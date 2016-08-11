@@ -1,0 +1,661 @@
+LIBRARY     DBTEST.BPL
+
+DESCRIPTION 'atabase test package'
+
+EXPORTS
+    @$xp$19Testframework@ITest     @272 ; __tpdsc__ Testframework::ITest
+    @$xp$20Dbxtest@TDBXTestCase    @436 ; __tpdsc__ Dbxtest::TDBXTestCase
+    @$xp$20System@%TArray__1$b%    @247 ; __tpdsc__ System::TArray__1<wchar_t>
+    @$xp$21System@%TArray__1$uc%   @568 ; __tpdsc__ System::TArray__1<unsigned char>
+    @$xp$21Testframework@PObject   @258 ; __tpdsc__ Testframework::PObject
+    @$xp$23Testframework@TTestCase @259 ; __tpdsc__ Testframework::TTestCase
+    @$xp$23Testframework@TTestProc @291 ; __tpdsc__ Testframework::TTestProc
+    @$xp$24Testframework@ETestError @283 ; __tpdsc__ Testframework::ETestError
+    @$xp$24Testframework@ITestSuite @267 ; __tpdsc__ Testframework::ITestSuite
+    @$xp$24Testframework@TTestSuite @254 ; __tpdsc__ Testframework::TTestSuite
+    @$xp$25Testframework@TTestMethod @292 ; __tpdsc__ Testframework::TTestMethod
+    @$xp$25Testframework@TTestResult @263 ; __tpdsc__ Testframework::TTestResult
+    @$xp$26Testframework@ETestFailure @287 ; __tpdsc__ Testframework::ETestFailure
+    @$xp$26Testframework@TTestFailure @252 ; __tpdsc__ Testframework::TTestFailure
+    @$xp$27Testframework@ITestListener @269 ; __tpdsc__ Testframework::ITestListener
+    @$xp$27Testframework@TAbstractTest @261 ; __tpdsc__ Testframework::TAbstractTest
+    @$xp$27Testframework@TListIterator @277 ; __tpdsc__ Testframework::TListIterator
+    @$xp$28Dbxdbmetadata@TDBXDBMetaData @648 ; __tpdsc__ Dbxdbmetadata::TDBXDBMetaData
+    @$xp$28Testframework@ExceptionClass @289 ; __tpdsc__ Testframework::ExceptionClass
+    @$xp$28Testframework@ITestDecorator @271 ; __tpdsc__ Testframework::ITestDecorator
+    @$xp$28Testframework@ITestListenerX @268 ; __tpdsc__ Testframework::ITestListenerX
+    @$xp$28Testframework@TTestCaseClass @290 ; __tpdsc__ Testframework::TTestCaseClass
+    @$xp$29Testframework@EDunitException @285 ; __tpdsc__ Testframework::EDunitException
+    @$xp$29Testframework@IMemLeakMonitor @276 ; __tpdsc__ Testframework::IMemLeakMonitor
+    @$xp$29Testframework@IStatusListener @270 ; __tpdsc__ Testframework::IStatusListener
+    @$xp$30Testframework@EPostTestFailure @279 ; __tpdsc__ Testframework::EPostTestFailure
+    @$xp$30Testframework@TGenericTestCase @256 ; __tpdsc__ Testframework::TGenericTestCase
+    @$xp$31Testframework@EStopTestsFailure @281 ; __tpdsc__ Testframework::EStopTestsFailure
+    @$xp$31Testframework@RunCountAttribute @293 ; __tpdsc__ Testframework::RunCountAttribute
+    @$xp$31Testframework@TAllowedLeakArray @278 ; __tpdsc__ Testframework::TAllowedLeakArray
+    @$xp$31Testframework@TMethodEnumerator @248 ; __tpdsc__ Testframework::TMethodEnumerator
+    @$xp$32Testframeworkextension@TInterval @327 ; __tpdsc__ Testframeworkextension::TInterval
+    @$xp$34Dbxdatagenerator@TDbxDataGenerator @638 ; __tpdsc__ Dbxdatagenerator::TDbxDataGenerator
+    @$xp$34Testframework@EBreakingTestFailure @273 ; __tpdsc__ Testframework::EBreakingTestFailure
+    @$xp$34Testframework@IDUnitMemLeakMonitor @275 ; __tpdsc__ Testframework::IDUnitMemLeakMonitor
+    @$xp$35Testframework@_TMethodEnumerator@_1 @251 ; __tpdsc__ Testframework::_TMethodEnumerator::_1
+    @$xp$35Testframework@_TMethodEnumerator@_2 @250 ; __tpdsc__ Testframework::_TMethodEnumerator::_2
+    @$xp$36System@%TArray__1$p14System@TObject% @435 ; __tpdsc__ System::TArray__1<System::TObject *>
+    @$xp$36Testframework@TStatusToResultAdapter @265 ; __tpdsc__ Testframework::TStatusToResultAdapter
+    @$xp$37Testframeworkextension@ITestExtension @335 ; __tpdsc__ Testframeworkextension::ITestExtension
+    @$xp$38Testframeworkextension@TTestCaseThread @329 ; __tpdsc__ Testframeworkextension::TTestCaseThread
+    @$xp$41System@%IEnumerable__1$p14System@TObject% @424 ; __tpdsc__ System::IEnumerable__1<System::TObject *>
+    @$xp$41System@%IEnumerator__1$p14System@TObject% @425 ; __tpdsc__ System::IEnumerator__1<System::TObject *>
+    @$xp$41Testframeworkextension@TTestCaseExtension @331 ; __tpdsc__ Testframeworkextension::TTestCaseExtension
+    @$xp$42Testframeworkextension@TTestSuiteExtension @333 ; __tpdsc__ Testframeworkextension::TTestSuiteExtension
+    @$xp$43Dbxcustomdatagenerator@TDBXDataGeneratedRow @599 ; __tpdsc__ Dbxcustomdatagenerator::TDBXDataGeneratedRow
+    @$xp$46Dbxcustomdatagenerator@TDBXCustomDataGenerator @603 ; __tpdsc__ Dbxcustomdatagenerator::TDBXCustomDataGenerator
+    @$xp$46Dbxcustomdatagenerator@TDBXDataGeneratedReader @601 ; __tpdsc__ Dbxcustomdatagenerator::TDBXDataGeneratedReader
+    @$xp$46Dbxcustomdatagenerator@TDBXDataGeneratorColumn @597 ; __tpdsc__ Dbxcustomdatagenerator::TDBXDataGeneratorColumn
+    @$xp$48Dbxcustomdatagenerator@TDBXBlobSequenceGenerator @593 ; __tpdsc__ Dbxcustomdatagenerator::TDBXBlobSequenceGenerator
+    @$xp$48Dbxcustomdatagenerator@TDBXDateSequenceGenerator @587 ; __tpdsc__ Dbxcustomdatagenerator::TDBXDateSequenceGenerator
+    @$xp$48Dbxcustomdatagenerator@TDBXInt8SequenceGenerator @575 ; __tpdsc__ Dbxcustomdatagenerator::TDBXInt8SequenceGenerator
+    @$xp$48Dbxcustomdatagenerator@TDBXTimeSequenceGenerator @573 ; __tpdsc__ Dbxcustomdatagenerator::TDBXTimeSequenceGenerator
+    @$xp$49Dbxcustomdatagenerator@TDBXDataGeneratorException @589 ; __tpdsc__ Dbxcustomdatagenerator::TDBXDataGeneratorException
+    @$xp$49Dbxcustomdatagenerator@TDBXInt16SequenceGenerator @581 ; __tpdsc__ Dbxcustomdatagenerator::TDBXInt16SequenceGenerator
+    @$xp$49Dbxcustomdatagenerator@TDBXInt32SequenceGenerator @579 ; __tpdsc__ Dbxcustomdatagenerator::TDBXInt32SequenceGenerator
+    @$xp$49Dbxcustomdatagenerator@TDBXInt64SequenceGenerator @577 ; __tpdsc__ Dbxcustomdatagenerator::TDBXInt64SequenceGenerator
+    @$xp$50Dbxcustomdatagenerator@TDBXDoubleSequenceGenerator @583 ; __tpdsc__ Dbxcustomdatagenerator::TDBXDoubleSequenceGenerator
+    @$xp$51Dbxcustomdatagenerator@TDBXBooleanSequenceGenerator @595 ; __tpdsc__ Dbxcustomdatagenerator::TDBXBooleanSequenceGenerator
+    @$xp$51Dbxcustomdatagenerator@TDBXDataGeneratorColumnArray @605 ; __tpdsc__ Dbxcustomdatagenerator::TDBXDataGeneratorColumnArray
+    @$xp$51Dbxcustomdatagenerator@TDBXDecimalSequenceGenerator @585 ; __tpdsc__ Dbxcustomdatagenerator::TDBXDecimalSequenceGenerator
+    @$xp$53Dbxcustomdatagenerator@TDBXTimestampSequenceGenerator @571 ; __tpdsc__ Dbxcustomdatagenerator::TDBXTimestampSequenceGenerator
+    @$xp$54Dbxcustomdatagenerator@TDBXAnsiStringSequenceGenerator @591 ; __tpdsc__ Dbxcustomdatagenerator::TDBXAnsiStringSequenceGenerator
+    @$xp$54Dbxcustomdatagenerator@TDBXWideStringSequenceGenerator @569 ; __tpdsc__ Dbxcustomdatagenerator::TDBXWideStringSequenceGenerator
+    @$xp$56System@Generics@Collections@%TList__1$p14System@TObject% @419 ; __tpdsc__ System::Generics::Collections::TList__1<System::TObject *>
+    @$xp$57System@Generics@Defaults@%IComparer__1$p14System@TObject% @429 ; __tpdsc__ System::Generics::Defaults::IComparer__1<System::TObject *>
+    @$xp$62System@Generics@Collections@%TEnumerable__1$p14System@TObject% @431 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<System::TObject *>
+    @$xp$62System@Generics@Collections@%TEnumerator__1$p14System@TObject% @433 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<System::TObject *>
+    @$xp$64System@Generics@Collections@%TArrayManager__1$p14System@TObject% @426 ; __tpdsc__ System::Generics::Collections::TArrayManager__1<System::TObject *>
+    @$xp$68System@Generics@Collections@%TList__1$p14System@TObject%@%arrayofT$% @430 ; __tpdsc__ System::Generics::Collections::TList__1<System::TObject *>::arrayofT<>
+    @$xp$70System@Generics@Collections@%TList__1$p14System@TObject%@%TEmptyFunc$% @423 ; __tpdsc__ System::Generics::Collections::TList__1<System::TObject *>::TEmptyFunc<>
+    @$xp$71System@Generics@Collections@%TList__1$p14System@TObject%@%TEnumerator$% @421 ; __tpdsc__ System::Generics::Collections::TList__1<System::TObject *>::TEnumerator<>
+    @$xp$73System@Generics@Collections@%TCollectionNotifyEvent__1$p14System@TObject% @428 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<System::TObject *>
+    @Dbtest@@GetPackageInfoTable$qqrv @653 ; Dbtest::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dbtest@@PackageLoad$qqrv      @652 ; Dbtest::__linkproc__ __fastcall PackageLoad()
+    @Dbtest@@PackageUnload$qqrv    @651 ; Dbtest::__linkproc__ __fastcall PackageUnload()
+    @Dbtest@initialization$qqrv    @650 ; __fastcall Dbtest::initialization()
+    @Dbxcustomdatagenerator@Finalization$qqrv @439 ; __fastcall Dbxcustomdatagenerator::Finalization()
+    @Dbxcustomdatagenerator@TDBXAnsiStringSequenceGenerator@ @592 ; Dbxcustomdatagenerator::TDBXAnsiStringSequenceGenerator::
+    @Dbxcustomdatagenerator@TDBXAnsiStringSequenceGenerator@$bctr$qqrxp43Data@Dbxmetadataprovider@TDBXMetaDataColumn @503 ; __fastcall Dbxcustomdatagenerator::TDBXAnsiStringSequenceGenerator::TDBXAnsiStringSequenceGenerator(Data::Dbxmetadataprovider::TDBXMetaDataColumn * const)
+    @Dbxcustomdatagenerator@TDBXAnsiStringSequenceGenerator@GetString$qqrxj @501 ; __fastcall Dbxcustomdatagenerator::TDBXAnsiStringSequenceGenerator::GetString(const __int64)
+    @Dbxcustomdatagenerator@TDBXAnsiStringSequenceGenerator@Open$qqrv @502 ; __fastcall Dbxcustomdatagenerator::TDBXAnsiStringSequenceGenerator::Open()
+    @Dbxcustomdatagenerator@TDBXAnsiStringSequenceGenerator@SetValue$qqrxjxp32Data@Dbxcommon@TDBXWritableValue @500 ; __fastcall Dbxcustomdatagenerator::TDBXAnsiStringSequenceGenerator::SetValue(const __int64, Data::Dbxcommon::TDBXWritableValue * const)
+    @Dbxcustomdatagenerator@TDBXBlobSequenceGenerator@ @594 ; Dbxcustomdatagenerator::TDBXBlobSequenceGenerator::
+    @Dbxcustomdatagenerator@TDBXBlobSequenceGenerator@$bctr$qqrxp43Data@Dbxmetadataprovider@TDBXMetaDataColumn @508 ; __fastcall Dbxcustomdatagenerator::TDBXBlobSequenceGenerator::TDBXBlobSequenceGenerator(Data::Dbxmetadataprovider::TDBXMetaDataColumn * const)
+    @Dbxcustomdatagenerator@TDBXBlobSequenceGenerator@GetBytes$qqrxj @505 ; __fastcall Dbxcustomdatagenerator::TDBXBlobSequenceGenerator::GetBytes(const __int64)
+    @Dbxcustomdatagenerator@TDBXBlobSequenceGenerator@GetString$qqrxj @506 ; __fastcall Dbxcustomdatagenerator::TDBXBlobSequenceGenerator::GetString(const __int64)
+    @Dbxcustomdatagenerator@TDBXBlobSequenceGenerator@Open$qqrv @507 ; __fastcall Dbxcustomdatagenerator::TDBXBlobSequenceGenerator::Open()
+    @Dbxcustomdatagenerator@TDBXBlobSequenceGenerator@SetValue$qqrxjxp32Data@Dbxcommon@TDBXWritableValue @504 ; __fastcall Dbxcustomdatagenerator::TDBXBlobSequenceGenerator::SetValue(const __int64, Data::Dbxcommon::TDBXWritableValue * const)
+    @Dbxcustomdatagenerator@TDBXBooleanSequenceGenerator@ @596 ; Dbxcustomdatagenerator::TDBXBooleanSequenceGenerator::
+    @Dbxcustomdatagenerator@TDBXBooleanSequenceGenerator@$bctr$qqrxp43Data@Dbxmetadataprovider@TDBXMetaDataColumn @514 ; __fastcall Dbxcustomdatagenerator::TDBXBooleanSequenceGenerator::TDBXBooleanSequenceGenerator(Data::Dbxmetadataprovider::TDBXMetaDataColumn * const)
+    @Dbxcustomdatagenerator@TDBXBooleanSequenceGenerator@GetBoolean$qqrxj @512 ; __fastcall Dbxcustomdatagenerator::TDBXBooleanSequenceGenerator::GetBoolean(const __int64)
+    @Dbxcustomdatagenerator@TDBXBooleanSequenceGenerator@GetInt8$qqrxj @510 ; __fastcall Dbxcustomdatagenerator::TDBXBooleanSequenceGenerator::GetInt8(const __int64)
+    @Dbxcustomdatagenerator@TDBXBooleanSequenceGenerator@GetString$qqrxj @511 ; __fastcall Dbxcustomdatagenerator::TDBXBooleanSequenceGenerator::GetString(const __int64)
+    @Dbxcustomdatagenerator@TDBXBooleanSequenceGenerator@Open$qqrv @513 ; __fastcall Dbxcustomdatagenerator::TDBXBooleanSequenceGenerator::Open()
+    @Dbxcustomdatagenerator@TDBXBooleanSequenceGenerator@SetValue$qqrxjxp32Data@Dbxcommon@TDBXWritableValue @509 ; __fastcall Dbxcustomdatagenerator::TDBXBooleanSequenceGenerator::SetValue(const __int64, Data::Dbxcommon::TDBXWritableValue * const)
+    @Dbxcustomdatagenerator@TDBXCustomDataGenerator@ @604 ; Dbxcustomdatagenerator::TDBXCustomDataGenerator::
+    @Dbxcustomdatagenerator@TDBXCustomDataGenerator@$bdtr$qqrv @565 ; __fastcall Dbxcustomdatagenerator::TDBXCustomDataGenerator::~TDBXCustomDataGenerator()
+    @Dbxcustomdatagenerator@TDBXCustomDataGenerator@AddColumn$qqrxp46Dbxcustomdatagenerator@TDBXDataGeneratorColumn @566 ; __fastcall Dbxcustomdatagenerator::TDBXCustomDataGenerator::AddColumn(Dbxcustomdatagenerator::TDBXDataGeneratorColumn * const)
+    @Dbxcustomdatagenerator@TDBXCustomDataGenerator@ColumnNameString$qqrx71System@%DynamicArray$p46Dbxcustomdatagenerator@TDBXDataGeneratorColumn% @562 ; Dbxcustomdatagenerator::TDBXCustomDataGenerator::ColumnNameString(const System::DynamicArray<{583}...
+    @Dbxcustomdatagenerator@TDBXCustomDataGenerator@CreateInsertStatement$qqrx71System@%DynamicArray$p46Dbxcustomdatagenerator@TDBXDataGeneratorColumn%xi @555 ; Dbxcustomdatagenerator::TDBXCustomDataGenerator::CreateInsertStatement(const System::DynamicArray<{583}...
+    @Dbxcustomdatagenerator@TDBXCustomDataGenerator@CreateInsertStatement$qqrx71System@%DynamicArray$p46Dbxcustomdatagenerator@TDBXDataGeneratorColumn%xixo @557 ; Dbxcustomdatagenerator::TDBXCustomDataGenerator::CreateInsertStatement(const System::DynamicArray<{583}...
+    @Dbxcustomdatagenerator@TDBXCustomDataGenerator@CreateInsertStatement$qqrxi @556 ; __fastcall Dbxcustomdatagenerator::TDBXCustomDataGenerator::CreateInsertStatement(const int)
+    @Dbxcustomdatagenerator@TDBXCustomDataGenerator@CreateParameterizedInsertStatement$qqrv @554 ; __fastcall Dbxcustomdatagenerator::TDBXCustomDataGenerator::CreateParameterizedInsertStatement()
+    @Dbxcustomdatagenerator@TDBXCustomDataGenerator@CreateParameterizedInsertStatement$qqrx71System@%DynamicArray$p46Dbxcustomdatagenerator@TDBXDataGeneratorColumn% @553 ; Dbxcustomdatagenerator::TDBXCustomDataGenerator::CreateParameterizedInsertStatement(const System::DynamicArray<{583}...
+    @Dbxcustomdatagenerator@TDBXCustomDataGenerator@GetColumn$qqrxi @564 ; __fastcall Dbxcustomdatagenerator::TDBXCustomDataGenerator::GetColumn(const int)
+    @Dbxcustomdatagenerator@TDBXCustomDataGenerator@GetColumnCount$qqrv @567 ; __fastcall Dbxcustomdatagenerator::TDBXCustomDataGenerator::GetColumnCount()
+    @Dbxcustomdatagenerator@TDBXCustomDataGenerator@GetMetaDataProvider$qqrv @551 ; __fastcall Dbxcustomdatagenerator::TDBXCustomDataGenerator::GetMetaDataProvider()
+    @Dbxcustomdatagenerator@TDBXCustomDataGenerator@GetTableName$qqrv @559 ; __fastcall Dbxcustomdatagenerator::TDBXCustomDataGenerator::GetTableName()
+    @Dbxcustomdatagenerator@TDBXCustomDataGenerator@MarkerString$qqrv @560 ; __fastcall Dbxcustomdatagenerator::TDBXCustomDataGenerator::MarkerString()
+    @Dbxcustomdatagenerator@TDBXCustomDataGenerator@Next$qqrv @552 ; __fastcall Dbxcustomdatagenerator::TDBXCustomDataGenerator::Next()
+    @Dbxcustomdatagenerator@TDBXCustomDataGenerator@Open$qqrv @563 ; __fastcall Dbxcustomdatagenerator::TDBXCustomDataGenerator::Open()
+    @Dbxcustomdatagenerator@TDBXCustomDataGenerator@SetMetaDataProvider$qqrxp45Data@Dbxmetadataprovider@TDBXMetaDataProvider @550 ; __fastcall Dbxcustomdatagenerator::TDBXCustomDataGenerator::SetMetaDataProvider(Data::Dbxmetadataprovider::TDBXMetaDataProvider * const)
+    @Dbxcustomdatagenerator@TDBXCustomDataGenerator@SetTableName$qqrx20System@UnicodeString @558 ; __fastcall Dbxcustomdatagenerator::TDBXCustomDataGenerator::SetTableName(const System::UnicodeString)
+    @Dbxcustomdatagenerator@TDBXCustomDataGenerator@ValueString$qqrx71System@%DynamicArray$p46Dbxcustomdatagenerator@TDBXDataGeneratorColumn%xi @561 ; Dbxcustomdatagenerator::TDBXCustomDataGenerator::ValueString(const System::DynamicArray<{583}...
+    @Dbxcustomdatagenerator@TDBXDataGeneratedReader@ @602 ; Dbxcustomdatagenerator::TDBXDataGeneratedReader::
+    @Dbxcustomdatagenerator@TDBXDataGeneratedReader@$bctr$qqrxjx71System@%DynamicArray$p46Dbxcustomdatagenerator@TDBXDataGeneratorColumn% @549 ; Dbxcustomdatagenerator::TDBXDataGeneratedReader::TDBXDataGeneratedReader(const __int64, const System::DynamicArray<{583}...
+    @Dbxcustomdatagenerator@TDBXDataGeneratedReader@$bdtr$qqrv @548 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratedReader::~TDBXDataGeneratedReader()
+    @Dbxcustomdatagenerator@TDBXDataGeneratedReader@CompareReader$qqrxp25Data@Dbxcommon@TDBXReader @541 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratedReader::CompareReader(Data::Dbxcommon::TDBXReader * const)
+    @Dbxcustomdatagenerator@TDBXDataGeneratedReader@CreateValues$qqrv @547 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratedReader::CreateValues()
+    @Dbxcustomdatagenerator@TDBXDataGeneratedReader@DerivedClose$qqrv @540 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratedReader::DerivedClose()
+    @Dbxcustomdatagenerator@TDBXDataGeneratedReader@DerivedNext$qqrv @544 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratedReader::DerivedNext()
+    @Dbxcustomdatagenerator@TDBXDataGeneratedReader@GenerateValues$qqrv @545 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratedReader::GenerateValues()
+    @Dbxcustomdatagenerator@TDBXDataGeneratedReader@GetByteReader$qqrv @543 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratedReader::GetByteReader()
+    @Dbxcustomdatagenerator@TDBXDataGeneratedReader@GetPosition$qqrv @542 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratedReader::GetPosition()
+    @Dbxcustomdatagenerator@TDBXDataGeneratedReader@Reset$qqrv @546 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratedReader::Reset()
+    @Dbxcustomdatagenerator@TDBXDataGeneratedRow@ @600 ; Dbxcustomdatagenerator::TDBXDataGeneratedRow::
+    @Dbxcustomdatagenerator@TDBXDataGeneratedRow@$bctr$qqrxp26Data@Dbxcommon@TDBXContext @539 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratedRow::TDBXDataGeneratedRow(Data::Dbxcommon::TDBXContext * const)
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@ @598 ; Dbxcustomdatagenerator::TDBXDataGeneratorColumn::
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@$bctr$qqrxp43Data@Dbxmetadataprovider@TDBXMetaDataColumn @537 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::TDBXDataGeneratorColumn(Data::Dbxmetadataprovider::TDBXMetaDataColumn * const)
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@$bdtr$qqrv @534 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::~TDBXDataGeneratorColumn()
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@GetBoolean$qqrxj @533 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::GetBoolean(const __int64)
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@GetBytes$qqrxj @526 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::GetBytes(const __int64)
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@GetColumnName$qqrv @517 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::GetColumnName()
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@GetDataType$qqrv @516 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::GetDataType()
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@GetDay$qqrxj @522 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::GetDay(const __int64)
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@GetDecimal$qqrxj @525 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::GetDecimal(const __int64)
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@GetDouble$qqrxj @528 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::GetDouble(const __int64)
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@GetHour$qqrxj @521 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::GetHour(const __int64)
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@GetInt16$qqrxj @531 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::GetInt16(const __int64)
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@GetInt32$qqrxj @530 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::GetInt32(const __int64)
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@GetInt64$qqrxj @529 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::GetInt64(const __int64)
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@GetInt8$qqrxj @532 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::GetInt8(const __int64)
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@GetMetaDataColumn$qqrv @515 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::GetMetaDataColumn()
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@GetMilliseconds$qqrxj @518 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::GetMilliseconds(const __int64)
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@GetMinute$qqrxj @520 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::GetMinute(const __int64)
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@GetMonth$qqrxj @523 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::GetMonth(const __int64)
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@GetSeconds$qqrxj @519 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::GetSeconds(const __int64)
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@GetSingle$qqrxj @527 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::GetSingle(const __int64)
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@GetYear$qqrxj @524 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::GetYear(const __int64)
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@Open$qqrv @535 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::Open()
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@SetDataGenerator$qqrxp46Dbxcustomdatagenerator@TDBXCustomDataGenerator @538 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::SetDataGenerator(Dbxcustomdatagenerator::TDBXCustomDataGenerator * const)
+    @Dbxcustomdatagenerator@TDBXDataGeneratorColumn@TypeNotSupported$qqrv @536 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorColumn::TypeNotSupported()
+    @Dbxcustomdatagenerator@TDBXDataGeneratorException@ @590 ; Dbxcustomdatagenerator::TDBXDataGeneratorException::
+    @Dbxcustomdatagenerator@TDBXDataGeneratorException@$bctr$qqrx20System@UnicodeString @499 ; __fastcall Dbxcustomdatagenerator::TDBXDataGeneratorException::TDBXDataGeneratorException(const System::UnicodeString)
+    @Dbxcustomdatagenerator@TDBXDateSequenceGenerator@ @588 ; Dbxcustomdatagenerator::TDBXDateSequenceGenerator::
+    @Dbxcustomdatagenerator@TDBXDateSequenceGenerator@$bctr$qqrxp43Data@Dbxmetadataprovider@TDBXMetaDataColumn @498 ; __fastcall Dbxcustomdatagenerator::TDBXDateSequenceGenerator::TDBXDateSequenceGenerator(Data::Dbxmetadataprovider::TDBXMetaDataColumn * const)
+    @Dbxcustomdatagenerator@TDBXDateSequenceGenerator@GetDay$qqrxj @494 ; __fastcall Dbxcustomdatagenerator::TDBXDateSequenceGenerator::GetDay(const __int64)
+    @Dbxcustomdatagenerator@TDBXDateSequenceGenerator@GetMonth$qqrxj @495 ; __fastcall Dbxcustomdatagenerator::TDBXDateSequenceGenerator::GetMonth(const __int64)
+    @Dbxcustomdatagenerator@TDBXDateSequenceGenerator@GetString$qqrxj @493 ; __fastcall Dbxcustomdatagenerator::TDBXDateSequenceGenerator::GetString(const __int64)
+    @Dbxcustomdatagenerator@TDBXDateSequenceGenerator@GetYear$qqrxj @496 ; __fastcall Dbxcustomdatagenerator::TDBXDateSequenceGenerator::GetYear(const __int64)
+    @Dbxcustomdatagenerator@TDBXDateSequenceGenerator@Open$qqrv @497 ; __fastcall Dbxcustomdatagenerator::TDBXDateSequenceGenerator::Open()
+    @Dbxcustomdatagenerator@TDBXDateSequenceGenerator@SetValue$qqrxjxp32Data@Dbxcommon@TDBXWritableValue @492 ; __fastcall Dbxcustomdatagenerator::TDBXDateSequenceGenerator::SetValue(const __int64, Data::Dbxcommon::TDBXWritableValue * const)
+    @Dbxcustomdatagenerator@TDBXDecimalSequenceGenerator@ @586 ; Dbxcustomdatagenerator::TDBXDecimalSequenceGenerator::
+    @Dbxcustomdatagenerator@TDBXDecimalSequenceGenerator@$bctr$qqrxp43Data@Dbxmetadataprovider@TDBXMetaDataColumn @491 ; __fastcall Dbxcustomdatagenerator::TDBXDecimalSequenceGenerator::TDBXDecimalSequenceGenerator(Data::Dbxmetadataprovider::TDBXMetaDataColumn * const)
+    @Dbxcustomdatagenerator@TDBXDecimalSequenceGenerator@GetDecimal$qqrxj @489 ; __fastcall Dbxcustomdatagenerator::TDBXDecimalSequenceGenerator::GetDecimal(const __int64)
+    @Dbxcustomdatagenerator@TDBXDecimalSequenceGenerator@GetString$qqrxj @488 ; __fastcall Dbxcustomdatagenerator::TDBXDecimalSequenceGenerator::GetString(const __int64)
+    @Dbxcustomdatagenerator@TDBXDecimalSequenceGenerator@Open$qqrv @490 ; __fastcall Dbxcustomdatagenerator::TDBXDecimalSequenceGenerator::Open()
+    @Dbxcustomdatagenerator@TDBXDecimalSequenceGenerator@SetValue$qqrxjxp32Data@Dbxcommon@TDBXWritableValue @487 ; __fastcall Dbxcustomdatagenerator::TDBXDecimalSequenceGenerator::SetValue(const __int64, Data::Dbxcommon::TDBXWritableValue * const)
+    @Dbxcustomdatagenerator@TDBXDoubleSequenceGenerator@ @584 ; Dbxcustomdatagenerator::TDBXDoubleSequenceGenerator::
+    @Dbxcustomdatagenerator@TDBXDoubleSequenceGenerator@$bctr$qqrxp43Data@Dbxmetadataprovider@TDBXMetaDataColumn @486 ; __fastcall Dbxcustomdatagenerator::TDBXDoubleSequenceGenerator::TDBXDoubleSequenceGenerator(Data::Dbxmetadataprovider::TDBXMetaDataColumn * const)
+    @Dbxcustomdatagenerator@TDBXDoubleSequenceGenerator@GetDouble$qqrxj @484 ; __fastcall Dbxcustomdatagenerator::TDBXDoubleSequenceGenerator::GetDouble(const __int64)
+    @Dbxcustomdatagenerator@TDBXDoubleSequenceGenerator@GetString$qqrxj @483 ; __fastcall Dbxcustomdatagenerator::TDBXDoubleSequenceGenerator::GetString(const __int64)
+    @Dbxcustomdatagenerator@TDBXDoubleSequenceGenerator@Open$qqrv @485 ; __fastcall Dbxcustomdatagenerator::TDBXDoubleSequenceGenerator::Open()
+    @Dbxcustomdatagenerator@TDBXDoubleSequenceGenerator@SetValue$qqrxjxp32Data@Dbxcommon@TDBXWritableValue @482 ; __fastcall Dbxcustomdatagenerator::TDBXDoubleSequenceGenerator::SetValue(const __int64, Data::Dbxcommon::TDBXWritableValue * const)
+    @Dbxcustomdatagenerator@TDBXInt16SequenceGenerator@ @582 ; Dbxcustomdatagenerator::TDBXInt16SequenceGenerator::
+    @Dbxcustomdatagenerator@TDBXInt16SequenceGenerator@$bctr$qqrxp43Data@Dbxmetadataprovider@TDBXMetaDataColumn @481 ; __fastcall Dbxcustomdatagenerator::TDBXInt16SequenceGenerator::TDBXInt16SequenceGenerator(Data::Dbxmetadataprovider::TDBXMetaDataColumn * const)
+    @Dbxcustomdatagenerator@TDBXInt16SequenceGenerator@GetInt16$qqrxj @479 ; __fastcall Dbxcustomdatagenerator::TDBXInt16SequenceGenerator::GetInt16(const __int64)
+    @Dbxcustomdatagenerator@TDBXInt16SequenceGenerator@GetString$qqrxj @478 ; __fastcall Dbxcustomdatagenerator::TDBXInt16SequenceGenerator::GetString(const __int64)
+    @Dbxcustomdatagenerator@TDBXInt16SequenceGenerator@Open$qqrv @480 ; __fastcall Dbxcustomdatagenerator::TDBXInt16SequenceGenerator::Open()
+    @Dbxcustomdatagenerator@TDBXInt16SequenceGenerator@SetValue$qqrxjxp32Data@Dbxcommon@TDBXWritableValue @477 ; __fastcall Dbxcustomdatagenerator::TDBXInt16SequenceGenerator::SetValue(const __int64, Data::Dbxcommon::TDBXWritableValue * const)
+    @Dbxcustomdatagenerator@TDBXInt32SequenceGenerator@ @580 ; Dbxcustomdatagenerator::TDBXInt32SequenceGenerator::
+    @Dbxcustomdatagenerator@TDBXInt32SequenceGenerator@$bctr$qqrxp43Data@Dbxmetadataprovider@TDBXMetaDataColumn @476 ; __fastcall Dbxcustomdatagenerator::TDBXInt32SequenceGenerator::TDBXInt32SequenceGenerator(Data::Dbxmetadataprovider::TDBXMetaDataColumn * const)
+    @Dbxcustomdatagenerator@TDBXInt32SequenceGenerator@GetInt32$qqrxj @474 ; __fastcall Dbxcustomdatagenerator::TDBXInt32SequenceGenerator::GetInt32(const __int64)
+    @Dbxcustomdatagenerator@TDBXInt32SequenceGenerator@GetString$qqrxj @473 ; __fastcall Dbxcustomdatagenerator::TDBXInt32SequenceGenerator::GetString(const __int64)
+    @Dbxcustomdatagenerator@TDBXInt32SequenceGenerator@Open$qqrv @475 ; __fastcall Dbxcustomdatagenerator::TDBXInt32SequenceGenerator::Open()
+    @Dbxcustomdatagenerator@TDBXInt32SequenceGenerator@SetValue$qqrxjxp32Data@Dbxcommon@TDBXWritableValue @472 ; __fastcall Dbxcustomdatagenerator::TDBXInt32SequenceGenerator::SetValue(const __int64, Data::Dbxcommon::TDBXWritableValue * const)
+    @Dbxcustomdatagenerator@TDBXInt64SequenceGenerator@ @578 ; Dbxcustomdatagenerator::TDBXInt64SequenceGenerator::
+    @Dbxcustomdatagenerator@TDBXInt64SequenceGenerator@$bctr$qqrxp43Data@Dbxmetadataprovider@TDBXMetaDataColumn @471 ; __fastcall Dbxcustomdatagenerator::TDBXInt64SequenceGenerator::TDBXInt64SequenceGenerator(Data::Dbxmetadataprovider::TDBXMetaDataColumn * const)
+    @Dbxcustomdatagenerator@TDBXInt64SequenceGenerator@GetInt64$qqrxj @469 ; __fastcall Dbxcustomdatagenerator::TDBXInt64SequenceGenerator::GetInt64(const __int64)
+    @Dbxcustomdatagenerator@TDBXInt64SequenceGenerator@GetString$qqrxj @468 ; __fastcall Dbxcustomdatagenerator::TDBXInt64SequenceGenerator::GetString(const __int64)
+    @Dbxcustomdatagenerator@TDBXInt64SequenceGenerator@Open$qqrv @470 ; __fastcall Dbxcustomdatagenerator::TDBXInt64SequenceGenerator::Open()
+    @Dbxcustomdatagenerator@TDBXInt64SequenceGenerator@SetValue$qqrxjxp32Data@Dbxcommon@TDBXWritableValue @467 ; __fastcall Dbxcustomdatagenerator::TDBXInt64SequenceGenerator::SetValue(const __int64, Data::Dbxcommon::TDBXWritableValue * const)
+    @Dbxcustomdatagenerator@TDBXInt8SequenceGenerator@ @576 ; Dbxcustomdatagenerator::TDBXInt8SequenceGenerator::
+    @Dbxcustomdatagenerator@TDBXInt8SequenceGenerator@$bctr$qqrxp43Data@Dbxmetadataprovider@TDBXMetaDataColumn @466 ; __fastcall Dbxcustomdatagenerator::TDBXInt8SequenceGenerator::TDBXInt8SequenceGenerator(Data::Dbxmetadataprovider::TDBXMetaDataColumn * const)
+    @Dbxcustomdatagenerator@TDBXInt8SequenceGenerator@GetInt8$qqrxj @464 ; __fastcall Dbxcustomdatagenerator::TDBXInt8SequenceGenerator::GetInt8(const __int64)
+    @Dbxcustomdatagenerator@TDBXInt8SequenceGenerator@GetString$qqrxj @463 ; __fastcall Dbxcustomdatagenerator::TDBXInt8SequenceGenerator::GetString(const __int64)
+    @Dbxcustomdatagenerator@TDBXInt8SequenceGenerator@Open$qqrv @465 ; __fastcall Dbxcustomdatagenerator::TDBXInt8SequenceGenerator::Open()
+    @Dbxcustomdatagenerator@TDBXInt8SequenceGenerator@SetValue$qqrxjxp32Data@Dbxcommon@TDBXWritableValue @462 ; __fastcall Dbxcustomdatagenerator::TDBXInt8SequenceGenerator::SetValue(const __int64, Data::Dbxcommon::TDBXWritableValue * const)
+    @Dbxcustomdatagenerator@TDBXTimeSequenceGenerator@ @574 ; Dbxcustomdatagenerator::TDBXTimeSequenceGenerator::
+    @Dbxcustomdatagenerator@TDBXTimeSequenceGenerator@$bctr$qqrxp43Data@Dbxmetadataprovider@TDBXMetaDataColumn @461 ; __fastcall Dbxcustomdatagenerator::TDBXTimeSequenceGenerator::TDBXTimeSequenceGenerator(Data::Dbxmetadataprovider::TDBXMetaDataColumn * const)
+    @Dbxcustomdatagenerator@TDBXTimeSequenceGenerator@GetHour$qqrxj @459 ; __fastcall Dbxcustomdatagenerator::TDBXTimeSequenceGenerator::GetHour(const __int64)
+    @Dbxcustomdatagenerator@TDBXTimeSequenceGenerator@GetMinute$qqrxj @458 ; __fastcall Dbxcustomdatagenerator::TDBXTimeSequenceGenerator::GetMinute(const __int64)
+    @Dbxcustomdatagenerator@TDBXTimeSequenceGenerator@GetSeconds$qqrxj @457 ; __fastcall Dbxcustomdatagenerator::TDBXTimeSequenceGenerator::GetSeconds(const __int64)
+    @Dbxcustomdatagenerator@TDBXTimeSequenceGenerator@GetString$qqrxj @456 ; __fastcall Dbxcustomdatagenerator::TDBXTimeSequenceGenerator::GetString(const __int64)
+    @Dbxcustomdatagenerator@TDBXTimeSequenceGenerator@Open$qqrv @460 ; __fastcall Dbxcustomdatagenerator::TDBXTimeSequenceGenerator::Open()
+    @Dbxcustomdatagenerator@TDBXTimeSequenceGenerator@SetValue$qqrxjxp32Data@Dbxcommon@TDBXWritableValue @455 ; __fastcall Dbxcustomdatagenerator::TDBXTimeSequenceGenerator::SetValue(const __int64, Data::Dbxcommon::TDBXWritableValue * const)
+    @Dbxcustomdatagenerator@TDBXTimestampSequenceGenerator@ @572 ; Dbxcustomdatagenerator::TDBXTimestampSequenceGenerator::
+    @Dbxcustomdatagenerator@TDBXTimestampSequenceGenerator@$bctr$qqrxp43Data@Dbxmetadataprovider@TDBXMetaDataColumn @454 ; __fastcall Dbxcustomdatagenerator::TDBXTimestampSequenceGenerator::TDBXTimestampSequenceGenerator(Data::Dbxmetadataprovider::TDBXMetaDataColumn * const)
+    @Dbxcustomdatagenerator@TDBXTimestampSequenceGenerator@GetDay$qqrxj @450 ; __fastcall Dbxcustomdatagenerator::TDBXTimestampSequenceGenerator::GetDay(const __int64)
+    @Dbxcustomdatagenerator@TDBXTimestampSequenceGenerator@GetHour$qqrxj @449 ; __fastcall Dbxcustomdatagenerator::TDBXTimestampSequenceGenerator::GetHour(const __int64)
+    @Dbxcustomdatagenerator@TDBXTimestampSequenceGenerator@GetMilliseconds$qqrxj @446 ; __fastcall Dbxcustomdatagenerator::TDBXTimestampSequenceGenerator::GetMilliseconds(const __int64)
+    @Dbxcustomdatagenerator@TDBXTimestampSequenceGenerator@GetMinute$qqrxj @448 ; __fastcall Dbxcustomdatagenerator::TDBXTimestampSequenceGenerator::GetMinute(const __int64)
+    @Dbxcustomdatagenerator@TDBXTimestampSequenceGenerator@GetMonth$qqrxj @451 ; __fastcall Dbxcustomdatagenerator::TDBXTimestampSequenceGenerator::GetMonth(const __int64)
+    @Dbxcustomdatagenerator@TDBXTimestampSequenceGenerator@GetSeconds$qqrxj @447 ; __fastcall Dbxcustomdatagenerator::TDBXTimestampSequenceGenerator::GetSeconds(const __int64)
+    @Dbxcustomdatagenerator@TDBXTimestampSequenceGenerator@GetString$qqrxj @445 ; __fastcall Dbxcustomdatagenerator::TDBXTimestampSequenceGenerator::GetString(const __int64)
+    @Dbxcustomdatagenerator@TDBXTimestampSequenceGenerator@GetYear$qqrxj @452 ; __fastcall Dbxcustomdatagenerator::TDBXTimestampSequenceGenerator::GetYear(const __int64)
+    @Dbxcustomdatagenerator@TDBXTimestampSequenceGenerator@Open$qqrv @453 ; __fastcall Dbxcustomdatagenerator::TDBXTimestampSequenceGenerator::Open()
+    @Dbxcustomdatagenerator@TDBXTimestampSequenceGenerator@SetValue$qqrxjxp32Data@Dbxcommon@TDBXWritableValue @444 ; __fastcall Dbxcustomdatagenerator::TDBXTimestampSequenceGenerator::SetValue(const __int64, Data::Dbxcommon::TDBXWritableValue * const)
+    @Dbxcustomdatagenerator@TDBXWideStringSequenceGenerator@ @570 ; Dbxcustomdatagenerator::TDBXWideStringSequenceGenerator::
+    @Dbxcustomdatagenerator@TDBXWideStringSequenceGenerator@$bctr$qqrxp43Data@Dbxmetadataprovider@TDBXMetaDataColumn @443 ; __fastcall Dbxcustomdatagenerator::TDBXWideStringSequenceGenerator::TDBXWideStringSequenceGenerator(Data::Dbxmetadataprovider::TDBXMetaDataColumn * const)
+    @Dbxcustomdatagenerator@TDBXWideStringSequenceGenerator@GetString$qqrxj @441 ; __fastcall Dbxcustomdatagenerator::TDBXWideStringSequenceGenerator::GetString(const __int64)
+    @Dbxcustomdatagenerator@TDBXWideStringSequenceGenerator@Open$qqrv @442 ; __fastcall Dbxcustomdatagenerator::TDBXWideStringSequenceGenerator::Open()
+    @Dbxcustomdatagenerator@TDBXWideStringSequenceGenerator@SetValue$qqrxjxp32Data@Dbxcommon@TDBXWritableValue @440 ; __fastcall Dbxcustomdatagenerator::TDBXWideStringSequenceGenerator::SetValue(const __int64, Data::Dbxcommon::TDBXWritableValue * const)
+    @Dbxcustomdatagenerator@initialization$qqrv @438 ; __fastcall Dbxcustomdatagenerator::initialization()
+    @Dbxdatagenerator@Finalization$qqrv @607 ; __fastcall Dbxdatagenerator::Finalization()
+    @Dbxdatagenerator@TDbxDataGenerator@ @639 ; Dbxdatagenerator::TDbxDataGenerator::
+    @Dbxdatagenerator@TDbxDataGenerator@$bctr$qqrv @628 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::TDbxDataGenerator()
+    @Dbxdatagenerator@TDbxDataGenerator@$bdtr$qqrv @627 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::~TDbxDataGenerator()
+    @Dbxdatagenerator@TDbxDataGenerator@AddParameters$qqrxp22Data@Sqlexpr@TSQLQuery @636 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::AddParameters(Data::Sqlexpr::TSQLQuery * const)
+    @Dbxdatagenerator@TDbxDataGenerator@AddParameters$qqrxp26Data@Dbxcommon@TDBXCommand @637 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::AddParameters(Data::Dbxcommon::TDBXCommand * const)
+    @Dbxdatagenerator@TDbxDataGenerator@BytesEquals$qqrx24System@%DynamicArray$uc%t1i @629 ; Dbxdatagenerator::TDbxDataGenerator::BytesEquals(const System::DynamicArray<{583}...
+    @Dbxdatagenerator@TDbxDataGenerator@GetIsFractionsSupported$qqrv @626 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::GetIsFractionsSupported()
+    @Dbxdatagenerator@TDbxDataGenerator@PopulateDataset$qqrp16Data@Db@TDataSeti @625 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::PopulateDataset(Data::Db::TDataSet *, int)
+    @Dbxdatagenerator@TDbxDataGenerator@PopulateParams$qqrp15Data@Db@TParams @624 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::PopulateParams(Data::Db::TParams *)
+    @Dbxdatagenerator@TDbxDataGenerator@ReadBytesFromStream$qqrp24Data@Dbxcommon@TDBXValuer24System@%DynamicArray$uc% @623 ; Dbxdatagenerator::TDbxDataGenerator::ReadBytesFromStream(Data::Dbxcommon::TDBXValue *, System::DynamicArray<{583}...
+    @Dbxdatagenerator@TDbxDataGenerator@SetInsertParameters$qqrxp22Data@Sqlexpr@TSQLQueryi @634 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::SetInsertParameters(Data::Sqlexpr::TSQLQuery * const, int)
+    @Dbxdatagenerator@TDbxDataGenerator@SetInsertParameters$qqrxp26Data@Dbxcommon@TDBXCommandi @635 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::SetInsertParameters(Data::Dbxcommon::TDBXCommand * const, int)
+    @Dbxdatagenerator@TDbxDataGenerator@SetParameter$qqriip14Data@Db@TParam @622 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::SetParameter(int, int, Data::Db::TParam *)
+    @Dbxdatagenerator@TDbxDataGenerator@ValidateAnsiString$qqr20System@UnicodeStringt1 @633 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::ValidateAnsiString(System::UnicodeString, System::UnicodeString)
+    @Dbxdatagenerator@TDbxDataGenerator@ValidateBcd$qqrrx16Data@Fmtbcd@TBcdt1 @631 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::ValidateBcd(const Data::Fmtbcd::TBcd&, const Data::Fmtbcd::TBcd&)
+    @Dbxdatagenerator@TDbxDataGenerator@ValidateBoolean$qqroo @630 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::ValidateBoolean(bool, bool)
+    @Dbxdatagenerator@TDbxDataGenerator@ValidateBytes$qqr24System@%DynamicArray$uc%t1 @621 ; Dbxdatagenerator::TDbxDataGenerator::ValidateBytes(System::DynamicArray<{583}...
+    @Dbxdatagenerator@TDbxDataGenerator@ValidateDate$qqrii @620 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::ValidateDate(int, int)
+    @Dbxdatagenerator@TDbxDataGenerator@ValidateDateTime$qqr16System@TDateTimet1 @615 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::ValidateDateTime(System::TDateTime, System::TDateTime)
+    @Dbxdatagenerator@TDbxDataGenerator@ValidateDouble$qqrdd @618 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::ValidateDouble(double, double)
+    @Dbxdatagenerator@TDbxDataGenerator@ValidateInt64$qqrjj @617 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::ValidateInt64(__int64, __int64)
+    @Dbxdatagenerator@TDbxDataGenerator@ValidateParam$qqriip14Data@Db@TParam @610 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::ValidateParam(int, int, Data::Db::TParam *)
+    @Dbxdatagenerator@TDbxDataGenerator@ValidateParameters$qqrxp26Data@Dbxcommon@TDBXCommandi @612 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::ValidateParameters(Data::Dbxcommon::TDBXCommand * const, int)
+    @Dbxdatagenerator@TDbxDataGenerator@ValidateParams$qqrxp15Data@Db@TParams @611 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::ValidateParams(Data::Db::TParams * const)
+    @Dbxdatagenerator@TDbxDataGenerator@ValidateRow$qqrxp16Data@Db@TDataSeti @609 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::ValidateRow(Data::Db::TDataSet * const, int)
+    @Dbxdatagenerator@TDbxDataGenerator@ValidateRow$qqrxp25Data@Dbxcommon@TDBXReaderi @608 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::ValidateRow(Data::Dbxcommon::TDBXReader * const, int)
+    @Dbxdatagenerator@TDbxDataGenerator@ValidateSingle$qqrff @619 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::ValidateSingle(float, float)
+    @Dbxdatagenerator@TDbxDataGenerator@ValidateTime$qqrii @616 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::ValidateTime(int, int)
+    @Dbxdatagenerator@TDbxDataGenerator@ValidateTimestamp$qqrrx27Data@Sqltimst@TSQLTimeStampt1 @614 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::ValidateTimestamp(const Data::Sqltimst::TSQLTimeStamp&, const Data::Sqltimst::TSQLTimeStamp&)
+    @Dbxdatagenerator@TDbxDataGenerator@ValidateTimestampOffset$qqrrx33Data@Sqltimst@TSQLTimeStampOffsett1 @613 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::ValidateTimestampOffset(const Data::Sqltimst::TSQLTimeStampOffset&, const Data::Sqltimst::TSQLTimeStampOffset&)
+    @Dbxdatagenerator@TDbxDataGenerator@ValidateWideString$qqr20System@UnicodeStringt1 @632 ; __fastcall Dbxdatagenerator::TDbxDataGenerator::ValidateWideString(System::UnicodeString, System::UnicodeString)
+    @Dbxdatagenerator@initialization$qqrv @606 ; __fastcall Dbxdatagenerator::initialization()
+    @Dbxdbmetadata@Finalization$qqrv @644 ; __fastcall Dbxdbmetadata::Finalization()
+    @Dbxdbmetadata@TDBXDBMetaData@ @649 ; Dbxdbmetadata::TDBXDBMetaData::
+    @Dbxdbmetadata@TDBXDBMetaData@AddClientDataSetFields$qqrp32Datasnap@Dbclient@TClientDataSetp42Data@Dbxmetadataprovider@TDBXMetaDataTable @646 ; __fastcall Dbxdbmetadata::TDBXDBMetaData::AddClientDataSetFields(Datasnap::Dbclient::TClientDataSet *, Data::Dbxmetadataprovider::TDBXMetaDataTable *)
+    @Dbxdbmetadata@TDBXDBMetaData@AddParams$qqrp15Data@Db@TParamsp42Data@Dbxmetadataprovider@TDBXMetaDataTable @645 ; __fastcall Dbxdbmetadata::TDBXDBMetaData::AddParams(Data::Db::TParams *, Data::Dbxmetadataprovider::TDBXMetaDataTable *)
+    @Dbxdbmetadata@TDBXDBMetaData@ToFieldType$qqri @647 ; __fastcall Dbxdbmetadata::TDBXDBMetaData::ToFieldType(int)
+    @Dbxdbmetadata@initialization$qqrv @643 ; __fastcall Dbxdbmetadata::initialization()
+    @Dbxtest@Finalization$qqrv     @398 ; __fastcall Dbxtest::Finalization()
+    @Dbxtest@TDBXTestCase@         @437 ; Dbxtest::TDBXTestCase::
+    @Dbxtest@TDBXTestCase@$bctr$qqr20System@UnicodeString @417 ; __fastcall Dbxtest::TDBXTestCase::TDBXTestCase(System::UnicodeString)
+    @Dbxtest@TDBXTestCase@$bdtr$qqrv @416 ; __fastcall Dbxtest::TDBXTestCase::~TDBXTestCase()
+    @Dbxtest@TDBXTestCase@CloseDbxConnection$qqrv @403 ; __fastcall Dbxtest::TDBXTestCase::CloseDbxConnection()
+    @Dbxtest@TDBXTestCase@CommitFreeAndNilMetaDataTransaction$qqrrp14System@TObject @418 ; __fastcall Dbxtest::TDBXTestCase::CommitFreeAndNilMetaDataTransaction(System::TObject *&)
+    @Dbxtest@TDBXTestCase@DropTable$qqr20System@UnicodeString @415 ; __fastcall Dbxtest::TDBXTestCase::DropTable(System::UnicodeString)
+    @Dbxtest@TDBXTestCase@ExecuteStatement$qqrx20System@UnicodeString @414 ; __fastcall Dbxtest::TDBXTestCase::ExecuteStatement(const System::UnicodeString)
+    @Dbxtest@TDBXTestCase@ExecuteStatementIgnoreError$qqrx20System@UnicodeString @413 ; __fastcall Dbxtest::TDBXTestCase::ExecuteStatementIgnoreError(const System::UnicodeString)
+    @Dbxtest@TDBXTestCase@FreeOnTearDown$qqrp14System@TObject @412 ; __fastcall Dbxtest::TDBXTestCase::FreeOnTearDown(System::TObject *)
+    @Dbxtest@TDBXTestCase@FreeTearDownList$qqrv @411 ; __fastcall Dbxtest::TDBXTestCase::FreeTearDownList()
+    @Dbxtest@TDBXTestCase@GetDbxConnection$qqrv @408 ; __fastcall Dbxtest::TDBXTestCase::GetDbxConnection()
+    @Dbxtest@TDBXTestCase@GetHostId$qqrv @407 ; __fastcall Dbxtest::TDBXTestCase::GetHostId()
+    @Dbxtest@TDBXTestCase@GetIsCreateTableInMultiStatementTransactionSupported$qqrv @406 ; __fastcall Dbxtest::TDBXTestCase::GetIsCreateTableInMultiStatementTransactionSupported()
+    @Dbxtest@TDBXTestCase@GetMetaDataProvider$qqrv @410 ; __fastcall Dbxtest::TDBXTestCase::GetMetaDataProvider()
+    @Dbxtest@TDBXTestCase@GetName$qqrv @409 ; __fastcall Dbxtest::TDBXTestCase::GetName()
+    @Dbxtest@TDBXTestCase@IsExtendedMetaDataBeingUsed$qqr20System@UnicodeString @405 ; __fastcall Dbxtest::TDBXTestCase::IsExtendedMetaDataBeingUsed(System::UnicodeString)
+    @Dbxtest@TDBXTestCase@IsTypeSupported$qqrii @399 ; __fastcall Dbxtest::TDBXTestCase::IsTypeSupported(int, int)
+    @Dbxtest@TDBXTestCase@RollbackMetaDataTransaction$qqrrp14System@TObject @404 ; __fastcall Dbxtest::TDBXTestCase::RollbackMetaDataTransaction(System::TObject *&)
+    @Dbxtest@TDBXTestCase@SetName$qqr20System@UnicodeString @402 ; __fastcall Dbxtest::TDBXTestCase::SetName(System::UnicodeString)
+    @Dbxtest@TDBXTestCase@StartMetaDataTransaction$qqrv @401 ; __fastcall Dbxtest::TDBXTestCase::StartMetaDataTransaction()
+    @Dbxtest@TDBXTestCase@TearDown$qqrv @400 ; __fastcall Dbxtest::TDBXTestCase::TearDown()
+    @Dbxtest@initialization$qqrv   @397 ; __fastcall Dbxtest::initialization()
+    @Dbxtestresstrs@Finalization$qqrv @641 ; __fastcall Dbxtestresstrs::Finalization()
+    @Dbxtestresstrs@_SUnexpectedMetaDataType @642 ; Dbxtestresstrs::_SUnexpectedMetaDataType
+    @Dbxtestresstrs@initialization$qqrv @640 ; __fastcall Dbxtestresstrs::initialization()
+    @Dunitconsts@Finalization$qqrv @2   ; __fastcall Dunitconsts::Finalization()
+    @Dunitconsts@_sAllowLeakArrayValues @24  ; Dunitconsts::_sAllowLeakArrayValues
+    @Dunitconsts@_sDUnitTesting    @6   ; Dunitconsts::_sDUnitTesting
+    @Dunitconsts@_sDecodeTime      @5   ; Dunitconsts::_sDecodeTime
+    @Dunitconsts@_sEmptyTest       @26  ; Dunitconsts::_sEmptyTest
+    @Dunitconsts@_sErrorsCount     @7   ; Dunitconsts::_sErrorsCount
+    @Dunitconsts@_sExceptionNothig @25  ; Dunitconsts::_sExceptionNothig
+    @Dunitconsts@_sExceptionUnexpected @22  ; Dunitconsts::_sExceptionUnexpected
+    @Dunitconsts@_sExpectedException @27  ; Dunitconsts::_sExpectedException
+    @Dunitconsts@_sExportFunction  @19  ; Dunitconsts::_sExportFunction
+    @Dunitconsts@_sFailedSetup     @32  ; Dunitconsts::_sFailedSetup
+    @Dunitconsts@_sFailedTearDown  @31  ; Dunitconsts::_sFailedTearDown
+    @Dunitconsts@_sFailedTestDetails @15  ; Dunitconsts::_sFailedTestDetails
+    @Dunitconsts@_sFailureCount    @8   ; Dunitconsts::_sFailureCount
+    @Dunitconsts@_sIdenticalContent @28  ; Dunitconsts::_sIdenticalContent
+    @Dunitconsts@_sLoadModule      @20  ; Dunitconsts::_sLoadModule
+    @Dunitconsts@_sMemoryChanged   @34  ; Dunitconsts::_sMemoryChanged
+    @Dunitconsts@_sMethodNotFound  @21  ; Dunitconsts::_sMethodNotFound
+    @Dunitconsts@_sNilListener     @33  ; Dunitconsts::_sNilListener
+    @Dunitconsts@_sNoChecksExecuted @23  ; Dunitconsts::_sNoChecksExecuted
+    @Dunitconsts@_sNonNilTestResult @30  ; Dunitconsts::_sNonNilTestResult
+    @Dunitconsts@_sPopupNext       @37  ; Dunitconsts::_sPopupNext
+    @Dunitconsts@_sPopupPrevious   @39  ; Dunitconsts::_sPopupPrevious
+    @Dunitconsts@_sPopupRun        @38  ; Dunitconsts::_sPopupRun
+    @Dunitconsts@_sPopupTitle      @40  ; Dunitconsts::_sPopupTitle
+    @Dunitconsts@_sPressReturn     @4   ; Dunitconsts::_sPressReturn
+    @Dunitconsts@_sPrintError      @17  ; Dunitconsts::_sPrintError
+    @Dunitconsts@_sPrintErrors     @16  ; Dunitconsts::_sPrintErrors
+    @Dunitconsts@_sPrintFailure    @14  ; Dunitconsts::_sPrintFailure
+    @Dunitconsts@_sPrintFailures   @13  ; Dunitconsts::_sPrintFailures
+    @Dunitconsts@_sReturnInterface @18  ; Dunitconsts::_sReturnInterface
+    @Dunitconsts@_sRunCount        @9   ; Dunitconsts::_sRunCount
+    @Dunitconsts@_sSetupDecorator  @36  ; Dunitconsts::_sSetupDecorator
+    @Dunitconsts@_sTestMemory      @35  ; Dunitconsts::_sTestMemory
+    @Dunitconsts@_sTestResults     @10  ; Dunitconsts::_sTestResults
+    @Dunitconsts@_sTestResultsFailures @11  ; Dunitconsts::_sTestResultsFailures
+    @Dunitconsts@_sTestResultsOk   @12  ; Dunitconsts::_sTestResultsOk
+    @Dunitconsts@_sTests           @29  ; Dunitconsts::_sTests
+    @Dunitconsts@_sTitle           @41  ; Dunitconsts::_sTitle
+    @Dunitconsts@_sUnsupportedTypeInfo @3   ; Dunitconsts::_sUnsupportedTypeInfo
+    @Dunitconsts@initialization$qqrv @1   ; __fastcall Dunitconsts::initialization()
+    @GetPackageInfoTable           @656 ; GetPackageInfoTable
+    @System@Generics@Collections@%TArrayManager__1$p14System@TObject%@ @427 ; System::Generics::Collections::TArrayManager__1<System::TObject *>::
+    @System@Generics@Collections@%TEnumerable__1$p14System@TObject%@ @432 ; System::Generics::Collections::TEnumerable__1<System::TObject *>::
+    @System@Generics@Collections@%TEnumerable__1$p14System@TObject%@$bdtr$qqrv @395 ; __fastcall System::Generics::Collections::TEnumerable__1<System::TObject *>::~TEnumerable__1<System::TObject *>()
+    @System@Generics@Collections@%TEnumerable__1$p14System@TObject%@GetEnumerator$qqrv @394 ; __fastcall System::Generics::Collections::TEnumerable__1<System::TObject *>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$p14System@TObject%@ToArray$qqrv @393 ; __fastcall System::Generics::Collections::TEnumerable__1<System::TObject *>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$p14System@TObject%@ToArrayImpl$qqri @396 ; __fastcall System::Generics::Collections::TEnumerable__1<System::TObject *>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerator__1$p14System@TObject%@ @434 ; System::Generics::Collections::TEnumerator__1<System::TObject *>::
+    @System@Generics@Collections@%TEnumerator__1$p14System@TObject%@MoveNext$qqrv @392 ; __fastcall System::Generics::Collections::TEnumerator__1<System::TObject *>::MoveNext()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@ @420 ; System::Generics::Collections::TList__1<System::TObject *>::
+    @System@Generics@Collections@%TList__1$p14System@TObject%@$bctr$qqrv @380 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::TList__1<System::TObject *>()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@$bctr$qqrx84System@%DelphiInterface$57System@Generics@Defaults@%IComparer__1$p14System@TObject%% @379 ; System::Generics::Collections::TList__1<System::TObject *>::TList__1<System::TObject *>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14System@TObject%@$bctr$qqrxp62System@Generics@Collections@%TEnumerable__1$p14System@TObject% @378 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::TList__1<System::TObject *>(System::Generics::Collections::TEnumerable__1<System::TObject *> * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@$bdtr$qqrv @377 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::~TList__1<System::TObject *>()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@%TEnumerator$%@ @422 ; System::Generics::Collections::TList__1<System::TObject *>::TEnumerator<>::
+    @System@Generics@Collections@%TList__1$p14System@TObject%@%TEnumerator$%@$bctr$qqrxp56System@Generics@Collections@%TList__1$p14System@TObject% @337 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::TEnumerator<>::TEnumerator<>(System::Generics::Collections::TList__1<System::TObject *> * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@%TEnumerator$%@DoGetCurrent$qqrv @339 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::TEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@%TEnumerator$%@DoMoveNext$qqrv @338 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::TEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@%TEnumerator$%@GetCurrent$qqrv @340 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::TEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@%TEnumerator$%@MoveNext$qqrv @336 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::TEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Add$qqrxp14System@TObject @374 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Add(System::TObject * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@AddRange$qqrpxp14System@TObjectxi @373 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::AddRange(System::TObject * const *, const int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@AddRange$qqrx68System@%DelphiInterface$41System@%IEnumerable__1$p14System@TObject%% @372 ; System::Generics::Collections::TList__1<System::TObject *>::AddRange(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14System@TObject%@AddRange$qqrxp62System@Generics@Collections@%TEnumerable__1$p14System@TObject% @371 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::AddRange(System::Generics::Collections::TEnumerable__1<System::TObject *> * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@BinarySearch$qqrxp14System@TObjectri @345 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::BinarySearch(System::TObject * const, int&)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@BinarySearch$qqrxp14System@TObjectrix84System@%DelphiInterface$57System@Generics@Defaults@%IComparer__1$p14System@TObject%% @344 ; System::Generics::Collections::TList__1<System::TObject *>::BinarySearch(System::TObject * const, int&, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Clear$qqrv @354 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Clear()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Contains$qqrxp14System@TObject @352 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Contains(System::TObject * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Delete$qqri @362 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Delete(int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@DeleteRange$qqrii @361 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::DeleteRange(int, int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@DoDelete$qqri51System@Generics@Collections@TCollectionNotification @384 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::DoDelete(int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@DoGetEnumerator$qqrv @382 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::DoGetEnumerator()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Error$qqrp20System@TResStringReci @375 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Error(System::TResStringRec *, int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Error$qqrx20System@UnicodeStringi @376 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Error(const System::UnicodeString, int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Exchange$qqrii @358 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Exchange(int, int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Expand$qqrv @353 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Expand()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Extract$qqrxp14System@TObject @360 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Extract(System::TObject * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@ExtractItem$qqrxp14System@TObject23System@Types@TDirection @359 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::ExtractItem(System::TObject * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@First$qqrv @356 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::First()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@GetCapacity$qqrv @391 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::GetCapacity()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@GetEnumerator$qqrv @341 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::GetEnumerator()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@GetItem$qqri @388 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::GetItem(int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Grow$qqri @386 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Grow(int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@GrowCheck$qqri @385 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::GrowCheck(int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@IndexOf$qqrxp14System@TObject @351 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::IndexOf(System::TObject * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@IndexOfItem$qqrxp14System@TObject23System@Types@TDirection @350 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::IndexOfItem(System::TObject * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Insert$qqrixp14System@TObject @370 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Insert(int, System::TObject * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@InsertRange$qqripxp14System@TObjectxi @369 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::InsertRange(int, System::TObject * const *, const int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@InsertRange$qqrix68System@%DelphiInterface$41System@%IEnumerable__1$p14System@TObject%% @368 ; System::Generics::Collections::TList__1<System::TObject *>::InsertRange(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14System@TObject%@InsertRange$qqrixp62System@Generics@Collections@%TEnumerable__1$p14System@TObject% @367 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::InsertRange(int, System::Generics::Collections::TEnumerable__1<System::TObject *> * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@ItemValue$qqrxp14System@TObject @383 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::ItemValue(System::TObject * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Last$qqrv @355 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Last()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@LastIndexOf$qqrxp14System@TObject @349 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::LastIndexOf(System::TObject * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Move$qqrii @357 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Move(int, int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Notify$qqrxp14System@TObject51System@Generics@Collections@TCollectionNotification @381 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Notify(System::TObject * const, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Pack$qqrv @366 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Pack()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Pack$qqrx97System@%DelphiInterface$70System@Generics@Collections@%TList__1$p14System@TObject%@%TEmptyFunc$%% @365 ; System::Generics::Collections::TList__1<System::TObject *>::Pack(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Remove$qqrxp14System@TObject @364 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Remove(System::TObject * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@RemoveItem$qqrxp14System@TObject23System@Types@TDirection @363 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::RemoveItem(System::TObject * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Reverse$qqrv @348 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Reverse()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@SetCapacity$qqri @390 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::SetCapacity(int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@SetCount$qqri @389 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::SetCount(int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@SetItem$qqrixp14System@TObject @387 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::SetItem(int, System::TObject * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Sort$qqrv @347 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Sort()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Sort$qqrx84System@%DelphiInterface$57System@Generics@Defaults@%IComparer__1$p14System@TObject%% @346 ; System::Generics::Collections::TList__1<System::TObject *>::Sort(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14System@TObject%@ToArray$qqrv @342 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::ToArray()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@TrimExcess$qqrv @343 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::TrimExcess()
+    @Testframework@CallerAddr$qqrv @243 ; __fastcall Testframework::CallerAddr()
+    @Testframework@ClearRegistry$qqrv @45  ; __fastcall Testframework::ClearRegistry()
+    @Testframework@EBreakingTestFailure@ @274 ; Testframework::EBreakingTestFailure::
+    @Testframework@EBreakingTestFailure@$bctr$qqr20System@UnicodeString @58  ; __fastcall Testframework::EBreakingTestFailure::EBreakingTestFailure(System::UnicodeString)
+    @Testframework@EBreakingTestFailure@$bctr$qqrv @59  ; __fastcall Testframework::EBreakingTestFailure::EBreakingTestFailure()
+    @Testframework@EDunitException@ @286 ; Testframework::EDunitException::
+    @Testframework@EPostTestFailure@ @280 ; Testframework::EPostTestFailure::
+    @Testframework@EStopTestsFailure@ @282 ; Testframework::EStopTestsFailure::
+    @Testframework@ETestError@     @284 ; Testframework::ETestError::
+    @Testframework@ETestFailure@   @288 ; Testframework::ETestFailure::
+    @Testframework@ETestFailure@$bctr$qqr20System@UnicodeString @60  ; __fastcall Testframework::ETestFailure::ETestFailure(System::UnicodeString)
+    @Testframework@ETestFailure@$bctr$qqrv @61  ; __fastcall Testframework::ETestFailure::ETestFailure()
+    @Testframework@Finalization$qqrv @43  ; __fastcall Testframework::Finalization()
+    @Testframework@FirstByteDiff$qqrpvt1uiruct4 @236 ; __fastcall Testframework::FirstByteDiff(void *, void *, unsigned int, unsigned char&, unsigned char&)
+    @Testframework@GetDUnitRegistryKey$qqrv @238 ; __fastcall Testframework::GetDUnitRegistryKey()
+    @Testframework@IsDecorator$qqr46System@%DelphiInterface$19Testframework@ITest% @239 ; Testframework::IsDecorator(System::DelphiInterface<{583}...
+    @Testframework@IsTestMethod$qqr46System@%DelphiInterface$19Testframework@ITest% @240 ; Testframework::IsTestMethod(System::DelphiInterface<{583}...
+    @Testframework@MemLeakMonitor$qqrv @245 ; __fastcall Testframework::MemLeakMonitor()
+    @Testframework@PointerToAddressInfo$qqrpv @241 ; __fastcall Testframework::PointerToAddressInfo(void *)
+    @Testframework@PointerToLocationInfo$qqrpv @242 ; __fastcall Testframework::PointerToLocationInfo(void *)
+    @Testframework@PtrToStr$qqrpv  @244 ; __fastcall Testframework::PtrToStr(void *)
+    @Testframework@RegisterTest$qqr20System@UnicodeString46System@%DelphiInterface$19Testframework@ITest% @52  ; Testframework::RegisterTest(System::UnicodeString, System::DelphiInterface<{583}...
+    @Testframework@RegisterTest$qqr46System@%DelphiInterface$19Testframework@ITest% @51  ; Testframework::RegisterTest(System::DelphiInterface<{583}...
+    @Testframework@RegisterTests$qqr20System@UnicodeStringpx46System@%DelphiInterface$19Testframework@ITest%xi @50  ; Testframework::RegisterTests(System::UnicodeString, const System::DelphiInterface<{583}...
+    @Testframework@RegisterTests$qqrpx46System@%DelphiInterface$19Testframework@ITest%xi @49  ; Testframework::RegisterTests(const System::DelphiInterface<{583}...
+    @Testframework@RegisteredTests$qqrv @48  ; __fastcall Testframework::RegisteredTests()
+    @Testframework@RunCountAttribute@ @294 ; Testframework::RunCountAttribute::
+    @Testframework@RunCountAttribute@$bctr$qqrj @44  ; __fastcall Testframework::RunCountAttribute::RunCountAttribute(__int64)
+    @Testframework@RunRegisteredTests$qqrpx54System@%DelphiInterface$27Testframework@ITestListener%xi @46  ; Testframework::RunRegisteredTests(const System::DelphiInterface<{583}...
+    @Testframework@RunTest$qqr46System@%DelphiInterface$19Testframework@ITest%px54System@%DelphiInterface$27Testframework@ITestListener%xi @47  ; Testframework::RunTest(System::DelphiInterface<{583}...
+    @Testframework@SetDUnitRegistryKey$qqrx20System@UnicodeString @237 ; __fastcall Testframework::SetDUnitRegistryKey(const System::UnicodeString)
+    @Testframework@TAbstractTest@  @262 ; Testframework::TAbstractTest::
+    @Testframework@TAbstractTest@$bctr$qqr20System@UnicodeString @204 ; __fastcall Testframework::TAbstractTest::TAbstractTest(System::UnicodeString)
+    @Testframework@TAbstractTest@$bdtr$qqrv @203 ; __fastcall Testframework::TAbstractTest::~TAbstractTest()
+    @Testframework@TAbstractTest@BoolToStr$qqro @124 ; __fastcall Testframework::TAbstractTest::BoolToStr(bool)
+    @Testframework@TAbstractTest@Check$qqro20System@UnicodeString @176 ; __fastcall Testframework::TAbstractTest::Check(bool, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEquals$qqr20System@UnicodeStringt1t1 @160 ; __fastcall Testframework::TAbstractTest::CheckEquals(System::UnicodeString, System::UnicodeString, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEquals$qqr23System@%DynamicArray$b%t120System@UnicodeString @118 ; Testframework::TAbstractTest::CheckEquals(System::DynamicArray<{583}...
+    @Testframework@TAbstractTest@CheckEquals$qqr31System@%AnsiStringT$us$i65535$%t120System@UnicodeString @157 ; __fastcall Testframework::TAbstractTest::CheckEquals(System::AnsiStringT<65535>, System::AnsiStringT<65535>, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEquals$qqrgg20System@UnicodeString @164 ; __fastcall Testframework::TAbstractTest::CheckEquals(long double, long double, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEquals$qqrggg20System@UnicodeString @165 ; __fastcall Testframework::TAbstractTest::CheckEquals(long double, long double, long double, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEquals$qqrii20System@UnicodeString @147 ; __fastcall Testframework::TAbstractTest::CheckEquals(int, int, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEquals$qqrjj20System@UnicodeString @145 ; __fastcall Testframework::TAbstractTest::CheckEquals(__int64, __int64, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEquals$qqroo20System@UnicodeString @139 ; __fastcall Testframework::TAbstractTest::CheckEquals(bool, bool, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEquals$qqrp17System@TMetaClasst120System@UnicodeString @119 ; __fastcall Testframework::TAbstractTest::CheckEquals(System::TMetaClass *, System::TMetaClass *, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEquals$qqrr29System@%SmallString$uc$i255$%t120System@UnicodeString @159 ; Testframework::TAbstractTest::CheckEquals(System::SmallString<{583}...
+    @Testframework@TAbstractTest@CheckEquals$qqruiui20System@UnicodeString @146 ; __fastcall Testframework::TAbstractTest::CheckEquals(unsigned int, unsigned int, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEquals$qqrujuj20System@UnicodeString @144 ; __fastcall Testframework::TAbstractTest::CheckEquals(unsigned __int64, unsigned __int64, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEqualsBin$qqruiui20System@UnicodeStringi @137 ; __fastcall Testframework::TAbstractTest::CheckEqualsBin(unsigned int, unsigned int, System::UnicodeString, int)
+    @Testframework@TAbstractTest@CheckEqualsHex$qqruiui20System@UnicodeStringi @135 ; __fastcall Testframework::TAbstractTest::CheckEqualsHex(unsigned int, unsigned int, System::UnicodeString, int)
+    @Testframework@TAbstractTest@CheckEqualsMem$qqrpvt1ui20System@UnicodeString @154 ; __fastcall Testframework::TAbstractTest::CheckEqualsMem(void *, void *, unsigned int, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEqualsString$qqr20System@UnicodeStringt1t1 @158 ; __fastcall Testframework::TAbstractTest::CheckEqualsString(System::UnicodeString, System::UnicodeString, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEqualsWideString$qqr17System@WideStringt120System@UnicodeString @156 ; __fastcall Testframework::TAbstractTest::CheckEqualsWideString(System::WideString, System::WideString, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckException$qqrynpqqrv$vp17System@TMetaClass20System@UnicodeString @120 ; __fastcall Testframework::TAbstractTest::CheckException(void __fastcall __closure(*)(), System::TMetaClass *, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckFalse$qqro20System@UnicodeString @174 ; __fastcall Testframework::TAbstractTest::CheckFalse(bool, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckInherits$qqrp17System@TMetaClasst120System@UnicodeString @117 ; __fastcall Testframework::TAbstractTest::CheckInherits(System::TMetaClass *, System::TMetaClass *, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckIs$qqrp14System@TObjectp17System@TMetaClass20System@UnicodeString @116 ; __fastcall Testframework::TAbstractTest::CheckIs(System::TObject *, System::TMetaClass *, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckMethodIsNotEmpty$qqrpv @121 ; __fastcall Testframework::TAbstractTest::CheckMethodIsNotEmpty(void *)
+    @Testframework@TAbstractTest@CheckNotEquals$qqr20System@UnicodeStringt1t1 @153 ; __fastcall Testframework::TAbstractTest::CheckNotEquals(System::UnicodeString, System::UnicodeString, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckNotEquals$qqr23System@%DynamicArray$b%t120System@UnicodeString @93  ; Testframework::TAbstractTest::CheckNotEquals(System::DynamicArray<{583}...
+    @Testframework@TAbstractTest@CheckNotEquals$qqr31System@%AnsiStringT$us$i65535$%t120System@UnicodeString @150 ; __fastcall Testframework::TAbstractTest::CheckNotEquals(System::AnsiStringT<65535>, System::AnsiStringT<65535>, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckNotEquals$qqrggg20System@UnicodeString @140 ; __fastcall Testframework::TAbstractTest::CheckNotEquals(long double, long double, long double, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckNotEquals$qqrii20System@UnicodeString @143 ; __fastcall Testframework::TAbstractTest::CheckNotEquals(int, int, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckNotEquals$qqrjj20System@UnicodeString @141 ; __fastcall Testframework::TAbstractTest::CheckNotEquals(__int64, __int64, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckNotEquals$qqroo20System@UnicodeString @138 ; __fastcall Testframework::TAbstractTest::CheckNotEquals(bool, bool, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckNotEquals$qqrr29System@%SmallString$uc$i255$%t120System@UnicodeString @152 ; Testframework::TAbstractTest::CheckNotEquals(System::SmallString<{583}...
+    @Testframework@TAbstractTest@CheckNotEquals$qqruiui20System@UnicodeString @142 ; __fastcall Testframework::TAbstractTest::CheckNotEquals(unsigned int, unsigned int, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckNotEqualsBin$qqruiui20System@UnicodeStringi @136 ; __fastcall Testframework::TAbstractTest::CheckNotEqualsBin(unsigned int, unsigned int, System::UnicodeString, int)
+    @Testframework@TAbstractTest@CheckNotEqualsHex$qqruiui20System@UnicodeStringi @134 ; __fastcall Testframework::TAbstractTest::CheckNotEqualsHex(unsigned int, unsigned int, System::UnicodeString, int)
+    @Testframework@TAbstractTest@CheckNotEqualsMem$qqrpvt1ui20System@UnicodeString @148 ; __fastcall Testframework::TAbstractTest::CheckNotEqualsMem(void *, void *, unsigned int, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckNotEqualsString$qqr20System@UnicodeStringt1t1 @151 ; __fastcall Testframework::TAbstractTest::CheckNotEqualsString(System::UnicodeString, System::UnicodeString, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckNotEqualsWideString$qqrx17System@WideStringt120System@UnicodeString @149 ; __fastcall Testframework::TAbstractTest::CheckNotEqualsWideString(const System::WideString, const System::WideString, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckNotNull$qqr44System@%DelphiInterface$17System@IInterface%20System@UnicodeString @163 ; Testframework::TAbstractTest::CheckNotNull(System::DelphiInterface<{583}...
+    @Testframework@TAbstractTest@CheckNotNull$qqrp14System@TObject20System@UnicodeString @132 ; __fastcall Testframework::TAbstractTest::CheckNotNull(System::TObject *, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckNull$qqr44System@%DelphiInterface$17System@IInterface%20System@UnicodeString @162 ; Testframework::TAbstractTest::CheckNull(System::DelphiInterface<{583}...
+    @Testframework@TAbstractTest@CheckNull$qqrp14System@TObject20System@UnicodeString @131 ; __fastcall Testframework::TAbstractTest::CheckNull(System::TObject *, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckSame$qqr44System@%DelphiInterface$17System@IInterface%t120System@UnicodeString @161 ; Testframework::TAbstractTest::CheckSame(System::DelphiInterface<{583}...
+    @Testframework@TAbstractTest@CheckSame$qqrp14System@TObjectt120System@UnicodeString @133 ; __fastcall Testframework::TAbstractTest::CheckSame(System::TObject *, System::TObject *, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckTrue$qqro20System@UnicodeString @175 ; __fastcall Testframework::TAbstractTest::CheckTrue(bool, System::UnicodeString)
+    @Testframework@TAbstractTest@CompareFloatRelative$qqrgg @115 ; __fastcall Testframework::TAbstractTest::CompareFloatRelative(long double, long double)
+    @Testframework@TAbstractTest@CompareFloatRelative$qqrggg @114 ; __fastcall Testframework::TAbstractTest::CompareFloatRelative(long double, long double, long double)
+    @Testframework@TAbstractTest@CountEnabledTestCases$qqrv @200 ; __fastcall Testframework::TAbstractTest::CountEnabledTestCases()
+    @Testframework@TAbstractTest@CountTestCases$qqrv @199 ; __fastcall Testframework::TAbstractTest::CountTestCases()
+    @Testframework@TAbstractTest@ElapsedTestTime$qqrv @181 ; __fastcall Testframework::TAbstractTest::ElapsedTestTime()
+    @Testframework@TAbstractTest@EqualsErrorMessage$qqr17System@WideStringt120System@UnicodeString @128 ; __fastcall Testframework::TAbstractTest::EqualsErrorMessage(System::WideString, System::WideString, System::UnicodeString)
+    @Testframework@TAbstractTest@EqualsErrorMessage$qqr20System@UnicodeStringt1t1 @127 ; __fastcall Testframework::TAbstractTest::EqualsErrorMessage(System::UnicodeString, System::UnicodeString, System::UnicodeString)
+    @Testframework@TAbstractTest@Fail$qqr20System@UnicodeStringpv @173 ; __fastcall Testframework::TAbstractTest::Fail(System::UnicodeString, void *)
+    @Testframework@TAbstractTest@FailEquals$qqr17System@WideStringt120System@UnicodeStringpv @169 ; __fastcall Testframework::TAbstractTest::FailEquals(System::WideString, System::WideString, System::UnicodeString, void *)
+    @Testframework@TAbstractTest@FailEquals$qqr20System@UnicodeStringt1t1pv @168 ; __fastcall Testframework::TAbstractTest::FailEquals(System::UnicodeString, System::UnicodeString, System::UnicodeString, void *)
+    @Testframework@TAbstractTest@FailNotEquals$qqr17System@WideStringt120System@UnicodeStringpv @171 ; __fastcall Testframework::TAbstractTest::FailNotEquals(System::WideString, System::WideString, System::UnicodeString, void *)
+    @Testframework@TAbstractTest@FailNotEquals$qqr20System@UnicodeStringt1t1pv @170 ; __fastcall Testframework::TAbstractTest::FailNotEquals(System::UnicodeString, System::UnicodeString, System::UnicodeString, void *)
+    @Testframework@TAbstractTest@FailNotSame$qqr17System@WideStringt120System@UnicodeStringpv @167 ; __fastcall Testframework::TAbstractTest::FailNotSame(System::WideString, System::WideString, System::UnicodeString, void *)
+    @Testframework@TAbstractTest@FailNotSame$qqr20System@UnicodeStringt1t1pv @166 ; __fastcall Testframework::TAbstractTest::FailNotSame(System::UnicodeString, System::UnicodeString, System::UnicodeString, void *)
+    @Testframework@TAbstractTest@GetAllowedLeak$qqrv @99  ; __fastcall Testframework::TAbstractTest::GetAllowedLeak()
+    @Testframework@TAbstractTest@GetAllowedLeaksIterator$qqrv @100 ; __fastcall Testframework::TAbstractTest::GetAllowedLeaksIterator()
+    @Testframework@TAbstractTest@GetAllowedMemoryLeakSize$qqrv @105 ; __fastcall Testframework::TAbstractTest::GetAllowedMemoryLeakSize()
+    @Testframework@TAbstractTest@GetEnabled$qqrv @198 ; __fastcall Testframework::TAbstractTest::GetEnabled()
+    @Testframework@TAbstractTest@GetFailsOnMemoryLeak$qqrv @109 ; __fastcall Testframework::TAbstractTest::GetFailsOnMemoryLeak()
+    @Testframework@TAbstractTest@GetFailsOnMemoryRecovery$qqrv @103 ; __fastcall Testframework::TAbstractTest::GetFailsOnMemoryRecovery()
+    @Testframework@TAbstractTest@GetFailsOnNoChecksExecuted$qqrv @111 ; __fastcall Testframework::TAbstractTest::GetFailsOnNoChecksExecuted()
+    @Testframework@TAbstractTest@GetGUIObject$qqrv @113 ; __fastcall Testframework::TAbstractTest::GetGUIObject()
+    @Testframework@TAbstractTest@GetIgnoreSetUpTearDownLeaks$qqrv @98  ; __fastcall Testframework::TAbstractTest::GetIgnoreSetUpTearDownLeaks()
+    @Testframework@TAbstractTest@GetMemDiffStr$qqrpvt1ui20System@UnicodeString @155 ; __fastcall Testframework::TAbstractTest::GetMemDiffStr(void *, void *, unsigned int, System::UnicodeString)
+    @Testframework@TAbstractTest@GetMemoryLeakIgnoredInSetupTearDown$qqrv @96  ; __fastcall Testframework::TAbstractTest::GetMemoryLeakIgnoredInSetupTearDown()
+    @Testframework@TAbstractTest@GetName$qqrv @197 ; __fastcall Testframework::TAbstractTest::GetName()
+    @Testframework@TAbstractTest@GetRunCount$qqrv @196 ; __fastcall Testframework::TAbstractTest::GetRunCount()
+    @Testframework@TAbstractTest@GetStartTime$qqrv @188 ; __fastcall Testframework::TAbstractTest::GetStartTime()
+    @Testframework@TAbstractTest@GetStatus$qqrv @179 ; __fastcall Testframework::TAbstractTest::GetStatus()
+    @Testframework@TAbstractTest@GetStopTime$qqrv @185 ; __fastcall Testframework::TAbstractTest::GetStopTime()
+    @Testframework@TAbstractTest@GetTestMethodInvoked$qqrv @107 ; __fastcall Testframework::TAbstractTest::GetTestMethodInvoked()
+    @Testframework@TAbstractTest@Invoke$qqrynpqqrv$v @202 ; __fastcall Testframework::TAbstractTest::Invoke(void __fastcall __closure(*)())
+    @Testframework@TAbstractTest@LoadConfiguration$qqrx20System@UnicodeStringxoxo @195 ; __fastcall Testframework::TAbstractTest::LoadConfiguration(const System::UnicodeString, const bool, const bool)
+    @Testframework@TAbstractTest@LoadConfiguration$qqrxp30System@Inifiles@TCustomIniFilex20System@UnicodeString @194 ; __fastcall Testframework::TAbstractTest::LoadConfiguration(System::Inifiles::TCustomIniFile * const, const System::UnicodeString)
+    @Testframework@TAbstractTest@NotEqualsErrorMessage$qqr17System@WideStringt120System@UnicodeString @130 ; __fastcall Testframework::TAbstractTest::NotEqualsErrorMessage(System::WideString, System::WideString, System::UnicodeString)
+    @Testframework@TAbstractTest@NotEqualsErrorMessage$qqr20System@UnicodeStringt1t1 @129 ; __fastcall Testframework::TAbstractTest::NotEqualsErrorMessage(System::UnicodeString, System::UnicodeString, System::UnicodeString)
+    @Testframework@TAbstractTest@NotSameErrorMessage$qqr17System@WideStringt120System@UnicodeString @126 ; __fastcall Testframework::TAbstractTest::NotSameErrorMessage(System::WideString, System::WideString, System::UnicodeString)
+    @Testframework@TAbstractTest@NotSameErrorMessage$qqr20System@UnicodeStringt1t1 @125 ; __fastcall Testframework::TAbstractTest::NotSameErrorMessage(System::UnicodeString, System::UnicodeString, System::UnicodeString)
+    @Testframework@TAbstractTest@Run$qqrp25Testframework@TTestResult @201 ; __fastcall Testframework::TAbstractTest::Run(Testframework::TTestResult *)
+    @Testframework@TAbstractTest@Run$qqrv @191 ; __fastcall Testframework::TAbstractTest::Run()
+    @Testframework@TAbstractTest@RunTest$qqrp25Testframework@TTestResult @182 ; __fastcall Testframework::TAbstractTest::RunTest(Testframework::TTestResult *)
+    @Testframework@TAbstractTest@RunWithFixture$qqrp25Testframework@TTestResult @177 ; __fastcall Testframework::TAbstractTest::RunWithFixture(Testframework::TTestResult *)
+    @Testframework@TAbstractTest@SaveConfiguration$qqrx20System@UnicodeStringxoxo @193 ; __fastcall Testframework::TAbstractTest::SaveConfiguration(const System::UnicodeString, const bool, const bool)
+    @Testframework@TAbstractTest@SaveConfiguration$qqrxp30System@Inifiles@TCustomIniFilex20System@UnicodeString @192 ; __fastcall Testframework::TAbstractTest::SaveConfiguration(System::Inifiles::TCustomIniFile * const, const System::UnicodeString)
+    @Testframework@TAbstractTest@SetAllowedLeakArray$qqrpixi @101 ; __fastcall Testframework::TAbstractTest::SetAllowedLeakArray(int *, const int)
+    @Testframework@TAbstractTest@SetAllowedMemoryLeakSize$qqrxi @104 ; __fastcall Testframework::TAbstractTest::SetAllowedMemoryLeakSize(const int)
+    @Testframework@TAbstractTest@SetEnabled$qqro @190 ; __fastcall Testframework::TAbstractTest::SetEnabled(bool)
+    @Testframework@TAbstractTest@SetFailsOnMemoryLeak$qqrxo @108 ; __fastcall Testframework::TAbstractTest::SetFailsOnMemoryLeak(const bool)
+    @Testframework@TAbstractTest@SetFailsOnMemoryRecovery$qqrxo @102 ; __fastcall Testframework::TAbstractTest::SetFailsOnMemoryRecovery(const bool)
+    @Testframework@TAbstractTest@SetFailsOnNoChecksExecuted$qqrxo @110 ; __fastcall Testframework::TAbstractTest::SetFailsOnNoChecksExecuted(const bool)
+    @Testframework@TAbstractTest@SetGUIObject$qqrxp14System@TObject @112 ; __fastcall Testframework::TAbstractTest::SetGUIObject(System::TObject * const)
+    @Testframework@TAbstractTest@SetIgnoreSetUpTearDownLeaks$qqrxo @97  ; __fastcall Testframework::TAbstractTest::SetIgnoreSetUpTearDownLeaks(const bool)
+    @Testframework@TAbstractTest@SetMemoryLeakIgnoredInSetupTearDown$qqrxo @95  ; __fastcall Testframework::TAbstractTest::SetMemoryLeakIgnoredInSetupTearDown(const bool)
+    @Testframework@TAbstractTest@SetRunCount$qqri @94  ; __fastcall Testframework::TAbstractTest::SetRunCount(int)
+    @Testframework@TAbstractTest@SetStartTime$qqrj @187 ; __fastcall Testframework::TAbstractTest::SetStartTime(__int64)
+    @Testframework@TAbstractTest@SetStatusListener$qqr56System@%DelphiInterface$29Testframework@IStatusListener% @180 ; Testframework::TAbstractTest::SetStatusListener(System::DelphiInterface<{583}...
+    @Testframework@TAbstractTest@SetStopTime$qqrj @186 ; __fastcall Testframework::TAbstractTest::SetStopTime(__int64)
+    @Testframework@TAbstractTest@SetTestMethodInvoked$qqrxo @106 ; __fastcall Testframework::TAbstractTest::SetTestMethodInvoked(const bool)
+    @Testframework@TAbstractTest@SetUp$qqrv @184 ; __fastcall Testframework::TAbstractTest::SetUp()
+    @Testframework@TAbstractTest@StartExpectingException$qqrp17System@TMetaClass @123 ; __fastcall Testframework::TAbstractTest::StartExpectingException(System::TMetaClass *)
+    @Testframework@TAbstractTest@Status$qqrx20System@UnicodeString @178 ; __fastcall Testframework::TAbstractTest::Status(const System::UnicodeString)
+    @Testframework@TAbstractTest@StopExpectingException$qqr20System@UnicodeString @122 ; __fastcall Testframework::TAbstractTest::StopExpectingException(System::UnicodeString)
+    @Testframework@TAbstractTest@StopTests$qqr20System@UnicodeString @172 ; __fastcall Testframework::TAbstractTest::StopTests(System::UnicodeString)
+    @Testframework@TAbstractTest@TearDown$qqrv @183 ; __fastcall Testframework::TAbstractTest::TearDown()
+    @Testframework@TAbstractTest@Tests$qqrv @189 ; __fastcall Testframework::TAbstractTest::Tests()
+    @Testframework@TGenericTestCase@ @257 ; Testframework::TGenericTestCase::
+    @Testframework@TMethodEnumerator@ @249 ; Testframework::TMethodEnumerator::
+    @Testframework@TMethodEnumerator@$bctr$qqrp17System@TMetaClass @57  ; __fastcall Testframework::TMethodEnumerator::TMethodEnumerator(System::TMetaClass *)
+    @Testframework@TMethodEnumerator@GetMethodCount$qqrv @56  ; __fastcall Testframework::TMethodEnumerator::GetMethodCount()
+    @Testframework@TMethodEnumerator@GetNameOfMethod$qqri @55  ; __fastcall Testframework::TMethodEnumerator::GetNameOfMethod(int)
+    @Testframework@TMethodEnumerator@GetRunCountOfMethod$qqri @54  ; __fastcall Testframework::TMethodEnumerator::GetRunCountOfMethod(int)
+    @Testframework@TStatusToResultAdapter@ @266 ; Testframework::TStatusToResultAdapter::
+    @Testframework@TStatusToResultAdapter@$bctr$qqrp25Testframework@TTestResult @206 ; __fastcall Testframework::TStatusToResultAdapter::TStatusToResultAdapter(Testframework::TTestResult *)
+    @Testframework@TStatusToResultAdapter@Status$qqr46System@%DelphiInterface$19Testframework@ITest%x20System@UnicodeString @205 ; Testframework::TStatusToResultAdapter::Status(System::DelphiInterface<{583}...
+    @Testframework@TTestCase@      @260 ; Testframework::TTestCase::
+    @Testframework@TTestCase@$bctr$qqr20System@UnicodeString @92  ; __fastcall Testframework::TTestCase::TTestCase(System::UnicodeString)
+    @Testframework@TTestCase@$bctr$qqr20System@UnicodeStringj @91  ; __fastcall Testframework::TTestCase::TTestCase(System::UnicodeString, __int64)
+    @Testframework@TTestCase@Invoke$qqrynpqqrv$v @90  ; __fastcall Testframework::TTestCase::Invoke(void __fastcall __closure(*)())
+    @Testframework@TTestCase@Run$qqrp25Testframework@TTestResult @87  ; __fastcall Testframework::TTestCase::Run(Testframework::TTestResult *)
+    @Testframework@TTestCase@RunTest$qqrp25Testframework@TTestResult @88  ; __fastcall Testframework::TTestCase::RunTest(Testframework::TTestResult *)
+    @Testframework@TTestCase@RunWithFixture$qqrp25Testframework@TTestResult @89  ; __fastcall Testframework::TTestCase::RunWithFixture(Testframework::TTestResult *)
+    @Testframework@TTestCase@Suite$qqrv @86  ; __fastcall Testframework::TTestCase::Suite()
+    @Testframework@TTestFailure@   @253 ; Testframework::TTestFailure::
+    @Testframework@TTestFailure@$bctr$qqr46System@%DelphiInterface$19Testframework@ITest%p25System@Sysutils@Exceptionpv20System@UnicodeString @85  ; Testframework::TTestFailure::TTestFailure(System::DelphiInterface<{583}...
+    @Testframework@TTestFailure@$bctr$qqr46System@%DelphiInterface$19Testframework@ITest%pv20System@UnicodeString @84  ; Testframework::TTestFailure::TTestFailure(System::DelphiInterface<{583}...
+    @Testframework@TTestFailure@AddressInfo$qqrv @77  ; __fastcall Testframework::TTestFailure::AddressInfo()
+    @Testframework@TTestFailure@CaptureStackTrace$qqrp25System@Sysutils@Exceptionpv @75  ; __fastcall Testframework::TTestFailure::CaptureStackTrace(System::Sysutils::Exception *, void *)
+    @Testframework@TTestFailure@FailedTest$qqrv @83  ; __fastcall Testframework::TTestFailure::FailedTest()
+    @Testframework@TTestFailure@LocationInfo$qqrv @78  ; __fastcall Testframework::TTestFailure::LocationInfo()
+    @Testframework@TTestFailure@StackTrace$qqrv @76  ; __fastcall Testframework::TTestFailure::StackTrace()
+    @Testframework@TTestFailure@ThrownExceptionAddress$qqrv @80  ; __fastcall Testframework::TTestFailure::ThrownExceptionAddress()
+    @Testframework@TTestFailure@ThrownExceptionClass$qqrv @79  ; __fastcall Testframework::TTestFailure::ThrownExceptionClass()
+    @Testframework@TTestFailure@ThrownExceptionMessage$qqrv @81  ; __fastcall Testframework::TTestFailure::ThrownExceptionMessage()
+    @Testframework@TTestFailure@ThrownExceptionName$qqrv @82  ; __fastcall Testframework::TTestFailure::ThrownExceptionName()
+    @Testframework@TTestResult@    @264 ; Testframework::TTestResult::
+    @Testframework@TTestResult@$bctr$qqrv @235 ; __fastcall Testframework::TTestResult::TTestResult()
+    @Testframework@TTestResult@$bdtr$qqrv @234 ; __fastcall Testframework::TTestResult::~TTestResult()
+    @Testframework@TTestResult@AddError$qqr46System@%DelphiInterface$19Testframework@ITest%p25System@Sysutils@Exceptionpv20System@UnicodeString @232 ; Testframework::TTestResult::AddError(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@AddFailure$qqr46System@%DelphiInterface$19Testframework@ITest%p25System@Sysutils@Exceptionpv @231 ; Testframework::TTestResult::AddFailure(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@AddFailure$qqr46System@%DelphiInterface$19Testframework@ITest%pv20System@UnicodeString @207 ; Testframework::TTestResult::AddFailure(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@AddListener$qqr54System@%DelphiInterface$27Testframework@ITestListener% @230 ; Testframework::TTestResult::AddListener(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@AddSuccess$qqr46System@%DelphiInterface$19Testframework@ITest% @233 ; Testframework::TTestResult::AddSuccess(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@EndSuite$qqr46System@%DelphiInterface$19Testframework@ITest% @209 ; Testframework::TTestResult::EndSuite(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@EndTest$qqr46System@%DelphiInterface$19Testframework@ITest% @229 ; Testframework::TTestResult::EndTest(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@ErrorCount$qqrv @217 ; __fastcall Testframework::TTestResult::ErrorCount()
+    @Testframework@TTestResult@FailureCount$qqrv @216 ; __fastcall Testframework::TTestResult::FailureCount()
+    @Testframework@TTestResult@GetError$qqri @227 ; __fastcall Testframework::TTestResult::GetError(int)
+    @Testframework@TTestResult@GetFailure$qqri @226 ; __fastcall Testframework::TTestResult::GetFailure(int)
+    @Testframework@TTestResult@Run$qqr46System@%DelphiInterface$19Testframework@ITest% @222 ; Testframework::TTestResult::Run(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@RunCount$qqrv @221 ; __fastcall Testframework::TTestResult::RunCount()
+    @Testframework@TTestResult@RunSuite$qqr46System@%DelphiInterface$19Testframework@ITest% @210 ; Testframework::TTestResult::RunSuite(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@RunTestRun$qqr46System@%DelphiInterface$19Testframework@ITest% @223 ; Testframework::TTestResult::RunTestRun(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@RunTestSetup$qqr46System@%DelphiInterface$19Testframework@ITest% @225 ; Testframework::TTestResult::RunTestSetup(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@RunTestTearDown$qqr46System@%DelphiInterface$19Testframework@ITest% @224 ; Testframework::TTestResult::RunTestTearDown(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@ShouldRunTest$qqr46System@%DelphiInterface$19Testframework@ITest% @212 ; Testframework::TTestResult::ShouldRunTest(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@ShouldStop$qqrv @220 ; __fastcall Testframework::TTestResult::ShouldStop()
+    @Testframework@TTestResult@StartSuite$qqr46System@%DelphiInterface$19Testframework@ITest% @208 ; Testframework::TTestResult::StartSuite(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@StartTest$qqr46System@%DelphiInterface$19Testframework@ITest% @219 ; Testframework::TTestResult::StartTest(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@Status$qqr46System@%DelphiInterface$19Testframework@ITest%x20System@UnicodeString @228 ; Testframework::TTestResult::Status(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@Stop$qqrv @218 ; __fastcall Testframework::TTestResult::Stop()
+    @Testframework@TTestResult@TestingEnds$qqrv @213 ; __fastcall Testframework::TTestResult::TestingEnds()
+    @Testframework@TTestResult@TestingStarts$qqrv @214 ; __fastcall Testframework::TTestResult::TestingStarts()
+    @Testframework@TTestResult@WasStopped$qqrv @211 ; __fastcall Testframework::TTestResult::WasStopped()
+    @Testframework@TTestResult@WasSuccessful$qqrv @215 ; __fastcall Testframework::TTestResult::WasSuccessful()
+    @Testframework@TTestSuite@     @255 ; Testframework::TTestSuite::
+    @Testframework@TTestSuite@$bctr$qqr20System@UnicodeString @73  ; __fastcall Testframework::TTestSuite::TTestSuite(System::UnicodeString)
+    @Testframework@TTestSuite@$bctr$qqr20System@UnicodeStringpx46System@%DelphiInterface$19Testframework@ITest%xi @71  ; Testframework::TTestSuite::TTestSuite(System::UnicodeString, const System::DelphiInterface<{583}...
+    @Testframework@TTestSuite@$bctr$qqrp17System@TMetaClass @72  ; __fastcall Testframework::TTestSuite::TTestSuite(System::TMetaClass *)
+    @Testframework@TTestSuite@$bctr$qqrv @74  ; __fastcall Testframework::TTestSuite::TTestSuite()
+    @Testframework@TTestSuite@AddSuite$qqr51System@%DelphiInterface$24Testframework@ITestSuite% @69  ; Testframework::TTestSuite::AddSuite(System::DelphiInterface<{583}...
+    @Testframework@TTestSuite@AddTest$qqr46System@%DelphiInterface$19Testframework@ITest% @70  ; Testframework::TTestSuite::AddTest(System::DelphiInterface<{583}...
+    @Testframework@TTestSuite@AddTests$qqrp17System@TMetaClass @68  ; __fastcall Testframework::TTestSuite::AddTests(System::TMetaClass *)
+    @Testframework@TTestSuite@CountEnabledTestCases$qqrv @66  ; __fastcall Testframework::TTestSuite::CountEnabledTestCases()
+    @Testframework@TTestSuite@CountTestCases$qqrv @67  ; __fastcall Testframework::TTestSuite::CountTestCases()
+    @Testframework@TTestSuite@LoadConfiguration$qqrxp30System@Inifiles@TCustomIniFilex20System@UnicodeString @63  ; __fastcall Testframework::TTestSuite::LoadConfiguration(System::Inifiles::TCustomIniFile * const, const System::UnicodeString)
+    @Testframework@TTestSuite@RunTest$qqrp25Testframework@TTestResult @65  ; __fastcall Testframework::TTestSuite::RunTest(Testframework::TTestResult *)
+    @Testframework@TTestSuite@SaveConfiguration$qqrxp30System@Inifiles@TCustomIniFilex20System@UnicodeString @62  ; __fastcall Testframework::TTestSuite::SaveConfiguration(System::Inifiles::TCustomIniFile * const, const System::UnicodeString)
+    @Testframework@TTestSuite@Tests$qqrv @64  ; __fastcall Testframework::TTestSuite::Tests()
+    @Testframework@TestDataDir$qqrv @246 ; __fastcall Testframework::TestDataDir()
+    @Testframework@TestSuite$qqr20System@UnicodeStringpx46System@%DelphiInterface$19Testframework@ITest%xi @53  ; Testframework::TestSuite(System::UnicodeString, const System::DelphiInterface<{583}...
+    @Testframework@initialization$qqrv @42  ; __fastcall Testframework::initialization()
+    @Testframework@rcs_id          @296 ; Testframework::rcs_id
+    @Testframework@rcs_version     @295 ; Testframework::rcs_version
+    @Testframeworkextension@CopyAppProperties$qqrp23System@Classes@TStrings @322 ; __fastcall Testframeworkextension::CopyAppProperties(System::Classes::TStrings *)
+    @Testframeworkextension@Finalization$qqrv @298 ; __fastcall Testframeworkextension::Finalization()
+    @Testframeworkextension@GetAppProperties$qqrv @325 ; __fastcall Testframeworkextension::GetAppProperties()
+    @Testframeworkextension@GetPropertyValue$qqr20System@UnicodeString @324 ; __fastcall Testframeworkextension::GetPropertyValue(System::UnicodeString)
+    @Testframeworkextension@SetPropertyValue$qqr20System@UnicodeStringt1 @323 ; __fastcall Testframeworkextension::SetPropertyValue(System::UnicodeString, System::UnicodeString)
+    @Testframeworkextension@TInterval@ @328 ; Testframeworkextension::TInterval::
+    @Testframeworkextension@TInterval@$bctr$qqrv @307 ; __fastcall Testframeworkextension::TInterval::TInterval()
+    @Testframeworkextension@TInterval@Clear$qqrv @308 ; __fastcall Testframeworkextension::TInterval::Clear()
+    @Testframeworkextension@TInterval@GetTimeSpan$qqrv @306 ; __fastcall Testframeworkextension::TInterval::GetTimeSpan()
+    @Testframeworkextension@TInterval@GetTotalHours$qqrv @305 ; __fastcall Testframeworkextension::TInterval::GetTotalHours()
+    @Testframeworkextension@TInterval@GetTotalMinuets$qqrv @304 ; __fastcall Testframeworkextension::TInterval::GetTotalMinuets()
+    @Testframeworkextension@TInterval@GetTotalSeconds$qqrv @303 ; __fastcall Testframeworkextension::TInterval::GetTotalSeconds()
+    @Testframeworkextension@TInterval@Start$qqrv @302 ; __fastcall Testframeworkextension::TInterval::Start()
+    @Testframeworkextension@TInterval@Stop$qqrv @301 ; __fastcall Testframeworkextension::TInterval::Stop()
+    @Testframeworkextension@TInterval@ToString$qqrv @300 ; __fastcall Testframeworkextension::TInterval::ToString()
+    @Testframeworkextension@TTestCaseExtension@ @332 ; Testframeworkextension::TTestCaseExtension::
+    @Testframeworkextension@TTestCaseExtension@$bctr$qqr20System@UnicodeString @321 ; __fastcall Testframeworkextension::TTestCaseExtension::TTestCaseExtension(System::UnicodeString)
+    @Testframeworkextension@TTestCaseExtension@$bdtr$qqrv @320 ; __fastcall Testframeworkextension::TTestCaseExtension::~TTestCaseExtension()
+    @Testframeworkextension@TTestCaseExtension@ApplyFilter$qqr20System@UnicodeString @317 ; __fastcall Testframeworkextension::TTestCaseExtension::ApplyFilter(System::UnicodeString)
+    @Testframeworkextension@TTestCaseExtension@GetHostName$qqrv @316 ; __fastcall Testframeworkextension::TTestCaseExtension::GetHostName()
+    @Testframeworkextension@TTestCaseExtension@GetMethodName$qqrv @315 ; __fastcall Testframeworkextension::TTestCaseExtension::GetMethodName()
+    @Testframeworkextension@TTestCaseExtension@GetProperties$qqrv @314 ; __fastcall Testframeworkextension::TTestCaseExtension::GetProperties()
+    @Testframeworkextension@TTestCaseExtension@GetUserToken$qqrv @319 ; __fastcall Testframeworkextension::TTestCaseExtension::GetUserToken()
+    @Testframeworkextension@TTestCaseExtension@Invoke$qqrynpqqrv$v @318 ; __fastcall Testframeworkextension::TTestCaseExtension::Invoke(void __fastcall __closure(*)())
+    @Testframeworkextension@TTestCaseExtension@SetProperties$qqrp23System@Classes@TStrings @313 ; __fastcall Testframeworkextension::TTestCaseExtension::SetProperties(System::Classes::TStrings *)
+    @Testframeworkextension@TTestCaseExtension@Suite$qqrv @312 ; __fastcall Testframeworkextension::TTestCaseExtension::Suite()
+    @Testframeworkextension@TTestCaseThread@ @330 ; Testframeworkextension::TTestCaseThread::
+    @Testframeworkextension@TTestCaseThread@Execute$qqrv @299 ; __fastcall Testframeworkextension::TTestCaseThread::Execute()
+    @Testframeworkextension@TTestSuiteExtension@ @334 ; Testframeworkextension::TTestSuiteExtension::
+    @Testframeworkextension@TTestSuiteExtension@AddTests$qqrp17System@TMetaClass @311 ; __fastcall Testframeworkextension::TTestSuiteExtension::AddTests(System::TMetaClass *)
+    @Testframeworkextension@TTestSuiteExtension@FilterTests$qqrv @310 ; __fastcall Testframeworkextension::TTestSuiteExtension::FilterTests()
+    @Testframeworkextension@TTestSuiteExtension@GetRunPattern$qqr20System@UnicodeString @309 ; __fastcall Testframeworkextension::TTestSuiteExtension::GetRunPattern(System::UnicodeString)
+    @Testframeworkextension@UseTestTimeout$qqrv @326 ; __fastcall Testframeworkextension::UseTestTimeout()
+    @Testframeworkextension@initialization$qqrv @297 ; __fastcall Testframeworkextension::initialization()
+    Finalize                       @654 ; Finalize
+    Initialize                     @655 ; Initialize

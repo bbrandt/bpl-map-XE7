@@ -1,0 +1,13 @@
+LIBRARY     BORDBK210N.DLL
+
+DESCRIPTION 'orland Debugger kernel Dll'
+
+EXPORTS
+    @isDbkLoggingOn$qv             @9   ; isDbkLoggingOn()
+    DllCanUnloadNow                @3   ; DllCanUnloadNow
+    DllGetClassObject              @2   ; DllGetClassObject
+    DllRegisterServer              @4   ; DllRegisterServer
+    DllUnregisterServer            @5   ; DllUnregisterServer
+    POSTEDHOOKPROC                 @7   ; POSTEDHOOKPROC
+    SENTHOOKPROC                   @8   ; SENTHOOKPROC
+    ___CPPdebugHook                @6   ; ___CPPdebugHook

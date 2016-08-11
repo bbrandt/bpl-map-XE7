@@ -1,0 +1,915 @@
+LIBRARY     MLCC210.BPL
+
+DESCRIPTION 'mbarcadero Markup Code Completion'
+
+EXPORTS
+    @$xp$11Cssimpl@TOp             @676 ; __tpdsc__ Cssimpl::TOp
+    @$xp$13Cssimpl@TPage           @658 ; __tpdsc__ Cssimpl::TPage
+    @$xp$14Cssimpl@TMedia          @660 ; __tpdsc__ Cssimpl::TMedia
+    @$xp$15Cssimpl@TImport         @662 ; __tpdsc__ Cssimpl::TImport
+    @$xp$15Cssimpl@TNodeOp         @652 ; __tpdsc__ Cssimpl::TNodeOp
+    @$xp$16Cssimpl@TCSSNode        @670 ; __tpdsc__ Cssimpl::TCSSNode
+    @$xp$16Cssimpl@TRuleSet        @654 ; __tpdsc__ Cssimpl::TRuleSet
+    @$xp$16Mlparser@TMLText        @559 ; __tpdsc__ Mlparser::TMLText
+    @$xp$16Mlparser@TXSLTag        @581 ; __tpdsc__ Mlparser::TXSLTag
+    @$xp$17Cssimpl@TFontFace       @656 ; __tpdsc__ Cssimpl::TFontFace
+    @$xp$17Cssimpl@TNodeKind       @679 ; __tpdsc__ Cssimpl::TNodeKind
+    @$xp$17Cssimpl@TSelector       @650 ; __tpdsc__ Cssimpl::TSelector
+    @$xp$17Dtdparser@TExprOp       @143 ; __tpdsc__ Dtdparser::TExprOp
+    @$xp$17Mlparser@PTagHash       @568 ; __tpdsc__ Mlparser::PTagHash
+    @$xp$17Mlparser@THTMLTag       @551 ; __tpdsc__ Mlparser::THTMLTag
+    @$xp$17Mlparser@TTagHash       @567 ; __tpdsc__ Mlparser::TTagHash
+    @$xp$18Cssimpl@TValueKind      @675 ; __tpdsc__ Cssimpl::TValueKind
+    @$xp$18Cssparser@TCSSType      @812 ; __tpdsc__ Cssparser::TCSSType
+    @$xp$18Mlparser@PAttrHash      @566 ; __tpdsc__ Mlparser::PAttrHash
+    @$xp$18Mlparser@PTagEntry      @598 ; __tpdsc__ Mlparser::PTagEntry
+    @$xp$18Mlparser@TAttrHash      @565 ; __tpdsc__ Mlparser::TAttrHash
+    @$xp$18Mlparser@TEmptyTag      @591 ; __tpdsc__ Mlparser::TEmptyTag
+    @$xp$18Mlparser@TMLParser      @540 ; __tpdsc__ Mlparser::TMLParser
+    @$xp$18Mlparser@TNamedTag      @587 ; __tpdsc__ Mlparser::TNamedTag
+    @$xp$18Mlparser@TTagEntry      @597 ; __tpdsc__ Mlparser::TTagEntry
+    @$xp$18Xsdreader@TXSDType      @214 ; __tpdsc__ Xsdreader::TXSDType
+    @$xp$19Cssimpl@TStyleSheet     @666 ; __tpdsc__ Cssimpl::TStyleSheet
+    @$xp$19Cssparser@TCSSValue     @818 ; __tpdsc__ Cssparser::TCSSValue
+    @$xp$19Dtdparser@TDeclType     @112 ; __tpdsc__ Dtdparser::TDeclType
+    @$xp$19Mlparser@PTagBucket     @580 ; __tpdsc__ Mlparser::PTagBucket
+    @$xp$19Mlparser@TMLComment     @561 ; __tpdsc__ Mlparser::TMLComment
+    @$xp$19Mlparser@TTagBucket     @579 ; __tpdsc__ Mlparser::TTagBucket
+    @$xp$19Xsdreader@TXSDClass     @228 ; __tpdsc__ Xsdreader::TXSDClass
+    @$xp$20Cssimpl@TCSSPriority    @677 ; __tpdsc__ Cssimpl::TCSSPriority
+    @$xp$20Cssimpl@TDeclaration    @644 ; __tpdsc__ Cssimpl::TDeclaration
+    @$xp$20Cssimpl@TSGMLComment    @664 ; __tpdsc__ Cssimpl::TSGMLComment
+    @$xp$20Cssparser@TCSSEditor    @838 ; __tpdsc__ Cssparser::TCSSEditor
+    @$xp$20Cssparser@TCSSSymbol    @841 ; __tpdsc__ Cssparser::TCSSSymbol
+    @$xp$20Cssparser@TErrorKind    @845 ; __tpdsc__ Cssparser::TErrorKind
+    @$xp$20Cssparser@TKibitzPos    @811 ; __tpdsc__ Cssparser::TKibitzPos
+    @$xp$20Dtdparser@TDTDEntity    @124 ; __tpdsc__ Dtdparser::TDTDEntity
+    @$xp$20Dtdparser@TDTDParser    @109 ; __tpdsc__ Dtdparser::TDTDParser
+    @$xp$20Dtdparser@TDTDSymbol    @131 ; __tpdsc__ Dtdparser::TDTDSymbol
+    @$xp$20Dtdparser@TTokenKind    @144 ; __tpdsc__ Dtdparser::TTokenKind
+    @$xp$20Mlparser@PEdPosEntry    @594 ; __tpdsc__ Mlparser::PEdPosEntry
+    @$xp$20Mlparser@TClosingTag    @589 ; __tpdsc__ Mlparser::TClosingTag
+    @$xp$20Mlparser@TDocTypeTag    @585 ; __tpdsc__ Mlparser::TDocTypeTag
+    @$xp$20Mlparser@TEdPosEntry    @593 ; __tpdsc__ Mlparser::TEdPosEntry
+    @$xp$20Mlparser@TMLTextNode    @563 ; __tpdsc__ Mlparser::TMLTextNode
+    @$xp$20Mlparser@TTagWrapper    @583 ; __tpdsc__ Mlparser::TTagWrapper
+    @$xp$20Mlparser@TXMLElement    @532 ; __tpdsc__ Mlparser::TXMLElement
+    @$xp$20Xsdreader@TXSDReader    @207 ; __tpdsc__ Xsdreader::TXSDReader
+    @$xp$21Cssimpl@TCSSValueNode   @668 ; __tpdsc__ Cssimpl::TCSSValueNode
+    @$xp$21Cssimpl@TSelectorType   @678 ; __tpdsc__ Cssimpl::TSelectorType
+    @$xp$21Dtdparser@TDTDElement   @121 ; __tpdsc__ Dtdparser::TDTDElement
+    @$xp$21Dtdparser@TDTDScanner   @113 ; __tpdsc__ Dtdparser::TDTDScanner
+    @$xp$21Dtdparser@TParseError   @141 ; __tpdsc__ Dtdparser::TParseError
+    @$xp$21Xsdreader@TXSDElement   @224 ; __tpdsc__ Xsdreader::TXSDElement
+    @$xp$22Cssimpl@TCSSStringList  @672 ; __tpdsc__ Cssimpl::TCSSStringList
+    @$xp$22Cssparser@TCSSProperty  @814 ; __tpdsc__ Cssparser::TCSSProperty
+    @$xp$22Dtdparser@PBufferEntry  @116 ; __tpdsc__ Dtdparser::PBufferEntry
+    @$xp$22Dtdparser@TBufferEntry  @115 ; __tpdsc__ Dtdparser::TBufferEntry
+    @$xp$22Dtdparser@TDTDExprList  @135 ; __tpdsc__ Dtdparser::TDTDExprList
+    @$xp$22Dtdparser@TDTDExprNode  @119 ; __tpdsc__ Dtdparser::TDTDExprNode
+    @$xp$22Dtdparser@TEntityArray  @123 ; __tpdsc__ Dtdparser::TEntityArray
+    @$xp$22Mlparser@TXMLAttribute  @530 ; __tpdsc__ Mlparser::TXMLAttribute
+    @$xp$22Mlparser@_TMLParser@_1  @542 ; __tpdsc__ Mlparser::_TMLParser::_1
+    @$xp$22Mlparserutils@TTagCase  @50  ; __tpdsc__ Mlparserutils::TTagCase
+    @$xp$22Mlparserutils@TTagType  @25  ; __tpdsc__ Mlparserutils::TTagType
+    @$xp$22Xsdreader@TXSDBaseType  @216 ; __tpdsc__ Xsdreader::TXSDBaseType
+    @$xp$23Cssimpl@TSimpleSelector @646 ; __tpdsc__ Cssimpl::TSimpleSelector
+    @$xp$23Cssparser@TCSSURIEditor @836 ; __tpdsc__ Cssparser::TCSSURIEditor
+    @$xp$23Cssparser@TCSSValueKind @840 ; __tpdsc__ Cssparser::TCSSValueKind
+    @$xp$23Dtdparser@TDTDAttribute @129 ; __tpdsc__ Dtdparser::TDTDAttribute
+    @$xp$23Mlparser@TAsciiCharList @575 ; __tpdsc__ Mlparser::TAsciiCharList
+    @$xp$23Mlparser@THTMLAttribute @573 ; __tpdsc__ Mlparser::THTMLAttribute
+    @$xp$23Mlparser@TParserContext @543 ; __tpdsc__ Mlparser::TParserContext
+    @$xp$23Mlparserutils@IOTAMLTag @36  ; __tpdsc__ Mlparserutils::IOTAMLTag
+    @$xp$23Xsdreader@TXSDAttribute @222 ; __tpdsc__ Xsdreader::TXSDAttribute
+    @$xp$24Cssparser@TCSSTimeEditor @828 ; __tpdsc__ Cssparser::TCSSTimeEditor
+    @$xp$24Cssparser@TCSSUnitEditor @834 ; __tpdsc__ Cssparser::TCSSUnitEditor
+    @$xp$24Dtdparser@_TDTDEntity@_1 @126 ; __tpdsc__ Dtdparser::_TDTDEntity::_1
+    @$xp$24Dtdparser@_TDTDParser@_1 @111 ; __tpdsc__ Dtdparser::_TDTDParser::_1
+    @$xp$24Mlparser@TMLServerScript @557 ; __tpdsc__ Mlparser::TMLServerScript
+    @$xp$24Mlparser@TParserContexts @544 ; __tpdsc__ Mlparser::TParserContexts
+    @$xp$24Mlparserutils@IOTAMLText @46  ; __tpdsc__ Mlparserutils::IOTAMLText
+    @$xp$24Xsdreader@PXSDClassEntry @211 ; __tpdsc__ Xsdreader::PXSDClassEntry
+    @$xp$24Xsdreader@TXSDClassEntry @210 ; __tpdsc__ Xsdreader::TXSDClassEntry
+    @$xp$24Xsdreader@TXSDSimpleType @218 ; __tpdsc__ Xsdreader::TXSDSimpleType
+    @$xp$24Xsdreader@TXSDTypedClass @226 ; __tpdsc__ Xsdreader::TXSDTypedClass
+    @$xp$25Cssparser@TCSSAngleEditor @830 ; __tpdsc__ Cssparser::TCSSAngleEditor
+    @$xp$25Cssparser@TCSSColorEditor @820 ; __tpdsc__ Cssparser::TCSSColorEditor
+    @$xp$25Cssparser@TCSSSymbolTable @809 ; __tpdsc__ Cssparser::TCSSSymbolTable
+    @$xp$25Dtdparser@EDTDParserError @139 ; __tpdsc__ Dtdparser::EDTDParserError
+    @$xp$25Dtdparser@PAttrAttributes @134 ; __tpdsc__ Dtdparser::PAttrAttributes
+    @$xp$25Dtdparser@TAttrAttributes @133 ; __tpdsc__ Dtdparser::TAttrAttributes
+    @$xp$25Dtdparser@TExprAttributes @142 ; __tpdsc__ Dtdparser::TExprAttributes
+    @$xp$25Mlparser@TMLSymbolManager @549 ; __tpdsc__ Mlparser::TMLSymbolManager
+    @$xp$25Mlparserutils@TKibitzMode @21  ; __tpdsc__ Mlparserutils::TKibitzMode
+    @$xp$25Xsdreader@TXSDRestriction @220 ; __tpdsc__ Xsdreader::TXSDRestriction
+    @$xp$26Cssimpl@_TCSSStringList@_1 @674 ; __tpdsc__ Cssimpl::_TCSSStringList::_1
+    @$xp$26Cssparser@TCSSLengthEditor @832 ; __tpdsc__ Cssparser::TCSSLengthEditor
+    @$xp$26Cssschemaloader@TCSSReader @690 ; __tpdsc__ Cssschemaloader::TCSSReader
+    @$xp$26Dtdparser@_TDTDExprList@_1 @137 ; __tpdsc__ Dtdparser::_TDTDExprList::_1
+    @$xp$26Mlparser@ITagStackIterator @547 ; __tpdsc__ Mlparser::ITagStackIterator
+    @$xp$26Mlparserutils@IOTAMLEditor @33  ; __tpdsc__ Mlparserutils::IOTAMLEditor
+    @$xp$26Mlparserutils@IOTAMLXSLTag @26  ; __tpdsc__ Mlparserutils::IOTAMLXSLTag
+    @$xp$27Cssparser@TStyleSheetParser @807 ; __tpdsc__ Cssparser::TStyleSheetParser
+    @$xp$27Dtdparser@TDTDKeywordSymbol @117 ; __tpdsc__ Dtdparser::TDTDKeywordSymbol
+    @$xp$27Dtdparser@TParserErrorEvent @138 ; __tpdsc__ Dtdparser::TParserErrorEvent
+    @$xp$27Mlparser@TMLEntityReference @553 ; __tpdsc__ Mlparser::TMLEntityReference
+    @$xp$27Mlparser@TTagAttributeValue @595 ; __tpdsc__ Mlparser::TTagAttributeValue
+    @$xp$27Mlparser@TXMLAttributeEvent @528 ; __tpdsc__ Mlparser::TXMLAttributeEvent
+    @$xp$27Mlparserutils@IOTAMLComment @45  ; __tpdsc__ Mlparserutils::IOTAMLComment
+    @$xp$27Mlparserutils@IOTAMLTagFlag @38  ; __tpdsc__ Mlparserutils::IOTAMLTagFlag
+    @$xp$28Cssimpl@TSimpleSelectorValue @648 ; __tpdsc__ Cssimpl::TSimpleSelectorValue
+    @$xp$28Cssparser@TOnParseErrorEvent @843 ; __tpdsc__ Cssparser::TOnParseErrorEvent
+    @$xp$28Cssparser@TPropertyArguments @816 ; __tpdsc__ Cssparser::TPropertyArguments
+    @$xp$28Cssparser@TStyleSheetScanner @805 ; __tpdsc__ Cssparser::TStyleSheetScanner
+    @$xp$28Mlparser@PTagAttributeBucket @578 ; __tpdsc__ Mlparser::PTagAttributeBucket
+    @$xp$28Mlparser@THTMLAttributeEvent @571 ; __tpdsc__ Mlparser::THTMLAttributeEvent
+    @$xp$28Mlparser@TTagAttributeBucket @577 ; __tpdsc__ Mlparser::TTagAttributeBucket
+    @$xp$28Mlparserutils@IOTAMLNamedTag @35  ; __tpdsc__ Mlparserutils::IOTAMLNamedTag
+    @$xp$28Mlparserutils@IOTAMLTagFlags @37  ; __tpdsc__ Mlparserutils::IOTAMLTagFlags
+    @$xp$28Mlparserutils@IOTAMLTextNode @47  ; __tpdsc__ Mlparserutils::IOTAMLTextNode
+    @$xp$28Mlparserutils@TMLParserState @49  ; __tpdsc__ Mlparserutils::TMLParserState
+    @$xp$28Xsdreader@TXSDAttributeGroup @212 ; __tpdsc__ Xsdreader::TXSDAttributeGroup
+    @$xp$29Csscodcmplt@TCSSKibitzManager @899 ; __tpdsc__ Csscodcmplt::TCSSKibitzManager
+    @$xp$29Cssparser@TCSSFrequencyEditor @826 ; __tpdsc__ Cssparser::TCSSFrequencyEditor
+    @$xp$29Cssuniteditor@TUnitEditorForm @694 ; __tpdsc__ Cssuniteditor::TUnitEditorForm
+    @$xp$29Mlparser@IOTAMLEditorRegistry @545 ; __tpdsc__ Mlparser::IOTAMLEditorRegistry
+    @$xp$29Mlparserutils@IOTACSSProvider @32  ; __tpdsc__ Mlparserutils::IOTACSSProvider
+    @$xp$29Mlparserutils@IOTAMLCustomTag @29  ; __tpdsc__ Mlparserutils::IOTAMLCustomTag
+    @$xp$29Mlparserutils@IOTAMLMarkupPos @48  ; __tpdsc__ Mlparserutils::IOTAMLMarkupPos
+    @$xp$29Xsdreader@TXSDParseErrorEvent @209 ; __tpdsc__ Xsdreader::TXSDParseErrorEvent
+    @$xp$30Cssparser@TCSSFamilyNameEditor @822 ; __tpdsc__ Cssparser::TCSSFamilyNameEditor
+    @$xp$30Cssparser@TCSSPercentageEditor @824 ; __tpdsc__ Cssparser::TCSSPercentageEditor
+    @$xp$30Mlparser@TUnknownHTMLAttribute @569 ; __tpdsc__ Mlparser::TUnknownHTMLAttribute
+    @$xp$30Mlparserutils@IOTAMLClosingTag @28  ; __tpdsc__ Mlparserutils::IOTAMLClosingTag
+    @$xp$30Mlparserutils@IOTAMLDocTypeTag @34  ; __tpdsc__ Mlparserutils::IOTAMLDocTypeTag
+    @$xp$30Mlparserutils@IOTAMLWrapperTag @27  ; __tpdsc__ Mlparserutils::IOTAMLWrapperTag
+    @$xp$31Mlparser@ISymbolManagerIterator @548 ; __tpdsc__ Mlparser::ISymbolManagerIterator
+    @$xp$31Mlparserutils@IMLBufferProducer @31  ; __tpdsc__ Mlparserutils::IMLBufferProducer
+    @$xp$31Mlparserutils@TMLBufferProducer @19  ; __tpdsc__ Mlparserutils::TMLBufferProducer
+    @$xp$32Mlparser@TDefaultAttributeEditor @534 ; __tpdsc__ Mlparser::TDefaultAttributeEditor
+    @$xp$32Mlparser@THTMLURIAttributeEditor @538 ; __tpdsc__ Mlparser::THTMLURIAttributeEditor
+    @$xp$32Mlparserutils@IOTAMLServerScript @44  ; __tpdsc__ Mlparserutils::IOTAMLServerScript
+    @$xp$32Mlparserutils@IOTAMLTagAttribute @41  ; __tpdsc__ Mlparserutils::IOTAMLTagAttribute
+    @$xp$33Dtdparser@TDTDParameterizedEntity @127 ; __tpdsc__ Dtdparser::TDTDParameterizedEntity
+    @$xp$33Mlparser@TMLProcessingInstruction @555 ; __tpdsc__ Mlparser::TMLProcessingInstruction
+    @$xp$34Mlparser@THTMLColorAttributeEditor @536 ; __tpdsc__ Mlparser::THTMLColorAttributeEditor
+    @$xp$35Htmlcodcmplt@ISymbolManagerAccessor @604 ; __tpdsc__ Htmlcodcmplt::ISymbolManagerAccessor
+    @$xp$35Mlparser@IFileToSchemaMapperService @546 ; __tpdsc__ Mlparser::IFileToSchemaMapperService
+    @$xp$35Mlparserutils@IOTAMLElementCallback @24  ; __tpdsc__ Mlparserutils::IOTAMLElementCallback
+    @$xp$35Mlparserutils@IOTAMLEntityReference @42  ; __tpdsc__ Mlparserutils::IOTAMLEntityReference
+    @$xp$37Htmlcodcmplt@IOTAMLCodeInsightManager @605 ; __tpdsc__ Htmlcodcmplt::IOTAMLCodeInsightManager
+    @$xp$37Mlparserutils@IOTAMLTagAttributeEvent @40  ; __tpdsc__ Mlparserutils::IOTAMLTagAttributeEvent
+    @$xp$39Mlparserutils@IMLBufferProducerInternal @30  ; __tpdsc__ Mlparserutils::IMLBufferProducerInternal
+    @$xp$39Mlparserutils@IOTAMLUnknownTagAttribute @39  ; __tpdsc__ Mlparserutils::IOTAMLUnknownTagAttribute
+    @$xp$41Mlparserutils@IOTAMLProcessingInstruction @43  ; __tpdsc__ Mlparserutils::IOTAMLProcessingInstruction
+    @Csscodcmplt@CSSLanguageManager$qqrv @898 ; __fastcall Csscodcmplt::CSSLanguageManager()
+    @Csscodcmplt@Finalization$qqrv @854 ; __fastcall Csscodcmplt::Finalization()
+    @Csscodcmplt@TCSSKibitzManager@ @900 ; Csscodcmplt::TCSSKibitzManager::
+    @Csscodcmplt@TCSSKibitzManager@$bctr$qqrv @895 ; __fastcall Csscodcmplt::TCSSKibitzManager::TCSSKibitzManager()
+    @Csscodcmplt@TCSSKibitzManager@$bdtr$qqrv @894 ; __fastcall Csscodcmplt::TCSSKibitzManager::~TCSSKibitzManager()
+    @Csscodcmplt@TCSSKibitzManager@AllowCodeInsight$qqrroxb @897 ; __fastcall Csscodcmplt::TCSSKibitzManager::AllowCodeInsight(bool&, const wchar_t)
+    @Csscodcmplt@TCSSKibitzManager@Clear$qqrv @896 ; __fastcall Csscodcmplt::TCSSKibitzManager::Clear()
+    @Csscodcmplt@TCSSKibitzManager@Done$qqroro @893 ; __fastcall Csscodcmplt::TCSSKibitzManager::Done(bool, bool&)
+    @Csscodcmplt@TCSSKibitzManager@EditorTokenValidChars$qqro @892 ; __fastcall Csscodcmplt::TCSSKibitzManager::EditorTokenValidChars(bool)
+    @Csscodcmplt@TCSSKibitzManager@FindIdent$qqrx20System@UnicodeString @891 ; __fastcall Csscodcmplt::TCSSKibitzManager::FindIdent(const System::UnicodeString)
+    @Csscodcmplt@TCSSKibitzManager@FindSymIndex$qqrx20System@UnicodeStringri @890 ; __fastcall Csscodcmplt::TCSSKibitzManager::FindSymIndex(const System::UnicodeString, int&)
+    @Csscodcmplt@TCSSKibitzManager@GetCodeInsightType$qqrbir28Toolsapi@TOTACodeInsightTyper23Toolsapi@TOTAInvokeType @889 ; __fastcall Csscodcmplt::TCSSKibitzManager::GetCodeInsightType(wchar_t, int, Toolsapi::TOTACodeInsightType&, Toolsapi::TOTAInvokeType&)
+    @Csscodcmplt@TCSSKibitzManager@GetContext$qqrv @888 ; __fastcall Csscodcmplt::TCSSKibitzManager::GetContext()
+    @Csscodcmplt@TCSSKibitzManager@GetCount$qqrv @887 ; __fastcall Csscodcmplt::TCSSKibitzManager::GetCount()
+    @Csscodcmplt@TCSSKibitzManager@GetEnabled$qqrv @886 ; __fastcall Csscodcmplt::TCSSKibitzManager::GetEnabled()
+    @Csscodcmplt@TCSSKibitzManager@GetHintText$qqrii @885 ; __fastcall Csscodcmplt::TCSSKibitzManager::GetHintText(int, int)
+    @Csscodcmplt@TCSSKibitzManager@GetIDString$qqrv @884 ; __fastcall Csscodcmplt::TCSSKibitzManager::GetIDString()
+    @Csscodcmplt@TCSSKibitzManager@GetLongestItem$qqrv @883 ; __fastcall Csscodcmplt::TCSSKibitzManager::GetLongestItem()
+    @Csscodcmplt@TCSSKibitzManager@GetMultiSelect$qqrv @882 ; __fastcall Csscodcmplt::TCSSKibitzManager::GetMultiSelect()
+    @Csscodcmplt@TCSSKibitzManager@GetName$qqrv @881 ; __fastcall Csscodcmplt::TCSSKibitzManager::GetName()
+    @Csscodcmplt@TCSSKibitzManager@GetOptionSetName$qqrv @880 ; __fastcall Csscodcmplt::TCSSKibitzManager::GetOptionSetName()
+    @Csscodcmplt@TCSSKibitzManager@GetParameterList$qqrr64System@%DelphiInterface$37Toolsapi@IOTACodeInsightParameterList% @879 ; Csscodcmplt::TCSSKibitzManager::GetParameterList(System::DelphiInterface<{583}...
+    @Csscodcmplt@TCSSKibitzManager@GetProcDispatchFlags$qqri @878 ; __fastcall Csscodcmplt::TCSSKibitzManager::GetProcDispatchFlags(int)
+    @Csscodcmplt@TCSSKibitzManager@GetSortOrder$qqrv @877 ; __fastcall Csscodcmplt::TCSSKibitzManager::GetSortOrder()
+    @Csscodcmplt@TCSSKibitzManager@GetSymbolClassText$qqri @876 ; __fastcall Csscodcmplt::TCSSKibitzManager::GetSymbolClassText(int)
+    @Csscodcmplt@TCSSKibitzManager@GetSymbolIsAbstract$qqri @875 ; __fastcall Csscodcmplt::TCSSKibitzManager::GetSymbolIsAbstract(int)
+    @Csscodcmplt@TCSSKibitzManager@GetSymbolIsReadWrite$qqri @874 ; __fastcall Csscodcmplt::TCSSKibitzManager::GetSymbolIsReadWrite(int)
+    @Csscodcmplt@TCSSKibitzManager@GetSymbolList$qqrr61System@%DelphiInterface$34Toolsapi@IOTACodeInsightSymbolList% @873 ; Csscodcmplt::TCSSKibitzManager::GetSymbolList(System::DelphiInterface<{583}...
+    @Csscodcmplt@TCSSKibitzManager@GetSymbolText$qqri @872 ; __fastcall Csscodcmplt::TCSSKibitzManager::GetSymbolText(int)
+    @Csscodcmplt@TCSSKibitzManager@GetSymbolTypeText$qqri @871 ; __fastcall Csscodcmplt::TCSSKibitzManager::GetSymbolTypeText(int)
+    @Csscodcmplt@TCSSKibitzManager@GetViewerSymbolFlags$qqri @870 ; __fastcall Csscodcmplt::TCSSKibitzManager::GetViewerSymbolFlags(int)
+    @Csscodcmplt@TCSSKibitzManager@GetViewerVisibilityFlags$qqri @869 ; __fastcall Csscodcmplt::TCSSKibitzManager::GetViewerVisibilityFlags(int)
+    @Csscodcmplt@TCSSKibitzManager@GotoDefinition$qqrr20System@UnicodeStringrii @868 ; __fastcall Csscodcmplt::TCSSKibitzManager::GotoDefinition(System::UnicodeString&, int&, int)
+    @Csscodcmplt@TCSSKibitzManager@HandlesFile$qqrx20System@UnicodeString @867 ; __fastcall Csscodcmplt::TCSSKibitzManager::HandlesFile(const System::UnicodeString)
+    @Csscodcmplt@TCSSKibitzManager@InvokeCodeCompletion$qqr23Toolsapi@TOTAInvokeTyper20System@UnicodeString @866 ; __fastcall Csscodcmplt::TCSSKibitzManager::InvokeCodeCompletion(Toolsapi::TOTAInvokeType, System::UnicodeString&)
+    @Csscodcmplt@TCSSKibitzManager@InvokeParameterCodeInsight$qqr23Toolsapi@TOTAInvokeTyperi @865 ; __fastcall Csscodcmplt::TCSSKibitzManager::InvokeParameterCodeInsight(Toolsapi::TOTAInvokeType, int&)
+    @Csscodcmplt@TCSSKibitzManager@IsViewerBrowsable$qqri @864 ; __fastcall Csscodcmplt::TCSSKibitzManager::IsViewerBrowsable(int)
+    @Csscodcmplt@TCSSKibitzManager@KibitzManager$qqrv @863 ; __fastcall Csscodcmplt::TCSSKibitzManager::KibitzManager()
+    @Csscodcmplt@TCSSKibitzManager@LoadSchema$qqrv @862 ; __fastcall Csscodcmplt::TCSSKibitzManager::LoadSchema()
+    @Csscodcmplt@TCSSKibitzManager@OnEditorKey$qqrbrot2 @861 ; __fastcall Csscodcmplt::TCSSKibitzManager::OnEditorKey(wchar_t, bool&, bool&)
+    @Csscodcmplt@TCSSKibitzManager@ParameterCodeInsightAnchorPos$qqrr20Toolsapi@TOTAEditPos @860 ; __fastcall Csscodcmplt::TCSSKibitzManager::ParameterCodeInsightAnchorPos(Toolsapi::TOTAEditPos&)
+    @Csscodcmplt@TCSSKibitzManager@ParameterCodeInsightParamIndex$qqrrx20Toolsapi@TOTAEditPos @859 ; __fastcall Csscodcmplt::TCSSKibitzManager::ParameterCodeInsightParamIndex(const Toolsapi::TOTAEditPos&)
+    @Csscodcmplt@TCSSKibitzManager@PreValidateCodeInsight$qqrx20System@UnicodeString @858 ; __fastcall Csscodcmplt::TCSSKibitzManager::PreValidateCodeInsight(const System::UnicodeString)
+    @Csscodcmplt@TCSSKibitzManager@SetEnabled$qqro @857 ; __fastcall Csscodcmplt::TCSSKibitzManager::SetEnabled(bool)
+    @Csscodcmplt@TCSSKibitzManager@SetFilter$qqrx20System@UnicodeString @856 ; __fastcall Csscodcmplt::TCSSKibitzManager::SetFilter(const System::UnicodeString)
+    @Csscodcmplt@TCSSKibitzManager@SetSortOrder$qqrx22Toolsapi@TOTASortOrder @855 ; __fastcall Csscodcmplt::TCSSKibitzManager::SetSortOrder(const Toolsapi::TOTASortOrder)
+    @Csscodcmplt@initialization$qqrv @853 ; __fastcall Csscodcmplt::initialization()
+    @Cssimpl@Finalization$qqrv     @607 ; __fastcall Cssimpl::Finalization()
+    @Cssimpl@TCSSNode@             @671 ; Cssimpl::TCSSNode::
+    @Cssimpl@TCSSNode@$bctr$qqrv   @608 ; __fastcall Cssimpl::TCSSNode::TCSSNode()
+    @Cssimpl@TCSSStringList@       @673 ; Cssimpl::TCSSStringList::
+    @Cssimpl@TCSSStringList@$bctr$qqrv @642 ; __fastcall Cssimpl::TCSSStringList::TCSSStringList()
+    @Cssimpl@TCSSStringList@Add$qqrx27System@%AnsiStringT$us$i0$% @643 ; __fastcall Cssimpl::TCSSStringList::Add(const System::AnsiStringT<0>)
+    @Cssimpl@TCSSStringList@GetItem$qqri @641 ; __fastcall Cssimpl::TCSSStringList::GetItem(int)
+    @Cssimpl@TCSSStringList@Grow$qqrv @640 ; __fastcall Cssimpl::TCSSStringList::Grow()
+    @Cssimpl@TCSSStringList@Remove$qqr27System@%AnsiStringT$us$i0$% @639 ; __fastcall Cssimpl::TCSSStringList::Remove(System::AnsiStringT<0>)
+    @Cssimpl@TCSSValueNode@        @669 ; Cssimpl::TCSSValueNode::
+    @Cssimpl@TCSSValueNode@$bctr$qqrv @610 ; __fastcall Cssimpl::TCSSValueNode::TCSSValueNode()
+    @Cssimpl@TDeclaration@         @645 ; Cssimpl::TDeclaration::
+    @Cssimpl@TDeclaration@$bctr$qqrv @611 ; __fastcall Cssimpl::TDeclaration::TDeclaration()
+    @Cssimpl@TFontFace@            @657 ; Cssimpl::TFontFace::
+    @Cssimpl@TFontFace@$bctr$qqrv  @625 ; __fastcall Cssimpl::TFontFace::TFontFace()
+    @Cssimpl@TFontFace@$bdtr$qqrv  @624 ; __fastcall Cssimpl::TFontFace::~TFontFace()
+    @Cssimpl@TFontFace@AddDecl$qqrp14System@TObject @626 ; __fastcall Cssimpl::TFontFace::AddDecl(System::TObject *)
+    @Cssimpl@TImport@              @663 ; Cssimpl::TImport::
+    @Cssimpl@TImport@$bctr$qqrv    @634 ; __fastcall Cssimpl::TImport::TImport()
+    @Cssimpl@TImport@$bdtr$qqrv    @633 ; __fastcall Cssimpl::TImport::~TImport()
+    @Cssimpl@TMedia@               @661 ; Cssimpl::TMedia::
+    @Cssimpl@TMedia@$bctr$qqrv     @631 ; __fastcall Cssimpl::TMedia::TMedia()
+    @Cssimpl@TMedia@$bdtr$qqrv     @630 ; __fastcall Cssimpl::TMedia::~TMedia()
+    @Cssimpl@TMedia@AddRule$qqrp14System@TObject @632 ; __fastcall Cssimpl::TMedia::AddRule(System::TObject *)
+    @Cssimpl@TNodeOp@              @653 ; Cssimpl::TNodeOp::
+    @Cssimpl@TNodeOp@$bctr$qqrv    @609 ; __fastcall Cssimpl::TNodeOp::TNodeOp()
+    @Cssimpl@TPage@                @659 ; Cssimpl::TPage::
+    @Cssimpl@TPage@$bctr$qqrv      @628 ; __fastcall Cssimpl::TPage::TPage()
+    @Cssimpl@TPage@$bdtr$qqrv      @627 ; __fastcall Cssimpl::TPage::~TPage()
+    @Cssimpl@TPage@AddDecl$qqrp14System@TObject @629 ; __fastcall Cssimpl::TPage::AddDecl(System::TObject *)
+    @Cssimpl@TRuleSet@             @655 ; Cssimpl::TRuleSet::
+    @Cssimpl@TRuleSet@$bctr$qqrv   @621 ; __fastcall Cssimpl::TRuleSet::TRuleSet()
+    @Cssimpl@TRuleSet@$bdtr$qqrv   @620 ; __fastcall Cssimpl::TRuleSet::~TRuleSet()
+    @Cssimpl@TRuleSet@AddDecl$qqrp14System@TObject @623 ; __fastcall Cssimpl::TRuleSet::AddDecl(System::TObject *)
+    @Cssimpl@TRuleSet@AddSelector$qqrp14System@TObject @622 ; __fastcall Cssimpl::TRuleSet::AddSelector(System::TObject *)
+    @Cssimpl@TSGMLComment@         @665 ; Cssimpl::TSGMLComment::
+    @Cssimpl@TSGMLComment@$bctr$qqrv @635 ; __fastcall Cssimpl::TSGMLComment::TSGMLComment()
+    @Cssimpl@TSelector@            @651 ; Cssimpl::TSelector::
+    @Cssimpl@TSelector@$bctr$qqrv  @619 ; __fastcall Cssimpl::TSelector::TSelector()
+    @Cssimpl@TSimpleSelector@      @647 ; Cssimpl::TSimpleSelector::
+    @Cssimpl@TSimpleSelector@$bctr$qqrv @617 ; __fastcall Cssimpl::TSimpleSelector::TSimpleSelector()
+    @Cssimpl@TSimpleSelector@$bdtr$qqrv @616 ; __fastcall Cssimpl::TSimpleSelector::~TSimpleSelector()
+    @Cssimpl@TSimpleSelector@AddValue$qqrp14System@TObject @618 ; __fastcall Cssimpl::TSimpleSelector::AddValue(System::TObject *)
+    @Cssimpl@TSimpleSelectorValue@ @649 ; Cssimpl::TSimpleSelectorValue::
+    @Cssimpl@TSimpleSelectorValue@SetAttrib$qqrp15Cssimpl@TNodeOp @615 ; __fastcall Cssimpl::TSimpleSelectorValue::SetAttrib(Cssimpl::TNodeOp *)
+    @Cssimpl@TSimpleSelectorValue@SetClass$qqrx27System@%AnsiStringT$us$i0$% @614 ; __fastcall Cssimpl::TSimpleSelectorValue::SetClass(const System::AnsiStringT<0>)
+    @Cssimpl@TSimpleSelectorValue@SetHash$qqrx27System@%AnsiStringT$us$i0$% @613 ; __fastcall Cssimpl::TSimpleSelectorValue::SetHash(const System::AnsiStringT<0>)
+    @Cssimpl@TSimpleSelectorValue@SetPseudo$qqrx27System@%AnsiStringT$us$i0$% @612 ; __fastcall Cssimpl::TSimpleSelectorValue::SetPseudo(const System::AnsiStringT<0>)
+    @Cssimpl@TStyleSheet@          @667 ; Cssimpl::TStyleSheet::
+    @Cssimpl@TStyleSheet@$bctr$qqrv @637 ; __fastcall Cssimpl::TStyleSheet::TStyleSheet()
+    @Cssimpl@TStyleSheet@$bdtr$qqrv @636 ; __fastcall Cssimpl::TStyleSheet::~TStyleSheet()
+    @Cssimpl@TStyleSheet@Add$qqrp16Cssimpl@TCSSNode @638 ; __fastcall Cssimpl::TStyleSheet::Add(Cssimpl::TCSSNode *)
+    @Cssimpl@initialization$qqrv   @606 ; __fastcall Cssimpl::initialization()
+    @Cssparser@Finalization$qqrv   @697 ; __fastcall Cssparser::Finalization()
+    @Cssparser@TCSSAngleEditor@    @831 ; Cssparser::TCSSAngleEditor::
+    @Cssparser@TCSSAngleEditor@$bctr$qqrv @700 ; __fastcall Cssparser::TCSSAngleEditor::TCSSAngleEditor()
+    @Cssparser@TCSSColorEditor@    @821 ; Cssparser::TCSSColorEditor::
+    @Cssparser@TCSSColorEditor@$bctr$qqrv @704 ; __fastcall Cssparser::TCSSColorEditor::TCSSColorEditor()
+    @Cssparser@TCSSColorEditor@Execute$qqrv @703 ; __fastcall Cssparser::TCSSColorEditor::Execute()
+    @Cssparser@TCSSEditor@         @839 ; Cssparser::TCSSEditor::
+    @Cssparser@TCSSFamilyNameEditor@ @823 ; Cssparser::TCSSFamilyNameEditor::
+    @Cssparser@TCSSFamilyNameEditor@$bctr$qqrv @706 ; __fastcall Cssparser::TCSSFamilyNameEditor::TCSSFamilyNameEditor()
+    @Cssparser@TCSSFamilyNameEditor@Execute$qqrv @705 ; __fastcall Cssparser::TCSSFamilyNameEditor::Execute()
+    @Cssparser@TCSSFrequencyEditor@ @827 ; Cssparser::TCSSFrequencyEditor::
+    @Cssparser@TCSSFrequencyEditor@$bctr$qqrv @698 ; __fastcall Cssparser::TCSSFrequencyEditor::TCSSFrequencyEditor()
+    @Cssparser@TCSSLengthEditor@   @833 ; Cssparser::TCSSLengthEditor::
+    @Cssparser@TCSSLengthEditor@$bctr$qqrv @701 ; __fastcall Cssparser::TCSSLengthEditor::TCSSLengthEditor()
+    @Cssparser@TCSSPercentageEditor@ @825 ; Cssparser::TCSSPercentageEditor::
+    @Cssparser@TCSSPercentageEditor@$bctr$qqrv @702 ; __fastcall Cssparser::TCSSPercentageEditor::TCSSPercentageEditor()
+    @Cssparser@TCSSProperty@       @815 ; Cssparser::TCSSProperty::
+    @Cssparser@TCSSProperty@$bctr$qqrv @756 ; __fastcall Cssparser::TCSSProperty::TCSSProperty()
+    @Cssparser@TCSSProperty@$bdtr$qqrv @755 ; __fastcall Cssparser::TCSSProperty::~TCSSProperty()
+    @Cssparser@TCSSProperty@AddType$qqrp14System@TObject @758 ; __fastcall Cssparser::TCSSProperty::AddType(System::TObject *)
+    @Cssparser@TCSSProperty@AddValue$qqrp14System@TObject @757 ; __fastcall Cssparser::TCSSProperty::AddValue(System::TObject *)
+    @Cssparser@TCSSProperty@GetKibitzValue$qqri @754 ; __fastcall Cssparser::TCSSProperty::GetKibitzValue(int)
+    @Cssparser@TCSSProperty@GetKibitzValueCount$qqrv @753 ; __fastcall Cssparser::TCSSProperty::GetKibitzValueCount()
+    @Cssparser@TCSSProperty@GetMedia$qqrv @752 ; __fastcall Cssparser::TCSSProperty::GetMedia()
+    @Cssparser@TCSSProperty@GetMediaCount$qqrv @751 ; __fastcall Cssparser::TCSSProperty::GetMediaCount()
+    @Cssparser@TCSSProperty@GetTypeCount$qqrv @750 ; __fastcall Cssparser::TCSSProperty::GetTypeCount()
+    @Cssparser@TCSSProperty@GetTypeList$qqrv @749 ; __fastcall Cssparser::TCSSProperty::GetTypeList()
+    @Cssparser@TCSSProperty@GetValueCount$qqrv @748 ; __fastcall Cssparser::TCSSProperty::GetValueCount()
+    @Cssparser@TCSSProperty@GetValueList$qqrv @747 ; __fastcall Cssparser::TCSSProperty::GetValueList()
+    @Cssparser@TCSSProperty@ResetKibitz$qqrv @746 ; __fastcall Cssparser::TCSSProperty::ResetKibitz()
+    @Cssparser@TCSSSymbol@         @842 ; Cssparser::TCSSSymbol::
+    @Cssparser@TCSSSymbolTable@    @810 ; Cssparser::TCSSSymbolTable::
+    @Cssparser@TCSSSymbolTable@$bctr$qqrp27Cssparser@TStyleSheetParser @743 ; __fastcall Cssparser::TCSSSymbolTable::TCSSSymbolTable(Cssparser::TStyleSheetParser *)
+    @Cssparser@TCSSSymbolTable@$bdtr$qqrv @742 ; __fastcall Cssparser::TCSSSymbolTable::~TCSSSymbolTable()
+    @Cssparser@TCSSSymbolTable@AddEditor$qqrp20Cssparser@TCSSEditor @745 ; __fastcall Cssparser::TCSSSymbolTable::AddEditor(Cssparser::TCSSEditor *)
+    @Cssparser@TCSSSymbolTable@AlphaSort$qqrv @744 ; __fastcall Cssparser::TCSSSymbolTable::AlphaSort()
+    @Cssparser@TCSSSymbolTable@FindIdent$qqrx20System@UnicodeString @741 ; __fastcall Cssparser::TCSSSymbolTable::FindIdent(const System::UnicodeString)
+    @Cssparser@TCSSSymbolTable@GetKibitzProp$qqri @740 ; __fastcall Cssparser::TCSSSymbolTable::GetKibitzProp(int)
+    @Cssparser@TCSSSymbolTable@GetKibitzPropCount$qqrv @739 ; __fastcall Cssparser::TCSSSymbolTable::GetKibitzPropCount()
+    @Cssparser@TCSSSymbolTable@GetKibitzValue$qqri @738 ; __fastcall Cssparser::TCSSSymbolTable::GetKibitzValue(int)
+    @Cssparser@TCSSSymbolTable@GetKibitzValueCount$qqrv @737 ; __fastcall Cssparser::TCSSSymbolTable::GetKibitzValueCount()
+    @Cssparser@TCSSSymbolTable@GetProp$qqri @736 ; __fastcall Cssparser::TCSSSymbolTable::GetProp(int)
+    @Cssparser@TCSSSymbolTable@GetType$qqri @735 ; __fastcall Cssparser::TCSSSymbolTable::GetType(int)
+    @Cssparser@TCSSSymbolTable@LookupEditor$qqrx27System@%AnsiStringT$us$i0$% @734 ; __fastcall Cssparser::TCSSSymbolTable::LookupEditor(const System::AnsiStringT<0>)
+    @Cssparser@TCSSSymbolTable@LookupProperty$qqrx27System@%AnsiStringT$us$i0$% @733 ; __fastcall Cssparser::TCSSSymbolTable::LookupProperty(const System::AnsiStringT<0>)
+    @Cssparser@TCSSSymbolTable@LookupType$qqrx27System@%AnsiStringT$us$i0$% @732 ; __fastcall Cssparser::TCSSSymbolTable::LookupType(const System::AnsiStringT<0>)
+    @Cssparser@TCSSSymbolTable@LookupValue$qqrx27System@%AnsiStringT$us$i0$% @731 ; __fastcall Cssparser::TCSSSymbolTable::LookupValue(const System::AnsiStringT<0>)
+    @Cssparser@TCSSSymbolTable@NewProperty$qqrx27System@%AnsiStringT$us$i0$% @730 ; __fastcall Cssparser::TCSSSymbolTable::NewProperty(const System::AnsiStringT<0>)
+    @Cssparser@TCSSSymbolTable@NewType$qqrx27System@%AnsiStringT$us$i0$% @729 ; __fastcall Cssparser::TCSSSymbolTable::NewType(const System::AnsiStringT<0>)
+    @Cssparser@TCSSSymbolTable@NewValue$qqrx27System@%AnsiStringT$us$i0$% @728 ; __fastcall Cssparser::TCSSSymbolTable::NewValue(const System::AnsiStringT<0>)
+    @Cssparser@TCSSSymbolTable@QuickSort$qqrp26System@Contnrs@TObjectListii @727 ; __fastcall Cssparser::TCSSSymbolTable::QuickSort(System::Contnrs::TObjectList *, int, int)
+    @Cssparser@TCSSSymbolTable@ResetKibitz$qqrv @726 ; __fastcall Cssparser::TCSSSymbolTable::ResetKibitz()
+    @Cssparser@TCSSSymbolTable@SetFilter$qqrx20System@UnicodeString @725 ; __fastcall Cssparser::TCSSSymbolTable::SetFilter(const System::UnicodeString)
+    @Cssparser@TCSSSymbolTable@SetKibitzProperty$qqrxp22Cssparser@TCSSProperty @724 ; __fastcall Cssparser::TCSSSymbolTable::SetKibitzProperty(Cssparser::TCSSProperty * const)
+    @Cssparser@TCSSSymbolTable@SortList$qqrp26System@Contnrs@TObjectListii @723 ; __fastcall Cssparser::TCSSSymbolTable::SortList(System::Contnrs::TObjectList *, int, int)
+    @Cssparser@TCSSTimeEditor@     @829 ; Cssparser::TCSSTimeEditor::
+    @Cssparser@TCSSTimeEditor@$bctr$qqrv @699 ; __fastcall Cssparser::TCSSTimeEditor::TCSSTimeEditor()
+    @Cssparser@TCSSType@           @813 ; Cssparser::TCSSType::
+    @Cssparser@TCSSType@$bctr$qqrv @720 ; __fastcall Cssparser::TCSSType::TCSSType()
+    @Cssparser@TCSSType@$bdtr$qqrv @719 ; __fastcall Cssparser::TCSSType::~TCSSType()
+    @Cssparser@TCSSType@GetIntrinsicCount$qqrv @714 ; __fastcall Cssparser::TCSSType::GetIntrinsicCount()
+    @Cssparser@TCSSType@GetIntrinsicTypeList$qqrv @713 ; __fastcall Cssparser::TCSSType::GetIntrinsicTypeList()
+    @Cssparser@TCSSType@GetRefCount$qqrv @716 ; __fastcall Cssparser::TCSSType::GetRefCount()
+    @Cssparser@TCSSType@GetRefList$qqrv @715 ; __fastcall Cssparser::TCSSType::GetRefList()
+    @Cssparser@TCSSType@GetValueCount$qqrv @718 ; __fastcall Cssparser::TCSSType::GetValueCount()
+    @Cssparser@TCSSType@GetValueList$qqrv @717 ; __fastcall Cssparser::TCSSType::GetValueList()
+    @Cssparser@TCSSURIEditor@      @837 ; Cssparser::TCSSURIEditor::
+    @Cssparser@TCSSURIEditor@$bctr$qqrv @712 ; __fastcall Cssparser::TCSSURIEditor::TCSSURIEditor()
+    @Cssparser@TCSSURIEditor@Execute$qqrv @711 ; __fastcall Cssparser::TCSSURIEditor::Execute()
+    @Cssparser@TCSSUnitEditor@     @835 ; Cssparser::TCSSUnitEditor::
+    @Cssparser@TCSSUnitEditor@$bctr$qqrv @710 ; __fastcall Cssparser::TCSSUnitEditor::TCSSUnitEditor()
+    @Cssparser@TCSSUnitEditor@$bdtr$qqrv @709 ; __fastcall Cssparser::TCSSUnitEditor::~TCSSUnitEditor()
+    @Cssparser@TCSSUnitEditor@Execute$qqrv @708 ; __fastcall Cssparser::TCSSUnitEditor::Execute()
+    @Cssparser@TCSSUnitEditor@GetUnitList$qqrv @707 ; __fastcall Cssparser::TCSSUnitEditor::GetUnitList()
+    @Cssparser@TCSSValue@          @819 ; Cssparser::TCSSValue::
+    @Cssparser@TPropertyArguments@ @817 ; Cssparser::TPropertyArguments::
+    @Cssparser@TPropertyArguments@$bctr$qqrv @722 ; __fastcall Cssparser::TPropertyArguments::TPropertyArguments()
+    @Cssparser@TPropertyArguments@$bdtr$qqrv @721 ; __fastcall Cssparser::TPropertyArguments::~TPropertyArguments()
+    @Cssparser@TStyleSheetParser@  @808 ; Cssparser::TStyleSheetParser::
+    @Cssparser@TStyleSheetParser@$bctr$qqrv @790 ; __fastcall Cssparser::TStyleSheetParser::TStyleSheetParser()
+    @Cssparser@TStyleSheetParser@$bdtr$qqrv @789 ; __fastcall Cssparser::TStyleSheetParser::~TStyleSheetParser()
+    @Cssparser@TStyleSheetParser@Expect$qqrcuc @788 ; __fastcall Cssparser::TStyleSheetParser::Expect(char, unsigned char)
+    @Cssparser@TStyleSheetParser@GetKibitzNode$qqrv @787 ; __fastcall Cssparser::TStyleSheetParser::GetKibitzNode()
+    @Cssparser@TStyleSheetParser@Parse$qqrv @786 ; __fastcall Cssparser::TStyleSheetParser::Parse()
+    @Cssparser@TStyleSheetParser@ParseAttrib$qqrv @785 ; __fastcall Cssparser::TStyleSheetParser::ParseAttrib()
+    @Cssparser@TStyleSheetParser@ParseClass$qqrv @784 ; __fastcall Cssparser::TStyleSheetParser::ParseClass()
+    @Cssparser@TStyleSheetParser@ParseCombinator$qqrv @783 ; __fastcall Cssparser::TStyleSheetParser::ParseCombinator()
+    @Cssparser@TStyleSheetParser@ParseDeclaration$qqrv @782 ; __fastcall Cssparser::TStyleSheetParser::ParseDeclaration()
+    @Cssparser@TStyleSheetParser@ParseElementName$qqrv @781 ; __fastcall Cssparser::TStyleSheetParser::ParseElementName()
+    @Cssparser@TStyleSheetParser@ParseError$qqr20Cssparser@TErrorKindx20System@UnicodeStringp14System@TVarRecxi @780 ; __fastcall Cssparser::TStyleSheetParser::ParseError(Cssparser::TErrorKind, const System::UnicodeString, System::TVarRec *, const int)
+    @Cssparser@TStyleSheetParser@ParseExpr$qqrv @779 ; __fastcall Cssparser::TStyleSheetParser::ParseExpr()
+    @Cssparser@TStyleSheetParser@ParseFontFace$qqrv @778 ; __fastcall Cssparser::TStyleSheetParser::ParseFontFace()
+    @Cssparser@TStyleSheetParser@ParseFunction$qqrv @777 ; __fastcall Cssparser::TStyleSheetParser::ParseFunction()
+    @Cssparser@TStyleSheetParser@ParseHexColor$qqrv @776 ; __fastcall Cssparser::TStyleSheetParser::ParseHexColor()
+    @Cssparser@TStyleSheetParser@ParseImport$qqrv @775 ; __fastcall Cssparser::TStyleSheetParser::ParseImport()
+    @Cssparser@TStyleSheetParser@ParseMedia$qqrv @774 ; __fastcall Cssparser::TStyleSheetParser::ParseMedia()
+    @Cssparser@TStyleSheetParser@ParseMedium$qqrv @773 ; __fastcall Cssparser::TStyleSheetParser::ParseMedium()
+    @Cssparser@TStyleSheetParser@ParseOperator$qqrv @772 ; __fastcall Cssparser::TStyleSheetParser::ParseOperator()
+    @Cssparser@TStyleSheetParser@ParsePage$qqrv @771 ; __fastcall Cssparser::TStyleSheetParser::ParsePage()
+    @Cssparser@TStyleSheetParser@ParsePrio$qqrv @770 ; __fastcall Cssparser::TStyleSheetParser::ParsePrio()
+    @Cssparser@TStyleSheetParser@ParseProperty$qqrv @769 ; __fastcall Cssparser::TStyleSheetParser::ParseProperty()
+    @Cssparser@TStyleSheetParser@ParsePseudo$qqrv @768 ; __fastcall Cssparser::TStyleSheetParser::ParsePseudo()
+    @Cssparser@TStyleSheetParser@ParsePseudoPage$qqrv @767 ; __fastcall Cssparser::TStyleSheetParser::ParsePseudoPage()
+    @Cssparser@TStyleSheetParser@ParseRuleSet$qqrv @766 ; __fastcall Cssparser::TStyleSheetParser::ParseRuleSet()
+    @Cssparser@TStyleSheetParser@ParseSGMLComment$qqrv @764 ; __fastcall Cssparser::TStyleSheetParser::ParseSGMLComment()
+    @Cssparser@TStyleSheetParser@ParseSelector$qqrv @765 ; __fastcall Cssparser::TStyleSheetParser::ParseSelector()
+    @Cssparser@TStyleSheetParser@ParseSimpleSelector$qqrv @763 ; __fastcall Cssparser::TStyleSheetParser::ParseSimpleSelector()
+    @Cssparser@TStyleSheetParser@ParseStyleSheet$qqrv @762 ; __fastcall Cssparser::TStyleSheetParser::ParseStyleSheet()
+    @Cssparser@TStyleSheetParser@ParseTerm$qqrv @761 ; __fastcall Cssparser::TStyleSheetParser::ParseTerm()
+    @Cssparser@TStyleSheetParser@ParseUnaryOperator$qqrv @760 ; __fastcall Cssparser::TStyleSheetParser::ParseUnaryOperator()
+    @Cssparser@TStyleSheetParser@SetBufferAndPoint$qqr58System@%DelphiInterface$31Mlparserutils@IMLBufferProducer%i @759 ; Cssparser::TStyleSheetParser::SetBufferAndPoint(System::DelphiInterface<{583}...
+    @Cssparser@TStyleSheetScanner@ @806 ; Cssparser::TStyleSheetScanner::
+    @Cssparser@TStyleSheetScanner@FillBuffer$qqrv @804 ; __fastcall Cssparser::TStyleSheetScanner::FillBuffer()
+    @Cssparser@TStyleSheetScanner@GetCharIndex$qqrv @803 ; __fastcall Cssparser::TStyleSheetScanner::GetCharIndex()
+    @Cssparser@TStyleSheetScanner@GetToken$qqrv @802 ; __fastcall Cssparser::TStyleSheetScanner::GetToken()
+    @Cssparser@TStyleSheetScanner@GetTokenStr$qqrv @801 ; __fastcall Cssparser::TStyleSheetScanner::GetTokenStr()
+    @Cssparser@TStyleSheetScanner@HandleComment$qqrv @800 ; __fastcall Cssparser::TStyleSheetScanner::HandleComment()
+    @Cssparser@TStyleSheetScanner@HandleString$qqrc @799 ; __fastcall Cssparser::TStyleSheetScanner::HandleString(char)
+    @Cssparser@TStyleSheetScanner@HandleURI$qqrv @798 ; __fastcall Cssparser::TStyleSheetScanner::HandleURI()
+    @Cssparser@TStyleSheetScanner@LookupAtKeywordToken$qqrx27System@%AnsiStringT$us$i0$% @797 ; __fastcall Cssparser::TStyleSheetScanner::LookupAtKeywordToken(const System::AnsiStringT<0>)
+    @Cssparser@TStyleSheetScanner@LookupFunctionToken$qqrx20System@UnicodeString @796 ; __fastcall Cssparser::TStyleSheetScanner::LookupFunctionToken(const System::UnicodeString)
+    @Cssparser@TStyleSheetScanner@LookupImportantToken$qqrx27System@%AnsiStringT$us$i0$% @795 ; __fastcall Cssparser::TStyleSheetScanner::LookupImportantToken(const System::AnsiStringT<0>)
+    @Cssparser@TStyleSheetScanner@LookupNumToken$qqrx27System@%AnsiStringT$us$i0$% @794 ; __fastcall Cssparser::TStyleSheetScanner::LookupNumToken(const System::AnsiStringT<0>)
+    @Cssparser@TStyleSheetScanner@SetBufferAndPoint$qqr58System@%DelphiInterface$31Mlparserutils@IMLBufferProducer%i @793 ; Cssparser::TStyleSheetScanner::SetBufferAndPoint(System::DelphiInterface<{583}...
+    @Cssparser@TStyleSheetScanner@SkipWhitespace$qqrv @792 ; __fastcall Cssparser::TStyleSheetScanner::SkipWhitespace()
+    @Cssparser@TStyleSheetScanner@TokenToStr$qqrc @791 ; __fastcall Cssparser::TStyleSheetScanner::TokenToStr(char)
+    @Cssparser@TokenClass          @844 ; Cssparser::TokenClass
+    @Cssparser@_sEditorNameAngle   @848 ; Cssparser::_sEditorNameAngle
+    @Cssparser@_sEditorNameFrequency @846 ; Cssparser::_sEditorNameFrequency
+    @Cssparser@_sEditorNameLength  @849 ; Cssparser::_sEditorNameLength
+    @Cssparser@_sEditorNamePercentage @850 ; Cssparser::_sEditorNamePercentage
+    @Cssparser@_sEditorNameTime    @847 ; Cssparser::_sEditorNameTime
+    @Cssparser@_sExpected          @852 ; Cssparser::_sExpected
+    @Cssparser@_sIdentifier        @851 ; Cssparser::_sIdentifier
+    @Cssparser@initialization$qqrv @696 ; __fastcall Cssparser::initialization()
+    @Cssschemaloader@Finalization$qqrv @681 ; __fastcall Cssschemaloader::Finalization()
+    @Cssschemaloader@TCSSReader@   @691 ; Cssschemaloader::TCSSReader::
+    @Cssschemaloader@TCSSReader@$bctr$qqrp25Cssparser@TCSSSymbolTable @686 ; __fastcall Cssschemaloader::TCSSReader::TCSSReader(Cssparser::TCSSSymbolTable *)
+    @Cssschemaloader@TCSSReader@AddProperty$qqr47System@%DelphiInterface$20Xml@Xmlintf@IXMLNode% @688 ; Cssschemaloader::TCSSReader::AddProperty(System::DelphiInterface<{583}...
+    @Cssschemaloader@TCSSReader@AddType$qqr47System@%DelphiInterface$20Xml@Xmlintf@IXMLNode% @687 ; Cssschemaloader::TCSSReader::AddType(System::DelphiInterface<{583}...
+    @Cssschemaloader@TCSSReader@LoadFromFile$qqrx20System@UnicodeString @685 ; __fastcall Cssschemaloader::TCSSReader::LoadFromFile(const System::UnicodeString)
+    @Cssschemaloader@TCSSReader@LoadValues$qqr47System@%DelphiInterface$20Xml@Xmlintf@IXMLNode%p22Cssparser@TCSSProperty @689 ; Cssschemaloader::TCSSReader::LoadValues(System::DelphiInterface<{583}...
+    @Cssschemaloader@TCSSReader@Resolve$qqrv @684 ; __fastcall Cssschemaloader::TCSSReader::Resolve()
+    @Cssschemaloader@TCSSReader@ResolveProp$qqrp22Cssparser@TCSSProperty @683 ; __fastcall Cssschemaloader::TCSSReader::ResolveProp(Cssparser::TCSSProperty *)
+    @Cssschemaloader@TCSSReader@ResolveType$qqrp18Cssparser@TCSSType @682 ; __fastcall Cssschemaloader::TCSSReader::ResolveType(Cssparser::TCSSType *)
+    @Cssschemaloader@initialization$qqrv @680 ; __fastcall Cssschemaloader::initialization()
+    @Cssuniteditor@Finalization$qqrv @693 ; __fastcall Cssuniteditor::Finalization()
+    @Cssuniteditor@TUnitEditorForm@ @695 ; Cssuniteditor::TUnitEditorForm::
+    @Cssuniteditor@initialization$qqrv @692 ; __fastcall Cssuniteditor::initialization()
+    @Dtdparser@EDTDParserError@    @140 ; Dtdparser::EDTDParserError::
+    @Dtdparser@Finalization$qqrv   @52  ; __fastcall Dtdparser::Finalization()
+    @Dtdparser@TDTDAttribute@      @130 ; Dtdparser::TDTDAttribute::
+    @Dtdparser@TDTDAttribute@$bdtr$qqrv @60  ; __fastcall Dtdparser::TDTDAttribute::~TDTDAttribute()
+    @Dtdparser@TDTDAttribute@SetAttr$qqrx27System@%AnsiStringT$us$i0$%oo @59  ; __fastcall Dtdparser::TDTDAttribute::SetAttr(const System::AnsiStringT<0>, bool, bool)
+    @Dtdparser@TDTDElement@        @122 ; Dtdparser::TDTDElement::
+    @Dtdparser@TDTDElement@$bctr$qqr27System@%AnsiStringT$us$i0$%51System@%DynamicArray$27System@%AnsiStringT$us$i0$%% @56  ; Dtdparser::TDTDElement::TDTDElement(System::AnsiStringT<0>, System::DynamicArray<{583}...
+    @Dtdparser@TDTDElement@EnterSymbol$qqrp23Dtdparser@TDTDAttribute @55  ; __fastcall Dtdparser::TDTDElement::EnterSymbol(Dtdparser::TDTDAttribute *)
+    @Dtdparser@TDTDElement@GetEntity$qqrv @54  ; __fastcall Dtdparser::TDTDElement::GetEntity()
+    @Dtdparser@TDTDElement@LookupSymbol$qqrx27System@%AnsiStringT$us$i0$% @53  ; __fastcall Dtdparser::TDTDElement::LookupSymbol(const System::AnsiStringT<0>)
+    @Dtdparser@TDTDEntity@         @125 ; Dtdparser::TDTDEntity::
+    @Dtdparser@TDTDEntity@AddValue$qqri @58  ; __fastcall Dtdparser::TDTDEntity::AddValue(int)
+    @Dtdparser@TDTDEntity@GetValues$qqri @57  ; __fastcall Dtdparser::TDTDEntity::GetValues(int)
+    @Dtdparser@TDTDExprList@       @136 ; Dtdparser::TDTDExprList::
+    @Dtdparser@TDTDExprList@AddExpr$qqrp22Dtdparser@TDTDExprNode @63  ; __fastcall Dtdparser::TDTDExprList::AddExpr(Dtdparser::TDTDExprNode *)
+    @Dtdparser@TDTDExprList@Assign$qqrp22Dtdparser@TDTDExprList @62  ; __fastcall Dtdparser::TDTDExprList::Assign(Dtdparser::TDTDExprList *)
+    @Dtdparser@TDTDExprList@GetExpr$qqri @61  ; __fastcall Dtdparser::TDTDExprList::GetExpr(int)
+    @Dtdparser@TDTDExprNode@       @120 ; Dtdparser::TDTDExprNode::
+    @Dtdparser@TDTDKeywordSymbol@  @118 ; Dtdparser::TDTDKeywordSymbol::
+    @Dtdparser@TDTDParameterizedEntity@ @128 ; Dtdparser::TDTDParameterizedEntity::
+    @Dtdparser@TDTDParser@         @110 ; Dtdparser::TDTDParser::
+    @Dtdparser@TDTDParser@$bctr$qqrv @107 ; __fastcall Dtdparser::TDTDParser::TDTDParser()
+    @Dtdparser@TDTDParser@$bdtr$qqrv @105 ; __fastcall Dtdparser::TDTDParser::~TDTDParser()
+    @Dtdparser@TDTDParser@ClearTable$qqrv @108 ; __fastcall Dtdparser::TDTDParser::ClearTable()
+    @Dtdparser@TDTDParser@CreateExpr$qqrv @106 ; __fastcall Dtdparser::TDTDParser::CreateExpr()
+    @Dtdparser@TDTDParser@EnterSymbol$qqrx20System@UnicodeString19Dtdparser@TDeclType @104 ; __fastcall Dtdparser::TDTDParser::EnterSymbol(const System::UnicodeString, Dtdparser::TDeclType)
+    @Dtdparser@TDTDParser@GetSymbol$qqri @103 ; __fastcall Dtdparser::TDTDParser::GetSymbol(int)
+    @Dtdparser@TDTDParser@LoadFromFile$qqrx20System@UnicodeString @102 ; __fastcall Dtdparser::TDTDParser::LoadFromFile(const System::UnicodeString)
+    @Dtdparser@TDTDParser@LoadFromStream$qqrp22System@Classes@TStream @101 ; __fastcall Dtdparser::TDTDParser::LoadFromStream(System::Classes::TStream *)
+    @Dtdparser@TDTDParser@LookupSymbol$qqrx20System@UnicodeString19Dtdparser@TDeclType @100 ; __fastcall Dtdparser::TDTDParser::LookupSymbol(const System::UnicodeString, Dtdparser::TDeclType)
+    @Dtdparser@TDTDParser@MakeSymArray$qqrv @99  ; __fastcall Dtdparser::TDTDParser::MakeSymArray()
+    @Dtdparser@TDTDParser@Parse$qqrv @98  ; __fastcall Dtdparser::TDTDParser::Parse()
+    @Dtdparser@TDTDParser@ParseAttList$qqrv @97  ; __fastcall Dtdparser::TDTDParser::ParseAttList()
+    @Dtdparser@TDTDParser@ParseAttribute$qqrp20Dtdparser@TDTDSymbol @96  ; __fastcall Dtdparser::TDTDParser::ParseAttribute(Dtdparser::TDTDSymbol *)
+    @Dtdparser@TDTDParser@ParseCharRefs$qqrp20Dtdparser@TDTDSymbolx27System@%AnsiStringT$us$i0$% @95  ; __fastcall Dtdparser::TDTDParser::ParseCharRefs(Dtdparser::TDTDSymbol *, const System::AnsiStringT<0>)
+    @Dtdparser@TDTDParser@ParseDocument$qqrv @94  ; __fastcall Dtdparser::TDTDParser::ParseDocument()
+    @Dtdparser@TDTDParser@ParseElement$qqrv @93  ; __fastcall Dtdparser::TDTDParser::ParseElement()
+    @Dtdparser@TDTDParser@ParseEntity$qqrv @92  ; __fastcall Dtdparser::TDTDParser::ParseEntity()
+    @Dtdparser@TDTDParser@ParseError$qqr21Dtdparser@TParseErrorx20System@UnicodeStringp14System@TVarRecxi @91  ; __fastcall Dtdparser::TDTDParser::ParseError(Dtdparser::TParseError, const System::UnicodeString, System::TVarRec *, const int)
+    @Dtdparser@TDTDParser@ParseErrorExpected$qqrp14System@TVarRecxi @90  ; __fastcall Dtdparser::TDTDParser::ParseErrorExpected(System::TVarRec *, const int)
+    @Dtdparser@TDTDParser@ParseExpr$qqrv @89  ; __fastcall Dtdparser::TDTDParser::ParseExpr()
+    @Dtdparser@TDTDParser@ParseExprBody$qqrv @88  ; __fastcall Dtdparser::TDTDParser::ParseExprBody()
+    @Dtdparser@TDTDParser@RemoveExpr$qqrp22Dtdparser@TDTDExprNode @87  ; __fastcall Dtdparser::TDTDParser::RemoveExpr(Dtdparser::TDTDExprNode *)
+    @Dtdparser@TDTDScanner@        @114 ; Dtdparser::TDTDScanner::
+    @Dtdparser@TDTDScanner@$bctr$qqrp20Dtdparser@TDTDParser @82  ; __fastcall Dtdparser::TDTDScanner::TDTDScanner(Dtdparser::TDTDParser *)
+    @Dtdparser@TDTDScanner@$bdtr$qqrv @81  ; __fastcall Dtdparser::TDTDScanner::~TDTDScanner()
+    @Dtdparser@TDTDScanner@BeginIgnore$qqrv @67  ; __fastcall Dtdparser::TDTDScanner::BeginIgnore()
+    @Dtdparser@TDTDScanner@ClearKeywordTable$qqrv @83  ; __fastcall Dtdparser::TDTDScanner::ClearKeywordTable()
+    @Dtdparser@TDTDScanner@EndIgnore$qqrv @66  ; __fastcall Dtdparser::TDTDScanner::EndIgnore()
+    @Dtdparser@TDTDScanner@EndOfStream$qqrv @80  ; __fastcall Dtdparser::TDTDScanner::EndOfStream()
+    @Dtdparser@TDTDScanner@EnterKeywordSymbol$qqrx27System@%AnsiStringT$us$i0$%20Dtdparser@TTokenKind @78  ; __fastcall Dtdparser::TDTDScanner::EnterKeywordSymbol(const System::AnsiStringT<0>, Dtdparser::TTokenKind)
+    @Dtdparser@TDTDScanner@FillBuffer$qqrv @77  ; __fastcall Dtdparser::TDTDScanner::FillBuffer()
+    @Dtdparser@TDTDScanner@GetParameterizedEntityNames$qqrv @64  ; __fastcall Dtdparser::TDTDScanner::GetParameterizedEntityNames()
+    @Dtdparser@TDTDScanner@GetToken$qqrv @76  ; __fastcall Dtdparser::TDTDScanner::GetToken()
+    @Dtdparser@TDTDScanner@HandleEditors$qqrv @65  ; __fastcall Dtdparser::TDTDScanner::HandleEditors()
+    @Dtdparser@TDTDScanner@HandleGlobalComment$qqrv @75  ; __fastcall Dtdparser::TDTDScanner::HandleGlobalComment()
+    @Dtdparser@TDTDScanner@HandleInlineComment$qqrv @74  ; __fastcall Dtdparser::TDTDScanner::HandleInlineComment()
+    @Dtdparser@TDTDScanner@HandleString$qqrc @69  ; __fastcall Dtdparser::TDTDScanner::HandleString(char)
+    @Dtdparser@TDTDScanner@Ignore$qqrv @68  ; __fastcall Dtdparser::TDTDScanner::Ignore()
+    @Dtdparser@TDTDScanner@LoadFromStream$qqrp22System@Classes@TStreamx20System@UnicodeString @73  ; __fastcall Dtdparser::TDTDScanner::LoadFromStream(System::Classes::TStream *, const System::UnicodeString)
+    @Dtdparser@TDTDScanner@LookupKeywordSymbol$qqrx27System@%AnsiStringT$us$i0$% @72  ; __fastcall Dtdparser::TDTDScanner::LookupKeywordSymbol(const System::AnsiStringT<0>)
+    @Dtdparser@TDTDScanner@ParseError$qqr21Dtdparser@TParseErrorx20System@UnicodeStringp14System@TVarRecxi @71  ; __fastcall Dtdparser::TDTDScanner::ParseError(Dtdparser::TParseError, const System::UnicodeString, System::TVarRec *, const int)
+    @Dtdparser@TDTDScanner@PushIncludeFile$qqrx20System@UnicodeString @79  ; __fastcall Dtdparser::TDTDScanner::PushIncludeFile(const System::UnicodeString)
+    @Dtdparser@TDTDScanner@PushParameterizedEntity$qqrp33Dtdparser@TDTDParameterizedEntity @70  ; __fastcall Dtdparser::TDTDScanner::PushParameterizedEntity(Dtdparser::TDTDParameterizedEntity *)
+    @Dtdparser@TDTDSymbol@         @132 ; Dtdparser::TDTDSymbol::
+    @Dtdparser@TDTDSymbol@$bctr$qqrx27System@%AnsiStringT$us$i0$% @86  ; __fastcall Dtdparser::TDTDSymbol::TDTDSymbol(const System::AnsiStringT<0>)
+    @Dtdparser@TDTDSymbol@$bdtr$qqrv @85  ; __fastcall Dtdparser::TDTDSymbol::~TDTDSymbol()
+    @Dtdparser@TDTDSymbol@GetExprList$qqrv @84  ; __fastcall Dtdparser::TDTDSymbol::GetExprList()
+    @Dtdparser@initialization$qqrv @51  ; __fastcall Dtdparser::initialization()
+    @GetPackageInfoTable           @910 ; GetPackageInfoTable
+    @Htmlcodcmplt@Finalization$qqrv @601 ; __fastcall Htmlcodcmplt::Finalization()
+    @Htmlcodcmplt@MLSymbolManager$qqrv @602 ; __fastcall Htmlcodcmplt::MLSymbolManager()
+    @Htmlcodcmplt@MarkupLanguageManager$qqrv @603 ; __fastcall Htmlcodcmplt::MarkupLanguageManager()
+    @Htmlcodcmplt@initialization$qqrv @600 ; __fastcall Htmlcodcmplt::initialization()
+    @Htmreg@Finalization$qqrv      @902 ; __fastcall Htmreg::Finalization()
+    @Htmreg@IDERegister$qqrv       @903 ; __fastcall Htmreg::IDERegister()
+    @Htmreg@initialization$qqrv    @901 ; __fastcall Htmreg::initialization()
+    @Mlcc@@GetPackageInfoTable$qqrv @907 ; Mlcc::__linkproc__ __fastcall GetPackageInfoTable()
+    @Mlcc@@PackageLoad$qqrv        @906 ; Mlcc::__linkproc__ __fastcall PackageLoad()
+    @Mlcc@@PackageUnload$qqrv      @905 ; Mlcc::__linkproc__ __fastcall PackageUnload()
+    @Mlcc@initialization$qqrv      @904 ; __fastcall Mlcc::initialization()
+    @Mlparser@Finalization$qqrv    @231 ; __fastcall Mlparser::Finalization()
+    @Mlparser@GetFileToSchemaMapperService$qqrv @234 ; __fastcall Mlparser::GetFileToSchemaMapperService()
+    @Mlparser@GetMLEditorRegistry$qqrv @233 ; __fastcall Mlparser::GetMLEditorRegistry()
+    @Mlparser@GetSymbolManagerIterator$qqrp25Mlparser@TMLSymbolManager @235 ; __fastcall Mlparser::GetSymbolManagerIterator(Mlparser::TMLSymbolManager *)
+    @Mlparser@GetTagStackIterator$qqrp25Mlparser@TMLSymbolManager @232 ; __fastcall Mlparser::GetTagStackIterator(Mlparser::TMLSymbolManager *)
+    @Mlparser@TAsciiCharList@      @576 ; Mlparser::TAsciiCharList::
+    @Mlparser@TAsciiCharList@$bctr$qqrv @376 ; __fastcall Mlparser::TAsciiCharList::TAsciiCharList()
+    @Mlparser@TAsciiCharList@$bdtr$qqrv @375 ; __fastcall Mlparser::TAsciiCharList::~TAsciiCharList()
+    @Mlparser@TAsciiCharList@AddEntity$qqrx20System@UnicodeStringi @379 ; __fastcall Mlparser::TAsciiCharList::AddEntity(const System::UnicodeString, int)
+    @Mlparser@TAsciiCharList@AlphaSort$qqrv @378 ; __fastcall Mlparser::TAsciiCharList::AlphaSort()
+    @Mlparser@TAsciiCharList@Clear$qqrv @377 ; __fastcall Mlparser::TAsciiCharList::Clear()
+    @Mlparser@TAsciiCharList@FindIndex$qqrx20System@UnicodeString @374 ; __fastcall Mlparser::TAsciiCharList::FindIndex(const System::UnicodeString)
+    @Mlparser@TAsciiCharList@GetAsciiVal$qqri @373 ; __fastcall Mlparser::TAsciiCharList::GetAsciiVal(int)
+    @Mlparser@TAsciiCharList@GetCount$qqrv @372 ; __fastcall Mlparser::TAsciiCharList::GetCount()
+    @Mlparser@TAsciiCharList@GetItem$qqri @371 ; __fastcall Mlparser::TAsciiCharList::GetItem(int)
+    @Mlparser@TAsciiCharList@SetFilter$qqrx20System@UnicodeString @370 ; __fastcall Mlparser::TAsciiCharList::SetFilter(const System::UnicodeString)
+    @Mlparser@TAsciiCharList@SetFontName$qqrx20System@UnicodeString @369 ; __fastcall Mlparser::TAsciiCharList::SetFontName(const System::UnicodeString)
+    @Mlparser@TClosingTag@         @590 ; Mlparser::TClosingTag::
+    @Mlparser@TDefaultAttributeEditor@ @535 ; Mlparser::TDefaultAttributeEditor::
+    @Mlparser@TDefaultAttributeEditor@Execute$qqr44System@%DelphiInterface$17System@IInterface%i @253 ; Mlparser::TDefaultAttributeEditor::Execute(System::DelphiInterface<{583}...
+    @Mlparser@TDefaultAttributeEditor@GetEditorId$qqrv @252 ; __fastcall Mlparser::TDefaultAttributeEditor::GetEditorId()
+    @Mlparser@TDefaultAttributeEditor@GetValue$qqrv @251 ; __fastcall Mlparser::TDefaultAttributeEditor::GetValue()
+    @Mlparser@TDefaultAttributeEditor@InvokeCodeCompletion$qqrv @250 ; __fastcall Mlparser::TDefaultAttributeEditor::InvokeCodeCompletion()
+    @Mlparser@TDefaultAttributeEditor@RelativeMoveCaretPos$qqrv @249 ; __fastcall Mlparser::TDefaultAttributeEditor::RelativeMoveCaretPos()
+    @Mlparser@TDocTypeTag@         @586 ; Mlparser::TDocTypeTag::
+    @Mlparser@TDocTypeTag@GetEmpty$qqrv @239 ; __fastcall Mlparser::TDocTypeTag::GetEmpty()
+    @Mlparser@TEmptyTag@           @592 ; Mlparser::TEmptyTag::
+    @Mlparser@TEmptyTag@$bctr$qqrx20System@UnicodeStringxp25Mlparser@TMLSymbolManageri @414 ; __fastcall Mlparser::TEmptyTag::TEmptyTag(const System::UnicodeString, Mlparser::TMLSymbolManager * const, int)
+    @Mlparser@TEmptyTag@AddAttribute$qqrx59System@%DelphiInterface$32Mlparserutils@IOTAMLTagAttribute% @419 ; Mlparser::TEmptyTag::AddAttribute(const System::DelphiInterface<{583}...
+    @Mlparser@TEmptyTag@AddTag$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag% @418 ; Mlparser::TEmptyTag::AddTag(const System::DelphiInterface<{583}...
+    @Mlparser@TEmptyTag@AlphaSort$qqrv @417 ; __fastcall Mlparser::TEmptyTag::AlphaSort()
+    @Mlparser@TEmptyTag@ClearAttrs$qqrv @416 ; __fastcall Mlparser::TEmptyTag::ClearAttrs()
+    @Mlparser@TEmptyTag@ClearTags$qqrv @415 ; __fastcall Mlparser::TEmptyTag::ClearTags()
+    @Mlparser@TEmptyTag@FindAttribute$qqrx20System@UnicodeString @413 ; __fastcall Mlparser::TEmptyTag::FindAttribute(const System::UnicodeString)
+    @Mlparser@TEmptyTag@FindSymbol$qqrx20System@UnicodeString @412 ; __fastcall Mlparser::TEmptyTag::FindSymbol(const System::UnicodeString)
+    @Mlparser@TEmptyTag@GetAny$qqrv @411 ; __fastcall Mlparser::TEmptyTag::GetAny()
+    @Mlparser@TEmptyTag@GetAttribute$qqri @410 ; __fastcall Mlparser::TEmptyTag::GetAttribute(int)
+    @Mlparser@TEmptyTag@GetAttributeCount$qqrv @409 ; __fastcall Mlparser::TEmptyTag::GetAttributeCount()
+    @Mlparser@TEmptyTag@GetEmpty$qqrv @408 ; __fastcall Mlparser::TEmptyTag::GetEmpty()
+    @Mlparser@TEmptyTag@GetEntityCount$qqrv @407 ; __fastcall Mlparser::TEmptyTag::GetEntityCount()
+    @Mlparser@TEmptyTag@GetEntityName$qqri @406 ; __fastcall Mlparser::TEmptyTag::GetEntityName(int)
+    @Mlparser@TEmptyTag@GetFilter$qqrv @405 ; __fastcall Mlparser::TEmptyTag::GetFilter()
+    @Mlparser@TEmptyTag@GetFlags$qqrv @404 ; __fastcall Mlparser::TEmptyTag::GetFlags()
+    @Mlparser@TEmptyTag@GetID$qqrv @403 ; __fastcall Mlparser::TEmptyTag::GetID()
+    @Mlparser@TEmptyTag@GetIsChild$qqrv @402 ; __fastcall Mlparser::TEmptyTag::GetIsChild()
+    @Mlparser@TEmptyTag@GetLineNumber$qqrv @401 ; __fastcall Mlparser::TEmptyTag::GetLineNumber()
+    @Mlparser@TEmptyTag@GetName$qqrv @400 ; __fastcall Mlparser::TEmptyTag::GetName()
+    @Mlparser@TEmptyTag@GetOffsetEnd$qqrv @399 ; __fastcall Mlparser::TEmptyTag::GetOffsetEnd()
+    @Mlparser@TEmptyTag@GetOffsetStart$qqrv @398 ; __fastcall Mlparser::TEmptyTag::GetOffsetStart()
+    @Mlparser@TEmptyTag@GetPureTagCount$qqrv @397 ; __fastcall Mlparser::TEmptyTag::GetPureTagCount()
+    @Mlparser@TEmptyTag@GetRequiresClosingTag$qqrv @396 ; __fastcall Mlparser::TEmptyTag::GetRequiresClosingTag()
+    @Mlparser@TEmptyTag@GetRequiresOpeningTag$qqrv @395 ; __fastcall Mlparser::TEmptyTag::GetRequiresOpeningTag()
+    @Mlparser@TEmptyTag@GetShowAttributes$qqrv @394 ; __fastcall Mlparser::TEmptyTag::GetShowAttributes()
+    @Mlparser@TEmptyTag@GetStartIndex$qqrv @393 ; __fastcall Mlparser::TEmptyTag::GetStartIndex()
+    @Mlparser@TEmptyTag@GetTagCount$qqrv @392 ; __fastcall Mlparser::TEmptyTag::GetTagCount()
+    @Mlparser@TEmptyTag@GetTags$qqri @391 ; __fastcall Mlparser::TEmptyTag::GetTags(int)
+    @Mlparser@TEmptyTag@LookupTag$qqrx20System@UnicodeString @390 ; __fastcall Mlparser::TEmptyTag::LookupTag(const System::UnicodeString)
+    @Mlparser@TEmptyTag@RemoveAttribute$qqrx20System@UnicodeString @389 ; __fastcall Mlparser::TEmptyTag::RemoveAttribute(const System::UnicodeString)
+    @Mlparser@TEmptyTag@RemoveTag$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag% @388 ; Mlparser::TEmptyTag::RemoveTag(const System::DelphiInterface<{583}...
+    @Mlparser@TEmptyTag@SetFilter$qqrx20System@UnicodeString @387 ; __fastcall Mlparser::TEmptyTag::SetFilter(const System::UnicodeString)
+    @Mlparser@TEmptyTag@SetFlags$qqr54System@%Set$27Mlparserutils@IOTAMLTagFlagt1$i0$t1$i1$% @386 ; Mlparser::TEmptyTag::SetFlags(System::Set<{583}...
+    @Mlparser@TEmptyTag@SetIsChild$qqro @385 ; __fastcall Mlparser::TEmptyTag::SetIsChild(bool)
+    @Mlparser@TEmptyTag@SetLineNumber$qqri @384 ; __fastcall Mlparser::TEmptyTag::SetLineNumber(int)
+    @Mlparser@TEmptyTag@SetOffsetEnd$qqri @383 ; __fastcall Mlparser::TEmptyTag::SetOffsetEnd(int)
+    @Mlparser@TEmptyTag@SetOffsetStart$qqri @382 ; __fastcall Mlparser::TEmptyTag::SetOffsetStart(int)
+    @Mlparser@TEmptyTag@SetShowAttributes$qqro @381 ; __fastcall Mlparser::TEmptyTag::SetShowAttributes(bool)
+    @Mlparser@THTMLAttribute@      @574 ; Mlparser::THTMLAttribute::
+    @Mlparser@THTMLAttribute@$bctr$qqrx20System@UnicodeStringi @326 ; __fastcall Mlparser::THTMLAttribute::THTMLAttribute(const System::UnicodeString, int)
+    @Mlparser@THTMLAttribute@$bdtr$qqrv @325 ; __fastcall Mlparser::THTMLAttribute::~THTMLAttribute()
+    @Mlparser@THTMLAttribute@AddValue$qqrx20System@UnicodeString @327 ; __fastcall Mlparser::THTMLAttribute::AddValue(const System::UnicodeString)
+    @Mlparser@THTMLAttribute@FindSymbol$qqrx20System@UnicodeString @324 ; __fastcall Mlparser::THTMLAttribute::FindSymbol(const System::UnicodeString)
+    @Mlparser@THTMLAttribute@GetAttributeValueStartOffset$qqrv @305 ; __fastcall Mlparser::THTMLAttribute::GetAttributeValueStartOffset()
+    @Mlparser@THTMLAttribute@GetCount$qqrv @323 ; __fastcall Mlparser::THTMLAttribute::GetCount()
+    @Mlparser@THTMLAttribute@GetFilter$qqrv @322 ; __fastcall Mlparser::THTMLAttribute::GetFilter()
+    @Mlparser@THTMLAttribute@GetFixed$qqrv @321 ; __fastcall Mlparser::THTMLAttribute::GetFixed()
+    @Mlparser@THTMLAttribute@GetFixedValue$qqrv @320 ; __fastcall Mlparser::THTMLAttribute::GetFixedValue()
+    @Mlparser@THTMLAttribute@GetID$qqrv @317 ; __fastcall Mlparser::THTMLAttribute::GetID()
+    @Mlparser@THTMLAttribute@GetName$qqrv @319 ; __fastcall Mlparser::THTMLAttribute::GetName()
+    @Mlparser@THTMLAttribute@GetOffsetEnd$qqrv @318 ; __fastcall Mlparser::THTMLAttribute::GetOffsetEnd()
+    @Mlparser@THTMLAttribute@GetOffsetStart$qqrv @316 ; __fastcall Mlparser::THTMLAttribute::GetOffsetStart()
+    @Mlparser@THTMLAttribute@GetRequired$qqrv @315 ; __fastcall Mlparser::THTMLAttribute::GetRequired()
+    @Mlparser@THTMLAttribute@GetValue$qqri @314 ; __fastcall Mlparser::THTMLAttribute::GetValue(int)
+    @Mlparser@THTMLAttribute@SetAttributeValueStartOffset$qqri @304 ; __fastcall Mlparser::THTMLAttribute::SetAttributeValueStartOffset(int)
+    @Mlparser@THTMLAttribute@SetFilter$qqrx20System@UnicodeString @313 ; __fastcall Mlparser::THTMLAttribute::SetFilter(const System::UnicodeString)
+    @Mlparser@THTMLAttribute@SetFixed$qqrxo @312 ; __fastcall Mlparser::THTMLAttribute::SetFixed(const bool)
+    @Mlparser@THTMLAttribute@SetFixedValue$qqrx20System@UnicodeString @311 ; __fastcall Mlparser::THTMLAttribute::SetFixedValue(const System::UnicodeString)
+    @Mlparser@THTMLAttribute@SetName$qqrx20System@UnicodeString @310 ; __fastcall Mlparser::THTMLAttribute::SetName(const System::UnicodeString)
+    @Mlparser@THTMLAttribute@SetOffsetEnd$qqri @309 ; __fastcall Mlparser::THTMLAttribute::SetOffsetEnd(int)
+    @Mlparser@THTMLAttribute@SetOffsetStart$qqri @308 ; __fastcall Mlparser::THTMLAttribute::SetOffsetStart(int)
+    @Mlparser@THTMLAttribute@SetRequired$qqrxo @307 ; __fastcall Mlparser::THTMLAttribute::SetRequired(const bool)
+    @Mlparser@THTMLAttribute@SetValue$qqrix20System@UnicodeString @306 ; __fastcall Mlparser::THTMLAttribute::SetValue(int, const System::UnicodeString)
+    @Mlparser@THTMLAttributeEvent@ @572 ; Mlparser::THTMLAttributeEvent::
+    @Mlparser@THTMLColorAttributeEditor@ @537 ; Mlparser::THTMLColorAttributeEditor::
+    @Mlparser@THTMLColorAttributeEditor@Execute$qqr44System@%DelphiInterface$17System@IInterface%i @258 ; Mlparser::THTMLColorAttributeEditor::Execute(System::DelphiInterface<{583}...
+    @Mlparser@THTMLColorAttributeEditor@GetEditorId$qqrv @257 ; __fastcall Mlparser::THTMLColorAttributeEditor::GetEditorId()
+    @Mlparser@THTMLColorAttributeEditor@GetValue$qqrv @256 ; __fastcall Mlparser::THTMLColorAttributeEditor::GetValue()
+    @Mlparser@THTMLColorAttributeEditor@InvokeCodeCompletion$qqrv @255 ; __fastcall Mlparser::THTMLColorAttributeEditor::InvokeCodeCompletion()
+    @Mlparser@THTMLColorAttributeEditor@RelativeMoveCaretPos$qqrv @254 ; __fastcall Mlparser::THTMLColorAttributeEditor::RelativeMoveCaretPos()
+    @Mlparser@THTMLTag@            @552 ; Mlparser::THTMLTag::
+    @Mlparser@THTMLTag@$bctr$qqrx20System@UnicodeStringxp25Mlparser@TMLSymbolManageri @363 ; __fastcall Mlparser::THTMLTag::THTMLTag(const System::UnicodeString, Mlparser::TMLSymbolManager * const, int)
+    @Mlparser@THTMLTag@$bdtr$qqrv  @362 ; __fastcall Mlparser::THTMLTag::~THTMLTag()
+    @Mlparser@THTMLTag@AddAttribute$qqrx59System@%DelphiInterface$32Mlparserutils@IOTAMLTagAttribute% @368 ; Mlparser::THTMLTag::AddAttribute(const System::DelphiInterface<{583}...
+    @Mlparser@THTMLTag@AddTag$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag% @367 ; Mlparser::THTMLTag::AddTag(const System::DelphiInterface<{583}...
+    @Mlparser@THTMLTag@AlphaSort$qqrv @366 ; __fastcall Mlparser::THTMLTag::AlphaSort()
+    @Mlparser@THTMLTag@ClearAttrs$qqrv @365 ; __fastcall Mlparser::THTMLTag::ClearAttrs()
+    @Mlparser@THTMLTag@ClearTags$qqrv @364 ; __fastcall Mlparser::THTMLTag::ClearTags()
+    @Mlparser@THTMLTag@FindAttribute$qqrx20System@UnicodeString @361 ; __fastcall Mlparser::THTMLTag::FindAttribute(const System::UnicodeString)
+    @Mlparser@THTMLTag@FindSymbol$qqrx20System@UnicodeString @360 ; __fastcall Mlparser::THTMLTag::FindSymbol(const System::UnicodeString)
+    @Mlparser@THTMLTag@GetAny$qqrv @359 ; __fastcall Mlparser::THTMLTag::GetAny()
+    @Mlparser@THTMLTag@GetAttribute$qqri @358 ; __fastcall Mlparser::THTMLTag::GetAttribute(int)
+    @Mlparser@THTMLTag@GetAttributeCount$qqrv @357 ; __fastcall Mlparser::THTMLTag::GetAttributeCount()
+    @Mlparser@THTMLTag@GetEmpty$qqrv @356 ; __fastcall Mlparser::THTMLTag::GetEmpty()
+    @Mlparser@THTMLTag@GetEntityCount$qqrv @355 ; __fastcall Mlparser::THTMLTag::GetEntityCount()
+    @Mlparser@THTMLTag@GetEntityName$qqri @354 ; __fastcall Mlparser::THTMLTag::GetEntityName(int)
+    @Mlparser@THTMLTag@GetFilter$qqrv @353 ; __fastcall Mlparser::THTMLTag::GetFilter()
+    @Mlparser@THTMLTag@GetFlags$qqrv @352 ; __fastcall Mlparser::THTMLTag::GetFlags()
+    @Mlparser@THTMLTag@GetID$qqrv  @351 ; __fastcall Mlparser::THTMLTag::GetID()
+    @Mlparser@THTMLTag@GetIsChild$qqrv @350 ; __fastcall Mlparser::THTMLTag::GetIsChild()
+    @Mlparser@THTMLTag@GetName$qqrv @349 ; __fastcall Mlparser::THTMLTag::GetName()
+    @Mlparser@THTMLTag@GetOffsetEnd$qqrv @348 ; __fastcall Mlparser::THTMLTag::GetOffsetEnd()
+    @Mlparser@THTMLTag@GetOffsetStart$qqrv @347 ; __fastcall Mlparser::THTMLTag::GetOffsetStart()
+    @Mlparser@THTMLTag@GetPureTagCount$qqrv @346 ; __fastcall Mlparser::THTMLTag::GetPureTagCount()
+    @Mlparser@THTMLTag@GetRequiresClosingTag$qqrv @345 ; __fastcall Mlparser::THTMLTag::GetRequiresClosingTag()
+    @Mlparser@THTMLTag@GetRequiresOpeningTag$qqrv @344 ; __fastcall Mlparser::THTMLTag::GetRequiresOpeningTag()
+    @Mlparser@THTMLTag@GetShowAttributes$qqrv @343 ; __fastcall Mlparser::THTMLTag::GetShowAttributes()
+    @Mlparser@THTMLTag@GetStartIndex$qqrv @342 ; __fastcall Mlparser::THTMLTag::GetStartIndex()
+    @Mlparser@THTMLTag@GetTagCount$qqrv @341 ; __fastcall Mlparser::THTMLTag::GetTagCount()
+    @Mlparser@THTMLTag@GetTags$qqri @340 ; __fastcall Mlparser::THTMLTag::GetTags(int)
+    @Mlparser@THTMLTag@LookupTag$qqrx20System@UnicodeString @339 ; __fastcall Mlparser::THTMLTag::LookupTag(const System::UnicodeString)
+    @Mlparser@THTMLTag@QuickSort$qqrii @338 ; __fastcall Mlparser::THTMLTag::QuickSort(int, int)
+    @Mlparser@THTMLTag@QuickSortAttrs$qqrii @337 ; __fastcall Mlparser::THTMLTag::QuickSortAttrs(int, int)
+    @Mlparser@THTMLTag@RemoveAttribute$qqrx20System@UnicodeString @336 ; __fastcall Mlparser::THTMLTag::RemoveAttribute(const System::UnicodeString)
+    @Mlparser@THTMLTag@RemoveTag$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag% @335 ; Mlparser::THTMLTag::RemoveTag(const System::DelphiInterface<{583}...
+    @Mlparser@THTMLTag@SetEntityName$qqrx51System@%DynamicArray$27System@%AnsiStringT$us$i0$%% @334 ; Mlparser::THTMLTag::SetEntityName(const System::DynamicArray<{583}...
+    @Mlparser@THTMLTag@SetFilter$qqrx20System@UnicodeString @333 ; __fastcall Mlparser::THTMLTag::SetFilter(const System::UnicodeString)
+    @Mlparser@THTMLTag@SetFlags$qqr54System@%Set$27Mlparserutils@IOTAMLTagFlagt1$i0$t1$i1$% @332 ; Mlparser::THTMLTag::SetFlags(System::Set<{583}...
+    @Mlparser@THTMLTag@SetIsChild$qqro @331 ; __fastcall Mlparser::THTMLTag::SetIsChild(bool)
+    @Mlparser@THTMLTag@SetOffsetEnd$qqri @330 ; __fastcall Mlparser::THTMLTag::SetOffsetEnd(int)
+    @Mlparser@THTMLTag@SetOffsetStart$qqri @329 ; __fastcall Mlparser::THTMLTag::SetOffsetStart(int)
+    @Mlparser@THTMLTag@SetShowAttributes$qqro @328 ; __fastcall Mlparser::THTMLTag::SetShowAttributes(bool)
+    @Mlparser@THTMLURIAttributeEditor@ @539 ; Mlparser::THTMLURIAttributeEditor::
+    @Mlparser@THTMLURIAttributeEditor@$bctr$qqrv @264 ; __fastcall Mlparser::THTMLURIAttributeEditor::THTMLURIAttributeEditor()
+    @Mlparser@THTMLURIAttributeEditor@EDITOR_ID @599 ; Mlparser::THTMLURIAttributeEditor::EDITOR_ID
+    @Mlparser@THTMLURIAttributeEditor@Execute$qqr44System@%DelphiInterface$17System@IInterface%i @263 ; Mlparser::THTMLURIAttributeEditor::Execute(System::DelphiInterface<{583}...
+    @Mlparser@THTMLURIAttributeEditor@GetEditorId$qqrv @262 ; __fastcall Mlparser::THTMLURIAttributeEditor::GetEditorId()
+    @Mlparser@THTMLURIAttributeEditor@GetValue$qqrv @261 ; __fastcall Mlparser::THTMLURIAttributeEditor::GetValue()
+    @Mlparser@THTMLURIAttributeEditor@InvokeCodeCompletion$qqrv @260 ; __fastcall Mlparser::THTMLURIAttributeEditor::InvokeCodeCompletion()
+    @Mlparser@THTMLURIAttributeEditor@RelativeMoveCaretPos$qqrv @259 ; __fastcall Mlparser::THTMLURIAttributeEditor::RelativeMoveCaretPos()
+    @Mlparser@TMLComment@          @562 ; Mlparser::TMLComment::
+    @Mlparser@TMLEntityReference@  @554 ; Mlparser::TMLEntityReference::
+    @Mlparser@TMLParser@           @541 ; Mlparser::TMLParser::
+    @Mlparser@TMLParser@$bctr$qqrxp25Mlparser@TMLSymbolManager @525 ; __fastcall Mlparser::TMLParser::TMLParser(Mlparser::TMLSymbolManager * const)
+    @Mlparser@TMLParser@$bdtr$qqrv @524 ; __fastcall Mlparser::TMLParser::~TMLParser()
+    @Mlparser@TMLParser@AddCallback$qqrx44System@%DelphiInterface$17System@IInterface% @497 ; Mlparser::TMLParser::AddCallback(const System::DelphiInterface<{583}...
+    @Mlparser@TMLParser@AddTagAttr$qqrx59System@%DelphiInterface$32Mlparserutils@IOTAMLTagAttribute%x20System@UnicodeStringcc @527 ; Mlparser::TMLParser::AddTagAttr(const System::DelphiInterface<{583}...
+    @Mlparser@TMLParser@BootStrapDTD$qqrx58System@%DelphiInterface$31Mlparserutils@IMLBufferProducer% @516 ; Mlparser::TMLParser::BootStrapDTD(const System::DelphiInterface<{583}...
+    @Mlparser@TMLParser@Callback$qqr56System@%DelphiInterface$29Mlparserutils@IOTAMLMarkupPos%22Mlparserutils@TTagTypeii @498 ; Mlparser::TMLParser::Callback(System::DelphiInterface<{583}...
+    @Mlparser@TMLParser@CallbacksInvalidate$qqrv @480 ; __fastcall Mlparser::TMLParser::CallbacksInvalidate()
+    @Mlparser@TMLParser@ClearAutoCloseTagPosStack$qqrv @506 ; __fastcall Mlparser::TMLParser::ClearAutoCloseTagPosStack()
+    @Mlparser@TMLParser@ClearContextPos$qqrv @481 ; __fastcall Mlparser::TMLParser::ClearContextPos()
+    @Mlparser@TMLParser@ClearTagAttrList$qqrp26System@Contnrs@TObjectList @499 ; __fastcall Mlparser::TMLParser::ClearTagAttrList(System::Contnrs::TObjectList *)
+    @Mlparser@TMLParser@ClearTagStack$qqrv @526 ; __fastcall Mlparser::TMLParser::ClearTagStack()
+    @Mlparser@TMLParser@DisposeTagEntry$qqrp18Mlparser@TTagEntryo @509 ; __fastcall Mlparser::TMLParser::DisposeTagEntry(Mlparser::TTagEntry *, bool)
+    @Mlparser@TMLParser@FindTag$qqrx20System@UnicodeString @523 ; __fastcall Mlparser::TMLParser::FindTag(const System::UnicodeString)
+    @Mlparser@TMLParser@GetContextPos$qqrv @484 ; __fastcall Mlparser::TMLParser::GetContextPos()
+    @Mlparser@TMLParser@GetCurrentCol$qqrv @485 ; __fastcall Mlparser::TMLParser::GetCurrentCol()
+    @Mlparser@TMLParser@GetCurrentTagAttrCount$qqrv @502 ; __fastcall Mlparser::TMLParser::GetCurrentTagAttrCount()
+    @Mlparser@TMLParser@GetCurrentTagAttrName$qqri @500 ; __fastcall Mlparser::TMLParser::GetCurrentTagAttrName(int)
+    @Mlparser@TMLParser@GetCurrentTagAttrOffsetEnd$qqr20System@UnicodeString @479 ; __fastcall Mlparser::TMLParser::GetCurrentTagAttrOffsetEnd(System::UnicodeString)
+    @Mlparser@TMLParser@GetCurrentTagAttrOffsetStart$qqr20System@UnicodeString @478 ; __fastcall Mlparser::TMLParser::GetCurrentTagAttrOffsetStart(System::UnicodeString)
+    @Mlparser@TMLParser@GetCurrentTagAttrStrType$qqr20System@UnicodeString @489 ; __fastcall Mlparser::TMLParser::GetCurrentTagAttrStrType(System::UnicodeString)
+    @Mlparser@TMLParser@GetCurrentTagAttrStrTypeEnd$qqr20System@UnicodeString @488 ; __fastcall Mlparser::TMLParser::GetCurrentTagAttrStrTypeEnd(System::UnicodeString)
+    @Mlparser@TMLParser@GetCurrentTagAttrValue$qqri @501 ; __fastcall Mlparser::TMLParser::GetCurrentTagAttrValue(int)
+    @Mlparser@TMLParser@GetCurrentTagAttrValueByName$qqr20System@UnicodeString @493 ; __fastcall Mlparser::TMLParser::GetCurrentTagAttrValueByName(System::UnicodeString)
+    @Mlparser@TMLParser@GetCurrentTagAttrValueOffsetStart$qqr20System@UnicodeString @477 ; __fastcall Mlparser::TMLParser::GetCurrentTagAttrValueOffsetStart(System::UnicodeString)
+    @Mlparser@TMLParser@GetCurrentTagAttrs$qqri @490 ; __fastcall Mlparser::TMLParser::GetCurrentTagAttrs(int)
+    @Mlparser@TMLParser@GetInAttribute$qqrv @522 ; __fastcall Mlparser::TMLParser::GetInAttribute()
+    @Mlparser@TMLParser@GetInDocType$qqrv @487 ; __fastcall Mlparser::TMLParser::GetInDocType()
+    @Mlparser@TMLParser@GetTagAttrValue$qqrrpcoo @521 ; __fastcall Mlparser::TMLParser::GetTagAttrValue(char *&, bool, bool)
+    @Mlparser@TMLParser@HandleASPComment$qqrrpci @476 ; __fastcall Mlparser::TMLParser::HandleASPComment(char *&, int)
+    @Mlparser@TMLParser@HandleHTMLComment$qqrrpci @520 ; __fastcall Mlparser::TMLParser::HandleHTMLComment(char *&, int)
+    @Mlparser@TMLParser@HandleProcessingInstruction$qqrrpci @519 ; __fastcall Mlparser::TMLParser::HandleProcessingInstruction(char *&, int)
+    @Mlparser@TMLParser@HandleScript$qqrrpc @504 ; __fastcall Mlparser::TMLParser::HandleScript(char *&)
+    @Mlparser@TMLParser@HandleServerSideScript$qqrrpci @518 ; __fastcall Mlparser::TMLParser::HandleServerSideScript(char *&, int)
+    @Mlparser@TMLParser@HandleString$qqrrpc @517 ; __fastcall Mlparser::TMLParser::HandleString(char *&)
+    @Mlparser@TMLParser@HandleStyle$qqrrpc @505 ; __fastcall Mlparser::TMLParser::HandleStyle(char *&)
+    @Mlparser@TMLParser@HandleTextArea$qqrrpc @503 ; __fastcall Mlparser::TMLParser::HandleTextArea(char *&)
+    @Mlparser@TMLParser@IsBeforeCaret$qqrpc @514 ; __fastcall Mlparser::TMLParser::IsBeforeCaret(char *)
+    @Mlparser@TMLParser@NewTagEntry$qqrv @508 ; __fastcall Mlparser::TMLParser::NewTagEntry()
+    @Mlparser@TMLParser@NewUnknownAttr$qqrx20System@UnicodeString @494 ; __fastcall Mlparser::TMLParser::NewUnknownAttr(const System::UnicodeString)
+    @Mlparser@TMLParser@NewUnknownElement$qqrx20System@UnicodeString @495 ; __fastcall Mlparser::TMLParser::NewUnknownElement(const System::UnicodeString)
+    @Mlparser@TMLParser@Parse$qqrrx20Toolsapi@TOTAEditPosx58System@%DelphiInterface$31Mlparserutils@IMLBufferProducer%50System@%DelphiInterface$23Mlparserutils@IOTAMLTag% @515 ; Mlparser::TMLParser::Parse(const Toolsapi::TOTAEditPos&, const System::DelphiInterface<{583}...
+    @Mlparser@TMLParser@ParseMLDocument$qqrv @512 ; __fastcall Mlparser::TMLParser::ParseMLDocument()
+    @Mlparser@TMLParser@PopContextPos$qqrv @483 ; __fastcall Mlparser::TMLParser::PopContextPos()
+    @Mlparser@TMLParser@PopTag$qqrx20System@UnicodeStringoo @511 ; __fastcall Mlparser::TMLParser::PopTag(const System::UnicodeString, bool, bool)
+    @Mlparser@TMLParser@PushAutoCloseTagPos$qqrrx20Toolsapi@TOTAEditPos @507 ; __fastcall Mlparser::TMLParser::PushAutoCloseTagPos(const Toolsapi::TOTAEditPos&)
+    @Mlparser@TMLParser@PushContextPos$qqri @482 ; __fastcall Mlparser::TMLParser::PushContextPos(int)
+    @Mlparser@TMLParser@PushTag$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag%ioo @510 ; Mlparser::TMLParser::PushTag(const System::DelphiInterface<{583}...
+    @Mlparser@TMLParser@RemoveCallback$qqrx44System@%DelphiInterface$17System@IInterface% @496 ; Mlparser::TMLParser::RemoveCallback(const System::DelphiInterface<{583}...
+    @Mlparser@TMLParser@SetCurrentColumn$qqrpc @486 ; __fastcall Mlparser::TMLParser::SetCurrentColumn(char *)
+    @Mlparser@TMLParser@SetTagOffsetEnd$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag%ioo @492 ; Mlparser::TMLParser::SetTagOffsetEnd(const System::DelphiInterface<{583}...
+    @Mlparser@TMLParser@SetTagOffsetStart$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag%ioo @491 ; Mlparser::TMLParser::SetTagOffsetStart(const System::DelphiInterface<{583}...
+    @Mlparser@TMLParser@SkipWhiteSpace$qqrrpc @513 ; __fastcall Mlparser::TMLParser::SkipWhiteSpace(char *&)
+    @Mlparser@TMLProcessingInstruction@ @556 ; Mlparser::TMLProcessingInstruction::
+    @Mlparser@TMLServerScript@     @558 ; Mlparser::TMLServerScript::
+    @Mlparser@TMLSymbolManager@    @550 ; Mlparser::TMLSymbolManager::
+    @Mlparser@TMLSymbolManager@$bctr$qqrv @475 ; __fastcall Mlparser::TMLSymbolManager::TMLSymbolManager()
+    @Mlparser@TMLSymbolManager@$bdtr$qqrv @474 ; __fastcall Mlparser::TMLSymbolManager::~TMLSymbolManager()
+    @Mlparser@TMLSymbolManager@AddElement$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag% @468 ; Mlparser::TMLSymbolManager::AddElement(const System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@CallbacksInvalidate$qqrv @450 ; __fastcall Mlparser::TMLSymbolManager::CallbacksInvalidate()
+    @Mlparser@TMLSymbolManager@CaseTag$qqrx20System@UnicodeString @437 ; __fastcall Mlparser::TMLSymbolManager::CaseTag(const System::UnicodeString)
+    @Mlparser@TMLSymbolManager@ClearTags$qqrv @470 ; __fastcall Mlparser::TMLSymbolManager::ClearTags()
+    @Mlparser@TMLSymbolManager@ContainsChild$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag%x20System@UnicodeString @421 ; Mlparser::TMLSymbolManager::ContainsChild(const System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@DTDParserError$qqrp14System@TObject21Dtdparser@TParseErrorx20System@UnicodeStringit3 @462 ; __fastcall Mlparser::TMLSymbolManager::DTDParserError(System::TObject *, Dtdparser::TParseError, const System::UnicodeString, int, const System::UnicodeString)
+    @Mlparser@TMLSymbolManager@DeleteClosedTag$qqri @441 ; __fastcall Mlparser::TMLSymbolManager::DeleteClosedTag(int)
+    @Mlparser@TMLSymbolManager@Error$qqrx20System@UnicodeStringt1t1ii @471 ; __fastcall Mlparser::TMLSymbolManager::Error(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, int, int)
+    @Mlparser@TMLSymbolManager@FindHiddenAttr$qqrx20System@UnicodeString @423 ; __fastcall Mlparser::TMLSymbolManager::FindHiddenAttr(const System::UnicodeString)
+    @Mlparser@TMLSymbolManager@FindTagAttr$qqrx59System@%DelphiInterface$32Mlparserutils@IOTAMLTagAttribute% @447 ; Mlparser::TMLSymbolManager::FindTagAttr(const System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@GetASPParentTags$qqrp23System@Classes@TStrings @428 ; __fastcall Mlparser::TMLSymbolManager::GetASPParentTags(System::Classes::TStrings *)
+    @Mlparser@TMLSymbolManager@GetAttributeEditor$qqrx20System@UnicodeString @454 ; __fastcall Mlparser::TMLSymbolManager::GetAttributeEditor(const System::UnicodeString)
+    @Mlparser@TMLSymbolManager@GetAttributeEditorFromHashList$qqrx20System@UnicodeStringr59System@%DelphiInterface$32Mlparserutils@IOTAMLTagAttribute%t1 @440 ; Mlparser::TMLSymbolManager::GetAttributeEditorFromHashList(const System::UnicodeString, System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@GetCloseTags$qqri @443 ; __fastcall Mlparser::TMLSymbolManager::GetCloseTags(int)
+    @Mlparser@TMLSymbolManager@GetClosedTagsCount$qqrv @442 ; __fastcall Mlparser::TMLSymbolManager::GetClosedTagsCount()
+    @Mlparser@TMLSymbolManager@GetCurrentTag$qqrv @448 ; __fastcall Mlparser::TMLSymbolManager::GetCurrentTag()
+    @Mlparser@TMLSymbolManager@GetElemName$qqrxp20Xsdreader@TXSDReaderxp21Xsdreader@TXSDElement @422 ; __fastcall Mlparser::TMLSymbolManager::GetElemName(Xsdreader::TXSDReader * const, Xsdreader::TXSDElement * const)
+    @Mlparser@TMLSymbolManager@GetHiddenAttrCount$qqrv @425 ; __fastcall Mlparser::TMLSymbolManager::GetHiddenAttrCount()
+    @Mlparser@TMLSymbolManager@GetHiddenAttrs$qqri @424 ; __fastcall Mlparser::TMLSymbolManager::GetHiddenAttrs(int)
+    @Mlparser@TMLSymbolManager@GetIsASPEnabled$qqrv @427 ; __fastcall Mlparser::TMLSymbolManager::GetIsASPEnabled()
+    @Mlparser@TMLSymbolManager@GetKibitzMode$qqrv @465 ; __fastcall Mlparser::TMLSymbolManager::GetKibitzMode()
+    @Mlparser@TMLSymbolManager@GetLineNumber$qqri @459 ; __fastcall Mlparser::TMLSymbolManager::GetLineNumber(int)
+    @Mlparser@TMLSymbolManager@GetMLTag$qqri @466 ; __fastcall Mlparser::TMLSymbolManager::GetMLTag(int)
+    @Mlparser@TMLSymbolManager@GetSchemaFile$qqrv @473 ; __fastcall Mlparser::TMLSymbolManager::GetSchemaFile()
+    @Mlparser@TMLSymbolManager@GetTagCase$qqrv @439 ; __fastcall Mlparser::TMLSymbolManager::GetTagCase()
+    @Mlparser@TMLSymbolManager@GetTagEditorFromHashList$qqrx20System@UnicodeString @460 ; __fastcall Mlparser::TMLSymbolManager::GetTagEditorFromHashList(const System::UnicodeString)
+    @Mlparser@TMLSymbolManager@GetTagFromHashList$qqrx20System@UnicodeString @461 ; __fastcall Mlparser::TMLSymbolManager::GetTagFromHashList(const System::UnicodeString)
+    @Mlparser@TMLSymbolManager@InitParse$qqrx20System@UnicodeString @446 ; __fastcall Mlparser::TMLSymbolManager::InitParse(const System::UnicodeString)
+    @Mlparser@TMLSymbolManager@InsertCustomElements$qqr56System@%DelphiInterface$29System@Classes@IInterfaceList%50System@%DelphiInterface$23Mlparserutils@IOTAMLTag% @445 ; Mlparser::TMLSymbolManager::InsertCustomElements(System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@InsertFixupElements$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag%t1 @434 ; Mlparser::TMLSymbolManager::InsertFixupElements(const System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@InsertOptionalElements$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag%t1 @436 ; Mlparser::TMLSymbolManager::InsertOptionalElements(const System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@InsertXSLElements$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag% @451 ; Mlparser::TMLSymbolManager::InsertXSLElements(const System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@LoadDTD$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag%x20System@UnicodeString @463 ; Mlparser::TMLSymbolManager::LoadDTD(const System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@LoadXSD$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag%xp23System@Classes@TStringsx20System@UnicodeString @430 ; Mlparser::TMLSymbolManager::LoadXSD(const System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@LoadXSDEx$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag%xp23System@Classes@TStringsx20System@UnicodeString @429 ; Mlparser::TMLSymbolManager::LoadXSDEx(const System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@RegisterAttributeEditor$qqrx59System@%DelphiInterface$32Mlparserutils@IOTAMLTagAttribute%x53System@%DelphiInterface$26Mlparserutils@IOTAMLEditor% @453 ; Mlparser::TMLSymbolManager::RegisterAttributeEditor(const System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@RegisterEditor$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag%x53System@%DelphiInterface$26Mlparserutils@IOTAMLEditor% @456 ; Mlparser::TMLSymbolManager::RegisterEditor(const System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@RegisterTag$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag% @458 ; Mlparser::TMLSymbolManager::RegisterTag(const System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@RemoveAlreadyExistingAttrs$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag% @432 ; Mlparser::TMLSymbolManager::RemoveAlreadyExistingAttrs(const System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@RemoveCustomElements$qqr56System@%DelphiInterface$29System@Classes@IInterfaceList%50System@%DelphiInterface$23Mlparserutils@IOTAMLTag% @444 ; Mlparser::TMLSymbolManager::RemoveCustomElements(System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@RemoveElement$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag% @467 ; Mlparser::TMLSymbolManager::RemoveElement(const System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@RemoveFixupElements$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag% @433 ; Mlparser::TMLSymbolManager::RemoveFixupElements(const System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@RemoveOptionalElements$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag% @435 ; Mlparser::TMLSymbolManager::RemoveOptionalElements(const System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@RemoveXSLElements$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag% @449 ; Mlparser::TMLSymbolManager::RemoveXSLElements(const System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@RepopulateAttrs$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag% @431 ; Mlparser::TMLSymbolManager::RepopulateAttrs(const System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@SetHiddenRootNode$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag% @469 ; Mlparser::TMLSymbolManager::SetHiddenRootNode(const System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@SetIsASPEnabled$qqrxo @426 ; __fastcall Mlparser::TMLSymbolManager::SetIsASPEnabled(const bool)
+    @Mlparser@TMLSymbolManager@SetKibitzMode$qqr25Mlparserutils@TKibitzMode @464 ; __fastcall Mlparser::TMLSymbolManager::SetKibitzMode(Mlparserutils::TKibitzMode)
+    @Mlparser@TMLSymbolManager@SetSchemaFile$qqr20System@UnicodeString @472 ; __fastcall Mlparser::TMLSymbolManager::SetSchemaFile(System::UnicodeString)
+    @Mlparser@TMLSymbolManager@SetTagCase$qqr22Mlparserutils@TTagCase @438 ; __fastcall Mlparser::TMLSymbolManager::SetTagCase(Mlparserutils::TTagCase)
+    @Mlparser@TMLSymbolManager@UnRegisterAttributeEditor$qqrx53System@%DelphiInterface$26Mlparserutils@IOTAMLEditor% @452 ; Mlparser::TMLSymbolManager::UnRegisterAttributeEditor(const System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@UnRegisterEditor$qqrx53System@%DelphiInterface$26Mlparserutils@IOTAMLEditor% @455 ; Mlparser::TMLSymbolManager::UnRegisterEditor(const System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@UnRegisterTag$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag% @457 ; Mlparser::TMLSymbolManager::UnRegisterTag(const System::DelphiInterface<{583}...
+    @Mlparser@TMLSymbolManager@XSDParserError$qqrp14System@TObjectx20System@UnicodeStringt2 @420 ; __fastcall Mlparser::TMLSymbolManager::XSDParserError(System::TObject *, const System::UnicodeString, const System::UnicodeString)
+    @Mlparser@TMLText@             @560 ; Mlparser::TMLText::
+    @Mlparser@TMLTextNode@         @564 ; Mlparser::TMLTextNode::
+    @Mlparser@TMLTextNode@GetID$qqrv @248 ; __fastcall Mlparser::TMLTextNode::GetID()
+    @Mlparser@TMLTextNode@GetOffsetEnd$qqrv @247 ; __fastcall Mlparser::TMLTextNode::GetOffsetEnd()
+    @Mlparser@TMLTextNode@GetOffsetStart$qqrv @246 ; __fastcall Mlparser::TMLTextNode::GetOffsetStart()
+    @Mlparser@TMLTextNode@GetText$qqrv @245 ; __fastcall Mlparser::TMLTextNode::GetText()
+    @Mlparser@TMLTextNode@SetOffsetEnd$qqri @244 ; __fastcall Mlparser::TMLTextNode::SetOffsetEnd(int)
+    @Mlparser@TMLTextNode@SetOffsetStart$qqri @243 ; __fastcall Mlparser::TMLTextNode::SetOffsetStart(int)
+    @Mlparser@TMLTextNode@SetText$qqrx20System@UnicodeString @242 ; __fastcall Mlparser::TMLTextNode::SetText(const System::UnicodeString)
+    @Mlparser@TNamedTag@           @588 ; Mlparser::TNamedTag::
+    @Mlparser@TNamedTag@GetRequiresClosingTag$qqrv @241 ; __fastcall Mlparser::TNamedTag::GetRequiresClosingTag()
+    @Mlparser@TNamedTag@SetName$qqrx20System@UnicodeString @240 ; __fastcall Mlparser::TNamedTag::SetName(const System::UnicodeString)
+    @Mlparser@TTagAttributeValue@  @596 ; Mlparser::TTagAttributeValue::
+    @Mlparser@TTagAttributeValue@$bctr$qqrx59System@%DelphiInterface$32Mlparserutils@IOTAMLTagAttribute%x17System@WideStringcc @380 ; Mlparser::TTagAttributeValue::TTagAttributeValue(const System::DelphiInterface<{583}...
+    @Mlparser@TTagWrapper@         @584 ; Mlparser::TTagWrapper::
+    @Mlparser@TTagWrapper@$bctr$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag%xp25Mlparser@TMLSymbolManageri @298 ; Mlparser::TTagWrapper::TTagWrapper(const System::DelphiInterface<{583}...
+    @Mlparser@TTagWrapper@AddAttribute$qqrx59System@%DelphiInterface$32Mlparserutils@IOTAMLTagAttribute% @303 ; Mlparser::TTagWrapper::AddAttribute(const System::DelphiInterface<{583}...
+    @Mlparser@TTagWrapper@AddTag$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag% @302 ; Mlparser::TTagWrapper::AddTag(const System::DelphiInterface<{583}...
+    @Mlparser@TTagWrapper@AlphaSort$qqrv @301 ; __fastcall Mlparser::TTagWrapper::AlphaSort()
+    @Mlparser@TTagWrapper@ClearAttrs$qqrv @300 ; __fastcall Mlparser::TTagWrapper::ClearAttrs()
+    @Mlparser@TTagWrapper@ClearTags$qqrv @299 ; __fastcall Mlparser::TTagWrapper::ClearTags()
+    @Mlparser@TTagWrapper@FindAttribute$qqrx20System@UnicodeString @297 ; __fastcall Mlparser::TTagWrapper::FindAttribute(const System::UnicodeString)
+    @Mlparser@TTagWrapper@FindSymbol$qqrx20System@UnicodeString @296 ; __fastcall Mlparser::TTagWrapper::FindSymbol(const System::UnicodeString)
+    @Mlparser@TTagWrapper@GetAny$qqrv @295 ; __fastcall Mlparser::TTagWrapper::GetAny()
+    @Mlparser@TTagWrapper@GetAttribute$qqri @294 ; __fastcall Mlparser::TTagWrapper::GetAttribute(int)
+    @Mlparser@TTagWrapper@GetAttributeCount$qqrv @293 ; __fastcall Mlparser::TTagWrapper::GetAttributeCount()
+    @Mlparser@TTagWrapper@GetEmpty$qqrv @292 ; __fastcall Mlparser::TTagWrapper::GetEmpty()
+    @Mlparser@TTagWrapper@GetEntityCount$qqrv @265 ; __fastcall Mlparser::TTagWrapper::GetEntityCount()
+    @Mlparser@TTagWrapper@GetEntityName$qqri @266 ; __fastcall Mlparser::TTagWrapper::GetEntityName(int)
+    @Mlparser@TTagWrapper@GetFilter$qqrv @291 ; __fastcall Mlparser::TTagWrapper::GetFilter()
+    @Mlparser@TTagWrapper@GetFlags$qqrv @290 ; __fastcall Mlparser::TTagWrapper::GetFlags()
+    @Mlparser@TTagWrapper@GetID$qqrv @270 ; __fastcall Mlparser::TTagWrapper::GetID()
+    @Mlparser@TTagWrapper@GetIsChild$qqrv @289 ; __fastcall Mlparser::TTagWrapper::GetIsChild()
+    @Mlparser@TTagWrapper@GetLineNumber$qqrv @288 ; __fastcall Mlparser::TTagWrapper::GetLineNumber()
+    @Mlparser@TTagWrapper@GetName$qqrv @287 ; __fastcall Mlparser::TTagWrapper::GetName()
+    @Mlparser@TTagWrapper@GetOffsetEnd$qqrv @286 ; __fastcall Mlparser::TTagWrapper::GetOffsetEnd()
+    @Mlparser@TTagWrapper@GetOffsetStart$qqrv @285 ; __fastcall Mlparser::TTagWrapper::GetOffsetStart()
+    @Mlparser@TTagWrapper@GetPureTagCount$qqrv @284 ; __fastcall Mlparser::TTagWrapper::GetPureTagCount()
+    @Mlparser@TTagWrapper@GetRequiresClosingTag$qqrv @283 ; __fastcall Mlparser::TTagWrapper::GetRequiresClosingTag()
+    @Mlparser@TTagWrapper@GetRequiresOpeningTag$qqrv @282 ; __fastcall Mlparser::TTagWrapper::GetRequiresOpeningTag()
+    @Mlparser@TTagWrapper@GetShowAttributes$qqrv @281 ; __fastcall Mlparser::TTagWrapper::GetShowAttributes()
+    @Mlparser@TTagWrapper@GetStartIndex$qqrv @280 ; __fastcall Mlparser::TTagWrapper::GetStartIndex()
+    @Mlparser@TTagWrapper@GetTagCount$qqrv @279 ; __fastcall Mlparser::TTagWrapper::GetTagCount()
+    @Mlparser@TTagWrapper@GetTags$qqri @278 ; __fastcall Mlparser::TTagWrapper::GetTags(int)
+    @Mlparser@TTagWrapper@LookupTag$qqrx20System@UnicodeString @277 ; __fastcall Mlparser::TTagWrapper::LookupTag(const System::UnicodeString)
+    @Mlparser@TTagWrapper@RemoveAttribute$qqrx20System@UnicodeString @276 ; __fastcall Mlparser::TTagWrapper::RemoveAttribute(const System::UnicodeString)
+    @Mlparser@TTagWrapper@RemoveTag$qqrx50System@%DelphiInterface$23Mlparserutils@IOTAMLTag% @275 ; Mlparser::TTagWrapper::RemoveTag(const System::DelphiInterface<{583}...
+    @Mlparser@TTagWrapper@SetFilter$qqrx20System@UnicodeString @274 ; __fastcall Mlparser::TTagWrapper::SetFilter(const System::UnicodeString)
+    @Mlparser@TTagWrapper@SetFlags$qqr54System@%Set$27Mlparserutils@IOTAMLTagFlagt1$i0$t1$i1$% @273 ; Mlparser::TTagWrapper::SetFlags(System::Set<{583}...
+    @Mlparser@TTagWrapper@SetIsChild$qqro @272 ; __fastcall Mlparser::TTagWrapper::SetIsChild(bool)
+    @Mlparser@TTagWrapper@SetLineNumber$qqri @271 ; __fastcall Mlparser::TTagWrapper::SetLineNumber(int)
+    @Mlparser@TTagWrapper@SetOffsetEnd$qqri @269 ; __fastcall Mlparser::TTagWrapper::SetOffsetEnd(int)
+    @Mlparser@TTagWrapper@SetOffsetStart$qqri @268 ; __fastcall Mlparser::TTagWrapper::SetOffsetStart(int)
+    @Mlparser@TTagWrapper@SetShowAttributes$qqro @267 ; __fastcall Mlparser::TTagWrapper::SetShowAttributes(bool)
+    @Mlparser@TUnknownHTMLAttribute@ @570 ; Mlparser::TUnknownHTMLAttribute::
+    @Mlparser@TXMLAttribute@       @531 ; Mlparser::TXMLAttribute::
+    @Mlparser@TXMLAttribute@$bctr$qqrx20System@UnicodeStringi @237 ; __fastcall Mlparser::TXMLAttribute::TXMLAttribute(const System::UnicodeString, int)
+    @Mlparser@TXMLAttributeEvent@  @529 ; Mlparser::TXMLAttributeEvent::
+    @Mlparser@TXMLAttributeEvent@$bctr$qqrx20System@UnicodeStringi @236 ; __fastcall Mlparser::TXMLAttributeEvent::TXMLAttributeEvent(const System::UnicodeString, int)
+    @Mlparser@TXMLElement@         @533 ; Mlparser::TXMLElement::
+    @Mlparser@TXMLElement@$bctr$qqrx20System@UnicodeStringxp25Mlparser@TMLSymbolManageri @238 ; __fastcall Mlparser::TXMLElement::TXMLElement(const System::UnicodeString, Mlparser::TMLSymbolManager * const, int)
+    @Mlparser@TXSLTag@             @582 ; Mlparser::TXSLTag::
+    @Mlparser@initialization$qqrv  @230 ; __fastcall Mlparser::initialization()
+    @Mlparserutils@Finalization$qqrv @2   ; __fastcall Mlparserutils::Finalization()
+    @Mlparserutils@GetSchemaFileName$qqrx20System@UnicodeString25Mlparserutils@TKibitzMode @16  ; __fastcall Mlparserutils::GetSchemaFileName(const System::UnicodeString, Mlparserutils::TKibitzMode)
+    @Mlparserutils@Hash$qqrx20System@UnicodeString @18  ; __fastcall Mlparserutils::Hash(const System::UnicodeString)
+    @Mlparserutils@Hash$qqrx27System@%AnsiStringT$us$i0$% @17  ; __fastcall Mlparserutils::Hash(const System::AnsiStringT<0>)
+    @Mlparserutils@IdentIsAttributeEditor$qqrx20System@UnicodeString @14  ; __fastcall Mlparserutils::IdentIsAttributeEditor(const System::UnicodeString)
+    @Mlparserutils@IdentIsNotDTDType$qqrx20System@UnicodeString @15  ; __fastcall Mlparserutils::IdentIsNotDTDType(const System::UnicodeString)
+    @Mlparserutils@NewID$qqrv      @13  ; __fastcall Mlparserutils::NewID()
+    @Mlparserutils@TMLBufferProducer@ @20  ; Mlparserutils::TMLBufferProducer::
+    @Mlparserutils@TMLBufferProducer@$bctr$qqrx48System@%DelphiInterface$21Toolsapi@IOTAEditView%xi @10  ; Mlparserutils::TMLBufferProducer::TMLBufferProducer(const System::DelphiInterface<{583}...
+    @Mlparserutils@TMLBufferProducer@$bctr$qqrx52System@%DelphiInterface$25Toolsapi@IOTASourceEditor%xi @9   ; Mlparserutils::TMLBufferProducer::TMLBufferProducer(const System::DelphiInterface<{583}...
+    @Mlparserutils@TMLBufferProducer@$bctr$qqrxp22System@Classes@TStreamx20System@UnicodeStringxi @6   ; __fastcall Mlparserutils::TMLBufferProducer::TMLBufferProducer(System::Classes::TStream * const, const System::UnicodeString, const int)
+    @Mlparserutils@TMLBufferProducer@BufferAtOffset$qqri @11  ; __fastcall Mlparserutils::TMLBufferProducer::BufferAtOffset(int)
+    @Mlparserutils@TMLBufferProducer@BufferOffset$qqrpc @12  ; __fastcall Mlparserutils::TMLBufferProducer::BufferOffset(char *)
+    @Mlparserutils@TMLBufferProducer@CreateReader$qqrv @4   ; __fastcall Mlparserutils::TMLBufferProducer::CreateReader()
+    @Mlparserutils@TMLBufferProducer@EOF$qqrv @5   ; __fastcall Mlparserutils::TMLBufferProducer::EOF()
+    @Mlparserutils@TMLBufferProducer@FillBuffer$qqrv @3   ; __fastcall Mlparserutils::TMLBufferProducer::FillBuffer()
+    @Mlparserutils@TMLBufferProducer@GetEditView$qqrv @8   ; __fastcall Mlparserutils::TMLBufferProducer::GetEditView()
+    @Mlparserutils@TMLBufferProducer@GetFilename$qqrv @7   ; __fastcall Mlparserutils::TMLBufferProducer::GetFilename()
+    @Mlparserutils@_sMLAttribute   @22  ; Mlparserutils::_sMLAttribute
+    @Mlparserutils@_sMLElement     @23  ; Mlparserutils::_sMLElement
+    @Mlparserutils@initialization$qqrv @1   ; __fastcall Mlparserutils::initialization()
+    @Xsdreader@Finalization$qqrv   @146 ; __fastcall Xsdreader::Finalization()
+    @Xsdreader@TXSDAttribute@      @223 ; Xsdreader::TXSDAttribute::
+    @Xsdreader@TXSDAttribute@$bctr$qqrx20System@UnicodeStringt1i @160 ; __fastcall Xsdreader::TXSDAttribute::TXSDAttribute(const System::UnicodeString, const System::UnicodeString, int)
+    @Xsdreader@TXSDAttribute@$bdtr$qqrv @159 ; __fastcall Xsdreader::TXSDAttribute::~TXSDAttribute()
+    @Xsdreader@TXSDAttribute@AddValue$qqrxp19Xsdreader@TXSDClass @161 ; __fastcall Xsdreader::TXSDAttribute::AddValue(Xsdreader::TXSDClass * const)
+    @Xsdreader@TXSDAttribute@GetCount$qqrv @158 ; __fastcall Xsdreader::TXSDAttribute::GetCount()
+    @Xsdreader@TXSDAttribute@GetValue$qqri @157 ; __fastcall Xsdreader::TXSDAttribute::GetValue(int)
+    @Xsdreader@TXSDAttributeGroup@ @213 ; Xsdreader::TXSDAttributeGroup::
+    @Xsdreader@TXSDBaseType@       @217 ; Xsdreader::TXSDBaseType::
+    @Xsdreader@TXSDBaseType@$bctr$qqrx20System@UnicodeStringi @167 ; __fastcall Xsdreader::TXSDBaseType::TXSDBaseType(const System::UnicodeString, int)
+    @Xsdreader@TXSDBaseType@$bdtr$qqrv @166 ; __fastcall Xsdreader::TXSDBaseType::~TXSDBaseType()
+    @Xsdreader@TXSDBaseType@AddAttribute$qqrxp23Xsdreader@TXSDAttribute @169 ; __fastcall Xsdreader::TXSDBaseType::AddAttribute(Xsdreader::TXSDAttribute * const)
+    @Xsdreader@TXSDBaseType@AddAttributeGroup$qqrx20System@UnicodeString @168 ; __fastcall Xsdreader::TXSDBaseType::AddAttributeGroup(const System::UnicodeString)
+    @Xsdreader@TXSDBaseType@GetAttrGroup$qqri @165 ; __fastcall Xsdreader::TXSDBaseType::GetAttrGroup(int)
+    @Xsdreader@TXSDBaseType@GetAttributeCount$qqrv @164 ; __fastcall Xsdreader::TXSDBaseType::GetAttributeCount()
+    @Xsdreader@TXSDBaseType@GetAttributes$qqri @163 ; __fastcall Xsdreader::TXSDBaseType::GetAttributes(int)
+    @Xsdreader@TXSDBaseType@GetGroupAttrCount$qqrv @162 ; __fastcall Xsdreader::TXSDBaseType::GetGroupAttrCount()
+    @Xsdreader@TXSDClass@          @229 ; Xsdreader::TXSDClass::
+    @Xsdreader@TXSDClass@$bctr$qqrx20System@UnicodeStringi @170 ; __fastcall Xsdreader::TXSDClass::TXSDClass(const System::UnicodeString, int)
+    @Xsdreader@TXSDElement@        @225 ; Xsdreader::TXSDElement::
+    @Xsdreader@TXSDReader@         @208 ; Xsdreader::TXSDReader::
+    @Xsdreader@TXSDReader@$bctr$qqrv @196 ; __fastcall Xsdreader::TXSDReader::TXSDReader()
+    @Xsdreader@TXSDReader@$bdtr$qqrv @195 ; __fastcall Xsdreader::TXSDReader::~TXSDReader()
+    @Xsdreader@TXSDReader@AddAttribute$qqrp22Xsdreader@TXSDBaseType47System@%DelphiInterface$20Xml@Xmlintf@IXMLNode% @205 ; Xsdreader::TXSDReader::AddAttribute(Xsdreader::TXSDBaseType *, System::DelphiInterface<{583}...
+    @Xsdreader@TXSDReader@AddAttributeGroup$qqr47System@%DelphiInterface$20Xml@Xmlintf@IXMLNode% @204 ; Xsdreader::TXSDReader::AddAttributeGroup(System::DelphiInterface<{583}...
+    @Xsdreader@TXSDReader@AddChoices$qqrp18Xsdreader@TXSDType47System@%DelphiInterface$20Xml@Xmlintf@IXMLNode% @203 ; Xsdreader::TXSDReader::AddChoices(Xsdreader::TXSDType *, System::DelphiInterface<{583}...
+    @Xsdreader@TXSDReader@AddElement$qqr47System@%DelphiInterface$20Xml@Xmlintf@IXMLNode%x20System@UnicodeStringo @202 ; Xsdreader::TXSDReader::AddElement(System::DelphiInterface<{583}...
+    @Xsdreader@TXSDReader@AddRestriction$qqrp25Xsdreader@TXSDRestriction47System@%DelphiInterface$20Xml@Xmlintf@IXMLNode% @201 ; Xsdreader::TXSDReader::AddRestriction(Xsdreader::TXSDRestriction *, System::DelphiInterface<{583}...
+    @Xsdreader@TXSDReader@AddSequence$qqrp18Xsdreader@TXSDType47System@%DelphiInterface$20Xml@Xmlintf@IXMLNode% @200 ; Xsdreader::TXSDReader::AddSequence(Xsdreader::TXSDType *, System::DelphiInterface<{583}...
+    @Xsdreader@TXSDReader@AddSimpleType$qqrp23Xsdreader@TXSDAttribute47System@%DelphiInterface$20Xml@Xmlintf@IXMLNode% @199 ; Xsdreader::TXSDReader::AddSimpleType(Xsdreader::TXSDAttribute *, System::DelphiInterface<{583}...
+    @Xsdreader@TXSDReader@AddType$qqr47System@%DelphiInterface$20Xml@Xmlintf@IXMLNode% @198 ; Xsdreader::TXSDReader::AddType(System::DelphiInterface<{583}...
+    @Xsdreader@TXSDReader@ClearXSDClassEntries$qqrv @197 ; __fastcall Xsdreader::TXSDReader::ClearXSDClassEntries()
+    @Xsdreader@TXSDReader@DestroyXSDClassEntries$qqrv @194 ; __fastcall Xsdreader::TXSDReader::DestroyXSDClassEntries()
+    @Xsdreader@TXSDReader@DisposeEntry$qqrp24Xsdreader@TXSDClassEntry @193 ; __fastcall Xsdreader::TXSDReader::DisposeEntry(Xsdreader::TXSDClassEntry *)
+    @Xsdreader@TXSDReader@Error$qqrx20System@UnicodeString @192 ; __fastcall Xsdreader::TXSDReader::Error(const System::UnicodeString)
+    @Xsdreader@TXSDReader@FixupReferences$qqrv @191 ; __fastcall Xsdreader::TXSDReader::FixupReferences()
+    @Xsdreader@TXSDReader@GetAttributeValue$qqr47System@%DelphiInterface$20Xml@Xmlintf@IXMLNode%x20System@UnicodeString @190 ; Xsdreader::TXSDReader::GetAttributeValue(System::DelphiInterface<{583}...
+    @Xsdreader@TXSDReader@GetDefaultQualified$qqrv @189 ; __fastcall Xsdreader::TXSDReader::GetDefaultQualified()
+    @Xsdreader@TXSDReader@GetFirstElement$qqrv @188 ; __fastcall Xsdreader::TXSDReader::GetFirstElement()
+    @Xsdreader@TXSDReader@GetNamespacePrefix$qqrv @187 ; __fastcall Xsdreader::TXSDReader::GetNamespacePrefix()
+    @Xsdreader@TXSDReader@GetNamespacePrefixOfFile$qqrx20System@UnicodeString @184 ; __fastcall Xsdreader::TXSDReader::GetNamespacePrefixOfFile(const System::UnicodeString)
+    @Xsdreader@TXSDReader@GetNextElement$qqrp24Xsdreader@TXSDClassEntry @186 ; __fastcall Xsdreader::TXSDReader::GetNextElement(Xsdreader::TXSDClassEntry *)
+    @Xsdreader@TXSDReader@GetSchemaNamespace$qqrv @185 ; __fastcall Xsdreader::TXSDReader::GetSchemaNamespace()
+    @Xsdreader@TXSDReader@LoadFromFile$qqrx20System@UnicodeString @183 ; __fastcall Xsdreader::TXSDReader::LoadFromFile(const System::UnicodeString)
+    @Xsdreader@TXSDReader@LookupAttrGroup$qqrx20System@UnicodeString @182 ; __fastcall Xsdreader::TXSDReader::LookupAttrGroup(const System::UnicodeString)
+    @Xsdreader@TXSDReader@LookupElement$qqrx20System@UnicodeStringt1oi @181 ; __fastcall Xsdreader::TXSDReader::LookupElement(const System::UnicodeString, const System::UnicodeString, bool, int)
+    @Xsdreader@TXSDReader@LookupSimpleType$qqr20System@UnicodeString @180 ; __fastcall Xsdreader::TXSDReader::LookupSimpleType(System::UnicodeString)
+    @Xsdreader@TXSDReader@LookupType$qqrx20System@UnicodeString @179 ; __fastcall Xsdreader::TXSDReader::LookupType(const System::UnicodeString)
+    @Xsdreader@TXSDReader@NewEntry$qqrv @178 ; __fastcall Xsdreader::TXSDReader::NewEntry()
+    @Xsdreader@TXSDReader@SetDefaultQualified$qqrxo @177 ; __fastcall Xsdreader::TXSDReader::SetDefaultQualified(const bool)
+    @Xsdreader@TXSDRestriction@    @221 ; Xsdreader::TXSDRestriction::
+    @Xsdreader@TXSDRestriction@$bctr$qqrv @155 ; __fastcall Xsdreader::TXSDRestriction::TXSDRestriction()
+    @Xsdreader@TXSDRestriction@$bdtr$qqrv @154 ; __fastcall Xsdreader::TXSDRestriction::~TXSDRestriction()
+    @Xsdreader@TXSDRestriction@AddEnumeration$qqrx20System@UnicodeString @156 ; __fastcall Xsdreader::TXSDRestriction::AddEnumeration(const System::UnicodeString)
+    @Xsdreader@TXSDRestriction@GetEnumerationCount$qqrv @153 ; __fastcall Xsdreader::TXSDRestriction::GetEnumerationCount()
+    @Xsdreader@TXSDRestriction@GetEnumerations$qqri @152 ; __fastcall Xsdreader::TXSDRestriction::GetEnumerations(int)
+    @Xsdreader@TXSDSimpleType@     @219 ; Xsdreader::TXSDSimpleType::
+    @Xsdreader@TXSDSimpleType@$bctr$qqrx20System@UnicodeStringi @150 ; __fastcall Xsdreader::TXSDSimpleType::TXSDSimpleType(const System::UnicodeString, int)
+    @Xsdreader@TXSDSimpleType@$bdtr$qqrv @149 ; __fastcall Xsdreader::TXSDSimpleType::~TXSDSimpleType()
+    @Xsdreader@TXSDSimpleType@AddRestriction$qqrxp25Xsdreader@TXSDRestriction @151 ; __fastcall Xsdreader::TXSDSimpleType::AddRestriction(Xsdreader::TXSDRestriction * const)
+    @Xsdreader@TXSDSimpleType@GetRestrictionCount$qqrv @148 ; __fastcall Xsdreader::TXSDSimpleType::GetRestrictionCount()
+    @Xsdreader@TXSDSimpleType@GetRestrictions$qqri @147 ; __fastcall Xsdreader::TXSDSimpleType::GetRestrictions(int)
+    @Xsdreader@TXSDType@           @215 ; Xsdreader::TXSDType::
+    @Xsdreader@TXSDType@$bctr$qqrx20System@UnicodeStringi @174 ; __fastcall Xsdreader::TXSDType::TXSDType(const System::UnicodeString, int)
+    @Xsdreader@TXSDType@$bdtr$qqrv @173 ; __fastcall Xsdreader::TXSDType::~TXSDType()
+    @Xsdreader@TXSDType@AddChild$qqrxp19Xsdreader@TXSDClass @175 ; __fastcall Xsdreader::TXSDType::AddChild(Xsdreader::TXSDClass * const)
+    @Xsdreader@TXSDType@GetChild$qqri @172 ; __fastcall Xsdreader::TXSDType::GetChild(int)
+    @Xsdreader@TXSDType@GetChildCount$qqrv @171 ; __fastcall Xsdreader::TXSDType::GetChildCount()
+    @Xsdreader@TXSDTypedClass@     @227 ; Xsdreader::TXSDTypedClass::
+    @Xsdreader@TXSDTypedClass@$bctr$qqrx20System@UnicodeStringt1i @176 ; __fastcall Xsdreader::TXSDTypedClass::TXSDTypedClass(const System::UnicodeString, const System::UnicodeString, int)
+    @Xsdreader@cAnyURI             @206 ; Xsdreader::cAnyURI
+    @Xsdreader@initialization$qqrv @145 ; __fastcall Xsdreader::initialization()
+    Finalize                       @908 ; Finalize
+    Initialize                     @909 ; Initialize

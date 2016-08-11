@@ -1,0 +1,813 @@
+LIBRARY     VCLIMG210.BPL
+
+DESCRIPTION 'mbarcadero Delphi image support library'
+
+EXPORTS
+    @$xp$26Vcl@Imaging@Jpeg@TJPEGData @800 ; __tpdsc__ Vcl::Imaging::Jpeg::TJPEGData
+    @$xp$27Vcl@Imaging@Gifimg@BGRArray @392 ; __tpdsc__ Vcl::Imaging::Gifimg::BGRArray
+    @$xp$27Vcl@Imaging@Gifimg@PalArray @390 ; __tpdsc__ Vcl::Imaging::Gifimg::PalArray
+    @$xp$27Vcl@Imaging@Gifimg@TGIFItem @456 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFItem
+    @$xp$27Vcl@Imaging@Gifimg@TGIFList @454 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFList
+    @$xp$27Vcl@Imaging@Jpeg@TJPEGImage @794 ; __tpdsc__ Vcl::Imaging::Jpeg::TJPEGImage
+    @$xp$27Vcl@Imaging@Jpeg@TJPEGScale @797 ; __tpdsc__ Vcl::Imaging::Jpeg::TJPEGScale
+    @$xp$27Vcl@Imaging@Pngimage@TChunk @676 ; __tpdsc__ Vcl::Imaging::Pngimage::TChunk
+    @$xp$28Vcl@Imaging@Gifimg@PBGRArray @391 ; __tpdsc__ Vcl::Imaging::Gifimg::PBGRArray
+    @$xp$28Vcl@Imaging@Gifimg@PPalArray @389 ; __tpdsc__ Vcl::Imaging::Gifimg::PPalArray
+    @$xp$28Vcl@Imaging@Gifimg@TColorMap @452 ; __tpdsc__ Vcl::Imaging::Gifimg::TColorMap
+    @$xp$28Vcl@Imaging@Gifimg@TGIFBlock @417 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFBlock
+    @$xp$28Vcl@Imaging@Gifimg@TGIFColor @453 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFColor
+    @$xp$28Vcl@Imaging@Gifimg@TGIFFrame @436 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFFrame
+    @$xp$28Vcl@Imaging@Gifimg@TGIFImage @402 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFImage
+    @$xp$28Vcl@Imaging@Pngimage@TFilter @682 ; __tpdsc__ Vcl::Imaging::Pngimage::TFilter
+    @$xp$29Vcl@Imaging@Gifimg@TGIFGCERec @433 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFGCERec
+    @$xp$29Vcl@Imaging@Gifimg@TGIFHeader @444 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFHeader
+    @$xp$29Vcl@Imaging@Pngimage@TFilters @681 ; __tpdsc__ Vcl::Imaging::Pngimage::TFilters
+    @$xp$29Vcl@Imaging@Pngimage@TPNGList @685 ; __tpdsc__ Vcl::Imaging::Pngimage::TPNGList
+    @$xp$29Vcl@Imaging@Pngimage@TRGBLine @700 ; __tpdsc__ Vcl::Imaging::Pngimage::TRGBLine
+    @$xp$29Vcl@Imaging@Pngimage@pRGBLine @699 ; __tpdsc__ Vcl::Imaging::Pngimage::pRGBLine
+    @$xp$30Vcl@Imaging@Gifimg@TDitherMode @409 ; __tpdsc__ Vcl::Imaging::Gifimg::TDitherMode
+    @$xp$30Vcl@Imaging@Gifimg@TGIFTrailer @434 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFTrailer
+    @$xp$30Vcl@Imaging@Gifimg@TGIFVersion @463 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFVersion
+    @$xp$30Vcl@Imaging@Gifimg@TGIFWarning @404 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFWarning
+    @$xp$30Vcl@Imaging@Gifimg@TUsageCount @451 ; __tpdsc__ Vcl::Imaging::Gifimg::TUsageCount
+    @$xp$30Vcl@Imaging@Jpeg@TJPEGDefaults @793 ; __tpdsc__ Vcl::Imaging::Jpeg::TJPEGDefaults
+    @$xp$30Vcl@Imaging@Pngimage@EPngError @741 ; __tpdsc__ Vcl::Imaging::Pngimage::EPngError
+    @$xp$30Vcl@Imaging@Pngimage@TIHDRData @672 ; __tpdsc__ Vcl::Imaging::Pngimage::TIHDRData
+    @$xp$30Vcl@Imaging@Pngimage@TPngImage @679 ; __tpdsc__ Vcl::Imaging::Pngimage::TPngImage
+    @$xp$30Vcl@Imaging@Pngimage@TRGBPixel @694 ; __tpdsc__ Vcl::Imaging::Pngimage::TRGBPixel
+    @$xp$30Vcl@Imaging@Pngimage@TUnitType @668 ; __tpdsc__ Vcl::Imaging::Pngimage::TUnitType
+    @$xp$30Vcl@Imaging@Pngimage@pCardinal @696 ; __tpdsc__ Vcl::Imaging::Pngimage::pCardinal
+    @$xp$30Vcl@Imaging@Pngimage@pIHDRData @673 ; __tpdsc__ Vcl::Imaging::Pngimage::pIHDRData
+    @$xp$30Vcl@Imaging@Pngimage@pRGBPixel @695 ; __tpdsc__ Vcl::Imaging::Pngimage::pRGBPixel
+    @$xp$30Vcl@Imaging@Pngimage@pUnitType @669 ; __tpdsc__ Vcl::Imaging::Pngimage::pUnitType
+    @$xp$31Vcl@Imaging@Gifimg@GIFException @459 ; __tpdsc__ Vcl::Imaging::Gifimg::GIFException
+    @$xp$31Vcl@Imaging@Gifimg@TColorLookup @396 ; __tpdsc__ Vcl::Imaging::Gifimg::TColorLookup
+    @$xp$31Vcl@Imaging@Gifimg@TGIFColorMap @447 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFColorMap
+    @$xp$31Vcl@Imaging@Gifimg@TGIFRenderer @398 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFRenderer
+    @$xp$31Vcl@Imaging@Gifimg@TGIFSeverity @458 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFSeverity
+    @$xp$31Vcl@Imaging@Pngimage@TByteArray @693 ; __tpdsc__ Vcl::Imaging::Pngimage::TByteArray
+    @$xp$31Vcl@Imaging@Pngimage@TChunkIDAT @657 ; __tpdsc__ Vcl::Imaging::Pngimage::TChunkIDAT
+    @$xp$31Vcl@Imaging@Pngimage@TChunkIEND @674 ; __tpdsc__ Vcl::Imaging::Pngimage::TChunkIEND
+    @$xp$31Vcl@Imaging@Pngimage@TChunkIHDR @670 ; __tpdsc__ Vcl::Imaging::Pngimage::TChunkIHDR
+    @$xp$31Vcl@Imaging@Pngimage@TChunkName @678 ; __tpdsc__ Vcl::Imaging::Pngimage::TChunkName
+    @$xp$31Vcl@Imaging@Pngimage@TChunkPLTE @661 ; __tpdsc__ Vcl::Imaging::Pngimage::TChunkPLTE
+    @$xp$31Vcl@Imaging@Pngimage@TChunkgAMA @664 ; __tpdsc__ Vcl::Imaging::Pngimage::TChunkgAMA
+    @$xp$31Vcl@Imaging@Pngimage@TChunkpHYs @666 ; __tpdsc__ Vcl::Imaging::Pngimage::TChunkpHYs
+    @$xp$31Vcl@Imaging@Pngimage@TChunktEXt @653 ; __tpdsc__ Vcl::Imaging::Pngimage::TChunktEXt
+    @$xp$31Vcl@Imaging@Pngimage@TChunktIME @655 ; __tpdsc__ Vcl::Imaging::Pngimage::TChunktIME
+    @$xp$31Vcl@Imaging@Pngimage@TChunktRNS @659 ; __tpdsc__ Vcl::Imaging::Pngimage::TChunktRNS
+    @$xp$31Vcl@Imaging@Pngimage@TChunkzTXt @651 ; __tpdsc__ Vcl::Imaging::Pngimage::TChunkzTXt
+    @$xp$31Vcl@Imaging@Pngimage@pByteArray @692 ; __tpdsc__ Vcl::Imaging::Pngimage::pByteArray
+    @$xp$32Vcl@Imaging@Gifimg@PRGBQuadArray @394 ; __tpdsc__ Vcl::Imaging::Gifimg::PRGBQuadArray
+    @$xp$32Vcl@Imaging@Gifimg@TGIFDithering @405 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFDithering
+    @$xp$32Vcl@Imaging@Gifimg@TGIFExtension @441 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFExtension
+    @$xp$32Vcl@Imaging@Gifimg@TGIFImageList @411 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFImageList
+    @$xp$32Vcl@Imaging@Gifimg@TRGBQuadArray @393 ; __tpdsc__ Vcl::Imaging::Gifimg::TRGBQuadArray
+    @$xp$32Vcl@Imaging@Pngimage@TChunkClass @687 ; __tpdsc__ Vcl::Imaging::Pngimage::TChunkClass
+    @$xp$33Vcl@Imaging@Gifimg@PInverseLookup @387 ; __tpdsc__ Vcl::Imaging::Gifimg::PInverseLookup
+    @$xp$33Vcl@Imaging@Gifimg@TGIFVersionRec @462 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFVersionRec
+    @$xp$33Vcl@Imaging@Gifimg@TInverseLookup @388 ; __tpdsc__ Vcl::Imaging::Gifimg::TInverseLookup
+    @$xp$33Vcl@Imaging@Jpeg@TJPEGPerformance @798 ; __tpdsc__ Vcl::Imaging::Jpeg::TJPEGPerformance
+    @$xp$33Vcl@Imaging@Jpeg@TJPEGPixelFormat @796 ; __tpdsc__ Vcl::Imaging::Jpeg::TJPEGPixelFormat
+    @$xp$33Vcl@Imaging@Pngimage@TZStreamRec2 @663 ; __tpdsc__ Vcl::Imaging::Pngimage::TZStreamRec2
+    @$xp$34Vcl@Imaging@Gifimg@TColorReduction @410 ; __tpdsc__ Vcl::Imaging::Gifimg::TColorReduction
+    @$xp$34Vcl@Imaging@Gifimg@TDisposalMethod @432 ; __tpdsc__ Vcl::Imaging::Gifimg::TDisposalMethod
+    @$xp$34Vcl@Imaging@Jpeg@TJPEGQualityRange @799 ; __tpdsc__ Vcl::Imaging::Jpeg::TJPEGQualityRange
+    @$xp$34Vcl@Imaging@Pngimage@EPNGNotExists @723 ; __tpdsc__ Vcl::Imaging::Pngimage::EPNGNotExists
+    @$xp$34Vcl@Imaging@Pngimage@EPNGOutMemory @743 ; __tpdsc__ Vcl::Imaging::Pngimage::EPNGOutMemory
+    @$xp$34Vcl@Imaging@Pngimage@EPNGZLIBError @731 ; __tpdsc__ Vcl::Imaging::Pngimage::EPNGZLIBError
+    @$xp$34Vcl@Imaging@Pngimage@TPointerArray @690 ; __tpdsc__ Vcl::Imaging::Pngimage::TPointerArray
+    @$xp$34Vcl@Imaging@Pngimage@pPointerArray @691 ; __tpdsc__ Vcl::Imaging::Pngimage::pPointerArray
+    @$xp$35Vcl@Imaging@Gifimg@TColormapReverse @449 ; __tpdsc__ Vcl::Imaging::Gifimg::TColormapReverse
+    @$xp$35Vcl@Imaging@Gifimg@TFastColorLookup @385 ; __tpdsc__ Vcl::Imaging::Gifimg::TFastColorLookup
+    @$xp$35Vcl@Imaging@Gifimg@TGIFAppExtNSLoop @413 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFAppExtNSLoop
+    @$xp$35Vcl@Imaging@Gifimg@TGrayScaleLookup @376 ; __tpdsc__ Vcl::Imaging::Gifimg::TGrayScaleLookup
+    @$xp$35Vcl@Imaging@Gifimg@TImageDescriptor @438 ; __tpdsc__ Vcl::Imaging::Gifimg::TImageDescriptor
+    @$xp$35Vcl@Imaging@Gifimg@TSlowColorLookup @383 ; __tpdsc__ Vcl::Imaging::Gifimg::TSlowColorLookup
+    @$xp$35Vcl@Imaging@Pngimage@EPngInvalidCRC @737 ; __tpdsc__ Vcl::Imaging::Pngimage::EPngInvalidCRC
+    @$xp$35Vcl@Imaging@Pngimage@TMAXBITMAPINFO @698 ; __tpdsc__ Vcl::Imaging::Pngimage::TMAXBITMAPINFO
+    @$xp$36Vcl@Imaging@Gifimg@TColorLookupClass @395 ; __tpdsc__ Vcl::Imaging::Gifimg::TColorLookupClass
+    @$xp$36Vcl@Imaging@Gifimg@TGIFAnimationLoop @406 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFAnimationLoop
+    @$xp$36Vcl@Imaging@Gifimg@TGIFExtensionList @439 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFExtensionList
+    @$xp$36Vcl@Imaging@Gifimg@TGIFTextExtension @427 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFTextExtension
+    @$xp$36Vcl@Imaging@Gifimg@TMonochromeLookup @374 ; __tpdsc__ Vcl::Imaging::Gifimg::TMonochromeLookup
+    @$xp$36Vcl@Imaging@Pngimage@EPNGInvalidSpec @701 ; __tpdsc__ Vcl::Imaging::Pngimage::EPNGInvalidSpec
+    @$xp$36Vcl@Imaging@Pngimage@EPNGNoImageData @711 ; __tpdsc__ Vcl::Imaging::Pngimage::EPNGNoImageData
+    @$xp$36Vcl@Imaging@Pngimage@EPNGSizeExceeds @721 ; __tpdsc__ Vcl::Imaging::Pngimage::EPNGSizeExceeds
+    @$xp$36Vcl@Imaging@Pngimage@EPngInvalidIHDR @735 ; __tpdsc__ Vcl::Imaging::Pngimage::EPngInvalidIHDR
+    @$xp$36Vcl@Imaging@Pngimage@TPNGPointerList @688 ; __tpdsc__ Vcl::Imaging::Pngimage::TPNGPointerList
+    @$xp$37Vcl@Imaging@Gifimg@TColormapHistogram @450 ; __tpdsc__ Vcl::Imaging::Gifimg::TColormapHistogram
+    @$xp$37Vcl@Imaging@Gifimg@TCustomGIFRenderer @400 ; __tpdsc__ Vcl::Imaging::Gifimg::TCustomGIFRenderer
+    @$xp$37Vcl@Imaging@Gifimg@TGIFApplicationRec @422 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFApplicationRec
+    @$xp$37Vcl@Imaging@Gifimg@TGIFExtensionClass @443 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFExtensionClass
+    @$xp$37Vcl@Imaging@Gifimg@TGIFIdentifierCode @424 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFIdentifierCode
+    @$xp$37Vcl@Imaging@Gifimg@TGIFOptimizeOption @408 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFOptimizeOption
+    @$xp$37Vcl@Imaging@Gifimg@TGrayWindowsLookup @378 ; __tpdsc__ Vcl::Imaging::Gifimg::TGrayWindowsLookup
+    @$xp$37Vcl@Imaging@Pngimage@EPNGIHDRNotFirst @725 ; __tpdsc__ Vcl::Imaging::Pngimage::EPNGIHDRNotFirst
+    @$xp$37Vcl@Imaging@Pngimage@TInterlaceMethod @684 ; __tpdsc__ Vcl::Imaging::Pngimage::TInterlaceMethod
+    @$xp$38Vcl@Imaging@Gifimg@TGIFOptimizeOptions @407 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFOptimizeOptions
+    @$xp$38Vcl@Imaging@Pngimage@EPngUnexpectedEnd @739 ; __tpdsc__ Vcl::Imaging::Pngimage::EPngUnexpectedEnd
+    @$xp$38Vcl@Imaging@Pngimage@TCompressionLevel @683 ; __tpdsc__ Vcl::Imaging::Pngimage::TCompressionLevel
+    @$xp$39Vcl@Imaging@Gifimg@TGIFCommentExtension @425 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFCommentExtension
+    @$xp$39Vcl@Imaging@Gifimg@TNetscapeColorLookup @380 ; __tpdsc__ Vcl::Imaging::Gifimg::TNetscapeColorLookup
+    @$xp$39Vcl@Imaging@Pngimage@EPNGInvalidNewSize @703 ; __tpdsc__ Vcl::Imaging::Pngimage::EPNGInvalidNewSize
+    @$xp$39Vcl@Imaging@Pngimage@EPNGInvalidPalette @729 ; __tpdsc__ Vcl::Imaging::Pngimage::EPNGInvalidPalette
+    @$xp$39Vcl@Imaging@Pngimage@EPNGMissingPalette @719 ; __tpdsc__ Vcl::Imaging::Pngimage::EPNGMissingPalette
+    @$xp$40Vcl@Imaging@Gifimg@TGIFAppExtensionClass @421 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFAppExtensionClass
+    @$xp$41Vcl@Imaging@Gifimg@TGIFAuthenticationCode @423 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFAuthenticationCode
+    @$xp$41Vcl@Imaging@Pngimage@EPNGHeaderNotPresent @705 ; __tpdsc__ Vcl::Imaging::Pngimage::EPNGHeaderNotPresent
+    @$xp$41Vcl@Imaging@Pngimage@EPNGUnknownInterlace @713 ; __tpdsc__ Vcl::Imaging::Pngimage::EPNGUnknownInterlace
+    @$xp$41Vcl@Imaging@Pngimage@TPNGTransparencyMode @697 ; __tpdsc__ Vcl::Imaging::Pngimage::TPNGTransparencyMode
+    @$xp$42Vcl@Imaging@Gifimg@TGIFUnknownAppExtension @415 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFUnknownAppExtension
+    @$xp$42Vcl@Imaging@Pngimage@EPNGInvalidFileHeader @727 ; __tpdsc__ Vcl::Imaging::Pngimage::EPNGInvalidFileHeader
+    @$xp$43Vcl@Imaging@Gifimg@TGIFApplicationExtension @419 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFApplicationExtension
+    @$xp$43Vcl@Imaging@Gifimg@TLogicalScreenDescriptor @446 ; __tpdsc__ Vcl::Imaging::Gifimg::TLogicalScreenDescriptor
+    @$xp$43Vcl@Imaging@Pngimage@EPNGUnknownCompression @715 ; __tpdsc__ Vcl::Imaging::Pngimage::EPNGUnknownCompression
+    @$xp$44Vcl@Imaging@Gifimg@TGIFPlainTextExtensionRec @429 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFPlainTextExtensionRec
+    @$xp$44Vcl@Imaging@Pngimage@EPNGMissingMultipleIDAT @733 ; __tpdsc__ Vcl::Imaging::Pngimage::EPNGMissingMultipleIDAT
+    @$xp$44Vcl@Imaging@Pngimage@Vcl_Imaging_Pngimage__1 @746 ; __tpdsc__ Vcl::Imaging::Pngimage::Vcl_Imaging_Pngimage__1
+    @$xp$45Vcl@Imaging@Pngimage@EPNGCouldNotLoadResource @709 ; __tpdsc__ Vcl::Imaging::Pngimage::EPNGCouldNotLoadResource
+    @$xp$45Vcl@Imaging@Pngimage@EPNGUnknownCriticalChunk @717 ; __tpdsc__ Vcl::Imaging::Pngimage::EPNGUnknownCriticalChunk
+    @$xp$46Vcl@Imaging@Gifimg@TGIFGraphicControlExtension @430 ; __tpdsc__ Vcl::Imaging::Gifimg::TGIFGraphicControlExtension
+    @$xp$48Vcl@Imaging@Pngimage@EPNGCannotChangeTransparent @707 ; __tpdsc__ Vcl::Imaging::Pngimage::EPNGCannotChangeTransparent
+    @GetPackageInfoTable           @808 ; GetPackageInfoTable
+    @Vcl@Imaging@Gifconsts@Finalization$qqrv @2   ; __fastcall Vcl::Imaging::Gifconsts::Finalization()
+    @Vcl@Imaging@Gifconsts@_sBadBlock @31  ; Vcl::Imaging::Gifconsts::_sBadBlock
+    @Vcl@Imaging@Gifconsts@_sBadBlockSize @32  ; Vcl::Imaging::Gifconsts::_sBadBlockSize
+    @Vcl@Imaging@Gifconsts@_sBadColorIndex @46  ; Vcl::Imaging::Gifconsts::_sBadColorIndex
+    @Vcl@Imaging@Gifconsts@_sBadColorIndexFixed @45  ; Vcl::Imaging::Gifconsts::_sBadColorIndexFixed
+    @Vcl@Imaging@Gifconsts@_sBadDimension @20  ; Vcl::Imaging::Gifconsts::_sBadDimension
+    @Vcl@Imaging@Gifconsts@_sBadExtensionInstance @33  ; Vcl::Imaging::Gifconsts::_sBadExtensionInstance
+    @Vcl@Imaging@Gifconsts@_sBadExtensionLabel @39  ; Vcl::Imaging::Gifconsts::_sBadExtensionLabel
+    @Vcl@Imaging@Gifconsts@_sBadPixelCoordinates @23  ; Vcl::Imaging::Gifconsts::_sBadPixelCoordinates
+    @Vcl@Imaging@Gifconsts@_sBadSignature @43  ; Vcl::Imaging::Gifconsts::_sBadSignature
+    @Vcl@Imaging@Gifconsts@_sBadSize @28  ; Vcl::Imaging::Gifconsts::_sBadSize
+    @Vcl@Imaging@Gifconsts@_sBadTrailer @34  ; Vcl::Imaging::Gifconsts::_sBadTrailer
+    @Vcl@Imaging@Gifconsts@_sDIBCreate @37  ; Vcl::Imaging::Gifconsts::_sDIBCreate
+    @Vcl@Imaging@Gifconsts@_sDecodeCircular @35  ; Vcl::Imaging::Gifconsts::_sDecodeCircular
+    @Vcl@Imaging@Gifconsts@_sDecodeTooFewBits @36  ; Vcl::Imaging::Gifconsts::_sDecodeTooFewBits
+    @Vcl@Imaging@Gifconsts@_sEmptyColorMap @15  ; Vcl::Imaging::Gifconsts::_sEmptyColorMap
+    @Vcl@Imaging@Gifconsts@_sEmptyImage @14  ; Vcl::Imaging::Gifconsts::_sEmptyImage
+    @Vcl@Imaging@Gifconsts@_sFailedPaste @27  ; Vcl::Imaging::Gifconsts::_sFailedPaste
+    @Vcl@Imaging@Gifconsts@_sGIFErrorSaveEmpty @44  ; Vcl::Imaging::Gifconsts::_sGIFErrorSaveEmpty
+    @Vcl@Imaging@Gifconsts@_sGIFImageFile @9   ; Vcl::Imaging::Gifconsts::_sGIFImageFile
+    @Vcl@Imaging@Gifconsts@_sImageBadColorSize @41  ; Vcl::Imaging::Gifconsts::_sImageBadColorSize
+    @Vcl@Imaging@Gifconsts@_sInvalidBitSize @16  ; Vcl::Imaging::Gifconsts::_sInvalidBitSize
+    @Vcl@Imaging@Gifconsts@_sInvalidBitmapList @13  ; Vcl::Imaging::Gifconsts::_sInvalidBitmapList
+    @Vcl@Imaging@Gifconsts@_sInvalidColor @17  ; Vcl::Imaging::Gifconsts::_sInvalidColor
+    @Vcl@Imaging@Gifconsts@_sInvalidData @29  ; Vcl::Imaging::Gifconsts::_sInvalidData
+    @Vcl@Imaging@Gifconsts@_sInvalidPixelFormat @21  ; Vcl::Imaging::Gifconsts::_sInvalidPixelFormat
+    @Vcl@Imaging@Gifconsts@_sInvalidReduction @12  ; Vcl::Imaging::Gifconsts::_sInvalidReduction
+    @Vcl@Imaging@Gifconsts@_sInvalidStream @18  ; Vcl::Imaging::Gifconsts::_sInvalidStream
+    @Vcl@Imaging@Gifconsts@_sMultipleGCE @11  ; Vcl::Imaging::Gifconsts::_sMultipleGCE
+    @Vcl@Imaging@Gifconsts@_sNoColorTable @24  ; Vcl::Imaging::Gifconsts::_sNoColorTable
+    @Vcl@Imaging@Gifconsts@_sNoDIB @19  ; Vcl::Imaging::Gifconsts::_sNoDIB
+    @Vcl@Imaging@Gifconsts@_sNoPalette @10  ; Vcl::Imaging::Gifconsts::_sNoPalette
+    @Vcl@Imaging@Gifconsts@_sOutOfData @48  ; Vcl::Imaging::Gifconsts::_sOutOfData
+    @Vcl@Imaging@Gifconsts@_sOutOfMemDIB @38  ; Vcl::Imaging::Gifconsts::_sOutOfMemDIB
+    @Vcl@Imaging@Gifconsts@_sProgressConverting @6   ; Vcl::Imaging::Gifconsts::_sProgressConverting
+    @Vcl@Imaging@Gifconsts@_sProgressCopying @4   ; Vcl::Imaging::Gifconsts::_sProgressCopying
+    @Vcl@Imaging@Gifconsts@_sProgressLoading @8   ; Vcl::Imaging::Gifconsts::_sProgressLoading
+    @Vcl@Imaging@Gifconsts@_sProgressOptimizing @3   ; Vcl::Imaging::Gifconsts::_sProgressOptimizing
+    @Vcl@Imaging@Gifconsts@_sProgressRendering @5   ; Vcl::Imaging::Gifconsts::_sProgressRendering
+    @Vcl@Imaging@Gifconsts@_sProgressSaving @7   ; Vcl::Imaging::Gifconsts::_sProgressSaving
+    @Vcl@Imaging@Gifconsts@_sScreenBadColorSize @42  ; Vcl::Imaging::Gifconsts::_sScreenBadColorSize
+    @Vcl@Imaging@Gifconsts@_sScreenSizeExceeded @25  ; Vcl::Imaging::Gifconsts::_sScreenSizeExceeded
+    @Vcl@Imaging@Gifconsts@_sTPictureConflict @26  ; Vcl::Imaging::Gifconsts::_sTPictureConflict
+    @Vcl@Imaging@Gifconsts@_sTooManyColors @47  ; Vcl::Imaging::Gifconsts::_sTooManyColors
+    @Vcl@Imaging@Gifconsts@_sUnknownExtension @40  ; Vcl::Imaging::Gifconsts::_sUnknownExtension
+    @Vcl@Imaging@Gifconsts@_sUnsupportedBitmap @22  ; Vcl::Imaging::Gifconsts::_sUnsupportedBitmap
+    @Vcl@Imaging@Gifconsts@_sUnsupportedClass @30  ; Vcl::Imaging::Gifconsts::_sUnsupportedClass
+    @Vcl@Imaging@Gifconsts@initialization$qqrv @1   ; __fastcall Vcl::Imaging::Gifconsts::initialization()
+    @Vcl@Imaging@Gifimg@BitmapAllocationThreshold @360 ; Vcl::Imaging::Gifimg::BitmapAllocationThreshold
+    @Vcl@Imaging@Gifimg@CF_GIF     @373 ; Vcl::Imaging::Gifimg::CF_GIF
+    @Vcl@Imaging@Gifimg@CreateOptimizedPaletteFromManyBitmaps$qqrp20System@Classes@TListiio @310 ; __fastcall Vcl::Imaging::Gifimg::CreateOptimizedPaletteFromManyBitmaps(System::Classes::TList *, int, int, bool)
+    @Vcl@Imaging@Gifimg@DoAutoDither @364 ; Vcl::Imaging::Gifimg::DoAutoDither
+    @Vcl@Imaging@Gifimg@Finalization$qqrv @50  ; __fastcall Vcl::Imaging::Gifimg::Finalization()
+    @Vcl@Imaging@Gifimg@GIFClearOnLoop @353 ; Vcl::Imaging::Gifimg::GIFClearOnLoop
+    @Vcl@Imaging@Gifimg@GIFDefaultDelay @358 ; Vcl::Imaging::Gifimg::GIFDefaultDelay
+    @Vcl@Imaging@Gifimg@GIFDefaultTransparentColor @354 ; Vcl::Imaging::Gifimg::GIFDefaultTransparentColor
+    @Vcl@Imaging@Gifimg@GIFDelayExp @359 ; Vcl::Imaging::Gifimg::GIFDelayExp
+    @Vcl@Imaging@Gifimg@GIFException@ @460 ; Vcl::Imaging::Gifimg::GIFException::
+    @Vcl@Imaging@Gifimg@GIFFileBufferSize @355 ; Vcl::Imaging::Gifimg::GIFFileBufferSize
+    @Vcl@Imaging@Gifimg@GIFImageDefaultAnimate @371 ; Vcl::Imaging::Gifimg::GIFImageDefaultAnimate
+    @Vcl@Imaging@Gifimg@GIFImageDefaultAnimationLoop @370 ; Vcl::Imaging::Gifimg::GIFImageDefaultAnimationLoop
+    @Vcl@Imaging@Gifimg@GIFImageDefaultAnimationSpeed @365 ; Vcl::Imaging::Gifimg::GIFImageDefaultAnimationSpeed
+    @Vcl@Imaging@Gifimg@GIFImageDefaultColorReduction @368 ; Vcl::Imaging::Gifimg::GIFImageDefaultColorReduction
+    @Vcl@Imaging@Gifimg@GIFImageDefaultColorReductionBits @367 ; Vcl::Imaging::Gifimg::GIFImageDefaultColorReductionBits
+    @Vcl@Imaging@Gifimg@GIFImageDefaultDitherMode @366 ; Vcl::Imaging::Gifimg::GIFImageDefaultDitherMode
+    @Vcl@Imaging@Gifimg@GIFImageDefaultDithering @369 ; Vcl::Imaging::Gifimg::GIFImageDefaultDithering
+    @Vcl@Imaging@Gifimg@GIFImageDefaultTransparent @372 ; Vcl::Imaging::Gifimg::GIFImageDefaultTransparent
+    @Vcl@Imaging@Gifimg@GIFImageOptimizeOnStream @361 ; Vcl::Imaging::Gifimg::GIFImageOptimizeOnStream
+    @Vcl@Imaging@Gifimg@GIFImageRenderOnLoad @362 ; Vcl::Imaging::Gifimg::GIFImageRenderOnLoad
+    @Vcl@Imaging@Gifimg@GIFMaximumDelay @356 ; Vcl::Imaging::Gifimg::GIFMaximumDelay
+    @Vcl@Imaging@Gifimg@GIFMinimumDelay @357 ; Vcl::Imaging::Gifimg::GIFMinimumDelay
+    @Vcl@Imaging@Gifimg@GIFVersions @461 ; Vcl::Imaging::Gifimg::GIFVersions
+    @Vcl@Imaging@Gifimg@InternalGetDIB$qqrp9HBITMAP__p10HPALETTE__pvt325Vcl@Graphics@TPixelFormat @349 ; __fastcall Vcl::Imaging::Gifimg::InternalGetDIB(HBITMAP__ *, HPALETTE__ *, void *, void *, Vcl::Graphics::TPixelFormat)
+    @Vcl@Imaging@Gifimg@InternalGetDIBSizes$qqrp9HBITMAP__rit225Vcl@Graphics@TPixelFormat @350 ; __fastcall Vcl::Imaging::Gifimg::InternalGetDIBSizes(HBITMAP__ *, int&, int&, Vcl::Graphics::TPixelFormat)
+    @Vcl@Imaging@Gifimg@PaletteDevice @363 ; Vcl::Imaging::Gifimg::PaletteDevice
+    @Vcl@Imaging@Gifimg@ReduceColors$qqrp20Vcl@Graphics@TBitmap34Vcl@Imaging@Gifimg@TColorReduction30Vcl@Imaging@Gifimg@TDitherModeip10HPALETTE__ @309 ; __fastcall Vcl::Imaging::Gifimg::ReduceColors(Vcl::Graphics::TBitmap *, Vcl::Imaging::Gifimg::TColorReduction, Vcl::Imaging::Gifimg::TDitherMode, int, HPALETTE__ *)
+    @Vcl@Imaging@Gifimg@Register$qqrv @352 ; __fastcall Vcl::Imaging::Gifimg::Register()
+    @Vcl@Imaging@Gifimg@TColorLookup@ @397 ; Vcl::Imaging::Gifimg::TColorLookup::
+    @Vcl@Imaging@Gifimg@TColorLookup@$bctr$qqrp10HPALETTE__ @326 ; __fastcall Vcl::Imaging::Gifimg::TColorLookup::TColorLookup(HPALETTE__ *)
+    @Vcl@Imaging@Gifimg@TColorLookup@SetColors$qqri @325 ; __fastcall Vcl::Imaging::Gifimg::TColorLookup::SetColors(int)
+    @Vcl@Imaging@Gifimg@TCustomGIFRenderer@ @401 ; Vcl::Imaging::Gifimg::TCustomGIFRenderer::
+    @Vcl@Imaging@Gifimg@TCustomGIFRenderer@$bctr$qqrp28Vcl@Imaging@Gifimg@TGIFImage @139 ; __fastcall Vcl::Imaging::Gifimg::TCustomGIFRenderer::TCustomGIFRenderer(Vcl::Imaging::Gifimg::TGIFImage *)
+    @Vcl@Imaging@Gifimg@TCustomGIFRenderer@Changed$qqrv @141 ; __fastcall Vcl::Imaging::Gifimg::TCustomGIFRenderer::Changed()
+    @Vcl@Imaging@Gifimg@TCustomGIFRenderer@CheckChange$qqrv @140 ; __fastcall Vcl::Imaging::Gifimg::TCustomGIFRenderer::CheckChange()
+    @Vcl@Imaging@Gifimg@TCustomGIFRenderer@DoNextFrame$qqrv @138 ; __fastcall Vcl::Imaging::Gifimg::TCustomGIFRenderer::DoNextFrame()
+    @Vcl@Imaging@Gifimg@TCustomGIFRenderer@Draw$qqrp20Vcl@Graphics@TCanvasrx18System@Types@TRect @137 ; __fastcall Vcl::Imaging::Gifimg::TCustomGIFRenderer::Draw(Vcl::Graphics::TCanvas *, const System::Types::TRect&)
+    @Vcl@Imaging@Gifimg@TCustomGIFRenderer@HaltAnimation$qqrv @136 ; __fastcall Vcl::Imaging::Gifimg::TCustomGIFRenderer::HaltAnimation()
+    @Vcl@Imaging@Gifimg@TCustomGIFRenderer@Initialize$qqrv @135 ; __fastcall Vcl::Imaging::Gifimg::TCustomGIFRenderer::Initialize()
+    @Vcl@Imaging@Gifimg@TCustomGIFRenderer@InternalSetFrameIndex$qqri @134 ; __fastcall Vcl::Imaging::Gifimg::TCustomGIFRenderer::InternalSetFrameIndex(int)
+    @Vcl@Imaging@Gifimg@TCustomGIFRenderer@Loop$qqrv @133 ; __fastcall Vcl::Imaging::Gifimg::TCustomGIFRenderer::Loop()
+    @Vcl@Imaging@Gifimg@TCustomGIFRenderer@NextFrame$qqrv @132 ; __fastcall Vcl::Imaging::Gifimg::TCustomGIFRenderer::NextFrame()
+    @Vcl@Imaging@Gifimg@TCustomGIFRenderer@Reset$qqrv @131 ; __fastcall Vcl::Imaging::Gifimg::TCustomGIFRenderer::Reset()
+    @Vcl@Imaging@Gifimg@TCustomGIFRenderer@SetAnimate$qqrxo @130 ; __fastcall Vcl::Imaging::Gifimg::TCustomGIFRenderer::SetAnimate(const bool)
+    @Vcl@Imaging@Gifimg@TCustomGIFRenderer@SetBackgroundColor$qqrx21System@Uitypes@TColor @129 ; __fastcall Vcl::Imaging::Gifimg::TCustomGIFRenderer::SetBackgroundColor(const System::Uitypes::TColor)
+    @Vcl@Imaging@Gifimg@TCustomGIFRenderer@SetFrameIndex$qqri @128 ; __fastcall Vcl::Imaging::Gifimg::TCustomGIFRenderer::SetFrameIndex(int)
+    @Vcl@Imaging@Gifimg@TCustomGIFRenderer@SetLoopMax$qqri @127 ; __fastcall Vcl::Imaging::Gifimg::TCustomGIFRenderer::SetLoopMax(int)
+    @Vcl@Imaging@Gifimg@TCustomGIFRenderer@SetSpeed$qqrxi @126 ; __fastcall Vcl::Imaging::Gifimg::TCustomGIFRenderer::SetSpeed(const int)
+    @Vcl@Imaging@Gifimg@TCustomGIFRenderer@SetTransparent$qqrxo @125 ; __fastcall Vcl::Imaging::Gifimg::TCustomGIFRenderer::SetTransparent(const bool)
+    @Vcl@Imaging@Gifimg@TCustomGIFRenderer@StartAnimation$qqrv @124 ; __fastcall Vcl::Imaging::Gifimg::TCustomGIFRenderer::StartAnimation()
+    @Vcl@Imaging@Gifimg@TCustomGIFRenderer@StopAnimation$qqrv @123 ; __fastcall Vcl::Imaging::Gifimg::TCustomGIFRenderer::StopAnimation()
+    @Vcl@Imaging@Gifimg@TFastColorLookup@ @386 ; Vcl::Imaging::Gifimg::TFastColorLookup::
+    @Vcl@Imaging@Gifimg@TFastColorLookup@$bctr$qqrp10HPALETTE__ @324 ; __fastcall Vcl::Imaging::Gifimg::TFastColorLookup::TFastColorLookup(HPALETTE__ *)
+    @Vcl@Imaging@Gifimg@TFastColorLookup@$bdtr$qqrv @323 ; __fastcall Vcl::Imaging::Gifimg::TFastColorLookup::~TFastColorLookup()
+    @Vcl@Imaging@Gifimg@TFastColorLookup@Lookup$qqrucucucruct4t4 @322 ; __fastcall Vcl::Imaging::Gifimg::TFastColorLookup::Lookup(unsigned char, unsigned char, unsigned char, unsigned char&, unsigned char&, unsigned char&)
+    @Vcl@Imaging@Gifimg@TGIFAppExtNSLoop@ @414 ; Vcl::Imaging::Gifimg::TGIFAppExtNSLoop::
+    @Vcl@Imaging@Gifimg@TGIFAppExtNSLoop@$bctr$qqrp28Vcl@Imaging@Gifimg@TGIFFrame @150 ; __fastcall Vcl::Imaging::Gifimg::TGIFAppExtNSLoop::TGIFAppExtNSLoop(Vcl::Imaging::Gifimg::TGIFFrame *)
+    @Vcl@Imaging@Gifimg@TGIFAppExtNSLoop@LoadData$qqrp22System@Classes@TStream @148 ; __fastcall Vcl::Imaging::Gifimg::TGIFAppExtNSLoop::LoadData(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFAppExtNSLoop@SaveData$qqrp22System@Classes@TStream @149 ; __fastcall Vcl::Imaging::Gifimg::TGIFAppExtNSLoop::SaveData(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFApplicationExtension@ @420 ; Vcl::Imaging::Gifimg::TGIFApplicationExtension::
+    @Vcl@Imaging@Gifimg@TGIFApplicationExtension@$bctr$qqrp28Vcl@Imaging@Gifimg@TGIFFrame @168 ; __fastcall Vcl::Imaging::Gifimg::TGIFApplicationExtension::TGIFApplicationExtension(Vcl::Imaging::Gifimg::TGIFFrame *)
+    @Vcl@Imaging@Gifimg@TGIFApplicationExtension@$bctr$qqrp28Vcl@Imaging@Gifimg@TGIFFramerx37Vcl@Imaging@Gifimg@TGIFApplicationRec @167 ; __fastcall Vcl::Imaging::Gifimg::TGIFApplicationExtension::TGIFApplicationExtension(Vcl::Imaging::Gifimg::TGIFFrame *, const Vcl::Imaging::Gifimg::TGIFApplicationRec&)
+    @Vcl@Imaging@Gifimg@TGIFApplicationExtension@$bdtr$qqrv @166 ; __fastcall Vcl::Imaging::Gifimg::TGIFApplicationExtension::~TGIFApplicationExtension()
+    @Vcl@Imaging@Gifimg@TGIFApplicationExtension@FindSubExtension$qqrp22System@Classes@TStream @169 ; __fastcall Vcl::Imaging::Gifimg::TGIFApplicationExtension::FindSubExtension(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFApplicationExtension@GetAuthentication$qqrv @164 ; __fastcall Vcl::Imaging::Gifimg::TGIFApplicationExtension::GetAuthentication()
+    @Vcl@Imaging@Gifimg@TGIFApplicationExtension@GetExtensionType$qqrv @165 ; __fastcall Vcl::Imaging::Gifimg::TGIFApplicationExtension::GetExtensionType()
+    @Vcl@Imaging@Gifimg@TGIFApplicationExtension@GetIdentifier$qqrv @162 ; __fastcall Vcl::Imaging::Gifimg::TGIFApplicationExtension::GetIdentifier()
+    @Vcl@Imaging@Gifimg@TGIFApplicationExtension@LoadFromStream$qqrp22System@Classes@TStream @159 ; __fastcall Vcl::Imaging::Gifimg::TGIFApplicationExtension::LoadFromStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFApplicationExtension@RegisterExtension$qqrrx37Vcl@Imaging@Gifimg@TGIFApplicationRecp17System@TMetaClass @170 ; __fastcall Vcl::Imaging::Gifimg::TGIFApplicationExtension::RegisterExtension(const Vcl::Imaging::Gifimg::TGIFApplicationRec&, System::TMetaClass *)
+    @Vcl@Imaging@Gifimg@TGIFApplicationExtension@SaveToStream$qqrp22System@Classes@TStream @160 ; __fastcall Vcl::Imaging::Gifimg::TGIFApplicationExtension::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFApplicationExtension@SetAuthentication$qqrx20System@UnicodeString @163 ; __fastcall Vcl::Imaging::Gifimg::TGIFApplicationExtension::SetAuthentication(const System::UnicodeString)
+    @Vcl@Imaging@Gifimg@TGIFApplicationExtension@SetIdentifier$qqrx20System@UnicodeString @161 ; __fastcall Vcl::Imaging::Gifimg::TGIFApplicationExtension::SetIdentifier(const System::UnicodeString)
+    @Vcl@Imaging@Gifimg@TGIFBlock@ @418 ; Vcl::Imaging::Gifimg::TGIFBlock::
+    @Vcl@Imaging@Gifimg@TGIFBlock@$bctr$qqri @158 ; __fastcall Vcl::Imaging::Gifimg::TGIFBlock::TGIFBlock(int)
+    @Vcl@Imaging@Gifimg@TGIFBlock@$bdtr$qqrv @157 ; __fastcall Vcl::Imaging::Gifimg::TGIFBlock::~TGIFBlock()
+    @Vcl@Imaging@Gifimg@TGIFBlock@LoadFromStream$qqrp22System@Classes@TStream @155 ; __fastcall Vcl::Imaging::Gifimg::TGIFBlock::LoadFromStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFBlock@SaveToStream$qqrp22System@Classes@TStream @156 ; __fastcall Vcl::Imaging::Gifimg::TGIFBlock::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFColorMap@ @448 ; Vcl::Imaging::Gifimg::TGIFColorMap::
+    @Vcl@Imaging@Gifimg@TGIFColorMap@$bctr$qqrv @308 ; __fastcall Vcl::Imaging::Gifimg::TGIFColorMap::TGIFColorMap()
+    @Vcl@Imaging@Gifimg@TGIFColorMap@$bdtr$qqrv @307 ; __fastcall Vcl::Imaging::Gifimg::TGIFColorMap::~TGIFColorMap()
+    @Vcl@Imaging@Gifimg@TGIFColorMap@Add$qqr21System@Uitypes@TColor @294 ; __fastcall Vcl::Imaging::Gifimg::TGIFColorMap::Add(System::Uitypes::TColor)
+    @Vcl@Imaging@Gifimg@TGIFColorMap@AddUnique$qqr21System@Uitypes@TColor @293 ; __fastcall Vcl::Imaging::Gifimg::TGIFColorMap::AddUnique(System::Uitypes::TColor)
+    @Vcl@Imaging@Gifimg@TGIFColorMap@Assign$qqrp26System@Classes@TPersistent @287 ; __fastcall Vcl::Imaging::Gifimg::TGIFColorMap::Assign(System::Classes::TPersistent *)
+    @Vcl@Imaging@Gifimg@TGIFColorMap@Clear$qqrv @306 ; __fastcall Vcl::Imaging::Gifimg::TGIFColorMap::Clear()
+    @Vcl@Imaging@Gifimg@TGIFColorMap@Color2RGB$qqr21System@Uitypes@TColor @305 ; __fastcall Vcl::Imaging::Gifimg::TGIFColorMap::Color2RGB(System::Uitypes::TColor)
+    @Vcl@Imaging@Gifimg@TGIFColorMap@Delete$qqri @292 ; __fastcall Vcl::Imaging::Gifimg::TGIFColorMap::Delete(int)
+    @Vcl@Imaging@Gifimg@TGIFColorMap@DoOptimize$qqrv @289 ; __fastcall Vcl::Imaging::Gifimg::TGIFColorMap::DoOptimize()
+    @Vcl@Imaging@Gifimg@TGIFColorMap@ExportPalette$qqrv @295 ; __fastcall Vcl::Imaging::Gifimg::TGIFColorMap::ExportPalette()
+    @Vcl@Imaging@Gifimg@TGIFColorMap@GetBitsPerPixel$qqrv @288 ; __fastcall Vcl::Imaging::Gifimg::TGIFColorMap::GetBitsPerPixel()
+    @Vcl@Imaging@Gifimg@TGIFColorMap@GetColor$qqri @291 ; __fastcall Vcl::Imaging::Gifimg::TGIFColorMap::GetColor(int)
+    @Vcl@Imaging@Gifimg@TGIFColorMap@ImportColorMap$qqrx52System@%DynamicArray$28Vcl@Imaging@Gifimg@TGIFColor%i @298 ; Vcl::Imaging::Gifimg::TGIFColorMap::ImportColorMap(const System::DynamicArray<{583}...
+    @Vcl@Imaging@Gifimg@TGIFColorMap@ImportColorTable$qqrpvi @297 ; __fastcall Vcl::Imaging::Gifimg::TGIFColorMap::ImportColorTable(void *, int)
+    @Vcl@Imaging@Gifimg@TGIFColorMap@ImportDIBColors$qqrp5HDC__ @296 ; __fastcall Vcl::Imaging::Gifimg::TGIFColorMap::ImportDIBColors(HDC__ *)
+    @Vcl@Imaging@Gifimg@TGIFColorMap@ImportPalette$qqrp10HPALETTE__ @299 ; __fastcall Vcl::Imaging::Gifimg::TGIFColorMap::ImportPalette(HPALETTE__ *)
+    @Vcl@Imaging@Gifimg@TGIFColorMap@IndexOf$qqr21System@Uitypes@TColor @301 ; __fastcall Vcl::Imaging::Gifimg::TGIFColorMap::IndexOf(System::Uitypes::TColor)
+    @Vcl@Imaging@Gifimg@TGIFColorMap@LoadFromStream$qqrp22System@Classes@TStreami @302 ; __fastcall Vcl::Imaging::Gifimg::TGIFColorMap::LoadFromStream(System::Classes::TStream *, int)
+    @Vcl@Imaging@Gifimg@TGIFColorMap@RGB2Color$qqr28Vcl@Imaging@Gifimg@TGIFColor @304 ; __fastcall Vcl::Imaging::Gifimg::TGIFColorMap::RGB2Color(Vcl::Imaging::Gifimg::TGIFColor)
+    @Vcl@Imaging@Gifimg@TGIFColorMap@SaveToStream$qqrp22System@Classes@TStream @303 ; __fastcall Vcl::Imaging::Gifimg::TGIFColorMap::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFColorMap@SetCapacity$qqri @300 ; __fastcall Vcl::Imaging::Gifimg::TGIFColorMap::SetCapacity(int)
+    @Vcl@Imaging@Gifimg@TGIFColorMap@SetColor$qqri21System@Uitypes@TColor @290 ; __fastcall Vcl::Imaging::Gifimg::TGIFColorMap::SetColor(int, System::Uitypes::TColor)
+    @Vcl@Imaging@Gifimg@TGIFCommentExtension@ @426 ; Vcl::Imaging::Gifimg::TGIFCommentExtension::
+    @Vcl@Imaging@Gifimg@TGIFCommentExtension@$bctr$qqrp28Vcl@Imaging@Gifimg@TGIFFrame @176 ; __fastcall Vcl::Imaging::Gifimg::TGIFCommentExtension::TGIFCommentExtension(Vcl::Imaging::Gifimg::TGIFFrame *)
+    @Vcl@Imaging@Gifimg@TGIFCommentExtension@$bdtr$qqrv @175 ; __fastcall Vcl::Imaging::Gifimg::TGIFCommentExtension::~TGIFCommentExtension()
+    @Vcl@Imaging@Gifimg@TGIFCommentExtension@GetExtensionType$qqrv @174 ; __fastcall Vcl::Imaging::Gifimg::TGIFCommentExtension::GetExtensionType()
+    @Vcl@Imaging@Gifimg@TGIFCommentExtension@LoadFromStream$qqrp22System@Classes@TStream @172 ; __fastcall Vcl::Imaging::Gifimg::TGIFCommentExtension::LoadFromStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFCommentExtension@SaveToStream$qqrp22System@Classes@TStream @173 ; __fastcall Vcl::Imaging::Gifimg::TGIFCommentExtension::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFCommentExtension@SetText$qqrxp23System@Classes@TStrings @171 ; __fastcall Vcl::Imaging::Gifimg::TGIFCommentExtension::SetText(System::Classes::TStrings * const)
+    @Vcl@Imaging@Gifimg@TGIFExtension@ @442 ; Vcl::Imaging::Gifimg::TGIFExtension::
+    @Vcl@Imaging@Gifimg@TGIFExtension@$bctr$qqrp28Vcl@Imaging@Gifimg@TGIFFrame @209 ; __fastcall Vcl::Imaging::Gifimg::TGIFExtension::TGIFExtension(Vcl::Imaging::Gifimg::TGIFFrame *)
+    @Vcl@Imaging@Gifimg@TGIFExtension@$bdtr$qqrv @208 ; __fastcall Vcl::Imaging::Gifimg::TGIFExtension::~TGIFExtension()
+    @Vcl@Imaging@Gifimg@TGIFExtension@Assign$qqrp26System@Classes@TPersistent @207 ; __fastcall Vcl::Imaging::Gifimg::TGIFExtension::Assign(System::Classes::TPersistent *)
+    @Vcl@Imaging@Gifimg@TGIFExtension@DoReadFromStream$qqrp22System@Classes@TStream @205 ; __fastcall Vcl::Imaging::Gifimg::TGIFExtension::DoReadFromStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFExtension@FindExtension$qqrp22System@Classes@TStream @211 ; __fastcall Vcl::Imaging::Gifimg::TGIFExtension::FindExtension(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFExtension@FindSubExtension$qqrp22System@Classes@TStream @210 ; __fastcall Vcl::Imaging::Gifimg::TGIFExtension::FindSubExtension(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFExtension@GetVersion$qqrv @213 ; __fastcall Vcl::Imaging::Gifimg::TGIFExtension::GetVersion()
+    @Vcl@Imaging@Gifimg@TGIFExtension@LoadFromStream$qqrp22System@Classes@TStream @204 ; __fastcall Vcl::Imaging::Gifimg::TGIFExtension::LoadFromStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFExtension@RegisterExtension$qqrucp17System@TMetaClass @212 ; __fastcall Vcl::Imaging::Gifimg::TGIFExtension::RegisterExtension(unsigned char, System::TMetaClass *)
+    @Vcl@Imaging@Gifimg@TGIFExtension@SaveToStream$qqrp22System@Classes@TStream @206 ; __fastcall Vcl::Imaging::Gifimg::TGIFExtension::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFExtensionList@ @440 ; Vcl::Imaging::Gifimg::TGIFExtensionList::
+    @Vcl@Imaging@Gifimg@TGIFExtensionList@$bctr$qqrp28Vcl@Imaging@Gifimg@TGIFFrame @271 ; __fastcall Vcl::Imaging::Gifimg::TGIFExtensionList::TGIFExtensionList(Vcl::Imaging::Gifimg::TGIFFrame *)
+    @Vcl@Imaging@Gifimg@TGIFExtensionList@Assign$qqrp26System@Classes@TPersistent @266 ; __fastcall Vcl::Imaging::Gifimg::TGIFExtensionList::Assign(System::Classes::TPersistent *)
+    @Vcl@Imaging@Gifimg@TGIFExtensionList@GetExtension$qqri @269 ; __fastcall Vcl::Imaging::Gifimg::TGIFExtensionList::GetExtension(int)
+    @Vcl@Imaging@Gifimg@TGIFExtensionList@GetImage$qqrv @270 ; __fastcall Vcl::Imaging::Gifimg::TGIFExtensionList::GetImage()
+    @Vcl@Imaging@Gifimg@TGIFExtensionList@LoadFromStream$qqrp22System@Classes@TStream @267 ; __fastcall Vcl::Imaging::Gifimg::TGIFExtensionList::LoadFromStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFExtensionList@SetExtension$qqrip32Vcl@Imaging@Gifimg@TGIFExtension @268 ; __fastcall Vcl::Imaging::Gifimg::TGIFExtensionList::SetExtension(int, Vcl::Imaging::Gifimg::TGIFExtension *)
+    @Vcl@Imaging@Gifimg@TGIFFrame@ @437 ; Vcl::Imaging::Gifimg::TGIFFrame::
+    @Vcl@Imaging@Gifimg@TGIFFrame@$bctr$qqrp28Vcl@Imaging@Gifimg@TGIFImage @265 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::TGIFFrame(Vcl::Imaging::Gifimg::TGIFImage *)
+    @Vcl@Imaging@Gifimg@TGIFFrame@$bdtr$qqrv @264 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::~TGIFFrame()
+    @Vcl@Imaging@Gifimg@TGIFFrame@Assign$qqrp26System@Classes@TPersistent @221 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::Assign(System::Classes::TPersistent *)
+    @Vcl@Imaging@Gifimg@TGIFFrame@AssignTo$qqrp26System@Classes@TPersistent @222 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::AssignTo(System::Classes::TPersistent *)
+    @Vcl@Imaging@Gifimg@TGIFFrame@Clear$qqrv @263 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::Clear()
+    @Vcl@Imaging@Gifimg@TGIFFrame@ClearImage$qqrv @258 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::ClearImage()
+    @Vcl@Imaging@Gifimg@TGIFFrame@Compress$qqrp22System@Classes@TStream @272 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::Compress(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFFrame@Crop$qqrv @217 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::Crop()
+    @Vcl@Imaging@Gifimg@TGIFFrame@Decompress$qqrp22System@Classes@TStream @273 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::Decompress(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFFrame@DoGetBitmap$qqrv @246 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::DoGetBitmap()
+    @Vcl@Imaging@Gifimg@TGIFFrame@DoGetDitherBitmap$qqrv @247 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::DoGetDitherBitmap()
+    @Vcl@Imaging@Gifimg@TGIFFrame@DoSetBounds$qqriiii @232 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::DoSetBounds(int, int, int, int)
+    @Vcl@Imaging@Gifimg@TGIFFrame@Dormant$qqrv @252 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::Dormant()
+    @Vcl@Imaging@Gifimg@TGIFFrame@Draw$qqrp20Vcl@Graphics@TCanvasrx18System@Types@TRectoo @220 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::Draw(Vcl::Graphics::TCanvas *, const System::Types::TRect&, bool, bool)
+    @Vcl@Imaging@Gifimg@TGIFFrame@FreeBitmap$qqrv @251 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::FreeBitmap()
+    @Vcl@Imaging@Gifimg@TGIFFrame@FreeImage$qqrv @256 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::FreeImage()
+    @Vcl@Imaging@Gifimg@TGIFFrame@FreeMask$qqrv @250 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::FreeMask()
+    @Vcl@Imaging@Gifimg@TGIFFrame@FreePalette$qqrv @249 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::FreePalette()
+    @Vcl@Imaging@Gifimg@TGIFFrame@GetActiveColorMap$qqrv @243 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::GetActiveColorMap()
+    @Vcl@Imaging@Gifimg@TGIFFrame@GetBitmap$qqrv @245 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::GetBitmap()
+    @Vcl@Imaging@Gifimg@TGIFFrame@GetBitsPerPixel$qqrv @238 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::GetBitsPerPixel()
+    @Vcl@Imaging@Gifimg@TGIFFrame@GetBoundsRect$qqrv @237 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::GetBoundsRect()
+    @Vcl@Imaging@Gifimg@TGIFFrame@GetClientRect$qqrv @230 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::GetClientRect()
+    @Vcl@Imaging@Gifimg@TGIFFrame@GetColorResolution$qqrv @239 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::GetColorResolution()
+    @Vcl@Imaging@Gifimg@TGIFFrame@GetEmpty$qqrv @262 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::GetEmpty()
+    @Vcl@Imaging@Gifimg@TGIFFrame@GetHasBitmap$qqrv @255 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::GetHasBitmap()
+    @Vcl@Imaging@Gifimg@TGIFFrame@GetInterlaced$qqrv @242 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::GetInterlaced()
+    @Vcl@Imaging@Gifimg@TGIFFrame@GetPalette$qqrv @261 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::GetPalette()
+    @Vcl@Imaging@Gifimg@TGIFFrame@GetPixel$qqrii @229 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::GetPixel(int, int)
+    @Vcl@Imaging@Gifimg@TGIFFrame@GetScanline$qqri @227 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::GetScanline(int)
+    @Vcl@Imaging@Gifimg@TGIFFrame@GetTransparent$qqrv @226 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::GetTransparent()
+    @Vcl@Imaging@Gifimg@TGIFFrame@GetVersion$qqrv @240 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::GetVersion()
+    @Vcl@Imaging@Gifimg@TGIFFrame@HasMask$qqrv @248 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::HasMask()
+    @Vcl@Imaging@Gifimg@TGIFFrame@LoadFromStream$qqrp22System@Classes@TStream @223 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::LoadFromStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFFrame@Merge$qqrp28Vcl@Imaging@Gifimg@TGIFFrame @216 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::Merge(Vcl::Imaging::Gifimg::TGIFFrame *)
+    @Vcl@Imaging@Gifimg@TGIFFrame@NeedImage$qqrv @259 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::NeedImage()
+    @Vcl@Imaging@Gifimg@TGIFFrame@NewBitmap$qqrv @253 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::NewBitmap()
+    @Vcl@Imaging@Gifimg@TGIFFrame@NewImage$qqrv @257 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::NewImage()
+    @Vcl@Imaging@Gifimg@TGIFFrame@Prepare$qqrv @225 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::Prepare()
+    @Vcl@Imaging@Gifimg@TGIFFrame@SaveToStream$qqrp22System@Classes@TStream @224 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFFrame@ScaleRect$qqrrx18System@Types@TRect @218 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::ScaleRect(const System::Types::TRect&)
+    @Vcl@Imaging@Gifimg@TGIFFrame@SetBitmap$qqrp20Vcl@Graphics@TBitmap @244 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::SetBitmap(Vcl::Graphics::TBitmap *)
+    @Vcl@Imaging@Gifimg@TGIFFrame@SetBoundsRect$qqrrx18System@Types@TRect @231 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::SetBoundsRect(const System::Types::TRect&)
+    @Vcl@Imaging@Gifimg@TGIFFrame@SetHasBitmap$qqro @254 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::SetHasBitmap(bool)
+    @Vcl@Imaging@Gifimg@TGIFFrame@SetHeight$qqrxus @236 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::SetHeight(const unsigned short)
+    @Vcl@Imaging@Gifimg@TGIFFrame@SetInterlaced$qqro @241 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::SetInterlaced(bool)
+    @Vcl@Imaging@Gifimg@TGIFFrame@SetLeft$qqrxus @235 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::SetLeft(const unsigned short)
+    @Vcl@Imaging@Gifimg@TGIFFrame@SetPalette$qqrp10HPALETTE__ @260 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::SetPalette(HPALETTE__ *)
+    @Vcl@Imaging@Gifimg@TGIFFrame@SetPixel$qqriixuc @228 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::SetPixel(int, int, const unsigned char)
+    @Vcl@Imaging@Gifimg@TGIFFrame@SetTop$qqrxus @234 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::SetTop(const unsigned short)
+    @Vcl@Imaging@Gifimg@TGIFFrame@SetWidth$qqrxus @233 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::SetWidth(const unsigned short)
+    @Vcl@Imaging@Gifimg@TGIFFrame@StretchDraw$qqrp20Vcl@Graphics@TCanvasrx18System@Types@TRectoo @219 ; __fastcall Vcl::Imaging::Gifimg::TGIFFrame::StretchDraw(Vcl::Graphics::TCanvas *, const System::Types::TRect&, bool, bool)
+    @Vcl@Imaging@Gifimg@TGIFGraphicControlExtension@ @431 ; Vcl::Imaging::Gifimg::TGIFGraphicControlExtension::
+    @Vcl@Imaging@Gifimg@TGIFGraphicControlExtension@$bctr$qqrp28Vcl@Imaging@Gifimg@TGIFFrame @203 ; __fastcall Vcl::Imaging::Gifimg::TGIFGraphicControlExtension::TGIFGraphicControlExtension(Vcl::Imaging::Gifimg::TGIFFrame *)
+    @Vcl@Imaging@Gifimg@TGIFGraphicControlExtension@$bdtr$qqrv @202 ; __fastcall Vcl::Imaging::Gifimg::TGIFGraphicControlExtension::~TGIFGraphicControlExtension()
+    @Vcl@Imaging@Gifimg@TGIFGraphicControlExtension@GetDelay$qqrv @194 ; __fastcall Vcl::Imaging::Gifimg::TGIFGraphicControlExtension::GetDelay()
+    @Vcl@Imaging@Gifimg@TGIFGraphicControlExtension@GetDisposal$qqrv @190 ; __fastcall Vcl::Imaging::Gifimg::TGIFGraphicControlExtension::GetDisposal()
+    @Vcl@Imaging@Gifimg@TGIFGraphicControlExtension@GetExtensionType$qqrv @201 ; __fastcall Vcl::Imaging::Gifimg::TGIFGraphicControlExtension::GetExtensionType()
+    @Vcl@Imaging@Gifimg@TGIFGraphicControlExtension@GetTransparent$qqrv @200 ; __fastcall Vcl::Imaging::Gifimg::TGIFGraphicControlExtension::GetTransparent()
+    @Vcl@Imaging@Gifimg@TGIFGraphicControlExtension@GetTransparentColor$qqrv @198 ; __fastcall Vcl::Imaging::Gifimg::TGIFGraphicControlExtension::GetTransparentColor()
+    @Vcl@Imaging@Gifimg@TGIFGraphicControlExtension@GetTransparentColorIndex$qqrv @196 ; __fastcall Vcl::Imaging::Gifimg::TGIFGraphicControlExtension::GetTransparentColorIndex()
+    @Vcl@Imaging@Gifimg@TGIFGraphicControlExtension@GetUserInput$qqrv @192 ; __fastcall Vcl::Imaging::Gifimg::TGIFGraphicControlExtension::GetUserInput()
+    @Vcl@Imaging@Gifimg@TGIFGraphicControlExtension@LoadFromStream$qqrp22System@Classes@TStream @187 ; __fastcall Vcl::Imaging::Gifimg::TGIFGraphicControlExtension::LoadFromStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFGraphicControlExtension@SaveToStream$qqrp22System@Classes@TStream @188 ; __fastcall Vcl::Imaging::Gifimg::TGIFGraphicControlExtension::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFGraphicControlExtension@SetDelay$qqrus @193 ; __fastcall Vcl::Imaging::Gifimg::TGIFGraphicControlExtension::SetDelay(unsigned short)
+    @Vcl@Imaging@Gifimg@TGIFGraphicControlExtension@SetDisposal$qqr34Vcl@Imaging@Gifimg@TDisposalMethod @189 ; __fastcall Vcl::Imaging::Gifimg::TGIFGraphicControlExtension::SetDisposal(Vcl::Imaging::Gifimg::TDisposalMethod)
+    @Vcl@Imaging@Gifimg@TGIFGraphicControlExtension@SetTransparent$qqro @199 ; __fastcall Vcl::Imaging::Gifimg::TGIFGraphicControlExtension::SetTransparent(bool)
+    @Vcl@Imaging@Gifimg@TGIFGraphicControlExtension@SetTransparentColor$qqr21System@Uitypes@TColor @197 ; __fastcall Vcl::Imaging::Gifimg::TGIFGraphicControlExtension::SetTransparentColor(System::Uitypes::TColor)
+    @Vcl@Imaging@Gifimg@TGIFGraphicControlExtension@SetTransparentColorIndex$qqruc @195 ; __fastcall Vcl::Imaging::Gifimg::TGIFGraphicControlExtension::SetTransparentColorIndex(unsigned char)
+    @Vcl@Imaging@Gifimg@TGIFGraphicControlExtension@SetUserInput$qqro @191 ; __fastcall Vcl::Imaging::Gifimg::TGIFGraphicControlExtension::SetUserInput(bool)
+    @Vcl@Imaging@Gifimg@TGIFHeader@ @445 ; Vcl::Imaging::Gifimg::TGIFHeader::
+    @Vcl@Imaging@Gifimg@TGIFHeader@$bctr$qqrp28Vcl@Imaging@Gifimg@TGIFImage @286 ; __fastcall Vcl::Imaging::Gifimg::TGIFHeader::TGIFHeader(Vcl::Imaging::Gifimg::TGIFImage *)
+    @Vcl@Imaging@Gifimg@TGIFHeader@$bdtr$qqrv @285 ; __fastcall Vcl::Imaging::Gifimg::TGIFHeader::~TGIFHeader()
+    @Vcl@Imaging@Gifimg@TGIFHeader@Assign$qqrp26System@Classes@TPersistent @283 ; __fastcall Vcl::Imaging::Gifimg::TGIFHeader::Assign(System::Classes::TPersistent *)
+    @Vcl@Imaging@Gifimg@TGIFHeader@Clear$qqrv @284 ; __fastcall Vcl::Imaging::Gifimg::TGIFHeader::Clear()
+    @Vcl@Imaging@Gifimg@TGIFHeader@GetBackgroundColor$qqrv @278 ; __fastcall Vcl::Imaging::Gifimg::TGIFHeader::GetBackgroundColor()
+    @Vcl@Imaging@Gifimg@TGIFHeader@GetBitsPerPixel$qqrv @275 ; __fastcall Vcl::Imaging::Gifimg::TGIFHeader::GetBitsPerPixel()
+    @Vcl@Imaging@Gifimg@TGIFHeader@GetColorResolution$qqrv @274 ; __fastcall Vcl::Imaging::Gifimg::TGIFHeader::GetColorResolution()
+    @Vcl@Imaging@Gifimg@TGIFHeader@GetVersion$qqrv @279 ; __fastcall Vcl::Imaging::Gifimg::TGIFHeader::GetVersion()
+    @Vcl@Imaging@Gifimg@TGIFHeader@LoadFromStream$qqrp22System@Classes@TStream @280 ; __fastcall Vcl::Imaging::Gifimg::TGIFHeader::LoadFromStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFHeader@Prepare$qqrv @282 ; __fastcall Vcl::Imaging::Gifimg::TGIFHeader::Prepare()
+    @Vcl@Imaging@Gifimg@TGIFHeader@SaveToStream$qqrp22System@Classes@TStream @281 ; __fastcall Vcl::Imaging::Gifimg::TGIFHeader::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFHeader@SetBackgroundColor$qqr21System@Uitypes@TColor @277 ; __fastcall Vcl::Imaging::Gifimg::TGIFHeader::SetBackgroundColor(System::Uitypes::TColor)
+    @Vcl@Imaging@Gifimg@TGIFHeader@SetBackgroundColorIndex$qqruc @276 ; __fastcall Vcl::Imaging::Gifimg::TGIFHeader::SetBackgroundColorIndex(unsigned char)
+    @Vcl@Imaging@Gifimg@TGIFImage@ @403 ; Vcl::Imaging::Gifimg::TGIFImage::
+    @Vcl@Imaging@Gifimg@TGIFImage@$bctr$qqrv @104 ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::TGIFImage()
+    @Vcl@Imaging@Gifimg@TGIFImage@$bdtr$qqrv @103 ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::~TGIFImage()
+    @Vcl@Imaging@Gifimg@TGIFImage@Add$qqrp26System@Classes@TPersistent @73  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::Add(System::Classes::TPersistent *)
+    @Vcl@Imaging@Gifimg@TGIFImage@Assign$qqrp26System@Classes@TPersistent @59  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::Assign(System::Classes::TPersistent *)
+    @Vcl@Imaging@Gifimg@TGIFImage@AssignTo$qqrp26System@Classes@TPersistent @60  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::AssignTo(System::Classes::TPersistent *)
+    @Vcl@Imaging@Gifimg@TGIFImage@Clear$qqrv @102 ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::Clear()
+    @Vcl@Imaging@Gifimg@TGIFImage@CreateRenderer$qqrv @53  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::CreateRenderer()
+    @Vcl@Imaging@Gifimg@TGIFImage@Dormant$qqrv @76  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::Dormant()
+    @Vcl@Imaging@Gifimg@TGIFImage@Draw$qqrp20Vcl@Graphics@TCanvasrx18System@Types@TRect @52  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::Draw(Vcl::Graphics::TCanvas *, const System::Types::TRect&)
+    @Vcl@Imaging@Gifimg@TGIFImage@EffectiveBackgroundColor$qqrv @54  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::EffectiveBackgroundColor()
+    @Vcl@Imaging@Gifimg@TGIFImage@Equals$qqrp21Vcl@Graphics@TGraphic @68  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::Equals(Vcl::Graphics::TGraphic *)
+    @Vcl@Imaging@Gifimg@TGIFImage@FreeBitmap$qqrv @74  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::FreeBitmap()
+    @Vcl@Imaging@Gifimg@TGIFImage@FreePalette$qqrv @75  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::FreePalette()
+    @Vcl@Imaging@Gifimg@TGIFImage@GetAspectRatio$qqrv @92  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::GetAspectRatio()
+    @Vcl@Imaging@Gifimg@TGIFImage@GetBackgroundColor$qqrv @94  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::GetBackgroundColor()
+    @Vcl@Imaging@Gifimg@TGIFImage@GetBackgroundColorIndex$qqrv @96  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::GetBackgroundColorIndex()
+    @Vcl@Imaging@Gifimg@TGIFImage@GetBitmap$qqrv @78  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::GetBitmap()
+    @Vcl@Imaging@Gifimg@TGIFImage@GetBitsPerPixel$qqrv @97  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::GetBitsPerPixel()
+    @Vcl@Imaging@Gifimg@TGIFImage@GetColorMap$qqrv @56  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::GetColorMap()
+    @Vcl@Imaging@Gifimg@TGIFImage@GetColorResolution$qqrv @98  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::GetColorResolution()
+    @Vcl@Imaging@Gifimg@TGIFImage@GetDoDither$qqrv @55  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::GetDoDither()
+    @Vcl@Imaging@Gifimg@TGIFImage@GetEmpty$qqrv @72  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::GetEmpty()
+    @Vcl@Imaging@Gifimg@TGIFImage@GetHeight$qqrv @71  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::GetHeight()
+    @Vcl@Imaging@Gifimg@TGIFImage@GetIsTransparent$qqrv @69  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::GetIsTransparent()
+    @Vcl@Imaging@Gifimg@TGIFImage@GetPalette$qqrv @67  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::GetPalette()
+    @Vcl@Imaging@Gifimg@TGIFImage@GetVersion$qqrv @99  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::GetVersion()
+    @Vcl@Imaging@Gifimg@TGIFImage@GetWidth$qqrv @70  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::GetWidth()
+    @Vcl@Imaging@Gifimg@TGIFImage@InternalClear$qqrv @101 ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::InternalClear()
+    @Vcl@Imaging@Gifimg@TGIFImage@LoadFromClipboardFormat$qqrusuip10HPALETTE__ @58  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::LoadFromClipboardFormat(unsigned short, unsigned int, HPALETTE__ *)
+    @Vcl@Imaging@Gifimg@TGIFImage@LoadFromStream$qqrp22System@Classes@TStream @79  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::LoadFromStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFImage@NewBitmap$qqrv @77  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::NewBitmap()
+    @Vcl@Imaging@Gifimg@TGIFImage@NewImage$qqrv @100 ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::NewImage()
+    @Vcl@Imaging@Gifimg@TGIFImage@Optimize$qqr64System@%Set$37Vcl@Imaging@Gifimg@TGIFOptimizeOptiont1$i0$t1$i3$%34Vcl@Imaging@Gifimg@TColorReduction30Vcl@Imaging@Gifimg@TDitherModei @83  ; Vcl::Imaging::Gifimg::TGIFImage::Optimize(System::Set<{583}...
+    @Vcl@Imaging@Gifimg@TGIFImage@OptimizeColorMap$qqrv @84  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::OptimizeColorMap()
+    @Vcl@Imaging@Gifimg@TGIFImage@Pack$qqrv @82  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::Pack()
+    @Vcl@Imaging@Gifimg@TGIFImage@ResumeDraw$qqrv @81  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::ResumeDraw()
+    @Vcl@Imaging@Gifimg@TGIFImage@SaveToClipboardFormat$qqrrusruirp10HPALETTE__ @57  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::SaveToClipboardFormat(unsigned short&, unsigned int&, HPALETTE__ *&)
+    @Vcl@Imaging@Gifimg@TGIFImage@SaveToStream$qqrp22System@Classes@TStream @80  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFImage@SetAnimate$qqrxo @89  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::SetAnimate(const bool)
+    @Vcl@Imaging@Gifimg@TGIFImage@SetAnimateLoop$qqrx36Vcl@Imaging@Gifimg@TGIFAnimationLoop @88  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::SetAnimateLoop(const Vcl::Imaging::Gifimg::TGIFAnimationLoop)
+    @Vcl@Imaging@Gifimg@TGIFImage@SetAnimationSpeed$qqri @87  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::SetAnimationSpeed(int)
+    @Vcl@Imaging@Gifimg@TGIFImage@SetAspectRatio$qqrxuc @91  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::SetAspectRatio(const unsigned char)
+    @Vcl@Imaging@Gifimg@TGIFImage@SetBackgroundColor$qqrx21System@Uitypes@TColor @93  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::SetBackgroundColor(const System::Uitypes::TColor)
+    @Vcl@Imaging@Gifimg@TGIFImage@SetBackgroundColorIndex$qqrxuc @95  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::SetBackgroundColorIndex(const unsigned char)
+    @Vcl@Imaging@Gifimg@TGIFImage@SetDithering$qqrx32Vcl@Imaging@Gifimg@TGIFDithering @90  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::SetDithering(const Vcl::Imaging::Gifimg::TGIFDithering)
+    @Vcl@Imaging@Gifimg@TGIFImage@SetHeight$qqri @65  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::SetHeight(int)
+    @Vcl@Imaging@Gifimg@TGIFImage@SetPalette$qqrp10HPALETTE__ @66  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::SetPalette(HPALETTE__ *)
+    @Vcl@Imaging@Gifimg@TGIFImage@SetReductionBits$qqri @86  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::SetReductionBits(int)
+    @Vcl@Imaging@Gifimg@TGIFImage@SetTransparent$qqro @85  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::SetTransparent(bool)
+    @Vcl@Imaging@Gifimg@TGIFImage@SetWidth$qqri @64  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::SetWidth(int)
+    @Vcl@Imaging@Gifimg@TGIFImage@StopDraw$qqrv @63  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::StopDraw()
+    @Vcl@Imaging@Gifimg@TGIFImage@SuspendDraw$qqrv @62  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::SuspendDraw()
+    @Vcl@Imaging@Gifimg@TGIFImage@Warning$qqrp14System@TObject31Vcl@Imaging@Gifimg@TGIFSeverityx20System@UnicodeString @51  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::Warning(System::TObject *, Vcl::Imaging::Gifimg::TGIFSeverity, const System::UnicodeString)
+    @Vcl@Imaging@Gifimg@TGIFImage@WriteData$qqrp22System@Classes@TStream @61  ; __fastcall Vcl::Imaging::Gifimg::TGIFImage::WriteData(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFImageList@ @412 ; Vcl::Imaging::Gifimg::TGIFImageList::
+    @Vcl@Imaging@Gifimg@TGIFImageList@$bctr$qqrp28Vcl@Imaging@Gifimg@TGIFImage @147 ; __fastcall Vcl::Imaging::Gifimg::TGIFImageList::TGIFImageList(Vcl::Imaging::Gifimg::TGIFImage *)
+    @Vcl@Imaging@Gifimg@TGIFImageList@GetFrame$qqri @145 ; __fastcall Vcl::Imaging::Gifimg::TGIFImageList::GetFrame(int)
+    @Vcl@Imaging@Gifimg@TGIFImageList@GetImage$qqrv @146 ; __fastcall Vcl::Imaging::Gifimg::TGIFImageList::GetImage()
+    @Vcl@Imaging@Gifimg@TGIFImageList@LoadFromStream$qqrp22System@Classes@TStream @143 ; __fastcall Vcl::Imaging::Gifimg::TGIFImageList::LoadFromStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFImageList@SaveToStream$qqrp22System@Classes@TStream @142 ; __fastcall Vcl::Imaging::Gifimg::TGIFImageList::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFImageList@SetFrame$qqrip28Vcl@Imaging@Gifimg@TGIFFrame @144 ; __fastcall Vcl::Imaging::Gifimg::TGIFImageList::SetFrame(int, Vcl::Imaging::Gifimg::TGIFFrame *)
+    @Vcl@Imaging@Gifimg@TGIFItem@  @457 ; Vcl::Imaging::Gifimg::TGIFItem::
+    @Vcl@Imaging@Gifimg@TGIFItem@$bctr$qqrp28Vcl@Imaging@Gifimg@TGIFImage @348 ; __fastcall Vcl::Imaging::Gifimg::TGIFItem::TGIFItem(Vcl::Imaging::Gifimg::TGIFImage *)
+    @Vcl@Imaging@Gifimg@TGIFItem@GetVersion$qqrv @346 ; __fastcall Vcl::Imaging::Gifimg::TGIFItem::GetVersion()
+    @Vcl@Imaging@Gifimg@TGIFItem@LoadFromFile$qqrx20System@UnicodeString @345 ; __fastcall Vcl::Imaging::Gifimg::TGIFItem::LoadFromFile(const System::UnicodeString)
+    @Vcl@Imaging@Gifimg@TGIFItem@SaveToFile$qqrx20System@UnicodeString @344 ; __fastcall Vcl::Imaging::Gifimg::TGIFItem::SaveToFile(const System::UnicodeString)
+    @Vcl@Imaging@Gifimg@TGIFItem@Warning$qqr31Vcl@Imaging@Gifimg@TGIFSeverityx20System@UnicodeString @347 ; __fastcall Vcl::Imaging::Gifimg::TGIFItem::Warning(Vcl::Imaging::Gifimg::TGIFSeverity, const System::UnicodeString)
+    @Vcl@Imaging@Gifimg@TGIFList@  @455 ; Vcl::Imaging::Gifimg::TGIFList::
+    @Vcl@Imaging@Gifimg@TGIFList@$bctr$qqrv @343 ; __fastcall Vcl::Imaging::Gifimg::TGIFList::TGIFList()
+    @Vcl@Imaging@Gifimg@TGIFList@$bdtr$qqrv @342 ; __fastcall Vcl::Imaging::Gifimg::TGIFList::~TGIFList()
+    @Vcl@Imaging@Gifimg@TGIFList@Add$qqrp27Vcl@Imaging@Gifimg@TGIFItem @338 ; __fastcall Vcl::Imaging::Gifimg::TGIFList::Add(Vcl::Imaging::Gifimg::TGIFItem *)
+    @Vcl@Imaging@Gifimg@TGIFList@Clear$qqrv @337 ; __fastcall Vcl::Imaging::Gifimg::TGIFList::Clear()
+    @Vcl@Imaging@Gifimg@TGIFList@Delete$qqri @336 ; __fastcall Vcl::Imaging::Gifimg::TGIFList::Delete(int)
+    @Vcl@Imaging@Gifimg@TGIFList@Exchange$qqrii @335 ; __fastcall Vcl::Imaging::Gifimg::TGIFList::Exchange(int, int)
+    @Vcl@Imaging@Gifimg@TGIFList@First$qqrv @334 ; __fastcall Vcl::Imaging::Gifimg::TGIFList::First()
+    @Vcl@Imaging@Gifimg@TGIFList@GetCount$qqrv @339 ; __fastcall Vcl::Imaging::Gifimg::TGIFList::GetCount()
+    @Vcl@Imaging@Gifimg@TGIFList@GetItem$qqri @341 ; __fastcall Vcl::Imaging::Gifimg::TGIFList::GetItem(int)
+    @Vcl@Imaging@Gifimg@TGIFList@IndexOf$qqrp27Vcl@Imaging@Gifimg@TGIFItem @333 ; __fastcall Vcl::Imaging::Gifimg::TGIFList::IndexOf(Vcl::Imaging::Gifimg::TGIFItem *)
+    @Vcl@Imaging@Gifimg@TGIFList@Insert$qqrip27Vcl@Imaging@Gifimg@TGIFItem @332 ; __fastcall Vcl::Imaging::Gifimg::TGIFList::Insert(int, Vcl::Imaging::Gifimg::TGIFItem *)
+    @Vcl@Imaging@Gifimg@TGIFList@Last$qqrv @331 ; __fastcall Vcl::Imaging::Gifimg::TGIFList::Last()
+    @Vcl@Imaging@Gifimg@TGIFList@Move$qqrii @330 ; __fastcall Vcl::Imaging::Gifimg::TGIFList::Move(int, int)
+    @Vcl@Imaging@Gifimg@TGIFList@Remove$qqrp27Vcl@Imaging@Gifimg@TGIFItem @329 ; __fastcall Vcl::Imaging::Gifimg::TGIFList::Remove(Vcl::Imaging::Gifimg::TGIFItem *)
+    @Vcl@Imaging@Gifimg@TGIFList@SaveToStream$qqrp22System@Classes@TStream @328 ; __fastcall Vcl::Imaging::Gifimg::TGIFList::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFList@SetItem$qqrip27Vcl@Imaging@Gifimg@TGIFItem @340 ; __fastcall Vcl::Imaging::Gifimg::TGIFList::SetItem(int, Vcl::Imaging::Gifimg::TGIFItem *)
+    @Vcl@Imaging@Gifimg@TGIFList@Warning$qqr31Vcl@Imaging@Gifimg@TGIFSeverity20System@UnicodeString @327 ; __fastcall Vcl::Imaging::Gifimg::TGIFList::Warning(Vcl::Imaging::Gifimg::TGIFSeverity, System::UnicodeString)
+    @Vcl@Imaging@Gifimg@TGIFRenderer@ @399 ; Vcl::Imaging::Gifimg::TGIFRenderer::
+    @Vcl@Imaging@Gifimg@TGIFRenderer@$bctr$qqrp28Vcl@Imaging@Gifimg@TGIFImage @119 ; __fastcall Vcl::Imaging::Gifimg::TGIFRenderer::TGIFRenderer(Vcl::Imaging::Gifimg::TGIFImage *)
+    @Vcl@Imaging@Gifimg@TGIFRenderer@$bdtr$qqrv @118 ; __fastcall Vcl::Imaging::Gifimg::TGIFRenderer::~TGIFRenderer()
+    @Vcl@Imaging@Gifimg@TGIFRenderer@AnimationTimerEvent$qqrp14System@TObject @122 ; __fastcall Vcl::Imaging::Gifimg::TGIFRenderer::AnimationTimerEvent(System::TObject *)
+    @Vcl@Imaging@Gifimg@TGIFRenderer@Changed$qqrv @121 ; __fastcall Vcl::Imaging::Gifimg::TGIFRenderer::Changed()
+    @Vcl@Imaging@Gifimg@TGIFRenderer@Clear$qqrv @120 ; __fastcall Vcl::Imaging::Gifimg::TGIFRenderer::Clear()
+    @Vcl@Imaging@Gifimg@TGIFRenderer@DoNextFrame$qqrv @111 ; __fastcall Vcl::Imaging::Gifimg::TGIFRenderer::DoNextFrame()
+    @Vcl@Imaging@Gifimg@TGIFRenderer@Draw$qqrp20Vcl@Graphics@TCanvasrx18System@Types@TRect @116 ; __fastcall Vcl::Imaging::Gifimg::TGIFRenderer::Draw(Vcl::Graphics::TCanvas *, const System::Types::TRect&)
+    @Vcl@Imaging@Gifimg@TGIFRenderer@GetBitmap$qqrv @115 ; __fastcall Vcl::Imaging::Gifimg::TGIFRenderer::GetBitmap()
+    @Vcl@Imaging@Gifimg@TGIFRenderer@HaltAnimation$qqrv @114 ; __fastcall Vcl::Imaging::Gifimg::TGIFRenderer::HaltAnimation()
+    @Vcl@Imaging@Gifimg@TGIFRenderer@Initialize$qqrv @113 ; __fastcall Vcl::Imaging::Gifimg::TGIFRenderer::Initialize()
+    @Vcl@Imaging@Gifimg@TGIFRenderer@Loop$qqrv @112 ; __fastcall Vcl::Imaging::Gifimg::TGIFRenderer::Loop()
+    @Vcl@Imaging@Gifimg@TGIFRenderer@RenderFrame$qqrv @110 ; __fastcall Vcl::Imaging::Gifimg::TGIFRenderer::RenderFrame()
+    @Vcl@Imaging@Gifimg@TGIFRenderer@Reset$qqrv @109 ; __fastcall Vcl::Imaging::Gifimg::TGIFRenderer::Reset()
+    @Vcl@Imaging@Gifimg@TGIFRenderer@StartAnimation$qqrv @108 ; __fastcall Vcl::Imaging::Gifimg::TGIFRenderer::StartAnimation()
+    @Vcl@Imaging@Gifimg@TGIFRenderer@StartAnimationTimer$qqri @107 ; __fastcall Vcl::Imaging::Gifimg::TGIFRenderer::StartAnimationTimer(int)
+    @Vcl@Imaging@Gifimg@TGIFRenderer@StopAnimation$qqrv @106 ; __fastcall Vcl::Imaging::Gifimg::TGIFRenderer::StopAnimation()
+    @Vcl@Imaging@Gifimg@TGIFRenderer@StopAnimationTimer$qqrv @105 ; __fastcall Vcl::Imaging::Gifimg::TGIFRenderer::StopAnimationTimer()
+    @Vcl@Imaging@Gifimg@TGIFRenderer@UndoPreviousFrame$qqrv @117 ; __fastcall Vcl::Imaging::Gifimg::TGIFRenderer::UndoPreviousFrame()
+    @Vcl@Imaging@Gifimg@TGIFTextExtension@ @428 ; Vcl::Imaging::Gifimg::TGIFTextExtension::
+    @Vcl@Imaging@Gifimg@TGIFTextExtension@$bctr$qqrp28Vcl@Imaging@Gifimg@TGIFFrame @186 ; __fastcall Vcl::Imaging::Gifimg::TGIFTextExtension::TGIFTextExtension(Vcl::Imaging::Gifimg::TGIFFrame *)
+    @Vcl@Imaging@Gifimg@TGIFTextExtension@$bdtr$qqrv @185 ; __fastcall Vcl::Imaging::Gifimg::TGIFTextExtension::~TGIFTextExtension()
+    @Vcl@Imaging@Gifimg@TGIFTextExtension@GetBackgroundColor$qqrv @181 ; __fastcall Vcl::Imaging::Gifimg::TGIFTextExtension::GetBackgroundColor()
+    @Vcl@Imaging@Gifimg@TGIFTextExtension@GetExtensionType$qqrv @184 ; __fastcall Vcl::Imaging::Gifimg::TGIFTextExtension::GetExtensionType()
+    @Vcl@Imaging@Gifimg@TGIFTextExtension@GetForegroundColor$qqrv @183 ; __fastcall Vcl::Imaging::Gifimg::TGIFTextExtension::GetForegroundColor()
+    @Vcl@Imaging@Gifimg@TGIFTextExtension@LoadFromStream$qqrp22System@Classes@TStream @178 ; __fastcall Vcl::Imaging::Gifimg::TGIFTextExtension::LoadFromStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFTextExtension@SaveToStream$qqrp22System@Classes@TStream @179 ; __fastcall Vcl::Imaging::Gifimg::TGIFTextExtension::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFTextExtension@SetBackgroundColor$qqr21System@Uitypes@TColor @180 ; __fastcall Vcl::Imaging::Gifimg::TGIFTextExtension::SetBackgroundColor(System::Uitypes::TColor)
+    @Vcl@Imaging@Gifimg@TGIFTextExtension@SetForegroundColor$qqr21System@Uitypes@TColor @182 ; __fastcall Vcl::Imaging::Gifimg::TGIFTextExtension::SetForegroundColor(System::Uitypes::TColor)
+    @Vcl@Imaging@Gifimg@TGIFTextExtension@SetText$qqrxp23System@Classes@TStrings @177 ; __fastcall Vcl::Imaging::Gifimg::TGIFTextExtension::SetText(System::Classes::TStrings * const)
+    @Vcl@Imaging@Gifimg@TGIFTrailer@ @435 ; Vcl::Imaging::Gifimg::TGIFTrailer::
+    @Vcl@Imaging@Gifimg@TGIFTrailer@LoadFromStream$qqrp22System@Classes@TStream @214 ; __fastcall Vcl::Imaging::Gifimg::TGIFTrailer::LoadFromStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFTrailer@SaveToStream$qqrp22System@Classes@TStream @215 ; __fastcall Vcl::Imaging::Gifimg::TGIFTrailer::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFUnknownAppExtension@ @416 ; Vcl::Imaging::Gifimg::TGIFUnknownAppExtension::
+    @Vcl@Imaging@Gifimg@TGIFUnknownAppExtension@$bctr$qqrp28Vcl@Imaging@Gifimg@TGIFFrame @154 ; __fastcall Vcl::Imaging::Gifimg::TGIFUnknownAppExtension::TGIFUnknownAppExtension(Vcl::Imaging::Gifimg::TGIFFrame *)
+    @Vcl@Imaging@Gifimg@TGIFUnknownAppExtension@$bdtr$qqrv @153 ; __fastcall Vcl::Imaging::Gifimg::TGIFUnknownAppExtension::~TGIFUnknownAppExtension()
+    @Vcl@Imaging@Gifimg@TGIFUnknownAppExtension@LoadData$qqrp22System@Classes@TStream @151 ; __fastcall Vcl::Imaging::Gifimg::TGIFUnknownAppExtension::LoadData(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGIFUnknownAppExtension@SaveData$qqrp22System@Classes@TStream @152 ; __fastcall Vcl::Imaging::Gifimg::TGIFUnknownAppExtension::SaveData(System::Classes::TStream *)
+    @Vcl@Imaging@Gifimg@TGenericColorMapper @382 ; Vcl::Imaging::Gifimg::TGenericColorMapper
+    @Vcl@Imaging@Gifimg@TGrayScaleLookup@ @377 ; Vcl::Imaging::Gifimg::TGrayScaleLookup::
+    @Vcl@Imaging@Gifimg@TGrayScaleLookup@$bctr$qqrp10HPALETTE__ @314 ; __fastcall Vcl::Imaging::Gifimg::TGrayScaleLookup::TGrayScaleLookup(HPALETTE__ *)
+    @Vcl@Imaging@Gifimg@TGrayScaleLookup@Lookup$qqrucucucruct4t4 @313 ; __fastcall Vcl::Imaging::Gifimg::TGrayScaleLookup::Lookup(unsigned char, unsigned char, unsigned char, unsigned char&, unsigned char&, unsigned char&)
+    @Vcl@Imaging@Gifimg@TGrayWindowsLookup@ @379 ; Vcl::Imaging::Gifimg::TGrayWindowsLookup::
+    @Vcl@Imaging@Gifimg@TGrayWindowsLookup@$bctr$qqrp10HPALETTE__ @316 ; __fastcall Vcl::Imaging::Gifimg::TGrayWindowsLookup::TGrayWindowsLookup(HPALETTE__ *)
+    @Vcl@Imaging@Gifimg@TGrayWindowsLookup@Lookup$qqrucucucruct4t4 @315 ; __fastcall Vcl::Imaging::Gifimg::TGrayWindowsLookup::Lookup(unsigned char, unsigned char, unsigned char, unsigned char&, unsigned char&, unsigned char&)
+    @Vcl@Imaging@Gifimg@TMonochromeLookup@ @375 ; Vcl::Imaging::Gifimg::TMonochromeLookup::
+    @Vcl@Imaging@Gifimg@TMonochromeLookup@$bctr$qqrp10HPALETTE__ @312 ; __fastcall Vcl::Imaging::Gifimg::TMonochromeLookup::TMonochromeLookup(HPALETTE__ *)
+    @Vcl@Imaging@Gifimg@TMonochromeLookup@Lookup$qqrucucucruct4t4 @311 ; __fastcall Vcl::Imaging::Gifimg::TMonochromeLookup::Lookup(unsigned char, unsigned char, unsigned char, unsigned char&, unsigned char&, unsigned char&)
+    @Vcl@Imaging@Gifimg@TNetscapeColorLookup@ @381 ; Vcl::Imaging::Gifimg::TNetscapeColorLookup::
+    @Vcl@Imaging@Gifimg@TNetscapeColorLookup@$bctr$qqrp10HPALETTE__ @318 ; __fastcall Vcl::Imaging::Gifimg::TNetscapeColorLookup::TNetscapeColorLookup(HPALETTE__ *)
+    @Vcl@Imaging@Gifimg@TNetscapeColorLookup@Lookup$qqrucucucruct4t4 @317 ; __fastcall Vcl::Imaging::Gifimg::TNetscapeColorLookup::Lookup(unsigned char, unsigned char, unsigned char, unsigned char&, unsigned char&, unsigned char&)
+    @Vcl@Imaging@Gifimg@TSlowColorLookup@ @384 ; Vcl::Imaging::Gifimg::TSlowColorLookup::
+    @Vcl@Imaging@Gifimg@TSlowColorLookup@$bctr$qqrp10HPALETTE__ @321 ; __fastcall Vcl::Imaging::Gifimg::TSlowColorLookup::TSlowColorLookup(HPALETTE__ *)
+    @Vcl@Imaging@Gifimg@TSlowColorLookup@$bdtr$qqrv @320 ; __fastcall Vcl::Imaging::Gifimg::TSlowColorLookup::~TSlowColorLookup()
+    @Vcl@Imaging@Gifimg@TSlowColorLookup@Lookup$qqrucucucruct4t4 @319 ; __fastcall Vcl::Imaging::Gifimg::TSlowColorLookup::Lookup(unsigned char, unsigned char, unsigned char, unsigned char&, unsigned char&, unsigned char&)
+    @Vcl@Imaging@Gifimg@WebPalette$qqrv @351 ; __fastcall Vcl::Imaging::Gifimg::WebPalette()
+    @Vcl@Imaging@Gifimg@initialization$qqrv @49  ; __fastcall Vcl::Imaging::Gifimg::initialization()
+    @Vcl@Imaging@Jconsts@Finalization$qqrv @748 ; __fastcall Vcl::Imaging::Jconsts::Finalization()
+    @Vcl@Imaging@Jconsts@_sChangeJPGSize @751 ; Vcl::Imaging::Jconsts::_sChangeJPGSize
+    @Vcl@Imaging@Jconsts@_sJPEGError @750 ; Vcl::Imaging::Jconsts::_sJPEGError
+    @Vcl@Imaging@Jconsts@_sJPEGImageFile @749 ; Vcl::Imaging::Jconsts::_sJPEGImageFile
+    @Vcl@Imaging@Jconsts@initialization$qqrv @747 ; __fastcall Vcl::Imaging::Jconsts::initialization()
+    @Vcl@Imaging@Jpeg@Finalization$qqrv @753 ; __fastcall Vcl::Imaging::Jpeg::Finalization()
+    @Vcl@Imaging@Jpeg@JPEGDefaults @792 ; Vcl::Imaging::Jpeg::JPEGDefaults
+    @Vcl@Imaging@Jpeg@TJPEGData@   @801 ; Vcl::Imaging::Jpeg::TJPEGData::
+    @Vcl@Imaging@Jpeg@TJPEGData@$bdtr$qqrv @791 ; __fastcall Vcl::Imaging::Jpeg::TJPEGData::~TJPEGData()
+    @Vcl@Imaging@Jpeg@TJPEGData@FreeHandle$qqrv @790 ; __fastcall Vcl::Imaging::Jpeg::TJPEGData::FreeHandle()
+    @Vcl@Imaging@Jpeg@TJPEGImage@  @795 ; Vcl::Imaging::Jpeg::TJPEGImage::
+    @Vcl@Imaging@Jpeg@TJPEGImage@$bctr$qqrv @789 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::TJPEGImage()
+    @Vcl@Imaging@Jpeg@TJPEGImage@$bdtr$qqrv @788 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::~TJPEGImage()
+    @Vcl@Imaging@Jpeg@TJPEGImage@Assign$qqrp26System@Classes@TPersistent @787 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::Assign(System::Classes::TPersistent *)
+    @Vcl@Imaging@Jpeg@TJPEGImage@AssignTo$qqrp26System@Classes@TPersistent @786 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::AssignTo(System::Classes::TPersistent *)
+    @Vcl@Imaging@Jpeg@TJPEGImage@CalcOutputDimensions$qqrv @785 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::CalcOutputDimensions()
+    @Vcl@Imaging@Jpeg@TJPEGImage@Changed$qqrp14System@TObject @784 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::Changed(System::TObject *)
+    @Vcl@Imaging@Jpeg@TJPEGImage@Compress$qqrv @783 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::Compress()
+    @Vcl@Imaging@Jpeg@TJPEGImage@DIBNeeded$qqrv @782 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::DIBNeeded()
+    @Vcl@Imaging@Jpeg@TJPEGImage@Draw$qqrp20Vcl@Graphics@TCanvasrx18System@Types@TRect @781 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::Draw(Vcl::Graphics::TCanvas *, const System::Types::TRect&)
+    @Vcl@Imaging@Jpeg@TJPEGImage@Equals$qqrp21Vcl@Graphics@TGraphic @780 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::Equals(Vcl::Graphics::TGraphic *)
+    @Vcl@Imaging@Jpeg@TJPEGImage@FreeBitmap$qqrv @779 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::FreeBitmap()
+    @Vcl@Imaging@Jpeg@TJPEGImage@GetBitmap$qqrv @778 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::GetBitmap()
+    @Vcl@Imaging@Jpeg@TJPEGImage@GetCanvas$qqrv @777 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::GetCanvas()
+    @Vcl@Imaging@Jpeg@TJPEGImage@GetEmpty$qqrv @776 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::GetEmpty()
+    @Vcl@Imaging@Jpeg@TJPEGImage@GetGrayscale$qqrv @775 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::GetGrayscale()
+    @Vcl@Imaging@Jpeg@TJPEGImage@GetHeight$qqrv @773 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::GetHeight()
+    @Vcl@Imaging@Jpeg@TJPEGImage@GetPalette$qqrv @774 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::GetPalette()
+    @Vcl@Imaging@Jpeg@TJPEGImage@GetWidth$qqrv @772 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::GetWidth()
+    @Vcl@Imaging@Jpeg@TJPEGImage@JPEGNeeded$qqrv @771 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::JPEGNeeded()
+    @Vcl@Imaging@Jpeg@TJPEGImage@LoadFromClipboardFormat$qqrusuip10HPALETTE__ @770 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::LoadFromClipboardFormat(unsigned short, unsigned int, HPALETTE__ *)
+    @Vcl@Imaging@Jpeg@TJPEGImage@LoadFromStream$qqrp22System@Classes@TStream @769 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::LoadFromStream(System::Classes::TStream *)
+    @Vcl@Imaging@Jpeg@TJPEGImage@NewBitmap$qqrv @768 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::NewBitmap()
+    @Vcl@Imaging@Jpeg@TJPEGImage@NewImage$qqrv @767 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::NewImage()
+    @Vcl@Imaging@Jpeg@TJPEGImage@ReadData$qqrp22System@Classes@TStream @766 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::ReadData(System::Classes::TStream *)
+    @Vcl@Imaging@Jpeg@TJPEGImage@ReadStream$qqrip22System@Classes@TStream @765 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::ReadStream(int, System::Classes::TStream *)
+    @Vcl@Imaging@Jpeg@TJPEGImage@SaveToClipboardFormat$qqrrusruirp10HPALETTE__ @764 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::SaveToClipboardFormat(unsigned short&, unsigned int&, HPALETTE__ *&)
+    @Vcl@Imaging@Jpeg@TJPEGImage@SaveToStream$qqrp22System@Classes@TStream @763 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Jpeg@TJPEGImage@SetGrayscale$qqro @762 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::SetGrayscale(bool)
+    @Vcl@Imaging@Jpeg@TJPEGImage@SetHeight$qqri @761 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::SetHeight(int)
+    @Vcl@Imaging@Jpeg@TJPEGImage@SetPalette$qqrp10HPALETTE__ @760 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::SetPalette(HPALETTE__ *)
+    @Vcl@Imaging@Jpeg@TJPEGImage@SetPerformance$qqr33Vcl@Imaging@Jpeg@TJPEGPerformance @759 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::SetPerformance(Vcl::Imaging::Jpeg::TJPEGPerformance)
+    @Vcl@Imaging@Jpeg@TJPEGImage@SetPixelFormat$qqr33Vcl@Imaging@Jpeg@TJPEGPixelFormat @758 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::SetPixelFormat(Vcl::Imaging::Jpeg::TJPEGPixelFormat)
+    @Vcl@Imaging@Jpeg@TJPEGImage@SetScale$qqr27Vcl@Imaging@Jpeg@TJPEGScale @757 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::SetScale(Vcl::Imaging::Jpeg::TJPEGScale)
+    @Vcl@Imaging@Jpeg@TJPEGImage@SetSmoothing$qqro @756 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::SetSmoothing(bool)
+    @Vcl@Imaging@Jpeg@TJPEGImage@SetWidth$qqri @755 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::SetWidth(int)
+    @Vcl@Imaging@Jpeg@TJPEGImage@WriteData$qqrp22System@Classes@TStream @754 ; __fastcall Vcl::Imaging::Jpeg::TJPEGImage::WriteData(System::Classes::TStream *)
+    @Vcl@Imaging@Jpeg@initialization$qqrv @752 ; __fastcall Vcl::Imaging::Jpeg::initialization()
+    @Vcl@Imaging@Pngimage@ByteSwap$qqrxi @649 ; __fastcall Vcl::Imaging::Pngimage::ByteSwap(const int)
+    @Vcl@Imaging@Pngimage@EPNGCannotChangeTransparent@ @708 ; Vcl::Imaging::Pngimage::EPNGCannotChangeTransparent::
+    @Vcl@Imaging@Pngimage@EPNGCouldNotLoadResource@ @710 ; Vcl::Imaging::Pngimage::EPNGCouldNotLoadResource::
+    @Vcl@Imaging@Pngimage@EPNGHeaderNotPresent@ @706 ; Vcl::Imaging::Pngimage::EPNGHeaderNotPresent::
+    @Vcl@Imaging@Pngimage@EPNGIHDRNotFirst@ @726 ; Vcl::Imaging::Pngimage::EPNGIHDRNotFirst::
+    @Vcl@Imaging@Pngimage@EPNGInvalidFileHeader@ @728 ; Vcl::Imaging::Pngimage::EPNGInvalidFileHeader::
+    @Vcl@Imaging@Pngimage@EPNGInvalidNewSize@ @704 ; Vcl::Imaging::Pngimage::EPNGInvalidNewSize::
+    @Vcl@Imaging@Pngimage@EPNGInvalidPalette@ @730 ; Vcl::Imaging::Pngimage::EPNGInvalidPalette::
+    @Vcl@Imaging@Pngimage@EPNGInvalidSpec@ @702 ; Vcl::Imaging::Pngimage::EPNGInvalidSpec::
+    @Vcl@Imaging@Pngimage@EPNGMissingMultipleIDAT@ @734 ; Vcl::Imaging::Pngimage::EPNGMissingMultipleIDAT::
+    @Vcl@Imaging@Pngimage@EPNGMissingPalette@ @720 ; Vcl::Imaging::Pngimage::EPNGMissingPalette::
+    @Vcl@Imaging@Pngimage@EPNGNoImageData@ @712 ; Vcl::Imaging::Pngimage::EPNGNoImageData::
+    @Vcl@Imaging@Pngimage@EPNGNotExists@ @724 ; Vcl::Imaging::Pngimage::EPNGNotExists::
+    @Vcl@Imaging@Pngimage@EPNGOutMemory@ @744 ; Vcl::Imaging::Pngimage::EPNGOutMemory::
+    @Vcl@Imaging@Pngimage@EPNGSizeExceeds@ @722 ; Vcl::Imaging::Pngimage::EPNGSizeExceeds::
+    @Vcl@Imaging@Pngimage@EPNGUnknownCompression@ @716 ; Vcl::Imaging::Pngimage::EPNGUnknownCompression::
+    @Vcl@Imaging@Pngimage@EPNGUnknownCriticalChunk@ @718 ; Vcl::Imaging::Pngimage::EPNGUnknownCriticalChunk::
+    @Vcl@Imaging@Pngimage@EPNGUnknownInterlace@ @714 ; Vcl::Imaging::Pngimage::EPNGUnknownInterlace::
+    @Vcl@Imaging@Pngimage@EPNGZLIBError@ @732 ; Vcl::Imaging::Pngimage::EPNGZLIBError::
+    @Vcl@Imaging@Pngimage@EPngError@ @742 ; Vcl::Imaging::Pngimage::EPngError::
+    @Vcl@Imaging@Pngimage@EPngInvalidCRC@ @738 ; Vcl::Imaging::Pngimage::EPngInvalidCRC::
+    @Vcl@Imaging@Pngimage@EPngInvalidIHDR@ @736 ; Vcl::Imaging::Pngimage::EPngInvalidIHDR::
+    @Vcl@Imaging@Pngimage@EPngUnexpectedEnd@ @740 ; Vcl::Imaging::Pngimage::EPngUnexpectedEnd::
+    @Vcl@Imaging@Pngimage@Finalization$qqrv @492 ; __fastcall Vcl::Imaging::Pngimage::Finalization()
+    @Vcl@Imaging@Pngimage@RegisterChunk$qqrp17System@TMetaClass @648 ; __fastcall Vcl::Imaging::Pngimage::RegisterChunk(System::TMetaClass *)
+    @Vcl@Imaging@Pngimage@TChunk@  @677 ; Vcl::Imaging::Pngimage::TChunk::
+    @Vcl@Imaging@Pngimage@TChunk@$bctr$qqrp30Vcl@Imaging@Pngimage@TPngImage @630 ; __fastcall Vcl::Imaging::Pngimage::TChunk::TChunk(Vcl::Imaging::Pngimage::TPngImage *)
+    @Vcl@Imaging@Pngimage@TChunk@$bdtr$qqrv @629 ; __fastcall Vcl::Imaging::Pngimage::TChunk::~TChunk()
+    @Vcl@Imaging@Pngimage@TChunk@Assign$qqrp27Vcl@Imaging@Pngimage@TChunk @631 ; __fastcall Vcl::Imaging::Pngimage::TChunk::Assign(Vcl::Imaging::Pngimage::TChunk *)
+    @Vcl@Imaging@Pngimage@TChunk@GetChunkName$qqrv @628 ; __fastcall Vcl::Imaging::Pngimage::TChunk::GetChunkName()
+    @Vcl@Imaging@Pngimage@TChunk@GetHeader$qqrv @632 ; __fastcall Vcl::Imaging::Pngimage::TChunk::GetHeader()
+    @Vcl@Imaging@Pngimage@TChunk@GetIndex$qqrv @633 ; __fastcall Vcl::Imaging::Pngimage::TChunk::GetIndex()
+    @Vcl@Imaging@Pngimage@TChunk@GetName$qqrv @627 ; __fastcall Vcl::Imaging::Pngimage::TChunk::GetName()
+    @Vcl@Imaging@Pngimage@TChunk@LoadFromStream$qqrp22System@Classes@TStreamx27System@%StaticArray$ci$i4$%i @624 ; __fastcall Vcl::Imaging::Pngimage::TChunk::LoadFromStream(System::Classes::TStream *, const System::StaticArray<char, 4>, int)
+    @Vcl@Imaging@Pngimage@TChunk@ResizeData$qqrxui @634 ; __fastcall Vcl::Imaging::Pngimage::TChunk::ResizeData(const unsigned int)
+    @Vcl@Imaging@Pngimage@TChunk@SaveData$qqrp22System@Classes@TStream @626 ; __fastcall Vcl::Imaging::Pngimage::TChunk::SaveData(System::Classes::TStream *)
+    @Vcl@Imaging@Pngimage@TChunk@SaveToStream$qqrp22System@Classes@TStream @625 ; __fastcall Vcl::Imaging::Pngimage::TChunk::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@ @658 ; Vcl::Imaging::Pngimage::TChunkIDAT::
+    @Vcl@Imaging@Pngimage@TChunkIDAT@CopyInterlacedGray2$qqrxucpuct2t2t2 @595 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::CopyInterlacedGray2(const unsigned char, unsigned char *, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@CopyInterlacedGrayscale16$qqrxucpuct2t2t2 @594 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::CopyInterlacedGrayscale16(const unsigned char, unsigned char *, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@CopyInterlacedGrayscaleAlpha16$qqrxucpuct2t2t2 @590 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::CopyInterlacedGrayscaleAlpha16(const unsigned char, unsigned char *, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@CopyInterlacedGrayscaleAlpha8$qqrxucpuct2t2t2 @591 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::CopyInterlacedGrayscaleAlpha8(const unsigned char, unsigned char *, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@CopyInterlacedPalette148$qqrxucpuct2t2t2 @597 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::CopyInterlacedPalette148(const unsigned char, unsigned char *, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@CopyInterlacedPalette2$qqrxucpuct2t2t2 @596 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::CopyInterlacedPalette2(const unsigned char, unsigned char *, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@CopyInterlacedRGB16$qqrxucpuct2t2t2 @598 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::CopyInterlacedRGB16(const unsigned char, unsigned char *, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@CopyInterlacedRGB8$qqrxucpuct2t2t2 @599 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::CopyInterlacedRGB8(const unsigned char, unsigned char *, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@CopyInterlacedRGBAlpha16$qqrxucpuct2t2t2 @592 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::CopyInterlacedRGBAlpha16(const unsigned char, unsigned char *, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@CopyInterlacedRGBAlpha8$qqrxucpuct2t2t2 @593 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::CopyInterlacedRGBAlpha8(const unsigned char, unsigned char *, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@CopyNonInterlacedGray2$qqrpuct1t1t1 @585 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::CopyNonInterlacedGray2(unsigned char *, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@CopyNonInterlacedGrayscale16$qqrpuct1t1t1 @583 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::CopyNonInterlacedGrayscale16(unsigned char *, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@CopyNonInterlacedGrayscaleAlpha16$qqrpuct1t1t1 @579 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::CopyNonInterlacedGrayscaleAlpha16(unsigned char *, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@CopyNonInterlacedGrayscaleAlpha8$qqrpuct1t1t1 @580 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::CopyNonInterlacedGrayscaleAlpha8(unsigned char *, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@CopyNonInterlacedPalette148$qqrpuct1t1t1 @586 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::CopyNonInterlacedPalette148(unsigned char *, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@CopyNonInterlacedPalette2$qqrpuct1t1t1 @584 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::CopyNonInterlacedPalette2(unsigned char *, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@CopyNonInterlacedRGB16$qqrpuct1t1t1 @587 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::CopyNonInterlacedRGB16(unsigned char *, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@CopyNonInterlacedRGB8$qqrpuct1t1t1 @588 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::CopyNonInterlacedRGB8(unsigned char *, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@CopyNonInterlacedRGBAlpha16$qqrpuct1t1t1 @581 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::CopyNonInterlacedRGBAlpha16(unsigned char *, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@CopyNonInterlacedRGBAlpha8$qqrpuct1t1t1 @582 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::CopyNonInterlacedRGBAlpha8(unsigned char *, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@DecodeInterlacedAdam7$qqrp22System@Classes@TStreamr33Vcl@Imaging@Pngimage@TZStreamRec2xirui @589 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::DecodeInterlacedAdam7(System::Classes::TStream *, Vcl::Imaging::Pngimage::TZStreamRec2&, const int, unsigned int&)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@DecodeNonInterlaced$qqrp22System@Classes@TStreamr33Vcl@Imaging@Pngimage@TZStreamRec2xirui @578 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::DecodeNonInterlaced(System::Classes::TStream *, Vcl::Imaging::Pngimage::TZStreamRec2&, const int, unsigned int&)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@EncodeInterlacedAdam7$qqrp22System@Classes@TStreamr33Vcl@Imaging@Pngimage@TZStreamRec2 @555 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::EncodeInterlacedAdam7(System::Classes::TStream *, Vcl::Imaging::Pngimage::TZStreamRec2&)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@EncodeInterlacedGrayscale16$qqrxucpuct2t2 @560 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::EncodeInterlacedGrayscale16(const unsigned char, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@EncodeInterlacedGrayscaleAlpha16$qqrxucpuct2t2 @556 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::EncodeInterlacedGrayscaleAlpha16(const unsigned char, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@EncodeInterlacedGrayscaleAlpha8$qqrxucpuct2t2 @557 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::EncodeInterlacedGrayscaleAlpha8(const unsigned char, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@EncodeInterlacedPalette148$qqrxucpuct2t2 @561 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::EncodeInterlacedPalette148(const unsigned char, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@EncodeInterlacedRGB16$qqrxucpuct2t2 @562 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::EncodeInterlacedRGB16(const unsigned char, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@EncodeInterlacedRGB8$qqrxucpuct2t2 @563 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::EncodeInterlacedRGB8(const unsigned char, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@EncodeInterlacedRGBAlpha16$qqrxucpuct2t2 @558 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::EncodeInterlacedRGBAlpha16(const unsigned char, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@EncodeInterlacedRGBAlpha8$qqrxucpuct2t2 @559 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::EncodeInterlacedRGBAlpha8(const unsigned char, unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@EncodeNonInterlaced$qqrp22System@Classes@TStreamr33Vcl@Imaging@Pngimage@TZStreamRec2 @564 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::EncodeNonInterlaced(System::Classes::TStream *, Vcl::Imaging::Pngimage::TZStreamRec2&)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@EncodeNonInterlacedGrayscale16$qqrpuct1t1 @569 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::EncodeNonInterlacedGrayscale16(unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@EncodeNonInterlacedGrayscaleAlpha16$qqrpuct1t1 @565 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::EncodeNonInterlacedGrayscaleAlpha16(unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@EncodeNonInterlacedGrayscaleAlpha8$qqrpuct1t1 @566 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::EncodeNonInterlacedGrayscaleAlpha8(unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@EncodeNonInterlacedPalette148$qqrpuct1t1 @570 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::EncodeNonInterlacedPalette148(unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@EncodeNonInterlacedRGB16$qqrpuct1t1 @571 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::EncodeNonInterlacedRGB16(unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@EncodeNonInterlacedRGB8$qqrpuct1t1 @572 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::EncodeNonInterlacedRGB8(unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@EncodeNonInterlacedRGBAlpha16$qqrpuct1t1 @567 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::EncodeNonInterlacedRGBAlpha16(unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@EncodeNonInterlacedRGBAlpha8$qqrpuct1t1 @568 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::EncodeNonInterlacedRGBAlpha8(unsigned char *, unsigned char *, unsigned char *)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@FilterRow$qqrv @577 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::FilterRow()
+    @Vcl@Imaging@Pngimage@TChunkIDAT@FilterToEncode$qqrv @554 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::FilterToEncode()
+    @Vcl@Imaging@Pngimage@TChunkIDAT@FinishIDATZlib$qqrr33Vcl@Imaging@Pngimage@TZStreamRec2 @573 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::FinishIDATZlib(Vcl::Imaging::Pngimage::TZStreamRec2&)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@IDATZlibRead$qqrr33Vcl@Imaging@Pngimage@TZStreamRec2pvirirui @600 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::IDATZlibRead(Vcl::Imaging::Pngimage::TZStreamRec2&, void *, int, int&, unsigned int&)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@IDATZlibWrite$qqrr33Vcl@Imaging@Pngimage@TZStreamRec2pvxui @574 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::IDATZlibWrite(Vcl::Imaging::Pngimage::TZStreamRec2&, void *, const unsigned int)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@LoadFromStream$qqrp22System@Classes@TStreamx27System@%StaticArray$ci$i4$%i @576 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::LoadFromStream(System::Classes::TStream *, const System::StaticArray<char, 4>, int)
+    @Vcl@Imaging@Pngimage@TChunkIDAT@PreparePalette$qqrv @601 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::PreparePalette()
+    @Vcl@Imaging@Pngimage@TChunkIDAT@SaveToStream$qqrp22System@Classes@TStream @575 ; __fastcall Vcl::Imaging::Pngimage::TChunkIDAT::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Pngimage@TChunkIEND@ @675 ; Vcl::Imaging::Pngimage::TChunkIEND::
+    @Vcl@Imaging@Pngimage@TChunkIHDR@ @671 ; Vcl::Imaging::Pngimage::TChunkIHDR::
+    @Vcl@Imaging@Pngimage@TChunkIHDR@$bctr$qqrp30Vcl@Imaging@Pngimage@TPngImage @615 ; __fastcall Vcl::Imaging::Pngimage::TChunkIHDR::TChunkIHDR(Vcl::Imaging::Pngimage::TPngImage *)
+    @Vcl@Imaging@Pngimage@TChunkIHDR@$bdtr$qqrv @614 ; __fastcall Vcl::Imaging::Pngimage::TChunkIHDR::~TChunkIHDR()
+    @Vcl@Imaging@Pngimage@TChunkIHDR@Assign$qqrp27Vcl@Imaging@Pngimage@TChunk @613 ; __fastcall Vcl::Imaging::Pngimage::TChunkIHDR::Assign(Vcl::Imaging::Pngimage::TChunk *)
+    @Vcl@Imaging@Pngimage@TChunkIHDR@CreateGrayscalePalette$qqri @609 ; __fastcall Vcl::Imaging::Pngimage::TChunkIHDR::CreateGrayscalePalette(int)
+    @Vcl@Imaging@Pngimage@TChunkIHDR@FreeImageData$qqrv @612 ; __fastcall Vcl::Imaging::Pngimage::TChunkIHDR::FreeImageData()
+    @Vcl@Imaging@Pngimage@TChunkIHDR@LoadFromStream$qqrp22System@Classes@TStreamx27System@%StaticArray$ci$i4$%i @611 ; __fastcall Vcl::Imaging::Pngimage::TChunkIHDR::LoadFromStream(System::Classes::TStream *, const System::StaticArray<char, 4>, int)
+    @Vcl@Imaging@Pngimage@TChunkIHDR@PaletteToDIB$qqrp10HPALETTE__ @608 ; __fastcall Vcl::Imaging::Pngimage::TChunkIHDR::PaletteToDIB(HPALETTE__ *)
+    @Vcl@Imaging@Pngimage@TChunkIHDR@PrepareImageData$qqrv @607 ; __fastcall Vcl::Imaging::Pngimage::TChunkIHDR::PrepareImageData()
+    @Vcl@Imaging@Pngimage@TChunkIHDR@SaveToStream$qqrp22System@Classes@TStream @610 ; __fastcall Vcl::Imaging::Pngimage::TChunkIHDR::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Pngimage@TChunkPLTE@ @662 ; Vcl::Imaging::Pngimage::TChunkPLTE::
+    @Vcl@Imaging@Pngimage@TChunkPLTE@Assign$qqrp27Vcl@Imaging@Pngimage@TChunk @550 ; __fastcall Vcl::Imaging::Pngimage::TChunkPLTE::Assign(Vcl::Imaging::Pngimage::TChunk *)
+    @Vcl@Imaging@Pngimage@TChunkPLTE@GetPaletteItem$qqruc @553 ; __fastcall Vcl::Imaging::Pngimage::TChunkPLTE::GetPaletteItem(unsigned char)
+    @Vcl@Imaging@Pngimage@TChunkPLTE@LoadFromStream$qqrp22System@Classes@TStreamx27System@%StaticArray$ci$i4$%i @552 ; __fastcall Vcl::Imaging::Pngimage::TChunkPLTE::LoadFromStream(System::Classes::TStream *, const System::StaticArray<char, 4>, int)
+    @Vcl@Imaging@Pngimage@TChunkPLTE@SaveToStream$qqrp22System@Classes@TStream @551 ; __fastcall Vcl::Imaging::Pngimage::TChunkPLTE::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Pngimage@TChunkgAMA@ @665 ; Vcl::Imaging::Pngimage::TChunkgAMA::
+    @Vcl@Imaging@Pngimage@TChunkgAMA@$bctr$qqrp30Vcl@Imaging@Pngimage@TPngImage @548 ; __fastcall Vcl::Imaging::Pngimage::TChunkgAMA::TChunkgAMA(Vcl::Imaging::Pngimage::TPngImage *)
+    @Vcl@Imaging@Pngimage@TChunkgAMA@Assign$qqrp27Vcl@Imaging@Pngimage@TChunk @549 ; __fastcall Vcl::Imaging::Pngimage::TChunkgAMA::Assign(Vcl::Imaging::Pngimage::TChunk *)
+    @Vcl@Imaging@Pngimage@TChunkgAMA@GetValue$qqrv @547 ; __fastcall Vcl::Imaging::Pngimage::TChunkgAMA::GetValue()
+    @Vcl@Imaging@Pngimage@TChunkgAMA@LoadFromStream$qqrp22System@Classes@TStreamx27System@%StaticArray$ci$i4$%i @546 ; __fastcall Vcl::Imaging::Pngimage::TChunkgAMA::LoadFromStream(System::Classes::TStream *, const System::StaticArray<char, 4>, int)
+    @Vcl@Imaging@Pngimage@TChunkgAMA@SetValue$qqrxui @545 ; __fastcall Vcl::Imaging::Pngimage::TChunkgAMA::SetValue(const unsigned int)
+    @Vcl@Imaging@Pngimage@TChunkpHYs@ @667 ; Vcl::Imaging::Pngimage::TChunkpHYs::
+    @Vcl@Imaging@Pngimage@TChunkpHYs@Assign$qqrp27Vcl@Imaging@Pngimage@TChunk @498 ; __fastcall Vcl::Imaging::Pngimage::TChunkpHYs::Assign(Vcl::Imaging::Pngimage::TChunk *)
+    @Vcl@Imaging@Pngimage@TChunkpHYs@LoadFromStream$qqrp22System@Classes@TStreamx27System@%StaticArray$ci$i4$%i @497 ; __fastcall Vcl::Imaging::Pngimage::TChunkpHYs::LoadFromStream(System::Classes::TStream *, const System::StaticArray<char, 4>, int)
+    @Vcl@Imaging@Pngimage@TChunkpHYs@SaveToStream$qqrp22System@Classes@TStream @496 ; __fastcall Vcl::Imaging::Pngimage::TChunkpHYs::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Pngimage@TChunktEXt@ @654 ; Vcl::Imaging::Pngimage::TChunktEXt::
+    @Vcl@Imaging@Pngimage@TChunktEXt@Assign$qqrp27Vcl@Imaging@Pngimage@TChunk @618 ; __fastcall Vcl::Imaging::Pngimage::TChunktEXt::Assign(Vcl::Imaging::Pngimage::TChunk *)
+    @Vcl@Imaging@Pngimage@TChunktEXt@LoadFromStream$qqrp22System@Classes@TStreamx27System@%StaticArray$ci$i4$%i @617 ; __fastcall Vcl::Imaging::Pngimage::TChunktEXt::LoadFromStream(System::Classes::TStream *, const System::StaticArray<char, 4>, int)
+    @Vcl@Imaging@Pngimage@TChunktEXt@SaveToStream$qqrp22System@Classes@TStream @616 ; __fastcall Vcl::Imaging::Pngimage::TChunktEXt::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Pngimage@TChunktIME@ @656 ; Vcl::Imaging::Pngimage::TChunktIME::
+    @Vcl@Imaging@Pngimage@TChunktIME@Assign$qqrp27Vcl@Imaging@Pngimage@TChunk @622 ; __fastcall Vcl::Imaging::Pngimage::TChunktIME::Assign(Vcl::Imaging::Pngimage::TChunk *)
+    @Vcl@Imaging@Pngimage@TChunktIME@LoadFromStream$qqrp22System@Classes@TStreamx27System@%StaticArray$ci$i4$%i @623 ; __fastcall Vcl::Imaging::Pngimage::TChunktIME::LoadFromStream(System::Classes::TStream *, const System::StaticArray<char, 4>, int)
+    @Vcl@Imaging@Pngimage@TChunktIME@SaveToStream$qqrp22System@Classes@TStream @621 ; __fastcall Vcl::Imaging::Pngimage::TChunktIME::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Pngimage@TChunktRNS@ @660 ; Vcl::Imaging::Pngimage::TChunktRNS::
+    @Vcl@Imaging@Pngimage@TChunktRNS@Assign$qqrp27Vcl@Imaging@Pngimage@TChunk @603 ; __fastcall Vcl::Imaging::Pngimage::TChunktRNS::Assign(Vcl::Imaging::Pngimage::TChunk *)
+    @Vcl@Imaging@Pngimage@TChunktRNS@GetTransparentColor$qqrv @605 ; __fastcall Vcl::Imaging::Pngimage::TChunktRNS::GetTransparentColor()
+    @Vcl@Imaging@Pngimage@TChunktRNS@LoadFromStream$qqrp22System@Classes@TStreamx27System@%StaticArray$ci$i4$%i @602 ; __fastcall Vcl::Imaging::Pngimage::TChunktRNS::LoadFromStream(System::Classes::TStream *, const System::StaticArray<char, 4>, int)
+    @Vcl@Imaging@Pngimage@TChunktRNS@SaveToStream$qqrp22System@Classes@TStream @604 ; __fastcall Vcl::Imaging::Pngimage::TChunktRNS::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Pngimage@TChunktRNS@SetTransparentColor$qqrxui @606 ; __fastcall Vcl::Imaging::Pngimage::TChunktRNS::SetTransparentColor(const unsigned int)
+    @Vcl@Imaging@Pngimage@TChunkzTXt@ @652 ; Vcl::Imaging::Pngimage::TChunkzTXt::
+    @Vcl@Imaging@Pngimage@TChunkzTXt@LoadFromStream$qqrp22System@Classes@TStreamx27System@%StaticArray$ci$i4$%i @620 ; __fastcall Vcl::Imaging::Pngimage::TChunkzTXt::LoadFromStream(System::Classes::TStream *, const System::StaticArray<char, 4>, int)
+    @Vcl@Imaging@Pngimage@TChunkzTXt@SaveToStream$qqrp22System@Classes@TStream @619 ; __fastcall Vcl::Imaging::Pngimage::TChunkzTXt::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Pngimage@TPNGList@ @686 ; Vcl::Imaging::Pngimage::TPNGList::
+    @Vcl@Imaging@Pngimage@TPNGList@Add$qqrp17System@TMetaClass @637 ; __fastcall Vcl::Imaging::Pngimage::TPNGList::Add(System::TMetaClass *)
+    @Vcl@Imaging@Pngimage@TPNGList@FindChunk$qqrp17System@TMetaClass @639 ; __fastcall Vcl::Imaging::Pngimage::TPNGList::FindChunk(System::TMetaClass *)
+    @Vcl@Imaging@Pngimage@TPNGList@GetItem$qqrui @636 ; __fastcall Vcl::Imaging::Pngimage::TPNGList::GetItem(unsigned int)
+    @Vcl@Imaging@Pngimage@TPNGList@ItemFromClass$qqrp17System@TMetaClass @635 ; __fastcall Vcl::Imaging::Pngimage::TPNGList::ItemFromClass(System::TMetaClass *)
+    @Vcl@Imaging@Pngimage@TPNGList@RemoveChunk$qqrp27Vcl@Imaging@Pngimage@TChunk @638 ; __fastcall Vcl::Imaging::Pngimage::TPNGList::RemoveChunk(Vcl::Imaging::Pngimage::TChunk *)
+    @Vcl@Imaging@Pngimage@TPNGPointerList@ @689 ; Vcl::Imaging::Pngimage::TPNGPointerList::
+    @Vcl@Imaging@Pngimage@TPNGPointerList@$bctr$qqrp30Vcl@Imaging@Pngimage@TPngImage @647 ; __fastcall Vcl::Imaging::Pngimage::TPNGPointerList::TPNGPointerList(Vcl::Imaging::Pngimage::TPngImage *)
+    @Vcl@Imaging@Pngimage@TPNGPointerList@$bdtr$qqrv @644 ; __fastcall Vcl::Imaging::Pngimage::TPNGPointerList::~TPNGPointerList()
+    @Vcl@Imaging@Pngimage@TPNGPointerList@Add$qqrpv @645 ; __fastcall Vcl::Imaging::Pngimage::TPNGPointerList::Add(void *)
+    @Vcl@Imaging@Pngimage@TPNGPointerList@GetItem$qqrui @643 ; __fastcall Vcl::Imaging::Pngimage::TPNGPointerList::GetItem(unsigned int)
+    @Vcl@Imaging@Pngimage@TPNGPointerList@Insert$qqrpvui @642 ; __fastcall Vcl::Imaging::Pngimage::TPNGPointerList::Insert(void *, unsigned int)
+    @Vcl@Imaging@Pngimage@TPNGPointerList@Remove$qqrpv @646 ; __fastcall Vcl::Imaging::Pngimage::TPNGPointerList::Remove(void *)
+    @Vcl@Imaging@Pngimage@TPNGPointerList@SetItem$qqruipxv @641 ; __fastcall Vcl::Imaging::Pngimage::TPNGPointerList::SetItem(unsigned int, const void *)
+    @Vcl@Imaging@Pngimage@TPNGPointerList@SetSize$qqrxui @640 ; __fastcall Vcl::Imaging::Pngimage::TPNGPointerList::SetSize(const unsigned int)
+    @Vcl@Imaging@Pngimage@TPngImage@ @680 ; Vcl::Imaging::Pngimage::TPngImage::
+    @Vcl@Imaging@Pngimage@TPngImage@$bctr$qqruiuiii @542 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::TPngImage(unsigned int, unsigned int, int, int)
+    @Vcl@Imaging@Pngimage@TPngImage@$bctr$qqrv @541 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::TPngImage()
+    @Vcl@Imaging@Pngimage@TPngImage@$bdtr$qqrv @540 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::~TPngImage()
+    @Vcl@Imaging@Pngimage@TPngImage@AddtEXt$qqrx27System@%AnsiStringT$us$i0$%t1 @509 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::AddtEXt(const System::AnsiStringT<0>, const System::AnsiStringT<0>)
+    @Vcl@Imaging@Pngimage@TPngImage@AddzTXt$qqrx27System@%AnsiStringT$us$i0$%t1 @508 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::AddzTXt(const System::AnsiStringT<0>, const System::AnsiStringT<0>)
+    @Vcl@Imaging@Pngimage@TPngImage@Assign$qqrp26System@Classes@TPersistent @544 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::Assign(System::Classes::TPersistent *)
+    @Vcl@Imaging@Pngimage@TPngImage@AssignHandle$qqrp9HBITMAP__oui @517 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::AssignHandle(HBITMAP__ *, bool, unsigned int)
+    @Vcl@Imaging@Pngimage@TPngImage@AssignPNG$qqrp30Vcl@Imaging@Pngimage@TPngImage @516 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::AssignPNG(Vcl::Imaging::Pngimage::TPngImage *)
+    @Vcl@Imaging@Pngimage@TPngImage@AssignTo$qqrp26System@Classes@TPersistent @518 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::AssignTo(System::Classes::TPersistent *)
+    @Vcl@Imaging@Pngimage@TPngImage@ClearChunks$qqrv @543 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::ClearChunks()
+    @Vcl@Imaging@Pngimage@TPngImage@CreateAlpha$qqrv @506 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::CreateAlpha()
+    @Vcl@Imaging@Pngimage@TPngImage@DoSetPalette$qqrp10HPALETTE__xo @495 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::DoSetPalette(HPALETTE__ *, const bool)
+    @Vcl@Imaging@Pngimage@TPngImage@Draw$qqrp20Vcl@Graphics@TCanvasrx18System@Types@TRect @528 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::Draw(Vcl::Graphics::TCanvas *, const System::Types::TRect&)
+    @Vcl@Imaging@Pngimage@TPngImage@DrawPartialTrans$qqrp5HDC__rx18System@Types@TRect @529 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::DrawPartialTrans(HDC__ *, const System::Types::TRect&)
+    @Vcl@Imaging@Pngimage@TPngImage@DrawUsingPixelInformation$qqrp20Vcl@Graphics@TCanvasrx19System@Types@TPoint @533 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::DrawUsingPixelInformation(Vcl::Graphics::TCanvas *, const System::Types::TPoint&)
+    @Vcl@Imaging@Pngimage@TPngImage@GetAlphaScanline$qqrxi @515 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::GetAlphaScanline(const int)
+    @Vcl@Imaging@Pngimage@TPngImage@GetEmpty$qqrv @536 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::GetEmpty()
+    @Vcl@Imaging@Pngimage@TPngImage@GetExtraScanline$qqrxi @514 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::GetExtraScanline(const int)
+    @Vcl@Imaging@Pngimage@TPngImage@GetHeader$qqrv @530 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::GetHeader()
+    @Vcl@Imaging@Pngimage@TPngImage@GetHeight$qqrv @538 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::GetHeight()
+    @Vcl@Imaging@Pngimage@TPngImage@GetLibraryVersion$qqrv @493 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::GetLibraryVersion()
+    @Vcl@Imaging@Pngimage@TPngImage@GetPalette$qqrv @499 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::GetPalette()
+    @Vcl@Imaging@Pngimage@TPngImage@GetPixelInfo$qqrruit1 @539 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::GetPixelInfo(unsigned int&, unsigned int&)
+    @Vcl@Imaging@Pngimage@TPngImage@GetPixelInformation$qqrv @531 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::GetPixelInformation()
+    @Vcl@Imaging@Pngimage@TPngImage@GetPixels$qqrxixi @500 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::GetPixels(const int, const int)
+    @Vcl@Imaging@Pngimage@TPngImage@GetScanline$qqrxi @513 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::GetScanline(const int)
+    @Vcl@Imaging@Pngimage@TPngImage@GetSupportsPartialTransparency$qqrv @512 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::GetSupportsPartialTransparency()
+    @Vcl@Imaging@Pngimage@TPngImage@GetTransparencyMode$qqrv @510 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::GetTransparencyMode()
+    @Vcl@Imaging@Pngimage@TPngImage@GetTransparent$qqrv @522 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::GetTransparent()
+    @Vcl@Imaging@Pngimage@TPngImage@GetTransparentColor$qqrv @505 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::GetTransparentColor()
+    @Vcl@Imaging@Pngimage@TPngImage@GetWidth$qqrv @537 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::GetWidth()
+    @Vcl@Imaging@Pngimage@TPngImage@HasPixelInformation$qqrv @532 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::HasPixelInformation()
+    @Vcl@Imaging@Pngimage@TPngImage@HeaderPresent$qqrv @503 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::HeaderPresent()
+    @Vcl@Imaging@Pngimage@TPngImage@InitializeGamma$qqrv @511 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::InitializeGamma()
+    @Vcl@Imaging@Pngimage@TPngImage@LoadFromClipboardFormat$qqrusuip10HPALETTE__ @523 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::LoadFromClipboardFormat(unsigned short, unsigned int, HPALETTE__ *)
+    @Vcl@Imaging@Pngimage@TPngImage@LoadFromResourceID$qqruii @519 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::LoadFromResourceID(unsigned int, int)
+    @Vcl@Imaging@Pngimage@TPngImage@LoadFromResourceName$qqruix20System@UnicodeString @520 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::LoadFromResourceName(unsigned int, const System::UnicodeString)
+    @Vcl@Imaging@Pngimage@TPngImage@LoadFromStream$qqrp22System@Classes@TStream @527 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::LoadFromStream(System::Classes::TStream *)
+    @Vcl@Imaging@Pngimage@TPngImage@RaiseError$qqrp17System@TMetaClass20System@UnicodeString @535 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::RaiseError(System::TMetaClass *, System::UnicodeString)
+    @Vcl@Imaging@Pngimage@TPngImage@RemoveTransparency$qqrv @507 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::RemoveTransparency()
+    @Vcl@Imaging@Pngimage@TPngImage@Resize$qqrxixi @502 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::Resize(const int, const int)
+    @Vcl@Imaging@Pngimage@TPngImage@SaveToClipboardFormat$qqrrusruirp10HPALETTE__ @524 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::SaveToClipboardFormat(unsigned short&, unsigned int&, HPALETTE__ *&)
+    @Vcl@Imaging@Pngimage@TPngImage@SaveToStream$qqrp22System@Classes@TStream @521 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::SaveToStream(System::Classes::TStream *)
+    @Vcl@Imaging@Pngimage@TPngImage@SetHeight$qqri @526 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::SetHeight(int)
+    @Vcl@Imaging@Pngimage@TPngImage@SetMaxIdatSize$qqrxi @534 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::SetMaxIdatSize(const int)
+    @Vcl@Imaging@Pngimage@TPngImage@SetPalette$qqrp10HPALETTE__ @494 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::SetPalette(HPALETTE__ *)
+    @Vcl@Imaging@Pngimage@TPngImage@SetPixels$qqrxixix21System@Uitypes@TColor @501 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::SetPixels(const int, const int, const System::Uitypes::TColor)
+    @Vcl@Imaging@Pngimage@TPngImage@SetTransparentColor$qqrx21System@Uitypes@TColor @504 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::SetTransparentColor(const System::Uitypes::TColor)
+    @Vcl@Imaging@Pngimage@TPngImage@SetWidth$qqri @525 ; __fastcall Vcl::Imaging::Pngimage::TPngImage::SetWidth(int)
+    @Vcl@Imaging@Pngimage@ZLIBErrors @745 ; Vcl::Imaging::Pngimage::ZLIBErrors
+    @Vcl@Imaging@Pngimage@initialization$qqrv @491 ; __fastcall Vcl::Imaging::Pngimage::initialization()
+    @Vcl@Imaging@Pngimage@update_crc$qqruip32System@%StaticArray$uci$i65536$%i @650 ; __fastcall Vcl::Imaging::Pngimage::update_crc(unsigned int, System::StaticArray<unsigned char, 65536> *, int)
+    @Vcl@Imaging@Pnglang@Finalization$qqrv @465 ; __fastcall Vcl::Imaging::Pnglang::Finalization()
+    @Vcl@Imaging@Pnglang@_EInvalidNewSize @467 ; Vcl::Imaging::Pnglang::_EInvalidNewSize
+    @Vcl@Imaging@Pnglang@_EInvalidSpec @466 ; Vcl::Imaging::Pnglang::_EInvalidSpec
+    @Vcl@Imaging@Pnglang@_EPNGCannotAddChunkText @473 ; Vcl::Imaging::Pnglang::_EPNGCannotAddChunkText
+    @Vcl@Imaging@Pnglang@_EPNGCannotAddInvalidImageText @472 ; Vcl::Imaging::Pnglang::_EPNGCannotAddInvalidImageText
+    @Vcl@Imaging@Pnglang@_EPNGCannotAssignChunkText @476 ; Vcl::Imaging::Pnglang::_EPNGCannotAssignChunkText
+    @Vcl@Imaging@Pnglang@_EPNGCannotChangeTransparentText @469 ; Vcl::Imaging::Pnglang::_EPNGCannotChangeTransparentText
+    @Vcl@Imaging@Pnglang@_EPNGCouldNotLoadResourceText @471 ; Vcl::Imaging::Pnglang::_EPNGCouldNotLoadResourceText
+    @Vcl@Imaging@Pnglang@_EPNGHeaderNotPresentText @468 ; Vcl::Imaging::Pnglang::_EPNGHeaderNotPresentText
+    @Vcl@Imaging@Pnglang@_EPNGIHDRNotFirstText @484 ; Vcl::Imaging::Pnglang::_EPNGIHDRNotFirstText
+    @Vcl@Imaging@Pnglang@_EPNGInvalidFileHeaderText @485 ; Vcl::Imaging::Pnglang::_EPNGInvalidFileHeaderText
+    @Vcl@Imaging@Pnglang@_EPNGInvalidIHDRText @489 ; Vcl::Imaging::Pnglang::_EPNGInvalidIHDRText
+    @Vcl@Imaging@Pnglang@_EPNGInvalidPaletteText @486 ; Vcl::Imaging::Pnglang::_EPNGInvalidPaletteText
+    @Vcl@Imaging@Pnglang@_EPNGMissingMultipleIDATText @488 ; Vcl::Imaging::Pnglang::_EPNGMissingMultipleIDATText
+    @Vcl@Imaging@Pnglang@_EPNGMissingPaletteText @480 ; Vcl::Imaging::Pnglang::_EPNGMissingPaletteText
+    @Vcl@Imaging@Pnglang@_EPNGNoImageDataText @474 ; Vcl::Imaging::Pnglang::_EPNGNoImageDataText
+    @Vcl@Imaging@Pnglang@_EPNGNotExistsText @483 ; Vcl::Imaging::Pnglang::_EPNGNotExistsText
+    @Vcl@Imaging@Pnglang@_EPNGOutMemoryText @470 ; Vcl::Imaging::Pnglang::_EPNGOutMemoryText
+    @Vcl@Imaging@Pnglang@_EPNGSizeExceedsText @482 ; Vcl::Imaging::Pnglang::_EPNGSizeExceedsText
+    @Vcl@Imaging@Pnglang@_EPNGUnexpectedEndText @475 ; Vcl::Imaging::Pnglang::_EPNGUnexpectedEndText
+    @Vcl@Imaging@Pnglang@_EPNGUnknownCompressionText @478 ; Vcl::Imaging::Pnglang::_EPNGUnknownCompressionText
+    @Vcl@Imaging@Pnglang@_EPNGUnknownCriticalChunkText @479 ; Vcl::Imaging::Pnglang::_EPNGUnknownCriticalChunkText
+    @Vcl@Imaging@Pnglang@_EPNGUnknownInterlaceText @477 ; Vcl::Imaging::Pnglang::_EPNGUnknownInterlaceText
+    @Vcl@Imaging@Pnglang@_EPNGUnknownPalEntryText @481 ; Vcl::Imaging::Pnglang::_EPNGUnknownPalEntryText
+    @Vcl@Imaging@Pnglang@_EPNGZLIBErrorText @487 ; Vcl::Imaging::Pnglang::_EPNGZLIBErrorText
+    @Vcl@Imaging@Pnglang@_EPngInvalidCRCText @490 ; Vcl::Imaging::Pnglang::_EPngInvalidCRCText
+    @Vcl@Imaging@Pnglang@initialization$qqrv @464 ; __fastcall Vcl::Imaging::Pnglang::initialization()
+    @Vclimg@@GetPackageInfoTable$qqrv @805 ; Vclimg::__linkproc__ __fastcall GetPackageInfoTable()
+    @Vclimg@@PackageLoad$qqrv      @804 ; Vclimg::__linkproc__ __fastcall PackageLoad()
+    @Vclimg@@PackageUnload$qqrv    @803 ; Vclimg::__linkproc__ __fastcall PackageUnload()
+    @Vclimg@initialization$qqrv    @802 ; __fastcall Vclimg::initialization()
+    Finalize                       @806 ; Finalize
+    Initialize                     @807 ; Initialize

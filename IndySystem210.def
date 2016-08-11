@@ -1,0 +1,1381 @@
+LIBRARY     INDYSYSTEM210.BPL
+
+DESCRIPTION 'ndy 10 System'
+
+EXPORTS
+    @$xp$10IN_PKTINFO              @622 ; __tpdsc__ IN_PKTINFO
+    @$xp$10LPFN_HTONL              @914 ; __tpdsc__ LPFN_HTONL
+    @$xp$10LPFN_HTONS              @913 ; __tpdsc__ LPFN_HTONS
+    @$xp$10LPFN_NTOHL              @909 ; __tpdsc__ LPFN_NTOHL
+    @$xp$10LPFN_NTOHS              @908 ; __tpdsc__ LPFN_NTOHS
+    @$xp$10PGROUP_REQ              @645 ; __tpdsc__ PGROUP_REQ
+    @$xp$10PRCVALL_IF              @532 ; __tpdsc__ PRCVALL_IF
+    @$xp$10PRIORESULT              @1001; __tpdsc__ PRIORESULT
+    @$xp$10PWSAPOLLFD              @941 ; __tpdsc__ PWSAPOLLFD
+    @$xp$10WSAVERSION              @972 ; __tpdsc__ WSAVERSION
+    @$xp$10_RIORESULT              @1002; __tpdsc__ _RIORESULT
+    @$xp$11ADDRINFOEXA             @611 ; __tpdsc__ ADDRINFOEXA
+    @$xp$11ADDRINFOEXW             @609 ; __tpdsc__ ADDRINFOEXW
+    @$xp$11AFPROTOCOLS             @976 ; __tpdsc__ AFPROTOCOLS
+    @$xp$11ATM_ADDRESS             @575 ; __tpdsc__ ATM_ADDRESS
+    @$xp$11ATM_BLLI_IE             @562 ; __tpdsc__ ATM_BLLI_IE
+    @$xp$11CSADDR_INFO             @978 ; __tpdsc__ CSADDR_INFO
+    @$xp$11IN6_PKTINFO             @620 ; __tpdsc__ IN6_PKTINFO
+    @$xp$11LPFN_ACCEPT             @922 ; __tpdsc__ LPFN_ACCEPT
+    @$xp$11LPFN_LISTEN             @910 ; __tpdsc__ LPFN_LISTEN
+    @$xp$11LPFN_SELECT             @905 ; __tpdsc__ LPFN_SELECT
+    @$xp$11LPFN_SENDTO             @903 ; __tpdsc__ LPFN_SENDTO
+    @$xp$11LPFN_SOCKET             @900 ; __tpdsc__ LPFN_SOCKET
+    @$xp$11PWSACMSGHDR             @944 ; __tpdsc__ PWSACMSGHDR
+    @$xp$11PWSAVERSION             @971 ; __tpdsc__ PWSAVERSION
+    @$xp$11SOCKADDR_NB             @577 ; __tpdsc__ SOCKADDR_NB
+    @$xp$11_WSACMSGHDR             @945 ; __tpdsc__ _WSACMSGHDR
+    @$xp$11ip_msfilter             @666 ; __tpdsc__ ip_msfilter
+    @$xp$11sockaddr_in             @1038; __tpdsc__ sockaddr_in
+    @$xp$12ATM_CAUSE_IE            @560 ; __tpdsc__ ATM_CAUSE_IE
+    @$xp$12GROUP_FILTER            @648 ; __tpdsc__ GROUP_FILTER
+    @$xp$12LPFN_CONNECT            @919 ; __tpdsc__ LPFN_CONNECT
+    @$xp$12LPFN_RIOSEND            @811 ; __tpdsc__ LPFN_RIOSEND
+    @$xp$12LPFN_WSAPOLL            @814 ; __tpdsc__ LPFN_WSAPOLL
+    @$xp$12LPFN_WSARECV            @853 ; __tpdsc__ LPFN_WSARECV
+    @$xp$12LPFN_WSASEND            @850 ; __tpdsc__ LPFN_WSASEND
+    @$xp$12PADDRINFOEXA            @612 ; __tpdsc__ PADDRINFOEXA
+    @$xp$12PADDRINFOEXW            @610 ; __tpdsc__ PADDRINFOEXW
+    @$xp$12PAFPROTOCOLS            @975 ; __tpdsc__ PAFPROTOCOLS
+    @$xp$12PCSADDR_INFO            @977 ; __tpdsc__ PCSADDR_INFO
+    @$xp$12RCVALL_VALUE            @535 ; __tpdsc__ RCVALL_VALUE
+    @$xp$12SOCKADDR_ATM            @572 ; __tpdsc__ SOCKADDR_ATM
+    @$xp$12SOCKADDR_IPX            @585 ; __tpdsc__ SOCKADDR_IPX
+    @$xp$12WSAQUERYSET2            @642 ; __tpdsc__ WSAQUERYSET2
+    @$xp$12WSAQUERYSETA            @970 ; __tpdsc__ WSAQUERYSETA
+    @$xp$12WSAQUERYSETW            @968 ; __tpdsc__ WSAQUERYSETW
+    @$xp$12addrinfoex2A            @607 ; __tpdsc__ addrinfoex2A
+    @$xp$12addrinfoex2W            @605 ; __tpdsc__ addrinfoex2W
+    @$xp$12sockaddr_gen            @654 ; __tpdsc__ sockaddr_gen
+    @$xp$13LPFN_ACCEPTEX           @870 ; __tpdsc__ LPFN_ACCEPTEX
+    @$xp$13LPFN_RECVFROM           @906 ; __tpdsc__ LPFN_RECVFROM
+    @$xp$13LPFN_SHUTDOWN           @901 ; __tpdsc__ LPFN_SHUTDOWN
+    @$xp$13LPFN_WSAHTONL           @858 ; __tpdsc__ LPFN_WSAHTONL
+    @$xp$13LPFN_WSAHTONS           @857 ; __tpdsc__ LPFN_WSAHTONS
+    @$xp$13LPFN_WSAIOCTL           @873 ; __tpdsc__ LPFN_WSAIOCTL
+    @$xp$13LPFN_WSANTOHL           @855 ; __tpdsc__ LPFN_WSANTOHL
+    @$xp$13LPFN_WSANTOHS           @854 ; __tpdsc__ LPFN_WSANTOHS
+    @$xp$13PGROUP_FILTER           @647 ; __tpdsc__ PGROUP_FILTER
+    @$xp$13PRCVALL_VALUE           @534 ; __tpdsc__ PRCVALL_VALUE
+    @$xp$13PRIO_BUFFERID           @1003; __tpdsc__ PRIO_BUFFERID
+    @$xp$13PWSAQUERYSET2           @641 ; __tpdsc__ PWSAQUERYSET2
+    @$xp$13PWSAQUERYSETA           @969 ; __tpdsc__ PWSAQUERYSETA
+    @$xp$13PWSAQUERYSETW           @967 ; __tpdsc__ PWSAQUERYSETW
+    @$xp$13Paddrinfoex2A           @608 ; __tpdsc__ Paddrinfoex2A
+    @$xp$13Paddrinfoex2W           @606 ; __tpdsc__ Paddrinfoex2W
+    @$xp$13Q2931_IE_TYPE           @570 ; __tpdsc__ Q2931_IE_TYPE
+    @$xp$13SERVICE_INFOA           @629 ; __tpdsc__ SERVICE_INFOA
+    @$xp$13SERVICE_INFOW           @628 ; __tpdsc__ SERVICE_INFOW
+    @$xp$13WSACOMPLETION           @932 ; __tpdsc__ WSACOMPLETION
+    @$xp$13tcp_keepalive           @553 ; __tpdsc__ tcp_keepalive
+    @$xp$14ATM_PVC_PARAMS          @556 ; __tpdsc__ ATM_PVC_PARAMS
+    @$xp$14INTERFACE_INFO          @653 ; __tpdsc__ INTERFACE_INFO
+    @$xp$14LPFN_CONNECTEX          @819 ; __tpdsc__ LPFN_CONNECTEX
+    @$xp$14LPFN_INET_ADDR          @912 ; __tpdsc__ LPFN_INET_ADDR
+    @$xp$14LPFN_INET_NTOA          @911 ; __tpdsc__ LPFN_INET_NTOA
+    @$xp$14LPFN_INET_NTOP          @1090; __tpdsc__ LPFN_INET_NTOP
+    @$xp$14LPFN_INET_PTON          @1092; __tpdsc__ LPFN_INET_PTON
+    @$xp$14LPFN_RIONOTIFY          @805 ; __tpdsc__ LPFN_RIONOTIFY
+    @$xp$14LPFN_RIOSENDEX          @810 ; __tpdsc__ LPFN_RIOSENDEX
+    @$xp$14LPFN_WSAACCEPT          @877 ; __tpdsc__ LPFN_WSAACCEPT
+    @$xp$14LPFN_WSARECVEX          @820 ; __tpdsc__ LPFN_WSARECVEX
+    @$xp$14LPFN_WSASENDTO          @848 ; __tpdsc__ LPFN_WSASENDTO
+    @$xp$14PWSACOMPLETION          @931 ; __tpdsc__ PWSACOMPLETION
+    @$xp$14SOCKET_ADDRESS          @982 ; __tpdsc__ SOCKET_ADDRESS
+    @$xp$14WSAECOMPARATOR          @974 ; __tpdsc__ WSAECOMPARATOR
+    @$xp$14ip_mreq_source          @667 ; __tpdsc__ ip_mreq_source
+    @$xp$15AAL5_PARAMETERS         @568 ; __tpdsc__ AAL5_PARAMETERS
+    @$xp$15IPX_NETNUM_DATA         @581 ; __tpdsc__ IPX_NETNUM_DATA
+    @$xp$15Idglobal@PShort         @384 ; __tpdsc__ Idglobal::PShort
+    @$xp$15IdnToAscii_LPFN         @1172; __tpdsc__ IdnToAscii_LPFN
+    @$xp$15Idwinsock2@PQOS         @1020; __tpdsc__ Idwinsock2::PQOS
+    @$xp$15Idwinsock2@SunB         @1042; __tpdsc__ Idwinsock2::SunB
+    @$xp$15Idwinsock2@SunW         @1041; __tpdsc__ Idwinsock2::SunW
+    @$xp$15LPCONDITIONPROC         @940 ; __tpdsc__ LPCONDITIONPROC
+    @$xp$15LPFN_GETSOCKOPT         @915 ; __tpdsc__ LPFN_GETSOCKOPT
+    @$xp$15LPFN_INET_NTOPW         @1089; __tpdsc__ LPFN_INET_NTOPW
+    @$xp$15LPFN_INET_PTONW         @1091; __tpdsc__ LPFN_INET_PTONW
+    @$xp$15LPFN_RIORECEIVE         @813 ; __tpdsc__ LPFN_RIORECEIVE
+    @$xp$15LPFN_SETSOCKOPT         @902 ; __tpdsc__ LPFN_SETSOCKOPT
+    @$xp$15LPFN_WSACLEANUP         @923 ; __tpdsc__ LPFN_WSACLEANUP
+    @$xp$15LPFN_WSACONNECT         @865 ; __tpdsc__ LPFN_WSACONNECT
+    @$xp$15LPFN_WSARECVMSG         @817 ; __tpdsc__ LPFN_WSARECVMSG
+    @$xp$15LPFN_WSASENDMSG         @815 ; __tpdsc__ LPFN_WSASENDMSG
+    @$xp$15LPFN_WSASOCKETA         @846 ; __tpdsc__ LPFN_WSASOCKETA
+    @$xp$15LPFN_WSASOCKETW         @845 ; __tpdsc__ LPFN_WSASOCKETW
+    @$xp$15LPFN_WSASTARTUP         @924 ; __tpdsc__ LPFN_WSASTARTUP
+    @$xp$15NL_ADDRESS_TYPE         @1043; __tpdsc__ NL_ADDRESS_TYPE
+    @$xp$15PINTERFACE_INFO         @652 ; __tpdsc__ PINTERFACE_INFO
+    @$xp$15PSOCKET_ADDRESS         @981 ; __tpdsc__ PSOCKET_ADDRESS
+    @$xp$15PWSAECOMPARATOR         @973 ; __tpdsc__ PWSAECOMPARATOR
+    @$xp$15SERVICE_ADDRESS         @635 ; __tpdsc__ SERVICE_ADDRESS
+    @$xp$15SOCKADDR_IN6_LH         @657 ; __tpdsc__ SOCKADDR_IN6_LH
+    @$xp$15WSANSCLASSINFOA         @965 ; __tpdsc__ WSANSCLASSINFOA
+    @$xp$15WSANSCLASSINFOW         @963 ; __tpdsc__ WSANSCLASSINFOW
+    @$xp$16ATM_QOS_CLASS_IE        @559 ; __tpdsc__ ATM_QOS_CLASS_IE
+    @$xp$16GROUP_SOURCE_REQ        @644 ; __tpdsc__ GROUP_SOURCE_REQ
+    @$xp$16IPX_ADDRESS_DATA        @583 ; __tpdsc__ IPX_ADDRESS_DATA
+    @$xp$16Idstack@TIdStack        @1291; __tpdsc__ Idstack::TIdStack
+    @$xp$16Idwinsock2@PBLOB        @1004; __tpdsc__ Idwinsock2::PBLOB
+    @$xp$16LPFN_CLOSESOCKET        @920 ; __tpdsc__ LPFN_CLOSESOCKET
+    @$xp$16LPFN_GETADDRINFO        @1098; __tpdsc__ LPFN_GETADDRINFO
+    @$xp$16LPFN_GETHOSTNAME        @897 ; __tpdsc__ LPFN_GETHOSTNAME
+    @$xp$16LPFN_GETNAMEINFO        @1096; __tpdsc__ LPFN_GETNAMEINFO
+    @$xp$16LPFN_GETPEERNAME        @917 ; __tpdsc__ LPFN_GETPEERNAME
+    @$xp$16LPFN_GETSOCKNAME        @916 ; __tpdsc__ LPFN_GETSOCKNAME
+    @$xp$16LPFN_IOCTLSOCKET        @918 ; __tpdsc__ LPFN_IOCTLSOCKET
+    @$xp$16LPFN_WSAJOINLEAF        @856 ; __tpdsc__ LPFN_WSAJOINLEAF
+    @$xp$16LPFN_WSANSPIOCTL        @835 ; __tpdsc__ LPFN_WSANSPIOCTL
+    @$xp$16LPFN_WSARECVFROM        @872 ; __tpdsc__ LPFN_WSARECVFROM
+    @$xp$16LPFN_WSASETEVENT        @847 ; __tpdsc__ LPFN_WSASETEVENT
+    @$xp$16NS_SERVICE_INFOA        @626 ; __tpdsc__ NS_SERVICE_INFOA
+    @$xp$16NS_SERVICE_INFOW        @624 ; __tpdsc__ NS_SERVICE_INFOW
+    @$xp$16PINET_PORT_RANGE        @549 ; __tpdsc__ PINET_PORT_RANGE
+    @$xp$16PRIO_CMSG_BUFFER        @997 ; __tpdsc__ PRIO_CMSG_BUFFER
+    @$xp$16PSERVICE_ADDRESS        @634 ; __tpdsc__ PSERVICE_ADDRESS
+    @$xp$16PWSANSCLASSINFOA        @964 ; __tpdsc__ PWSANSCLASSINFOA
+    @$xp$16PWSANSCLASSINFOW        @962 ; __tpdsc__ PWSANSCLASSINFOW
+    @$xp$16SOCKADDR_STORAGE        @1035; __tpdsc__ SOCKADDR_STORAGE
+    @$xp$16WSAESETSERVICEOP        @966 ; __tpdsc__ WSAESETSERVICEOP
+    @$xp$16WSANETWORKEVENTS        @1018; __tpdsc__ WSANETWORKEVENTS
+    @$xp$16WSAPROTOCOLCHAIN        @1011; __tpdsc__ WSAPROTOCOLCHAIN
+    @$xp$16_INET_PORT_RANGE        @550 ; __tpdsc__ _INET_PORT_RANGE
+    @$xp$16_RIO_CMSG_BUFFER        @998 ; __tpdsc__ _RIO_CMSG_BUFFER
+    @$xp$16sockaddr_in6_old        @661 ; __tpdsc__ sockaddr_in6_old
+    @$xp$17AAL_PARAMETERS_IE       @566 ; __tpdsc__ AAL_PARAMETERS_IE
+    @$xp$17ATM_CONNECTION_ID       @557 ; __tpdsc__ ATM_CONNECTION_ID
+    @$xp$17INTERFACE_INFO_EX       @651 ; __tpdsc__ INTERFACE_INFO_EX
+    @$xp$17Idctypes@PIdC_INT       @443 ; __tpdsc__ Idctypes::PIdC_INT
+    @$xp$17Idglobal@TIdBytes       @401 ; __tpdsc__ Idglobal::TIdBytes
+    @$xp$17Idglobal@TPosProc       @369 ; __tpdsc__ Idglobal::TPosProc
+    @$xp$17IdnToUnicode_LPFN       @1170; __tpdsc__ IdnToUnicode_LPFN
+    @$xp$17Idstruct@TIdUnion       @1366; __tpdsc__ Idstruct::TIdUnion
+    @$xp$17Idwinsock2@PFDSet       @1055; __tpdsc__ Idwinsock2::PFDSet
+    @$xp$17Idwinsock2@TFDSet       @1054; __tpdsc__ Idwinsock2::TFDSet
+    @$xp$17LPFN_DISCONNECTEX       @818 ; __tpdsc__ LPFN_DISCONNECTEX
+    @$xp$17LPFN_FREEADDRINFO       @1094; __tpdsc__ LPFN_FREEADDRINFO
+    @$xp$17LPFN_GETADDRINFOW       @1097; __tpdsc__ LPFN_GETADDRINFOW
+    @$xp$17LPFN_GETNAMEINFOW       @1095; __tpdsc__ LPFN_GETNAMEINFOW
+    @$xp$17LPFN_RIORECEIVEEX       @812 ; __tpdsc__ LPFN_RIORECEIVEEX
+    @$xp$17LPFN_TRANSMITFILE       @871 ; __tpdsc__ LPFN_TRANSMITFILE
+    @$xp$17LPFN___WSAFDISSET       @878 ; __tpdsc__ LPFN___WSAFDISSET
+    @$xp$17PGROUP_SOURCE_REQ       @643 ; __tpdsc__ PGROUP_SOURCE_REQ
+    @$xp$17PNS_SERVICE_INFOA       @625 ; __tpdsc__ PNS_SERVICE_INFOA
+    @$xp$17PNS_SERVICE_INFOW       @623 ; __tpdsc__ PNS_SERVICE_INFOW
+    @$xp$17SERVICE_ADDRESSES       @633 ; __tpdsc__ SERVICE_ADDRESSES
+    @$xp$17WSACOMPLETIONTYPE       @938 ; __tpdsc__ WSACOMPLETIONTYPE
+    @$xp$17WSACOMPLETION_APC       @935 ; __tpdsc__ WSACOMPLETION_APC
+    @$xp$17WSAPROTOCOL_INFOA       @1009; __tpdsc__ WSAPROTOCOL_INFOA
+    @$xp$17WSAPROTOCOL_INFOW       @1007; __tpdsc__ WSAPROTOCOL_INFOW
+    @$xp$18AALUSER_PARAMETERS      @567 ; __tpdsc__ AALUSER_PARAMETERS
+    @$xp$18Idctypes@PIdC_INT8      @439 ; __tpdsc__ Idctypes::PIdC_INT8
+    @$xp$18Idctypes@PIdC_LONG      @449 ; __tpdsc__ Idctypes::PIdC_LONG
+    @$xp$18Idctypes@PIdC_UINT      @442 ; __tpdsc__ Idctypes::PIdC_UINT
+    @$xp$18Idglobal@TIdOSType      @371 ; __tpdsc__ Idglobal::TIdOSType
+    @$xp$18Idstruct@TIdStruct      @1368; __tpdsc__ Idstruct::TIdStruct
+    @$xp$18Idwinsock2@PInAddr      @1039; __tpdsc__ Idwinsock2::PInAddr
+    @$xp$18Idwinsock2@PNetEnt      @1048; __tpdsc__ Idwinsock2::PNetEnt
+    @$xp$18Idwinsock2@PWSABuf      @1024; __tpdsc__ Idwinsock2::PWSABuf
+    @$xp$18LPFN_FREEADDRINFOW      @1093; __tpdsc__ LPFN_FREEADDRINFOW
+    @$xp$18LPFN_GETHOSTBYADDR      @899 ; __tpdsc__ LPFN_GETHOSTBYADDR
+    @$xp$18LPFN_GETHOSTBYNAME      @898 ; __tpdsc__ LPFN_GETHOSTBYNAME
+    @$xp$18LPFN_GETSERVBYNAME      @895 ; __tpdsc__ LPFN_GETSERVBYNAME
+    @$xp$18LPFN_GETSERVBYPORT      @896 ; __tpdsc__ LPFN_GETSERVBYPORT
+    @$xp$18LPFN_WSACLOSEEVENT      @866 ; __tpdsc__ LPFN_WSACLOSEEVENT
+    @$xp$18LPFN_WSAISBLOCKING      @889 ; __tpdsc__ LPFN_WSAISBLOCKING
+    @$xp$18LPFN_WSARESETEVENT      @851 ; __tpdsc__ LPFN_WSARESETEVENT
+    @$xp$18LPWSAPROTOCOLCHAIN      @1010; __tpdsc__ LPWSAPROTOCOLCHAIN
+    @$xp$18PINTERFACE_INFO_EX      @650 ; __tpdsc__ PINTERFACE_INFO_EX
+    @$xp$18PSERVICE_ADDRESSES      @632 ; __tpdsc__ PSERVICE_ADDRESSES
+    @$xp$18WSACOMPLETION_PORT      @934 ; __tpdsc__ WSACOMPLETION_PORT
+    @$xp$18WSANAMESPACE_INFOA      @957 ; __tpdsc__ WSANAMESPACE_INFOA
+    @$xp$18WSANAMESPACE_INFOW      @955 ; __tpdsc__ WSANAMESPACE_INFOW
+    @$xp$18sockaddr_in6_union      @658 ; __tpdsc__ sockaddr_in6_union
+    @$xp$19Idctypes@PIdC_FLOAT     @431 ; __tpdsc__ Idctypes::PIdC_FLOAT
+    @$xp$19Idctypes@PIdC_INT16     @437 ; __tpdsc__ Idctypes::PIdC_INT16
+    @$xp$19Idctypes@PIdC_INT32     @435 ; __tpdsc__ Idctypes::PIdC_INT32
+    @$xp$19Idctypes@PIdC_INT64     @433 ; __tpdsc__ Idctypes::PIdC_INT64
+    @$xp$19Idctypes@PIdC_SHORT     @445 ; __tpdsc__ Idctypes::PIdC_SHORT
+    @$xp$19Idctypes@PIdC_UINT8     @438 ; __tpdsc__ Idctypes::PIdC_UINT8
+    @$xp$19Idctypes@PIdC_ULONG     @448 ; __tpdsc__ Idctypes::PIdC_ULONG
+    @$xp$19Idwinsock2@PHostEnt     @1050; __tpdsc__ Idwinsock2::PHostEnt
+    @$xp$19Idwinsock2@PIn6Addr     @664 ; __tpdsc__ Idwinsock2::PIn6Addr
+    @$xp$19Idwinsock2@PServEnt     @1046; __tpdsc__ Idwinsock2::PServEnt
+    @$xp$19Idwinsock2@PTimeVal     @1052; __tpdsc__ Idwinsock2::PTimeVal
+    @$xp$19Idwinsock2@PWSAData     @1028; __tpdsc__ Idwinsock2::PWSAData
+    @$xp$19Idwship6@PPaddrinfo     @1110; __tpdsc__ Idwship6::PPaddrinfo
+    @$xp$19LPFN_FREEADDRINFOEX     @1084; __tpdsc__ LPFN_FREEADDRINFOEX
+    @$xp$19LPFN_GETADDRINFOEXA     @1088; __tpdsc__ LPFN_GETADDRINFOEXA
+    @$xp$19LPFN_GETADDRINFOEXW     @1087; __tpdsc__ LPFN_GETADDRINFOEXW
+    @$xp$19LPFN_GETPROTOBYNAME     @893 ; __tpdsc__ LPFN_GETPROTOBYNAME
+    @$xp$19LPFN_SETADDRINFOEXA     @1086; __tpdsc__ LPFN_SETADDRINFOEXA
+    @$xp$19LPFN_SETADDRINFOEXW     @1085; __tpdsc__ LPFN_SETADDRINFOEXW
+    @$xp$19LPFN_WSAASYNCSELECT     @879 ; __tpdsc__ LPFN_WSAASYNCSELECT
+    @$xp$19LPFN_WSACREATEEVENT     @864 ; __tpdsc__ LPFN_WSACREATEEVENT
+    @$xp$19LPFN_WSAEVENTSELECT     @860 ; __tpdsc__ LPFN_WSAEVENTSELECT
+    @$xp$19LPFN_WSASETSERVICEA     @824 ; __tpdsc__ LPFN_WSASETSERVICEA
+    @$xp$19LPFN_WSASETSERVICEW     @823 ; __tpdsc__ LPFN_WSASETSERVICEW
+    @$xp$19MULTICAST_MODE_TYPE     @649 ; __tpdsc__ MULTICAST_MODE_TYPE
+    @$xp$19NAPI_PROVIDER_LEVEL     @638 ; __tpdsc__ NAPI_PROVIDER_LEVEL
+    @$xp$19PWSANAMESPACE_INFOA     @956 ; __tpdsc__ PWSANAMESPACE_INFOA
+    @$xp$19PWSANAMESPACE_INFOW     @954 ; __tpdsc__ PWSANAMESPACE_INFOW
+    @$xp$19SOCKADDR_IN6_W2KSP1     @656 ; __tpdsc__ SOCKADDR_IN6_W2KSP1
+    @$xp$19SOCKET_ADDRESS_LIST     @980 ; __tpdsc__ SOCKET_ADDRESS_LIST
+    @$xp$19WSACOMPLETION_EVENT     @936 ; __tpdsc__ WSACOMPLETION_EVENT
+    @$xp$19WSACOMPLETION_union     @933 ; __tpdsc__ WSACOMPLETION_union
+    @$xp$20Idctypes@PIdC_DOUBLE    @430 ; __tpdsc__ Idctypes::PIdC_DOUBLE
+    @$xp$20Idctypes@PIdC_SIGNED    @441 ; __tpdsc__ Idctypes::PIdC_SIGNED
+    @$xp$20Idctypes@PIdC_UINT16    @436 ; __tpdsc__ Idctypes::PIdC_UINT16
+    @$xp$20Idctypes@PIdC_UINT32    @434 ; __tpdsc__ Idctypes::PIdC_UINT32
+    @$xp$20Idctypes@PIdC_UINT64    @432 ; __tpdsc__ Idctypes::PIdC_UINT64
+    @$xp$20Idctypes@PIdC_USHORT    @444 ; __tpdsc__ Idctypes::PIdC_USHORT
+    @$xp$20Idstack@TIdServeFile    @1306; __tpdsc__ Idstack::TIdServeFile
+    @$xp$20Idstruct@TIdLongWord    @1364; __tpdsc__ Idstruct::TIdLongWord
+    @$xp$20Idwinsock2@PAddrInfo    @618 ; __tpdsc__ Idwinsock2::PAddrInfo
+    @$xp$20Idwinsock2@PProtoEnt    @1044; __tpdsc__ Idwinsock2::PProtoEnt
+    @$xp$20Idwinsock2@PWSAEVENT    @1056; __tpdsc__ Idwinsock2::PWSAEVENT
+    @$xp$20Idwship6@PPaddrinfoW    @1109; __tpdsc__ Idwship6::PPaddrinfoW
+    @$xp$20LPFN_FREEADDRINFOEXW    @1083; __tpdsc__ LPFN_FREEADDRINFOEXW
+    @$xp$20LPFN_TRANSMITPACKETS    @816 ; __tpdsc__ LPFN_TRANSMITPACKETS
+    @$xp$20LPFN_WSAGETLASTERROR    @891 ; __tpdsc__ LPFN_WSAGETLASTERROR
+    @$xp$20LPFN_WSAGETQOSBYNAME    @859 ; __tpdsc__ LPFN_WSAGETQOSBYNAME
+    @$xp$20LPFN_WSASETLASTERROR    @892 ; __tpdsc__ LPFN_WSASETLASTERROR
+    @$xp$20NormalizeString_LPFN    @1174; __tpdsc__ NormalizeString_LPFN
+    @$xp$20PSOCKET_ADDRESS_LIST    @979 ; __tpdsc__ PSOCKET_ADDRESS_LIST
+    @$xp$20RSS_SCALABILITY_INFO    @529 ; __tpdsc__ RSS_SCALABILITY_INFO
+    @$xp$20TRANSPORT_SETTING_ID    @555 ; __tpdsc__ TRANSPORT_SETTING_ID
+    @$xp$20WSANAMESPACE_INFOEXA    @951 ; __tpdsc__ WSANAMESPACE_INFOEXA
+    @$xp$20WSANAMESPACE_INFOEXW    @953 ; __tpdsc__ WSANAMESPACE_INFOEXW
+    @$xp$20WSASERVICECLASSINFOA    @961 ; __tpdsc__ WSASERVICECLASSINFOA
+    @$xp$20WSASERVICECLASSINFOW    @959 ; __tpdsc__ WSASERVICECLASSINFOW
+    @$xp$21Idcomponent@TIdStatus   @1338; __tpdsc__ Idcomponent::TIdStatus
+    @$xp$21Idcomponent@TWorkInfo   @1333; __tpdsc__ Idcomponent::TWorkInfo
+    @$xp$21Idcomponent@TWorkMode   @1334; __tpdsc__ Idcomponent::TWorkMode
+    @$xp$21Idglobal@TIdIPVersion   @370 ; __tpdsc__ Idglobal::TIdIPVersion
+    @$xp$21Idglobal@TIdWideChars   @400 ; __tpdsc__ Idglobal::TIdWideChars
+    @$xp$21Idglobal@TStrScanProc   @368 ; __tpdsc__ Idglobal::TStrScanProc
+    @$xp$21Idstack@EIdNotASocket   @1307; __tpdsc__ Idstack::EIdNotASocket
+    @$xp$21Idstack@EIdStackError   @1313; __tpdsc__ Idstack::EIdStackError
+    @$xp$21Idstack@TIdPacketInfo   @1304; __tpdsc__ Idstack::TIdPacketInfo
+    @$xp$21Idstack@TIdSocketList   @1301; __tpdsc__ Idstack::TIdSocketList
+    @$xp$21Idstack@TIdStackClass   @1290; __tpdsc__ Idstack::TIdStackClass
+    @$xp$21Idwinsock2@PAddrInfoW   @614 ; __tpdsc__ Idwinsock2::PAddrInfoW
+    @$xp$21Idwinsock2@PIPv6_MReq   @662 ; __tpdsc__ Idwinsock2::PIPv6_MReq
+    @$xp$21Idwinsock2@PInPktInfo   @621 ; __tpdsc__ Idwinsock2::PInPktInfo
+    @$xp$21Idwinsock2@PPaddrinfo   @617 ; __tpdsc__ Idwinsock2::PPaddrinfo
+    @$xp$21Idwinsock2@PSockProto   @1032; __tpdsc__ Idwinsock2::PSockProto
+    @$xp$21LPFN_GETPROTOBYNUMBER   @894 ; __tpdsc__ LPFN_GETPROTOBYNUMBER
+    @$xp$21LPFN_WSACONNECTBYLIST   @869 ; __tpdsc__ LPFN_WSACONNECTBYLIST
+    @$xp$21PRSS_SCALABILITY_INFO   @528 ; __tpdsc__ PRSS_SCALABILITY_INFO
+    @$xp$21PTRANSPORT_SETTING_ID   @554 ; __tpdsc__ PTRANSPORT_SETTING_ID
+    @$xp$21PWSANAMESPACE_INFOEXA   @950 ; __tpdsc__ PWSANAMESPACE_INFOEXA
+    @$xp$21PWSANAMESPACE_INFOEXW   @952 ; __tpdsc__ PWSANAMESPACE_INFOEXW
+    @$xp$21PWSASERVICECLASSINFOA   @960 ; __tpdsc__ PWSASERVICECLASSINFOA
+    @$xp$21PWSASERVICECLASSINFOW   @958 ; __tpdsc__ PWSASERVICECLASSINFOW
+    @$xp$21TRANSMIT_FILE_BUFFERS   @1016; __tpdsc__ TRANSMIT_FILE_BUFFERS
+    @$xp$22IPX_SPXCONNSTATUS_DATA  @579 ; __tpdsc__ IPX_SPXCONNSTATUS_DATA
+    @$xp$22Idcomponent@TWorkEvent  @1330; __tpdsc__ Idcomponent::TWorkEvent
+    @$xp$22Idctypes@PIdC_LONGLONG  @447 ; __tpdsc__ Idctypes::PIdC_LONGLONG
+    @$xp$22Idctypes@PIdC_UNSIGNED  @440 ; __tpdsc__ Idctypes::PIdC_UNSIGNED
+    @$xp$22Idglobal@TIdBaseStream  @365 ; __tpdsc__ Idglobal::TIdBaseStream
+    @$xp$22Idglobal@TIdLocalEvent  @387 ; __tpdsc__ Idglobal::TIdLocalEvent
+    @$xp$22Idstack@EIdSocketError  @1315; __tpdsc__ Idstack::EIdSocketError
+    @$xp$22Idstackbsdbase@TIdSunB  @1151; __tpdsc__ Idstackbsdbase::TIdSunB
+    @$xp$22Idstackbsdbase@TIdSunW  @1150; __tpdsc__ Idstackbsdbase::TIdSunW
+    @$xp$22Idwinsock2@PIn6PktInfo  @619 ; __tpdsc__ Idwinsock2::PIn6PktInfo
+    @$xp$22Idwinsock2@PPaddrinfoW  @616 ; __tpdsc__ Idwinsock2::PPaddrinfoW
+    @$xp$22Idwinsock2@PSockAddrIn  @1037; __tpdsc__ Idwinsock2::PSockAddrIn
+    @$xp$22Idwinsock2@PSockAddrNB  @576 ; __tpdsc__ Idwinsock2::PSockAddrNB
+    @$xp$22LPFN_RIOREGISTERBUFFER  @804 ; __tpdsc__ LPFN_RIOREGISTERBUFFER
+    @$xp$22LPFN_WSACONNECTBYNAMEA  @868 ; __tpdsc__ LPFN_WSACONNECTBYNAMEA
+    @$xp$22LPFN_WSACONNECTBYNAMEW  @867 ; __tpdsc__ LPFN_WSACONNECTBYNAMEW
+    @$xp$22LPFN_WSAENUMPROTOCOLSA  @876 ; __tpdsc__ LPFN_WSAENUMPROTOCOLSA
+    @$xp$22LPFN_WSAENUMPROTOCOLSW  @875 ; __tpdsc__ LPFN_WSAENUMPROTOCOLSW
+    @$xp$22LPFN_WSARECVDISCONNECT  @852 ; __tpdsc__ LPFN_WSARECVDISCONNECT
+    @$xp$22LPFN_WSASENDDISCONNECT  @849 ; __tpdsc__ LPFN_WSASENDDISCONNECT
+    @$xp$22PINET_PORT_RESERVATION  @548 ; __tpdsc__ PINET_PORT_RESERVATION
+    @$xp$22WSC_PROVIDER_INFO_TYPE  @1026; __tpdsc__ WSC_PROVIDER_INFO_TYPE
+    @$xp$23Idctypes@PIdC_ULONGLONG @446 ; __tpdsc__ Idctypes::PIdC_ULONGLONG
+    @$xp$23Idglobal@EIdEndOfStream @380 ; __tpdsc__ Idglobal::EIdEndOfStream
+    @$xp$23Idglobal@TIdEventStream @357 ; __tpdsc__ Idglobal::TIdEventStream
+    @$xp$23Idglobal@TIdIPv6Address @373 ; __tpdsc__ Idglobal::TIdIPv6Address
+    @$xp$23Idglobal@TIdReuseSocket @367 ; __tpdsc__ Idglobal::TIdReuseSocket
+    @$xp$23Idwinsock2@PSockAddrATM @571 ; __tpdsc__ Idwinsock2::PSockAddrATM
+    @$xp$23Idwinsock2@PSockAddrIPX @584 ; __tpdsc__ Idwinsock2::PSockAddrIPX
+    @$xp$23Idwinsock2@PSockAddrIn6 @655 ; __tpdsc__ Idwinsock2::PSockAddrIn6
+    @$xp$23IsNormalizedString_LPFN @1173; __tpdsc__ IsNormalizedString_LPFN
+    @$xp$23LPFN_WSASETBLOCKINGHOOK @887 ; __tpdsc__ LPFN_WSASETBLOCKINGHOOK
+    @$xp$23SERVICE_TYPE_VALUE_ABSA @631 ; __tpdsc__ SERVICE_TYPE_VALUE_ABSA
+    @$xp$23SOCKET_PEER_TARGET_NAME @1105; __tpdsc__ SOCKET_PEER_TARGET_NAME
+    @$xp$24Idcomponent@TIdComponent @1328; __tpdsc__ Idcomponent::TIdComponent
+    @$xp$24Idctypes@PIdC_LONGDOUBLE @429 ; __tpdsc__ Idctypes::PIdC_LONGDOUBLE
+    @$xp$24Idexception@EIdException @24  ; __tpdsc__ Idexception::EIdException
+    @$xp$24Idglobal@IIdTextEncoding @399 ; __tpdsc__ Idglobal::IIdTextEncoding
+    @$xp$24Idstackbsdbase@PIdInAddr @1145; __tpdsc__ Idstackbsdbase::PIdInAddr
+    @$xp$24Idstackbsdbase@TIdIPMreq @1144; __tpdsc__ Idstackbsdbase::TIdIPMreq
+    @$xp$24LPFN_RIODEREGISTERBUFFER @806 ; __tpdsc__ LPFN_RIODEREGISTERBUFFER
+    @$xp$24LPFN_WSAADDRESSTOSTRINGA @843 ; __tpdsc__ LPFN_WSAADDRESSTOSTRINGA
+    @$xp$24LPFN_WSAADDRESSTOSTRINGW @842 ; __tpdsc__ LPFN_WSAADDRESSTOSTRINGW
+    @$xp$24LPFN_WSADUPLICATESOCKETA @863 ; __tpdsc__ LPFN_WSADUPLICATESOCKETA
+    @$xp$24LPFN_WSADUPLICATESOCKETW @862 ; __tpdsc__ LPFN_WSADUPLICATESOCKETW
+    @$xp$24LPFN_WSALOOKUPSERVICEEND @834 ; __tpdsc__ LPFN_WSALOOKUPSERVICEEND
+    @$xp$24LPFN_WSASTRINGTOADDRESSA @841 ; __tpdsc__ LPFN_WSASTRINGTOADDRESSA
+    @$xp$24LPFN_WSASTRINGTOADDRESSW @840 ; __tpdsc__ LPFN_WSASTRINGTOADDRESSW
+    @$xp$24PSERVICE_TYPE_VALUE_ABSA @630 ; __tpdsc__ PSERVICE_TYPE_VALUE_ABSA
+    @$xp$24PSOCKET_PEER_TARGET_NAME @1104; __tpdsc__ PSOCKET_PEER_TARGET_NAME
+    @$xp$24SOCKET_SECURITY_PROTOCOL @1108; __tpdsc__ SOCKET_SECURITY_PROTOCOL
+    @$xp$24SOCKET_SECURITY_PROTOCOL @627 ; __tpdsc__ SOCKET_SECURITY_PROTOCOL
+    @$xp$24TRANSMIT_PACKETS_ELEMENT @1014; __tpdsc__ TRANSMIT_PACKETS_ELEMENT
+    @$xp$25ATM_TRAFFIC_DESCRIPTOR_IE @564 ; __tpdsc__ ATM_TRAFFIC_DESCRIPTOR_IE
+    @$xp$25Idcomponent@TWorkEndEvent @1331; __tpdsc__ Idcomponent::TWorkEndEvent
+    @$xp$25Idglobal@TIdMaxLineAction @372 ; __tpdsc__ Idglobal::TIdMaxLineAction
+    @$xp$25IdnToNameprepUnicode_LPFN @1171; __tpdsc__ IdnToNameprepUnicode_LPFN
+    @$xp$25Idstackbsdbase@PIdIn4Addr @1149; __tpdsc__ Idstackbsdbase::PIdIn4Addr
+    @$xp$25Idstackbsdbase@PIdIn6Addr @1147; __tpdsc__ Idstackbsdbase::PIdIn6Addr
+    @$xp$25Idstackbsdbase@TIdIn4Addr @1148; __tpdsc__ Idstackbsdbase::TIdIn4Addr
+    @$xp$25Idstackbsdbase@TIdIn6Addr @1146; __tpdsc__ Idstackbsdbase::TIdIn6Addr
+    @$xp$25Idwinsock2@PIPXNetNumData @580 ; __tpdsc__ Idwinsock2::PIPXNetNumData
+    @$xp$25Idwinsock2@PWSAOverlapped @1027; __tpdsc__ Idwinsock2::PWSAOverlapped
+    @$xp$25LPFN_GETACCEPTEXSOCKADDRS @821 ; __tpdsc__ LPFN_GETACCEPTEXSOCKADDRS
+    @$xp$25LPFN_RIODEQUEUECOMPLETION @807 ; __tpdsc__ LPFN_RIODEQUEUECOMPLETION
+    @$xp$25LPFN_WSAENUMNETWORKEVENTS @861 ; __tpdsc__ LPFN_WSAENUMNETWORKEVENTS
+    @$xp$25PTRANSMIT_PACKETS_ELEMENT @1012; __tpdsc__ PTRANSMIT_PACKETS_ELEMENT
+    @$xp$26Idcomponent@Idcomponent__1 @1337; __tpdsc__ Idcomponent::Idcomponent__1
+    @$xp$26Idcomponent@TIdStatusEvent @1335; __tpdsc__ Idcomponent::TIdStatusEvent
+    @$xp$26Idstack@TIdSocketListClass @1303; __tpdsc__ Idstack::TIdSocketListClass
+    @$xp$26Idstackbsdbase@TIdIPv6Mreq @1143; __tpdsc__ Idstackbsdbase::TIdIPv6Mreq
+    @$xp$26Idwinsock2@PIPXAddressData @582 ; __tpdsc__ Idwinsock2::PIPXAddressData
+    @$xp$26LPFN_RIOCREATEREQUESTQUEUE @808 ; __tpdsc__ LPFN_RIOCREATEREQUESTQUEUE
+    @$xp$26LPFN_RIORESIZEREQUESTQUEUE @802 ; __tpdsc__ LPFN_RIORESIZEREQUESTQUEUE
+    @$xp$26LPFN_WSAASYNCGETHOSTBYADDR @880 ; __tpdsc__ LPFN_WSAASYNCGETHOSTBYADDR
+    @$xp$26LPFN_WSAASYNCGETHOSTBYNAME @881 ; __tpdsc__ LPFN_WSAASYNCGETHOSTBYNAME
+    @$xp$26LPFN_WSAASYNCGETSERVBYNAME @885 ; __tpdsc__ LPFN_WSAASYNCGETSERVBYNAME
+    @$xp$26LPFN_WSAASYNCGETSERVBYPORT @884 ; __tpdsc__ LPFN_WSAASYNCGETSERVBYPORT
+    @$xp$26LPFN_WSACANCELASYNCREQUEST @890 ; __tpdsc__ LPFN_WSACANCELASYNCREQUEST
+    @$xp$26LPFN_WSACANCELBLOCKINGCALL @886 ; __tpdsc__ LPFN_WSACANCELBLOCKINGCALL
+    @$xp$26LPFN_WSALOOKUPSERVICENEXTA @837 ; __tpdsc__ LPFN_WSALOOKUPSERVICENEXTA
+    @$xp$26LPFN_WSALOOKUPSERVICENEXTW @836 ; __tpdsc__ LPFN_WSALOOKUPSERVICENEXTW
+    @$xp$26LPFN_WSAREMOVESERVICECLASS @831 ; __tpdsc__ LPFN_WSAREMOVESERVICECLASS
+    @$xp$26LPFN_WSAUNHOOKBLOCKINGHOOK @888 ; __tpdsc__ LPFN_WSAUNHOOKBLOCKINGHOOK
+    @$xp$26SOCKET_SECURITY_QUERY_INFO @1103; __tpdsc__ SOCKET_SECURITY_QUERY_INFO
+    @$xp$26TCP_INITIAL_RTO_PARAMETERS @552 ; __tpdsc__ TCP_INITIAL_RTO_PARAMETERS
+    @$xp$27ATM_CALLING_PARTY_NUMBER_IE @561 ; __tpdsc__ ATM_CALLING_PARTY_NUMBER_IE
+    @$xp$27DownlevelVerifyScripts_LPFN @1175; __tpdsc__ DownlevelVerifyScripts_LPFN
+    @$xp$27INET_PORT_RESERVATION_TOKEN @547 ; __tpdsc__ INET_PORT_RESERVATION_TOKEN
+    @$xp$27Idcomponent@TWorkBeginEvent @1332; __tpdsc__ Idcomponent::TWorkBeginEvent
+    @$xp$27Idglobal@IdTextEncodingType @398 ; __tpdsc__ Idglobal::IdTextEncodingType
+    @$xp$27Idglobal@TIdCriticalSection @385 ; __tpdsc__ Idglobal::TIdCriticalSection
+    @$xp$27Idglobal@TIdStreamReadEvent @362 ; __tpdsc__ Idglobal::TIdStreamReadEvent
+    @$xp$27Idglobal@TIdStreamSeekEvent @360 ; __tpdsc__ Idglobal::TIdStreamSeekEvent
+    @$xp$27Idwinsock2@PSockAddrStorage @1034; __tpdsc__ Idwinsock2::PSockAddrStorage
+    @$xp$27LPFN_WSAASYNCGETPROTOBYNAME @883 ; __tpdsc__ LPFN_WSAASYNCGETPROTOBYNAME
+    @$xp$27LPFN_WSAGETOVERLAPPEDRESULT @874 ; __tpdsc__ LPFN_WSAGETOVERLAPPEDRESULT
+    @$xp$27LPFN_WSALOOKUPSERVICEBEGINA @839 ; __tpdsc__ LPFN_WSALOOKUPSERVICEBEGINA
+    @$xp$27LPFN_WSALOOKUPSERVICEBEGINW @838 ; __tpdsc__ LPFN_WSALOOKUPSERVICEBEGINW
+    @$xp$27LPFN_WSAQUERYSOCKETSECURITY @1079; __tpdsc__ LPFN_WSAQUERYSOCKETSECURITY
+    @$xp$27LPFN_WSAREVERTIMPERSONATION @1078; __tpdsc__ LPFN_WSAREVERTIMPERSONATION
+    @$xp$27PSOCKET_SECURITY_QUERY_INFO @1102; __tpdsc__ PSOCKET_SECURITY_QUERY_INFO
+    @$xp$27PTCP_INITIAL_RTO_PARAMETERS @551 ; __tpdsc__ PTCP_INITIAL_RTO_PARAMETERS
+    @$xp$27WSACOMPLETION_WINDOWMESSAGE @937 ; __tpdsc__ WSACOMPLETION_WINDOWMESSAGE
+    @$xp$28Idglobal@TIdAppendFileStream @395 ; __tpdsc__ Idglobal::TIdAppendFileStream
+    @$xp$28Idglobal@TIdFileCreateStream @389 ; __tpdsc__ Idglobal::TIdFileCreateStream
+    @$xp$28Idglobal@TIdStreamWriteEvent @361 ; __tpdsc__ Idglobal::TIdStreamWriteEvent
+    @$xp$28Idstack@TIdStackLocalAddress @1299; __tpdsc__ Idstack::TIdStackLocalAddress
+    @$xp$28Idstackbsdbase@TIdInt64Parts @1154; __tpdsc__ Idstackbsdbase::TIdInt64Parts
+    @$xp$28Idwinsock2@PWSANetworkEvents @1017; __tpdsc__ Idwinsock2::PWSANetworkEvents
+    @$xp$28LPFN_RIOCLOSECOMPLETIONQUEUE @801 ; __tpdsc__ LPFN_RIOCLOSECOMPLETIONQUEUE
+    @$xp$28LPFN_WSAGETSERVICECLASSINFOA @830 ; __tpdsc__ LPFN_WSAGETSERVICECLASSINFOA
+    @$xp$28LPFN_WSAGETSERVICECLASSINFOW @829 ; __tpdsc__ LPFN_WSAGETSERVICECLASSINFOW
+    @$xp$28LPFN_WSAINSTALLSERVICECLASSA @833 ; __tpdsc__ LPFN_WSAINSTALLSERVICECLASSA
+    @$xp$28LPFN_WSAINSTALLSERVICECLASSW @832 ; __tpdsc__ LPFN_WSAINSTALLSERVICECLASSW
+    @$xp$28LPFN_WSAPROVIDERCONFIGCHANGE @822 ; __tpdsc__ LPFN_WSAPROVIDERCONFIGCHANGE
+    @$xp$28NAPI_DOMAIN_DESCRIPTION_BLOB @640 ; __tpdsc__ NAPI_DOMAIN_DESCRIPTION_BLOB
+    @$xp$28PINET_PORT_RESERVATION_TOKEN @546 ; __tpdsc__ PINET_PORT_RESERVATION_TOKEN
+    @$xp$28PRIO_NOTIFICATION_COMPLETION @925 ; __tpdsc__ PRIO_NOTIFICATION_COMPLETION
+    @$xp$28_RIO_NOTIFICATION_COMPLETION @926 ; __tpdsc__ _RIO_NOTIFICATION_COMPLETION
+    @$xp$29Idexception@TClassIdException @23  ; __tpdsc__ Idexception::TClassIdException
+    @$xp$29Idstack@EIdMaliciousPtrRecord @1309; __tpdsc__ Idstack::EIdMaliciousPtrRecord
+    @$xp$29Idwinsock2@PWSAProtocol_InfoA @1008; __tpdsc__ Idwinsock2::PWSAProtocol_InfoA
+    @$xp$29Idwinsock2@PWSAProtocol_InfoW @1006; __tpdsc__ Idwinsock2::PWSAProtocol_InfoW
+    @$xp$29LPFN_RIOCREATECOMPLETIONQUEUE @809 ; __tpdsc__ LPFN_RIOCREATECOMPLETIONQUEUE
+    @$xp$29LPFN_RIORESIZECOMPLETIONQUEUE @803 ; __tpdsc__ LPFN_RIORESIZECOMPLETIONQUEUE
+    @$xp$29LPFN_WSAASYNCGETPROTOBYNUMBER @882 ; __tpdsc__ LPFN_WSAASYNCGETPROTOBYNUMBER
+    @$xp$29LPFN_WSAIMPERSONATESOCKETPEER @1080; __tpdsc__ LPFN_WSAIMPERSONATESOCKETPEER
+    @$xp$29LPFN_WSAWAITFORMULTIPLEEVENTS @844 ; __tpdsc__ LPFN_WSAWAITFORMULTIPLEEVENTS
+    @$xp$29PNAPI_DOMAIN_DESCRIPTION_BLOB @639 ; __tpdsc__ PNAPI_DOMAIN_DESCRIPTION_BLOB
+    @$xp$29PRIO_EXTENSION_FUNCTION_TABLE @799 ; __tpdsc__ PRIO_EXTENSION_FUNCTION_TABLE
+    @$xp$29_RIO_EXTENSION_FUNCTION_TABLE @800 ; __tpdsc__ _RIO_EXTENSION_FUNCTION_TABLE
+    @$xp$30CONTROL_CHANNEL_TRIGGER_STATUS @541 ; __tpdsc__ CONTROL_CHANNEL_TRIGGER_STATUS
+    @$xp$30DownlevelGetLocaleScripts_LPFN @1177; __tpdsc__ DownlevelGetLocaleScripts_LPFN
+    @$xp$30DownlevelGetStringScripts_LPFN @1176; __tpdsc__ DownlevelGetStringScripts_LPFN
+    @$xp$30INET_PORT_RESERVATION_INSTANCE @545 ; __tpdsc__ INET_PORT_RESERVATION_INSTANCE
+    @$xp$30Idexception@EIdNotAllBytesSent @13  ; __tpdsc__ Idexception::EIdNotAllBytesSent
+    @$xp$30Idexception@EIdSilentException @21  ; __tpdsc__ Idexception::EIdSilentException
+    @$xp$30Idglobal@EIdInvalidIPv6Address @378 ; __tpdsc__ Idglobal::EIdInvalidIPv6Address
+    @$xp$30Idglobal@TIdMemoryBufferStream @355 ; __tpdsc__ Idglobal::TIdMemoryBufferStream
+    @$xp$30Idglobal@TIdStreamSetSizeEvent @359 ; __tpdsc__ Idglobal::TIdStreamSetSizeEvent
+    @$xp$30Idstackbsdbase@TIdIPAddressRec @1152; __tpdsc__ Idstackbsdbase::TIdIPAddressRec
+    @$xp$30Idstackbsdbase@TIdStackBSDBase @1141; __tpdsc__ Idstackbsdbase::TIdStackBSDBase
+    @$xp$30Idstackwindows@TIdStackWindows @1237; __tpdsc__ Idstackwindows::TIdStackWindows
+    @$xp$30Idstreamvcl@TIdStreamHelperVCL @110 ; __tpdsc__ Idstreamvcl::TIdStreamHelperVCL
+    @$xp$30Idwinsock2@EIdWinsockStubError @1057; __tpdsc__ Idwinsock2::EIdWinsockStubError
+    @$xp$30SOCKET_SECURITY_QUERY_TEMPLATE @1101; __tpdsc__ SOCKET_SECURITY_QUERY_TEMPLATE
+    @$xp$30SOCKET_SECURITY_SETTINGS_IPSEC @1107; __tpdsc__ SOCKET_SECURITY_SETTINGS_IPSEC
+    @$xp$31Idexception@EIdInvalidPortRange @7   ; __tpdsc__ Idexception::EIdInvalidPortRange
+    @$xp$31Idglobal@EIdCorruptServicesFile @382 ; __tpdsc__ Idglobal::EIdCorruptServicesFile
+    @$xp$31Idglobal@EIdNoEncodingSpecified @376 ; __tpdsc__ Idglobal::EIdNoEncodingSpecified
+    @$xp$31Idglobal@TIdCalculateSizeStream @363 ; __tpdsc__ Idglobal::TIdCalculateSizeStream
+    @$xp$31Idstack@EIdIPVersionUnsupported @1311; __tpdsc__ Idstack::EIdIPVersionUnsupported
+    @$xp$31Idwinsock2@PTransmitFileBuffers @1015; __tpdsc__ Idwinsock2::PTransmitFileBuffers
+    @$xp$31LPFN_WSAENUMNAMESPACEPROVIDERSA @828 ; __tpdsc__ LPFN_WSAENUMNAMESPACEPROVIDERSA
+    @$xp$31LPFN_WSAENUMNAMESPACEPROVIDERSW @827 ; __tpdsc__ LPFN_WSAENUMNAMESPACEPROVIDERSW
+    @$xp$31LPFN_WSASETSOCKETPEERTARGETNAME @1081; __tpdsc__ LPFN_WSASETSOCKETPEERTARGETNAME
+    @$xp$31NAPI_PROVIDER_INSTALLATION_BLOB @637 ; __tpdsc__ NAPI_PROVIDER_INSTALLATION_BLOB
+    @$xp$31PCONTROL_CHANNEL_TRIGGER_STATUS @540 ; __tpdsc__ PCONTROL_CHANNEL_TRIGGER_STATUS
+    @$xp$31PINET_PORT_RESERVATION_INSTANCE @544 ; __tpdsc__ PINET_PORT_RESERVATION_INSTANCE
+    @$xp$31PSOCKET_SECURITY_QUERY_TEMPLATE @1100; __tpdsc__ PSOCKET_SECURITY_QUERY_TEMPLATE
+    @$xp$31PSOCKET_SECURITY_SETTINGS_IPSEC @1106; __tpdsc__ PSOCKET_SECURITY_SETTINGS_IPSEC
+    @$xp$32ATM_TRANSIT_NETWORK_SELECTION_IE @558 ; __tpdsc__ ATM_TRANSIT_NETWORK_SELECTION_IE
+    @$xp$32Idbasecomponent@TIdBaseComponent @413 ; __tpdsc__ Idbasecomponent::TIdBaseComponent
+    @$xp$32Idexception@EIdPackageSizeTooBig @15  ; __tpdsc__ Idexception::EIdPackageSizeTooBig
+    @$xp$32Idexception@EIdSocketHandleError @17  ; __tpdsc__ Idexception::EIdSocketHandleError
+    @$xp$32Idstack@TIdStackLocalAddressIPv4 @1297; __tpdsc__ Idstack::TIdStackLocalAddressIPv4
+    @$xp$32Idstack@TIdStackLocalAddressIPv6 @1295; __tpdsc__ Idstack::TIdStackLocalAddressIPv6
+    @$xp$32Idstack@TIdStackLocalAddressList @1293; __tpdsc__ Idstack::TIdStackLocalAddressList
+    @$xp$32Idstackbsdbase@TIdIPv6AddressRec @1153; __tpdsc__ Idstackbsdbase::TIdIPv6AddressRec
+    @$xp$32Idwinsock2@PIPXSPXConnStatusData @578 ; __tpdsc__ Idwinsock2::PIPXSPXConnStatusData
+    @$xp$32PNAPI_PROVIDER_INSTALLATION_BLOB @636 ; __tpdsc__ PNAPI_PROVIDER_INSTALLATION_BLOB
+    @$xp$33INET_PORT_RESERVATION_INFORMATION @543 ; __tpdsc__ INET_PORT_RESERVATION_INFORMATION
+    @$xp$33Idexception@EIdCouldNotBindSocket @11  ; __tpdsc__ Idexception::EIdCouldNotBindSocket
+    @$xp$33Idstackwindows@EIdIPv6Unavailable @1241; __tpdsc__ Idstackwindows::EIdIPv6Unavailable
+    @$xp$33LPFN_WSAENUMNAMESPACEPROVIDERSEXA @948 ; __tpdsc__ LPFN_WSAENUMNAMESPACEPROVIDERSEXA
+    @$xp$33LPFN_WSAENUMNAMESPACEPROVIDERSEXW @949 ; __tpdsc__ LPFN_WSAENUMNAMESPACEPROVIDERSEXW
+    @$xp$33PRIO_NOTIFICATION_COMPLETION_TYPE @930 ; __tpdsc__ PRIO_NOTIFICATION_COMPLETION_TYPE
+    @$xp$33SOCKET_SECURITY_QUERY_INFO_IPSEC2 @531 ; __tpdsc__ SOCKET_SECURITY_QUERY_INFO_IPSEC2
+    @$xp$33_RIO_NOTIFICATION_COMPLETION_IOCP @928 ; __tpdsc__ _RIO_NOTIFICATION_COMPLETION_IOCP
+    @$xp$34ATM_BROADBAND_BEARER_CAPABILITY_IE @563 ; __tpdsc__ ATM_BROADBAND_BEARER_CAPABILITY_IE
+    @$xp$34Idantifreezebase@TIdAntiFreezeBase @425 ; __tpdsc__ Idantifreezebase::TIdAntiFreezeBase
+    @$xp$34Idwinsock2@PTransmitPacketsElement @1013; __tpdsc__ Idwinsock2::PTransmitPacketsElement
+    @$xp$34LPFN_WSADELETESOCKETPEERTARGETNAME @1082; __tpdsc__ LPFN_WSADELETESOCKETPEERTARGETNAME
+    @$xp$34LPLOOKUPSERVICE_COMPLETION_ROUTINE @1099; __tpdsc__ LPLOOKUPSERVICE_COMPLETION_ROUTINE
+    @$xp$34LPWSAOVERLAPPED_COMPLETION_ROUTINE @939 ; __tpdsc__ LPWSAOVERLAPPED_COMPLETION_ROUTINE
+    @$xp$34PINET_PORT_RESERVATION_INFORMATION @542 ; __tpdsc__ PINET_PORT_RESERVATION_INFORMATION
+    @$xp$34PSOCKET_SECURITY_QUERY_INFO_IPSEC2 @530 ; __tpdsc__ PSOCKET_SECURITY_QUERY_INFO_IPSEC2
+    @$xp$34_RIO_NOTIFICATION_COMPLETION_EVENT @929 ; __tpdsc__ _RIO_NOTIFICATION_COMPLETION_EVENT
+    @$xp$34_RIO_NOTIFICATION_COMPLETION_UNION @927 ; __tpdsc__ _RIO_NOTIFICATION_COMPLETION_UNION
+    @$xp$35Idexception@EIdConnClosedGracefully @19  ; __tpdsc__ Idexception::EIdConnClosedGracefully
+    @$xp$35Idglobal@TIdReadFileExclusiveStream @393 ; __tpdsc__ Idglobal::TIdReadFileExclusiveStream
+    @$xp$35Idstackwindows@TIdSocketListWindows @1239; __tpdsc__ Idstackwindows::TIdSocketListWindows
+    @$xp$36Idexception@EIdCanNotBindPortInRange @9   ; __tpdsc__ Idexception::EIdCanNotBindPortInRange
+    @$xp$36Idstackbsdbase@EIdInvalidServiceName @1139; __tpdsc__ Idstackbsdbase::EIdInvalidServiceName
+    @$xp$36REAL_TIME_NOTIFICATION_SETTING_INPUT @539 ; __tpdsc__ REAL_TIME_NOTIFICATION_SETTING_INPUT
+    @$xp$37LPFN_WSAGETSERVICECLASSNAMEBYCLASSIDA @826 ; __tpdsc__ LPFN_WSAGETSERVICECLASSNAMEBYCLASSIDA
+    @$xp$37LPFN_WSAGETSERVICECLASSNAMEBYCLASSIDW @825 ; __tpdsc__ LPFN_WSAGETSERVICECLASSNAMEBYCLASSIDW
+    @$xp$37PREAL_TIME_NOTIFICATION_SETTING_INPUT @538 ; __tpdsc__ PREAL_TIME_NOTIFICATION_SETTING_INPUT
+    @$xp$37REAL_TIME_NOTIFICATION_SETTING_OUTPUT @537 ; __tpdsc__ REAL_TIME_NOTIFICATION_SETTING_OUTPUT
+    @$xp$38Idglobal@TIdReadFileNonExclusiveStream @391 ; __tpdsc__ Idglobal::TIdReadFileNonExclusiveStream
+    @$xp$38Idstackbsdbase@EIdStackSetSizeExceeded @1135; __tpdsc__ Idstackbsdbase::EIdStackSetSizeExceeded
+    @$xp$38PREAL_TIME_NOTIFICATION_SETTING_OUTPUT @536 ; __tpdsc__ PREAL_TIME_NOTIFICATION_SETTING_OUTPUT
+    @$xp$39Idbasecomponent@TIdInitializerComponent @415 ; __tpdsc__ Idbasecomponent::TIdInitializerComponent
+    @$xp$3QOS                      @1021; __tpdsc__ QOS
+    @$xp$40Idglobal@EIdFailedToRetreiveTimeZoneInfo @374 ; __tpdsc__ Idglobal::EIdFailedToRetreiveTimeZoneInfo
+    @$xp$43Idstackbsdbase@EIdStackInitializationFailed @1137; __tpdsc__ Idstackbsdbase::EIdStackInitializationFailed
+    @$xp$46Idexception@EIdCannotSetIPVersionWhenConnected @5   ; __tpdsc__ Idexception::EIdCannotSetIPVersionWhenConnected
+    @$xp$4BLOB                     @1005; __tpdsc__ BLOB
+    @$xp$6ATM_TD                   @565 ; __tpdsc__ ATM_TD
+    @$xp$6PGROUP                   @1019; __tpdsc__ PGROUP
+    @$xp$6WSABUF                   @1025; __tpdsc__ WSABUF
+    @$xp$6WSAMSG                   @947 ; __tpdsc__ WSAMSG
+    @$xp$6linger                   @1031; __tpdsc__ linger
+    @$xp$6netent                   @1049; __tpdsc__ netent
+    @$xp$7PLINGER                  @1030; __tpdsc__ PLINGER
+    @$xp$7PWSAMSG                  @946 ; __tpdsc__ PWSAMSG
+    @$xp$7WSADATA                  @1029; __tpdsc__ WSADATA
+    @$xp$7hostent                  @1051; __tpdsc__ hostent
+    @$xp$7in_addr                  @1040; __tpdsc__ in_addr
+    @$xp$7ip_mreq                  @668 ; __tpdsc__ ip_mreq
+    @$xp$7servent                  @1047; __tpdsc__ servent
+    @$xp$7timeval                  @1053; __tpdsc__ timeval
+    @$xp$8ADDRINFO                 @615 ; __tpdsc__ ADDRINFO
+    @$xp$8ATM_BHLI                 @573 ; __tpdsc__ ATM_BHLI
+    @$xp$8ATM_BLLI                 @574 ; __tpdsc__ ATM_BLLI
+    @$xp$8FLOWSPEC                 @1023; __tpdsc__ FLOWSPEC
+    @$xp$8IN6_ADDR                 @665 ; __tpdsc__ IN6_ADDR
+    @$xp$8PCMSGHDR                 @943 ; __tpdsc__ PCMSGHDR
+    @$xp$8PRIO_BUF                 @999 ; __tpdsc__ PRIO_BUF
+    @$xp$8Q2931_IE                 @569 ; __tpdsc__ Q2931_IE
+    @$xp$8SCOPE_ID                 @660 ; __tpdsc__ SCOPE_ID
+    @$xp$8_RIO_BUF                 @1000; __tpdsc__ _RIO_BUF
+    @$xp$8protoent                 @1045; __tpdsc__ protoent
+    @$xp$9ADDRINFOW                @613 ; __tpdsc__ ADDRINFOW
+    @$xp$9GROUP_REQ                @646 ; __tpdsc__ GROUP_REQ
+    @$xp$9LPFN_BIND                @921 ; __tpdsc__ LPFN_BIND
+    @$xp$9LPFN_RECV                @907 ; __tpdsc__ LPFN_RECV
+    @$xp$9LPFN_SEND                @904 ; __tpdsc__ LPFN_SEND
+    @$xp$9PFLOWSPEC                @1022; __tpdsc__ PFLOWSPEC
+    @$xp$9PSCOPE_ID                @659 ; __tpdsc__ PSCOPE_ID
+    @$xp$9PSOCKADDR                @1036; __tpdsc__ PSOCKADDR
+    @$xp$9RCVALL_IF                @533 ; __tpdsc__ RCVALL_IF
+    @$xp$9WSAPOLLFD                @942 ; __tpdsc__ WSAPOLLFD
+    @$xp$9ipv6_mreq                @663 ; __tpdsc__ ipv6_mreq
+    @$xp$9sockproto                @1033; __tpdsc__ sockproto
+    @GetPackageInfoTable           @1376; GetPackageInfoTable
+    @Idantifreezebase@Finalization$qqrv @418 ; __fastcall Idantifreezebase::Finalization()
+    @Idantifreezebase@GAntiFreeze  @424 ; Idantifreezebase::GAntiFreeze
+    @Idantifreezebase@TIdAntiFreezeBase@ @426 ; Idantifreezebase::TIdAntiFreezeBase::
+    @Idantifreezebase@TIdAntiFreezeBase@$bdtr$qqrv @423 ; __fastcall Idantifreezebase::TIdAntiFreezeBase::~TIdAntiFreezeBase()
+    @Idantifreezebase@TIdAntiFreezeBase@DoProcess$qqrxoxo @422 ; __fastcall Idantifreezebase::TIdAntiFreezeBase::DoProcess(const bool, const bool)
+    @Idantifreezebase@TIdAntiFreezeBase@InitComponent$qqrv @421 ; __fastcall Idantifreezebase::TIdAntiFreezeBase::InitComponent()
+    @Idantifreezebase@TIdAntiFreezeBase@ShouldUse$qqrv @420 ; __fastcall Idantifreezebase::TIdAntiFreezeBase::ShouldUse()
+    @Idantifreezebase@TIdAntiFreezeBase@Sleep$qqri @419 ; __fastcall Idantifreezebase::TIdAntiFreezeBase::Sleep(int)
+    @Idantifreezebase@initialization$qqrv @417 ; __fastcall Idantifreezebase::initialization()
+    @Idbasecomponent@Finalization$qqrv @405 ; __fastcall Idbasecomponent::Finalization()
+    @Idbasecomponent@TIdBaseComponent@ @414 ; Idbasecomponent::TIdBaseComponent::
+    @Idbasecomponent@TIdBaseComponent@$bctr$qqrp25System@Classes@TComponent @407 ; __fastcall Idbasecomponent::TIdBaseComponent::TIdBaseComponent(System::Classes::TComponent *)
+    @Idbasecomponent@TIdBaseComponent@GetIndyVersion$qqrv @406 ; __fastcall Idbasecomponent::TIdBaseComponent::GetIndyVersion()
+    @Idbasecomponent@TIdInitializerComponent@ @416 ; Idbasecomponent::TIdInitializerComponent::
+    @Idbasecomponent@TIdInitializerComponent@$bctr$qqrp25System@Classes@TComponent @411 ; __fastcall Idbasecomponent::TIdInitializerComponent::TIdInitializerComponent(System::Classes::TComponent *)
+    @Idbasecomponent@TIdInitializerComponent@$bctr$qqrv @412 ; __fastcall Idbasecomponent::TIdInitializerComponent::TIdInitializerComponent()
+    @Idbasecomponent@TIdInitializerComponent@GetIsDesignTime$qqrv @408 ; __fastcall Idbasecomponent::TIdInitializerComponent::GetIsDesignTime()
+    @Idbasecomponent@TIdInitializerComponent@GetIsLoading$qqrv @409 ; __fastcall Idbasecomponent::TIdInitializerComponent::GetIsLoading()
+    @Idbasecomponent@TIdInitializerComponent@InitComponent$qqrv @410 ; __fastcall Idbasecomponent::TIdInitializerComponent::InitComponent()
+    @Idbasecomponent@initialization$qqrv @404 ; __fastcall Idbasecomponent::initialization()
+    @Idcomponent@Finalization$qqrv @1318; __fastcall Idcomponent::Finalization()
+    @Idcomponent@IdStati           @1336; Idcomponent::IdStati
+    @Idcomponent@TIdComponent@     @1329; Idcomponent::TIdComponent::
+    @Idcomponent@TIdComponent@$bdtr$qqrv @1327; __fastcall Idcomponent::TIdComponent::~TIdComponent()
+    @Idcomponent@TIdComponent@BeginWork$qqr21Idcomponent@TWorkModexj @1324; __fastcall Idcomponent::TIdComponent::BeginWork(Idcomponent::TWorkMode, const __int64)
+    @Idcomponent@TIdComponent@DoStatus$qqr21Idcomponent@TIdStatus @1326; __fastcall Idcomponent::TIdComponent::DoStatus(Idcomponent::TIdStatus)
+    @Idcomponent@TIdComponent@DoStatus$qqr21Idcomponent@TIdStatuspx14System@TVarRecxi @1325; __fastcall Idcomponent::TIdComponent::DoStatus(Idcomponent::TIdStatus, const System::TVarRec *, const int)
+    @Idcomponent@TIdComponent@DoWork$qqr21Idcomponent@TWorkModexj @1323; __fastcall Idcomponent::TIdComponent::DoWork(Idcomponent::TWorkMode, const __int64)
+    @Idcomponent@TIdComponent@EndWork$qqr21Idcomponent@TWorkMode @1322; __fastcall Idcomponent::TIdComponent::EndWork(Idcomponent::TWorkMode)
+    @Idcomponent@TIdComponent@InitComponent$qqrv @1321; __fastcall Idcomponent::TIdComponent::InitComponent()
+    @Idcomponent@TIdComponent@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @1320; __fastcall Idcomponent::TIdComponent::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Idcomponent@TIdComponent@SetWorkTarget$qqrp24Idcomponent@TIdComponent @1319; __fastcall Idcomponent::TIdComponent::SetWorkTarget(Idcomponent::TIdComponent *)
+    @Idcomponent@initialization$qqrv @1317; __fastcall Idcomponent::initialization()
+    @Idctypes@Finalization$qqrv    @428 ; __fastcall Idctypes::Finalization()
+    @Idctypes@initialization$qqrv  @427 ; __fastcall Idctypes::initialization()
+    @Idexception@EIdCanNotBindPortInRange@ @10  ; Idexception::EIdCanNotBindPortInRange::
+    @Idexception@EIdCannotSetIPVersionWhenConnected@ @6   ; Idexception::EIdCannotSetIPVersionWhenConnected::
+    @Idexception@EIdConnClosedGracefully@ @20  ; Idexception::EIdConnClosedGracefully::
+    @Idexception@EIdCouldNotBindSocket@ @12  ; Idexception::EIdCouldNotBindSocket::
+    @Idexception@EIdException@     @25  ; Idexception::EIdException::
+    @Idexception@EIdException@$bctr$qqrx20System@UnicodeString @4   ; __fastcall Idexception::EIdException::EIdException(const System::UnicodeString)
+    @Idexception@EIdException@Toss$qqrx20System@UnicodeString @3   ; __fastcall Idexception::EIdException::Toss(const System::UnicodeString)
+    @Idexception@EIdInvalidPortRange@ @8   ; Idexception::EIdInvalidPortRange::
+    @Idexception@EIdNotAllBytesSent@ @14  ; Idexception::EIdNotAllBytesSent::
+    @Idexception@EIdPackageSizeTooBig@ @16  ; Idexception::EIdPackageSizeTooBig::
+    @Idexception@EIdSilentException@ @22  ; Idexception::EIdSilentException::
+    @Idexception@EIdSocketHandleError@ @18  ; Idexception::EIdSocketHandleError::
+    @Idexception@Finalization$qqrv @2   ; __fastcall Idexception::Finalization()
+    @Idexception@initialization$qqrv @1   ; __fastcall Idexception::initialization()
+    @Idglobal@AddMSecToTime$qqrx16System@TDateTimexi @213 ; __fastcall Idglobal::AddMSecToTime(const System::TDateTime, const int)
+    @Idglobal@AppendByte$qqrr24System@%DynamicArray$uc%xuc @150 ; Idglobal::AppendByte(System::DynamicArray<{583}...
+    @Idglobal@AppendBytes$qqrr24System@%DynamicArray$uc%x24System@%DynamicArray$uc%xixi @151 ; Idglobal::AppendBytes(System::DynamicArray<{583}...
+    @Idglobal@AppendString$qqrr24System@%DynamicArray$uc%x20System@UnicodeStringxi51System@%DelphiInterface$24Idglobal@IIdTextEncoding% @149 ; Idglobal::AppendString(System::DynamicArray<{583}...
+    @Idglobal@ByteIdxInSet$qqrx24System@%DynamicArray$uc%xit1 @131 ; Idglobal::ByteIdxInSet(const System::DynamicArray<{583}...
+    @Idglobal@ByteIndex$qqrxucx24System@%DynamicArray$uc%xi @132 ; Idglobal::ByteIndex(const unsigned char, const System::DynamicArray<{583}...
+    @Idglobal@ByteIsInEOL$qqrx24System@%DynamicArray$uc%xi @129 ; Idglobal::ByteIsInEOL(const System::DynamicArray<{583}...
+    @Idglobal@ByteIsInSet$qqrx24System@%DynamicArray$uc%xit1 @130 ; Idglobal::ByteIsInSet(const System::DynamicArray<{583}...
+    @Idglobal@ByteToHex$qqrxuc     @305 ; __fastcall Idglobal::ByteToHex(const unsigned char)
+    @Idglobal@ByteToOctal$qqrxuc   @300 ; __fastcall Idglobal::ByteToOctal(const unsigned char)
+    @Idglobal@BytesToChar$qqrx24System@%DynamicArray$uc%rbxi51System@%DelphiInterface$24Idglobal@IIdTextEncoding% @185 ; Idglobal::BytesToChar(const System::DynamicArray<{583}...
+    @Idglobal@BytesToChar$qqrx24System@%DynamicArray$uc%xi51System@%DelphiInterface$24Idglobal@IIdTextEncoding% @186 ; Idglobal::BytesToChar(const System::DynamicArray<{583}...
+    @Idglobal@BytesToIPv4Str$qqrx24System@%DynamicArray$uc%xi @180 ; Idglobal::BytesToIPv4Str(const System::DynamicArray<{583}...
+    @Idglobal@BytesToIPv6$qqrx24System@%DynamicArray$uc%r28System@%StaticArray$usi$i8$%xi @179 ; Idglobal::BytesToIPv6(const System::DynamicArray<{583}...
+    @Idglobal@BytesToInt64$qqrx24System@%DynamicArray$uc%xi @183 ; Idglobal::BytesToInt64(const System::DynamicArray<{583}...
+    @Idglobal@BytesToLongInt$qqrx24System@%DynamicArray$uc%xi @184 ; Idglobal::BytesToLongInt(const System::DynamicArray<{583}...
+    @Idglobal@BytesToLongWord$qqrx24System@%DynamicArray$uc%xi @178 ; Idglobal::BytesToLongWord(const System::DynamicArray<{583}...
+    @Idglobal@BytesToRaw$qqrx24System@%DynamicArray$uc%pvxi @173 ; Idglobal::BytesToRaw(const System::DynamicArray<{583}...
+    @Idglobal@BytesToShort$qqrx24System@%DynamicArray$uc%xi @181 ; Idglobal::BytesToShort(const System::DynamicArray<{583}...
+    @Idglobal@BytesToString$qqrx24System@%DynamicArray$uc%51System@%DelphiInterface$24Idglobal@IIdTextEncoding% @177 ; Idglobal::BytesToString(const System::DynamicArray<{583}...
+    @Idglobal@BytesToString$qqrx24System@%DynamicArray$uc%xixi51System@%DelphiInterface$24Idglobal@IIdTextEncoding% @176 ; Idglobal::BytesToString(const System::DynamicArray<{583}...
+    @Idglobal@BytesToStringRaw$qqrx24System@%DynamicArray$uc% @175 ; Idglobal::BytesToStringRaw(const System::DynamicArray<{583}...
+    @Idglobal@BytesToStringRaw$qqrx24System@%DynamicArray$uc%xixi @174 ; Idglobal::BytesToStringRaw(const System::DynamicArray<{583}...
+    @Idglobal@BytesToWord$qqrx24System@%DynamicArray$uc%xi @182 ; Idglobal::BytesToWord(const System::DynamicArray<{583}...
+    @Idglobal@CharEquals$qqrx20System@UnicodeStringxixb @133 ; __fastcall Idglobal::CharEquals(const System::UnicodeString, const int, const wchar_t)
+    @Idglobal@CharIsInEOL$qqrx20System@UnicodeStringxi @134 ; __fastcall Idglobal::CharIsInEOL(const System::UnicodeString, const int)
+    @Idglobal@CharIsInSet$qqrx20System@UnicodeStringxit1 @135 ; __fastcall Idglobal::CharIsInSet(const System::UnicodeString, const int, const System::UnicodeString)
+    @Idglobal@CharPosInSet$qqrx20System@UnicodeStringxit1 @136 ; __fastcall Idglobal::CharPosInSet(const System::UnicodeString, const int, const System::UnicodeString)
+    @Idglobal@CheckByteEncoding$qqrr24System@%DynamicArray$uc%51System@%DelphiInterface$24Idglobal@IIdTextEncoding%t2 @352 ; Idglobal::CheckByteEncoding(System::DynamicArray<{583}...
+    @Idglobal@CompareDate$qqrx16System@TDateTimet1 @214 ; __fastcall Idglobal::CompareDate(const System::TDateTime, const System::TDateTime)
+    @Idglobal@CopyTIdByteArray$qqrpxucxixir24System@%DynamicArray$uc%xixi @290 ; Idglobal::CopyTIdByteArray(const unsigned char *, const int, const int, System::DynamicArray<{583}...
+    @Idglobal@CopyTIdBytes$qqrx24System@%DynamicArray$uc%xir24System@%DynamicArray$uc%xixi @298 ; Idglobal::CopyTIdBytes(const System::DynamicArray<{583}...
+    @Idglobal@CopyTIdChar$qqrxbr24System@%DynamicArray$uc%xi51System@%DelphiInterface$24Idglobal@IIdTextEncoding% @297 ; Idglobal::CopyTIdChar(const wchar_t, System::DynamicArray<{583}...
+    @Idglobal@CopyTIdIPV6Address$qqrrx28System@%StaticArray$usi$i8$%r24System@%DynamicArray$uc%xi @291 ; Idglobal::CopyTIdIPV6Address(const System::StaticArray<unsigned short, 8>&, System::DynamicArray<{583}...
+    @Idglobal@CopyTIdInt64$qqrxjr24System@%DynamicArray$uc%xi @292 ; Idglobal::CopyTIdInt64(const __int64, System::DynamicArray<{583}...
+    @Idglobal@CopyTIdLongInt$qqrxir24System@%DynamicArray$uc%xi @293 ; Idglobal::CopyTIdLongInt(const int, System::DynamicArray<{583}...
+    @Idglobal@CopyTIdLongWord$qqrxuir24System@%DynamicArray$uc%xi @294 ; Idglobal::CopyTIdLongWord(const unsigned int, System::DynamicArray<{583}...
+    @Idglobal@CopyTIdShort$qqrxsr24System@%DynamicArray$uc%xi @296 ; Idglobal::CopyTIdShort(const short, System::DynamicArray<{583}...
+    @Idglobal@CopyTIdString$qqrx20System@UnicodeStringr24System@%DynamicArray$uc%xixi51System@%DelphiInterface$24Idglobal@IIdTextEncoding% @289 ; Idglobal::CopyTIdString(const System::UnicodeString, System::DynamicArray<{583}...
+    @Idglobal@CopyTIdString$qqrx20System@UnicodeStringxir24System@%DynamicArray$uc%xixi51System@%DelphiInterface$24Idglobal@IIdTextEncoding% @288 ; Idglobal::CopyTIdString(const System::UnicodeString, const int, System::DynamicArray<{583}...
+    @Idglobal@CopyTIdWord$qqrxusr24System@%DynamicArray$uc%xi @295 ; Idglobal::CopyTIdWord(const unsigned short, System::DynamicArray<{583}...
+    @Idglobal@CurrentProcessId$qqrv @285 ; __fastcall Idglobal::CurrentProcessId()
+    @Idglobal@CurrentThreadId$qqrv @286 ; __fastcall Idglobal::CurrentThreadId()
+    @Idglobal@DateTimeGMTToCookieStr$qqrx16System@TDateTimexo @228 ; __fastcall Idglobal::DateTimeGMTToCookieStr(const System::TDateTime, const bool)
+    @Idglobal@DateTimeGMTToHttpStr$qqrx16System@TDateTime @229 ; __fastcall Idglobal::DateTimeGMTToHttpStr(const System::TDateTime)
+    @Idglobal@DateTimeToGmtOffSetStr$qqr16System@TDateTimexo @223 ; __fastcall Idglobal::DateTimeToGmtOffSetStr(System::TDateTime, const bool)
+    @Idglobal@DateTimeToInternetStr$qqrx16System@TDateTimexo @225 ; __fastcall Idglobal::DateTimeToInternetStr(const System::TDateTime, const bool)
+    @Idglobal@DebugOutput$qqrx20System@UnicodeString @287 ; __fastcall Idglobal::DebugOutput(const System::UnicodeString)
+    @Idglobal@EIdCorruptServicesFile@ @383 ; Idglobal::EIdCorruptServicesFile::
+    @Idglobal@EIdEndOfStream@      @381 ; Idglobal::EIdEndOfStream::
+    @Idglobal@EIdFailedToRetreiveTimeZoneInfo@ @375 ; Idglobal::EIdFailedToRetreiveTimeZoneInfo::
+    @Idglobal@EIdInvalidIPv6Address@ @379 ; Idglobal::EIdInvalidIPv6Address::
+    @Idglobal@EIdNoEncodingSpecified@ @377 ; Idglobal::EIdNoEncodingSpecified::
+    @Idglobal@EnsureEncoding$qqrr51System@%DelphiInterface$24Idglobal@IIdTextEncoding%27Idglobal@IdTextEncodingType @353 ; Idglobal::EnsureEncoding(System::DelphiInterface<{583}...
+    @Idglobal@ExpandBytes$qqrr24System@%DynamicArray$uc%xixixuc @148 ; Idglobal::ExpandBytes(System::DynamicArray<{583}...
+    @Idglobal@Fetch$qqrr20System@UnicodeStringx20System@UnicodeStringxoxo @284 ; __fastcall Idglobal::Fetch(System::UnicodeString&, const System::UnicodeString, const bool, const bool)
+    @Idglobal@FetchCaseInsensitive$qqrr20System@UnicodeStringx20System@UnicodeStringxo @283 ; __fastcall Idglobal::FetchCaseInsensitive(System::UnicodeString&, const System::UnicodeString, const bool)
+    @Idglobal@FillBytes$qqrr24System@%DynamicArray$uc%xixuc @317 ; Idglobal::FillBytes(System::DynamicArray<{583}...
+    @Idglobal@Finalization$qqrv    @115 ; __fastcall Idglobal::Finalization()
+    @Idglobal@GIdDefaultTextEncoding @397 ; Idglobal::GIdDefaultTextEncoding
+    @Idglobal@GetThreadHandle$qqrp22System@Classes@TThread @282 ; __fastcall Idglobal::GetThreadHandle(System::Classes::TThread *)
+    @Idglobal@GetTickDiff$qqrxuixui @280 ; __fastcall Idglobal::GetTickDiff(const unsigned int, const unsigned int)
+    @Idglobal@HostToLittleEndian$qqrxi @321 ; __fastcall Idglobal::HostToLittleEndian(const int)
+    @Idglobal@HostToLittleEndian$qqrxui @322 ; __fastcall Idglobal::HostToLittleEndian(const unsigned int)
+    @Idglobal@HostToLittleEndian$qqrxus @323 ; __fastcall Idglobal::HostToLittleEndian(const unsigned short)
+    @Idglobal@IPv4MakeLongWordInRange$qqrxjxi @258 ; __fastcall Idglobal::IPv4MakeLongWordInRange(const __int64, const int)
+    @Idglobal@IPv4ToDWord$qqrx20System@UnicodeString @257 ; __fastcall Idglobal::IPv4ToDWord(const System::UnicodeString)
+    @Idglobal@IPv4ToDWord$qqrx20System@UnicodeStringro @256 ; __fastcall Idglobal::IPv4ToDWord(const System::UnicodeString, bool&)
+    @Idglobal@IPv4ToHex$qqrx20System@UnicodeStringxo @301 ; __fastcall Idglobal::IPv4ToHex(const System::UnicodeString, const bool)
+    @Idglobal@IPv4ToOctal$qqrx20System@UnicodeString @299 ; __fastcall Idglobal::IPv4ToOctal(const System::UnicodeString)
+    @Idglobal@IPv6AddressToStr$qqrrx28System@%StaticArray$usi$i8$% @255 ; __fastcall Idglobal::IPv6AddressToStr(const System::StaticArray<unsigned short, 8>&)
+    @Idglobal@IPv6ToIdIPv6Address$qqrx20System@UnicodeStringr28System@%StaticArray$usi$i8$% @252 ; __fastcall Idglobal::IPv6ToIdIPv6Address(const System::UnicodeString, System::StaticArray<unsigned short, 8>&)
+    @Idglobal@IPv6ToIdIPv6Address$qqrx20System@UnicodeStringr28System@%StaticArray$usi$i8$%ro @251 ; __fastcall Idglobal::IPv6ToIdIPv6Address(const System::UnicodeString, System::StaticArray<unsigned short, 8>&, bool&)
+    @Idglobal@IdDelete$qqrr20System@UnicodeStringii @144 ; __fastcall Idglobal::IdDelete(System::UnicodeString&, int, int)
+    @Idglobal@IdDisposeAndNil$qqrpv @116 ; __fastcall Idglobal::IdDisposeAndNil(void *)
+    @Idglobal@IdHexDigits          @403 ; Idglobal::IdHexDigits
+    @Idglobal@IdInsert$qqrx20System@UnicodeStringr20System@UnicodeStringi @143 ; __fastcall Idglobal::IdInsert(const System::UnicodeString, System::UnicodeString&, int)
+    @Idglobal@IdOctalDigits        @402 ; Idglobal::IdOctalDigits
+    @Idglobal@IdPorts$qqrv         @278 ; __fastcall Idglobal::IdPorts()
+    @Idglobal@InMainThread$qqrv    @273 ; __fastcall Idglobal::InMainThread()
+    @Idglobal@Indy8BitEncoding$qqrxo @335 ; __fastcall Idglobal::Indy8BitEncoding(const bool)
+    @Idglobal@IndyASCIIEncoding$qqrxo @334 ; __fastcall Idglobal::IndyASCIIEncoding(const bool)
+    @Idglobal@IndyCheckWindowsVersion$qqrxixi @117 ; __fastcall Idglobal::IndyCheckWindowsVersion(const int, const int)
+    @Idglobal@IndyCompareStr$qqrx20System@UnicodeStringt1 @137 ; __fastcall Idglobal::IndyCompareStr(const System::UnicodeString, const System::UnicodeString)
+    @Idglobal@IndyDirectoryExists$qqrx20System@UnicodeString @211 ; __fastcall Idglobal::IndyDirectoryExists(const System::UnicodeString)
+    @Idglobal@IndyExcludeTrailingPathDelimiter$qqrx20System@UnicodeString @219 ; __fastcall Idglobal::IndyExcludeTrailingPathDelimiter(const System::UnicodeString)
+    @Idglobal@IndyFileAge$qqrx20System@UnicodeString @212 ; __fastcall Idglobal::IndyFileAge(const System::UnicodeString)
+    @Idglobal@IndyFormat$qqrx20System@UnicodeStringpx14System@TVarRecxi @230 ; __fastcall Idglobal::IndyFormat(const System::UnicodeString, const System::TVarRec *, const int)
+    @Idglobal@IndyIncludeTrailingPathDelimiter$qqrx20System@UnicodeString @220 ; __fastcall Idglobal::IndyIncludeTrailingPathDelimiter(const System::UnicodeString)
+    @Idglobal@IndyIndexOf$qqrp23System@Classes@TStringsx20System@UnicodeStringxo @125 ; __fastcall Idglobal::IndyIndexOf(System::Classes::TStrings *, const System::UnicodeString, const bool)
+    @Idglobal@IndyIndexOf$qqrp26System@Classes@TStringListx20System@UnicodeStringxo @124 ; __fastcall Idglobal::IndyIndexOf(System::Classes::TStringList *, const System::UnicodeString, const bool)
+    @Idglobal@IndyIndexOfName$qqrp23System@Classes@TStringsx20System@UnicodeStringxo @123 ; __fastcall Idglobal::IndyIndexOfName(System::Classes::TStrings *, const System::UnicodeString, const bool)
+    @Idglobal@IndyIndexOfName$qqrp26System@Classes@TStringListx20System@UnicodeStringxo @122 ; __fastcall Idglobal::IndyIndexOfName(System::Classes::TStringList *, const System::UnicodeString, const bool)
+    @Idglobal@IndyLength$qqrx20System@UnicodeStringxixi @233 ; __fastcall Idglobal::IndyLength(const System::UnicodeString, const int, const int)
+    @Idglobal@IndyLength$qqrx24System@%DynamicArray$uc%xixi @232 ; Idglobal::IndyLength(const System::DynamicArray<{583}...
+    @Idglobal@IndyLength$qqrxp22System@Classes@TStreamxj @231 ; __fastcall Idglobal::IndyLength(System::Classes::TStream * const, const __int64)
+    @Idglobal@IndyLowerCase$qqrx20System@UnicodeString @139 ; __fastcall Idglobal::IndyLowerCase(const System::UnicodeString)
+    @Idglobal@IndyMax$qqrxixi      @249 ; __fastcall Idglobal::IndyMax(const int, const int)
+    @Idglobal@IndyMax$qqrxjxj      @250 ; __fastcall Idglobal::IndyMax(const __int64, const __int64)
+    @Idglobal@IndyMax$qqrxusxus    @248 ; __fastcall Idglobal::IndyMax(const unsigned short, const unsigned short)
+    @Idglobal@IndyMin$qqrxixi      @246 ; __fastcall Idglobal::IndyMin(const int, const int)
+    @Idglobal@IndyMin$qqrxjxj      @245 ; __fastcall Idglobal::IndyMin(const __int64, const __int64)
+    @Idglobal@IndyMin$qqrxusxus    @244 ; __fastcall Idglobal::IndyMin(const unsigned short, const unsigned short)
+    @Idglobal@IndyOSDefaultEncoding$qqrxo @331 ; __fastcall Idglobal::IndyOSDefaultEncoding(const bool)
+    @Idglobal@IndyPos              @354 ; Idglobal::IndyPos
+    @Idglobal@IndyRaiseLastError$qqrv @328 ; __fastcall Idglobal::IndyRaiseLastError()
+    @Idglobal@IndyRegisterExpectedMemoryLeak$qqrpv @126 ; __fastcall Idglobal::IndyRegisterExpectedMemoryLeak(void *)
+    @Idglobal@IndySetThreadPriority$qqrp22System@Classes@TThreadx30System@Classes@TThreadPriorityxi @242 ; __fastcall Idglobal::IndySetThreadPriority(System::Classes::TThread *, const System::Classes::TThreadPriority, const int)
+    @Idglobal@IndySleep$qqrui      @241 ; __fastcall Idglobal::IndySleep(unsigned int)
+    @Idglobal@IndyStrToInt$qqrx20System@UnicodeString @216 ; __fastcall Idglobal::IndyStrToInt(const System::UnicodeString)
+    @Idglobal@IndyStrToInt$qqrx20System@UnicodeStringi @215 ; __fastcall Idglobal::IndyStrToInt(const System::UnicodeString, int)
+    @Idglobal@IndyStrToInt64$qqrx20System@UnicodeString @209 ; __fastcall Idglobal::IndyStrToInt64(const System::UnicodeString)
+    @Idglobal@IndyStrToInt64$qqrx20System@UnicodeStringxj @210 ; __fastcall Idglobal::IndyStrToInt64(const System::UnicodeString, const __int64)
+    @Idglobal@IndyStrToStreamSize$qqrx20System@UnicodeString @207 ; __fastcall Idglobal::IndyStrToStreamSize(const System::UnicodeString)
+    @Idglobal@IndyStrToStreamSize$qqrx20System@UnicodeStringxj @208 ; __fastcall Idglobal::IndyStrToStreamSize(const System::UnicodeString, const __int64)
+    @Idglobal@IndyTextEncoding$qqr27Idglobal@IdTextEncodingType @351 ; __fastcall Idglobal::IndyTextEncoding(Idglobal::IdTextEncodingType)
+    @Idglobal@IndyTextEncoding$qqrp25System@Sysutils@TEncoding @348 ; __fastcall Idglobal::IndyTextEncoding(System::Sysutils::TEncoding *)
+    @Idglobal@IndyTextEncoding$qqrus @350 ; __fastcall Idglobal::IndyTextEncoding(unsigned short)
+    @Idglobal@IndyTextEncoding$qqrx20System@UnicodeString @349 ; __fastcall Idglobal::IndyTextEncoding(const System::UnicodeString)
+    @Idglobal@IndyTextEncoding_8Bit$qqrv @345 ; __fastcall Idglobal::IndyTextEncoding_8Bit()
+    @Idglobal@IndyTextEncoding_ASCII$qqrv @344 ; __fastcall Idglobal::IndyTextEncoding_ASCII()
+    @Idglobal@IndyTextEncoding_Default$qqrv @347 ; __fastcall Idglobal::IndyTextEncoding_Default()
+    @Idglobal@IndyTextEncoding_OSDefault$qqrv @346 ; __fastcall Idglobal::IndyTextEncoding_OSDefault()
+    @Idglobal@IndyTextEncoding_UTF16BE$qqrv @343 ; __fastcall Idglobal::IndyTextEncoding_UTF16BE()
+    @Idglobal@IndyTextEncoding_UTF16LE$qqrv @342 ; __fastcall Idglobal::IndyTextEncoding_UTF16LE()
+    @Idglobal@IndyTextEncoding_UTF7$qqrv @341 ; __fastcall Idglobal::IndyTextEncoding_UTF7()
+    @Idglobal@IndyTextEncoding_UTF8$qqrv @340 ; __fastcall Idglobal::IndyTextEncoding_UTF8()
+    @Idglobal@IndyUTF16BigEndianEncoding$qqrxo @333 ; __fastcall Idglobal::IndyUTF16BigEndianEncoding(const bool)
+    @Idglobal@IndyUTF16LittleEndianEncoding$qqrxo @332 ; __fastcall Idglobal::IndyUTF16LittleEndianEncoding(const bool)
+    @Idglobal@IndyUTF7Encoding$qqrxo @330 ; __fastcall Idglobal::IndyUTF7Encoding(const bool)
+    @Idglobal@IndyUTF8Encoding$qqrxo @329 ; __fastcall Idglobal::IndyUTF8Encoding(const bool)
+    @Idglobal@IndyUpperCase$qqrx20System@UnicodeString @138 ; __fastcall Idglobal::IndyUpperCase(const System::UnicodeString)
+    @Idglobal@IndyWindowsBuildNumber$qqrv @119 ; __fastcall Idglobal::IndyWindowsBuildNumber()
+    @Idglobal@IndyWindowsMajorVersion$qqrv @121 ; __fastcall Idglobal::IndyWindowsMajorVersion()
+    @Idglobal@IndyWindowsMinorVersion$qqrv @120 ; __fastcall Idglobal::IndyWindowsMinorVersion()
+    @Idglobal@IndyWindowsPlatform$qqrv @118 ; __fastcall Idglobal::IndyWindowsPlatform()
+    @Idglobal@InsertByte$qqrr24System@%DynamicArray$uc%xucxi @146 ; Idglobal::InsertByte(System::DynamicArray<{583}...
+    @Idglobal@InsertBytes$qqrr24System@%DynamicArray$uc%xix24System@%DynamicArray$uc%xi @147 ; Idglobal::InsertBytes(System::DynamicArray<{583}...
+    @Idglobal@InterlockedCompareExchangeIntf$qqrr44System@%DelphiInterface$17System@IInterface%x44System@%DelphiInterface$17System@IInterface%t2 @324 ; Idglobal::InterlockedCompareExchangeIntf(System::DelphiInterface<{583}...
+    @Idglobal@InterlockedCompareExchangeObj$qqrrp14System@TObjectxp14System@TObjectt2 @325 ; __fastcall Idglobal::InterlockedCompareExchangeObj(System::TObject *&, System::TObject * const, System::TObject * const)
+    @Idglobal@InterlockedCompareExchangePtr$qqrrpvpxvt2 @326 ; __fastcall Idglobal::InterlockedCompareExchangePtr(void *&, const void *, const void *)
+    @Idglobal@InterlockedExchangeTHandle$qqrruixui @327 ; __fastcall Idglobal::InterlockedExchangeTHandle(unsigned int&, const unsigned int)
+    @Idglobal@IsASCII$qqrx24System@%DynamicArray$uc% @309 ; Idglobal::IsASCII(const System::DynamicArray<{583}...
+    @Idglobal@IsASCII$qqrxuc       @310 ; __fastcall Idglobal::IsASCII(const unsigned char)
+    @Idglobal@IsASCIILDH$qqrx24System@%DynamicArray$uc% @311 ; Idglobal::IsASCIILDH(const System::DynamicArray<{583}...
+    @Idglobal@IsASCIILDH$qqrxuc    @312 ; __fastcall Idglobal::IsASCIILDH(const unsigned char)
+    @Idglobal@IsAlpha$qqrx20System@UnicodeStringxixi @268 ; __fastcall Idglobal::IsAlpha(const System::UnicodeString, const int, const int)
+    @Idglobal@IsAlpha$qqrxb        @269 ; __fastcall Idglobal::IsAlpha(const wchar_t)
+    @Idglobal@IsAlphaNumeric$qqrx20System@UnicodeStringxixi @266 ; __fastcall Idglobal::IsAlphaNumeric(const System::UnicodeString, const int, const int)
+    @Idglobal@IsAlphaNumeric$qqrxb @267 ; __fastcall Idglobal::IsAlphaNumeric(const wchar_t)
+    @Idglobal@IsCurrentThread$qqrp22System@Classes@TThread @271 ; __fastcall Idglobal::IsCurrentThread(System::Classes::TThread *)
+    @Idglobal@IsHexidecimal$qqrx20System@UnicodeStringxixi @262 ; __fastcall Idglobal::IsHexidecimal(const System::UnicodeString, const int, const int)
+    @Idglobal@IsHexidecimal$qqrxb  @263 ; __fastcall Idglobal::IsHexidecimal(const wchar_t)
+    @Idglobal@IsNumeric$qqrx20System@UnicodeString @261 ; __fastcall Idglobal::IsNumeric(const System::UnicodeString)
+    @Idglobal@IsNumeric$qqrx20System@UnicodeStringxixi @260 ; __fastcall Idglobal::IsNumeric(const System::UnicodeString, const int, const int)
+    @Idglobal@IsNumeric$qqrxb      @259 ; __fastcall Idglobal::IsNumeric(const wchar_t)
+    @Idglobal@IsOctal$qqrx20System@UnicodeStringxixi @264 ; __fastcall Idglobal::IsOctal(const System::UnicodeString, const int, const int)
+    @Idglobal@IsOctal$qqrxb        @265 ; __fastcall Idglobal::IsOctal(const wchar_t)
+    @Idglobal@LittleEndianToHost$qqrxi @318 ; __fastcall Idglobal::LittleEndianToHost(const int)
+    @Idglobal@LittleEndianToHost$qqrxui @319 ; __fastcall Idglobal::LittleEndianToHost(const unsigned int)
+    @Idglobal@LittleEndianToHost$qqrxus @320 ; __fastcall Idglobal::LittleEndianToHost(const unsigned short)
+    @Idglobal@LocalDateTimeToCookieStr$qqrx16System@TDateTimexo @226 ; __fastcall Idglobal::LocalDateTimeToCookieStr(const System::TDateTime, const bool)
+    @Idglobal@LocalDateTimeToGMT$qqrx16System@TDateTimexo @224 ; __fastcall Idglobal::LocalDateTimeToGMT(const System::TDateTime, const bool)
+    @Idglobal@LocalDateTimeToHttpStr$qqrx16System@TDateTime @227 ; __fastcall Idglobal::LocalDateTimeToHttpStr(const System::TDateTime)
+    @Idglobal@LongWordToHex$qqrxui @304 ; __fastcall Idglobal::LongWordToHex(const unsigned int)
+    @Idglobal@MakeCanonicalIPv4Address$qqrx20System@UnicodeString @254 ; __fastcall Idglobal::MakeCanonicalIPv4Address(const System::UnicodeString)
+    @Idglobal@MakeCanonicalIPv6Address$qqrx20System@UnicodeString @253 ; __fastcall Idglobal::MakeCanonicalIPv6Address(const System::UnicodeString)
+    @Idglobal@MakeDWordIntoIPv4Address$qqrxui @270 ; __fastcall Idglobal::MakeDWordIntoIPv4Address(const unsigned int)
+    @Idglobal@MemoryPos$qqrx20System@UnicodeStringpbi @247 ; __fastcall Idglobal::MemoryPos(const System::UnicodeString, wchar_t *, int)
+    @Idglobal@OffsetFromUTC$qqrv   @222 ; __fastcall Idglobal::OffsetFromUTC()
+    @Idglobal@PosIdx$qqrx20System@UnicodeStringt1ui @243 ; __fastcall Idglobal::PosIdx(const System::UnicodeString, const System::UnicodeString, unsigned int)
+    @Idglobal@PosInSmallIntArray$qqrxspxsxi @307 ; __fastcall Idglobal::PosInSmallIntArray(const short, const short *, const int)
+    @Idglobal@PosInStrArray$qqrx20System@UnicodeStringpx20System@UnicodeStringxixo @306 ; __fastcall Idglobal::PosInStrArray(const System::UnicodeString, const System::UnicodeString *, const int, const bool)
+    @Idglobal@RawToBytes$qqrpxvxi  @196 ; __fastcall Idglobal::RawToBytes(const void *, const int)
+    @Idglobal@RawToBytesF$qqrr24System@%DynamicArray$uc%pxvxi @187 ; Idglobal::RawToBytesF(System::DynamicArray<{583}...
+    @Idglobal@ReadCharFromStream$qqrp22System@Classes@TStreamrb51System@%DelphiInterface$24Idglobal@IIdTextEncoding% @169 ; Idglobal::ReadCharFromStream(System::Classes::TStream *, wchar_t&, System::DelphiInterface<{583}...
+    @Idglobal@ReadLnFromStream$qqrp22System@Classes@TStreamio51System@%DelphiInterface$24Idglobal@IIdTextEncoding% @128 ; Idglobal::ReadLnFromStream(System::Classes::TStream *, int, bool, System::DelphiInterface<{583}...
+    @Idglobal@ReadLnFromStream$qqrp22System@Classes@TStreamr20System@UnicodeStringi51System@%DelphiInterface$24Idglobal@IIdTextEncoding% @127 ; Idglobal::ReadLnFromStream(System::Classes::TStream *, System::UnicodeString&, int, System::DelphiInterface<{583}...
+    @Idglobal@ReadStringFromStream$qqrp22System@Classes@TStreami51System@%DelphiInterface$24Idglobal@IIdTextEncoding% @171 ; Idglobal::ReadStringFromStream(System::Classes::TStream *, int, System::DelphiInterface<{583}...
+    @Idglobal@ReadTIdBytesFromStream$qqrxp22System@Classes@TStreamr24System@%DynamicArray$uc%xjxi @170 ; Idglobal::ReadTIdBytesFromStream(System::Classes::TStream * const, System::DynamicArray<{583}...
+    @Idglobal@RemoveBytes$qqrr24System@%DynamicArray$uc%xixi @145 ; Idglobal::RemoveBytes(System::DynamicArray<{583}...
+    @Idglobal@ReplaceOnlyFirst$qqrx20System@UnicodeStringt1t1 @217 ; __fastcall Idglobal::ReplaceOnlyFirst(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Idglobal@ServicesFilePath$qqrv @279 ; __fastcall Idglobal::ServicesFilePath()
+    @Idglobal@SetThreadName$qqrx20System@UnicodeStringui @237 ; __fastcall Idglobal::SetThreadName(const System::UnicodeString, unsigned int)
+    @Idglobal@SplitColumns$qqrx20System@UnicodeStringp23System@Classes@TStringst1 @239 ; __fastcall Idglobal::SplitColumns(const System::UnicodeString, System::Classes::TStrings *, const System::UnicodeString)
+    @Idglobal@SplitColumnsNoTrim$qqrx20System@UnicodeStringp23System@Classes@TStringst1 @240 ; __fastcall Idglobal::SplitColumnsNoTrim(const System::UnicodeString, System::Classes::TStrings *, const System::UnicodeString)
+    @Idglobal@SplitDelimitedString$qqrx20System@UnicodeStringp23System@Classes@TStringsot1o @238 ; __fastcall Idglobal::SplitDelimitedString(const System::UnicodeString, System::Classes::TStrings *, bool, const System::UnicodeString, bool)
+    @Idglobal@StartsWithACE$qqrx24System@%DynamicArray$uc% @308 ; Idglobal::StartsWithACE(const System::DynamicArray<{583}...
+    @Idglobal@StringsReplace$qqrx20System@UnicodeStringpx20System@UnicodeStringxit2xi @218 ; __fastcall Idglobal::StringsReplace(const System::UnicodeString, const System::UnicodeString *, const int, const System::UnicodeString *, const int)
+    @Idglobal@TIdAppendFileStream@ @396 ; Idglobal::TIdAppendFileStream::
+    @Idglobal@TIdAppendFileStream@$bctr$qqrx20System@UnicodeString @315 ; __fastcall Idglobal::TIdAppendFileStream::TIdAppendFileStream(const System::UnicodeString)
+    @Idglobal@TIdBaseStream@       @366 ; Idglobal::TIdBaseStream::
+    @Idglobal@TIdBaseStream@Read$qqrpvi @164 ; __fastcall Idglobal::TIdBaseStream::Read(void *, int)
+    @Idglobal@TIdBaseStream@Seek$qqrxj26System@Classes@TSeekOrigin @162 ; __fastcall Idglobal::TIdBaseStream::Seek(const __int64, System::Classes::TSeekOrigin)
+    @Idglobal@TIdBaseStream@SetSize$qqrxj @165 ; __fastcall Idglobal::TIdBaseStream::SetSize(const __int64)
+    @Idglobal@TIdBaseStream@Write$qqrpxvi @163 ; __fastcall Idglobal::TIdBaseStream::Write(const void *, int)
+    @Idglobal@TIdCalculateSizeStream@ @364 ; Idglobal::TIdCalculateSizeStream::
+    @Idglobal@TIdCalculateSizeStream@IdRead$qqrr24System@%DynamicArray$uc%ii @161 ; Idglobal::TIdCalculateSizeStream::IdRead(System::DynamicArray<{583}...
+    @Idglobal@TIdCalculateSizeStream@IdSeek$qqrxj26System@Classes@TSeekOrigin @159 ; __fastcall Idglobal::TIdCalculateSizeStream::IdSeek(const __int64, System::Classes::TSeekOrigin)
+    @Idglobal@TIdCalculateSizeStream@IdSetSize$qqrj @158 ; __fastcall Idglobal::TIdCalculateSizeStream::IdSetSize(__int64)
+    @Idglobal@TIdCalculateSizeStream@IdWrite$qqrx24System@%DynamicArray$uc%ii @160 ; Idglobal::TIdCalculateSizeStream::IdWrite(const System::DynamicArray<{583}...
+    @Idglobal@TIdCriticalSection@  @386 ; Idglobal::TIdCriticalSection::
+    @Idglobal@TIdEventStream@      @358 ; Idglobal::TIdEventStream::
+    @Idglobal@TIdEventStream@IdRead$qqrr24System@%DynamicArray$uc%ii @157 ; Idglobal::TIdEventStream::IdRead(System::DynamicArray<{583}...
+    @Idglobal@TIdEventStream@IdSeek$qqrxj26System@Classes@TSeekOrigin @155 ; __fastcall Idglobal::TIdEventStream::IdSeek(const __int64, System::Classes::TSeekOrigin)
+    @Idglobal@TIdEventStream@IdSetSize$qqrj @154 ; __fastcall Idglobal::TIdEventStream::IdSetSize(__int64)
+    @Idglobal@TIdEventStream@IdWrite$qqrx24System@%DynamicArray$uc%ii @156 ; Idglobal::TIdEventStream::IdWrite(const System::DynamicArray<{583}...
+    @Idglobal@TIdFileCreateStream@ @390 ; Idglobal::TIdFileCreateStream::
+    @Idglobal@TIdFileCreateStream@$bctr$qqrx20System@UnicodeString @316 ; __fastcall Idglobal::TIdFileCreateStream::TIdFileCreateStream(const System::UnicodeString)
+    @Idglobal@TIdLocalEvent@       @388 ; Idglobal::TIdLocalEvent::
+    @Idglobal@TIdLocalEvent@$bctr$qqrxoxo @236 ; __fastcall Idglobal::TIdLocalEvent::TIdLocalEvent(const bool, const bool)
+    @Idglobal@TIdLocalEvent@WaitForEver$qqrv @235 ; __fastcall Idglobal::TIdLocalEvent::WaitForEver()
+    @Idglobal@TIdMemoryBufferStream@ @356 ; Idglobal::TIdMemoryBufferStream::
+    @Idglobal@TIdMemoryBufferStream@$bctr$qqrpvi @153 ; __fastcall Idglobal::TIdMemoryBufferStream::TIdMemoryBufferStream(void *, int)
+    @Idglobal@TIdMemoryBufferStream@Write$qqrpxvi @152 ; __fastcall Idglobal::TIdMemoryBufferStream::Write(const void *, int)
+    @Idglobal@TIdReadFileExclusiveStream@ @394 ; Idglobal::TIdReadFileExclusiveStream::
+    @Idglobal@TIdReadFileExclusiveStream@$bctr$qqrx20System@UnicodeString @313 ; __fastcall Idglobal::TIdReadFileExclusiveStream::TIdReadFileExclusiveStream(const System::UnicodeString)
+    @Idglobal@TIdReadFileNonExclusiveStream@ @392 ; Idglobal::TIdReadFileNonExclusiveStream::
+    @Idglobal@TIdReadFileNonExclusiveStream@$bctr$qqrx20System@UnicodeString @314 ; __fastcall Idglobal::TIdReadFileNonExclusiveStream::TIdReadFileNonExclusiveStream(const System::UnicodeString)
+    @Idglobal@TextEndsWith$qqrx20System@UnicodeStringt1 @140 ; __fastcall Idglobal::TextEndsWith(const System::UnicodeString, const System::UnicodeString)
+    @Idglobal@TextIsSame$qqrx20System@UnicodeStringt1 @142 ; __fastcall Idglobal::TextIsSame(const System::UnicodeString, const System::UnicodeString)
+    @Idglobal@TextStartsWith$qqrx20System@UnicodeStringt1 @141 ; __fastcall Idglobal::TextStartsWith(const System::UnicodeString, const System::UnicodeString)
+    @Idglobal@Ticks$qqrv           @281 ; __fastcall Idglobal::Ticks()
+    @Idglobal@ToBytes$qqrx20System@UnicodeString51System@%DelphiInterface$24Idglobal@IIdTextEncoding% @206 ; Idglobal::ToBytes(const System::UnicodeString, System::DelphiInterface<{583}...
+    @Idglobal@ToBytes$qqrx20System@UnicodeStringxixi51System@%DelphiInterface$24Idglobal@IIdTextEncoding% @205 ; Idglobal::ToBytes(const System::UnicodeString, const int, const int, System::DelphiInterface<{583}...
+    @Idglobal@ToBytes$qqrx24System@%DynamicArray$uc%xixi @197 ; Idglobal::ToBytes(const System::DynamicArray<{583}...
+    @Idglobal@ToBytes$qqrxb51System@%DelphiInterface$24Idglobal@IIdTextEncoding% @204 ; Idglobal::ToBytes(const wchar_t, System::DelphiInterface<{583}...
+    @Idglobal@ToBytes$qqrxi        @202 ; __fastcall Idglobal::ToBytes(const int)
+    @Idglobal@ToBytes$qqrxj        @203 ; __fastcall Idglobal::ToBytes(const __int64)
+    @Idglobal@ToBytes$qqrxs        @200 ; __fastcall Idglobal::ToBytes(const short)
+    @Idglobal@ToBytes$qqrxuc       @198 ; __fastcall Idglobal::ToBytes(const unsigned char)
+    @Idglobal@ToBytes$qqrxui       @201 ; __fastcall Idglobal::ToBytes(const unsigned int)
+    @Idglobal@ToBytes$qqrxus       @199 ; __fastcall Idglobal::ToBytes(const unsigned short)
+    @Idglobal@ToBytesF$qqrr24System@%DynamicArray$uc%x24System@%DynamicArray$uc%xixi @188 ; Idglobal::ToBytesF(System::DynamicArray<{583}...
+    @Idglobal@ToBytesF$qqrr24System@%DynamicArray$uc%xb51System@%DelphiInterface$24Idglobal@IIdTextEncoding% @195 ; Idglobal::ToBytesF(System::DynamicArray<{583}...
+    @Idglobal@ToBytesF$qqrr24System@%DynamicArray$uc%xi @194 ; Idglobal::ToBytesF(System::DynamicArray<{583}...
+    @Idglobal@ToBytesF$qqrr24System@%DynamicArray$uc%xj @189 ; Idglobal::ToBytesF(System::DynamicArray<{583}...
+    @Idglobal@ToBytesF$qqrr24System@%DynamicArray$uc%xs @193 ; Idglobal::ToBytesF(System::DynamicArray<{583}...
+    @Idglobal@ToBytesF$qqrr24System@%DynamicArray$uc%xuc @191 ; Idglobal::ToBytesF(System::DynamicArray<{583}...
+    @Idglobal@ToBytesF$qqrr24System@%DynamicArray$uc%xui @190 ; Idglobal::ToBytesF(System::DynamicArray<{583}...
+    @Idglobal@ToBytesF$qqrr24System@%DynamicArray$uc%xus @192 ; Idglobal::ToBytesF(System::DynamicArray<{583}...
+    @Idglobal@ToDo$qqrx20System@UnicodeString @234 ; __fastcall Idglobal::ToDo(const System::UnicodeString)
+    @Idglobal@ToHex$qqrpxuixi      @302 ; __fastcall Idglobal::ToHex(const unsigned int *, const int)
+    @Idglobal@ToHex$qqrx24System@%DynamicArray$uc%xixi @303 ; Idglobal::ToHex(const System::DynamicArray<{583}...
+    @Idglobal@TwoByteToWord$qqrucuc @172 ; __fastcall Idglobal::TwoByteToWord(unsigned char, unsigned char)
+    @Idglobal@UTCOffsetToStr$qqrx16System@TDateTimexo @221 ; __fastcall Idglobal::UTCOffsetToStr(const System::TDateTime, const bool)
+    @Idglobal@WriteMemoryStreamToStream$qqrp28System@Classes@TMemoryStreamp22System@Classes@TStreamj @272 ; __fastcall Idglobal::WriteMemoryStreamToStream(System::Classes::TMemoryStream *, System::Classes::TStream *, __int64)
+    @Idglobal@WriteStringToStream$qqrp22System@Classes@TStreamx20System@UnicodeString51System@%DelphiInterface$24Idglobal@IIdTextEncoding% @167 ; Idglobal::WriteStringToStream(System::Classes::TStream *, const System::UnicodeString, System::DelphiInterface<{583}...
+    @Idglobal@WriteStringToStream$qqrp22System@Classes@TStreamx20System@UnicodeStringxixi51System@%DelphiInterface$24Idglobal@IIdTextEncoding% @166 ; Idglobal::WriteStringToStream(System::Classes::TStream *, const System::UnicodeString, const int, const int, System::DelphiInterface<{583}...
+    @Idglobal@WriteTIdBytesToStream$qqrxp22System@Classes@TStreamx24System@%DynamicArray$uc%xixi @168 ; Idglobal::WriteTIdBytesToStream(System::Classes::TStream * const, const System::DynamicArray<{583}...
+    @Idglobal@en7Bit$qqrv          @338 ; __fastcall Idglobal::en7Bit()
+    @Idglobal@en8Bit$qqrv          @337 ; __fastcall Idglobal::en8Bit()
+    @Idglobal@enDefault$qqrv       @339 ; __fastcall Idglobal::enDefault()
+    @Idglobal@enUTF8$qqrv          @336 ; __fastcall Idglobal::enUTF8()
+    @Idglobal@iif$qqrox20System@UnicodeStringt2 @276 ; __fastcall Idglobal::iif(bool, const System::UnicodeString, const System::UnicodeString)
+    @Idglobal@iif$qqroxixi         @277 ; __fastcall Idglobal::iif(bool, const int, const int)
+    @Idglobal@iif$qqroxoxo         @275 ; __fastcall Idglobal::iif(bool, const bool, const bool)
+    @Idglobal@iif$qqrx51System@%DelphiInterface$24Idglobal@IIdTextEncoding%t127Idglobal@IdTextEncodingType @274 ; Idglobal::iif(const System::DelphiInterface<{583}...
+    @Idglobal@initialization$qqrv  @114 ; __fastcall Idglobal::initialization()
+    @Ididn@CloseIDNLibrary$qqrv    @1157; __fastcall Ididn::CloseIDNLibrary()
+    @Ididn@DownlevelGetLocaleScripts @1169; Ididn::DownlevelGetLocaleScripts
+    @Ididn@DownlevelGetStringScripts @1168; Ididn::DownlevelGetStringScripts
+    @Ididn@DownlevelVerifyScripts  @1167; Ididn::DownlevelVerifyScripts
+    @Ididn@Finalization$qqrv       @1156; __fastcall Ididn::Finalization()
+    @Ididn@IDNToPunnyCode$qqrx20System@UnicodeString @1159; __fastcall Ididn::IDNToPunnyCode(const System::UnicodeString)
+    @Ididn@IdnToAscii              @1162; Ididn::IdnToAscii
+    @Ididn@IdnToNameprepUnicode    @1163; Ididn::IdnToNameprepUnicode
+    @Ididn@IdnToUnicode            @1164; Ididn::IdnToUnicode
+    @Ididn@InitIDNLibrary$qqrv     @1158; __fastcall Ididn::InitIDNLibrary()
+    @Ididn@IsNormalizedString      @1166; Ididn::IsNormalizedString
+    @Ididn@NormalizeString         @1165; Ididn::NormalizeString
+    @Ididn@PunnyCodeToIDN$qqrx20System@UnicodeString @1160; __fastcall Ididn::PunnyCodeToIDN(const System::UnicodeString)
+    @Ididn@UseIDNAPI$qqrv          @1161; __fastcall Ididn::UseIDNAPI()
+    @Ididn@initialization$qqrv     @1155; __fastcall Ididn::initialization()
+    @Idresourcestrings@Finalization$qqrv @27  ; __fastcall Idresourcestrings::Finalization()
+    @Idresourcestrings@_RSAntiFreezeOnlyOne @44  ; Idresourcestrings::_RSAntiFreezeOnlyOne
+    @Idresourcestrings@_RSCannotBindRange @42  ; Idresourcestrings::_RSCannotBindRange
+    @Idresourcestrings@_RSCannotSetIPVersionWhenConnected @43  ; Idresourcestrings::_RSCannotSetIPVersionWhenConnected
+    @Idresourcestrings@_RSCharIndexOutOfBounds @102 ; Idresourcestrings::_RSCharIndexOutOfBounds
+    @Idresourcestrings@_RSConnectionClosedGracefully @41  ; Idresourcestrings::_RSConnectionClosedGracefully
+    @Idresourcestrings@_RSCorruptServicesFile @40  ; Idresourcestrings::_RSCorruptServicesFile
+    @Idresourcestrings@_RSCouldNotBindSocket @39  ; Idresourcestrings::_RSCouldNotBindSocket
+    @Idresourcestrings@_RSEndOfStream @29  ; Idresourcestrings::_RSEndOfStream
+    @Idresourcestrings@_RSFailedTimeZoneInfo @95  ; Idresourcestrings::_RSFailedTimeZoneInfo
+    @Idresourcestrings@_RSIPVersionUnsupported @34  ; Idresourcestrings::_RSIPVersionUnsupported
+    @Idresourcestrings@_RSIPv6Unavailable @36  ; Idresourcestrings::_RSIPv6Unavailable
+    @Idresourcestrings@_RSInvalidCharCount @101 ; Idresourcestrings::_RSInvalidCharCount
+    @Idresourcestrings@_RSInvalidCharSet @98  ; Idresourcestrings::_RSInvalidCharSet
+    @Idresourcestrings@_RSInvalidCharSetConv @97  ; Idresourcestrings::_RSInvalidCharSetConv
+    @Idresourcestrings@_RSInvalidCharSetConvWithFlags @96  ; Idresourcestrings::_RSInvalidCharSetConvWithFlags
+    @Idresourcestrings@_RSInvalidCodePage @99  ; Idresourcestrings::_RSInvalidCodePage
+    @Idresourcestrings@_RSInvalidDestinationArray @103 ; Idresourcestrings::_RSInvalidDestinationArray
+    @Idresourcestrings@_RSInvalidDestinationIndex @100 ; Idresourcestrings::_RSInvalidDestinationIndex
+    @Idresourcestrings@_RSInvalidIPv6Address @35  ; Idresourcestrings::_RSInvalidIPv6Address
+    @Idresourcestrings@_RSInvalidPortRange @38  ; Idresourcestrings::_RSInvalidPortRange
+    @Idresourcestrings@_RSInvalidServiceName @37  ; Idresourcestrings::_RSInvalidServiceName
+    @Idresourcestrings@_RSInvalidSourceArray @104 ; Idresourcestrings::_RSInvalidSourceArray
+    @Idresourcestrings@_RSMaliciousPtrRecord @28  ; Idresourcestrings::_RSMaliciousPtrRecord
+    @Idresourcestrings@_RSNoEncodingSpecified @30  ; Idresourcestrings::_RSNoEncodingSpecified
+    @Idresourcestrings@_RSNotAllBytesSent @33  ; Idresourcestrings::_RSNotAllBytesSent
+    @Idresourcestrings@_RSPackageSizeTooBig @32  ; Idresourcestrings::_RSPackageSizeTooBig
+    @Idresourcestrings@_RSSetSizeExceeded @31  ; Idresourcestrings::_RSSetSizeExceeded
+    @Idresourcestrings@_RSStackAlreadyCreated @45  ; Idresourcestrings::_RSStackAlreadyCreated
+    @Idresourcestrings@_RSStackClassUndefined @46  ; Idresourcestrings::_RSStackClassUndefined
+    @Idresourcestrings@_RSStackEACCES @83  ; Idresourcestrings::_RSStackEACCES
+    @Idresourcestrings@_RSStackEADDRINUSE @66  ; Idresourcestrings::_RSStackEADDRINUSE
+    @Idresourcestrings@_RSStackEADDRNOTAVAIL @65  ; Idresourcestrings::_RSStackEADDRNOTAVAIL
+    @Idresourcestrings@_RSStackEAFNOSUPPORT @67  ; Idresourcestrings::_RSStackEAFNOSUPPORT
+    @Idresourcestrings@_RSStackEALREADY @77  ; Idresourcestrings::_RSStackEALREADY
+    @Idresourcestrings@_RSStackEBADF @84  ; Idresourcestrings::_RSStackEBADF
+    @Idresourcestrings@_RSStackECONNABORTED @61  ; Idresourcestrings::_RSStackECONNABORTED
+    @Idresourcestrings@_RSStackECONNREFUSED @53  ; Idresourcestrings::_RSStackECONNREFUSED
+    @Idresourcestrings@_RSStackECONNRESET @60  ; Idresourcestrings::_RSStackECONNRESET
+    @Idresourcestrings@_RSStackEDESTADDRREQ @75  ; Idresourcestrings::_RSStackEDESTADDRREQ
+    @Idresourcestrings@_RSStackEFAULT @82  ; Idresourcestrings::_RSStackEFAULT
+    @Idresourcestrings@_RSStackEHOSTDOWN @50  ; Idresourcestrings::_RSStackEHOSTDOWN
+    @Idresourcestrings@_RSStackEHOSTUNREACH @49  ; Idresourcestrings::_RSStackEHOSTUNREACH
+    @Idresourcestrings@_RSStackEINPROGRESS @78  ; Idresourcestrings::_RSStackEINPROGRESS
+    @Idresourcestrings@_RSStackEINTR @85  ; Idresourcestrings::_RSStackEINTR
+    @Idresourcestrings@_RSStackEINVAL @81  ; Idresourcestrings::_RSStackEINVAL
+    @Idresourcestrings@_RSStackEISCONN @58  ; Idresourcestrings::_RSStackEISCONN
+    @Idresourcestrings@_RSStackELOOP @52  ; Idresourcestrings::_RSStackELOOP
+    @Idresourcestrings@_RSStackEMFILE @80  ; Idresourcestrings::_RSStackEMFILE
+    @Idresourcestrings@_RSStackEMSGSIZE @74  ; Idresourcestrings::_RSStackEMSGSIZE
+    @Idresourcestrings@_RSStackENAMETOOLONG @51  ; Idresourcestrings::_RSStackENAMETOOLONG
+    @Idresourcestrings@_RSStackENETDOWN @64  ; Idresourcestrings::_RSStackENETDOWN
+    @Idresourcestrings@_RSStackENETRESET @62  ; Idresourcestrings::_RSStackENETRESET
+    @Idresourcestrings@_RSStackENETUNREACH @63  ; Idresourcestrings::_RSStackENETUNREACH
+    @Idresourcestrings@_RSStackENOBUFS @59  ; Idresourcestrings::_RSStackENOBUFS
+    @Idresourcestrings@_RSStackENOPROTOOPT @72  ; Idresourcestrings::_RSStackENOPROTOOPT
+    @Idresourcestrings@_RSStackENOTCONN @57  ; Idresourcestrings::_RSStackENOTCONN
+    @Idresourcestrings@_RSStackENOTEMPTY @48  ; Idresourcestrings::_RSStackENOTEMPTY
+    @Idresourcestrings@_RSStackENOTSOCK @76  ; Idresourcestrings::_RSStackENOTSOCK
+    @Idresourcestrings@_RSStackEOPNOTSUPP @69  ; Idresourcestrings::_RSStackEOPNOTSUPP
+    @Idresourcestrings@_RSStackEPFNOSUPPORT @68  ; Idresourcestrings::_RSStackEPFNOSUPPORT
+    @Idresourcestrings@_RSStackEPROTONOSUPPORT @71  ; Idresourcestrings::_RSStackEPROTONOSUPPORT
+    @Idresourcestrings@_RSStackEPROTOTYPE @73  ; Idresourcestrings::_RSStackEPROTOTYPE
+    @Idresourcestrings@_RSStackESHUTDOWN @56  ; Idresourcestrings::_RSStackESHUTDOWN
+    @Idresourcestrings@_RSStackESOCKTNOSUPPORT @70  ; Idresourcestrings::_RSStackESOCKTNOSUPPORT
+    @Idresourcestrings@_RSStackETIMEDOUT @54  ; Idresourcestrings::_RSStackETIMEDOUT
+    @Idresourcestrings@_RSStackETOOMANYREFS @55  ; Idresourcestrings::_RSStackETOOMANYREFS
+    @Idresourcestrings@_RSStackEWOULDBLOCK @79  ; Idresourcestrings::_RSStackEWOULDBLOCK
+    @Idresourcestrings@_RSStackError @86  ; Idresourcestrings::_RSStackError
+    @Idresourcestrings@_RSStackHOST_NOT_FOUND @47  ; Idresourcestrings::_RSStackHOST_NOT_FOUND
+    @Idresourcestrings@_RSStatusConnected @90  ; Idresourcestrings::_RSStatusConnected
+    @Idresourcestrings@_RSStatusConnecting @91  ; Idresourcestrings::_RSStatusConnecting
+    @Idresourcestrings@_RSStatusDisconnected @88  ; Idresourcestrings::_RSStatusDisconnected
+    @Idresourcestrings@_RSStatusDisconnecting @89  ; Idresourcestrings::_RSStatusDisconnecting
+    @Idresourcestrings@_RSStatusResolving @92  ; Idresourcestrings::_RSStatusResolving
+    @Idresourcestrings@_RSStatusText @87  ; Idresourcestrings::_RSStatusText
+    @Idresourcestrings@_RSWinsockCallError @94  ; Idresourcestrings::_RSWinsockCallError
+    @Idresourcestrings@_RSWinsockLoadError @93  ; Idresourcestrings::_RSWinsockLoadError
+    @Idresourcestrings@initialization$qqrv @26  ; __fastcall Idresourcestrings::initialization()
+    @Idstack@EIdIPVersionUnsupported@ @1312; Idstack::EIdIPVersionUnsupported::
+    @Idstack@EIdMaliciousPtrRecord@ @1310; Idstack::EIdMaliciousPtrRecord::
+    @Idstack@EIdNotASocket@        @1308; Idstack::EIdNotASocket::
+    @Idstack@EIdSocketError@       @1316; Idstack::EIdSocketError::
+    @Idstack@EIdSocketError@$bctr$qqrxix20System@UnicodeString @1278; __fastcall Idstack::EIdSocketError::EIdSocketError(const int, const System::UnicodeString)
+    @Idstack@EIdStackError@        @1314; Idstack::EIdStackError::
+    @Idstack@Finalization$qqrv     @1244; __fastcall Idstack::Finalization()
+    @Idstack@GServeFileProc        @1288; Idstack::GServeFileProc
+    @Idstack@GSocketListClass      @1287; Idstack::GSocketListClass
+    @Idstack@GStack                @1289; Idstack::GStack
+    @Idstack@SetStackClass$qqrp17System@TMetaClass @1286; __fastcall Idstack::SetStackClass(System::TMetaClass *)
+    @Idstack@TIdPacketInfo@        @1305; Idstack::TIdPacketInfo::
+    @Idstack@TIdPacketInfo@Reset$qqrv @1285; __fastcall Idstack::TIdPacketInfo::Reset()
+    @Idstack@TIdSocketList@        @1302; Idstack::TIdSocketList::
+    @Idstack@TIdSocketList@$bctr$qqrv @1284; __fastcall Idstack::TIdSocketList::TIdSocketList()
+    @Idstack@TIdSocketList@$bdtr$qqrv @1282; __fastcall Idstack::TIdSocketList::~TIdSocketList()
+    @Idstack@TIdSocketList@CreateSocketList$qqrv @1283; __fastcall Idstack::TIdSocketList::CreateSocketList()
+    @Idstack@TIdSocketList@Lock$qqrv @1281; __fastcall Idstack::TIdSocketList::Lock()
+    @Idstack@TIdSocketList@Select$qqrp21Idstack@TIdSocketListt1t1xi @1280; __fastcall Idstack::TIdSocketList::Select(Idstack::TIdSocketList *, Idstack::TIdSocketList *, Idstack::TIdSocketList *, const int)
+    @Idstack@TIdSocketList@Unlock$qqrv @1279; __fastcall Idstack::TIdSocketList::Unlock()
+    @Idstack@TIdStack@             @1292; Idstack::TIdStack::
+    @Idstack@TIdStack@$bctr$qqrv   @1270; __fastcall Idstack::TIdStack::TIdStack()
+    @Idstack@TIdStack@$bdtr$qqrv   @1269; __fastcall Idstack::TIdStack::~TIdStack()
+    @Idstack@TIdStack@Accept$qqruir20System@UnicodeStringrus @1267; __fastcall Idstack::TIdStack::Accept(unsigned int, System::UnicodeString&, unsigned short&)
+    @Idstack@TIdStack@AddLocalAddressesToList$qqrp23System@Classes@TStrings @1264; __fastcall Idstack::TIdStack::AddLocalAddressesToList(System::Classes::TStrings *)
+    @Idstack@TIdStack@CalcCheckSum$qqrx24System@%DynamicArray$uc% @1246; Idstack::TIdStack::CalcCheckSum(const System::DynamicArray<{583}...
+    @Idstack@TIdStack@CheckForSocketError$qqrxi @1255; __fastcall Idstack::TIdStack::CheckForSocketError(const int)
+    @Idstack@TIdStack@CheckForSocketError$qqrxipxixi @1254; __fastcall Idstack::TIdStack::CheckForSocketError(const int, const int *, const int)
+    @Idstack@TIdStack@DecUsage$qqrv @1257; __fastcall Idstack::TIdStack::DecUsage()
+    @Idstack@TIdStack@GetLocalAddress$qqrv @1262; __fastcall Idstack::TIdStack::GetLocalAddress()
+    @Idstack@TIdStack@GetLocalAddresses$qqrv @1263; __fastcall Idstack::TIdStack::GetLocalAddresses()
+    @Idstack@TIdStack@GetPeerName$qqruir20System@UnicodeStringrus @1266; __fastcall Idstack::TIdStack::GetPeerName(unsigned int, System::UnicodeString&, unsigned short&)
+    @Idstack@TIdStack@GetSocketName$qqruir20System@UnicodeStringrus @1265; __fastcall Idstack::TIdStack::GetSocketName(unsigned int, System::UnicodeString&, unsigned short&)
+    @Idstack@TIdStack@HostToNetwork$qqrrx28System@%StaticArray$usi$i8$% @1250; __fastcall Idstack::TIdStack::HostToNetwork(const System::StaticArray<unsigned short, 8>&)
+    @Idstack@TIdStack@IPVersionUnsupported$qqrv @1268; __fastcall Idstack::TIdStack::IPVersionUnsupported()
+    @Idstack@TIdStack@IncUsage$qqrv @1256; __fastcall Idstack::TIdStack::IncUsage()
+    @Idstack@TIdStack@IsIP$qqr20System@UnicodeString @1261; __fastcall Idstack::TIdStack::IsIP(System::UnicodeString)
+    @Idstack@TIdStack@IsValidIPv4MulticastGroup$qqrx20System@UnicodeString @1248; __fastcall Idstack::TIdStack::IsValidIPv4MulticastGroup(const System::UnicodeString)
+    @Idstack@TIdStack@IsValidIPv6MulticastGroup$qqrx20System@UnicodeString @1247; __fastcall Idstack::TIdStack::IsValidIPv6MulticastGroup(const System::UnicodeString)
+    @Idstack@TIdStack@MakeCanonicalIPv6Address$qqrx20System@UnicodeString @1260; __fastcall Idstack::TIdStack::MakeCanonicalIPv6Address(const System::UnicodeString)
+    @Idstack@TIdStack@NetworkToHost$qqrrx28System@%StaticArray$usi$i8$% @1249; __fastcall Idstack::TIdStack::NetworkToHost(const System::StaticArray<unsigned short, 8>&)
+    @Idstack@TIdStack@RaiseLastSocketError$qqrv @1253; __fastcall Idstack::TIdStack::RaiseLastSocketError()
+    @Idstack@TIdStack@RaiseSocketError$qqri @1252; __fastcall Idstack::TIdStack::RaiseSocketError(int)
+    @Idstack@TIdStack@ResolveHost$qqrx20System@UnicodeStringx21Idglobal@TIdIPVersion @1259; __fastcall Idstack::TIdStack::ResolveHost(const System::UnicodeString, const Idglobal::TIdIPVersion)
+    @Idstack@TIdStack@SendTo$qqruix24System@%DynamicArray$uc%xix20System@UnicodeStringxusx21Idglobal@TIdIPVersion @1258; Idstack::TIdStack::SendTo(unsigned int, const System::DynamicArray<{583}...
+    @Idstack@TIdStack@SetKeepAliveValues$qqruixoxixi @1245; __fastcall Idstack::TIdStack::SetKeepAliveValues(unsigned int, const bool, const int, const int)
+    @Idstack@TIdStack@WSTranslateSocketErrorMsg$qqrxi @1251; __fastcall Idstack::TIdStack::WSTranslateSocketErrorMsg(const int)
+    @Idstack@TIdStackLocalAddress@ @1300; Idstack::TIdStackLocalAddress::
+    @Idstack@TIdStackLocalAddress@$bctr$qqrp26System@Classes@TCollectionx21Idglobal@TIdIPVersionx20System@UnicodeString @1277; __fastcall Idstack::TIdStackLocalAddress::TIdStackLocalAddress(System::Classes::TCollection *, const Idglobal::TIdIPVersion, const System::UnicodeString)
+    @Idstack@TIdStackLocalAddressIPv4@ @1298; Idstack::TIdStackLocalAddressIPv4::
+    @Idstack@TIdStackLocalAddressIPv4@$bctr$qqrp26System@Classes@TCollectionx20System@UnicodeStringt2 @1276; __fastcall Idstack::TIdStackLocalAddressIPv4::TIdStackLocalAddressIPv4(System::Classes::TCollection *, const System::UnicodeString, const System::UnicodeString)
+    @Idstack@TIdStackLocalAddressIPv6@ @1296; Idstack::TIdStackLocalAddressIPv6::
+    @Idstack@TIdStackLocalAddressIPv6@$bctr$qqrp26System@Classes@TCollectionx20System@UnicodeString @1275; __fastcall Idstack::TIdStackLocalAddressIPv6::TIdStackLocalAddressIPv6(System::Classes::TCollection *, const System::UnicodeString)
+    @Idstack@TIdStackLocalAddressList@ @1294; Idstack::TIdStackLocalAddressList::
+    @Idstack@TIdStackLocalAddressList@$bctr$qqrv @1274; __fastcall Idstack::TIdStackLocalAddressList::TIdStackLocalAddressList()
+    @Idstack@TIdStackLocalAddressList@GetAddress$qqri @1273; __fastcall Idstack::TIdStackLocalAddressList::GetAddress(int)
+    @Idstack@TIdStackLocalAddressList@IndexOfIP$qqrx20System@UnicodeString @1272; __fastcall Idstack::TIdStackLocalAddressList::IndexOfIP(const System::UnicodeString)
+    @Idstack@TIdStackLocalAddressList@IndexOfIP$qqrx20System@UnicodeString21Idglobal@TIdIPVersion @1271; __fastcall Idstack::TIdStackLocalAddressList::IndexOfIP(const System::UnicodeString, Idglobal::TIdIPVersion)
+    @Idstack@initialization$qqrv   @1243; __fastcall Idstack::initialization()
+    @Idstackbsdbase@EIdInvalidServiceName@ @1140; Idstackbsdbase::EIdInvalidServiceName::
+    @Idstackbsdbase@EIdStackInitializationFailed@ @1138; Idstackbsdbase::EIdStackInitializationFailed::
+    @Idstackbsdbase@EIdStackSetSizeExceeded@ @1136; Idstackbsdbase::EIdStackSetSizeExceeded::
+    @Idstackbsdbase@Finalization$qqrv @1116; __fastcall Idstackbsdbase::Finalization()
+    @Idstackbsdbase@GBSDStack      @1134; Idstackbsdbase::GBSDStack
+    @Idstackbsdbase@IdIPFamily     @1133; Idstackbsdbase::IdIPFamily
+    @Idstackbsdbase@TIdStackBSDBase@ @1142; Idstackbsdbase::TIdStackBSDBase::
+    @Idstackbsdbase@TIdStackBSDBase@$bctr$qqrv @1129; __fastcall Idstackbsdbase::TIdStackBSDBase::TIdStackBSDBase()
+    @Idstackbsdbase@TIdStackBSDBase@AddMulticastMembership$qqruix20System@UnicodeStringt2x21Idglobal@TIdIPVersion @1121; __fastcall Idstackbsdbase::TIdStackBSDBase::AddMulticastMembership(unsigned int, const System::UnicodeString, const System::UnicodeString, const Idglobal::TIdIPVersion)
+    @Idstackbsdbase@TIdStackBSDBase@DropMulticastMembership$qqruix20System@UnicodeStringt2x21Idglobal@TIdIPVersion @1122; __fastcall Idstackbsdbase::TIdStackBSDBase::DropMulticastMembership(unsigned int, const System::UnicodeString, const System::UnicodeString, const Idglobal::TIdIPVersion)
+    @Idstackbsdbase@TIdStackBSDBase@GetSocketOption$qqruiiiri @1124; __fastcall Idstackbsdbase::TIdStackBSDBase::GetSocketOption(unsigned int, int, int, int&)
+    @Idstackbsdbase@TIdStackBSDBase@MembershipSockOpt$qqruix20System@UnicodeStringt2xix21Idglobal@TIdIPVersion @1118; __fastcall Idstackbsdbase::TIdStackBSDBase::MembershipSockOpt(unsigned int, const System::UnicodeString, const System::UnicodeString, const int, const Idglobal::TIdIPVersion)
+    @Idstackbsdbase@TIdStackBSDBase@NewSocketHandle$qqrxixix21Idglobal@TIdIPVersionxo @1130; __fastcall Idstackbsdbase::TIdStackBSDBase::NewSocketHandle(const int, const int, const Idglobal::TIdIPVersion, const bool)
+    @Idstackbsdbase@TIdStackBSDBase@Receive$qqruir24System@%DynamicArray$uc% @1128; Idstackbsdbase::TIdStackBSDBase::Receive(unsigned int, System::DynamicArray<{583}...
+    @Idstackbsdbase@TIdStackBSDBase@ReceiveFrom$qqruir24System@%DynamicArray$uc%r20System@UnicodeStringrusr21Idglobal@TIdIPVersion @1126; Idstackbsdbase::TIdStackBSDBase::ReceiveFrom(unsigned int, System::DynamicArray<{583}...
+    @Idstackbsdbase@TIdStackBSDBase@Send$qqruix24System@%DynamicArray$uc%xixi @1127; Idstackbsdbase::TIdStackBSDBase::Send(unsigned int, const System::DynamicArray<{583}...
+    @Idstackbsdbase@TIdStackBSDBase@SendTo$qqruix24System@%DynamicArray$uc%xixix20System@UnicodeStringxusx21Idglobal@TIdIPVersion @1125; Idstackbsdbase::TIdStackBSDBase::SendTo(unsigned int, const System::DynamicArray<{583}...
+    @Idstackbsdbase@TIdStackBSDBase@SetLoopBack$qqruixox21Idglobal@TIdIPVersion @1119; __fastcall Idstackbsdbase::TIdStackBSDBase::SetLoopBack(unsigned int, const bool, const Idglobal::TIdIPVersion)
+    @Idstackbsdbase@TIdStackBSDBase@SetMulticastTTL$qqruixucx21Idglobal@TIdIPVersion @1120; __fastcall Idstackbsdbase::TIdStackBSDBase::SetMulticastTTL(unsigned int, const unsigned char, const Idglobal::TIdIPVersion)
+    @Idstackbsdbase@TIdStackBSDBase@SetSocketOption$qqruiiii @1123; __fastcall Idstackbsdbase::TIdStackBSDBase::SetSocketOption(unsigned int, int, int, int)
+    @Idstackbsdbase@TIdStackBSDBase@TranslateStringToTInAddr$qqrx20System@UnicodeStringpvx21Idglobal@TIdIPVersion @1131; __fastcall Idstackbsdbase::TIdStackBSDBase::TranslateStringToTInAddr(const System::UnicodeString, void *, const Idglobal::TIdIPVersion)
+    @Idstackbsdbase@TIdStackBSDBase@TranslateTInAddrToString$qqrpvx21Idglobal@TIdIPVersion @1132; __fastcall Idstackbsdbase::TIdStackBSDBase::TranslateTInAddrToString(void *, const Idglobal::TIdIPVersion)
+    @Idstackbsdbase@TIdStackBSDBase@WSGetServByPort$qqrxus @1117; __fastcall Idstackbsdbase::TIdStackBSDBase::WSGetServByPort(const unsigned short)
+    @Idstackbsdbase@initialization$qqrv @1115; __fastcall Idstackbsdbase::initialization()
+    @Idstackconsts@Finalization$qqrv @1112; __fastcall Idstackconsts::Finalization()
+    @Idstackconsts@Id_SO_False     @1113; Idstackconsts::Id_SO_False
+    @Idstackconsts@Id_SO_True      @1114; Idstackconsts::Id_SO_True
+    @Idstackconsts@initialization$qqrv @1111; __fastcall Idstackconsts::initialization()
+    @Idstackwindows@EIdIPv6Unavailable@ @1242; Idstackwindows::EIdIPv6Unavailable::
+    @Idstackwindows@Finalization$qqrv @1179; __fastcall Idstackwindows::Finalization()
+    @Idstackwindows@GWindowsStack  @1236; Idstackwindows::GWindowsStack
+    @Idstackwindows@TIdSocketListWindows@ @1240; Idstackwindows::TIdSocketListWindows::
+    @Idstackwindows@TIdSocketListWindows@Add$qqrui @1209; __fastcall Idstackwindows::TIdSocketListWindows::Add(unsigned int)
+    @Idstackwindows@TIdSocketListWindows@Clear$qqrv @1208; __fastcall Idstackwindows::TIdSocketListWindows::Clear()
+    @Idstackwindows@TIdSocketListWindows@Clone$qqrv @1195; __fastcall Idstackwindows::TIdSocketListWindows::Clone()
+    @Idstackwindows@TIdSocketListWindows@ContainsSocket$qqrui @1207; __fastcall Idstackwindows::TIdSocketListWindows::ContainsSocket(unsigned int)
+    @Idstackwindows@TIdSocketListWindows@Count$qqrv @1206; __fastcall Idstackwindows::TIdSocketListWindows::Count()
+    @Idstackwindows@TIdSocketListWindows@FDSelect$qqrp17Idwinsock2@TFDSett1t1xi @1201; __fastcall Idstackwindows::TIdSocketListWindows::FDSelect(Idwinsock2::TFDSet *, Idwinsock2::TFDSet *, Idwinsock2::TFDSet *, const int)
+    @Idstackwindows@TIdSocketListWindows@GetFDSet$qqrr17Idwinsock2@TFDSet @1197; __fastcall Idstackwindows::TIdSocketListWindows::GetFDSet(Idwinsock2::TFDSet&)
+    @Idstackwindows@TIdSocketListWindows@GetItem$qqri @1205; __fastcall Idstackwindows::TIdSocketListWindows::GetItem(int)
+    @Idstackwindows@TIdSocketListWindows@Remove$qqrui @1204; __fastcall Idstackwindows::TIdSocketListWindows::Remove(unsigned int)
+    @Idstackwindows@TIdSocketListWindows@Select$qqrp21Idstack@TIdSocketListt1t1xi @1199; __fastcall Idstackwindows::TIdSocketListWindows::Select(Idstack::TIdSocketList *, Idstack::TIdSocketList *, Idstack::TIdSocketList *, const int)
+    @Idstackwindows@TIdSocketListWindows@SelectRead$qqrxi @1202; __fastcall Idstackwindows::TIdSocketListWindows::SelectRead(const int)
+    @Idstackwindows@TIdSocketListWindows@SelectReadList$qqrrp21Idstack@TIdSocketListxi @1200; __fastcall Idstackwindows::TIdSocketListWindows::SelectReadList(Idstack::TIdSocketList *&, const int)
+    @Idstackwindows@TIdSocketListWindows@SetFDSet$qqrr17Idwinsock2@TFDSet @1198; __fastcall Idstackwindows::TIdSocketListWindows::SetFDSet(Idwinsock2::TFDSet&)
+    @Idstackwindows@TIdStackWindows@ @1238; Idstackwindows::TIdStackWindows::
+    @Idstackwindows@TIdStackWindows@$bctr$qqrv @1235; __fastcall Idstackwindows::TIdStackWindows::TIdStackWindows()
+    @Idstackwindows@TIdStackWindows@$bdtr$qqrv @1234; __fastcall Idstackwindows::TIdStackWindows::~TIdStackWindows()
+    @Idstackwindows@TIdStackWindows@Accept$qqruir20System@UnicodeStringrusr21Idglobal@TIdIPVersion @1233; __fastcall Idstackwindows::TIdStackWindows::Accept(unsigned int, System::UnicodeString&, unsigned short&, Idglobal::TIdIPVersion&)
+    @Idstackwindows@TIdStackWindows@AddServByPortToList$qqrxusp23System@Classes@TStrings @1219; __fastcall Idstackwindows::TIdStackWindows::AddServByPortToList(const unsigned short, System::Classes::TStrings *)
+    @Idstackwindows@TIdStackWindows@Bind$qqruix20System@UnicodeStringxusx21Idglobal@TIdIPVersion @1232; __fastcall Idstackwindows::TIdStackWindows::Bind(unsigned int, const System::UnicodeString, const unsigned short, const Idglobal::TIdIPVersion)
+    @Idstackwindows@TIdStackWindows@CheckIPVersionSupport$qqrx21Idglobal@TIdIPVersion @1181; __fastcall Idstackwindows::TIdStackWindows::CheckIPVersionSupport(const Idglobal::TIdIPVersion)
+    @Idstackwindows@TIdStackWindows@Connect$qqrxuix20System@UnicodeStringxusx21Idglobal@TIdIPVersion @1192; __fastcall Idstackwindows::TIdStackWindows::Connect(const unsigned int, const System::UnicodeString, const unsigned short, const Idglobal::TIdIPVersion)
+    @Idstackwindows@TIdStackWindows@Disconnect$qqrui @1190; __fastcall Idstackwindows::TIdStackWindows::Disconnect(unsigned int)
+    @Idstackwindows@TIdStackWindows@GetLocalAddressList$qqrp32Idstack@TIdStackLocalAddressList @1212; __fastcall Idstackwindows::TIdStackWindows::GetLocalAddressList(Idstack::TIdStackLocalAddressList *)
+    @Idstackwindows@TIdStackWindows@GetPeerName$qqruir20System@UnicodeStringrusr21Idglobal@TIdIPVersion @1191; __fastcall Idstackwindows::TIdStackWindows::GetPeerName(unsigned int, System::UnicodeString&, unsigned short&, Idglobal::TIdIPVersion&)
+    @Idstackwindows@TIdStackWindows@GetSocketName$qqruir20System@UnicodeStringrusr21Idglobal@TIdIPVersion @1210; __fastcall Idstackwindows::TIdStackWindows::GetSocketName(unsigned int, System::UnicodeString&, unsigned short&, Idglobal::TIdIPVersion&)
+    @Idstackwindows@TIdStackWindows@GetSocketOption$qqruiiipvri @1189; __fastcall Idstackwindows::TIdStackWindows::GetSocketOption(unsigned int, int, int, void *, int&)
+    @Idstackwindows@TIdStackWindows@HostByAddress$qqrx20System@UnicodeStringx21Idglobal@TIdIPVersion @1230; __fastcall Idstackwindows::TIdStackWindows::HostByAddress(const System::UnicodeString, const Idglobal::TIdIPVersion)
+    @Idstackwindows@TIdStackWindows@HostByName$qqrx20System@UnicodeStringx21Idglobal@TIdIPVersion @1193; __fastcall Idstackwindows::TIdStackWindows::HostByName(const System::UnicodeString, const Idglobal::TIdIPVersion)
+    @Idstackwindows@TIdStackWindows@HostToNetwork$qqrj @1214; __fastcall Idstackwindows::TIdStackWindows::HostToNetwork(__int64)
+    @Idstackwindows@TIdStackWindows@HostToNetwork$qqrui @1216; __fastcall Idstackwindows::TIdStackWindows::HostToNetwork(unsigned int)
+    @Idstackwindows@TIdStackWindows@HostToNetwork$qqrus @1218; __fastcall Idstackwindows::TIdStackWindows::HostToNetwork(unsigned short)
+    @Idstackwindows@TIdStackWindows@IOControl$qqrxuixuirui @1186; __fastcall Idstackwindows::TIdStackWindows::IOControl(const unsigned int, const unsigned int, unsigned int&)
+    @Idstackwindows@TIdStackWindows@Listen$qqruii @1228; __fastcall Idstackwindows::TIdStackWindows::Listen(unsigned int, int)
+    @Idstackwindows@TIdStackWindows@NetworkToHost$qqrj @1213; __fastcall Idstackwindows::TIdStackWindows::NetworkToHost(__int64)
+    @Idstackwindows@TIdStackWindows@NetworkToHost$qqrui @1215; __fastcall Idstackwindows::TIdStackWindows::NetworkToHost(unsigned int)
+    @Idstackwindows@TIdStackWindows@NetworkToHost$qqrus @1217; __fastcall Idstackwindows::TIdStackWindows::NetworkToHost(unsigned short)
+    @Idstackwindows@TIdStackWindows@ReadHostName$qqrv @1229; __fastcall Idstackwindows::TIdStackWindows::ReadHostName()
+    @Idstackwindows@TIdStackWindows@ReceiveMsg$qqruir24System@%DynamicArray$uc%p21Idstack@TIdPacketInfo @1182; Idstackwindows::TIdStackWindows::ReceiveMsg(unsigned int, System::DynamicArray<{583}...
+    @Idstackwindows@TIdStackWindows@RecvFrom$qqrxuipvxixir20System@UnicodeStringrusr21Idglobal@TIdIPVersion @1226; __fastcall Idstackwindows::TIdStackWindows::RecvFrom(const unsigned int, void *, const int, const int, System::UnicodeString&, unsigned short&, Idglobal::TIdIPVersion&)
+    @Idstackwindows@TIdStackWindows@SetBlocking$qqruixo @1196; __fastcall Idstackwindows::TIdStackWindows::SetBlocking(unsigned int, const bool)
+    @Idstackwindows@TIdStackWindows@SetKeepAliveValues$qqruixoxixi @1180; __fastcall Idstackwindows::TIdStackWindows::SetKeepAliveValues(unsigned int, const bool, const int, const int)
+    @Idstackwindows@TIdStackWindows@SetSocketOption$qqruiiipxvxi @1188; __fastcall Idstackwindows::TIdStackWindows::SetSocketOption(unsigned int, int, int, const void *, const int)
+    @Idstackwindows@TIdStackWindows@SupportsIPv6$qqrv @1187; __fastcall Idstackwindows::TIdStackWindows::SupportsIPv6()
+    @Idstackwindows@TIdStackWindows@WSCloseSocket$qqrui @1231; __fastcall Idstackwindows::TIdStackWindows::WSCloseSocket(unsigned int)
+    @Idstackwindows@TIdStackWindows@WSGetLastError$qqrv @1223; __fastcall Idstackwindows::TIdStackWindows::WSGetLastError()
+    @Idstackwindows@TIdStackWindows@WSGetServByName$qqrx20System@UnicodeString @1220; __fastcall Idstackwindows::TIdStackWindows::WSGetServByName(const System::UnicodeString)
+    @Idstackwindows@TIdStackWindows@WSQuerryIPv6Route$qqruix20System@UnicodeStringxuspvt4 @1185; __fastcall Idstackwindows::TIdStackWindows::WSQuerryIPv6Route(unsigned int, const System::UnicodeString, const unsigned short, void *, void *)
+    @Idstackwindows@TIdStackWindows@WSRecv$qqruipvxixi @1227; __fastcall Idstackwindows::TIdStackWindows::WSRecv(unsigned int, void *, const int, const int)
+    @Idstackwindows@TIdStackWindows@WSSend$qqruipxvxixi @1225; __fastcall Idstackwindows::TIdStackWindows::WSSend(unsigned int, const void *, const int, const int)
+    @Idstackwindows@TIdStackWindows@WSSendTo$qqruipxvxixix20System@UnicodeStringxus21Idglobal@TIdIPVersion @1224; __fastcall Idstackwindows::TIdStackWindows::WSSendTo(unsigned int, const void *, const int, const int, const System::UnicodeString, const unsigned short, Idglobal::TIdIPVersion)
+    @Idstackwindows@TIdStackWindows@WSSetLastError$qqrxi @1222; __fastcall Idstackwindows::TIdStackWindows::WSSetLastError(const int)
+    @Idstackwindows@TIdStackWindows@WSShutdown$qqruii @1211; __fastcall Idstackwindows::TIdStackWindows::WSShutdown(unsigned int, int)
+    @Idstackwindows@TIdStackWindows@WSSocket$qqriiixo @1221; __fastcall Idstackwindows::TIdStackWindows::WSSocket(int, int, int, const bool)
+    @Idstackwindows@TIdStackWindows@WSTranslateSocketErrorMsg$qqrxi @1203; __fastcall Idstackwindows::TIdStackWindows::WSTranslateSocketErrorMsg(const int)
+    @Idstackwindows@TIdStackWindows@WouldBlock$qqrxi @1194; __fastcall Idstackwindows::TIdStackWindows::WouldBlock(const int)
+    @Idstackwindows@TIdStackWindows@WriteChecksum$qqruir24System@%DynamicArray$uc%xix20System@UnicodeStringxusx21Idglobal@TIdIPVersion @1184; Idstackwindows::TIdStackWindows::WriteChecksum(unsigned int, System::DynamicArray<{583}...
+    @Idstackwindows@TIdStackWindows@WriteChecksumIPv6$qqruir24System@%DynamicArray$uc%xix20System@UnicodeStringxus @1183; Idstackwindows::TIdStackWindows::WriteChecksumIPv6(unsigned int, System::DynamicArray<{583}...
+    @Idstackwindows@initialization$qqrv @1178; __fastcall Idstackwindows::initialization()
+    @Idstream@Finalization$qqrv    @113 ; __fastcall Idstream::Finalization()
+    @Idstream@initialization$qqrv  @112 ; __fastcall Idstream::initialization()
+    @Idstreamvcl@Finalization$qqrv @106 ; __fastcall Idstreamvcl::Finalization()
+    @Idstreamvcl@TIdStreamHelperVCL@ @111 ; Idstreamvcl::TIdStreamHelperVCL::
+    @Idstreamvcl@TIdStreamHelperVCL@ReadBytes$qqrxp22System@Classes@TStreamr24System@%DynamicArray$uc%xixi @109 ; Idstreamvcl::TIdStreamHelperVCL::ReadBytes(System::Classes::TStream * const, System::DynamicArray<{583}...
+    @Idstreamvcl@TIdStreamHelperVCL@Seek$qqrxp22System@Classes@TStreamxjx26System@Classes@TSeekOrigin @107 ; __fastcall Idstreamvcl::TIdStreamHelperVCL::Seek(System::Classes::TStream * const, const __int64, const System::Classes::TSeekOrigin)
+    @Idstreamvcl@TIdStreamHelperVCL@Write$qqrxp22System@Classes@TStreamx24System@%DynamicArray$uc%xixi @108 ; Idstreamvcl::TIdStreamHelperVCL::Write(System::Classes::TStream * const, const System::DynamicArray<{583}...
+    @Idstreamvcl@initialization$qqrv @105 ; __fastcall Idstreamvcl::initialization()
+    @Idstruct@Finalization$qqrv    @1340; __fastcall Idstruct::Finalization()
+    @Idstruct@TIdLongWord@         @1365; Idstruct::TIdLongWord::
+    @Idstruct@TIdLongWord@$bctr$qqrv @1355; __fastcall Idstruct::TIdLongWord::TIdLongWord()
+    @Idstruct@TIdLongWord@Get_l$qqrv @1344; __fastcall Idstruct::TIdLongWord::Get_l()
+    @Idstruct@TIdLongWord@Gets_b1$qqrv @1352; __fastcall Idstruct::TIdLongWord::Gets_b1()
+    @Idstruct@TIdLongWord@Gets_b2$qqrv @1350; __fastcall Idstruct::TIdLongWord::Gets_b2()
+    @Idstruct@TIdLongWord@Gets_b3$qqrv @1348; __fastcall Idstruct::TIdLongWord::Gets_b3()
+    @Idstruct@TIdLongWord@Gets_b4$qqrv @1346; __fastcall Idstruct::TIdLongWord::Gets_b4()
+    @Idstruct@TIdLongWord@Gets_w1$qqrv @1354; __fastcall Idstruct::TIdLongWord::Gets_w1()
+    @Idstruct@TIdLongWord@Gets_w2$qqrv @1342; __fastcall Idstruct::TIdLongWord::Gets_w2()
+    @Idstruct@TIdLongWord@SetS_w1$qqrxus @1353; __fastcall Idstruct::TIdLongWord::SetS_w1(const unsigned short)
+    @Idstruct@TIdLongWord@SetS_w2$qqrxus @1341; __fastcall Idstruct::TIdLongWord::SetS_w2(const unsigned short)
+    @Idstruct@TIdLongWord@Set_l$qqrxui @1343; __fastcall Idstruct::TIdLongWord::Set_l(const unsigned int)
+    @Idstruct@TIdLongWord@Sets_b1$qqrxuc @1351; __fastcall Idstruct::TIdLongWord::Sets_b1(const unsigned char)
+    @Idstruct@TIdLongWord@Sets_b2$qqrxuc @1349; __fastcall Idstruct::TIdLongWord::Sets_b2(const unsigned char)
+    @Idstruct@TIdLongWord@Sets_b3$qqrxuc @1347; __fastcall Idstruct::TIdLongWord::Sets_b3(const unsigned char)
+    @Idstruct@TIdLongWord@Sets_b4$qqrxuc @1345; __fastcall Idstruct::TIdLongWord::Sets_b4(const unsigned char)
+    @Idstruct@TIdStruct@           @1369; Idstruct::TIdStruct::
+    @Idstruct@TIdStruct@$bctr$qqrv @1363; __fastcall Idstruct::TIdStruct::TIdStruct()
+    @Idstruct@TIdStruct@GetBytesLen$qqrv @1362; __fastcall Idstruct::TIdStruct::GetBytesLen()
+    @Idstruct@TIdStruct@ReadStruct$qqrx24System@%DynamicArray$uc%rui @1361; Idstruct::TIdStruct::ReadStruct(const System::DynamicArray<{583}...
+    @Idstruct@TIdStruct@WriteStruct$qqrr24System@%DynamicArray$uc%rui @1360; Idstruct::TIdStruct::WriteStruct(System::DynamicArray<{583}...
+    @Idstruct@TIdUnion@            @1367; Idstruct::TIdUnion::
+    @Idstruct@TIdUnion@GetBytesLen$qqrv @1359; __fastcall Idstruct::TIdUnion::GetBytesLen()
+    @Idstruct@TIdUnion@ReadStruct$qqrx24System@%DynamicArray$uc%rui @1357; Idstruct::TIdUnion::ReadStruct(const System::DynamicArray<{583}...
+    @Idstruct@TIdUnion@SetBytesLen$qqrxui @1358; __fastcall Idstruct::TIdUnion::SetBytesLen(const unsigned int)
+    @Idstruct@TIdUnion@WriteStruct$qqrr24System@%DynamicArray$uc%rui @1356; Idstruct::TIdUnion::WriteStruct(System::DynamicArray<{583}...
+    @Idstruct@initialization$qqrv  @1339; __fastcall Idstruct::initialization()
+    @Idwinsock2@AcceptEx           @678 ; Idwinsock2::AcceptEx
+    @Idwinsock2@CMSGDATA_ALIGN$qqrxui @509 ; __fastcall Idwinsock2::CMSGDATA_ALIGN(const unsigned int)
+    @Idwinsock2@CMSGHDR_ALIGN$qqrxui @510 ; __fastcall Idwinsock2::CMSGHDR_ALIGN(const unsigned int)
+    @Idwinsock2@CMSG_FIRSTHDR$qqrxp6WSAMSG @508 ; __fastcall Idwinsock2::CMSG_FIRSTHDR(WSAMSG * const)
+    @Idwinsock2@CMSG_LEN$qqrxui    @505 ; __fastcall Idwinsock2::CMSG_LEN(const unsigned int)
+    @Idwinsock2@CMSG_NXTHDR$qqrxp6WSAMSGxp11_WSACMSGHDR @507 ; __fastcall Idwinsock2::CMSG_NXTHDR(WSAMSG * const, _WSACMSGHDR * const)
+    @Idwinsock2@CMSG_SPACE$qqrxui  @506 ; __fastcall Idwinsock2::CMSG_SPACE(const unsigned int)
+    @Idwinsock2@ConnectEx          @675 ; Idwinsock2::ConnectEx
+    @Idwinsock2@DisconnectEx       @674 ; Idwinsock2::DisconnectEx
+    @Idwinsock2@EIdWinsockStubError@ @1058; Idwinsock2::EIdWinsockStubError::
+    @Idwinsock2@EIdWinsockStubError@$bctr$qqruix20System@UnicodeStringp14System@TVarRecxi @521 ; __fastcall Idwinsock2::EIdWinsockStubError::EIdWinsockStubError(unsigned int, const System::UnicodeString, System::TVarRec *, const int)
+    @Idwinsock2@FD_CLR$qqruir17Idwinsock2@TFDSet @514 ; __fastcall Idwinsock2::FD_CLR(unsigned int, Idwinsock2::TFDSet&)
+    @Idwinsock2@FD_ISSET$qqruir17Idwinsock2@TFDSet @513 ; __fastcall Idwinsock2::FD_ISSET(unsigned int, Idwinsock2::TFDSet&)
+    @Idwinsock2@FD_SET$qqruir17Idwinsock2@TFDSet @512 ; __fastcall Idwinsock2::FD_SET(unsigned int, Idwinsock2::TFDSet&)
+    @Idwinsock2@FD_ZERO$qqrr17Idwinsock2@TFDSet @511 ; __fastcall Idwinsock2::FD_ZERO(Idwinsock2::TFDSet&)
+    @Idwinsock2@Finalization$qqrv  @451 ; __fastcall Idwinsock2::Finalization()
+    @Idwinsock2@GROUP_FILTER_SIZE$qqrxui @452 ; __fastcall Idwinsock2::GROUP_FILTER_SIZE(const unsigned int)
+    @Idwinsock2@GetAcceptExSockaddrs @677 ; Idwinsock2::GetAcceptExSockaddrs
+    @Idwinsock2@IN4ADDR_ALLIGMPV3ROUTERSONLINK_INIT$qqrv @489 ; __fastcall Idwinsock2::IN4ADDR_ALLIGMPV3ROUTERSONLINK_INIT()
+    @Idwinsock2@IN4ADDR_ALLNODESONLINK_INIT$qqrv @491 ; __fastcall Idwinsock2::IN4ADDR_ALLNODESONLINK_INIT()
+    @Idwinsock2@IN4ADDR_ALLROUTERSONLINK_INIT$qqrv @490 ; __fastcall Idwinsock2::IN4ADDR_ALLROUTERSONLINK_INIT()
+    @Idwinsock2@IN4ADDR_ALLTEREDONODESONLINK_INIT$qqrv @488 ; __fastcall Idwinsock2::IN4ADDR_ALLTEREDONODESONLINK_INIT()
+    @Idwinsock2@IN4ADDR_ANY_INIT$qqrv @494 ; __fastcall Idwinsock2::IN4ADDR_ANY_INIT()
+    @Idwinsock2@IN4ADDR_BROADCAST_INIT$qqrv @492 ; __fastcall Idwinsock2::IN4ADDR_BROADCAST_INIT()
+    @Idwinsock2@IN4ADDR_LINKLOCALPREFIX_INIT$qqrv @487 ; __fastcall Idwinsock2::IN4ADDR_LINKLOCALPREFIX_INIT()
+    @Idwinsock2@IN4ADDR_LOOPBACK_INIT$qqrv @493 ; __fastcall Idwinsock2::IN4ADDR_LOOPBACK_INIT()
+    @Idwinsock2@IN4ADDR_MULTICASTPREFIX_INIT$qqrv @486 ; __fastcall Idwinsock2::IN4ADDR_MULTICASTPREFIX_INIT()
+    @Idwinsock2@IN6ADDR_ALLMLDV2ROUTERSONLINK_INIT$qqrv @480 ; __fastcall Idwinsock2::IN6ADDR_ALLMLDV2ROUTERSONLINK_INIT()
+    @Idwinsock2@IN6ADDR_ALLNODESONLINK_INIT$qqrv @482 ; __fastcall Idwinsock2::IN6ADDR_ALLNODESONLINK_INIT()
+    @Idwinsock2@IN6ADDR_ALLNODESONNODE_INIT$qqrv @483 ; __fastcall Idwinsock2::IN6ADDR_ALLNODESONNODE_INIT()
+    @Idwinsock2@IN6ADDR_ALLROUTERSONLINK_INIT$qqrv @481 ; __fastcall Idwinsock2::IN6ADDR_ALLROUTERSONLINK_INIT()
+    @Idwinsock2@IN6ADDR_ANY_INIT$qqrv @485 ; __fastcall Idwinsock2::IN6ADDR_ANY_INIT()
+    @Idwinsock2@IN6ADDR_ISANY$qqrp15SOCKADDR_IN6_LH @474 ; __fastcall Idwinsock2::IN6ADDR_ISANY(SOCKADDR_IN6_LH *)
+    @Idwinsock2@IN6ADDR_ISLOOPBACK$qqrp15SOCKADDR_IN6_LH @473 ; __fastcall Idwinsock2::IN6ADDR_ISLOOPBACK(SOCKADDR_IN6_LH *)
+    @Idwinsock2@IN6ADDR_LOOPBACK_INIT$qqrv @484 ; __fastcall Idwinsock2::IN6ADDR_LOOPBACK_INIT()
+    @Idwinsock2@IN6ADDR_SETANY$qqrp15SOCKADDR_IN6_LH @476 ; __fastcall Idwinsock2::IN6ADDR_SETANY(SOCKADDR_IN6_LH *)
+    @Idwinsock2@IN6ADDR_SETLOOPBACK$qqrp15SOCKADDR_IN6_LH @475 ; __fastcall Idwinsock2::IN6ADDR_SETLOOPBACK(SOCKADDR_IN6_LH *)
+    @Idwinsock2@IN6ADDR_TEREDOINITIALLINKLOCALADDRESS_INIT$qqrv @479 ; __fastcall Idwinsock2::IN6ADDR_TEREDOINITIALLINKLOCALADDRESS_INIT()
+    @Idwinsock2@IN6ADDR_TEREDOOLDLINKLOCALADDRESSVISTA_INIT$qqrv @477 ; __fastcall Idwinsock2::IN6ADDR_TEREDOOLDLINKLOCALADDRESSVISTA_INIT()
+    @Idwinsock2@IN6ADDR_TEREDOOLDLINKLOCALADDRESSXP_INIT$qqrv @478 ; __fastcall Idwinsock2::IN6ADDR_TEREDOOLDLINKLOCALADDRESSXP_INIT()
+    @Idwinsock2@IN6_ADDR_EQUAL$qqrxp8IN6_ADDRt1 @472 ; __fastcall Idwinsock2::IN6_ADDR_EQUAL(IN6_ADDR * const, IN6_ADDR * const)
+    @Idwinsock2@IN6_IS_ADDR_ANYCAST$qqrxp8IN6_ADDR @465 ; __fastcall Idwinsock2::IN6_IS_ADDR_ANYCAST(IN6_ADDR * const)
+    @Idwinsock2@IN6_IS_ADDR_EUI64$qqrxp8IN6_ADDR @468 ; __fastcall Idwinsock2::IN6_IS_ADDR_EUI64(IN6_ADDR * const)
+    @Idwinsock2@IN6_IS_ADDR_LINKLOCAL$qqrxp8IN6_ADDR @464 ; __fastcall Idwinsock2::IN6_IS_ADDR_LINKLOCAL(IN6_ADDR * const)
+    @Idwinsock2@IN6_IS_ADDR_LOOPBACK$qqrxp8IN6_ADDR @470 ; __fastcall Idwinsock2::IN6_IS_ADDR_LOOPBACK(IN6_ADDR * const)
+    @Idwinsock2@IN6_IS_ADDR_MC_GLOBAL$qqrxp8IN6_ADDR @455 ; __fastcall Idwinsock2::IN6_IS_ADDR_MC_GLOBAL(IN6_ADDR * const)
+    @Idwinsock2@IN6_IS_ADDR_MC_LINKLOCAL$qqrxp8IN6_ADDR @458 ; __fastcall Idwinsock2::IN6_IS_ADDR_MC_LINKLOCAL(IN6_ADDR * const)
+    @Idwinsock2@IN6_IS_ADDR_MC_NODELOCAL$qqrxp8IN6_ADDR @459 ; __fastcall Idwinsock2::IN6_IS_ADDR_MC_NODELOCAL(IN6_ADDR * const)
+    @Idwinsock2@IN6_IS_ADDR_MC_ORGLOCAL$qqrxp8IN6_ADDR @456 ; __fastcall Idwinsock2::IN6_IS_ADDR_MC_ORGLOCAL(IN6_ADDR * const)
+    @Idwinsock2@IN6_IS_ADDR_MC_SITELOCAL$qqrxp8IN6_ADDR @457 ; __fastcall Idwinsock2::IN6_IS_ADDR_MC_SITELOCAL(IN6_ADDR * const)
+    @Idwinsock2@IN6_IS_ADDR_MULTICAST$qqrxp8IN6_ADDR @469 ; __fastcall Idwinsock2::IN6_IS_ADDR_MULTICAST(IN6_ADDR * const)
+    @Idwinsock2@IN6_IS_ADDR_SITELOCAL$qqrxp8IN6_ADDR @463 ; __fastcall Idwinsock2::IN6_IS_ADDR_SITELOCAL(IN6_ADDR * const)
+    @Idwinsock2@IN6_IS_ADDR_SUBNET_RESERVED_ANYCAST$qqrxp8IN6_ADDR @466 ; __fastcall Idwinsock2::IN6_IS_ADDR_SUBNET_RESERVED_ANYCAST(IN6_ADDR * const)
+    @Idwinsock2@IN6_IS_ADDR_SUBNET_ROUTER_ANYCAST$qqrxp8IN6_ADDR @467 ; __fastcall Idwinsock2::IN6_IS_ADDR_SUBNET_ROUTER_ANYCAST(IN6_ADDR * const)
+    @Idwinsock2@IN6_IS_ADDR_UNSPECIFIED$qqrxp8IN6_ADDR @471 ; __fastcall Idwinsock2::IN6_IS_ADDR_UNSPECIFIED(IN6_ADDR * const)
+    @Idwinsock2@IN6_IS_ADDR_V4COMPAT$qqrxp8IN6_ADDR @461 ; __fastcall Idwinsock2::IN6_IS_ADDR_V4COMPAT(IN6_ADDR * const)
+    @Idwinsock2@IN6_IS_ADDR_V4MAPPED$qqrxp8IN6_ADDR @462 ; __fastcall Idwinsock2::IN6_IS_ADDR_V4MAPPED(IN6_ADDR * const)
+    @Idwinsock2@IN6_IS_ADDR_V4TRANSLATED$qqrxp8IN6_ADDR @460 ; __fastcall Idwinsock2::IN6_IS_ADDR_V4TRANSLATED(IN6_ADDR * const)
+    @Idwinsock2@IN6_SET_ADDR_UNSPECIFIED$qqrp8IN6_ADDR @454 ; __fastcall Idwinsock2::IN6_SET_ADDR_UNSPECIFIED(IN6_ADDR *)
+    @Idwinsock2@IP_MSFILTER_SIZE$qqrxui @497 ; __fastcall Idwinsock2::IP_MSFILTER_SIZE(const unsigned int)
+    @Idwinsock2@InitializeWinSock$qqrv @523 ; __fastcall Idwinsock2::InitializeWinSock()
+    @Idwinsock2@REAL_TIME_NOTIFICATION_CAPABILITY @526 ; Idwinsock2::REAL_TIME_NOTIFICATION_CAPABILITY
+    @Idwinsock2@SCOPEID_UNSPECIFIED_INIT$qqrv @495 ; __fastcall Idwinsock2::SCOPEID_UNSPECIFIED_INIT()
+    @Idwinsock2@SERVICE_TYPE_VALUE_IPXPORTA @996 ; Idwinsock2::SERVICE_TYPE_VALUE_IPXPORTA
+    @Idwinsock2@SERVICE_TYPE_VALUE_IPXPORTW @991 ; Idwinsock2::SERVICE_TYPE_VALUE_IPXPORTW
+    @Idwinsock2@SERVICE_TYPE_VALUE_OBJECTID @983 ; Idwinsock2::SERVICE_TYPE_VALUE_OBJECTID
+    @Idwinsock2@SERVICE_TYPE_VALUE_OBJECTIDA @992 ; Idwinsock2::SERVICE_TYPE_VALUE_OBJECTIDA
+    @Idwinsock2@SERVICE_TYPE_VALUE_OBJECTIDW @987 ; Idwinsock2::SERVICE_TYPE_VALUE_OBJECTIDW
+    @Idwinsock2@SERVICE_TYPE_VALUE_SAPID @986 ; Idwinsock2::SERVICE_TYPE_VALUE_SAPID
+    @Idwinsock2@SERVICE_TYPE_VALUE_SAPIDA @995 ; Idwinsock2::SERVICE_TYPE_VALUE_SAPIDA
+    @Idwinsock2@SERVICE_TYPE_VALUE_SAPIDW @990 ; Idwinsock2::SERVICE_TYPE_VALUE_SAPIDW
+    @Idwinsock2@SERVICE_TYPE_VALUE_TCPPORT @985 ; Idwinsock2::SERVICE_TYPE_VALUE_TCPPORT
+    @Idwinsock2@SERVICE_TYPE_VALUE_TCPPORTA @994 ; Idwinsock2::SERVICE_TYPE_VALUE_TCPPORTA
+    @Idwinsock2@SERVICE_TYPE_VALUE_TCPPORTW @989 ; Idwinsock2::SERVICE_TYPE_VALUE_TCPPORTW
+    @Idwinsock2@SERVICE_TYPE_VALUE_UDPPORT @984 ; Idwinsock2::SERVICE_TYPE_VALUE_UDPPORT
+    @Idwinsock2@SERVICE_TYPE_VALUE_UDPPORTA @993 ; Idwinsock2::SERVICE_TYPE_VALUE_UDPPORTA
+    @Idwinsock2@SERVICE_TYPE_VALUE_UDPPORTW @988 ; Idwinsock2::SERVICE_TYPE_VALUE_UDPPORTW
+    @Idwinsock2@SET_NETBIOS_SOCKADDR$qqrp11SOCKADDR_NBxuspxcxc @453 ; __fastcall Idwinsock2::SET_NETBIOS_SOCKADDR(SOCKADDR_NB *, const unsigned short, const char *, const char)
+    @Idwinsock2@SOCKET_DEFAULT2_QM_POLICY @527 ; Idwinsock2::SOCKET_DEFAULT2_QM_POLICY
+    @Idwinsock2@SS_PORT$qqrp11sockaddr_in @496 ; __fastcall Idwinsock2::SS_PORT(sockaddr_in *)
+    @Idwinsock2@TransmitFile       @679 ; Idwinsock2::TransmitFile
+    @Idwinsock2@TransmitPackets    @672 ; Idwinsock2::TransmitPackets
+    @Idwinsock2@UninitializeWinSock$qqrv @522 ; __fastcall Idwinsock2::UninitializeWinSock()
+    @Idwinsock2@WSAAccept          @741 ; Idwinsock2::WSAAccept
+    @Idwinsock2@WSAAddressToString @738 ; Idwinsock2::WSAAddressToString
+    @Idwinsock2@WSAAddressToStringA @740 ; Idwinsock2::WSAAddressToStringA
+    @Idwinsock2@WSAAddressToStringW @739 ; Idwinsock2::WSAAddressToStringW
+    @Idwinsock2@WSAAsyncGetHostByAddr @745 ; Idwinsock2::WSAAsyncGetHostByAddr
+    @Idwinsock2@WSAAsyncGetHostByName @746 ; Idwinsock2::WSAAsyncGetHostByName
+    @Idwinsock2@WSAAsyncGetProtoByName @748 ; Idwinsock2::WSAAsyncGetProtoByName
+    @Idwinsock2@WSAAsyncGetProtoByNumber @747 ; Idwinsock2::WSAAsyncGetProtoByNumber
+    @Idwinsock2@WSAAsyncGetServByName @750 ; Idwinsock2::WSAAsyncGetServByName
+    @Idwinsock2@WSAAsyncGetServByPort @749 ; Idwinsock2::WSAAsyncGetServByPort
+    @Idwinsock2@WSAAsyncSelect     @743 ; Idwinsock2::WSAAsyncSelect
+    @Idwinsock2@WSACancelAsyncRequest @744 ; Idwinsock2::WSACancelAsyncRequest
+    @Idwinsock2@WSACancelBlockingCall @751 ; Idwinsock2::WSACancelBlockingCall
+    @Idwinsock2@WSACleanup         @787 ; Idwinsock2::WSACleanup
+    @Idwinsock2@WSACloseEvent      @737 ; Idwinsock2::WSACloseEvent
+    @Idwinsock2@WSAConnect         @736 ; Idwinsock2::WSAConnect
+    @Idwinsock2@WSACreateEvent     @735 ; Idwinsock2::WSACreateEvent
+    @Idwinsock2@WSADuplicateSocket @732 ; Idwinsock2::WSADuplicateSocket
+    @Idwinsock2@WSADuplicateSocketA @734 ; Idwinsock2::WSADuplicateSocketA
+    @Idwinsock2@WSADuplicateSocketW @733 ; Idwinsock2::WSADuplicateSocketW
+    @Idwinsock2@WSAEnumNameSpaceProviders @725 ; Idwinsock2::WSAEnumNameSpaceProviders
+    @Idwinsock2@WSAEnumNameSpaceProvidersA @727 ; Idwinsock2::WSAEnumNameSpaceProvidersA
+    @Idwinsock2@WSAEnumNameSpaceProvidersW @726 ; Idwinsock2::WSAEnumNameSpaceProvidersW
+    @Idwinsock2@WSAEnumNetworkEvents @731 ; Idwinsock2::WSAEnumNetworkEvents
+    @Idwinsock2@WSAEnumProtocols   @728 ; Idwinsock2::WSAEnumProtocols
+    @Idwinsock2@WSAEnumProtocolsA  @730 ; Idwinsock2::WSAEnumProtocolsA
+    @Idwinsock2@WSAEnumProtocolsW  @729 ; Idwinsock2::WSAEnumProtocolsW
+    @Idwinsock2@WSAEventSelect     @724 ; Idwinsock2::WSAEventSelect
+    @Idwinsock2@WSAGetAsyncBuflen$qqri @518 ; __fastcall Idwinsock2::WSAGetAsyncBuflen(int)
+    @Idwinsock2@WSAGetAsyncError$qqri @517 ; __fastcall Idwinsock2::WSAGetAsyncError(int)
+    @Idwinsock2@WSAGetLastError    @755 ; Idwinsock2::WSAGetLastError
+    @Idwinsock2@WSAGetOverlappedResult @723 ; Idwinsock2::WSAGetOverlappedResult
+    @Idwinsock2@WSAGetQosByName    @722 ; Idwinsock2::WSAGetQosByName
+    @Idwinsock2@WSAGetSelectError$qqri @515 ; __fastcall Idwinsock2::WSAGetSelectError(int)
+    @Idwinsock2@WSAGetSelectEvent$qqri @516 ; __fastcall Idwinsock2::WSAGetSelectEvent(int)
+    @Idwinsock2@WSAGetServiceClassInfo @719 ; Idwinsock2::WSAGetServiceClassInfo
+    @Idwinsock2@WSAGetServiceClassInfoA @721 ; Idwinsock2::WSAGetServiceClassInfoA
+    @Idwinsock2@WSAGetServiceClassInfoW @720 ; Idwinsock2::WSAGetServiceClassInfoW
+    @Idwinsock2@WSAGetServiceClassNameByClassId @716 ; Idwinsock2::WSAGetServiceClassNameByClassId
+    @Idwinsock2@WSAGetServiceClassNameByClassIdA @718 ; Idwinsock2::WSAGetServiceClassNameByClassIdA
+    @Idwinsock2@WSAGetServiceClassNameByClassIdW @717 ; Idwinsock2::WSAGetServiceClassNameByClassIdW
+    @Idwinsock2@WSAHtonl           @715 ; Idwinsock2::WSAHtonl
+    @Idwinsock2@WSAHtons           @714 ; Idwinsock2::WSAHtons
+    @Idwinsock2@WSAID_ACCEPTEX     @798 ; Idwinsock2::WSAID_ACCEPTEX
+    @Idwinsock2@WSAID_CONNECTEX    @797 ; Idwinsock2::WSAID_CONNECTEX
+    @Idwinsock2@WSAID_DISCONNECTEX @796 ; Idwinsock2::WSAID_DISCONNECTEX
+    @Idwinsock2@WSAID_GETACCEPTEXSOCKADDRS @795 ; Idwinsock2::WSAID_GETACCEPTEXSOCKADDRS
+    @Idwinsock2@WSAID_MULTIPLE_RIO @789 ; Idwinsock2::WSAID_MULTIPLE_RIO
+    @Idwinsock2@WSAID_TRANSMITFILE @794 ; Idwinsock2::WSAID_TRANSMITFILE
+    @Idwinsock2@WSAID_TRANSMITPACKETS @793 ; Idwinsock2::WSAID_TRANSMITPACKETS
+    @Idwinsock2@WSAID_WSAPOLL      @792 ; Idwinsock2::WSAID_WSAPOLL
+    @Idwinsock2@WSAID_WSARECVMSG   @791 ; Idwinsock2::WSAID_WSARECVMSG
+    @Idwinsock2@WSAID_WSASENDMSG   @790 ; Idwinsock2::WSAID_WSASENDMSG
+    @Idwinsock2@WSAInstallServiceClass @710 ; Idwinsock2::WSAInstallServiceClass
+    @Idwinsock2@WSAInstallServiceClassA @712 ; Idwinsock2::WSAInstallServiceClassA
+    @Idwinsock2@WSAInstallServiceClassW @711 ; Idwinsock2::WSAInstallServiceClassW
+    @Idwinsock2@WSAIoctl           @713 ; Idwinsock2::WSAIoctl
+    @Idwinsock2@WSAIsBlocking      @754 ; Idwinsock2::WSAIsBlocking
+    @Idwinsock2@WSAJoinLeaf        @709 ; Idwinsock2::WSAJoinLeaf
+    @Idwinsock2@WSALookupServiceBegin @706 ; Idwinsock2::WSALookupServiceBegin
+    @Idwinsock2@WSALookupServiceBeginA @708 ; Idwinsock2::WSALookupServiceBeginA
+    @Idwinsock2@WSALookupServiceBeginW @707 ; Idwinsock2::WSALookupServiceBeginW
+    @Idwinsock2@WSALookupServiceEnd @705 ; Idwinsock2::WSALookupServiceEnd
+    @Idwinsock2@WSALookupServiceNext @702 ; Idwinsock2::WSALookupServiceNext
+    @Idwinsock2@WSALookupServiceNextA @704 ; Idwinsock2::WSALookupServiceNextA
+    @Idwinsock2@WSALookupServiceNextW @703 ; Idwinsock2::WSALookupServiceNextW
+    @Idwinsock2@WSAMakeSelectReply$qqrusus @519 ; __fastcall Idwinsock2::WSAMakeSelectReply(unsigned short, unsigned short)
+    @Idwinsock2@WSAMakeSyncReply$qqrusus @520 ; __fastcall Idwinsock2::WSAMakeSyncReply(unsigned short, unsigned short)
+    @Idwinsock2@WSANSPIoctl        @669 ; Idwinsock2::WSANSPIoctl
+    @Idwinsock2@WSANtohl           @701 ; Idwinsock2::WSANtohl
+    @Idwinsock2@WSANtohs           @700 ; Idwinsock2::WSANtohs
+    @Idwinsock2@WSAPoll            @670 ; Idwinsock2::WSAPoll
+    @Idwinsock2@WSAProviderConfigChange @680 ; Idwinsock2::WSAProviderConfigChange
+    @Idwinsock2@WSARecv            @699 ; Idwinsock2::WSARecv
+    @Idwinsock2@WSARecvDisconnect  @698 ; Idwinsock2::WSARecvDisconnect
+    @Idwinsock2@WSARecvEx          @676 ; Idwinsock2::WSARecvEx
+    @Idwinsock2@WSARecvFrom        @697 ; Idwinsock2::WSARecvFrom
+    @Idwinsock2@WSARecvMsg         @673 ; Idwinsock2::WSARecvMsg
+    @Idwinsock2@WSARemoveServiceClass @696 ; Idwinsock2::WSARemoveServiceClass
+    @Idwinsock2@WSAResetEvent      @695 ; Idwinsock2::WSAResetEvent
+    @Idwinsock2@WSASend            @694 ; Idwinsock2::WSASend
+    @Idwinsock2@WSASendDisconnect  @693 ; Idwinsock2::WSASendDisconnect
+    @Idwinsock2@WSASendMsg         @671 ; Idwinsock2::WSASendMsg
+    @Idwinsock2@WSASendTo          @692 ; Idwinsock2::WSASendTo
+    @Idwinsock2@WSASetBlockingHook @752 ; Idwinsock2::WSASetBlockingHook
+    @Idwinsock2@WSASetEvent        @691 ; Idwinsock2::WSASetEvent
+    @Idwinsock2@WSASetLastError    @756 ; Idwinsock2::WSASetLastError
+    @Idwinsock2@WSASetService      @688 ; Idwinsock2::WSASetService
+    @Idwinsock2@WSASetServiceA     @690 ; Idwinsock2::WSASetServiceA
+    @Idwinsock2@WSASetServiceW     @689 ; Idwinsock2::WSASetServiceW
+    @Idwinsock2@WSASocket          @685 ; Idwinsock2::WSASocket
+    @Idwinsock2@WSASocketA         @687 ; Idwinsock2::WSASocketA
+    @Idwinsock2@WSASocketW         @686 ; Idwinsock2::WSASocketW
+    @Idwinsock2@WSAStartup         @788 ; Idwinsock2::WSAStartup
+    @Idwinsock2@WSAStringToAddress @682 ; Idwinsock2::WSAStringToAddress
+    @Idwinsock2@WSAStringToAddressA @684 ; Idwinsock2::WSAStringToAddressA
+    @Idwinsock2@WSAStringToAddressW @683 ; Idwinsock2::WSAStringToAddressW
+    @Idwinsock2@WSAUnhookBlockingHook @753 ; Idwinsock2::WSAUnhookBlockingHook
+    @Idwinsock2@WSAWaitForMultipleEvents @681 ; Idwinsock2::WSAWaitForMultipleEvents
+    @Idwinsock2@WSA_CMSGDATA_ALIGN$qqrxui @503 ; __fastcall Idwinsock2::WSA_CMSGDATA_ALIGN(const unsigned int)
+    @Idwinsock2@WSA_CMSGHDR_ALIGN$qqrxui @504 ; __fastcall Idwinsock2::WSA_CMSGHDR_ALIGN(const unsigned int)
+    @Idwinsock2@WSA_CMSG_DATA$qqrxp11_WSACMSGHDR @500 ; __fastcall Idwinsock2::WSA_CMSG_DATA(_WSACMSGHDR * const)
+    @Idwinsock2@WSA_CMSG_FIRSTHDR$qqrxp6WSAMSG @502 ; __fastcall Idwinsock2::WSA_CMSG_FIRSTHDR(WSAMSG * const)
+    @Idwinsock2@WSA_CMSG_LEN$qqrxui @498 ; __fastcall Idwinsock2::WSA_CMSG_LEN(const unsigned int)
+    @Idwinsock2@WSA_CMSG_NXTHDR$qqrxp6WSAMSGxp11_WSACMSGHDR @501 ; __fastcall Idwinsock2::WSA_CMSG_NXTHDR(WSAMSG * const, _WSACMSGHDR * const)
+    @Idwinsock2@WSA_CMSG_SPACE$qqrxui @499 ; __fastcall Idwinsock2::WSA_CMSG_SPACE(const unsigned int)
+    @Idwinsock2@Winsock2Loaded$qqrv @524 ; __fastcall Idwinsock2::Winsock2Loaded()
+    @Idwinsock2@WinsockHandle$qqrv @525 ; __fastcall Idwinsock2::WinsockHandle()
+    @Idwinsock2@__WSAFDIsSet       @742 ; Idwinsock2::__WSAFDIsSet
+    @Idwinsock2@_in4addr_any       @603 ; Idwinsock2::_in4addr_any
+    @Idwinsock2@_in4addr_broadcast @601 ; Idwinsock2::_in4addr_broadcast
+    @Idwinsock2@_in4addr_loopback  @602 ; Idwinsock2::_in4addr_loopback
+    @Idwinsock2@accept             @786 ; Idwinsock2::accept
+    @Idwinsock2@bind               @785 ; Idwinsock2::bind
+    @Idwinsock2@closesocket        @784 ; Idwinsock2::closesocket
+    @Idwinsock2@connect            @783 ; Idwinsock2::connect
+    @Idwinsock2@gethostbyaddr      @763 ; Idwinsock2::gethostbyaddr
+    @Idwinsock2@gethostbyname      @762 ; Idwinsock2::gethostbyname
+    @Idwinsock2@gethostname        @761 ; Idwinsock2::gethostname
+    @Idwinsock2@getpeername        @781 ; Idwinsock2::getpeername
+    @Idwinsock2@getprotobyname     @757 ; Idwinsock2::getprotobyname
+    @Idwinsock2@getprotobynumber   @758 ; Idwinsock2::getprotobynumber
+    @Idwinsock2@getservbyname      @759 ; Idwinsock2::getservbyname
+    @Idwinsock2@getservbyport      @760 ; Idwinsock2::getservbyport
+    @Idwinsock2@getsockname        @780 ; Idwinsock2::getsockname
+    @Idwinsock2@getsockopt         @779 ; Idwinsock2::getsockopt
+    @Idwinsock2@htonl              @778 ; Idwinsock2::htonl
+    @Idwinsock2@htons              @777 ; Idwinsock2::htons
+    @Idwinsock2@in4addr_alligmpv3routersonlink @598 ; Idwinsock2::in4addr_alligmpv3routersonlink
+    @Idwinsock2@in4addr_allnodesonlink @600 ; Idwinsock2::in4addr_allnodesonlink
+    @Idwinsock2@in4addr_allroutersonlink @599 ; Idwinsock2::in4addr_allroutersonlink
+    @Idwinsock2@in4addr_allteredohostsonlink @597 ; Idwinsock2::in4addr_allteredohostsonlink
+    @Idwinsock2@in4addr_linklocalprefix @596 ; Idwinsock2::in4addr_linklocalprefix
+    @Idwinsock2@in4addr_multicastprefix @595 ; Idwinsock2::in4addr_multicastprefix
+    @Idwinsock2@in6addr_6to4prefix @587 ; Idwinsock2::in6addr_6to4prefix
+    @Idwinsock2@in6addr_allnodesonlink @591 ; Idwinsock2::in6addr_allnodesonlink
+    @Idwinsock2@in6addr_allnodesonnode @592 ; Idwinsock2::in6addr_allnodesonnode
+    @Idwinsock2@in6addr_allroutersonlink @590 ; Idwinsock2::in6addr_allroutersonlink
+    @Idwinsock2@in6addr_any        @594 ; Idwinsock2::in6addr_any
+    @Idwinsock2@in6addr_loopback   @593 ; Idwinsock2::in6addr_loopback
+    @Idwinsock2@in6addr_solicitednodemulticastprefix @589 ; Idwinsock2::in6addr_solicitednodemulticastprefix
+    @Idwinsock2@in6addr_teredoprefix @586 ; Idwinsock2::in6addr_teredoprefix
+    @Idwinsock2@in6addr_v4mappedprefix @588 ; Idwinsock2::in6addr_v4mappedprefix
+    @Idwinsock2@inet_addr          @776 ; Idwinsock2::inet_addr
+    @Idwinsock2@inet_ntoa          @775 ; Idwinsock2::inet_ntoa
+    @Idwinsock2@initialization$qqrv @450 ; __fastcall Idwinsock2::initialization()
+    @Idwinsock2@ioctlsocket        @782 ; Idwinsock2::ioctlsocket
+    @Idwinsock2@listen             @774 ; Idwinsock2::listen
+    @Idwinsock2@ntohl              @773 ; Idwinsock2::ntohl
+    @Idwinsock2@ntohs              @772 ; Idwinsock2::ntohs
+    @Idwinsock2@recv               @771 ; Idwinsock2::recv
+    @Idwinsock2@recvfrom           @770 ; Idwinsock2::recvfrom
+    @Idwinsock2@scopeid_unspecified @604 ; Idwinsock2::scopeid_unspecified
+    @Idwinsock2@select             @769 ; Idwinsock2::select
+    @Idwinsock2@send               @768 ; Idwinsock2::send
+    @Idwinsock2@sendto             @767 ; Idwinsock2::sendto
+    @Idwinsock2@setsockopt         @766 ; Idwinsock2::setsockopt
+    @Idwinsock2@shutdown           @765 ; Idwinsock2::shutdown
+    @Idwinsock2@socket             @764 ; Idwinsock2::socket
+    @Idwship6@CloseLibrary$qqrv    @1062; __fastcall Idwship6::CloseLibrary()
+    @Idwship6@Finalization$qqrv    @1060; __fastcall Idwship6::Finalization()
+    @Idwship6@FreeAddrInfoEx       @1070; Idwship6::FreeAddrInfoEx
+    @Idwship6@GIdIPv6FuncsAvailable @1064; Idwship6::GIdIPv6FuncsAvailable
+    @Idwship6@GetAddrInfoEx        @1072; Idwship6::GetAddrInfoEx
+    @Idwship6@InitLibrary$qqrv     @1061; __fastcall Idwship6::InitLibrary()
+    @Idwship6@SetAddrInfoEx        @1071; Idwship6::SetAddrInfoEx
+    @Idwship6@WSADeleteSocketPeerTargetName @1068; Idwship6::WSADeleteSocketPeerTargetName
+    @Idwship6@WSAImpersonateSocketPeer @1067; Idwship6::WSAImpersonateSocketPeer
+    @Idwship6@WSAQUERYSOCKETSECURITY @1066; Idwship6::WSAQUERYSOCKETSECURITY
+    @Idwship6@WSARevertImpersonation @1065; Idwship6::WSARevertImpersonation
+    @Idwship6@WSASetSocketPeerTargetName @1069; Idwship6::WSASetSocketPeerTargetName
+    @Idwship6@freeaddrinfo         @1075; Idwship6::freeaddrinfo
+    @Idwship6@gaiErrorToWsaError$qqrxi @1063; __fastcall Idwship6::gaiErrorToWsaError(const int)
+    @Idwship6@getaddrinfo          @1077; Idwship6::getaddrinfo
+    @Idwship6@getnameinfo          @1076; Idwship6::getnameinfo
+    @Idwship6@inet_ntop            @1073; Idwship6::inet_ntop
+    @Idwship6@inet_pton            @1074; Idwship6::inet_pton
+    @Idwship6@initialization$qqrv  @1059; __fastcall Idwship6::initialization()
+    @Indysystem@@GetPackageInfoTable$qqrv @1373; Indysystem::__linkproc__ __fastcall GetPackageInfoTable()
+    @Indysystem@@PackageLoad$qqrv  @1372; Indysystem::__linkproc__ __fastcall PackageLoad()
+    @Indysystem@@PackageUnload$qqrv @1371; Indysystem::__linkproc__ __fastcall PackageUnload()
+    @Indysystem@initialization$qqrv @1370; __fastcall Indysystem::initialization()
+    Finalize                       @1374; Finalize
+    Initialize                     @1375; Initialize

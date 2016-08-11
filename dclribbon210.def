@@ -1,0 +1,181 @@
+LIBRARY     DCLRIBBON210.BPL
+
+DESCRIPTION 'mbarcadero Ribbon Controls'
+
+EXPORTS
+    @$xp$25Ribboneditors@TPageEditor @51  ; __tpdsc__ Ribboneditors::TPageEditor
+    @$xp$27Ribboneditors@TRibbonEditor @53  ; __tpdsc__ Ribboneditors::TRibbonEditor
+    @$xp$37Screentipseditform@TfrmScreenTipsEdit @156 ; __tpdsc__ Screentipseditform::TfrmScreenTipsEdit
+    @$xp$37Screentipsfindform@TfrmScreenTipsFind @87  ; __tpdsc__ Screentipsfindform::TfrmScreenTipsFind
+    @$xp$39Ribbonmovegroupform@TfrmRibbonMoveGroup @21  ; __tpdsc__ Ribbonmovegroupform::TfrmRibbonMoveGroup
+    @$xp$39Screentipscolorform@TfrmScreenTipsColor @97  ; __tpdsc__ Screentipscolorform::TfrmScreenTipsColor
+    @$xp$40Screentipsfindform@TScreenTipsFindParams @89  ; __tpdsc__ Screentipsfindform::TScreenTipsFindParams
+    @$xp$41Ribbonreordergroupsform@TfrmReorderGroups @31  ; __tpdsc__ Ribbonreordergroupsform::TfrmReorderGroups
+    @$xp$43Screentipseditors@TScreenTipComponentEditor @168 ; __tpdsc__ Screentipseditors::TScreenTipComponentEditor
+    @Dclribbon@@GetPackageInfoTable$qqrv @173 ; Dclribbon::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclribbon@@PackageLoad$qqrv   @172 ; Dclribbon::__linkproc__ __fastcall PackageLoad()
+    @Dclribbon@@PackageUnload$qqrv @171 ; Dclribbon::__linkproc__ __fastcall PackageUnload()
+    @Dclribbon@initialization$qqrv @170 ; __fastcall Dclribbon::initialization()
+    @GetPackageInfoTable           @176 ; GetPackageInfoTable
+    @Ribboneditors@Finalization$qqrv @34  ; __fastcall Ribboneditors::Finalization()
+    @Ribboneditors@Register$qqrv   @50  ; __fastcall Ribboneditors::Register()
+    @Ribboneditors@TPageEditor@    @52  ; Ribboneditors::TPageEditor::
+    @Ribboneditors@TPageEditor@AddGroup$qqrv @35  ; __fastcall Ribboneditors::TPageEditor::AddGroup()
+    @Ribboneditors@TPageEditor@ExecuteVerb$qqri @41  ; __fastcall Ribboneditors::TPageEditor::ExecuteVerb(int)
+    @Ribboneditors@TPageEditor@GetVerb$qqri @40  ; __fastcall Ribboneditors::TPageEditor::GetVerb(int)
+    @Ribboneditors@TPageEditor@GetVerbCount$qqrv @39  ; __fastcall Ribboneditors::TPageEditor::GetVerbCount()
+    @Ribboneditors@TPageEditor@MoveGroup$qqrv @37  ; __fastcall Ribboneditors::TPageEditor::MoveGroup()
+    @Ribboneditors@TPageEditor@PrepareItem$qqrix48System@%DelphiInterface$21Designmenus@IMenuItem% @38  ; Ribboneditors::TPageEditor::PrepareItem(int, const System::DelphiInterface<{583}...
+    @Ribboneditors@TPageEditor@ReorderGroups$qqrv @36  ; __fastcall Ribboneditors::TPageEditor::ReorderGroups()
+    @Ribboneditors@TRibbonEditor@  @54  ; Ribboneditors::TRibbonEditor::
+    @Ribboneditors@TRibbonEditor@AddApplicationMenu$qqrv @44  ; __fastcall Ribboneditors::TRibbonEditor::AddApplicationMenu()
+    @Ribboneditors@TRibbonEditor@AddQuickAccessToolbar$qqrv @43  ; __fastcall Ribboneditors::TRibbonEditor::AddQuickAccessToolbar()
+    @Ribboneditors@TRibbonEditor@AddTab$qqrv @42  ; __fastcall Ribboneditors::TRibbonEditor::AddTab()
+    @Ribboneditors@TRibbonEditor@DeleteTab$qqrv @49  ; __fastcall Ribboneditors::TRibbonEditor::DeleteTab()
+    @Ribboneditors@TRibbonEditor@ExecuteVerb$qqri @48  ; __fastcall Ribboneditors::TRibbonEditor::ExecuteVerb(int)
+    @Ribboneditors@TRibbonEditor@GetVerb$qqri @47  ; __fastcall Ribboneditors::TRibbonEditor::GetVerb(int)
+    @Ribboneditors@TRibbonEditor@GetVerbCount$qqrv @46  ; __fastcall Ribboneditors::TRibbonEditor::GetVerbCount()
+    @Ribboneditors@TRibbonEditor@PrepareItem$qqrix48System@%DelphiInterface$21Designmenus@IMenuItem% @45  ; Ribboneditors::TRibbonEditor::PrepareItem(int, const System::DelphiInterface<{583}...
+    @Ribboneditors@initialization$qqrv @33  ; __fastcall Ribboneditors::initialization()
+    @Ribboneditorsconsts@Finalization$qqrv @2   ; __fastcall Ribboneditorsconsts::Finalization()
+    @Ribboneditorsconsts@_SAddApplicationMenu @9   ; Ribboneditorsconsts::_SAddApplicationMenu
+    @Ribboneditorsconsts@_SAddGroup @7   ; Ribboneditorsconsts::_SAddGroup
+    @Ribboneditorsconsts@_SAddQuickAccessToolbar @8   ; Ribboneditorsconsts::_SAddQuickAccessToolbar
+    @Ribboneditorsconsts@_SAddTab  @11  ; Ribboneditorsconsts::_SAddTab
+    @Ribboneditorsconsts@_SApplicationMenuAddWarning @4   ; Ribboneditorsconsts::_SApplicationMenuAddWarning
+    @Ribboneditorsconsts@_SDeleteTab @10  ; Ribboneditorsconsts::_SDeleteTab
+    @Ribboneditorsconsts@_SMoveGroup @6   ; Ribboneditorsconsts::_SMoveGroup
+    @Ribboneditorsconsts@_SQuickAccessToolbarAddWarning @3   ; Ribboneditorsconsts::_SQuickAccessToolbarAddWarning
+    @Ribboneditorsconsts@_SReorderGroups @5   ; Ribboneditorsconsts::_SReorderGroups
+    @Ribboneditorsconsts@_SRibbonPalettePage @12  ; Ribboneditorsconsts::_SRibbonPalettePage
+    @Ribboneditorsconsts@initialization$qqrv @1   ; __fastcall Ribboneditorsconsts::initialization()
+    @Ribbonmovegroupform@Finalization$qqrv @14  ; __fastcall Ribbonmovegroupform::Finalization()
+    @Ribbonmovegroupform@TfrmRibbonMoveGroup@ @22  ; Ribbonmovegroupform::TfrmRibbonMoveGroup::
+    @Ribbonmovegroupform@TfrmRibbonMoveGroup@Execute$qqrp24Vcl@Ribbon@TCustomRibbonp28Vcl@Ribbon@TCustomRibbonPager20System@UnicodeStringt3 @19  ; __fastcall Ribbonmovegroupform::TfrmRibbonMoveGroup::Execute(Vcl::Ribbon::TCustomRibbon *, Vcl::Ribbon::TCustomRibbonPage *, System::UnicodeString&, System::UnicodeString&)
+    @Ribbonmovegroupform@TfrmRibbonMoveGroup@GetGroupCaption$qqrv @18  ; __fastcall Ribbonmovegroupform::TfrmRibbonMoveGroup::GetGroupCaption()
+    @Ribbonmovegroupform@TfrmRibbonMoveGroup@GetPageCaption$qqrv @17  ; __fastcall Ribbonmovegroupform::TfrmRibbonMoveGroup::GetPageCaption()
+    @Ribbonmovegroupform@TfrmRibbonMoveGroup@SetPage$qqrxp28Vcl@Ribbon@TCustomRibbonPage @16  ; __fastcall Ribbonmovegroupform::TfrmRibbonMoveGroup::SetPage(Vcl::Ribbon::TCustomRibbonPage * const)
+    @Ribbonmovegroupform@TfrmRibbonMoveGroup@SetRibbon$qqrxp24Vcl@Ribbon@TCustomRibbon @15  ; __fastcall Ribbonmovegroupform::TfrmRibbonMoveGroup::SetRibbon(Vcl::Ribbon::TCustomRibbon * const)
+    @Ribbonmovegroupform@frmRibbonMoveGroup @20  ; Ribbonmovegroupform::frmRibbonMoveGroup
+    @Ribbonmovegroupform@initialization$qqrv @13  ; __fastcall Ribbonmovegroupform::initialization()
+    @Ribbonreg@Finalization$qqrv   @56  ; __fastcall Ribbonreg::Finalization()
+    @Ribbonreg@Register$qqrv       @57  ; __fastcall Ribbonreg::Register()
+    @Ribbonreg@initialization$qqrv @55  ; __fastcall Ribbonreg::initialization()
+    @Ribbonreordergroupsform@Finalization$qqrv @24  ; __fastcall Ribbonreordergroupsform::Finalization()
+    @Ribbonreordergroupsform@TfrmReorderGroups@ @32  ; Ribbonreordergroupsform::TfrmReorderGroups::
+    @Ribbonreordergroupsform@TfrmReorderGroups@Execute$qqrp28Vcl@Ribbon@TCustomRibbonPage @26  ; __fastcall Ribbonreordergroupsform::TfrmReorderGroups::Execute(Vcl::Ribbon::TCustomRibbonPage *)
+    @Ribbonreordergroupsform@TfrmReorderGroups@SetPage$qqrxp28Vcl@Ribbon@TCustomRibbonPage @25  ; __fastcall Ribbonreordergroupsform::TfrmReorderGroups::SetPage(Vcl::Ribbon::TCustomRibbonPage * const)
+    @Ribbonreordergroupsform@TfrmReorderGroups@bOKClick$qqrp14System@TObject @27  ; __fastcall Ribbonreordergroupsform::TfrmReorderGroups::bOKClick(System::TObject *)
+    @Ribbonreordergroupsform@TfrmReorderGroups@bbDownClick$qqrp14System@TObject @29  ; __fastcall Ribbonreordergroupsform::TfrmReorderGroups::bbDownClick(System::TObject *)
+    @Ribbonreordergroupsform@TfrmReorderGroups@bbUpClick$qqrp14System@TObject @28  ; __fastcall Ribbonreordergroupsform::TfrmReorderGroups::bbUpClick(System::TObject *)
+    @Ribbonreordergroupsform@frmReorderGroups @30  ; Ribbonreordergroupsform::frmReorderGroups
+    @Ribbonreordergroupsform@initialization$qqrv @23  ; __fastcall Ribbonreordergroupsform::initialization()
+    @Screentipscolorform@Finalization$qqrv @92  ; __fastcall Screentipscolorform::Finalization()
+    @Screentipscolorform@TfrmScreenTipsColor@ @98  ; Screentipscolorform::TfrmScreenTipsColor::
+    @Screentipscolorform@TfrmScreenTipsColor@GetSelectedColor$qqrv @94  ; __fastcall Screentipscolorform::TfrmScreenTipsColor::GetSelectedColor()
+    @Screentipscolorform@TfrmScreenTipsColor@SetSelectedColor$qqrx21System@Uitypes@TColor @93  ; __fastcall Screentipscolorform::TfrmScreenTipsColor::SetSelectedColor(const System::Uitypes::TColor)
+    @Screentipscolorform@TfrmScreenTipsColor@aPreviewColorExecute$qqrp14System@TObject @96  ; __fastcall Screentipscolorform::TfrmScreenTipsColor::aPreviewColorExecute(System::TObject *)
+    @Screentipscolorform@TfrmScreenTipsColor@clbSelectColorDblClick$qqrp14System@TObject @95  ; __fastcall Screentipscolorform::TfrmScreenTipsColor::clbSelectColorDblClick(System::TObject *)
+    @Screentipscolorform@initialization$qqrv @91  ; __fastcall Screentipscolorform::initialization()
+    @Screentipseditform@Finalization$qqrv @100 ; __fastcall Screentipseditform::Finalization()
+    @Screentipseditform@TfrmScreenTipsEdit@ @157 ; Screentipseditform::TfrmScreenTipsEdit::
+    @Screentipseditform@TfrmScreenTipsEdit@ChangeImage1Click$qqrp14System@TObject @129 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::ChangeImage1Click(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@ClearActions$qqrv @128 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::ClearActions()
+    @Screentipseditform@TfrmScreenTipsEdit@ClearImage1Click$qqrp14System@TObject @127 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::ClearImage1Click(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@CreatePreviewItem$qqrp29Vcl@Screentips@TScreenTipItem @126 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::CreatePreviewItem(Vcl::Screentips::TScreenTipItem *)
+    @Screentipseditform@TfrmScreenTipsEdit@CurrentToolTip$qqrv @125 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::CurrentToolTip()
+    @Screentipseditform@TfrmScreenTipsEdit@DoFind$qqrp40Screentipsfindform@TScreenTipsFindParamsxo @124 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::DoFind(Screentipsfindform::TScreenTipsFindParams *, const bool)
+    @Screentipseditform@TfrmScreenTipsEdit@Execute$qqrp39Vcl@Screentips@TCustomScreenTipsManager @154 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::Execute(Vcl::Screentips::TCustomScreenTipsManager *)
+    @Screentipseditform@TfrmScreenTipsEdit@FindActionByName$qqrx20System@UnicodeString @153 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::FindActionByName(const System::UnicodeString)
+    @Screentipseditform@TfrmScreenTipsEdit@FormCloseQuery$qqrp14System@TObjectro @152 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::FormCloseQuery(System::TObject *, bool&)
+    @Screentipseditform@TfrmScreenTipsEdit@FormCreate$qqrp14System@TObject @151 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::FormCreate(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@FormDestroy$qqrp14System@TObject @150 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::FormDestroy(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@GetCategory$qqrx20System@UnicodeString @121 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::GetCategory(const System::UnicodeString)
+    @Screentipseditform@TfrmScreenTipsEdit@GetWasModified$qqrv @120 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::GetWasModified()
+    @Screentipseditform@TfrmScreenTipsEdit@LoadActionList$qqrp30Vcl@Actnlist@TCustomActionList @122 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::LoadActionList(Vcl::Actnlist::TCustomActionList *)
+    @Screentipseditform@TfrmScreenTipsEdit@LoadActions$qqrv @119 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::LoadActions()
+    @Screentipseditform@TfrmScreenTipsEdit@LoadHelpTip$qqrp29Vcl@Screentips@TScreenTipItem @117 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::LoadHelpTip(Vcl::Screentips::TScreenTipItem *)
+    @Screentipseditform@TfrmScreenTipsEdit@LoadManagerProperties$qqrv @118 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::LoadManagerProperties()
+    @Screentipseditform@TfrmScreenTipsEdit@SaveHelpTip$qqrp29Vcl@Screentips@TScreenTipItem @111 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::SaveHelpTip(Vcl::Screentips::TScreenTipItem *)
+    @Screentipseditform@TfrmScreenTipsEdit@SaveManagerProperties$qqrp39Vcl@Screentips@TCustomScreenTipsManager @112 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::SaveManagerProperties(Vcl::Screentips::TCustomScreenTipsManager *)
+    @Screentipseditform@TfrmScreenTipsEdit@SetControlsEnabled$qqrxo @110 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::SetControlsEnabled(const bool)
+    @Screentipseditform@TfrmScreenTipsEdit@SetManager$qqrxp39Vcl@Screentips@TCustomScreenTipsManager @109 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::SetManager(Vcl::Screentips::TCustomScreenTipsManager * const)
+    @Screentipseditform@TfrmScreenTipsEdit@SetModified$qqrxo @108 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::SetModified(const bool)
+    @Screentipseditform@TfrmScreenTipsEdit@SetSaveManager$qqrxo @107 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::SetSaveManager(const bool)
+    @Screentipseditform@TfrmScreenTipsEdit@SizeDisplayImage$qqrv @106 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::SizeDisplayImage()
+    @Screentipseditform@TfrmScreenTipsEdit@TreeView1Change$qqrp14System@TObjectp22Vcl@Comctrls@TTreeNode @103 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::TreeView1Change(System::TObject *, Vcl::Comctrls::TTreeNode *)
+    @Screentipseditform@TfrmScreenTipsEdit@TreeView1Changing$qqrp14System@TObjectp22Vcl@Comctrls@TTreeNodero @102 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::TreeView1Changing(System::TObject *, Vcl::Comctrls::TTreeNode *, bool&)
+    @Screentipseditform@TfrmScreenTipsEdit@UpdateFooter$qqrp29Vcl@Screentips@TScreenTipItem @101 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::UpdateFooter(Vcl::Screentips::TScreenTipItem *)
+    @Screentipseditform@TfrmScreenTipsEdit@aEditDeleteExecute$qqrp14System@TObject @149 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::aEditDeleteExecute(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@aEditDeleteUpdate$qqrp14System@TObject @148 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::aEditDeleteUpdate(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@aFileExitExecute$qqrp14System@TObject @147 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::aFileExitExecute(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@aFileSaveExecute$qqrp14System@TObject @146 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::aFileSaveExecute(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@aFileSaveUpdate$qqrp14System@TObject @145 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::aFileSaveUpdate(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@aSearchFindExecute$qqrp14System@TObject @144 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::aSearchFindExecute(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@aSearchFindNextExecute$qqrp14System@TObject @143 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::aSearchFindNextExecute(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@aToolsGenerateExecute$qqrp14System@TObject @142 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::aToolsGenerateExecute(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@aViewDisabledModeExecute$qqrp14System@TObject @141 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::aViewDisabledModeExecute(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@aViewManagerPropertiesExecute$qqrp14System@TObject @140 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::aViewManagerPropertiesExecute(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@bClearImageClick$qqrp14System@TObject @139 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::bClearImageClick(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@bFooterImageClick$qqrp14System@TObject @138 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::bFooterImageClick(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@bPreviewClick$qqrp14System@TObject @137 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::bPreviewClick(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@bPreviewMouseEnter$qqrp14System@TObject @136 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::bPreviewMouseEnter(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@cbShowActionImageClick$qqrp14System@TObject @134 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::cbShowActionImageClick(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@cbShowFooterClick$qqrp14System@TObject @133 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::cbShowFooterClick(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@cbShowHeaderClick$qqrp14System@TObject @132 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::cbShowHeaderClick(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@cbShowImageClick$qqrp14System@TObject @131 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::cbShowImageClick(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@cbShowShortCutClick$qqrp14System@TObject @130 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::cbShowShortCutClick(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@cboxStyleChange$qqrp14System@TObject @135 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::cboxStyleChange(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@eCornerSizeKeyPress$qqrp14System@TObjectrb @123 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::eCornerSizeKeyPress(System::TObject *, wchar_t&)
+    @Screentipseditform@TfrmScreenTipsEdit@lAddImageDblClick$qqrp14System@TObject @114 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::lAddImageDblClick(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@lvSearchResultsDblClick$qqrp14System@TObject @116 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::lvSearchResultsDblClick(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@mDescriptionChange$qqrp14System@TObject @115 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::mDescriptionChange(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@rgModeClick$qqrp14System@TObject @113 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::rgModeClick(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@spEndGradientColorClick$qqrp14System@TObject @105 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::spEndGradientColorClick(System::TObject *)
+    @Screentipseditform@TfrmScreenTipsEdit@spStartGradientColorClick$qqrp14System@TObject @104 ; __fastcall Screentipseditform::TfrmScreenTipsEdit::spStartGradientColorClick(System::TObject *)
+    @Screentipseditform@frmScreenTipsEdit @155 ; Screentipseditform::frmScreenTipsEdit
+    @Screentipseditform@initialization$qqrv @99  ; __fastcall Screentipseditform::initialization()
+    @Screentipseditors@Finalization$qqrv @159 ; __fastcall Screentipseditors::Finalization()
+    @Screentipseditors@Register$qqrv @167 ; __fastcall Screentipseditors::Register()
+    @Screentipseditors@TScreenTipComponentEditor@ @169 ; Screentipseditors::TScreenTipComponentEditor::
+    @Screentipseditors@TScreenTipComponentEditor@Edit$qqrv @163 ; __fastcall Screentipseditors::TScreenTipComponentEditor::Edit()
+    @Screentipseditors@TScreenTipComponentEditor@EditScreenTips$qqrv @160 ; __fastcall Screentipseditors::TScreenTipComponentEditor::EditScreenTips()
+    @Screentipseditors@TScreenTipComponentEditor@ExecuteVerb$qqri @166 ; __fastcall Screentipseditors::TScreenTipComponentEditor::ExecuteVerb(int)
+    @Screentipseditors@TScreenTipComponentEditor@GenerateScreenTips$qqrv @162 ; __fastcall Screentipseditors::TScreenTipComponentEditor::GenerateScreenTips()
+    @Screentipseditors@TScreenTipComponentEditor@GetVerb$qqri @161 ; __fastcall Screentipseditors::TScreenTipComponentEditor::GetVerb(int)
+    @Screentipseditors@TScreenTipComponentEditor@GetVerbCount$qqrv @165 ; __fastcall Screentipseditors::TScreenTipComponentEditor::GetVerbCount()
+    @Screentipseditors@TScreenTipComponentEditor@RegenerateScreenTips$qqrv @164 ; __fastcall Screentipseditors::TScreenTipComponentEditor::RegenerateScreenTips()
+    @Screentipseditors@initialization$qqrv @158 ; __fastcall Screentipseditors::initialization()
+    @Screentipseditorsconsts@Finalization$qqrv @59  ; __fastcall Screentipseditorsconsts::Finalization()
+    @Screentipseditorsconsts@_SEditScreenTips @81  ; Screentipseditorsconsts::_SEditScreenTips
+    @Screentipseditorsconsts@_SGenerateScreenTips @80  ; Screentipseditorsconsts::_SGenerateScreenTips
+    @Screentipseditorsconsts@_SNoActionListAssignForScreenTips @74  ; Screentipseditorsconsts::_SNoActionListAssignForScreenTips
+    @Screentipseditorsconsts@_SNoHelpTipsGenerated @78  ; Screentipseditorsconsts::_SNoHelpTipsGenerated
+    @Screentipseditorsconsts@_SRegenerateDeleteWarning @75  ; Screentipseditorsconsts::_SRegenerateDeleteWarning
+    @Screentipseditorsconsts@_SRegenerateScreenTips @76  ; Screentipseditorsconsts::_SRegenerateScreenTips
+    @Screentipseditorsconsts@_SScreenTipDeleteFailed @65  ; Screentipseditorsconsts::_SScreenTipDeleteFailed
+    @Screentipseditorsconsts@_SScreenTipsGenerated @79  ; Screentipseditorsconsts::_SScreenTipsGenerated
+    @Screentipseditorsconsts@_SScreenTipsModified @63  ; Screentipseditorsconsts::_SScreenTipsModified
+    @Screentipseditorsconsts@_SScreenTipsNoActionFound @60  ; Screentipseditorsconsts::_SScreenTipsNoActionFound
+    @Screentipseditorsconsts@_SScreenTipsNoCategory @61  ; Screentipseditorsconsts::_SScreenTipsNoCategory
+    @Screentipseditorsconsts@_SScreenTipsPreviewCaption @62  ; Screentipseditorsconsts::_SScreenTipsPreviewCaption
+    @Screentipseditorsconsts@_StrFailedToFindNode @67  ; Screentipseditorsconsts::_StrFailedToFindNode
+    @Screentipseditorsconsts@_StrFailedToGenerateH @68  ; Screentipseditorsconsts::_StrFailedToGenerateH
+    @Screentipseditorsconsts@_StrFailedToGenereate @70  ; Screentipseditorsconsts::_StrFailedToGenereate
+    @Screentipseditorsconsts@_StrHelpTipsHaveBeen @69  ; Screentipseditorsconsts::_StrHelpTipsHaveBeen
+    @Screentipseditorsconsts@_StrInsufficientInforma @64  ; Screentipseditorsconsts::_StrInsufficientInforma
+    @Screentipseditorsconsts@_StrSelectedHelpTipDe @66  ; Screentipseditorsconsts::_StrSelectedHelpTipDe
+    @Screentipseditorsconsts@_StrTheSelectedAction @71  ; Screentipseditorsconsts::_StrTheSelectedAction
+    @Screentipseditorsconsts@_StrUnableToGenerateH @77  ; Screentipseditorsconsts::_StrUnableToGenerateH
+    @Screentipseditorsconsts@_StrYouHaveChangesPen @72  ; Screentipseditorsconsts::_StrYouHaveChangesPen
+    @Screentipseditorsconsts@_StrYouHaveUnsavedCha @73  ; Screentipseditorsconsts::_StrYouHaveUnsavedCha
+    @Screentipseditorsconsts@initialization$qqrv @58  ; __fastcall Screentipseditorsconsts::initialization()
+    @Screentipsfindform@Finalization$qqrv @83  ; __fastcall Screentipsfindform::Finalization()
+    @Screentipsfindform@TScreenTipsFindParams@ @90  ; Screentipsfindform::TScreenTipsFindParams::
+    @Screentipsfindform@TfrmScreenTipsFind@ @88  ; Screentipsfindform::TfrmScreenTipsFind::
+    @Screentipsfindform@TfrmScreenTipsFind@Execute$qqrrp40Screentipsfindform@TScreenTipsFindParams @85  ; __fastcall Screentipsfindform::TfrmScreenTipsFind::Execute(Screentipsfindform::TScreenTipsFindParams *&)
+    @Screentipsfindform@TfrmScreenTipsFind@FindNext$qqrp40Screentipsfindform@TScreenTipsFindParams @84  ; __fastcall Screentipsfindform::TfrmScreenTipsFind::FindNext(Screentipsfindform::TScreenTipsFindParams *)
+    @Screentipsfindform@frmScreenTipsFind @86  ; Screentipsfindform::frmScreenTipsFind
+    @Screentipsfindform@initialization$qqrv @82  ; __fastcall Screentipsfindform::initialization()
+    Finalize                       @174 ; Finalize
+    Initialize                     @175 ; Initialize

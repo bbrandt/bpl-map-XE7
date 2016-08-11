@@ -1,0 +1,32 @@
+LIBRARY     BCBFMXIDE210.BPL
+
+DESCRIPTION 'mbarcadero C++Builder FMX IDE Package'
+
+EXPORTS
+    @$xp$25Cppfmxidecmd@TFmxCommands @14  ; __tpdsc__ Cppfmxidecmd::TFmxCommands
+    @$xp$27Cppfmxidecmd@TCppNewFmxType @17  ; __tpdsc__ Cppfmxidecmd::TCppNewFmxType
+    @$xp$33Cppfmxidecmd@TCppNewFmxWizardMode @16  ; __tpdsc__ Cppfmxidecmd::TCppNewFmxWizardMode
+    @$xp$39Cppfmxframework@TCppFmxComponentCreator @8   ; __tpdsc__ Cppfmxframework::TCppFmxComponentCreator
+    @Bcbfmxide@@GetPackageInfoTable$qqrv @24  ; Bcbfmxide::__linkproc__ __fastcall GetPackageInfoTable()
+    @Bcbfmxide@@PackageLoad$qqrv   @23  ; Bcbfmxide::__linkproc__ __fastcall PackageLoad()
+    @Bcbfmxide@@PackageUnload$qqrv @22  ; Bcbfmxide::__linkproc__ __fastcall PackageUnload()
+    @Bcbfmxide@initialization$qqrv @21  ; __fastcall Bcbfmxide::initialization()
+    @Cppfmxframework@CppFmxComponentsCallbackID @10  ; Cppfmxframework::CppFmxComponentsCallbackID
+    @Cppfmxframework@Finalization$qqrv @2   ; __fastcall Cppfmxframework::Finalization()
+    @Cppfmxframework@IDERegister$qqrv @3   ; __fastcall Cppfmxframework::IDERegister()
+    @Cppfmxframework@TCppFmxComponentCreator@ @9   ; Cppfmxframework::TCppFmxComponentCreator::
+    @Cppfmxframework@TCppFmxComponentCreator@CreateComponent$qqrx20System@UnicodeStringt1t1t1 @7   ; __fastcall Cppfmxframework::TCppFmxComponentCreator::CreateComponent(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Cppfmxframework@TCppFmxComponentCreator@GetCaption$qqrv @6   ; __fastcall Cppfmxframework::TCppFmxComponentCreator::GetCaption()
+    @Cppfmxframework@TCppFmxComponentCreator@GetClassGroup$qqrv @4   ; __fastcall Cppfmxframework::TCppFmxComponentCreator::GetClassGroup()
+    @Cppfmxframework@TCppFmxComponentCreator@GetComponentsCallbackId$qqrv @5   ; __fastcall Cppfmxframework::TCppFmxComponentCreator::GetComponentsCallbackId()
+    @Cppfmxframework@initialization$qqrv @1   ; __fastcall Cppfmxframework::initialization()
+    @Cppfmxidecmd@Finalization$qqrv @12  ; __fastcall Cppfmxidecmd::Finalization()
+    @Cppfmxidecmd@IDERegister$qqrv @13  ; __fastcall Cppfmxidecmd::IDERegister()
+    @Cppfmxidecmd@TFmxCommands@    @15  ; Cppfmxidecmd::TFmxCommands::
+    @Cppfmxidecmd@initialization$qqrv @11  ; __fastcall Cppfmxidecmd::initialization()
+    @Cppfmxmetroidecmd@Finalization$qqrv @19  ; __fastcall Cppfmxmetroidecmd::Finalization()
+    @Cppfmxmetroidecmd@IDERegister$qqrv @20  ; __fastcall Cppfmxmetroidecmd::IDERegister()
+    @Cppfmxmetroidecmd@initialization$qqrv @18  ; __fastcall Cppfmxmetroidecmd::initialization()
+    @GetPackageInfoTable           @27  ; GetPackageInfoTable
+    Finalize                       @25  ; Finalize
+    Initialize                     @26  ; Initialize

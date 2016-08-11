@@ -1,0 +1,6 @@
+LIBRARY     RCDLL.DLL
+
+EXPORTS
+    Handler                        @1   ; Handler
+    RC                             @2   ; RC
+    RCW                            @3   ; RCW

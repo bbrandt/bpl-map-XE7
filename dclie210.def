@@ -1,0 +1,20 @@
+LIBRARY     DCLIE210.BPL
+
+DESCRIPTION 'nternet Explorer Components'
+
+EXPORTS
+    @$xp$29Webactnres@TWebBrowserActions @4   ; __tpdsc__ Webactnres::TWebBrowserActions
+    @Dclie@@GetPackageInfoTable$qqrv @12  ; Dclie::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclie@@PackageLoad$qqrv       @11  ; Dclie::__linkproc__ __fastcall PackageLoad()
+    @Dclie@@PackageUnload$qqrv     @10  ; Dclie::__linkproc__ __fastcall PackageUnload()
+    @Dclie@initialization$qqrv     @9   ; __fastcall Dclie::initialization()
+    @GetPackageInfoTable           @15  ; GetPackageInfoTable
+    @Iereg@Finalization$qqrv       @7   ; __fastcall Iereg::Finalization()
+    @Iereg@Register$qqrv           @8   ; __fastcall Iereg::Register()
+    @Iereg@initialization$qqrv     @6   ; __fastcall Iereg::initialization()
+    @Webactnres@Finalization$qqrv  @2   ; __fastcall Webactnres::Finalization()
+    @Webactnres@TWebBrowserActions@ @5   ; Webactnres::TWebBrowserActions::
+    @Webactnres@WebBrowserActions  @3   ; Webactnres::WebBrowserActions
+    @Webactnres@initialization$qqrv @1   ; __fastcall Webactnres::initialization()
+    Finalize                       @13  ; Finalize
+    Initialize                     @14  ; Initialize

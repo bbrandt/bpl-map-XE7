@@ -1,0 +1,192 @@
+LIBRARY     CODETEMPLATES210.BPL
+
+DESCRIPTION 'mbarcadero Code Templates IDE Package'
+
+EXPORTS
+    @$xp$22Codetemp@TTemplateArgs  @38  ; __tpdsc__ Codetemp::TTemplateArgs
+    @$xp$24Codetemp@TTemplateReader @44  ; __tpdsc__ Codetemp::TTemplateReader
+    @$xp$24Codetemp@TTemplateWriter @40  ; __tpdsc__ Codetemp::TTemplateWriter
+    @$xp$30Templateviewform@TTemplateView @164 ; __tpdsc__ Templateviewform::TTemplateView
+    @$xp$31Codetemp@TTemplateReaderFactory @46  ; __tpdsc__ Codetemp::TTemplateReaderFactory
+    @$xp$31Codetemp@TTemplateWriterFactory @42  ; __tpdsc__ Codetemp::TTemplateWriterFactory
+    @$xp$32Codetemplistbox@TCodeTemplateBox @85  ; __tpdsc__ Codetemplistbox::TCodeTemplateBox
+    @$xp$32Codetemplistbox@TTemplateInvoker @83  ; __tpdsc__ Codetemplistbox::TTemplateInvoker
+    @$xp$33Templateviewform@TTemplateColumns @170 ; __tpdsc__ Templateviewform::TTemplateColumns
+    @$xp$34Codetemplatecmds@TCodeTemplateCmds @179 ; __tpdsc__ Codetemplatecmds::TCodeTemplateCmds
+    @$xp$34Directorywatcher@TDirectoryWatcher @14  ; __tpdsc__ Directorywatcher::TDirectoryWatcher
+    @$xp$34Directorywatcher@TNotificationType @17  ; __tpdsc__ Directorywatcher::TNotificationType
+    @$xp$34Templateviewform@_TTemplateView@_1 @169 ; __tpdsc__ Templateviewform::_TTemplateView::_1
+    @$xp$34Templateviewform@_TTemplateView@_2 @168 ; __tpdsc__ Templateviewform::_TTemplateView::_2
+    @$xp$34Templateviewform@_TTemplateView@_3 @167 ; __tpdsc__ Templateviewform::_TTemplateView::_3
+    @$xp$34Templateviewform@_TTemplateView@_4 @166 ; __tpdsc__ Templateviewform::_TTemplateView::_4
+    @$xp$35Directorywatcher@TNotificationTypes @16  ; __tpdsc__ Directorywatcher::TNotificationTypes
+    @$xp$36Idetemplatescript@TIDETemplateEngine @115 ; __tpdsc__ Idetemplatescript::TIDETemplateEngine
+    @$xp$37Codetemp@IInternalCodeTemplateManager @37  ; __tpdsc__ Codetemp::IInternalCodeTemplateManager
+    @$xp$41Codetemplatesoptionspage@TTemplateColumns @108 ; __tpdsc__ Codetemplatesoptionspage::TTemplateColumns
+    @$xp$48Codetemplatesoptionspage@TCodeTemplatesOptionsPg @106 ; __tpdsc__ Codetemplatesoptionspage::TCodeTemplatesOptionsPg
+    @Bdstemplates@Finalization$qqrv @52  ; __fastcall Bdstemplates::Finalization()
+    @Bdstemplates@IDERegister$qqrv @53  ; __fastcall Bdstemplates::IDERegister()
+    @Bdstemplates@initialization$qqrv @51  ; __fastcall Bdstemplates::initialization()
+    @Codetemp@CodeTemplateManager$qqrv @36  ; __fastcall Codetemp::CodeTemplateManager()
+    @Codetemp@Finalization$qqrv    @19  ; __fastcall Codetemp::Finalization()
+    @Codetemp@GetCurrentEditorOpts$qqrv @23  ; __fastcall Codetemp::GetCurrentEditorOpts()
+    @Codetemp@TTemplateArgs@       @39  ; Codetemp::TTemplateArgs::
+    @Codetemp@TTemplateArgs@$bdtr$qqrv @22  ; __fastcall Codetemp::TTemplateArgs::~TTemplateArgs()
+    @Codetemp@TTemplateArgs@GetValue$qqr17System@WideString @21  ; __fastcall Codetemp::TTemplateArgs::GetValue(System::WideString)
+    @Codetemp@TTemplateArgs@SetValue$qqr17System@WideStringt1 @20  ; __fastcall Codetemp::TTemplateArgs::SetValue(System::WideString, System::WideString)
+    @Codetemp@TTemplateReader@     @45  ; Codetemp::TTemplateReader::
+    @Codetemp@TTemplateReader@GetTemplate$qqrv @30  ; __fastcall Codetemp::TTemplateReader::GetTemplate()
+    @Codetemp@TTemplateReader@Load$qqrx17System@WideStringx59System@%DelphiInterface$32Codetemplateapi@IOTACodeTemplate% @31  ; Codetemp::TTemplateReader::Load(const System::WideString, const System::DelphiInterface<{583}...
+    @Codetemp@TTemplateReader@SetTemplate$qqrx59System@%DelphiInterface$32Codetemplateapi@IOTACodeTemplate% @29  ; Codetemp::TTemplateReader::SetTemplate(const System::DelphiInterface<{583}...
+    @Codetemp@TTemplateReaderFactory@ @47  ; Codetemp::TTemplateReaderFactory::
+    @Codetemp@TTemplateReaderFactory@$bctr$qqrv @34  ; __fastcall Codetemp::TTemplateReaderFactory::TTemplateReaderFactory()
+    @Codetemp@TTemplateReaderFactory@CreateReader$qqrv @33  ; __fastcall Codetemp::TTemplateReaderFactory::CreateReader()
+    @Codetemp@TTemplateReaderFactory@HandlesFile$qqrx17System@WideString @32  ; __fastcall Codetemp::TTemplateReaderFactory::HandlesFile(const System::WideString)
+    @Codetemp@TTemplateWriter@     @41  ; Codetemp::TTemplateWriter::
+    @Codetemp@TTemplateWriter@GetTemplate$qqrv @25  ; __fastcall Codetemp::TTemplateWriter::GetTemplate()
+    @Codetemp@TTemplateWriter@Save$qqrx59System@%DelphiInterface$32Codetemplateapi@IOTACodeTemplate% @26  ; Codetemp::TTemplateWriter::Save(const System::DelphiInterface<{583}...
+    @Codetemp@TTemplateWriter@SetTemplate$qqrx59System@%DelphiInterface$32Codetemplateapi@IOTACodeTemplate% @24  ; Codetemp::TTemplateWriter::SetTemplate(const System::DelphiInterface<{583}...
+    @Codetemp@TTemplateWriterFactory@ @43  ; Codetemp::TTemplateWriterFactory::
+    @Codetemp@TTemplateWriterFactory@$bctr$qqrv @28  ; __fastcall Codetemp::TTemplateWriterFactory::TTemplateWriterFactory()
+    @Codetemp@TTemplateWriterFactory@CreateWriter$qqrv @27  ; __fastcall Codetemp::TTemplateWriterFactory::CreateWriter()
+    @Codetemp@TemplateDir$qqrv     @35  ; __fastcall Codetemp::TemplateDir()
+    @Codetemp@initialization$qqrv  @18  ; __fastcall Codetemp::initialization()
+    @Codetempcmplt@Finalization$qqrv @55  ; __fastcall Codetempcmplt::Finalization()
+    @Codetempcmplt@IDERegister$qqrv @56  ; __fastcall Codetempcmplt::IDERegister()
+    @Codetempcmplt@_sCodeTemplate  @57  ; Codetempcmplt::_sCodeTemplate
+    @Codetempcmplt@initialization$qqrv @54  ; __fastcall Codetempcmplt::initialization()
+    @Codetemplatecmds@Finalization$qqrv @173 ; __fastcall Codetemplatecmds::Finalization()
+    @Codetemplatecmds@TCodeTemplateCmds@ @180 ; Codetemplatecmds::TCodeTemplateCmds::
+    @Codetemplatecmds@TCodeTemplateCmds@$bdtr$qqrv @175 ; __fastcall Codetemplatecmds::TCodeTemplateCmds::~TCodeTemplateCmds()
+    @Codetemplatecmds@TCodeTemplateCmds@PopulateSubActions$qqrp19Vcl@Menus@TMenuItem @177 ; __fastcall Codetemplatecmds::TCodeTemplateCmds::PopulateSubActions(Vcl::Menus::TMenuItem *)
+    @Codetemplatecmds@TCodeTemplateCmds@SurroundCmdPopulateSubMenu$qqrp14System@TObjectp19Vcl@Menus@TMenuItem @176 ; __fastcall Codetemplatecmds::TCodeTemplateCmds::SurroundCmdPopulateSubMenu(System::TObject *, Vcl::Menus::TMenuItem *)
+    @Codetemplatecmds@TCodeTemplateCmds@SurroundCmdUpdate$qqrp14System@TObject @174 ; __fastcall Codetemplatecmds::TCodeTemplateCmds::SurroundCmdUpdate(System::TObject *)
+    @Codetemplatecmds@TCodeTemplateCmds@ViewTemplateManagerCommandExecute$qqrp14System@TObject @178 ; __fastcall Codetemplatecmds::TCodeTemplateCmds::ViewTemplateManagerCommandExecute(System::TObject *)
+    @Codetemplatecmds@initialization$qqrv @172 ; __fastcall Codetemplatecmds::initialization()
+    @Codetemplates@@GetPackageInfoTable$qqrv @184 ; Codetemplates::__linkproc__ __fastcall GetPackageInfoTable()
+    @Codetemplates@@PackageLoad$qqrv @183 ; Codetemplates::__linkproc__ __fastcall PackageLoad()
+    @Codetemplates@@PackageUnload$qqrv @182 ; Codetemplates::__linkproc__ __fastcall PackageUnload()
+    @Codetemplates@initialization$qqrv @181 ; __fastcall Codetemplates::initialization()
+    @Codetemplatesoptionspage@Finalization$qqrv @88  ; __fastcall Codetemplatesoptionspage::Finalization()
+    @Codetemplatesoptionspage@TCodeTemplatesOptionsPg@ @107 ; Codetemplatesoptionspage::TCodeTemplatesOptionsPg::
+    @Codetemplatesoptionspage@TCodeTemplatesOptionsPg@CTManager$qqrv @105 ; __fastcall Codetemplatesoptionspage::TCodeTemplatesOptionsPg::CTManager()
+    @Codetemplatesoptionspage@TCodeTemplatesOptionsPg@CodeListChange$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNode @95  ; __fastcall Codetemplatesoptionspage::TCodeTemplatesOptionsPg::CodeListChange(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *)
+    @Codetemplatesoptionspage@TCodeTemplatesOptionsPg@CodeListCompareNodes$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodet2iri @90  ; __fastcall Codetemplatesoptionspage::TCodeTemplatesOptionsPg::CodeListCompareNodes(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, Idevirtualtrees::TVirtualNode *, int, int&)
+    @Codetemplatesoptionspage@TCodeTemplatesOptionsPg@CodeListEdited$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodei @96  ; __fastcall Codetemplatesoptionspage::TCodeTemplatesOptionsPg::CodeListEdited(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, int)
+    @Codetemplatesoptionspage@TCodeTemplatesOptionsPg@CodeListFocusChanged$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodei @92  ; __fastcall Codetemplatesoptionspage::TCodeTemplatesOptionsPg::CodeListFocusChanged(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, int)
+    @Codetemplatesoptionspage@TCodeTemplatesOptionsPg@CodeListGetNodeDataSize$qqrp32Idevirtualtrees@TBaseVirtualTreeri @94  ; __fastcall Codetemplatesoptionspage::TCodeTemplatesOptionsPg::CodeListGetNodeDataSize(Idevirtualtrees::TBaseVirtualTree *, int&)
+    @Codetemplatesoptionspage@TCodeTemplatesOptionsPg@CodeListGetText$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodei28Idevirtualtrees@TVSTTextTyper17System@WideString @93  ; __fastcall Codetemplatesoptionspage::TCodeTemplatesOptionsPg::CodeListGetText(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, int, Idevirtualtrees::TVSTTextType, System::WideString&)
+    @Codetemplatesoptionspage@TCodeTemplatesOptionsPg@CodeListHeaderClick$qqrp25Idevirtualtrees@TVTHeaderi27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @91  ; Codetemplatesoptionspage::TCodeTemplatesOptionsPg::CodeListHeaderClick(Idevirtualtrees::TVTHeader *, int, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Codetemplatesoptionspage@TCodeTemplatesOptionsPg@CodeTextExit$qqrp14System@TObject @89  ; __fastcall Codetemplatesoptionspage::TCodeTemplatesOptionsPg::CodeTextExit(System::TObject *)
+    @Codetemplatesoptionspage@TCodeTemplatesOptionsPg@InitCodeTemplatePage$qqrv @102 ; __fastcall Codetemplatesoptionspage::TCodeTemplatesOptionsPg::InitCodeTemplatePage()
+    @Codetemplatesoptionspage@TCodeTemplatesOptionsPg@InitTemplateEditView$qqrv @104 ; __fastcall Codetemplatesoptionspage::TCodeTemplatesOptionsPg::InitTemplateEditView()
+    @Codetemplatesoptionspage@TCodeTemplatesOptionsPg@LoadTemplateColumnWidths$qqrv @103 ; __fastcall Codetemplatesoptionspage::TCodeTemplatesOptionsPg::LoadTemplateColumnWidths()
+    @Codetemplatesoptionspage@TCodeTemplatesOptionsPg@LoadTemplates$qqrv @101 ; __fastcall Codetemplatesoptionspage::TCodeTemplatesOptionsPg::LoadTemplates()
+    @Codetemplatesoptionspage@TCodeTemplatesOptionsPg@PropertySheetBroadcast$qqrp14System@TObjectr24Winapi@Messages@TMessage @100 ; __fastcall Codetemplatesoptionspage::TCodeTemplatesOptionsPg::PropertySheetBroadcast(System::TObject *, Winapi::Messages::TMessage&)
+    @Codetemplatesoptionspage@TCodeTemplatesOptionsPg@PropertySheetCreate$qqrp14System@TObject @99  ; __fastcall Codetemplatesoptionspage::TCodeTemplatesOptionsPg::PropertySheetCreate(System::TObject *)
+    @Codetemplatesoptionspage@TCodeTemplatesOptionsPg@PropertySheetShow$qqrp14System@TObject @98  ; __fastcall Codetemplatesoptionspage::TCodeTemplatesOptionsPg::PropertySheetShow(System::TObject *)
+    @Codetemplatesoptionspage@TCodeTemplatesOptionsPg@Template$qqri @97  ; __fastcall Codetemplatesoptionspage::TCodeTemplatesOptionsPg::Template(int)
+    @Codetemplatesoptionspage@initialization$qqrv @87  ; __fastcall Codetemplatesoptionspage::initialization()
+    @Codetemplistbox@Finalization$qqrv @59  ; __fastcall Codetemplistbox::Finalization()
+    @Codetemplistbox@TCodeTemplateBox@ @86  ; Codetemplistbox::TCodeTemplateBox::
+    @Codetemplistbox@TCodeTemplateBox@$bctr$qqrp25System@Classes@TComponent @66  ; __fastcall Codetemplistbox::TCodeTemplateBox::TCodeTemplateBox(System::Classes::TComponent *)
+    @Codetemplistbox@TCodeTemplateBox@AlphaSort$qqrii @81  ; __fastcall Codetemplistbox::TCodeTemplateBox::AlphaSort(int, int)
+    @Codetemplistbox@TCodeTemplateBox@CloseUp$qqro @70  ; __fastcall Codetemplistbox::TCodeTemplateBox::CloseUp(bool)
+    @Codetemplistbox@TCodeTemplateBox@DefaultViewerDrawLine$qqrip20Vcl@Graphics@TCanvasr18System@Types@TRectoo @73  ; __fastcall Codetemplistbox::TCodeTemplateBox::DefaultViewerDrawLine(int, Vcl::Graphics::TCanvas *, System::Types::TRect&, bool, bool)
+    @Codetemplistbox@TCodeTemplateBox@DoEditorKey$qqrbrot2 @72  ; __fastcall Codetemplistbox::TCodeTemplateBox::DoEditorKey(wchar_t, bool&, bool&)
+    @Codetemplistbox@TCodeTemplateBox@EditorTokenChars$qqrv @64  ; __fastcall Codetemplistbox::TCodeTemplateBox::EditorTokenChars()
+    @Codetemplistbox@TCodeTemplateBox@ExactMatch$qqr20System@UnicodeString @63  ; __fastcall Codetemplistbox::TCodeTemplateBox::ExactMatch(System::UnicodeString)
+    @Codetemplistbox@TCodeTemplateBox@FindItem$qqrx20System@UnicodeStringxixi @80  ; __fastcall Codetemplistbox::TCodeTemplateBox::FindItem(const System::UnicodeString, const int, const int)
+    @Codetemplistbox@TCodeTemplateBox@GetCodeObjects$qqri @71  ; __fastcall Codetemplistbox::TCodeTemplateBox::GetCodeObjects(int)
+    @Codetemplistbox@TCodeTemplateBox@GetItemClassText$qqri @77  ; __fastcall Codetemplistbox::TCodeTemplateBox::GetItemClassText(int)
+    @Codetemplistbox@TCodeTemplateBox@GetItemClassWidth$qqri @78  ; __fastcall Codetemplistbox::TCodeTemplateBox::GetItemClassWidth(int)
+    @Codetemplistbox@TCodeTemplateBox@GetItemTypeText$qqri @76  ; __fastcall Codetemplistbox::TCodeTemplateBox::GetItemTypeText(int)
+    @Codetemplistbox@TCodeTemplateBox@GetMatchCount$qqrv @65  ; __fastcall Codetemplistbox::TCodeTemplateBox::GetMatchCount()
+    @Codetemplistbox@TCodeTemplateBox@ListCount$qqrv @74  ; __fastcall Codetemplistbox::TCodeTemplateBox::ListCount()
+    @Codetemplistbox@TCodeTemplateBox@SeedAlphaList$qqrv @82  ; __fastcall Codetemplistbox::TCodeTemplateBox::SeedAlphaList()
+    @Codetemplistbox@TCodeTemplateBox@SetFilter$qqrx20System@UnicodeString @69  ; __fastcall Codetemplistbox::TCodeTemplateBox::SetFilter(const System::UnicodeString)
+    @Codetemplistbox@TCodeTemplateBox@SetPosition$qqrx20System@UnicodeString @68  ; __fastcall Codetemplistbox::TCodeTemplateBox::SetPosition(const System::UnicodeString)
+    @Codetemplistbox@TCodeTemplateBox@ShowList$qqrx20System@UnicodeString @67  ; __fastcall Codetemplistbox::TCodeTemplateBox::ShowList(const System::UnicodeString)
+    @Codetemplistbox@TCodeTemplateBox@UpdateAlphaList$qqrv @79  ; __fastcall Codetemplistbox::TCodeTemplateBox::UpdateAlphaList()
+    @Codetemplistbox@TCodeTemplateBox@ViewerAccept$qqrp14System@TObject @75  ; __fastcall Codetemplistbox::TCodeTemplateBox::ViewerAccept(System::TObject *)
+    @Codetemplistbox@TTemplateInvoker@ @84  ; Codetemplistbox::TTemplateInvoker::
+    @Codetemplistbox@TTemplateInvoker@$bctr$qqrv @62  ; __fastcall Codetemplistbox::TTemplateInvoker::TTemplateInvoker()
+    @Codetemplistbox@TTemplateInvoker@$bdtr$qqrv @61  ; __fastcall Codetemplistbox::TTemplateInvoker::~TTemplateInvoker()
+    @Codetemplistbox@TTemplateInvoker@TemplateInvoke$qqrp14System@TObject @60  ; __fastcall Codetemplistbox::TTemplateInvoker::TemplateInvoke(System::TObject *)
+    @Codetemplistbox@initialization$qqrv @58  ; __fastcall Codetemplistbox::initialization()
+    @Directorywatcher@Finalization$qqrv @2   ; __fastcall Directorywatcher::Finalization()
+    @Directorywatcher@TDirectoryWatcher@ @15  ; Directorywatcher::TDirectoryWatcher::
+    @Directorywatcher@TDirectoryWatcher@$bctr$qqrv @6   ; __fastcall Directorywatcher::TDirectoryWatcher::TDirectoryWatcher()
+    @Directorywatcher@TDirectoryWatcher@$bdtr$qqrv @4   ; __fastcall Directorywatcher::TDirectoryWatcher::~TDirectoryWatcher()
+    @Directorywatcher@TDirectoryWatcher@BeginWatch$qqrv @12  ; __fastcall Directorywatcher::TDirectoryWatcher::BeginWatch()
+    @Directorywatcher@TDirectoryWatcher@EndWatch$qqrv @13  ; __fastcall Directorywatcher::TDirectoryWatcher::EndWatch()
+    @Directorywatcher@TDirectoryWatcher@GetPath$qqrp11_ITEMIDLIST @11  ; __fastcall Directorywatcher::TDirectoryWatcher::GetPath(_ITEMIDLIST *)
+    @Directorywatcher@TDirectoryWatcher@SetActive$qqro @9   ; __fastcall Directorywatcher::TDirectoryWatcher::SetActive(bool)
+    @Directorywatcher@TDirectoryWatcher@SetNotificationTypes$qqrx62System@%Set$34Directorywatcher@TNotificationTypet1$i0$t1$i19$% @10  ; Directorywatcher::TDirectoryWatcher::SetNotificationTypes(const System::Set<{583}...
+    @Directorywatcher@TDirectoryWatcher@SetPath$qqrx20System@UnicodeString @8   ; __fastcall Directorywatcher::TDirectoryWatcher::SetPath(const System::UnicodeString)
+    @Directorywatcher@TDirectoryWatcher@SetSubDirectories$qqrxo @7   ; __fastcall Directorywatcher::TDirectoryWatcher::SetSubDirectories(const bool)
+    @Directorywatcher@TDirectoryWatcher@ShellNotification$qqrp14System@TObject34Directorywatcher@TNotificationTypex20System@UnicodeStringt3 @5   ; __fastcall Directorywatcher::TDirectoryWatcher::ShellNotification(System::TObject *, Directorywatcher::TNotificationType, const System::UnicodeString, const System::UnicodeString)
+    @Directorywatcher@TDirectoryWatcher@WndProc$qqrr24Winapi@Messages@TMessage @3   ; __fastcall Directorywatcher::TDirectoryWatcher::WndProc(Winapi::Messages::TMessage&)
+    @Directorywatcher@initialization$qqrv @1   ; __fastcall Directorywatcher::initialization()
+    @GetPackageInfoTable           @187 ; GetPackageInfoTable
+    @Idetemplate@CreateTemplateFile$qqrx20System@UnicodeString @119 ; __fastcall Idetemplate::CreateTemplateFile(const System::UnicodeString)
+    @Idetemplate@Finalization$qqrv @118 ; __fastcall Idetemplate::Finalization()
+    @Idetemplate@initialization$qqrv @117 ; __fastcall Idetemplate::initialization()
+    @Idetemplatescript@Finalization$qqrv @110 ; __fastcall Idetemplatescript::Finalization()
+    @Idetemplatescript@TIDETemplateEngine@ @116 ; Idetemplatescript::TIDETemplateEngine::
+    @Idetemplatescript@TIDETemplateEngine@Execute$qqrx59System@%DelphiInterface$32Codetemplateapi@IOTACodeTemplate%x64System@%DelphiInterface$37Codetemplateapi@IOTACodeTemplatePoint%x54System@%DelphiInterface$27Toolsapi@IOTASyncEditPoiZg8VsKfJOXPoNl0rN9u7Nw @112 ; Idetemplatescript::TIDETemplateEngine::Execute(const System::DelphiInterface<{583}...
+    @Idetemplatescript@TIDETemplateEngine@GetIDString$qqrv @114 ; __fastcall Idetemplatescript::TIDETemplateEngine::GetIDString()
+    @Idetemplatescript@TIDETemplateEngine@GetLanguage$qqrv @113 ; __fastcall Idetemplatescript::TIDETemplateEngine::GetLanguage()
+    @Idetemplatescript@TIDETemplateEngine@Register$qqrv @111 ; __fastcall Idetemplatescript::TIDETemplateEngine::Register()
+    @Idetemplatescript@initialization$qqrv @109 ; __fastcall Idetemplatescript::initialization()
+    @Mstemplates@Finalization$qqrv @49  ; __fastcall Mstemplates::Finalization()
+    @Mstemplates@IDERegister$qqrv  @50  ; __fastcall Mstemplates::IDERegister()
+    @Mstemplates@initialization$qqrv @48  ; __fastcall Mstemplates::initialization()
+    @Templateviewform@Finalization$qqrv @121 ; __fastcall Templateviewform::Finalization()
+    @Templateviewform@TTemplateView@ @165 ; Templateviewform::TTemplateView::
+    @Templateviewform@TTemplateView@$bctr$qqrp25System@Classes@TComponent @146 ; __fastcall Templateviewform::TTemplateView::TTemplateView(System::Classes::TComponent *)
+    @Templateviewform@TTemplateView@$bdtr$qqrv @155 ; __fastcall Templateviewform::TTemplateView::~TTemplateView()
+    @Templateviewform@TTemplateView@AddTemplate$qqrx59System@%DelphiInterface$32Codetemplateapi@IOTACodeTemplate% @144 ; Templateviewform::TTemplateView::AddTemplate(const System::DelphiInterface<{583}...
+    @Templateviewform@TTemplateView@CTManager$qqrv @156 ; __fastcall Templateviewform::TTemplateView::CTManager()
+    @Templateviewform@TTemplateView@ChangeNotification$qqr44Codetemplateapi@TOTATemplateNotificationTypex59System@%DelphiInterface$32Codetemplateapi@IOTACodeTemplate% @145 ; Templateviewform::TTemplateView::ChangeNotification(Codetemplateapi::TOTATemplateNotificationType, const System::DelphiInterface<{583}...
+    @Templateviewform@TTemplateView@CodeListCompareNodes$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodet2iri @163 ; __fastcall Templateviewform::TTemplateView::CodeListCompareNodes(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, Idevirtualtrees::TVirtualNode *, int, int&)
+    @Templateviewform@TTemplateView@CodeListDblClick$qqrp14System@TObject @123 ; __fastcall Templateviewform::TTemplateView::CodeListDblClick(System::TObject *)
+    @Templateviewform@TTemplateView@CodeListGetHint$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodeir40Idevirtualtrees@TVTTooltipLineBreakStyler17System@WideString @131 ; __fastcall Templateviewform::TTemplateView::CodeListGetHint(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, int, Idevirtualtrees::TVTTooltipLineBreakStyle&, System::WideString&)
+    @Templateviewform@TTemplateView@CodeListGetNodeDataSize$qqrp32Idevirtualtrees@TBaseVirtualTreeri @162 ; __fastcall Templateviewform::TTemplateView::CodeListGetNodeDataSize(Idevirtualtrees::TBaseVirtualTree *, int&)
+    @Templateviewform@TTemplateView@CodeListGetText$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodei28Idevirtualtrees@TVSTTextTyper17System@WideString @161 ; __fastcall Templateviewform::TTemplateView::CodeListGetText(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, int, Idevirtualtrees::TVSTTextType, System::WideString&)
+    @Templateviewform@TTemplateView@CodeListHeaderClick$qqrp25Idevirtualtrees@TVTHeaderi27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @160 ; Templateviewform::TTemplateView::CodeListHeaderClick(Idevirtualtrees::TVTHeader *, int, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Templateviewform@TTemplateView@CodeListKeyPress$qqrp14System@TObjectrb @149 ; __fastcall Templateviewform::TTemplateView::CodeListKeyPress(System::TObject *, wchar_t&)
+    @Templateviewform@TTemplateView@EditTemplateCmdExecute$qqrp14System@TObject @133 ; __fastcall Templateviewform::TTemplateView::EditTemplateCmdExecute(System::TObject *)
+    @Templateviewform@TTemplateView@EditTemplateCmdUpdate$qqrp14System@TObject @135 ; __fastcall Templateviewform::TTemplateView::EditTemplateCmdUpdate(System::TObject *)
+    @Templateviewform@TTemplateView@EditorViewChanged$qqrp14System@TObjectii @134 ; __fastcall Templateviewform::TTemplateView::EditorViewChanged(System::TObject *, int, int)
+    @Templateviewform@TTemplateView@Filter$qqro @126 ; __fastcall Templateviewform::TTemplateView::Filter(bool)
+    @Templateviewform@TTemplateView@FocusFirstNode$qqrv @128 ; __fastcall Templateviewform::TTemplateView::FocusFirstNode()
+    @Templateviewform@TTemplateView@FormShow$qqrp14System@TObject @127 ; __fastcall Templateviewform::TTemplateView::FormShow(System::TObject *)
+    @Templateviewform@TTemplateView@GetCurEdOpts$qqrv @138 ; __fastcall Templateviewform::TTemplateView::GetCurEdOpts()
+    @Templateviewform@TTemplateView@GetEditState$qqrv @137 ; __fastcall Templateviewform::TTemplateView::GetEditState()
+    @Templateviewform@TTemplateView@GetLanguage$qqri @136 ; __fastcall Templateviewform::TTemplateView::GetLanguage(int)
+    @Templateviewform@TTemplateView@GetLanguageNode$qqr17System@WideString @157 ; __fastcall Templateviewform::TTemplateView::GetLanguageNode(System::WideString)
+    @Templateviewform@TTemplateView@GetSelectedText$qqrv @151 ; __fastcall Templateviewform::TTemplateView::GetSelectedText()
+    @Templateviewform@TTemplateView@InitDialog$qqrv @159 ; __fastcall Templateviewform::TTemplateView::InitDialog()
+    @Templateviewform@TTemplateView@InsertCodeCmdExecute$qqrp14System@TObject @125 ; __fastcall Templateviewform::TTemplateView::InsertCodeCmdExecute(System::TObject *)
+    @Templateviewform@TTemplateView@InsertCodeCmdUpdate$qqrp14System@TObject @124 ; __fastcall Templateviewform::TTemplateView::InsertCodeCmdUpdate(System::TObject *)
+    @Templateviewform@TTemplateView@LoadTemplateColumnWidths$qqrv @158 ; __fastcall Templateviewform::TTemplateView::LoadTemplateColumnWidths()
+    @Templateviewform@TTemplateView@LoadWindowState$qqrp30System@Inifiles@TCustomIniFile @147 ; __fastcall Templateviewform::TTemplateView::LoadWindowState(System::Inifiles::TCustomIniFile *)
+    @Templateviewform@TTemplateView@NewTemplateCmdExecute$qqrp14System@TObject @153 ; __fastcall Templateviewform::TTemplateView::NewTemplateCmdExecute(System::TObject *)
+    @Templateviewform@TTemplateView@NewTemplateCmdUpdate$qqrp14System@TObject @122 ; __fastcall Templateviewform::TTemplateView::NewTemplateCmdUpdate(System::TObject *)
+    @Templateviewform@TTemplateView@NodeFromTemplateIndex$qqri @139 ; __fastcall Templateviewform::TTemplateView::NodeFromTemplateIndex(int)
+    @Templateviewform@TTemplateView@NotifierIndex @171 ; Templateviewform::TTemplateView::NotifierIndex
+    @Templateviewform@TTemplateView@OpenTemplate$qqri @150 ; __fastcall Templateviewform::TTemplateView::OpenTemplate(int)
+    @Templateviewform@TTemplateView@PersonalityFilter$qqrv @129 ; __fastcall Templateviewform::TTemplateView::PersonalityFilter()
+    @Templateviewform@TTemplateView@PersonalityFilterCmdExecute$qqrp14System@TObject @130 ; __fastcall Templateviewform::TTemplateView::PersonalityFilterCmdExecute(System::TObject *)
+    @Templateviewform@TTemplateView@RemoveEditorHook$qqrv @143 ; __fastcall Templateviewform::TTemplateView::RemoveEditorHook()
+    @Templateviewform@TTemplateView@RemoveTemplate$qqrx59System@%DelphiInterface$32Codetemplateapi@IOTACodeTemplate% @142 ; Templateviewform::TTemplateView::RemoveTemplate(const System::DelphiInterface<{583}...
+    @Templateviewform@TTemplateView@RemoveTemplateCmdExecute$qqrp14System@TObject @132 ; __fastcall Templateviewform::TTemplateView::RemoveTemplateCmdExecute(System::TObject *)
+    @Templateviewform@TTemplateView@RemoveTemplateCmdUpdate$qqrp14System@TObject @152 ; __fastcall Templateviewform::TTemplateView::RemoveTemplateCmdUpdate(System::TObject *)
+    @Templateviewform@TTemplateView@SaveWindowState$qqrp30System@Inifiles@TCustomIniFileo @148 ; __fastcall Templateviewform::TTemplateView::SaveWindowState(System::Inifiles::TCustomIniFile *, bool)
+    @Templateviewform@TTemplateView@Template$qqri @154 ; __fastcall Templateviewform::TTemplateView::Template(int)
+    @Templateviewform@TTemplateView@TemplateIndex$qqrx59System@%DelphiInterface$32Codetemplateapi@IOTACodeTemplate% @141 ; Templateviewform::TTemplateView::TemplateIndex(const System::DelphiInterface<{583}...
+    @Templateviewform@TTemplateView@UpdateTemplate$qqrx59System@%DelphiInterface$32Codetemplateapi@IOTACodeTemplate% @140 ; Templateviewform::TTemplateView::UpdateTemplate(const System::DelphiInterface<{583}...
+    @Templateviewform@initialization$qqrv @120 ; __fastcall Templateviewform::initialization()
+    Finalize                       @185 ; Finalize
+    Initialize                     @186 ; Initialize

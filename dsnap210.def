@@ -1,0 +1,1098 @@
+LIBRARY     DSNAP210.BPL
+
+DESCRIPTION 'mbarcadero DataSnap Components'
+
+EXPORTS
+    @$xp$21Datasnap@Dsintf@DSKEY   @110 ; __tpdsc__ Datasnap::Dsintf::DSKEY
+    @$xp$21System@%TArray__1$uc%   @598 ; __tpdsc__ System::TArray__1<unsigned char>
+    @$xp$22Datasnap@Dsintf@DSAttr  @123 ; __tpdsc__ Datasnap::Dsintf::DSAttr
+    @$xp$22Datasnap@Dsintf@DSProp  @108 ; __tpdsc__ Datasnap::Dsintf::DSProp
+    @$xp$23Datasnap@Dsintf@CURProp @107 ; __tpdsc__ Datasnap::Dsintf::CURProp
+    @$xp$23Datasnap@Dsintf@DSProps @105 ; __tpdsc__ Datasnap::Dsintf::DSProps
+    @$xp$23Datasnap@Dsintf@IDSBase @85  ; __tpdsc__ Datasnap::Dsintf::IDSBase
+    @$xp$23Datasnap@Dsintf@pDSAttr @124 ; __tpdsc__ Datasnap::Dsintf::pDSAttr
+    @$xp$24Datasnap@Dsintf@AGGSTATE @117 ; __tpdsc__ Datasnap::Dsintf::AGGSTATE
+    @$xp$24Datasnap@Dsintf@AGGVALUE @115 ; __tpdsc__ Datasnap::Dsintf::AGGVALUE
+    @$xp$24Datasnap@Dsintf@pDSProps @106 ; __tpdsc__ Datasnap::Dsintf::pDSProps
+    @$xp$25Datasnap@Dsintf@DSBOOKMRK @113 ; __tpdsc__ Datasnap::Dsintf::DSBOOKMRK
+    @$xp$25Datasnap@Dsintf@DSFLDDesc @103 ; __tpdsc__ Datasnap::Dsintf::DSFLDDesc
+    @$xp$25Datasnap@Dsintf@DSIDXDesc @101 ; __tpdsc__ Datasnap::Dsintf::DSIDXDesc
+    @$xp$25Datasnap@Dsintf@DSKEYBOOL @109 ; __tpdsc__ Datasnap::Dsintf::DSKEYBOOL
+    @$xp$25Datasnap@Dsintf@IDSCursor @84  ; __tpdsc__ Datasnap::Dsintf::IDSCursor
+    @$xp$25Datasnap@Dsintf@IDSWriter @83  ; __tpdsc__ Datasnap::Dsintf::IDSWriter
+    @$xp$25Datasnap@Dsintf@MIDASNAME @126 ; __tpdsc__ Datasnap::Dsintf::MIDASNAME
+    @$xp$25Datasnap@Dsintf@MIDASPATH @125 ; __tpdsc__ Datasnap::Dsintf::MIDASPATH
+    @$xp$25Datasnap@Dsintf@PLongBool @128 ; __tpdsc__ Datasnap::Dsintf::PLongBool
+    @$xp$25Datasnap@Dsintf@SAVEPOINT @111 ; __tpdsc__ Datasnap::Dsintf::SAVEPOINT
+    @$xp$25Datasnap@Dsintf@hDSFilter @121 ; __tpdsc__ Datasnap::Dsintf::hDSFilter
+    @$xp$25Datasnap@Dsintf@pfFLDComp @94  ; __tpdsc__ Datasnap::Dsintf::pfFLDComp
+    @$xp$25Datasnap@Midas@IAppServer @4   ; __tpdsc__ Datasnap::Midas::IAppServer
+    @$xp$26Datasnap@Dbclient@PRecInfo @620 ; __tpdsc__ Datasnap::Dbclient::PRecInfo
+    @$xp$26Datasnap@Dbclient@TRecInfo @619 ; __tpdsc__ Datasnap::Dbclient::TRecInfo
+    @$xp$26Datasnap@Dsintf@GROUPSTATE @120 ; __tpdsc__ Datasnap::Dsintf::GROUPSTATE
+    @$xp$26Datasnap@Dsintf@pDSBOOKMRK @114 ; __tpdsc__ Datasnap::Dsintf::pDSBOOKMRK
+    @$xp$26Datasnap@Dsintf@pDSFLDDesc @104 ; __tpdsc__ Datasnap::Dsintf::pDSFLDDesc
+    @$xp$26Datasnap@Dsintf@pDSIDXDesc @102 ; __tpdsc__ Datasnap::Dsintf::pDSIDXDesc
+    @$xp$26Datasnap@Dsintf@pSAVEPOINT @112 ; __tpdsc__ Datasnap::Dsintf::pSAVEPOINT
+    @$xp$26Datasnap@Dsintf@pdsCBRType @97  ; __tpdsc__ Datasnap::Dsintf::pdsCBRType
+    @$xp$26Datasnap@Dsintf@pfDSFilter @99  ; __tpdsc__ Datasnap::Dsintf::pfDSFilter
+    @$xp$26Datasnap@Dsintf@phDSFilter @122 ; __tpdsc__ Datasnap::Dsintf::phDSFilter
+    @$xp$27Datasnap@Dbclient@EDBClient @634 ; __tpdsc__ Datasnap::Dbclient::EDBClient
+    @$xp$27Datasnap@Provider@EDSWriter @962 ; __tpdsc__ Datasnap::Provider::EDSWriter
+    @$xp$27Datasnap@Provider@TProvider @925 ; __tpdsc__ Datasnap::Provider::TProvider
+    @$xp$28Datasnap@Dbclient@PKeyBuffer @618 ; __tpdsc__ Datasnap::Dbclient::PKeyBuffer
+    @$xp$28Datasnap@Dbclient@TAggregate @624 ; __tpdsc__ Datasnap::Dbclient::TAggregate
+    @$xp$28Datasnap@Dbclient@TKeyBuffer @616 ; __tpdsc__ Datasnap::Dbclient::TKeyBuffer
+    @$xp$28Datasnap@Dsintf@DBSearchCond @127 ; __tpdsc__ Datasnap::Dsintf::DBSearchCond
+    @$xp$28Datasnap@Dsintf@_AGGVALUE@_1 @116 ; __tpdsc__ Datasnap::Dsintf::_AGGVALUE::_1
+    @$xp$28Datasnap@Dsintf@hDSAggregate @118 ; __tpdsc__ Datasnap::Dsintf::hDSAggregate
+    @$xp$28Datasnap@Provider@TInfoArray @951 ; __tpdsc__ Datasnap::Provider::TInfoArray
+    @$xp$29Datasnap@Dbclient@TAggregates @622 ; __tpdsc__ Datasnap::Dbclient::TAggregates
+    @$xp$29Datasnap@Dsintf@TPcktAttrArea @93  ; __tpdsc__ Datasnap::Dsintf::TPcktAttrArea
+    @$xp$29Datasnap@Dsintf@pfDSCalcField @98  ; __tpdsc__ Datasnap::Dsintf::pfDSCalcField
+    @$xp$29Datasnap@Dsintf@pfDSReconcile @96  ; __tpdsc__ Datasnap::Dsintf::pfDSReconcile
+    @$xp$29Datasnap@Dsintf@phDSAggregate @119 ; __tpdsc__ Datasnap::Dsintf::phDSAggregate
+    @$xp$29Datasnap@Midas@IAppServerDisp @3   ; __tpdsc__ Datasnap::Midas::IAppServerDisp
+    @$xp$29Datasnap@Provider@TGetDSProps @929 ; __tpdsc__ Datasnap::Provider::TGetDSProps
+    @$xp$29Datasnap@Provider@TOnValidate @949 ; __tpdsc__ Datasnap::Provider::TOnValidate
+    @$xp$29Datasnap@Provider@TUpdateTree @923 ; __tpdsc__ Datasnap::Provider::TUpdateTree
+    @$xp$30Datasnap@Dbclient@TFetchOption @608 ; __tpdsc__ Datasnap::Dbclient::TFetchOption
+    @$xp$30Datasnap@Dbclient@TRemoteEvent @612 ; __tpdsc__ Datasnap::Dbclient::TRemoteEvent
+    @$xp$30Datasnap@Dsintf@TPcktFldStatus @92  ; __tpdsc__ Datasnap::Dsintf::TPcktFldStatus
+    @$xp$30Datasnap@Provider@TSQLResolver @917 ; __tpdsc__ Datasnap::Provider::TSQLResolver
+    @$xp$31Datasnap@Dbclient@TFetchOptions @607 ; __tpdsc__ Datasnap::Dbclient::TFetchOptions
+    @$xp$31Datasnap@Provider@PPutFieldInfo @954 ; __tpdsc__ Datasnap::Provider::PPutFieldInfo
+    @$xp$31Datasnap@Provider@TBaseProvider @931 ; __tpdsc__ Datasnap::Provider::TBaseProvider
+    @$xp$31Datasnap@Provider@TPutFieldInfo @952 ; __tpdsc__ Datasnap::Provider::TPutFieldInfo
+    @$xp$31Datasnap@Provider@TPutFieldProc @953 ; __tpdsc__ Datasnap::Provider::TPutFieldProc
+    @$xp$32Datasnap@Dbclient@TClientDataSet @601 ; __tpdsc__ Datasnap::Dbclient::TClientDataSet
+    @$xp$32Datasnap@Dbclient@TDataSetOption @610 ; __tpdsc__ Datasnap::Dbclient::TDataSetOption
+    @$xp$32Datasnap@Dbclient@TFieldDescList @621 ; __tpdsc__ Datasnap::Dbclient::TFieldDescList
+    @$xp$32Datasnap@Dbclient@TReconcileInfo @611 ; __tpdsc__ Datasnap::Dbclient::TReconcileInfo
+    @$xp$32Datasnap@Dbclient@_TKeyBuffer@_1 @617 ; __tpdsc__ Datasnap::Dbclient::_TKeyBuffer::_1
+    @$xp$32Datasnap@Dsintf@pfCHANGECallBack @100 ; __tpdsc__ Datasnap::Dsintf::pfCHANGECallBack
+    @$xp$32Datasnap@Dsintf@pfDSReconcile_MD @95  ; __tpdsc__ Datasnap::Dsintf::pfDSReconcile_MD
+    @$xp$32Datasnap@Provider@TPacketDataSet @945 ; __tpdsc__ Datasnap::Provider::TPacketDataSet
+    @$xp$33Datasnap@Dbclient@EReconcileError @632 ; __tpdsc__ Datasnap::Dbclient::EReconcileError
+    @$xp$33Datasnap@Dbclient@TAggUpdateEvent @626 ; __tpdsc__ Datasnap::Dbclient::TAggUpdateEvent
+    @$xp$33Datasnap@Dbclient@TDataSetOptions @609 ; __tpdsc__ Datasnap::Dbclient::TDataSetOptions
+    @$xp$33Datasnap@Provider@TCustomProvider @943 ; __tpdsc__ Datasnap::Provider::TCustomProvider
+    @$xp$33Datasnap@Provider@TCustomResolver @921 ; __tpdsc__ Datasnap::Provider::TCustomResolver
+    @$xp$33Datasnap@Provider@TGetParamsEvent @950 ; __tpdsc__ Datasnap::Provider::TGetParamsEvent
+    @$xp$33Datasnap@Provider@TLocalAppServer @915 ; __tpdsc__ Datasnap::Provider::TLocalAppServer
+    @$xp$33Datasnap@Provider@TProviderOption @956 ; __tpdsc__ Datasnap::Provider::TProviderOption
+    @$xp$34Datasnap@Databkr@TRemoteDataModule @1083; __tpdsc__ Datasnap::Databkr::TRemoteDataModule
+    @$xp$34Datasnap@Dbclient@TReconcileAction @614 ; __tpdsc__ Datasnap::Dbclient::TReconcileAction
+    @$xp$34Datasnap@Provider@TDataSetProvider @927 ; __tpdsc__ Datasnap::Provider::TDataSetProvider
+    @$xp$34Datasnap@Provider@TDataSetResolver @919 ; __tpdsc__ Datasnap::Provider::TDataSetResolver
+    @$xp$34Datasnap@Provider@TGetRecordOption @959 ; __tpdsc__ Datasnap::Provider::TGetRecordOption
+    @$xp$34Datasnap@Provider@TProviderOptions @955 ; __tpdsc__ Datasnap::Provider::TProviderOptions
+    @$xp$35Datasnap@Databkr@TCRemoteDataModule @1063; __tpdsc__ Datasnap::Databkr::TCRemoteDataModule
+    @$xp$35Datasnap@Dbclient@TClientBlobStream @599 ; __tpdsc__ Datasnap::Dbclient::TClientBlobStream
+    @$xp$35Datasnap@Dbclient@TConnectionBroker @627 ; __tpdsc__ Datasnap::Dbclient::TConnectionBroker
+    @$xp$35Datasnap@Dbclient@TDataPacketFormat @615 ; __tpdsc__ Datasnap::Dbclient::TDataPacketFormat
+    @$xp$35Datasnap@Dbclient@TGetUsernameEvent @631 ; __tpdsc__ Datasnap::Dbclient::TGetUsernameEvent
+    @$xp$35Datasnap@Provider@TDataPacketWriter @947 ; __tpdsc__ Datasnap::Provider::TDataPacketWriter
+    @$xp$35Datasnap@Provider@TDataRequestEvent @957 ; __tpdsc__ Datasnap::Provider::TDataRequestEvent
+    @$xp$35Datasnap@Provider@TGetRecordOptions @958 ; __tpdsc__ Datasnap::Provider::TGetRecordOptions
+    @$xp$35Datasnap@Provider@TResolverResponse @938 ; __tpdsc__ Datasnap::Provider::TResolverResponse
+    @$xp$36Datasnap@Databkr@TProviderDataModule @1085; __tpdsc__ Datasnap::Databkr::TProviderDataModule
+    @$xp$36Datasnap@Dsintf@PDSDataPacketFldDesc @91  ; __tpdsc__ Datasnap::Dsintf::PDSDataPacketFldDesc
+    @$xp$36Datasnap@Dsintf@TDSDataPacketFldDesc @90  ; __tpdsc__ Datasnap::Dsintf::TDSDataPacketFldDesc
+    @$xp$36Datasnap@Provider@IProviderContainer @914 ; __tpdsc__ Datasnap::Provider::IProviderContainer
+    @$xp$36Datasnap@Provider@TBeforeCommitEvent @933 ; __tpdsc__ Datasnap::Provider::TBeforeCommitEvent
+    @$xp$36Datasnap@Provider@TGetTableNameEvent @930 ; __tpdsc__ Datasnap::Provider::TGetTableNameEvent
+    @$xp$36Datasnap@Provider@TProviderDataEvent @937 ; __tpdsc__ Datasnap::Provider::TProviderDataEvent
+    @$xp$36System@%TArray__1$p14Data@Db@TField% @580 ; __tpdsc__ System::TArray__1<Data::Db::TField *>
+    @$xp$37Datasnap@Dbclient@TCustomRemoteServer @629 ; __tpdsc__ Datasnap::Dbclient::TCustomRemoteServer
+    @$xp$37Datasnap@Provider@TCustomPacketWriter @960 ; __tpdsc__ Datasnap::Provider::TCustomPacketWriter
+    @$xp$37Datasnap@Provider@TResolverErrorEvent @934 ; __tpdsc__ Datasnap::Provider::TResolverErrorEvent
+    @$xp$38Datasnap@Dbclient@TCustomClientDataSet @603 ; __tpdsc__ Datasnap::Dbclient::TCustomClientDataSet
+    @$xp$38Datasnap@Dbclient@TReconcileErrorEvent @613 ; __tpdsc__ Datasnap::Dbclient::TReconcileErrorEvent
+    @$xp$39Datasnap@Databkr@TRemoteDataModuleClass @1082; __tpdsc__ Datasnap::Databkr::TRemoteDataModuleClass
+    @$xp$41Datasnap@Provider@TAfterUpdateRecordEvent @935 ; __tpdsc__ Datasnap::Provider::TAfterUpdateRecordEvent
+    @$xp$41System@%IEnumerable__1$p14Data@Db@TField% @569 ; __tpdsc__ System::IEnumerable__1<Data::Db::TField *>
+    @$xp$41System@%IEnumerator__1$p14Data@Db@TField% @570 ; __tpdsc__ System::IEnumerator__1<Data::Db::TField *>
+    @$xp$42Datasnap@Provider@TBeforeUpdateRecordEvent @936 ; __tpdsc__ Datasnap::Provider::TBeforeUpdateRecordEvent
+    @$xp$42System@%TArray__1$p20System@Classes@TList% @597 ; __tpdsc__ System::TArray__1<System::Classes::TList *>
+    @$xp$47System@%IEnumerable__1$p20System@Classes@TList% @586 ; __tpdsc__ System::IEnumerable__1<System::Classes::TList *>
+    @$xp$47System@%IEnumerator__1$p20System@Classes@TList% @587 ; __tpdsc__ System::IEnumerator__1<System::Classes::TList *>
+    @$xp$51System@%TArray__1$p29Datasnap@Provider@TUpdateTree% @913 ; __tpdsc__ System::TArray__1<Datasnap::Provider::TUpdateTree *>
+    @$xp$55System@%TArray__1$p33Datasnap@Provider@TCustomProvider% @1081; __tpdsc__ System::TArray__1<Datasnap::Provider::TCustomProvider *>
+    @$xp$56System@%IEnumerable__1$p29Datasnap@Provider@TUpdateTree% @902 ; __tpdsc__ System::IEnumerable__1<Datasnap::Provider::TUpdateTree *>
+    @$xp$56System@%IEnumerator__1$p29Datasnap@Provider@TUpdateTree% @903 ; __tpdsc__ System::IEnumerator__1<Datasnap::Provider::TUpdateTree *>
+    @$xp$56System@Generics@Collections@%TList__1$p14Data@Db@TField% @564 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Db::TField *>
+    @$xp$57Datasnap@Dbclient@TCustomClientDataSet@TPersistDataPacket @605 ; __tpdsc__ Datasnap::Dbclient::TCustomClientDataSet::TPersistDataPacket
+    @$xp$57System@Generics@Defaults@%IComparer__1$p14Data@Db@TField% @574 ; __tpdsc__ System::Generics::Defaults::IComparer__1<Data::Db::TField *>
+    @$xp$60System@%IEnumerable__1$p33Datasnap@Provider@TCustomProvider% @1070; __tpdsc__ System::IEnumerable__1<Datasnap::Provider::TCustomProvider *>
+    @$xp$60System@%IEnumerator__1$p33Datasnap@Provider@TCustomProvider% @1071; __tpdsc__ System::IEnumerator__1<Datasnap::Provider::TCustomProvider *>
+    @$xp$62System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField% @576 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<Data::Db::TField *>
+    @$xp$62System@Generics@Collections@%TEnumerator__1$p14Data@Db@TField% @578 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<Data::Db::TField *>
+    @$xp$62System@Generics@Collections@%TList__1$p20System@Classes@TList% @581 ; __tpdsc__ System::Generics::Collections::TList__1<System::Classes::TList *>
+    @$xp$63System@Generics@Defaults@%IComparer__1$p20System@Classes@TList% @591 ; __tpdsc__ System::Generics::Defaults::IComparer__1<System::Classes::TList *>
+    @$xp$64System@Generics@Collections@%TArrayManager__1$p14Data@Db@TField% @571 ; __tpdsc__ System::Generics::Collections::TArrayManager__1<Data::Db::TField *>
+    @$xp$68System@Generics@Collections@%TEnumerable__1$p20System@Classes@TList% @593 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<System::Classes::TList *>
+    @$xp$68System@Generics@Collections@%TEnumerator__1$p20System@Classes@TList% @595 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<System::Classes::TList *>
+    @$xp$68System@Generics@Collections@%TList__1$p14Data@Db@TField%@%arrayofT$% @575 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Db::TField *>::arrayofT<>
+    @$xp$70System@Generics@Collections@%TArrayManager__1$p20System@Classes@TList% @588 ; __tpdsc__ System::Generics::Collections::TArrayManager__1<System::Classes::TList *>
+    @$xp$70System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEmptyFunc$% @568 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Db::TField *>::TEmptyFunc<>
+    @$xp$71System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEnumerator$% @566 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Db::TField *>::TEnumerator<>
+    @$xp$71System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree% @897 ; __tpdsc__ System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>
+    @$xp$72System@Generics@Defaults@%IComparer__1$p29Datasnap@Provider@TUpdateTree% @907 ; __tpdsc__ System::Generics::Defaults::IComparer__1<Datasnap::Provider::TUpdateTree *>
+    @$xp$73System@Generics@Collections@%TCollectionNotifyEvent__1$p14Data@Db@TField% @573 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<Data::Db::TField *>
+    @$xp$74System@Generics@Collections@%TList__1$p20System@Classes@TList%@%arrayofT$% @592 ; __tpdsc__ System::Generics::Collections::TList__1<System::Classes::TList *>::arrayofT<>
+    @$xp$75System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider% @1065; __tpdsc__ System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>
+    @$xp$76System@Generics@Collections@%TList__1$p20System@Classes@TList%@%TEmptyFunc$% @585 ; __tpdsc__ System::Generics::Collections::TList__1<System::Classes::TList *>::TEmptyFunc<>
+    @$xp$76System@Generics@Defaults@%IComparer__1$p33Datasnap@Provider@TCustomProvider% @1075; __tpdsc__ System::Generics::Defaults::IComparer__1<Datasnap::Provider::TCustomProvider *>
+    @$xp$77System@Generics@Collections@%TEnumerable__1$p29Datasnap@Provider@TUpdateTree% @909 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<Datasnap::Provider::TUpdateTree *>
+    @$xp$77System@Generics@Collections@%TEnumerator__1$p29Datasnap@Provider@TUpdateTree% @911 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<Datasnap::Provider::TUpdateTree *>
+    @$xp$77System@Generics@Collections@%TList__1$p20System@Classes@TList%@%TEnumerator$% @583 ; __tpdsc__ System::Generics::Collections::TList__1<System::Classes::TList *>::TEnumerator<>
+    @$xp$79System@Generics@Collections@%TArrayManager__1$p29Datasnap@Provider@TUpdateTree% @904 ; __tpdsc__ System::Generics::Collections::TArrayManager__1<Datasnap::Provider::TUpdateTree *>
+    @$xp$79System@Generics@Collections@%TCollectionNotifyEvent__1$p20System@Classes@TList% @590 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<System::Classes::TList *>
+    @$xp$81System@Generics@Collections@%TEnumerable__1$p33Datasnap@Provider@TCustomProvider% @1077; __tpdsc__ System::Generics::Collections::TEnumerable__1<Datasnap::Provider::TCustomProvider *>
+    @$xp$81System@Generics@Collections@%TEnumerator__1$p33Datasnap@Provider@TCustomProvider% @1079; __tpdsc__ System::Generics::Collections::TEnumerator__1<Datasnap::Provider::TCustomProvider *>
+    @$xp$83System@Generics@Collections@%TArrayManager__1$p33Datasnap@Provider@TCustomProvider% @1072; __tpdsc__ System::Generics::Collections::TArrayManager__1<Datasnap::Provider::TCustomProvider *>
+    @$xp$83System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@%arrayofT$% @908 ; __tpdsc__ System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::arrayofT<>
+    @$xp$85System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@%TEmptyFunc$% @901 ; __tpdsc__ System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::TEmptyFunc<>
+    @$xp$86System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@%TEnumerator$% @899 ; __tpdsc__ System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::TEnumerator<>
+    @$xp$87System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@%arrayofT$% @1076; __tpdsc__ System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::arrayofT<>
+    @$xp$88System@Generics@Collections@%TCollectionNotifyEvent__1$p29Datasnap@Provider@TUpdateTree% @906 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<Datasnap::Provider::TUpdateTree *>
+    @$xp$89System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@%TEmptyFunc$% @1069; __tpdsc__ System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::TEmptyFunc<>
+    @$xp$90System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@%TEnumerator$% @1067; __tpdsc__ System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::TEnumerator<>
+    @$xp$92System@Generics@Collections@%TCollectionNotifyEvent__1$p33Datasnap@Provider@TCustomProvider% @1074; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<Datasnap::Provider::TCustomProvider *>
+    @Datasnap@Databkr@DisableSocketTransport$qqrx20System@UnicodeString @1059; __fastcall Datasnap::Databkr::DisableSocketTransport(const System::UnicodeString)
+    @Datasnap@Databkr@DisableWebTransport$qqrx20System@UnicodeString @1057; __fastcall Datasnap::Databkr::DisableWebTransport(const System::UnicodeString)
+    @Datasnap@Databkr@EnableSocketTransport$qqrx20System@UnicodeString @1060; __fastcall Datasnap::Databkr::EnableSocketTransport(const System::UnicodeString)
+    @Datasnap@Databkr@EnableWebTransport$qqrx20System@UnicodeString @1058; __fastcall Datasnap::Databkr::EnableWebTransport(const System::UnicodeString)
+    @Datasnap@Databkr@Finalization$qqrv @1027; __fastcall Datasnap::Databkr::Finalization()
+    @Datasnap@Databkr@RegisterPooled$qqrx20System@UnicodeStringiio @1062; __fastcall Datasnap::Databkr::RegisterPooled(const System::UnicodeString, int, int, bool)
+    @Datasnap@Databkr@TCRemoteDataModule@ @1064; Datasnap::Databkr::TCRemoteDataModule::
+    @Datasnap@Databkr@TCRemoteDataModule@$bctr$qqrp25System@Classes@TComponent @1036; __fastcall Datasnap::Databkr::TCRemoteDataModule::TCRemoteDataModule(System::Classes::TComponent *)
+    @Datasnap@Databkr@TCRemoteDataModule@$bdtr$qqrv @1035; __fastcall Datasnap::Databkr::TCRemoteDataModule::~TCRemoteDataModule()
+    @Datasnap@Databkr@TCRemoteDataModule@CRDMGetProviderNames$qqrv @1030; __fastcall Datasnap::Databkr::TCRemoteDataModule::CRDMGetProviderNames()
+    @Datasnap@Databkr@TCRemoteDataModule@GetProvider$qqrx20System@UnicodeString @1029; __fastcall Datasnap::Databkr::TCRemoteDataModule::GetProvider(const System::UnicodeString)
+    @Datasnap@Databkr@TCRemoteDataModule@GetProviderCount$qqrv @1028; __fastcall Datasnap::Databkr::TCRemoteDataModule::GetProviderCount()
+    @Datasnap@Databkr@TCRemoteDataModule@Lock$qqrv @1034; __fastcall Datasnap::Databkr::TCRemoteDataModule::Lock()
+    @Datasnap@Databkr@TCRemoteDataModule@RegisterProvider$qqrp33Datasnap@Provider@TCustomProvider @1032; __fastcall Datasnap::Databkr::TCRemoteDataModule::RegisterProvider(Datasnap::Provider::TCustomProvider *)
+    @Datasnap@Databkr@TCRemoteDataModule@UnLock$qqrv @1033; __fastcall Datasnap::Databkr::TCRemoteDataModule::UnLock()
+    @Datasnap@Databkr@TCRemoteDataModule@UnRegisterProvider$qqrp33Datasnap@Provider@TCustomProvider @1031; __fastcall Datasnap::Databkr::TCRemoteDataModule::UnRegisterProvider(Datasnap::Provider::TCustomProvider *)
+    @Datasnap@Databkr@TProviderDataModule@ @1086; Datasnap::Databkr::TProviderDataModule::
+    @Datasnap@Databkr@TProviderDataModule@$bctr$qqrp25System@Classes@TComponent @1043; __fastcall Datasnap::Databkr::TProviderDataModule::TProviderDataModule(System::Classes::TComponent *)
+    @Datasnap@Databkr@TProviderDataModule@$bdtr$qqrv @1042; __fastcall Datasnap::Databkr::TProviderDataModule::~TProviderDataModule()
+    @Datasnap@Databkr@TProviderDataModule@CleanProviders$qqrv @1044; __fastcall Datasnap::Databkr::TProviderDataModule::CleanProviders()
+    @Datasnap@Databkr@TProviderDataModule@GetProvider$qqrx20System@UnicodeString @1041; __fastcall Datasnap::Databkr::TProviderDataModule::GetProvider(const System::UnicodeString)
+    @Datasnap@Databkr@TProviderDataModule@GetProviderCount$qqrv @1040; __fastcall Datasnap::Databkr::TProviderDataModule::GetProviderCount()
+    @Datasnap@Databkr@TProviderDataModule@ProviderNamesToVariant$qqrv @1039; __fastcall Datasnap::Databkr::TProviderDataModule::ProviderNamesToVariant()
+    @Datasnap@Databkr@TProviderDataModule@RegisterProvider$qqrp33Datasnap@Provider@TCustomProvider @1038; __fastcall Datasnap::Databkr::TProviderDataModule::RegisterProvider(Datasnap::Provider::TCustomProvider *)
+    @Datasnap@Databkr@TProviderDataModule@UnRegisterProvider$qqrp33Datasnap@Provider@TCustomProvider @1037; __fastcall Datasnap::Databkr::TProviderDataModule::UnRegisterProvider(Datasnap::Provider::TCustomProvider *)
+    @Datasnap@Databkr@TRemoteDataModule@ @1084; Datasnap::Databkr::TRemoteDataModule::
+    @Datasnap@Databkr@TRemoteDataModule@$bctr$qqrp25System@Classes@TComponent @1056; __fastcall Datasnap::Databkr::TRemoteDataModule::TRemoteDataModule(System::Classes::TComponent *)
+    @Datasnap@Databkr@TRemoteDataModule@$bdtr$qqrv @1055; __fastcall Datasnap::Databkr::TRemoteDataModule::~TRemoteDataModule()
+    @Datasnap@Databkr@TRemoteDataModule@AS_ApplyUpdates$qqsx17System@WideStringx17System@OleVariantirir17System@OleVariantt5 @1051; __stdcall Datasnap::Databkr::TRemoteDataModule::AS_ApplyUpdates(const System::WideString, const System::OleVariant, int, int&, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Databkr@TRemoteDataModule@AS_DataRequest$qqsx17System@WideStringx17System@OleVariantr17System@OleVariant @1048; __stdcall Datasnap::Databkr::TRemoteDataModule::AS_DataRequest(const System::WideString, const System::OleVariant, System::OleVariant&)
+    @Datasnap@Databkr@TRemoteDataModule@AS_Execute$qqsx17System@WideStringt1r17System@OleVariantt3 @1046; __stdcall Datasnap::Databkr::TRemoteDataModule::AS_Execute(const System::WideString, const System::WideString, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Databkr@TRemoteDataModule@AS_GetParams$qqsx17System@WideStringr17System@OleVariantt2 @1047; __stdcall Datasnap::Databkr::TRemoteDataModule::AS_GetParams(const System::WideString, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Databkr@TRemoteDataModule@AS_GetProviderNames$qqsr17System@OleVariant @1052; __stdcall Datasnap::Databkr::TRemoteDataModule::AS_GetProviderNames(System::OleVariant&)
+    @Datasnap@Databkr@TRemoteDataModule@AS_GetRecords$qqsx17System@WideStringiriit1r17System@OleVariantt6t6 @1050; __stdcall Datasnap::Databkr::TRemoteDataModule::AS_GetRecords(const System::WideString, int, int&, int, const System::WideString, System::OleVariant&, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Databkr@TRemoteDataModule@AS_RowRequest$qqsx17System@WideStringx17System@OleVariantir17System@OleVariantt4 @1049; __stdcall Datasnap::Databkr::TRemoteDataModule::AS_RowRequest(const System::WideString, const System::OleVariant, int, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Databkr@TRemoteDataModule@Lock$qqrv @1054; __fastcall Datasnap::Databkr::TRemoteDataModule::Lock()
+    @Datasnap@Databkr@TRemoteDataModule@Unlock$qqrv @1053; __fastcall Datasnap::Databkr::TRemoteDataModule::Unlock()
+    @Datasnap@Databkr@TRemoteDataModule@UpdateRegistry$qqrox20System@UnicodeStringt2 @1045; __fastcall Datasnap::Databkr::TRemoteDataModule::UpdateRegistry(bool, const System::UnicodeString, const System::UnicodeString)
+    @Datasnap@Databkr@UnregisterPooled$qqrx20System@UnicodeString @1061; __fastcall Datasnap::Databkr::UnregisterPooled(const System::UnicodeString)
+    @Datasnap@Databkr@initialization$qqrv @1026; __fastcall Datasnap::Databkr::initialization()
+    @Datasnap@Dbclient@EDBClient@  @635 ; Datasnap::Dbclient::EDBClient::
+    @Datasnap@Dbclient@EDBClient@$bctr$qqr20System@UnicodeStringus @563 ; __fastcall Datasnap::Dbclient::EDBClient::EDBClient(System::UnicodeString, unsigned short)
+    @Datasnap@Dbclient@EReconcileError@ @633 ; Datasnap::Dbclient::EReconcileError::
+    @Datasnap@Dbclient@EReconcileError@$bctr$qqr20System@UnicodeStringt1usus @562 ; __fastcall Datasnap::Dbclient::EReconcileError::EReconcileError(System::UnicodeString, System::UnicodeString, unsigned short, unsigned short)
+    @Datasnap@Dbclient@Finalization$qqrv @252 ; __fastcall Datasnap::Dbclient::Finalization()
+    @Datasnap@Dbclient@PackageParams$qqrp15Data@Db@TParams45System@%Set$18Data@Db@TParamTypet1$i0$t1$i4$% @561 ; Datasnap::Dbclient::PackageParams(Data::Db::TParams *, System::Set<{583}...
+    @Datasnap@Dbclient@TAggregate@ @625 ; Datasnap::Dbclient::TAggregate::
+    @Datasnap@Dbclient@TAggregate@$bctr$qqrp29Datasnap@Dbclient@TAggregatesp38Datasnap@Dbclient@TCustomClientDataSet @272 ; __fastcall Datasnap::Dbclient::TAggregate::TAggregate(Datasnap::Dbclient::TAggregates *, Datasnap::Dbclient::TCustomClientDataSet *)
+    @Datasnap@Dbclient@TAggregate@$bdtr$qqrv @271 ; __fastcall Datasnap::Dbclient::TAggregate::~TAggregate()
+    @Datasnap@Dbclient@TAggregate@Activate$qqrv @270 ; __fastcall Datasnap::Dbclient::TAggregate::Activate()
+    @Datasnap@Dbclient@TAggregate@Assign$qqrp26System@Classes@TPersistent @269 ; __fastcall Datasnap::Dbclient::TAggregate::Assign(System::Classes::TPersistent *)
+    @Datasnap@Dbclient@TAggregate@GetDisplayName$qqrv @268 ; __fastcall Datasnap::Dbclient::TAggregate::GetDisplayName()
+    @Datasnap@Dbclient@TAggregate@SetActive$qqro @267 ; __fastcall Datasnap::Dbclient::TAggregate::SetActive(bool)
+    @Datasnap@Dbclient@TAggregate@SetExpression$qqrx20System@UnicodeString @266 ; __fastcall Datasnap::Dbclient::TAggregate::SetExpression(const System::UnicodeString)
+    @Datasnap@Dbclient@TAggregate@SetGroupingLevel$qqri @265 ; __fastcall Datasnap::Dbclient::TAggregate::SetGroupingLevel(int)
+    @Datasnap@Dbclient@TAggregate@SetIndexName$qqr20System@UnicodeString @264 ; __fastcall Datasnap::Dbclient::TAggregate::SetIndexName(System::UnicodeString)
+    @Datasnap@Dbclient@TAggregate@Value$qqrv @263 ; __fastcall Datasnap::Dbclient::TAggregate::Value()
+    @Datasnap@Dbclient@TAggregates@ @623 ; Datasnap::Dbclient::TAggregates::
+    @Datasnap@Dbclient@TAggregates@$bctr$qqrp26System@Classes@TPersistent @280 ; __fastcall Datasnap::Dbclient::TAggregates::TAggregates(System::Classes::TPersistent *)
+    @Datasnap@Dbclient@TAggregates@Add$qqrv @279 ; __fastcall Datasnap::Dbclient::TAggregates::Add()
+    @Datasnap@Dbclient@TAggregates@Clear$qqrv @278 ; __fastcall Datasnap::Dbclient::TAggregates::Clear()
+    @Datasnap@Dbclient@TAggregates@Find$qqrx20System@UnicodeString @273 ; __fastcall Datasnap::Dbclient::TAggregates::Find(const System::UnicodeString)
+    @Datasnap@Dbclient@TAggregates@GetItem$qqri @276 ; __fastcall Datasnap::Dbclient::TAggregates::GetItem(int)
+    @Datasnap@Dbclient@TAggregates@GetOwner$qqrv @277 ; __fastcall Datasnap::Dbclient::TAggregates::GetOwner()
+    @Datasnap@Dbclient@TAggregates@IndexOf$qqrx20System@UnicodeString @274 ; __fastcall Datasnap::Dbclient::TAggregates::IndexOf(const System::UnicodeString)
+    @Datasnap@Dbclient@TAggregates@SetItem$qqrip28Datasnap@Dbclient@TAggregate @275 ; __fastcall Datasnap::Dbclient::TAggregates::SetItem(int, Datasnap::Dbclient::TAggregate *)
+    @Datasnap@Dbclient@TClientBlobStream@ @600 ; Datasnap::Dbclient::TClientBlobStream::
+    @Datasnap@Dbclient@TClientBlobStream@$bctr$qqrp18Data@Db@TBlobField23Data@Db@TBlobStreamMode @285 ; __fastcall Datasnap::Dbclient::TClientBlobStream::TClientBlobStream(Data::Db::TBlobField *, Data::Db::TBlobStreamMode)
+    @Datasnap@Dbclient@TClientBlobStream@$bdtr$qqrv @284 ; __fastcall Datasnap::Dbclient::TClientBlobStream::~TClientBlobStream()
+    @Datasnap@Dbclient@TClientBlobStream@ReadBlobData$qqrv @283 ; __fastcall Datasnap::Dbclient::TClientBlobStream::ReadBlobData()
+    @Datasnap@Dbclient@TClientBlobStream@Truncate$qqrv @281 ; __fastcall Datasnap::Dbclient::TClientBlobStream::Truncate()
+    @Datasnap@Dbclient@TClientBlobStream@Write$qqrpxvi @282 ; __fastcall Datasnap::Dbclient::TClientBlobStream::Write(const void *, int)
+    @Datasnap@Dbclient@TClientDataSet@ @602 ; Datasnap::Dbclient::TClientDataSet::
+    @Datasnap@Dbclient@TConnectionBroker@ @628 ; Datasnap::Dbclient::TConnectionBroker::
+    @Datasnap@Dbclient@TConnectionBroker@$bctr$qqrp25System@Classes@TComponent @262 ; __fastcall Datasnap::Dbclient::TConnectionBroker::TConnectionBroker(System::Classes::TComponent *)
+    @Datasnap@Dbclient@TConnectionBroker@GetAppServer$qqrv @260 ; __fastcall Datasnap::Dbclient::TConnectionBroker::GetAppServer()
+    @Datasnap@Dbclient@TConnectionBroker@GetConnected$qqrv @259 ; __fastcall Datasnap::Dbclient::TConnectionBroker::GetConnected()
+    @Datasnap@Dbclient@TConnectionBroker@GetServer$qqrv @261 ; __fastcall Datasnap::Dbclient::TConnectionBroker::GetServer()
+    @Datasnap@Dbclient@TConnectionBroker@Loaded$qqrv @257 ; __fastcall Datasnap::Dbclient::TConnectionBroker::Loaded()
+    @Datasnap@Dbclient@TConnectionBroker@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @258 ; __fastcall Datasnap::Dbclient::TConnectionBroker::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Datasnap@Dbclient@TConnectionBroker@SetConnected$qqro @256 ; __fastcall Datasnap::Dbclient::TConnectionBroker::SetConnected(bool)
+    @Datasnap@Dbclient@TConnectionBroker@SetConnection$qqrxp37Datasnap@Dbclient@TCustomRemoteServer @255 ; __fastcall Datasnap::Dbclient::TConnectionBroker::SetConnection(Datasnap::Dbclient::TCustomRemoteServer * const)
+    @Datasnap@Dbclient@TCustomClientDataSet@ @604 ; Datasnap::Dbclient::TCustomClientDataSet::
+    @Datasnap@Dbclient@TCustomClientDataSet@$bctr$qqrp25System@Classes@TComponent @553 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::TCustomClientDataSet(System::Classes::TComponent *)
+    @Datasnap@Dbclient@TCustomClientDataSet@$bdtr$qqrv @552 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::~TCustomClientDataSet()
+    @Datasnap@Dbclient@TCustomClientDataSet@ActivateFilters$qqrv @335 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::ActivateFilters()
+    @Datasnap@Dbclient@TCustomClientDataSet@AddDataPacket$qqrrx17System@OleVarianto @513 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::AddDataPacket(const System::OleVariant&, bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@AddExprFilter$qqrx20System@UnicodeString48System@%Set$21Data@Db@TFilterOptiont1$i0$t1$i1$% @333 ; Datasnap::Dbclient::TCustomClientDataSet::AddExprFilter(const System::UnicodeString, System::Set<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@AddFieldDesc$qqr49System@%DynamicArray$25Datasnap@Dsintf@DSFLDDesc%rit2p18Data@Db@TFieldDefs @448 ; Datasnap::Dbclient::TCustomClientDataSet::AddFieldDesc(System::DynamicArray<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@AddFuncFilter$qqrv @331 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::AddFuncFilter()
+    @Datasnap@Dbclient@TCustomClientDataSet@AddIndex$qqrx20System@UnicodeStringt147System@%Set$20Data@Db@TIndexOptiont1$i0$t1$i5$%t1t1xi @390 ; Datasnap::Dbclient::TCustomClientDataSet::AddIndex(const System::UnicodeString, const System::UnicodeString, System::Set<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@AllocKeyBuffers$qqrv @378 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::AllocKeyBuffers()
+    @Datasnap@Dbclient@TCustomClientDataSet@AllocRecordBuffer$qqrv @467 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::AllocRecordBuffer()
+    @Datasnap@Dbclient@TCustomClientDataSet@AppendData$qqrrx17System@OleVarianto @512 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::AppendData(const System::OleVariant&, bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@ApplyRange$qqrv @357 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::ApplyRange()
+    @Datasnap@Dbclient@TCustomClientDataSet@ApplyUpdates$qqri @495 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::ApplyUpdates(int)
+    @Datasnap@Dbclient@TCustomClientDataSet@BookmarkValid$qqr24System@%DynamicArray$uc% @406 ; Datasnap::Dbclient::TCustomClientDataSet::BookmarkValid(System::DynamicArray<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@CalcFieldsCallBack$qqsi @437 ; __stdcall Datasnap::Dbclient::TCustomClientDataSet::CalcFieldsCallBack(int)
+    @Datasnap@Dbclient@TCustomClientDataSet@Cancel$qqrv @425 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::Cancel()
+    @Datasnap@Dbclient@TCustomClientDataSet@CancelRange$qqrv @356 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::CancelRange()
+    @Datasnap@Dbclient@TCustomClientDataSet@CancelUpdates$qqrv @400 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::CancelUpdates()
+    @Datasnap@Dbclient@TCustomClientDataSet@Check$qqrus @551 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::Check(unsigned short)
+    @Datasnap@Dbclient@TCustomClientDataSet@CheckDetailRecords$qqrv @350 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::CheckDetailRecords()
+    @Datasnap@Dbclient@TCustomClientDataSet@CheckFieldProps$qqrv @532 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::CheckFieldProps()
+    @Datasnap@Dbclient@TCustomClientDataSet@CheckMasterRange$qqrv @349 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::CheckMasterRange()
+    @Datasnap@Dbclient@TCustomClientDataSet@CheckProviderEOF$qqrv @514 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::CheckProviderEOF()
+    @Datasnap@Dbclient@TCustomClientDataSet@CheckSetKeyMode$qqrv @374 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::CheckSetKeyMode()
+    @Datasnap@Dbclient@TCustomClientDataSet@ClearActiveAggs$qqrv @316 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::ClearActiveAggs()
+    @Datasnap@Dbclient@TCustomClientDataSet@ClearCalcFields$qqri @463 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::ClearCalcFields(int)
+    @Datasnap@Dbclient@TCustomClientDataSet@ClearSavedPacket$qqrv @522 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::ClearSavedPacket()
+    @Datasnap@Dbclient@TCustomClientDataSet@CloneCursor$qqrp38Datasnap@Dbclient@TCustomClientDataSetoo @487 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::CloneCursor(Datasnap::Dbclient::TCustomClientDataSet *, bool, bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@CloseAggs$qqrv @315 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::CloseAggs()
+    @Datasnap@Dbclient@TCustomClientDataSet@CloseCursor$qqrv @535 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::CloseCursor()
+    @Datasnap@Dbclient@TCustomClientDataSet@CompareBookmarks$qqr24System@%DynamicArray$uc%t1 @407 ; Datasnap::Dbclient::TCustomClientDataSet::CompareBookmarks(System::DynamicArray<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@ConstraintsDisabled$qqrv @471 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::ConstraintsDisabled()
+    @Datasnap@Dbclient@TCustomClientDataSet@ConstraintsStored$qqrv @292 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::ConstraintsStored()
+    @Datasnap@Dbclient@TCustomClientDataSet@CreateBlobStream$qqrp14Data@Db@TField23Data@Db@TBlobStreamMode @440 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::CreateBlobStream(Data::Db::TField *, Data::Db::TBlobStreamMode)
+    @Datasnap@Dbclient@TCustomClientDataSet@CreateDSBase$qqrv @550 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::CreateDSBase()
+    @Datasnap@Dbclient@TCustomClientDataSet@CreateDSCursor$qqr52System@%DelphiInterface$25Datasnap@Dsintf@IDSCursor% @549 ; Datasnap::Dbclient::TCustomClientDataSet::CreateDSCursor(System::DelphiInterface<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@CreateDataSet$qqrv @485 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::CreateDataSet()
+    @Datasnap@Dbclient@TCustomClientDataSet@DataConvert$qqrp14Data@Db@TField24System@%DynamicArray$uc%r24System@%DynamicArray$uc%o @436 ; Datasnap::Dbclient::TCustomClientDataSet::DataConvert(Data::Db::TField *, System::DynamicArray<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@DataConvert$qqrp14Data@Db@TFieldpvt2o @435 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DataConvert(Data::Db::TField *, void *, void *, bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@DataEvent$qqr18Data@Db@TDataEventi @500 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DataEvent(Data::Db::TDataEvent, int)
+    @Datasnap@Dbclient@TCustomClientDataSet@DataRequest$qqrrx17System@OleVariant @496 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DataRequest(const System::OleVariant&)
+    @Datasnap@Dbclient@TCustomClientDataSet@DataStored$qqrxp38Datasnap@Dbclient@TCustomClientDataSet @337 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DataStored(Datasnap::Dbclient::TCustomClientDataSet * const)
+    @Datasnap@Dbclient@TCustomClientDataSet@DeactivateFilters$qqrv @334 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DeactivateFilters()
+    @Datasnap@Dbclient@TCustomClientDataSet@DecodeIndexDesc$qqrrx25Datasnap@Dsintf@DSIDXDescr20System@UnicodeStringt2t2t2r47System@%Set$20Data@Db@TIndexOptiont1$i0$t1$i5$% @398 ; Datasnap::Dbclient::TCustomClientDataSet::DecodeIndexDesc(const Datasnap::Dsintf::DSIDXDesc&, System::UnicodeString&, System::UnicodeString&, System::UnicodeString&, System::UnicodeString&, System::Set<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@DefChanged$qqrp14System@TObject @534 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DefChanged(System::TObject *)
+    @Datasnap@Dbclient@TCustomClientDataSet@DefineProperties$qqrp21System@Classes@TFiler @336 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DefineProperties(System::Classes::TFiler *)
+    @Datasnap@Dbclient@TCustomClientDataSet@DeleteIndex$qqrx20System@UnicodeString @389 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DeleteIndex(const System::UnicodeString)
+    @Datasnap@Dbclient@TCustomClientDataSet@DestroyLookupCursor$qqrv @323 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DestroyLookupCursor()
+    @Datasnap@Dbclient@TCustomClientDataSet@DisableConstraints$qqrv @470 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DisableConstraints()
+    @Datasnap@Dbclient@TCustomClientDataSet@DoAfterApplyUpdates$qqrr17System@OleVariant @304 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DoAfterApplyUpdates(System::OleVariant&)
+    @Datasnap@Dbclient@TCustomClientDataSet@DoAfterExecute$qqrr17System@OleVariant @295 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DoAfterExecute(System::OleVariant&)
+    @Datasnap@Dbclient@TCustomClientDataSet@DoAfterGetParams$qqrr17System@OleVariant @539 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DoAfterGetParams(System::OleVariant&)
+    @Datasnap@Dbclient@TCustomClientDataSet@DoAfterGetRecords$qqrr17System@OleVariant @300 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DoAfterGetRecords(System::OleVariant&)
+    @Datasnap@Dbclient@TCustomClientDataSet@DoAfterRowRequest$qqrr17System@OleVariant @298 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DoAfterRowRequest(System::OleVariant&)
+    @Datasnap@Dbclient@TCustomClientDataSet@DoAggUpdates$qqro @308 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DoAggUpdates(bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@DoApplyUpdates$qqrrx17System@OleVariantiri @302 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DoApplyUpdates(const System::OleVariant&, int, int&)
+    @Datasnap@Dbclient@TCustomClientDataSet@DoBeforeApplyUpdates$qqrr17System@OleVariant @303 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DoBeforeApplyUpdates(System::OleVariant&)
+    @Datasnap@Dbclient@TCustomClientDataSet@DoBeforeExecute$qqrr17System@OleVariant @294 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DoBeforeExecute(System::OleVariant&)
+    @Datasnap@Dbclient@TCustomClientDataSet@DoBeforeGetParams$qqrr17System@OleVariant @538 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DoBeforeGetParams(System::OleVariant&)
+    @Datasnap@Dbclient@TCustomClientDataSet@DoBeforeGetRecords$qqrr17System@OleVariant @301 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DoBeforeGetRecords(System::OleVariant&)
+    @Datasnap@Dbclient@TCustomClientDataSet@DoBeforeInsert$qqrv @428 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DoBeforeInsert()
+    @Datasnap@Dbclient@TCustomClientDataSet@DoBeforeRowRequest$qqrr17System@OleVariant @297 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DoBeforeRowRequest(System::OleVariant&)
+    @Datasnap@Dbclient@TCustomClientDataSet@DoExecute$qqrrx17System@OleVariant @293 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DoExecute(const System::OleVariant&)
+    @Datasnap@Dbclient@TCustomClientDataSet@DoGetRecords$qqririix17System@WideStringrx17System@OleVariant @299 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DoGetRecords(int, int&, int, const System::WideString, const System::OleVariant&)
+    @Datasnap@Dbclient@TCustomClientDataSet@DoOnNewRecord$qqrv @338 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DoOnNewRecord()
+    @Datasnap@Dbclient@TCustomClientDataSet@DoRowRequest$qqrrx17System@OleVarianti @296 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::DoRowRequest(const System::OleVariant&, int)
+    @Datasnap@Dbclient@TCustomClientDataSet@EditKey$qqrv @358 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::EditKey()
+    @Datasnap@Dbclient@TCustomClientDataSet@EditRangeEnd$qqrv @352 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::EditRangeEnd()
+    @Datasnap@Dbclient@TCustomClientDataSet@EditRangeStart$qqrv @351 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::EditRangeStart()
+    @Datasnap@Dbclient@TCustomClientDataSet@EmptyDataSet$qqrv @484 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::EmptyDataSet()
+    @Datasnap@Dbclient@TCustomClientDataSet@EnableConstraints$qqrv @469 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::EnableConstraints()
+    @Datasnap@Dbclient@TCustomClientDataSet@EncodeFieldDesc$qqrr25Datasnap@Dsintf@DSFLDDescx20System@UnicodeString18Data@Db@TFieldTypeiio50System@%Set$23Data@Db@TFieldAttributet1$i0$t1$i5$% @486 ; Datasnap::Dbclient::TCustomClientDataSet::EncodeFieldDesc(Datasnap::Dsintf::DSFLDDesc&, const System::UnicodeString, Data::Db::TFieldType, int, int, bool, System::Set<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@EncodeIndexDesc$qqrr25Datasnap@Dsintf@DSIDXDescx20System@UnicodeStringt2t2t247System@%Set$20Data@Db@TIndexOptiont1$i0$t1$i5$% @391 ; Datasnap::Dbclient::TCustomClientDataSet::EncodeIndexDesc(Datasnap::Dsintf::DSIDXDesc&, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, System::Set<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@Execute$qqrv @498 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::Execute()
+    @Datasnap@Dbclient@TCustomClientDataSet@ExecuteCommand$qqrx20System@UnicodeStringpx14System@TVarRecxi @497 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::ExecuteCommand(const System::UnicodeString, const System::TVarRec *, const int)
+    @Datasnap@Dbclient@TCustomClientDataSet@FetchBlobs$qqrv @517 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::FetchBlobs()
+    @Datasnap@Dbclient@TCustomClientDataSet@FetchDetails$qqrv @516 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::FetchDetails()
+    @Datasnap@Dbclient@TCustomClientDataSet@FetchMoreData$qqro @519 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::FetchMoreData(bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@FetchParams$qqrv @537 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::FetchParams()
+    @Datasnap@Dbclient@TCustomClientDataSet@FilterCallback$qqsi @332 ; __stdcall Datasnap::Dbclient::TCustomClientDataSet::FilterCallback(int)
+    @Datasnap@Dbclient@TCustomClientDataSet@FindKey$qqrpx14System@TVarRecxi @363 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::FindKey(const System::TVarRec *, const int)
+    @Datasnap@Dbclient@TCustomClientDataSet@FindNearest$qqrpx14System@TVarRecxi @362 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::FindNearest(const System::TVarRec *, const int)
+    @Datasnap@Dbclient@TCustomClientDataSet@FindRecord$qqroo @324 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::FindRecord(bool, bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@FreeKeyBuffers$qqrv @376 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::FreeKeyBuffers()
+    @Datasnap@Dbclient@TCustomClientDataSet@FreeRecordBuffer$qqrrpuc @466 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::FreeRecordBuffer(unsigned char *&)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetActiveAggs$qqri @309 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetActiveAggs(int)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetActiveRecBuf$qqrri @452 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetActiveRecBuf(int&)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetAggFieldData$qqri @307 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetAggFieldData(int)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetAggregateValue$qqrp14Data@Db@TField @306 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetAggregateValue(Data::Db::TField *)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetAppServer$qqrv @508 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetAppServer()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetBookmarkData$qqri24System@%DynamicArray$uc% @413 ; Datasnap::Dbclient::TCustomClientDataSet::GetBookmarkData(int, System::DynamicArray<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@GetBookmarkData$qqrpuc24System@%DynamicArray$uc% @411 ; Datasnap::Dbclient::TCustomClientDataSet::GetBookmarkData(unsigned char *, System::DynamicArray<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@GetBookmarkData$qqrpucpv @410 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetBookmarkData(unsigned char *, void *)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetBookmarkFlag$qqri @417 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetBookmarkFlag(int)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetBookmarkFlag$qqrpuc @415 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetBookmarkFlag(unsigned char *)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetCanModify$qqrv @474 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetCanModify()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetCanRefresh$qqrv @473 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetCanRefresh()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetChangeCount$qqrv @451 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetChangeCount()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetCommandStates$qqrx20System@UnicodeString @450 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetCommandStates(const System::UnicodeString)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetCurrentRecord$qqri @459 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetCurrentRecord(int)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetCurrentRecord$qqrpuc @457 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetCurrentRecord(unsigned char *)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetData$qqrv @526 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetData()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetDataSize$qqrv @520 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetDataSize()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetDataSource$qqrv @342 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetDataSource()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetDelta$qqrv @499 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetDelta()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetFieldData$qqripv @444 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetFieldData(int, void *)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetFieldData$qqrir24System@%DynamicArray$uc% @446 ; Datasnap::Dbclient::TCustomClientDataSet::GetFieldData(int, System::DynamicArray<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@GetFieldData$qqrp14Data@Db@TFieldpv @445 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetFieldData(Data::Db::TField *, void *)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetFieldData$qqrp14Data@Db@TFieldr24System@%DynamicArray$uc% @447 ; Datasnap::Dbclient::TCustomClientDataSet::GetFieldData(Data::Db::TField *, System::DynamicArray<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@GetGroupState$qqri @310 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetGroupState(int)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetHasAppServer$qqrv @507 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetHasAppServer()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetIndexDefs$qqrv @396 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetIndexDefs()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetIndexField$qqri @388 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetIndexField(int)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetIndexFieldCount$qqrv @380 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetIndexFieldCount()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetIndexFieldNames$qqrv @382 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetIndexFieldNames()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetIndexInfo$qqr20System@UnicodeString @394 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetIndexInfo(System::UnicodeString)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetIndexName$qqrv @386 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetIndexName()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetIndexNames$qqrp23System@Classes@TStrings @397 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetIndexNames(System::Classes::TStrings *)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetIsClone$qqrv @286 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetIsClone()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetIsIndexField$qqrp14Data@Db@TField @387 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetIsIndexField(Data::Db::TField *)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetKeyBuffer$qqr28Data@Dbcommontypes@TKeyIndex @377 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetKeyBuffer(Data::Dbcommontypes::TKeyIndex)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetKeyExclusive$qqrv @368 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetKeyExclusive()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetKeyFieldCount$qqrv @366 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetKeyFieldCount()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetLogChanges$qqrv @475 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetLogChanges()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetMasterFields$qqrv @340 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetMasterFields()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetNextPacket$qqrv @511 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetNextPacket()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetOptionalParam$qqrx20System@UnicodeString @542 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetOptionalParam(const System::UnicodeString)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetProviderEOF$qqrv @504 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetProviderEOF()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetRecNo$qqrv @455 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetRecNo()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetRecord$qqri16Data@Db@TGetModeo @460 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetRecord(int, Data::Db::TGetMode, bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetRecord$qqrpuc16Data@Db@TGetModeo @458 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetRecord(unsigned char *, Data::Db::TGetMode, bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetRecordCount$qqrv @456 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetRecordCount()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetRecordSize$qqrv @453 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetRecordSize()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetRemoteServer$qqrv @503 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetRemoteServer()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetSavePoint$qqrv @402 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetSavePoint()
+    @Datasnap@Dbclient@TCustomClientDataSet@GetStateFieldValue$qqr21Data@Db@TDataSetStatep14Data@Db@TField @443 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetStateFieldValue(Data::Db::TDataSetState, Data::Db::TField *)
+    @Datasnap@Dbclient@TCustomClientDataSet@GetXMLData$qqrv @524 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GetXMLData()
+    @Datasnap@Dbclient@TCustomClientDataSet@GotoCurrent$qqrp38Datasnap@Dbclient@TCustomClientDataSet @319 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GotoCurrent(Datasnap::Dbclient::TCustomClientDataSet *)
+    @Datasnap@Dbclient@TCustomClientDataSet@GotoKey$qqrv @361 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GotoKey()
+    @Datasnap@Dbclient@TCustomClientDataSet@GotoNearest$qqrv @360 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::GotoNearest()
+    @Datasnap@Dbclient@TCustomClientDataSet@InitBufferPointers$qqro @468 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InitBufferPointers(bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@InitKeyBuffer$qqrp28Datasnap@Dbclient@TKeyBuffer @375 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InitKeyBuffer(Datasnap::Dbclient::TKeyBuffer *)
+    @Datasnap@Dbclient@TCustomClientDataSet@InitRecord$qqri @462 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InitRecord(int)
+    @Datasnap@Dbclient@TCustomClientDataSet@InitRecord$qqrpuc @461 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InitRecord(unsigned char *)
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalAddRecord$qqrio @424 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalAddRecord(int, bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalAddRecord$qqrpuco @423 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalAddRecord(unsigned char *, bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalAddRecord$qqrpvo @422 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalAddRecord(void *, bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalCancel$qqrv @431 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalCancel()
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalCheck$qqrus @536 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalCheck(unsigned short)
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalClose$qqrv @530 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalClose()
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalDelete$qqrv @430 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalDelete()
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalEdit$qqrv @429 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalEdit()
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalFetch$qqr57System@%Set$30Datasnap@Dbclient@TFetchOptiont1$i0$t1$i2$% @518 ; Datasnap::Dbclient::TCustomClientDataSet::InternalFetch(System::Set<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalFirst$qqrv @434 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalFirst()
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalGetGroupState$qqri @311 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalGetGroupState(int)
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalGetOptionalParam$qqrx20System@UnicodeStringi @541 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalGetOptionalParam(const System::UnicodeString, int)
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalGotoBookmark$qqr24System@%DynamicArray$uc% @421 ; Datasnap::Dbclient::TCustomClientDataSet::InternalGotoBookmark(System::DynamicArray<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalGotoBookmark$qqrpv @419 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalGotoBookmark(void *)
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalHandleException$qqrv @527 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalHandleException()
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalInitFieldDefs$qqrv @533 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalInitFieldDefs()
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalInitRecord$qqri @465 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalInitRecord(int)
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalInitRecord$qqrpuc @464 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalInitRecord(unsigned char *)
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalInsert$qqrv @427 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalInsert()
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalLast$qqrv @433 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalLast()
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalOpen$qqrv @531 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalOpen()
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalPost$qqrv @432 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalPost()
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalRefresh$qqrv @529 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalRefresh()
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalSetOptionalParam$qqrx20System@UnicodeStringrx17System@OleVariantoi @543 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalSetOptionalParam(const System::UnicodeString, const System::OleVariant&, bool, int)
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalSetToRecord$qqri @420 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalSetToRecord(int)
+    @Datasnap@Dbclient@TCustomClientDataSet@InternalSetToRecord$qqrpuc @418 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::InternalSetToRecord(unsigned char *)
+    @Datasnap@Dbclient@TCustomClientDataSet@IsCursorOpen$qqrv @528 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::IsCursorOpen()
+    @Datasnap@Dbclient@TCustomClientDataSet@LoadFromFile$qqrx20System@UnicodeString @478 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::LoadFromFile(const System::UnicodeString)
+    @Datasnap@Dbclient@TCustomClientDataSet@LoadFromStream$qqrp22System@Classes@TStream @480 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::LoadFromStream(System::Classes::TStream *)
+    @Datasnap@Dbclient@TCustomClientDataSet@Loaded$qqrv @345 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::Loaded()
+    @Datasnap@Dbclient@TCustomClientDataSet@Locate$qqrx20System@UnicodeStringrx14System@Variant48System@%Set$21Data@Db@TLocateOptiont1$i0$t1$i1$% @320 ; Datasnap::Dbclient::TCustomClientDataSet::Locate(const System::UnicodeString, const System::Variant&, System::Set<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@LocateRecord$qqrx20System@UnicodeStringrx14System@Variant48System@%Set$21Data@Db@TLocateOptiont1$i0$t1$i1$%o @322 ; Datasnap::Dbclient::TCustomClientDataSet::LocateRecord(const System::UnicodeString, const System::Variant&, System::Set<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@Lookup$qqrx20System@UnicodeStringrx14System@Variantt1 @321 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::Lookup(const System::UnicodeString, const System::Variant&, const System::UnicodeString)
+    @Datasnap@Dbclient@TCustomClientDataSet@MasterChanged$qqrp14System@TObject @348 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::MasterChanged(System::TObject *)
+    @Datasnap@Dbclient@TCustomClientDataSet@MasterDisabled$qqrp14System@TObject @347 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::MasterDisabled(System::TObject *)
+    @Datasnap@Dbclient@TCustomClientDataSet@MergeChangeLog$qqrv @494 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::MergeChangeLog()
+    @Datasnap@Dbclient@TCustomClientDataSet@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @501 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Datasnap@Dbclient@TCustomClientDataSet@NotifyCallback$qqsv @489 ; __stdcall Datasnap::Dbclient::TCustomClientDataSet::NotifyCallback()
+    @Datasnap@Dbclient@TCustomClientDataSet@OpenCursor$qqro @540 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::OpenCursor(bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@PSGetCommandText$qqrv @288 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::PSGetCommandText()
+    @Datasnap@Dbclient@TCustomClientDataSet@PSGetCommandType$qqrv @287 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::PSGetCommandType()
+    @Datasnap@Dbclient@TCustomClientDataSet@PSGetIndexDefs$qqr47System@%Set$20Data@Db@TIndexOptiont1$i0$t1$i5$% @289 ; Datasnap::Dbclient::TCustomClientDataSet::PSGetIndexDefs(System::Set<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@ParamByName$qqrx20System@UnicodeString @493 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::ParamByName(const System::UnicodeString)
+    @Datasnap@Dbclient@TCustomClientDataSet@Post$qqrv @426 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::Post()
+    @Datasnap@Dbclient@TCustomClientDataSet@PostKeyBuffer$qqro @369 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::PostKeyBuffer(bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@ReadData$qqrp22System@Classes@TStream @344 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::ReadData(System::Classes::TStream *)
+    @Datasnap@Dbclient@TCustomClientDataSet@ReadDataPacket$qqrp22System@Classes@TStreamo @481 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::ReadDataPacket(System::Classes::TStream *, bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@Reconcile$qqrrx17System@OleVariant @490 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::Reconcile(const System::OleVariant&)
+    @Datasnap@Dbclient@TCustomClientDataSet@ReconcileCallback$qqsiuciipvt5t5t5t5ipi @491 ; __stdcall Datasnap::Dbclient::TCustomClientDataSet::ReconcileCallback(int, unsigned char, int, int, void *, void *, void *, void *, void *, int, int *)
+    @Datasnap@Dbclient@TCustomClientDataSet@RefreshInternalCalcFields$qqri @439 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::RefreshInternalCalcFields(int)
+    @Datasnap@Dbclient@TCustomClientDataSet@RefreshInternalCalcFields$qqrpuc @438 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::RefreshInternalCalcFields(unsigned char *)
+    @Datasnap@Dbclient@TCustomClientDataSet@RefreshRecord$qqrv @515 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::RefreshRecord()
+    @Datasnap@Dbclient@TCustomClientDataSet@ResetAgg$qqrp28Datasnap@Dbclient@TAggregateo @313 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::ResetAgg(Datasnap::Dbclient::TAggregate *, bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@ResetAggField$qqrp14Data@Db@TField @305 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::ResetAggField(Data::Db::TField *)
+    @Datasnap@Dbclient@TCustomClientDataSet@ResetAllAggs$qqro @312 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::ResetAllAggs(bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@ResetCursorRange$qqrv @372 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::ResetCursorRange()
+    @Datasnap@Dbclient@TCustomClientDataSet@ResetGrouping$qqrv @314 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::ResetGrouping()
+    @Datasnap@Dbclient@TCustomClientDataSet@RevertRecord$qqrv @403 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::RevertRecord()
+    @Datasnap@Dbclient@TCustomClientDataSet@SaveDataPacket$qqr35Datasnap@Dbclient@TDataPacketFormat @521 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SaveDataPacket(Datasnap::Dbclient::TDataPacketFormat)
+    @Datasnap@Dbclient@TCustomClientDataSet@SaveToFile$qqrx20System@UnicodeString35Datasnap@Dbclient@TDataPacketFormat @477 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SaveToFile(const System::UnicodeString, Datasnap::Dbclient::TDataPacketFormat)
+    @Datasnap@Dbclient@TCustomClientDataSet@SaveToStream$qqrp22System@Classes@TStream35Datasnap@Dbclient@TDataPacketFormat @479 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SaveToStream(System::Classes::TStream *, Datasnap::Dbclient::TDataPacketFormat)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetAggregates$qqrp29Datasnap@Dbclient@TAggregates @318 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetAggregates(Datasnap::Dbclient::TAggregates *)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetAggsActive$qqro @317 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetAggsActive(bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetAltRecBuffers$qqriii @492 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetAltRecBuffers(int, int, int)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetAppServer$qqr52System@%DelphiInterface$25Datasnap@Midas@IAppServer% @506 ; Datasnap::Dbclient::TCustomClientDataSet::SetAppServer(System::DelphiInterface<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@SetBookmarkData$qqri24System@%DynamicArray$uc% @412 ; Datasnap::Dbclient::TCustomClientDataSet::SetBookmarkData(int, System::DynamicArray<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@SetBookmarkData$qqrpuc24System@%DynamicArray$uc% @409 ; Datasnap::Dbclient::TCustomClientDataSet::SetBookmarkData(unsigned char *, System::DynamicArray<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@SetBookmarkData$qqrpucpv @408 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetBookmarkData(unsigned char *, void *)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetBookmarkFlag$qqri21Data@Db@TBookmarkFlag @416 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetBookmarkFlag(int, Data::Db::TBookmarkFlag)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetBookmarkFlag$qqrpuc21Data@Db@TBookmarkFlag @414 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetBookmarkFlag(unsigned char *, Data::Db::TBookmarkFlag)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetCommandText$qqr17System@WideString @548 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetCommandText(System::WideString)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetConnectionBroker$qqrxp35Datasnap@Dbclient@TConnectionBroker @290 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetConnectionBroker(Datasnap::Dbclient::TConnectionBroker * const)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetCursorRange$qqrv @373 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetCursorRange()
+    @Datasnap@Dbclient@TCustomClientDataSet@SetData$qqrrx17System@OleVariant @525 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetData(const System::OleVariant&)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetDataSetField$qqrxp21Data@Db@TDataSetField @346 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetDataSetField(Data::Db::TDataSetField * const)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetDataSource$qqrp19Data@Db@TDataSource @341 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetDataSource(Data::Db::TDataSource *)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetDisableStringTrim$qqro @547 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetDisableStringTrim(bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetFieldData$qqrp14Data@Db@TField24System@%DynamicArray$uc% @442 ; Datasnap::Dbclient::TCustomClientDataSet::SetFieldData(Data::Db::TField *, System::DynamicArray<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@SetFieldData$qqrp14Data@Db@TFieldpv @441 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetFieldData(Data::Db::TField *, void *)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetFileName$qqrx20System@UnicodeString @385 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetFileName(const System::UnicodeString)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetFilterData$qqrx20System@UnicodeString48System@%Set$21Data@Db@TFilterOptiont1$i0$t1$i1$% @330 ; Datasnap::Dbclient::TCustomClientDataSet::SetFilterData(const System::UnicodeString, System::Set<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@SetFilterOptions$qqr48System@%Set$21Data@Db@TFilterOptiont1$i0$t1$i1$% @328 ; Datasnap::Dbclient::TCustomClientDataSet::SetFilterOptions(System::Set<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@SetFilterText$qqrx20System@UnicodeString @329 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetFilterText(const System::UnicodeString)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetFiltered$qqro @326 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetFiltered(bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetIndex$qqrx20System@UnicodeStringo @392 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetIndex(const System::UnicodeString, bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetIndexDefs$qqrp18Data@Db@TIndexDefs @395 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetIndexDefs(Data::Db::TIndexDefs *)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetIndexField$qqrip14Data@Db@TField @383 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetIndexField(int, Data::Db::TField *)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetIndexFieldNames$qqrx20System@UnicodeString @381 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetIndexFieldNames(const System::UnicodeString)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetIndexName$qqrx20System@UnicodeString @384 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetIndexName(const System::UnicodeString)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetKey$qqrv @359 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetKey()
+    @Datasnap@Dbclient@TCustomClientDataSet@SetKeyBuffer$qqr28Data@Dbcommontypes@TKeyIndexo @370 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetKeyBuffer(Data::Dbcommontypes::TKeyIndex, bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetKeyExclusive$qqro @367 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetKeyExclusive(bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetKeyFieldCount$qqri @365 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetKeyFieldCount(int)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetKeyFields$qqr28Data@Dbcommontypes@TKeyIndexpx14System@TVarRecxi @364 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetKeyFields(Data::Dbcommontypes::TKeyIndex, const System::TVarRec *, const int)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetLinkRanges$qqrp56System@Generics@Collections@%TList__1$p14Data@Db@TField% @371 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetLinkRanges(System::Generics::Collections::TList__1<Data::Db::TField *> *)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetLogChanges$qqro @476 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetLogChanges(bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetMasterFields$qqrx20System@UnicodeString @339 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetMasterFields(const System::UnicodeString)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetNotifyCallback$qqrv @488 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetNotifyCallback()
+    @Datasnap@Dbclient@TCustomClientDataSet@SetOnFilterRecord$qqrxynpqqrp16Data@Db@TDataSetro$v @327 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetOnFilterRecord(void __fastcall __closure(*)(Data::Db::TDataSet *, bool&) const)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetOptionalParam$qqrx20System@UnicodeStringrx17System@OleVarianto @544 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetOptionalParam(const System::UnicodeString, const System::OleVariant&, bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetParams$qqrp15Data@Db@TParams @546 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetParams(Data::Db::TParams *)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetPersistDataPacket$qqrxp57Datasnap@Dbclient@TCustomClientDataSet@TPersistDataPacket @545 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetPersistDataPacket(Datasnap::Dbclient::TCustomClientDataSet::TPersistDataPacket * const)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetProvider$qqrp25System@Classes@TComponent @509 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetProvider(System::Classes::TComponent *)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetProviderEOF$qqro @505 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetProviderEOF(bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetProviderName$qqrx20System@UnicodeString @510 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetProviderName(const System::UnicodeString)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetRange$qqrpx14System@TVarRecxit1xi @355 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetRange(const System::TVarRec *, const int, const System::TVarRec *, const int)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetRangeEnd$qqrv @354 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetRangeEnd()
+    @Datasnap@Dbclient@TCustomClientDataSet@SetRangeStart$qqrv @353 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetRangeStart()
+    @Datasnap@Dbclient@TCustomClientDataSet@SetReadOnly$qqro @472 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetReadOnly(bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetRecNo$qqri @454 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetRecNo(int)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetRemoteServer$qqrp37Datasnap@Dbclient@TCustomRemoteServer @502 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetRemoteServer(Datasnap::Dbclient::TCustomRemoteServer *)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetSavePoint$qqrj @401 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetSavePoint(__int64)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetStatusFilter$qqrx48System@%Set$21Data@Db@TUpdateStatust1$i0$t1$i3$% @325 ; Datasnap::Dbclient::TCustomClientDataSet::SetStatusFilter(const System::Set<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@SetXMLData$qqrx20System@UnicodeString @523 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetXMLData(const System::UnicodeString)
+    @Datasnap@Dbclient@TCustomClientDataSet@SetupConstraints$qqrv @291 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetupConstraints()
+    @Datasnap@Dbclient@TCustomClientDataSet@SetupInternalCalcFields$qqro @483 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SetupInternalCalcFields(bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@SortOnFields$qqr52System@%DelphiInterface$25Datasnap@Dsintf@IDSCursor%x20System@UnicodeStringoo @379 ; Datasnap::Dbclient::TCustomClientDataSet::SortOnFields(System::DelphiInterface<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@SwitchToIndex$qqrx20System@UnicodeString @393 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::SwitchToIndex(const System::UnicodeString)
+    @Datasnap@Dbclient@TCustomClientDataSet@SyncCursors$qqr52System@%DelphiInterface$25Datasnap@Dsintf@IDSCursor%t1 @405 ; Datasnap::Dbclient::TCustomClientDataSet::SyncCursors(System::DelphiInterface<{583}...
+    @Datasnap@Dbclient@TCustomClientDataSet@TPersistDataPacket@ @606 ; Datasnap::Dbclient::TCustomClientDataSet::TPersistDataPacket::
+    @Datasnap@Dbclient@TCustomClientDataSet@TPersistDataPacket@$bctr$qqrxp38Datasnap@Dbclient@TCustomClientDataSet @254 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::TPersistDataPacket::TPersistDataPacket(Datasnap::Dbclient::TCustomClientDataSet * const)
+    @Datasnap@Dbclient@TCustomClientDataSet@TPersistDataPacket@DefineProperties$qqrp21System@Classes@TFiler @253 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::TPersistDataPacket::DefineProperties(System::Classes::TFiler *)
+    @Datasnap@Dbclient@TCustomClientDataSet@UndoLastChange$qqro @404 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::UndoLastChange(bool)
+    @Datasnap@Dbclient@TCustomClientDataSet@UpdateIndexDefs$qqrv @399 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::UpdateIndexDefs()
+    @Datasnap@Dbclient@TCustomClientDataSet@UpdateStatus$qqrv @449 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::UpdateStatus()
+    @Datasnap@Dbclient@TCustomClientDataSet@WriteData$qqrp22System@Classes@TStream @343 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::WriteData(System::Classes::TStream *)
+    @Datasnap@Dbclient@TCustomClientDataSet@WriteDataPacket$qqrp22System@Classes@TStreamo35Datasnap@Dbclient@TDataPacketFormat @482 ; __fastcall Datasnap::Dbclient::TCustomClientDataSet::WriteDataPacket(System::Classes::TStream *, bool, Datasnap::Dbclient::TDataPacketFormat)
+    @Datasnap@Dbclient@TCustomRemoteServer@ @630 ; Datasnap::Dbclient::TCustomRemoteServer::
+    @Datasnap@Dbclient@TCustomRemoteServer@$bctr$qqrp25System@Classes@TComponent @559 ; __fastcall Datasnap::Dbclient::TCustomRemoteServer::TCustomRemoteServer(System::Classes::TComponent *)
+    @Datasnap@Dbclient@TCustomRemoteServer@GetAppServer$qqrv @555 ; __fastcall Datasnap::Dbclient::TCustomRemoteServer::GetAppServer()
+    @Datasnap@Dbclient@TCustomRemoteServer@GetProviderNames$qqrynpqqrx20System@UnicodeString$v @556 ; __fastcall Datasnap::Dbclient::TCustomRemoteServer::GetProviderNames(void __fastcall __closure(*)(const System::UnicodeString))
+    @Datasnap@Dbclient@TCustomRemoteServer@GetServer$qqrv @557 ; __fastcall Datasnap::Dbclient::TCustomRemoteServer::GetServer()
+    @Datasnap@Dbclient@TCustomRemoteServer@GetServerList$qqrv @558 ; __fastcall Datasnap::Dbclient::TCustomRemoteServer::GetServerList()
+    @Datasnap@Dbclient@TCustomRemoteServer@SetAppServer$qqrrx14System@Variant @554 ; __fastcall Datasnap::Dbclient::TCustomRemoteServer::SetAppServer(const System::Variant&)
+    @Datasnap@Dbclient@UnpackParams$qqrrx17System@OleVariantp15Data@Db@TParams @560 ; __fastcall Datasnap::Dbclient::UnpackParams(const System::OleVariant&, Data::Db::TParams *)
+    @Datasnap@Dbclient@initialization$qqrv @251 ; __fastcall Datasnap::Dbclient::initialization()
+    @Datasnap@Dsintf@BlobTypeMap   @86  ; Datasnap::Dsintf::BlobTypeMap
+    @Datasnap@Dsintf@BytesToVariantArray$qqrx24System@%DynamicArray$uc% @72  ; Datasnap::Dsintf::BytesToVariantArray(const System::DynamicArray<{583}...
+    @Datasnap@Dsintf@CLSID_DSBase  @82  ; Datasnap::Dsintf::CLSID_DSBase
+    @Datasnap@Dsintf@CLSID_DSCursor @81  ; Datasnap::Dsintf::CLSID_DSCursor
+    @Datasnap@Dsintf@CLSID_DSWriter @80  ; Datasnap::Dsintf::CLSID_DSWriter
+    @Datasnap@Dsintf@CreateDbClientObject$qqrrx5_GUIDt1pv @78  ; __fastcall Datasnap::Dsintf::CreateDbClientObject(const _GUID&, const _GUID&, void *)
+    @Datasnap@Dsintf@DataPacketSize$qqrxp16System@TVarArray @75  ; __fastcall Datasnap::Dsintf::DataPacketSize(System::TVarArray * const)
+    @Datasnap@Dsintf@DataPacketToVariant$qqrxp16System@TVarArrayr17System@OleVariant @74  ; __fastcall Datasnap::Dsintf::DataPacketToVariant(System::TVarArray * const, System::OleVariant&)
+    @Datasnap@Dsintf@DataTypeMap   @87  ; Datasnap::Dsintf::DataTypeMap
+    @Datasnap@Dsintf@FieldTypeMap  @89  ; Datasnap::Dsintf::FieldTypeMap
+    @Datasnap@Dsintf@Finalization$qqrv @70  ; __fastcall Datasnap::Dsintf::Finalization()
+    @Datasnap@Dsintf@FldSubTypeMap @88  ; Datasnap::Dsintf::FldSubTypeMap
+    @Datasnap@Dsintf@FreeDataPacket$qqrrp16System@TVarArray @77  ; __fastcall Datasnap::Dsintf::FreeDataPacket(System::TVarArray *&)
+    @Datasnap@Dsintf@RaiseErr$qqri @79  ; __fastcall Datasnap::Dsintf::RaiseErr(int)
+    @Datasnap@Dsintf@RegisterMidasLib$qqrpv @71  ; __fastcall Datasnap::Dsintf::RegisterMidasLib(void *)
+    @Datasnap@Dsintf@VarToDataPacket$qqrrx17System@OleVariant @76  ; __fastcall Datasnap::Dsintf::VarToDataPacket(const System::OleVariant&)
+    @Datasnap@Dsintf@VariantArrayToBytes$qqrrx17System@OleVariant @73  ; __fastcall Datasnap::Dsintf::VariantArrayToBytes(const System::OleVariant&)
+    @Datasnap@Dsintf@initialization$qqrv @69  ; __fastcall Datasnap::Dsintf::initialization()
+    @Datasnap@Midas@Finalization$qqrv @2   ; __fastcall Datasnap::Midas::Finalization()
+    @Datasnap@Midas@IID_IAppServer @5   ; Datasnap::Midas::IID_IAppServer
+    @Datasnap@Midas@LIBID_Midas    @6   ; Datasnap::Midas::LIBID_Midas
+    @Datasnap@Midas@initialization$qqrv @1   ; __fastcall Datasnap::Midas::initialization()
+    @Datasnap@Midconst@CATID_MIDASAppServer @68  ; Datasnap::Midconst::CATID_MIDASAppServer
+    @Datasnap@Midconst@CATID_MIDASInterceptor @67  ; Datasnap::Midconst::CATID_MIDASInterceptor
+    @Datasnap@Midconst@Finalization$qqrv @8   ; __fastcall Datasnap::Midconst::Finalization()
+    @Datasnap@Midconst@_SAggregatesActive @26  ; Datasnap::Midconst::_SAggregatesActive
+    @Datasnap@Midconst@_SAggsGroupingLevel @59  ; Datasnap::Midconst::_SAggsGroupingLevel
+    @Datasnap@Midconst@_SAggsNoSuchLevel @58  ; Datasnap::Midconst::_SAggsNoSuchLevel
+    @Datasnap@Midconst@_SArrayElementError @32  ; Datasnap::Midconst::_SArrayElementError
+    @Datasnap@Midconst@_SBadVariantType @49  ; Datasnap::Midconst::_SBadVariantType
+    @Datasnap@Midconst@_SBlankChildName @46  ; Datasnap::Midconst::_SBlankChildName
+    @Datasnap@Midconst@_SCDSDlgOpenCaption @53  ; Datasnap::Midconst::_SCDSDlgOpenCaption
+    @Datasnap@Midconst@_SCannotChangeCommandText @27  ; Datasnap::Midconst::_SCannotChangeCommandText
+    @Datasnap@Midconst@_SCannotCreateDataSet @55  ; Datasnap::Midconst::_SCannotCreateDataSet
+    @Datasnap@Midconst@_SClassNotAvailable @13  ; Datasnap::Midconst::_SClassNotAvailable
+    @Datasnap@Midconst@_SConnectionMissing @23  ; Datasnap::Midconst::_SConnectionMissing
+    @Datasnap@Midconst@_SConstraintFailed @40  ; Datasnap::Midconst::_SConstraintFailed
+    @Datasnap@Midconst@_SDefExprFail @33  ; Datasnap::Midconst::_SDefExprFail
+    @Datasnap@Midconst@_SDefaultURL @18  ; Datasnap::Midconst::_SDefaultURL
+    @Datasnap@Midconst@_SErrorLoadingMidas @56  ; Datasnap::Midconst::_SErrorLoadingMidas
+    @Datasnap@Midconst@_SField     @39  ; Datasnap::Midconst::_SField
+    @Datasnap@Midconst@_SFieldConstFail @34  ; Datasnap::Midconst::_SFieldConstFail
+    @Datasnap@Midconst@_SInvalidAction @48  ; Datasnap::Midconst::_SInvalidAction
+    @Datasnap@Midconst@_SInvalidArg @11  ; Datasnap::Midconst::_SInvalidArg
+    @Datasnap@Midconst@_SInvalidClone @54  ; Datasnap::Midconst::_SInvalidClone
+    @Datasnap@Midconst@_SInvalidDataPacket @64  ; Datasnap::Midconst::_SInvalidDataPacket
+    @Datasnap@Midconst@_SInvalidOptParamType @42  ; Datasnap::Midconst::_SInvalidOptParamType
+    @Datasnap@Midconst@_SInvalidProviderName @50  ; Datasnap::Midconst::_SInvalidProviderName
+    @Datasnap@Midconst@_SInvalidRegistration @24  ; Datasnap::Midconst::_SInvalidRegistration
+    @Datasnap@Midconst@_SInvalidResponse @45  ; Datasnap::Midconst::_SInvalidResponse
+    @Datasnap@Midconst@_SInvalidURL @17  ; Datasnap::Midconst::_SInvalidURL
+    @Datasnap@Midconst@_SMasterNotOpen @14  ; Datasnap::Midconst::_SMasterNotOpen
+    @Datasnap@Midconst@_SMissingDataSet @41  ; Datasnap::Midconst::_SMissingDataSet
+    @Datasnap@Midconst@_SNoCircularConnection @22  ; Datasnap::Midconst::_SNoCircularConnection
+    @Datasnap@Midconst@_SNoCircularReference @57  ; Datasnap::Midconst::_SNoCircularReference
+    @Datasnap@Midconst@_SNoConnectToBroker @52  ; Datasnap::Midconst::_SNoConnectToBroker
+    @Datasnap@Midconst@_SNoDataProvider @65  ; Datasnap::Midconst::_SNoDataProvider
+    @Datasnap@Midconst@_SNoDataSets @36  ; Datasnap::Midconst::_SNoDataSets
+    @Datasnap@Midconst@_SNoDeletesAllowed @29  ; Datasnap::Midconst::_SNoDeletesAllowed
+    @Datasnap@Midconst@_SNoEditsAllowed @30  ; Datasnap::Midconst::_SNoEditsAllowed
+    @Datasnap@Midconst@_SNoInsertsAllowed @28  ; Datasnap::Midconst::_SNoInsertsAllowed
+    @Datasnap@Midconst@_SNoKeySpecified @37  ; Datasnap::Midconst::_SNoKeySpecified
+    @Datasnap@Midconst@_SNoParentConnection @47  ; Datasnap::Midconst::_SNoParentConnection
+    @Datasnap@Midconst@_SNoServers @25  ; Datasnap::Midconst::_SNoServers
+    @Datasnap@Midconst@_SNoTableName @31  ; Datasnap::Midconst::_SNoTableName
+    @Datasnap@Midconst@_SNoWinSock2 @20  ; Datasnap::Midconst::_SNoWinSock2
+    @Datasnap@Midconst@_SNotFound  @9   ; Datasnap::Midconst::_SNotFound
+    @Datasnap@Midconst@_SObjectNotAvailable @15  ; Datasnap::Midconst::_SObjectNotAvailable
+    @Datasnap@Midconst@_SOutOfMemory @12  ; Datasnap::Midconst::_SOutOfMemory
+    @Datasnap@Midconst@_SProviderInvalid @62  ; Datasnap::Midconst::_SProviderInvalid
+    @Datasnap@Midconst@_SProviderNotExported @66  ; Datasnap::Midconst::_SProviderNotExported
+    @Datasnap@Midconst@_SReadOnlyProvider @38  ; Datasnap::Midconst::_SReadOnlyProvider
+    @Datasnap@Midconst@_SRecConstFail @35  ; Datasnap::Midconst::_SRecConstFail
+    @Datasnap@Midconst@_SRecordNotFound @44  ; Datasnap::Midconst::_SRecordNotFound
+    @Datasnap@Midconst@_SRefreshError @63  ; Datasnap::Midconst::_SRefreshError
+    @Datasnap@Midconst@_SRepositoryIdBlank @60  ; Datasnap::Midconst::_SRepositoryIdBlank
+    @Datasnap@Midconst@_SReturnError @21  ; Datasnap::Midconst::_SReturnError
+    @Datasnap@Midconst@_SServerIsBusy @16  ; Datasnap::Midconst::_SServerIsBusy
+    @Datasnap@Midconst@_SServerNameBlank @61  ; Datasnap::Midconst::_SServerNameBlank
+    @Datasnap@Midconst@_SSocketReadError @51  ; Datasnap::Midconst::_SSocketReadError
+    @Datasnap@Midconst@_STooManyRecordsModified @43  ; Datasnap::Midconst::_STooManyRecordsModified
+    @Datasnap@Midconst@_SURLRequired @19  ; Datasnap::Midconst::_SURLRequired
+    @Datasnap@Midconst@_SUnableToLoadICU @10  ; Datasnap::Midconst::_SUnableToLoadICU
+    @Datasnap@Midconst@initialization$qqrv @7   ; __fastcall Datasnap::Midconst::initialization()
+    @Datasnap@Provider@EDSWriter@  @963 ; Datasnap::Provider::EDSWriter::
+    @Datasnap@Provider@EDSWriter@$bctr$qqr20System@UnicodeStringii @893 ; __fastcall Datasnap::Provider::EDSWriter::EDSWriter(System::UnicodeString, int, int)
+    @Datasnap@Provider@Finalization$qqrv @698 ; __fastcall Datasnap::Provider::Finalization()
+    @Datasnap@Provider@GetObjectProperty$qqrp26System@Classes@TPersistentx20System@UnicodeString @896 ; __fastcall Datasnap::Provider::GetObjectProperty(System::Classes::TPersistent *, const System::UnicodeString)
+    @Datasnap@Provider@GetStringProperty$qqrp26System@Classes@TPersistentx20System@UnicodeString @895 ; __fastcall Datasnap::Provider::GetStringProperty(System::Classes::TPersistent *, const System::UnicodeString)
+    @Datasnap@Provider@InformixLob @964 ; Datasnap::Provider::InformixLob
+    @Datasnap@Provider@MetaDataOption @941 ; Datasnap::Provider::MetaDataOption
+    @Datasnap@Provider@ResetOption @942 ; Datasnap::Provider::ResetOption
+    @Datasnap@Provider@TBaseProvider@ @932 ; Datasnap::Provider::TBaseProvider::
+    @Datasnap@Provider@TBaseProvider@$bctr$qqrp25System@Classes@TComponent @814 ; __fastcall Datasnap::Provider::TBaseProvider::TBaseProvider(System::Classes::TComponent *)
+    @Datasnap@Provider@TBaseProvider@$bdtr$qqrv @813 ; __fastcall Datasnap::Provider::TBaseProvider::~TBaseProvider()
+    @Datasnap@Provider@TBaseProvider@CheckResolver$qqrv @809 ; __fastcall Datasnap::Provider::TBaseProvider::CheckResolver()
+    @Datasnap@Provider@TBaseProvider@CreateDataPacket$qqr61System@%Set$34Datasnap@Provider@TGetRecordOptiont1$i0$t1$i3$%61System@%Set$33Datasnap@Provider@TProviderOptiont1$i0$t1$i15$%rir17System@OleVariant @801 ; Datasnap::Provider::TBaseProvider::CreateDataPacket(System::Set<{583}...
+    @Datasnap@Provider@TBaseProvider@CreateResolver$qqrv @802 ; __fastcall Datasnap::Provider::TBaseProvider::CreateResolver()
+    @Datasnap@Provider@TBaseProvider@DoAfterUpdateRecord$qqrp16Data@Db@TDataSetp38Datasnap@Dbclient@TCustomClientDataSet19Data@Db@TUpdateKind @799 ; __fastcall Datasnap::Provider::TBaseProvider::DoAfterUpdateRecord(Data::Db::TDataSet *, Datasnap::Dbclient::TCustomClientDataSet *, Data::Db::TUpdateKind)
+    @Datasnap@Provider@TBaseProvider@DoBeforeCommit$qqrp32Datasnap@Provider@TPacketDataSetiirx17System@OleVariant @800 ; __fastcall Datasnap::Provider::TBaseProvider::DoBeforeCommit(Datasnap::Provider::TPacketDataSet *, int, int, const System::OleVariant&)
+    @Datasnap@Provider@TBaseProvider@DoBeforeUpdateRecord$qqrp16Data@Db@TDataSetp38Datasnap@Dbclient@TCustomClientDataSet19Data@Db@TUpdateKindro @798 ; __fastcall Datasnap::Provider::TBaseProvider::DoBeforeUpdateRecord(Data::Db::TDataSet *, Datasnap::Dbclient::TCustomClientDataSet *, Data::Db::TUpdateKind, bool&)
+    @Datasnap@Provider@TBaseProvider@DoOnGetData$qqrr17System@OleVariant @804 ; __fastcall Datasnap::Provider::TBaseProvider::DoOnGetData(System::OleVariant&)
+    @Datasnap@Provider@TBaseProvider@DoOnUpdateData$qqrp32Datasnap@Provider@TPacketDataSet @803 ; __fastcall Datasnap::Provider::TBaseProvider::DoOnUpdateData(Datasnap::Provider::TPacketDataSet *)
+    @Datasnap@Provider@TBaseProvider@FetchDetails$qqrp16Data@Db@TDataSett1 @810 ; __fastcall Datasnap::Provider::TBaseProvider::FetchDetails(Data::Db::TDataSet *, Data::Db::TDataSet *)
+    @Datasnap@Provider@TBaseProvider@FreeResolver$qqrv @808 ; __fastcall Datasnap::Provider::TBaseProvider::FreeResolver()
+    @Datasnap@Provider@TBaseProvider@InternalApplyUpdates$qqrrx17System@OleVariantiri @807 ; __fastcall Datasnap::Provider::TBaseProvider::InternalApplyUpdates(const System::OleVariant&, int, int&)
+    @Datasnap@Provider@TBaseProvider@InternalGetRecords$qqriri61System@%Set$34Datasnap@Provider@TGetRecordOptiont1$i0$t1$i3$%x17System@WideStringr17System@OleVariant @805 ; Datasnap::Provider::TBaseProvider::InternalGetRecords(int, int&, System::Set<{583}...
+    @Datasnap@Provider@TBaseProvider@InternalRowRequest$qqrrx17System@OleVariant57System@%Set$30Datasnap@Dbclient@TFetchOptiont1$i0$t1$i2$% @806 ; Datasnap::Provider::TBaseProvider::InternalRowRequest(const System::OleVariant&, System::Set<{583}...
+    @Datasnap@Provider@TBaseProvider@LocateRecord$qqrp16Data@Db@TDataSett1 @812 ; __fastcall Datasnap::Provider::TBaseProvider::LocateRecord(Data::Db::TDataSet *, Data::Db::TDataSet *)
+    @Datasnap@Provider@TBaseProvider@UpdateRecord$qqrp16Data@Db@TDataSett1oo @811 ; __fastcall Datasnap::Provider::TBaseProvider::UpdateRecord(Data::Db::TDataSet *, Data::Db::TDataSet *, bool, bool)
+    @Datasnap@Provider@TCustomPacketWriter@ @961 ; Datasnap::Provider::TCustomPacketWriter::
+    @Datasnap@Provider@TCustomPacketWriter@$bctr$qqrv @892 ; __fastcall Datasnap::Provider::TCustomPacketWriter::TCustomPacketWriter()
+    @Datasnap@Provider@TCustomPacketWriter@$bdtr$qqrv @891 ; __fastcall Datasnap::Provider::TCustomPacketWriter::~TCustomPacketWriter()
+    @Datasnap@Provider@TCustomPacketWriter@AddAttribute$qqr29Datasnap@Dsintf@TPcktAttrAreax20System@UnicodeStringrx17System@OleVarianto @888 ; __fastcall Datasnap::Provider::TCustomPacketWriter::AddAttribute(Datasnap::Dsintf::TPcktAttrArea, const System::UnicodeString, const System::OleVariant&, bool)
+    @Datasnap@Provider@TCustomPacketWriter@Check$qqri @890 ; __fastcall Datasnap::Provider::TCustomPacketWriter::Check(int)
+    @Datasnap@Provider@TCustomPacketWriter@InternalCheck$qqri @889 ; __fastcall Datasnap::Provider::TCustomPacketWriter::InternalCheck(int)
+    @Datasnap@Provider@TCustomPacketWriter@SetDSWriter$qqrx52System@%DelphiInterface$25Datasnap@Dsintf@IDSWriter% @887 ; Datasnap::Provider::TCustomPacketWriter::SetDSWriter(const System::DelphiInterface<{583}...
+    @Datasnap@Provider@TCustomProvider@ @944 ; Datasnap::Provider::TCustomProvider::
+    @Datasnap@Provider@TCustomProvider@$bctr$qqrp25System@Classes@TComponent @842 ; __fastcall Datasnap::Provider::TCustomProvider::TCustomProvider(System::Classes::TComponent *)
+    @Datasnap@Provider@TCustomProvider@$bdtr$qqrv @841 ; __fastcall Datasnap::Provider::TCustomProvider::~TCustomProvider()
+    @Datasnap@Provider@TCustomProvider@ApplyUpdates$qqrrx17System@OleVariantiri @837 ; __fastcall Datasnap::Provider::TCustomProvider::ApplyUpdates(const System::OleVariant&, int, int&)
+    @Datasnap@Provider@TCustomProvider@ApplyUpdates$qqrrx17System@OleVariantirir17System@OleVariant @836 ; __fastcall Datasnap::Provider::TCustomProvider::ApplyUpdates(const System::OleVariant&, int, int&, System::OleVariant&)
+    @Datasnap@Provider@TCustomProvider@DataRequest$qqrrx17System@OleVariant @816 ; __fastcall Datasnap::Provider::TCustomProvider::DataRequest(const System::OleVariant&)
+    @Datasnap@Provider@TCustomProvider@DoAfterApplyUpdates$qqrr17System@OleVariant @839 ; __fastcall Datasnap::Provider::TCustomProvider::DoAfterApplyUpdates(System::OleVariant&)
+    @Datasnap@Provider@TCustomProvider@DoAfterExecute$qqrr17System@OleVariant @826 ; __fastcall Datasnap::Provider::TCustomProvider::DoAfterExecute(System::OleVariant&)
+    @Datasnap@Provider@TCustomProvider@DoAfterGetParams$qqrr17System@OleVariant @823 ; __fastcall Datasnap::Provider::TCustomProvider::DoAfterGetParams(System::OleVariant&)
+    @Datasnap@Provider@TCustomProvider@DoAfterGetRecords$qqrr17System@OleVariant @834 ; __fastcall Datasnap::Provider::TCustomProvider::DoAfterGetRecords(System::OleVariant&)
+    @Datasnap@Provider@TCustomProvider@DoAfterRowRequest$qqrr17System@OleVariant @829 ; __fastcall Datasnap::Provider::TCustomProvider::DoAfterRowRequest(System::OleVariant&)
+    @Datasnap@Provider@TCustomProvider@DoApplyUpdates$qqrrx17System@OleVariantirir17System@OleVariant @835 ; __fastcall Datasnap::Provider::TCustomProvider::DoApplyUpdates(const System::OleVariant&, int, int&, System::OleVariant&)
+    @Datasnap@Provider@TCustomProvider@DoBeforeApplyUpdates$qqrr17System@OleVariant @838 ; __fastcall Datasnap::Provider::TCustomProvider::DoBeforeApplyUpdates(System::OleVariant&)
+    @Datasnap@Provider@TCustomProvider@DoBeforeExecute$qqrx17System@WideStringr17System@OleVariantt2 @825 ; __fastcall Datasnap::Provider::TCustomProvider::DoBeforeExecute(const System::WideString, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Provider@TCustomProvider@DoBeforeGetParams$qqrr17System@OleVariant @822 ; __fastcall Datasnap::Provider::TCustomProvider::DoBeforeGetParams(System::OleVariant&)
+    @Datasnap@Provider@TCustomProvider@DoBeforeGetRecords$qqriix17System@WideStringr17System@OleVariantt4 @833 ; __fastcall Datasnap::Provider::TCustomProvider::DoBeforeGetRecords(int, int, const System::WideString, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Provider@TCustomProvider@DoBeforeRowRequest$qqrr17System@OleVariant @828 ; __fastcall Datasnap::Provider::TCustomProvider::DoBeforeRowRequest(System::OleVariant&)
+    @Datasnap@Provider@TCustomProvider@DoGetRecords$qqririix17System@WideStringr17System@OleVariantt5 @830 ; __fastcall Datasnap::Provider::TCustomProvider::DoGetRecords(int, int&, int, const System::WideString, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Provider@TCustomProvider@Execute$qqrx17System@WideStringr17System@OleVariantt2 @824 ; __fastcall Datasnap::Provider::TCustomProvider::Execute(const System::WideString, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Provider@TCustomProvider@GetData$qqrv @840 ; __fastcall Datasnap::Provider::TCustomProvider::GetData()
+    @Datasnap@Provider@TCustomProvider@GetParams$qqrr17System@OleVariant @821 ; __fastcall Datasnap::Provider::TCustomProvider::GetParams(System::OleVariant&)
+    @Datasnap@Provider@TCustomProvider@GetRecords$qqririi @832 ; __fastcall Datasnap::Provider::TCustomProvider::GetRecords(int, int&, int)
+    @Datasnap@Provider@TCustomProvider@GetRecords$qqririix20System@UnicodeStringr17System@OleVariantt5 @831 ; __fastcall Datasnap::Provider::TCustomProvider::GetRecords(int, int&, int, const System::UnicodeString, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Provider@TCustomProvider@InternalExecute$qqrx17System@WideStringr17System@OleVariant @819 ; __fastcall Datasnap::Provider::TCustomProvider::InternalExecute(const System::WideString, System::OleVariant&)
+    @Datasnap@Provider@TCustomProvider@InternalGetParams$qqr45System@%Set$18Data@Db@TParamTypet1$i0$t1$i4$% @820 ; Datasnap::Provider::TCustomProvider::InternalGetParams(System::Set<{583}...
+    @Datasnap@Provider@TCustomProvider@InternalGetRecords$qqriri61System@%Set$34Datasnap@Provider@TGetRecordOptiont1$i0$t1$i3$%x17System@WideStringr17System@OleVariant @818 ; Datasnap::Provider::TCustomProvider::InternalGetRecords(int, int&, System::Set<{583}...
+    @Datasnap@Provider@TCustomProvider@InternalRowRequest$qqrrx17System@OleVariant57System@%Set$30Datasnap@Dbclient@TFetchOptiont1$i0$t1$i2$% @817 ; Datasnap::Provider::TCustomProvider::InternalRowRequest(const System::OleVariant&, System::Set<{583}...
+    @Datasnap@Provider@TCustomProvider@RowRequest$qqrrx17System@OleVariantir17System@OleVariant @827 ; __fastcall Datasnap::Provider::TCustomProvider::RowRequest(const System::OleVariant&, int, System::OleVariant&)
+    @Datasnap@Provider@TCustomProvider@SetActiveUpdateException$qqrp25System@Sysutils@Exception @815 ; __fastcall Datasnap::Provider::TCustomProvider::SetActiveUpdateException(System::Sysutils::Exception *)
+    @Datasnap@Provider@TCustomResolver@ @922 ; Datasnap::Provider::TCustomResolver::
+    @Datasnap@Provider@TCustomResolver@$bctr$qqrp31Datasnap@Provider@TBaseProvider @757 ; __fastcall Datasnap::Provider::TCustomResolver::TCustomResolver(Datasnap::Provider::TBaseProvider *)
+    @Datasnap@Provider@TCustomResolver@$bdtr$qqrv @756 ; __fastcall Datasnap::Provider::TCustomResolver::~TCustomResolver()
+    @Datasnap@Provider@TCustomResolver@ApplyUpdates$qqrrx17System@OleVariantiri @747 ; __fastcall Datasnap::Provider::TCustomResolver::ApplyUpdates(const System::OleVariant&, int, int&)
+    @Datasnap@Provider@TCustomResolver@BeginUpdate$qqrv @755 ; __fastcall Datasnap::Provider::TCustomResolver::BeginUpdate()
+    @Datasnap@Provider@TCustomResolver@EndUpdate$qqrv @754 ; __fastcall Datasnap::Provider::TCustomResolver::EndUpdate()
+    @Datasnap@Provider@TCustomResolver@FreeTreeData$qqrp29Datasnap@Provider@TUpdateTree @751 ; __fastcall Datasnap::Provider::TCustomResolver::FreeTreeData(Datasnap::Provider::TUpdateTree *)
+    @Datasnap@Provider@TCustomResolver@HandleUpdateError$qqrp29Datasnap@Provider@TUpdateTreep20Data@Db@EUpdateErrorrit3 @746 ; __fastcall Datasnap::Provider::TCustomResolver::HandleUpdateError(Datasnap::Provider::TUpdateTree *, Data::Db::EUpdateError *, int&, int&)
+    @Datasnap@Provider@TCustomResolver@InitKeyFields$qqrp29Datasnap@Provider@TUpdateTreep32Datasnap@Provider@TPacketDataSet @753 ; __fastcall Datasnap::Provider::TCustomResolver::InitKeyFields(Datasnap::Provider::TUpdateTree *, Datasnap::Provider::TPacketDataSet *)
+    @Datasnap@Provider@TCustomResolver@InitTreeData$qqrp29Datasnap@Provider@TUpdateTree @752 ; __fastcall Datasnap::Provider::TCustomResolver::InitTreeData(Datasnap::Provider::TUpdateTree *)
+    @Datasnap@Provider@TCustomResolver@InternalBeforeResolve$qqrp29Datasnap@Provider@TUpdateTree @750 ; __fastcall Datasnap::Provider::TCustomResolver::InternalBeforeResolve(Datasnap::Provider::TUpdateTree *)
+    @Datasnap@Provider@TCustomResolver@InternalUpdateRecord$qqrp29Datasnap@Provider@TUpdateTree @749 ; __fastcall Datasnap::Provider::TCustomResolver::InternalUpdateRecord(Datasnap::Provider::TUpdateTree *)
+    @Datasnap@Provider@TCustomResolver@LogUpdateError$qqrp29Datasnap@Provider@TUpdateTreep20Data@Db@EUpdateError35Datasnap@Provider@TResolverResponse @744 ; __fastcall Datasnap::Provider::TCustomResolver::LogUpdateError(Datasnap::Provider::TUpdateTree *, Data::Db::EUpdateError *, Datasnap::Provider::TResolverResponse)
+    @Datasnap@Provider@TCustomResolver@LogUpdateRecord$qqrp29Datasnap@Provider@TUpdateTree @745 ; __fastcall Datasnap::Provider::TCustomResolver::LogUpdateRecord(Datasnap::Provider::TUpdateTree *)
+    @Datasnap@Provider@TCustomResolver@RowRequest$qqrrx17System@OleVariant57System@%Set$30Datasnap@Dbclient@TFetchOptiont1$i0$t1$i2$% @748 ; Datasnap::Provider::TCustomResolver::RowRequest(const System::OleVariant&, System::Set<{583}...
+    @Datasnap@Provider@TDataPacketWriter@ @948 ; Datasnap::Provider::TDataPacketWriter::
+    @Datasnap@Provider@TDataPacketWriter@$bdtr$qqrv @886 ; __fastcall Datasnap::Provider::TDataPacketWriter::~TDataPacketWriter()
+    @Datasnap@Provider@TDataPacketWriter@AddColumn$qqrrx31Datasnap@Provider@TPutFieldInfo @871 ; __fastcall Datasnap::Provider::TDataPacketWriter::AddColumn(const Datasnap::Provider::TPutFieldInfo&)
+    @Datasnap@Provider@TDataPacketWriter@AddConstraints$qqrp16Data@Db@TDataSet @870 ; __fastcall Datasnap::Provider::TDataPacketWriter::AddConstraints(Data::Db::TDataSet *)
+    @Datasnap@Provider@TDataPacketWriter@AddDataSetAttributes$qqrp16Data@Db@TDataSet @874 ; __fastcall Datasnap::Provider::TDataPacketWriter::AddDataSetAttributes(Data::Db::TDataSet *)
+    @Datasnap@Provider@TDataPacketWriter@AddExtraFieldProps$qqrp14Data@Db@TField @872 ; __fastcall Datasnap::Provider::TDataPacketWriter::AddExtraFieldProps(Data::Db::TField *)
+    @Datasnap@Provider@TDataPacketWriter@AddFieldLinks$qqrx55System@%DynamicArray$31Datasnap@Provider@TPutFieldInfo% @868 ; Datasnap::Provider::TDataPacketWriter::AddFieldLinks(const System::DynamicArray<{583}...
+    @Datasnap@Provider@TDataPacketWriter@AddIndexDefs$qqrp16Data@Db@TDataSetx55System@%DynamicArray$31Datasnap@Provider@TPutFieldInfo% @869 ; Datasnap::Provider::TDataPacketWriter::AddIndexDefs(Data::Db::TDataSet *, const System::DynamicArray<{583}...
+    @Datasnap@Provider@TDataPacketWriter@FreeInfoRecords$qqrr55System@%DynamicArray$31Datasnap@Provider@TPutFieldInfo% @885 ; Datasnap::Provider::TDataPacketWriter::FreeInfoRecords(System::DynamicArray<{583}...
+    @Datasnap@Provider@TDataPacketWriter@GetDataPacket$qqrp16Data@Db@TDataSetrir17System@OleVariant @864 ; __fastcall Datasnap::Provider::TDataPacketWriter::GetDataPacket(Data::Db::TDataSet *, int&, System::OleVariant&)
+    @Datasnap@Provider@TDataPacketWriter@GetFieldIdx$qqrx20System@UnicodeStringx55System@%DynamicArray$31Datasnap@Provider@TPutFieldInfo% @873 ; Datasnap::Provider::TDataPacketWriter::GetFieldIdx(const System::UnicodeString, const System::DynamicArray<{583}...
+    @Datasnap@Provider@TDataPacketWriter@InitPutProcs$qqrp16Data@Db@TDataSetri @865 ; __fastcall Datasnap::Provider::TDataPacketWriter::InitPutProcs(Data::Db::TDataSet *, int&)
+    @Datasnap@Provider@TDataPacketWriter@PutADTField$qqrp31Datasnap@Provider@TPutFieldInfo @878 ; __fastcall Datasnap::Provider::TDataPacketWriter::PutADTField(Datasnap::Provider::TPutFieldInfo *)
+    @Datasnap@Provider@TDataPacketWriter@PutArrayField$qqrp31Datasnap@Provider@TPutFieldInfo @877 ; __fastcall Datasnap::Provider::TDataPacketWriter::PutArrayField(Datasnap::Provider::TPutFieldInfo *)
+    @Datasnap@Provider@TDataPacketWriter@PutBlobField$qqrp31Datasnap@Provider@TPutFieldInfo @884 ; __fastcall Datasnap::Provider::TDataPacketWriter::PutBlobField(Datasnap::Provider::TPutFieldInfo *)
+    @Datasnap@Provider@TDataPacketWriter@PutCalcField$qqrp31Datasnap@Provider@TPutFieldInfo @883 ; __fastcall Datasnap::Provider::TDataPacketWriter::PutCalcField(Datasnap::Provider::TPutFieldInfo *)
+    @Datasnap@Provider@TDataPacketWriter@PutDataSetField$qqrp31Datasnap@Provider@TPutFieldInfo @876 ; __fastcall Datasnap::Provider::TDataPacketWriter::PutDataSetField(Datasnap::Provider::TPutFieldInfo *)
+    @Datasnap@Provider@TDataPacketWriter@PutField$qqrp31Datasnap@Provider@TPutFieldInfo @882 ; __fastcall Datasnap::Provider::TDataPacketWriter::PutField(Datasnap::Provider::TPutFieldInfo *)
+    @Datasnap@Provider@TDataPacketWriter@PutStringField$qqrp31Datasnap@Provider@TPutFieldInfo @881 ; __fastcall Datasnap::Provider::TDataPacketWriter::PutStringField(Datasnap::Provider::TPutFieldInfo *)
+    @Datasnap@Provider@TDataPacketWriter@PutVarBytesField$qqrp31Datasnap@Provider@TPutFieldInfo @879 ; __fastcall Datasnap::Provider::TDataPacketWriter::PutVarBytesField(Datasnap::Provider::TPutFieldInfo *)
+    @Datasnap@Provider@TDataPacketWriter@PutWideStringField$qqrp31Datasnap@Provider@TPutFieldInfo @880 ; __fastcall Datasnap::Provider::TDataPacketWriter::PutWideStringField(Datasnap::Provider::TPutFieldInfo *)
+    @Datasnap@Provider@TDataPacketWriter@RefreshPutProcs$qqrp16Data@Db@TDataSetr55System@%DynamicArray$31Datasnap@Provider@TPutFieldInfo% @866 ; Datasnap::Provider::TDataPacketWriter::RefreshPutProcs(Data::Db::TDataSet *, System::DynamicArray<{583}...
+    @Datasnap@Provider@TDataPacketWriter@Reset$qqrv @863 ; __fastcall Datasnap::Provider::TDataPacketWriter::Reset()
+    @Datasnap@Provider@TDataPacketWriter@WriteDataSet$qqrp16Data@Db@TDataSetr55System@%DynamicArray$31Datasnap@Provider@TPutFieldInfo%i @875 ; Datasnap::Provider::TDataPacketWriter::WriteDataSet(Data::Db::TDataSet *, System::DynamicArray<{583}...
+    @Datasnap@Provider@TDataPacketWriter@WriteMetaData$qqrp16Data@Db@TDataSetx55System@%DynamicArray$31Datasnap@Provider@TPutFieldInfo%o @867 ; Datasnap::Provider::TDataPacketWriter::WriteMetaData(Data::Db::TDataSet *, const System::DynamicArray<{583}...
+    @Datasnap@Provider@TDataSetProvider@ @928 ; Datasnap::Provider::TDataSetProvider::
+    @Datasnap@Provider@TDataSetProvider@$bctr$qqrp25System@Classes@TComponent @797 ; __fastcall Datasnap::Provider::TDataSetProvider::TDataSetProvider(System::Classes::TComponent *)
+    @Datasnap@Provider@TDataSetProvider@$bdtr$qqrv @796 ; __fastcall Datasnap::Provider::TDataSetProvider::~TDataSetProvider()
+    @Datasnap@Provider@TDataSetProvider@CheckDataSet$qqrv @778 ; __fastcall Datasnap::Provider::TDataSetProvider::CheckDataSet()
+    @Datasnap@Provider@TDataSetProvider@CreateDataPacket$qqr61System@%Set$34Datasnap@Provider@TGetRecordOptiont1$i0$t1$i3$%61System@%Set$33Datasnap@Provider@TProviderOptiont1$i0$t1$i15$%rir17System@OleVariant @774 ; Datasnap::Provider::TDataSetProvider::CreateDataPacket(System::Set<{583}...
+    @Datasnap@Provider@TDataSetProvider@CreateResolver$qqrv @779 ; __fastcall Datasnap::Provider::TDataSetProvider::CreateResolver()
+    @Datasnap@Provider@TDataSetProvider@DoBeforeExecute$qqrx17System@WideStringr17System@OleVariantt2 @790 ; __fastcall Datasnap::Provider::TDataSetProvider::DoBeforeExecute(const System::WideString, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Provider@TDataSetProvider@DoBeforeGetRecords$qqriix17System@WideStringr17System@OleVariantt4 @777 ; __fastcall Datasnap::Provider::TDataSetProvider::DoBeforeGetRecords(int, int, const System::WideString, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Provider@TDataSetProvider@DoGetProviderAttributes$qqrp16Data@Db@TDataSetp20System@Classes@TList @775 ; __fastcall Datasnap::Provider::TDataSetProvider::DoGetProviderAttributes(Data::Db::TDataSet *, System::Classes::TList *)
+    @Datasnap@Provider@TDataSetProvider@DoGetTableName$qqrp16Data@Db@TDataSetr20System@UnicodeString @788 ; __fastcall Datasnap::Provider::TDataSetProvider::DoGetTableName(Data::Db::TDataSet *, System::UnicodeString&)
+    @Datasnap@Provider@TDataSetProvider@FetchDetails$qqrp16Data@Db@TDataSett1 @793 ; __fastcall Datasnap::Provider::TDataSetProvider::FetchDetails(Data::Db::TDataSet *, Data::Db::TDataSet *)
+    @Datasnap@Provider@TDataSetProvider@FindRecord$qqrp16Data@Db@TDataSett119Data@Db@TUpdateMode @794 ; __fastcall Datasnap::Provider::TDataSetProvider::FindRecord(Data::Db::TDataSet *, Data::Db::TDataSet *, Data::Db::TUpdateMode)
+    @Datasnap@Provider@TDataSetProvider@GetDataSetFromDelta$qqrp29Datasnap@Provider@TUpdateTreep16Data@Db@TDataSett219Data@Db@TUpdateMode @792 ; __fastcall Datasnap::Provider::TDataSetProvider::GetDataSetFromDelta(Datasnap::Provider::TUpdateTree *, Data::Db::TDataSet *, Data::Db::TDataSet *, Data::Db::TUpdateMode)
+    @Datasnap@Provider@TDataSetProvider@InternalApplyUpdates$qqrrx17System@OleVariantiri @782 ; __fastcall Datasnap::Provider::TDataSetProvider::InternalApplyUpdates(const System::OleVariant&, int, int&)
+    @Datasnap@Provider@TDataSetProvider@InternalExecute$qqrx17System@WideStringr17System@OleVariant @789 ; __fastcall Datasnap::Provider::TDataSetProvider::InternalExecute(const System::WideString, System::OleVariant&)
+    @Datasnap@Provider@TDataSetProvider@InternalGetParams$qqr45System@%Set$18Data@Db@TParamTypet1$i0$t1$i4$% @784 ; Datasnap::Provider::TDataSetProvider::InternalGetParams(System::Set<{583}...
+    @Datasnap@Provider@TDataSetProvider@InternalGetRecords$qqriri61System@%Set$34Datasnap@Provider@TGetRecordOptiont1$i0$t1$i3$%x17System@WideStringr17System@OleVariant @776 ; Datasnap::Provider::TDataSetProvider::InternalGetRecords(int, int&, System::Set<{583}...
+    @Datasnap@Provider@TDataSetProvider@InternalRowRequest$qqrrx17System@OleVariant57System@%Set$30Datasnap@Dbclient@TFetchOptiont1$i0$t1$i2$% @783 ; Datasnap::Provider::TDataSetProvider::InternalRowRequest(const System::OleVariant&, System::Set<{583}...
+    @Datasnap@Provider@TDataSetProvider@LocateRecord$qqrp16Data@Db@TDataSett1 @795 ; __fastcall Datasnap::Provider::TDataSetProvider::LocateRecord(Data::Db::TDataSet *, Data::Db::TDataSet *)
+    @Datasnap@Provider@TDataSetProvider@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @773 ; __fastcall Datasnap::Provider::TDataSetProvider::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Datasnap@Provider@TDataSetProvider@Reset$qqrv @787 ; __fastcall Datasnap::Provider::TDataSetProvider::Reset()
+    @Datasnap@Provider@TDataSetProvider@SetCommandText$qqrx17System@WideString @786 ; __fastcall Datasnap::Provider::TDataSetProvider::SetCommandText(const System::WideString)
+    @Datasnap@Provider@TDataSetProvider@SetDataSet$qqrp16Data@Db@TDataSet @781 ; __fastcall Datasnap::Provider::TDataSetProvider::SetDataSet(Data::Db::TDataSet *)
+    @Datasnap@Provider@TDataSetProvider@SetParams$qqrrx17System@OleVariant @785 ; __fastcall Datasnap::Provider::TDataSetProvider::SetParams(const System::OleVariant&)
+    @Datasnap@Provider@TDataSetProvider@SetResolveToDataSet$qqro @780 ; __fastcall Datasnap::Provider::TDataSetProvider::SetResolveToDataSet(bool)
+    @Datasnap@Provider@TDataSetProvider@UpdateRecord$qqrp16Data@Db@TDataSett1oo @791 ; __fastcall Datasnap::Provider::TDataSetProvider::UpdateRecord(Data::Db::TDataSet *, Data::Db::TDataSet *, bool, bool)
+    @Datasnap@Provider@TDataSetResolver@ @920 ; Datasnap::Provider::TDataSetResolver::
+    @Datasnap@Provider@TDataSetResolver@$bctr$qqrp34Datasnap@Provider@TDataSetProvider @743 ; __fastcall Datasnap::Provider::TDataSetResolver::TDataSetResolver(Datasnap::Provider::TDataSetProvider *)
+    @Datasnap@Provider@TDataSetResolver@BeginUpdate$qqrv @741 ; __fastcall Datasnap::Provider::TDataSetResolver::BeginUpdate()
+    @Datasnap@Provider@TDataSetResolver@DoDelete$qqrp29Datasnap@Provider@TUpdateTree @735 ; __fastcall Datasnap::Provider::TDataSetResolver::DoDelete(Datasnap::Provider::TUpdateTree *)
+    @Datasnap@Provider@TDataSetResolver@DoInsert$qqrp29Datasnap@Provider@TUpdateTree @734 ; __fastcall Datasnap::Provider::TDataSetResolver::DoInsert(Datasnap::Provider::TUpdateTree *)
+    @Datasnap@Provider@TDataSetResolver@DoUpdate$qqrp29Datasnap@Provider@TUpdateTree @736 ; __fastcall Datasnap::Provider::TDataSetResolver::DoUpdate(Datasnap::Provider::TUpdateTree *)
+    @Datasnap@Provider@TDataSetResolver@EndUpdate$qqrv @740 ; __fastcall Datasnap::Provider::TDataSetResolver::EndUpdate()
+    @Datasnap@Provider@TDataSetResolver@GetProvider$qqrv @742 ; __fastcall Datasnap::Provider::TDataSetResolver::GetProvider()
+    @Datasnap@Provider@TDataSetResolver@InitializeConflictBuffer$qqrp29Datasnap@Provider@TUpdateTree @739 ; __fastcall Datasnap::Provider::TDataSetResolver::InitializeConflictBuffer(Datasnap::Provider::TUpdateTree *)
+    @Datasnap@Provider@TDataSetResolver@InternalBeforeResolve$qqrp29Datasnap@Provider@TUpdateTree @738 ; __fastcall Datasnap::Provider::TDataSetResolver::InternalBeforeResolve(Datasnap::Provider::TUpdateTree *)
+    @Datasnap@Provider@TDataSetResolver@PutRecord$qqrp29Datasnap@Provider@TUpdateTree @737 ; __fastcall Datasnap::Provider::TDataSetResolver::PutRecord(Datasnap::Provider::TUpdateTree *)
+    @Datasnap@Provider@TLocalAppServer@ @916 ; Datasnap::Provider::TLocalAppServer::
+    @Datasnap@Provider@TLocalAppServer@$bctr$qqrp16Data@Db@TDataSet @712 ; __fastcall Datasnap::Provider::TLocalAppServer::TLocalAppServer(Data::Db::TDataSet *)
+    @Datasnap@Provider@TLocalAppServer@$bctr$qqrp33Datasnap@Provider@TCustomProvider @714 ; __fastcall Datasnap::Provider::TLocalAppServer::TLocalAppServer(Datasnap::Provider::TCustomProvider *)
+    @Datasnap@Provider@TLocalAppServer@$bdtr$qqrv @713 ; __fastcall Datasnap::Provider::TLocalAppServer::~TLocalAppServer()
+    @Datasnap@Provider@TLocalAppServer@AS_ApplyUpdates$qqsx17System@WideStringx17System@OleVariantirir17System@OleVariantt5 @707 ; __stdcall Datasnap::Provider::TLocalAppServer::AS_ApplyUpdates(const System::WideString, const System::OleVariant, int, int&, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Provider@TLocalAppServer@AS_DataRequest$qqsx17System@WideStringx17System@OleVariantr17System@OleVariant @704 ; __stdcall Datasnap::Provider::TLocalAppServer::AS_DataRequest(const System::WideString, const System::OleVariant, System::OleVariant&)
+    @Datasnap@Provider@TLocalAppServer@AS_Execute$qqsx17System@WideStringt1r17System@OleVariantt3 @701 ; __stdcall Datasnap::Provider::TLocalAppServer::AS_Execute(const System::WideString, const System::WideString, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Provider@TLocalAppServer@AS_GetParams$qqsx17System@WideStringr17System@OleVariantt2 @703 ; __stdcall Datasnap::Provider::TLocalAppServer::AS_GetParams(const System::WideString, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Provider@TLocalAppServer@AS_GetProviderNames$qqsr17System@OleVariant @705 ; __stdcall Datasnap::Provider::TLocalAppServer::AS_GetProviderNames(System::OleVariant&)
+    @Datasnap@Provider@TLocalAppServer@AS_GetRecords$qqsx17System@WideStringiriit1r17System@OleVariantt6t6 @706 ; __stdcall Datasnap::Provider::TLocalAppServer::AS_GetRecords(const System::WideString, int, int&, int, const System::WideString, System::OleVariant&, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Provider@TLocalAppServer@AS_RowRequest$qqsx17System@WideStringx17System@OleVariantir17System@OleVariantt4 @702 ; __stdcall Datasnap::Provider::TLocalAppServer::AS_RowRequest(const System::WideString, const System::OleVariant, int, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Provider@TLocalAppServer@GetIDsOfNames$qqsrx5_GUIDpviit2 @709 ; __stdcall Datasnap::Provider::TLocalAppServer::GetIDsOfNames(const _GUID&, void *, int, int, void *)
+    @Datasnap@Provider@TLocalAppServer@GetTypeInfo$qqsiipv @710 ; __stdcall Datasnap::Provider::TLocalAppServer::GetTypeInfo(int, int, void *)
+    @Datasnap@Provider@TLocalAppServer@GetTypeInfoCount$qqsri @711 ; __stdcall Datasnap::Provider::TLocalAppServer::GetTypeInfoCount(int&)
+    @Datasnap@Provider@TLocalAppServer@InterfaceSupportsErrorInfo$qqsrx5_GUID @700 ; __stdcall Datasnap::Provider::TLocalAppServer::InterfaceSupportsErrorInfo(const _GUID&)
+    @Datasnap@Provider@TLocalAppServer@Invoke$qqsirx5_GUIDiuspvt5t5t5 @708 ; __stdcall Datasnap::Provider::TLocalAppServer::Invoke(int, const _GUID&, int, unsigned short, void *, void *, void *, void *)
+    @Datasnap@Provider@TLocalAppServer@SafeCallException$qqrp14System@TObjectpv @699 ; __fastcall Datasnap::Provider::TLocalAppServer::SafeCallException(System::TObject *, void *)
+    @Datasnap@Provider@TPacketDataSet@ @946 ; Datasnap::Provider::TPacketDataSet::
+    @Datasnap@Provider@TPacketDataSet@$bctr$qqrp25System@Classes@TComponent @862 ; __fastcall Datasnap::Provider::TPacketDataSet::TPacketDataSet(System::Classes::TComponent *)
+    @Datasnap@Provider@TPacketDataSet@AssignCurValues$qqrp16Data@Db@TDataSet @846 ; __fastcall Datasnap::Provider::TPacketDataSet::AssignCurValues(Data::Db::TDataSet *)
+    @Datasnap@Provider@TPacketDataSet@AssignCurValues$qqrrx14System@Variant @845 ; __fastcall Datasnap::Provider::TPacketDataSet::AssignCurValues(const System::Variant&)
+    @Datasnap@Provider@TPacketDataSet@CreateFromDelta$qqrp32Datasnap@Provider@TPacketDataSet @861 ; __fastcall Datasnap::Provider::TPacketDataSet::CreateFromDelta(Datasnap::Provider::TPacketDataSet *)
+    @Datasnap@Provider@TPacketDataSet@DataEvent$qqr18Data@Db@TDataEventi @852 ; __fastcall Datasnap::Provider::TPacketDataSet::DataEvent(Data::Db::TDataEvent, int)
+    @Datasnap@Provider@TPacketDataSet@GetStateFieldValue$qqr21Data@Db@TDataSetStatep14Data@Db@TField @856 ; __fastcall Datasnap::Provider::TPacketDataSet::GetStateFieldValue(Data::Db::TDataSetState, Data::Db::TField *)
+    @Datasnap@Provider@TPacketDataSet@GetStreamMetaData$qqrv @855 ; __fastcall Datasnap::Provider::TPacketDataSet::GetStreamMetaData()
+    @Datasnap@Provider@TPacketDataSet@HasCurValues$qqrv @851 ; __fastcall Datasnap::Provider::TPacketDataSet::HasCurValues()
+    @Datasnap@Provider@TPacketDataSet@HasMergeConflicts$qqrv @844 ; __fastcall Datasnap::Provider::TPacketDataSet::HasMergeConflicts()
+    @Datasnap@Provider@TPacketDataSet@InitAltRecBuffers$qqro @850 ; __fastcall Datasnap::Provider::TPacketDataSet::InitAltRecBuffers(bool)
+    @Datasnap@Provider@TPacketDataSet@InternalClose$qqrv @857 ; __fastcall Datasnap::Provider::TPacketDataSet::InternalClose()
+    @Datasnap@Provider@TPacketDataSet@InternalInitRecord$qqri @860 ; __fastcall Datasnap::Provider::TPacketDataSet::InternalInitRecord(int)
+    @Datasnap@Provider@TPacketDataSet@InternalInitRecord$qqrpuc @859 ; __fastcall Datasnap::Provider::TPacketDataSet::InternalInitRecord(unsigned char *)
+    @Datasnap@Provider@TPacketDataSet@InternalOpen$qqrv @858 ; __fastcall Datasnap::Provider::TPacketDataSet::InternalOpen()
+    @Datasnap@Provider@TPacketDataSet@SetFieldData$qqrp14Data@Db@TField24System@%DynamicArray$uc% @849 ; Datasnap::Provider::TPacketDataSet::SetFieldData(Data::Db::TField *, System::DynamicArray<{583}...
+    @Datasnap@Provider@TPacketDataSet@SetFieldData$qqrp14Data@Db@TFieldpv @848 ; __fastcall Datasnap::Provider::TPacketDataSet::SetFieldData(Data::Db::TField *, void *)
+    @Datasnap@Provider@TPacketDataSet@SetStateFieldValue$qqr21Data@Db@TDataSetStatep14Data@Db@TFieldrx14System@Variant @843 ; __fastcall Datasnap::Provider::TPacketDataSet::SetStateFieldValue(Data::Db::TDataSetState, Data::Db::TField *, const System::Variant&)
+    @Datasnap@Provider@TPacketDataSet@SetStreamMetaData$qqro @854 ; __fastcall Datasnap::Provider::TPacketDataSet::SetStreamMetaData(bool)
+    @Datasnap@Provider@TPacketDataSet@SetWritingCurValues$qqrxo @847 ; __fastcall Datasnap::Provider::TPacketDataSet::SetWritingCurValues(const bool)
+    @Datasnap@Provider@TPacketDataSet@UpdateKind$qqrv @853 ; __fastcall Datasnap::Provider::TPacketDataSet::UpdateKind()
+    @Datasnap@Provider@TProvider@  @926 ; Datasnap::Provider::TProvider::
+    @Datasnap@Provider@TSQLResolver@ @918 ; Datasnap::Provider::TSQLResolver::
+    @Datasnap@Provider@TSQLResolver@$bctr$qqrp34Datasnap@Provider@TDataSetProvider @733 ; __fastcall Datasnap::Provider::TSQLResolver::TSQLResolver(Datasnap::Provider::TDataSetProvider *)
+    @Datasnap@Provider@TSQLResolver@$bdtr$qqrv @732 ; __fastcall Datasnap::Provider::TSQLResolver::~TSQLResolver()
+    @Datasnap@Provider@TSQLResolver@DoDelete$qqrp29Datasnap@Provider@TUpdateTree @723 ; __fastcall Datasnap::Provider::TSQLResolver::DoDelete(Datasnap::Provider::TUpdateTree *)
+    @Datasnap@Provider@TSQLResolver@DoExecSQL$qqrp26System@Classes@TStringListp15Data@Db@TParams @728 ; __fastcall Datasnap::Provider::TSQLResolver::DoExecSQL(System::Classes::TStringList *, Data::Db::TParams *)
+    @Datasnap@Provider@TSQLResolver@DoGetValues$qqrp26System@Classes@TStringListp15Data@Db@TParamsp16Data@Db@TDataSet @727 ; __fastcall Datasnap::Provider::TSQLResolver::DoGetValues(System::Classes::TStringList *, Data::Db::TParams *, Data::Db::TDataSet *)
+    @Datasnap@Provider@TSQLResolver@DoInsert$qqrp29Datasnap@Provider@TUpdateTree @722 ; __fastcall Datasnap::Provider::TSQLResolver::DoInsert(Datasnap::Provider::TUpdateTree *)
+    @Datasnap@Provider@TSQLResolver@DoUpdate$qqrp29Datasnap@Provider@TUpdateTree @724 ; __fastcall Datasnap::Provider::TSQLResolver::DoUpdate(Datasnap::Provider::TUpdateTree *)
+    @Datasnap@Provider@TSQLResolver@FreeTreeData$qqrp29Datasnap@Provider@TUpdateTree @729 ; __fastcall Datasnap::Provider::TSQLResolver::FreeTreeData(Datasnap::Provider::TUpdateTree *)
+    @Datasnap@Provider@TSQLResolver@GenDeleteSQL$qqrp29Datasnap@Provider@TUpdateTreep23System@Classes@TStringsp15Data@Db@TParams20System@UnicodeString @717 ; __fastcall Datasnap::Provider::TSQLResolver::GenDeleteSQL(Datasnap::Provider::TUpdateTree *, System::Classes::TStrings *, Data::Db::TParams *, System::UnicodeString)
+    @Datasnap@Provider@TSQLResolver@GenInsertSQL$qqrp29Datasnap@Provider@TUpdateTreep23System@Classes@TStringsp15Data@Db@TParams @718 ; __fastcall Datasnap::Provider::TSQLResolver::GenInsertSQL(Datasnap::Provider::TUpdateTree *, System::Classes::TStrings *, Data::Db::TParams *)
+    @Datasnap@Provider@TSQLResolver@GenSelectSQL$qqrp29Datasnap@Provider@TUpdateTreep23System@Classes@TStringsp15Data@Db@TParams20System@UnicodeString19Data@Db@TUpdateMode @715 ; __fastcall Datasnap::Provider::TSQLResolver::GenSelectSQL(Datasnap::Provider::TUpdateTree *, System::Classes::TStrings *, Data::Db::TParams *, System::UnicodeString, Data::Db::TUpdateMode)
+    @Datasnap@Provider@TSQLResolver@GenUpdateSQL$qqrp29Datasnap@Provider@TUpdateTreep23System@Classes@TStringsp15Data@Db@TParams20System@UnicodeString @716 ; __fastcall Datasnap::Provider::TSQLResolver::GenUpdateSQL(Datasnap::Provider::TUpdateTree *, System::Classes::TStrings *, Data::Db::TParams *, System::UnicodeString)
+    @Datasnap@Provider@TSQLResolver@GenWhereSQL$qqrp29Datasnap@Provider@TUpdateTreep23System@Classes@TStringsp15Data@Db@TParams19Data@Db@TUpdateMode20System@UnicodeString @719 ; __fastcall Datasnap::Provider::TSQLResolver::GenWhereSQL(Datasnap::Provider::TUpdateTree *, System::Classes::TStrings *, Data::Db::TParams *, Data::Db::TUpdateMode, System::UnicodeString)
+    @Datasnap@Provider@TSQLResolver@GetProvider$qqrv @731 ; __fastcall Datasnap::Provider::TSQLResolver::GetProvider()
+    @Datasnap@Provider@TSQLResolver@InitTreeData$qqrp29Datasnap@Provider@TUpdateTree @730 ; __fastcall Datasnap::Provider::TSQLResolver::InitTreeData(Datasnap::Provider::TUpdateTree *)
+    @Datasnap@Provider@TSQLResolver@InitializeConflictBuffer$qqrp29Datasnap@Provider@TUpdateTree @726 ; __fastcall Datasnap::Provider::TSQLResolver::InitializeConflictBuffer(Datasnap::Provider::TUpdateTree *)
+    @Datasnap@Provider@TSQLResolver@InternalDoUpdate$qqrp29Datasnap@Provider@TUpdateTree19Data@Db@TUpdateKind @725 ; __fastcall Datasnap::Provider::TSQLResolver::InternalDoUpdate(Datasnap::Provider::TUpdateTree *, Data::Db::TUpdateKind)
+    @Datasnap@Provider@TSQLResolver@UseFieldInUpdate$qqrp14Data@Db@TField @721 ; __fastcall Datasnap::Provider::TSQLResolver::UseFieldInUpdate(Data::Db::TField *)
+    @Datasnap@Provider@TSQLResolver@UseFieldInWhere$qqrp14Data@Db@TField19Data@Db@TUpdateMode @720 ; __fastcall Datasnap::Provider::TSQLResolver::UseFieldInWhere(Data::Db::TField *, Data::Db::TUpdateMode)
+    @Datasnap@Provider@TUpdateTree@ @924 ; Datasnap::Provider::TUpdateTree::
+    @Datasnap@Provider@TUpdateTree@$bctr$qqrp29Datasnap@Provider@TUpdateTreep33Datasnap@Provider@TCustomResolver @772 ; __fastcall Datasnap::Provider::TUpdateTree::TUpdateTree(Datasnap::Provider::TUpdateTree *, Datasnap::Provider::TCustomResolver *)
+    @Datasnap@Provider@TUpdateTree@$bdtr$qqrv @771 ; __fastcall Datasnap::Provider::TUpdateTree::~TUpdateTree()
+    @Datasnap@Provider@TUpdateTree@Clear$qqrv @769 ; __fastcall Datasnap::Provider::TUpdateTree::Clear()
+    @Datasnap@Provider@TUpdateTree@DoUpdates$qqrv @761 ; __fastcall Datasnap::Provider::TUpdateTree::DoUpdates()
+    @Datasnap@Provider@TUpdateTree@GetDetail$qqri @763 ; __fastcall Datasnap::Provider::TUpdateTree::GetDetail(int)
+    @Datasnap@Provider@TUpdateTree@GetDetailCount$qqrv @764 ; __fastcall Datasnap::Provider::TUpdateTree::GetDetailCount()
+    @Datasnap@Provider@TUpdateTree@GetErrorDS$qqrv @760 ; __fastcall Datasnap::Provider::TUpdateTree::GetErrorDS()
+    @Datasnap@Provider@TUpdateTree@GetHasErrors$qqrv @759 ; __fastcall Datasnap::Provider::TUpdateTree::GetHasErrors()
+    @Datasnap@Provider@TUpdateTree@GetIsNested$qqrv @770 ; __fastcall Datasnap::Provider::TUpdateTree::GetIsNested()
+    @Datasnap@Provider@TUpdateTree@GetTree$qqrx20System@UnicodeString @768 ; __fastcall Datasnap::Provider::TUpdateTree::GetTree(const System::UnicodeString)
+    @Datasnap@Provider@TUpdateTree@InitData$qqrp16Data@Db@TDataSet @767 ; __fastcall Datasnap::Provider::TUpdateTree::InitData(Data::Db::TDataSet *)
+    @Datasnap@Provider@TUpdateTree@InitDelta$qqrp32Datasnap@Provider@TPacketDataSet @766 ; __fastcall Datasnap::Provider::TUpdateTree::InitDelta(Datasnap::Provider::TPacketDataSet *)
+    @Datasnap@Provider@TUpdateTree@InitDelta$qqrrx17System@OleVariant @765 ; __fastcall Datasnap::Provider::TUpdateTree::InitDelta(const System::OleVariant&)
+    @Datasnap@Provider@TUpdateTree@InitErrorPacket$qqrp20Data@Db@EUpdateError35Datasnap@Provider@TResolverResponse @758 ; __fastcall Datasnap::Provider::TUpdateTree::InitErrorPacket(Data::Db::EUpdateError *, Datasnap::Provider::TResolverResponse)
+    @Datasnap@Provider@TUpdateTree@RefreshData$qqr57System@%Set$30Datasnap@Dbclient@TFetchOptiont1$i0$t1$i2$% @762 ; Datasnap::Provider::TUpdateTree::RefreshData(System::Set<{583}...
+    @Datasnap@Provider@VarArrayFromStrings$qqrp23System@Classes@TStrings @894 ; __fastcall Datasnap::Provider::VarArrayFromStrings(System::Classes::TStrings *)
+    @Datasnap@Provider@XMLOption   @940 ; Datasnap::Provider::XMLOption
+    @Datasnap@Provider@XMLUTF8Option @939 ; Datasnap::Provider::XMLUTF8Option
+    @Datasnap@Provider@initialization$qqrv @697 ; __fastcall Datasnap::Provider::initialization()
+    @Dsnap@@GetPackageInfoTable$qqrv @1090; Dsnap::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dsnap@@PackageLoad$qqrv       @1089; Dsnap::__linkproc__ __fastcall PackageLoad()
+    @Dsnap@@PackageUnload$qqrv     @1088; Dsnap::__linkproc__ __fastcall PackageUnload()
+    @Dsnap@initialization$qqrv     @1087; __fastcall Dsnap::initialization()
+    @GetPackageInfoTable           @1093; GetPackageInfoTable
+    @System@Generics@Collections@%TArrayManager__1$p14Data@Db@TField%@ @572 ; System::Generics::Collections::TArrayManager__1<Data::Db::TField *>::
+    @System@Generics@Collections@%TArrayManager__1$p20System@Classes@TList%@ @589 ; System::Generics::Collections::TArrayManager__1<System::Classes::TList *>::
+    @System@Generics@Collections@%TArrayManager__1$p29Datasnap@Provider@TUpdateTree%@ @905 ; System::Generics::Collections::TArrayManager__1<Datasnap::Provider::TUpdateTree *>::
+    @System@Generics@Collections@%TArrayManager__1$p33Datasnap@Provider@TCustomProvider%@ @1073; System::Generics::Collections::TArrayManager__1<Datasnap::Provider::TCustomProvider *>::
+    @System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField%@ @577 ; System::Generics::Collections::TEnumerable__1<Data::Db::TField *>::
+    @System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField%@$bdtr$qqrv @188 ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Db::TField *>::~TEnumerable__1<Data::Db::TField *>()
+    @System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField%@GetEnumerator$qqrv @187 ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Db::TField *>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField%@ToArray$qqrv @186 ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Db::TField *>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField%@ToArrayImpl$qqri @189 ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Db::TField *>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerable__1$p20System@Classes@TList%@ @594 ; System::Generics::Collections::TEnumerable__1<System::Classes::TList *>::
+    @System@Generics@Collections@%TEnumerable__1$p20System@Classes@TList%@$bdtr$qqrv @249 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Classes::TList *>::~TEnumerable__1<System::Classes::TList *>()
+    @System@Generics@Collections@%TEnumerable__1$p20System@Classes@TList%@GetEnumerator$qqrv @248 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Classes::TList *>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$p20System@Classes@TList%@ToArray$qqrv @247 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Classes::TList *>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$p20System@Classes@TList%@ToArrayImpl$qqri @250 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Classes::TList *>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerable__1$p29Datasnap@Provider@TUpdateTree%@ @910 ; System::Generics::Collections::TEnumerable__1<Datasnap::Provider::TUpdateTree *>::
+    @System@Generics@Collections@%TEnumerable__1$p29Datasnap@Provider@TUpdateTree%@$bdtr$qqrv @695 ; __fastcall System::Generics::Collections::TEnumerable__1<Datasnap::Provider::TUpdateTree *>::~TEnumerable__1<Datasnap::Provider::TUpdateTree *>()
+    @System@Generics@Collections@%TEnumerable__1$p29Datasnap@Provider@TUpdateTree%@GetEnumerator$qqrv @694 ; __fastcall System::Generics::Collections::TEnumerable__1<Datasnap::Provider::TUpdateTree *>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$p29Datasnap@Provider@TUpdateTree%@ToArray$qqrv @693 ; __fastcall System::Generics::Collections::TEnumerable__1<Datasnap::Provider::TUpdateTree *>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$p29Datasnap@Provider@TUpdateTree%@ToArrayImpl$qqri @696 ; __fastcall System::Generics::Collections::TEnumerable__1<Datasnap::Provider::TUpdateTree *>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerable__1$p33Datasnap@Provider@TCustomProvider%@ @1078; System::Generics::Collections::TEnumerable__1<Datasnap::Provider::TCustomProvider *>::
+    @System@Generics@Collections@%TEnumerable__1$p33Datasnap@Provider@TCustomProvider%@$bdtr$qqrv @1024; __fastcall System::Generics::Collections::TEnumerable__1<Datasnap::Provider::TCustomProvider *>::~TEnumerable__1<Datasnap::Provider::TCustomProvider *>()
+    @System@Generics@Collections@%TEnumerable__1$p33Datasnap@Provider@TCustomProvider%@GetEnumerator$qqrv @1023; __fastcall System::Generics::Collections::TEnumerable__1<Datasnap::Provider::TCustomProvider *>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$p33Datasnap@Provider@TCustomProvider%@ToArray$qqrv @1022; __fastcall System::Generics::Collections::TEnumerable__1<Datasnap::Provider::TCustomProvider *>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$p33Datasnap@Provider@TCustomProvider%@ToArrayImpl$qqri @1025; __fastcall System::Generics::Collections::TEnumerable__1<Datasnap::Provider::TCustomProvider *>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerator__1$p14Data@Db@TField%@ @579 ; System::Generics::Collections::TEnumerator__1<Data::Db::TField *>::
+    @System@Generics@Collections@%TEnumerator__1$p14Data@Db@TField%@MoveNext$qqrv @185 ; __fastcall System::Generics::Collections::TEnumerator__1<Data::Db::TField *>::MoveNext()
+    @System@Generics@Collections@%TEnumerator__1$p20System@Classes@TList%@ @596 ; System::Generics::Collections::TEnumerator__1<System::Classes::TList *>::
+    @System@Generics@Collections@%TEnumerator__1$p20System@Classes@TList%@MoveNext$qqrv @246 ; __fastcall System::Generics::Collections::TEnumerator__1<System::Classes::TList *>::MoveNext()
+    @System@Generics@Collections@%TEnumerator__1$p29Datasnap@Provider@TUpdateTree%@ @912 ; System::Generics::Collections::TEnumerator__1<Datasnap::Provider::TUpdateTree *>::
+    @System@Generics@Collections@%TEnumerator__1$p29Datasnap@Provider@TUpdateTree%@MoveNext$qqrv @692 ; __fastcall System::Generics::Collections::TEnumerator__1<Datasnap::Provider::TUpdateTree *>::MoveNext()
+    @System@Generics@Collections@%TEnumerator__1$p33Datasnap@Provider@TCustomProvider%@ @1080; System::Generics::Collections::TEnumerator__1<Datasnap::Provider::TCustomProvider *>::
+    @System@Generics@Collections@%TEnumerator__1$p33Datasnap@Provider@TCustomProvider%@MoveNext$qqrv @1021; __fastcall System::Generics::Collections::TEnumerator__1<Datasnap::Provider::TCustomProvider *>::MoveNext()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@ @565 ; System::Generics::Collections::TList__1<Data::Db::TField *>::
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@$bctr$qqrv @173 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TList__1<Data::Db::TField *>()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@$bctr$qqrx84System@%DelphiInterface$57System@Generics@Defaults@%IComparer__1$p14Data@Db@TField%% @172 ; System::Generics::Collections::TList__1<Data::Db::TField *>::TList__1<Data::Db::TField *>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@$bctr$qqrxp62System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField% @171 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TList__1<Data::Db::TField *>(System::Generics::Collections::TEnumerable__1<Data::Db::TField *> * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@$bdtr$qqrv @170 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::~TList__1<Data::Db::TField *>()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEnumerator$%@ @567 ; System::Generics::Collections::TList__1<Data::Db::TField *>::TEnumerator<>::
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEnumerator$%@$bctr$qqrxp56System@Generics@Collections@%TList__1$p14Data@Db@TField% @130 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TEnumerator<>::TEnumerator<>(System::Generics::Collections::TList__1<Data::Db::TField *> * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEnumerator$%@DoGetCurrent$qqrv @132 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEnumerator$%@DoMoveNext$qqrv @131 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEnumerator$%@GetCurrent$qqrv @133 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEnumerator$%@MoveNext$qqrv @129 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Add$qqrxp14Data@Db@TField @167 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Add(Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@AddRange$qqrpxp14Data@Db@TFieldxi @166 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::AddRange(Data::Db::TField * const *, const int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@AddRange$qqrx68System@%DelphiInterface$41System@%IEnumerable__1$p14Data@Db@TField%% @165 ; System::Generics::Collections::TList__1<Data::Db::TField *>::AddRange(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@AddRange$qqrxp62System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField% @164 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::AddRange(System::Generics::Collections::TEnumerable__1<Data::Db::TField *> * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@BinarySearch$qqrxp14Data@Db@TFieldri @138 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::BinarySearch(Data::Db::TField * const, int&)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@BinarySearch$qqrxp14Data@Db@TFieldrix84System@%DelphiInterface$57System@Generics@Defaults@%IComparer__1$p14Data@Db@TField%% @137 ; System::Generics::Collections::TList__1<Data::Db::TField *>::BinarySearch(Data::Db::TField * const, int&, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Clear$qqrv @147 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Clear()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Contains$qqrxp14Data@Db@TField @145 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Contains(Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Delete$qqri @155 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Delete(int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@DeleteRange$qqrii @154 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::DeleteRange(int, int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@DoDelete$qqri51System@Generics@Collections@TCollectionNotification @177 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::DoDelete(int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@DoGetEnumerator$qqrv @175 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::DoGetEnumerator()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Error$qqrp20System@TResStringReci @168 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Error(System::TResStringRec *, int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Error$qqrx20System@UnicodeStringi @169 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Error(const System::UnicodeString, int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Exchange$qqrii @151 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Exchange(int, int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Expand$qqrv @146 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Expand()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Extract$qqrxp14Data@Db@TField @153 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Extract(Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@ExtractItem$qqrxp14Data@Db@TField23System@Types@TDirection @152 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::ExtractItem(Data::Db::TField * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@First$qqrv @149 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::First()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@GetCapacity$qqrv @184 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::GetCapacity()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@GetEnumerator$qqrv @134 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::GetEnumerator()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@GetItem$qqri @181 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::GetItem(int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Grow$qqri @179 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Grow(int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@GrowCheck$qqri @178 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::GrowCheck(int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@IndexOf$qqrxp14Data@Db@TField @144 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::IndexOf(Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@IndexOfItem$qqrxp14Data@Db@TField23System@Types@TDirection @143 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::IndexOfItem(Data::Db::TField * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Insert$qqrixp14Data@Db@TField @163 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Insert(int, Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@InsertRange$qqripxp14Data@Db@TFieldxi @162 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::InsertRange(int, Data::Db::TField * const *, const int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@InsertRange$qqrix68System@%DelphiInterface$41System@%IEnumerable__1$p14Data@Db@TField%% @161 ; System::Generics::Collections::TList__1<Data::Db::TField *>::InsertRange(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@InsertRange$qqrixp62System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField% @160 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::InsertRange(int, System::Generics::Collections::TEnumerable__1<Data::Db::TField *> * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@ItemValue$qqrxp14Data@Db@TField @176 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::ItemValue(Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Last$qqrv @148 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Last()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@LastIndexOf$qqrxp14Data@Db@TField @142 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::LastIndexOf(Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Move$qqrii @150 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Move(int, int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Notify$qqrxp14Data@Db@TField51System@Generics@Collections@TCollectionNotification @174 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Notify(Data::Db::TField * const, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Pack$qqrv @159 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Pack()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Pack$qqrx97System@%DelphiInterface$70System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEmptyFunc$%% @158 ; System::Generics::Collections::TList__1<Data::Db::TField *>::Pack(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Remove$qqrxp14Data@Db@TField @157 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Remove(Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@RemoveItem$qqrxp14Data@Db@TField23System@Types@TDirection @156 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::RemoveItem(Data::Db::TField * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Reverse$qqrv @141 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Reverse()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@SetCapacity$qqri @183 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::SetCapacity(int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@SetCount$qqri @182 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::SetCount(int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@SetItem$qqrixp14Data@Db@TField @180 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::SetItem(int, Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Sort$qqrv @140 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Sort()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Sort$qqrx84System@%DelphiInterface$57System@Generics@Defaults@%IComparer__1$p14Data@Db@TField%% @139 ; System::Generics::Collections::TList__1<Data::Db::TField *>::Sort(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@ToArray$qqrv @135 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::ToArray()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@TrimExcess$qqrv @136 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TrimExcess()
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@ @582 ; System::Generics::Collections::TList__1<System::Classes::TList *>::
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@$bctr$qqrv @234 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::TList__1<System::Classes::TList *>()
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@$bctr$qqrx90System@%DelphiInterface$63System@Generics@Defaults@%IComparer__1$p20System@Classes@TList%% @233 ; System::Generics::Collections::TList__1<System::Classes::TList *>::TList__1<System::Classes::TList *>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@$bctr$qqrxp68System@Generics@Collections@%TEnumerable__1$p20System@Classes@TList% @232 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::TList__1<System::Classes::TList *>(System::Generics::Collections::TEnumerable__1<System::Classes::TList *> * const)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@$bdtr$qqrv @231 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::~TList__1<System::Classes::TList *>()
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@%TEnumerator$%@ @584 ; System::Generics::Collections::TList__1<System::Classes::TList *>::TEnumerator<>::
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@%TEnumerator$%@$bctr$qqrxp62System@Generics@Collections@%TList__1$p20System@Classes@TList% @191 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::TEnumerator<>::TEnumerator<>(System::Generics::Collections::TList__1<System::Classes::TList *> * const)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@%TEnumerator$%@DoGetCurrent$qqrv @193 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::TEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@%TEnumerator$%@DoMoveNext$qqrv @192 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::TEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@%TEnumerator$%@GetCurrent$qqrv @194 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::TEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@%TEnumerator$%@MoveNext$qqrv @190 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::TEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@Add$qqrxp20System@Classes@TList @228 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::Add(System::Classes::TList * const)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@AddRange$qqrpxp20System@Classes@TListxi @227 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::AddRange(System::Classes::TList * const *, const int)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@AddRange$qqrx74System@%DelphiInterface$47System@%IEnumerable__1$p20System@Classes@TList%% @226 ; System::Generics::Collections::TList__1<System::Classes::TList *>::AddRange(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@AddRange$qqrxp68System@Generics@Collections@%TEnumerable__1$p20System@Classes@TList% @225 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::AddRange(System::Generics::Collections::TEnumerable__1<System::Classes::TList *> * const)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@BinarySearch$qqrxp20System@Classes@TListri @199 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::BinarySearch(System::Classes::TList * const, int&)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@BinarySearch$qqrxp20System@Classes@TListrix90System@%DelphiInterface$63System@Generics@Defaults@%IComparer__1$p20System@Classes@TList%% @198 ; System::Generics::Collections::TList__1<System::Classes::TList *>::BinarySearch(System::Classes::TList * const, int&, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@Clear$qqrv @208 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::Clear()
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@Contains$qqrxp20System@Classes@TList @206 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::Contains(System::Classes::TList * const)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@Delete$qqri @216 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::Delete(int)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@DeleteRange$qqrii @215 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::DeleteRange(int, int)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@DoDelete$qqri51System@Generics@Collections@TCollectionNotification @238 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::DoDelete(int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@DoGetEnumerator$qqrv @236 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::DoGetEnumerator()
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@Error$qqrp20System@TResStringReci @229 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::Error(System::TResStringRec *, int)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@Error$qqrx20System@UnicodeStringi @230 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::Error(const System::UnicodeString, int)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@Exchange$qqrii @212 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::Exchange(int, int)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@Expand$qqrv @207 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::Expand()
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@Extract$qqrxp20System@Classes@TList @214 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::Extract(System::Classes::TList * const)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@ExtractItem$qqrxp20System@Classes@TList23System@Types@TDirection @213 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::ExtractItem(System::Classes::TList * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@First$qqrv @210 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::First()
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@GetCapacity$qqrv @245 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::GetCapacity()
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@GetEnumerator$qqrv @195 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::GetEnumerator()
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@GetItem$qqri @242 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::GetItem(int)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@Grow$qqri @240 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::Grow(int)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@GrowCheck$qqri @239 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::GrowCheck(int)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@IndexOf$qqrxp20System@Classes@TList @205 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::IndexOf(System::Classes::TList * const)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@IndexOfItem$qqrxp20System@Classes@TList23System@Types@TDirection @204 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::IndexOfItem(System::Classes::TList * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@Insert$qqrixp20System@Classes@TList @224 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::Insert(int, System::Classes::TList * const)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@InsertRange$qqripxp20System@Classes@TListxi @223 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::InsertRange(int, System::Classes::TList * const *, const int)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@InsertRange$qqrix74System@%DelphiInterface$47System@%IEnumerable__1$p20System@Classes@TList%% @222 ; System::Generics::Collections::TList__1<System::Classes::TList *>::InsertRange(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@InsertRange$qqrixp68System@Generics@Collections@%TEnumerable__1$p20System@Classes@TList% @221 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::InsertRange(int, System::Generics::Collections::TEnumerable__1<System::Classes::TList *> * const)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@ItemValue$qqrxp20System@Classes@TList @237 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::ItemValue(System::Classes::TList * const)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@Last$qqrv @209 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::Last()
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@LastIndexOf$qqrxp20System@Classes@TList @203 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::LastIndexOf(System::Classes::TList * const)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@Move$qqrii @211 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::Move(int, int)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@Notify$qqrxp20System@Classes@TList51System@Generics@Collections@TCollectionNotification @235 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::Notify(System::Classes::TList * const, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@Pack$qqrv @220 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::Pack()
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@Pack$qqrx103System@%DelphiInterface$76System@Generics@Collections@%TList__1$p20System@Classes@TList%@%TEmptyFunc$%% @219 ; System::Generics::Collections::TList__1<System::Classes::TList *>::Pack(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@Remove$qqrxp20System@Classes@TList @218 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::Remove(System::Classes::TList * const)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@RemoveItem$qqrxp20System@Classes@TList23System@Types@TDirection @217 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::RemoveItem(System::Classes::TList * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@Reverse$qqrv @202 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::Reverse()
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@SetCapacity$qqri @244 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::SetCapacity(int)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@SetCount$qqri @243 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::SetCount(int)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@SetItem$qqrixp20System@Classes@TList @241 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::SetItem(int, System::Classes::TList * const)
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@Sort$qqrv @201 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::Sort()
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@Sort$qqrx90System@%DelphiInterface$63System@Generics@Defaults@%IComparer__1$p20System@Classes@TList%% @200 ; System::Generics::Collections::TList__1<System::Classes::TList *>::Sort(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@ToArray$qqrv @196 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::ToArray()
+    @System@Generics@Collections@%TList__1$p20System@Classes@TList%@TrimExcess$qqrv @197 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TList *>::TrimExcess()
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@ @898 ; System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@$bctr$qqrv @680 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::TList__1<Datasnap::Provider::TUpdateTree *>()
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@$bctr$qqrx99System@%DelphiInterface$72System@Generics@Defaults@%IComparer__1$p29Datasnap@Provider@TUpdateTree%% @679 ; System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::TList__1<Datasnap::Provider::TUpdateTree *>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@$bctr$qqrxp77System@Generics@Collections@%TEnumerable__1$p29Datasnap@Provider@TUpdateTree% @678 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::TList__1<Datasnap::Provider::TUpdateTree *>(System::Generics::Collections::TEnumerable__1<Datasnap::Provider::TUpdateTree *> * const)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@$bdtr$qqrv @677 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::~TList__1<Datasnap::Provider::TUpdateTree *>()
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@%TEnumerator$%@ @900 ; System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::TEnumerator<>::
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@%TEnumerator$%@$bctr$qqrxp71System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree% @637 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::TEnumerator<>::TEnumerator<>(System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *> * const)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@%TEnumerator$%@DoGetCurrent$qqrv @639 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::TEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@%TEnumerator$%@DoMoveNext$qqrv @638 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::TEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@%TEnumerator$%@GetCurrent$qqrv @640 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::TEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@%TEnumerator$%@MoveNext$qqrv @636 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::TEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@Add$qqrxp29Datasnap@Provider@TUpdateTree @674 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::Add(Datasnap::Provider::TUpdateTree * const)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@AddRange$qqrpxp29Datasnap@Provider@TUpdateTreexi @673 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::AddRange(Datasnap::Provider::TUpdateTree * const *, const int)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@AddRange$qqrx83System@%DelphiInterface$56System@%IEnumerable__1$p29Datasnap@Provider@TUpdateTree%% @672 ; System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::AddRange(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@AddRange$qqrxp77System@Generics@Collections@%TEnumerable__1$p29Datasnap@Provider@TUpdateTree% @671 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::AddRange(System::Generics::Collections::TEnumerable__1<Datasnap::Provider::TUpdateTree *> * const)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@BinarySearch$qqrxp29Datasnap@Provider@TUpdateTreeri @645 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::BinarySearch(Datasnap::Provider::TUpdateTree * const, int&)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@BinarySearch$qqrxp29Datasnap@Provider@TUpdateTreerix99System@%DelphiInterface$72System@Generics@Defaults@%IComparer__1$p29Datasnap@Provider@TUpdateTree%% @644 ; System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::BinarySearch(Datasnap::Provider::TUpdateTree * const, int&, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@Clear$qqrv @654 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::Clear()
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@Contains$qqrxp29Datasnap@Provider@TUpdateTree @652 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::Contains(Datasnap::Provider::TUpdateTree * const)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@Delete$qqri @662 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::Delete(int)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@DeleteRange$qqrii @661 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::DeleteRange(int, int)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@DoDelete$qqri51System@Generics@Collections@TCollectionNotification @684 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::DoDelete(int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@DoGetEnumerator$qqrv @682 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::DoGetEnumerator()
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@Error$qqrp20System@TResStringReci @675 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::Error(System::TResStringRec *, int)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@Error$qqrx20System@UnicodeStringi @676 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::Error(const System::UnicodeString, int)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@Exchange$qqrii @658 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::Exchange(int, int)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@Expand$qqrv @653 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::Expand()
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@Extract$qqrxp29Datasnap@Provider@TUpdateTree @660 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::Extract(Datasnap::Provider::TUpdateTree * const)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@ExtractItem$qqrxp29Datasnap@Provider@TUpdateTree23System@Types@TDirection @659 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::ExtractItem(Datasnap::Provider::TUpdateTree * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@First$qqrv @656 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::First()
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@GetCapacity$qqrv @691 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::GetCapacity()
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@GetEnumerator$qqrv @641 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::GetEnumerator()
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@GetItem$qqri @688 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::GetItem(int)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@Grow$qqri @686 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::Grow(int)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@GrowCheck$qqri @685 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::GrowCheck(int)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@IndexOf$qqrxp29Datasnap@Provider@TUpdateTree @651 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::IndexOf(Datasnap::Provider::TUpdateTree * const)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@IndexOfItem$qqrxp29Datasnap@Provider@TUpdateTree23System@Types@TDirection @650 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::IndexOfItem(Datasnap::Provider::TUpdateTree * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@Insert$qqrixp29Datasnap@Provider@TUpdateTree @670 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::Insert(int, Datasnap::Provider::TUpdateTree * const)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@InsertRange$qqripxp29Datasnap@Provider@TUpdateTreexi @669 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::InsertRange(int, Datasnap::Provider::TUpdateTree * const *, const int)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@InsertRange$qqrix83System@%DelphiInterface$56System@%IEnumerable__1$p29Datasnap@Provider@TUpdateTree%% @668 ; System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::InsertRange(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@InsertRange$qqrixp77System@Generics@Collections@%TEnumerable__1$p29Datasnap@Provider@TUpdateTree% @667 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::InsertRange(int, System::Generics::Collections::TEnumerable__1<Datasnap::Provider::TUpdateTree *> * const)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@ItemValue$qqrxp29Datasnap@Provider@TUpdateTree @683 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::ItemValue(Datasnap::Provider::TUpdateTree * const)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@Last$qqrv @655 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::Last()
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@LastIndexOf$qqrxp29Datasnap@Provider@TUpdateTree @649 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::LastIndexOf(Datasnap::Provider::TUpdateTree * const)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@Move$qqrii @657 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::Move(int, int)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@Notify$qqrxp29Datasnap@Provider@TUpdateTree51System@Generics@Collections@TCollectionNotification @681 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::Notify(Datasnap::Provider::TUpdateTree * const, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@Pack$qqrv @666 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::Pack()
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@Pack$qqrx112System@%DelphiInterface$85System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@%TEmptyFunc$%% @665 ; System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::Pack(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@Remove$qqrxp29Datasnap@Provider@TUpdateTree @664 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::Remove(Datasnap::Provider::TUpdateTree * const)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@RemoveItem$qqrxp29Datasnap@Provider@TUpdateTree23System@Types@TDirection @663 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::RemoveItem(Datasnap::Provider::TUpdateTree * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@Reverse$qqrv @648 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::Reverse()
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@SetCapacity$qqri @690 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::SetCapacity(int)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@SetCount$qqri @689 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::SetCount(int)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@SetItem$qqrixp29Datasnap@Provider@TUpdateTree @687 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::SetItem(int, Datasnap::Provider::TUpdateTree * const)
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@Sort$qqrv @647 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::Sort()
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@Sort$qqrx99System@%DelphiInterface$72System@Generics@Defaults@%IComparer__1$p29Datasnap@Provider@TUpdateTree%% @646 ; System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::Sort(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@ToArray$qqrv @642 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::ToArray()
+    @System@Generics@Collections@%TList__1$p29Datasnap@Provider@TUpdateTree%@TrimExcess$qqrv @643 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TUpdateTree *>::TrimExcess()
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@ @1066; System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@$bctr$qqrv @1009; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::TList__1<Datasnap::Provider::TCustomProvider *>()
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@$bctr$qqrx103System@%DelphiInterface$76System@Generics@Defaults@%IComparer__1$p33Datasnap@Provider@TCustomProvider%% @1008; System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::TList__1<Datasnap::Provider::TCustomProvider *>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@$bctr$qqrxp81System@Generics@Collections@%TEnumerable__1$p33Datasnap@Provider@TCustomProvider% @1007; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::TList__1<Datasnap::Provider::TCustomProvider *>(System::Generics::Collections::TEnumerable__1<Datasnap::Provider::TCustomProvider *> * const)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@$bdtr$qqrv @1006; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::~TList__1<Datasnap::Provider::TCustomProvider *>()
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@%TEnumerator$%@ @1068; System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::TEnumerator<>::
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@%TEnumerator$%@$bctr$qqrxp75System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider% @966 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::TEnumerator<>::TEnumerator<>(System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *> * const)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@%TEnumerator$%@DoGetCurrent$qqrv @968 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::TEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@%TEnumerator$%@DoMoveNext$qqrv @967 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::TEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@%TEnumerator$%@GetCurrent$qqrv @969 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::TEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@%TEnumerator$%@MoveNext$qqrv @965 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::TEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@Add$qqrxp33Datasnap@Provider@TCustomProvider @1003; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::Add(Datasnap::Provider::TCustomProvider * const)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@AddRange$qqrpxp33Datasnap@Provider@TCustomProviderxi @1002; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::AddRange(Datasnap::Provider::TCustomProvider * const *, const int)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@AddRange$qqrx87System@%DelphiInterface$60System@%IEnumerable__1$p33Datasnap@Provider@TCustomProvider%% @1001; System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::AddRange(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@AddRange$qqrxp81System@Generics@Collections@%TEnumerable__1$p33Datasnap@Provider@TCustomProvider% @1000; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::AddRange(System::Generics::Collections::TEnumerable__1<Datasnap::Provider::TCustomProvider *> * const)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@BinarySearch$qqrxp33Datasnap@Provider@TCustomProviderri @974 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::BinarySearch(Datasnap::Provider::TCustomProvider * const, int&)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@BinarySearch$qqrxp33Datasnap@Provider@TCustomProviderrix103System@%DelphiInterface$76System@Generics@Defaults@%IComparer__1$p33Datasnap@Provider@TCustomProvider%% @973 ; System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::BinarySearch(Datasnap::Provider::TCustomProvider * const, int&, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@Clear$qqrv @983 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::Clear()
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@Contains$qqrxp33Datasnap@Provider@TCustomProvider @981 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::Contains(Datasnap::Provider::TCustomProvider * const)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@Delete$qqri @991 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::Delete(int)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@DeleteRange$qqrii @990 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::DeleteRange(int, int)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@DoDelete$qqri51System@Generics@Collections@TCollectionNotification @1013; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::DoDelete(int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@DoGetEnumerator$qqrv @1011; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::DoGetEnumerator()
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@Error$qqrp20System@TResStringReci @1004; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::Error(System::TResStringRec *, int)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@Error$qqrx20System@UnicodeStringi @1005; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::Error(const System::UnicodeString, int)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@Exchange$qqrii @987 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::Exchange(int, int)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@Expand$qqrv @982 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::Expand()
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@Extract$qqrxp33Datasnap@Provider@TCustomProvider @989 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::Extract(Datasnap::Provider::TCustomProvider * const)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@ExtractItem$qqrxp33Datasnap@Provider@TCustomProvider23System@Types@TDirection @988 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::ExtractItem(Datasnap::Provider::TCustomProvider * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@First$qqrv @985 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::First()
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@GetCapacity$qqrv @1020; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::GetCapacity()
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@GetEnumerator$qqrv @970 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::GetEnumerator()
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@GetItem$qqri @1017; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::GetItem(int)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@Grow$qqri @1015; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::Grow(int)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@GrowCheck$qqri @1014; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::GrowCheck(int)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@IndexOf$qqrxp33Datasnap@Provider@TCustomProvider @980 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::IndexOf(Datasnap::Provider::TCustomProvider * const)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@IndexOfItem$qqrxp33Datasnap@Provider@TCustomProvider23System@Types@TDirection @979 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::IndexOfItem(Datasnap::Provider::TCustomProvider * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@Insert$qqrixp33Datasnap@Provider@TCustomProvider @999 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::Insert(int, Datasnap::Provider::TCustomProvider * const)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@InsertRange$qqripxp33Datasnap@Provider@TCustomProviderxi @998 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::InsertRange(int, Datasnap::Provider::TCustomProvider * const *, const int)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@InsertRange$qqrix87System@%DelphiInterface$60System@%IEnumerable__1$p33Datasnap@Provider@TCustomProvider%% @997 ; System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::InsertRange(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@InsertRange$qqrixp81System@Generics@Collections@%TEnumerable__1$p33Datasnap@Provider@TCustomProvider% @996 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::InsertRange(int, System::Generics::Collections::TEnumerable__1<Datasnap::Provider::TCustomProvider *> * const)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@ItemValue$qqrxp33Datasnap@Provider@TCustomProvider @1012; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::ItemValue(Datasnap::Provider::TCustomProvider * const)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@Last$qqrv @984 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::Last()
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@LastIndexOf$qqrxp33Datasnap@Provider@TCustomProvider @978 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::LastIndexOf(Datasnap::Provider::TCustomProvider * const)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@Move$qqrii @986 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::Move(int, int)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@Notify$qqrxp33Datasnap@Provider@TCustomProvider51System@Generics@Collections@TCollectionNotification @1010; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::Notify(Datasnap::Provider::TCustomProvider * const, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@Pack$qqrv @995 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::Pack()
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@Pack$qqrx116System@%DelphiInterface$89System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@%TEmptyFunc$%% @994 ; System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::Pack(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@Remove$qqrxp33Datasnap@Provider@TCustomProvider @993 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::Remove(Datasnap::Provider::TCustomProvider * const)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@RemoveItem$qqrxp33Datasnap@Provider@TCustomProvider23System@Types@TDirection @992 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::RemoveItem(Datasnap::Provider::TCustomProvider * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@Reverse$qqrv @977 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::Reverse()
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@SetCapacity$qqri @1019; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::SetCapacity(int)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@SetCount$qqri @1018; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::SetCount(int)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@SetItem$qqrixp33Datasnap@Provider@TCustomProvider @1016; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::SetItem(int, Datasnap::Provider::TCustomProvider * const)
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@Sort$qqrv @976 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::Sort()
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@Sort$qqrx103System@%DelphiInterface$76System@Generics@Defaults@%IComparer__1$p33Datasnap@Provider@TCustomProvider%% @975 ; System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::Sort(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@ToArray$qqrv @971 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::ToArray()
+    @System@Generics@Collections@%TList__1$p33Datasnap@Provider@TCustomProvider%@TrimExcess$qqrv @972 ; __fastcall System::Generics::Collections::TList__1<Datasnap::Provider::TCustomProvider *>::TrimExcess()
+    Finalize                       @1091; Finalize
+    Initialize                     @1092; Initialize

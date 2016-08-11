@@ -1,0 +1,20 @@
+LIBRARY     INDYIPCOMMON210.BPL
+
+DESCRIPTION 'mbarcadero IP Indy Common Implementation'
+
+EXPORTS
+    @$xp$23Ippeercommon@TIdClassIP @7   ; __tpdsc__ Ippeercommon::TIdClassIP
+    @GetPackageInfoTable           @15  ; GetPackageInfoTable
+    @Indyipcommon@@GetPackageInfoTable$qqrv @12  ; Indyipcommon::__linkproc__ __fastcall GetPackageInfoTable()
+    @Indyipcommon@@PackageLoad$qqrv @11  ; Indyipcommon::__linkproc__ __fastcall PackageLoad()
+    @Indyipcommon@@PackageUnload$qqrv @10  ; Indyipcommon::__linkproc__ __fastcall PackageUnload()
+    @Indyipcommon@initialization$qqrv @9   ; __fastcall Indyipcommon::initialization()
+    @Ippeercommon@Finalization$qqrv @2   ; __fastcall Ippeercommon::Finalization()
+    @Ippeercommon@IPImpId$qqrv     @3   ; __fastcall Ippeercommon::IPImpId()
+    @Ippeercommon@TIdClassIP@      @8   ; Ippeercommon::TIdClassIP::
+    @Ippeercommon@TIdClassIP@AfterConstruction$qqrv @6   ; __fastcall Ippeercommon::TIdClassIP::AfterConstruction()
+    @Ippeercommon@TIdClassIP@NeedToFree$qqrv @5   ; __fastcall Ippeercommon::TIdClassIP::NeedToFree()
+    @Ippeercommon@TIdClassIP@SetDestroyed$qqrv @4   ; __fastcall Ippeercommon::TIdClassIP::SetDestroyed()
+    @Ippeercommon@initialization$qqrv @1   ; __fastcall Ippeercommon::initialization()
+    Finalize                       @13  ; Finalize
+    Initialize                     @14  ; Initialize

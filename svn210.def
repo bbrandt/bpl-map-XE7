@@ -1,0 +1,2203 @@
+LIBRARY     SVN210.BPL
+
+DESCRIPTION 'ubversion integration'
+
+EXPORTS
+    @$xp$10Apr@PIOVec              @530 ; __tpdsc__ Apr::PIOVec
+    @$xp$10Apr@TATime              @321 ; __tpdsc__ Apr::TATime
+    @$xp$10Apr@TIOVec              @529 ; __tpdsc__ Apr::TIOVec
+    @$xp$11Apr@PAprDir             @317 ; __tpdsc__ Apr::PAprDir
+    @$xp$11Apr@PAprOff             @527 ; __tpdsc__ Apr::PAprOff
+    @$xp$11Apr@PAprShm             @426 ; __tpdsc__ Apr::PAprShm
+    @$xp$12Apr@PAprFile            @318 ; __tpdsc__ Apr::PAprFile
+    @$xp$12Apr@PAprHash            @417 ; __tpdsc__ Apr::PAprHash
+    @$xp$12Apr@PAprHdtr            @239 ; __tpdsc__ Apr::PAprHdtr
+    @$xp$12Apr@PAprMMap            @251 ; __tpdsc__ Apr::PAprMMap
+    @$xp$12Apr@PAprPool            @508 ; __tpdsc__ Apr::PAprPool
+    @$xp$12Apr@PAprProc            @152 ; __tpdsc__ Apr::PAprProc
+    @$xp$12Apr@PAprSize            @528 ; __tpdsc__ Apr::PAprSize
+    @$xp$12Apr@PAprTime            @341 ; __tpdsc__ Apr::PAprTime
+    @$xp$12Apr@TAprHdtr            @238 ; __tpdsc__ Apr::TAprHdtr
+    @$xp$12Apr@TAprMMap            @249 ; __tpdsc__ Apr::TAprMMap
+    @$xp$12Apr@TAprProc            @151 ; __tpdsc__ Apr::TAprProc
+    @$xp$13Apr@EAprError           @20  ; __tpdsc__ Apr::EAprError
+    @$xp$13Apr@PAprFInfo           @316 ; __tpdsc__ Apr::PAprFInfo
+    @$xp$13Apr@PAprOSDir           @66  ; __tpdsc__ Apr::PAprOSDir
+    @$xp$13Apr@PAprOSShm           @55  ; __tpdsc__ Apr::PAprOSShm
+    @$xp$13Apr@PAprTable           @400 ; __tpdsc__ Apr::PAprTable
+    @$xp$13Apr@PAprWChar           @522 ; __tpdsc__ Apr::PAprWChar
+    @$xp$13Apr@PPAprFile           @319 ; __tpdsc__ Apr::PPAprFile
+    @$xp$13Apr@TAprFInfo           @315 ; __tpdsc__ Apr::TAprFInfo
+    @$xp$14Apr@PAprGetOpt          @363 ; __tpdsc__ Apr::PAprGetOpt
+    @$xp$14Apr@PAprOSFile          @67  ; __tpdsc__ Apr::PAprOSFile
+    @$xp$14Apr@PAprOSProc          @62  ; __tpdsc__ Apr::PAprOSProc
+    @$xp$14Apr@PAprOSSock          @65  ; __tpdsc__ Apr::PAprOSSock
+    @$xp$14Apr@PAprPollFD          @191 ; __tpdsc__ Apr::PAprPollFD
+    @$xp$14Apr@PAprRandom          @461 ; __tpdsc__ Apr::PAprRandom
+    @$xp$14Apr@PAprSocket          @242 ; __tpdsc__ Apr::PAprSocket
+    @$xp$14Apr@PAprThread          @156 ; __tpdsc__ Apr::PAprThread
+    @$xp$14Apr@TAprGetOpt          @362 ; __tpdsc__ Apr::TAprGetOpt
+    @$xp$14Apr@TAprPollFD          @190 ; __tpdsc__ Apr::TAprPollFD
+    @$xp$14Apr@TDaySNames          @342 ; __tpdsc__ Apr::TDaySNames
+    @$xp$14Apr@TFlushFunc          @517 ; __tpdsc__ Apr::TFlushFunc
+    @$xp$15Apr@PAprMemNode         @82  ; __tpdsc__ Apr::PAprMemNode
+    @$xp$15Apr@PAprPollSet         @189 ; __tpdsc__ Apr::PAprPollSet
+    @$xp$15Apr@PAprTimeExp         @338 ; __tpdsc__ Apr::PAprTimeExp
+    @$xp$15Apr@PPAprPollFD         @192 ; __tpdsc__ Apr::PPAprPollFD
+    @$xp$15Apr@TAprCmdType         @158 ; __tpdsc__ Apr::TAprCmdType
+    @$xp$15Apr@TAprMemNode         @81  ; __tpdsc__ Apr::TAprMemNode
+    @$xp$15Apr@TAprTimeExp         @337 ; __tpdsc__ Apr::TAprTimeExp
+    @$xp$15Apr@TAprVersion         @525 ; __tpdsc__ Apr::TAprVersion
+    @$xp$15Apr@TAprWaitHow         @157 ; __tpdsc__ Apr::TAprWaitHow
+    @$xp$16Apr@PAprIPSubnet        @237 ; __tpdsc__ Apr::PAprIPSubnet
+    @$xp$16Apr@PAprOSThread        @63  ; __tpdsc__ Apr::PAprOSThread
+    @$xp$16Apr@PAprProcAttr        @150 ; __tpdsc__ Apr::PAprProcAttr
+    @$xp$16Apr@PAprSockAddr        @241 ; __tpdsc__ Apr::PAprSockAddr
+    @$xp$16Apr@PPAprMemNode        @83  ; __tpdsc__ Apr::PPAprMemNode
+    @$xp$16Apr@TAprDataType        @194 ; __tpdsc__ Apr::TAprDataType
+    @$xp$16Apr@TAprHashFunc        @415 ; __tpdsc__ Apr::TAprHashFunc
+    @$xp$16Apr@TAprLockMech        @96  ; __tpdsc__ Apr::TAprLockMech
+    @$xp$16Apr@TAprSockAddr        @240 ; __tpdsc__ Apr::TAprSockAddr
+    @$xp$16Apr@TMonthSNames        @343 ; __tpdsc__ Apr::TMonthSNames
+    @$xp$17Apr@PAprAllocator       @507 ; __tpdsc__ Apr::PAprAllocator
+    @$xp$17Apr@PAprDSOHandle       @356 ; __tpdsc__ Apr::PAprDSOHandle
+    @$xp$17Apr@PAprHashIndex       @416 ; __tpdsc__ Apr::PAprHashIndex
+    @$xp$17Apr@PAprOSExpTime       @57  ; __tpdsc__ Apr::PAprOSExpTime
+    @$xp$17Apr@PAprOSImpTime       @59  ; __tpdsc__ Apr::PAprOSImpTime
+    @$xp$17Apr@PAprProcMutex       @95  ; __tpdsc__ Apr::PAprProcMutex
+    @$xp$17Apr@PAprThreadKey       @153 ; __tpdsc__ Apr::PAprThreadKey
+    @$xp$17Apr@TAprAbortFunc       @506 ; __tpdsc__ Apr::TAprAbortFunc
+    @$xp$17Apr@TAprInterface       @243 ; __tpdsc__ Apr::TAprInterface
+    @$xp$17Apr@TChildRegProc       @142 ; __tpdsc__ Apr::TChildRegProc
+    @$xp$17Svn_client@PSvnFS       @1341; __tpdsc__ Svn_client::PSvnFS
+    @$xp$17Svntree@TDataKind       @2191; __tpdsc__ Svntree::TDataKind
+    @$xp$18Apr@PAprCryptoHash      @464 ; __tpdsc__ Apr::PAprCryptoHash
+    @$xp$18Apr@PAprOSSockInfo      @54  ; __tpdsc__ Apr::PAprOSSockInfo
+    @$xp$18Apr@PAprOtherChild      @149 ; __tpdsc__ Apr::PAprOtherChild
+    @$xp$18Apr@PAprThreadAttr      @155 ; __tpdsc__ Apr::PAprThreadAttr
+    @$xp$18Apr@PAprThreadCond      @166 ; __tpdsc__ Apr::PAprThreadCond
+    @$xp$18Apr@PAprThreadOnce      @154 ; __tpdsc__ Apr::PAprThreadOnce
+    @$xp$18Apr@PPAprOSExpTime      @58  ; __tpdsc__ Apr::PPAprOSExpTime
+    @$xp$18Apr@PPAprOSImpTime      @60  ; __tpdsc__ Apr::PPAprOSImpTime
+    @$xp$18Apr@TAprChildErrFn      @148 ; __tpdsc__ Apr::TAprChildErrFn
+    @$xp$18Apr@TAprCryptoHash      @463 ; __tpdsc__ Apr::TAprCryptoHash
+    @$xp$18Apr@TAprDescriptor      @193 ; __tpdsc__ Apr::TAprDescriptor
+    @$xp$18Apr@TAprOSSockInfo      @53  ; __tpdsc__ Apr::TAprOSSockInfo
+    @$xp$18Apr@TAprTableEntry      @396 ; __tpdsc__ Apr::TAprTableEntry
+    @$xp$18Apr@THashMergeFunc      @414 ; __tpdsc__ Apr::THashMergeFunc
+    @$xp$18Apr@TTableCallback      @395 ; __tpdsc__ Apr::TTableCallback
+    @$xp$18Svnclient@TSvnItem      @2171; __tpdsc__ Svnclient::TSvnItem
+    @$xp$18Svnclient@TSvnList      @2167; __tpdsc__ Svnclient::TSvnList
+    @$xp$18Svntree@Svntree__5      @2188; __tpdsc__ Svntree::Svntree__5
+    @$xp$19Apr@PAprArrayHeader     @398 ; __tpdsc__ Apr::PAprArrayHeader
+    @$xp$19Apr@PAprOSDSOHandle     @56  ; __tpdsc__ Apr::PAprOSDSOHandle
+    @$xp$19Apr@PAprOSProcMutex     @64  ; __tpdsc__ Apr::PAprOSProcMutex
+    @$xp$19Apr@PAprOSThreadKey     @61  ; __tpdsc__ Apr::PAprOSThreadKey
+    @$xp$19Apr@PAprThreadMutex     @182 ; __tpdsc__ Apr::PAprThreadMutex
+    @$xp$19Apr@TAprArrayHeader     @397 ; __tpdsc__ Apr::TAprArrayHeader
+    @$xp$19Apr@TAprShutdownHow     @244 ; __tpdsc__ Apr::TAprShutdownHow
+    @$xp$19Apr@TAprThreadStart     @147 ; __tpdsc__ Apr::TAprThreadStart
+    @$xp$19Svn_client@PSvnDiff     @1418; __tpdsc__ Svn_client::PSvnDiff
+    @$xp$19Svn_client@PSvnFSID     @1337; __tpdsc__ Svn_client::PSvnFSID
+    @$xp$19Svn_client@PSvnInfo     @720 ; __tpdsc__ Svn_client::PSvnInfo
+    @$xp$19Svn_client@PSvnLock     @1821; __tpdsc__ Svn_client::PSvnLock
+    @$xp$19Svn_client@PSvnProp     @1678; __tpdsc__ Svn_client::PSvnProp
+    @$xp$19Svn_client@TSvnDiff     @1417; __tpdsc__ Svn_client::TSvnDiff
+    @$xp$19Svn_client@TSvnInfo     @719 ; __tpdsc__ Svn_client::TSvnInfo
+    @$xp$19Svn_client@TSvnLock     @1820; __tpdsc__ Svn_client::TSvnLock
+    @$xp$19Svn_client@TSvnProp     @1677; __tpdsc__ Svn_client::TSvnProp
+    @$xp$20Apr@ENonAIRException    @22  ; __tpdsc__ Apr::ENonAIRException
+    @$xp$20Apr@PAprGetOptOption    @361 ; __tpdsc__ Apr::PAprGetOptOption
+    @$xp$20Apr@PAprIntervalTime    @340 ; __tpdsc__ Apr::PAprIntervalTime
+    @$xp$20Apr@PAprThreadRWLock    @175 ; __tpdsc__ Apr::PAprThreadRWLock
+    @$xp$20Apr@PPAprArrayHeader    @399 ; __tpdsc__ Apr::PPAprArrayHeader
+    @$xp$20Apr@TAprGetOptOption    @360 ; __tpdsc__ Apr::TAprGetOptOption
+    @$xp$20Apr@TGetOptErrorProc    @364 ; __tpdsc__ Apr::TGetOptErrorProc
+    @$xp$20Apr@TUserDataCleanup    @505 ; __tpdsc__ Apr::TUserDataCleanup
+    @$xp$20Svn_client@ESvnError    @583 ; __tpdsc__ Svn_client::ESvnError
+    @$xp$20Svn_client@PSvnAuthz    @1217; __tpdsc__ Svn_client::PSvnAuthz
+    @$xp$20Svn_client@PSvnError    @1840; __tpdsc__ Svn_client::PSvnError
+    @$xp$20Svn_client@PSvnFSTxn    @1336; __tpdsc__ Svn_client::PSvnFSTxn
+    @$xp$20Svn_client@PSvnRepos    @1228; __tpdsc__ Svn_client::PSvnRepos
+    @$xp$20Svn_client@TSvnError    @1839; __tpdsc__ Svn_client::TSvnError
+    @$xp$20Svnclient@TSvnClient    @2135; __tpdsc__ Svnclient::TSvnClient
+    @$xp$20Svntree@TSvnTreeData    @2189; __tpdsc__ Svntree::TSvnTreeData
+    @$xp$21Apr@PAprOSGlobalMutex   @52  ; __tpdsc__ Apr::PAprOSGlobalMutex
+    @$xp$21Apr@PAprVFormatterBuf   @519 ; __tpdsc__ Apr::PAprVFormatterBuf
+    @$xp$21Apr@TAprCryptoHashAdd   @466 ; __tpdsc__ Apr::TAprCryptoHashAdd
+    @$xp$21Apr@TAprMMapRingEntry   @250 ; __tpdsc__ Apr::TAprMMapRingEntry
+    @$xp$21Apr@TAprVFormatterBuf   @518 ; __tpdsc__ Apr::TAprVFormatterBuf
+    @$xp$21Svn_client@PSvnConfig   @1604; __tpdsc__ Svn_client::PSvnConfig
+    @$xp$21Svn_client@PSvnDirEnt   @1834; __tpdsc__ Svn_client::PSvnDirEnt
+    @$xp$21Svn_client@PSvnFSRoot   @1335; __tpdsc__ Svn_client::PSvnFSRoot
+    @$xp$21Svn_client@PSvnRevNum   @1837; __tpdsc__ Svn_client::PSvnRevNum
+    @$xp$21Svn_client@PSvnStream   @1555; __tpdsc__ Svn_client::PSvnStream
+    @$xp$21Svn_client@PSvnString   @1758; __tpdsc__ Svn_client::PSvnString
+    @$xp$21Svn_client@TErrorData   @586 ; __tpdsc__ Svn_client::TErrorData
+    @$xp$21Svn_client@TSvnDirEnt   @1833; __tpdsc__ Svn_client::TSvnDirEnt
+    @$xp$21Svn_client@TSvnString   @1757; __tpdsc__ Svn_client::TSvnString
+    @$xp$21System@%TArray__1$uc%   @2130; __tpdsc__ System::TArray__1<unsigned char>
+    @$xp$22Apr@TAprCryptoHashInit  @467 ; __tpdsc__ Apr::TAprCryptoHashInit
+    @$xp$22Apr@TAprKillConditions  @146 ; __tpdsc__ Apr::TAprKillConditions
+    @$xp$22Apr@TAprThreadOnceProc  @145 ; __tpdsc__ Apr::TAprThreadOnceProc
+    @$xp$22Apr@TSocketDataCleanup  @236 ; __tpdsc__ Apr::TSocketDataCleanup
+    @$xp$22Svn_client@PPSvnDirEnt  @1835; __tpdsc__ Svn_client::PPSvnDirEnt
+    @$xp$22Svn_client@PPSvnStream  @1556; __tpdsc__ Svn_client::PPSvnStream
+    @$xp$22Svn_client@PPSvnString  @1759; __tpdsc__ Svn_client::PPSvnString
+    @$xp$22Svn_client@PSvnDiffFns  @1415; __tpdsc__ Svn_client::PSvnDiffFns
+    @$xp$22Svn_client@PSvnVersion  @1790; __tpdsc__ Svn_client::PSvnVersion
+    @$xp$22Svn_client@PSvnWcEntry  @911 ; __tpdsc__ Svn_client::PSvnWcEntry
+    @$xp$22Svn_client@TSvnDiffFns  @1414; __tpdsc__ Svn_client::TSvnDiffFns
+    @$xp$22Svn_client@TSvnVersion  @1789; __tpdsc__ Svn_client::TSvnVersion
+    @$xp$22Svn_client@TSvnWcEntry  @910 ; __tpdsc__ Svn_client::TSvnWcEntry
+    @$xp$22Svnclient@IAsyncUpdate  @2179; __tpdsc__ Svnclient::IAsyncUpdate
+    @$xp$22Svnclient@PStatusEntry  @2138; __tpdsc__ Svnclient::PStatusEntry
+    @$xp$22Svnclient@TStatusEntry  @2137; __tpdsc__ Svnclient::TStatusEntry
+    @$xp$22Svnclient@TSvnListItem  @2169; __tpdsc__ Svnclient::TSvnListItem
+    @$xp$23Apr@TAprFileDataCleanup @302 ; __tpdsc__ Apr::TAprFileDataCleanup
+    @$xp$23Svn_client@PSvnFSAccess @1338; __tpdsc__ Svn_client::PSvnFSAccess
+    @$xp$23Svn_client@PSvnFSDirent @1330; __tpdsc__ Svn_client::PSvnFSDirent
+    @$xp$23Svn_client@PSvnIODirEnt @1558; __tpdsc__ Svn_client::PSvnIODirEnt
+    @$xp$23Svn_client@PSvnLogEntry @1828; __tpdsc__ Svn_client::PSvnLogEntry
+    @$xp$23Svn_client@PSvnRaPlugin @989 ; __tpdsc__ Svn_client::PSvnRaPlugin
+    @$xp$23Svn_client@PSvnSortItem @1774; __tpdsc__ Svn_client::PSvnSortItem
+    @$xp$23Svn_client@PSvnWcNotify @920 ; __tpdsc__ Svn_client::PSvnWcNotify
+    @$xp$23Svn_client@PSvnWcStatus @903 ; __tpdsc__ Svn_client::PSvnWcStatus
+    @$xp$23Svn_client@TSvnDiffType @1419; __tpdsc__ Svn_client::TSvnDiffType
+    @$xp$23Svn_client@TSvnFSDirent @1329; __tpdsc__ Svn_client::TSvnFSDirent
+    @$xp$23Svn_client@TSvnIODirEnt @1557; __tpdsc__ Svn_client::TSvnIODirEnt
+    @$xp$23Svn_client@TSvnLogEntry @1827; __tpdsc__ Svn_client::TSvnLogEntry
+    @$xp$23Svn_client@TSvnNodeKind @1838; __tpdsc__ Svn_client::TSvnNodeKind
+    @$xp$23Svn_client@TSvnPropKind @1676; __tpdsc__ Svn_client::TSvnPropKind
+    @$xp$23Svn_client@TSvnRaPlugin @988 ; __tpdsc__ Svn_client::TSvnRaPlugin
+    @$xp$23Svn_client@TSvnReadFunc @1554; __tpdsc__ Svn_client::TSvnReadFunc
+    @$xp$23Svn_client@TSvnSortItem @1773; __tpdsc__ Svn_client::TSvnSortItem
+    @$xp$23Svn_client@TSvnWcNotify @919 ; __tpdsc__ Svn_client::TSvnWcNotify
+    @$xp$23Svn_client@TSvnWcStatus @902 ; __tpdsc__ Svn_client::TSvnWcStatus
+    @$xp$23Svnclient@Svnclient__31 @2152; __tpdsc__ Svnclient::Svnclient__31
+    @$xp$23Svnclient@Svnclient__71 @2129; __tpdsc__ Svnclient::Svnclient__71
+    @$xp$23Svnclient@TSvnBlameItem @2177; __tpdsc__ Svnclient::TSvnBlameItem
+    @$xp$23Svnclient@TSvnItemArray @2153; __tpdsc__ Svnclient::TSvnItemArray
+    @$xp$24Apr@TAprCryptoHashFinish @465 ; __tpdsc__ Apr::TAprCryptoHashFinish
+    @$xp$24Svn_client@PSvnAuthBaton @1080; __tpdsc__ Svn_client::PSvnAuthBaton
+    @$xp$24Svn_client@PSvnClientCtx @722 ; __tpdsc__ Svn_client::PSvnClientCtx
+    @$xp$24Svn_client@PSvnFSHistory @1331; __tpdsc__ Svn_client::PSvnFSHistory
+    @$xp$24Svn_client@PSvnRaSession @990 ; __tpdsc__ Svn_client::PSvnRaSession
+    @$xp$24Svn_client@PSvnReposNode @1225; __tpdsc__ Svn_client::PSvnReposNode
+    @$xp$24Svn_client@PSvnStringBuf @1756; __tpdsc__ Svn_client::PSvnStringBuf
+    @$xp$24Svn_client@PSvnTxDeltaOp @1378; __tpdsc__ Svn_client::PSvnTxDeltaOp
+    @$xp$24Svn_client@PSvnWcStatus2 @905 ; __tpdsc__ Svn_client::PSvnWcStatus2
+    @$xp$24Svn_client@PSvnXMLParser @1718; __tpdsc__ Svn_client::PSvnXMLParser
+    @$xp$24Svn_client@Svn_client__1 @1664; __tpdsc__ Svn_client::Svn_client__1
+    @$xp$24Svn_client@TSvnClientCtx @721 ; __tpdsc__ Svn_client::TSvnClientCtx
+    @$xp$24Svn_client@TSvnCloseFunc @1552; __tpdsc__ Svn_client::TSvnCloseFunc
+    @$xp$24Svn_client@TSvnIOFileDel @1559; __tpdsc__ Svn_client::TSvnIOFileDel
+    @$xp$24Svn_client@TSvnReposNode @1224; __tpdsc__ Svn_client::TSvnReposNode
+    @$xp$24Svn_client@TSvnStringBuf @1755; __tpdsc__ Svn_client::TSvnStringBuf
+    @$xp$24Svn_client@TSvnTxDeltaOp @1377; __tpdsc__ Svn_client::TSvnTxDeltaOp
+    @$xp$24Svn_client@TSvnWcGetFile @893 ; __tpdsc__ Svn_client::TSvnWcGetFile
+    @$xp$24Svn_client@TSvnWcStatus2 @904 ; __tpdsc__ Svn_client::TSvnWcStatus2
+    @$xp$24Svn_client@TSvnWriteFunc @1553; __tpdsc__ Svn_client::TSvnWriteFunc
+    @$xp$24Svn_client@_ESvnError@_1 @585 ; __tpdsc__ Svn_client::_ESvnError::_1
+    @$xp$25Apr@PAprShortIntervalTime @339 ; __tpdsc__ Apr::PAprShortIntervalTime
+    @$xp$25Apr@TAprThreadDataCleanup @144 ; __tpdsc__ Apr::TAprThreadDataCleanup
+    @$xp$25Apr@TAprThreadPrivateDest @143 ; __tpdsc__ Apr::TAprThreadPrivateDest
+    @$xp$25Svn_client@PSvnCommitInfo @1832; __tpdsc__ Svn_client::PSvnCommitInfo
+    @$xp$25Svn_client@PSvnMergeRange @1819; __tpdsc__ Svn_client::PSvnMergeRange
+    @$xp$25Svn_client@PSvnRaReporter @996 ; __tpdsc__ Svn_client::PSvnRaReporter
+    @$xp$25Svn_client@TSvnCancelFunc @1822; __tpdsc__ Svn_client::TSvnCancelFunc
+    @$xp$25Svn_client@TSvnCommitInfo @1831; __tpdsc__ Svn_client::TSvnCommitInfo
+    @$xp$25Svn_client@TSvnIOWalkFunc @1551; __tpdsc__ Svn_client::TSvnIOWalkFunc
+    @$xp$25Svn_client@TSvnMergeRange @1818; __tpdsc__ Svn_client::TSvnMergeRange
+    @$xp$25Svn_client@TSvnNodeAction @1223; __tpdsc__ Svn_client::TSvnNodeAction
+    @$xp$25Svn_client@TSvnRaInitFunc @987 ; __tpdsc__ Svn_client::TSvnRaInitFunc
+    @$xp$25Svn_client@TSvnRaReporter @995 ; __tpdsc__ Svn_client::TSvnRaReporter
+    @$xp$25Svn_client@TSvnWcSchedule @912 ; __tpdsc__ Svn_client::TSvnWcSchedule
+    @$xp$25Svn_client@TSvnXMLEndElem @1716; __tpdsc__ Svn_client::TSvnXMLEndElem
+    @$xp$25Svnclient@TSvnHistoryItem @2175; __tpdsc__ Svnclient::TSvnHistoryItem
+    @$xp$26Svn_client@PSvnDeltaEditor @1370; __tpdsc__ Svn_client::PSvnDeltaEditor
+    @$xp$26Svn_client@PSvnOptRevision @1110; __tpdsc__ Svn_client::PSvnOptRevision
+    @$xp$26Svn_client@PSvnRaCallbacks @992 ; __tpdsc__ Svn_client::PSvnRaCallbacks
+    @$xp$26Svn_client@PSvnRaReporter2 @998 ; __tpdsc__ Svn_client::PSvnRaReporter2
+    @$xp$26Svn_client@PSvnRaReporter3 @1000; __tpdsc__ Svn_client::PSvnRaReporter3
+    @$xp$26Svn_client@PSvnWcAdmAccess @930 ; __tpdsc__ Svn_client::PSvnWcAdmAccess
+    @$xp$26Svn_client@TSvnDeltaAction @1379; __tpdsc__ Svn_client::TSvnDeltaAction
+    @$xp$26Svn_client@TSvnDeltaEditor @1369; __tpdsc__ Svn_client::TSvnDeltaEditor
+    @$xp$26Svn_client@TSvnOptRevision @1109; __tpdsc__ Svn_client::TSvnOptRevision
+    @$xp$26Svn_client@TSvnRaCallbacks @991 ; __tpdsc__ Svn_client::TSvnRaCallbacks
+    @$xp$26Svn_client@TSvnRaReporter2 @997 ; __tpdsc__ Svn_client::TSvnRaReporter2
+    @$xp$26Svn_client@TSvnRaReporter3 @999 ; __tpdsc__ Svn_client::TSvnRaReporter3
+    @$xp$26Svn_client@TSvnRecurseKind @1836; __tpdsc__ Svn_client::TSvnRecurseKind
+    @$xp$26Svn_client@TSvnXMLCharData @1715; __tpdsc__ Svn_client::TSvnXMLCharData
+    @$xp$26Svnclient@DllLoadException @2133; __tpdsc__ Svnclient::DllLoadException
+    @$xp$26Svnclient@TSvnBlameOptions @2154; __tpdsc__ Svnclient::TSvnBlameOptions
+    @$xp$26Svnclient@TSvnConfigString @2160; __tpdsc__ Svnclient::TSvnConfigString
+    @$xp$26Svnclient@TSvnCustomConfig @2158; __tpdsc__ Svnclient::TSvnCustomConfig
+    @$xp$26Svnclient@TSvnListCallback @2144; __tpdsc__ Svnclient::TSvnListCallback
+    @$xp$26Svnclient@TSvnServerConfig @2156; __tpdsc__ Svnclient::TSvnServerConfig
+    @$xp$27Svn_client@PSvnAuthProvider @1078; __tpdsc__ Svn_client::PSvnAuthProvider
+    @$xp$27Svn_client@PSvnFSPathChange @1333; __tpdsc__ Svn_client::PSvnFSPathChange
+    @$xp$27Svn_client@PSvnRaCallbacks2 @994 ; __tpdsc__ Svn_client::PSvnRaCallbacks2
+    @$xp$27Svn_client@TSvnAuthProvider @1077; __tpdsc__ Svn_client::TSvnAuthProvider
+    @$xp$27Svn_client@TSvnFSPathChange @1332; __tpdsc__ Svn_client::TSvnFSPathChange
+    @$xp$27Svn_client@TSvnHashDiffFunc @1454; __tpdsc__ Svn_client::TSvnHashDiffFunc
+    @$xp$27Svn_client@TSvnInfoReceiver @718 ; __tpdsc__ Svn_client::TSvnInfoReceiver
+    @$xp$27Svn_client@TSvnRaCallbacks2 @993 ; __tpdsc__ Svn_client::TSvnRaCallbacks2
+    @$xp$27Svn_client@TSvnWcNotifyFunc @917 ; __tpdsc__ Svn_client::TSvnWcNotifyFunc
+    @$xp$27Svn_client@TSvnWcStatusFunc @900 ; __tpdsc__ Svn_client::TSvnWcStatusFunc
+    @$xp$27Svn_client@TSvnXMLStartElem @1717; __tpdsc__ Svn_client::TSvnXMLStartElem
+    @$xp$27Svnclient@TLoginPromptEvent @2150; __tpdsc__ Svnclient::TLoginPromptEvent
+    @$xp$27Svnclient@TSvnBlameCallback @2145; __tpdsc__ Svnclient::TSvnBlameCallback
+    @$xp$28Svn_client@PSvnAuthIterState @1079; __tpdsc__ Svn_client::PSvnAuthIterState
+    @$xp$28Svn_client@PSvnDiffOutputFns @1413; __tpdsc__ Svn_client::PSvnDiffOutputFns
+    @$xp$28Svn_client@PSvnReposParseFns @1219; __tpdsc__ Svn_client::PSvnReposParseFns
+    @$xp$28Svn_client@PSvnSubstKeywords @1442; __tpdsc__ Svn_client::PSvnSubstKeywords
+    @$xp$28Svn_client@PSvnTxDeltaStream @1371; __tpdsc__ Svn_client::PSvnTxDeltaStream
+    @$xp$28Svn_client@PSvnTxDeltaWindow @1376; __tpdsc__ Svn_client::PSvnTxDeltaWindow
+    @$xp$28Svn_client@PSvnWcNotifyState @923 ; __tpdsc__ Svn_client::PSvnWcNotifyState
+    @$xp$28Svn_client@TSvnDiffOutputFns @1412; __tpdsc__ Svn_client::TSvnDiffOutputFns
+    @$xp$28Svn_client@TSvnIterAprHashCb @1662; __tpdsc__ Svn_client::TSvnIterAprHashCb
+    @$xp$28Svn_client@TSvnOptSubcommand @1119; __tpdsc__ Svn_client::TSvnOptSubcommand
+    @$xp$28Svn_client@TSvnReposLoadUuid @1222; __tpdsc__ Svn_client::TSvnReposLoadUuid
+    @$xp$28Svn_client@TSvnReposParseFns @1218; __tpdsc__ Svn_client::TSvnReposParseFns
+    @$xp$28Svn_client@TSvnSubstEolStyle @1443; __tpdsc__ Svn_client::TSvnSubstEolStyle
+    @$xp$28Svn_client@TSvnSubstKeywords @1441; __tpdsc__ Svn_client::TSvnSubstKeywords
+    @$xp$28Svn_client@TSvnTxDeltaWindow @1375; __tpdsc__ Svn_client::TSvnTxDeltaWindow
+    @$xp$28Svn_client@TSvnWcNotifyFunc2 @918 ; __tpdsc__ Svn_client::TSvnWcNotifyFunc2
+    @$xp$28Svn_client@TSvnWcNotifyState @922 ; __tpdsc__ Svn_client::TSvnWcNotifyState
+    @$xp$28Svn_client@TSvnWcStatusFunc2 @901 ; __tpdsc__ Svn_client::TSvnWcStatusFunc2
+    @$xp$28Svn_client@TVersionQueryFunc @1788; __tpdsc__ Svn_client::TVersionQueryFunc
+    @$xp$28Svnclient@TSvnCancelCallback @2141; __tpdsc__ Svnclient::TSvnCancelCallback
+    @$xp$28Svnclient@TSvnNotifyCallback @2143; __tpdsc__ Svnclient::TSvnNotifyCallback
+    @$xp$28Svnclient@TSvnStatusCallback @2142; __tpdsc__ Svnclient::TSvnStatusCallback
+    @$xp$29Svn_client@PSvnAuthCredSimple @1073; __tpdsc__ Svn_client::PSvnAuthCredSimple
+    @$xp$29Svn_client@PSvnLogChangedPath @1830; __tpdsc__ Svn_client::PSvnLogChangedPath
+    @$xp$29Svn_client@PSvnReposParseFns2 @1221; __tpdsc__ Svn_client::PSvnReposParseFns2
+    @$xp$29Svn_client@PSvnWcExternalItem @928 ; __tpdsc__ Svn_client::PSvnWcExternalItem
+    @$xp$29Svn_client@TSvnAuthCredSimple @1072; __tpdsc__ Svn_client::TSvnAuthCredSimple
+    @$xp$29Svn_client@TSvnClientListFunc @723 ; __tpdsc__ Svn_client::TSvnClientListFunc
+    @$xp$29Svn_client@TSvnCommitCallback @1823; __tpdsc__ Svn_client::TSvnCommitCallback
+    @$xp$29Svn_client@TSvnDiffDataSource @1416; __tpdsc__ Svn_client::TSvnDiffDataSource
+    @$xp$29Svn_client@TSvnFileRevHandler @1367; __tpdsc__ Svn_client::TSvnFileRevHandler
+    @$xp$29Svn_client@TSvnIterAprArrayCb @1661; __tpdsc__ Svn_client::TSvnIterAprArrayCb
+    @$xp$29Svn_client@TSvnLogChangedPath @1829; __tpdsc__ Svn_client::TSvnLogChangedPath
+    @$xp$29Svn_client@TSvnRaLockCallback @1004; __tpdsc__ Svn_client::TSvnRaLockCallback
+    @$xp$29Svn_client@TSvnReposAuthzFunc @1231; __tpdsc__ Svn_client::TSvnReposAuthzFunc
+    @$xp$29Svn_client@TSvnReposParseFns2 @1220; __tpdsc__ Svn_client::TSvnReposParseFns2
+    @$xp$29Svn_client@TSvnWcConflictKind @890 ; __tpdsc__ Svn_client::TSvnWcConflictKind
+    @$xp$29Svn_client@TSvnWcExternalItem @927 ; __tpdsc__ Svn_client::TSvnWcExternalItem
+    @$xp$29Svn_client@TSvnWcMergeOutcome @899 ; __tpdsc__ Svn_client::TSvnWcMergeOutcome
+    @$xp$29Svn_client@TSvnWcNotifyAction @924 ; __tpdsc__ Svn_client::TSvnWcNotifyAction
+    @$xp$29Svnclient@TSvnConfigItemState @2162; __tpdsc__ Svnclient::TSvnConfigItemState
+    @$xp$29Svntree@TSvnRootNodeWalkModes @2187; __tpdsc__ Svntree::TSvnRootNodeWalkModes
+    @$xp$30Svn_client@PSvnDiffFileOptions @1410; __tpdsc__ Svn_client::PSvnDiffFileOptions
+    @$xp$30Svn_client@PSvnLocationSegment @1817; __tpdsc__ Svn_client::PSvnLocationSegment
+    @$xp$30Svn_client@PSvnWcDiffCallbacks @914 ; __tpdsc__ Svn_client::PSvnWcDiffCallbacks
+    @$xp$30Svn_client@PSvnWcExternalItem2 @926 ; __tpdsc__ Svn_client::PSvnWcExternalItem2
+    @$xp$30Svn_client@PSvnWcTraversalInfo @929 ; __tpdsc__ Svn_client::PSvnWcTraversalInfo
+    @$xp$30Svn_client@TSvnCommitCallback2 @1824; __tpdsc__ Svn_client::TSvnCommitCallback2
+    @$xp$30Svn_client@TSvnDiffFileOptions @1409; __tpdsc__ Svn_client::TSvnDiffFileOptions
+    @$xp$30Svn_client@TSvnLocationSegment @1816; __tpdsc__ Svn_client::TSvnLocationSegment
+    @$xp$30Svn_client@TSvnOptRevisionKind @1113; __tpdsc__ Svn_client::TSvnOptRevisionKind
+    @$xp$30Svn_client@TSvnRaGetWCPropFunc @1011; __tpdsc__ Svn_client::TSvnRaGetWCPropFunc
+    @$xp$30Svn_client@TSvnRaSetWCPropFunc @1010; __tpdsc__ Svn_client::TSvnRaSetWCPropFunc
+    @$xp$30Svn_client@TSvnSortHashCompare @1772; __tpdsc__ Svn_client::TSvnSortHashCompare
+    @$xp$30Svn_client@TSvnWcDiffCallbacks @913 ; __tpdsc__ Svn_client::TSvnWcDiffCallbacks
+    @$xp$30Svn_client@TSvnWcExternalItem2 @925 ; __tpdsc__ Svn_client::TSvnWcExternalItem2
+    @$xp$30Svnclient@THistoryUpdateThread @2173; __tpdsc__ Svnclient::THistoryUpdateThread
+    @$xp$30Svnclient@TSSLClientCertPrompt @2147; __tpdsc__ Svnclient::TSSLClientCertPrompt
+    @$xp$30Svnclient@TSvnConflictCallback @2139; __tpdsc__ Svnclient::TSvnConflictCallback
+    @$xp$30Svnclient@TSvnProgressCallback @2140; __tpdsc__ Svnclient::TSvnProgressCallback
+    @$xp$30Svnclient@TUserNamePromptEvent @2149; __tpdsc__ Svnclient::TUserNamePromptEvent
+    @$xp$31Svn_client@PSvnAuthCredUsername @1071; __tpdsc__ Svn_client::PSvnAuthCredUsername
+    @$xp$31Svn_client@PSvnClientCommitInfo @740 ; __tpdsc__ Svn_client::PSvnClientCommitInfo
+    @$xp$31Svn_client@PSvnClientCommitItem @734 ; __tpdsc__ Svn_client::PSvnClientCommitItem
+    @$xp$31Svn_client@PSvnClientCopySource @717 ; __tpdsc__ Svn_client::PSvnClientCopySource
+    @$xp$31Svn_client@PSvnOptRevisionRange @1108; __tpdsc__ Svn_client::PSvnOptRevisionRange
+    @$xp$31Svn_client@PSvnOptRevisionValue @1112; __tpdsc__ Svn_client::PSvnOptRevisionValue
+    @$xp$31Svn_client@PSvnVersionChecklist @1787; __tpdsc__ Svn_client::PSvnVersionChecklist
+    @$xp$31Svn_client@PSvnWcCommittedQueue @883 ; __tpdsc__ Svn_client::PSvnWcCommittedQueue
+    @$xp$31Svn_client@PSvnWcConflictResult @886 ; __tpdsc__ Svn_client::PSvnWcConflictResult
+    @$xp$31Svn_client@PSvnWcDiffCallbacks2 @916 ; __tpdsc__ Svn_client::PSvnWcDiffCallbacks2
+    @$xp$31Svn_client@PSvnWcEntryCallbacks @907 ; __tpdsc__ Svn_client::PSvnWcEntryCallbacks
+    @$xp$31Svn_client@PSvnWcRevisionStatus @895 ; __tpdsc__ Svn_client::PSvnWcRevisionStatus
+    @$xp$31Svn_client@TSvnAuthCredUsername @1070; __tpdsc__ Svn_client::TSvnAuthCredUsername
+    @$xp$31Svn_client@TSvnClientCommitInfo @739 ; __tpdsc__ Svn_client::TSvnClientCommitInfo
+    @$xp$31Svn_client@TSvnClientCommitItem @733 ; __tpdsc__ Svn_client::TSvnClientCommitItem
+    @$xp$31Svn_client@TSvnClientCopySource @716 ; __tpdsc__ Svn_client::TSvnClientCopySource
+    @$xp$31Svn_client@TSvnConfigEnumerator @1601; __tpdsc__ Svn_client::TSvnConfigEnumerator
+    @$xp$31Svn_client@TSvnFSPathChangeKind @1334; __tpdsc__ Svn_client::TSvnFSPathChangeKind
+    @$xp$31Svn_client@TSvnLogEntryReceiver @1826; __tpdsc__ Svn_client::TSvnLogEntryReceiver
+    @$xp$31Svn_client@TSvnOptRevisionRange @1107; __tpdsc__ Svn_client::TSvnOptRevisionRange
+    @$xp$31Svn_client@TSvnOptRevisionValue @1111; __tpdsc__ Svn_client::TSvnOptRevisionValue
+    @$xp$31Svn_client@TSvnPropListReceiver @741 ; __tpdsc__ Svn_client::TSvnPropListReceiver
+    @$xp$31Svn_client@TSvnRaFileRevHandler @1005; __tpdsc__ Svn_client::TSvnRaFileRevHandler
+    @$xp$31Svn_client@TSvnRaPushWCPropFunc @1009; __tpdsc__ Svn_client::TSvnRaPushWCPropFunc
+    @$xp$31Svn_client@TSvnReposHistoryFunc @1226; __tpdsc__ Svn_client::TSvnReposHistoryFunc
+    @$xp$31Svn_client@TSvnVersionChecklist @1786; __tpdsc__ Svn_client::TSvnVersionChecklist
+    @$xp$31Svn_client@TSvnWcConflictAction @892 ; __tpdsc__ Svn_client::TSvnWcConflictAction
+    @$xp$31Svn_client@TSvnWcConflictChoice @887 ; __tpdsc__ Svn_client::TSvnWcConflictChoice
+    @$xp$31Svn_client@TSvnWcConflictReason @891 ; __tpdsc__ Svn_client::TSvnWcConflictReason
+    @$xp$31Svn_client@TSvnWcConflictResult @885 ; __tpdsc__ Svn_client::TSvnWcConflictResult
+    @$xp$31Svn_client@TSvnWcDiffCallbacks2 @915 ; __tpdsc__ Svn_client::TSvnWcDiffCallbacks2
+    @$xp$31Svn_client@TSvnWcEntryCallbacks @906 ; __tpdsc__ Svn_client::TSvnWcEntryCallbacks
+    @$xp$31Svn_client@TSvnWcRevisionStatus @894 ; __tpdsc__ Svn_client::TSvnWcRevisionStatus
+    @$xp$31Svnclient@IAnnotationCompletion @2180; __tpdsc__ Svnclient::IAnnotationCompletion
+    @$xp$31Svnclient@TSSLServerTrustPrompt @2148; __tpdsc__ Svnclient::TSSLServerTrustPrompt
+    @$xp$31Svnclient@TSvnMergeRevisionList @2163; __tpdsc__ Svnclient::TSvnMergeRevisionList
+    @$xp$32Svn_client@PSvnClientCommitItem2 @736 ; __tpdsc__ Svn_client::PSvnClientCommitItem2
+    @$xp$32Svn_client@PSvnClientCommitItem3 @738 ; __tpdsc__ Svn_client::PSvnClientCommitItem3
+    @$xp$32Svn_client@PSvnOptSubcommandDesc @1115; __tpdsc__ Svn_client::PSvnOptSubcommandDesc
+    @$xp$32Svn_client@PSvnWcEntryCallbacks2 @909 ; __tpdsc__ Svn_client::PSvnWcEntryCallbacks2
+    @$xp$32Svn_client@TSvnClientCommitItem2 @735 ; __tpdsc__ Svn_client::TSvnClientCommitItem2
+    @$xp$32Svn_client@TSvnClientCommitItem3 @737 ; __tpdsc__ Svn_client::TSvnClientCommitItem3
+    @$xp$32Svn_client@TSvnConfigEnumerator2 @1600; __tpdsc__ Svn_client::TSvnConfigEnumerator2
+    @$xp$32Svn_client@TSvnFSWarningCallback @1340; __tpdsc__ Svn_client::TSvnFSWarningCallback
+    @$xp$32Svn_client@TSvnFileRevHandlerOld @1366; __tpdsc__ Svn_client::TSvnFileRevHandlerOld
+    @$xp$32Svn_client@TSvnHashDiffKeyStatus @1455; __tpdsc__ Svn_client::TSvnHashDiffKeyStatus
+    @$xp$32Svn_client@TSvnOptSubcommandDesc @1114; __tpdsc__ Svn_client::TSvnOptSubcommandDesc
+    @$xp$32Svn_client@TSvnWcEntryCallbacks2 @908 ; __tpdsc__ Svn_client::TSvnWcEntryCallbacks2
+    @$xp$32Svn_client@TSvnWcNotifyLockState @921 ; __tpdsc__ Svn_client::TSvnWcNotifyLockState
+    @$xp$32Svnclient@TSvnMergeRevisionRange @2165; __tpdsc__ Svnclient::TSvnMergeRevisionRange
+    @$xp$33Svn_client@PSvnAuthProviderObject @1075; __tpdsc__ Svn_client::PSvnAuthProviderObject
+    @$xp$33Svn_client@PSvnClientPropListItem @743 ; __tpdsc__ Svn_client::PSvnClientPropListItem
+    @$xp$33Svn_client@PSvnCmdlinePromptBaton @1033; __tpdsc__ Svn_client::PSvnCmdlinePromptBaton
+    @$xp$33Svn_client@PSvnOptSubcommandDesc2 @1117; __tpdsc__ Svn_client::PSvnOptSubcommandDesc2
+    @$xp$33Svn_client@TSvnAuthProviderObject @1074; __tpdsc__ Svn_client::TSvnAuthProviderObject
+    @$xp$33Svn_client@TSvnChangeListReceiver @715 ; __tpdsc__ Svn_client::TSvnChangeListReceiver
+    @$xp$33Svn_client@TSvnClientGetCommitLog @730 ; __tpdsc__ Svn_client::TSvnClientGetCommitLog
+    @$xp$33Svn_client@TSvnClientPropListItem @742 ; __tpdsc__ Svn_client::TSvnClientPropListItem
+    @$xp$33Svn_client@TSvnCmdlinePromptBaton @1032; __tpdsc__ Svn_client::TSvnCmdlinePromptBaton
+    @$xp$33Svn_client@TSvnFSGetLocksCallback @1328; __tpdsc__ Svn_client::TSvnFSGetLocksCallback
+    @$xp$33Svn_client@TSvnLogMessageReceiver @1825; __tpdsc__ Svn_client::TSvnLogMessageReceiver
+    @$xp$33Svn_client@TSvnOptSubcommandDesc2 @1116; __tpdsc__ Svn_client::TSvnOptSubcommandDesc2
+    @$xp$33Svn_client@TSvnReposAuthzCallback @1230; __tpdsc__ Svn_client::TSvnReposAuthzCallback
+    @$xp$33Svnclient@IAnnotationLineProvider @2181; __tpdsc__ Svnclient::IAnnotationLineProvider
+    @$xp$33Svnclient@TSSLServerTrustFailures @2151; __tpdsc__ Svnclient::TSSLServerTrustFailures
+    @$xp$34Svn_client@PPSvnAuthProviderObject @1076; __tpdsc__ Svn_client::PPSvnAuthProviderObject
+    @$xp$34Svn_client@PPSvnClientPropListItem @744 ; __tpdsc__ Svn_client::PPSvnClientPropListItem
+    @$xp$34Svn_client@PSvnClientDiffSummarize @726 ; __tpdsc__ Svn_client::PSvnClientDiffSummarize
+    @$xp$34Svn_client@TSvnClientBlameReceiver @728 ; __tpdsc__ Svn_client::TSvnClientBlameReceiver
+    @$xp$34Svn_client@TSvnClientDiffSummarize @725 ; __tpdsc__ Svn_client::TSvnClientDiffSummarize
+    @$xp$34Svn_client@TSvnClientGetCommitLog2 @731 ; __tpdsc__ Svn_client::TSvnClientGetCommitLog2
+    @$xp$34Svn_client@TSvnClientGetCommitLog3 @732 ; __tpdsc__ Svn_client::TSvnClientGetCommitLog3
+    @$xp$34Svn_client@TSvnDiffFileIgnoreSpace @1411; __tpdsc__ Svn_client::TSvnDiffFileIgnoreSpace
+    @$xp$34Svn_client@TSvnReposFileRevHandler @1229; __tpdsc__ Svn_client::TSvnReposFileRevHandler
+    @$xp$34Svnclient@TSSLClientPasswordPrompt @2146; __tpdsc__ Svnclient::TSSLClientPasswordPrompt
+    @$xp$35Svn_client@TSvnAuthSimplePromptFunc @1061; __tpdsc__ Svn_client::TSvnAuthSimplePromptFunc
+    @$xp$35Svn_client@TSvnClientBlameReceiver2 @729 ; __tpdsc__ Svn_client::TSvnClientBlameReceiver2
+    @$xp$35Svn_client@TSvnMergeInfoInheritance @1581; __tpdsc__ Svn_client::TSvnMergeInfoInheritance
+    @$xp$35Svn_client@TSvnRaProgressNotifyFunc @1003; __tpdsc__ Svn_client::TSvnRaProgressNotifyFunc
+    @$xp$35Svn_client@TSvnReposRecoverCallback @1227; __tpdsc__ Svn_client::TSvnReposRecoverCallback
+    @$xp$35Svn_client@TSvnReposUpgradeCallback @1216; __tpdsc__ Svn_client::TSvnReposUpgradeCallback
+    @$xp$35Svn_client@TSvnTxDeltaMd5DigestFunc @1372; __tpdsc__ Svn_client::TSvnTxDeltaMd5DigestFunc
+    @$xp$35Svn_client@TSvnTxDeltaWindowHandler @1374; __tpdsc__ Svn_client::TSvnTxDeltaWindowHandler
+    @$xp$36Svn_client@PSvnAuthCredSSLClientCert @1069; __tpdsc__ Svn_client::PSvnAuthCredSSLClientCert
+    @$xp$36Svn_client@PSvnAuthSSLServerCertInfo @1065; __tpdsc__ Svn_client::PSvnAuthSSLServerCertInfo
+    @$xp$36Svn_client@PSvnWcConflictDescription @889 ; __tpdsc__ Svn_client::PSvnWcConflictDescription
+    @$xp$36Svn_client@TSvnAuthCredSSLClientCert @1068; __tpdsc__ Svn_client::TSvnAuthCredSSLClientCert
+    @$xp$36Svn_client@TSvnAuthSSLServerCertInfo @1064; __tpdsc__ Svn_client::TSvnAuthSSLServerCertInfo
+    @$xp$36Svn_client@TSvnBerkeleyErrorCallback @1339; __tpdsc__ Svn_client::TSvnBerkeleyErrorCallback
+    @$xp$36Svn_client@TSvnDeltaPathDriverCbFunc @1368; __tpdsc__ Svn_client::TSvnDeltaPathDriverCbFunc
+    @$xp$36Svn_client@TSvnRaGetClientStringFunc @1006; __tpdsc__ Svn_client::TSvnRaGetClientStringFunc
+    @$xp$36Svn_client@TSvnRaGetLatestRevNumFunc @1007; __tpdsc__ Svn_client::TSvnRaGetLatestRevNumFunc
+    @$xp$36Svn_client@TSvnTxDeltaNextWindowFunc @1373; __tpdsc__ Svn_client::TSvnTxDeltaNextWindowFunc
+    @$xp$36Svn_client@TSvnWcConflictDescription @888 ; __tpdsc__ Svn_client::TSvnWcConflictDescription
+    @$xp$36Svn_client@TSvnWcRelocationValidator @896 ; __tpdsc__ Svn_client::TSvnWcRelocationValidator
+    @$xp$37Svn_client@PSvnAuthCredSSLServerTrust @1063; __tpdsc__ Svn_client::PSvnAuthCredSSLServerTrust
+    @$xp$37Svn_client@TSvnAuthCredSSLServerTrust @1062; __tpdsc__ Svn_client::TSvnAuthCredSSLServerTrust
+    @$xp$37Svn_client@TSvnAuthUsernamePromptFunc @1060; __tpdsc__ Svn_client::TSvnAuthUsernamePromptFunc
+    @$xp$37Svn_client@TSvnWcConflictResolverFunc @884 ; __tpdsc__ Svn_client::TSvnWcConflictResolverFunc
+    @$xp$37Svn_client@TSvnWcRelocationValidator2 @897 ; __tpdsc__ Svn_client::TSvnWcRelocationValidator2
+    @$xp$37Svn_client@TSvnWcRelocationValidator3 @898 ; __tpdsc__ Svn_client::TSvnWcRelocationValidator3
+    @$xp$38Svn_client@PSvnAuthCredSSLClientCertPw @1067; __tpdsc__ Svn_client::PSvnAuthCredSSLClientCertPw
+    @$xp$38Svn_client@TSvnAuthCredSSLClientCertPw @1066; __tpdsc__ Svn_client::TSvnAuthCredSSLClientCertPw
+    @$xp$38Svn_client@TSvnAuthPlaintextPromptFunc @1056; __tpdsc__ Svn_client::TSvnAuthPlaintextPromptFunc
+    @$xp$38Svn_client@TSvnClientDiffSummarizeFunc @724 ; __tpdsc__ Svn_client::TSvnClientDiffSummarizeFunc
+    @$xp$38Svn_client@TSvnClientDiffSummarizeKind @727 ; __tpdsc__ Svn_client::TSvnClientDiffSummarizeKind
+    @$xp$38Svn_client@TSvnConfigSectionEnumerator @1603; __tpdsc__ Svn_client::TSvnConfigSectionEnumerator
+    @$xp$38Svn_client@TSvnLocationSegmentReceiver @1815; __tpdsc__ Svn_client::TSvnLocationSegmentReceiver
+    @$xp$38Svn_client@TSvnRaInvalidateWCPropsFunc @1008; __tpdsc__ Svn_client::TSvnRaInvalidateWCPropsFunc
+    @$xp$39Svn_client@TSvnConfigSectionEnumerator2 @1602; __tpdsc__ Svn_client::TSvnConfigSectionEnumerator2
+    @$xp$39Svn_client@TSvnRaReplayRevStartCallback @1002; __tpdsc__ Svn_client::TSvnRaReplayRevStartCallback
+    @$xp$39Svn_client@TSvnReposRevisionAccessLevel @1215; __tpdsc__ Svn_client::TSvnReposRevisionAccessLevel
+    @$xp$40Svn_client@TSvnOptSubcommandDescOverride @1118; __tpdsc__ Svn_client::TSvnOptSubcommandDescOverride
+    @$xp$40Svn_client@TSvnRaReplayRevFinishCallback @1001; __tpdsc__ Svn_client::TSvnRaReplayRevFinishCallback
+    @$xp$42Svn_client@TSvnAuthSSLClientCertPromptFunc @1058; __tpdsc__ Svn_client::TSvnAuthSSLClientCertPromptFunc
+    @$xp$42Svnclient@TSvnClientAnnotationLineProvider @2131; __tpdsc__ Svnclient::TSvnClientAnnotationLineProvider
+    @$xp$43Svn_client@TSvnAuthSSLServerTrustPromptFunc @1059; __tpdsc__ Svn_client::TSvnAuthSSLServerTrustPromptFunc
+    @$xp$43Svn_client@TSvnWcCanonicalizeSvnPropGetFile @882 ; __tpdsc__ Svn_client::TSvnWcCanonicalizeSvnPropGetFile
+    @$xp$44Svn_client@TSvnAuthSSLClientCertPwPromptFunc @1057; __tpdsc__ Svn_client::TSvnAuthSSLClientCertPwPromptFunc
+    @$xp$70System@Generics@Defaults@%IEqualityComparer__1$20System@UnicodeString% @2186; __tpdsc__ System::Generics::Defaults::IEqualityComparer__1<System::UnicodeString>
+    @$xp$78System@Generics@Collections@%TCollectionNotifyEvent__1$20System@UnicodeString% @2185; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<System::UnicodeString>
+    @Apr@APR_DELTA_EPOCH_IN_USEC   @320 ; Apr::APR_DELTA_EPOCH_IN_USEC
+    @Apr@APR_USEC_PER_SEC          @336 ; Apr::APR_USEC_PER_SEC
+    @Apr@AprCheck$qqri             @6   ; __fastcall Apr::AprCheck(int)
+    @Apr@AprLibLoaded$qqrv         @10  ; __fastcall Apr::AprLibLoaded()
+    @Apr@AprMMapCandidate$qqrj     @13  ; __fastcall Apr::AprMMapCandidate(__int64)
+    @Apr@AprTimeToFileTime$qqrj    @11  ; __fastcall Apr::AprTimeToFileTime(__int64)
+    @Apr@EAprError@                @21  ; Apr::EAprError::
+    @Apr@EAprError@$bctr$qqri      @3   ; __fastcall Apr::EAprError::EAprError(int)
+    @Apr@ENonAIRException@         @23  ; Apr::ENonAIRException::
+    @Apr@FileTimeToAprTime$qqrrx9_FILETIME @12  ; __fastcall Apr::FileTimeToAprTime(const _FILETIME&)
+    @Apr@Finalization$qqrv         @2   ; __fastcall Apr::Finalization()
+    @Apr@FreeAprLib$qqrv           @7   ; __fastcall Apr::FreeAprLib()
+    @Apr@GetAprErrorMessage$qqri   @5   ; __fastcall Apr::GetAprErrorMessage(int)
+    @Apr@LoadAprLib$qqrx20System@UnicodeStringt1 @8   ; __fastcall Apr::LoadAprLib(const System::UnicodeString, const System::UnicodeString)
+    @Apr@LoadDll$qqrx20System@UnicodeStringt1t1 @9   ; __fastcall Apr::LoadDll(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Apr@RaiseAprError$qqri        @4   ; __fastcall Apr::RaiseAprError(int)
+    @Apr@apr_allocator_alloc       @78  ; Apr::apr_allocator_alloc
+    @Apr@apr_allocator_create      @80  ; Apr::apr_allocator_create
+    @Apr@apr_allocator_destroy     @79  ; Apr::apr_allocator_destroy
+    @Apr@apr_allocator_free        @77  ; Apr::apr_allocator_free
+    @Apr@apr_allocator_max_free_set @74  ; Apr::apr_allocator_max_free_set
+    @Apr@apr_allocator_mutex_get   @72  ; Apr::apr_allocator_mutex_get
+    @Apr@apr_allocator_mutex_set   @73  ; Apr::apr_allocator_mutex_set
+    @Apr@apr_allocator_owner_get   @75  ; Apr::apr_allocator_owner_get
+    @Apr@apr_allocator_owner_set   @76  ; Apr::apr_allocator_owner_set
+    @Apr@apr_app_initialize        @512 ; Apr::apr_app_initialize
+    @Apr@apr_array_append          @385 ; Apr::apr_array_append
+    @Apr@apr_array_cat             @388 ; Apr::apr_array_cat
+    @Apr@apr_array_copy            @387 ; Apr::apr_array_copy
+    @Apr@apr_array_copy_hdr        @386 ; Apr::apr_array_copy_hdr
+    @Apr@apr_array_make            @391 ; Apr::apr_array_make
+    @Apr@apr_array_pop             @389 ; Apr::apr_array_pop
+    @Apr@apr_array_pstrcat         @384 ; Apr::apr_array_pstrcat
+    @Apr@apr_array_push            @390 ; Apr::apr_array_push
+    @Apr@apr_atoi64                @428 ; Apr::apr_atoi64
+    @Apr@apr_atomic_add32          @474 ; Apr::apr_atomic_add32
+    @Apr@apr_atomic_cas32          @470 ; Apr::apr_atomic_cas32
+    @Apr@apr_atomic_casptr         @468 ; Apr::apr_atomic_casptr
+    @Apr@apr_atomic_dec32          @471 ; Apr::apr_atomic_dec32
+    @Apr@apr_atomic_inc32          @472 ; Apr::apr_atomic_inc32
+    @Apr@apr_atomic_init           @477 ; Apr::apr_atomic_init
+    @Apr@apr_atomic_read32         @476 ; Apr::apr_atomic_read32
+    @Apr@apr_atomic_set32          @475 ; Apr::apr_atomic_set32
+    @Apr@apr_atomic_sub32          @473 ; Apr::apr_atomic_sub32
+    @Apr@apr_atomic_xchg32         @469 ; Apr::apr_atomic_xchg32
+    @Apr@apr_collapse_spaces       @438 ; Apr::apr_collapse_spaces
+    @Apr@apr_conv_ucs2_to_utf8     @520 ; Apr::apr_conv_ucs2_to_utf8
+    @Apr@apr_conv_utf8_to_ucs2     @521 ; Apr::apr_conv_utf8_to_ucs2
+    @Apr@apr_cpystrn               @439 ; Apr::apr_cpystrn
+    @Apr@apr_crypto_sha256_new     @462 ; Apr::apr_crypto_sha256_new
+    @Apr@apr_ctime                 @324 ; Apr::apr_ctime
+    @Apr@apr_day_snames            @334 ; Apr::apr_day_snames
+    @Apr@apr_dir_close             @312 ; Apr::apr_dir_close
+    @Apr@apr_dir_make              @262 ; Apr::apr_dir_make
+    @Apr@apr_dir_make_recursive    @261 ; Apr::apr_dir_make_recursive
+    @Apr@apr_dir_open              @313 ; Apr::apr_dir_open
+    @Apr@apr_dir_read              @311 ; Apr::apr_dir_read
+    @Apr@apr_dir_remove            @260 ; Apr::apr_dir_remove
+    @Apr@apr_dir_rewind            @310 ; Apr::apr_dir_rewind
+    @Apr@apr_dso_error             @352 ; Apr::apr_dso_error
+    @Apr@apr_dso_load              @355 ; Apr::apr_dso_load
+    @Apr@apr_dso_sym               @353 ; Apr::apr_dso_sym
+    @Apr@apr_dso_unload            @354 ; Apr::apr_dso_unload
+    @Apr@apr_env_delete            @365 ; Apr::apr_env_delete
+    @Apr@apr_env_get               @367 ; Apr::apr_env_get
+    @Apr@apr_env_set               @366 ; Apr::apr_env_set
+    @Apr@apr_file_append           @296 ; Apr::apr_file_append
+    @Apr@apr_file_attrs_set        @264 ; Apr::apr_file_attrs_set
+    @Apr@apr_file_close            @300 ; Apr::apr_file_close
+    @Apr@apr_file_copy             @297 ; Apr::apr_file_copy
+    @Apr@apr_file_data_get         @268 ; Apr::apr_file_data_get
+    @Apr@apr_file_data_set         @267 ; Apr::apr_file_data_set
+    @Apr@apr_file_dup              @279 ; Apr::apr_file_dup
+    @Apr@apr_file_dup2             @278 ; Apr::apr_file_dup2
+    @Apr@apr_file_eof              @295 ; Apr::apr_file_eof
+    @Apr@apr_file_flags_get        @257 ; Apr::apr_file_flags_get
+    @Apr@apr_file_flush            @280 ; Apr::apr_file_flush
+    @Apr@apr_file_getc             @284 ; Apr::apr_file_getc
+    @Apr@apr_file_gets             @282 ; Apr::apr_file_gets
+    @Apr@apr_file_info_get         @259 ; Apr::apr_file_info_get
+    @Apr@apr_file_inherit_set      @255 ; Apr::apr_file_inherit_set
+    @Apr@apr_file_inherit_unset    @254 ; Apr::apr_file_inherit_unset
+    @Apr@apr_file_lock             @271 ; Apr::apr_file_lock
+    @Apr@apr_file_mktemp           @253 ; Apr::apr_file_mktemp
+    @Apr@apr_file_mtime_set        @263 ; Apr::apr_file_mtime_set
+    @Apr@apr_file_name_get         @269 ; Apr::apr_file_name_get
+    @Apr@apr_file_namedpipe_create @274 ; Apr::apr_file_namedpipe_create
+    @Apr@apr_file_open             @301 ; Apr::apr_file_open
+    @Apr@apr_file_open_stderr      @294 ; Apr::apr_file_open_stderr
+    @Apr@apr_file_open_stdin       @292 ; Apr::apr_file_open_stdin
+    @Apr@apr_file_open_stdout      @293 ; Apr::apr_file_open_stdout
+    @Apr@apr_file_perms_set        @265 ; Apr::apr_file_perms_set
+    @Apr@apr_file_pipe_create      @275 ; Apr::apr_file_pipe_create
+    @Apr@apr_file_pipe_timeout_get @273 ; Apr::apr_file_pipe_timeout_get
+    @Apr@apr_file_pipe_timeout_set @272 ; Apr::apr_file_pipe_timeout_set
+    @Apr@apr_file_pool_get         @256 ; Apr::apr_file_pool_get
+    @Apr@apr_file_printf           @266 ; Apr::apr_file_printf
+    @Apr@apr_file_putc             @285 ; Apr::apr_file_putc
+    @Apr@apr_file_puts             @281 ; Apr::apr_file_puts
+    @Apr@apr_file_read             @291 ; Apr::apr_file_read
+    @Apr@apr_file_read_full        @288 ; Apr::apr_file_read_full
+    @Apr@apr_file_remove           @299 ; Apr::apr_file_remove
+    @Apr@apr_file_rename           @298 ; Apr::apr_file_rename
+    @Apr@apr_file_seek             @276 ; Apr::apr_file_seek
+    @Apr@apr_file_setaside         @277 ; Apr::apr_file_setaside
+    @Apr@apr_file_trunc            @258 ; Apr::apr_file_trunc
+    @Apr@apr_file_ungetc           @283 ; Apr::apr_file_ungetc
+    @Apr@apr_file_unlock           @270 ; Apr::apr_file_unlock
+    @Apr@apr_file_write            @290 ; Apr::apr_file_write
+    @Apr@apr_file_write_full       @287 ; Apr::apr_file_write_full
+    @Apr@apr_file_writev           @289 ; Apr::apr_file_writev
+    @Apr@apr_file_writev_full      @286 ; Apr::apr_file_writev_full
+    @Apr@apr_filepath_encoding     @303 ; Apr::apr_filepath_encoding
+    @Apr@apr_filepath_get          @305 ; Apr::apr_filepath_get
+    @Apr@apr_filepath_list_merge   @306 ; Apr::apr_filepath_list_merge
+    @Apr@apr_filepath_list_split   @307 ; Apr::apr_filepath_list_split
+    @Apr@apr_filepath_merge        @308 ; Apr::apr_filepath_merge
+    @Apr@apr_filepath_name_get     @516 ; Apr::apr_filepath_name_get
+    @Apr@apr_filepath_root         @309 ; Apr::apr_filepath_root
+    @Apr@apr_filepath_set          @304 ; Apr::apr_filepath_set
+    @Apr@apr_fnmatch               @71  ; Apr::apr_fnmatch
+    @Apr@apr_fnmatch_test          @70  ; Apr::apr_fnmatch_test
+    @Apr@apr_generate_random_bytes @509 ; Apr::apr_generate_random_bytes
+    @Apr@apr_gethostname           @225 ; Apr::apr_gethostname
+    @Apr@apr_getnameinfo           @227 ; Apr::apr_getnameinfo
+    @Apr@apr_getopt                @358 ; Apr::apr_getopt
+    @Apr@apr_getopt_init           @359 ; Apr::apr_getopt_init
+    @Apr@apr_getopt_long           @357 ; Apr::apr_getopt_long
+    @Apr@apr_getservbyname         @207 ; Apr::apr_getservbyname
+    @Apr@apr_gid_compare           @344 ; Apr::apr_gid_compare
+    @Apr@apr_gid_get               @345 ; Apr::apr_gid_get
+    @Apr@apr_gid_name_get          @346 ; Apr::apr_gid_name_get
+    @Apr@apr_hash_copy             @410 ; Apr::apr_hash_copy
+    @Apr@apr_hash_count            @404 ; Apr::apr_hash_count
+    @Apr@apr_hash_first            @407 ; Apr::apr_hash_first
+    @Apr@apr_hash_get              @408 ; Apr::apr_hash_get
+    @Apr@apr_hash_make             @412 ; Apr::apr_hash_make
+    @Apr@apr_hash_make_custom      @411 ; Apr::apr_hash_make_custom
+    @Apr@apr_hash_merge            @402 ; Apr::apr_hash_merge
+    @Apr@apr_hash_next             @406 ; Apr::apr_hash_next
+    @Apr@apr_hash_overlay          @403 ; Apr::apr_hash_overlay
+    @Apr@apr_hash_pool_get         @401 ; Apr::apr_hash_pool_get
+    @Apr@apr_hash_set              @409 ; Apr::apr_hash_set
+    @Apr@apr_hash_this             @405 ; Apr::apr_hash_this
+    @Apr@apr_hashfunc_default      @413 ; Apr::apr_hashfunc_default
+    @Apr@apr_initialize            @513 ; Apr::apr_initialize
+    @Apr@apr_ipsubnet_create       @206 ; Apr::apr_ipsubnet_create
+    @Apr@apr_ipsubnet_test         @205 ; Apr::apr_ipsubnet_test
+    @Apr@apr_is_empty_array        @392 ; Apr::apr_is_empty_array
+    @Apr@apr_is_empty_table        @393 ; Apr::apr_is_empty_table
+    @Apr@apr_is_fnmatch            @69  ; Apr::apr_is_fnmatch
+    @Apr@apr_itoa                  @433 ; Apr::apr_itoa
+    @Apr@apr_ltoa                  @432 ; Apr::apr_ltoa
+    @Apr@apr_match_glob            @68  ; Apr::apr_match_glob
+    @Apr@apr_mcast_hops            @197 ; Apr::apr_mcast_hops
+    @Apr@apr_mcast_interface       @195 ; Apr::apr_mcast_interface
+    @Apr@apr_mcast_join            @199 ; Apr::apr_mcast_join
+    @Apr@apr_mcast_leave           @198 ; Apr::apr_mcast_leave
+    @Apr@apr_mcast_loopback        @196 ; Apr::apr_mcast_loopback
+    @Apr@apr_mmap_create           @248 ; Apr::apr_mmap_create
+    @Apr@apr_mmap_delete           @246 ; Apr::apr_mmap_delete
+    @Apr@apr_mmap_dup              @247 ; Apr::apr_mmap_dup
+    @Apr@apr_mmap_offset           @245 ; Apr::apr_mmap_offset
+    @Apr@apr_month_snames          @335 ; Apr::apr_month_snames
+    @Apr@apr_off_t_toa             @431 ; Apr::apr_off_t_toa
+    @Apr@apr_os_default_encoding   @25  ; Apr::apr_os_default_encoding
+    @Apr@apr_os_dir_get            @50  ; Apr::apr_os_dir_get
+    @Apr@apr_os_dir_put            @35  ; Apr::apr_os_dir_put
+    @Apr@apr_os_dso_handle_get     @27  ; Apr::apr_os_dso_handle_get
+    @Apr@apr_os_dso_handle_put     @28  ; Apr::apr_os_dso_handle_put
+    @Apr@apr_os_exp_time_get       @47  ; Apr::apr_os_exp_time_get
+    @Apr@apr_os_exp_time_put       @30  ; Apr::apr_os_exp_time_put
+    @Apr@apr_os_file_get           @51  ; Apr::apr_os_file_get
+    @Apr@apr_os_file_put           @38  ; Apr::apr_os_file_put
+    @Apr@apr_os_imp_time_get       @46  ; Apr::apr_os_imp_time_get
+    @Apr@apr_os_imp_time_put       @31  ; Apr::apr_os_imp_time_put
+    @Apr@apr_os_locale_encoding    @24  ; Apr::apr_os_locale_encoding
+    @Apr@apr_os_pipe_put           @37  ; Apr::apr_os_pipe_put
+    @Apr@apr_os_pipe_put_ex        @36  ; Apr::apr_os_pipe_put_ex
+    @Apr@apr_os_proc_mutex_get     @48  ; Apr::apr_os_proc_mutex_get
+    @Apr@apr_os_proc_mutex_put     @32  ; Apr::apr_os_proc_mutex_put
+    @Apr@apr_os_shm_get            @45  ; Apr::apr_os_shm_get
+    @Apr@apr_os_shm_put            @29  ; Apr::apr_os_shm_put
+    @Apr@apr_os_sock_get           @49  ; Apr::apr_os_sock_get
+    @Apr@apr_os_sock_make          @33  ; Apr::apr_os_sock_make
+    @Apr@apr_os_sock_put           @34  ; Apr::apr_os_sock_put
+    @Apr@apr_os_thread_current     @40  ; Apr::apr_os_thread_current
+    @Apr@apr_os_thread_equal       @39  ; Apr::apr_os_thread_equal
+    @Apr@apr_os_thread_get         @44  ; Apr::apr_os_thread_get
+    @Apr@apr_os_thread_put         @42  ; Apr::apr_os_thread_put
+    @Apr@apr_os_threadkey_get      @43  ; Apr::apr_os_threadkey_get
+    @Apr@apr_os_threadkey_put      @41  ; Apr::apr_os_threadkey_put
+    @Apr@apr_os_uuid_get           @26  ; Apr::apr_os_uuid_get
+    @Apr@apr_palloc                @495 ; Apr::apr_palloc
+    @Apr@apr_palloc_debug          @494 ; Apr::apr_palloc_debug
+    @Apr@apr_parse_addr_port       @226 ; Apr::apr_parse_addr_port
+    @Apr@apr_password_get          @514 ; Apr::apr_password_get
+    @Apr@apr_pcalloc               @493 ; Apr::apr_pcalloc
+    @Apr@apr_pcalloc_debug         @492 ; Apr::apr_pcalloc_debug
+    @Apr@apr_pmemdup               @444 ; Apr::apr_pmemdup
+    @Apr@apr_poll                  @183 ; Apr::apr_poll
+    @Apr@apr_pollset_add           @186 ; Apr::apr_pollset_add
+    @Apr@apr_pollset_create        @188 ; Apr::apr_pollset_create
+    @Apr@apr_pollset_destroy       @187 ; Apr::apr_pollset_destroy
+    @Apr@apr_pollset_poll          @184 ; Apr::apr_pollset_poll
+    @Apr@apr_pollset_remove        @185 ; Apr::apr_pollset_remove
+    @Apr@apr_pool_abort_get        @490 ; Apr::apr_pool_abort_get
+    @Apr@apr_pool_abort_set        @491 ; Apr::apr_pool_abort_set
+    @Apr@apr_pool_allocator_get    @500 ; Apr::apr_pool_allocator_get
+    @Apr@apr_pool_child_cleanup_set @481 ; Apr::apr_pool_child_cleanup_set
+    @Apr@apr_pool_cleanup_for_exec @478 ; Apr::apr_pool_cleanup_for_exec
+    @Apr@apr_pool_cleanup_kill     @482 ; Apr::apr_pool_cleanup_kill
+    @Apr@apr_pool_cleanup_null     @479 ; Apr::apr_pool_cleanup_null
+    @Apr@apr_pool_cleanup_register @483 ; Apr::apr_pool_cleanup_register
+    @Apr@apr_pool_cleanup_run      @480 ; Apr::apr_pool_cleanup_run
+    @Apr@apr_pool_clear            @499 ; Apr::apr_pool_clear
+    @Apr@apr_pool_clear_debug      @498 ; Apr::apr_pool_clear_debug
+    @Apr@apr_pool_create_ex        @502 ; Apr::apr_pool_create_ex
+    @Apr@apr_pool_create_ex_debug  @501 ; Apr::apr_pool_create_ex_debug
+    @Apr@apr_pool_destroy          @497 ; Apr::apr_pool_destroy
+    @Apr@apr_pool_destroy_debug    @496 ; Apr::apr_pool_destroy_debug
+    @Apr@apr_pool_initialize       @504 ; Apr::apr_pool_initialize
+    @Apr@apr_pool_is_ancestor      @488 ; Apr::apr_pool_is_ancestor
+    @Apr@apr_pool_note_subprocess  @98  ; Apr::apr_pool_note_subprocess
+    @Apr@apr_pool_parent_get       @489 ; Apr::apr_pool_parent_get
+    @Apr@apr_pool_tag              @487 ; Apr::apr_pool_tag
+    @Apr@apr_pool_terminate        @503 ; Apr::apr_pool_terminate
+    @Apr@apr_pool_userdata_get     @484 ; Apr::apr_pool_userdata_get
+    @Apr@apr_pool_userdata_set     @486 ; Apr::apr_pool_userdata_set
+    @Apr@apr_pool_userdata_setn    @485 ; Apr::apr_pool_userdata_setn
+    @Apr@apr_proc_create           @108 ; Apr::apr_proc_create
+    @Apr@apr_proc_detach           @105 ; Apr::apr_proc_detach
+    @Apr@apr_proc_kill             @99  ; Apr::apr_proc_kill
+    @Apr@apr_proc_mutex_child_init @93  ; Apr::apr_proc_mutex_child_init
+    @Apr@apr_proc_mutex_cleanup    @88  ; Apr::apr_proc_mutex_cleanup
+    @Apr@apr_proc_mutex_create     @94  ; Apr::apr_proc_mutex_create
+    @Apr@apr_proc_mutex_defname    @85  ; Apr::apr_proc_mutex_defname
+    @Apr@apr_proc_mutex_destroy    @89  ; Apr::apr_proc_mutex_destroy
+    @Apr@apr_proc_mutex_lock       @92  ; Apr::apr_proc_mutex_lock
+    @Apr@apr_proc_mutex_lockfile   @87  ; Apr::apr_proc_mutex_lockfile
+    @Apr@apr_proc_mutex_name       @86  ; Apr::apr_proc_mutex_name
+    @Apr@apr_proc_mutex_pool_get   @84  ; Apr::apr_proc_mutex_pool_get
+    @Apr@apr_proc_mutex_trylock    @91  ; Apr::apr_proc_mutex_trylock
+    @Apr@apr_proc_mutex_unlock     @90  ; Apr::apr_proc_mutex_unlock
+    @Apr@apr_proc_other_child_alert @102 ; Apr::apr_proc_other_child_alert
+    @Apr@apr_proc_other_child_refresh @101 ; Apr::apr_proc_other_child_refresh
+    @Apr@apr_proc_other_child_refresh_all @100 ; Apr::apr_proc_other_child_refresh_all
+    @Apr@apr_proc_other_child_register @104 ; Apr::apr_proc_other_child_register
+    @Apr@apr_proc_other_child_unregister @103 ; Apr::apr_proc_other_child_unregister
+    @Apr@apr_proc_wait             @107 ; Apr::apr_proc_wait
+    @Apr@apr_proc_wait_all_procs   @106 ; Apr::apr_proc_wait_all_procs
+    @Apr@apr_procattr_addrspace_set @111 ; Apr::apr_procattr_addrspace_set
+    @Apr@apr_procattr_child_err_set @117 ; Apr::apr_procattr_child_err_set
+    @Apr@apr_procattr_child_errfn_set @113 ; Apr::apr_procattr_child_errfn_set
+    @Apr@apr_procattr_child_in_set @119 ; Apr::apr_procattr_child_in_set
+    @Apr@apr_procattr_child_out_set @118 ; Apr::apr_procattr_child_out_set
+    @Apr@apr_procattr_cmdtype_set  @115 ; Apr::apr_procattr_cmdtype_set
+    @Apr@apr_procattr_create       @121 ; Apr::apr_procattr_create
+    @Apr@apr_procattr_detach_set   @114 ; Apr::apr_procattr_detach_set
+    @Apr@apr_procattr_dir_set      @116 ; Apr::apr_procattr_dir_set
+    @Apr@apr_procattr_error_check_set @112 ; Apr::apr_procattr_error_check_set
+    @Apr@apr_procattr_group_set    @109 ; Apr::apr_procattr_group_set
+    @Apr@apr_procattr_io_set       @120 ; Apr::apr_procattr_io_set
+    @Apr@apr_procattr_user_set     @110 ; Apr::apr_procattr_user_set
+    @Apr@apr_psprintf              @440 ; Apr::apr_psprintf
+    @Apr@apr_pstrcat               @443 ; Apr::apr_pstrcat
+    @Apr@apr_pstrcatv              @442 ; Apr::apr_pstrcatv
+    @Apr@apr_pstrdup               @447 ; Apr::apr_pstrdup
+    @Apr@apr_pstrmemdup            @446 ; Apr::apr_pstrmemdup
+    @Apr@apr_pstrndup              @445 ; Apr::apr_pstrndup
+    @Apr@apr_pvsprintf             @441 ; Apr::apr_pvsprintf
+    @Apr@apr_random_add_entropy    @458 ; Apr::apr_random_add_entropy
+    @Apr@apr_random_after_fork     @452 ; Apr::apr_random_after_fork
+    @Apr@apr_random_barrier        @455 ; Apr::apr_random_barrier
+    @Apr@apr_random_init           @460 ; Apr::apr_random_init
+    @Apr@apr_random_insecure_bytes @457 ; Apr::apr_random_insecure_bytes
+    @Apr@apr_random_insecure_ready @453 ; Apr::apr_random_insecure_ready
+    @Apr@apr_random_secure_bytes   @456 ; Apr::apr_random_secure_bytes
+    @Apr@apr_random_secure_ready   @454 ; Apr::apr_random_secure_ready
+    @Apr@apr_random_standard_new   @459 ; Apr::apr_random_standard_new
+    @Apr@apr_rfc822_date           @325 ; Apr::apr_rfc822_date
+    @Apr@apr_shm_attach            @422 ; Apr::apr_shm_attach
+    @Apr@apr_shm_baseaddr_get      @420 ; Apr::apr_shm_baseaddr_get
+    @Apr@apr_shm_create            @425 ; Apr::apr_shm_create
+    @Apr@apr_shm_destroy           @423 ; Apr::apr_shm_destroy
+    @Apr@apr_shm_detach            @421 ; Apr::apr_shm_detach
+    @Apr@apr_shm_pool_get          @418 ; Apr::apr_shm_pool_get
+    @Apr@apr_shm_remove            @424 ; Apr::apr_shm_remove
+    @Apr@apr_shm_size_get          @419 ; Apr::apr_shm_size_get
+    @Apr@apr_signal_block          @451 ; Apr::apr_signal_block
+    @Apr@apr_signal_unblock        @450 ; Apr::apr_signal_unblock
+    @Apr@apr_sleep                 @326 ; Apr::apr_sleep
+    @Apr@apr_snprintf              @435 ; Apr::apr_snprintf
+    @Apr@apr_sockaddr_equal        @209 ; Apr::apr_sockaddr_equal
+    @Apr@apr_sockaddr_info_get     @228 ; Apr::apr_sockaddr_info_get
+    @Apr@apr_sockaddr_ip_get       @210 ; Apr::apr_sockaddr_ip_get
+    @Apr@apr_socket_accept         @230 ; Apr::apr_socket_accept
+    @Apr@apr_socket_addr_get       @211 ; Apr::apr_socket_addr_get
+    @Apr@apr_socket_atmark         @212 ; Apr::apr_socket_atmark
+    @Apr@apr_socket_bind           @232 ; Apr::apr_socket_bind
+    @Apr@apr_socket_close          @233 ; Apr::apr_socket_close
+    @Apr@apr_socket_connect        @229 ; Apr::apr_socket_connect
+    @Apr@apr_socket_create         @235 ; Apr::apr_socket_create
+    @Apr@apr_socket_data_get       @224 ; Apr::apr_socket_data_get
+    @Apr@apr_socket_data_set       @223 ; Apr::apr_socket_data_set
+    @Apr@apr_socket_inherit_set    @203 ; Apr::apr_socket_inherit_set
+    @Apr@apr_socket_inherit_unset  @201 ; Apr::apr_socket_inherit_unset
+    @Apr@apr_socket_listen         @231 ; Apr::apr_socket_listen
+    @Apr@apr_socket_opt_get        @214 ; Apr::apr_socket_opt_get
+    @Apr@apr_socket_opt_set        @216 ; Apr::apr_socket_opt_set
+    @Apr@apr_socket_protocol_get   @204 ; Apr::apr_socket_protocol_get
+    @Apr@apr_socket_recv           @217 ; Apr::apr_socket_recv
+    @Apr@apr_socket_recvfrom       @219 ; Apr::apr_socket_recvfrom
+    @Apr@apr_socket_send           @222 ; Apr::apr_socket_send
+    @Apr@apr_socket_sendfile       @218 ; Apr::apr_socket_sendfile
+    @Apr@apr_socket_sendto         @220 ; Apr::apr_socket_sendto
+    @Apr@apr_socket_sendv          @221 ; Apr::apr_socket_sendv
+    @Apr@apr_socket_set_inherit    @202 ; Apr::apr_socket_set_inherit
+    @Apr@apr_socket_shutdown       @234 ; Apr::apr_socket_shutdown
+    @Apr@apr_socket_timeout_get    @213 ; Apr::apr_socket_timeout_get
+    @Apr@apr_socket_timeout_set    @215 ; Apr::apr_socket_timeout_set
+    @Apr@apr_socket_type_get       @208 ; Apr::apr_socket_type_get
+    @Apr@apr_socket_unset_inherit  @200 ; Apr::apr_socket_unset_inherit
+    @Apr@apr_stat                  @314 ; Apr::apr_stat
+    @Apr@apr_strerror              @526 ; Apr::apr_strerror
+    @Apr@apr_strfsize              @427 ; Apr::apr_strfsize
+    @Apr@apr_strftime              @323 ; Apr::apr_strftime
+    @Apr@apr_strnatcasecmp         @448 ; Apr::apr_strnatcasecmp
+    @Apr@apr_strnatcmp             @449 ; Apr::apr_strnatcmp
+    @Apr@apr_strtoff               @430 ; Apr::apr_strtoff
+    @Apr@apr_strtoi64              @429 ; Apr::apr_strtoi64
+    @Apr@apr_strtok                @436 ; Apr::apr_strtok
+    @Apr@apr_table_add             @374 ; Apr::apr_table_add
+    @Apr@apr_table_addn            @373 ; Apr::apr_table_addn
+    @Apr@apr_table_clear           @381 ; Apr::apr_table_clear
+    @Apr@apr_table_compress        @368 ; Apr::apr_table_compress
+    @Apr@apr_table_copy            @382 ; Apr::apr_table_copy
+    @Apr@apr_table_do              @371 ; Apr::apr_table_do
+    @Apr@apr_table_elts            @394 ; Apr::apr_table_elts
+    @Apr@apr_table_get             @380 ; Apr::apr_table_get
+    @Apr@apr_table_make            @383 ; Apr::apr_table_make
+    @Apr@apr_table_merge           @376 ; Apr::apr_table_merge
+    @Apr@apr_table_mergen          @375 ; Apr::apr_table_mergen
+    @Apr@apr_table_overlap         @369 ; Apr::apr_table_overlap
+    @Apr@apr_table_overlay         @372 ; Apr::apr_table_overlay
+    @Apr@apr_table_set             @379 ; Apr::apr_table_set
+    @Apr@apr_table_setn            @378 ; Apr::apr_table_setn
+    @Apr@apr_table_unset           @377 ; Apr::apr_table_unset
+    @Apr@apr_table_vdo             @370 ; Apr::apr_table_vdo
+    @Apr@apr_temp_dir_get          @252 ; Apr::apr_temp_dir_get
+    @Apr@apr_terminate             @511 ; Apr::apr_terminate
+    @Apr@apr_terminate2            @510 ; Apr::apr_terminate2
+    @Apr@apr_thread_cond_broadcast @161 ; Apr::apr_thread_cond_broadcast
+    @Apr@apr_thread_cond_create    @165 ; Apr::apr_thread_cond_create
+    @Apr@apr_thread_cond_destroy   @160 ; Apr::apr_thread_cond_destroy
+    @Apr@apr_thread_cond_pool_get  @159 ; Apr::apr_thread_cond_pool_get
+    @Apr@apr_thread_cond_signal    @162 ; Apr::apr_thread_cond_signal
+    @Apr@apr_thread_cond_timedwait @163 ; Apr::apr_thread_cond_timedwait
+    @Apr@apr_thread_cond_wait      @164 ; Apr::apr_thread_cond_wait
+    @Apr@apr_thread_create         @136 ; Apr::apr_thread_create
+    @Apr@apr_thread_data_get       @129 ; Apr::apr_thread_data_get
+    @Apr@apr_thread_data_set       @128 ; Apr::apr_thread_data_set
+    @Apr@apr_thread_detach         @130 ; Apr::apr_thread_detach
+    @Apr@apr_thread_exit           @135 ; Apr::apr_thread_exit
+    @Apr@apr_thread_join           @134 ; Apr::apr_thread_join
+    @Apr@apr_thread_mutex_create   @181 ; Apr::apr_thread_mutex_create
+    @Apr@apr_thread_mutex_destroy  @177 ; Apr::apr_thread_mutex_destroy
+    @Apr@apr_thread_mutex_lock     @180 ; Apr::apr_thread_mutex_lock
+    @Apr@apr_thread_mutex_pool_get @176 ; Apr::apr_thread_mutex_pool_get
+    @Apr@apr_thread_mutex_trylock  @179 ; Apr::apr_thread_mutex_trylock
+    @Apr@apr_thread_mutex_unlock   @178 ; Apr::apr_thread_mutex_unlock
+    @Apr@apr_thread_once           @131 ; Apr::apr_thread_once
+    @Apr@apr_thread_once_init      @132 ; Apr::apr_thread_once_init
+    @Apr@apr_thread_pool_get       @97  ; Apr::apr_thread_pool_get
+    @Apr@apr_thread_rwlock_create  @174 ; Apr::apr_thread_rwlock_create
+    @Apr@apr_thread_rwlock_destroy @168 ; Apr::apr_thread_rwlock_destroy
+    @Apr@apr_thread_rwlock_pool_get @167 ; Apr::apr_thread_rwlock_pool_get
+    @Apr@apr_thread_rwlock_rdlock  @173 ; Apr::apr_thread_rwlock_rdlock
+    @Apr@apr_thread_rwlock_tryrdlock @172 ; Apr::apr_thread_rwlock_tryrdlock
+    @Apr@apr_thread_rwlock_trywrlock @170 ; Apr::apr_thread_rwlock_trywrlock
+    @Apr@apr_thread_rwlock_unlock  @169 ; Apr::apr_thread_rwlock_unlock
+    @Apr@apr_thread_rwlock_wrlock  @171 ; Apr::apr_thread_rwlock_wrlock
+    @Apr@apr_thread_yield          @133 ; Apr::apr_thread_yield
+    @Apr@apr_threadattr_create     @141 ; Apr::apr_threadattr_create
+    @Apr@apr_threadattr_detach_get @139 ; Apr::apr_threadattr_detach_get
+    @Apr@apr_threadattr_detach_set @140 ; Apr::apr_threadattr_detach_set
+    @Apr@apr_threadattr_guardsize_set @137 ; Apr::apr_threadattr_guardsize_set
+    @Apr@apr_threadattr_stacksize_set @138 ; Apr::apr_threadattr_stacksize_set
+    @Apr@apr_threadkey_data_get    @123 ; Apr::apr_threadkey_data_get
+    @Apr@apr_threadkey_data_set    @122 ; Apr::apr_threadkey_data_set
+    @Apr@apr_threadkey_private_create @127 ; Apr::apr_threadkey_private_create
+    @Apr@apr_threadkey_private_delete @124 ; Apr::apr_threadkey_private_delete
+    @Apr@apr_threadkey_private_get @126 ; Apr::apr_threadkey_private_get
+    @Apr@apr_threadkey_private_set @125 ; Apr::apr_threadkey_private_set
+    @Apr@apr_time_ansi_put         @332 ; Apr::apr_time_ansi_put
+    @Apr@apr_time_as_msec$qqrj     @16  ; __fastcall Apr::apr_time_as_msec(__int64)
+    @Apr@apr_time_clock_hires      @322 ; Apr::apr_time_clock_hires
+    @Apr@apr_time_exp_get          @328 ; Apr::apr_time_exp_get
+    @Apr@apr_time_exp_gmt          @330 ; Apr::apr_time_exp_gmt
+    @Apr@apr_time_exp_gmt_get      @327 ; Apr::apr_time_exp_gmt_get
+    @Apr@apr_time_exp_lt           @329 ; Apr::apr_time_exp_lt
+    @Apr@apr_time_exp_tz           @331 ; Apr::apr_time_exp_tz
+    @Apr@apr_time_from_sec$qqrj    @15  ; __fastcall Apr::apr_time_from_sec(__int64)
+    @Apr@apr_time_make$qqrjj       @14  ; __fastcall Apr::apr_time_make(__int64, __int64)
+    @Apr@apr_time_msec$qqrj        @17  ; __fastcall Apr::apr_time_msec(__int64)
+    @Apr@apr_time_now              @333 ; Apr::apr_time_now
+    @Apr@apr_time_sec$qqrj         @19  ; __fastcall Apr::apr_time_sec(__int64)
+    @Apr@apr_time_usec$qqrj        @18  ; __fastcall Apr::apr_time_usec(__int64)
+    @Apr@apr_tokenize_to_argv      @437 ; Apr::apr_tokenize_to_argv
+    @Apr@apr_uid_compare           @347 ; Apr::apr_uid_compare
+    @Apr@apr_uid_current           @351 ; Apr::apr_uid_current
+    @Apr@apr_uid_get               @349 ; Apr::apr_uid_get
+    @Apr@apr_uid_homepath_get      @348 ; Apr::apr_uid_homepath_get
+    @Apr@apr_uid_name_get          @350 ; Apr::apr_uid_name_get
+    @Apr@apr_version               @524 ; Apr::apr_version
+    @Apr@apr_version_string        @523 ; Apr::apr_version_string
+    @Apr@apr_vformatter            @515 ; Apr::apr_vformatter
+    @Apr@apr_vsnprintf             @434 ; Apr::apr_vsnprintf
+    @Apr@initialization$qqrv       @1   ; __fastcall Apr::initialization()
+    @GetPackageInfoTable           @2198; GetPackageInfoTable
+    @Svn@@GetPackageInfoTable$qqrv @2195; Svn::__linkproc__ __fastcall GetPackageInfoTable()
+    @Svn@@PackageLoad$qqrv         @2194; Svn::__linkproc__ __fastcall PackageLoad()
+    @Svn@@PackageUnload$qqrv       @2193; Svn::__linkproc__ __fastcall PackageUnload()
+    @Svn@initialization$qqrv       @2192; __fastcall Svn::initialization()
+    @Svn_client@ESvnError@         @584 ; Svn_client::ESvnError::
+    @Svn_client@ESvnError@$bctr$qqrp20Svn_client@TSvnError @537 ; __fastcall Svn_client::ESvnError::ESvnError(Svn_client::TSvnError *)
+    @Svn_client@ESvnError@$bdtr$qqrv @536 ; __fastcall Svn_client::ESvnError::~ESvnError()
+    @Svn_client@ESvnError@GetCount$qqrv @540 ; __fastcall Svn_client::ESvnError::GetCount()
+    @Svn_client@ESvnError@GetErrorCodes$qqri @539 ; __fastcall Svn_client::ESvnError::GetErrorCodes(int)
+    @Svn_client@ESvnError@GetMessages$qqri @538 ; __fastcall Svn_client::ESvnError::GetMessages(int)
+    @Svn_client@Finalization$qqrv  @532 ; __fastcall Svn_client::Finalization()
+    @Svn_client@FreeSvnClientLib$qqrv @548 ; __fastcall Svn_client::FreeSvnClientLib()
+    @Svn_client@FreeSvnDeltaLib$qqrv @547 ; __fastcall Svn_client::FreeSvnDeltaLib()
+    @Svn_client@FreeSvnDiffLib$qqrv @546 ; __fastcall Svn_client::FreeSvnDiffLib()
+    @Svn_client@FreeSvnFsLib$qqrv  @545 ; __fastcall Svn_client::FreeSvnFsLib()
+    @Svn_client@FreeSvnRaLib$qqrv  @544 ; __fastcall Svn_client::FreeSvnRaLib()
+    @Svn_client@FreeSvnReposLib$qqrv @543 ; __fastcall Svn_client::FreeSvnReposLib()
+    @Svn_client@FreeSvnSubrLib$qqrv @542 ; __fastcall Svn_client::FreeSvnSubrLib()
+    @Svn_client@FreeSvnWcLib$qqrv  @541 ; __fastcall Svn_client::FreeSvnWcLib()
+    @Svn_client@GetSvnErrorMessage$qqri @535 ; __fastcall Svn_client::GetSvnErrorMessage(int)
+    @Svn_client@LoadSvnClientLib$qqrx20System@UnicodeStringt1 @556 ; __fastcall Svn_client::LoadSvnClientLib(const System::UnicodeString, const System::UnicodeString)
+    @Svn_client@LoadSvnDeltaLib$qqrx20System@UnicodeStringt1 @555 ; __fastcall Svn_client::LoadSvnDeltaLib(const System::UnicodeString, const System::UnicodeString)
+    @Svn_client@LoadSvnDiffLib$qqrx20System@UnicodeStringt1 @554 ; __fastcall Svn_client::LoadSvnDiffLib(const System::UnicodeString, const System::UnicodeString)
+    @Svn_client@LoadSvnFsLib$qqrx20System@UnicodeStringt1 @553 ; __fastcall Svn_client::LoadSvnFsLib(const System::UnicodeString, const System::UnicodeString)
+    @Svn_client@LoadSvnRaLib$qqrx20System@UnicodeStringt1 @552 ; __fastcall Svn_client::LoadSvnRaLib(const System::UnicodeString, const System::UnicodeString)
+    @Svn_client@LoadSvnReposLib$qqrx20System@UnicodeStringt1 @551 ; __fastcall Svn_client::LoadSvnReposLib(const System::UnicodeString, const System::UnicodeString)
+    @Svn_client@LoadSvnSubrLib$qqrx20System@UnicodeStringt1 @550 ; __fastcall Svn_client::LoadSvnSubrLib(const System::UnicodeString, const System::UnicodeString)
+    @Svn_client@LoadSvnWcLib$qqrx20System@UnicodeStringt1 @549 ; __fastcall Svn_client::LoadSvnWcLib(const System::UnicodeString, const System::UnicodeString)
+    @Svn_client@RaiseSvnError$qqrp20Svn_client@TSvnError @533 ; __fastcall Svn_client::RaiseSvnError(Svn_client::TSvnError *)
+    @Svn_client@SVN_INFO_SIZE_UNKNOWN @745 ; Svn_client::SVN_INFO_SIZE_UNKNOWN
+    @Svn_client@SVN_INVALID_FILESIZE @1813; Svn_client::SVN_INVALID_FILESIZE
+    @Svn_client@SVN_INVALID_REVNUM @1814; Svn_client::SVN_INVALID_REVNUM
+    @Svn_client@SVN_PROP_REVISION_ALL_PROPS @1663; Svn_client::SVN_PROP_REVISION_ALL_PROPS
+    @Svn_client@SvnCheck$qqrp20Svn_client@TSvnError @534 ; __fastcall Svn_client::SvnCheck(Svn_client::TSvnError *)
+    @Svn_client@SvnClientLibLoaded$qqrv @564 ; __fastcall Svn_client::SvnClientLibLoaded()
+    @Svn_client@SvnDeltaLibLoaded$qqrv @563 ; __fastcall Svn_client::SvnDeltaLibLoaded()
+    @Svn_client@SvnDiffLibLoaded$qqrv @562 ; __fastcall Svn_client::SvnDiffLibLoaded()
+    @Svn_client@SvnFsLibLoaded$qqrv @561 ; __fastcall Svn_client::SvnFsLibLoaded()
+    @Svn_client@SvnIsLockError$qqrrx20Svn_client@TSvnError @566 ; __fastcall Svn_client::SvnIsLockError(const Svn_client::TSvnError&)
+    @Svn_client@SvnIsUnlockError$qqrrx20Svn_client@TSvnError @565 ; __fastcall Svn_client::SvnIsUnlockError(const Svn_client::TSvnError&)
+    @Svn_client@SvnRaLibLoaded$qqrv @560 ; __fastcall Svn_client::SvnRaLibLoaded()
+    @Svn_client@SvnReposLibLoaded$qqrv @559 ; __fastcall Svn_client::SvnReposLibLoaded()
+    @Svn_client@SvnSubrLibLoaded$qqrv @558 ; __fastcall Svn_client::SvnSubrLibLoaded()
+    @Svn_client@SvnWcLibLoaded$qqrv @557 ; __fastcall Svn_client::SvnWcLibLoaded()
+    @Svn_client@initialization$qqrv @531 ; __fastcall Svn_client::initialization()
+    @Svn_client@svn_auth_first_credentials @1051; Svn_client::svn_auth_first_credentials
+    @Svn_client@svn_auth_get_parameter @1052; Svn_client::svn_auth_get_parameter
+    @Svn_client@svn_auth_get_platform_specific_client_providers @1034; Svn_client::svn_auth_get_platform_specific_client_providers
+    @Svn_client@svn_auth_get_platform_specific_provider @1048; Svn_client::svn_auth_get_platform_specific_provider
+    @Svn_client@svn_auth_get_simple_prompt_provider @1047; Svn_client::svn_auth_get_simple_prompt_provider
+    @Svn_client@svn_auth_get_simple_provider @1045; Svn_client::svn_auth_get_simple_provider
+    @Svn_client@svn_auth_get_simple_provider2 @1044; Svn_client::svn_auth_get_simple_provider2
+    @Svn_client@svn_auth_get_ssl_client_cert_file_provider @1039; Svn_client::svn_auth_get_ssl_client_cert_file_provider
+    @Svn_client@svn_auth_get_ssl_client_cert_prompt_provider @1036; Svn_client::svn_auth_get_ssl_client_cert_prompt_provider
+    @Svn_client@svn_auth_get_ssl_client_cert_pw_file_provider @1038; Svn_client::svn_auth_get_ssl_client_cert_pw_file_provider
+    @Svn_client@svn_auth_get_ssl_client_cert_pw_prompt_provider @1035; Svn_client::svn_auth_get_ssl_client_cert_pw_prompt_provider
+    @Svn_client@svn_auth_get_ssl_server_trust_file_provider @1041; Svn_client::svn_auth_get_ssl_server_trust_file_provider
+    @Svn_client@svn_auth_get_ssl_server_trust_prompt_provider @1037; Svn_client::svn_auth_get_ssl_server_trust_prompt_provider
+    @Svn_client@svn_auth_get_username_prompt_provider @1046; Svn_client::svn_auth_get_username_prompt_provider
+    @Svn_client@svn_auth_get_username_provider @1042; Svn_client::svn_auth_get_username_provider
+    @Svn_client@svn_auth_get_windows_simple_provider @1043; Svn_client::svn_auth_get_windows_simple_provider
+    @Svn_client@svn_auth_get_windows_ssl_server_trust_provider @1040; Svn_client::svn_auth_get_windows_ssl_server_trust_provider
+    @Svn_client@svn_auth_next_credentials @1050; Svn_client::svn_auth_next_credentials
+    @Svn_client@svn_auth_open      @1054; Svn_client::svn_auth_open
+    @Svn_client@svn_auth_save_credentials @1049; Svn_client::svn_auth_save_credentials
+    @Svn_client@svn_auth_set_parameter @1053; Svn_client::svn_auth_set_parameter
+    @Svn_client@svn_auth_ssl_server_cert_info_dup @1055; Svn_client::svn_auth_ssl_server_cert_info_dup
+    @Svn_client@svn_base64_decode  @1383; Svn_client::svn_base64_decode
+    @Svn_client@svn_base64_decode_string @1381; Svn_client::svn_base64_decode_string
+    @Svn_client@svn_base64_encode  @1384; Svn_client::svn_base64_encode
+    @Svn_client@svn_base64_encode_string @1382; Svn_client::svn_base64_encode_string
+    @Svn_client@svn_base64_from_md5 @1380; Svn_client::svn_base64_from_md5
+    @Svn_client@svn_categorize_props @1667; Svn_client::svn_categorize_props
+    @Svn_client@svn_client_add     @686 ; Svn_client::svn_client_add
+    @Svn_client@svn_client_add2    @687 ; Svn_client::svn_client_add2
+    @Svn_client@svn_client_add3    @688 ; Svn_client::svn_client_add3
+    @Svn_client@svn_client_add4    @689 ; Svn_client::svn_client_add4
+    @Svn_client@svn_client_add_to_changelist @599 ; Svn_client::svn_client_add_to_changelist
+    @Svn_client@svn_client_blame   @662 ; Svn_client::svn_client_blame
+    @Svn_client@svn_client_blame2  @663 ; Svn_client::svn_client_blame2
+    @Svn_client@svn_client_blame3  @664 ; Svn_client::svn_client_blame3
+    @Svn_client@svn_client_blame4  @665 ; Svn_client::svn_client_blame4
+    @Svn_client@svn_client_cat     @600 ; Svn_client::svn_client_cat
+    @Svn_client@svn_client_cat2    @601 ; Svn_client::svn_client_cat2
+    @Svn_client@svn_client_checkout @695 ; Svn_client::svn_client_checkout
+    @Svn_client@svn_client_checkout2 @696 ; Svn_client::svn_client_checkout2
+    @Svn_client@svn_client_checkout3 @697 ; Svn_client::svn_client_checkout3
+    @Svn_client@svn_client_cleanup @637 ; Svn_client::svn_client_cleanup
+    @Svn_client@svn_client_commit  @673 ; Svn_client::svn_client_commit
+    @Svn_client@svn_client_commit2 @674 ; Svn_client::svn_client_commit2
+    @Svn_client@svn_client_commit3 @675 ; Svn_client::svn_client_commit3
+    @Svn_client@svn_client_commit4 @676 ; Svn_client::svn_client_commit4
+    @Svn_client@svn_client_commit_item2_dup @701 ; Svn_client::svn_client_commit_item2_dup
+    @Svn_client@svn_client_commit_item3_dup @699 ; Svn_client::svn_client_commit_item3_dup
+    @Svn_client@svn_client_commit_item_create @700 ; Svn_client::svn_client_commit_item_create
+    @Svn_client@svn_client_copy    @628 ; Svn_client::svn_client_copy
+    @Svn_client@svn_client_copy2   @629 ; Svn_client::svn_client_copy2
+    @Svn_client@svn_client_copy3   @630 ; Svn_client::svn_client_copy3
+    @Svn_client@svn_client_copy4   @631 ; Svn_client::svn_client_copy4
+    @Svn_client@svn_client_create_context @698 ; Svn_client::svn_client_create_context
+    @Svn_client@svn_client_delete  @680 ; Svn_client::svn_client_delete
+    @Svn_client@svn_client_delete2 @681 ; Svn_client::svn_client_delete2
+    @Svn_client@svn_client_delete3 @682 ; Svn_client::svn_client_delete3
+    @Svn_client@svn_client_diff    @658 ; Svn_client::svn_client_diff
+    @Svn_client@svn_client_diff2   @659 ; Svn_client::svn_client_diff2
+    @Svn_client@svn_client_diff3   @660 ; Svn_client::svn_client_diff3
+    @Svn_client@svn_client_diff4   @661 ; Svn_client::svn_client_diff4
+    @Svn_client@svn_client_diff_peg @654 ; Svn_client::svn_client_diff_peg
+    @Svn_client@svn_client_diff_peg2 @655 ; Svn_client::svn_client_diff_peg2
+    @Svn_client@svn_client_diff_peg3 @656 ; Svn_client::svn_client_diff_peg3
+    @Svn_client@svn_client_diff_peg4 @657 ; Svn_client::svn_client_diff_peg4
+    @Svn_client@svn_client_diff_summarize @651 ; Svn_client::svn_client_diff_summarize
+    @Svn_client@svn_client_diff_summarize2 @652 ; Svn_client::svn_client_diff_summarize2
+    @Svn_client@svn_client_diff_summarize_dup @653 ; Svn_client::svn_client_diff_summarize_dup
+    @Svn_client@svn_client_diff_summarize_peg @649 ; Svn_client::svn_client_diff_summarize_peg
+    @Svn_client@svn_client_diff_summarize_peg2 @650 ; Svn_client::svn_client_diff_summarize_peg2
+    @Svn_client@svn_client_export  @607 ; Svn_client::svn_client_export
+    @Svn_client@svn_client_export2 @608 ; Svn_client::svn_client_export2
+    @Svn_client@svn_client_export3 @609 ; Svn_client::svn_client_export3
+    @Svn_client@svn_client_export4 @610 ; Svn_client::svn_client_export4
+    @Svn_client@svn_client_get_changelists @597 ; Svn_client::svn_client_get_changelists
+    @Svn_client@svn_client_get_simple_prompt_provider @713 ; Svn_client::svn_client_get_simple_prompt_provider
+    @Svn_client@svn_client_get_simple_provider @711 ; Svn_client::svn_client_get_simple_provider
+    @Svn_client@svn_client_get_ssl_client_cert_file_provider @707 ; Svn_client::svn_client_get_ssl_client_cert_file_provider
+    @Svn_client@svn_client_get_ssl_client_cert_prompt_provider @704 ; Svn_client::svn_client_get_ssl_client_cert_prompt_provider
+    @Svn_client@svn_client_get_ssl_client_cert_pw_file_provider @706 ; Svn_client::svn_client_get_ssl_client_cert_pw_file_provider
+    @Svn_client@svn_client_get_ssl_client_cert_pw_prompt_provider @703 ; Svn_client::svn_client_get_ssl_client_cert_pw_prompt_provider
+    @Svn_client@svn_client_get_ssl_server_trust_file_provider @708 ; Svn_client::svn_client_get_ssl_server_trust_file_provider
+    @Svn_client@svn_client_get_ssl_server_trust_prompt_provider @705 ; Svn_client::svn_client_get_ssl_server_trust_prompt_provider
+    @Svn_client@svn_client_get_username_prompt_provider @712 ; Svn_client::svn_client_get_username_prompt_provider
+    @Svn_client@svn_client_get_username_provider @709 ; Svn_client::svn_client_get_username_provider
+    @Svn_client@svn_client_get_windows_simple_provider @710 ; Svn_client::svn_client_get_windows_simple_provider
+    @Svn_client@svn_client_import  @677 ; Svn_client::svn_client_import
+    @Svn_client@svn_client_import2 @678 ; Svn_client::svn_client_import2
+    @Svn_client@svn_client_import3 @679 ; Svn_client::svn_client_import3
+    @Svn_client@svn_client_info    @592 ; Svn_client::svn_client_info
+    @Svn_client@svn_client_info2   @593 ; Svn_client::svn_client_info2
+    @Svn_client@svn_client_list    @605 ; Svn_client::svn_client_list
+    @Svn_client@svn_client_list2   @606 ; Svn_client::svn_client_list2
+    @Svn_client@svn_client_lock    @596 ; Svn_client::svn_client_lock
+    @Svn_client@svn_client_log     @666 ; Svn_client::svn_client_log
+    @Svn_client@svn_client_log2    @667 ; Svn_client::svn_client_log2
+    @Svn_client@svn_client_log3    @668 ; Svn_client::svn_client_log3
+    @Svn_client@svn_client_log4    @669 ; Svn_client::svn_client_log4
+    @Svn_client@svn_client_ls      @602 ; Svn_client::svn_client_ls
+    @Svn_client@svn_client_ls2     @603 ; Svn_client::svn_client_ls2
+    @Svn_client@svn_client_ls3     @604 ; Svn_client::svn_client_ls3
+    @Svn_client@svn_client_merge   @646 ; Svn_client::svn_client_merge
+    @Svn_client@svn_client_merge2  @647 ; Svn_client::svn_client_merge2
+    @Svn_client@svn_client_merge3  @648 ; Svn_client::svn_client_merge3
+    @Svn_client@svn_client_merge_peg @642 ; Svn_client::svn_client_merge_peg
+    @Svn_client@svn_client_merge_peg2 @643 ; Svn_client::svn_client_merge_peg2
+    @Svn_client@svn_client_merge_peg3 @644 ; Svn_client::svn_client_merge_peg3
+    @Svn_client@svn_client_merge_reintegrate @645 ; Svn_client::svn_client_merge_reintegrate
+    @Svn_client@svn_client_mergeinfo_get_merged @640 ; Svn_client::svn_client_mergeinfo_get_merged
+    @Svn_client@svn_client_mergeinfo_log_eligible @638 ; Svn_client::svn_client_mergeinfo_log_eligible
+    @Svn_client@svn_client_mergeinfo_log_merged @639 ; Svn_client::svn_client_mergeinfo_log_merged
+    @Svn_client@svn_client_mkdir   @683 ; Svn_client::svn_client_mkdir
+    @Svn_client@svn_client_mkdir2  @684 ; Svn_client::svn_client_mkdir2
+    @Svn_client@svn_client_mkdir3  @685 ; Svn_client::svn_client_mkdir3
+    @Svn_client@svn_client_move    @623 ; Svn_client::svn_client_move
+    @Svn_client@svn_client_move2   @624 ; Svn_client::svn_client_move2
+    @Svn_client@svn_client_move3   @625 ; Svn_client::svn_client_move3
+    @Svn_client@svn_client_move4   @626 ; Svn_client::svn_client_move4
+    @Svn_client@svn_client_move5   @627 ; Svn_client::svn_client_move5
+    @Svn_client@svn_client_open_ra_session @587 ; Svn_client::svn_client_open_ra_session
+    @Svn_client@svn_client_propget @616 ; Svn_client::svn_client_propget
+    @Svn_client@svn_client_propget2 @617 ; Svn_client::svn_client_propget2
+    @Svn_client@svn_client_propget3 @618 ; Svn_client::svn_client_propget3
+    @Svn_client@svn_client_proplist @612 ; Svn_client::svn_client_proplist
+    @Svn_client@svn_client_proplist2 @613 ; Svn_client::svn_client_proplist2
+    @Svn_client@svn_client_proplist3 @614 ; Svn_client::svn_client_proplist3
+    @Svn_client@svn_client_proplist_item_dup @702 ; Svn_client::svn_client_proplist_item_dup
+    @Svn_client@svn_client_propset @620 ; Svn_client::svn_client_propset
+    @Svn_client@svn_client_propset2 @621 ; Svn_client::svn_client_propset2
+    @Svn_client@svn_client_propset3 @622 ; Svn_client::svn_client_propset3
+    @Svn_client@svn_client_relocate @636 ; Svn_client::svn_client_relocate
+    @Svn_client@svn_client_remove_from_changelists @598 ; Svn_client::svn_client_remove_from_changelists
+    @Svn_client@svn_client_resolve @632 ; Svn_client::svn_client_resolve
+    @Svn_client@svn_client_resolved @633 ; Svn_client::svn_client_resolved
+    @Svn_client@svn_client_revert  @634 ; Svn_client::svn_client_revert
+    @Svn_client@svn_client_revert2 @635 ; Svn_client::svn_client_revert2
+    @Svn_client@svn_client_revprop_get @615 ; Svn_client::svn_client_revprop_get
+    @Svn_client@svn_client_revprop_list @611 ; Svn_client::svn_client_revprop_list
+    @Svn_client@svn_client_revprop_set @619 ; Svn_client::svn_client_revprop_set
+    @Svn_client@svn_client_root_url_from_path @590 ; Svn_client::svn_client_root_url_from_path
+    @Svn_client@svn_client_status  @670 ; Svn_client::svn_client_status
+    @Svn_client@svn_client_status2 @671 ; Svn_client::svn_client_status2
+    @Svn_client@svn_client_status3 @672 ; Svn_client::svn_client_status3
+    @Svn_client@svn_client_suggest_merge_sources @641 ; Svn_client::svn_client_suggest_merge_sources
+    @Svn_client@svn_client_switch  @690 ; Svn_client::svn_client_switch
+    @Svn_client@svn_client_switch2 @691 ; Svn_client::svn_client_switch2
+    @Svn_client@svn_client_unlock  @595 ; Svn_client::svn_client_unlock
+    @Svn_client@svn_client_update  @692 ; Svn_client::svn_client_update
+    @Svn_client@svn_client_update2 @693 ; Svn_client::svn_client_update2
+    @Svn_client@svn_client_update3 @694 ; Svn_client::svn_client_update3
+    @Svn_client@svn_client_url_from_path @591 ; Svn_client::svn_client_url_from_path
+    @Svn_client@svn_client_uuid_from_path @588 ; Svn_client::svn_client_uuid_from_path
+    @Svn_client@svn_client_uuid_from_url @589 ; Svn_client::svn_client_uuid_from_url
+    @Svn_client@svn_client_version @714 ; Svn_client::svn_client_version
+    @Svn_client@svn_cmdline__getopt_init @1012; Svn_client::svn_cmdline__getopt_init
+    @Svn_client@svn_cmdline_auth_simple_prompt @1018; Svn_client::svn_cmdline_auth_simple_prompt
+    @Svn_client@svn_cmdline_auth_ssl_client_cert_prompt @1015; Svn_client::svn_cmdline_auth_ssl_client_cert_prompt
+    @Svn_client@svn_cmdline_auth_ssl_client_cert_pw_prompt @1014; Svn_client::svn_cmdline_auth_ssl_client_cert_pw_prompt
+    @Svn_client@svn_cmdline_auth_ssl_server_trust_prompt @1016; Svn_client::svn_cmdline_auth_ssl_server_trust_prompt
+    @Svn_client@svn_cmdline_auth_username_prompt @1017; Svn_client::svn_cmdline_auth_username_prompt
+    @Svn_client@svn_cmdline_cstring_from_utf8 @1030; Svn_client::svn_cmdline_cstring_from_utf8
+    @Svn_client@svn_cmdline_cstring_from_utf8_fuzzy @1029; Svn_client::svn_cmdline_cstring_from_utf8_fuzzy
+    @Svn_client@svn_cmdline_cstring_to_utf8 @1028; Svn_client::svn_cmdline_cstring_to_utf8
+    @Svn_client@svn_cmdline_fflush @1023; Svn_client::svn_cmdline_fflush
+    @Svn_client@svn_cmdline_fprintf @1025; Svn_client::svn_cmdline_fprintf
+    @Svn_client@svn_cmdline_fputs  @1024; Svn_client::svn_cmdline_fputs
+    @Svn_client@svn_cmdline_handle_exit_error @1021; Svn_client::svn_cmdline_handle_exit_error
+    @Svn_client@svn_cmdline_init   @1031; Svn_client::svn_cmdline_init
+    @Svn_client@svn_cmdline_output_encoding @1022; Svn_client::svn_cmdline_output_encoding
+    @Svn_client@svn_cmdline_path_local_style_from_utf8 @1027; Svn_client::svn_cmdline_path_local_style_from_utf8
+    @Svn_client@svn_cmdline_printf @1026; Svn_client::svn_cmdline_printf
+    @Svn_client@svn_cmdline_prompt_user @1019; Svn_client::svn_cmdline_prompt_user
+    @Svn_client@svn_cmdline_prompt_user2 @1020; Svn_client::svn_cmdline_prompt_user2
+    @Svn_client@svn_cmdline_setup_auth_baton @1013; Svn_client::svn_cmdline_setup_auth_baton
+    @Svn_client@svn_commit_info_dup @1806; Svn_client::svn_commit_info_dup
+    @Svn_client@svn_compat_log_revprops_clear @1795; Svn_client::svn_compat_log_revprops_clear
+    @Svn_client@svn_compat_log_revprops_in @1794; Svn_client::svn_compat_log_revprops_in
+    @Svn_client@svn_compat_log_revprops_out @1793; Svn_client::svn_compat_log_revprops_out
+    @Svn_client@svn_compat_wrap_commit_callback @1796; Svn_client::svn_compat_wrap_commit_callback
+    @Svn_client@svn_compat_wrap_file_rev_handler @1342; Svn_client::svn_compat_wrap_file_rev_handler
+    @Svn_client@svn_compat_wrap_log_receiver @1792; Svn_client::svn_compat_wrap_log_receiver
+    @Svn_client@svn_config_ensure  @1584; Svn_client::svn_config_ensure
+    @Svn_client@svn_config_enumerate @1590; Svn_client::svn_config_enumerate
+    @Svn_client@svn_config_enumerate2 @1589; Svn_client::svn_config_enumerate2
+    @Svn_client@svn_config_enumerate_sections @1592; Svn_client::svn_config_enumerate_sections
+    @Svn_client@svn_config_enumerate_sections2 @1591; Svn_client::svn_config_enumerate_sections2
+    @Svn_client@svn_config_find_group @1587; Svn_client::svn_config_find_group
+    @Svn_client@svn_config_get     @1596; Svn_client::svn_config_get
+    @Svn_client@svn_config_get_bool @1594; Svn_client::svn_config_get_bool
+    @Svn_client@svn_config_get_config @1599; Svn_client::svn_config_get_config
+    @Svn_client@svn_config_get_server_setting @1586; Svn_client::svn_config_get_server_setting
+    @Svn_client@svn_config_get_server_setting_int @1585; Svn_client::svn_config_get_server_setting_int
+    @Svn_client@svn_config_has_section @1588; Svn_client::svn_config_has_section
+    @Svn_client@svn_config_merge   @1597; Svn_client::svn_config_merge
+    @Svn_client@svn_config_read    @1598; Svn_client::svn_config_read
+    @Svn_client@svn_config_read_auth_data @1583; Svn_client::svn_config_read_auth_data
+    @Svn_client@svn_config_set     @1595; Svn_client::svn_config_set
+    @Svn_client@svn_config_set_bool @1593; Svn_client::svn_config_set_bool
+    @Svn_client@svn_config_write_auth_data @1582; Svn_client::svn_config_write_auth_data
+    @Svn_client@svn_create_commit_info @1807; Svn_client::svn_create_commit_info
+    @Svn_client@svn_cstring_casecmp @1719; Svn_client::svn_cstring_casecmp
+    @Svn_client@svn_cstring_count_newlines @1721; Svn_client::svn_cstring_count_newlines
+    @Svn_client@svn_cstring_join   @1720; Svn_client::svn_cstring_join
+    @Svn_client@svn_cstring_match_glob_list @1722; Svn_client::svn_cstring_match_glob_list
+    @Svn_client@svn_cstring_split  @1724; Svn_client::svn_cstring_split
+    @Svn_client@svn_cstring_split_append @1723; Svn_client::svn_cstring_split_append
+    @Svn_client@svn_ctype_casecmp  @1841; Svn_client::svn_ctype_casecmp
+    @Svn_client@svn_ctype_isalnum$qqrb @574 ; __fastcall Svn_client::svn_ctype_isalnum(wchar_t)
+    @Svn_client@svn_ctype_isalpha$qqrb @575 ; __fastcall Svn_client::svn_ctype_isalpha(wchar_t)
+    @Svn_client@svn_ctype_isascii$qqrb @576 ; __fastcall Svn_client::svn_ctype_isascii(wchar_t)
+    @Svn_client@svn_ctype_iscntrl$qqrb @582 ; __fastcall Svn_client::svn_ctype_iscntrl(wchar_t)
+    @Svn_client@svn_ctype_isdigit$qqrb @580 ; __fastcall Svn_client::svn_ctype_isdigit(wchar_t)
+    @Svn_client@svn_ctype_isgraph$qqrb @572 ; __fastcall Svn_client::svn_ctype_isgraph(wchar_t)
+    @Svn_client@svn_ctype_islower$qqrb @578 ; __fastcall Svn_client::svn_ctype_islower(wchar_t)
+    @Svn_client@svn_ctype_isprint$qqrb @571 ; __fastcall Svn_client::svn_ctype_isprint(wchar_t)
+    @Svn_client@svn_ctype_ispunct$qqrb @577 ; __fastcall Svn_client::svn_ctype_ispunct(wchar_t)
+    @Svn_client@svn_ctype_isspace$qqrb @581 ; __fastcall Svn_client::svn_ctype_isspace(wchar_t)
+    @Svn_client@svn_ctype_isupper$qqrb @579 ; __fastcall Svn_client::svn_ctype_isupper(wchar_t)
+    @Svn_client@svn_ctype_isutf8$qqrb @567 ; __fastcall Svn_client::svn_ctype_isutf8(wchar_t)
+    @Svn_client@svn_ctype_isutf8cont$qqrb @569 ; __fastcall Svn_client::svn_ctype_isutf8cont(wchar_t)
+    @Svn_client@svn_ctype_isutf8lead$qqrb @570 ; __fastcall Svn_client::svn_ctype_isutf8lead(wchar_t)
+    @Svn_client@svn_ctype_isutf8mbc$qqrb @568 ; __fastcall Svn_client::svn_ctype_isutf8mbc(wchar_t)
+    @Svn_client@svn_ctype_isxdigit$qqrb @573 ; __fastcall Svn_client::svn_ctype_isxdigit(wchar_t)
+    @Svn_client@svn_ctype_table    @1842; Svn_client::svn_ctype_table
+    @Svn_client@svn_delta_default_editor @1347; Svn_client::svn_delta_default_editor
+    @Svn_client@svn_delta_depth_filter_editor @1344; Svn_client::svn_delta_depth_filter_editor
+    @Svn_client@svn_delta_get_cancellation_editor @1345; Svn_client::svn_delta_get_cancellation_editor
+    @Svn_client@svn_delta_noop_window_handler @1346; Svn_client::svn_delta_noop_window_handler
+    @Svn_client@svn_delta_path_driver @1343; Svn_client::svn_delta_path_driver
+    @Svn_client@svn_delta_version  @1365; Svn_client::svn_delta_version
+    @Svn_client@svn_depth_from_word @1810; Svn_client::svn_depth_from_word
+    @Svn_client@svn_depth_to_word  @1811; Svn_client::svn_depth_to_word
+    @Svn_client@svn_diff_contains_conflicts @1404; Svn_client::svn_diff_contains_conflicts
+    @Svn_client@svn_diff_contains_diffs @1403; Svn_client::svn_diff_contains_diffs
+    @Svn_client@svn_diff_diff      @1407; Svn_client::svn_diff_diff
+    @Svn_client@svn_diff_diff3     @1406; Svn_client::svn_diff_diff3
+    @Svn_client@svn_diff_diff4     @1405; Svn_client::svn_diff_diff4
+    @Svn_client@svn_diff_file_diff @1400; Svn_client::svn_diff_file_diff
+    @Svn_client@svn_diff_file_diff3 @1398; Svn_client::svn_diff_file_diff3
+    @Svn_client@svn_diff_file_diff3_2 @1399; Svn_client::svn_diff_file_diff3_2
+    @Svn_client@svn_diff_file_diff4 @1396; Svn_client::svn_diff_file_diff4
+    @Svn_client@svn_diff_file_diff4_2 @1397; Svn_client::svn_diff_file_diff4_2
+    @Svn_client@svn_diff_file_diff_2 @1401; Svn_client::svn_diff_file_diff_2
+    @Svn_client@svn_diff_file_options_create @1391; Svn_client::svn_diff_file_options_create
+    @Svn_client@svn_diff_file_options_parse @1390; Svn_client::svn_diff_file_options_parse
+    @Svn_client@svn_diff_file_output_merge @1392; Svn_client::svn_diff_file_output_merge
+    @Svn_client@svn_diff_file_output_unified @1393; Svn_client::svn_diff_file_output_unified
+    @Svn_client@svn_diff_file_output_unified2 @1394; Svn_client::svn_diff_file_output_unified2
+    @Svn_client@svn_diff_file_output_unified3 @1395; Svn_client::svn_diff_file_output_unified3
+    @Svn_client@svn_diff_mem_string_diff @1389; Svn_client::svn_diff_mem_string_diff
+    @Svn_client@svn_diff_mem_string_diff3 @1388; Svn_client::svn_diff_mem_string_diff3
+    @Svn_client@svn_diff_mem_string_diff4 @1387; Svn_client::svn_diff_mem_string_diff4
+    @Svn_client@svn_diff_mem_string_output_merge @1385; Svn_client::svn_diff_mem_string_output_merge
+    @Svn_client@svn_diff_mem_string_output_unified @1386; Svn_client::svn_diff_mem_string_output_unified
+    @Svn_client@svn_diff_output    @1402; Svn_client::svn_diff_output
+    @Svn_client@svn_diff_version   @1408; Svn_client::svn_diff_version
+    @Svn_client@svn_dirent_dup     @1809; Svn_client::svn_dirent_dup
+    @Svn_client@svn_dirent_is_root @1629; Svn_client::svn_dirent_is_root
+    @Svn_client@svn_dso_initialize @1561; Svn_client::svn_dso_initialize
+    @Svn_client@svn_dso_load       @1560; Svn_client::svn_dso_load
+    @Svn_client@svn_err_best_message @1655; Svn_client::svn_err_best_message
+    @Svn_client@svn_error__locate  @1657; Svn_client::svn_error__locate
+    @Svn_client@svn_error_clear    @1647; Svn_client::svn_error_clear
+    @Svn_client@svn_error_compose  @1650; Svn_client::svn_error_compose
+    @Svn_client@svn_error_create   @1654; Svn_client::svn_error_create
+    @Svn_client@svn_error_createf  @1653; Svn_client::svn_error_createf
+    @Svn_client@svn_error_dup      @1648; Svn_client::svn_error_dup
+    @Svn_client@svn_error_quick_wrap @1651; Svn_client::svn_error_quick_wrap
+    @Svn_client@svn_error_root_cause @1649; Svn_client::svn_error_root_cause
+    @Svn_client@svn_error_wrap_apr @1652; Svn_client::svn_error_wrap_apr
+    @Svn_client@svn_fs_abort_txn   @1295; Svn_client::svn_fs_abort_txn
+    @Svn_client@svn_fs_access_add_lock_token @1303; Svn_client::svn_fs_access_add_lock_token
+    @Svn_client@svn_fs_access_get_username @1304; Svn_client::svn_fs_access_get_username
+    @Svn_client@svn_fs_apply_text  @1247; Svn_client::svn_fs_apply_text
+    @Svn_client@svn_fs_apply_textdelta @1248; Svn_client::svn_fs_apply_textdelta
+    @Svn_client@svn_fs_begin_txn   @1297; Svn_client::svn_fs_begin_txn
+    @Svn_client@svn_fs_begin_txn2  @1298; Svn_client::svn_fs_begin_txn2
+    @Svn_client@svn_fs_berkeley_logfiles @1314; Svn_client::svn_fs_berkeley_logfiles
+    @Svn_client@svn_fs_berkeley_path @1310; Svn_client::svn_fs_berkeley_path
+    @Svn_client@svn_fs_berkeley_recover @1315; Svn_client::svn_fs_berkeley_recover
+    @Svn_client@svn_fs_change_node_prop @1263; Svn_client::svn_fs_change_node_prop
+    @Svn_client@svn_fs_change_rev_prop @1241; Svn_client::svn_fs_change_rev_prop
+    @Svn_client@svn_fs_change_txn_prop @1287; Svn_client::svn_fs_change_txn_prop
+    @Svn_client@svn_fs_change_txn_props @1286; Svn_client::svn_fs_change_txn_props
+    @Svn_client@svn_fs_check_path  @1275; Svn_client::svn_fs_check_path
+    @Svn_client@svn_fs_check_related @1301; Svn_client::svn_fs_check_related
+    @Svn_client@svn_fs_close_root  @1283; Svn_client::svn_fs_close_root
+    @Svn_client@svn_fs_closest_copy @1260; Svn_client::svn_fs_closest_copy
+    @Svn_client@svn_fs_commit_txn  @1296; Svn_client::svn_fs_commit_txn
+    @Svn_client@svn_fs_compare_ids @1302; Svn_client::svn_fs_compare_ids
+    @Svn_client@svn_fs_contents_changed @1246; Svn_client::svn_fs_contents_changed
+    @Svn_client@svn_fs_copied_from @1261; Svn_client::svn_fs_copied_from
+    @Svn_client@svn_fs_copy        @1254; Svn_client::svn_fs_copy
+    @Svn_client@svn_fs_create      @1324; Svn_client::svn_fs_create
+    @Svn_client@svn_fs_create_access @1307; Svn_client::svn_fs_create_access
+    @Svn_client@svn_fs_create_berkeley @1312; Svn_client::svn_fs_create_berkeley
+    @Svn_client@svn_fs_delete      @1255; Svn_client::svn_fs_delete
+    @Svn_client@svn_fs_delete_berkeley @1309; Svn_client::svn_fs_delete_berkeley
+    @Svn_client@svn_fs_delete_fs   @1319; Svn_client::svn_fs_delete_fs
+    @Svn_client@svn_fs_deltify_revision @1244; Svn_client::svn_fs_deltify_revision
+    @Svn_client@svn_fs_dir_entries @1257; Svn_client::svn_fs_dir_entries
+    @Svn_client@svn_fs_file_contents @1250; Svn_client::svn_fs_file_contents
+    @Svn_client@svn_fs_file_length @1252; Svn_client::svn_fs_file_length
+    @Svn_client@svn_fs_file_md5_checksum @1251; Svn_client::svn_fs_file_md5_checksum
+    @Svn_client@svn_fs_generate_lock_token @1236; Svn_client::svn_fs_generate_lock_token
+    @Svn_client@svn_fs_get_access  @1305; Svn_client::svn_fs_get_access
+    @Svn_client@svn_fs_get_file_delta_stream @1240; Svn_client::svn_fs_get_file_delta_stream
+    @Svn_client@svn_fs_get_lock    @1234; Svn_client::svn_fs_get_lock
+    @Svn_client@svn_fs_get_locks   @1233; Svn_client::svn_fs_get_locks
+    @Svn_client@svn_fs_get_mergeinfo @1259; Svn_client::svn_fs_get_mergeinfo
+    @Svn_client@svn_fs_get_uuid    @1239; Svn_client::svn_fs_get_uuid
+    @Svn_client@svn_fs_history_location @1272; Svn_client::svn_fs_history_location
+    @Svn_client@svn_fs_history_prev @1273; Svn_client::svn_fs_history_prev
+    @Svn_client@svn_fs_hotcopy     @1318; Svn_client::svn_fs_hotcopy
+    @Svn_client@svn_fs_hotcopy_berkeley @1308; Svn_client::svn_fs_hotcopy_berkeley
+    @Svn_client@svn_fs_initialize  @1326; Svn_client::svn_fs_initialize
+    @Svn_client@svn_fs_is_dir      @1271; Svn_client::svn_fs_is_dir
+    @Svn_client@svn_fs_is_file     @1270; Svn_client::svn_fs_is_file
+    @Svn_client@svn_fs_is_revision_root @1280; Svn_client::svn_fs_is_revision_root
+    @Svn_client@svn_fs_is_txn_root @1281; Svn_client::svn_fs_is_txn_root
+    @Svn_client@svn_fs_list_transactions @1290; Svn_client::svn_fs_list_transactions
+    @Svn_client@svn_fs_lock        @1237; Svn_client::svn_fs_lock
+    @Svn_client@svn_fs_make_dir    @1256; Svn_client::svn_fs_make_dir
+    @Svn_client@svn_fs_make_file   @1249; Svn_client::svn_fs_make_file
+    @Svn_client@svn_fs_merge       @1258; Svn_client::svn_fs_merge
+    @Svn_client@svn_fs_new         @1313; Svn_client::svn_fs_new
+    @Svn_client@svn_fs_node_created_path @1266; Svn_client::svn_fs_node_created_path
+    @Svn_client@svn_fs_node_created_rev @1268; Svn_client::svn_fs_node_created_rev
+    @Svn_client@svn_fs_node_history @1274; Svn_client::svn_fs_node_history
+    @Svn_client@svn_fs_node_id     @1269; Svn_client::svn_fs_node_id
+    @Svn_client@svn_fs_node_origin_rev @1267; Svn_client::svn_fs_node_origin_rev
+    @Svn_client@svn_fs_node_prop   @1265; Svn_client::svn_fs_node_prop
+    @Svn_client@svn_fs_node_proplist @1264; Svn_client::svn_fs_node_proplist
+    @Svn_client@svn_fs_open        @1323; Svn_client::svn_fs_open
+    @Svn_client@svn_fs_open_berkeley @1311; Svn_client::svn_fs_open_berkeley
+    @Svn_client@svn_fs_open_txn    @1291; Svn_client::svn_fs_open_txn
+    @Svn_client@svn_fs_parse_id    @1300; Svn_client::svn_fs_parse_id
+    @Svn_client@svn_fs_path        @1320; Svn_client::svn_fs_path
+    @Svn_client@svn_fs_paths_changed @1276; Svn_client::svn_fs_paths_changed
+    @Svn_client@svn_fs_print_modules @1232; Svn_client::svn_fs_print_modules
+    @Svn_client@svn_fs_props_changed @1262; Svn_client::svn_fs_props_changed
+    @Svn_client@svn_fs_purge_txn   @1294; Svn_client::svn_fs_purge_txn
+    @Svn_client@svn_fs_recover     @1317; Svn_client::svn_fs_recover
+    @Svn_client@svn_fs_revision_link @1253; Svn_client::svn_fs_revision_link
+    @Svn_client@svn_fs_revision_prop @1243; Svn_client::svn_fs_revision_prop
+    @Svn_client@svn_fs_revision_proplist @1242; Svn_client::svn_fs_revision_proplist
+    @Svn_client@svn_fs_revision_root @1285; Svn_client::svn_fs_revision_root
+    @Svn_client@svn_fs_revision_root_revision @1277; Svn_client::svn_fs_revision_root_revision
+    @Svn_client@svn_fs_root_fs     @1282; Svn_client::svn_fs_root_fs
+    @Svn_client@svn_fs_set_access  @1306; Svn_client::svn_fs_set_access
+    @Svn_client@svn_fs_set_berkeley_errcall @1316; Svn_client::svn_fs_set_berkeley_errcall
+    @Svn_client@svn_fs_set_uuid    @1238; Svn_client::svn_fs_set_uuid
+    @Svn_client@svn_fs_set_warning_func @1325; Svn_client::svn_fs_set_warning_func
+    @Svn_client@svn_fs_txn_base_revision @1292; Svn_client::svn_fs_txn_base_revision
+    @Svn_client@svn_fs_txn_name    @1293; Svn_client::svn_fs_txn_name
+    @Svn_client@svn_fs_txn_prop    @1289; Svn_client::svn_fs_txn_prop
+    @Svn_client@svn_fs_txn_proplist @1288; Svn_client::svn_fs_txn_proplist
+    @Svn_client@svn_fs_txn_root    @1284; Svn_client::svn_fs_txn_root
+    @Svn_client@svn_fs_txn_root_base_revision @1278; Svn_client::svn_fs_txn_root_base_revision
+    @Svn_client@svn_fs_txn_root_name @1279; Svn_client::svn_fs_txn_root_name
+    @Svn_client@svn_fs_type        @1321; Svn_client::svn_fs_type
+    @Svn_client@svn_fs_unlock      @1235; Svn_client::svn_fs_unlock
+    @Svn_client@svn_fs_unparse_id  @1299; Svn_client::svn_fs_unparse_id
+    @Svn_client@svn_fs_upgrade     @1322; Svn_client::svn_fs_upgrade
+    @Svn_client@svn_fs_version     @1327; Svn_client::svn_fs_version
+    @Svn_client@svn_fs_youngest_rev @1245; Svn_client::svn_fs_youngest_rev
+    @Svn_client@svn_handle_error   @1645; Svn_client::svn_handle_error
+    @Svn_client@svn_handle_error2  @1646; Svn_client::svn_handle_error2
+    @Svn_client@svn_handle_warning @1643; Svn_client::svn_handle_warning
+    @Svn_client@svn_handle_warning2 @1644; Svn_client::svn_handle_warning2
+    @Svn_client@svn_hash__clear    @1444; Svn_client::svn_hash__clear
+    @Svn_client@svn_hash_diff      @1447; Svn_client::svn_hash_diff
+    @Svn_client@svn_hash_from_cstring_keys @1445; Svn_client::svn_hash_from_cstring_keys
+    @Svn_client@svn_hash_keys      @1446; Svn_client::svn_hash_keys
+    @Svn_client@svn_hash_read      @1449; Svn_client::svn_hash_read
+    @Svn_client@svn_hash_read2     @1453; Svn_client::svn_hash_read2
+    @Svn_client@svn_hash_read_incremental @1451; Svn_client::svn_hash_read_incremental
+    @Svn_client@svn_hash_write     @1448; Svn_client::svn_hash_write
+    @Svn_client@svn_hash_write2    @1452; Svn_client::svn_hash_write2
+    @Svn_client@svn_hash_write_incremental @1450; Svn_client::svn_hash_write_incremental
+    @Svn_client@svn_info_dup       @594 ; Svn_client::svn_info_dup
+    @Svn_client@svn_inheritance_from_word @1562; Svn_client::svn_inheritance_from_word
+    @Svn_client@svn_inheritance_to_word @1563; Svn_client::svn_inheritance_to_word
+    @Svn_client@svn_io_append_file @1537; Svn_client::svn_io_append_file
+    @Svn_client@svn_io_check_path  @1550; Svn_client::svn_io_check_path
+    @Svn_client@svn_io_check_resolved_path @1548; Svn_client::svn_io_check_resolved_path
+    @Svn_client@svn_io_check_special_path @1549; Svn_client::svn_io_check_special_path
+    @Svn_client@svn_io_copy_dir_recursively @1540; Svn_client::svn_io_copy_dir_recursively
+    @Svn_client@svn_io_copy_file   @1542; Svn_client::svn_io_copy_file
+    @Svn_client@svn_io_copy_link   @1541; Svn_client::svn_io_copy_link
+    @Svn_client@svn_io_create_unique_link @1545; Svn_client::svn_io_create_unique_link
+    @Svn_client@svn_io_detect_mimetype @1480; Svn_client::svn_io_detect_mimetype
+    @Svn_client@svn_io_detect_mimetype2 @1481; Svn_client::svn_io_detect_mimetype2
+    @Svn_client@svn_io_dir_empty   @1538; Svn_client::svn_io_dir_empty
+    @Svn_client@svn_io_dir_file_copy @1521; Svn_client::svn_io_dir_file_copy
+    @Svn_client@svn_io_dir_make    @1467; Svn_client::svn_io_dir_make
+    @Svn_client@svn_io_dir_make_hidden @1466; Svn_client::svn_io_dir_make_hidden
+    @Svn_client@svn_io_dir_make_sgid @1465; Svn_client::svn_io_dir_make_sgid
+    @Svn_client@svn_io_dir_open    @1464; Svn_client::svn_io_dir_open
+    @Svn_client@svn_io_dir_read    @1462; Svn_client::svn_io_dir_read
+    @Svn_client@svn_io_dir_remove_nonrecursive @1463; Svn_client::svn_io_dir_remove_nonrecursive
+    @Svn_client@svn_io_dir_walk    @1489; Svn_client::svn_io_dir_walk
+    @Svn_client@svn_io_file_affected_time @1530; Svn_client::svn_io_file_affected_time
+    @Svn_client@svn_io_file_checksum @1527; Svn_client::svn_io_file_checksum
+    @Svn_client@svn_io_file_close  @1478; Svn_client::svn_io_file_close
+    @Svn_client@svn_io_file_create @1525; Svn_client::svn_io_file_create
+    @Svn_client@svn_io_file_flush_to_disk @1522; Svn_client::svn_io_file_flush_to_disk
+    @Svn_client@svn_io_file_getc   @1477; Svn_client::svn_io_file_getc
+    @Svn_client@svn_io_file_info_get @1476; Svn_client::svn_io_file_info_get
+    @Svn_client@svn_io_file_lock   @1524; Svn_client::svn_io_file_lock
+    @Svn_client@svn_io_file_lock2  @1523; Svn_client::svn_io_file_lock2
+    @Svn_client@svn_io_file_move   @1468; Svn_client::svn_io_file_move
+    @Svn_client@svn_io_file_open   @1479; Svn_client::svn_io_file_open
+    @Svn_client@svn_io_file_read   @1475; Svn_client::svn_io_file_read
+    @Svn_client@svn_io_file_read_full @1474; Svn_client::svn_io_file_read_full
+    @Svn_client@svn_io_file_rename @1469; Svn_client::svn_io_file_rename
+    @Svn_client@svn_io_file_seek   @1473; Svn_client::svn_io_file_seek
+    @Svn_client@svn_io_file_write  @1472; Svn_client::svn_io_file_write
+    @Svn_client@svn_io_file_write_full @1471; Svn_client::svn_io_file_write_full
+    @Svn_client@svn_io_files_contents_same_p @1526; Svn_client::svn_io_files_contents_same_p
+    @Svn_client@svn_io_filesizes_different_p @1528; Svn_client::svn_io_filesizes_different_p
+    @Svn_client@svn_io_get_dir_filenames @1492; Svn_client::svn_io_get_dir_filenames
+    @Svn_client@svn_io_get_dirents @1490; Svn_client::svn_io_get_dirents
+    @Svn_client@svn_io_get_dirents2 @1491; Svn_client::svn_io_get_dirents2
+    @Svn_client@svn_io_is_file_executable @1532; Svn_client::svn_io_is_file_executable
+    @Svn_client@svn_io_make_dir_recursively @1539; Svn_client::svn_io_make_dir_recursively
+    @Svn_client@svn_io_open_unique_file @1546; Svn_client::svn_io_open_unique_file
+    @Svn_client@svn_io_open_unique_file2 @1547; Svn_client::svn_io_open_unique_file2
+    @Svn_client@svn_io_parse_mimetypes_file @1482; Svn_client::svn_io_parse_mimetypes_file
+    @Svn_client@svn_io_read_length_line @1531; Svn_client::svn_io_read_length_line
+    @Svn_client@svn_io_read_link   @1544; Svn_client::svn_io_read_link
+    @Svn_client@svn_io_read_version_file @1461; Svn_client::svn_io_read_version_file
+    @Svn_client@svn_io_remove_dir  @1493; Svn_client::svn_io_remove_dir
+    @Svn_client@svn_io_remove_dir2 @1494; Svn_client::svn_io_remove_dir2
+    @Svn_client@svn_io_remove_file @1495; Svn_client::svn_io_remove_file
+    @Svn_client@svn_io_run_cmd     @1486; Svn_client::svn_io_run_cmd
+    @Svn_client@svn_io_run_diff    @1485; Svn_client::svn_io_run_diff
+    @Svn_client@svn_io_run_diff3   @1483; Svn_client::svn_io_run_diff3
+    @Svn_client@svn_io_run_diff3_2 @1484; Svn_client::svn_io_run_diff3_2
+    @Svn_client@svn_io_set_file_affected_time @1529; Svn_client::svn_io_set_file_affected_time
+    @Svn_client@svn_io_set_file_executable @1533; Svn_client::svn_io_set_file_executable
+    @Svn_client@svn_io_set_file_read_only @1536; Svn_client::svn_io_set_file_read_only
+    @Svn_client@svn_io_set_file_read_write @1535; Svn_client::svn_io_set_file_read_write
+    @Svn_client@svn_io_set_file_read_write_carefully @1534; Svn_client::svn_io_set_file_read_write_carefully
+    @Svn_client@svn_io_start_cmd   @1488; Svn_client::svn_io_start_cmd
+    @Svn_client@svn_io_stat        @1470; Svn_client::svn_io_stat
+    @Svn_client@svn_io_temp_dir    @1543; Svn_client::svn_io_temp_dir
+    @Svn_client@svn_io_wait_for_cmd @1487; Svn_client::svn_io_wait_for_cmd
+    @Svn_client@svn_io_write_version_file @1460; Svn_client::svn_io_write_version_file
+    @Svn_client@svn_iter__break    @1658; Svn_client::svn_iter__break
+    @Svn_client@svn_iter_apr_array @1659; Svn_client::svn_iter_apr_array
+    @Svn_client@svn_iter_apr_hash  @1660; Svn_client::svn_iter_apr_hash
+    @Svn_client@svn_location_segment_dup @1797; Svn_client::svn_location_segment_dup
+    @Svn_client@svn_lock_create    @1802; Svn_client::svn_lock_create
+    @Svn_client@svn_lock_dup       @1801; Svn_client::svn_lock_dup
+    @Svn_client@svn_log_changed_path_dup @1805; Svn_client::svn_log_changed_path_dup
+    @Svn_client@svn_log_entry_create @1808; Svn_client::svn_log_entry_create
+    @Svn_client@svn_md5_digest_to_cstring @1761; Svn_client::svn_md5_digest_to_cstring
+    @Svn_client@svn_md5_digest_to_cstring_display @1762; Svn_client::svn_md5_digest_to_cstring_display
+    @Svn_client@svn_md5_digests_match @1760; Svn_client::svn_md5_digests_match
+    @Svn_client@svn_md5_empty_string_digest @1763; Svn_client::svn_md5_empty_string_digest
+    @Svn_client@svn_merge_range_contains_rev @1798; Svn_client::svn_merge_range_contains_rev
+    @Svn_client@svn_merge_range_dup @1799; Svn_client::svn_merge_range_dup
+    @Svn_client@svn_mergeinfo_diff @1579; Svn_client::svn_mergeinfo_diff
+    @Svn_client@svn_mergeinfo_dup  @1565; Svn_client::svn_mergeinfo_dup
+    @Svn_client@svn_mergeinfo_inheritable @1568; Svn_client::svn_mergeinfo_inheritable
+    @Svn_client@svn_mergeinfo_intersect @1573; Svn_client::svn_mergeinfo_intersect
+    @Svn_client@svn_mergeinfo_merge @1578; Svn_client::svn_mergeinfo_merge
+    @Svn_client@svn_mergeinfo_parse @1580; Svn_client::svn_mergeinfo_parse
+    @Svn_client@svn_mergeinfo_remove @1577; Svn_client::svn_mergeinfo_remove
+    @Svn_client@svn_mergeinfo_sort @1566; Svn_client::svn_mergeinfo_sort
+    @Svn_client@svn_mergeinfo_to_string @1567; Svn_client::svn_mergeinfo_to_string
+    @Svn_client@svn_mime_type_is_binary @1803; Svn_client::svn_mime_type_is_binary
+    @Svn_client@svn_mime_type_validate @1804; Svn_client::svn_mime_type_validate
+    @Svn_client@svn_nls_init       @1791; Svn_client::svn_nls_init
+    @Svn_client@svn_opt_args_to_target_array @1088; Svn_client::svn_opt_args_to_target_array
+    @Svn_client@svn_opt_args_to_target_array2 @1089; Svn_client::svn_opt_args_to_target_array2
+    @Svn_client@svn_opt_args_to_target_array3 @1090; Svn_client::svn_opt_args_to_target_array3
+    @Svn_client@svn_opt_format_option @1097; Svn_client::svn_opt_format_option
+    @Svn_client@svn_opt_get_canonical_subcommand @1105; Svn_client::svn_opt_get_canonical_subcommand
+    @Svn_client@svn_opt_get_canonical_subcommand2 @1106; Svn_client::svn_opt_get_canonical_subcommand2
+    @Svn_client@svn_opt_get_option_from_code @1103; Svn_client::svn_opt_get_option_from_code
+    @Svn_client@svn_opt_get_option_from_code2 @1104; Svn_client::svn_opt_get_option_from_code2
+    @Svn_client@svn_opt_parse_all_args @1085; Svn_client::svn_opt_parse_all_args
+    @Svn_client@svn_opt_parse_num_args @1086; Svn_client::svn_opt_parse_num_args
+    @Svn_client@svn_opt_parse_path @1084; Svn_client::svn_opt_parse_path
+    @Svn_client@svn_opt_parse_revision @1093; Svn_client::svn_opt_parse_revision
+    @Svn_client@svn_opt_parse_revision_to_range @1092; Svn_client::svn_opt_parse_revision_to_range
+    @Svn_client@svn_opt_print_generic_help @1098; Svn_client::svn_opt_print_generic_help
+    @Svn_client@svn_opt_print_generic_help2 @1099; Svn_client::svn_opt_print_generic_help2
+    @Svn_client@svn_opt_print_help @1081; Svn_client::svn_opt_print_help
+    @Svn_client@svn_opt_print_help2 @1082; Svn_client::svn_opt_print_help2
+    @Svn_client@svn_opt_print_help3 @1083; Svn_client::svn_opt_print_help3
+    @Svn_client@svn_opt_push_implicit_dot_target @1087; Svn_client::svn_opt_push_implicit_dot_target
+    @Svn_client@svn_opt_resolve_revisions @1091; Svn_client::svn_opt_resolve_revisions
+    @Svn_client@svn_opt_subcommand_help @1094; Svn_client::svn_opt_subcommand_help
+    @Svn_client@svn_opt_subcommand_help2 @1095; Svn_client::svn_opt_subcommand_help2
+    @Svn_client@svn_opt_subcommand_help3 @1096; Svn_client::svn_opt_subcommand_help3
+    @Svn_client@svn_opt_subcommand_takes_option @1100; Svn_client::svn_opt_subcommand_takes_option
+    @Svn_client@svn_opt_subcommand_takes_option2 @1101; Svn_client::svn_opt_subcommand_takes_option2
+    @Svn_client@svn_opt_subcommand_takes_option3 @1102; Svn_client::svn_opt_subcommand_takes_option3
+    @Svn_client@svn_parse_date     @1778; Svn_client::svn_parse_date
+    @Svn_client@svn_path_add_component @1634; Svn_client::svn_path_add_component
+    @Svn_client@svn_path_basename  @1638; Svn_client::svn_path_basename
+    @Svn_client@svn_path_canonicalize @1628; Svn_client::svn_path_canonicalize
+    @Svn_client@svn_path_check_valid @1614; Svn_client::svn_path_check_valid
+    @Svn_client@svn_path_compare_paths @1626; Svn_client::svn_path_compare_paths
+    @Svn_client@svn_path_component_count @1635; Svn_client::svn_path_component_count
+    @Svn_client@svn_path_compose   @1619; Svn_client::svn_path_compose
+    @Svn_client@svn_path_condense_targets @1622; Svn_client::svn_path_condense_targets
+    @Svn_client@svn_path_cstring_from_utf8 @1606; Svn_client::svn_path_cstring_from_utf8
+    @Svn_client@svn_path_cstring_to_utf8 @1605; Svn_client::svn_path_cstring_to_utf8
+    @Svn_client@svn_path_decompose @1620; Svn_client::svn_path_decompose
+    @Svn_client@svn_path_dirname   @1637; Svn_client::svn_path_dirname
+    @Svn_client@svn_path_get_absolute @1624; Svn_client::svn_path_get_absolute
+    @Svn_client@svn_path_get_longest_ancestor @1625; Svn_client::svn_path_get_longest_ancestor
+    @Svn_client@svn_path_internal_style @1642; Svn_client::svn_path_internal_style
+    @Svn_client@svn_path_is_ancestor @1615; Svn_client::svn_path_is_ancestor
+    @Svn_client@svn_path_is_backpath_present @1617; Svn_client::svn_path_is_backpath_present
+    @Svn_client@svn_path_is_canonical @1627; Svn_client::svn_path_is_canonical
+    @Svn_client@svn_path_is_child  @1616; Svn_client::svn_path_is_child
+    @Svn_client@svn_path_is_empty  @1630; Svn_client::svn_path_is_empty
+    @Svn_client@svn_path_is_single_path_component @1618; Svn_client::svn_path_is_single_path_component
+    @Svn_client@svn_path_is_uri_safe @1612; Svn_client::svn_path_is_uri_safe
+    @Svn_client@svn_path_is_url    @1613; Svn_client::svn_path_is_url
+    @Svn_client@svn_path_join      @1640; Svn_client::svn_path_join
+    @Svn_client@svn_path_join_many @1639; Svn_client::svn_path_join_many
+    @Svn_client@svn_path_local_style @1641; Svn_client::svn_path_local_style
+    @Svn_client@svn_path_remove_component @1633; Svn_client::svn_path_remove_component
+    @Svn_client@svn_path_remove_components @1632; Svn_client::svn_path_remove_components
+    @Svn_client@svn_path_remove_redundancies @1621; Svn_client::svn_path_remove_redundancies
+    @Svn_client@svn_path_split     @1631; Svn_client::svn_path_split
+    @Svn_client@svn_path_split_if_file @1623; Svn_client::svn_path_split_if_file
+    @Svn_client@svn_path_splitext  @1636; Svn_client::svn_path_splitext
+    @Svn_client@svn_path_uri_autoescape @1607; Svn_client::svn_path_uri_autoescape
+    @Svn_client@svn_path_uri_decode @1610; Svn_client::svn_path_uri_decode
+    @Svn_client@svn_path_uri_encode @1611; Svn_client::svn_path_uri_encode
+    @Svn_client@svn_path_uri_from_iri @1608; Svn_client::svn_path_uri_from_iri
+    @Svn_client@svn_path_url_add_component @1609; Svn_client::svn_path_url_add_component
+    @Svn_client@svn_pool_create_ex @1765; Svn_client::svn_pool_create_ex
+    @Svn_client@svn_pool_create_ex_debug @1764; Svn_client::svn_pool_create_ex_debug
+    @Svn_client@svn_prop_array_dup @1674; Svn_client::svn_prop_array_dup
+    @Svn_client@svn_prop_diffs     @1666; Svn_client::svn_prop_diffs
+    @Svn_client@svn_prop_dup       @1675; Svn_client::svn_prop_dup
+    @Svn_client@svn_prop_has_svn_prop @1670; Svn_client::svn_prop_has_svn_prop
+    @Svn_client@svn_prop_hash_to_array @1673; Svn_client::svn_prop_hash_to_array
+    @Svn_client@svn_prop_is_boolean @1669; Svn_client::svn_prop_is_boolean
+    @Svn_client@svn_prop_is_svn_prop @1671; Svn_client::svn_prop_is_svn_prop
+    @Svn_client@svn_prop_name_is_valid @1665; Svn_client::svn_prop_name_is_valid
+    @Svn_client@svn_prop_needs_translation @1668; Svn_client::svn_prop_needs_translation
+    @Svn_client@svn_property_kind  @1672; Svn_client::svn_property_kind
+    @Svn_client@svn_quoprint_decode @1458; Svn_client::svn_quoprint_decode
+    @Svn_client@svn_quoprint_decode_string @1456; Svn_client::svn_quoprint_decode_string
+    @Svn_client@svn_quoprint_encode @1459; Svn_client::svn_quoprint_encode
+    @Svn_client@svn_quoprint_encode_string @1457; Svn_client::svn_quoprint_encode_string
+    @Svn_client@svn_ra_change_rev_prop @976 ; Svn_client::svn_ra_change_rev_prop
+    @Svn_client@svn_ra_check_path  @955 ; Svn_client::svn_ra_check_path
+    @Svn_client@svn_ra_create_callbacks @984 ; Svn_client::svn_ra_create_callbacks
+    @Svn_client@svn_ra_dav_init    @936 ; Svn_client::svn_ra_dav_init
+    @Svn_client@svn_ra_do_diff     @958 ; Svn_client::svn_ra_do_diff
+    @Svn_client@svn_ra_do_diff2    @959 ; Svn_client::svn_ra_do_diff2
+    @Svn_client@svn_ra_do_diff3    @960 ; Svn_client::svn_ra_do_diff3
+    @Svn_client@svn_ra_do_status   @961 ; Svn_client::svn_ra_do_status
+    @Svn_client@svn_ra_do_status2  @962 ; Svn_client::svn_ra_do_status2
+    @Svn_client@svn_ra_do_switch   @963 ; Svn_client::svn_ra_do_switch
+    @Svn_client@svn_ra_do_switch2  @964 ; Svn_client::svn_ra_do_switch2
+    @Svn_client@svn_ra_do_update   @965 ; Svn_client::svn_ra_do_update
+    @Svn_client@svn_ra_do_update2  @966 ; Svn_client::svn_ra_do_update2
+    @Svn_client@svn_ra_get_commit_editor @971 ; Svn_client::svn_ra_get_commit_editor
+    @Svn_client@svn_ra_get_commit_editor2 @972 ; Svn_client::svn_ra_get_commit_editor2
+    @Svn_client@svn_ra_get_commit_editor3 @973 ; Svn_client::svn_ra_get_commit_editor3
+    @Svn_client@svn_ra_get_dated_revision @977 ; Svn_client::svn_ra_get_dated_revision
+    @Svn_client@svn_ra_get_dir     @968 ; Svn_client::svn_ra_get_dir
+    @Svn_client@svn_ra_get_dir2    @969 ; Svn_client::svn_ra_get_dir2
+    @Svn_client@svn_ra_get_file    @970 ; Svn_client::svn_ra_get_file
+    @Svn_client@svn_ra_get_file_revs @946 ; Svn_client::svn_ra_get_file_revs
+    @Svn_client@svn_ra_get_file_revs2 @947 ; Svn_client::svn_ra_get_file_revs2
+    @Svn_client@svn_ra_get_latest_revnum @978 ; Svn_client::svn_ra_get_latest_revnum
+    @Svn_client@svn_ra_get_location_segments @949 ; Svn_client::svn_ra_get_location_segments
+    @Svn_client@svn_ra_get_locations @948 ; Svn_client::svn_ra_get_locations
+    @Svn_client@svn_ra_get_lock    @943 ; Svn_client::svn_ra_get_lock
+    @Svn_client@svn_ra_get_locks   @942 ; Svn_client::svn_ra_get_locks
+    @Svn_client@svn_ra_get_log     @956 ; Svn_client::svn_ra_get_log
+    @Svn_client@svn_ra_get_log2    @957 ; Svn_client::svn_ra_get_log2
+    @Svn_client@svn_ra_get_mergeinfo @967 ; Svn_client::svn_ra_get_mergeinfo
+    @Svn_client@svn_ra_get_ra_library @931 ; Svn_client::svn_ra_get_ra_library
+    @Svn_client@svn_ra_get_repos_root @950 ; Svn_client::svn_ra_get_repos_root
+    @Svn_client@svn_ra_get_repos_root2 @951 ; Svn_client::svn_ra_get_repos_root2
+    @Svn_client@svn_ra_get_session_url @979 ; Svn_client::svn_ra_get_session_url
+    @Svn_client@svn_ra_get_uuid    @952 ; Svn_client::svn_ra_get_uuid
+    @Svn_client@svn_ra_get_uuid2   @953 ; Svn_client::svn_ra_get_uuid2
+    @Svn_client@svn_ra_has_capability @939 ; Svn_client::svn_ra_has_capability
+    @Svn_client@svn_ra_init_ra_libs @932 ; Svn_client::svn_ra_init_ra_libs
+    @Svn_client@svn_ra_initialize  @985 ; Svn_client::svn_ra_initialize
+    @Svn_client@svn_ra_local_init  @935 ; Svn_client::svn_ra_local_init
+    @Svn_client@svn_ra_lock        @945 ; Svn_client::svn_ra_lock
+    @Svn_client@svn_ra_open        @981 ; Svn_client::svn_ra_open
+    @Svn_client@svn_ra_open2       @982 ; Svn_client::svn_ra_open2
+    @Svn_client@svn_ra_open3       @983 ; Svn_client::svn_ra_open3
+    @Svn_client@svn_ra_print_modules @938 ; Svn_client::svn_ra_print_modules
+    @Svn_client@svn_ra_print_ra_libraries @937 ; Svn_client::svn_ra_print_ra_libraries
+    @Svn_client@svn_ra_reparent    @980 ; Svn_client::svn_ra_reparent
+    @Svn_client@svn_ra_replay      @940 ; Svn_client::svn_ra_replay
+    @Svn_client@svn_ra_replay_range @941 ; Svn_client::svn_ra_replay_range
+    @Svn_client@svn_ra_rev_prop    @974 ; Svn_client::svn_ra_rev_prop
+    @Svn_client@svn_ra_rev_proplist @975 ; Svn_client::svn_ra_rev_proplist
+    @Svn_client@svn_ra_serf_init   @933 ; Svn_client::svn_ra_serf_init
+    @Svn_client@svn_ra_stat        @954 ; Svn_client::svn_ra_stat
+    @Svn_client@svn_ra_svn_init    @934 ; Svn_client::svn_ra_svn_init
+    @Svn_client@svn_ra_unlock      @944 ; Svn_client::svn_ra_unlock
+    @Svn_client@svn_ra_version     @986 ; Svn_client::svn_ra_version
+    @Svn_client@svn_rangelist_diff @1576; Svn_client::svn_rangelist_diff
+    @Svn_client@svn_rangelist_dup  @1564; Svn_client::svn_rangelist_dup
+    @Svn_client@svn_rangelist_inheritable @1569; Svn_client::svn_rangelist_inheritable
+    @Svn_client@svn_rangelist_intersect @1572; Svn_client::svn_rangelist_intersect
+    @Svn_client@svn_rangelist_merge @1575; Svn_client::svn_rangelist_merge
+    @Svn_client@svn_rangelist_remove @1574; Svn_client::svn_rangelist_remove
+    @Svn_client@svn_rangelist_reverse @1571; Svn_client::svn_rangelist_reverse
+    @Svn_client@svn_rangelist_to_string @1570; Svn_client::svn_rangelist_to_string
+    @Svn_client@svn_repos_abort_report @1174; Svn_client::svn_repos_abort_report
+    @Svn_client@svn_repos_authz_check_access @1122; Svn_client::svn_repos_authz_check_access
+    @Svn_client@svn_repos_authz_read @1123; Svn_client::svn_repos_authz_read
+    @Svn_client@svn_repos_begin_report @1183; Svn_client::svn_repos_begin_report
+    @Svn_client@svn_repos_begin_report2 @1184; Svn_client::svn_repos_begin_report2
+    @Svn_client@svn_repos_check_revision_access @1121; Svn_client::svn_repos_check_revision_access
+    @Svn_client@svn_repos_conf_dir @1199; Svn_client::svn_repos_conf_dir
+    @Svn_client@svn_repos_create   @1211; Svn_client::svn_repos_create
+    @Svn_client@svn_repos_dated_revision @1164; Svn_client::svn_repos_dated_revision
+    @Svn_client@svn_repos_db_env   @1200; Svn_client::svn_repos_db_env
+    @Svn_client@svn_repos_db_lockfile @1196; Svn_client::svn_repos_db_lockfile
+    @Svn_client@svn_repos_db_logfiles @1202; Svn_client::svn_repos_db_logfiles
+    @Svn_client@svn_repos_db_logs_lockfile @1195; Svn_client::svn_repos_db_logs_lockfile
+    @Svn_client@svn_repos_delete   @1209; Svn_client::svn_repos_delete
+    @Svn_client@svn_repos_delete_path @1176; Svn_client::svn_repos_delete_path
+    @Svn_client@svn_repos_deleted_rev @1161; Svn_client::svn_repos_deleted_rev
+    @Svn_client@svn_repos_dir_delta @1172; Svn_client::svn_repos_dir_delta
+    @Svn_client@svn_repos_dir_delta2 @1173; Svn_client::svn_repos_dir_delta2
+    @Svn_client@svn_repos_dump_fs  @1130; Svn_client::svn_repos_dump_fs
+    @Svn_client@svn_repos_dump_fs2 @1131; Svn_client::svn_repos_dump_fs2
+    @Svn_client@svn_repos_find_root_path @1213; Svn_client::svn_repos_find_root_path
+    @Svn_client@svn_repos_finish_report @1175; Svn_client::svn_repos_finish_report
+    @Svn_client@svn_repos_fs       @1207; Svn_client::svn_repos_fs
+    @Svn_client@svn_repos_fs_begin_txn_for_commit @1147; Svn_client::svn_repos_fs_begin_txn_for_commit
+    @Svn_client@svn_repos_fs_begin_txn_for_commit2 @1148; Svn_client::svn_repos_fs_begin_txn_for_commit2
+    @Svn_client@svn_repos_fs_begin_txn_for_update @1146; Svn_client::svn_repos_fs_begin_txn_for_update
+    @Svn_client@svn_repos_fs_change_node_prop @1137; Svn_client::svn_repos_fs_change_node_prop
+    @Svn_client@svn_repos_fs_change_rev_prop @1140; Svn_client::svn_repos_fs_change_rev_prop
+    @Svn_client@svn_repos_fs_change_rev_prop2 @1141; Svn_client::svn_repos_fs_change_rev_prop2
+    @Svn_client@svn_repos_fs_change_rev_prop3 @1142; Svn_client::svn_repos_fs_change_rev_prop3
+    @Svn_client@svn_repos_fs_change_txn_prop @1136; Svn_client::svn_repos_fs_change_txn_prop
+    @Svn_client@svn_repos_fs_change_txn_props @1135; Svn_client::svn_repos_fs_change_txn_props
+    @Svn_client@svn_repos_fs_commit_txn @1149; Svn_client::svn_repos_fs_commit_txn
+    @Svn_client@svn_repos_fs_get_locks @1143; Svn_client::svn_repos_fs_get_locks
+    @Svn_client@svn_repos_fs_get_mergeinfo @1152; Svn_client::svn_repos_fs_get_mergeinfo
+    @Svn_client@svn_repos_fs_lock  @1145; Svn_client::svn_repos_fs_lock
+    @Svn_client@svn_repos_fs_revision_prop @1139; Svn_client::svn_repos_fs_revision_prop
+    @Svn_client@svn_repos_fs_revision_proplist @1138; Svn_client::svn_repos_fs_revision_proplist
+    @Svn_client@svn_repos_fs_unlock @1144; Svn_client::svn_repos_fs_unlock
+    @Svn_client@svn_repos_get_commit_editor @1165; Svn_client::svn_repos_get_commit_editor
+    @Svn_client@svn_repos_get_commit_editor2 @1166; Svn_client::svn_repos_get_commit_editor2
+    @Svn_client@svn_repos_get_commit_editor3 @1167; Svn_client::svn_repos_get_commit_editor3
+    @Svn_client@svn_repos_get_commit_editor4 @1168; Svn_client::svn_repos_get_commit_editor4
+    @Svn_client@svn_repos_get_commit_editor5 @1169; Svn_client::svn_repos_get_commit_editor5
+    @Svn_client@svn_repos_get_committed_info @1163; Svn_client::svn_repos_get_committed_info
+    @Svn_client@svn_repos_get_file_revs @1150; Svn_client::svn_repos_get_file_revs
+    @Svn_client@svn_repos_get_file_revs2 @1151; Svn_client::svn_repos_get_file_revs2
+    @Svn_client@svn_repos_get_fs_build_parser @1124; Svn_client::svn_repos_get_fs_build_parser
+    @Svn_client@svn_repos_get_fs_build_parser2 @1126; Svn_client::svn_repos_get_fs_build_parser2
+    @Svn_client@svn_repos_get_logs @1153; Svn_client::svn_repos_get_logs
+    @Svn_client@svn_repos_get_logs2 @1154; Svn_client::svn_repos_get_logs2
+    @Svn_client@svn_repos_get_logs3 @1155; Svn_client::svn_repos_get_logs3
+    @Svn_client@svn_repos_get_logs4 @1156; Svn_client::svn_repos_get_logs4
+    @Svn_client@svn_repos_has_capability @1208; Svn_client::svn_repos_has_capability
+    @Svn_client@svn_repos_history  @1159; Svn_client::svn_repos_history
+    @Svn_client@svn_repos_history2 @1160; Svn_client::svn_repos_history2
+    @Svn_client@svn_repos_hook_dir @1194; Svn_client::svn_repos_hook_dir
+    @Svn_client@svn_repos_hotcopy  @1206; Svn_client::svn_repos_hotcopy
+    @Svn_client@svn_repos_link_path @1177; Svn_client::svn_repos_link_path
+    @Svn_client@svn_repos_link_path2 @1178; Svn_client::svn_repos_link_path2
+    @Svn_client@svn_repos_link_path3 @1179; Svn_client::svn_repos_link_path3
+    @Svn_client@svn_repos_load_fs  @1128; Svn_client::svn_repos_load_fs
+    @Svn_client@svn_repos_load_fs2 @1129; Svn_client::svn_repos_load_fs2
+    @Svn_client@svn_repos_lock_dir @1197; Svn_client::svn_repos_lock_dir
+    @Svn_client@svn_repos_node_editor @1134; Svn_client::svn_repos_node_editor
+    @Svn_client@svn_repos_node_from_baton @1133; Svn_client::svn_repos_node_from_baton
+    @Svn_client@svn_repos_node_location_segments @1157; Svn_client::svn_repos_node_location_segments
+    @Svn_client@svn_repos_open     @1212; Svn_client::svn_repos_open
+    @Svn_client@svn_repos_parse_dumpstream @1125; Svn_client::svn_repos_parse_dumpstream
+    @Svn_client@svn_repos_parse_dumpstream2 @1127; Svn_client::svn_repos_parse_dumpstream2
+    @Svn_client@svn_repos_path     @1201; Svn_client::svn_repos_path
+    @Svn_client@svn_repos_post_commit_hook @1191; Svn_client::svn_repos_post_commit_hook
+    @Svn_client@svn_repos_post_lock_hook @1187; Svn_client::svn_repos_post_lock_hook
+    @Svn_client@svn_repos_post_revprop_change_hook @1189; Svn_client::svn_repos_post_revprop_change_hook
+    @Svn_client@svn_repos_post_unlock_hook @1185; Svn_client::svn_repos_post_unlock_hook
+    @Svn_client@svn_repos_pre_commit_hook @1192; Svn_client::svn_repos_pre_commit_hook
+    @Svn_client@svn_repos_pre_lock_hook @1188; Svn_client::svn_repos_pre_lock_hook
+    @Svn_client@svn_repos_pre_revprop_change_hook @1190; Svn_client::svn_repos_pre_revprop_change_hook
+    @Svn_client@svn_repos_pre_unlock_hook @1186; Svn_client::svn_repos_pre_unlock_hook
+    @Svn_client@svn_repos_recover  @1203; Svn_client::svn_repos_recover
+    @Svn_client@svn_repos_recover2 @1204; Svn_client::svn_repos_recover2
+    @Svn_client@svn_repos_recover3 @1205; Svn_client::svn_repos_recover3
+    @Svn_client@svn_repos_remember_client_capabilities @1120; Svn_client::svn_repos_remember_client_capabilities
+    @Svn_client@svn_repos_replay   @1170; Svn_client::svn_repos_replay
+    @Svn_client@svn_repos_replay2  @1171; Svn_client::svn_repos_replay2
+    @Svn_client@svn_repos_set_path @1180; Svn_client::svn_repos_set_path
+    @Svn_client@svn_repos_set_path2 @1181; Svn_client::svn_repos_set_path2
+    @Svn_client@svn_repos_set_path3 @1182; Svn_client::svn_repos_set_path3
+    @Svn_client@svn_repos_start_commit_hook @1193; Svn_client::svn_repos_start_commit_hook
+    @Svn_client@svn_repos_stat     @1162; Svn_client::svn_repos_stat
+    @Svn_client@svn_repos_svnserve_conf @1198; Svn_client::svn_repos_svnserve_conf
+    @Svn_client@svn_repos_trace_node_locations @1158; Svn_client::svn_repos_trace_node_locations
+    @Svn_client@svn_repos_upgrade  @1210; Svn_client::svn_repos_upgrade
+    @Svn_client@svn_repos_verify_fs @1132; Svn_client::svn_repos_verify_fs
+    @Svn_client@svn_repos_version  @1214; Svn_client::svn_repos_version
+    @Svn_client@svn_revnum_parse   @1812; Svn_client::svn_revnum_parse
+    @Svn_client@svn_sleep_for_timestamps @1777; Svn_client::svn_sleep_for_timestamps
+    @Svn_client@svn_sort__hash     @1766; Svn_client::svn_sort__hash
+    @Svn_client@svn_sort_compare_items_as_paths @1771; Svn_client::svn_sort_compare_items_as_paths
+    @Svn_client@svn_sort_compare_items_lexically @1770; Svn_client::svn_sort_compare_items_lexically
+    @Svn_client@svn_sort_compare_paths @1768; Svn_client::svn_sort_compare_paths
+    @Svn_client@svn_sort_compare_ranges @1767; Svn_client::svn_sort_compare_ranges
+    @Svn_client@svn_sort_compare_revisions @1769; Svn_client::svn_sort_compare_revisions
+    @Svn_client@svn_stream_checksummed @1508; Svn_client::svn_stream_checksummed
+    @Svn_client@svn_stream_close   @1505; Svn_client::svn_stream_close
+    @Svn_client@svn_stream_compressed @1509; Svn_client::svn_stream_compressed
+    @Svn_client@svn_stream_contents_same @1499; Svn_client::svn_stream_contents_same
+    @Svn_client@svn_stream_copy    @1500; Svn_client::svn_stream_copy
+    @Svn_client@svn_stream_copy2   @1501; Svn_client::svn_stream_copy2
+    @Svn_client@svn_stream_create  @1520; Svn_client::svn_stream_create
+    @Svn_client@svn_stream_disown  @1514; Svn_client::svn_stream_disown
+    @Svn_client@svn_stream_empty   @1515; Svn_client::svn_stream_empty
+    @Svn_client@svn_stream_for_stdout @1511; Svn_client::svn_stream_for_stdout
+    @Svn_client@svn_stream_from_aprfile @1512; Svn_client::svn_stream_from_aprfile
+    @Svn_client@svn_stream_from_aprfile2 @1513; Svn_client::svn_stream_from_aprfile2
+    @Svn_client@svn_stream_from_stringbuf @1510; Svn_client::svn_stream_from_stringbuf
+    @Svn_client@svn_stream_printf  @1504; Svn_client::svn_stream_printf
+    @Svn_client@svn_stream_printf_from_utf8 @1503; Svn_client::svn_stream_printf_from_utf8
+    @Svn_client@svn_stream_read    @1507; Svn_client::svn_stream_read
+    @Svn_client@svn_stream_readline @1502; Svn_client::svn_stream_readline
+    @Svn_client@svn_stream_set_baton @1519; Svn_client::svn_stream_set_baton
+    @Svn_client@svn_stream_set_close @1516; Svn_client::svn_stream_set_close
+    @Svn_client@svn_stream_set_read @1518; Svn_client::svn_stream_set_read
+    @Svn_client@svn_stream_set_write @1517; Svn_client::svn_stream_set_write
+    @Svn_client@svn_stream_write   @1506; Svn_client::svn_stream_write
+    @Svn_client@svn_strerror       @1656; Svn_client::svn_strerror
+    @Svn_client@svn_string_compare @1747; Svn_client::svn_string_compare
+    @Svn_client@svn_string_compare_stringbuf @1725; Svn_client::svn_string_compare_stringbuf
+    @Svn_client@svn_string_create  @1754; Svn_client::svn_string_create
+    @Svn_client@svn_string_create_from_buf @1752; Svn_client::svn_string_create_from_buf
+    @Svn_client@svn_string_createf @1751; Svn_client::svn_string_createf
+    @Svn_client@svn_string_createv @1750; Svn_client::svn_string_createv
+    @Svn_client@svn_string_dup     @1748; Svn_client::svn_string_dup
+    @Svn_client@svn_string_find_char_backward @1745; Svn_client::svn_string_find_char_backward
+    @Svn_client@svn_string_first_non_whitespace @1746; Svn_client::svn_string_first_non_whitespace
+    @Svn_client@svn_string_isempty @1749; Svn_client::svn_string_isempty
+    @Svn_client@svn_string_ncreate @1753; Svn_client::svn_string_ncreate
+    @Svn_client@svn_stringbuf_appendbytes @1733; Svn_client::svn_stringbuf_appendbytes
+    @Svn_client@svn_stringbuf_appendcstr @1731; Svn_client::svn_stringbuf_appendcstr
+    @Svn_client@svn_stringbuf_appendstr @1732; Svn_client::svn_stringbuf_appendstr
+    @Svn_client@svn_stringbuf_chop @1735; Svn_client::svn_stringbuf_chop
+    @Svn_client@svn_stringbuf_compare @1729; Svn_client::svn_stringbuf_compare
+    @Svn_client@svn_stringbuf_create @1744; Svn_client::svn_stringbuf_create
+    @Svn_client@svn_stringbuf_create_from_string @1742; Svn_client::svn_stringbuf_create_from_string
+    @Svn_client@svn_stringbuf_createf @1741; Svn_client::svn_stringbuf_createf
+    @Svn_client@svn_stringbuf_createv @1740; Svn_client::svn_stringbuf_createv
+    @Svn_client@svn_stringbuf_dup  @1730; Svn_client::svn_stringbuf_dup
+    @Svn_client@svn_stringbuf_ensure @1739; Svn_client::svn_stringbuf_ensure
+    @Svn_client@svn_stringbuf_fillchar @1734; Svn_client::svn_stringbuf_fillchar
+    @Svn_client@svn_stringbuf_find_char_backward @1726; Svn_client::svn_stringbuf_find_char_backward
+    @Svn_client@svn_stringbuf_first_non_whitespace @1728; Svn_client::svn_stringbuf_first_non_whitespace
+    @Svn_client@svn_stringbuf_from_aprfile @1496; Svn_client::svn_stringbuf_from_aprfile
+    @Svn_client@svn_stringbuf_from_file @1497; Svn_client::svn_stringbuf_from_file
+    @Svn_client@svn_stringbuf_from_file2 @1498; Svn_client::svn_stringbuf_from_file2
+    @Svn_client@svn_stringbuf_isempty @1736; Svn_client::svn_stringbuf_isempty
+    @Svn_client@svn_stringbuf_ncreate @1743; Svn_client::svn_stringbuf_ncreate
+    @Svn_client@svn_stringbuf_set  @1738; Svn_client::svn_stringbuf_set
+    @Svn_client@svn_stringbuf_setempty @1737; Svn_client::svn_stringbuf_setempty
+    @Svn_client@svn_stringbuf_strip_whitespace @1727; Svn_client::svn_stringbuf_strip_whitespace
+    @Svn_client@svn_subr_version   @1782; Svn_client::svn_subr_version
+    @Svn_client@svn_subst_build_keywords @1437; Svn_client::svn_subst_build_keywords
+    @Svn_client@svn_subst_build_keywords2 @1438; Svn_client::svn_subst_build_keywords2
+    @Svn_client@svn_subst_copy_and_translate @1426; Svn_client::svn_subst_copy_and_translate
+    @Svn_client@svn_subst_copy_and_translate2 @1427; Svn_client::svn_subst_copy_and_translate2
+    @Svn_client@svn_subst_copy_and_translate3 @1428; Svn_client::svn_subst_copy_and_translate3
+    @Svn_client@svn_subst_detranslate_string @1420; Svn_client::svn_subst_detranslate_string
+    @Svn_client@svn_subst_eol_style_from_value @1440; Svn_client::svn_subst_eol_style_from_value
+    @Svn_client@svn_subst_keywords_differ @1435; Svn_client::svn_subst_keywords_differ
+    @Svn_client@svn_subst_keywords_differ2 @1436; Svn_client::svn_subst_keywords_differ2
+    @Svn_client@svn_subst_stream_detranslated @1422; Svn_client::svn_subst_stream_detranslated
+    @Svn_client@svn_subst_stream_from_specialfile @1432; Svn_client::svn_subst_stream_from_specialfile
+    @Svn_client@svn_subst_stream_translated @1434; Svn_client::svn_subst_stream_translated
+    @Svn_client@svn_subst_stream_translated_to_normal_form @1433; Svn_client::svn_subst_stream_translated_to_normal_form
+    @Svn_client@svn_subst_translate_cstring @1424; Svn_client::svn_subst_translate_cstring
+    @Svn_client@svn_subst_translate_cstring2 @1425; Svn_client::svn_subst_translate_cstring2
+    @Svn_client@svn_subst_translate_stream @1429; Svn_client::svn_subst_translate_stream
+    @Svn_client@svn_subst_translate_stream2 @1430; Svn_client::svn_subst_translate_stream2
+    @Svn_client@svn_subst_translate_stream3 @1431; Svn_client::svn_subst_translate_stream3
+    @Svn_client@svn_subst_translate_string @1421; Svn_client::svn_subst_translate_string
+    @Svn_client@svn_subst_translate_to_normal_form @1423; Svn_client::svn_subst_translate_to_normal_form
+    @Svn_client@svn_subst_translation_required @1439; Svn_client::svn_subst_translation_required
+    @Svn_client@svn_time_from_cstring @1780; Svn_client::svn_time_from_cstring
+    @Svn_client@svn_time_to_cstring @1781; Svn_client::svn_time_to_cstring
+    @Svn_client@svn_time_to_human_cstring @1779; Svn_client::svn_time_to_human_cstring
+    @Svn_client@svn_txdelta        @1358; Svn_client::svn_txdelta
+    @Svn_client@svn_txdelta_apply  @1353; Svn_client::svn_txdelta_apply
+    @Svn_client@svn_txdelta_apply_instructions @1360; Svn_client::svn_txdelta_apply_instructions
+    @Svn_client@svn_txdelta_compose_windows @1363; Svn_client::svn_txdelta_compose_windows
+    @Svn_client@svn_txdelta_md5_digest @1359; Svn_client::svn_txdelta_md5_digest
+    @Svn_client@svn_txdelta_next_window @1361; Svn_client::svn_txdelta_next_window
+    @Svn_client@svn_txdelta_parse_svndiff @1350; Svn_client::svn_txdelta_parse_svndiff
+    @Svn_client@svn_txdelta_read_svndiff_window @1349; Svn_client::svn_txdelta_read_svndiff_window
+    @Svn_client@svn_txdelta_send_stream @1355; Svn_client::svn_txdelta_send_stream
+    @Svn_client@svn_txdelta_send_string @1356; Svn_client::svn_txdelta_send_string
+    @Svn_client@svn_txdelta_send_txstream @1354; Svn_client::svn_txdelta_send_txstream
+    @Svn_client@svn_txdelta_skip_svndiff_window @1348; Svn_client::svn_txdelta_skip_svndiff_window
+    @Svn_client@svn_txdelta_stream_create @1362; Svn_client::svn_txdelta_stream_create
+    @Svn_client@svn_txdelta_target_push @1357; Svn_client::svn_txdelta_target_push
+    @Svn_client@svn_txdelta_to_svndiff @1351; Svn_client::svn_txdelta_to_svndiff
+    @Svn_client@svn_txdelta_to_svndiff2 @1352; Svn_client::svn_txdelta_to_svndiff2
+    @Svn_client@svn_txdelta_window_dup @1364; Svn_client::svn_txdelta_window_dup
+    @Svn_client@svn_user_get_homedir @1775; Svn_client::svn_user_get_homedir
+    @Svn_client@svn_user_get_name  @1776; Svn_client::svn_user_get_name
+    @Svn_client@svn_utf_cstring_from_utf8 @1684; Svn_client::svn_utf_cstring_from_utf8
+    @Svn_client@svn_utf_cstring_from_utf8_ex @1682; Svn_client::svn_utf_cstring_from_utf8_ex
+    @Svn_client@svn_utf_cstring_from_utf8_ex2 @1683; Svn_client::svn_utf_cstring_from_utf8_ex2
+    @Svn_client@svn_utf_cstring_from_utf8_fuzzy @1681; Svn_client::svn_utf_cstring_from_utf8_fuzzy
+    @Svn_client@svn_utf_cstring_from_utf8_string @1679; Svn_client::svn_utf_cstring_from_utf8_string
+    @Svn_client@svn_utf_cstring_from_utf8_stringbuf @1680; Svn_client::svn_utf_cstring_from_utf8_stringbuf
+    @Svn_client@svn_utf_cstring_to_utf8 @1689; Svn_client::svn_utf_cstring_to_utf8
+    @Svn_client@svn_utf_cstring_to_utf8_ex @1687; Svn_client::svn_utf_cstring_to_utf8_ex
+    @Svn_client@svn_utf_cstring_to_utf8_ex2 @1688; Svn_client::svn_utf_cstring_to_utf8_ex2
+    @Svn_client@svn_utf_initialize @1692; Svn_client::svn_utf_initialize
+    @Svn_client@svn_utf_string_from_utf8 @1685; Svn_client::svn_utf_string_from_utf8
+    @Svn_client@svn_utf_string_to_utf8 @1690; Svn_client::svn_utf_string_to_utf8
+    @Svn_client@svn_utf_stringbuf_from_utf8 @1686; Svn_client::svn_utf_stringbuf_from_utf8
+    @Svn_client@svn_utf_stringbuf_to_utf8 @1691; Svn_client::svn_utf_stringbuf_to_utf8
+    @Svn_client@svn_uuid_generate  @1800; Svn_client::svn_uuid_generate
+    @Svn_client@svn_ver_check_list @1783; Svn_client::svn_ver_check_list
+    @Svn_client@svn_ver_compatible @1785; Svn_client::svn_ver_compatible
+    @Svn_client@svn_ver_equal      @1784; Svn_client::svn_ver_equal
+    @Svn_client@svn_wc_add         @817 ; Svn_client::svn_wc_add
+    @Svn_client@svn_wc_add2        @818 ; Svn_client::svn_wc_add2
+    @Svn_client@svn_wc_add_lock    @749 ; Svn_client::svn_wc_add_lock
+    @Svn_client@svn_wc_add_repos_file @815 ; Svn_client::svn_wc_add_repos_file
+    @Svn_client@svn_wc_add_repos_file2 @816 ; Svn_client::svn_wc_add_repos_file2
+    @Svn_client@svn_wc_adm_access_path @867 ; Svn_client::svn_wc_adm_access_path
+    @Svn_client@svn_wc_adm_access_pool @866 ; Svn_client::svn_wc_adm_access_pool
+    @Svn_client@svn_wc_adm_close   @868 ; Svn_client::svn_wc_adm_close
+    @Svn_client@svn_wc_adm_locked  @865 ; Svn_client::svn_wc_adm_locked
+    @Svn_client@svn_wc_adm_open    @878 ; Svn_client::svn_wc_adm_open
+    @Svn_client@svn_wc_adm_open2   @879 ; Svn_client::svn_wc_adm_open2
+    @Svn_client@svn_wc_adm_open3   @880 ; Svn_client::svn_wc_adm_open3
+    @Svn_client@svn_wc_adm_open_anchor @874 ; Svn_client::svn_wc_adm_open_anchor
+    @Svn_client@svn_wc_adm_probe_open @875 ; Svn_client::svn_wc_adm_probe_open
+    @Svn_client@svn_wc_adm_probe_open2 @876 ; Svn_client::svn_wc_adm_probe_open2
+    @Svn_client@svn_wc_adm_probe_open3 @877 ; Svn_client::svn_wc_adm_probe_open3
+    @Svn_client@svn_wc_adm_probe_retrieve @872 ; Svn_client::svn_wc_adm_probe_retrieve
+    @Svn_client@svn_wc_adm_probe_try @869 ; Svn_client::svn_wc_adm_probe_try
+    @Svn_client@svn_wc_adm_probe_try2 @870 ; Svn_client::svn_wc_adm_probe_try2
+    @Svn_client@svn_wc_adm_probe_try3 @871 ; Svn_client::svn_wc_adm_probe_try3
+    @Svn_client@svn_wc_adm_retrieve @873 ; Svn_client::svn_wc_adm_retrieve
+    @Svn_client@svn_wc_canonicalize_svn_prop @785 ; Svn_client::svn_wc_canonicalize_svn_prop
+    @Svn_client@svn_wc_check_wc    @848 ; Svn_client::svn_wc_check_wc
+    @Svn_client@svn_wc_cleanup     @767 ; Svn_client::svn_wc_cleanup
+    @Svn_client@svn_wc_cleanup2    @768 ; Svn_client::svn_wc_cleanup2
+    @Svn_client@svn_wc_committed_queue_create @810 ; Svn_client::svn_wc_committed_queue_create
+    @Svn_client@svn_wc_conflicted_p @841 ; Svn_client::svn_wc_conflicted_p
+    @Svn_client@svn_wc_copy        @822 ; Svn_client::svn_wc_copy
+    @Svn_client@svn_wc_copy2       @823 ; Svn_client::svn_wc_copy2
+    @Svn_client@svn_wc_crawl_revisions @801 ; Svn_client::svn_wc_crawl_revisions
+    @Svn_client@svn_wc_crawl_revisions2 @802 ; Svn_client::svn_wc_crawl_revisions2
+    @Svn_client@svn_wc_crawl_revisions3 @803 ; Svn_client::svn_wc_crawl_revisions3
+    @Svn_client@svn_wc_create_conflict_result @849 ; Svn_client::svn_wc_create_conflict_result
+    @Svn_client@svn_wc_create_notify @851 ; Svn_client::svn_wc_create_notify
+    @Svn_client@svn_wc_create_tmp_file @759 ; Svn_client::svn_wc_create_tmp_file
+    @Svn_client@svn_wc_create_tmp_file2 @760 ; Svn_client::svn_wc_create_tmp_file2
+    @Svn_client@svn_wc_delete      @819 ; Svn_client::svn_wc_delete
+    @Svn_client@svn_wc_delete2     @820 ; Svn_client::svn_wc_delete2
+    @Svn_client@svn_wc_delete3     @821 ; Svn_client::svn_wc_delete3
+    @Svn_client@svn_wc_diff        @777 ; Svn_client::svn_wc_diff
+    @Svn_client@svn_wc_diff2       @778 ; Svn_client::svn_wc_diff2
+    @Svn_client@svn_wc_diff3       @779 ; Svn_client::svn_wc_diff3
+    @Svn_client@svn_wc_diff4       @780 ; Svn_client::svn_wc_diff4
+    @Svn_client@svn_wc_dup_notify  @850 ; Svn_client::svn_wc_dup_notify
+    @Svn_client@svn_wc_dup_status  @830 ; Svn_client::svn_wc_dup_status
+    @Svn_client@svn_wc_dup_status2 @831 ; Svn_client::svn_wc_dup_status2
+    @Svn_client@svn_wc_edited_externals @859 ; Svn_client::svn_wc_edited_externals
+    @Svn_client@svn_wc_ensure_adm  @833 ; Svn_client::svn_wc_ensure_adm
+    @Svn_client@svn_wc_ensure_adm2 @834 ; Svn_client::svn_wc_ensure_adm2
+    @Svn_client@svn_wc_ensure_adm3 @835 ; Svn_client::svn_wc_ensure_adm3
+    @Svn_client@svn_wc_entries_read @843 ; Svn_client::svn_wc_entries_read
+    @Svn_client@svn_wc_entry       @844 ; Svn_client::svn_wc_entry
+    @Svn_client@svn_wc_entry_dup   @842 ; Svn_client::svn_wc_entry_dup
+    @Svn_client@svn_wc_external_item2_dup @856 ; Svn_client::svn_wc_external_item2_dup
+    @Svn_client@svn_wc_external_item_create @857 ; Svn_client::svn_wc_external_item_create
+    @Svn_client@svn_wc_external_item_dup @855 ; Svn_client::svn_wc_external_item_dup
+    @Svn_client@svn_wc_get_actual_target @799 ; Svn_client::svn_wc_get_actual_target
+    @Svn_client@svn_wc_get_adm_dir @862 ; Svn_client::svn_wc_get_adm_dir
+    @Svn_client@svn_wc_get_ancestry @840 ; Svn_client::svn_wc_get_ancestry
+    @Svn_client@svn_wc_get_default_ignores @752 ; Svn_client::svn_wc_get_default_ignores
+    @Svn_client@svn_wc_get_diff_editor @781 ; Svn_client::svn_wc_get_diff_editor
+    @Svn_client@svn_wc_get_diff_editor2 @782 ; Svn_client::svn_wc_get_diff_editor2
+    @Svn_client@svn_wc_get_diff_editor3 @783 ; Svn_client::svn_wc_get_diff_editor3
+    @Svn_client@svn_wc_get_diff_editor4 @784 ; Svn_client::svn_wc_get_diff_editor4
+    @Svn_client@svn_wc_get_ignores @751 ; Svn_client::svn_wc_get_ignores
+    @Svn_client@svn_wc_get_pristine_copy_path @769 ; Svn_client::svn_wc_get_pristine_copy_path
+    @Svn_client@svn_wc_get_prop_diffs @776 ; Svn_client::svn_wc_get_prop_diffs
+    @Svn_client@svn_wc_get_status_editor @825 ; Svn_client::svn_wc_get_status_editor
+    @Svn_client@svn_wc_get_status_editor2 @826 ; Svn_client::svn_wc_get_status_editor2
+    @Svn_client@svn_wc_get_status_editor3 @827 ; Svn_client::svn_wc_get_status_editor3
+    @Svn_client@svn_wc_get_switch_editor @793 ; Svn_client::svn_wc_get_switch_editor
+    @Svn_client@svn_wc_get_switch_editor2 @794 ; Svn_client::svn_wc_get_switch_editor2
+    @Svn_client@svn_wc_get_switch_editor3 @795 ; Svn_client::svn_wc_get_switch_editor3
+    @Svn_client@svn_wc_get_update_editor @796 ; Svn_client::svn_wc_get_update_editor
+    @Svn_client@svn_wc_get_update_editor2 @797 ; Svn_client::svn_wc_get_update_editor2
+    @Svn_client@svn_wc_get_update_editor3 @798 ; Svn_client::svn_wc_get_update_editor3
+    @Svn_client@svn_wc_has_binary_prop @847 ; Svn_client::svn_wc_has_binary_prop
+    @Svn_client@svn_wc_init_traversal_info @860 ; Svn_client::svn_wc_init_traversal_info
+    @Svn_client@svn_wc_is_adm_dir  @863 ; Svn_client::svn_wc_is_adm_dir
+    @Svn_client@svn_wc_is_entry_prop @786 ; Svn_client::svn_wc_is_entry_prop
+    @Svn_client@svn_wc_is_normal_prop @788 ; Svn_client::svn_wc_is_normal_prop
+    @Svn_client@svn_wc_is_wc_prop  @787 ; Svn_client::svn_wc_is_wc_prop
+    @Svn_client@svn_wc_is_wc_root  @800 ; Svn_client::svn_wc_is_wc_root
+    @Svn_client@svn_wc_locked      @864 ; Svn_client::svn_wc_locked
+    @Svn_client@svn_wc_mark_missing_deleted @836 ; Svn_client::svn_wc_mark_missing_deleted
+    @Svn_client@svn_wc_match_ignore_list @750 ; Svn_client::svn_wc_match_ignore_list
+    @Svn_client@svn_wc_maybe_set_repos_root @832 ; Svn_client::svn_wc_maybe_set_repos_root
+    @Svn_client@svn_wc_merge       @773 ; Svn_client::svn_wc_merge
+    @Svn_client@svn_wc_merge2      @774 ; Svn_client::svn_wc_merge2
+    @Svn_client@svn_wc_merge3      @775 ; Svn_client::svn_wc_merge3
+    @Svn_client@svn_wc_merge_prop_diffs @770 ; Svn_client::svn_wc_merge_prop_diffs
+    @Svn_client@svn_wc_merge_props @771 ; Svn_client::svn_wc_merge_props
+    @Svn_client@svn_wc_merge_props2 @772 ; Svn_client::svn_wc_merge_props2
+    @Svn_client@svn_wc_parse_externals_description @852 ; Svn_client::svn_wc_parse_externals_description
+    @Svn_client@svn_wc_parse_externals_description2 @853 ; Svn_client::svn_wc_parse_externals_description2
+    @Svn_client@svn_wc_parse_externals_description3 @854 ; Svn_client::svn_wc_parse_externals_description3
+    @Svn_client@svn_wc_process_committed @804 ; Svn_client::svn_wc_process_committed
+    @Svn_client@svn_wc_process_committed2 @805 ; Svn_client::svn_wc_process_committed2
+    @Svn_client@svn_wc_process_committed3 @806 ; Svn_client::svn_wc_process_committed3
+    @Svn_client@svn_wc_process_committed4 @807 ; Svn_client::svn_wc_process_committed4
+    @Svn_client@svn_wc_process_committed_queue @808 ; Svn_client::svn_wc_process_committed_queue
+    @Svn_client@svn_wc_prop_get    @791 ; Svn_client::svn_wc_prop_get
+    @Svn_client@svn_wc_prop_list   @792 ; Svn_client::svn_wc_prop_list
+    @Svn_client@svn_wc_prop_set    @789 ; Svn_client::svn_wc_prop_set
+    @Svn_client@svn_wc_prop_set2   @790 ; Svn_client::svn_wc_prop_set2
+    @Svn_client@svn_wc_props_modified_p @845 ; Svn_client::svn_wc_props_modified_p
+    @Svn_client@svn_wc_queue_committed @809 ; Svn_client::svn_wc_queue_committed
+    @Svn_client@svn_wc_relocate    @764 ; Svn_client::svn_wc_relocate
+    @Svn_client@svn_wc_relocate2   @765 ; Svn_client::svn_wc_relocate2
+    @Svn_client@svn_wc_relocate3   @766 ; Svn_client::svn_wc_relocate3
+    @Svn_client@svn_wc_remove_from_revision_control @814 ; Svn_client::svn_wc_remove_from_revision_control
+    @Svn_client@svn_wc_remove_lock @748 ; Svn_client::svn_wc_remove_lock
+    @Svn_client@svn_wc_resolved_conflict @811 ; Svn_client::svn_wc_resolved_conflict
+    @Svn_client@svn_wc_resolved_conflict2 @812 ; Svn_client::svn_wc_resolved_conflict2
+    @Svn_client@svn_wc_resolved_conflict3 @813 ; Svn_client::svn_wc_resolved_conflict3
+    @Svn_client@svn_wc_revert      @761 ; Svn_client::svn_wc_revert
+    @Svn_client@svn_wc_revert2     @762 ; Svn_client::svn_wc_revert2
+    @Svn_client@svn_wc_revert3     @763 ; Svn_client::svn_wc_revert3
+    @Svn_client@svn_wc_revision_status @747 ; Svn_client::svn_wc_revision_status
+    @Svn_client@svn_wc_set_adm_dir @861 ; Svn_client::svn_wc_set_adm_dir
+    @Svn_client@svn_wc_set_changelist @746 ; Svn_client::svn_wc_set_changelist
+    @Svn_client@svn_wc_status      @828 ; Svn_client::svn_wc_status
+    @Svn_client@svn_wc_status2     @829 ; Svn_client::svn_wc_status2
+    @Svn_client@svn_wc_status_set_repos_locks @824 ; Svn_client::svn_wc_status_set_repos_locks
+    @Svn_client@svn_wc_text_modified_p @846 ; Svn_client::svn_wc_text_modified_p
+    @Svn_client@svn_wc_translated_file @757 ; Svn_client::svn_wc_translated_file
+    @Svn_client@svn_wc_translated_file2 @758 ; Svn_client::svn_wc_translated_file2
+    @Svn_client@svn_wc_translated_stream @756 ; Svn_client::svn_wc_translated_stream
+    @Svn_client@svn_wc_transmit_prop_deltas @753 ; Svn_client::svn_wc_transmit_prop_deltas
+    @Svn_client@svn_wc_transmit_text_deltas @754 ; Svn_client::svn_wc_transmit_text_deltas
+    @Svn_client@svn_wc_transmit_text_deltas2 @755 ; Svn_client::svn_wc_transmit_text_deltas2
+    @Svn_client@svn_wc_traversed_depths @858 ; Svn_client::svn_wc_traversed_depths
+    @Svn_client@svn_wc_version     @881 ; Svn_client::svn_wc_version
+    @Svn_client@svn_wc_walk_entries @837 ; Svn_client::svn_wc_walk_entries
+    @Svn_client@svn_wc_walk_entries2 @838 ; Svn_client::svn_wc_walk_entries2
+    @Svn_client@svn_wc_walk_entries3 @839 ; Svn_client::svn_wc_walk_entries3
+    @Svn_client@svn_xml_ap_to_hash @1701; Svn_client::svn_xml_ap_to_hash
+    @Svn_client@svn_xml_escape_attr_cstring @1708; Svn_client::svn_xml_escape_attr_cstring
+    @Svn_client@svn_xml_escape_attr_string @1709; Svn_client::svn_xml_escape_attr_string
+    @Svn_client@svn_xml_escape_attr_stringbuf @1710; Svn_client::svn_xml_escape_attr_stringbuf
+    @Svn_client@svn_xml_escape_cdata_cstring @1711; Svn_client::svn_xml_escape_cdata_cstring
+    @Svn_client@svn_xml_escape_cdata_string @1712; Svn_client::svn_xml_escape_cdata_string
+    @Svn_client@svn_xml_escape_cdata_stringbuf @1713; Svn_client::svn_xml_escape_cdata_stringbuf
+    @Svn_client@svn_xml_free_parser @1705; Svn_client::svn_xml_free_parser
+    @Svn_client@svn_xml_fuzzy_escape @1707; Svn_client::svn_xml_fuzzy_escape
+    @Svn_client@svn_xml_get_attr_value @1702; Svn_client::svn_xml_get_attr_value
+    @Svn_client@svn_xml_hash_atts_overlaying @1698; Svn_client::svn_xml_hash_atts_overlaying
+    @Svn_client@svn_xml_hash_atts_preserving @1699; Svn_client::svn_xml_hash_atts_preserving
+    @Svn_client@svn_xml_is_xml_safe @1714; Svn_client::svn_xml_is_xml_safe
+    @Svn_client@svn_xml_make_att_hash @1700; Svn_client::svn_xml_make_att_hash
+    @Svn_client@svn_xml_make_close_tag @1693; Svn_client::svn_xml_make_close_tag
+    @Svn_client@svn_xml_make_header @1697; Svn_client::svn_xml_make_header
+    @Svn_client@svn_xml_make_open_tag @1696; Svn_client::svn_xml_make_open_tag
+    @Svn_client@svn_xml_make_open_tag_hash @1694; Svn_client::svn_xml_make_open_tag_hash
+    @Svn_client@svn_xml_make_open_tag_v @1695; Svn_client::svn_xml_make_open_tag_v
+    @Svn_client@svn_xml_make_parser @1706; Svn_client::svn_xml_make_parser
+    @Svn_client@svn_xml_parse      @1704; Svn_client::svn_xml_parse
+    @Svn_client@svn_xml_signal_bailout @1703; Svn_client::svn_xml_signal_bailout
+    @Svnclient@AprTimeToDateTime$qqrj @2123; __fastcall Svnclient::AprTimeToDateTime(__int64)
+    @Svnclient@BaseDllDir          @2127; Svnclient::BaseDllDir
+    @Svnclient@DateTimeToAprTime$qqr16System@TDateTime @2122; __fastcall Svnclient::DateTimeToAprTime(System::TDateTime)
+    @Svnclient@DllLoadException@   @2134; Svnclient::DllLoadException::
+    @Svnclient@DllLoadException@$bctr$qqrx20System@UnicodeString @1947; __fastcall Svnclient::DllLoadException::DllLoadException(const System::UnicodeString)
+    @Svnclient@DllLoadException@GetFileNotFoundError$qqrv @1946; __fastcall Svnclient::DllLoadException::GetFileNotFoundError()
+    @Svnclient@FileAttrStr$qqrui   @2118; __fastcall Svnclient::FileAttrStr(unsigned int)
+    @Svnclient@Finalization$qqrv   @1945; __fastcall Svnclient::Finalization()
+    @Svnclient@NodeKindStrings     @2128; Svnclient::NodeKindStrings
+    @Svnclient@NotifyActionStr$qqr29Svn_client@TSvnWcNotifyAction @2120; __fastcall Svnclient::NotifyActionStr(Svn_client::TSvnWcNotifyAction)
+    @Svnclient@NotifyStateStr$qqr28Svn_client@TSvnWcNotifyState @2119; __fastcall Svnclient::NotifyStateStr(Svn_client::TSvnWcNotifyState)
+    @Svnclient@StatusKindStr$qqr27Svn_client@TSvnWcStatusKind @2117; __fastcall Svnclient::StatusKindStr(Svn_client::TSvnWcStatusKind)
+    @Svnclient@SvnExcludeTrailingPathDelimiter$qqrx20System@UnicodeString @2116; __fastcall Svnclient::SvnExcludeTrailingPathDelimiter(const System::UnicodeString)
+    @Svnclient@SvnExtractFileDrive$qqrx20System@UnicodeString @2115; __fastcall Svnclient::SvnExtractFileDrive(const System::UnicodeString)
+    @Svnclient@SvnExtractFileName$qqrx20System@UnicodeString @2114; __fastcall Svnclient::SvnExtractFileName(const System::UnicodeString)
+    @Svnclient@SvnExtractFilePath$qqrx20System@UnicodeString @2113; __fastcall Svnclient::SvnExtractFilePath(const System::UnicodeString)
+    @Svnclient@SvnIncludeTrailingPathDelimiter$qqrx20System@UnicodeString @2112; __fastcall Svnclient::SvnIncludeTrailingPathDelimiter(const System::UnicodeString)
+    @Svnclient@SvnStrToDateTime$qqrx20System@UnicodeStringpui @2121; __fastcall Svnclient::SvnStrToDateTime(const System::UnicodeString, unsigned int *)
+    @Svnclient@THistoryUpdateThread@ @2174; Svnclient::THistoryUpdateThread::
+    @Svnclient@THistoryUpdateThread@$bctr$qqrp18Svnclient@TSvnItemx49System@%DelphiInterface$22Svnclient@IAsyncUpdate% @1959; Svnclient::THistoryUpdateThread::THistoryUpdateThread(Svnclient::TSvnItem *, const System::DelphiInterface<{583}...
+    @Svnclient@THistoryUpdateThread@Completed$qqrp14System@TObject @1960; __fastcall Svnclient::THistoryUpdateThread::Completed(System::TObject *)
+    @Svnclient@THistoryUpdateThread@Execute$qqrv @1958; __fastcall Svnclient::THistoryUpdateThread::Execute()
+    @Svnclient@THistoryUpdateThread@InternalUpdate$qqro @1957; __fastcall Svnclient::THistoryUpdateThread::InternalUpdate(bool)
+    @Svnclient@THistoryUpdateThread@NewUpdate$qqrv @1956; __fastcall Svnclient::THistoryUpdateThread::NewUpdate()
+    @Svnclient@THistoryUpdateThread@ResetUpdate$qqrv @1955; __fastcall Svnclient::THistoryUpdateThread::ResetUpdate()
+    @Svnclient@THistoryUpdateThread@Update$qqrv @1954; __fastcall Svnclient::THistoryUpdateThread::Update()
+    @Svnclient@TSvnBlameItem@      @2178; Svnclient::TSvnBlameItem::
+    @Svnclient@TSvnBlameOptions@   @2155; Svnclient::TSvnBlameOptions::
+    @Svnclient@TSvnBlameOptions@$bctr$qqrv @2020; __fastcall Svnclient::TSvnBlameOptions::TSvnBlameOptions()
+    @Svnclient@TSvnBlameOptions@AssignTo$qqrp26System@Classes@TPersistent @2019; __fastcall Svnclient::TSvnBlameOptions::AssignTo(System::Classes::TPersistent *)
+    @Svnclient@TSvnClient@         @2136; Svnclient::TSvnClient::
+    @Svnclient@TSvnClient@$bctr$qqrv @2002; __fastcall Svnclient::TSvnClient::TSvnClient()
+    @Svnclient@TSvnClient@$bdtr$qqrv @1998; __fastcall Svnclient::TSvnClient::~TSvnClient()
+    @Svnclient@TSvnClient@Add$qqrx20System@UnicodeStringooopui @1996; __fastcall Svnclient::TSvnClient::Add(const System::UnicodeString, bool, bool, bool, unsigned int *)
+    @Svnclient@TSvnClient@AddToChangeList$qqrp23System@Classes@TStringsx20System@UnicodeString20Svn_client@TSvnDepthpui @1995; __fastcall Svnclient::TSvnClient::AddToChangeList(System::Classes::TStrings *, const System::UnicodeString, Svn_client::TSvnDepth, unsigned int *)
+    @Svnclient@TSvnClient@Blame$qqrx20System@UnicodeStringynpqqrp14System@TObjectjix20System@UnicodeString16System@TDateTimet4ro$viiipui @1994; __fastcall Svnclient::TSvnClient::Blame(const System::UnicodeString, void __fastcall __closure(*)(System::TObject *, __int64, int, const System::UnicodeString, System::TDateTime, const System::UnicodeString, bool&), int, int, int, unsigned int *)
+    @Svnclient@TSvnClient@CheckDllLoadError$qqrx20System@UnicodeString @1997; __fastcall Svnclient::TSvnClient::CheckDllLoadError(const System::UnicodeString)
+    @Svnclient@TSvnClient@Checkout$qqrx20System@UnicodeStringt1ynpqqrp14System@TObjectx20System@UnicodeStringt229Svn_client@TSvnWcNotifyAction23Svn_client@TSvnNodeKind28Svn_client@TSvnWcNotifyStatet6iro$vooiiynpqqrp14System@TObjectro$vpui @1993; Svnclient::TSvnClient::Checkout(const System::UnicodeString, const System::UnicodeString, __closure(*)(System::TObject *, const System::UnicodeString, const System::UnicodeString, Svn_client::TSvnWcNotifyAction, Svn_client::TSvnNodeKind, Svn_client::TS
+    @Svnclient@TSvnClient@Cleanup$qqrx20System@UnicodeStringpui @1992; __fastcall Svnclient::TSvnClient::Cleanup(const System::UnicodeString, unsigned int *)
+    @Svnclient@TSvnClient@Commit$qqrp23System@Classes@TStringsx20System@UnicodeStringynpqqrp14System@TObjectx20System@UnicodeStringt229Svn_client@TSvnWcNotifyAction23Svn_client@TSvnNodeKind28Svn_client@TSvnWcNotifyStatet6iro$voopui @1991; Svnclient::TSvnClient::Commit(System::Classes::TStrings *, const System::UnicodeString, __closure(*)(System::TObject *, const System::UnicodeString, const System::UnicodeString, Svn_client::TSvnWcNotifyAction, Svn_client::TSvnNodeKind, Svn_client::TSvn
+    @Svnclient@TSvnClient@DoBlame$qqrjix20System@UnicodeStringt3t3 @2013; __fastcall Svnclient::TSvnClient::DoBlame(__int64, int, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Svnclient@TSvnClient@DoCancel$qqrv @2012; __fastcall Svnclient::TSvnClient::DoCancel()
+    @Svnclient@TSvnClient@DoList$qqr20System@UnicodeStringrx21Svn_client@TSvnDirEntorx19Svn_client@TSvnLockt1 @2011; __fastcall Svnclient::TSvnClient::DoList(System::UnicodeString, const Svn_client::TSvnDirEnt&, bool, const Svn_client::TSvnLock&, System::UnicodeString)
+    @Svnclient@TSvnClient@DoLoginPrompt$qqrx20System@UnicodeStringr20System@UnicodeStringt2ro @2010; __fastcall Svnclient::TSvnClient::DoLoginPrompt(const System::UnicodeString, System::UnicodeString&, System::UnicodeString&, bool&)
+    @Svnclient@TSvnClient@DoNotify$qqrx20System@UnicodeStringt129Svn_client@TSvnWcNotifyAction23Svn_client@TSvnNodeKind28Svn_client@TSvnWcNotifyStatet5i @2009; __fastcall Svnclient::TSvnClient::DoNotify(const System::UnicodeString, const System::UnicodeString, Svn_client::TSvnWcNotifyAction, Svn_client::TSvnNodeKind, Svn_client::TSvnWcNotifyState, Svn_client::TSvnWcNotifyState, int)
+    @Svnclient@TSvnClient@DoProgress$qqrjj @2008; __fastcall Svnclient::TSvnClient::DoProgress(__int64, __int64)
+    @Svnclient@TSvnClient@DoSSLClientCertPrompt$qqrx20System@UnicodeStringr20System@UnicodeStringro @2007; __fastcall Svnclient::TSvnClient::DoSSLClientCertPrompt(const System::UnicodeString, System::UnicodeString&, bool&)
+    @Svnclient@TSvnClient@DoSSLClientPasswordPrompt$qqrx20System@UnicodeStringr20System@UnicodeStringro @2006; __fastcall Svnclient::TSvnClient::DoSSLClientPasswordPrompt(const System::UnicodeString, System::UnicodeString&, bool&)
+    @Svnclient@TSvnClient@DoSSLServerTrustPrompt$qqrx20System@UnicodeStringrx36Svn_client@TSvnAuthSSLServerCertInfo50System@%Set$23Svnclient@Svnclient__31t1$i0$t1$i4$%ro @2005; Svnclient::TSvnClient::DoSSLServerTrustPrompt(const System::UnicodeString, const Svn_client::TSvnAuthSSLServerCertInfo&, System::Set<{583}...
+    @Svnclient@TSvnClient@DoUserNamePrompt$qqrx20System@UnicodeStringr20System@UnicodeStringro @2004; __fastcall Svnclient::TSvnClient::DoUserNamePrompt(const System::UnicodeString, System::UnicodeString&, bool&)
+    @Svnclient@TSvnClient@DoWCStatus$qqrpcrx24Svn_client@TSvnWcStatus2 @2003; __fastcall Svnclient::TSvnClient::DoWCStatus(char *, const Svn_client::TSvnWcStatus2&)
+    @Svnclient@TSvnClient@Export$qqrx20System@UnicodeStringt1ynpqqrp14System@TObjectx20System@UnicodeStringt229Svn_client@TSvnWcNotifyAction23Svn_client@TSvnNodeKind28Svn_client@TSvnWcNotifyStatet6iro$voooiipui @1990; Svnclient::TSvnClient::Export(const System::UnicodeString, const System::UnicodeString, __closure(*)(System::TObject *, const System::UnicodeString, const System::UnicodeString, Svn_client::TSvnWcNotifyAction, Svn_client::TSvnNodeKind, Svn_client::TSvn
+    @Svnclient@TSvnClient@Finalize$qqrv @1989; __fastcall Svnclient::TSvnClient::Finalize()
+    @Svnclient@TSvnClient@FindRepository$qqrx20System@UnicodeStringpui @1988; __fastcall Svnclient::TSvnClient::FindRepository(const System::UnicodeString, unsigned int *)
+    @Svnclient@TSvnClient@FindRepositoryRoot$qqrx20System@UnicodeStringpui @1987; __fastcall Svnclient::TSvnClient::FindRepositoryRoot(const System::UnicodeString, unsigned int *)
+    @Svnclient@TSvnClient@GetBaseURL$qqrp26System@Classes@TStringListr20System@UnicodeString @1986; __fastcall Svnclient::TSvnClient::GetBaseURL(System::Classes::TStringList *, System::UnicodeString&)
+    @Svnclient@TSvnClient@GetChangeLists$qqrx20System@UnicodeStringp23System@Classes@TStrings20Svn_client@TSvnDepthpui @1985; __fastcall Svnclient::TSvnClient::GetChangeLists(const System::UnicodeString, System::Classes::TStrings *, Svn_client::TSvnDepth, unsigned int *)
+    @Svnclient@TSvnClient@GetExternals$qqrx20System@UnicodeStringp23System@Classes@TStringso @1984; __fastcall Svnclient::TSvnClient::GetExternals(const System::UnicodeString, System::Classes::TStrings *, bool)
+    @Svnclient@TSvnClient@GetExternalsCallback$qqrp14System@TObjectp18Svnclient@TSvnItemro @2018; __fastcall Svnclient::TSvnClient::GetExternalsCallback(System::TObject *, Svnclient::TSvnItem *, bool&)
+    @Svnclient@TSvnClient@GetFirstStatus$qqrx20System@UnicodeStringr22Svnclient@TStatusEntrypui @2017; __fastcall Svnclient::TSvnClient::GetFirstStatus(const System::UnicodeString, Svnclient::TStatusEntry&, unsigned int *)
+    @Svnclient@TSvnClient@GetHeadRevision$qqrx20System@UnicodeStringpui @2016; __fastcall Svnclient::TSvnClient::GetHeadRevision(const System::UnicodeString, unsigned int *)
+    @Svnclient@TSvnClient@GetInitialized$qqrv @2015; __fastcall Svnclient::TSvnClient::GetInitialized()
+    @Svnclient@TSvnClient@GetListCallback$qqrp14System@TObject20System@UnicodeStringrx21Svn_client@TSvnDirEntorx19Svn_client@TSvnLockt2ro @2014; __fastcall Svnclient::TSvnClient::GetListCallback(System::TObject *, System::UnicodeString, const Svn_client::TSvnDirEnt&, bool, const Svn_client::TSvnLock&, System::UnicodeString, bool&)
+    @Svnclient@TSvnClient@GetMaxRevision$qqrx20System@UnicodeStringpui @1983; __fastcall Svnclient::TSvnClient::GetMaxRevision(const System::UnicodeString, unsigned int *)
+    @Svnclient@TSvnClient@GetModifications$qqrx20System@UnicodeStringynpqqrp14System@TObjectp18Svnclient@TSvnItemro$voooopui @1982; __fastcall Svnclient::TSvnClient::GetModifications(const System::UnicodeString, void __fastcall __closure(*)(System::TObject *, Svnclient::TSvnItem *, bool&), bool, bool, bool, bool, unsigned int *)
+    @Svnclient@TSvnClient@GetProps$qqrp19Apr@TAprArrayHeaderp23System@Classes@TStringspuib @1981; __fastcall Svnclient::TSvnClient::GetProps(Apr::TAprArrayHeader *, System::Classes::TStrings *, unsigned int *, wchar_t)
+    @Svnclient@TSvnClient@GetRevisionProperties$qqrx20System@UnicodeStringip23System@Classes@TStringspuib @1980; __fastcall Svnclient::TSvnClient::GetRevisionProperties(const System::UnicodeString, int, System::Classes::TStrings *, unsigned int *, wchar_t)
+    @Svnclient@TSvnClient@Import$qqrx20System@UnicodeStringt120Svn_client@TSvnDepth @1979; __fastcall Svnclient::TSvnClient::Import(const System::UnicodeString, const System::UnicodeString, Svn_client::TSvnDepth)
+    @Svnclient@TSvnClient@Initialize$qqrx20System@UnicodeStringpui @1978; __fastcall Svnclient::TSvnClient::Initialize(const System::UnicodeString, unsigned int *)
+    @Svnclient@TSvnClient@IsPathVersioned$qqrx20System@UnicodeString @1977; __fastcall Svnclient::TSvnClient::IsPathVersioned(const System::UnicodeString)
+    @Svnclient@TSvnClient@List$qqrx20System@UnicodeString20Svn_client@TSvnDepthop23System@Classes@TStringsuiiipui @1975; __fastcall Svnclient::TSvnClient::List(const System::UnicodeString, Svn_client::TSvnDepth, bool, System::Classes::TStrings *, unsigned int, int, int, unsigned int *)
+    @Svnclient@TSvnClient@List$qqrx20System@UnicodeString20Svn_client@TSvnDepthouiynpqqrp14System@TObject20System@UnicodeStringrx21Svn_client@TSvnDirEntorx19Svn_client@TSvnLockt2ro$viipui @1976; Svnclient::TSvnClient::List(const System::UnicodeString, Svn_client::TSvnDepth, bool, unsigned int, __closure(*)(System::TObject *, System::UnicodeString, const Svn_client::TSvnDirEnt&, bool, const Svn_client::TSvnLock&, System::UnicodeString, bool&)vo
+    @Svnclient@TSvnClient@MatchGlobalIgnores$qqrx20System@UnicodeStringpui @1974; __fastcall Svnclient::TSvnClient::MatchGlobalIgnores(const System::UnicodeString, unsigned int *)
+    @Svnclient@TSvnClient@Merge$qqrx20System@UnicodeStringit1it1ynpqqrp14System@TObjectx20System@UnicodeStringt229Svn_client@TSvnWcNotifyAction23Svn_client@TSvnNodeKind28Svn_client@TSvnWcNotifyStatet6iro$vynpqqrp14System@TObjectro$v20ScgRlSfBk6SYCqRZXGc1TnQ @1973; Svnclient::TSvnClient::Merge(const System::UnicodeString, int, const System::UnicodeString, int, const System::UnicodeString, __closure(*)(System::TObject *, const System::UnicodeString, const System::UnicodeString, Svn_client::TSvnWcNotifyAction, Svn_
+    @Svnclient@TSvnClient@MergePeg$qqrx20System@UnicodeStringp31Svnclient@TSvnMergeRevisionListt1iynpqqrp14System@TObjectx20System@UnicodeStringt229Svn_client@TSvnWcNotifyAction23Svn_client@TSvnNodeKind28Svn_client@TSvnWcNotifyStatet6ilF/Lme80HsubtVFLE8TWcg @1972; Svnclient::TSvnClient::MergePeg(const System::UnicodeString, Svnclient::TSvnMergeRevisionList *, const System::UnicodeString, int, __closure(*)(System::TObject *, const System::UnicodeString, const System::UnicodeString, Svn_client::TSvnWcNotifyAction,
+    @Svnclient@TSvnClient@MkDir$qqrxp26System@Classes@TStringListx20System@UnicodeStringopui @1971; __fastcall Svnclient::TSvnClient::MkDir(System::Classes::TStringList * const, const System::UnicodeString, bool, unsigned int *)
+    @Svnclient@TSvnClient@Move$qqrp23System@Classes@TStringsx20System@UnicodeStringooopui @1970; __fastcall Svnclient::TSvnClient::Move(System::Classes::TStrings *, const System::UnicodeString, bool, bool, bool, unsigned int *)
+    @Svnclient@TSvnClient@NativePathToSvnPath$qqrx20System@UnicodeStringpui @1969; __fastcall Svnclient::TSvnClient::NativePathToSvnPath(const System::UnicodeString, unsigned int *)
+    @Svnclient@TSvnClient@PathNamesToAprArray$qqrp23System@Classes@TStringspui @1968; __fastcall Svnclient::TSvnClient::PathNamesToAprArray(System::Classes::TStrings *, unsigned int *)
+    @Svnclient@TSvnClient@PathNamesToAprArray$qqrpx20System@UnicodeStringxipui @1967; __fastcall Svnclient::TSvnClient::PathNamesToAprArray(const System::UnicodeString *, const int, unsigned int *)
+    @Svnclient@TSvnClient@RemoveFromChangeList$qqrp23System@Classes@TStrings20Svn_client@TSvnDepthpui @1965; __fastcall Svnclient::TSvnClient::RemoveFromChangeList(System::Classes::TStrings *, Svn_client::TSvnDepth, unsigned int *)
+    @Svnclient@TSvnClient@Resolved$qqrx20System@UnicodeString31Svn_client@TSvnWcConflictChoiceopui @1964; __fastcall Svnclient::TSvnClient::Resolved(const System::UnicodeString, Svn_client::TSvnWcConflictChoice, bool, unsigned int *)
+    @Svnclient@TSvnClient@Revert$qqrp23System@Classes@TStringsynpqqrp14System@TObjectx20System@UnicodeStringt229Svn_client@TSvnWcNotifyAction23Svn_client@TSvnNodeKind28Svn_client@TSvnWcNotifyStatet6iro$vopui @1966; Svnclient::TSvnClient::Revert(System::Classes::TStrings *, __closure(*)(System::TObject *, const System::UnicodeString, const System::UnicodeString, Svn_client::TSvnWcNotifyAction, Svn_client::TSvnNodeKind, Svn_client::TSvnWcNotifyState, Svn_client::TS
+    @Svnclient@TSvnClient@SaveFileContentToStream$qqrx20System@UnicodeStringip22System@Classes@TStreampui @2001; __fastcall Svnclient::TSvnClient::SaveFileContentToStream(const System::UnicodeString, int, System::Classes::TStream *, unsigned int *)
+    @Svnclient@TSvnClient@SetRevisionProperty$qqrx20System@UnicodeStringi20System@UnicodeStringt3opui @2000; __fastcall Svnclient::TSvnClient::SetRevisionProperty(const System::UnicodeString, int, System::UnicodeString, System::UnicodeString, bool, unsigned int *)
+    @Svnclient@TSvnClient@StringListToAprArray$qqrp23System@Classes@TStringspui @1999; __fastcall Svnclient::TSvnClient::StringListToAprArray(System::Classes::TStrings *, unsigned int *)
+    @Svnclient@TSvnClient@SvnPathToNativePath$qqrx20System@UnicodeStringpui @1963; __fastcall Svnclient::TSvnClient::SvnPathToNativePath(const System::UnicodeString, unsigned int *)
+    @Svnclient@TSvnClient@Switch$qqrx20System@UnicodeStringt1iiynpqqrp14System@TObjectx20System@UnicodeStringt229Svn_client@TSvnWcNotifyAction23Svn_client@TSvnNodeKind28Svn_client@TSvnWcNotifyStatet6iro$vynpqqrp14System@TObjectro$v20SvnSKO928pVudBKSV0IVn5LA @1962; Svnclient::TSvnClient::Switch(const System::UnicodeString, const System::UnicodeString, int, int, __closure(*)(System::TObject *, const System::UnicodeString, const System::UnicodeString, Svn_client::TSvnWcNotifyAction, Svn_client::TSvnNodeKind, Svn_cl
+    @Svnclient@TSvnClient@Update$qqrp23System@Classes@TStringsynpqqrp14System@TObjectx20System@UnicodeStringt229Svn_client@TSvnWcNotifyAction23Svn_client@TSvnNodeKind28Svn_client@TSvnWcNotifyStatet6iro$vooynpqqrp14System@TObjectr20SystpLIGK/RTvhKOO6wlC7Zp2Q @1961; Svnclient::TSvnClient::Update(System::Classes::TStrings *, __closure(*)(System::TObject *, const System::UnicodeString, const System::UnicodeString, Svn_client::TSvnWcNotifyAction, Svn_client::TSvnNodeKind, Svn_client::TSvnWcNotifyState, Svn_client::TS
+    @Svnclient@TSvnClientAnnotationLineProvider@ @2132; Svnclient::TSvnClientAnnotationLineProvider::
+    @Svnclient@TSvnClientAnnotationLineProvider@$bctr$qqrp25Svnclient@TSvnHistoryItem @1953; __fastcall Svnclient::TSvnClientAnnotationLineProvider::TSvnClientAnnotationLineProvider(Svnclient::TSvnHistoryItem *)
+    @Svnclient@TSvnClientAnnotationLineProvider@GetCount$qqrv @1952; __fastcall Svnclient::TSvnClientAnnotationLineProvider::GetCount()
+    @Svnclient@TSvnClientAnnotationLineProvider@GetGutterInfo$qqri @1951; __fastcall Svnclient::TSvnClientAnnotationLineProvider::GetGutterInfo(int)
+    @Svnclient@TSvnClientAnnotationLineProvider@GetHintStr$qqri @1949; __fastcall Svnclient::TSvnClientAnnotationLineProvider::GetHintStr(int)
+    @Svnclient@TSvnClientAnnotationLineProvider@GetIntensity$qqri @1948; __fastcall Svnclient::TSvnClientAnnotationLineProvider::GetIntensity(int)
+    @Svnclient@TSvnClientAnnotationLineProvider@GetMaxGutterWidth$qqrv @1950; __fastcall Svnclient::TSvnClientAnnotationLineProvider::GetMaxGutterWidth()
+    @Svnclient@TSvnConfigString@   @2161; Svnclient::TSvnConfigString::
+    @Svnclient@TSvnConfigString@$bctr$qqrv @2028; __fastcall Svnclient::TSvnConfigString::TSvnConfigString()
+    @Svnclient@TSvnConfigString@SetValue$qqr20System@UnicodeString @2027; __fastcall Svnclient::TSvnConfigString::SetValue(System::UnicodeString)
+    @Svnclient@TSvnCustomConfig@   @2159; Svnclient::TSvnCustomConfig::
+    @Svnclient@TSvnCustomConfig@GetStringValue$qqrpuipct2p26Svnclient@TSvnConfigString @2026; __fastcall Svnclient::TSvnCustomConfig::GetStringValue(unsigned int *, char *, char *, Svnclient::TSvnConfigString *)
+    @Svnclient@TSvnCustomConfig@SetStringValue$qqrpuipct2p26Svnclient@TSvnConfigString @2025; __fastcall Svnclient::TSvnCustomConfig::SetStringValue(unsigned int *, char *, char *, Svnclient::TSvnConfigString *)
+    @Svnclient@TSvnHistoryItem@    @2176; Svnclient::TSvnHistoryItem::
+    @Svnclient@TSvnHistoryItem@$bctr$qqrv @2106; __fastcall Svnclient::TSvnHistoryItem::TSvnHistoryItem()
+    @Svnclient@TSvnHistoryItem@$bdtr$qqrv @2105; __fastcall Svnclient::TSvnHistoryItem::~TSvnHistoryItem()
+    @Svnclient@TSvnHistoryItem@BlameCallback$qqrp14System@TObjectjix20System@UnicodeString16System@TDateTimet4ro @2111; __fastcall Svnclient::TSvnHistoryItem::BlameCallback(System::TObject *, __int64, int, const System::UnicodeString, System::TDateTime, const System::UnicodeString, bool&)
+    @Svnclient@TSvnHistoryItem@BlameThreadTerminate$qqrp14System@TObject @2110; __fastcall Svnclient::TSvnHistoryItem::BlameThreadTerminate(System::TObject *)
+    @Svnclient@TSvnHistoryItem@CancelBlame$qqrv @2101; __fastcall Svnclient::TSvnHistoryItem::CancelBlame()
+    @Svnclient@TSvnHistoryItem@ClearBlame$qqrv @2109; __fastcall Svnclient::TSvnHistoryItem::ClearBlame()
+    @Svnclient@TSvnHistoryItem@GetBlameCount$qqrv @2104; __fastcall Svnclient::TSvnHistoryItem::GetBlameCount()
+    @Svnclient@TSvnHistoryItem@GetBlameItems$qqri @2103; __fastcall Svnclient::TSvnHistoryItem::GetBlameItems(int)
+    @Svnclient@TSvnHistoryItem@GetChangeFiles$qqrv @2102; __fastcall Svnclient::TSvnHistoryItem::GetChangeFiles()
+    @Svnclient@TSvnHistoryItem@GetFile$qqrv @2100; __fastcall Svnclient::TSvnHistoryItem::GetFile()
+    @Svnclient@TSvnHistoryItem@GetHintString$qqrv @2099; __fastcall Svnclient::TSvnHistoryItem::GetHintString()
+    @Svnclient@TSvnHistoryItem@HasBlameLoaded$qqrv @2098; __fastcall Svnclient::TSvnHistoryItem::HasBlameLoaded()
+    @Svnclient@TSvnHistoryItem@IsLoadingBlame$qqrv @2097; __fastcall Svnclient::TSvnHistoryItem::IsLoadingBlame()
+    @Svnclient@TSvnHistoryItem@ReloadBlame$qqrp20Svnclient@TSvnClientx20System@UnicodeStringi @2107; __fastcall Svnclient::TSvnHistoryItem::ReloadBlame(Svnclient::TSvnClient *, const System::UnicodeString, int)
+    @Svnclient@TSvnHistoryItem@ReloadBlame$qqrv @2108; __fastcall Svnclient::TSvnHistoryItem::ReloadBlame()
+    @Svnclient@TSvnHistoryItem@StartLoadingBlame$qqr58System@%DelphiInterface$31Svnclient@IAnnotationCompletion% @2096; Svnclient::TSvnHistoryItem::StartLoadingBlame(System::DelphiInterface<{583}...
+    @Svnclient@TSvnItem@           @2172; Svnclient::TSvnItem::
+    @Svnclient@TSvnItem@$bctr$qqrp20Svnclient@TSvnClientp18Svnclient@TSvnItemx20System@UnicodeStringooo @2069; __fastcall Svnclient::TSvnItem::TSvnItem(Svnclient::TSvnClient *, Svnclient::TSvnItem *, const System::UnicodeString, bool, bool, bool)
+    @Svnclient@TSvnItem@$bctr$qqrp20Svnclient@TSvnClientp18Svnclient@TSvnItemx20System@UnicodeStringrx24Svn_client@TSvnWcStatus2 @2068; __fastcall Svnclient::TSvnItem::TSvnItem(Svnclient::TSvnClient *, Svnclient::TSvnItem *, const System::UnicodeString, const Svn_client::TSvnWcStatus2&)
+    @Svnclient@TSvnItem@$bctr$qqrp20Svnclient@TSvnClientx20System@UnicodeString @2067; __fastcall Svnclient::TSvnItem::TSvnItem(Svnclient::TSvnClient *, const System::UnicodeString)
+    @Svnclient@TSvnItem@$bdtr$qqrv @2066; __fastcall Svnclient::TSvnItem::~TSvnItem()
+    @Svnclient@TSvnItem@Add$qqrp18Svnclient@TSvnItem @2065; __fastcall Svnclient::TSvnItem::Add(Svnclient::TSvnItem *)
+    @Svnclient@TSvnItem@AddDestroyNotification$qqrynpqqrp14System@TObject$v @2064; __fastcall Svnclient::TSvnItem::AddDestroyNotification(void __fastcall __closure(*)(System::TObject *))
+    @Svnclient@TSvnItem@AsyncReloadHistory$qqrv @2063; __fastcall Svnclient::TSvnItem::AsyncReloadHistory()
+    @Svnclient@TSvnItem@AsyncUpdateUI$qqri @2062; __fastcall Svnclient::TSvnItem::AsyncUpdateUI(int)
+    @Svnclient@TSvnItem@Clear$qqrv @2061; __fastcall Svnclient::TSvnItem::Clear()
+    @Svnclient@TSvnItem@ClearHistory$qqrv @2095; __fastcall Svnclient::TSvnItem::ClearHistory()
+    @Svnclient@TSvnItem@ClearItems$qqrv @2094; __fastcall Svnclient::TSvnItem::ClearItems()
+    @Svnclient@TSvnItem@DoDestroyNotifications$qqrv @2071; __fastcall Svnclient::TSvnItem::DoDestroyNotifications()
+    @Svnclient@TSvnItem@DoWCStatus$qqrpcrx24Svn_client@TSvnWcStatus2 @2070; __fastcall Svnclient::TSvnItem::DoWCStatus(char *, const Svn_client::TSvnWcStatus2&)
+    @Svnclient@TSvnItem@GetBaseFile$qqrv @2060; __fastcall Svnclient::TSvnItem::GetBaseFile()
+    @Svnclient@TSvnItem@GetCommittedFile$qqrv @2059; __fastcall Svnclient::TSvnItem::GetCommittedFile()
+    @Svnclient@TSvnItem@GetCount$qqrv @2093; __fastcall Svnclient::TSvnItem::GetCount()
+    @Svnclient@TSvnItem@GetExternal$qqrv @2092; __fastcall Svnclient::TSvnItem::GetExternal()
+    @Svnclient@TSvnItem@GetFileAttr$qqrv @2091; __fastcall Svnclient::TSvnItem::GetFileAttr()
+    @Svnclient@TSvnItem@GetHintStrings$qqri @2090; __fastcall Svnclient::TSvnItem::GetHintStrings(int)
+    @Svnclient@TSvnItem@GetHistoryCount$qqrv @2089; __fastcall Svnclient::TSvnItem::GetHistoryCount()
+    @Svnclient@TSvnItem@GetHistoryItems$qqri @2088; __fastcall Svnclient::TSvnItem::GetHistoryItems(int)
+    @Svnclient@TSvnItem@GetIsDirectory$qqrv @2087; __fastcall Svnclient::TSvnItem::GetIsDirectory()
+    @Svnclient@TSvnItem@GetItems$qqri @2086; __fastcall Svnclient::TSvnItem::GetItems(int)
+    @Svnclient@TSvnItem@GetPropCount$qqrv @2085; __fastcall Svnclient::TSvnItem::GetPropCount()
+    @Svnclient@TSvnItem@GetPropNames$qqri @2084; __fastcall Svnclient::TSvnItem::GetPropNames(int)
+    @Svnclient@TSvnItem@GetPropValueFromIndex$qqri @2083; __fastcall Svnclient::TSvnItem::GetPropValueFromIndex(int)
+    @Svnclient@TSvnItem@GetPropValues$qqrx20System@UnicodeString @2082; __fastcall Svnclient::TSvnItem::GetPropValues(const System::UnicodeString)
+    @Svnclient@TSvnItem@HistoryThreadTerminated$qqrv @2081; __fastcall Svnclient::TSvnItem::HistoryThreadTerminated()
+    @Svnclient@TSvnItem@IndexOf$qqrp18Svnclient@TSvnItem @2058; __fastcall Svnclient::TSvnItem::IndexOf(Svnclient::TSvnItem *)
+    @Svnclient@TSvnItem@IndexOf$qqrx20System@UnicodeStringo @2057; __fastcall Svnclient::TSvnItem::IndexOf(const System::UnicodeString, bool)
+    @Svnclient@TSvnItem@LoadStatus$qqrrx24Svn_client@TSvnWcStatus2 @2080; __fastcall Svnclient::TSvnItem::LoadStatus(const Svn_client::TSvnWcStatus2&)
+    @Svnclient@TSvnItem@LoadUnversionedPaths$qqrv @2079; __fastcall Svnclient::TSvnItem::LoadUnversionedPaths()
+    @Svnclient@TSvnItem@PauseAsynchronousUpdate$qqrv @2078; __fastcall Svnclient::TSvnItem::PauseAsynchronousUpdate()
+    @Svnclient@TSvnItem@Reload$qqroo @2056; __fastcall Svnclient::TSvnItem::Reload(bool, bool)
+    @Svnclient@TSvnItem@ReloadHistory$qqrv @2077; __fastcall Svnclient::TSvnItem::ReloadHistory()
+    @Svnclient@TSvnItem@ReloadProps$qqrv @2076; __fastcall Svnclient::TSvnItem::ReloadProps()
+    @Svnclient@TSvnItem@ReloadStatus$qqrv @2055; __fastcall Svnclient::TSvnItem::ReloadStatus()
+    @Svnclient@TSvnItem@Remove$qqrp18Svnclient@TSvnItem @2054; __fastcall Svnclient::TSvnItem::Remove(Svnclient::TSvnItem *)
+    @Svnclient@TSvnItem@RemoveDestroyNotification$qqrynpqqrp14System@TObject$v @2053; __fastcall Svnclient::TSvnItem::RemoveDestroyNotification(void __fastcall __closure(*)(System::TObject *))
+    @Svnclient@TSvnItem@Resolved$qqro @2052; __fastcall Svnclient::TSvnItem::Resolved(bool)
+    @Svnclient@TSvnItem@ResumeAsynchronousUpdate$qqrv @2051; __fastcall Svnclient::TSvnItem::ResumeAsynchronousUpdate()
+    @Svnclient@TSvnItem@ScheduleAsyncReload$qqr49System@%DelphiInterface$22Svnclient@IAsyncUpdate% @2075; Svnclient::TSvnItem::ScheduleAsyncReload(System::DelphiInterface<{583}...
+    @Svnclient@TSvnItem@SetPropValues$qqrx20System@UnicodeStringt1 @2074; __fastcall Svnclient::TSvnItem::SetPropValues(const System::UnicodeString, const System::UnicodeString)
+    @Svnclient@TSvnItem@SortItems$qqro @2073; __fastcall Svnclient::TSvnItem::SortItems(bool)
+    @Svnclient@TSvnItem@TerminateAsynchronousUpdate$qqro @2072; __fastcall Svnclient::TSvnItem::TerminateAsynchronousUpdate(bool)
+    @Svnclient@TSvnList@           @2168; Svnclient::TSvnList::
+    @Svnclient@TSvnList@$bctr$qqrp20Svnclient@TSvnClient @2049; __fastcall Svnclient::TSvnList::TSvnList(Svnclient::TSvnClient *)
+    @Svnclient@TSvnList@$bdtr$qqrv @2048; __fastcall Svnclient::TSvnList::~TSvnList()
+    @Svnclient@TSvnList@Clear$qqrv @2047; __fastcall Svnclient::TSvnList::Clear()
+    @Svnclient@TSvnList@GetCount$qqrv @2046; __fastcall Svnclient::TSvnList::GetCount()
+    @Svnclient@TSvnList@GetItems$qqri @2045; __fastcall Svnclient::TSvnList::GetItems(int)
+    @Svnclient@TSvnList@ListCallback$qqrp14System@TObject20System@UnicodeStringrx21Svn_client@TSvnDirEntorx19Svn_client@TSvnLockt2ro @2044; __fastcall Svnclient::TSvnList::ListCallback(System::TObject *, System::UnicodeString, const Svn_client::TSvnDirEnt&, bool, const Svn_client::TSvnLock&, System::UnicodeString, bool&)
+    @Svnclient@TSvnList@LoadList$qqrx20System@UnicodeString20Svn_client@TSvnDepthouii @2043; __fastcall Svnclient::TSvnList::LoadList(const System::UnicodeString, Svn_client::TSvnDepth, bool, unsigned int, int)
+    @Svnclient@TSvnListItem@       @2170; Svnclient::TSvnListItem::
+    @Svnclient@TSvnListItem@AssignTo$qqrp26System@Classes@TPersistent @2050; __fastcall Svnclient::TSvnListItem::AssignTo(System::Classes::TPersistent *)
+    @Svnclient@TSvnMergeRevisionList@ @2164; Svnclient::TSvnMergeRevisionList::
+    @Svnclient@TSvnMergeRevisionList@$bctr$qqrv @2037; __fastcall Svnclient::TSvnMergeRevisionList::TSvnMergeRevisionList()
+    @Svnclient@TSvnMergeRevisionList@$bdtr$qqrv @2036; __fastcall Svnclient::TSvnMergeRevisionList::~TSvnMergeRevisionList()
+    @Svnclient@TSvnMergeRevisionList@AddRevision$qqri @2041; __fastcall Svnclient::TSvnMergeRevisionList::AddRevision(int)
+    @Svnclient@TSvnMergeRevisionList@AddRevisionRange$qqrii @2040; __fastcall Svnclient::TSvnMergeRevisionList::AddRevisionRange(int, int)
+    @Svnclient@TSvnMergeRevisionList@AssignTo$qqrp26System@Classes@TPersistent @2039; __fastcall Svnclient::TSvnMergeRevisionList::AssignTo(System::Classes::TPersistent *)
+    @Svnclient@TSvnMergeRevisionList@Clear$qqrv @2038; __fastcall Svnclient::TSvnMergeRevisionList::Clear()
+    @Svnclient@TSvnMergeRevisionList@GetAsString$qqrv @2035; __fastcall Svnclient::TSvnMergeRevisionList::GetAsString()
+    @Svnclient@TSvnMergeRevisionList@GetCount$qqrv @2034; __fastcall Svnclient::TSvnMergeRevisionList::GetCount()
+    @Svnclient@TSvnMergeRevisionList@GetItems$qqri @2033; __fastcall Svnclient::TSvnMergeRevisionList::GetItems(int)
+    @Svnclient@TSvnMergeRevisionList@IsValidRangeStr$qqrx20System@UnicodeString @2032; __fastcall Svnclient::TSvnMergeRevisionList::IsValidRangeStr(const System::UnicodeString)
+    @Svnclient@TSvnMergeRevisionList@PrepareForMerge$qqrio @2031; __fastcall Svnclient::TSvnMergeRevisionList::PrepareForMerge(int, bool)
+    @Svnclient@TSvnMergeRevisionList@SetAsString$qqrx20System@UnicodeString @2030; __fastcall Svnclient::TSvnMergeRevisionList::SetAsString(const System::UnicodeString)
+    @Svnclient@TSvnMergeRevisionList@ToAprArray$qqrp20Svnclient@TSvnClientpui @2029; __fastcall Svnclient::TSvnMergeRevisionList::ToAprArray(Svnclient::TSvnClient *, unsigned int *)
+    @Svnclient@TSvnMergeRevisionRange@ @2166; Svnclient::TSvnMergeRevisionRange::
+    @Svnclient@TSvnMergeRevisionRange@$bctr$qqrii @2042; __fastcall Svnclient::TSvnMergeRevisionRange::TSvnMergeRevisionRange(int, int)
+    @Svnclient@TSvnServerConfig@   @2157; Svnclient::TSvnServerConfig::
+    @Svnclient@TSvnServerConfig@$bctr$qqrv @2024; __fastcall Svnclient::TSvnServerConfig::TSvnServerConfig()
+    @Svnclient@TSvnServerConfig@$bdtr$qqrv @2023; __fastcall Svnclient::TSvnServerConfig::~TSvnServerConfig()
+    @Svnclient@TSvnServerConfig@GetConfig$qqrpui @2022; __fastcall Svnclient::TSvnServerConfig::GetConfig(unsigned int *)
+    @Svnclient@TSvnServerConfig@SetConfig$qqrpui @2021; __fastcall Svnclient::TSvnServerConfig::SetConfig(unsigned int *)
+    @Svnclient@TzToUTCDateTime$qqr16System@TDateTime @2125; __fastcall Svnclient::TzToUTCDateTime(System::TDateTime)
+    @Svnclient@UTCToTzDateTime$qqr16System@TDateTime @2124; __fastcall Svnclient::UTCToTzDateTime(System::TDateTime)
+    @Svnclient@Unloading           @2126; Svnclient::Unloading
+    @Svnclient@initialization$qqrv @1944; __fastcall Svnclient::initialization()
+    @Svnconst@Finalization$qqrv    @1844; __fastcall Svnconst::Finalization()
+    @Svnconst@_SAuthor             @1939; Svnconst::_SAuthor
+    @Svnconst@_SComment            @1937; Svnconst::_SComment
+    @Svnconst@_SNodeKindDir        @1941; Svnconst::_SNodeKindDir
+    @Svnconst@_SNodeKindFile       @1942; Svnconst::_SNodeKindFile
+    @Svnconst@_SNodeKindNone       @1943; Svnconst::_SNodeKindNone
+    @Svnconst@_SNodeKindUnknown    @1940; Svnconst::_SNodeKindUnknown
+    @Svnconst@_STime               @1938; Svnconst::_STime
+    @Svnconst@_SWcNotifyAdd        @1922; Svnconst::_SWcNotifyAdd
+    @Svnconst@_SWcNotifyBlameRevision @1902; Svnconst::_SWcNotifyBlameRevision
+    @Svnconst@_SWcNotifyChangelistClear @1895; Svnconst::_SWcNotifyChangelistClear
+    @Svnconst@_SWcNotifyChangelistMoved @1894; Svnconst::_SWcNotifyChangelistMoved
+    @Svnconst@_SWcNotifyChangelistSet @1896; Svnconst::_SWcNotifyChangelistSet
+    @Svnconst@_SWcNotifyCommitAdded @1906; Svnconst::_SWcNotifyCommitAdded
+    @Svnconst@_SWcNotifyCommitDeleted @1905; Svnconst::_SWcNotifyCommitDeleted
+    @Svnconst@_SWcNotifyCommitModified @1907; Svnconst::_SWcNotifyCommitModified
+    @Svnconst@_SWcNotifyCommitPostfixTxdelta @1903; Svnconst::_SWcNotifyCommitPostfixTxdelta
+    @Svnconst@_SWcNotifyCommitReplaced @1904; Svnconst::_SWcNotifyCommitReplaced
+    @Svnconst@_SWcNotifyCopy       @1921; Svnconst::_SWcNotifyCopy
+    @Svnconst@_SWcNotifyDelete     @1920; Svnconst::_SWcNotifyDelete
+    @Svnconst@_SWcNotifyExists     @1897; Svnconst::_SWcNotifyExists
+    @Svnconst@_SWcNotifyFailedExternal @1882; Svnconst::_SWcNotifyFailedExternal
+    @Svnconst@_SWcNotifyFailedLock @1899; Svnconst::_SWcNotifyFailedLock
+    @Svnconst@_SWcNotifyFailedRevert @1917; Svnconst::_SWcNotifyFailedRevert
+    @Svnconst@_SWcNotifyFailedUnlock @1898; Svnconst::_SWcNotifyFailedUnlock
+    @Svnconst@_SWcNotifyForeignMergeBegin @1892; Svnconst::_SWcNotifyForeignMergeBegin
+    @Svnconst@_SWcNotifyLocked     @1901; Svnconst::_SWcNotifyLocked
+    @Svnconst@_SWcNotifyMergeBegin @1893; Svnconst::_SWcNotifyMergeBegin
+    @Svnconst@_SWcNotifyMergeCompleted @1884; Svnconst::_SWcNotifyMergeCompleted
+    @Svnconst@_SWcNotifyPropertyAdded @1890; Svnconst::_SWcNotifyPropertyAdded
+    @Svnconst@_SWcNotifyPropertyDeleted @1888; Svnconst::_SWcNotifyPropertyDeleted
+    @Svnconst@_SWcNotifyPropertyDeletedNonexistent @1887; Svnconst::_SWcNotifyPropertyDeletedNonexistent
+    @Svnconst@_SWcNotifyPropertyModified @1889; Svnconst::_SWcNotifyPropertyModified
+    @Svnconst@_SWcNotifyResolved   @1916; Svnconst::_SWcNotifyResolved
+    @Svnconst@_SWcNotifyRestore    @1919; Svnconst::_SWcNotifyRestore
+    @Svnconst@_SWcNotifyRevert     @1918; Svnconst::_SWcNotifyRevert
+    @Svnconst@_SWcNotifyRevpropDeleted @1885; Svnconst::_SWcNotifyRevpropDeleted
+    @Svnconst@_SWcNotifyRevpropSet @1886; Svnconst::_SWcNotifyRevpropSet
+    @Svnconst@_SWcNotifySkip       @1915; Svnconst::_SWcNotifySkip
+    @Svnconst@_SWcNotifyStatusCompleted @1909; Svnconst::_SWcNotifyStatusCompleted
+    @Svnconst@_SWcNotifyStatusExternal @1908; Svnconst::_SWcNotifyStatusExternal
+    @Svnconst@_SWcNotifyTreeConflict @1883; Svnconst::_SWcNotifyTreeConflict
+    @Svnconst@_SWcNotifyUnlocked   @1900; Svnconst::_SWcNotifyUnlocked
+    @Svnconst@_SWcNotifyUpdateAdd  @1913; Svnconst::_SWcNotifyUpdateAdd
+    @Svnconst@_SWcNotifyUpdateCompleted @1911; Svnconst::_SWcNotifyUpdateCompleted
+    @Svnconst@_SWcNotifyUpdateDelete @1914; Svnconst::_SWcNotifyUpdateDelete
+    @Svnconst@_SWcNotifyUpdateExternal @1910; Svnconst::_SWcNotifyUpdateExternal
+    @Svnconst@_SWcNotifyUpdateReplace @1891; Svnconst::_SWcNotifyUpdateReplace
+    @Svnconst@_SWcNotifyUpdateUpdate @1912; Svnconst::_SWcNotifyUpdateUpdate
+    @Svnconst@_SWcStatusAdded      @1933; Svnconst::_SWcStatusAdded
+    @Svnconst@_SWcStatusConflicted @1927; Svnconst::_SWcStatusConflicted
+    @Svnconst@_SWcStatusDeleted    @1931; Svnconst::_SWcStatusDeleted
+    @Svnconst@_SWcStatusExternal   @1924; Svnconst::_SWcStatusExternal
+    @Svnconst@_SWcStatusIgnored    @1926; Svnconst::_SWcStatusIgnored
+    @Svnconst@_SWcStatusIncomplete @1923; Svnconst::_SWcStatusIncomplete
+    @Svnconst@_SWcStatusMerged     @1928; Svnconst::_SWcStatusMerged
+    @Svnconst@_SWcStatusMissing    @1932; Svnconst::_SWcStatusMissing
+    @Svnconst@_SWcStatusModified   @1929; Svnconst::_SWcStatusModified
+    @Svnconst@_SWcStatusNone       @1936; Svnconst::_SWcStatusNone
+    @Svnconst@_SWcStatusNormal     @1934; Svnconst::_SWcStatusNormal
+    @Svnconst@_SWcStatusObstructed @1925; Svnconst::_SWcStatusObstructed
+    @Svnconst@_SWcStatusReplaced   @1930; Svnconst::_SWcStatusReplaced
+    @Svnconst@_SWcStatusUnversioned @1935; Svnconst::_SWcStatusUnversioned
+    @Svnconst@_sCancelledByUser    @1845; Svnconst::_sCancelledByUser
+    @Svnconst@_sWcNotifyCommitCopied @1857; Svnconst::_sWcNotifyCommitCopied
+    @Svnconst@_sWcNotifyCommitCopiedReplaced @1856; Svnconst::_sWcNotifyCommitCopiedReplaced
+    @Svnconst@_sWcNotifyExclude    @1853; Svnconst::_sWcNotifyExclude
+    @Svnconst@_sWcNotifyFailedConflict @1852; Svnconst::_sWcNotifyFailedConflict
+    @Svnconst@_sWcNotifyFailedForbiddenbyServer @1847; Svnconst::_sWcNotifyFailedForbiddenbyServer
+    @Svnconst@_sWcNotifyFailedLocked @1848; Svnconst::_sWcNotifyFailedLocked
+    @Svnconst@_sWcNotifyFailedMissing @1851; Svnconst::_sWcNotifyFailedMissing
+    @Svnconst@_sWcNotifyFailedNoParent @1849; Svnconst::_sWcNotifyFailedNoParent
+    @Svnconst@_sWcNotifyFailedOutOfDate @1850; Svnconst::_sWcNotifyFailedOutOfDate
+    @Svnconst@_sWcNotifyMergeElideInfo @1862; Svnconst::_sWcNotifyMergeElideInfo
+    @Svnconst@_sWcNotifyMergeRecordInfo @1865; Svnconst::_sWcNotifyMergeRecordInfo
+    @Svnconst@_sWcNotifyMergeRecordInfoBegin @1863; Svnconst::_sWcNotifyMergeRecordInfoBegin
+    @Svnconst@_sWcNotifyPatch      @1861; Svnconst::_sWcNotifyPatch
+    @Svnconst@_sWcNotifyPatchAppliedHunk @1860; Svnconst::_sWcNotifyPatchAppliedHunk
+    @Svnconst@_sWcNotifyPatchHunkAlreadyApplied @1858; Svnconst::_sWcNotifyPatchHunkAlreadyApplied
+    @Svnconst@_sWcNotifyPatchRejectedHunk @1859; Svnconst::_sWcNotifyPatchRejectedHunk
+    @Svnconst@_sWcNotifyPathNonexistent @1854; Svnconst::_sWcNotifyPathNonexistent
+    @Svnconst@_sWcNotifySkipConflicted @1846; Svnconst::_sWcNotifySkipConflicted
+    @Svnconst@_sWcNotifyStateChanged @1876; Svnconst::_sWcNotifyStateChanged
+    @Svnconst@_sWcNotifyStateConflicted @1874; Svnconst::_sWcNotifyStateConflicted
+    @Svnconst@_sWcNotifyStateInapplicable @1881; Svnconst::_sWcNotifyStateInapplicable
+    @Svnconst@_sWcNotifyStateMerged @1875; Svnconst::_sWcNotifyStateMerged
+    @Svnconst@_sWcNotifyStateMissing @1878; Svnconst::_sWcNotifyStateMissing
+    @Svnconst@_sWcNotifyStateObstructed @1877; Svnconst::_sWcNotifyStateObstructed
+    @Svnconst@_sWcNotifyStateUnchanged @1879; Svnconst::_sWcNotifyStateUnchanged
+    @Svnconst@_sWcNotifyStateUnknown @1880; Svnconst::_sWcNotifyStateUnknown
+    @Svnconst@_sWcNotifyUpdateExternalRemoved @1869; Svnconst::_sWcNotifyUpdateExternalRemoved
+    @Svnconst@_sWcNotifyUpdateShadowedAdd @1868; Svnconst::_sWcNotifyUpdateShadowedAdd
+    @Svnconst@_sWcNotifyUpdateShadowedDelete @1866; Svnconst::_sWcNotifyUpdateShadowedDelete
+    @Svnconst@_sWcNotifyUpdateShadowedUpdate @1867; Svnconst::_sWcNotifyUpdateShadowedUpdate
+    @Svnconst@_sWcNotifyUpdateSkipAccessDenied @1870; Svnconst::_sWcNotifyUpdateSkipAccessDenied
+    @Svnconst@_sWcNotifyUpdateSkipObstruction @1872; Svnconst::_sWcNotifyUpdateSkipObstruction
+    @Svnconst@_sWcNotifyUpdateSkipWorkingOnly @1871; Svnconst::_sWcNotifyUpdateSkipWorkingOnly
+    @Svnconst@_sWcNotifyUpdateStarted @1873; Svnconst::_sWcNotifyUpdateStarted
+    @Svnconst@_sWcNotifyUpgradedPath @1864; Svnconst::_sWcNotifyUpgradedPath
+    @Svnconst@_sWcNotifyUrlRedirect @1855; Svnconst::_sWcNotifyUrlRedirect
+    @Svnconst@initialization$qqrv  @1843; __fastcall Svnconst::initialization()
+    @Svntree@Finalization$qqrv     @2183; __fastcall Svntree::Finalization()
+    @Svntree@TSvnTreeData@         @2190; Svntree::TSvnTreeData::
+    @Svntree@TSvnTreeData@$bctr$qqrv @2184; __fastcall Svntree::TSvnTreeData::TSvnTreeData()
+    @Svntree@initialization$qqrv   @2182; __fastcall Svntree::initialization()
+    Finalize                       @2196; Finalize
+    Initialize                     @2197; Initialize

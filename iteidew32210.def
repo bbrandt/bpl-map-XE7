@@ -1,0 +1,74 @@
+LIBRARY     ITEIDEW32210.BPL
+
+DESCRIPTION 'mbarcadero Integrated Translation Environment for Win32'
+
+EXPORTS
+    @$xp$29Itew32container@TITEW32RcTool @16  ; __tpdsc__ Itew32container::TITEW32RcTool
+    @$xp$30Itew32container@TITEW32DfmTool @14  ; __tpdsc__ Itew32container::TITEW32DfmTool
+    @$xp$32Itew32personality@TITEW32Project @56  ; __tpdsc__ Itew32personality::TITEW32Project
+    @$xp$35Itew32projectoptions@TITEW32Options @40  ; __tpdsc__ Itew32projectoptions::TITEW32Options
+    @$xp$39Itew32container@TITEW32BaseResourceTool @20  ; __tpdsc__ Itew32container::TITEW32BaseResourceTool
+    @$xp$40Itew32projectoptions@TITEW32LocalOptions @38  ; __tpdsc__ Itew32projectoptions::TITEW32LocalOptions
+    @$xp$44Itew32projectoptions@TITEW32OptionsInterface @36  ; __tpdsc__ Itew32projectoptions::TITEW32OptionsInterface
+    @$xp$47Itew32container@TITEStdW32ResourceLeafContainer @18  ; __tpdsc__ Itew32container::TITEStdW32ResourceLeafContainer
+    @GetPackageInfoTable           @69  ; GetPackageInfoTable
+    @Iteidew32@@GetPackageInfoTable$qqrv @66  ; Iteidew32::__linkproc__ __fastcall GetPackageInfoTable()
+    @Iteidew32@@PackageLoad$qqrv   @65  ; Iteidew32::__linkproc__ __fastcall PackageLoad()
+    @Iteidew32@@PackageUnload$qqrv @64  ; Iteidew32::__linkproc__ __fastcall PackageUnload()
+    @Iteidew32@initialization$qqrv @63  ; __fastcall Iteidew32::initialization()
+    @Itew32container@Finalization$qqrv @2   ; __fastcall Itew32container::Finalization()
+    @Itew32container@TITEStdW32ResourceLeafContainer@ @19  ; Itew32container::TITEStdW32ResourceLeafContainer::
+    @Itew32container@TITEStdW32ResourceLeafContainer@CanInplaceRename$qqrv @13  ; __fastcall Itew32container::TITEStdW32ResourceLeafContainer::CanInplaceRename()
+    @Itew32container@TITEStdW32ResourceLeafContainer@GetProjectManagerMenus$qqrx56System@%DelphiInterface$29System@Classes@IInterfaceList%o @11  ; Itew32container::TITEStdW32ResourceLeafContainer::GetProjectManagerMenus(const System::DelphiInterface<{583}...
+    @Itew32container@TITEStdW32ResourceLeafContainer@OpenItem$qqrv @12  ; __fastcall Itew32container::TITEStdW32ResourceLeafContainer::OpenItem()
+    @Itew32container@TITEW32BaseResourceTool@ @21  ; Itew32container::TITEW32BaseResourceTool::
+    @Itew32container@TITEW32DfmTool@ @15  ; Itew32container::TITEW32DfmTool::
+    @Itew32container@TITEW32DfmTool@CanHandle$qqrx20System@UnicodeString @5   ; __fastcall Itew32container::TITEW32DfmTool::CanHandle(const System::UnicodeString)
+    @Itew32container@TITEW32DfmTool@CreateContainer$qqrx20System@UnicodeStringt1x58System@%DelphiInterface$31Projectintf@IProjectItemCreator%x50System@%DelphiInterface$23Idemodel@IGraphLocation%ro @6   ; Itew32container::TITEW32DfmTool::CreateContainer(const System::UnicodeString, const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Itew32container@TITEW32DfmTool@DefaultFor$qqrp26System@Classes@TStringList @4   ; __fastcall Itew32container::TITEW32DfmTool::DefaultFor(System::Classes::TStringList *)
+    @Itew32container@TITEW32DfmTool@GetContainerId$qqrv @3   ; __fastcall Itew32container::TITEW32DfmTool::GetContainerId()
+    @Itew32container@TITEW32RcTool@ @17  ; Itew32container::TITEW32RcTool::
+    @Itew32container@TITEW32RcTool@CanHandle$qqrx20System@UnicodeString @9   ; __fastcall Itew32container::TITEW32RcTool::CanHandle(const System::UnicodeString)
+    @Itew32container@TITEW32RcTool@CreateContainer$qqrx20System@UnicodeStringt1x58System@%DelphiInterface$31Projectintf@IProjectItemCreator%x50System@%DelphiInterface$23Idemodel@IGraphLocation%ro @10  ; Itew32container::TITEW32RcTool::CreateContainer(const System::UnicodeString, const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Itew32container@TITEW32RcTool@DefaultFor$qqrp26System@Classes@TStringList @8   ; __fastcall Itew32container::TITEW32RcTool::DefaultFor(System::Classes::TStringList *)
+    @Itew32container@TITEW32RcTool@GetContainerId$qqrv @7   ; __fastcall Itew32container::TITEW32RcTool::GetContainerId()
+    @Itew32container@initialization$qqrv @1   ; __fastcall Itew32container::initialization()
+    @Itew32pascalgenerator@CreatePascalDLL$qqrp15Itecommon@TProjp15Itecommon@TLangp26System@Classes@TStringListoo @44  ; __fastcall Itew32pascalgenerator::CreatePascalDLL(Itecommon::TProj *, Itecommon::TLang *, System::Classes::TStringList *, bool, bool)
+    @Itew32pascalgenerator@Finalization$qqrv @43  ; __fastcall Itew32pascalgenerator::Finalization()
+    @Itew32pascalgenerator@initialization$qqrv @42  ; __fastcall Itew32pascalgenerator::initialization()
+    @Itew32personality@Finalization$qqrv @48  ; __fastcall Itew32personality::Finalization()
+    @Itew32personality@RegisterW32ResourceDLLPersonality$qqrv @49  ; __fastcall Itew32personality::RegisterW32ResourceDLLPersonality()
+    @Itew32personality@TITEW32Project@ @57  ; Itew32personality::TITEW32Project::
+    @Itew32personality@TITEW32Project@AddFile$qqrx20System@UnicodeStringt1o @55  ; __fastcall Itew32personality::TITEW32Project::AddFile(const System::UnicodeString, const System::UnicodeString, bool)
+    @Itew32personality@TITEW32Project@EditLocalOptions$qqrx20System@UnicodeString @54  ; __fastcall Itew32personality::TITEW32Project::EditLocalOptions(const System::UnicodeString)
+    @Itew32personality@TITEW32Project@GetDefaultProjectPersonality$qqrv @53  ; __fastcall Itew32personality::TITEW32Project::GetDefaultProjectPersonality()
+    @Itew32personality@TITEW32Project@GetModuleIntf$qqrv @52  ; __fastcall Itew32personality::TITEW32Project::GetModuleIntf()
+    @Itew32personality@TITEW32Project@GetOptions$qqrv @51  ; __fastcall Itew32personality::TITEW32Project::GetOptions()
+    @Itew32personality@TITEW32Project@GetProjectContainer$qqrx54System@%DelphiInterface$27Projectintf@IModelContainer% @50  ; Itew32personality::TITEW32Project::GetProjectContainer(const System::DelphiInterface<{583}...
+    @Itew32personality@initialization$qqrv @47  ; __fastcall Itew32personality::initialization()
+    @Itew32project@Finalization$qqrv @46  ; __fastcall Itew32project::Finalization()
+    @Itew32project@initialization$qqrv @45  ; __fastcall Itew32project::initialization()
+    @Itew32projectoptions@Finalization$qqrv @23  ; __fastcall Itew32projectoptions::Finalization()
+    @Itew32projectoptions@TITEW32LocalOptions@ @39  ; Itew32projectoptions::TITEW32LocalOptions::
+    @Itew32projectoptions@TITEW32Options@ @41  ; Itew32projectoptions::TITEW32Options::
+    @Itew32projectoptions@TITEW32Options@$bctr$qqrv @35  ; __fastcall Itew32projectoptions::TITEW32Options::TITEW32Options()
+    @Itew32projectoptions@TITEW32Options@GetExt$qqrv @32  ; __fastcall Itew32projectoptions::TITEW32Options::GetExt()
+    @Itew32projectoptions@TITEW32Options@GetOptionsString$qqrv @34  ; __fastcall Itew32projectoptions::TITEW32Options::GetOptionsString()
+    @Itew32projectoptions@TITEW32Options@GetOptionsStringW$qqrv @33  ; __fastcall Itew32projectoptions::TITEW32Options::GetOptionsStringW()
+    @Itew32projectoptions@TITEW32Options@ReadOptions$qqrp30System@Inifiles@TCustomIniFile @30  ; __fastcall Itew32projectoptions::TITEW32Options::ReadOptions(System::Inifiles::TCustomIniFile *)
+    @Itew32projectoptions@TITEW32Options@SetExt$qqrx20System@UnicodeString @31  ; __fastcall Itew32projectoptions::TITEW32Options::SetExt(const System::UnicodeString)
+    @Itew32projectoptions@TITEW32Options@WriteOptions$qqrp30System@Inifiles@TCustomIniFile @29  ; __fastcall Itew32projectoptions::TITEW32Options::WriteOptions(System::Inifiles::TCustomIniFile *)
+    @Itew32projectoptions@TITEW32OptionsInterface@ @37  ; Itew32projectoptions::TITEW32OptionsInterface::
+    @Itew32projectoptions@TITEW32OptionsInterface@$bctr$qqr49System@%DelphiInterface$22Codemgr@ICustomProject% @28  ; Itew32projectoptions::TITEW32OptionsInterface::TITEW32OptionsInterface(System::DelphiInterface<{583}...
+    @Itew32projectoptions@TITEW32OptionsInterface@CreateLocalOption$qqrv @27  ; __fastcall Itew32projectoptions::TITEW32OptionsInterface::CreateLocalOption()
+    @Itew32projectoptions@TITEW32OptionsInterface@Edit$qqrx20System@UnicodeStringt1 @26  ; __fastcall Itew32projectoptions::TITEW32OptionsInterface::Edit(const System::UnicodeString, const System::UnicodeString)
+    @Itew32projectoptions@TITEW32OptionsInterface@EditLocalOptions$qqrx20System@UnicodeString @25  ; __fastcall Itew32projectoptions::TITEW32OptionsInterface::EditLocalOptions(const System::UnicodeString)
+    @Itew32projectoptions@TITEW32OptionsInterface@GetOptionsStringW$qqrv @24  ; __fastcall Itew32projectoptions::TITEW32OptionsInterface::GetOptionsStringW()
+    @Itew32projectoptions@initialization$qqrv @22  ; __fastcall Itew32projectoptions::initialization()
+    @Itew32register@Finalization$qqrv @61  ; __fastcall Itew32register::Finalization()
+    @Itew32register@IDERegister$qqrv @62  ; __fastcall Itew32register::IDERegister()
+    @Itew32register@initialization$qqrv @60  ; __fastcall Itew32register::initialization()
+    @Itew32resourcedllwizard@Finalization$qqrv @59  ; __fastcall Itew32resourcedllwizard::Finalization()
+    @Itew32resourcedllwizard@initialization$qqrv @58  ; __fastcall Itew32resourcedllwizard::initialization()
+    Finalize                       @67  ; Finalize
+    Initialize                     @68  ; Initialize

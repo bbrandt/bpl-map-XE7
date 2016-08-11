@@ -1,0 +1,343 @@
+LIBRARY     PLUGVIEW210.BPL
+
+DESCRIPTION 'mbarcadero Pluggable Tree View'
+
+EXPORTS
+    @$xp$18Plugpage@TPlugForm      @165 ; __tpdsc__ Plugpage::TPlugForm
+    @$xp$22Language@TLanguageType  @202 ; __tpdsc__ Language::TLanguageType
+    @$xp$22Usespageplug@TUsesForm  @135 ; __tpdsc__ Usespageplug::TUsesForm
+    @$xp$24Viewmodule@TCanOpenEvent @331 ; __tpdsc__ Viewmodule::TCanOpenEvent
+    @$xp$25Viewmodule@TGenericModule @325 ; __tpdsc__ Viewmodule::TGenericModule
+    @$xp$26Textpageplug@ITextPagePlug @264 ; __tpdsc__ Textpageplug::ITextPagePlug
+    @$xp$26Textpageplug@TTextPageForm @265 ; __tpdsc__ Textpageplug::TTextPageForm
+    @$xp$26Textpageplug@TTextPagePlug @260 ; __tpdsc__ Textpageplug::TTextPagePlug
+    @$xp$26Usespageplug@IUsesPagePlug @134 ; __tpdsc__ Usespageplug::IUsesPagePlug
+    @$xp$26Usespageplug@TUsesPagePlug @130 ; __tpdsc__ Usespageplug::TUsesPagePlug
+    @$xp$27Viewmodule@TPluggableModule @329 ; __tpdsc__ Viewmodule::TPluggableModule
+    @$xp$28Flagspageplug@IFlagsPagePlug @195 ; __tpdsc__ Flagspageplug::IFlagsPagePlug
+    @$xp$28Flagspageplug@TFlagsPagePlug @191 ; __tpdsc__ Flagspageplug::TFlagsPagePlug
+    @$xp$28Viewmodule@IOTABrowserModule @324 ; __tpdsc__ Viewmodule::IOTABrowserModule
+    @$xp$29Pluggableviewer@TRowTypeEvent @76  ; __tpdsc__ Pluggableviewer::TRowTypeEvent
+    @$xp$29Textpageplug@TTextPageFactory @262 ; __tpdsc__ Textpageplug::TTextPageFactory
+    @$xp$29Usespageplug@TUsesPageFactory @132 ; __tpdsc__ Usespageplug::TUsesPageFactory
+    @$xp$29Viewmodule@TGenericModuleIntf @322 ; __tpdsc__ Viewmodule::TGenericModuleIntf
+    @$xp$30Pluggableviewer@IPluggableSort @74  ; __tpdsc__ Pluggableviewer::IPluggableSort
+    @$xp$31Flagspageplug@TFlagsPageFactory @193 ; __tpdsc__ Flagspageplug::TFlagsPageFactory
+    @$xp$32Pluggableviewer@IPluggableSearch @75  ; __tpdsc__ Pluggableviewer::IPluggableSearch
+    @$xp$32Pluggableviewer@IPluggableSource @65  ; __tpdsc__ Pluggableviewer::IPluggableSource
+    @$xp$32Pluggableviewer@TColumnTypeEvent @77  ; __tpdsc__ Pluggableviewer::TColumnTypeEvent
+    @$xp$32Typebrowserview@TTypeBrowserView @294 ; __tpdsc__ Typebrowserview::TTypeBrowserView
+    @$xp$33Browserdialogs@TOpenBrowserDialog @89  ; __tpdsc__ Browserdialogs::TOpenBrowserDialog
+    @$xp$33Typebrowserview@TTypeBrowserFrame @296 ; __tpdsc__ Typebrowserview::TTypeBrowserFrame
+    @$xp$34Pluggableviewer@IPluggableTreeNode @69  ; __tpdsc__ Pluggableviewer::IPluggableTreeNode
+    @$xp$34Pluggableviewer@TPluggableTreeView @59  ; __tpdsc__ Pluggableviewer::TPluggableTreeView
+    @$xp$35Pluggablesearchdialog@TSearchDialog @160 ; __tpdsc__ Pluggablesearchdialog::TSearchDialog
+    @$xp$35Pluggableviewer@IPluggablePopupMenu @73  ; __tpdsc__ Pluggableviewer::IPluggablePopupMenu
+    @$xp$35Pluggableviewer@TPluggablePopupMenu @63  ; __tpdsc__ Pluggableviewer::TPluggablePopupMenu
+    @$xp$36Pluggableviewer@IPropertyPageManager @70  ; __tpdsc__ Pluggableviewer::IPropertyPageManager
+    @$xp$36Viewmodule@TPluggableFileOpenHandler @327 ; __tpdsc__ Viewmodule::TPluggableFileOpenHandler
+    @$xp$37Attributespageplug@IAttributePagePlug @233 ; __tpdsc__ Attributespageplug::IAttributePagePlug
+    @$xp$37Attributespageplug@TAttributePagePlug @229 ; __tpdsc__ Attributespageplug::TAttributePagePlug
+    @$xp$37Pluggableviewer@IPluggableTreeManager @68  ; __tpdsc__ Pluggableviewer::IPluggableTreeManager
+    @$xp$37Pluggableviewer@TPluggableNotifyEvent @62  ; __tpdsc__ Pluggableviewer::TPluggableNotifyEvent
+    @$xp$37Pluggableviewer@TPluggableSourceEvent @61  ; __tpdsc__ Pluggableviewer::TPluggableSourceEvent
+    @$xp$37Pluggableviewer@TRegisterMenuFunction @58  ; __tpdsc__ Pluggableviewer::TRegisterMenuFunction
+    @$xp$38Pluggableviewer@IPluggablePropertyPage @72  ; __tpdsc__ Pluggableviewer::IPluggablePropertyPage
+    @$xp$39Pluggableviewer@IPluggableSourceFactory @67  ; __tpdsc__ Pluggableviewer::IPluggableSourceFactory
+    @$xp$39Pluggableviewer@IPluggableSymbolBrowser @66  ; __tpdsc__ Pluggableviewer::IPluggableSymbolBrowser
+    @$xp$40Attributespageplug@TAttributePageFactory @231 ; __tpdsc__ Attributespageplug::TAttributePageFactory
+    @$xp$45Pluggableviewer@IPluggablePropertyPageFactory @71  ; __tpdsc__ Pluggableviewer::IPluggablePropertyPageFactory
+    @Attributespageplug@Finalization$qqrv @204 ; __fastcall Attributespageplug::Finalization()
+    @Attributespageplug@GUID_AttributePagePlugID @234 ; Attributespageplug::GUID_AttributePagePlugID
+    @Attributespageplug@TAttributePageFactory@ @232 ; Attributespageplug::TAttributePageFactory::
+    @Attributespageplug@TAttributePageFactory@CreateInstance$qqrx20System@UnicodeString @228 ; __fastcall Attributespageplug::TAttributePageFactory::CreateInstance(const System::UnicodeString)
+    @Attributespageplug@TAttributePageFactory@GetID$qqrv @227 ; __fastcall Attributespageplug::TAttributePageFactory::GetID()
+    @Attributespageplug@TAttributePagePlug@ @230 ; Attributespageplug::TAttributePagePlug::
+    @Attributespageplug@TAttributePagePlug@$bctr$qqrv @226 ; __fastcall Attributespageplug::TAttributePagePlug::TAttributePagePlug()
+    @Attributespageplug@TAttributePagePlug@$bdtr$qqrv @225 ; __fastcall Attributespageplug::TAttributePagePlug::~TAttributePagePlug()
+    @Attributespageplug@TAttributePagePlug@AddAttribute$qqrx20System@UnicodeStringt1o @209 ; __fastcall Attributespageplug::TAttributePagePlug::AddAttribute(const System::UnicodeString, const System::UnicodeString, bool)
+    @Attributespageplug@TAttributePagePlug@AddAttribute$qqrx20System@UnicodeStringt1p23System@Classes@TStringso @208 ; __fastcall Attributespageplug::TAttributePagePlug::AddAttribute(const System::UnicodeString, const System::UnicodeString, System::Classes::TStrings *, bool)
+    @Attributespageplug@TAttributePagePlug@AddAttribute$qqrx20System@UnicodeStringt1x64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager%x61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode%o @207 ; Attributespageplug::TAttributePagePlug::AddAttribute(const System::UnicodeString, const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Attributespageplug@TAttributePagePlug@Clear$qqrv @224 ; __fastcall Attributespageplug::TAttributePagePlug::Clear()
+    @Attributespageplug@TAttributePagePlug@EditChange$qqrp14System@TObject @205 ; __fastcall Attributespageplug::TAttributePagePlug::EditChange(System::TObject *)
+    @Attributespageplug@TAttributePagePlug@GetAttribute$qqrx20System@UnicodeString @206 ; __fastcall Attributespageplug::TAttributePagePlug::GetAttribute(const System::UnicodeString)
+    @Attributespageplug@TAttributePagePlug@GetCaption$qqrv @223 ; __fastcall Attributespageplug::TAttributePagePlug::GetCaption()
+    @Attributespageplug@TAttributePagePlug@GetID$qqrv @216 ; __fastcall Attributespageplug::TAttributePagePlug::GetID()
+    @Attributespageplug@TAttributePagePlug@GetPage$qqrv @215 ; __fastcall Attributespageplug::TAttributePagePlug::GetPage()
+    @Attributespageplug@TAttributePagePlug@GetPageManager$qqrv @214 ; __fastcall Attributespageplug::TAttributePagePlug::GetPageManager()
+    @Attributespageplug@TAttributePagePlug@GetReadOnly$qqrv @211 ; __fastcall Attributespageplug::TAttributePagePlug::GetReadOnly()
+    @Attributespageplug@TAttributePagePlug@GetVisible$qqrv @218 ; __fastcall Attributespageplug::TAttributePagePlug::GetVisible()
+    @Attributespageplug@TAttributePagePlug@Modified$qqrv @212 ; __fastcall Attributespageplug::TAttributePagePlug::Modified()
+    @Attributespageplug@TAttributePagePlug@OnBegin$qqrv @220 ; __fastcall Attributespageplug::TAttributePagePlug::OnBegin()
+    @Attributespageplug@TAttributePagePlug@OnEnd$qqrv @219 ; __fastcall Attributespageplug::TAttributePagePlug::OnEnd()
+    @Attributespageplug@TAttributePagePlug@OnSelect$qqrv @221 ; __fastcall Attributespageplug::TAttributePagePlug::OnSelect()
+    @Attributespageplug@TAttributePagePlug@SetCaption$qqrx20System@UnicodeString @222 ; __fastcall Attributespageplug::TAttributePagePlug::SetCaption(const System::UnicodeString)
+    @Attributespageplug@TAttributePagePlug@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @213 ; Attributespageplug::TAttributePagePlug::SetPageManager(const System::DelphiInterface<{583}...
+    @Attributespageplug@TAttributePagePlug@SetReadOnly$qqro @210 ; __fastcall Attributespageplug::TAttributePagePlug::SetReadOnly(bool)
+    @Attributespageplug@TAttributePagePlug@SetVisible$qqrxo @217 ; __fastcall Attributespageplug::TAttributePagePlug::SetVisible(const bool)
+    @Attributespageplug@initialization$qqrv @203 ; __fastcall Attributespageplug::initialization()
+    @Browserdialogs@Finalization$qqrv @79  ; __fastcall Browserdialogs::Finalization()
+    @Browserdialogs@TOpenBrowserDialog@ @90  ; Browserdialogs::TOpenBrowserDialog::
+    @Browserdialogs@TOpenBrowserDialog@$bctr$qqrp25System@Classes@TComponent @88  ; __fastcall Browserdialogs::TOpenBrowserDialog::TOpenBrowserDialog(System::Classes::TComponent *)
+    @Browserdialogs@TOpenBrowserDialog@$bdtr$qqrv @87  ; __fastcall Browserdialogs::TOpenBrowserDialog::~TOpenBrowserDialog()
+    @Browserdialogs@TOpenBrowserDialog@AddType$qqr66System@%DelphiInterface$39Pluggableviewer@IPluggableSourceFactory% @81  ; Browserdialogs::TOpenBrowserDialog::AddType(System::DelphiInterface<{583}...
+    @Browserdialogs@TOpenBrowserDialog@DoClose$qqrv @85  ; __fastcall Browserdialogs::TOpenBrowserDialog::DoClose()
+    @Browserdialogs@TOpenBrowserDialog@DoSelectionChange$qqrv @86  ; __fastcall Browserdialogs::TOpenBrowserDialog::DoSelectionChange()
+    @Browserdialogs@TOpenBrowserDialog@DoShow$qqrv @84  ; __fastcall Browserdialogs::TOpenBrowserDialog::DoShow()
+    @Browserdialogs@TOpenBrowserDialog@Execute$qqrv @82  ; __fastcall Browserdialogs::TOpenBrowserDialog::Execute()
+    @Browserdialogs@TOpenBrowserDialog@LoadFile$qqrv @83  ; __fastcall Browserdialogs::TOpenBrowserDialog::LoadFile()
+    @Browserdialogs@TOpenBrowserDialog@Refresh$qqrv @80  ; __fastcall Browserdialogs::TOpenBrowserDialog::Refresh()
+    @Browserdialogs@initialization$qqrv @78  ; __fastcall Browserdialogs::initialization()
+    @Flagspageplug@Finalization$qqrv @168 ; __fastcall Flagspageplug::Finalization()
+    @Flagspageplug@GUID_FlagsPagePlugID @196 ; Flagspageplug::GUID_FlagsPagePlugID
+    @Flagspageplug@TFlagsPageFactory@ @194 ; Flagspageplug::TFlagsPageFactory::
+    @Flagspageplug@TFlagsPageFactory@CreateInstance$qqrx20System@UnicodeString @190 ; __fastcall Flagspageplug::TFlagsPageFactory::CreateInstance(const System::UnicodeString)
+    @Flagspageplug@TFlagsPageFactory@GetID$qqrv @189 ; __fastcall Flagspageplug::TFlagsPageFactory::GetID()
+    @Flagspageplug@TFlagsPagePlug@ @192 ; Flagspageplug::TFlagsPagePlug::
+    @Flagspageplug@TFlagsPagePlug@$bctr$qqrv @188 ; __fastcall Flagspageplug::TFlagsPagePlug::TFlagsPagePlug()
+    @Flagspageplug@TFlagsPagePlug@$bdtr$qqrv @187 ; __fastcall Flagspageplug::TFlagsPagePlug::~TFlagsPagePlug()
+    @Flagspageplug@TFlagsPagePlug@AddCheckBox$qqrx20System@UnicodeStringoo @171 ; __fastcall Flagspageplug::TFlagsPagePlug::AddCheckBox(const System::UnicodeString, bool, bool)
+    @Flagspageplug@TFlagsPagePlug@CheckBoxClick$qqrp14System@TObject @169 ; __fastcall Flagspageplug::TFlagsPagePlug::CheckBoxClick(System::TObject *)
+    @Flagspageplug@TFlagsPagePlug@Clear$qqrv @186 ; __fastcall Flagspageplug::TFlagsPagePlug::Clear()
+    @Flagspageplug@TFlagsPagePlug@GetCaption$qqrv @185 ; __fastcall Flagspageplug::TFlagsPagePlug::GetCaption()
+    @Flagspageplug@TFlagsPagePlug@GetCheckBox$qqrx20System@UnicodeString @170 ; __fastcall Flagspageplug::TFlagsPagePlug::GetCheckBox(const System::UnicodeString)
+    @Flagspageplug@TFlagsPagePlug@GetID$qqrv @178 ; __fastcall Flagspageplug::TFlagsPagePlug::GetID()
+    @Flagspageplug@TFlagsPagePlug@GetPage$qqrv @177 ; __fastcall Flagspageplug::TFlagsPagePlug::GetPage()
+    @Flagspageplug@TFlagsPagePlug@GetPageManager$qqrv @176 ; __fastcall Flagspageplug::TFlagsPagePlug::GetPageManager()
+    @Flagspageplug@TFlagsPagePlug@GetReadOnly$qqrv @173 ; __fastcall Flagspageplug::TFlagsPagePlug::GetReadOnly()
+    @Flagspageplug@TFlagsPagePlug@GetVisible$qqrv @180 ; __fastcall Flagspageplug::TFlagsPagePlug::GetVisible()
+    @Flagspageplug@TFlagsPagePlug@Modified$qqrv @174 ; __fastcall Flagspageplug::TFlagsPagePlug::Modified()
+    @Flagspageplug@TFlagsPagePlug@OnBegin$qqrv @182 ; __fastcall Flagspageplug::TFlagsPagePlug::OnBegin()
+    @Flagspageplug@TFlagsPagePlug@OnEnd$qqrv @181 ; __fastcall Flagspageplug::TFlagsPagePlug::OnEnd()
+    @Flagspageplug@TFlagsPagePlug@OnSelect$qqrv @183 ; __fastcall Flagspageplug::TFlagsPagePlug::OnSelect()
+    @Flagspageplug@TFlagsPagePlug@SetCaption$qqrx20System@UnicodeString @184 ; __fastcall Flagspageplug::TFlagsPagePlug::SetCaption(const System::UnicodeString)
+    @Flagspageplug@TFlagsPagePlug@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @175 ; Flagspageplug::TFlagsPagePlug::SetPageManager(const System::DelphiInterface<{583}...
+    @Flagspageplug@TFlagsPagePlug@SetReadOnly$qqro @172 ; __fastcall Flagspageplug::TFlagsPagePlug::SetReadOnly(bool)
+    @Flagspageplug@TFlagsPagePlug@SetVisible$qqrxo @179 ; __fastcall Flagspageplug::TFlagsPagePlug::SetVisible(const bool)
+    @Flagspageplug@initialization$qqrv @167 ; __fastcall Flagspageplug::initialization()
+    @GetPackageInfoTable           @338 ; GetPackageInfoTable
+    @Hashtable@Finalization$qqrv   @299 ; __fastcall Hashtable::Finalization()
+    @Hashtable@initialization$qqrv @298 ; __fastcall Hashtable::initialization()
+    @Language@Finalization$qqrv    @198 ; __fastcall Language::Finalization()
+    @Language@GetLanguage$qqrv     @200 ; __fastcall Language::GetLanguage()
+    @Language@GetLanguageQuotation$qqrv @199 ; __fastcall Language::GetLanguageQuotation()
+    @Language@SetLanguage$qqr22Language@TLanguageType @201 ; __fastcall Language::SetLanguage(Language::TLanguageType)
+    @Language@initialization$qqrv  @197 ; __fastcall Language::initialization()
+    @Pluggableregistry@Finalization$qqrv @269 ; __fastcall Pluggableregistry::Finalization()
+    @Pluggableregistry@GetPluggablePropertyPage$qqri @270 ; __fastcall Pluggableregistry::GetPluggablePropertyPage(int)
+    @Pluggableregistry@GetPluggablePropertyPageCount$qqrv @271 ; __fastcall Pluggableregistry::GetPluggablePropertyPageCount()
+    @Pluggableregistry@RegisterPluggablePropertyPage$qqr72System@%DelphiInterface$45Pluggableviewer@IPluggablePropertyPageFactory% @273 ; Pluggableregistry::RegisterPluggablePropertyPage(System::DelphiInterface<{583}...
+    @Pluggableregistry@UnregisterPluggablePropertyPage$qqrrx5_GUID @272 ; __fastcall Pluggableregistry::UnregisterPluggablePropertyPage(const _GUID&)
+    @Pluggableregistry@initialization$qqrv @268 ; __fastcall Pluggableregistry::initialization()
+    @Pluggablesearchdialog@Finalization$qqrv @139 ; __fastcall Pluggablesearchdialog::Finalization()
+    @Pluggablesearchdialog@SearchDialog @159 ; Pluggablesearchdialog::SearchDialog
+    @Pluggablesearchdialog@TSearchDialog@ @161 ; Pluggablesearchdialog::TSearchDialog::
+    @Pluggablesearchdialog@TSearchDialog@AddColumn$qqrx20System@UnicodeStringi @153 ; __fastcall Pluggablesearchdialog::TSearchDialog::AddColumn(const System::UnicodeString, int)
+    @Pluggablesearchdialog@TSearchDialog@AddRow$qqrpx20System@UnicodeStringxii61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @152 ; Pluggablesearchdialog::TSearchDialog::AddRow(const System::UnicodeString *, const int, int, System::DelphiInterface<{583}...
+    @Pluggablesearchdialog@TSearchDialog@AddSearchType$qqrx20System@UnicodeStringipqqrx59System@%DelphiInterface$32Pluggableviewer@IPluggableSearch%$vpqqrx59System@%DelphiInterface$32Pluggableviewer@IPluggableSearch%x61System@%DelphiIn37gACHA0RRF2fCaYsGdkDA @154 ; Pluggablesearchdialog::TSearchDialog::AddSearchType(const System::UnicodeString, int, (*)(const System::DelphiInterface<{583}...
+    @Pluggablesearchdialog@TSearchDialog@Clear$qqrv @155 ; __fastcall Pluggablesearchdialog::TSearchDialog::Clear()
+    @Pluggablesearchdialog@TSearchDialog@Execute$qqrv @156 ; __fastcall Pluggablesearchdialog::TSearchDialog::Execute()
+    @Pluggablesearchdialog@TSearchDialog@FormCreate$qqrp14System@TObject @158 ; __fastcall Pluggablesearchdialog::TSearchDialog::FormCreate(System::TObject *)
+    @Pluggablesearchdialog@TSearchDialog@FormDestroy$qqrp14System@TObject @157 ; __fastcall Pluggablesearchdialog::TSearchDialog::FormDestroy(System::TObject *)
+    @Pluggablesearchdialog@TSearchDialog@FormKeyPress$qqrp14System@TObjectrb @142 ; __fastcall Pluggablesearchdialog::TSearchDialog::FormKeyPress(System::TObject *, wchar_t&)
+    @Pluggablesearchdialog@TSearchDialog@FormShow$qqrp14System@TObject @143 ; __fastcall Pluggablesearchdialog::TSearchDialog::FormShow(System::TObject *)
+    @Pluggablesearchdialog@TSearchDialog@GetSearchType$qqrv @148 ; __fastcall Pluggablesearchdialog::TSearchDialog::GetSearchType()
+    @Pluggablesearchdialog@TSearchDialog@GetTree$qqrv @150 ; __fastcall Pluggablesearchdialog::TSearchDialog::GetTree()
+    @Pluggablesearchdialog@TSearchDialog@HandleKey$qqrrb @146 ; __fastcall Pluggablesearchdialog::TSearchDialog::HandleKey(wchar_t&)
+    @Pluggablesearchdialog@TSearchDialog@MenuItemClick$qqrp14System@TObject @151 ; __fastcall Pluggablesearchdialog::TSearchDialog::MenuItemClick(System::TObject *)
+    @Pluggablesearchdialog@TSearchDialog@Render$qqrv @145 ; __fastcall Pluggablesearchdialog::TSearchDialog::Render()
+    @Pluggablesearchdialog@TSearchDialog@SearchButtonClick$qqrp14System@TObject @144 ; __fastcall Pluggablesearchdialog::TSearchDialog::SearchButtonClick(System::TObject *)
+    @Pluggablesearchdialog@TSearchDialog@SearchButtonKeyPress$qqrp14System@TObjectrb @140 ; __fastcall Pluggablesearchdialog::TSearchDialog::SearchButtonKeyPress(System::TObject *, wchar_t&)
+    @Pluggablesearchdialog@TSearchDialog@SearchEditKeyPress$qqrp14System@TObjectrb @141 ; __fastcall Pluggablesearchdialog::TSearchDialog::SearchEditKeyPress(System::TObject *, wchar_t&)
+    @Pluggablesearchdialog@TSearchDialog@SetSearchType$qqri @147 ; __fastcall Pluggablesearchdialog::TSearchDialog::SetSearchType(int)
+    @Pluggablesearchdialog@TSearchDialog@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @149 ; Pluggablesearchdialog::TSearchDialog::SetTree(const System::DelphiInterface<{583}...
+    @Pluggablesearchdialog@initialization$qqrv @138 ; __fastcall Pluggablesearchdialog::initialization()
+    @Pluggableviewer@Finalization$qqrv @2   ; __fastcall Pluggableviewer::Finalization()
+    @Pluggableviewer@RegisterMenu  @57  ; Pluggableviewer::RegisterMenu
+    @Pluggableviewer@TPluggablePopupMenu@ @64  ; Pluggableviewer::TPluggablePopupMenu::
+    @Pluggableviewer@TPluggablePopupMenu@$bctr$qqrp25System@Classes@TComponent @55  ; __fastcall Pluggableviewer::TPluggablePopupMenu::TPluggablePopupMenu(System::Classes::TComponent *)
+    @Pluggableviewer@TPluggablePopupMenu@$bdtr$qqrv @54  ; __fastcall Pluggableviewer::TPluggablePopupMenu::~TPluggablePopupMenu()
+    @Pluggableviewer@TPluggablePopupMenu@AddMenuItem$qqrx20System@UnicodeStringynpqqrp14System@TObject$vit1 @50  ; __fastcall Pluggableviewer::TPluggablePopupMenu::AddMenuItem(const System::UnicodeString, void __fastcall __closure(*)(System::TObject *), int, const System::UnicodeString)
+    @Pluggableviewer@TPluggablePopupMenu@Clear$qqrv @48  ; __fastcall Pluggableviewer::TPluggablePopupMenu::Clear()
+    @Pluggableviewer@TPluggablePopupMenu@GetImages$qqrv @53  ; __fastcall Pluggableviewer::TPluggablePopupMenu::GetImages()
+    @Pluggableviewer@TPluggablePopupMenu@GetPopupMenu$qqrv @51  ; __fastcall Pluggableviewer::TPluggablePopupMenu::GetPopupMenu()
+    @Pluggableviewer@TPluggablePopupMenu@Popup$qqrv @49  ; __fastcall Pluggableviewer::TPluggablePopupMenu::Popup()
+    @Pluggableviewer@TPluggablePopupMenu@SetImages$qqrp23Vcl@Controls@TImageList @52  ; __fastcall Pluggableviewer::TPluggablePopupMenu::SetImages(Vcl::Controls::TImageList *)
+    @Pluggableviewer@TPluggableTreeView@ @60  ; Pluggableviewer::TPluggableTreeView::
+    @Pluggableviewer@TPluggableTreeView@$bctr$qqrp25System@Classes@TComponent @47  ; __fastcall Pluggableviewer::TPluggableTreeView::TPluggableTreeView(System::Classes::TComponent *)
+    @Pluggableviewer@TPluggableTreeView@$bdtr$qqrv @46  ; __fastcall Pluggableviewer::TPluggableTreeView::~TPluggableTreeView()
+    @Pluggableviewer@TPluggableTreeView@Add$qqrx59System@%DelphiInterface$32Pluggableviewer@IPluggableSource% @45  ; Pluggableviewer::TPluggableTreeView::Add(const System::DelphiInterface<{583}...
+    @Pluggableviewer@TPluggableTreeView@Add$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode%t1 @44  ; Pluggableviewer::TPluggableTreeView::Add(const System::DelphiInterface<{583}...
+    @Pluggableviewer@TPluggableTreeView@AddMenuItem$qqrx20System@UnicodeStringynpqqrp14System@TObject$vit1 @39  ; __fastcall Pluggableviewer::TPluggableTreeView::AddMenuItem(const System::UnicodeString, void __fastcall __closure(*)(System::TObject *), int, const System::UnicodeString)
+    @Pluggableviewer@TPluggableTreeView@BeginUpdate$qqrv @20  ; __fastcall Pluggableviewer::TPluggableTreeView::BeginUpdate()
+    @Pluggableviewer@TPluggableTreeView@CanGoBack$qqrv @12  ; __fastcall Pluggableviewer::TPluggableTreeView::CanGoBack()
+    @Pluggableviewer@TPluggableTreeView@CanGoForeward$qqrv @11  ; __fastcall Pluggableviewer::TPluggableTreeView::CanGoForeward()
+    @Pluggableviewer@TPluggableTreeView@Clear$qqrv @5   ; __fastcall Pluggableviewer::TPluggableTreeView::Clear()
+    @Pluggableviewer@TPluggableTreeView@CollapseNode$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode%o @40  ; Pluggableviewer::TPluggableTreeView::CollapseNode(const System::DelphiInterface<{583}...
+    @Pluggableviewer@TPluggableTreeView@CreateWnd$qqrv @3   ; __fastcall Pluggableviewer::TPluggableTreeView::CreateWnd()
+    @Pluggableviewer@TPluggableTreeView@DoChange$qqrp14System@TObject @26  ; __fastcall Pluggableviewer::TPluggableTreeView::DoChange(System::TObject *)
+    @Pluggableviewer@TPluggableTreeView@DoExpanding$qqrp14System@TObjectp22Vcl@Comctrls@TTreeNodero @32  ; __fastcall Pluggableviewer::TPluggableTreeView::DoExpanding(System::TObject *, Vcl::Comctrls::TTreeNode *, bool&)
+    @Pluggableviewer@TPluggableTreeView@DoMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @31  ; Pluggableviewer::TPluggableTreeView::DoMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Pluggableviewer@TPluggableTreeView@DoSelect$qqrp14System@TObjectp22Vcl@Comctrls@TTreeNode @33  ; __fastcall Pluggableviewer::TPluggableTreeView::DoSelect(System::TObject *, Vcl::Comctrls::TTreeNode *)
+    @Pluggableviewer@TPluggableTreeView@Edit$qqrrx10tagTVITEMW @21  ; __fastcall Pluggableviewer::TPluggableTreeView::Edit(const tagTVITEMW&)
+    @Pluggableviewer@TPluggableTreeView@EnableButtons$qqrv @24  ; __fastcall Pluggableviewer::TPluggableTreeView::EnableButtons()
+    @Pluggableviewer@TPluggableTreeView@EndUpdate$qqrv @19  ; __fastcall Pluggableviewer::TPluggableTreeView::EndUpdate()
+    @Pluggableviewer@TPluggableTreeView@ExpandNode$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode%o @41  ; Pluggableviewer::TPluggableTreeView::ExpandNode(const System::DelphiInterface<{583}...
+    @Pluggableviewer@TPluggableTreeView@GetCount$qqrv @9   ; __fastcall Pluggableviewer::TPluggableTreeView::GetCount()
+    @Pluggableviewer@TPluggableTreeView@GetImages$qqrv @6   ; __fastcall Pluggableviewer::TPluggableTreeView::GetImages()
+    @Pluggableviewer@TPluggableTreeView@GetItem$qqri @8   ; __fastcall Pluggableviewer::TPluggableTreeView::GetItem(int)
+    @Pluggableviewer@TPluggableTreeView@GetPropertyPage$qqrrx5_GUIDx20System@UnicodeString @37  ; __fastcall Pluggableviewer::TPluggableTreeView::GetPropertyPage(const _GUID&, const System::UnicodeString)
+    @Pluggableviewer@TPluggableTreeView@GetRootNodes$qqri @30  ; __fastcall Pluggableviewer::TPluggableTreeView::GetRootNodes(int)
+    @Pluggableviewer@TPluggableTreeView@GetRootNodesCount$qqrv @29  ; __fastcall Pluggableviewer::TPluggableTreeView::GetRootNodesCount()
+    @Pluggableviewer@TPluggableTreeView@GetSourceItems$qqri @28  ; __fastcall Pluggableviewer::TPluggableTreeView::GetSourceItems(int)
+    @Pluggableviewer@TPluggableTreeView@GetSourceItemsCount$qqrv @27  ; __fastcall Pluggableviewer::TPluggableTreeView::GetSourceItemsCount()
+    @Pluggableviewer@TPluggableTreeView@GetTitle$qqrv @18  ; __fastcall Pluggableviewer::TPluggableTreeView::GetTitle()
+    @Pluggableviewer@TPluggableTreeView@GetVisible$qqrx65System@%DelphiInterface$38Pluggableviewer@IPluggablePropertyPage% @35  ; Pluggableviewer::TPluggableTreeView::GetVisible(const System::DelphiInterface<{583}...
+    @Pluggableviewer@TPluggableTreeView@GoBack$qqrv @14  ; __fastcall Pluggableviewer::TPluggableTreeView::GoBack()
+    @Pluggableviewer@TPluggableTreeView@GoForeward$qqrv @13  ; __fastcall Pluggableviewer::TPluggableTreeView::GoForeward()
+    @Pluggableviewer@TPluggableTreeView@RefreshCurrentSelection$qqrv @10  ; __fastcall Pluggableviewer::TPluggableTreeView::RefreshCurrentSelection()
+    @Pluggableviewer@TPluggableTreeView@RegisterPageFactory$qqrx72System@%DelphiInterface$45Pluggableviewer@IPluggablePropertyPageFactory% @38  ; Pluggableviewer::TPluggableTreeView::RegisterPageFactory(const System::DelphiInterface<{583}...
+    @Pluggableviewer@TPluggableTreeView@Remove$qqrx59System@%DelphiInterface$32Pluggableviewer@IPluggableSource% @43  ; Pluggableviewer::TPluggableTreeView::Remove(const System::DelphiInterface<{583}...
+    @Pluggableviewer@TPluggableTreeView@Remove$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @42  ; Pluggableviewer::TPluggableTreeView::Remove(const System::DelphiInterface<{583}...
+    @Pluggableviewer@TPluggableTreeView@Select$qqrio @15  ; __fastcall Pluggableviewer::TPluggableTreeView::Select(int, bool)
+    @Pluggableviewer@TPluggableTreeView@Select$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode%o @16  ; Pluggableviewer::TPluggableTreeView::Select(const System::DelphiInterface<{583}...
+    @Pluggableviewer@TPluggableTreeView@SetBackButton$qqrp21Vcl@Controls@TControl @23  ; __fastcall Pluggableviewer::TPluggableTreeView::SetBackButton(Vcl::Controls::TControl *)
+    @Pluggableviewer@TPluggableTreeView@SetForewardButton$qqrp21Vcl@Controls@TControl @22  ; __fastcall Pluggableviewer::TPluggableTreeView::SetForewardButton(Vcl::Controls::TControl *)
+    @Pluggableviewer@TPluggableTreeView@SetImages$qqrp28Vcl@Imglist@TCustomImageList @7   ; __fastcall Pluggableviewer::TPluggableTreeView::SetImages(Vcl::Imglist::TCustomImageList *)
+    @Pluggableviewer@TPluggableTreeView@SetPageControl$qqrp25Vcl@Comctrls@TPageControl @25  ; __fastcall Pluggableviewer::TPluggableTreeView::SetPageControl(Vcl::Comctrls::TPageControl *)
+    @Pluggableviewer@TPluggableTreeView@SetTitle$qqrx20System@UnicodeString @17  ; __fastcall Pluggableviewer::TPluggableTreeView::SetTitle(const System::UnicodeString)
+    @Pluggableviewer@TPluggableTreeView@SetVisible$qqrx65System@%DelphiInterface$38Pluggableviewer@IPluggablePropertyPage% @36  ; Pluggableviewer::TPluggableTreeView::SetVisible(const System::DelphiInterface<{583}...
+    @Pluggableviewer@TPluggableTreeView@ShowPages$qqrv @34  ; __fastcall Pluggableviewer::TPluggableTreeView::ShowPages()
+    @Pluggableviewer@TPluggableTreeView@ShowSubChildren$qqrp22Vcl@Comctrls@TTreeNode @4   ; __fastcall Pluggableviewer::TPluggableTreeView::ShowSubChildren(Vcl::Comctrls::TTreeNode *)
+    @Pluggableviewer@UnRegisterMenu @56  ; Pluggableviewer::UnRegisterMenu
+    @Pluggableviewer@initialization$qqrv @1   ; __fastcall Pluggableviewer::initialization()
+    @Plugpage@Finalization$qqrv    @163 ; __fastcall Plugpage::Finalization()
+    @Plugpage@TPlugForm@           @166 ; Plugpage::TPlugForm::
+    @Plugpage@TPlugForm@$bctr$qqrp25System@Classes@TComponent @164 ; __fastcall Plugpage::TPlugForm::TPlugForm(System::Classes::TComponent *)
+    @Plugpage@initialization$qqrv  @162 ; __fastcall Plugpage::initialization()
+    @Plugview@@GetPackageInfoTable$qqrv @335 ; Plugview::__linkproc__ __fastcall GetPackageInfoTable()
+    @Plugview@@PackageLoad$qqrv    @334 ; Plugview::__linkproc__ __fastcall PackageLoad()
+    @Plugview@@PackageUnload$qqrv  @333 ; Plugview::__linkproc__ __fastcall PackageUnload()
+    @Plugview@initialization$qqrv  @332 ; __fastcall Plugview::initialization()
+    @Plugviewreg@Finalization$qqrv @301 ; __fastcall Plugviewreg::Finalization()
+    @Plugviewreg@IDERegister$qqrv  @302 ; __fastcall Plugviewreg::IDERegister()
+    @Plugviewreg@initialization$qqrv @300 ; __fastcall Plugviewreg::initialization()
+    @Textpageplug@Finalization$qqrv @236 ; __fastcall Textpageplug::Finalization()
+    @Textpageplug@GUID_TextPagePlugID @267 ; Textpageplug::GUID_TextPagePlugID
+    @Textpageplug@TTextPageFactory@ @263 ; Textpageplug::TTextPageFactory::
+    @Textpageplug@TTextPageFactory@CreateInstance$qqrx20System@UnicodeString @258 ; __fastcall Textpageplug::TTextPageFactory::CreateInstance(const System::UnicodeString)
+    @Textpageplug@TTextPageFactory@GetID$qqrv @257 ; __fastcall Textpageplug::TTextPageFactory::GetID()
+    @Textpageplug@TTextPageForm@   @266 ; Textpageplug::TTextPageForm::
+    @Textpageplug@TTextPageForm@$bctr$qqrp25System@Classes@TComponent @237 ; __fastcall Textpageplug::TTextPageForm::TTextPageForm(System::Classes::TComponent *)
+    @Textpageplug@TTextPageForm@SourceChange$qqrp14System@TObject @238 ; __fastcall Textpageplug::TTextPageForm::SourceChange(System::TObject *)
+    @Textpageplug@TTextPagePlug@   @261 ; Textpageplug::TTextPagePlug::
+    @Textpageplug@TTextPagePlug@$bctr$qqrv @256 ; __fastcall Textpageplug::TTextPagePlug::TTextPagePlug()
+    @Textpageplug@TTextPagePlug@$bdtr$qqrv @255 ; __fastcall Textpageplug::TTextPagePlug::~TTextPagePlug()
+    @Textpageplug@TTextPagePlug@Clear$qqrv @254 ; __fastcall Textpageplug::TTextPagePlug::Clear()
+    @Textpageplug@TTextPagePlug@GetCaption$qqrv @253 ; __fastcall Textpageplug::TTextPagePlug::GetCaption()
+    @Textpageplug@TTextPagePlug@GetID$qqrv @246 ; __fastcall Textpageplug::TTextPagePlug::GetID()
+    @Textpageplug@TTextPagePlug@GetLines$qqrv @242 ; __fastcall Textpageplug::TTextPagePlug::GetLines()
+    @Textpageplug@TTextPagePlug@GetPage$qqrv @245 ; __fastcall Textpageplug::TTextPagePlug::GetPage()
+    @Textpageplug@TTextPagePlug@GetPageManager$qqrv @241 ; __fastcall Textpageplug::TTextPagePlug::GetPageManager()
+    @Textpageplug@TTextPagePlug@GetReadOnly$qqrv @244 ; __fastcall Textpageplug::TTextPagePlug::GetReadOnly()
+    @Textpageplug@TTextPagePlug@GetVisible$qqrv @248 ; __fastcall Textpageplug::TTextPagePlug::GetVisible()
+    @Textpageplug@TTextPagePlug@Modified$qqrv @239 ; __fastcall Textpageplug::TTextPagePlug::Modified()
+    @Textpageplug@TTextPagePlug@OnBegin$qqrv @250 ; __fastcall Textpageplug::TTextPagePlug::OnBegin()
+    @Textpageplug@TTextPagePlug@OnEnd$qqrv @249 ; __fastcall Textpageplug::TTextPagePlug::OnEnd()
+    @Textpageplug@TTextPagePlug@OnSelect$qqrv @251 ; __fastcall Textpageplug::TTextPagePlug::OnSelect()
+    @Textpageplug@TTextPagePlug@SetCaption$qqrx20System@UnicodeString @252 ; __fastcall Textpageplug::TTextPagePlug::SetCaption(const System::UnicodeString)
+    @Textpageplug@TTextPagePlug@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @240 ; Textpageplug::TTextPagePlug::SetPageManager(const System::DelphiInterface<{583}...
+    @Textpageplug@TTextPagePlug@SetReadOnly$qqro @243 ; __fastcall Textpageplug::TTextPagePlug::SetReadOnly(bool)
+    @Textpageplug@TTextPagePlug@SetVisible$qqrxo @247 ; __fastcall Textpageplug::TTextPagePlug::SetVisible(const bool)
+    @Textpageplug@TextPageForm     @259 ; Textpageplug::TextPageForm
+    @Textpageplug@initialization$qqrv @235 ; __fastcall Textpageplug::initialization()
+    @Typebrowserview@Finalization$qqrv @275 ; __fastcall Typebrowserview::Finalization()
+    @Typebrowserview@TTypeBrowserFrame@ @297 ; Typebrowserview::TTypeBrowserFrame::
+    @Typebrowserview@TTypeBrowserFrame@$bctr$qqrp25System@Classes@TComponent @293 ; __fastcall Typebrowserview::TTypeBrowserFrame::TTypeBrowserFrame(System::Classes::TComponent *)
+    @Typebrowserview@TTypeBrowserFrame@$bdtr$qqrv @292 ; __fastcall Typebrowserview::TTypeBrowserFrame::~TTypeBrowserFrame()
+    @Typebrowserview@TTypeBrowserFrame@BackButtonClick$qqrp14System@TObject @290 ; __fastcall Typebrowserview::TTypeBrowserFrame::BackButtonClick(System::TObject *)
+    @Typebrowserview@TTypeBrowserFrame@DoHistory$qqrp14System@TObject61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode%t2 @288 ; Typebrowserview::TTypeBrowserFrame::DoHistory(System::TObject *, System::DelphiInterface<{583}...
+    @Typebrowserview@TTypeBrowserFrame@DoSearchFind$qqrp14System@TObject @291 ; __fastcall Typebrowserview::TTypeBrowserFrame::DoSearchFind(System::TObject *)
+    @Typebrowserview@TTypeBrowserFrame@ForewardButtonClick$qqrp14System@TObject @289 ; __fastcall Typebrowserview::TTypeBrowserFrame::ForewardButtonClick(System::TObject *)
+    @Typebrowserview@TTypeBrowserView@ @295 ; Typebrowserview::TTypeBrowserView::
+    @Typebrowserview@TTypeBrowserView@$bctr$qqrp22Editorform@TEditWindowx20System@UnicodeStringp26Editorform@TCustomEditViewt3t2 @287 ; __fastcall Typebrowserview::TTypeBrowserView::TTypeBrowserView(Editorform::TEditWindow *, const System::UnicodeString, Editorform::TCustomEditView *, Editorform::TCustomEditView *, const System::UnicodeString)
+    @Typebrowserview@TTypeBrowserView@$bdtr$qqrv @286 ; __fastcall Typebrowserview::TTypeBrowserView::~TTypeBrowserView()
+    @Typebrowserview@TTypeBrowserView@CloneEditView$qqrp22Editorform@TEditWindow @285 ; __fastcall Typebrowserview::TTypeBrowserView::CloneEditView(Editorform::TEditWindow *)
+    @Typebrowserview@TTypeBrowserView@GetCaption$qqrv @280 ; __fastcall Typebrowserview::TTypeBrowserView::GetCaption()
+    @Typebrowserview@TTypeBrowserView@GetFrameClass$qqrv @276 ; __fastcall Typebrowserview::TTypeBrowserView::GetFrameClass()
+    @Typebrowserview@TTypeBrowserView@GetSavedChildIndex$qqrv @284 ; __fastcall Typebrowserview::TTypeBrowserView::GetSavedChildIndex()
+    @Typebrowserview@TTypeBrowserView@GetTabText$qqrv @278 ; __fastcall Typebrowserview::TTypeBrowserView::GetTabText()
+    @Typebrowserview@TTypeBrowserView@GetTreeView$qqrv @279 ; __fastcall Typebrowserview::TTypeBrowserView::GetTreeView()
+    @Typebrowserview@TTypeBrowserView@GetViewTabNames$qqrp23System@Classes@TStrings @277 ; __fastcall Typebrowserview::TTypeBrowserView::GetViewTabNames(System::Classes::TStrings *)
+    @Typebrowserview@TTypeBrowserView@SaveChildIndex$qqri @283 ; __fastcall Typebrowserview::TTypeBrowserView::SaveChildIndex(int)
+    @Typebrowserview@TTypeBrowserView@SelectView$qqri @282 ; __fastcall Typebrowserview::TTypeBrowserView::SelectView(int)
+    @Typebrowserview@TTypeBrowserView@Show$qqrv @281 ; __fastcall Typebrowserview::TTypeBrowserView::Show()
+    @Typebrowserview@initialization$qqrv @274 ; __fastcall Typebrowserview::initialization()
+    @Usespageplug@Finalization$qqrv @92  ; __fastcall Usespageplug::Finalization()
+    @Usespageplug@GUID_UsesPagePlugID @137 ; Usespageplug::GUID_UsesPagePlugID
+    @Usespageplug@TUsesForm@       @136 ; Usespageplug::TUsesForm::
+    @Usespageplug@TUsesForm@$bctr$qqrp25System@Classes@TComponent @100 ; __fastcall Usespageplug::TUsesForm::TUsesForm(System::Classes::TComponent *)
+    @Usespageplug@TUsesForm@$bdtr$qqrv @99  ; __fastcall Usespageplug::TUsesForm::~TUsesForm()
+    @Usespageplug@TUsesForm@GoToSelected$qqrv @98  ; __fastcall Usespageplug::TUsesForm::GoToSelected()
+    @Usespageplug@TUsesForm@ListViewClick$qqrp14System@TObject @94  ; __fastcall Usespageplug::TUsesForm::ListViewClick(System::TObject *)
+    @Usespageplug@TUsesForm@ListViewCustomDrawItem$qqrp28Vcl@Comctrls@TCustomListViewp22Vcl@Comctrls@TListItem56System@%Set$28Vcl@Comctrls@Vcl_Comctrls__9t1$i0$t1$i12$%ro @96  ; Usespageplug::TUsesForm::ListViewCustomDrawItem(Vcl::Comctrls::TCustomListView *, Vcl::Comctrls::TListItem *, System::Set<{583}...
+    @Usespageplug@TUsesForm@ListViewCustomDrawSubItem$qqrp28Vcl@Comctrls@TCustomListViewp22Vcl@Comctrls@TListItemi56System@%Set$28Vcl@Comctrls@Vcl_Comctrls__9t1$i0$t1$i12$%ro @95  ; Usespageplug::TUsesForm::ListViewCustomDrawSubItem(Vcl::Comctrls::TCustomListView *, Vcl::Comctrls::TListItem *, int, System::Set<{583}...
+    @Usespageplug@TUsesForm@ListViewKeyDown$qqrp14System@TObjectrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @93  ; Usespageplug::TUsesForm::ListViewKeyDown(System::TObject *, unsigned short&, System::Set<{583}...
+    @Usespageplug@TUsesForm@ListViewMouseMove$qqrp14System@TObject60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @97  ; Usespageplug::TUsesForm::ListViewMouseMove(System::TObject *, System::Set<{583}...
+    @Usespageplug@TUsesPageFactory@ @133 ; Usespageplug::TUsesPageFactory::
+    @Usespageplug@TUsesPageFactory@CreateInstance$qqrx20System@UnicodeString @129 ; __fastcall Usespageplug::TUsesPageFactory::CreateInstance(const System::UnicodeString)
+    @Usespageplug@TUsesPageFactory@GetID$qqrv @128 ; __fastcall Usespageplug::TUsesPageFactory::GetID()
+    @Usespageplug@TUsesPagePlug@   @131 ; Usespageplug::TUsesPagePlug::
+    @Usespageplug@TUsesPagePlug@$bctr$qqrv @127 ; __fastcall Usespageplug::TUsesPagePlug::TUsesPagePlug()
+    @Usespageplug@TUsesPagePlug@$bdtr$qqrv @126 ; __fastcall Usespageplug::TUsesPagePlug::~TUsesPagePlug()
+    @Usespageplug@TUsesPagePlug@AddColumn$qqrx20System@UnicodeStringi @110 ; __fastcall Usespageplug::TUsesPagePlug::AddColumn(const System::UnicodeString, int)
+    @Usespageplug@TUsesPagePlug@AddRow$qqrpx20System@UnicodeStringxiix61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @109 ; Usespageplug::TUsesPagePlug::AddRow(const System::UnicodeString *, const int, int, const System::DelphiInterface<{583}...
+    @Usespageplug@TUsesPagePlug@BeginUpdate$qqrv @108 ; __fastcall Usespageplug::TUsesPagePlug::BeginUpdate()
+    @Usespageplug@TUsesPagePlug@Clear$qqrv @125 ; __fastcall Usespageplug::TUsesPagePlug::Clear()
+    @Usespageplug@TUsesPagePlug@EndUpdate$qqrv @107 ; __fastcall Usespageplug::TUsesPagePlug::EndUpdate()
+    @Usespageplug@TUsesPagePlug@Get$qqrii @106 ; __fastcall Usespageplug::TUsesPagePlug::Get(int, int)
+    @Usespageplug@TUsesPagePlug@GetCaption$qqrv @124 ; __fastcall Usespageplug::TUsesPagePlug::GetCaption()
+    @Usespageplug@TUsesPagePlug@GetColCount$qqrv @104 ; __fastcall Usespageplug::TUsesPagePlug::GetColCount()
+    @Usespageplug@TUsesPagePlug@GetID$qqrv @117 ; __fastcall Usespageplug::TUsesPagePlug::GetID()
+    @Usespageplug@TUsesPagePlug@GetImages$qqrv @102 ; __fastcall Usespageplug::TUsesPagePlug::GetImages()
+    @Usespageplug@TUsesPagePlug@GetPage$qqrv @116 ; __fastcall Usespageplug::TUsesPagePlug::GetPage()
+    @Usespageplug@TUsesPagePlug@GetPageManager$qqrv @115 ; __fastcall Usespageplug::TUsesPagePlug::GetPageManager()
+    @Usespageplug@TUsesPagePlug@GetReadOnly$qqrv @112 ; __fastcall Usespageplug::TUsesPagePlug::GetReadOnly()
+    @Usespageplug@TUsesPagePlug@GetRowCount$qqrv @105 ; __fastcall Usespageplug::TUsesPagePlug::GetRowCount()
+    @Usespageplug@TUsesPagePlug@GetVisible$qqrv @119 ; __fastcall Usespageplug::TUsesPagePlug::GetVisible()
+    @Usespageplug@TUsesPagePlug@Modified$qqrv @113 ; __fastcall Usespageplug::TUsesPagePlug::Modified()
+    @Usespageplug@TUsesPagePlug@OnBegin$qqrv @121 ; __fastcall Usespageplug::TUsesPagePlug::OnBegin()
+    @Usespageplug@TUsesPagePlug@OnEnd$qqrv @120 ; __fastcall Usespageplug::TUsesPagePlug::OnEnd()
+    @Usespageplug@TUsesPagePlug@OnSelect$qqrv @122 ; __fastcall Usespageplug::TUsesPagePlug::OnSelect()
+    @Usespageplug@TUsesPagePlug@RemoveRow$qqri @101 ; __fastcall Usespageplug::TUsesPagePlug::RemoveRow(int)
+    @Usespageplug@TUsesPagePlug@SetCaption$qqrx20System@UnicodeString @123 ; __fastcall Usespageplug::TUsesPagePlug::SetCaption(const System::UnicodeString)
+    @Usespageplug@TUsesPagePlug@SetImages$qqrp28Vcl@Imglist@TCustomImageList @103 ; __fastcall Usespageplug::TUsesPagePlug::SetImages(Vcl::Imglist::TCustomImageList *)
+    @Usespageplug@TUsesPagePlug@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @114 ; Usespageplug::TUsesPagePlug::SetPageManager(const System::DelphiInterface<{583}...
+    @Usespageplug@TUsesPagePlug@SetReadOnly$qqro @111 ; __fastcall Usespageplug::TUsesPagePlug::SetReadOnly(bool)
+    @Usespageplug@TUsesPagePlug@SetVisible$qqrxo @118 ; __fastcall Usespageplug::TUsesPagePlug::SetVisible(const bool)
+    @Usespageplug@initialization$qqrv @91  ; __fastcall Usespageplug::initialization()
+    @Viewmodule@Finalization$qqrv  @304 ; __fastcall Viewmodule::Finalization()
+    @Viewmodule@TGenericModule@    @326 ; Viewmodule::TGenericModule::
+    @Viewmodule@TGenericModule@$bctr$qqrx20System@UnicodeString66System@%DelphiInterface$39Pluggableviewer@IPluggableSourceFactory%t1 @310 ; Viewmodule::TGenericModule::TGenericModule(const System::UnicodeString, System::DelphiInterface<{583}...
+    @Viewmodule@TGenericModule@$bdtr$qqrv @309 ; __fastcall Viewmodule::TGenericModule::~TGenericModule()
+    @Viewmodule@TGenericModule@BrowseToSymbol$qqrx20System@UnicodeString @306 ; __fastcall Viewmodule::TGenericModule::BrowseToSymbol(const System::UnicodeString)
+    @Viewmodule@TGenericModule@CheckFileDate$qqrv @307 ; __fastcall Viewmodule::TGenericModule::CheckFileDate()
+    @Viewmodule@TGenericModule@GetFileName$qqrv @314 ; __fastcall Viewmodule::TGenericModule::GetFileName()
+    @Viewmodule@TGenericModule@GetModuleIntf$qqrv @308 ; __fastcall Viewmodule::TGenericModule::GetModuleIntf()
+    @Viewmodule@TGenericModuleIntf@ @323 ; Viewmodule::TGenericModuleIntf::
+    @Viewmodule@TGenericModuleIntf@BrowseToSymbol$qqr17System@WideString @305 ; __fastcall Viewmodule::TGenericModuleIntf::BrowseToSymbol(System::WideString)
+    @Viewmodule@TPluggableFileOpenHandler@ @328 ; Viewmodule::TPluggableFileOpenHandler::
+    @Viewmodule@TPluggableFileOpenHandler@CanOpen$qqrix20System@UnicodeString @312 ; __fastcall Viewmodule::TPluggableFileOpenHandler::CanOpen(int, const System::UnicodeString)
+    @Viewmodule@TPluggableFileOpenHandler@FileOpen$qqrix20System@UnicodeStringop19Docmodul@TDocModule @313 ; __fastcall Viewmodule::TPluggableFileOpenHandler::FileOpen(int, const System::UnicodeString, bool, Docmodul::TDocModule *)
+    @Viewmodule@TPluggableFileOpenHandler@GetFilters$qqrp20Docmodul@TFilterListo @311 ; __fastcall Viewmodule::TPluggableFileOpenHandler::GetFilters(Docmodul::TFilterList *, bool)
+    @Viewmodule@TPluggableModule@  @330 ; Viewmodule::TPluggableModule::
+    @Viewmodule@TPluggableModule@$bctr$qqr66System@%DelphiInterface$39Pluggableviewer@IPluggableSourceFactory%pqqrx20System@UnicodeString66System@%DelphiInterface$39Pluggableviewer@IPluggableSourceFactory%$o @320 ; Viewmodule::TPluggableModule::TPluggableModule(System::DelphiInterface<{583}...
+    @Viewmodule@TPluggableModule@$bctr$qqrv @321 ; __fastcall Viewmodule::TPluggableModule::TPluggableModule()
+    @Viewmodule@TPluggableModule@$bdtr$qqrv @319 ; __fastcall Viewmodule::TPluggableModule::~TPluggableModule()
+    @Viewmodule@TPluggableModule@GetCanOpenEvent$qqrv @318 ; __fastcall Viewmodule::TPluggableModule::GetCanOpenEvent()
+    @Viewmodule@TPluggableModule@GetFactory$qqrv @316 ; __fastcall Viewmodule::TPluggableModule::GetFactory()
+    @Viewmodule@TPluggableModule@SetCanOpenEvent$qqrpqqrx20System@UnicodeString66System@%DelphiInterface$39Pluggableviewer@IPluggableSourceFactory%$o @317 ; Viewmodule::TPluggableModule::SetCanOpenEvent((*)(const System::UnicodeString, System::DelphiInterface<{583}...
+    @Viewmodule@TPluggableModule@SetFactory$qqr66System@%DelphiInterface$39Pluggableviewer@IPluggableSourceFactory% @315 ; Viewmodule::TPluggableModule::SetFactory(System::DelphiInterface<{583}...
+    @Viewmodule@initialization$qqrv @303 ; __fastcall Viewmodule::initialization()
+    Finalize                       @336 ; Finalize
+    Initialize                     @337 ; Initialize

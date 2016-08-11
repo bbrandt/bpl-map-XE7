@@ -1,0 +1,927 @@
+LIBRARY     DCLSOAP210.BPL
+
+DESCRIPTION 'mbarcadero SOAP Components'
+
+EXPORTS
+    @$xp$19Dmxform@TSoapDMForm     @635 ; __tpdsc__ Dmxform::TSoapDMForm
+    @$xp$19Webservimp@PartType     @756 ; __tpdsc__ Webservimp::PartType
+    @$xp$20Invwizfrm@TFrmInvWiz    @780 ; __tpdsc__ Invwizfrm::TFrmInvWiz
+    @$xp$20Messagedigest_5@IMD5    @207 ; __tpdsc__ Messagedigest_5::IMD5
+    @$xp$20Webservimp@TPartInfo    @751 ; __tpdsc__ Webservimp::TPartInfo
+    @$xp$21Soapidereg@TSOAPMenus   @900 ; __tpdsc__ Soapidereg::TSOAPMenus
+    @$xp$21Wsdlreg@TWSDLProperty   @114 ; __tpdsc__ Wsdlreg::TWSDLProperty
+    @$xp$22Gencreator@IGenCreator  @82  ; __tpdsc__ Gencreator::IGenCreator
+    @$xp$22Gencreator@TGenCreator  @80  ; __tpdsc__ Gencreator::TGenCreator
+    @$xp$22Webservimp@TWebServImp  @746 ; __tpdsc__ Webservimp::TWebServImp
+    @$xp$22Wsdlmodelintf@PartFlag  @196 ; __tpdsc__ Wsdlmodelintf::PartFlag
+    @$xp$22Wsdlmodelintf@PartType  @198 ; __tpdsc__ Wsdlmodelintf::PartType
+    @$xp$23Webservimp@ArgumentType @757 ; __tpdsc__ Webservimp::ArgumentType
+    @$xp$23Webservimp@TComplexType @753 ; __tpdsc__ Webservimp::TComplexType
+    @$xp$23Wsdlmodelintf@IMIMEPart @191 ; __tpdsc__ Wsdlmodelintf::IMIMEPart
+    @$xp$23Wsdlmodelintf@IWSDLItem @201 ; __tpdsc__ Wsdlmodelintf::IWSDLItem
+    @$xp$23Wsdlmodelintf@IWSDLPart @193 ; __tpdsc__ Wsdlmodelintf::IWSDLPart
+    @$xp$23Wsdlmodelintf@IWSDLType @166 ; __tpdsc__ Wsdlmodelintf::IWSDLType
+    @$xp$23Wsdlmodelintf@TPartFlag @195 ; __tpdsc__ Wsdlmodelintf::TPartFlag
+    @$xp$23Wsdlmodelintf@TPartType @197 ; __tpdsc__ Wsdlmodelintf::TPartType
+    @$xp$24Genwizard@IGenericWizard @107 ; __tpdsc__ Genwizard::IGenericWizard
+    @$xp$24Genwizard@TGenericWizard @105 ; __tpdsc__ Genwizard::TGenericWizard
+    @$xp$24Uddibrow_unit1@TNodeType @858 ; __tpdsc__ Uddibrow_unit1::TNodeType
+    @$xp$24Webservimp@TInterfaceMap @755 ; __tpdsc__ Webservimp::TInterfaceMap
+    @$xp$24Wsdlmodelintf@IWSDLTypes @171 ; __tpdsc__ Wsdlmodelintf::IWSDLTypes
+    @$xp$24Wsdlmodelintf@TWriteProc @162 ; __tpdsc__ Wsdlmodelintf::TWriteProc
+    @$xp$25Uddibrow_unit1@XMLStrings @861 ; __tpdsc__ Uddibrow_unit1::XMLStrings
+    @$xp$25Webservimp@TPartInfoArray @750 ; __tpdsc__ Webservimp::TPartInfoArray
+    @$xp$25Webservimp@TSoapClassDecl @744 ; __tpdsc__ Webservimp::TSoapClassDecl
+    @$xp$25Wsdlimpwriter@SetToStrOpt @399 ; __tpdsc__ Wsdlimpwriter::SetToStrOpt
+    @$xp$25Wsdlimpwriter@THeaderItem @404 ; __tpdsc__ Wsdlimpwriter::THeaderItem
+    @$xp$25Wsdlimpwriter@TMethodItem @408 ; __tpdsc__ Wsdlimpwriter::TMethodItem
+    @$xp$25Wsdlimpwriter@TMethodList @406 ; __tpdsc__ Wsdlimpwriter::TMethodList
+    @$xp$25Wsdlimpwriter@TRegTracker @401 ; __tpdsc__ Wsdlimpwriter::TRegTracker
+    @$xp$25Wsdlimpwriter@TWSDLWriter @411 ; __tpdsc__ Wsdlimpwriter::TWSDLWriter
+    @$xp$25Wsdlmodelintf@IWSDLItemNS @199 ; __tpdsc__ Wsdlmodelintf::IWSDLItemNS
+    @$xp$25Wsdlmodelintf@XMLItemInfo @174 ; __tpdsc__ Wsdlmodelintf::XMLItemInfo
+    @$xp$26Importoptdlg@TImportOptDlg @768 ; __tpdsc__ Importoptdlg::TImportOptDlg
+    @$xp$26Uddibrow_unit1@TWaitCursor @859 ; __tpdsc__ Uddibrow_unit1::TWaitCursor
+    @$xp$26Wsdlimpwriter@FactProcType @400 ; __tpdsc__ Wsdlimpwriter::FactProcType
+    @$xp$26Wsdlimpwriter@SetToStrOpts @398 ; __tpdsc__ Wsdlimpwriter::SetToStrOpts
+    @$xp$26Wsdlimpwriter@WSDLGenFlags @414 ; __tpdsc__ Wsdlimpwriter::WSDLGenFlags
+    @$xp$26Wsdlmodelintf@ArgumentType @194 ; __tpdsc__ Wsdlmodelintf::ArgumentType
+    @$xp$26Wsdlmodelintf@CannotUnwrap @185 ; __tpdsc__ Wsdlmodelintf::CannotUnwrap
+    @$xp$26Wsdlmodelintf@ICleanupIntf @167 ; __tpdsc__ Wsdlmodelintf::ICleanupIntf
+    @$xp$26Wsdlmodelintf@TXMLItemInfo @173 ; __tpdsc__ Wsdlmodelintf::TXMLItemInfo
+    @$xp$26Wsdlmodelintf@TweakPartOpt @187 ; __tpdsc__ Wsdlmodelintf::TweakPartOpt
+    @$xp$26Wsdlmodelintf@UnwrapStatus @189 ; __tpdsc__ Wsdlmodelintf::UnwrapStatus
+    @$xp$26Wsdlmodelintf@WSDLItemType @203 ; __tpdsc__ Wsdlmodelintf::WSDLItemType
+    @$xp$26Wsdlmodelintf@WSDLTypeFlag @175 ; __tpdsc__ Wsdlmodelintf::WSDLTypeFlag
+    @$xp$26Wsdlmodelintf@WSDLTypeKind @176 ; __tpdsc__ Wsdlmodelintf::WSDLTypeKind
+    @$xp$27Invwizfrm@TCreateUnitsEvent @782 ; __tpdsc__ Invwizfrm::TCreateUnitsEvent
+    @$xp$27Rioreg@TWSDLRIOPortProperty @122 ; __tpdsc__ Rioreg::TWSDLRIOPortProperty
+    @$xp$27Wsdlimportdlg@TWSDLImporter @627 ; __tpdsc__ Wsdlimportdlg::TWSDLImporter
+    @$xp$27Wsdlimpwriter@ImporterFlags @418 ; __tpdsc__ Wsdlimpwriter::ImporterFlags
+    @$xp$27Wsdlimpwriter@InfoAttribute @397 ; __tpdsc__ Wsdlimpwriter::InfoAttribute
+    @$xp$27Wsdlimpwriter@TRegTrackType @403 ; __tpdsc__ Wsdlimpwriter::TRegTrackType
+    @$xp$27Wsdlimpwriter@TWSDLGenFlags @413 ; __tpdsc__ Wsdlimpwriter::TWSDLGenFlags
+    @$xp$27Wsdlimpwriter@TWSDLImporter @415 ; __tpdsc__ Wsdlimpwriter::TWSDLImporter
+    @$xp$27Wsdlimpwriter@TWSDLTypeKind @423 ; __tpdsc__ Wsdlimpwriter::TWSDLTypeKind
+    @$xp$27Wsdlmodelintf@ArrayOfString @202 ; __tpdsc__ Wsdlmodelintf::ArrayOfString
+    @$xp$27Wsdlmodelintf@IWSDLImporter @158 ; __tpdsc__ Wsdlmodelintf::IWSDLImporter
+    @$xp$27Wsdlmodelintf@IWSDLPortType @179 ; __tpdsc__ Wsdlmodelintf::IWSDLPortType
+    @$xp$27Wsdlmodelintf@PortTypeFlags @181 ; __tpdsc__ Wsdlmodelintf::PortTypeFlags
+    @$xp$27Wsdlmodelintf@TCannotUnwrap @184 ; __tpdsc__ Wsdlmodelintf::TCannotUnwrap
+    @$xp$28Webservimp@TComplexTypeArray @752 ; __tpdsc__ Webservimp::TComplexTypeArray
+    @$xp$28Webservimp@TWSDLImportOption @749 ; __tpdsc__ Webservimp::TWSDLImportOption
+    @$xp$28Wsdlcppwriter@TWSDLCppWriter @669 ; __tpdsc__ Wsdlcppwriter::TWSDLCppWriter
+    @$xp$28Wsdlimpconst@TIntfImplOption @588 ; __tpdsc__ Wsdlimpconst::TIntfImplOption
+    @$xp$28Wsdlimpconst@Wsdlimpconst__1 @587 ; __tpdsc__ Wsdlimpconst::Wsdlimpconst__1
+    @$xp$28Wsdlimpconst@Wsdlimpconst__2 @441 ; __tpdsc__ Wsdlimpconst::Wsdlimpconst__2
+    @$xp$28Wsdlimpconst@Wsdlimpconst__3 @439 ; __tpdsc__ Wsdlimpconst::Wsdlimpconst__3
+    @$xp$28Wsdlimpconst@Wsdlimpconst__4 @437 ; __tpdsc__ Wsdlimpconst::Wsdlimpconst__4
+    @$xp$28Wsdlimpconst@Wsdlimpconst__5 @435 ; __tpdsc__ Wsdlimpconst::Wsdlimpconst__5
+    @$xp$28Wsdlimpconst@Wsdlimpconst__6 @432 ; __tpdsc__ Wsdlimpconst::Wsdlimpconst__6
+    @$xp$28Wsdlimpwriter@PassWriterType @422 ; __tpdsc__ Wsdlimpwriter::PassWriterType
+    @$xp$28Wsdlimpwriter@TImporterFlags @417 ; __tpdsc__ Wsdlimpwriter::TImporterFlags
+    @$xp$28Wsdlmodelintf@IMIMEPartArray @190 ; __tpdsc__ Wsdlmodelintf::IMIMEPartArray
+    @$xp$28Wsdlmodelintf@IWSDLItemArray @200 ; __tpdsc__ Wsdlmodelintf::IWSDLItemArray
+    @$xp$28Wsdlmodelintf@IWSDLOperation @183 ; __tpdsc__ Wsdlmodelintf::IWSDLOperation
+    @$xp$28Wsdlmodelintf@IWSDLPartArray @192 ; __tpdsc__ Wsdlmodelintf::IWSDLPartArray
+    @$xp$28Wsdlmodelintf@IWSDLPortTypes @168 ; __tpdsc__ Wsdlmodelintf::IWSDLPortTypes
+    @$xp$28Wsdlmodelintf@IWSDLTypeArray @172 ; __tpdsc__ Wsdlmodelintf::IWSDLTypeArray
+    @$xp$28Wsdlmodelintf@TPortTypeFlags @180 ; __tpdsc__ Wsdlmodelintf::TPortTypeFlags
+    @$xp$28Wsdlmodelintf@TTweakPartOpts @186 ; __tpdsc__ Wsdlmodelintf::TTweakPartOpts
+    @$xp$28Wsdlpaswriter@TWSDLPasWriter @703 ; __tpdsc__ Wsdlpaswriter::TWSDLPasWriter
+    @$xp$28Xmlschemahelper@TDataTypeTie @236 ; __tpdsc__ Xmlschemahelper::TDataTypeTie
+    @$xp$28Xmlschemahelper@TElementType @241 ; __tpdsc__ Xmlschemahelper::TElementType
+    @$xp$29Webservimp@TInterfaceMapArray @754 ; __tpdsc__ Webservimp::TInterfaceMapArray
+    @$xp$29Webservimp@TWSDLImportOptions @748 ; __tpdsc__ Webservimp::TWSDLImportOptions
+    @$xp$29Wsdlimpwriter@TPassWriterType @421 ; __tpdsc__ Wsdlimpwriter::TPassWriterType
+    @$xp$29Wsdlmodelintf@PWSDLImportInfo @160 ; __tpdsc__ Wsdlmodelintf::PWSDLImportInfo
+    @$xp$29Wsdlmodelintf@TWSDLImportInfo @159 ; __tpdsc__ Wsdlmodelintf::TWSDLImportInfo
+    @$xp$29Xmlschemahelper@TElementTypes @240 ; __tpdsc__ Xmlschemahelper::TElementTypes
+    @$xp$30Rioreg@TWSDLRIOServiceProperty @120 ; __tpdsc__ Rioreg::TWSDLRIOServiceProperty
+    @$xp$30Uddibrow_unit1@TSelDetailPages @857 ; __tpdsc__ Uddibrow_unit1::TSelDetailPages
+    @$xp$30Wsdlimpwriter@TWSDLWriterClass @410 ; __tpdsc__ Wsdlimpwriter::TWSDLWriterClass
+    @$xp$30Wsdlimpwriter@Wsdlimpwriter__1 @427 ; __tpdsc__ Wsdlimpwriter::Wsdlimpwriter__1
+    @$xp$30Wsdlimpwriter@Wsdlimpwriter__2 @425 ; __tpdsc__ Wsdlimpwriter::Wsdlimpwriter__2
+    @$xp$30Wsdlmodelintf@ArrayOfIPortType @177 ; __tpdsc__ Wsdlmodelintf::ArrayOfIPortType
+    @$xp$30Wsdlmodelintf@WSDLImporterOpts @165 ; __tpdsc__ Wsdlmodelintf::WSDLImporterOpts
+    @$xp$30Wsdlmodelintf@Wsdlmodelintf__1 @157 ; __tpdsc__ Wsdlmodelintf::Wsdlmodelintf__1
+    @$xp$30Wsdlmodelintf@Wsdlmodelintf__2 @155 ; __tpdsc__ Wsdlmodelintf::Wsdlmodelintf__2
+    @$xp$30Wsdlmodelintf@Wsdlmodelintf__3 @153 ; __tpdsc__ Wsdlmodelintf::Wsdlmodelintf__3
+    @$xp$30Wsdlmodelintf@Wsdlmodelintf__4 @151 ; __tpdsc__ Wsdlmodelintf::Wsdlmodelintf__4
+    @$xp$30Wsdlmodelintf@Wsdlmodelintf__5 @149 ; __tpdsc__ Wsdlmodelintf::Wsdlmodelintf__5
+    @$xp$30Xmlschemahelper@ArrayOfXMLNode @237 ; __tpdsc__ Xmlschemahelper::ArrayOfXMLNode
+    @$xp$31Httpreg@THTTPClientCertProperty @593 ; __tpdsc__ Httpreg::THTTPClientCertProperty
+    @$xp$31Uddihlprdesign@IUDDIResultCache @145 ; __tpdsc__ Uddihlprdesign::IUDDIResultCache
+    @$xp$31Wsdlimpwriter@TProcessedTracker @419 ; __tpdsc__ Wsdlimpwriter::TProcessedTracker
+    @$xp$31Wsdlimpwriter@TRegInfoAttribute @396 ; __tpdsc__ Wsdlimpwriter::TRegInfoAttribute
+    @$xp$31Wsdlimpwriter@Wsdlimpwriter__01 @393 ; __tpdsc__ Wsdlimpwriter::Wsdlimpwriter__01
+    @$xp$31Wsdlmodelintf@IProcessedTracker @170 ; __tpdsc__ Wsdlmodelintf::IProcessedTracker
+    @$xp$31Wsdlmodelintf@TWSDLImporterOpts @164 ; __tpdsc__ Wsdlmodelintf::TWSDLImporterOpts
+    @$xp$31Wsdlmodelintf@UnwrapStatusArray @188 ; __tpdsc__ Wsdlmodelintf::UnwrapStatusArray
+    @$xp$31Xmlschemahelper@IXMLSchemaGuide @238 ; __tpdsc__ Xmlschemahelper::IXMLSchemaGuide
+    @$xp$32Uddibrow_unit1@TUDDIBrowMainForm @855 ; __tpdsc__ Uddibrow_unit1::TUDDIBrowMainForm
+    @$xp$32Uddibrow_unit1@Uddibrow_unit1__3 @854 ; __tpdsc__ Uddibrow_unit1::Uddibrow_unit1__3
+    @$xp$32Uddibrow_unit1@Uddibrow_unit1__4 @852 ; __tpdsc__ Uddibrow_unit1::Uddibrow_unit1__4
+    @$xp$32Uddibrow_unit1@Uddibrow_unit1__5 @850 ; __tpdsc__ Uddibrow_unit1::Uddibrow_unit1__5
+    @$xp$32Uddibrow_unit1@Uddibrow_unit1__6 @828 ; __tpdsc__ Uddibrow_unit1::Uddibrow_unit1__6
+    @$xp$32Wsdlmodelintf@IWSDLPortTypeArray @178 ; __tpdsc__ Wsdlmodelintf::IWSDLPortTypeArray
+    @$xp$32Wsdlmodelintf@PTWSDLImporterOpts @163 ; __tpdsc__ Wsdlmodelintf::PTWSDLImporterOpts
+    @$xp$33Uddihlprdesign@IImportBindingInfo @144 ; __tpdsc__ Uddihlprdesign::IImportBindingInfo
+    @$xp$33Wsdlcppwriter@TWSDLCppWriterClass @668 ; __tpdsc__ Wsdlcppwriter::TWSDLCppWriterClass
+    @$xp$33Wsdlmodelintf@ISchemaTypeImporter @169 ; __tpdsc__ Wsdlmodelintf::ISchemaTypeImporter
+    @$xp$33Wsdlmodelintf@IWSDLOperationArray @182 ; __tpdsc__ Wsdlmodelintf::IWSDLOperationArray
+    @$xp$33Wsdlpaswriter@TWSDLPasWriterClass @702 ; __tpdsc__ Wsdlpaswriter::TWSDLPasWriterClass
+    @$xp$33Xmlschemahelper@IXMLSchemaVisitor @239 ; __tpdsc__ Xmlschemahelper::IXMLSchemaVisitor
+    @$xp$34Wsdlmodelintf@IWSDLImporterOptions @161 ; __tpdsc__ Wsdlmodelintf::IWSDLImporterOptions
+    @$xp$34Xmlschemahelper@Xmlschemahelper__1 @235 ; __tpdsc__ Xmlschemahelper::Xmlschemahelper__1
+    @$xp$36Wsdlimporterwizard@TWSDLImportWizard @890 ; __tpdsc__ Wsdlimporterwizard::TWSDLImportWizard
+    @$xp$36Wsdlmodulecreator@TWSDLModuleCreator @617 ; __tpdsc__ Wsdlmodulecreator::TWSDLModuleCreator
+    @$xp$38Wsdlimporterwizard@TWSDLImporterWizard @892 ; __tpdsc__ Wsdlimporterwizard::TWSDLImporterWizard
+    @$xp$41System@%TArray__1$20System@UnicodeString% @394 ; __tpdsc__ System::TArray__1<System::UnicodeString>
+    @$xp$48System@%TArray__1$27Wsdlimpwriter@InfoAttribute% @395 ; __tpdsc__ System::TArray__1<Wsdlimpwriter::InfoAttribute>
+    @$xp$52Soapwebbrokerexpertsui@TSoapWebBrokerExpertsUIModule @914 ; __tpdsc__ Soapwebbrokerexpertsui::TSoapWebBrokerExpertsUIModule
+    @$xp$64Soapwebbrokerexpertscreators@TSoapWebBrokerExpertsCreatorsModule @906 ; __tpdsc__ Soapwebbrokerexpertscreators::TSoapWebBrokerExpertsCreatorsModule
+    @Dclsoap@@GetPackageInfoTable$qqrv @919 ; Dclsoap::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclsoap@@PackageLoad$qqrv     @918 ; Dclsoap::__linkproc__ __fastcall PackageLoad()
+    @Dclsoap@@PackageUnload$qqrv   @917 ; Dclsoap::__linkproc__ __fastcall PackageUnload()
+    @Dclsoap@initialization$qqrv   @916 ; __fastcall Dclsoap::initialization()
+    @Dmxform@Finalization$qqrv     @630 ; __fastcall Dmxform::Finalization()
+    @Dmxform@SoapDMForm            @634 ; Dmxform::SoapDMForm
+    @Dmxform@TSoapDMForm@          @636 ; Dmxform::TSoapDMForm::
+    @Dmxform@TSoapDMForm@Button1Click$qqrp14System@TObject @633 ; __fastcall Dmxform::TSoapDMForm::Button1Click(System::TObject *)
+    @Dmxform@TSoapDMForm@Button2Click$qqrp14System@TObject @632 ; __fastcall Dmxform::TSoapDMForm::Button2Click(System::TObject *)
+    @Dmxform@TSoapDMForm@bmHelpClick$qqrp14System@TObject @631 ; __fastcall Dmxform::TSoapDMForm::bmHelpClick(System::TObject *)
+    @Dmxform@initialization$qqrv   @629 ; __fastcall Dmxform::initialization()
+    @Gencreator@Finalization$qqrv  @60  ; __fastcall Gencreator::Finalization()
+    @Gencreator@IsPascal$qqrx20System@UnicodeString @79  ; __fastcall Gencreator::IsPascal(const System::UnicodeString)
+    @Gencreator@TGenCreator@       @81  ; Gencreator::TGenCreator::
+    @Gencreator@TGenCreator@$bctr$qqrv @78  ; __fastcall Gencreator::TGenCreator::TGenCreator()
+    @Gencreator@TGenCreator@FormCreated$qqrx50System@%DelphiInterface$23Toolsapi@IOTAFormEditor% @76  ; Gencreator::TGenCreator::FormCreated(const System::DelphiInterface<{583}...
+    @Gencreator@TGenCreator@GetAncestorName$qqrv @75  ; __fastcall Gencreator::TGenCreator::GetAncestorName()
+    @Gencreator@TGenCreator@GetCreatorType$qqrv @74  ; __fastcall Gencreator::TGenCreator::GetCreatorType()
+    @Gencreator@TGenCreator@GetExisting$qqrv @73  ; __fastcall Gencreator::TGenCreator::GetExisting()
+    @Gencreator@TGenCreator@GetFileSystem$qqrv @72  ; __fastcall Gencreator::TGenCreator::GetFileSystem()
+    @Gencreator@TGenCreator@GetFormName$qqrv @71  ; __fastcall Gencreator::TGenCreator::GetFormName()
+    @Gencreator@TGenCreator@GetGenCreator$qqrv @77  ; __fastcall Gencreator::TGenCreator::GetGenCreator()
+    @Gencreator@TGenCreator@GetImplFileName$qqrv @70  ; __fastcall Gencreator::TGenCreator::GetImplFileName()
+    @Gencreator@TGenCreator@GetIntfFileName$qqrv @69  ; __fastcall Gencreator::TGenCreator::GetIntfFileName()
+    @Gencreator@TGenCreator@GetMainForm$qqrv @68  ; __fastcall Gencreator::TGenCreator::GetMainForm()
+    @Gencreator@TGenCreator@GetOwner$qqrv @67  ; __fastcall Gencreator::TGenCreator::GetOwner()
+    @Gencreator@TGenCreator@GetShowForm$qqrv @66  ; __fastcall Gencreator::TGenCreator::GetShowForm()
+    @Gencreator@TGenCreator@GetShowSource$qqrv @65  ; __fastcall Gencreator::TGenCreator::GetShowSource()
+    @Gencreator@TGenCreator@GetUnnamed$qqrv @64  ; __fastcall Gencreator::TGenCreator::GetUnnamed()
+    @Gencreator@TGenCreator@NewFormFile$qqrx20System@UnicodeStringt1 @63  ; __fastcall Gencreator::TGenCreator::NewFormFile(const System::UnicodeString, const System::UnicodeString)
+    @Gencreator@TGenCreator@NewImplSource$qqrx20System@UnicodeStringt1t1 @62  ; __fastcall Gencreator::TGenCreator::NewImplSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Gencreator@TGenCreator@NewIntfSource$qqrx20System@UnicodeStringt1t1 @61  ; __fastcall Gencreator::TGenCreator::NewIntfSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Gencreator@initialization$qqrv @59  ; __fastcall Gencreator::initialization()
+    @Genwizard@FileExistInActiveProject$qqrx20System@UnicodeString @88  ; __fastcall Genwizard::FileExistInActiveProject(const System::UnicodeString)
+    @Genwizard@Finalization$qqrv   @84  ; __fastcall Genwizard::Finalization()
+    @Genwizard@GetModuleFromActiveProject$qqrx20System@UnicodeString @87  ; __fastcall Genwizard::GetModuleFromActiveProject(const System::UnicodeString)
+    @Genwizard@IsCLXProject$qqrv   @89  ; __fastcall Genwizard::IsCLXProject()
+    @Genwizard@TGenericWizard@     @106 ; Genwizard::TGenericWizard::
+    @Genwizard@TGenericWizard@$bctr$qqrx20System@UnicodeString @104 ; __fastcall Genwizard::TGenericWizard::TGenericWizard(const System::UnicodeString)
+    @Genwizard@TGenericWizard@AfterSave$qqrv @102 ; __fastcall Genwizard::TGenericWizard::AfterSave()
+    @Genwizard@TGenericWizard@BeforeSave$qqrv @101 ; __fastcall Genwizard::TGenericWizard::BeforeSave()
+    @Genwizard@TGenericWizard@Destroyed$qqrv @100 ; __fastcall Genwizard::TGenericWizard::Destroyed()
+    @Genwizard@TGenericWizard@Execute$qqrv @99  ; __fastcall Genwizard::TGenericWizard::Execute()
+    @Genwizard@TGenericWizard@GetAuthor$qqrv @98  ; __fastcall Genwizard::TGenericWizard::GetAuthor()
+    @Genwizard@TGenericWizard@GetComment$qqrv @97  ; __fastcall Genwizard::TGenericWizard::GetComment()
+    @Genwizard@TGenericWizard@GetDesigner$qqrv @90  ; __fastcall Genwizard::TGenericWizard::GetDesigner()
+    @Genwizard@TGenericWizard@GetGalleryCategory$qqrv @86  ; __fastcall Genwizard::TGenericWizard::GetGalleryCategory()
+    @Genwizard@TGenericWizard@GetGenericWizard$qqrv @103 ; __fastcall Genwizard::TGenericWizard::GetGenericWizard()
+    @Genwizard@TGenericWizard@GetGlyph$qqrv @96  ; __fastcall Genwizard::TGenericWizard::GetGlyph()
+    @Genwizard@TGenericWizard@GetIDString$qqrv @95  ; __fastcall Genwizard::TGenericWizard::GetIDString()
+    @Genwizard@TGenericWizard@GetName$qqrv @94  ; __fastcall Genwizard::TGenericWizard::GetName()
+    @Genwizard@TGenericWizard@GetPage$qqrv @93  ; __fastcall Genwizard::TGenericWizard::GetPage()
+    @Genwizard@TGenericWizard@GetPersonality$qqrv @85  ; __fastcall Genwizard::TGenericWizard::GetPersonality()
+    @Genwizard@TGenericWizard@GetState$qqrv @92  ; __fastcall Genwizard::TGenericWizard::GetState()
+    @Genwizard@TGenericWizard@Modified$qqrv @91  ; __fastcall Genwizard::TGenericWizard::Modified()
+    @Genwizard@initialization$qqrv @83  ; __fastcall Genwizard::initialization()
+    @GetPackageInfoTable           @922 ; GetPackageInfoTable
+    @Httpreg@Finalization$qqrv     @590 ; __fastcall Httpreg::Finalization()
+    @Httpreg@THTTPClientCertProperty@ @594 ; Httpreg::THTTPClientCertProperty::
+    @Httpreg@THTTPClientCertProperty@Edit$qqrv @592 ; __fastcall Httpreg::THTTPClientCertProperty::Edit()
+    @Httpreg@THTTPClientCertProperty@GetAttributes$qqrv @591 ; __fastcall Httpreg::THTTPClientCertProperty::GetAttributes()
+    @Httpreg@initialization$qqrv   @589 ; __fastcall Httpreg::initialization()
+    @Importoptdlg@Finalization$qqrv @759 ; __fastcall Importoptdlg::Finalization()
+    @Importoptdlg@GetOptionsFromIniFile$qqrp24System@Inifiles@TIniFile @767 ; __fastcall Importoptdlg::GetOptionsFromIniFile(System::Inifiles::TIniFile *)
+    @Importoptdlg@OptIndices       @770 ; Importoptdlg::OptIndices
+    @Importoptdlg@TImportOptDlg@   @769 ; Importoptdlg::TImportOptDlg::
+    @Importoptdlg@TImportOptDlg@FormCreate$qqrp14System@TObject @761 ; __fastcall Importoptdlg::TImportOptDlg::FormCreate(System::TObject *)
+    @Importoptdlg@TImportOptDlg@GetWSDLGenFlags$qqrv @765 ; __fastcall Importoptdlg::TImportOptDlg::GetWSDLGenFlags()
+    @Importoptdlg@TImportOptDlg@HelpClick$qqrp14System@TObject @760 ; __fastcall Importoptdlg::TImportOptDlg::HelpClick(System::TObject *)
+    @Importoptdlg@TImportOptDlg@OKBtnClick$qqrp14System@TObject @763 ; __fastcall Importoptdlg::TImportOptDlg::OKBtnClick(System::TObject *)
+    @Importoptdlg@TImportOptDlg@ReadOptions$qqrv @764 ; __fastcall Importoptdlg::TImportOptDlg::ReadOptions()
+    @Importoptdlg@TImportOptDlg@SaveOptionsToIniFile$qqrrx54System@%Set$26Wsdlimpwriter@WSDLGenFlagst1$i0$t1$i34$% @762 ; Importoptdlg::TImportOptDlg::SaveOptionsToIniFile(const System::Set<{583}...
+    @Importoptdlg@TImportOptDlg@SetWSDLGenFlags$qqrrx54System@%Set$26Wsdlimpwriter@WSDLGenFlagst1$i0$t1$i34$% @766 ; Importoptdlg::TImportOptDlg::SetWSDLGenFlags(const System::Set<{583}...
+    @Importoptdlg@initialization$qqrv @758 ; __fastcall Importoptdlg::initialization()
+    @Invwizfrm@Finalization$qqrv   @772 ; __fastcall Invwizfrm::Finalization()
+    @Invwizfrm@TFrmInvWiz@         @781 ; Invwizfrm::TFrmInvWiz::
+    @Invwizfrm@TFrmInvWiz@$bctr$qqrp25System@Classes@TComponentynpqqrx20System@UnicodeStringt1t1xoxoxo20System@UnicodeString$vo20System@UnicodeString @778 ; Invwizfrm::TFrmInvWiz::TFrmInvWiz(System::Classes::TComponent *, void __fastcall __closure(*)(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const bool, const bool, const bool, System::UnicodeString), bool, Syste
+    @Invwizfrm@TFrmInvWiz@FormCreate$qqrp14System@TObject @775 ; __fastcall Invwizfrm::TFrmInvWiz::FormCreate(System::TObject *)
+    @Invwizfrm@TFrmInvWiz@HelpClick$qqrp14System@TObject @774 ; __fastcall Invwizfrm::TFrmInvWiz::HelpClick(System::TObject *)
+    @Invwizfrm@TFrmInvWiz@actGenerateExecute$qqrp14System@TObject @777 ; __fastcall Invwizfrm::TFrmInvWiz::actGenerateExecute(System::TObject *)
+    @Invwizfrm@TFrmInvWiz@actGenerateUpdate$qqrp14System@TObject @776 ; __fastcall Invwizfrm::TFrmInvWiz::actGenerateUpdate(System::TObject *)
+    @Invwizfrm@TFrmInvWiz@edtUnitIdentKeyPress$qqrp14System@TObjectrb @773 ; __fastcall Invwizfrm::TFrmInvWiz::edtUnitIdentKeyPress(System::TObject *, wchar_t&)
+    @Invwizfrm@frmInvWiz           @779 ; Invwizfrm::frmInvWiz
+    @Invwizfrm@initialization$qqrv @771 ; __fastcall Invwizfrm::initialization()
+    @Messagedigest_5@Finalization$qqrv @205 ; __fastcall Messagedigest_5::Finalization()
+    @Messagedigest_5@GetMD5$qqrv   @206 ; __fastcall Messagedigest_5::GetMD5()
+    @Messagedigest_5@initialization$qqrv @204 ; __fastcall Messagedigest_5::initialization()
+    @Rioreg@Finalization$qqrv      @117 ; __fastcall Rioreg::Finalization()
+    @Rioreg@TWSDLRIOPortProperty@  @123 ; Rioreg::TWSDLRIOPortProperty::
+    @Rioreg@TWSDLRIOPortProperty@GetValueList$qqrp25Soap@Wsdlintf@TDOMStrings @119 ; __fastcall Rioreg::TWSDLRIOPortProperty::GetValueList(Soap::Wsdlintf::TDOMStrings *)
+    @Rioreg@TWSDLRIOServiceProperty@ @121 ; Rioreg::TWSDLRIOServiceProperty::
+    @Rioreg@TWSDLRIOServiceProperty@GetValueList$qqrp25Soap@Wsdlintf@TDOMStrings @118 ; __fastcall Rioreg::TWSDLRIOServiceProperty::GetValueList(Soap::Wsdlintf::TDOMStrings *)
+    @Rioreg@initialization$qqrv    @116 ; __fastcall Rioreg::initialization()
+    @Soapdesconst@Finalization$qqrv @2   ; __fastcall Soapdesconst::Finalization()
+    @Soapdesconst@GetCppTemplateDir$qqrv @3   ; __fastcall Soapdesconst::GetCppTemplateDir()
+    @Soapdesconst@GetTemplateDir$qqrv @4   ; __fastcall Soapdesconst::GetTemplateDir()
+    @Soapdesconst@_SCBuilderUnitIdent @41  ; Soapdesconst::_SCBuilderUnitIdent
+    @Soapdesconst@_SCreateIntfToSOAPModule @49  ; Soapdesconst::_SCreateIntfToSOAPModule
+    @Soapdesconst@_SImportsWebServices @51  ; Soapdesconst::_SImportsWebServices
+    @Soapdesconst@_SLocationFilter @55  ; Soapdesconst::_SLocationFilter
+    @Soapdesconst@_SNOHTTPReqResp  @38  ; Soapdesconst::_SNOHTTPReqResp
+    @Soapdesconst@_SNOService      @40  ; Soapdesconst::_SNOService
+    @Soapdesconst@_SNOWSDLLocation @39  ; Soapdesconst::_SNOWSDLLocation
+    @Soapdesconst@_SNewServerApp   @58  ; Soapdesconst::_SNewServerApp
+    @Soapdesconst@_SNewSoapModuleExpertComment @57  ; Soapdesconst::_SNewSoapModuleExpertComment
+    @Soapdesconst@_SNewSoapModuleExpertName @35  ; Soapdesconst::_SNewSoapModuleExpertName
+    @Soapdesconst@_SNoSoapClassName @48  ; Soapdesconst::_SNoSoapClassName
+    @Soapdesconst@_SOPENWsdlXml    @53  ; Soapdesconst::_SOPENWsdlXml
+    @Soapdesconst@_SQTLocationFilter @54  ; Soapdesconst::_SQTLocationFilter
+    @Soapdesconst@_SSoapDMComment  @29  ; Soapdesconst::_SSoapDMComment
+    @Soapdesconst@_SSoapDMName     @31  ; Soapdesconst::_SSoapDMName
+    @Soapdesconst@_SSoapDMWizardID @30  ; Soapdesconst::_SSoapDMWizardID
+    @Soapdesconst@_SSoapInvalidName @47  ; Soapdesconst::_SSoapInvalidName
+    @Soapdesconst@_SWEBServicesImporter @52  ; Soapdesconst::_SWEBServicesImporter
+    @Soapdesconst@_WSDLImportExpert @50  ; Soapdesconst::_WSDLImportExpert
+    @Soapdesconst@_sCodeGearSOAP   @6   ; Soapdesconst::_sCodeGearSOAP
+    @Soapdesconst@_sInvokeWizardComment @32  ; Soapdesconst::_sInvokeWizardComment
+    @Soapdesconst@_sInvokeWizardID @33  ; Soapdesconst::_sInvokeWizardID
+    @Soapdesconst@_sInvokeWizardName @34  ; Soapdesconst::_sInvokeWizardName
+    @Soapdesconst@_sMissingCloseTag @46  ; Soapdesconst::_sMissingCloseTag
+    @Soapdesconst@_sMissingParen   @45  ; Soapdesconst::_sMissingParen
+    @Soapdesconst@_sPopEmptyStack  @44  ; Soapdesconst::_sPopEmptyStack
+    @Soapdesconst@_sSelectCertificate @5   ; Soapdesconst::_sSelectCertificate
+    @Soapdesconst@_sSoapIntFileSourceComment @37  ; Soapdesconst::_sSoapIntFileSourceComment
+    @Soapdesconst@_sSoapSourceFileSourceComment @36  ; Soapdesconst::_sSoapSourceFileSourceComment
+    @Soapdesconst@_sTopEmptyStack  @43  ; Soapdesconst::_sTopEmptyStack
+    @Soapdesconst@_sUDDIImportInfo @21  ; Soapdesconst::_sUDDIImportInfo
+    @Soapdesconst@_sUnsupportedPropType @42  ; Soapdesconst::_sUnsupportedPropType
+    @Soapdesconst@_sWImportClsLeaked @25  ; Soapdesconst::_sWImportClsLeaked
+    @Soapdesconst@_sWImportMemLeaked @24  ; Soapdesconst::_sWImportMemLeaked
+    @Soapdesconst@_sWSDLBindingAttr @15  ; Soapdesconst::_sWSDLBindingAttr
+    @Soapdesconst@_sWSDLEncodingAttr @8   ; Soapdesconst::_sWSDLEncodingAttr
+    @Soapdesconst@_sWSDLInterfaceNodeName @23  ; Soapdesconst::_sWSDLInterfaceNodeName
+    @Soapdesconst@_sWSDLNameAttr   @20  ; Soapdesconst::_sWSDLNameAttr
+    @Soapdesconst@_sWSDLNamespaceAttr @19  ; Soapdesconst::_sWSDLNamespaceAttr
+    @Soapdesconst@_sWSDLNativeTypeAttr @13  ; Soapdesconst::_sWSDLNativeTypeAttr
+    @Soapdesconst@_sWSDLOperationsAttr @18  ; Soapdesconst::_sWSDLOperationsAttr
+    @Soapdesconst@_sWSDLParametersAttr @11  ; Soapdesconst::_sWSDLParametersAttr
+    @Soapdesconst@_sWSDLResourceAttr @7   ; Soapdesconst::_sWSDLResourceAttr
+    @Soapdesconst@_sWSDLReturnsAttr @12  ; Soapdesconst::_sWSDLReturnsAttr
+    @Soapdesconst@_sWSDLSOAPActionAttr @14  ; Soapdesconst::_sWSDLSOAPActionAttr
+    @Soapdesconst@_sWSDLStyleAttr  @17  ; Soapdesconst::_sWSDLStyleAttr
+    @Soapdesconst@_sWSDLTransportAttr @16  ; Soapdesconst::_sWSDLTransportAttr
+    @Soapdesconst@_sWSDLTypeNodeName @22  ; Soapdesconst::_sWSDLTypeNodeName
+    @Soapdesconst@_sWSDLUsesAttr   @10  ; Soapdesconst::_sWSDLUsesAttr
+    @Soapdesconst@_sWSDLVersionAttr @9   ; Soapdesconst::_sWSDLVersionAttr
+    @Soapdesconst@_sWSDLWizardComment @26  ; Soapdesconst::_sWSDLWizardComment
+    @Soapdesconst@_sWSDLWizardID   @27  ; Soapdesconst::_sWSDLWizardID
+    @Soapdesconst@_sWSDLWizardName @28  ; Soapdesconst::_sWSDLWizardName
+    @Soapdesconst@_sWSWizardPage   @56  ; Soapdesconst::_sWSWizardPage
+    @Soapdesconst@initialization$qqrv @1   ; __fastcall Soapdesconst::initialization()
+    @Soapidereg@Finalization$qqrv  @895 ; __fastcall Soapidereg::Finalization()
+    @Soapidereg@Register$qqrv      @896 ; __fastcall Soapidereg::Register()
+    @Soapidereg@TSOAPMenus@        @901 ; Soapidereg::TSOAPMenus::
+    @Soapidereg@TSOAPMenus@$bctr$qqrv @899 ; __fastcall Soapidereg::TSOAPMenus::TSOAPMenus()
+    @Soapidereg@TSOAPMenus@$bdtr$qqrv @898 ; __fastcall Soapidereg::TSOAPMenus::~TSOAPMenus()
+    @Soapidereg@TSOAPMenus@DoImportWSDLExecute$qqrp14System@TObject @897 ; __fastcall Soapidereg::TSOAPMenus::DoImportWSDLExecute(System::TObject *)
+    @Soapidereg@initialization$qqrv @894 ; __fastcall Soapidereg::initialization()
+    @Soapreg@Finalization$qqrv     @596 ; __fastcall Soapreg::Finalization()
+    @Soapreg@Register$qqrv         @597 ; __fastcall Soapreg::Register()
+    @Soapreg@initialization$qqrv   @595 ; __fastcall Soapreg::initialization()
+    @Soapwebbrokerexpertscreators@Finalization$qqrv @903 ; __fastcall Soapwebbrokerexpertscreators::Finalization()
+    @Soapwebbrokerexpertscreators@TSoapWebBrokerExpertsCreatorsModule@ @907 ; Soapwebbrokerexpertscreators::TSoapWebBrokerExpertsCreatorsModule::
+    @Soapwebbrokerexpertscreators@TSoapWebBrokerExpertsCreatorsModule@CreateModules$qqrx20System@UnicodeString @905 ; __fastcall Soapwebbrokerexpertscreators::TSoapWebBrokerExpertsCreatorsModule::CreateModules(const System::UnicodeString)
+    @Soapwebbrokerexpertscreators@TSoapWebBrokerExpertsCreatorsModule@UpdateProperties$qqrv @904 ; __fastcall Soapwebbrokerexpertscreators::TSoapWebBrokerExpertsCreatorsModule::UpdateProperties()
+    @Soapwebbrokerexpertscreators@initialization$qqrv @902 ; __fastcall Soapwebbrokerexpertscreators::initialization()
+    @Soapwebbrokerexpertsui@Finalization$qqrv @909 ; __fastcall Soapwebbrokerexpertsui::Finalization()
+    @Soapwebbrokerexpertsui@SoapWebBrokerExpertsUIModule @913 ; Soapwebbrokerexpertsui::SoapWebBrokerExpertsUIModule
+    @Soapwebbrokerexpertsui@TSoapWebBrokerExpertsUIModule@ @915 ; Soapwebbrokerexpertsui::TSoapWebBrokerExpertsUIModule::
+    @Soapwebbrokerexpertsui@TSoapWebBrokerExpertsUIModule@DataModuleCreate$qqrp14System@TObject @912 ; __fastcall Soapwebbrokerexpertsui::TSoapWebBrokerExpertsUIModule::DataModuleCreate(System::TObject *)
+    @Soapwebbrokerexpertsui@TSoapWebBrokerExpertsUIModule@EnablePages$qqrv @911 ; __fastcall Soapwebbrokerexpertsui::TSoapWebBrokerExpertsUIModule::EnablePages()
+    @Soapwebbrokerexpertsui@TSoapWebBrokerExpertsUIModule@WebServerProjectWizardLoadImage$qqrp36Expertsuiwizard@TCustomExpertsWizardrp20Vcl@Graphics@TBitmap @910 ; __fastcall Soapwebbrokerexpertsui::TSoapWebBrokerExpertsUIModule::WebServerProjectWizardLoadImage(Expertsuiwizard::TCustomExpertsWizard *, Vcl::Graphics::TBitmap *&)
+    @Soapwebbrokerexpertsui@initialization$qqrv @908 ; __fastcall Soapwebbrokerexpertsui::initialization()
+    @Uddibrow_unit1@BoolStr        @853 ; Uddibrow_unit1::BoolStr
+    @Uddibrow_unit1@DefaultRegistries @851 ; Uddibrow_unit1::DefaultRegistries
+    @Uddibrow_unit1@DefaultShortNames @849 ; Uddibrow_unit1::DefaultShortNames
+    @Uddibrow_unit1@Finalization$qqrv @784 ; __fastcall Uddibrow_unit1::Finalization()
+    @Uddibrow_unit1@TUDDIBrowMainForm@ @856 ; Uddibrow_unit1::TUDDIBrowMainForm::
+    @Uddibrow_unit1@TUDDIBrowMainForm@BusSerChange$qqrp14System@TObjectp22Vcl@Comctrls@TTreeNode @799 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::BusSerChange(System::TObject *, Vcl::Comctrls::TTreeNode *)
+    @Uddibrow_unit1@TUDDIBrowMainForm@BusSerExpanding$qqrp14System@TObjectp22Vcl@Comctrls@TTreeNodero @809 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::BusSerExpanding(System::TObject *, Vcl::Comctrls::TTreeNode *, bool&)
+    @Uddibrow_unit1@TUDDIBrowMainForm@CancelButtonClick$qqrp14System@TObject @789 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::CancelButtonClick(System::TObject *)
+    @Uddibrow_unit1@TUDDIBrowMainForm@ClearEntries$qqrv @805 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::ClearEntries()
+    @Uddibrow_unit1@TUDDIBrowMainForm@DisplayBindingDetails$qqrxp31Soap@Inquire_v1@BindingTemplate @807 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::DisplayBindingDetails(Soap::Inquire_v1::BindingTemplate * const)
+    @Uddibrow_unit1@TUDDIBrowMainForm@DisplayBusinessDetails$qqrp28Soap@Inquire_v1@BusinessInfo @806 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::DisplayBusinessDetails(Soap::Inquire_v1::BusinessInfo *)
+    @Uddibrow_unit1@TUDDIBrowMainForm@DisplayServiceDetails$qqrx20System@UnicodeString @808 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::DisplayServiceDetails(const System::UnicodeString)
+    @Uddibrow_unit1@TUDDIBrowMainForm@EnableFindButton$qqrv @794 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::EnableFindButton()
+    @Uddibrow_unit1@TUDDIBrowMainForm@FindBusiness$qqrv @819 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::FindBusiness()
+    @Uddibrow_unit1@TUDDIBrowMainForm@FindClick$qqrp14System@TObject @820 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::FindClick(System::TObject *)
+    @Uddibrow_unit1@TUDDIBrowMainForm@FindService$qqrv @818 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::FindService()
+    @Uddibrow_unit1@TUDDIBrowMainForm@FormCreate$qqrp14System@TObject @822 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::FormCreate(System::TObject *)
+    @Uddibrow_unit1@TUDDIBrowMainForm@FormDestroy$qqrp14System@TObject @821 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::FormDestroy(System::TObject *)
+    @Uddibrow_unit1@TUDDIBrowMainForm@GetServiceDetail$qqrx20System@UnicodeString @800 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::GetServiceDetail(const System::UnicodeString)
+    @Uddibrow_unit1@TUDDIBrowMainForm@HTTPRIO1AfterExecute$qqrx20System@UnicodeStringp22System@Classes@TStream @816 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::HTTPRIO1AfterExecute(const System::UnicodeString, System::Classes::TStream *)
+    @Uddibrow_unit1@TUDDIBrowMainForm@HTTPRIO1BeforeExecute$qqrx20System@UnicodeStringr17System@WideString @817 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::HTTPRIO1BeforeExecute(const System::UnicodeString, System::WideString&)
+    @Uddibrow_unit1@TUDDIBrowMainForm@HTTPRIO1Converter1MemberDataNotReceived$qqrx20System@UnicodeStringt1 @787 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::HTTPRIO1Converter1MemberDataNotReceived(const System::UnicodeString, const System::UnicodeString)
+    @Uddibrow_unit1@TUDDIBrowMainForm@HTTPRIO1Converter1UnhandledNode$qqrx20System@UnicodeString17System@WideString @786 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::HTTPRIO1Converter1UnhandledNode(const System::UnicodeString, System::WideString)
+    @Uddibrow_unit1@TUDDIBrowMainForm@HandledException$qqrp25System@Sysutils@Exception @804 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::HandledException(System::Sysutils::Exception *)
+    @Uddibrow_unit1@TUDDIBrowMainForm@HasBindingTemplates$qqrp27Soap@Inquire_v1@ServiceInfo @810 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::HasBindingTemplates(Soap::Inquire_v1::ServiceInfo *)
+    @Uddibrow_unit1@TUDDIBrowMainForm@HelpButtonClick$qqrp14System@TObject @795 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::HelpButtonClick(System::TObject *)
+    @Uddibrow_unit1@TUDDIBrowMainForm@ImportButtonClick$qqrp14System@TObject @815 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::ImportButtonClick(System::TObject *)
+    @Uddibrow_unit1@TUDDIBrowMainForm@ImportWSDLClick$qqrp14System@TObject @798 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::ImportWSDLClick(System::TObject *)
+    @Uddibrow_unit1@TUDDIBrowMainForm@IsBusinessNode$qqrxp22Vcl@Comctrls@TTreeNode @813 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::IsBusinessNode(Vcl::Comctrls::TTreeNode * const)
+    @Uddibrow_unit1@TUDDIBrowMainForm@IsChildOfRootNode$qqrxp22Vcl@Comctrls@TTreeNode @814 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::IsChildOfRootNode(Vcl::Comctrls::TTreeNode * const)
+    @Uddibrow_unit1@TUDDIBrowMainForm@IsServiceNode$qqrxp22Vcl@Comctrls@TTreeNode @812 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::IsServiceNode(Vcl::Comctrls::TTreeNode * const)
+    @Uddibrow_unit1@TUDDIBrowMainForm@IsTModelNode$qqrxp22Vcl@Comctrls@TTreeNode @811 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::IsTModelNode(Vcl::Comctrls::TTreeNode * const)
+    @Uddibrow_unit1@TUDDIBrowMainForm@MatchCriteriaGroupEnter$qqrp14System@TObject @788 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::MatchCriteriaGroupEnter(System::TObject *)
+    @Uddibrow_unit1@TUDDIBrowMainForm@NameChange$qqrp14System@TObject @793 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::NameChange(System::TObject *)
+    @Uddibrow_unit1@TUDDIBrowMainForm@RegistryURLChange$qqrp14System@TObject @791 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::RegistryURLChange(System::TObject *)
+    @Uddibrow_unit1@TUDDIBrowMainForm@RegistryURLEnter$qqrp14System@TObject @792 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::RegistryURLEnter(System::TObject *)
+    @Uddibrow_unit1@TUDDIBrowMainForm@RegistryURLExit$qqrp14System@TObject @790 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::RegistryURLExit(System::TObject *)
+    @Uddibrow_unit1@TUDDIBrowMainForm@SetProxyInfo$qqrx20System@UnicodeStringt1t1 @785 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::SetProxyInfo(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Uddibrow_unit1@TUDDIBrowMainForm@SetURL$qqrx20System@UnicodeString @796 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::SetURL(const System::UnicodeString)
+    @Uddibrow_unit1@TUDDIBrowMainForm@SetXMLStringsCacheSize$qqri @803 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::SetXMLStringsCacheSize(int)
+    @Uddibrow_unit1@TUDDIBrowMainForm@URLListChange$qqrp14System@TObject @797 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::URLListChange(System::TObject *)
+    @Uddibrow_unit1@TUDDIBrowMainForm@UpdateUpDownLabel$qqrv @802 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::UpdateUpDownLabel()
+    @Uddibrow_unit1@TUDDIBrowMainForm@XMLUpDownChangingEx$qqrp14System@TObjectros29Vcl@Comctrls@TUpDownDirection @801 ; __fastcall Uddibrow_unit1::TUDDIBrowMainForm::XMLUpDownChangingEx(System::TObject *, bool&, short, Vcl::Comctrls::TUpDownDirection)
+    @Uddibrow_unit1@TWaitCursor@   @860 ; Uddibrow_unit1::TWaitCursor::
+    @Uddibrow_unit1@TWaitCursor@$bctr$qqrv @825 ; __fastcall Uddibrow_unit1::TWaitCursor::TWaitCursor()
+    @Uddibrow_unit1@TWaitCursor@$bdtr$qqrv @824 ; __fastcall Uddibrow_unit1::TWaitCursor::~TWaitCursor()
+    @Uddibrow_unit1@TWaitCursor@SetCursor$qqri @823 ; __fastcall Uddibrow_unit1::TWaitCursor::SetCursor(int)
+    @Uddibrow_unit1@TruncatedString @827 ; Uddibrow_unit1::TruncatedString
+    @Uddibrow_unit1@UDDIBrowMainForm @826 ; Uddibrow_unit1::UDDIBrowMainForm
+    @Uddibrow_unit1@_sAccessPoint  @837 ; Uddibrow_unit1::_sAccessPoint
+    @Uddibrow_unit1@_sAuthName     @838 ; Uddibrow_unit1::_sAuthName
+    @Uddibrow_unit1@_sBindingKey   @839 ; Uddibrow_unit1::_sBindingKey
+    @Uddibrow_unit1@_sBindingKeyFmt @844 ; Uddibrow_unit1::_sBindingKeyFmt
+    @Uddibrow_unit1@_sBusinessKey  @841 ; Uddibrow_unit1::_sBusinessKey
+    @Uddibrow_unit1@_sBusinessKeyFmt @846 ; Uddibrow_unit1::_sBusinessKeyFmt
+    @Uddibrow_unit1@_sCountOfCount @847 ; Uddibrow_unit1::_sCountOfCount
+    @Uddibrow_unit1@_sErrorMessage @832 ; Uddibrow_unit1::_sErrorMessage
+    @Uddibrow_unit1@_sErrorMessageDetail @831 ; Uddibrow_unit1::_sErrorMessageDetail
+    @Uddibrow_unit1@_sErrorTitle   @833 ; Uddibrow_unit1::_sErrorTitle
+    @Uddibrow_unit1@_sInvalidRegURL @834 ; Uddibrow_unit1::_sInvalidRegURL
+    @Uddibrow_unit1@_sMissingData  @830 ; Uddibrow_unit1::_sMissingData
+    @Uddibrow_unit1@_sNameField    @836 ; Uddibrow_unit1::_sNameField
+    @Uddibrow_unit1@_sResultCount  @848 ; Uddibrow_unit1::_sResultCount
+    @Uddibrow_unit1@_sServiceInfo  @842 ; Uddibrow_unit1::_sServiceInfo
+    @Uddibrow_unit1@_sServiceKey   @840 ; Uddibrow_unit1::_sServiceKey
+    @Uddibrow_unit1@_sServiceKeyFmt @845 ; Uddibrow_unit1::_sServiceKeyFmt
+    @Uddibrow_unit1@_sTruncated    @835 ; Uddibrow_unit1::_sTruncated
+    @Uddibrow_unit1@_sUnhandledData @829 ; Uddibrow_unit1::_sUnhandledData
+    @Uddibrow_unit1@_sWSDLLoc      @843 ; Uddibrow_unit1::_sWSDLLoc
+    @Uddibrow_unit1@initialization$qqrv @783 ; __fastcall Uddibrow_unit1::initialization()
+    @Uddihlprdesign@Finalization$qqrv @125 ; __fastcall Uddihlprdesign::Finalization()
+    @Uddihlprdesign@FindBus$qqrx54System@%DelphiInterface$27Soap@Inquire_v1@InquireSoap%ix20System@UnicodeStringoo @141 ; Uddihlprdesign::FindBus(const System::DelphiInterface<{583}...
+    @Uddihlprdesign@FindBus$qqrx54System@%DelphiInterface$27Soap@Inquire_v1@InquireSoap%ixp23System@Classes@TStrings @142 ; Uddihlprdesign::FindBus(const System::DelphiInterface<{583}...
+    @Uddihlprdesign@FindSvc$qqrx54System@%DelphiInterface$27Soap@Inquire_v1@InquireSoap%ix20System@UnicodeStringoo @140 ; Uddihlprdesign::FindSvc(const System::DelphiInterface<{583}...
+    @Uddihlprdesign@GetBindingkeyDetail$qqrx20System@UnicodeStringt1 @135 ; __fastcall Uddihlprdesign::GetBindingkeyDetail(const System::UnicodeString, const System::UnicodeString)
+    @Uddihlprdesign@GetBindingkeyDetail$qqrx54System@%DelphiInterface$27Soap@Inquire_v1@InquireSoap%x20System@UnicodeString @134 ; Uddihlprdesign::GetBindingkeyDetail(const System::DelphiInterface<{583}...
+    @Uddihlprdesign@GetBindingkeyImportInfo$qqrx20System@UnicodeStringt1 @133 ; __fastcall Uddihlprdesign::GetBindingkeyImportInfo(const System::UnicodeString, const System::UnicodeString)
+    @Uddihlprdesign@GetBindingkeyImportInfo$qqrx54System@%DelphiInterface$27Soap@Inquire_v1@InquireSoap%x20System@UnicodeStringt2 @132 ; Uddihlprdesign::GetBindingkeyImportInfo(const System::DelphiInterface<{583}...
+    @Uddihlprdesign@GetBusDetail$qqrx54System@%DelphiInterface$27Soap@Inquire_v1@InquireSoap%xp28Soap@Inquire_v1@BusinessInfo @139 ; Uddihlprdesign::GetBusDetail(const System::DelphiInterface<{583}...
+    @Uddihlprdesign@GetImportBindingInfo$qqrv @126 ; __fastcall Uddihlprdesign::GetImportBindingInfo()
+    @Uddihlprdesign@GetSvcDetail$qqrx54System@%DelphiInterface$27Soap@Inquire_v1@InquireSoap%x20System@UnicodeString @143 ; Uddihlprdesign::GetSvcDetail(const System::DelphiInterface<{583}...
+    @Uddihlprdesign@GetTModDetail$qqrx54System@%DelphiInterface$27Soap@Inquire_v1@InquireSoap%x20System@UnicodeString @138 ; Uddihlprdesign::GetTModDetail(const System::DelphiInterface<{583}...
+    @Uddihlprdesign@GetTModelOfWSDL$qqrx54System@%DelphiInterface$27Soap@Inquire_v1@InquireSoap%x20System@UnicodeString @136 ; Uddihlprdesign::GetTModelOfWSDL(const System::DelphiInterface<{583}...
+    @Uddihlprdesign@GetTModelOfWSDL$qqrxp28Soap@Inquire_v1@TModelDetail @137 ; __fastcall Uddihlprdesign::GetTModelOfWSDL(Soap::Inquire_v1::TModelDetail * const)
+    @Uddihlprdesign@GetUDDIResultCache$qqrv @127 ; __fastcall Uddihlprdesign::GetUDDIResultCache()
+    @Uddihlprdesign@GetWSDL$qqrx20System@UnicodeStringt1 @128 ; __fastcall Uddihlprdesign::GetWSDL(const System::UnicodeString, const System::UnicodeString)
+    @Uddihlprdesign@GetWSDL$qqrx54System@%DelphiInterface$27Soap@Inquire_v1@InquireSoap%x20System@UnicodeString @129 ; Uddihlprdesign::GetWSDL(const System::DelphiInterface<{583}...
+    @Uddihlprdesign@GetWSDL$qqrx54System@%DelphiInterface$27Soap@Inquire_v1@InquireSoap%xp29Soap@Inquire_v1@BindingDetail @130 ; Uddihlprdesign::GetWSDL(const System::DelphiInterface<{583}...
+    @Uddihlprdesign@GetWSDL$qqrx54System@%DelphiInterface$27Soap@Inquire_v1@InquireSoap%xp31Soap@Inquire_v1@BindingTemplater20System@UnicodeString @131 ; Uddihlprdesign::GetWSDL(const System::DelphiInterface<{583}...
+    @Uddihlprdesign@initialization$qqrv @124 ; __fastcall Uddihlprdesign::initialization()
+    @Webservicecrtrs@CreateModules$qqr53System@%DelphiInterface$26Expertfilter@IExpertFilter%20System@UnicodeStringt2t2t2 @707 ; Webservicecrtrs::CreateModules(System::DelphiInterface<{583}...
+    @Webservicecrtrs@Finalization$qqrv @706 ; __fastcall Webservicecrtrs::Finalization()
+    @Webservicecrtrs@GetUniqueFileName$qqrx20System@UnicodeStringt1 @708 ; __fastcall Webservicecrtrs::GetUniqueFileName(const System::UnicodeString, const System::UnicodeString)
+    @Webservicecrtrs@initialization$qqrv @705 ; __fastcall Webservicecrtrs::initialization()
+    @Webservimp@Finalization$qqrv  @710 ; __fastcall Webservimp::Finalization()
+    @Webservimp@GetArrayName$qqrx20System@UnicodeStringri @721 ; __fastcall Webservimp::GetArrayName(const System::UnicodeString, int&)
+    @Webservimp@GetDynArrayType$qqrx20System@UnicodeString @718 ; __fastcall Webservimp::GetDynArrayType(const System::UnicodeString)
+    @Webservimp@IsDuplicate$qqrx47System@%DynamicArray$23Webservimp@TComplexType%x17System@WideStringt2 @730 ; Webservimp::IsDuplicate(const System::DynamicArray<{583}...
+    @Webservimp@IsDynArrayType$qqr20System@UnicodeString @720 ; __fastcall Webservimp::IsDynArrayType(System::UnicodeString)
+    @Webservimp@IsPredefinedDataType$qqr20System@UnicodeString @719 ; __fastcall Webservimp::IsPredefinedDataType(System::UnicodeString)
+    @Webservimp@TSoapClassDecl@    @745 ; Webservimp::TSoapClassDecl::
+    @Webservimp@TSoapClassDecl@WriteDecl$qqrv @712 ; __fastcall Webservimp::TSoapClassDecl::WriteDecl()
+    @Webservimp@TSoapClassDecl@WriteProperty$qqrx57System@%DelphiInterface$30Xmlbindmgr@IXMLPropertyBinding%xo @711 ; Webservimp::TSoapClassDecl::WriteProperty(const System::DelphiInterface<{583}...
+    @Webservimp@TWebServImp@       @747 ; Webservimp::TWebServImp::
+    @Webservimp@TWebServImp@$bctr$qqrv @743 ; __fastcall Webservimp::TWebServImp::TWebServImp()
+    @Webservimp@TWebServImp@$bdtr$qqrv @742 ; __fastcall Webservimp::TWebServImp::~TWebServImp()
+    @Webservimp@TWebServImp@AddPartInfo$qqrr44System@%DynamicArray$20Webservimp@TPartInfo%46System@%DelphiInterface$19Soap@Wsdlbind@IPart%23Webservimp@ArgumentType @737 ; Webservimp::TWebServImp::AddPartInfo(System::DynamicArray<{583}...
+    @Webservimp@TWebServImp@CodeGenComplexTypeArray$qqrx59System@%DelphiInterface$32Xml@Xmlschema@IXMLComplexTypeDef% @725 ; Webservimp::TWebServImp::CodeGenComplexTypeArray(const System::DelphiInterface<{583}...
+    @Webservimp@TWebServImp@CodeGenDynArray$qqrx59System@%DelphiInterface$32Xml@Xmlschema@IXMLComplexTypeDef% @723 ; Webservimp::TWebServImp::CodeGenDynArray(const System::DelphiInterface<{583}...
+    @Webservimp@TWebServImp@CodeGenElementDef$qqrx17System@WideStringt1 @727 ; __fastcall Webservimp::TWebServImp::CodeGenElementDef(const System::WideString, const System::WideString)
+    @Webservimp@TWebServImp@CodeGenEnum$qqrx17System@WideStringx66System@%DelphiInterface$39Xml@Xmlschema@IXMLEnumerationCollection% @726 ; Webservimp::TWebServImp::CodeGenEnum(const System::WideString, const System::DelphiInterface<{583}...
+    @Webservimp@TWebServImp@GetInterfaceMapList$qqrr48System@%DynamicArray$24Webservimp@TInterfaceMap% @713 ; Webservimp::TWebServImp::GetInterfaceMapList(System::DynamicArray<{583}...
+    @Webservimp@TWebServImp@GetMultiDimension$qqrx20System@UnicodeString @724 ; __fastcall Webservimp::TWebServImp::GetMultiDimension(const System::UnicodeString)
+    @Webservimp@TWebServImp@GetMultiDimension$qqrx55System@%DelphiInterface$28Xml@Xmlschema@IXMLElementDef% @722 ; Webservimp::TWebServImp::GetMultiDimension(const System::DelphiInterface<{583}...
+    @Webservimp@TWebServImp@GetPascalArguments$qqrx54System@%DelphiInterface$27Soap@Wsdlbind@IWSDLDocument%x51System@%DelphiInterface$24Soap@Wsdlbind@IOperation%ro @736 ; Webservimp::TWebServImp::GetPascalArguments(const System::DelphiInterface<{583}...
+    @Webservimp@TWebServImp@GetPascalDataType$qqrrx14System@Variant @717 ; __fastcall Webservimp::TWebServImp::GetPascalDataType(const System::Variant&)
+    @Webservimp@TWebServImp@GetPascalInterface$qqrxp25Soap@Wsdlitems@TWSDLItemsrp26System@Classes@TStringList @738 ; __fastcall Webservimp::TWebServImp::GetPascalInterface(Soap::Wsdlitems::TWSDLItems * const, System::Classes::TStringList *&)
+    @Webservimp@TWebServImp@GetPascalTypeDef$qqrx54System@%DelphiInterface$27Soap@Wsdlbind@IWSDLDocument%r47System@%DynamicArray$23Webservimp@TComplexType% @729 ; Webservimp::TWebServImp::GetPascalTypeDef(const System::DelphiInterface<{583}...
+    @Webservimp@TWebServImp@GetPascalTypeDef$qqrx54System@%DelphiInterface$27Xml@Xmlschema@IXMLSchemaDef%r47System@%DynamicArray$23Webservimp@TComplexType% @728 ; Webservimp::TWebServImp::GetPascalTypeDef(const System::DelphiInterface<{583}...
+    @Webservimp@TWebServImp@GetPascalTypes$qqrx54System@%DelphiInterface$27Soap@Wsdlbind@IWSDLDocument%r47System@%DynamicArray$23Webservimp@TComplexType% @733 ; Webservimp::TWebServImp::GetPascalTypes(const System::DelphiInterface<{583}...
+    @Webservimp@TWebServImp@GetPascalTypes$qqrx54System@%DelphiInterface$27Xml@Xmlschema@IXMLSchemaDef%r47System@%DynamicArray$23Webservimp@TComplexType% @734 ; Webservimp::TWebServImp::GetPascalTypes(const System::DelphiInterface<{583}...
+    @Webservimp@TWebServImp@GetTypes$qqrx54System@%DelphiInterface$27Soap@Wsdlbind@IWSDLDocument%rp20System@Classes@TList @732 ; Webservimp::TWebServImp::GetTypes(const System::DelphiInterface<{583}...
+    @Webservimp@TWebServImp@GetTypes$qqrx54System@%DelphiInterface$27Xml@Xmlschema@IXMLSchemaDef%rp20System@Classes@TList @731 ; Webservimp::TWebServImp::GetTypes(const System::DelphiInterface<{583}...
+    @Webservimp@TWebServImp@HasDefinition$qqrx54System@%DelphiInterface$27Soap@Wsdlbind@IWSDLDocument% @735 ; Webservimp::TWebServImp::HasDefinition(const System::DelphiInterface<{583}...
+    @Webservimp@TWebServImp@IsValidIdentifier$qqrx17System@WideString26Soap@Wsdlintf@TWSDLElement @716 ; __fastcall Webservimp::TWebServImp::IsValidIdentifier(const System::WideString, Soap::Wsdlintf::TWSDLElement)
+    @Webservimp@TWebServImp@ReplaceSpecialChar$qqrx17System@WideString @715 ; __fastcall Webservimp::TWebServImp::ReplaceSpecialChar(const System::WideString)
+    @Webservimp@TWebServImp@SetAutoValidate$qqrxo @739 ; __fastcall Webservimp::TWebServImp::SetAutoValidate(const bool)
+    @Webservimp@TWebServImp@SetBaseClass$qqrx20System@UnicodeString @740 ; __fastcall Webservimp::TWebServImp::SetBaseClass(const System::UnicodeString)
+    @Webservimp@TWebServImp@SetStringType$qqrx20System@UnicodeString @741 ; __fastcall Webservimp::TWebServImp::SetStringType(const System::UnicodeString)
+    @Webservimp@TWebServImp@ValidateName$qqrx17System@WideString26Soap@Wsdlintf@TWSDLElement @714 ; __fastcall Webservimp::TWebServImp::ValidateName(const System::WideString, Soap::Wsdlintf::TWSDLElement)
+    @Webservimp@initialization$qqrv @709 ; __fastcall Webservimp::initialization()
+    @Wsdlcppwriter@Finalization$qqrv @638 ; __fastcall Wsdlcppwriter::Finalization()
+    @Wsdlcppwriter@TWSDLCppWriter@ @670 ; Wsdlcppwriter::TWSDLCppWriter::
+    @Wsdlcppwriter@TWSDLCppWriter@$bctr$qqrx54System@%DelphiInterface$27Wsdlmodelintf@IWSDLImporter% @667 ; Wsdlcppwriter::TWSDLCppWriter::TWSDLCppWriter(const System::DelphiInterface<{583}...
+    @Wsdlcppwriter@TWSDLCppWriter@$bctr$qqrx54System@%DelphiInterface$27Wsdlmodelintf@IWSDLImporter%20System@UnicodeString @666 ; Wsdlcppwriter::TWSDLCppWriter::TWSDLCppWriter(const System::DelphiInterface<{583}...
+    @Wsdlcppwriter@TWSDLCppWriter@$bdtr$qqrv @665 ; __fastcall Wsdlcppwriter::TWSDLCppWriter::~TWSDLCppWriter()
+    @Wsdlcppwriter@TWSDLCppWriter@Escape$qqrx20System@UnicodeString @647 ; __fastcall Wsdlcppwriter::TWSDLCppWriter::Escape(const System::UnicodeString)
+    @Wsdlcppwriter@TWSDLCppWriter@GetPartFlagList$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLPart%49System@%Set$22Wsdlmodelintf@PartFlagt1$i0$t1$i7$% @653 ; Wsdlcppwriter::TWSDLCppWriter::GetPartFlagList(const System::DelphiInterface<{583}...
+    @Wsdlcppwriter@TWSDLCppWriter@GetTypeInfo$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType% @652 ; Wsdlcppwriter::TWSDLCppWriter::GetTypeInfo(const System::DelphiInterface<{583}...
+    @Wsdlcppwriter@TWSDLCppWriter@HasSource$qqrv @659 ; __fastcall Wsdlcppwriter::TWSDLCppWriter::HasSource()
+    @Wsdlcppwriter@TWSDLCppWriter@IntfExt$qqrv @658 ; __fastcall Wsdlcppwriter::TWSDLCppWriter::IntfExt()
+    @Wsdlcppwriter@TWSDLCppWriter@IsDynArrayType$qqr20System@UnicodeString @663 ; __fastcall Wsdlcppwriter::TWSDLCppWriter::IsDynArrayType(System::UnicodeString)
+    @Wsdlcppwriter@TWSDLCppWriter@IsReservedWord$qqrx20System@UnicodeStringr20System@UnicodeString @664 ; __fastcall Wsdlcppwriter::TWSDLCppWriter::IsReservedWord(const System::UnicodeString, System::UnicodeString&)
+    @Wsdlcppwriter@TWSDLCppWriter@RemapMembersOfTypeName$qqrv @655 ; __fastcall Wsdlcppwriter::TWSDLCppWriter::RemapMembersOfTypeName()
+    @Wsdlcppwriter@TWSDLCppWriter@SetOutFile$qqrx20System@UnicodeStringo @656 ; __fastcall Wsdlcppwriter::TWSDLCppWriter::SetOutFile(const System::UnicodeString, bool)
+    @Wsdlcppwriter@TWSDLCppWriter@SourceExt$qqrv @657 ; __fastcall Wsdlcppwriter::TWSDLCppWriter::SourceExt()
+    @Wsdlcppwriter@TWSDLCppWriter@TypeNameFromTypeInfo$qqrp24System@Typinfo@TTypeInfo @662 ; __fastcall Wsdlcppwriter::TWSDLCppWriter::TypeNameFromTypeInfo(System::Typinfo::TTypeInfo *)
+    @Wsdlcppwriter@TWSDLCppWriter@WriteAliasDef$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType% @650 ; Wsdlcppwriter::TWSDLCppWriter::WriteAliasDef(const System::DelphiInterface<{583}...
+    @Wsdlcppwriter@TWSDLCppWriter@WriteArray$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType% @649 ; Wsdlcppwriter::TWSDLCppWriter::WriteArray(const System::DelphiInterface<{583}...
+    @Wsdlcppwriter@TWSDLCppWriter@WriteComplexTypeClass$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType%55System@%Set$28Wsdlimpwriter@PassWriterTypet1$i0$t1$i5$% @648 ; Wsdlcppwriter::TWSDLCppWriter::WriteComplexTypeClass(const System::DelphiInterface<{583}...
+    @Wsdlcppwriter@TWSDLCppWriter@WriteEnum$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType% @651 ; Wsdlcppwriter::TWSDLCppWriter::WriteEnum(const System::DelphiInterface<{583}...
+    @Wsdlcppwriter@TWSDLCppWriter@WriteInterfaceBegin$qqrx54System@%DelphiInterface$27Wsdlmodelintf@IWSDLPortType%55System@%Set$28Wsdlimpwriter@PassWriterTypet1$i0$t1$i5$% @646 ; Wsdlcppwriter::TWSDLCppWriter::WriteInterfaceBegin(const System::DelphiInterface<{583}...
+    @Wsdlcppwriter@TWSDLCppWriter@WriteInterfaceEnd$qqrx54System@%DelphiInterface$27Wsdlmodelintf@IWSDLPortType%55System@%Set$28Wsdlimpwriter@PassWriterTypet1$i0$t1$i5$% @644 ; Wsdlcppwriter::TWSDLCppWriter::WriteInterfaceEnd(const System::DelphiInterface<{583}...
+    @Wsdlcppwriter@TWSDLCppWriter@WriteIntfFooter$qqrv @660 ; __fastcall Wsdlcppwriter::TWSDLCppWriter::WriteIntfFooter()
+    @Wsdlcppwriter@TWSDLCppWriter@WriteIntfHeader$qqrv @661 ; __fastcall Wsdlcppwriter::TWSDLCppWriter::WriteIntfHeader()
+    @Wsdlcppwriter@TWSDLCppWriter@WriteMethod$qqrx55System@%DelphiInterface$28Wsdlmodelintf@IWSDLOperation%x54System@%DelphiInterface$27Wsdlmodelintf@IWSDLPortType%55System@%Set$28Wsdlimpwriter@PassWriterTypet1$i0$t1$i5$% @645 ; Wsdlcppwriter::TWSDLCppWriter::WriteMethod(const System::DelphiInterface<{583}...
+    @Wsdlcppwriter@TWSDLCppWriter@WriteRegCalls$qqrv @640 ; __fastcall Wsdlcppwriter::TWSDLCppWriter::WriteRegCalls()
+    @Wsdlcppwriter@TWSDLCppWriter@WriteSettingsFile$qqrv @643 ; __fastcall Wsdlcppwriter::TWSDLCppWriter::WriteSettingsFile()
+    @Wsdlcppwriter@TWSDLCppWriter@WriteSource$qqrv @642 ; __fastcall Wsdlcppwriter::TWSDLCppWriter::WriteSource()
+    @Wsdlcppwriter@TWSDLCppWriter@WriteSourceFooter$qqrv @639 ; __fastcall Wsdlcppwriter::TWSDLCppWriter::WriteSourceFooter()
+    @Wsdlcppwriter@TWSDLCppWriter@WriteSourceHeader$qqrv @641 ; __fastcall Wsdlcppwriter::TWSDLCppWriter::WriteSourceHeader()
+    @Wsdlcppwriter@TWSDLCppWriter@WriteTypeNamespace$qqrx20System@UnicodeStringo @654 ; __fastcall Wsdlcppwriter::TWSDLCppWriter::WriteTypeNamespace(const System::UnicodeString, bool)
+    @Wsdlcppwriter@initialization$qqrv @637 ; __fastcall Wsdlcppwriter::initialization()
+    @Wsdlimpconst@CannotUnwrapStr  @440 ; Wsdlimpconst::CannotUnwrapStr
+    @Wsdlimpconst@Finalization$qqrv @429 ; __fastcall Wsdlimpconst::Finalization()
+    @Wsdlimpconst@IsOptionHandledByOptionsPage$qqrx26Wsdlimpwriter@WSDLGenFlags @430 ; __fastcall Wsdlimpconst::IsOptionHandledByOptionsPage(const Wsdlimpwriter::WSDLGenFlags)
+    @Wsdlimpconst@OptCommandLineFlags @431 ; Wsdlimpconst::OptCommandLineFlags
+    @Wsdlimpconst@OptDescriptions  @436 ; Wsdlimpconst::OptDescriptions
+    @Wsdlimpconst@OptDescriptionsForCommandLineHelp @434 ; Wsdlimpconst::OptDescriptionsForCommandLineHelp
+    @Wsdlimpconst@OptHiddenOptions @433 ; Wsdlimpconst::OptHiddenOptions
+    @Wsdlimpconst@OptStrings       @438 ; Wsdlimpconst::OptStrings
+    @Wsdlimpconst@XMLItemInfoComment @586 ; Wsdlimpconst::XMLItemInfoComment
+    @Wsdlimpconst@_SConfirmClose   @580 ; Wsdlimpconst::_SConfirmClose
+    @Wsdlimpconst@_SNewXMLDataBinding @583 ; Wsdlimpconst::_SNewXMLDataBinding
+    @Wsdlimpconst@_SSourceFilter   @581 ; Wsdlimpconst::_SSourceFilter
+    @Wsdlimpconst@_SWSDLDefExt     @582 ; Wsdlimpconst::_SWSDLDefExt
+    @Wsdlimpconst@_sAllowOutParameters @490 ; Wsdlimpconst::_sAllowOutParameters
+    @Wsdlimpconst@_sAllowOutParametersForCommandLineHelp @463 ; Wsdlimpconst::_sAllowOutParametersForCommandLineHelp
+    @Wsdlimpconst@_sAmbiguousComplexTypesAsArray @498 ; Wsdlimpconst::_sAmbiguousComplexTypesAsArray
+    @Wsdlimpconst@_sAmbiguousComplexTypesAsArrayForCommandLineHelp @471 ; Wsdlimpconst::_sAmbiguousComplexTypesAsArrayForCommandLineHelp
+    @Wsdlimpconst@_sAutoDestroyMembers @497 ; Wsdlimpconst::_sAutoDestroyMembers
+    @Wsdlimpconst@_sAutoDestroyMembersForCommandLineHelp @470 ; Wsdlimpconst::_sAutoDestroyMembersForCommandLineHelp
+    @Wsdlimpconst@_sBindInfoBaseType @545 ; Wsdlimpconst::_sBindInfoBaseType
+    @Wsdlimpconst@_sBindInfoBound  @544 ; Wsdlimpconst::_sBindInfoBound
+    @Wsdlimpconst@_sBindInfoGeneric @560 ; Wsdlimpconst::_sBindInfoGeneric
+    @Wsdlimpconst@_sBindInfoLocalName @546 ; Wsdlimpconst::_sBindInfoLocalName
+    @Wsdlimpconst@_sBindableTypeError @525 ; Wsdlimpconst::_sBindableTypeError
+    @Wsdlimpconst@_sBindingInfo    @551 ; Wsdlimpconst::_sBindingInfo
+    @Wsdlimpconst@_sCUInputMessageHasMoreThanOnePart @456 ; Wsdlimpconst::_sCUInputMessageHasMoreThanOnePart
+    @Wsdlimpconst@_sCUInputPartNotAComplexType @451 ; Wsdlimpconst::_sCUInputPartNotAComplexType
+    @Wsdlimpconst@_sCUInputPartRefersToTypeNotElement @454 ; Wsdlimpconst::_sCUInputPartRefersToTypeNotElement
+    @Wsdlimpconst@_sCUInputWrapperElementNotSameAsOperationName @452 ; Wsdlimpconst::_sCUInputWrapperElementNotSameAsOperationName
+    @Wsdlimpconst@_sCUMoreThanOneStrictlyOutMembersWereFound @449 ; Wsdlimpconst::_sCUMoreThanOneStrictlyOutMembersWereFound
+    @Wsdlimpconst@_sCUOutputElementIsAPureCollection @447 ; Wsdlimpconst::_sCUOutputElementIsAPureCollection
+    @Wsdlimpconst@_sCUOutputMessageHasMoreThanOnePart @455 ; Wsdlimpconst::_sCUOutputMessageHasMoreThanOnePart
+    @Wsdlimpconst@_sCUOutputPartNotAComplexType @450 ; Wsdlimpconst::_sCUOutputPartNotAComplexType
+    @Wsdlimpconst@_sCUOutputPartRefersToTypeNotElement @453 ; Wsdlimpconst::_sCUOutputPartRefersToTypeNotElement
+    @Wsdlimpconst@_sCUTypeNeedsSpecialSerialization @448 ; Wsdlimpconst::_sCUTypeNeedsSpecialSerialization
+    @Wsdlimpconst@_sCircularTypeLink @514 ; Wsdlimpconst::_sCircularTypeLink
+    @Wsdlimpconst@_sComplexTypeError @526 ; Wsdlimpconst::_sComplexTypeError
+    @Wsdlimpconst@_sCouldNotUnwrapDocLitElementWrapper @457 ; Wsdlimpconst::_sCouldNotUnwrapDocLitElementWrapper
+    @Wsdlimpconst@_sCreateArrayElemTypeAlias @485 ; Wsdlimpconst::_sCreateArrayElemTypeAlias
+    @Wsdlimpconst@_sCreateArrayElemTypeAliasForCommandLineHelp @458 ; Wsdlimpconst::_sCreateArrayElemTypeAliasForCommandLineHelp
+    @Wsdlimpconst@_sDottedLine     @529 ; Wsdlimpconst::_sDottedLine
+    @Wsdlimpconst@_sDuplicateTypes @565 ; Wsdlimpconst::_sDuplicateTypes
+    @Wsdlimpconst@_sEncodingInfo   @576 ; Wsdlimpconst::_sEncodingInfo
+    @Wsdlimpconst@_sErrorImportingWSDL1 @444 ; Wsdlimpconst::_sErrorImportingWSDL1
+    @Wsdlimpconst@_sErrorImportingWSDL2 @443 ; Wsdlimpconst::_sErrorImportingWSDL2
+    @Wsdlimpconst@_sErrorImportingWSDL3 @442 ; Wsdlimpconst::_sErrorImportingWSDL3
+    @Wsdlimpconst@_sExternalName   @559 ; Wsdlimpconst::_sExternalName
+    @Wsdlimpconst@_sFailureFeedback @520 ; Wsdlimpconst::_sFailureFeedback
+    @Wsdlimpconst@_sFeedbackDebug  @534 ; Wsdlimpconst::_sFeedbackDebug
+    @Wsdlimpconst@_sFeedbackDone   @539 ; Wsdlimpconst::_sFeedbackDone
+    @Wsdlimpconst@_sFeedbackError  @536 ; Wsdlimpconst::_sFeedbackError
+    @Wsdlimpconst@_sFeedbackError2 @535 ; Wsdlimpconst::_sFeedbackError2
+    @Wsdlimpconst@_sFeedbackImp    @540 ; Wsdlimpconst::_sFeedbackImp
+    @Wsdlimpconst@_sFeedbackRead   @542 ; Wsdlimpconst::_sFeedbackRead
+    @Wsdlimpconst@_sFeedbackSkip   @537 ; Wsdlimpconst::_sFeedbackSkip
+    @Wsdlimpconst@_sFeedbackUDDI   @538 ; Wsdlimpconst::_sFeedbackUDDI
+    @Wsdlimpconst@_sFeedbackWrite  @541 ; Wsdlimpconst::_sFeedbackWrite
+    @Wsdlimpconst@_sForceSOAP11    @503 ; Wsdlimpconst::_sForceSOAP11
+    @Wsdlimpconst@_sForceSOAP11ForCommandLineHelp @476 ; Wsdlimpconst::_sForceSOAP11ForCommandLineHelp
+    @Wsdlimpconst@_sForceSOAP12    @502 ; Wsdlimpconst::_sForceSOAP12
+    @Wsdlimpconst@_sForceSOAP12ForCommandLineHelp @475 ; Wsdlimpconst::_sForceSOAP12ForCommandLineHelp
+    @Wsdlimpconst@_sForwardDecl    @543 ; Wsdlimpconst::_sForwardDecl
+    @Wsdlimpconst@_sGenOptions     @571 ; Wsdlimpconst::_sGenOptions
+    @Wsdlimpconst@_sGenServerImpl  @500 ; Wsdlimpconst::_sGenServerImpl
+    @Wsdlimpconst@_sGenServerImplForCommandLineHelp @473 ; Wsdlimpconst::_sGenServerImplForCommandLineHelp
+    @Wsdlimpconst@_sGenTrueGUID    @504 ; Wsdlimpconst::_sGenTrueGUID
+    @Wsdlimpconst@_sGenTrueGUIDForCommandLineHelp @477 ; Wsdlimpconst::_sGenTrueGUIDForCommandLineHelp
+    @Wsdlimpconst@_sGenerateWarnings @499 ; Wsdlimpconst::_sGenerateWarnings
+    @Wsdlimpconst@_sGenerateWarningsForCommandLineHelp @472 ; Wsdlimpconst::_sGenerateWarningsForCommandLineHelp
+    @Wsdlimpconst@_sGenericError   @523 ; Wsdlimpconst::_sGenericError
+    @Wsdlimpconst@_sGenericTypeError @527 ; Wsdlimpconst::_sGenericTypeError
+    @Wsdlimpconst@_sIgnoreSchemaErrors @493 ; Wsdlimpconst::_sIgnoreSchemaErrors
+    @Wsdlimpconst@_sIgnoreSchemaErrorsForCommandLineHelp @466 ; Wsdlimpconst::_sIgnoreSchemaErrorsForCommandLineHelp
+    @Wsdlimpconst@_sImportFaults   @507 ; Wsdlimpconst::_sImportFaults
+    @Wsdlimpconst@_sImportFaultsForCommandLineHelp @480 ; Wsdlimpconst::_sImportFaultsForCommandLineHelp
+    @Wsdlimpconst@_sImportHeaders  @505 ; Wsdlimpconst::_sImportHeaders
+    @Wsdlimpconst@_sImportHeadersForCommandLineHelp @478 ; Wsdlimpconst::_sImportHeadersForCommandLineHelp
+    @Wsdlimpconst@_sImportInfo     @577 ; Wsdlimpconst::_sImportInfo
+    @Wsdlimpconst@_sImportWSDL     @585 ; Wsdlimpconst::_sImportWSDL
+    @Wsdlimpconst@_sImportWSDLEllipsis @584 ; Wsdlimpconst::_sImportWSDLEllipsis
+    @Wsdlimpconst@_sInfoBeg        @569 ; Wsdlimpconst::_sInfoBeg
+    @Wsdlimpconst@_sInfoEnd        @568 ; Wsdlimpconst::_sInfoEnd
+    @Wsdlimpconst@_sMapNamedArrays @509 ; Wsdlimpconst::_sMapNamedArrays
+    @Wsdlimpconst@_sMapNamedArraysForCommandLineHelp @482 ; Wsdlimpconst::_sMapNamedArraysForCommandLineHelp
+    @Wsdlimpconst@_sMapStringsToWideStrings @496 ; Wsdlimpconst::_sMapStringsToWideStrings
+    @Wsdlimpconst@_sMapStringsToWideStringsForCommandLineHelp @469 ; Wsdlimpconst::_sMapStringsToWideStringsForCommandLineHelp
+    @Wsdlimpconst@_sMethodHeaders  @446 ; Wsdlimpconst::_sMethodHeaders
+    @Wsdlimpconst@_sMissingDefinition @528 ; Wsdlimpconst::_sMissingDefinition
+    @Wsdlimpconst@_sMovingType     @530 ; Wsdlimpconst::_sMovingType
+    @Wsdlimpconst@_sNamespaceInfo  @556 ; Wsdlimpconst::_sNamespaceInfo
+    @Wsdlimpconst@_sNoBindingsFound @579 ; Wsdlimpconst::_sNoBindingsFound
+    @Wsdlimpconst@_sOneOutParamIsReturn @501 ; Wsdlimpconst::_sOneOutParamIsReturn
+    @Wsdlimpconst@_sOneOutParamIsReturnForCommandLineHelp @474 ; Wsdlimpconst::_sOneOutParamIsReturnForCommandLineHelp
+    @Wsdlimpconst@_sOutputLiteralTypes @495 ; Wsdlimpconst::_sOutputLiteralTypes
+    @Wsdlimpconst@_sOutputLiteralTypesForCommandLineHelp @468 ; Wsdlimpconst::_sOutputLiteralTypesForCommandLineHelp
+    @Wsdlimpconst@_sPortInfo       @549 ; Wsdlimpconst::_sPortInfo
+    @Wsdlimpconst@_sPorts          @572 ; Wsdlimpconst::_sPorts
+    @Wsdlimpconst@_sPredefinedInfo @567 ; Wsdlimpconst::_sPredefinedInfo
+    @Wsdlimpconst@_sPredefinedTypes @566 ; Wsdlimpconst::_sPredefinedTypes
+    @Wsdlimpconst@_sProcessNillableOptional @488 ; Wsdlimpconst::_sProcessNillableOptional
+    @Wsdlimpconst@_sProcessNillableOptionalForCommandLineHelp @461 ; Wsdlimpconst::_sProcessNillableOptionalForCommandLineHelp
+    @Wsdlimpconst@_sProcessRefSchemas @492 ; Wsdlimpconst::_sProcessRefSchemas
+    @Wsdlimpconst@_sProcessRefSchemasForCommandLineHelp @465 ; Wsdlimpconst::_sProcessRefSchemasForCommandLineHelp
+    @Wsdlimpconst@_sReadingType    @532 ; Wsdlimpconst::_sReadingType
+    @Wsdlimpconst@_sRegProcInfo    @561 ; Wsdlimpconst::_sRegProcInfo
+    @Wsdlimpconst@_sSOAPActionInfo @555 ; Wsdlimpconst::_sSOAPActionInfo
+    @Wsdlimpconst@_sSchemaError    @524 ; Wsdlimpconst::_sSchemaError
+    @Wsdlimpconst@_sSchemaRef      @574 ; Wsdlimpconst::_sSchemaRef
+    @Wsdlimpconst@_sSchemaWarning  @519 ; Wsdlimpconst::_sSchemaWarning
+    @Wsdlimpconst@_sSerialization  @558 ; Wsdlimpconst::_sSerialization
+    @Wsdlimpconst@_sServerImpl     @547 ; Wsdlimpconst::_sServerImpl
+    @Wsdlimpconst@_sServiceInf     @550 ; Wsdlimpconst::_sServiceInf
+    @Wsdlimpconst@_sServices       @573 ; Wsdlimpconst::_sServices
+    @Wsdlimpconst@_sSkipHTTPBindOpt @510 ; Wsdlimpconst::_sSkipHTTPBindOpt
+    @Wsdlimpconst@_sSkipHTTPBindOptForCommandLineHelp @483 ; Wsdlimpconst::_sSkipHTTPBindOptForCommandLineHelp
+    @Wsdlimpconst@_sSkipUnusedTypes @508 ; Wsdlimpconst::_sSkipUnusedTypes
+    @Wsdlimpconst@_sSkipUnusedTypesForCommandLineHelp @481 ; Wsdlimpconst::_sSkipUnusedTypesForCommandLineHelp
+    @Wsdlimpconst@_sSortingType    @531 ; Wsdlimpconst::_sSortingType
+    @Wsdlimpconst@_sStrongClassAliases @491 ; Wsdlimpconst::_sStrongClassAliases
+    @Wsdlimpconst@_sStrongClassAliasesForCommandLineHelp @464 ; Wsdlimpconst::_sStrongClassAliasesForCommandLineHelp
+    @Wsdlimpconst@_sStyleInfo      @553 ; Wsdlimpconst::_sStyleInfo
+    @Wsdlimpconst@_sSummaryFeedback1 @522 ; Wsdlimpconst::_sSummaryFeedback1
+    @Wsdlimpconst@_sSummaryFeedback2 @521 ; Wsdlimpconst::_sSummaryFeedback2
+    @Wsdlimpconst@_sTransportInfo  @554 ; Wsdlimpconst::_sTransportInfo
+    @Wsdlimpconst@_sURLInfo        @548 ; Wsdlimpconst::_sURLInfo
+    @Wsdlimpconst@_sUnableToSort   @513 ; Wsdlimpconst::_sUnableToSort
+    @Wsdlimpconst@_sUnableToSortTypes @512 ; Wsdlimpconst::_sUnableToSortTypes
+    @Wsdlimpconst@_sUnwindLiteralTypes @494 ; Wsdlimpconst::_sUnwindLiteralTypes
+    @Wsdlimpconst@_sUnwindLiteralTypesForCommandLineHelp @467 ; Wsdlimpconst::_sUnwindLiteralTypesForCommandLineHelp
+    @Wsdlimpconst@_sUnwindWarningIn @518 ; Wsdlimpconst::_sUnwindWarningIn
+    @Wsdlimpconst@_sUnwindWarningOut @517 ; Wsdlimpconst::_sUnwindWarningOut
+    @Wsdlimpconst@_sUseInfo        @552 ; Wsdlimpconst::_sUseInfo
+    @Wsdlimpconst@_sUseScopedEnumerations @486 ; Wsdlimpconst::_sUseScopedEnumerations
+    @Wsdlimpconst@_sUseScopedEnumerationsForCommandLineHelp @459 ; Wsdlimpconst::_sUseScopedEnumerationsForCommandLineHelp
+    @Wsdlimpconst@_sUseSettersAndGetters @489 ; Wsdlimpconst::_sUseSettersAndGetters
+    @Wsdlimpconst@_sUseSettersAndGettersForCommandLineHelp @462 ; Wsdlimpconst::_sUseSettersAndGettersForCommandLineHelp
+    @Wsdlimpconst@_sUseXSTypeForSimpleNillable @487 ; Wsdlimpconst::_sUseXSTypeForSimpleNillable
+    @Wsdlimpconst@_sUseXSTypeForSimpleNillableForCommandLineHelp @460 ; Wsdlimpconst::_sUseXSTypeForSimpleNillableForCommandLineHelp
+    @Wsdlimpconst@_sValidateEnum   @506 ; Wsdlimpconst::_sValidateEnum
+    @Wsdlimpconst@_sValidateEnumForCommandLineHelp @479 ; Wsdlimpconst::_sValidateEnumForCommandLineHelp
+    @Wsdlimpconst@_sVerboseOpt     @511 ; Wsdlimpconst::_sVerboseOpt
+    @Wsdlimpconst@_sVerboseOptForCommandLineHelp @484 ; Wsdlimpconst::_sVerboseOptForCommandLineHelp
+    @Wsdlimpconst@_sVersionInfo    @575 ; Wsdlimpconst::_sVersionInfo
+    @Wsdlimpconst@_sWSDLImportError @445 ; Wsdlimpconst::_sWSDLImportError
+    @Wsdlimpconst@_sWSDLInfoBeg    @578 ; Wsdlimpconst::_sWSDLInfoBeg
+    @Wsdlimpconst@_sWSDLInfoEnd    @570 ; Wsdlimpconst::_sWSDLInfoEnd
+    @Wsdlimpconst@_sWarningAttribute @515 ; Wsdlimpconst::_sWarningAttribute
+    @Wsdlimpconst@_sWarningHeader  @516 ; Wsdlimpconst::_sWarningHeader
+    @Wsdlimpconst@_sWarningInfo    @563 ; Wsdlimpconst::_sWarningInfo
+    @Wsdlimpconst@_sWarningInfoBegin @564 ; Wsdlimpconst::_sWarningInfoBegin
+    @Wsdlimpconst@_sWarningInfoEnd @562 ; Wsdlimpconst::_sWarningInfoEnd
+    @Wsdlimpconst@_sWritingType    @533 ; Wsdlimpconst::_sWritingType
+    @Wsdlimpconst@_sXMLInfo        @557 ; Wsdlimpconst::_sXMLInfo
+    @Wsdlimpconst@initialization$qqrv @428 ; __fastcall Wsdlimpconst::initialization()
+    @Wsdlimportdlg@Finalization$qqrv @620 ; __fastcall Wsdlimportdlg::Finalization()
+    @Wsdlimportdlg@TWSDLImporter@  @628 ; Wsdlimportdlg::TWSDLImporter::
+    @Wsdlimportdlg@TWSDLImporter@CancelButtonClick$qqrp14System@TObject @625 ; __fastcall Wsdlimportdlg::TWSDLImporter::CancelButtonClick(System::TObject *)
+    @Wsdlimportdlg@TWSDLImporter@Edit1Exit$qqrp14System@TObject @622 ; __fastcall Wsdlimportdlg::TWSDLImporter::Edit1Exit(System::TObject *)
+    @Wsdlimportdlg@TWSDLImporter@FileOpen1Accept$qqrp14System@TObject @624 ; __fastcall Wsdlimportdlg::TWSDLImporter::FileOpen1Accept(System::TObject *)
+    @Wsdlimportdlg@TWSDLImporter@GenerateButtonClick$qqrp14System@TObject @626 ; __fastcall Wsdlimportdlg::TWSDLImporter::GenerateButtonClick(System::TObject *)
+    @Wsdlimportdlg@TWSDLImporter@HelpButtonClick$qqrp14System@TObject @621 ; __fastcall Wsdlimportdlg::TWSDLImporter::HelpButtonClick(System::TObject *)
+    @Wsdlimportdlg@TWSDLImporter@WSDLSourceChange$qqrp14System@TObject @623 ; __fastcall Wsdlimportdlg::TWSDLImporter::WSDLSourceChange(System::TObject *)
+    @Wsdlimportdlg@initialization$qqrv @619 ; __fastcall Wsdlimportdlg::initialization()
+    @Wsdlimporterwizard@Finalization$qqrv @863 ; __fastcall Wsdlimporterwizard::Finalization()
+    @Wsdlimporterwizard@Register$qqrv @889 ; __fastcall Wsdlimporterwizard::Register()
+    @Wsdlimporterwizard@TWSDLImportWizard@ @891 ; Wsdlimporterwizard::TWSDLImportWizard::
+    @Wsdlimporterwizard@TWSDLImportWizard@$bctr$qqrx20System@UnicodeString @865 ; __fastcall Wsdlimporterwizard::TWSDLImportWizard::TWSDLImportWizard(const System::UnicodeString)
+    @Wsdlimporterwizard@TWSDLImportWizard@Execute$qqrv @864 ; __fastcall Wsdlimporterwizard::TWSDLImportWizard::Execute()
+    @Wsdlimporterwizard@TWSDLImporterWizard@ @893 ; Wsdlimporterwizard::TWSDLImporterWizard::
+    @Wsdlimporterwizard@TWSDLImporterWizard@$bctr$qqrv @880 ; __fastcall Wsdlimporterwizard::TWSDLImporterWizard::TWSDLImporterWizard()
+    @Wsdlimporterwizard@TWSDLImporterWizard@$bdtr$qqrv @879 ; __fastcall Wsdlimporterwizard::TWSDLImporterWizard::~TWSDLImporterWizard()
+    @Wsdlimporterwizard@TWSDLImporterWizard@Cancel$qqrv @874 ; __fastcall Wsdlimporterwizard::TWSDLImporterWizard::Cancel()
+    @Wsdlimporterwizard@TWSDLImporterWizard@Caption$qqrv @873 ; __fastcall Wsdlimporterwizard::TWSDLImporterWizard::Caption()
+    @Wsdlimporterwizard@TWSDLImporterWizard@CreatePage$qqrrx5_GUIDpvx20System@UnicodeString @883 ; __fastcall Wsdlimporterwizard::TWSDLImporterWizard::CreatePage(const _GUID&, void *, const System::UnicodeString)
+    @Wsdlimporterwizard@TWSDLImporterWizard@Finish$qqrv @871 ; __fastcall Wsdlimporterwizard::TWSDLImporterWizard::Finish()
+    @Wsdlimporterwizard@TWSDLImporterWizard@FirstPage$qqrv @870 ; __fastcall Wsdlimporterwizard::TWSDLImporterWizard::FirstPage()
+    @Wsdlimporterwizard@TWSDLImporterWizard@GetHelpContext$qqrv @869 ; __fastcall Wsdlimporterwizard::TWSDLImporterWizard::GetHelpContext()
+    @Wsdlimporterwizard@TWSDLImporterWizard@GetPersonality$qqrv @868 ; __fastcall Wsdlimporterwizard::TWSDLImporterWizard::GetPersonality()
+    @Wsdlimporterwizard@TWSDLImporterWizard@GetWizard$qqrv @867 ; __fastcall Wsdlimporterwizard::TWSDLImporterWizard::GetWizard()
+    @Wsdlimporterwizard@TWSDLImporterWizard@HandleLanguagePage$qqrx48System@%DelphiInterface$21Wizardapi@IWizardPage% @878 ; Wsdlimporterwizard::TWSDLImporterWizard::HandleLanguagePage(const System::DelphiInterface<{583}...
+    @Wsdlimporterwizard@TWSDLImporterWizard@HandleSOAPVersionPage$qqrx48System@%DelphiInterface$21Wizardapi@IWizardPage% @876 ; Wsdlimporterwizard::TWSDLImporterWizard::HandleSOAPVersionPage(const System::DelphiInterface<{583}...
+    @Wsdlimporterwizard@TWSDLImporterWizard@HandleWSDLLocationPage$qqrx48System@%DelphiInterface$21Wizardapi@IWizardPage% @877 ; Wsdlimporterwizard::TWSDLImporterWizard::HandleWSDLLocationPage(const System::DelphiInterface<{583}...
+    @Wsdlimporterwizard@TWSDLImporterWizard@HandleWSDLOptionsPage$qqrx48System@%DelphiInterface$21Wizardapi@IWizardPage% @875 ; Wsdlimporterwizard::TWSDLImporterWizard::HandleWSDLOptionsPage(const System::DelphiInterface<{583}...
+    @Wsdlimporterwizard@TWSDLImporterWizard@ImportWSDL$qqrv @888 ; __fastcall Wsdlimporterwizard::TWSDLImporterWizard::ImportWSDL()
+    @Wsdlimporterwizard@TWSDLImporterWizard@InitOptions$qqrv @887 ; __fastcall Wsdlimporterwizard::TWSDLImporterWizard::InitOptions()
+    @Wsdlimporterwizard@TWSDLImporterWizard@IsPage$qqrx44System@%DelphiInterface$17System@IInterface%rx5_GUIDx20System@UnicodeString @882 ; Wsdlimporterwizard::TWSDLImporterWizard::IsPage(const System::DelphiInterface<{583}...
+    @Wsdlimporterwizard@TWSDLImporterWizard@LoadWSDLFileHistory$qqrv @886 ; __fastcall Wsdlimporterwizard::TWSDLImporterWizard::LoadWSDLFileHistory()
+    @Wsdlimporterwizard@TWSDLImporterWizard@OptionChanged$qqrx20System@UnicodeStringt1rx14System@Variant @884 ; __fastcall Wsdlimporterwizard::TWSDLImporterWizard::OptionChanged(const System::UnicodeString, const System::UnicodeString, const System::Variant&)
+    @Wsdlimporterwizard@TWSDLImporterWizard@SaveWSDLFileHistory$qqrv @885 ; __fastcall Wsdlimporterwizard::TWSDLImporterWizard::SaveWSDLFileHistory()
+    @Wsdlimporterwizard@TWSDLImporterWizard@SetImage$qqr48System@%DelphiInterface$21Wizardapi@IWizardPage%x20System@UnicodeString @881 ; Wsdlimporterwizard::TWSDLImporterWizard::SetImage(System::DelphiInterface<{583}...
+    @Wsdlimporterwizard@TWSDLImporterWizard@SetWizard$qqrx44System@%DelphiInterface$17Wizardapi@IWizard% @866 ; Wsdlimporterwizard::TWSDLImporterWizard::SetWizard(const System::DelphiInterface<{583}...
+    @Wsdlimporterwizard@TWSDLImporterWizard@Start$qqrv @872 ; __fastcall Wsdlimporterwizard::TWSDLImporterWizard::Start()
+    @Wsdlimporterwizard@initialization$qqrv @862 ; __fastcall Wsdlimporterwizard::initialization()
+    @Wsdlimpwriter@AddFaultsForOperation$qqr55System@%DelphiInterface$28Wsdlmodelintf@IWSDLOperation%p25Wsdlimpwriter@TRegTracker @377 ; Wsdlimpwriter::AddFaultsForOperation(System::DelphiInterface<{583}...
+    @Wsdlimpwriter@AddHeadersForOperation$qqr55System@%DelphiInterface$28Wsdlmodelintf@IWSDLOperation%p25Wsdlimpwriter@TRegTracker @378 ; Wsdlimpwriter::AddHeadersForOperation(System::DelphiInterface<{583}...
+    @Wsdlimpwriter@Commas          @426 ; Wsdlimpwriter::Commas
+    @Wsdlimpwriter@DefaultReturnParamNames @386 ; Wsdlimpwriter::DefaultReturnParamNames
+    @Wsdlimpwriter@Default_WSDLGenFlags @389 ; Wsdlimpwriter::Default_WSDLGenFlags
+    @Wsdlimpwriter@DumpSettings    @383 ; Wsdlimpwriter::DumpSettings
+    @Wsdlimpwriter@ExcludedFromRenameList @385 ; Wsdlimpwriter::ExcludedFromRenameList
+    @Wsdlimpwriter@Finalization$qqrv @243 ; __fastcall Wsdlimpwriter::Finalization()
+    @Wsdlimpwriter@GetOutFileName$qqrx20System@UnicodeString @380 ; __fastcall Wsdlimpwriter::GetOutFileName(const System::UnicodeString)
+    @Wsdlimpwriter@GetSortedWSDLGenFlags$qqrv @249 ; __fastcall Wsdlimpwriter::GetSortedWSDLGenFlags()
+    @Wsdlimpwriter@GetValidIdent$qqrx20System@UnicodeString @379 ; __fastcall Wsdlimpwriter::GetValidIdent(const System::UnicodeString)
+    @Wsdlimpwriter@Global_WSDLGenFlags @388 ; Wsdlimpwriter::Global_WSDLGenFlags
+    @Wsdlimpwriter@Global_WSDLGenFlags_Specified @387 ; Wsdlimpwriter::Global_WSDLGenFlags_Specified
+    @Wsdlimpwriter@INFOATTR_BEG_CHAR @391 ; Wsdlimpwriter::INFOATTR_BEG_CHAR
+    @Wsdlimpwriter@INFOATTR_END_CHAR @390 ; Wsdlimpwriter::INFOATTR_END_CHAR
+    @Wsdlimpwriter@ImportWSDL$qqrx20System@UnicodeStringxp22System@Classes@TStreampqqrx20System@UnicodeStringpx14System@TVarRecxi$v54System@%Set$27Wsdlimpwriter@ImporterFlagst1$i0$t1$i2$%t1t1t1t1ixp29Wsdlmodelintf@TWSDLImportInfo @381 ; Wsdlimpwriter::ImportWSDL(const System::UnicodeString, System::Classes::TStream * const, void __fastcall (*)(const System::UnicodeString, const System::TVarRec *, const int), System::Set<{583}...
+    @Wsdlimpwriter@InfoAttributeStr @392 ; Wsdlimpwriter::InfoAttributeStr
+    @Wsdlimpwriter@IsPortTypeDerivedFromIAppServerSOAP$qqrx50System@%DelphiInterface$23Soap@Wsdlbind@IPortType% @260 ; Wsdlimpwriter::IsPortTypeDerivedFromIAppServerSOAP(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@IsReservedNameInSymFile$qqrx20System@UnicodeStringor20System@UnicodeString @257 ; __fastcall Wsdlimpwriter::IsReservedNameInSymFile(const System::UnicodeString, bool, System::UnicodeString&)
+    @Wsdlimpwriter@NoDateStamp     @384 ; Wsdlimpwriter::NoDateStamp
+    @Wsdlimpwriter@SemiStr         @424 ; Wsdlimpwriter::SemiStr
+    @Wsdlimpwriter@SetToStr$qqrp24System@Typinfo@TTypeInfoi52System@%Set$25Wsdlimpwriter@SetToStrOptt1$i0$t1$i3$% @310 ; Wsdlimpwriter::SetToStr(System::Typinfo::TTypeInfo *, int, System::Set<{583}...
+    @Wsdlimpwriter@SetToStr$qqrp24System@Typinfo@TTypeInfoio @309 ; __fastcall Wsdlimpwriter::SetToStr(System::Typinfo::TTypeInfo *, int, bool)
+    @Wsdlimpwriter@SubstituteStrings$qqrx20System@UnicodeStringt1t1 @333 ; __fastcall Wsdlimpwriter::SubstituteStrings(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Wsdlimpwriter@THeaderItem@    @405 ; Wsdlimpwriter::THeaderItem::
+    @Wsdlimpwriter@THeaderItem@$bctr$qqrx20System@UnicodeStringt1t137Soap@Invokeregistry@eHeaderMethodTypeo @373 ; __fastcall Wsdlimpwriter::THeaderItem::THeaderItem(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, Soap::Invokeregistry::eHeaderMethodType, bool)
+    @Wsdlimpwriter@TMethodItem@    @409 ; Wsdlimpwriter::TMethodItem::
+    @Wsdlimpwriter@TMethodItem@$bctr$qqrx20System@UnicodeString37Soap@Invokeregistry@eHeaderMethodTypeo @376 ; __fastcall Wsdlimpwriter::TMethodItem::TMethodItem(const System::UnicodeString, Soap::Invokeregistry::eHeaderMethodType, bool)
+    @Wsdlimpwriter@TMethodList@    @407 ; Wsdlimpwriter::TMethodList::
+    @Wsdlimpwriter@TMethodList@AddItem$qqrx20System@UnicodeString37Soap@Invokeregistry@eHeaderMethodTypeo @375 ; __fastcall Wsdlimpwriter::TMethodList::AddItem(const System::UnicodeString, Soap::Invokeregistry::eHeaderMethodType, bool)
+    @Wsdlimpwriter@TMethodList@Find$qqrx20System@UnicodeString @374 ; __fastcall Wsdlimpwriter::TMethodList::Find(const System::UnicodeString)
+    @Wsdlimpwriter@TProcessedTracker@ @420 ; Wsdlimpwriter::TProcessedTracker::
+    @Wsdlimpwriter@TProcessedTracker@$bctr$qqrv @254 ; __fastcall Wsdlimpwriter::TProcessedTracker::TProcessedTracker()
+    @Wsdlimpwriter@TProcessedTracker@$bdtr$qqrv @253 ; __fastcall Wsdlimpwriter::TProcessedTracker::~TProcessedTracker()
+    @Wsdlimpwriter@TProcessedTracker@AddProcessed$qqrx20System@UnicodeString @256 ; __fastcall Wsdlimpwriter::TProcessedTracker::AddProcessed(const System::UnicodeString)
+    @Wsdlimpwriter@TProcessedTracker@Clear$qqrv @255 ; __fastcall Wsdlimpwriter::TProcessedTracker::Clear()
+    @Wsdlimpwriter@TProcessedTracker@GetCount$qqrv @252 ; __fastcall Wsdlimpwriter::TProcessedTracker::GetCount()
+    @Wsdlimpwriter@TProcessedTracker@GetItem$qqri @251 ; __fastcall Wsdlimpwriter::TProcessedTracker::GetItem(int)
+    @Wsdlimpwriter@TProcessedTracker@ProcessedAlready$qqrx20System@UnicodeString @250 ; __fastcall Wsdlimpwriter::TProcessedTracker::ProcessedAlready(const System::UnicodeString)
+    @Wsdlimpwriter@TRegInfoAttribute@AsString$qqro @244 ; __fastcall Wsdlimpwriter::TRegInfoAttribute::AsString(bool)
+    @Wsdlimpwriter@TRegInfoAttribute@HasAttr$qqrv @246 ; __fastcall Wsdlimpwriter::TRegInfoAttribute::HasAttr()
+    @Wsdlimpwriter@TRegInfoAttribute@Load$qqrx20System@UnicodeString @245 ; __fastcall Wsdlimpwriter::TRegInfoAttribute::Load(const System::UnicodeString)
+    @Wsdlimpwriter@TRegInfoAttribute@Reset$qqrv @248 ; __fastcall Wsdlimpwriter::TRegInfoAttribute::Reset()
+    @Wsdlimpwriter@TRegInfoAttribute@SetAttr$qqr27Wsdlimpwriter@InfoAttributex20System@UnicodeString @247 ; __fastcall Wsdlimpwriter::TRegInfoAttribute::SetAttr(Wsdlimpwriter::InfoAttribute, const System::UnicodeString)
+    @Wsdlimpwriter@TRegTracker@    @402 ; Wsdlimpwriter::TRegTracker::
+    @Wsdlimpwriter@TRegTracker@$bctr$qqrx20System@UnicodeStringt1t127Wsdlimpwriter@TRegTrackType @372 ; __fastcall Wsdlimpwriter::TRegTracker::TRegTracker(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, Wsdlimpwriter::TRegTrackType)
+    @Wsdlimpwriter@TRegTracker@AddItem$qqrx20System@UnicodeStringt1t137Soap@Invokeregistry@eHeaderMethodTypeo @369 ; __fastcall Wsdlimpwriter::TRegTracker::AddItem(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, Soap::Invokeregistry::eHeaderMethodType, bool)
+    @Wsdlimpwriter@TRegTracker@Find$qqrx20System@UnicodeString @371 ; __fastcall Wsdlimpwriter::TRegTracker::Find(const System::UnicodeString)
+    @Wsdlimpwriter@TRegTracker@WriteRegistration$qqrx20System@UnicodeString79System@%DynamicArray$55System@%DelphiInterface$28Wsdlmodelintf@IWSDLOperation%%p25Wsdlimpwriter@TWSDLWriter @370 ; Wsdlimpwriter::TRegTracker::WriteRegistration(const System::UnicodeString, System::DynamicArray<{583}...
+    @Wsdlimpwriter@TWSDLImporter@  @416 ; Wsdlimpwriter::TWSDLImporter::
+    @Wsdlimpwriter@TWSDLImporter@$bctr$qqrp25System@Classes@TComponent54System@%Set$27Wsdlimpwriter@ImporterFlagst1$i0$t1$i2$% @368 ; Wsdlimpwriter::TWSDLImporter::TWSDLImporter(System::Classes::TComponent *, System::Set<{583}...
+    @Wsdlimpwriter@TWSDLImporter@$bdtr$qqrv @367 ; __fastcall Wsdlimpwriter::TWSDLImporter::~TWSDLImporter()
+    @Wsdlimpwriter@TWSDLImporter@AddWarning$qqrx20System@UnicodeString @356 ; __fastcall Wsdlimpwriter::TWSDLImporter::AddWarning(const System::UnicodeString)
+    @Wsdlimpwriter@TWSDLImporter@AddWarning$qqrx20System@UnicodeStringpx14System@TVarRecxi @355 ; __fastcall Wsdlimpwriter::TWSDLImporter::AddWarning(const System::UnicodeString, const System::TVarRec *, const int)
+    @Wsdlimpwriter@TWSDLImporter@Cleanup$qqrv @366 ; __fastcall Wsdlimpwriter::TWSDLImporter::Cleanup()
+    @Wsdlimpwriter@TWSDLImporter@ClearMIMEParts$qqrv @334 ; __fastcall Wsdlimpwriter::TWSDLImporter::ClearMIMEParts()
+    @Wsdlimpwriter@TWSDLImporter@CreateSerializer$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType%x20System@UnicodeStringt2t2x68System@%Set$40Soap@Invokeregistry@SerializationOptionst1$i0$t1$i17$%o @336 ; Wsdlimpwriter::TWSDLImporter::CreateSerializer(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLImporter@DumpTypes$qqrv @315 ; __fastcall Wsdlimpwriter::TWSDLImporter::DumpTypes()
+    @Wsdlimpwriter@TWSDLImporter@FindMimePart$qqrx20System@UnicodeStringt1t126Wsdlmodelintf@ArgumentType @337 ; __fastcall Wsdlimpwriter::TWSDLImporter::FindMimePart(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, Wsdlmodelintf::ArgumentType)
+    @Wsdlimpwriter@TWSDLImporter@FindType$qqrx20System@UnicodeStringt1x53System@%Set$25Wsdlmodelintf@XMLItemInfot1$i0$t1$i11$%t3o @346 ; Wsdlimpwriter::TWSDLImporter::FindType(const System::UnicodeString, const System::UnicodeString, const System::Set<{583}...
+    @Wsdlimpwriter@TWSDLImporter@GetDefName$qqrv @340 ; __fastcall Wsdlimpwriter::TWSDLImporter::GetDefName()
+    @Wsdlimpwriter@TWSDLImporter@GetImportList$qqrv @339 ; __fastcall Wsdlimpwriter::TWSDLImporter::GetImportList()
+    @Wsdlimpwriter@TWSDLImporter@GetMIMEParts$qqrx20System@UnicodeString @335 ; __fastcall Wsdlimpwriter::TWSDLImporter::GetMIMEParts(const System::UnicodeString)
+    @Wsdlimpwriter@TWSDLImporter@GetOnWrite$qqrv @351 ; __fastcall Wsdlimpwriter::TWSDLImporter::GetOnWrite()
+    @Wsdlimpwriter@TWSDLImporter@GetOptions$qqrv @344 ; __fastcall Wsdlimpwriter::TWSDLImporter::GetOptions()
+    @Wsdlimpwriter@TWSDLImporter@GetOutFile$qqrv @348 ; __fastcall Wsdlimpwriter::TWSDLImporter::GetOutFile()
+    @Wsdlimpwriter@TWSDLImporter@GetPortTypes$qqrv @360 ; __fastcall Wsdlimpwriter::TWSDLImporter::GetPortTypes()
+    @Wsdlimpwriter@TWSDLImporter@GetTypes$qqrv @361 ; __fastcall Wsdlimpwriter::TWSDLImporter::GetTypes()
+    @Wsdlimpwriter@TWSDLImporter@GetWSDLImportInfo$qqrv @342 ; __fastcall Wsdlimpwriter::TWSDLImporter::GetWSDLImportInfo()
+    @Wsdlimpwriter@TWSDLImporter@GetWSDLItems$qqrv @362 ; __fastcall Wsdlimpwriter::TWSDLImporter::GetWSDLItems()
+    @Wsdlimpwriter@TWSDLImporter@GetWSDLPortTypes$qqrv @358 ; __fastcall Wsdlimpwriter::TWSDLImporter::GetWSDLPortTypes()
+    @Wsdlimpwriter@TWSDLImporter@GetWSDLTypes$qqrv @359 ; __fastcall Wsdlimpwriter::TWSDLImporter::GetWSDLTypes()
+    @Wsdlimpwriter@TWSDLImporter@GetWarningList$qqrv @349 ; __fastcall Wsdlimpwriter::TWSDLImporter::GetWarningList()
+    @Wsdlimpwriter@TWSDLImporter@Import$qqrx20System@UnicodeStringxp22System@Classes@TStream @365 ; __fastcall Wsdlimpwriter::TWSDLImporter::Import(const System::UnicodeString, System::Classes::TStream * const)
+    @Wsdlimpwriter@TWSDLImporter@ImportInterfaces$qqrxp25Soap@Wsdlitems@TWSDLItemsx55System@%DelphiInterface$28Wsdlmodelintf@IWSDLPortTypes% @352 ; Wsdlimpwriter::TWSDLImporter::ImportInterfaces(Soap::Wsdlitems::TWSDLItems * const, const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLImporter@ImportTypes$qqrx54System@%DelphiInterface$27Xml@Xmlschema@IXMLSchemaDef%x20System@UnicodeStringx51System@%DelphiInterface$24Wsdlmodelintf@IWSDLTypes% @353 ; Wsdlimpwriter::TWSDLImporter::ImportTypes(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLImporter@ImportTypes$qqrxp25Soap@Wsdlitems@TWSDLItemsx20System@UnicodeStringx51System@%DelphiInterface$24Wsdlmodelintf@IWSDLTypes%xo @354 ; Wsdlimpwriter::TWSDLImporter::ImportTypes(Soap::Wsdlitems::TWSDLItems * const, const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLImporter@ImportsCallback$qqrx35Soap@Wsdlitems@IterateImportOptionsx52System@%DelphiInterface$25Soap@Wsdlitems@IWSDLItems%x54System@%DelphiInterface$27Xml@Xmlschema@IXMLSchemaDoc%x20System@UnicodeString @364 ; Wsdlimpwriter::TWSDLImporter::ImportsCallback(const Soap::Wsdlitems::IterateImportOptions, const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLImporter@MarkTypes$qqrv @317 ; __fastcall Wsdlimpwriter::TWSDLImporter::MarkTypes()
+    @Wsdlimpwriter@TWSDLImporter@MungeTypes$qqrv @314 ; __fastcall Wsdlimpwriter::TWSDLImporter::MungeTypes()
+    @Wsdlimpwriter@TWSDLImporter@SelectItem$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLItem% @357 ; Wsdlimpwriter::TWSDLImporter::SelectItem(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLImporter@SetDefName$qqrx20System@UnicodeString @338 ; __fastcall Wsdlimpwriter::TWSDLImporter::SetDefName(const System::UnicodeString)
+    @Wsdlimpwriter@TWSDLImporter@SetOnWrite$qqrxpqqrx20System@UnicodeStringpx14System@TVarRecxi$v @350 ; __fastcall Wsdlimpwriter::TWSDLImporter::SetOnWrite(void __fastcall (*)(const System::UnicodeString, const System::TVarRec *, const int) const)
+    @Wsdlimpwriter@TWSDLImporter@SetOptions$qqrx58System@%Set$30Wsdlmodelintf@WSDLImporterOptst1$i0$t1$i12$% @343 ; Wsdlimpwriter::TWSDLImporter::SetOptions(const System::Set<{583}...
+    @Wsdlimpwriter@TWSDLImporter@SetOutFile$qqrx20System@UnicodeString @347 ; __fastcall Wsdlimpwriter::TWSDLImporter::SetOutFile(const System::UnicodeString)
+    @Wsdlimpwriter@TWSDLImporter@SetWSDLImportInfo$qqrxp29Wsdlmodelintf@TWSDLImportInfo @341 ; __fastcall Wsdlimpwriter::TWSDLImporter::SetWSDLImportInfo(Wsdlmodelintf::TWSDLImportInfo * const)
+    @Wsdlimpwriter@TWSDLImporter@SkipType$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType%o @345 ; Wsdlimpwriter::TWSDLImporter::SkipType(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLImporter@SortTypes$qqrv @316 ; __fastcall Wsdlimpwriter::TWSDLImporter::SortTypes()
+    @Wsdlimpwriter@TWSDLImporter@ValidateModel$qqrv @313 ; __fastcall Wsdlimpwriter::TWSDLImporter::ValidateModel()
+    @Wsdlimpwriter@TWSDLImporter@WriteFeedback$qqrx20System@UnicodeStringpx14System@TVarRecxi @363 ; __fastcall Wsdlimpwriter::TWSDLImporter::WriteFeedback(const System::UnicodeString, const System::TVarRec *, const int)
+    @Wsdlimpwriter@TWSDLWriter@    @412 ; Wsdlimpwriter::TWSDLWriter::
+    @Wsdlimpwriter@TWSDLWriter@$bctr$qqrx54System@%DelphiInterface$27Wsdlmodelintf@IWSDLImporter% @332 ; Wsdlimpwriter::TWSDLWriter::TWSDLWriter(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLWriter@$bctr$qqrx54System@%DelphiInterface$27Wsdlmodelintf@IWSDLImporter%20System@UnicodeString @331 ; Wsdlimpwriter::TWSDLWriter::TWSDLWriter(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLWriter@$bdtr$qqrv @330 ; __fastcall Wsdlimpwriter::TWSDLWriter::~TWSDLWriter()
+    @Wsdlimpwriter@TWSDLWriter@DataToString$qqrv @322 ; __fastcall Wsdlimpwriter::TWSDLWriter::DataToString()
+    @Wsdlimpwriter@TWSDLWriter@DataToUTF8String$qqrv @321 ; __fastcall Wsdlimpwriter::TWSDLWriter::DataToUTF8String()
+    @Wsdlimpwriter@TWSDLWriter@EmitIndexMacros$qqrr58System@%Set$30Wsdlmodelintf@WSDLImporterOptst1$i0$t1$i12$%o @303 ; Wsdlimpwriter::TWSDLWriter::EmitIndexMacros(System::Set<{583}...
+    @Wsdlimpwriter@TWSDLWriter@GenIndexedSpecifiedSupport$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLPart% @283 ; Wsdlimpwriter::TWSDLWriter::GenIndexedSpecifiedSupport(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLWriter@GenSpecifiedSupport$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLPart% @282 ; Wsdlimpwriter::TWSDLWriter::GenSpecifiedSupport(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLWriter@GetBaseClassName$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType% @281 ; Wsdlimpwriter::TWSDLWriter::GetBaseClassName(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLWriter@GetDataType$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType% @261 ; Wsdlimpwriter::TWSDLWriter::GetDataType(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLWriter@GetDebugMode$qqrv @273 ; __fastcall Wsdlimpwriter::TWSDLWriter::GetDebugMode()
+    @Wsdlimpwriter@TWSDLWriter@GetMethodInfo$qqrx55System@%DelphiInterface$28Wsdlmodelintf@IWSDLOperation% @299 ; Wsdlimpwriter::TWSDLWriter::GetMethodInfo(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLWriter@GetTypeInfo$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType% @284 ; Wsdlimpwriter::TWSDLWriter::GetTypeInfo(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLWriter@GetTypeInfoPad$qqrv @274 ; __fastcall Wsdlimpwriter::TWSDLWriter::GetTypeInfoPad()
+    @Wsdlimpwriter@TWSDLWriter@GetVerboseMode$qqrv @272 ; __fastcall Wsdlimpwriter::TWSDLWriter::GetVerboseMode()
+    @Wsdlimpwriter@TWSDLWriter@HasIndexDecl$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLPart%o @302 ; Wsdlimpwriter::TWSDLWriter::HasIndexDecl(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLWriter@HasIndexDecl$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLPart%r49System@%Set$22Wsdlmodelintf@PartFlagt1$i0$t1$i7$%roo @301 ; Wsdlimpwriter::TWSDLWriter::HasIndexDecl(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLWriter@HasInfoAboutMethod$qqrx55System@%DelphiInterface$28Wsdlmodelintf@IWSDLOperation% @300 ; Wsdlimpwriter::TWSDLWriter::HasInfoAboutMethod(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLWriter@HasSource$qqrv @298 ; __fastcall Wsdlimpwriter::TWSDLWriter::HasSource()
+    @Wsdlimpwriter@TWSDLWriter@Init$qqrx54System@%DelphiInterface$27Wsdlmodelintf@IWSDLImporter%20System@UnicodeString @329 ; Wsdlimpwriter::TWSDLWriter::Init(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLWriter@IntfExt$qqrv @292 ; __fastcall Wsdlimpwriter::TWSDLWriter::IntfExt()
+    @Wsdlimpwriter@TWSDLWriter@IsCaseSensitive$qqrv @297 ; __fastcall Wsdlimpwriter::TWSDLWriter::IsCaseSensitive()
+    @Wsdlimpwriter@TWSDLWriter@IsComplex$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType% @280 ; Wsdlimpwriter::TWSDLWriter::IsComplex(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLWriter@IsComplexArray$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType% @279 ; Wsdlimpwriter::TWSDLWriter::IsComplexArray(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLWriter@MapTypes$qqrx74System@%DynamicArray$50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType%% @312 ; Wsdlimpwriter::TWSDLWriter::MapTypes(const System::DynamicArray<{583}...
+    @Wsdlimpwriter@TWSDLWriter@RemapMembersOfTypeName$qqrv @293 ; __fastcall Wsdlimpwriter::TWSDLWriter::RemapMembersOfTypeName()
+    @Wsdlimpwriter@TWSDLWriter@ReplaceSpecialChar$qqrx20System@UnicodeString @263 ; __fastcall Wsdlimpwriter::TWSDLWriter::ReplaceSpecialChar(const System::UnicodeString)
+    @Wsdlimpwriter@TWSDLWriter@SetDirectory$qqrx20System@UnicodeString @296 ; __fastcall Wsdlimpwriter::TWSDLWriter::SetDirectory(const System::UnicodeString)
+    @Wsdlimpwriter@TWSDLWriter@SetOutFile$qqrx20System@UnicodeStringo @294 ; __fastcall Wsdlimpwriter::TWSDLWriter::SetOutFile(const System::UnicodeString, bool)
+    @Wsdlimpwriter@TWSDLWriter@SetRelHeaderDir$qqrx20System@UnicodeString @295 ; __fastcall Wsdlimpwriter::TWSDLWriter::SetRelHeaderDir(const System::UnicodeString)
+    @Wsdlimpwriter@TWSDLWriter@SetSize$qqri @319 ; __fastcall Wsdlimpwriter::TWSDLWriter::SetSize(int)
+    @Wsdlimpwriter@TWSDLWriter@SkipType$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType%o @278 ; Wsdlimpwriter::TWSDLWriter::SkipType(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLWriter@TypeCount$qqrx53System@%Set$26Wsdlmodelintf@WSDLTypeKindt1$i0$t1$i7$% @285 ; Wsdlimpwriter::TWSDLWriter::TypeCount(const System::Set<{583}...
+    @Wsdlimpwriter@TWSDLWriter@TypeNameFromTypeInfo$qqrp24System@Typinfo@TTypeInfo @262 ; __fastcall Wsdlimpwriter::TWSDLWriter::TypeNameFromTypeInfo(System::Typinfo::TTypeInfo *)
+    @Wsdlimpwriter@TWSDLWriter@ValidateName$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLItem%p25Soap@Wsdlintf@TDOMStringsit2 @266 ; Wsdlimpwriter::TWSDLWriter::ValidateName(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLWriter@ValidatePart$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLPart% @265 ; Wsdlimpwriter::TWSDLWriter::ValidatePart(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLWriter@ValidatePortTypes$qqrx78System@%DynamicArray$54System@%DelphiInterface$27Wsdlmodelintf@IWSDLPortType%% @264 ; Wsdlimpwriter::TWSDLWriter::ValidatePortTypes(const System::DynamicArray<{583}...
+    @Wsdlimpwriter@TWSDLWriter@ValidateTypes$qqrx74System@%DynamicArray$50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType%% @311 ; Wsdlimpwriter::TWSDLWriter::ValidateTypes(const System::DynamicArray<{583}...
+    @Wsdlimpwriter@TWSDLWriter@Write$qqrpxvi @318 ; __fastcall Wsdlimpwriter::TWSDLWriter::Write(const void *, int)
+    @Wsdlimpwriter@TWSDLWriter@WriteComplexClassInfo$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType% @307 ; Wsdlimpwriter::TWSDLWriter::WriteComplexClassInfo(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLWriter@WriteDebug$qqrv @289 ; __fastcall Wsdlimpwriter::TWSDLWriter::WriteDebug()
+    @Wsdlimpwriter@TWSDLWriter@WriteEnumEpilogue$qqrv @287 ; __fastcall Wsdlimpwriter::TWSDLWriter::WriteEnumEpilogue()
+    @Wsdlimpwriter@TWSDLWriter@WriteEnumPrologue$qqrv @288 ; __fastcall Wsdlimpwriter::TWSDLWriter::WriteEnumPrologue()
+    @Wsdlimpwriter@TWSDLWriter@WriteFeedback$qqrx20System@UnicodeStringpx14System@TVarRecxi @323 ; __fastcall Wsdlimpwriter::TWSDLWriter::WriteFeedback(const System::UnicodeString, const System::TVarRec *, const int)
+    @Wsdlimpwriter@TWSDLWriter@WriteFmt$qqrx20System@UnicodeStringpx14System@TVarRecxi @324 ; __fastcall Wsdlimpwriter::TWSDLWriter::WriteFmt(const System::UnicodeString, const System::TVarRec *, const int)
+    @Wsdlimpwriter@TWSDLWriter@WriteForwards$qqrv @286 ; __fastcall Wsdlimpwriter::TWSDLWriter::WriteForwards()
+    @Wsdlimpwriter@TWSDLWriter@WriteImplHeader$qqrv @270 ; __fastcall Wsdlimpwriter::TWSDLWriter::WriteImplHeader()
+    @Wsdlimpwriter@TWSDLWriter@WriteImplementations$qqrv @269 ; __fastcall Wsdlimpwriter::TWSDLWriter::WriteImplementations()
+    @Wsdlimpwriter@TWSDLWriter@WriteInterface$qqrx54System@%DelphiInterface$27Wsdlmodelintf@IWSDLPortType%55System@%Set$28Wsdlimpwriter@PassWriterTypet1$i0$t1$i5$% @268 ; Wsdlimpwriter::TWSDLWriter::WriteInterface(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLWriter@WriteInterfaceInfo$qqrx54System@%DelphiInterface$27Wsdlmodelintf@IWSDLPortType% @305 ; Wsdlimpwriter::TWSDLWriter::WriteInterfaceInfo(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLWriter@WriteInterfaces$qqrv @271 ; __fastcall Wsdlimpwriter::TWSDLWriter::WriteInterfaces()
+    @Wsdlimpwriter@TWSDLWriter@WriteIntf$qqrv @304 ; __fastcall Wsdlimpwriter::TWSDLWriter::WriteIntf()
+    @Wsdlimpwriter@TWSDLWriter@WriteIntfFooter$qqrv @267 ; __fastcall Wsdlimpwriter::TWSDLWriter::WriteIntfFooter()
+    @Wsdlimpwriter@TWSDLWriter@WriteIntfHeader$qqrv @290 ; __fastcall Wsdlimpwriter::TWSDLWriter::WriteIntfHeader()
+    @Wsdlimpwriter@TWSDLWriter@WriteLn$qqrx20System@UnicodeString @327 ; __fastcall Wsdlimpwriter::TWSDLWriter::WriteLn(const System::UnicodeString)
+    @Wsdlimpwriter@TWSDLWriter@WriteLn$qqrx20System@UnicodeStringpx14System@TVarRecxi @326 ; __fastcall Wsdlimpwriter::TWSDLWriter::WriteLn(const System::UnicodeString, const System::TVarRec *, const int)
+    @Wsdlimpwriter@TWSDLWriter@WriteOutSerialOpts$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType% @325 ; Wsdlimpwriter::TWSDLWriter::WriteOutSerialOpts(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLWriter@WritePredefinedInfo$qqrv @306 ; __fastcall Wsdlimpwriter::TWSDLWriter::WritePredefinedInfo()
+    @Wsdlimpwriter@TWSDLWriter@WriteSource$qqrv @291 ; __fastcall Wsdlimpwriter::TWSDLWriter::WriteSource()
+    @Wsdlimpwriter@TWSDLWriter@WriteStr$qqrx20System@UnicodeString @328 ; __fastcall Wsdlimpwriter::TWSDLWriter::WriteStr(const System::UnicodeString)
+    @Wsdlimpwriter@TWSDLWriter@WriteToFile$qqr20System@UnicodeString @320 ; __fastcall Wsdlimpwriter::TWSDLWriter::WriteToFile(System::UnicodeString)
+    @Wsdlimpwriter@TWSDLWriter@WriteTypeDecl$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType%55System@%Set$28Wsdlimpwriter@PassWriterTypet1$i0$t1$i5$% @275 ; Wsdlimpwriter::TWSDLWriter::WriteTypeDecl(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@TWSDLWriter@WriteTypes$qqr55System@%Set$28Wsdlimpwriter@PassWriterTypet1$i0$t1$i5$%x53System@%Set$26Wsdlmodelintf@WSDLTypeKindt1$i0$t1$i7$%t2 @276 ; Wsdlimpwriter::TWSDLWriter::WriteTypes(System::Set<{583}...
+    @Wsdlimpwriter@TWSDLWriter@WriteTypes$qqrv @277 ; __fastcall Wsdlimpwriter::TWSDLWriter::WriteTypes()
+    @Wsdlimpwriter@TWSDLWriter@WriteWSDLInfo$qqrv @308 ; __fastcall Wsdlimpwriter::TWSDLWriter::WriteWSDLInfo()
+    @Wsdlimpwriter@UnwindType$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType%o @259 ; Wsdlimpwriter::UnwindType(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@WriteFactory$qqrx54System@%DelphiInterface$27Wsdlmodelintf@IWSDLPortType% @258 ; Wsdlimpwriter::WriteFactory(const System::DelphiInterface<{583}...
+    @Wsdlimpwriter@XMLSchemaFile   @382 ; Wsdlimpwriter::XMLSchemaFile
+    @Wsdlimpwriter@initialization$qqrv @242 ; __fastcall Wsdlimpwriter::initialization()
+    @Wsdlmodelintf@Finalization$qqrv @147 ; __fastcall Wsdlmodelintf::Finalization()
+    @Wsdlmodelintf@PartFlagStr     @152 ; Wsdlmodelintf::PartFlagStr
+    @Wsdlmodelintf@PartTypeStr     @148 ; Wsdlmodelintf::PartTypeStr
+    @Wsdlmodelintf@WSDLTypeFlagStr @150 ; Wsdlmodelintf::WSDLTypeFlagStr
+    @Wsdlmodelintf@WSDLTypeKindStr @156 ; Wsdlmodelintf::WSDLTypeKindStr
+    @Wsdlmodelintf@XMLItemInfoStr  @154 ; Wsdlmodelintf::XMLItemInfoStr
+    @Wsdlmodelintf@initialization$qqrv @146 ; __fastcall Wsdlmodelintf::initialization()
+    @Wsdlmodulecreator@Finalization$qqrv @599 ; __fastcall Wsdlmodulecreator::Finalization()
+    @Wsdlmodulecreator@TWSDLModuleCreator@ @618 ; Wsdlmodulecreator::TWSDLModuleCreator::
+    @Wsdlmodulecreator@TWSDLModuleCreator@$bctr$qqrxp25Wsdlimpwriter@TWSDLWriter @616 ; __fastcall Wsdlmodulecreator::TWSDLModuleCreator::TWSDLModuleCreator(Wsdlimpwriter::TWSDLWriter * const)
+    @Wsdlmodulecreator@TWSDLModuleCreator@FormCreated$qqrx50System@%DelphiInterface$23Toolsapi@IOTAFormEditor% @615 ; Wsdlmodulecreator::TWSDLModuleCreator::FormCreated(const System::DelphiInterface<{583}...
+    @Wsdlmodulecreator@TWSDLModuleCreator@GetAncestorName$qqrv @614 ; __fastcall Wsdlmodulecreator::TWSDLModuleCreator::GetAncestorName()
+    @Wsdlmodulecreator@TWSDLModuleCreator@GetCreatorType$qqrv @613 ; __fastcall Wsdlmodulecreator::TWSDLModuleCreator::GetCreatorType()
+    @Wsdlmodulecreator@TWSDLModuleCreator@GetExisting$qqrv @612 ; __fastcall Wsdlmodulecreator::TWSDLModuleCreator::GetExisting()
+    @Wsdlmodulecreator@TWSDLModuleCreator@GetFileSystem$qqrv @611 ; __fastcall Wsdlmodulecreator::TWSDLModuleCreator::GetFileSystem()
+    @Wsdlmodulecreator@TWSDLModuleCreator@GetFormName$qqrv @610 ; __fastcall Wsdlmodulecreator::TWSDLModuleCreator::GetFormName()
+    @Wsdlmodulecreator@TWSDLModuleCreator@GetImplFileName$qqrv @609 ; __fastcall Wsdlmodulecreator::TWSDLModuleCreator::GetImplFileName()
+    @Wsdlmodulecreator@TWSDLModuleCreator@GetIntfFileName$qqrv @608 ; __fastcall Wsdlmodulecreator::TWSDLModuleCreator::GetIntfFileName()
+    @Wsdlmodulecreator@TWSDLModuleCreator@GetMainForm$qqrv @607 ; __fastcall Wsdlmodulecreator::TWSDLModuleCreator::GetMainForm()
+    @Wsdlmodulecreator@TWSDLModuleCreator@GetOwner$qqrv @606 ; __fastcall Wsdlmodulecreator::TWSDLModuleCreator::GetOwner()
+    @Wsdlmodulecreator@TWSDLModuleCreator@GetShowForm$qqrv @605 ; __fastcall Wsdlmodulecreator::TWSDLModuleCreator::GetShowForm()
+    @Wsdlmodulecreator@TWSDLModuleCreator@GetShowSource$qqrv @604 ; __fastcall Wsdlmodulecreator::TWSDLModuleCreator::GetShowSource()
+    @Wsdlmodulecreator@TWSDLModuleCreator@GetUnnamed$qqrv @603 ; __fastcall Wsdlmodulecreator::TWSDLModuleCreator::GetUnnamed()
+    @Wsdlmodulecreator@TWSDLModuleCreator@NewFormFile$qqrx20System@UnicodeStringt1 @602 ; __fastcall Wsdlmodulecreator::TWSDLModuleCreator::NewFormFile(const System::UnicodeString, const System::UnicodeString)
+    @Wsdlmodulecreator@TWSDLModuleCreator@NewImplSource$qqrx20System@UnicodeStringt1t1 @601 ; __fastcall Wsdlmodulecreator::TWSDLModuleCreator::NewImplSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Wsdlmodulecreator@TWSDLModuleCreator@NewIntfSource$qqrx20System@UnicodeStringt1t1 @600 ; __fastcall Wsdlmodulecreator::TWSDLModuleCreator::NewIntfSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Wsdlmodulecreator@initialization$qqrv @598 ; __fastcall Wsdlmodulecreator::initialization()
+    @Wsdlpaswriter@Finalization$qqrv @672 ; __fastcall Wsdlpaswriter::Finalization()
+    @Wsdlpaswriter@TWSDLPasWriter@ @704 ; Wsdlpaswriter::TWSDLPasWriter::
+    @Wsdlpaswriter@TWSDLPasWriter@$bctr$qqrx54System@%DelphiInterface$27Wsdlmodelintf@IWSDLImporter% @701 ; Wsdlpaswriter::TWSDLPasWriter::TWSDLPasWriter(const System::DelphiInterface<{583}...
+    @Wsdlpaswriter@TWSDLPasWriter@$bctr$qqrx54System@%DelphiInterface$27Wsdlmodelintf@IWSDLImporter%20System@UnicodeString @673 ; Wsdlpaswriter::TWSDLPasWriter::TWSDLPasWriter(const System::DelphiInterface<{583}...
+    @Wsdlpaswriter@TWSDLPasWriter@$bdtr$qqrv @700 ; __fastcall Wsdlpaswriter::TWSDLPasWriter::~TWSDLPasWriter()
+    @Wsdlpaswriter@TWSDLPasWriter@Escape$qqrx20System@UnicodeString @678 ; __fastcall Wsdlpaswriter::TWSDLPasWriter::Escape(const System::UnicodeString)
+    @Wsdlpaswriter@TWSDLPasWriter@GetPartFlagList$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLPart%49System@%Set$22Wsdlmodelintf@PartFlagt1$i0$t1$i7$% @687 ; Wsdlpaswriter::TWSDLPasWriter::GetPartFlagList(const System::DelphiInterface<{583}...
+    @Wsdlpaswriter@TWSDLPasWriter@GetTypeInfo$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType% @686 ; Wsdlpaswriter::TWSDLPasWriter::GetTypeInfo(const System::DelphiInterface<{583}...
+    @Wsdlpaswriter@TWSDLPasWriter@GetTypeInfoPad$qqrv @690 ; __fastcall Wsdlpaswriter::TWSDLPasWriter::GetTypeInfoPad()
+    @Wsdlpaswriter@TWSDLPasWriter@IsCaseSensitive$qqrv @689 ; __fastcall Wsdlpaswriter::TWSDLPasWriter::IsCaseSensitive()
+    @Wsdlpaswriter@TWSDLPasWriter@IsDynArrayType$qqr20System@UnicodeString @698 ; __fastcall Wsdlpaswriter::TWSDLPasWriter::IsDynArrayType(System::UnicodeString)
+    @Wsdlpaswriter@TWSDLPasWriter@IsReservedWord$qqrx20System@UnicodeStringr20System@UnicodeString @699 ; __fastcall Wsdlpaswriter::TWSDLPasWriter::IsReservedWord(const System::UnicodeString, System::UnicodeString&)
+    @Wsdlpaswriter@TWSDLPasWriter@SetOutFile$qqrx20System@UnicodeStringo @688 ; __fastcall Wsdlpaswriter::TWSDLPasWriter::SetOutFile(const System::UnicodeString, bool)
+    @Wsdlpaswriter@TWSDLPasWriter@SourceExt$qqrv @692 ; __fastcall Wsdlpaswriter::TWSDLPasWriter::SourceExt()
+    @Wsdlpaswriter@TWSDLPasWriter@TypeNameFromTypeInfo$qqrp24System@Typinfo@TTypeInfo @697 ; __fastcall Wsdlpaswriter::TWSDLPasWriter::TypeNameFromTypeInfo(System::Typinfo::TTypeInfo *)
+    @Wsdlpaswriter@TWSDLPasWriter@ValidatePortTypes$qqrx78System@%DynamicArray$54System@%DelphiInterface$27Wsdlmodelintf@IWSDLPortType%% @696 ; Wsdlpaswriter::TWSDLPasWriter::ValidatePortTypes(const System::DynamicArray<{583}...
+    @Wsdlpaswriter@TWSDLPasWriter@WriteAliasDef$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType% @684 ; Wsdlpaswriter::TWSDLPasWriter::WriteAliasDef(const System::DelphiInterface<{583}...
+    @Wsdlpaswriter@TWSDLPasWriter@WriteArray$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType% @683 ; Wsdlpaswriter::TWSDLPasWriter::WriteArray(const System::DelphiInterface<{583}...
+    @Wsdlpaswriter@TWSDLPasWriter@WriteComplexTypeClass$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType%55System@%Set$28Wsdlimpwriter@PassWriterTypet1$i0$t1$i5$% @682 ; Wsdlpaswriter::TWSDLPasWriter::WriteComplexTypeClass(const System::DelphiInterface<{583}...
+    @Wsdlpaswriter@TWSDLPasWriter@WriteEnum$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType% @685 ; Wsdlpaswriter::TWSDLPasWriter::WriteEnum(const System::DelphiInterface<{583}...
+    @Wsdlpaswriter@TWSDLPasWriter@WriteEnumEpilogue$qqrv @676 ; __fastcall Wsdlpaswriter::TWSDLPasWriter::WriteEnumEpilogue()
+    @Wsdlpaswriter@TWSDLPasWriter@WriteEnumPrologue$qqrv @677 ; __fastcall Wsdlpaswriter::TWSDLPasWriter::WriteEnumPrologue()
+    @Wsdlpaswriter@TWSDLPasWriter@WriteImplHeader$qqrv @694 ; __fastcall Wsdlpaswriter::TWSDLPasWriter::WriteImplHeader()
+    @Wsdlpaswriter@TWSDLPasWriter@WriteInterfaceBegin$qqrx54System@%DelphiInterface$27Wsdlmodelintf@IWSDLPortType%55System@%Set$28Wsdlimpwriter@PassWriterTypet1$i0$t1$i5$% @681 ; Wsdlpaswriter::TWSDLPasWriter::WriteInterfaceBegin(const System::DelphiInterface<{583}...
+    @Wsdlpaswriter@TWSDLPasWriter@WriteInterfaceEnd$qqrx54System@%DelphiInterface$27Wsdlmodelintf@IWSDLPortType%55System@%Set$28Wsdlimpwriter@PassWriterTypet1$i0$t1$i5$% @679 ; Wsdlpaswriter::TWSDLPasWriter::WriteInterfaceEnd(const System::DelphiInterface<{583}...
+    @Wsdlpaswriter@TWSDLPasWriter@WriteIntfFooter$qqrv @693 ; __fastcall Wsdlpaswriter::TWSDLPasWriter::WriteIntfFooter()
+    @Wsdlpaswriter@TWSDLPasWriter@WriteIntfHeader$qqrv @695 ; __fastcall Wsdlpaswriter::TWSDLPasWriter::WriteIntfHeader()
+    @Wsdlpaswriter@TWSDLPasWriter@WriteMethod$qqrx55System@%DelphiInterface$28Wsdlmodelintf@IWSDLOperation%x54System@%DelphiInterface$27Wsdlmodelintf@IWSDLPortType%55System@%Set$28Wsdlimpwriter@PassWriterTypet1$i0$t1$i5$% @680 ; Wsdlpaswriter::TWSDLPasWriter::WriteMethod(const System::DelphiInterface<{583}...
+    @Wsdlpaswriter@TWSDLPasWriter@WriteRegCalls$qqrv @675 ; __fastcall Wsdlpaswriter::TWSDLPasWriter::WriteRegCalls()
+    @Wsdlpaswriter@TWSDLPasWriter@WriteSettingsFile$qqrv @674 ; __fastcall Wsdlpaswriter::TWSDLPasWriter::WriteSettingsFile()
+    @Wsdlpaswriter@TWSDLPasWriter@WriteTypeIntro$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType% @691 ; Wsdlpaswriter::TWSDLPasWriter::WriteTypeIntro(const System::DelphiInterface<{583}...
+    @Wsdlpaswriter@initialization$qqrv @671 ; __fastcall Wsdlpaswriter::initialization()
+    @Wsdlreg@Finalization$qqrv     @109 ; __fastcall Wsdlreg::Finalization()
+    @Wsdlreg@TWSDLProperty@        @115 ; Wsdlreg::TWSDLProperty::
+    @Wsdlreg@TWSDLProperty@GetAttributes$qqrv @113 ; __fastcall Wsdlreg::TWSDLProperty::GetAttributes()
+    @Wsdlreg@TWSDLProperty@GetValueList$qqrp23System@Classes@TStrings @112 ; __fastcall Wsdlreg::TWSDLProperty::GetValueList(System::Classes::TStrings *)
+    @Wsdlreg@TWSDLProperty@GetValueList$qqrp25Soap@Wsdlintf@TDOMStrings @111 ; __fastcall Wsdlreg::TWSDLProperty::GetValueList(Soap::Wsdlintf::TDOMStrings *)
+    @Wsdlreg@TWSDLProperty@GetValues$qqrynpqqrx20System@UnicodeString$v @110 ; __fastcall Wsdlreg::TWSDLProperty::GetValues(void __fastcall __closure(*)(const System::UnicodeString))
+    @Wsdlreg@initialization$qqrv   @108 ; __fastcall Wsdlreg::initialization()
+    @Xmlschemahelper@AttributeDefinedInline$qqrx57System@%DelphiInterface$30Xml@Xmlschema@IXMLAttributeDef% @230 ; Xmlschemahelper::AttributeDefinedInline(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@AttributeGroupDefinedInline$qqrx59System@%DelphiInterface$32Xml@Xmlschema@IXMLAttributeGroup% @229 ; Xmlschemahelper::AttributeGroupDefinedInline(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@DerivationMethodStr @234 ; Xmlschemahelper::DerivationMethodStr
+    @Xmlschemahelper@ElementDefinedInline$qqrx55System@%DelphiInterface$28Xml@Xmlschema@IXMLElementDef% @231 ; Xmlschemahelper::ElementDefinedInline(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@Finalization$qqrv @209 ; __fastcall Xmlschemahelper::Finalization()
+    @Xmlschemahelper@GetChildNodesOfName$qqrx47System@%DelphiInterface$20Xml@Xmlintf@IXMLNode%x20System@UnicodeString @232 ; Xmlschemahelper::GetChildNodesOfName(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@GetDataTypeName$qqrx60System@%DelphiInterface$33Xml@Xmlschema@IXMLTypedSchemaItem% @214 ; Xmlschemahelper::GetDataTypeName(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@GetDataTypeNamespace$qqrx60System@%DelphiInterface$33Xml@Xmlschema@IXMLTypedSchemaItem% @213 ; Xmlschemahelper::GetDataTypeNamespace(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@GetDataTypeTie$qqrx60System@%DelphiInterface$33Xml@Xmlschema@IXMLTypedSchemaItem% @215 ; Xmlschemahelper::GetDataTypeTie(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@GetDocumentation$qqrx59System@%DelphiInterface$32Xml@Xmlschema@IXMLComplexTypeDef% @228 ; Xmlschemahelper::GetDocumentation(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@GetNameOf$qqrx52System@%DelphiInterface$25Xml@Xmlschema@IXMLTypeDef%x20System@UnicodeString @221 ; Xmlschemahelper::GetNameOf(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@GetNameOf$qqrx59System@%DelphiInterface$32Xml@Xmlschema@IXMLAttributeGroup% @223 ; Xmlschemahelper::GetNameOf(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@GetNameOf$qqrx60System@%DelphiInterface$33Xml@Xmlschema@IXMLTypedSchemaItem% @222 ; Xmlschemahelper::GetNameOf(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@GetNamespaceOf$qqrx55System@%DelphiInterface$28Xml@Xmlschema@IXMLElementDef% @218 ; Xmlschemahelper::GetNamespaceOf(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@GetNamespaceOf$qqrx55System@%DelphiInterface$28Xml@Xmlschema@IXMLSchemaItem% @216 ; Xmlschemahelper::GetNamespaceOf(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@GetNamespaceOf$qqrx58System@%DelphiInterface$31Xml@Xmlschema@IXMLSimpleTypeDef% @220 ; Xmlschemahelper::GetNamespaceOf(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@GetNamespaceOf$qqrx59System@%DelphiInterface$32Xml@Xmlschema@IXMLAttributeGroup% @219 ; Xmlschemahelper::GetNamespaceOf(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@GetNamespaceOf$qqrx59System@%DelphiInterface$32Xml@Xmlschema@IXMLComplexTypeDef% @217 ; Xmlschemahelper::GetNamespaceOf(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@GetProcessedTracker$qqrv @233 ; __fastcall Xmlschemahelper::GetProcessedTracker()
+    @Xmlschemahelper@HasRefAttr$qqrx60System@%DelphiInterface$33Xml@Xmlschema@IXMLTypedSchemaItem% @212 ; Xmlschemahelper::HasRefAttr(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@IsKnownType$qqrx58System@%DelphiInterface$31Xml@Xmlschema@IXMLSimpleTypeDef% @211 ; Xmlschemahelper::IsKnownType(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@IsPureCollection$qqrx50System@%DelphiInterface$23Wsdlmodelintf@IWSDLType% @224 ; Xmlschemahelper::IsPureCollection(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@IsPureCollection$qqrx59System@%DelphiInterface$32Xml@Xmlschema@IXMLComplexTypeDef%r20System@UnicodeStringt2 @225 ; Xmlschemahelper::IsPureCollection(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@IsPureCollection$qqrx59System@%DelphiInterface$32Xml@Xmlschema@IXMLComplexTypeDef%ro @226 ; Xmlschemahelper::IsPureCollection(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@SOAPArray$qqrx59System@%DelphiInterface$32Xml@Xmlschema@IXMLComplexTypeDef%r20System@UnicodeStringt2ri @227 ; Xmlschemahelper::SOAPArray(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@VisitSchema$qqrx54System@%DelphiInterface$27Xml@Xmlschema@IXMLSchemaDef%x20System@UnicodeStringx60System@%DelphiInterface$33Xmlschemahelper@IXMLSchemaVisitor%x58System@%DelphiInterface$31Wsdlmodelintf@IProcessedTracker% @210 ; Xmlschemahelper::VisitSchema(const System::DelphiInterface<{583}...
+    @Xmlschemahelper@initialization$qqrv @208 ; __fastcall Xmlschemahelper::initialization()
+    Finalize                       @920 ; Finalize
+    Initialize                     @921 ; Initialize

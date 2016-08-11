@@ -1,0 +1,805 @@
+LIBRARY     FIREDACADSDRIVER210.BPL
+
+DESCRIPTION 'mbarcadero FireDAC ADS Driver Components'
+
+EXPORTS
+    @$xp$26Firedac@Phys@Adscli@PWCHAR @490 ; __tpdsc__ Firedac::Phys::Adscli::PWCHAR
+    @$xp$28Firedac@Phys@Adscli@PAceChar @488 ; __tpdsc__ Firedac::Phys::Adscli::PAceChar
+    @$xp$28Firedac@Phys@Adscli@PSIGNED8 @491 ; __tpdsc__ Firedac::Phys::Adscli::PSIGNED8
+    @$xp$28Firedac@Phys@Adscli@TAdsSeek @130 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSeek
+    @$xp$28Firedac@Phys@Adscli@TAdsSkip @91  ; __tpdsc__ Firedac::Phys::Adscli::TAdsSkip
+    @$xp$28Firedac@Phys@Adscli@TUDFFunc @436 ; __tpdsc__ Firedac::Phys::Adscli::TUDFFunc
+    @$xp$29Firedac@Phys@Ads@TFDADSBackup @784 ; __tpdsc__ Firedac::Phys::Ads::TFDADSBackup
+    @$xp$29Firedac@Phys@Adscli@PSIGNED16 @493 ; __tpdsc__ Firedac::Phys::Adscli::PSIGNED16
+    @$xp$29Firedac@Phys@Adscli@PSIGNED32 @495 ; __tpdsc__ Firedac::Phys::Adscli::PSIGNED32
+    @$xp$29Firedac@Phys@Adscli@PSIGNED64 @497 ; __tpdsc__ Firedac::Phys::Adscli::PSIGNED64
+    @$xp$29Firedac@Phys@Adscli@TAdsAtBOF @430 ; __tpdsc__ Firedac::Phys::Adscli::TAdsAtBOF
+    @$xp$29Firedac@Phys@Adscli@TAdsAtEOF @429 ; __tpdsc__ Firedac::Phys::Adscli::TAdsAtEOF
+    @$xp$30Firedac@Phys@Ads@TFDADSRestore @780 ; __tpdsc__ Firedac::Phys::Ads::TFDADSRestore
+    @$xp$30Firedac@Phys@Ads@TFDADSService @790 ; __tpdsc__ Firedac::Phys::Ads::TFDADSService
+    @$xp$30Firedac@Phys@Ads@TFDADSUtility @777 ; __tpdsc__ Firedac::Phys::Ads::TFDADSUtility
+    @$xp$30Firedac@Phys@Adscli@PADSHANDLE @486 ; __tpdsc__ Firedac::Phys::Adscli::PADSHANDLE
+    @$xp$30Firedac@Phys@Adscli@PAceBinary @487 ; __tpdsc__ Firedac::Phys::Adscli::PAceBinary
+    @$xp$30Firedac@Phys@Adscli@PPWideChar @489 ; __tpdsc__ Firedac::Phys::Adscli::PPWideChar
+    @$xp$30Firedac@Phys@Adscli@PUNSIGNED8 @492 ; __tpdsc__ Firedac::Phys::Adscli::PUNSIGNED8
+    @$xp$30Firedac@Phys@Adscli@TAdsGetAOF @75  ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetAOF
+    @$xp$30Firedac@Phys@Adscli@TAdsIsNull @18  ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsNull
+    @$xp$30Firedac@Phys@Adscli@TAdsLocate @170 ; __tpdsc__ Firedac::Phys::Adscli::TAdsLocate
+    @$xp$30Firedac@Phys@Adscli@TAdsSetAOF @81  ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetAOF
+    @$xp$31Firedac@Phys@Adscli@PUNSIGNED16 @494 ; __tpdsc__ Firedac::Phys::Adscli::PUNSIGNED16
+    @$xp$31Firedac@Phys@Adscli@PUNSIGNED32 @496 ; __tpdsc__ Firedac::Phys::Adscli::PUNSIGNED32
+    @$xp$31Firedac@Phys@Adscli@PUNSIGNED64 @498 ; __tpdsc__ Firedac::Phys::Adscli::PUNSIGNED64
+    @$xp$31Firedac@Phys@Adscli@TAdsConnect @408 ; __tpdsc__ Firedac::Phys::Adscli::TAdsConnect
+    @$xp$31Firedac@Phys@Adscli@TAdsEvalAOF @79  ; __tpdsc__ Firedac::Phys::Adscli::TAdsEvalAOF
+    @$xp$31Firedac@Phys@Adscli@TAdsGetDate @273 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetDate
+    @$xp$31Firedac@Phys@Adscli@TAdsGetLong @235 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetLong
+    @$xp$31Firedac@Phys@Adscli@TAdsGetTime @197 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetTime
+    @$xp$31Firedac@Phys@Adscli@TAdsGotoTop @191 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGotoTop
+    @$xp$31Firedac@Phys@Adscli@TAdsIsEmpty @188 ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsEmpty
+    @$xp$31Firedac@Phys@Adscli@TAdsIsFound @186 ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsFound
+    @$xp$31Firedac@Phys@Adscli@TAdsReindex @135 ; __tpdsc__ Firedac::Phys::Adscli::TAdsReindex
+    @$xp$31Firedac@Phys@Adscli@TAdsSetDate @125 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetDate
+    @$xp$31Firedac@Phys@Adscli@TAdsSetLong @107 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetLong
+    @$xp$31Firedac@Phys@Adscli@TAdsSetNull @16  ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetNull
+    @$xp$31Firedac@Phys@Adscli@TAdsSetTime @93  ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetTime
+    @$xp$31Firedac@Phys@Adswrapper@TADSLib @683 ; __tpdsc__ Firedac::Phys::Adswrapper::TADSLib
+    @$xp$32Firedac@Phys@Adscli@TAdsClearAOF @77  ; __tpdsc__ Firedac::Phys::Adscli::TAdsClearAOF
+    @$xp$32Firedac@Phys@Adscli@TAdsContinue @401 ; __tpdsc__ Firedac::Phys::Adscli::TAdsContinue
+    @$xp$32Firedac@Phys@Adscli@TAdsDDCreate @389 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDCreate
+    @$xp$32Firedac@Phys@Adscli@TAdsEnableRI @26  ; __tpdsc__ Firedac::Phys::Adscli::TAdsEnableRI
+    @$xp$32Firedac@Phys@Adscli@TAdsGetEpoch @266 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetEpoch
+    @$xp$32Firedac@Phys@Adscli@TAdsGetExact @264 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetExact
+    @$xp$32Firedac@Phys@Adscli@TAdsGetField @262 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetField
+    @$xp$32Firedac@Phys@Adscli@TAdsGetMoney @229 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetMoney
+    @$xp$32Firedac@Phys@Adscli@TAdsGetScope @215 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetScope
+    @$xp$32Firedac@Phys@Adscli@TAdsGetShort @211 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetShort
+    @$xp$32Firedac@Phys@Adscli@TAdsSeekLast @129 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSeekLast
+    @$xp$32Firedac@Phys@Adscli@TAdsSetEmpty @118 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetEmpty
+    @$xp$32Firedac@Phys@Adscli@TAdsSetEpoch @117 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetEpoch
+    @$xp$32Firedac@Phys@Adscli@TAdsSetExact @116 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetExact
+    @$xp$32Firedac@Phys@Adscli@TAdsSetField @114 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetField
+    @$xp$32Firedac@Phys@Adscli@TAdsSetMoney @104 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetMoney
+    @$xp$32Firedac@Phys@Adscli@TAdsSetScope @100 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetScope
+    @$xp$32Firedac@Phys@Adscli@TAdsSetShort @96  ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetShort
+    @$xp$32Firedac@Phys@Adscli@TAdsZapTable @82  ; __tpdsc__ Firedac::Phys::Adscli::TAdsZapTable
+    @$xp$33Firedac@Phys@Adscli@ADSIndexArray @435 ; __tpdsc__ Firedac::Phys::Adscli::ADSIndexArray
+    @$xp$33Firedac@Phys@Adscli@TADSTimeStamp @485 ; __tpdsc__ Firedac::Phys::Adscli::TADSTimeStamp
+    @$xp$33Firedac@Phys@Adscli@TAdsConnect26 @407 ; __tpdsc__ Firedac::Phys::Adscli::TAdsConnect26
+    @$xp$33Firedac@Phys@Adscli@TAdsConnect60 @406 ; __tpdsc__ Firedac::Phys::Adscli::TAdsConnect60
+    @$xp$33Firedac@Phys@Adscli@TAdsCopyTable @399 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCopyTable
+    @$xp$33Firedac@Phys@Adscli@TAdsDDAddView @357 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDAddView
+    @$xp$33Firedac@Phys@Adscli@TAdsDisableRI @27  ; __tpdsc__ Firedac::Phys::Adscli::TAdsDisableRI
+    @$xp$33Firedac@Phys@Adscli@TAdsFindClose @297 ; __tpdsc__ Firedac::Phys::Adscli::TAdsFindClose
+    @$xp$33Firedac@Phys@Adscli@TAdsGetAOF100 @74  ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetAOF100
+    @$xp$33Firedac@Phys@Adscli@TAdsGetBinary @286 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetBinary
+    @$xp$33Firedac@Phys@Adscli@TAdsGetDouble @267 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetDouble
+    @$xp$33Firedac@Phys@Adscli@TAdsGetFieldW @261 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetFieldW
+    @$xp$33Firedac@Phys@Adscli@TAdsGetFilter @254 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetFilter
+    @$xp$33Firedac@Phys@Adscli@TAdsGetJulian @243 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetJulian
+    @$xp$33Firedac@Phys@Adscli@TAdsGetKeyNum @241 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetKeyNum
+    @$xp$33Firedac@Phys@Adscli@TAdsGetRecord @221 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetRecord
+    @$xp$33Firedac@Phys@Adscli@TAdsGetString @210 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetString
+    @$xp$33Firedac@Phys@Adscli@TAdsLockTable @168 ; __tpdsc__ Firedac::Phys::Adscli::TAdsLockTable
+    @$xp$33Firedac@Phys@Adscli@TAdsLookupKey @167 ; __tpdsc__ Firedac::Phys::Adscli::TAdsLookupKey
+    @$xp$33Firedac@Phys@Adscli@TAdsMgConnect @166 ; __tpdsc__ Firedac::Phys::Adscli::TAdsMgConnect
+    @$xp$33Firedac@Phys@Adscli@TAdsOpenIndex @149 ; __tpdsc__ Firedac::Phys::Adscli::TAdsOpenIndex
+    @$xp$33Firedac@Phys@Adscli@TAdsOpenTable @148 ; __tpdsc__ Firedac::Phys::Adscli::TAdsOpenTable
+    @$xp$33Firedac@Phys@Adscli@TAdsPackTable @145 ; __tpdsc__ Firedac::Phys::Adscli::TAdsPackTable
+    @$xp$33Firedac@Phys@Adscli@TAdsReindex61 @134 ; __tpdsc__ Firedac::Phys::Adscli::TAdsReindex61
+    @$xp$33Firedac@Phys@Adscli@TAdsSetAOF100 @80  ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetAOF100
+    @$xp$33Firedac@Phys@Adscli@TAdsSetBinary @128 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetBinary
+    @$xp$33Firedac@Phys@Adscli@TAdsSetDouble @119 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetDouble
+    @$xp$33Firedac@Phys@Adscli@TAdsSetFieldW @113 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetFieldW
+    @$xp$33Firedac@Phys@Adscli@TAdsSetFilter @112 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetFilter
+    @$xp$33Firedac@Phys@Adscli@TAdsSetJulian @109 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetJulian
+    @$xp$33Firedac@Phys@Adscli@TAdsSetRecord @103 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetRecord
+    @$xp$33Firedac@Phys@Adscli@TAdsSetString @95  ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetString
+    @$xp$33Firedac@Phys@Adscli@TAdsShowError @92  ; __tpdsc__ Firedac::Phys::Adscli::TAdsShowError
+    @$xp$33Firedac@Phys@Adscli@TAdsVerifySQL @31  ; __tpdsc__ Firedac::Phys::Adscli::TAdsVerifySQL
+    @$xp$33Firedac@Phys@Adscli@TSQLAbortFunc @437 ; __tpdsc__ Firedac::Phys::Adscli::TSQLAbortFunc
+    @$xp$33Firedac@Phys@Adsdef@TFDADSLocking @719 ; __tpdsc__ Firedac::Phys::Adsdef::TFDADSLocking
+    @$xp$33Firedac@Phys@Adswrapper@TADSTable @662 ; __tpdsc__ Firedac::Phys::Adswrapper::TADSTable
+    @$xp$34Firedac@Phys@Ads@TFDADSUtilityMode @779 ; __tpdsc__ Firedac::Phys::Ads::TFDADSUtilityMode
+    @$xp$34Firedac@Phys@Adscli@ADD_FIELD_DESC @450 ; __tpdsc__ Firedac::Phys::Adscli::ADD_FIELD_DESC
+    @$xp$34Firedac@Phys@Adscli@ADSMgUserArray @468 ; __tpdsc__ Firedac::Phys::Adscli::ADSMgUserArray
+    @$xp$34Firedac@Phys@Adscli@PADSIndexArray @434 ; __tpdsc__ Firedac::Phys::Adscli::PADSIndexArray
+    @$xp$34Firedac@Phys@Adscli@TAdsClearScope @416 ; __tpdsc__ Firedac::Phys::Adscli::TAdsClearScope
+    @$xp$34Firedac@Phys@Adscli@TAdsCloneTable @415 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCloneTable
+    @$xp$34Firedac@Phys@Adscli@TAdsCloseIndex @412 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCloseIndex
+    @$xp$34Firedac@Phys@Adscli@TAdsCloseTable @411 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCloseTable
+    @$xp$34Firedac@Phys@Adscli@TAdsConnect101 @405 ; __tpdsc__ Firedac::Phys::Adscli::TAdsConnect101
+    @$xp$34Firedac@Phys@Adscli@TAdsDDAddTable @359 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDAddTable
+    @$xp$34Firedac@Phys@Adscli@TAdsDDDropLink @333 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDDropLink
+    @$xp$34Firedac@Phys@Adscli@TAdsDisconnect @311 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDisconnect
+    @$xp$34Firedac@Phys@Adscli@TAdsEvalAOF100 @78  ; __tpdsc__ Firedac::Phys::Adscli::TAdsEvalAOF100
+    @$xp$34Firedac@Phys@Adscli@TAdsExecuteSQL @61  ; __tpdsc__ Firedac::Phys::Adscli::TAdsExecuteSQL
+    @$xp$34Firedac@Phys@Adscli@TAdsExtractKey @302 ; __tpdsc__ Firedac::Phys::Adscli::TAdsExtractKey
+    @$xp$34Firedac@Phys@Adscli@TAdsGetDefault @269 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetDefault
+    @$xp$34Firedac@Phys@Adscli@TAdsGetDeleted @268 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetDeleted
+    @$xp$34Firedac@Phys@Adscli@TAdsGetExact22 @263 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetExact22
+    @$xp$34Firedac@Phys@Adscli@TAdsGetKeyType @239 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetKeyType
+    @$xp$34Firedac@Phys@Adscli@TAdsGetLogical @236 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetLogical
+    @$xp$34Firedac@Phys@Adscli@TAdsGetStringW @209 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetStringW
+    @$xp$34Firedac@Phys@Adscli@TAdsGetVersion @196 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetVersion
+    @$xp$34Firedac@Phys@Adscli@TAdsGotoBottom @193 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGotoBottom
+    @$xp$34Firedac@Phys@Adscli@TAdsGotoRecord @192 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGotoRecord
+    @$xp$34Firedac@Phys@Adscli@TAdsInitRawKey @69  ; __tpdsc__ Firedac::Phys::Adscli::TAdsInitRawKey
+    @$xp$34Firedac@Phys@Adscli@TAdsIsIndexFTS @179 ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsIndexFTS
+    @$xp$34Firedac@Phys@Adscli@TAdsIsNullable @17  ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsNullable
+    @$xp$34Firedac@Phys@Adscli@TAdsLockRecord @169 ; __tpdsc__ Firedac::Phys::Adscli::TAdsLockRecord
+    @$xp$34Firedac@Phys@Adscli@TAdsMgGetLocks @155 ; __tpdsc__ Firedac::Phys::Adscli::TAdsMgGetLocks
+    @$xp$34Firedac@Phys@Adscli@TAdsMgKillUser @153 ; __tpdsc__ Firedac::Phys::Adscli::TAdsMgKillUser
+    @$xp$34Firedac@Phys@Adscli@TAdsPrepareSQL @65  ; __tpdsc__ Firedac::Phys::Adscli::TAdsPrepareSQL
+    @$xp$34Firedac@Phys@Adscli@TAdsRefreshAOF @76  ; __tpdsc__ Firedac::Phys::Adscli::TAdsRefreshAOF
+    @$xp$34Firedac@Phys@Adscli@TAdsReindexFTS @133 ; __tpdsc__ Firedac::Phys::Adscli::TAdsReindexFTS
+    @$xp$34Firedac@Phys@Adscli@TAdsSetDefault @121 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetDefault
+    @$xp$34Firedac@Phys@Adscli@TAdsSetExact22 @115 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetExact22
+    @$xp$34Firedac@Phys@Adscli@TAdsSetLogical @108 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetLogical
+    @$xp$34Firedac@Phys@Adscli@TAdsSetStringW @94  ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetStringW
+    @$xp$34Firedac@Phys@Adscli@TAdsSkipUnique @90  ; __tpdsc__ Firedac::Phys::Adscli::TAdsSkipUnique
+    @$xp$34Firedac@Phys@Adscli@TAdsThreadExit @89  ; __tpdsc__ Firedac::Phys::Adscli::TAdsThreadExit
+    @$xp$34Firedac@Phys@Adscli@TAdsVerifySQLW @30  ; __tpdsc__ Firedac::Phys::Adscli::TAdsVerifySQLW
+    @$xp$34Firedac@Phys@Adsdef@TFDADSCompress @720 ; __tpdsc__ Firedac::Phys::Adsdef::TFDADSCompress
+    @$xp$34Firedac@Phys@Adsdef@TFDADSProtocol @722 ; __tpdsc__ Firedac::Phys::Adsdef::TFDADSProtocol
+    @$xp$34Firedac@Phys@Adswrapper@TADSCursor @664 ; __tpdsc__ Firedac::Phys::Adswrapper::TADSCursor
+    @$xp$34Firedac@Phys@Adswrapper@TADSHandle @681 ; __tpdsc__ Firedac::Phys::Adswrapper::TADSHandle
+    @$xp$35Firedac@Phys@Adscli@ADSMgIndexArray @460 ; __tpdsc__ Firedac::Phys::Adscli::ADSMgIndexArray
+    @$xp$35Firedac@Phys@Adscli@ADSMgLocksArray @456 ; __tpdsc__ Firedac::Phys::Adscli::ADSMgLocksArray
+    @$xp$35Firedac@Phys@Adscli@ADSMgTableArray @464 ; __tpdsc__ Firedac::Phys::Adscli::ADSMgTableArray
+    @$xp$35Firedac@Phys@Adscli@PADSMgUserArray @467 ; __tpdsc__ Firedac::Phys::Adscli::PADSMgUserArray
+    @$xp$35Firedac@Phys@Adscli@PFDD_FIELD_DESC @449 ; __tpdsc__ Firedac::Phys::Adscli::PFDD_FIELD_DESC
+    @$xp$35Firedac@Phys@Adscli@TAdsBuildRawKey @68  ; __tpdsc__ Firedac::Phys::Adscli::TAdsBuildRawKey
+    @$xp$35Firedac@Phys@Adscli@TAdsClearFilter @418 ; __tpdsc__ Firedac::Phys::Adscli::TAdsClearFilter
+    @$xp$35Firedac@Phys@Adscli@TAdsCreateIndex @396 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCreateIndex
+    @$xp$35Firedac@Phys@Adscli@TAdsCreateTable @392 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCreateTable
+    @$xp$35Firedac@Phys@Adscli@TAdsDDCreate101 @388 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDCreate101
+    @$xp$35Firedac@Phys@Adscli@TAdsDDFindClose @336 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDFindClose
+    @$xp$35Firedac@Phys@Adscli@TAdsDDFreeTable @21  ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDFreeTable
+    @$xp$35Firedac@Phys@Adscli@TAdsDeleteIndex @316 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDeleteIndex
+    @$xp$35Firedac@Phys@Adscli@TAdsFindServers @6   ; __tpdsc__ Firedac::Phys::Adscli::TAdsFindServers
+    @$xp$35Firedac@Phys@Adscli@TAdsGetAllLocks @288 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetAllLocks
+    @$xp$35Firedac@Phys@Adscli@TAdsGetBookmark @284 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetBookmark
+    @$xp$35Firedac@Phys@Adscli@TAdsGetDecimals @270 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetDecimals
+    @$xp$35Firedac@Phys@Adscli@TAdsGetFieldNum @257 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetFieldNum
+    @$xp$35Firedac@Phys@Adscli@TAdsGetKeyCount @242 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetKeyCount
+    @$xp$35Firedac@Phys@Adscli@TAdsGetLongLong @234 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetLongLong
+    @$xp$35Firedac@Phys@Adscli@TAdsGetNumLocks @223 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetNumLocks
+    @$xp$35Firedac@Phys@Adscli@TAdsIsExprValid @187 ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsExprValid
+    @$xp$35Firedac@Phys@Adscli@TAdsOpenTable90 @147 ; __tpdsc__ Firedac::Phys::Adscli::TAdsOpenTable90
+    @$xp$35Firedac@Phys@Adscli@TAdsPrepareSQLW @64  ; __tpdsc__ Firedac::Phys::Adscli::TAdsPrepareSQLW
+    @$xp$35Firedac@Phys@Adscli@TAdsRegisterUDF @41  ; __tpdsc__ Firedac::Phys::Adscli::TAdsRegisterUDF
+    @$xp$35Firedac@Phys@Adscli@TAdsSetDecimals @122 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetDecimals
+    @$xp$35Firedac@Phys@Adscli@TAdsSetLongLong @106 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetLongLong
+    @$xp$35Firedac@Phys@Adscli@TAdsSetRelation @102 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetRelation
+    @$xp$35Firedac@Phys@Adscli@TAdsShowDeleted @120 ; __tpdsc__ Firedac::Phys::Adscli::TAdsShowDeleted
+    @$xp$35Firedac@Phys@Adscli@TAdsUnlockTable @87  ; __tpdsc__ Firedac::Phys::Adscli::TAdsUnlockTable
+    @$xp$35Firedac@Phys@Adscli@TAdsWriteRecord @83  ; __tpdsc__ Firedac::Phys::Adscli::TAdsWriteRecord
+    @$xp$36Firedac@Phys@Ads@Firedac_Phys_Ads__4 @787 ; __tpdsc__ Firedac::Phys::Ads::Firedac_Phys_Ads__4
+    @$xp$36Firedac@Phys@Ads@Firedac_Phys_Ads__6 @783 ; __tpdsc__ Firedac::Phys::Ads::Firedac_Phys_Ads__6
+    @$xp$36Firedac@Phys@Ads@TFDADSBackupOptions @786 ; __tpdsc__ Firedac::Phys::Ads::TFDADSBackupOptions
+    @$xp$36Firedac@Phys@Ads@TFDADSBackupRestore @788 ; __tpdsc__ Firedac::Phys::Ads::TFDADSBackupRestore
+    @$xp$36Firedac@Phys@Adscli@PADSMgIndexArray @459 ; __tpdsc__ Firedac::Phys::Adscli::PADSMgIndexArray
+    @$xp$36Firedac@Phys@Adscli@PADSMgLocksArray @455 ; __tpdsc__ Firedac::Phys::Adscli::PADSMgLocksArray
+    @$xp$36Firedac@Phys@Adscli@PADSMgTableArray @463 ; __tpdsc__ Firedac::Phys::Adscli::PADSMgTableArray
+    @$xp$36Firedac@Phys@Adscli@TAdsAddCustomKey @433 ; __tpdsc__ Firedac::Phys::Adscli::TAdsAddCustomKey
+    @$xp$36Firedac@Phys@Adscli@TAdsAppendRecord @432 ; __tpdsc__ Firedac::Phys::Adscli::TAdsAppendRecord
+    @$xp$36Firedac@Phys@Adscli@TAdsBinaryToFile @427 ; __tpdsc__ Firedac::Phys::Adscli::TAdsBinaryToFile
+    @$xp$36Firedac@Phys@Adscli@TAdsCacheRecords @424 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCacheRecords
+    @$xp$36Firedac@Phys@Adscli@TAdsCancelUpdate @423 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCancelUpdate
+    @$xp$36Firedac@Phys@Adscli@TAdsClearDefault @419 ; __tpdsc__ Firedac::Phys::Adscli::TAdsClearDefault
+    @$xp$36Firedac@Phys@Adscli@TAdsConvertTable @400 ; __tpdsc__ Firedac::Phys::Adscli::TAdsConvertTable
+    @$xp$36Firedac@Phys@Adscli@TAdsCustomizeAOF @70  ; __tpdsc__ Firedac::Phys::Adscli::TAdsCustomizeAOF
+    @$xp$36Firedac@Phys@Adscli@TAdsDDAddTable90 @358 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDAddTable90
+    @$xp$36Firedac@Phys@Adscli@TAdsDDAddView100 @356 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDAddView100
+    @$xp$36Firedac@Phys@Adscli@TAdsDDCreateLink @335 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDCreateLink
+    @$xp$36Firedac@Phys@Adscli@TAdsDDCreateUser @351 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDCreateUser
+    @$xp$36Firedac@Phys@Adscli@TAdsDDDeleteUser @348 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDDeleteUser
+    @$xp$36Firedac@Phys@Adscli@TAdsDDModifyLink @334 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDModifyLink
+    @$xp$36Firedac@Phys@Adscli@TAdsDDRemoveView @341 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDRemoveView
+    @$xp$36Firedac@Phys@Adscli@TAdsDecryptTable @318 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDecryptTable
+    @$xp$36Firedac@Phys@Adscli@TAdsDeleteRecord @315 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDeleteRecord
+    @$xp$36Firedac@Phys@Adscli@TAdsEncryptTable @308 ; __tpdsc__ Firedac::Phys::Adscli::TAdsEncryptTable
+    @$xp$36Firedac@Phys@Adscli@TAdsEvalTestExpr @303 ; __tpdsc__ Firedac::Phys::Adscli::TAdsEvalTestExpr
+    @$xp$36Firedac@Phys@Adscli@TAdsFileToBinary @300 ; __tpdsc__ Firedac::Phys::Adscli::TAdsFileToBinary
+    @$xp$36Firedac@Phys@Adscli@TAdsGetAllTables @287 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetAllTables
+    @$xp$36Firedac@Phys@Adscli@TAdsGetCollation @279 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetCollation
+    @$xp$36Firedac@Phys@Adscli@TAdsGetFieldName @258 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetFieldName
+    @$xp$36Firedac@Phys@Adscli@TAdsGetFieldType @255 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetFieldType
+    @$xp$36Firedac@Phys@Adscli@TAdsGetIndexExpr @250 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetIndexExpr
+    @$xp$36Firedac@Phys@Adscli@TAdsGetIndexName @245 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetIndexName
+    @$xp$36Firedac@Phys@Adscli@TAdsGetKeyColumn @314 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetKeyColumn
+    @$xp$36Firedac@Phys@Adscli@TAdsGetKeyLength @240 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetKeyLength
+    @$xp$36Firedac@Phys@Adscli@TAdsGetLastError @238 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetLastError
+    @$xp$36Firedac@Phys@Adscli@TAdsGetNumFields @226 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetNumFields
+    @$xp$36Firedac@Phys@Adscli@TAdsGetNumParams @40  ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetNumParams
+    @$xp$36Firedac@Phys@Adscli@TAdsGetRecordCRC @217 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetRecordCRC
+    @$xp$36Firedac@Phys@Adscli@TAdsGetRecordNum @219 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetRecordNum
+    @$xp$36Firedac@Phys@Adscli@TAdsGetRelKeyPos @216 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetRelKeyPos
+    @$xp$36Firedac@Phys@Adscli@TAdsGetTableType @198 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetTableType
+    @$xp$36Firedac@Phys@Adscli@TAdsGotoBookmark @195 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGotoBookmark
+    @$xp$36Firedac@Phys@Adscli@TAdsMgDisconnect @165 ; __tpdsc__ Firedac::Phys::Adscli::TAdsMgDisconnect
+    @$xp$36Firedac@Phys@Adscli@TAdsMgKillUser90 @11  ; __tpdsc__ Firedac::Phys::Adscli::TAdsMgKillUser90
+    @$xp$36Firedac@Phys@Adscli@TAdsOpenTable101 @146 ; __tpdsc__ Firedac::Phys::Adscli::TAdsOpenTable101
+    @$xp$36Firedac@Phys@Adscli@TAdsRecallRecord @144 ; __tpdsc__ Firedac::Phys::Adscli::TAdsRecallRecord
+    @$xp$36Firedac@Phys@Adscli@TAdsSetCollation @126 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetCollation
+    @$xp$36Firedac@Phys@Adscli@TAdsSetFilter100 @111 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetFilter100
+    @$xp$36Firedac@Phys@Adscli@TAdsSetRelKeyPos @101 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetRelKeyPos
+    @$xp$36Firedac@Phys@Adscli@TAdsSetTimeStamp @44  ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetTimeStamp
+    @$xp$36Firedac@Phys@Adscli@TAdsUnlockRecord @88  ; __tpdsc__ Firedac::Phys::Adscli::TAdsUnlockRecord
+    @$xp$36Firedac@Phys@Adswrapper@TADSLockType @669 ; __tpdsc__ Firedac::Phys::Adswrapper::TADSLockType
+    @$xp$36Firedac@Phys@Adswrapper@TADSVariable @672 ; __tpdsc__ Firedac::Phys::Adswrapper::TADSVariable
+    @$xp$37Firedac@Phys@Ads@TFDADSRestoreOptions @782 ; __tpdsc__ Firedac::Phys::Ads::TFDADSRestoreOptions
+    @$xp$37Firedac@Phys@Ads@TFDPhysADSDriverLink @792 ; __tpdsc__ Firedac::Phys::Ads::TFDPhysADSDriverLink
+    @$xp$37Firedac@Phys@Adscli@ADSMgThreadsArray @452 ; __tpdsc__ Firedac::Phys::Adscli::ADSMgThreadsArray
+    @$xp$37Firedac@Phys@Adscli@TAdsClearRelation @417 ; __tpdsc__ Firedac::Phys::Adscli::TAdsClearRelation
+    @$xp$37Firedac@Phys@Adscli@TAdsCreateIndex61 @395 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCreateIndex61
+    @$xp$37Firedac@Phys@Adscli@TAdsCreateIndex90 @394 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCreateIndex90
+    @$xp$37Firedac@Phys@Adscli@TAdsCreateTable71 @391 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCreateTable71
+    @$xp$37Firedac@Phys@Adscli@TAdsCreateTable90 @390 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCreateTable90
+    @$xp$37Firedac@Phys@Adscli@TAdsDDDeleteIndex @345 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDDeleteIndex
+    @$xp$37Firedac@Phys@Adscli@TAdsDDRemoveTable @342 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDRemoveTable
+    @$xp$37Firedac@Phys@Adscli@TAdsDecryptRecord @319 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDecryptRecord
+    @$xp$37Firedac@Phys@Adscli@TAdsEncryptRecord @309 ; __tpdsc__ Firedac::Phys::Adscli::TAdsEncryptRecord
+    @$xp$37Firedac@Phys@Adscli@TAdsFindNextTable @295 ; __tpdsc__ Firedac::Phys::Adscli::TAdsFindNextTable
+    @$xp$37Firedac@Phys@Adscli@TAdsGetAllIndexes @292 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetAllIndexes
+    @$xp$37Firedac@Phys@Adscli@TAdsGetBookmark60 @283 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetBookmark60
+    @$xp$37Firedac@Phys@Adscli@TAdsGetDataLength @13  ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetDataLength
+    @$xp$37Firedac@Phys@Adscli@TAdsGetDateFormat @272 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetDateFormat
+    @$xp$37Firedac@Phys@Adscli@TAdsGetFTSIndexes @291 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetFTSIndexes
+    @$xp$37Firedac@Phys@Adscli@TAdsGetHandleLong @253 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetHandleLong
+    @$xp$37Firedac@Phys@Adscli@TAdsGetHandleType @252 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetHandleType
+    @$xp$37Firedac@Phys@Adscli@TAdsGetMemoLength @232 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetMemoLength
+    @$xp$37Firedac@Phys@Adscli@TAdsGetNumIndexes @225 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetNumIndexes
+    @$xp$37Firedac@Phys@Adscli@TAdsGetSearchPath @214 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetSearchPath
+    @$xp$37Firedac@Phys@Adscli@TAdsGetServerName @213 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetServerName
+    @$xp$37Firedac@Phys@Adscli@TAdsGetServerTime @212 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetServerTime
+    @$xp$37Firedac@Phys@Adscli@TAdsGetTableAlias @208 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetTableAlias
+    @$xp$37Firedac@Phys@Adscli@TAdsInTransaction @189 ; __tpdsc__ Firedac::Phys::Adscli::TAdsInTransaction
+    @$xp$37Firedac@Phys@Adscli@TAdsIsFieldBinary @19  ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsFieldBinary
+    @$xp$37Firedac@Phys@Adscli@TAdsIsIndexCustom @182 ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsIndexCustom
+    @$xp$37Firedac@Phys@Adscli@TAdsIsIndexUnique @178 ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsIndexUnique
+    @$xp$37Firedac@Phys@Adscli@TAdsIsRecordInAOF @71  ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsRecordInAOF
+    @$xp$37Firedac@Phys@Adscli@TAdsIsTableLocked @171 ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsTableLocked
+    @$xp$37Firedac@Phys@Adscli@TAdsRefreshRecord @142 ; __tpdsc__ Firedac::Phys::Adscli::TAdsRefreshRecord
+    @$xp$37Firedac@Phys@Adscli@TAdsSetDateFormat @124 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetDateFormat
+    @$xp$37Firedac@Phys@Adscli@TAdsSetHandleLong @110 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetHandleLong
+    @$xp$37Firedac@Phys@Adscli@TAdsSetSQLTimeout @136 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetSQLTimeout
+    @$xp$37Firedac@Phys@Adscli@TAdsSetSearchPath @98  ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetSearchPath
+    @$xp$37Firedac@Phys@Adscli@TAdsSetServerType @97  ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetServerType
+    @$xp$37Firedac@Phys@Adscli@TCallbackFunction @440 ; __tpdsc__ Firedac::Phys::Adscli::TCallbackFunction
+    @$xp$37Firedac@Phys@Adscli@TProgressCallback @438 ; __tpdsc__ Firedac::Phys::Adscli::TProgressCallback
+    @$xp$37Firedac@Phys@Adsdef@TFDADSServerTypes @723 ; __tpdsc__ Firedac::Phys::Adsdef::TFDADSServerTypes
+    @$xp$37Firedac@Phys@Adswrapper@TADSColumnDef @676 ; __tpdsc__ Firedac::Phys::Adswrapper::TADSColumnDef
+    @$xp$37Firedac@Phys@Adswrapper@TADSStatement @666 ; __tpdsc__ Firedac::Phys::Adswrapper::TADSStatement
+    @$xp$37Firedac@Phys@Adswrapper@TADSTableType @668 ; __tpdsc__ Firedac::Phys::Adswrapper::TADSTableType
+    @$xp$37Firedac@Phys@Adswrapper@TADSVariables @670 ; __tpdsc__ Firedac::Phys::Adswrapper::TADSVariables
+    @$xp$38Firedac@Phys@Adscli@ADS_MGMT_USER_INFO @470 ; __tpdsc__ Firedac::Phys::Adscli::ADS_MGMT_USER_INFO
+    @$xp$38Firedac@Phys@Adscli@PADSMgThreadsArray @451 ; __tpdsc__ Firedac::Phys::Adscli::PADSMgThreadsArray
+    @$xp$38Firedac@Phys@Adscli@TAdsBuildRawKey100 @67  ; __tpdsc__ Firedac::Phys::Adscli::TAdsBuildRawKey100
+    @$xp$38Firedac@Phys@Adscli@TAdsCancelUpdate90 @422 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCancelUpdate90
+    @$xp$38Firedac@Phys@Adscli@TAdsCheckExistence @421 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCheckExistence
+    @$xp$38Firedac@Phys@Adscli@TAdsClearAllScopes @420 ; __tpdsc__ Firedac::Phys::Adscli::TAdsClearAllScopes
+    @$xp$38Firedac@Phys@Adscli@TAdsClearCachePool @404 ; __tpdsc__ Firedac::Phys::Adscli::TAdsClearCachePool
+    @$xp$38Firedac@Phys@Adscli@TAdsClearSQLParams @45  ; __tpdsc__ Firedac::Phys::Adscli::TAdsClearSQLParams
+    @$xp$38Firedac@Phys@Adscli@TAdsCloseAllTables @413 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCloseAllTables
+    @$xp$38Firedac@Phys@Adscli@TAdsCreateFTSIndex @393 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCreateFTSIndex
+    @$xp$38Firedac@Phys@Adscli@TAdsDDAddIndexFile @352 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDAddIndexFile
+    @$xp$38Firedac@Phys@Adscli@TAdsDDAddProcedure @361 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDAddProcedure
+    @$xp$38Firedac@Phys@Adscli@TAdsDDRenameObject @340 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDRenameObject
+    @$xp$38Firedac@Phys@Adscli@TAdsEvalStringExpr @304 ; __tpdsc__ Firedac::Phys::Adscli::TAdsEvalStringExpr
+    @$xp$38Firedac@Phys@Adscli@TAdsFindConnection @299 ; __tpdsc__ Firedac::Phys::Adscli::TAdsFindConnection
+    @$xp$38Firedac@Phys@Adscli@TAdsFindFirstTable @296 ; __tpdsc__ Firedac::Phys::Adscli::TAdsFindFirstTable
+    @$xp$38Firedac@Phys@Adscli@TAdsGetAOFOptLevel @73  ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetAOFOptLevel
+    @$xp$38Firedac@Phys@Adscli@TAdsGetErrorString @265 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetErrorString
+    @$xp$38Firedac@Phys@Adscli@TAdsGetFieldLength @259 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetFieldLength
+    @$xp$38Firedac@Phys@Adscli@TAdsGetFieldOffset @256 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetFieldOffset
+    @$xp$38Firedac@Phys@Adscli@TAdsGetIndexHandle @248 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetIndexHandle
+    @$xp$38Firedac@Phys@Adscli@TAdsGetIntProperty @278 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetIntProperty
+    @$xp$38Firedac@Phys@Adscli@TAdsGetLastAutoinc @39  ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetLastAutoinc
+    @$xp$38Firedac@Phys@Adscli@TAdsGetRecordCount @220 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetRecordCount
+    @$xp$38Firedac@Phys@Adscli@TAdsGetTableHandle @204 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetTableHandle
+    @$xp$38Firedac@Phys@Adscli@TAdsGetTableRights @199 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetTableRights
+    @$xp$38Firedac@Phys@Adscli@TAdsGotoBookmark60 @194 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGotoBookmark60
+    @$xp$38Firedac@Phys@Adscli@TAdsIsRecordLocked @175 ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsRecordLocked
+    @$xp$38Firedac@Phys@Adscli@TAdsIsServerLoaded @173 ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsServerLoaded
+    @$xp$38Firedac@Phys@Adscli@TAdsMgGetCommStats @164 ; __tpdsc__ Firedac::Phys::Adscli::TAdsMgGetCommStats
+    @$xp$38Firedac@Phys@Adscli@TAdsMgGetLockOwner @151 ; __tpdsc__ Firedac::Phys::Adscli::TAdsMgGetLockOwner
+    @$xp$38Firedac@Phys@Adscli@TAdsMgGetUserNames @158 ; __tpdsc__ Firedac::Phys::Adscli::TAdsMgGetUserNames
+    @$xp$38Firedac@Phys@Adscli@TAdsVerifyPassword @86  ; __tpdsc__ Firedac::Phys::Adscli::TAdsVerifyPassword
+    @$xp$38Firedac@Phys@Adsdef@TFDADSCharacterSet @721 ; __tpdsc__ Firedac::Phys::Adsdef::TFDADSCharacterSet
+    @$xp$38Firedac@Phys@Adswrapper@TADSBLOBStream @674 ; __tpdsc__ Firedac::Phys::Adswrapper::TADSBLOBStream
+    @$xp$38Firedac@Phys@Adswrapper@TADSConnection @678 ; __tpdsc__ Firedac::Phys::Adswrapper::TADSConnection
+    @$xp$38Firedac@Phys@Adswrapper@TADSDictionary @660 ; __tpdsc__ Firedac::Phys::Adswrapper::TADSDictionary
+    @$xp$39Firedac@Phys@Adscli@ADS_MGMT_COMM_STATS @484 ; __tpdsc__ Firedac::Phys::Adscli::ADS_MGMT_COMM_STATS
+    @$xp$39Firedac@Phys@Adscli@ADS_MGMT_INDEX_INFO @462 ; __tpdsc__ Firedac::Phys::Adscli::ADS_MGMT_INDEX_INFO
+    @$xp$39Firedac@Phys@Adscli@ADS_MGMT_TABLE_INFO @466 ; __tpdsc__ Firedac::Phys::Adscli::ADS_MGMT_TABLE_INFO
+    @$xp$39Firedac@Phys@Adscli@ADS_MGMT_USAGE_INFO @474 ; __tpdsc__ Firedac::Phys::Adscli::ADS_MGMT_USAGE_INFO
+    @$xp$39Firedac@Phys@Adscli@PADS_MGMT_USER_INFO @469 ; __tpdsc__ Firedac::Phys::Adscli::PADS_MGMT_USER_INFO
+    @$xp$39Firedac@Phys@Adscli@TAdsApplicationExit @431 ; __tpdsc__ Firedac::Phys::Adscli::TAdsApplicationExit
+    @$xp$39Firedac@Phys@Adscli@TAdsCacheOpenTables @425 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCacheOpenTables
+    @$xp$39Firedac@Phys@Adscli@TAdsCachePrepareSQL @63  ; __tpdsc__ Firedac::Phys::Adscli::TAdsCachePrepareSQL
+    @$xp$39Firedac@Phys@Adscli@TAdsCloseAllIndexes @414 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCloseAllIndexes
+    @$xp$39Firedac@Phys@Adscli@TAdsCreateSavepoint @22  ; __tpdsc__ Firedac::Phys::Adscli::TAdsCreateSavepoint
+    @$xp$39Firedac@Phys@Adscli@TAdsDDCreateArticle @328 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDCreateArticle
+    @$xp$39Firedac@Phys@Adscli@TAdsDDCreateTrigger @355 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDCreateTrigger
+    @$xp$39Firedac@Phys@Adscli@TAdsDDDeleteArticle @324 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDDeleteArticle
+    @$xp$39Firedac@Phys@Adscli@TAdsDDRemoveTrigger @353 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDRemoveTrigger
+    @$xp$39Firedac@Phys@Adscli@TAdsDeleteCustomKey @317 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDeleteCustomKey
+    @$xp$39Firedac@Phys@Adscli@TAdsEvalLogicalExpr @307 ; __tpdsc__ Firedac::Phys::Adscli::TAdsEvalLogicalExpr
+    @$xp$39Firedac@Phys@Adscli@TAdsEvalNumericExpr @305 ; __tpdsc__ Firedac::Phys::Adscli::TAdsEvalNumericExpr
+    @$xp$39Firedac@Phys@Adscli@TAdsFindNextTable62 @293 ; __tpdsc__ Firedac::Phys::Adscli::TAdsFindNextTable62
+    @$xp$39Firedac@Phys@Adscli@TAdsGetBinaryLength @285 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetBinaryLength
+    @$xp$39Firedac@Phys@Adscli@TAdsGetDateFormat60 @271 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetDateFormat60
+    @$xp$39Firedac@Phys@Adscli@TAdsGetFTSIndexInfo @290 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetFTSIndexInfo
+    @$xp$39Firedac@Phys@Adscli@TAdsGetMemoDataType @231 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetMemoDataType
+    @$xp$39Firedac@Phys@Adscli@TAdsGetMilliseconds @230 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetMilliseconds
+    @$xp$39Firedac@Phys@Adscli@TAdsGetRecordLength @218 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetRecordLength
+    @$xp$39Firedac@Phys@Adscli@TAdsGetSQLStatement @34  ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetSQLStatement
+    @$xp$39Firedac@Phys@Adscli@TAdsIsIndexCompound @185 ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsIndexCompound
+    @$xp$39Firedac@Phys@Adscli@TAdsIsIndexNullable @183 ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsIndexNullable
+    @$xp$39Firedac@Phys@Adscli@TAdsIsRecordDeleted @177 ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsRecordDeleted
+    @$xp$39Firedac@Phys@Adscli@TAdsIsRecordVisible @174 ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsRecordVisible
+    @$xp$39Firedac@Phys@Adscli@TAdsMgGetConfigInfo @161 ; __tpdsc__ Firedac::Phys::Adscli::TAdsMgGetConfigInfo
+    @$xp$39Firedac@Phys@Adscli@TAdsMgGetOpenTables @157 ; __tpdsc__ Firedac::Phys::Adscli::TAdsMgGetOpenTables
+    @$xp$39Firedac@Phys@Adscli@TAdsMgGetServerType @154 ; __tpdsc__ Firedac::Phys::Adscli::TAdsMgGetServerType
+    @$xp$39Firedac@Phys@Adscli@TAdsResetConnection @132 ; __tpdsc__ Firedac::Phys::Adscli::TAdsResetConnection
+    @$xp$39Firedac@Phys@Adscli@TAdsSetDateFormat60 @123 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetDateFormat60
+    @$xp$39Firedac@Phys@Adscli@TAdsSetMilliseconds @105 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetMilliseconds
+    @$xp$39Firedac@Phys@Adscli@TAdsSetTimeStampRaw @3   ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetTimeStampRaw
+    @$xp$39Firedac@Phys@Adscli@TAdsWriteAllRecords @84  ; __tpdsc__ Firedac::Phys::Adscli::TAdsWriteAllRecords
+    @$xp$40Firedac@Phys@Adscli@ADS_MGMT_RECORD_INFO @458 ; __tpdsc__ Firedac::Phys::Adscli::ADS_MGMT_RECORD_INFO
+    @$xp$40Firedac@Phys@Adscli@ADS_MGMT_UPTIME_INFO @476 ; __tpdsc__ Firedac::Phys::Adscli::ADS_MGMT_UPTIME_INFO
+    @$xp$40Firedac@Phys@Adscli@PADS_MGMT_COMM_STATS @483 ; __tpdsc__ Firedac::Phys::Adscli::PADS_MGMT_COMM_STATS
+    @$xp$40Firedac@Phys@Adscli@PADS_MGMT_INDEX_INFO @461 ; __tpdsc__ Firedac::Phys::Adscli::PADS_MGMT_INDEX_INFO
+    @$xp$40Firedac@Phys@Adscli@PADS_MGMT_TABLE_INFO @465 ; __tpdsc__ Firedac::Phys::Adscli::PADS_MGMT_TABLE_INFO
+    @$xp$40Firedac@Phys@Adscli@PADS_MGMT_USAGE_INFO @473 ; __tpdsc__ Firedac::Phys::Adscli::PADS_MGMT_USAGE_INFO
+    @$xp$40Firedac@Phys@Adscli@TAdsBeginTransaction @428 ; __tpdsc__ Firedac::Phys::Adscli::TAdsBeginTransaction
+    @$xp$40Firedac@Phys@Adscli@TAdsCacheOpenCursors @426 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCacheOpenCursors
+    @$xp$40Firedac@Phys@Adscli@TAdsCachePrepareSQLW @62  ; __tpdsc__ Firedac::Phys::Adscli::TAdsCachePrepareSQLW
+    @$xp$40Firedac@Phys@Adscli@TAdsCompareBookmarks @281 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCompareBookmarks
+    @$xp$40Firedac@Phys@Adscli@TAdsDDAddUserToGroup @350 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDAddUserToGroup
+    @$xp$40Firedac@Phys@Adscli@TAdsDDDeployDatabase @32  ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDDeployDatabase
+    @$xp$40Firedac@Phys@Adscli@TAdsDDFindNextObject @337 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDFindNextObject
+    @$xp$40Firedac@Phys@Adscli@TAdsDDGetPermissions @372 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDGetPermissions
+    @$xp$40Firedac@Phys@Adscli@TAdsDDMoveObjectFile @339 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDMoveObjectFile
+    @$xp$40Firedac@Phys@Adscli@TAdsEnableEncryption @310 ; __tpdsc__ Firedac::Phys::Adscli::TAdsEnableEncryption
+    @$xp$40Firedac@Phys@Adscli@TAdsEvalLogicalExprW @306 ; __tpdsc__ Firedac::Phys::Adscli::TAdsEvalLogicalExprW
+    @$xp$40Firedac@Phys@Adscli@TAdsExecuteSQLDirect @60  ; __tpdsc__ Firedac::Phys::Adscli::TAdsExecuteSQLDirect
+    @$xp$40Firedac@Phys@Adscli@TAdsFindConnection25 @298 ; __tpdsc__ Firedac::Phys::Adscli::TAdsFindConnection25
+    @$xp$40Firedac@Phys@Adscli@TAdsFindFirstTable62 @294 ; __tpdsc__ Firedac::Phys::Adscli::TAdsFindFirstTable62
+    @$xp$40Firedac@Phys@Adscli@TAdsFlushFileBuffers @33  ; __tpdsc__ Firedac::Phys::Adscli::TAdsFlushFileBuffers
+    @$xp$40Firedac@Phys@Adscli@TAdsGetCollationLang @280 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetCollationLang
+    @$xp$40Firedac@Phys@Adscli@TAdsGetFTSIndexInfoW @289 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetFTSIndexInfoW
+    @$xp$40Firedac@Phys@Adscli@TAdsGetFieldDecimals @260 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetFieldDecimals
+    @$xp$40Firedac@Phys@Adscli@TAdsGetIndexFilename @249 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetIndexFilename
+    @$xp$40Firedac@Phys@Adscli@TAdsGetMemoBlockSize @233 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetMemoBlockSize
+    @$xp$40Firedac@Phys@Adscli@TAdsGetNumFTSIndexes @224 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetNumFTSIndexes
+    @$xp$40Firedac@Phys@Adscli@TAdsGetNumOpenTables @222 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetNumOpenTables
+    @$xp$40Firedac@Phys@Adscli@TAdsGetTableCharType @207 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetTableCharType
+    @$xp$40Firedac@Phys@Adscli@TAdsGetTableFilename @205 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetTableFilename
+    @$xp$40Firedac@Phys@Adscli@TAdsGetTableHandle25 @203 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetTableHandle25
+    @$xp$40Firedac@Phys@Adscli@TAdsGetTableLockType @202 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetTableLockType
+    @$xp$40Firedac@Phys@Adscli@TAdsGetTableMemoSize @201 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetTableMemoSize
+    @$xp$40Firedac@Phys@Adscli@TAdsImageToClipboard @190 ; __tpdsc__ Firedac::Phys::Adscli::TAdsImageToClipboard
+    @$xp$40Firedac@Phys@Adscli@TAdsIsIndexCandidate @184 ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsIndexCandidate
+    @$xp$40Firedac@Phys@Adscli@TAdsIsTableEncrypted @172 ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsTableEncrypted
+    @$xp$40Firedac@Phys@Adscli@TAdsMgGetInstallInfo @160 ; __tpdsc__ Firedac::Phys::Adscli::TAdsMgGetInstallInfo
+    @$xp$40Firedac@Phys@Adscli@TAdsMgGetOpenIndexes @156 ; __tpdsc__ Firedac::Phys::Adscli::TAdsMgGetOpenIndexes
+    @$xp$40Firedac@Phys@Adscli@TAdsMgResetCommStats @163 ; __tpdsc__ Firedac::Phys::Adscli::TAdsMgResetCommStats
+    @$xp$40Firedac@Phys@Adscli@TAdsRecallAllRecords @143 ; __tpdsc__ Firedac::Phys::Adscli::TAdsRecallAllRecords
+    @$xp$40Firedac@Phys@Adscli@TAdsRestructureTable @37  ; __tpdsc__ Firedac::Phys::Adscli::TAdsRestructureTable
+    @$xp$40Firedac@Phys@Adscli@TAdsSetCollationLang @127 ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetCollationLang
+    @$xp$40Firedac@Phys@Adscli@TAdsStmtSetTableType @53  ; __tpdsc__ Firedac::Phys::Adscli::TAdsStmtSetTableType
+    @$xp$40Firedac@Phys@Adscli@TCallbackFunction101 @439 ; __tpdsc__ Firedac::Phys::Adscli::TCallbackFunction101
+    @$xp$41Firedac@Phys@Adscli@ADS_MGMT_INSTALL_INFO @478 ; __tpdsc__ Firedac::Phys::Adscli::ADS_MGMT_INSTALL_INFO
+    @$xp$41Firedac@Phys@Adscli@PADS_MGMT_RECORD_INFO @457 ; __tpdsc__ Firedac::Phys::Adscli::PADS_MGMT_RECORD_INFO
+    @$xp$41Firedac@Phys@Adscli@PADS_MGMT_UPTIME_INFO @475 ; __tpdsc__ Firedac::Phys::Adscli::PADS_MGMT_UPTIME_INFO
+    @$xp$41Firedac@Phys@Adscli@TAdsClearSQLAbortFunc @43  ; __tpdsc__ Firedac::Phys::Adscli::TAdsClearSQLAbortFunc
+    @$xp$41Firedac@Phys@Adscli@TAdsCloseCachedTables @410 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCloseCachedTables
+    @$xp$41Firedac@Phys@Adscli@TAdsCloseSQLStatement @58  ; __tpdsc__ Firedac::Phys::Adscli::TAdsCloseSQLStatement
+    @$xp$41Firedac@Phys@Adscli@TAdsCommitTransaction @409 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCommitTransaction
+    @$xp$41Firedac@Phys@Adscli@TAdsCopyTableContents @398 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCopyTableContents
+    @$xp$41Firedac@Phys@Adscli@TAdsDDAddProcedure100 @360 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDAddProcedure100
+    @$xp$41Firedac@Phys@Adscli@TAdsDDCreateUserGroup @347 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDCreateUserGroup
+    @$xp$41Firedac@Phys@Adscli@TAdsDDDeleteUserGroup @346 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDDeleteUserGroup
+    @$xp$41Firedac@Phys@Adscli@TAdsDDFindFirstObject @338 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDFindFirstObject
+    @$xp$41Firedac@Phys@Adscli@TAdsDDGetLinkProperty @380 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDGetLinkProperty
+    @$xp$41Firedac@Phys@Adscli@TAdsDDGetUserProperty @377 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDGetUserProperty
+    @$xp$41Firedac@Phys@Adscli@TAdsDDGetViewProperty @376 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDGetViewProperty
+    @$xp$41Firedac@Phys@Adscli@TAdsDDGrantPermission @371 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDGrantPermission
+    @$xp$41Firedac@Phys@Adscli@TAdsDDRemoveIndexFile @344 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDRemoveIndexFile
+    @$xp$41Firedac@Phys@Adscli@TAdsDDRemoveProcedure @343 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDRemoveProcedure
+    @$xp$41Firedac@Phys@Adscli@TAdsDDSetUserProperty @364 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDSetUserProperty
+    @$xp$41Firedac@Phys@Adscli@TAdsDDSetViewProperty @363 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDSetViewProperty
+    @$xp$41Firedac@Phys@Adscli@TAdsDisableEncryption @313 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDisableEncryption
+    @$xp$41Firedac@Phys@Adscli@TAdsExecuteSQLDirectW @59  ; __tpdsc__ Firedac::Phys::Adscli::TAdsExecuteSQLDirectW
+    @$xp$41Firedac@Phys@Adscli@TAdsGetAOFOptLevel100 @72  ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetAOFOptLevel100
+    @$xp$41Firedac@Phys@Adscli@TAdsGetActiveLinkInfo @228 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetActiveLinkInfo
+    @$xp$41Firedac@Phys@Adscli@TAdsGetBookmarkLength @282 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetBookmarkLength
+    @$xp$41Firedac@Phys@Adscli@TAdsGetConnectionPath @275 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetConnectionPath
+    @$xp$41Firedac@Phys@Adscli@TAdsGetConnectionType @277 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetConnectionType
+    @$xp$41Firedac@Phys@Adscli@TAdsGetFieldLength100 @10  ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetFieldLength100
+    @$xp$41Firedac@Phys@Adscli@TAdsGetIndexCollation @14  ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetIndexCollation
+    @$xp$41Firedac@Phys@Adscli@TAdsGetIndexCondition @251 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetIndexCondition
+    @$xp$41Firedac@Phys@Adscli@TAdsGetNumActiveLinks @227 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetNumActiveLinks
+    @$xp$41Firedac@Phys@Adscli@TAdsGetTableCollation @15  ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetTableCollation
+    @$xp$41Firedac@Phys@Adscli@TAdsIsConnectionAlive @402 ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsConnectionAlive
+    @$xp$41Firedac@Phys@Adscli@TAdsIsIndexDescending @181 ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsIndexDescending
+    @$xp$41Firedac@Phys@Adscli@TAdsIsIndexPrimaryKey @180 ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsIndexPrimaryKey
+    @$xp$41Firedac@Phys@Adscli@TAdsIsRecordEncrypted @176 ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsRecordEncrypted
+    @$xp$41Firedac@Phys@Adscli@TAdsMgGetActivityInfo @159 ; __tpdsc__ Firedac::Phys::Adscli::TAdsMgGetActivityInfo
+    @$xp$41Firedac@Phys@Adscli@TAdsSetIndexDirection @12  ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetIndexDirection
+    @$xp$41Firedac@Phys@Adscli@TAdsSetRightsChecking @9   ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetRightsChecking
+    @$xp$41Firedac@Phys@Adscli@TAdsSetScopedRelation @99  ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetScopedRelation
+    @$xp$41Firedac@Phys@Adscli@TSTORED_PROCEDURE_PTR @448 ; __tpdsc__ Firedac::Phys::Adscli::TSTORED_PROCEDURE_PTR
+    @$xp$41Firedac@Phys@Adscli@TTRIGGER_FUNCTION_PTR @442 ; __tpdsc__ Firedac::Phys::Adscli::TTRIGGER_FUNCTION_PTR
+    @$xp$42Firedac@Phys@Adscli@ADS_MGMT_ACTIVITY_INFO @472 ; __tpdsc__ Firedac::Phys::Adscli::ADS_MGMT_ACTIVITY_INFO
+    @$xp$42Firedac@Phys@Adscli@ADS_MGMT_CONFIG_MEMORY @480 ; __tpdsc__ Firedac::Phys::Adscli::ADS_MGMT_CONFIG_MEMORY
+    @$xp$42Firedac@Phys@Adscli@ADS_MGMT_CONFIG_PARAMS @482 ; __tpdsc__ Firedac::Phys::Adscli::ADS_MGMT_CONFIG_PARAMS
+    @$xp$42Firedac@Phys@Adscli@PADS_MGMT_INSTALL_INFO @477 ; __tpdsc__ Firedac::Phys::Adscli::PADS_MGMT_INSTALL_INFO
+    @$xp$42Firedac@Phys@Adscli@TAdsCopyTableStructure @397 ; __tpdsc__ Firedac::Phys::Adscli::TAdsCopyTableStructure
+    @$xp$42Firedac@Phys@Adscli@TAdsCreateSQLStatement @66  ; __tpdsc__ Firedac::Phys::Adscli::TAdsCreateSQLStatement
+    @$xp$42Firedac@Phys@Adscli@TAdsDDCreateArticle100 @327 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDCreateArticle100
+    @$xp$42Firedac@Phys@Adscli@TAdsDDCreateTrigger100 @354 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDCreateTrigger100
+    @$xp$42Firedac@Phys@Adscli@TAdsDDGetFieldProperty @383 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDGetFieldProperty
+    @$xp$42Firedac@Phys@Adscli@TAdsDDGetIndexProperty @381 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDGetIndexProperty
+    @$xp$42Firedac@Phys@Adscli@TAdsDDGetTableProperty @379 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDGetTableProperty
+    @$xp$42Firedac@Phys@Adscli@TAdsDDRevokePermission @370 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDRevokePermission
+    @$xp$42Firedac@Phys@Adscli@TAdsDDSetFieldProperty @368 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDSetFieldProperty
+    @$xp$42Firedac@Phys@Adscli@TAdsDDSetIndexProperty @20  ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDSetIndexProperty
+    @$xp$42Firedac@Phys@Adscli@TAdsDDSetTableProperty @366 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDSetTableProperty
+    @$xp$42Firedac@Phys@Adscli@TAdsGetLastTableUpdate @237 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetLastTableUpdate
+    @$xp$42Firedac@Phys@Adscli@TAdsGetTableConnection @206 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetTableConnection
+    @$xp$42Firedac@Phys@Adscli@TAdsIsIndexUserDefined @38  ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsIndexUserDefined
+    @$xp$42Firedac@Phys@Adscli@TAdsRestructureTable90 @36  ; __tpdsc__ Firedac::Phys::Adscli::TAdsRestructureTable90
+    @$xp$42Firedac@Phys@Adscli@TAdsStmtReadAllColumns @46  ; __tpdsc__ Firedac::Phys::Adscli::TAdsStmtReadAllColumns
+    @$xp$42Firedac@Phys@Adscli@TAdsStmtSetTableRights @57  ; __tpdsc__ Firedac::Phys::Adscli::TAdsStmtSetTableRights
+    @$xp$42Firedac@Phys@Adscli@TSTARTUP_PROCEDURE_PTR @447 ; __tpdsc__ Firedac::Phys::Adscli::TSTARTUP_PROCEDURE_PTR
+    @$xp$42Firedac@Phys@Adscli@TSTORED_PROCEDURE2_PTR @445 ; __tpdsc__ Firedac::Phys::Adscli::TSTORED_PROCEDURE2_PTR
+    @$xp$43Firedac@Phys@Adscli@PADS_MGMT_ACTIVITY_INFO @471 ; __tpdsc__ Firedac::Phys::Adscli::PADS_MGMT_ACTIVITY_INFO
+    @$xp$43Firedac@Phys@Adscli@PADS_MGMT_CONFIG_MEMORY @479 ; __tpdsc__ Firedac::Phys::Adscli::PADS_MGMT_CONFIG_MEMORY
+    @$xp$43Firedac@Phys@Adscli@PADS_MGMT_CONFIG_PARAMS @481 ; __tpdsc__ Firedac::Phys::Adscli::PADS_MGMT_CONFIG_PARAMS
+    @$xp$43Firedac@Phys@Adscli@TAdsDDCreatePublication @332 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDCreatePublication
+    @$xp$43Firedac@Phys@Adscli@TAdsDDDeletePublication @329 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDDeletePublication
+    @$xp$43Firedac@Phys@Adscli@TAdsGetTableOpenOptions @200 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetTableOpenOptions
+    @$xp$43Firedac@Phys@Adscli@TAdsGetTransactionCount @276 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetTransactionCount
+    @$xp$43Firedac@Phys@Adscli@TAdsIsEncryptionEnabled @85  ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsEncryptionEnabled
+    @$xp$43Firedac@Phys@Adscli@TAdsRollbackTransaction @131 ; __tpdsc__ Firedac::Phys::Adscli::TAdsRollbackTransaction
+    @$xp$43Firedac@Phys@Adscli@TSHUTDOWN_PROCEDURE_PTR @446 ; __tpdsc__ Firedac::Phys::Adscli::TSHUTDOWN_PROCEDURE_PTR
+    @$xp$43Firedac@Phys@Adscli@TSTARTUP_PROCEDURE2_PTR @444 ; __tpdsc__ Firedac::Phys::Adscli::TSTARTUP_PROCEDURE2_PTR
+    @$xp$43Firedac@Phys@Adswrapper@EADSNativeException @685 ; __tpdsc__ Firedac::Phys::Adswrapper::EADSNativeException
+    @$xp$44Firedac@Phys@Adscli@ADS_MGMT_THREAD_ACTIVITY @454 ; __tpdsc__ Firedac::Phys::Adscli::ADS_MGMT_THREAD_ACTIVITY
+    @$xp$44Firedac@Phys@Adscli@TAdsDDCreateRefIntegrity @387 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDCreateRefIntegrity
+    @$xp$44Firedac@Phys@Adscli@TAdsDDCreateSubscription @323 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDCreateSubscription
+    @$xp$44Firedac@Phys@Adscli@TAdsDDDeleteSubscription @320 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDDeleteSubscription
+    @$xp$44Firedac@Phys@Adscli@TAdsDDGetArticleProperty @326 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDGetArticleProperty
+    @$xp$44Firedac@Phys@Adscli@TAdsDDGetTriggerProperty @375 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDGetTriggerProperty
+    @$xp$44Firedac@Phys@Adscli@TAdsDDRemoveRefIntegrity @385 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDRemoveRefIntegrity
+    @$xp$44Firedac@Phys@Adscli@TAdsDDSetArticleProperty @325 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDSetArticleProperty
+    @$xp$44Firedac@Phys@Adscli@TAdsDDSetTriggerProperty @5   ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDSetTriggerProperty
+    @$xp$44Firedac@Phys@Adscli@TAdsGetIndexHandleByExpr @246 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetIndexHandleByExpr
+    @$xp$44Firedac@Phys@Adscli@TAdsMgDumpInternalTables @162 ; __tpdsc__ Firedac::Phys::Adscli::TAdsMgDumpInternalTables
+    @$xp$44Firedac@Phys@Adscli@TAdsNullTerminateStrings @150 ; __tpdsc__ Firedac::Phys::Adscli::TAdsNullTerminateStrings
+    @$xp$44Firedac@Phys@Adscli@TAdsRegisterSQLAbortFunc @42  ; __tpdsc__ Firedac::Phys::Adscli::TAdsRegisterSQLAbortFunc
+    @$xp$44Firedac@Phys@Adscli@TAdsStmtConstrainUpdates @51  ; __tpdsc__ Firedac::Phys::Adscli::TAdsStmtConstrainUpdates
+    @$xp$44Firedac@Phys@Adscli@TAdsStmtEnableEncryption @50  ; __tpdsc__ Firedac::Phys::Adscli::TAdsStmtEnableEncryption
+    @$xp$44Firedac@Phys@Adscli@TAdsStmtSetTableCharType @54  ; __tpdsc__ Firedac::Phys::Adscli::TAdsStmtSetTableCharType
+    @$xp$44Firedac@Phys@Adscli@TAdsStmtSetTableLockType @55  ; __tpdsc__ Firedac::Phys::Adscli::TAdsStmtSetTableLockType
+    @$xp$44Firedac@Phys@Adscli@TAdsStmtSetTablePassword @48  ; __tpdsc__ Firedac::Phys::Adscli::TAdsStmtSetTablePassword
+    @$xp$44Firedac@Phys@Adscli@TAdsStmtSetTableReadOnly @56  ; __tpdsc__ Firedac::Phys::Adscli::TAdsStmtSetTableReadOnly
+    @$xp$44Firedac@Phys@Adscli@TSHUTDOWN_PROCEDURE2_PTR @443 ; __tpdsc__ Firedac::Phys::Adscli::TSHUTDOWN_PROCEDURE2_PTR
+    @$xp$44Firedac@Phys@Adswrapper@TADSProgressCallback @680 ; __tpdsc__ Firedac::Phys::Adswrapper::TADSProgressCallback
+    @$xp$45Firedac@Phys@Adscli@PADS_MGMT_THREAD_ACTIVITY @453 ; __tpdsc__ Firedac::Phys::Adscli::PADS_MGMT_THREAD_ACTIVITY
+    @$xp$45Firedac@Phys@Adscli@TAdsClearCallbackFunction @137 ; __tpdsc__ Firedac::Phys::Adscli::TAdsClearCallbackFunction
+    @$xp$45Firedac@Phys@Adscli@TAdsClearProgressCallback @141 ; __tpdsc__ Firedac::Phys::Adscli::TAdsClearProgressCallback
+    @$xp$45Firedac@Phys@Adscli@TAdsConvertStringToJulian @4   ; __tpdsc__ Firedac::Phys::Adscli::TAdsConvertStringToJulian
+    @$xp$45Firedac@Phys@Adscli@TAdsDDGetDatabaseProperty @384 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDGetDatabaseProperty
+    @$xp$45Firedac@Phys@Adscli@TAdsDDRemoveUserFromGroup @349 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDRemoveUserFromGroup
+    @$xp$45Firedac@Phys@Adscli@TAdsDDSetDatabaseProperty @369 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDSetDatabaseProperty
+    @$xp$45Firedac@Phys@Adscli@TAdsGetConnectionProperty @274 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetConnectionProperty
+    @$xp$45Firedac@Phys@Adscli@TAdsGetIndexHandleByOrder @247 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetIndexHandleByOrder
+    @$xp$45Firedac@Phys@Adscli@TAdsGetIndexOrderByHandle @244 ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetIndexOrderByHandle
+    @$xp$45Firedac@Phys@Adscli@TAdsGetSQLStatementHandle @35  ; __tpdsc__ Firedac::Phys::Adscli::TAdsGetSQLStatementHandle
+    @$xp$45Firedac@Phys@Adscli@TAdsReapUnusedConnections @403 ; __tpdsc__ Firedac::Phys::Adscli::TAdsReapUnusedConnections
+    @$xp$45Firedac@Phys@Adscli@TAdsRollbackTransaction80 @23  ; __tpdsc__ Firedac::Phys::Adscli::TAdsRollbackTransaction80
+    @$xp$45Firedac@Phys@Adscli@TAdsStmtDisableEncryption @49  ; __tpdsc__ Firedac::Phys::Adscli::TAdsStmtDisableEncryption
+    @$xp$45Firedac@Phys@Adscli@TAdsStmtSetTableCollation @52  ; __tpdsc__ Firedac::Phys::Adscli::TAdsStmtSetTableCollation
+    @$xp$46Firedac@Phys@Adscli@TAdsDDCreateRefIntegrity62 @386 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDCreateRefIntegrity62
+    @$xp$46Firedac@Phys@Adscli@TAdsDDGetIndexFileProperty @382 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDGetIndexFileProperty
+    @$xp$46Firedac@Phys@Adscli@TAdsDDGetProcedureProperty @374 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDGetProcedureProperty
+    @$xp$46Firedac@Phys@Adscli@TAdsDDGetUserGroupProperty @378 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDGetUserGroupProperty
+    @$xp$46Firedac@Phys@Adscli@TAdsDDSetProcedureProperty @367 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDSetProcedureProperty
+    @$xp$46Firedac@Phys@Adscli@TAdsDDSetUserGroupProperty @365 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDSetUserGroupProperty
+    @$xp$46Firedac@Phys@Adscli@TAdsIsTableTransactionFree @7   ; __tpdsc__ Firedac::Phys::Adscli::TAdsIsTableTransactionFree
+    @$xp$46Firedac@Phys@Adscli@TGET_INTERFACE_VERSION_PTR @441 ; __tpdsc__ Firedac::Phys::Adscli::TGET_INTERFACE_VERSION_PTR
+    @$xp$47Firedac@Phys@Adscli@TAdsDDSetObjectAccessRights @362 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDSetObjectAccessRights
+    @$xp$47Firedac@Phys@Adscli@TAdsDisableLocalConnections @312 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDisableLocalConnections
+    @$xp$47Firedac@Phys@Adscli@TAdsEnableUniqueEnforcement @28  ; __tpdsc__ Firedac::Phys::Adscli::TAdsEnableUniqueEnforcement
+    @$xp$47Firedac@Phys@Adscli@TAdsSetTableTransactionFree @8   ; __tpdsc__ Firedac::Phys::Adscli::TAdsSetTableTransactionFree
+    @$xp$47Firedac@Phys@Adscli@TAdsStmtClearTablePasswords @47  ; __tpdsc__ Firedac::Phys::Adscli::TAdsStmtClearTablePasswords
+    @$xp$48Firedac@Phys@Adscli@TAdsDDGetPublicationProperty @331 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDGetPublicationProperty
+    @$xp$48Firedac@Phys@Adscli@TAdsDDSetPublicationProperty @330 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDSetPublicationProperty
+    @$xp$48Firedac@Phys@Adscli@TAdsDisableUniqueEnforcement @29  ; __tpdsc__ Firedac::Phys::Adscli::TAdsDisableUniqueEnforcement
+    @$xp$48Firedac@Phys@Adscli@TAdsEnableAutoIncEnforcement @24  ; __tpdsc__ Firedac::Phys::Adscli::TAdsEnableAutoIncEnforcement
+    @$xp$48Firedac@Phys@Adscli@TAdsRegisterCallbackFunction @139 ; __tpdsc__ Firedac::Phys::Adscli::TAdsRegisterCallbackFunction
+    @$xp$48Firedac@Phys@Adscli@TAdsRegisterProgressCallback @140 ; __tpdsc__ Firedac::Phys::Adscli::TAdsRegisterProgressCallback
+    @$xp$49Firedac@Phys@Adscli@TAdsDDGetRefIntegrityProperty @373 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDGetRefIntegrityProperty
+    @$xp$49Firedac@Phys@Adscli@TAdsDDGetSubscriptionProperty @322 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDGetSubscriptionProperty
+    @$xp$49Firedac@Phys@Adscli@TAdsDDSetSubscriptionProperty @321 ; __tpdsc__ Firedac::Phys::Adscli::TAdsDDSetSubscriptionProperty
+    @$xp$49Firedac@Phys@Adscli@TAdsDisableAutoIncEnforcement @25  ; __tpdsc__ Firedac::Phys::Adscli::TAdsDisableAutoIncEnforcement
+    @$xp$49Firedac@Phys@Adscli@TAdsFailedTransactionRecovery @301 ; __tpdsc__ Firedac::Phys::Adscli::TAdsFailedTransactionRecovery
+    @$xp$49Firedac@Phys@Adscli@TAdsMgGetWorkerThreadActivity @152 ; __tpdsc__ Firedac::Phys::Adscli::TAdsMgGetWorkerThreadActivity
+    @$xp$49Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams @717 ; __tpdsc__ Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams
+    @$xp$51Firedac@Phys@Adscli@TAdsRegisterCallbackFunction101 @138 ; __tpdsc__ Firedac::Phys::Adscli::TAdsRegisterCallbackFunction101
+    @Firedac@Phys@Ads@Finalization$qqrv @725 ; __fastcall Firedac::Phys::Ads::Finalization()
+    @Firedac@Phys@Ads@TFDADSBackup@ @785 ; Firedac::Phys::Ads::TFDADSBackup::
+    @Firedac@Phys@Ads@TFDADSBackup@Backup$qqrv @739 ; __fastcall Firedac::Phys::Ads::TFDADSBackup::Backup()
+    @Firedac@Phys@Ads@TFDADSBackup@GetOptions$qqrv @741 ; __fastcall Firedac::Phys::Ads::TFDADSBackup::GetOptions()
+    @Firedac@Phys@Ads@TFDADSBackup@InternalExecute$qqrv @740 ; __fastcall Firedac::Phys::Ads::TFDADSBackup::InternalExecute()
+    @Firedac@Phys@Ads@TFDADSBackupRestore@ @789 ; Firedac::Phys::Ads::TFDADSBackupRestore::
+    @Firedac@Phys@Ads@TFDADSBackupRestore@$bctr$qqrp25System@Classes@TComponent @748 ; __fastcall Firedac::Phys::Ads::TFDADSBackupRestore::TFDADSBackupRestore(System::Classes::TComponent *)
+    @Firedac@Phys@Ads@TFDADSBackupRestore@$bdtr$qqrv @747 ; __fastcall Firedac::Phys::Ads::TFDADSBackupRestore::~TFDADSBackupRestore()
+    @Firedac@Phys@Ads@TFDADSBackupRestore@AddOption$qqrr20System@UnicodeStringx20System@UnicodeStringt2 @743 ; __fastcall Firedac::Phys::Ads::TFDADSBackupRestore::AddOption(System::UnicodeString&, const System::UnicodeString, const System::UnicodeString)
+    @Firedac@Phys@Ads@TFDADSBackupRestore@GetOptions$qqrv @742 ; __fastcall Firedac::Phys::Ads::TFDADSBackupRestore::GetOptions()
+    @Firedac@Phys@Ads@TFDADSBackupRestore@SetExclude$qqrxp23System@Classes@TStrings @745 ; __fastcall Firedac::Phys::Ads::TFDADSBackupRestore::SetExclude(System::Classes::TStrings * const)
+    @Firedac@Phys@Ads@TFDADSBackupRestore@SetInclude$qqrxp23System@Classes@TStrings @746 ; __fastcall Firedac::Phys::Ads::TFDADSBackupRestore::SetInclude(System::Classes::TStrings * const)
+    @Firedac@Phys@Ads@TFDADSBackupRestore@SetTableTypeMap$qqrxp23System@Classes@TStrings @744 ; __fastcall Firedac::Phys::Ads::TFDADSBackupRestore::SetTableTypeMap(System::Classes::TStrings * const)
+    @Firedac@Phys@Ads@TFDADSRestore@ @781 ; Firedac::Phys::Ads::TFDADSRestore::
+    @Firedac@Phys@Ads@TFDADSRestore@GetOptions$qqrv @738 ; __fastcall Firedac::Phys::Ads::TFDADSRestore::GetOptions()
+    @Firedac@Phys@Ads@TFDADSRestore@InternalExecute$qqrv @737 ; __fastcall Firedac::Phys::Ads::TFDADSRestore::InternalExecute()
+    @Firedac@Phys@Ads@TFDADSRestore@Restore$qqrv @736 ; __fastcall Firedac::Phys::Ads::TFDADSRestore::Restore()
+    @Firedac@Phys@Ads@TFDADSService@ @791 ; Firedac::Phys::Ads::TFDADSService::
+    @Firedac@Phys@Ads@TFDADSService@GetConnection$qqrr62System@%DelphiInterface$35Firedac@Phys@Intf@IFDPhysConnection%r59System@%DelphiInterface$32Firedac@Phys@Intf@IFDPhysCommand% @749 ; Firedac::Phys::Ads::TFDADSService::GetConnection(System::DelphiInterface<{583}...
+    @Firedac@Phys@Ads@TFDADSService@GetDriverLink$qqrv @751 ; __fastcall Firedac::Phys::Ads::TFDADSService::GetDriverLink()
+    @Firedac@Phys@Ads@TFDADSService@SetDriverLink$qqrxp37Firedac@Phys@Ads@TFDPhysADSDriverLink @750 ; __fastcall Firedac::Phys::Ads::TFDADSService::SetDriverLink(Firedac::Phys::Ads::TFDPhysADSDriverLink * const)
+    @Firedac@Phys@Ads@TFDADSUtility@ @778 ; Firedac::Phys::Ads::TFDADSUtility::
+    @Firedac@Phys@Ads@TFDADSUtility@$bctr$qqrp25System@Classes@TComponent @735 ; __fastcall Firedac::Phys::Ads::TFDADSUtility::TFDADSUtility(System::Classes::TComponent *)
+    @Firedac@Phys@Ads@TFDADSUtility@$bdtr$qqrv @734 ; __fastcall Firedac::Phys::Ads::TFDADSUtility::~TFDADSUtility()
+    @Firedac@Phys@Ads@TFDADSUtility@Decrypt$qqrv @731 ; __fastcall Firedac::Phys::Ads::TFDADSUtility::Decrypt()
+    @Firedac@Phys@Ads@TFDADSUtility@Encrypt$qqrv @732 ; __fastcall Firedac::Phys::Ads::TFDADSUtility::Encrypt()
+    @Firedac@Phys@Ads@TFDADSUtility@InternalExecute$qqrv @726 ; __fastcall Firedac::Phys::Ads::TFDADSUtility::InternalExecute()
+    @Firedac@Phys@Ads@TFDADSUtility@Pack$qqrv @730 ; __fastcall Firedac::Phys::Ads::TFDADSUtility::Pack()
+    @Firedac@Phys@Ads@TFDADSUtility@Recall$qqrv @728 ; __fastcall Firedac::Phys::Ads::TFDADSUtility::Recall()
+    @Firedac@Phys@Ads@TFDADSUtility@Reindex$qqrv @727 ; __fastcall Firedac::Phys::Ads::TFDADSUtility::Reindex()
+    @Firedac@Phys@Ads@TFDADSUtility@SetTables$qqrxp23System@Classes@TStrings @733 ; __fastcall Firedac::Phys::Ads::TFDADSUtility::SetTables(System::Classes::TStrings * const)
+    @Firedac@Phys@Ads@TFDADSUtility@Zap$qqrv @729 ; __fastcall Firedac::Phys::Ads::TFDADSUtility::Zap()
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@ @793 ; Firedac::Phys::Ads::TFDPhysADSDriverLink::
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@$bctr$qqrp25System@Classes@TComponent @776 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::TFDPhysADSDriverLink(System::Classes::TComponent *)
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@ApplyTo$qqrx62System@%DelphiInterface$35Firedac@Stan@Intf@IFDStanDefinition% @774 ; Firedac::Phys::Ads::TFDPhysADSDriverLink::ApplyTo(const System::DelphiInterface<{583}...
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@GetBaseDriverID$qqrv @775 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::GetBaseDriverID()
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@GetDateFormat$qqrv @772 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::GetDateFormat()
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@GetDecimals$qqrv @769 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::GetDecimals()
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@GetDefaultPath$qqrv @766 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::GetDefaultPath()
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@GetEpoch$qqrv @757 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::GetEpoch()
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@GetExact$qqrv @754 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::GetExact()
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@GetSearchPath$qqrv @763 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::GetSearchPath()
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@GetShowDeleted$qqrv @760 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::GetShowDeleted()
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@IsConfigured$qqrv @773 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::IsConfigured()
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@IsDFS$qqrv @770 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::IsDFS()
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@IsDPS$qqrv @764 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::IsDPS()
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@IsDS$qqrv @767 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::IsDS()
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@IsEpS$qqrv @755 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::IsEpS()
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@IsExS$qqrv @752 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::IsExS()
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@IsSDS$qqrv @758 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::IsSDS()
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@IsSPS$qqrv @761 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::IsSPS()
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@SetDateFormat$qqrx20System@UnicodeString @771 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::SetDateFormat(const System::UnicodeString)
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@SetDecimals$qqrxus @768 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::SetDecimals(const unsigned short)
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@SetDefaultPath$qqrx20System@UnicodeString @765 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::SetDefaultPath(const System::UnicodeString)
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@SetEpoch$qqrxus @756 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::SetEpoch(const unsigned short)
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@SetExact$qqrxo @753 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::SetExact(const bool)
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@SetSearchPath$qqrx20System@UnicodeString @762 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::SetSearchPath(const System::UnicodeString)
+    @Firedac@Phys@Ads@TFDPhysADSDriverLink@SetShowDeleted$qqrxo @759 ; __fastcall Firedac::Phys::Ads::TFDPhysADSDriverLink::SetShowDeleted(const bool)
+    @Firedac@Phys@Ads@initialization$qqrv @724 ; __fastcall Firedac::Phys::Ads::initialization()
+    @Firedac@Phys@Adscli@C_ADSDll  @499 ; Firedac::Phys::Adscli::C_ADSDll
+    @Firedac@Phys@Adscli@Finalization$qqrv @2   ; __fastcall Firedac::Phys::Adscli::Finalization()
+    @Firedac@Phys@Adscli@initialization$qqrv @1   ; __fastcall Firedac::Phys::Adscli::initialization()
+    @Firedac@Phys@Adsdef@Finalization$qqrv @688 ; __fastcall Firedac::Phys::Adsdef::Finalization()
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@ @718 ; Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@GetADSAdvanced$qqrv @694 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::GetADSAdvanced()
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@GetAlias$qqrv @714 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::GetAlias()
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@GetCharacterSet$qqrv @704 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::GetCharacterSet()
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@GetCompress$qqrv @702 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::GetCompress()
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@GetDriverID$qqrv @716 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::GetDriverID()
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@GetLocking$qqrv @696 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::GetLocking()
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@GetMetaCurCatalog$qqrv @690 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::GetMetaCurCatalog()
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@GetMetaDefCatalog$qqrv @692 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::GetMetaDefCatalog()
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@GetPort$qqrv @706 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::GetPort()
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@GetProtocol$qqrv @710 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::GetProtocol()
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@GetServer$qqrv @708 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::GetServer()
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@GetServerTypes$qqrv @712 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::GetServerTypes()
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@GetTablePassword$qqrv @698 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::GetTablePassword()
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@GetTableType$qqrv @700 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::GetTableType()
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@SetADSAdvanced$qqrx20System@UnicodeString @693 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::SetADSAdvanced(const System::UnicodeString)
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@SetAlias$qqrx20System@UnicodeString @713 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::SetAlias(const System::UnicodeString)
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@SetCharacterSet$qqrx38Firedac@Phys@Adsdef@TFDADSCharacterSet @703 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::SetCharacterSet(const Firedac::Phys::Adsdef::TFDADSCharacterSet)
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@SetCompress$qqrx34Firedac@Phys@Adsdef@TFDADSCompress @701 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::SetCompress(const Firedac::Phys::Adsdef::TFDADSCompress)
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@SetDriverID$qqrx20System@UnicodeString @715 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::SetDriverID(const System::UnicodeString)
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@SetLocking$qqrx33Firedac@Phys@Adsdef@TFDADSLocking @695 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::SetLocking(const Firedac::Phys::Adsdef::TFDADSLocking)
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@SetMetaCurCatalog$qqrx20System@UnicodeString @689 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::SetMetaCurCatalog(const System::UnicodeString)
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@SetMetaDefCatalog$qqrx20System@UnicodeString @691 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::SetMetaDefCatalog(const System::UnicodeString)
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@SetPort$qqrxi @705 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::SetPort(const int)
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@SetProtocol$qqrx34Firedac@Phys@Adsdef@TFDADSProtocol @709 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::SetProtocol(const Firedac::Phys::Adsdef::TFDADSProtocol)
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@SetServer$qqrx20System@UnicodeString @707 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::SetServer(const System::UnicodeString)
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@SetServerTypes$qqrx37Firedac@Phys@Adsdef@TFDADSServerTypes @711 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::SetServerTypes(const Firedac::Phys::Adsdef::TFDADSServerTypes)
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@SetTablePassword$qqrx20System@UnicodeString @697 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::SetTablePassword(const System::UnicodeString)
+    @Firedac@Phys@Adsdef@TFDPhysADSConnectionDefParams@SetTableType$qqrx37Firedac@Phys@Adswrapper@TADSTableType @699 ; __fastcall Firedac::Phys::Adsdef::TFDPhysADSConnectionDefParams::SetTableType(const Firedac::Phys::Adswrapper::TADSTableType)
+    @Firedac@Phys@Adsdef@initialization$qqrv @687 ; __fastcall Firedac::Phys::Adsdef::initialization()
+    @Firedac@Phys@Adswrapper@EADSNativeException@ @686 ; Firedac::Phys::Adswrapper::EADSNativeException::
+    @Firedac@Phys@Adswrapper@EADSNativeException@$bctr$qqruip31Firedac@Phys@Adswrapper@TADSLibp34Firedac@Phys@Adswrapper@TADSHandle @634 ; __fastcall Firedac::Phys::Adswrapper::EADSNativeException::EADSNativeException(unsigned int, Firedac::Phys::Adswrapper::TADSLib *, Firedac::Phys::Adswrapper::TADSHandle *)
+    @Firedac@Phys@Adswrapper@Finalization$qqrv @501 ; __fastcall Firedac::Phys::Adswrapper::Finalization()
+    @Firedac@Phys@Adswrapper@TADSBLOBStream@ @675 ; Firedac::Phys::Adswrapper::TADSBLOBStream::
+    @Firedac@Phys@Adswrapper@TADSBLOBStream@$bctr$qqrp34Firedac@Phys@Adswrapper@TADSHandlep36Firedac@Phys@Adswrapper@TADSVariable @582 ; __fastcall Firedac::Phys::Adswrapper::TADSBLOBStream::TADSBLOBStream(Firedac::Phys::Adswrapper::TADSHandle *, Firedac::Phys::Adswrapper::TADSVariable *)
+    @Firedac@Phys@Adswrapper@TADSBLOBStream@LoadFromFile$qqrx20System@UnicodeString @576 ; __fastcall Firedac::Phys::Adswrapper::TADSBLOBStream::LoadFromFile(const System::UnicodeString)
+    @Firedac@Phys@Adswrapper@TADSBLOBStream@Read$qqrpvi @580 ; __fastcall Firedac::Phys::Adswrapper::TADSBLOBStream::Read(void *, int)
+    @Firedac@Phys@Adswrapper@TADSBLOBStream@SaveToFile$qqrx20System@UnicodeString @575 ; __fastcall Firedac::Phys::Adswrapper::TADSBLOBStream::SaveToFile(const System::UnicodeString)
+    @Firedac@Phys@Adswrapper@TADSBLOBStream@Seek$qqrius @578 ; __fastcall Firedac::Phys::Adswrapper::TADSBLOBStream::Seek(int, unsigned short)
+    @Firedac@Phys@Adswrapper@TADSBLOBStream@Seek$qqrxj26System@Classes@TSeekOrigin @577 ; __fastcall Firedac::Phys::Adswrapper::TADSBLOBStream::Seek(const __int64, System::Classes::TSeekOrigin)
+    @Firedac@Phys@Adswrapper@TADSBLOBStream@SetSize$qqri @581 ; __fastcall Firedac::Phys::Adswrapper::TADSBLOBStream::SetSize(int)
+    @Firedac@Phys@Adswrapper@TADSBLOBStream@Write$qqrpxvi @579 ; __fastcall Firedac::Phys::Adswrapper::TADSBLOBStream::Write(const void *, int)
+    @Firedac@Phys@Adswrapper@TADSColumnDef@ @677 ; Firedac::Phys::Adswrapper::TADSColumnDef::
+    @Firedac@Phys@Adswrapper@TADSColumnDef@$bctr$qqrp34Firedac@Phys@Adswrapper@TADSCursori @583 ; __fastcall Firedac::Phys::Adswrapper::TADSColumnDef::TADSColumnDef(Firedac::Phys::Adswrapper::TADSCursor *, int)
+    @Firedac@Phys@Adswrapper@TADSConnection@ @679 ; Firedac::Phys::Adswrapper::TADSConnection::
+    @Firedac@Phys@Adswrapper@TADSConnection@$bctr$qqrp31Firedac@Phys@Adswrapper@TADSLibp14System@TObjectx58System@%DelphiInterface$31Firedac@Stan@Intf@IFDMoniClient% @626 ; Firedac::Phys::Adswrapper::TADSConnection::TADSConnection(Firedac::Phys::Adswrapper::TADSLib *, System::TObject *, const System::DelphiInterface<{583}...
+    @Firedac@Phys@Adswrapper@TADSConnection@$bctr$qqrp31Firedac@Phys@Adswrapper@TADSLibuip14System@TObjectx58System@%DelphiInterface$31Firedac@Stan@Intf@IFDMoniClient% @625 ; Firedac::Phys::Adswrapper::TADSConnection::TADSConnection(Firedac::Phys::Adswrapper::TADSLib *, unsigned int, System::TObject *, const System::DelphiInterface<{583}...
+    @Firedac@Phys@Adswrapper@TADSConnection@$bdtr$qqrv @624 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::~TADSConnection()
+    @Firedac@Phys@Adswrapper@TADSConnection@Abort$qqrv @615 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::Abort()
+    @Firedac@Phys@Adswrapper@TADSConnection@AfterConnecting$qqrv @622 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::AfterConnecting()
+    @Firedac@Phys@Adswrapper@TADSConnection@BeforeConnecting$qqrv @623 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::BeforeConnecting()
+    @Firedac@Phys@Adswrapper@TADSConnection@BeginTransaction$qqrx20System@UnicodeString @612 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::BeginTransaction(const System::UnicodeString)
+    @Firedac@Phys@Adswrapper@TADSConnection@Commit$qqrv @611 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::Commit()
+    @Firedac@Phys@Adswrapper@TADSConnection@Connect101$qqrx20System@UnicodeString @621 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::Connect101(const System::UnicodeString)
+    @Firedac@Phys@Adswrapper@TADSConnection@Connect60$qqrx20System@UnicodeStringus20System@UnicodeStringt3ui @620 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::Connect60(const System::UnicodeString, unsigned short, System::UnicodeString, System::UnicodeString, unsigned int)
+    @Firedac@Phys@Adswrapper@TADSConnection@DisableProgress$qqrv @617 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::DisableProgress()
+    @Firedac@Phys@Adswrapper@TADSConnection@Disconnect$qqrv @614 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::Disconnect()
+    @Firedac@Phys@Adswrapper@TADSConnection@DoProgress$qqrus @619 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::DoProgress(unsigned short)
+    @Firedac@Phys@Adswrapper@TADSConnection@EnableProgress$qqrv @618 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::EnableProgress()
+    @Firedac@Phys@Adswrapper@TADSConnection@GetCollation$qqrv @605 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::GetCollation()
+    @Firedac@Phys@Adswrapper@TADSConnection@GetConnectionPath$qqrv @603 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::GetConnectionPath()
+    @Firedac@Phys@Adswrapper@TADSConnection@GetDateFormat$qqrv @602 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::GetDateFormat()
+    @Firedac@Phys@Adswrapper@TADSConnection@GetTransactionCount$qqrv @609 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::GetTransactionCount()
+    @Firedac@Phys@Adswrapper@TADSConnection@Ping$qqrv @613 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::Ping()
+    @Firedac@Phys@Adswrapper@TADSConnection@Rollback$qqrx20System@UnicodeString @610 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::Rollback(const System::UnicodeString)
+    @Firedac@Phys@Adswrapper@TADSConnection@SetAutoIncEnforcement$qqrxo @608 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::SetAutoIncEnforcement(const bool)
+    @Firedac@Phys@Adswrapper@TADSConnection@SetCollation$qqrx20System@UnicodeString @604 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::SetCollation(const System::UnicodeString)
+    @Firedac@Phys@Adswrapper@TADSConnection@SetDateFormat$qqrx20System@UnicodeString @601 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::SetDateFormat(const System::UnicodeString)
+    @Firedac@Phys@Adswrapper@TADSConnection@SetOnProgress$qqrxynpqqrp38Firedac@Phys@Adswrapper@TADSConnectionusro$v @616 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::SetOnProgress(void __fastcall __closure(*)(Firedac::Phys::Adswrapper::TADSConnection *, unsigned short, bool&) const)
+    @Firedac@Phys@Adswrapper@TADSConnection@SetRIEnforcement$qqrxo @607 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::SetRIEnforcement(const bool)
+    @Firedac@Phys@Adswrapper@TADSConnection@SetUniqueEnforcement$qqrxo @606 ; __fastcall Firedac::Phys::Adswrapper::TADSConnection::SetUniqueEnforcement(const bool)
+    @Firedac@Phys@Adswrapper@TADSCursor@ @665 ; Firedac::Phys::Adswrapper::TADSCursor::
+    @Firedac@Phys@Adswrapper@TADSCursor@$bctr$qqrp14System@TObjectuit1 @550 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::TADSCursor(System::TObject *, unsigned int, System::TObject *)
+    @Firedac@Phys@Adswrapper@TADSCursor@$bdtr$qqrv @549 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::~TADSCursor()
+    @Firedac@Phys@Adswrapper@TADSCursor@AddColumns$qqrv @547 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::AddColumns()
+    @Firedac@Phys@Adswrapper@TADSCursor@Append$qqrv @528 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::Append()
+    @Firedac@Phys@Adswrapper@TADSCursor@Bottom$qqrv @532 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::Bottom()
+    @Firedac@Phys@Adswrapper@TADSCursor@Close$qqrv @537 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::Close()
+    @Firedac@Phys@Adswrapper@TADSCursor@CopyTable$qqrx20System@UnicodeStringus @521 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::CopyTable(const System::UnicodeString, unsigned short)
+    @Firedac@Phys@Adswrapper@TADSCursor@Delete$qqrv @527 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::Delete()
+    @Firedac@Phys@Adswrapper@TADSCursor@DumpColumns$qqrv @529 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::DumpColumns()
+    @Firedac@Phys@Adswrapper@TADSCursor@EnableEncryption$qqrx20System@UnicodeString @520 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::EnableEncryption(const System::UnicodeString)
+    @Firedac@Phys@Adswrapper@TADSCursor@GetBof$qqrv @546 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::GetBof()
+    @Firedac@Phys@Adswrapper@TADSCursor@GetCharType$qqrv @541 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::GetCharType()
+    @Firedac@Phys@Adswrapper@TADSCursor@GetCheckRights$qqrv @539 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::GetCheckRights()
+    @Firedac@Phys@Adswrapper@TADSCursor@GetColumnDefs$qqri @538 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::GetColumnDefs(int)
+    @Firedac@Phys@Adswrapper@TADSCursor@GetDeleted$qqrv @525 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::GetDeleted()
+    @Firedac@Phys@Adswrapper@TADSCursor@GetEof$qqrv @545 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::GetEof()
+    @Firedac@Phys@Adswrapper@TADSCursor@GetKeyColumns$qqrv @531 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::GetKeyColumns()
+    @Firedac@Phys@Adswrapper@TADSCursor@GetLastUpdate$qqrv @530 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::GetLastUpdate()
+    @Firedac@Phys@Adswrapper@TADSCursor@GetLockType$qqrv @540 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::GetLockType()
+    @Firedac@Phys@Adswrapper@TADSCursor@GetRecNo$qqrv @535 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::GetRecNo()
+    @Firedac@Phys@Adswrapper@TADSCursor@GetRecordCount$qqrv @543 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::GetRecordCount()
+    @Firedac@Phys@Adswrapper@TADSCursor@GetTableType$qqrv @542 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::GetTableType()
+    @Firedac@Phys@Adswrapper@TADSCursor@Lock$qqrui @523 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::Lock(unsigned int)
+    @Firedac@Phys@Adswrapper@TADSCursor@Post$qqrv @524 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::Post()
+    @Firedac@Phys@Adswrapper@TADSCursor@Recall$qqrv @526 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::Recall()
+    @Firedac@Phys@Adswrapper@TADSCursor@SetCacheRecords$qqrxi @544 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::SetCacheRecords(const int)
+    @Firedac@Phys@Adswrapper@TADSCursor@SetRecNo$qqrxui @534 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::SetRecNo(const unsigned int)
+    @Firedac@Phys@Adswrapper@TADSCursor@Skip$qqri @536 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::Skip(int)
+    @Firedac@Phys@Adswrapper@TADSCursor@Top$qqrv @533 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::Top()
+    @Firedac@Phys@Adswrapper@TADSCursor@UnLock$qqrui @522 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::UnLock(unsigned int)
+    @Firedac@Phys@Adswrapper@TADSCursor@UpdateFieldsNum$qqrv @548 ; __fastcall Firedac::Phys::Adswrapper::TADSCursor::UpdateFieldsNum()
+    @Firedac@Phys@Adswrapper@TADSDictionary@ @661 ; Firedac::Phys::Adswrapper::TADSDictionary::
+    @Firedac@Phys@Adswrapper@TADSDictionary@$bctr$qqrp38Firedac@Phys@Adswrapper@TADSConnection @508 ; __fastcall Firedac::Phys::Adswrapper::TADSDictionary::TADSDictionary(Firedac::Phys::Adswrapper::TADSConnection *)
+    @Firedac@Phys@Adswrapper@TADSDictionary@GetLongWord$qqri @507 ; __fastcall Firedac::Phys::Adswrapper::TADSDictionary::GetLongWord(int)
+    @Firedac@Phys@Adswrapper@TADSDictionary@GetString$qqri @506 ; __fastcall Firedac::Phys::Adswrapper::TADSDictionary::GetString(int)
+    @Firedac@Phys@Adswrapper@TADSDictionary@GetWord$qqri @505 ; __fastcall Firedac::Phys::Adswrapper::TADSDictionary::GetWord(int)
+    @Firedac@Phys@Adswrapper@TADSDictionary@SetLongWord$qqrixui @504 ; __fastcall Firedac::Phys::Adswrapper::TADSDictionary::SetLongWord(int, const unsigned int)
+    @Firedac@Phys@Adswrapper@TADSDictionary@SetString$qqrix20System@UnicodeString @503 ; __fastcall Firedac::Phys::Adswrapper::TADSDictionary::SetString(int, const System::UnicodeString)
+    @Firedac@Phys@Adswrapper@TADSDictionary@SetWord$qqrixus @502 ; __fastcall Firedac::Phys::Adswrapper::TADSDictionary::SetWord(int, const unsigned short)
+    @Firedac@Phys@Adswrapper@TADSHandle@ @682 ; Firedac::Phys::Adswrapper::TADSHandle::
+    @Firedac@Phys@Adswrapper@TADSHandle@$bctr$qqrui @632 ; __fastcall Firedac::Phys::Adswrapper::TADSHandle::TADSHandle(unsigned int)
+    @Firedac@Phys@Adswrapper@TADSHandle@$bctr$qqrv @633 ; __fastcall Firedac::Phys::Adswrapper::TADSHandle::TADSHandle()
+    @Firedac@Phys@Adswrapper@TADSHandle@$bdtr$qqrv @631 ; __fastcall Firedac::Phys::Adswrapper::TADSHandle::~TADSHandle()
+    @Firedac@Phys@Adswrapper@TADSHandle@Check$qqrui @630 ; __fastcall Firedac::Phys::Adswrapper::TADSHandle::Check(unsigned int)
+    @Firedac@Phys@Adswrapper@TADSHandle@GetTracing$qqrv @629 ; __fastcall Firedac::Phys::Adswrapper::TADSHandle::GetTracing()
+    @Firedac@Phys@Adswrapper@TADSHandle@Trace$qqr34Firedac@Stan@Intf@TFDMoniEventKind34Firedac@Stan@Intf@TFDMoniEventStepx20System@UnicodeStringpx14System@TVarRecxi @627 ; __fastcall Firedac::Phys::Adswrapper::TADSHandle::Trace(Firedac::Stan::Intf::TFDMoniEventKind, Firedac::Stan::Intf::TFDMoniEventStep, const System::UnicodeString, const System::TVarRec *, const int)
+    @Firedac@Phys@Adswrapper@TADSHandle@Trace$qqrx20System@UnicodeStringpx14System@TVarRecxi @628 ; __fastcall Firedac::Phys::Adswrapper::TADSHandle::Trace(const System::UnicodeString, const System::TVarRec *, const int)
+    @Firedac@Phys@Adswrapper@TADSLib@ @684 ; Firedac::Phys::Adswrapper::TADSLib::
+    @Firedac@Phys@Adswrapper@TADSLib@$bctr$qqrp14System@TObject @659 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::TADSLib(System::TObject *)
+    @Firedac@Phys@Adswrapper@TADSLib@$bdtr$qqrv @658 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::~TADSLib()
+    @Firedac@Phys@Adswrapper@TADSLib@Check$qqrui @654 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::Check(unsigned int)
+    @Firedac@Phys@Adswrapper@TADSLib@DumpField$qqrpzc @652 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::DumpField(signed char *)
+    @Firedac@Phys@Adswrapper@TADSLib@GetAliasFileName$qqrv @637 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::GetAliasFileName()
+    @Firedac@Phys@Adswrapper@TADSLib@GetDateFormat$qqrv @651 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::GetDateFormat()
+    @Firedac@Phys@Adswrapper@TADSLib@GetDecimals$qqrv @649 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::GetDecimals()
+    @Firedac@Phys@Adswrapper@TADSLib@GetDefaultPath$qqrv @647 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::GetDefaultPath()
+    @Firedac@Phys@Adswrapper@TADSLib@GetEpoch$qqrv @643 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::GetEpoch()
+    @Firedac@Phys@Adswrapper@TADSLib@GetExact$qqrv @641 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::GetExact()
+    @Firedac@Phys@Adswrapper@TADSLib@GetSearchPath$qqrv @639 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::GetSearchPath()
+    @Firedac@Phys@Adswrapper@TADSLib@GetShowDeleted$qqrv @645 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::GetShowDeleted()
+    @Firedac@Phys@Adswrapper@TADSLib@ListAliases$qqrp23System@Classes@TStrings @636 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::ListAliases(System::Classes::TStrings *)
+    @Firedac@Phys@Adswrapper@TADSLib@ListServers$qqrp23System@Classes@TStrings @653 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::ListServers(System::Classes::TStrings *)
+    @Firedac@Phys@Adswrapper@TADSLib@Load$qqrx20System@UnicodeStringt1 @657 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::Load(const System::UnicodeString, const System::UnicodeString)
+    @Firedac@Phys@Adswrapper@TADSLib@LoadEntries$qqrv @656 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::LoadEntries()
+    @Firedac@Phys@Adswrapper@TADSLib@ResolveAlias$qqrx20System@UnicodeStringr20System@UnicodeString20System@UnicodeString @635 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::ResolveAlias(const System::UnicodeString, System::UnicodeString&, System::UnicodeString)
+    @Firedac@Phys@Adswrapper@TADSLib@SetDateFormat$qqrx20System@UnicodeString @650 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::SetDateFormat(const System::UnicodeString)
+    @Firedac@Phys@Adswrapper@TADSLib@SetDecimals$qqrxus @648 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::SetDecimals(const unsigned short)
+    @Firedac@Phys@Adswrapper@TADSLib@SetDefaultPath$qqrx20System@UnicodeString @646 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::SetDefaultPath(const System::UnicodeString)
+    @Firedac@Phys@Adswrapper@TADSLib@SetEpoch$qqrxus @642 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::SetEpoch(const unsigned short)
+    @Firedac@Phys@Adswrapper@TADSLib@SetExact$qqrxo @640 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::SetExact(const bool)
+    @Firedac@Phys@Adswrapper@TADSLib@SetSearchPath$qqrx20System@UnicodeString @638 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::SetSearchPath(const System::UnicodeString)
+    @Firedac@Phys@Adswrapper@TADSLib@SetShowDeleted$qqrxo @644 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::SetShowDeleted(const bool)
+    @Firedac@Phys@Adswrapper@TADSLib@UpdateVersion$qqrv @655 ; __fastcall Firedac::Phys::Adswrapper::TADSLib::UpdateVersion()
+    @Firedac@Phys@Adswrapper@TADSStatement@ @667 ; Firedac::Phys::Adswrapper::TADSStatement::
+    @Firedac@Phys@Adswrapper@TADSStatement@$bctr$qqrp38Firedac@Phys@Adswrapper@TADSConnectionp14System@TObject @600 ; __fastcall Firedac::Phys::Adswrapper::TADSStatement::TADSStatement(Firedac::Phys::Adswrapper::TADSConnection *, System::TObject *)
+    @Firedac@Phys@Adswrapper@TADSStatement@$bdtr$qqrv @599 ; __fastcall Firedac::Phys::Adswrapper::TADSStatement::~TADSStatement()
+    @Firedac@Phys@Adswrapper@TADSStatement@Close$qqrv @594 ; __fastcall Firedac::Phys::Adswrapper::TADSStatement::Close()
+    @Firedac@Phys@Adswrapper@TADSStatement@Execute$qqrv @595 ; __fastcall Firedac::Phys::Adswrapper::TADSStatement::Execute()
+    @Firedac@Phys@Adswrapper@TADSStatement@ExecuteDirect$qqrx20System@UnicodeString @596 ; __fastcall Firedac::Phys::Adswrapper::TADSStatement::ExecuteDirect(const System::UnicodeString)
+    @Firedac@Phys@Adswrapper@TADSStatement@GetCursor$qqrv @591 ; __fastcall Firedac::Phys::Adswrapper::TADSStatement::GetCursor()
+    @Firedac@Phys@Adswrapper@TADSStatement@GetLastAutoInc$qqrv @593 ; __fastcall Firedac::Phys::Adswrapper::TADSStatement::GetLastAutoInc()
+    @Firedac@Phys@Adswrapper@TADSStatement@GetRecordCount$qqrv @592 ; __fastcall Firedac::Phys::Adswrapper::TADSStatement::GetRecordCount()
+    @Firedac@Phys@Adswrapper@TADSStatement@Prepare$qqrx20System@UnicodeString @598 ; __fastcall Firedac::Phys::Adswrapper::TADSStatement::Prepare(const System::UnicodeString)
+    @Firedac@Phys@Adswrapper@TADSStatement@SetCharType$qqrxus @589 ; __fastcall Firedac::Phys::Adswrapper::TADSStatement::SetCharType(const unsigned short)
+    @Firedac@Phys@Adswrapper@TADSStatement@SetCollation$qqrx20System@UnicodeString @588 ; __fastcall Firedac::Phys::Adswrapper::TADSStatement::SetCollation(const System::UnicodeString)
+    @Firedac@Phys@Adswrapper@TADSStatement@SetLockType$qqrx36Firedac@Phys@Adswrapper@TADSLockType @587 ; __fastcall Firedac::Phys::Adswrapper::TADSStatement::SetLockType(const Firedac::Phys::Adswrapper::TADSLockType)
+    @Firedac@Phys@Adswrapper@TADSStatement@SetReadOnly$qqrxo @586 ; __fastcall Firedac::Phys::Adswrapper::TADSStatement::SetReadOnly(const bool)
+    @Firedac@Phys@Adswrapper@TADSStatement@SetTablePassword$qqrx20System@UnicodeStringt1 @584 ; __fastcall Firedac::Phys::Adswrapper::TADSStatement::SetTablePassword(const System::UnicodeString, const System::UnicodeString)
+    @Firedac@Phys@Adswrapper@TADSStatement@SetTableType$qqrx37Firedac@Phys@Adswrapper@TADSTableType @585 ; __fastcall Firedac::Phys::Adswrapper::TADSStatement::SetTableType(const Firedac::Phys::Adswrapper::TADSTableType)
+    @Firedac@Phys@Adswrapper@TADSStatement@SetTimeout$qqrxui @590 ; __fastcall Firedac::Phys::Adswrapper::TADSStatement::SetTimeout(const unsigned int)
+    @Firedac@Phys@Adswrapper@TADSStatement@Unprepare$qqrv @597 ; __fastcall Firedac::Phys::Adswrapper::TADSStatement::Unprepare()
+    @Firedac@Phys@Adswrapper@TADSTable@ @663 ; Firedac::Phys::Adswrapper::TADSTable::
+    @Firedac@Phys@Adswrapper@TADSTable@$bctr$qqrp38Firedac@Phys@Adswrapper@TADSConnectionp14System@TObject @519 ; __fastcall Firedac::Phys::Adswrapper::TADSTable::TADSTable(Firedac::Phys::Adswrapper::TADSConnection *, System::TObject *)
+    @Firedac@Phys@Adswrapper@TADSTable@CreateIndex$qqrx20System@UnicodeStringt1t1t1t1ui @513 ; __fastcall Firedac::Phys::Adswrapper::TADSTable::CreateIndex(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, unsigned int)
+    @Firedac@Phys@Adswrapper@TADSTable@CreateTable$qqrx20System@UnicodeStringus @516 ; __fastcall Firedac::Phys::Adswrapper::TADSTable::CreateTable(const System::UnicodeString, unsigned short)
+    @Firedac@Phys@Adswrapper@TADSTable@Decrypt$qqrv @511 ; __fastcall Firedac::Phys::Adswrapper::TADSTable::Decrypt()
+    @Firedac@Phys@Adswrapper@TADSTable@Encrypt$qqrv @512 ; __fastcall Firedac::Phys::Adswrapper::TADSTable::Encrypt()
+    @Firedac@Phys@Adswrapper@TADSTable@Open$qqrv @518 ; __fastcall Firedac::Phys::Adswrapper::TADSTable::Open()
+    @Firedac@Phys@Adswrapper@TADSTable@Open101$qqrv @517 ; __fastcall Firedac::Phys::Adswrapper::TADSTable::Open101()
+    @Firedac@Phys@Adswrapper@TADSTable@Pack$qqrv @515 ; __fastcall Firedac::Phys::Adswrapper::TADSTable::Pack()
+    @Firedac@Phys@Adswrapper@TADSTable@RecallAll$qqrv @510 ; __fastcall Firedac::Phys::Adswrapper::TADSTable::RecallAll()
+    @Firedac@Phys@Adswrapper@TADSTable@Reindex$qqrv @509 ; __fastcall Firedac::Phys::Adswrapper::TADSTable::Reindex()
+    @Firedac@Phys@Adswrapper@TADSTable@Zap$qqrv @514 ; __fastcall Firedac::Phys::Adswrapper::TADSTable::Zap()
+    @Firedac@Phys@Adswrapper@TADSVariable@ @673 ; Firedac::Phys::Adswrapper::TADSVariable::
+    @Firedac@Phys@Adswrapper@TADSVariable@$bctr$qqrp37Firedac@Phys@Adswrapper@TADSVariablesp34Firedac@Phys@Adswrapper@TADSHandle @574 ; __fastcall Firedac::Phys::Adswrapper::TADSVariable::TADSVariable(Firedac::Phys::Adswrapper::TADSVariables *, Firedac::Phys::Adswrapper::TADSHandle *)
+    @Firedac@Phys@Adswrapper@TADSVariable@Clear$qqrv @569 ; __fastcall Firedac::Phys::Adswrapper::TADSVariable::Clear()
+    @Firedac@Phys@Adswrapper@TADSVariable@CreateBlobStream$qqrv @565 ; __fastcall Firedac::Phys::Adswrapper::TADSVariable::CreateBlobStream()
+    @Firedac@Phys@Adswrapper@TADSVariable@DumpLabel$qqrv @560 ; __fastcall Firedac::Phys::Adswrapper::TADSVariable::DumpLabel()
+    @Firedac@Phys@Adswrapper@TADSVariable@DumpSQLDataType$qqrv @562 ; __fastcall Firedac::Phys::Adswrapper::TADSVariable::DumpSQLDataType()
+    @Firedac@Phys@Adswrapper@TADSVariable@DumpValue$qqrv @561 ; __fastcall Firedac::Phys::Adswrapper::TADSVariable::DumpValue()
+    @Firedac@Phys@Adswrapper@TADSVariable@GetAsString$qqrv @564 ; __fastcall Firedac::Phys::Adswrapper::TADSVariable::GetAsString()
+    @Firedac@Phys@Adswrapper@TADSVariable@GetData$qqrpvri @568 ; __fastcall Firedac::Phys::Adswrapper::TADSVariable::GetData(void *, int&)
+    @Firedac@Phys@Adswrapper@TADSVariable@GetDataLength$qqrv @567 ; __fastcall Firedac::Phys::Adswrapper::TADSVariable::GetDataLength()
+    @Firedac@Phys@Adswrapper@TADSVariable@GetIsNull$qqrv @570 ; __fastcall Firedac::Phys::Adswrapper::TADSVariable::GetIsNull()
+    @Firedac@Phys@Adswrapper@TADSVariable@GetPosition$qqrv @572 ; __fastcall Firedac::Phys::Adswrapper::TADSVariable::GetPosition()
+    @Firedac@Phys@Adswrapper@TADSVariable@SetAsString$qqrx20System@UnicodeString @563 ; __fastcall Firedac::Phys::Adswrapper::TADSVariable::SetAsString(const System::UnicodeString)
+    @Firedac@Phys@Adswrapper@TADSVariable@SetData$qqrpvi @566 ; __fastcall Firedac::Phys::Adswrapper::TADSVariable::SetData(void *, int)
+    @Firedac@Phys@Adswrapper@TADSVariable@SetName$qqrx20System@UnicodeString @573 ; __fastcall Firedac::Phys::Adswrapper::TADSVariable::SetName(const System::UnicodeString)
+    @Firedac@Phys@Adswrapper@TADSVariable@SetPosition$qqrxus @571 ; __fastcall Firedac::Phys::Adswrapper::TADSVariable::SetPosition(const unsigned short)
+    @Firedac@Phys@Adswrapper@TADSVariables@ @671 ; Firedac::Phys::Adswrapper::TADSVariables::
+    @Firedac@Phys@Adswrapper@TADSVariables@$bctr$qqrp37Firedac@Phys@Adswrapper@TADSStatementp34Firedac@Phys@Adswrapper@TADSHandle @559 ; __fastcall Firedac::Phys::Adswrapper::TADSVariables::TADSVariables(Firedac::Phys::Adswrapper::TADSStatement *, Firedac::Phys::Adswrapper::TADSHandle *)
+    @Firedac@Phys@Adswrapper@TADSVariables@$bdtr$qqrv @558 ; __fastcall Firedac::Phys::Adswrapper::TADSVariables::~TADSVariables()
+    @Firedac@Phys@Adswrapper@TADSVariables@Add$qqrv @554 ; __fastcall Firedac::Phys::Adswrapper::TADSVariables::Add()
+    @Firedac@Phys@Adswrapper@TADSVariables@Clear$qqrv @553 ; __fastcall Firedac::Phys::Adswrapper::TADSVariables::Clear()
+    @Firedac@Phys@Adswrapper@TADSVariables@FindVar$qqrx20System@UnicodeString @552 ; __fastcall Firedac::Phys::Adswrapper::TADSVariables::FindVar(const System::UnicodeString)
+    @Firedac@Phys@Adswrapper@TADSVariables@GetCount$qqrv @557 ; __fastcall Firedac::Phys::Adswrapper::TADSVariables::GetCount()
+    @Firedac@Phys@Adswrapper@TADSVariables@GetItems$qqri @555 ; __fastcall Firedac::Phys::Adswrapper::TADSVariables::GetItems(int)
+    @Firedac@Phys@Adswrapper@TADSVariables@SetCount$qqrxi @556 ; __fastcall Firedac::Phys::Adswrapper::TADSVariables::SetCount(const int)
+    @Firedac@Phys@Adswrapper@TADSVariables@VarByName$qqrx20System@UnicodeString @551 ; __fastcall Firedac::Phys::Adswrapper::TADSVariables::VarByName(const System::UnicodeString)
+    @Firedac@Phys@Adswrapper@initialization$qqrv @500 ; __fastcall Firedac::Phys::Adswrapper::initialization()
+    @Firedacadsdriver@@GetPackageInfoTable$qqrv @797 ; Firedacadsdriver::__linkproc__ __fastcall GetPackageInfoTable()
+    @Firedacadsdriver@@PackageLoad$qqrv @796 ; Firedacadsdriver::__linkproc__ __fastcall PackageLoad()
+    @Firedacadsdriver@@PackageUnload$qqrv @795 ; Firedacadsdriver::__linkproc__ __fastcall PackageUnload()
+    @Firedacadsdriver@initialization$qqrv @794 ; __fastcall Firedacadsdriver::initialization()
+    @GetPackageInfoTable           @800 ; GetPackageInfoTable
+    Finalize                       @798 ; Finalize
+    Initialize                     @799 ; Initialize

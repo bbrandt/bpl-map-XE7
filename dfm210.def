@@ -1,0 +1,226 @@
+LIBRARY     DFM210.BPL
+
+DESCRIPTION 'mbarcadero Integrated Translation Environment / DFM translator'
+
+EXPORTS
+    @$xp$17Itedfmmgr@TDFMMgr       @146 ; __tpdsc__ Itedfmmgr::TDFMMgr
+    @$xp$22Itedfmcommon@TFormInfo  @52  ; __tpdsc__ Itedfmcommon::TFormInfo
+    @$xp$22Itedfmform@TITEDFMForm  @193 ; __tpdsc__ Itedfmform::TITEDFMForm
+    @$xp$23Itedfmviewer@TDFMViewer @163 ; __tpdsc__ Itedfmviewer::TDFMViewer
+    @$xp$24Iteformtype@IITEFormType @19  ; __tpdsc__ Iteformtype::IITEFormType
+    @$xp$25Iteformtype@TITEFormTypes @17  ; __tpdsc__ Iteformtype::TITEFormTypes
+    @$xp$27Itedfmcommon@TITEFormFormat @51  ; __tpdsc__ Itedfmcommon::TITEFormFormat
+    @$xp$27Iteformutils@TITEFormStream @107 ; __tpdsc__ Iteformutils::TITEFormStream
+    @$xp$28Itedfmcommon@Itedfmcommon__2 @37  ; __tpdsc__ Itedfmcommon::Itedfmcommon__2
+    @$xp$28Itedfmform@TITEDFMTranslator @195 ; __tpdsc__ Itedfmform::TITEDFMTranslator
+    @$xp$28Iteformtype@IITEDesignerForm @20  ; __tpdsc__ Iteformtype::IITEDesignerForm
+    @$xp$30Iteformnotes@TITEFormNotesFile @75  ; __tpdsc__ Iteformnotes::TITEFormNotesFile
+    @$xp$30Iteformnotes@TITEFormNotesItem @77  ; __tpdsc__ Iteformnotes::TITEFormNotesItem
+    @$xp$31Iteformutils@TITEFormDataString @110 ; __tpdsc__ Iteformutils::TITEFormDataString
+    @$xp$32Itedfmcommon@PITEFormCreatorData @50  ; __tpdsc__ Itedfmcommon::PITEFormCreatorData
+    @$xp$32Itedfmcommon@TITEFormCreatorData @49  ; __tpdsc__ Itedfmcommon::TITEFormCreatorData
+    @$xp$32Iteformdesigner@IITEFormDesigner @3   ; __tpdsc__ Iteformdesigner::IITEFormDesigner
+    @$xp$33Iteformutils@TITEFormStreamFormat @109 ; __tpdsc__ Iteformutils::TITEFormStreamFormat
+    @$xp$36Iteformtype@IITEDesignerFormNotifier @21  ; __tpdsc__ Iteformtype::IITEDesignerFormNotifier
+    @$xp$39Iteformdesigner@IITEFormDesignerOptions @5   ; __tpdsc__ Iteformdesigner::IITEFormDesignerOptions
+    @$xp$39Iteformoptionpage@TfrmITEFormOptionPage @207 ; __tpdsc__ Iteformoptionpage::TfrmITEFormOptionPage
+    @$xp$40Iteformdesigner@IITEFormDesignerNotifier @4   ; __tpdsc__ Iteformdesigner::IITEFormDesignerNotifier
+    @$xp$55Iteformdesigneroptionpage@TfrmITEFormDesignerOptionPage @213 ; __tpdsc__ Iteformdesigneroptionpage::TfrmITEFormDesignerOptionPage
+    @Dfm@@GetPackageInfoTable$qqrv @218 ; Dfm::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dfm@@PackageLoad$qqrv         @217 ; Dfm::__linkproc__ __fastcall PackageLoad()
+    @Dfm@@PackageUnload$qqrv       @216 ; Dfm::__linkproc__ __fastcall PackageUnload()
+    @Dfm@initialization$qqrv       @215 ; __fastcall Dfm::initialization()
+    @GetPackageInfoTable           @221 ; GetPackageInfoTable
+    @Itedfmcommon@Creator          @31  ; Itedfmcommon::Creator
+    @Itedfmcommon@DefColIds        @35  ; Itedfmcommon::DefColIds
+    @Itedfmcommon@FileExtToNoteExt$qqrx20System@UnicodeString @28  ; __fastcall Itedfmcommon::FileExtToNoteExt(const System::UnicodeString)
+    @Itedfmcommon@FileNameToNoteName$qqrx20System@UnicodeString @26  ; __fastcall Itedfmcommon::FileNameToNoteName(const System::UnicodeString)
+    @Itedfmcommon@Finalization$qqrv @23  ; __fastcall Itedfmcommon::Finalization()
+    @Itedfmcommon@ITEColInfo       @36  ; Itedfmcommon::ITEColInfo
+    @Itedfmcommon@NoteExtToFileExt$qqrx20System@UnicodeString @27  ; __fastcall Itedfmcommon::NoteExtToFileExt(const System::UnicodeString)
+    @Itedfmcommon@QuickSortReOrder$qqr49System@%DelphiInterface$22Iteintf@IITENotesItems%ii @25  ; Itedfmcommon::QuickSortReOrder(System::DelphiInterface<{583}...
+    @Itedfmcommon@RegisteredComponents @29  ; Itedfmcommon::RegisteredComponents
+    @Itedfmcommon@TFormInfo@       @53  ; Itedfmcommon::TFormInfo::
+    @Itedfmcommon@TFormInfo@$bctr$qqrv @24  ; __fastcall Itedfmcommon::TFormInfo::TFormInfo()
+    @Itedfmcommon@Updater          @30  ; Itedfmcommon::Updater
+    @Itedfmcommon@_SColComment     @38  ; Itedfmcommon::_SColComment
+    @Itedfmcommon@_SColCreated     @42  ; Itedfmcommon::_SColCreated
+    @Itedfmcommon@_SColCurr        @43  ; Itedfmcommon::_SColCurr
+    @Itedfmcommon@_SColId          @46  ; Itedfmcommon::_SColId
+    @Itedfmcommon@_SColIndex       @47  ; Itedfmcommon::_SColIndex
+    @Itedfmcommon@_SColModified    @41  ; Itedfmcommon::_SColModified
+    @Itedfmcommon@_SColOrig        @45  ; Itedfmcommon::_SColOrig
+    @Itedfmcommon@_SColPrevCurr    @39  ; Itedfmcommon::_SColPrevCurr
+    @Itedfmcommon@_SColPrevOrig    @40  ; Itedfmcommon::_SColPrevOrig
+    @Itedfmcommon@_SColStatus      @44  ; Itedfmcommon::_SColStatus
+    @Itedfmcommon@_SFiles          @48  ; Itedfmcommon::_SFiles
+    @Itedfmcommon@bFormAsText      @34  ; Itedfmcommon::bFormAsText
+    @Itedfmcommon@bKeepFormTimeStamp @33  ; Itedfmcommon::bKeepFormTimeStamp
+    @Itedfmcommon@bShowAllProperties @32  ; Itedfmcommon::bShowAllProperties
+    @Itedfmcommon@initialization$qqrv @22  ; __fastcall Itedfmcommon::initialization()
+    @Itedfmcreator@Finalization$qqrv @113 ; __fastcall Itedfmcreator::Finalization()
+    @Itedfmcreator@initialization$qqrv @112 ; __fastcall Itedfmcreator::initialization()
+    @Itedfmdesigner@Create$qqrp21Vcl@Forms@TCustomFormx20System@UnicodeString @117 ; __fastcall Itedfmdesigner::Create(Vcl::Forms::TCustomForm *, const System::UnicodeString)
+    @Itedfmdesigner@CreateForm$qqrxo @116 ; __fastcall Itedfmdesigner::CreateForm(const bool)
+    @Itedfmdesigner@Finalization$qqrv @115 ; __fastcall Itedfmdesigner::Finalization()
+    @Itedfmdesigner@initialization$qqrv @114 ; __fastcall Itedfmdesigner::initialization()
+    @Itedfmform@Finalization$qqrv  @166 ; __fastcall Itedfmform::Finalization()
+    @Itedfmform@TITEDFMForm@       @194 ; Itedfmform::TITEDFMForm::
+    @Itedfmform@TITEDFMForm@EatError$qqrp14System@TObjectx20System@UnicodeStringro @177 ; __fastcall Itedfmform::TITEDFMForm::EatError(System::TObject *, const System::UnicodeString, bool&)
+    @Itedfmform@TITEDFMForm@EditOnTopModeExecute$qqrp14System@TObject @168 ; __fastcall Itedfmform::TITEDFMForm::EditOnTopModeExecute(System::TObject *)
+    @Itedfmform@TITEDFMForm@EditOnTopModeUpdate$qqrp14System@TObject @169 ; __fastcall Itedfmform::TITEDFMForm::EditOnTopModeUpdate(System::TObject *)
+    @Itedfmform@TITEDFMForm@EditRefreshXlatFormExecute$qqrp14System@TObject @170 ; __fastcall Itedfmform::TITEDFMForm::EditRefreshXlatFormExecute(System::TObject *)
+    @Itedfmform@TITEDFMForm@EditRefreshXlatFormUpdate$qqrp14System@TObject @171 ; __fastcall Itedfmform::TITEDFMForm::EditRefreshXlatFormUpdate(System::TObject *)
+    @Itedfmform@TITEDFMForm@EditShowOrigFormExecute$qqrp14System@TObject @174 ; __fastcall Itedfmform::TITEDFMForm::EditShowOrigFormExecute(System::TObject *)
+    @Itedfmform@TITEDFMForm@EditShowOrigFormUpdate$qqrp14System@TObject @172 ; __fastcall Itedfmform::TITEDFMForm::EditShowOrigFormUpdate(System::TObject *)
+    @Itedfmform@TITEDFMForm@EditShowXlatFormExecute$qqrp14System@TObject @173 ; __fastcall Itedfmform::TITEDFMForm::EditShowXlatFormExecute(System::TObject *)
+    @Itedfmform@TITEDFMForm@FormCreate$qqrp14System@TObject @189 ; __fastcall Itedfmform::TITEDFMForm::FormCreate(System::TObject *)
+    @Itedfmform@TITEDFMForm@FormDestroy$qqrp14System@TObject @188 ; __fastcall Itedfmform::TITEDFMForm::FormDestroy(System::TObject *)
+    @Itedfmform@TITEDFMForm@FormHide$qqrp14System@TObject @187 ; __fastcall Itedfmform::TITEDFMForm::FormHide(System::TObject *)
+    @Itedfmform@TITEDFMForm@GetCurrID$qqrv @183 ; __fastcall Itedfmform::TITEDFMForm::GetCurrID()
+    @Itedfmform@TITEDFMForm@GetTranslator$qqrv @182 ; __fastcall Itedfmform::TITEDFMForm::GetTranslator()
+    @Itedfmform@TITEDFMForm@ITEGridCellValueChangedEvent$qqrp14System@TObjectii @176 ; __fastcall Itedfmform::TITEDFMForm::ITEGridCellValueChangedEvent(System::TObject *, int, int)
+    @Itedfmform@TITEDFMForm@ITEGridDrawCell$qqrp14System@TObjectiirx18System@Types@TRect49System@%Set$22Vcl@Grids@Vcl_Grids__3t1$i0$t1$i5$% @181 ; Itedfmform::TITEDFMForm::ITEGridDrawCell(System::TObject *, int, int, const System::Types::TRect&, System::Set<{583}...
+    @Itedfmform@TITEDFMForm@ITEGridGetEditStyle$qqrp14System@TObjectiir20Vcl@Grids@TEditStyle @180 ; __fastcall Itedfmform::TITEDFMForm::ITEGridGetEditStyle(System::TObject *, int, int, Vcl::Grids::TEditStyle&)
+    @Itedfmform@TITEDFMForm@ITEGridGetPickListItems$qqriip23System@Classes@TStrings @179 ; __fastcall Itedfmform::TITEDFMForm::ITEGridGetPickListItems(int, int, System::Classes::TStrings *)
+    @Itedfmform@TITEDFMForm@IsSelectionOfOneType$qqri @178 ; __fastcall Itedfmform::TITEDFMForm::IsSelectionOfOneType(int)
+    @Itedfmform@TITEDFMForm@LoadFile$qqrx20System@UnicodeString @184 ; __fastcall Itedfmform::TITEDFMForm::LoadFile(const System::UnicodeString)
+    @Itedfmform@TITEDFMForm@Save$qqrv @186 ; __fastcall Itedfmform::TITEDFMForm::Save()
+    @Itedfmform@TITEDFMForm@SetOnTopModeButtonState$qqro @167 ; __fastcall Itedfmform::TITEDFMForm::SetOnTopModeButtonState(bool)
+    @Itedfmform@TITEDFMForm@ValidateText$qqrp20Itecontrols@TITEGridii @185 ; __fastcall Itedfmform::TITEDFMForm::ValidateText(Itecontrols::TITEGrid *, int, int)
+    @Itedfmform@TITEDFMForm@ViewerClose$qqrp14System@TObject @175 ; __fastcall Itedfmform::TITEDFMForm::ViewerClose(System::TObject *)
+    @Itedfmform@TITEDFMTranslator@ @196 ; Itedfmform::TITEDFMTranslator::
+    @Itedfmform@TITEDFMTranslator@$bctr$qqrv @191 ; __fastcall Itedfmform::TITEDFMTranslator::TITEDFMTranslator()
+    @Itedfmform@TITEDFMTranslator@GetForm$qqrv @190 ; __fastcall Itedfmform::TITEDFMTranslator::GetForm()
+    @Itedfmform@TITEDFMTranslator@GetMgrClass$qqrv @192 ; __fastcall Itedfmform::TITEDFMTranslator::GetMgrClass()
+    @Itedfmform@initialization$qqrv @165 ; __fastcall Itedfmform::initialization()
+    @Itedfmformtype@Finalization$qqrv @119 ; __fastcall Itedfmformtype::Finalization()
+    @Itedfmformtype@initialization$qqrv @118 ; __fastcall Itedfmformtype::initialization()
+    @Itedfmmgr@Finalization$qqrv   @121 ; __fastcall Itedfmmgr::Finalization()
+    @Itedfmmgr@GetClassName$qqrx20System@UnicodeStringop22Itedfmcommon@TFormInfo @142 ; __fastcall Itedfmmgr::GetClassName(const System::UnicodeString, bool, Itedfmcommon::TFormInfo *)
+    @Itedfmmgr@GetFullObjectName$qqrx20System@UnicodeString @143 ; __fastcall Itedfmmgr::GetFullObjectName(const System::UnicodeString)
+    @Itedfmmgr@GetObjectName$qqrx20System@UnicodeString @144 ; __fastcall Itedfmmgr::GetObjectName(const System::UnicodeString)
+    @Itedfmmgr@GetPropName$qqrx20System@UnicodeString @141 ; __fastcall Itedfmmgr::GetPropName(const System::UnicodeString)
+    @Itedfmmgr@GetStats$qqrx20System@UnicodeStringo @140 ; __fastcall Itedfmmgr::GetStats(const System::UnicodeString, bool)
+    @Itedfmmgr@ITEIsRootBaseClass$qqrx20System@UnicodeStringp22Itedfmcommon@TFormInfo @145 ; __fastcall Itedfmmgr::ITEIsRootBaseClass(const System::UnicodeString, Itedfmcommon::TFormInfo *)
+    @Itedfmmgr@TDFMMgr@            @147 ; Itedfmmgr::TDFMMgr::
+    @Itedfmmgr@TDFMMgr@$bctr$qqrx20System@UnicodeStringo @139 ; __fastcall Itedfmmgr::TDFMMgr::TDFMMgr(const System::UnicodeString, bool)
+    @Itedfmmgr@TDFMMgr@CanLocalize$qqri @138 ; __fastcall Itedfmmgr::TDFMMgr::CanLocalize(int)
+    @Itedfmmgr@TDFMMgr@CheckStats$qqrv @137 ; __fastcall Itedfmmgr::TDFMMgr::CheckStats()
+    @Itedfmmgr@TDFMMgr@ConvertFromRawString$qqrx20System@UnicodeString @126 ; __fastcall Itedfmmgr::TDFMMgr::ConvertFromRawString(const System::UnicodeString)
+    @Itedfmmgr@TDFMMgr@ConvertToRawString$qqrx20System@UnicodeString @125 ; __fastcall Itedfmmgr::TDFMMgr::ConvertToRawString(const System::UnicodeString)
+    @Itedfmmgr@TDFMMgr@EggBuild$qqrv @129 ; __fastcall Itedfmmgr::TDFMMgr::EggBuild()
+    @Itedfmmgr@TDFMMgr@FileNameToNoteName$qqrx20System@UnicodeString @124 ; __fastcall Itedfmmgr::TDFMMgr::FileNameToNoteName(const System::UnicodeString)
+    @Itedfmmgr@TDFMMgr@GetColInfo$qqri @122 ; __fastcall Itedfmmgr::TDFMMgr::GetColInfo(int)
+    @Itedfmmgr@TDFMMgr@GetItemCount$qqr46System@%Set$19Itetypes@TResStatust1$i0$t1$i7$% @136 ; Itedfmmgr::TDFMMgr::GetItemCount(System::Set<{583}...
+    @Itedfmmgr@TDFMMgr@GetNotesClass$qqrv @123 ; __fastcall Itedfmmgr::TDFMMgr::GetNotesClass()
+    @Itedfmmgr@TDFMMgr@IsLineVisible$qqri @135 ; __fastcall Itedfmmgr::TDFMMgr::IsLineVisible(int)
+    @Itedfmmgr@TDFMMgr@IsStorable$qqri @134 ; __fastcall Itedfmmgr::TDFMMgr::IsStorable(int)
+    @Itedfmmgr@TDFMMgr@IsStringType$qqri @133 ; __fastcall Itedfmmgr::TDFMMgr::IsStringType(int)
+    @Itedfmmgr@TDFMMgr@MakeDictionary$qqrp23System@Classes@TStrings @128 ; __fastcall Itedfmmgr::TDFMMgr::MakeDictionary(System::Classes::TStrings *)
+    @Itedfmmgr@TDFMMgr@Purge$qqrv  @130 ; __fastcall Itedfmmgr::TDFMMgr::Purge()
+    @Itedfmmgr@TDFMMgr@RecreateXlat$qqrv @127 ; __fastcall Itedfmmgr::TDFMMgr::RecreateXlat()
+    @Itedfmmgr@TDFMMgr@Save$qqrouiuio @132 ; __fastcall Itedfmmgr::TDFMMgr::Save(bool, unsigned int, unsigned int, bool)
+    @Itedfmmgr@TDFMMgr@SaveStringList$qqrv @131 ; __fastcall Itedfmmgr::TDFMMgr::SaveStringList()
+    @Itedfmmgr@initialization$qqrv @120 ; __fastcall Itedfmmgr::initialization()
+    @Itedfmupdater@Finalization$qqrv @149 ; __fastcall Itedfmupdater::Finalization()
+    @Itedfmupdater@initialization$qqrv @148 ; __fastcall Itedfmupdater::initialization()
+    @Itedfmviewer@DFMViewer$qqrv   @152 ; __fastcall Itedfmviewer::DFMViewer()
+    @Itedfmviewer@Finalization$qqrv @151 ; __fastcall Itedfmviewer::Finalization()
+    @Itedfmviewer@TDFMViewer@      @164 ; Itedfmviewer::TDFMViewer::
+    @Itedfmviewer@TDFMViewer@$bctr$qqrv @162 ; __fastcall Itedfmviewer::TDFMViewer::TDFMViewer()
+    @Itedfmviewer@TDFMViewer@$bdtr$qqrv @161 ; __fastcall Itedfmviewer::TDFMViewer::~TDFMViewer()
+    @Itedfmviewer@TDFMViewer@CreateForm$qqrx20System@UnicodeStringo @157 ; __fastcall Itedfmviewer::TDFMViewer::CreateForm(const System::UnicodeString, bool)
+    @Itedfmviewer@TDFMViewer@DestroyForm$qqro @160 ; __fastcall Itedfmviewer::TDFMViewer::DestroyForm(bool)
+    @Itedfmviewer@TDFMViewer@GetDesigner$qqrv @154 ; __fastcall Itedfmviewer::TDFMViewer::GetDesigner()
+    @Itedfmviewer@TDFMViewer@GetDesignerOptions$qqrv @153 ; __fastcall Itedfmviewer::TDFMViewer::GetDesignerOptions()
+    @Itedfmviewer@TDFMViewer@HideForm$qqro @159 ; __fastcall Itedfmviewer::TDFMViewer::HideForm(bool)
+    @Itedfmviewer@TDFMViewer@ShowForm$qqrx20System@UnicodeStringoo @158 ; __fastcall Itedfmviewer::TDFMViewer::ShowForm(const System::UnicodeString, bool, bool)
+    @Itedfmviewer@TDFMViewer@UpdateDesignerOptions$qqrv @155 ; __fastcall Itedfmviewer::TDFMViewer::UpdateDesignerOptions()
+    @Itedfmviewer@TDFMViewer@UpdateFormStyle$qqroo @156 ; __fastcall Itedfmviewer::TDFMViewer::UpdateFormStyle(bool, bool)
+    @Itedfmviewer@initialization$qqrv @150 ; __fastcall Itedfmviewer::initialization()
+    @Iteformdesigner@Finalization$qqrv @2   ; __fastcall Iteformdesigner::Finalization()
+    @Iteformdesigner@initialization$qqrv @1   ; __fastcall Iteformdesigner::initialization()
+    @Iteformdesigneroptionpage@Finalization$qqrv @210 ; __fastcall Iteformdesigneroptionpage::Finalization()
+    @Iteformdesigneroptionpage@TfrmITEFormDesignerOptionPage@ @214 ; Iteformdesigneroptionpage::TfrmITEFormDesignerOptionPage::
+    @Iteformdesigneroptionpage@TfrmITEFormDesignerOptionPage@FormDestroy$qqrp14System@TObject @211 ; __fastcall Iteformdesigneroptionpage::TfrmITEFormDesignerOptionPage::FormDestroy(System::TObject *)
+    @Iteformdesigneroptionpage@frmITEFormDesignerOptionPage @212 ; Iteformdesigneroptionpage::frmITEFormDesignerOptionPage
+    @Iteformdesigneroptionpage@initialization$qqrv @209 ; __fastcall Iteformdesigneroptionpage::initialization()
+    @Iteformnotes@Finalization$qqrv @55  ; __fastcall Iteformnotes::Finalization()
+    @Iteformnotes@TITEFormNotesFile@ @76  ; Iteformnotes::TITEFormNotesFile::
+    @Iteformnotes@TITEFormNotesFile@CreateNotesItem$qqrv @60  ; __fastcall Iteformnotes::TITEFormNotesFile::CreateNotesItem()
+    @Iteformnotes@TITEFormNotesFile@GetExts$qqrv @59  ; __fastcall Iteformnotes::TITEFormNotesFile::GetExts()
+    @Iteformnotes@TITEFormNotesFile@GetType$qqrv @58  ; __fastcall Iteformnotes::TITEFormNotesFile::GetType()
+    @Iteformnotes@TITEFormNotesFile@ReadCustomProp$qqr41System@%DelphiInterface$14IXMLDOMElement%48System@%DelphiInterface$21Iteintf@IITENotesItem% @57  ; Iteformnotes::TITEFormNotesFile::ReadCustomProp(System::DelphiInterface<{583}...
+    @Iteformnotes@TITEFormNotesFile@WriteCustomProp$qqr41System@%DelphiInterface$14IXMLDOMElement%48System@%DelphiInterface$21Iteintf@IITENotesItem% @56  ; Iteformnotes::TITEFormNotesFile::WriteCustomProp(System::DelphiInterface<{583}...
+    @Iteformnotes@TITEFormNotesItem@ @78  ; Iteformnotes::TITEFormNotesItem::
+    @Iteformnotes@TITEFormNotesItem@$bctr$qqrv @74  ; __fastcall Iteformnotes::TITEFormNotesItem::TITEFormNotesItem()
+    @Iteformnotes@TITEFormNotesItem@Assign$qqr48System@%DelphiInterface$21Iteintf@IITENotesItem% @71  ; Iteformnotes::TITEFormNotesItem::Assign(System::DelphiInterface<{583}...
+    @Iteformnotes@TITEFormNotesItem@GetClassType$qqrv @69  ; __fastcall Iteformnotes::TITEFormNotesItem::GetClassType()
+    @Iteformnotes@TITEFormNotesItem@GetClose$qqrv @66  ; __fastcall Iteformnotes::TITEFormNotesItem::GetClose()
+    @Iteformnotes@TITEFormNotesItem@GetLocalize$qqrv @68  ; __fastcall Iteformnotes::TITEFormNotesItem::GetLocalize()
+    @Iteformnotes@TITEFormNotesItem@GetOpen$qqrv @67  ; __fastcall Iteformnotes::TITEFormNotesItem::GetOpen()
+    @Iteformnotes@TITEFormNotesItem@GetOrder$qqrv @70  ; __fastcall Iteformnotes::TITEFormNotesItem::GetOrder()
+    @Iteformnotes@TITEFormNotesItem@GetText$qqriio @73  ; __fastcall Iteformnotes::TITEFormNotesItem::GetText(int, int, bool)
+    @Iteformnotes@TITEFormNotesItem@SetClassType$qqrx20System@UnicodeString @64  ; __fastcall Iteformnotes::TITEFormNotesItem::SetClassType(const System::UnicodeString)
+    @Iteformnotes@TITEFormNotesItem@SetClose$qqrx20System@UnicodeString @61  ; __fastcall Iteformnotes::TITEFormNotesItem::SetClose(const System::UnicodeString)
+    @Iteformnotes@TITEFormNotesItem@SetLocalize$qqro @63  ; __fastcall Iteformnotes::TITEFormNotesItem::SetLocalize(bool)
+    @Iteformnotes@TITEFormNotesItem@SetOpen$qqrx20System@UnicodeString @62  ; __fastcall Iteformnotes::TITEFormNotesItem::SetOpen(const System::UnicodeString)
+    @Iteformnotes@TITEFormNotesItem@SetOrder$qqri @65  ; __fastcall Iteformnotes::TITEFormNotesItem::SetOrder(int)
+    @Iteformnotes@TITEFormNotesItem@SetText$qqriix20System@UnicodeString @72  ; __fastcall Iteformnotes::TITEFormNotesItem::SetText(int, int, const System::UnicodeString)
+    @Iteformnotes@initialization$qqrv @54  ; __fastcall Iteformnotes::initialization()
+    @Iteformoptionpage@Finalization$qqrv @198 ; __fastcall Iteformoptionpage::Finalization()
+    @Iteformoptionpage@TfrmITEFormOptionPage@ @208 ; Iteformoptionpage::TfrmITEFormOptionPage::
+    @Iteformoptionpage@TfrmITEFormOptionPage@FormCreate$qqrp14System@TObject @205 ; __fastcall Iteformoptionpage::TfrmITEFormOptionPage::FormCreate(System::TObject *)
+    @Iteformoptionpage@TfrmITEFormOptionPage@GetIndex$qqrx20System@UnicodeString @204 ; __fastcall Iteformoptionpage::TfrmITEFormOptionPage::GetIndex(const System::UnicodeString)
+    @Iteformoptionpage@TfrmITEFormOptionPage@LoadPackageList$qqrv @203 ; __fastcall Iteformoptionpage::TfrmITEFormOptionPage::LoadPackageList()
+    @Iteformoptionpage@TfrmITEFormOptionPage@PackagesAddButtonClick$qqrp14System@TObject @201 ; __fastcall Iteformoptionpage::TfrmITEFormOptionPage::PackagesAddButtonClick(System::TObject *)
+    @Iteformoptionpage@TfrmITEFormOptionPage@PackagesRemoveButtonClick$qqrp14System@TObject @200 ; __fastcall Iteformoptionpage::TfrmITEFormOptionPage::PackagesRemoveButtonClick(System::TObject *)
+    @Iteformoptionpage@TfrmITEFormOptionPage@lvPackagesChange$qqrp14System@TObjectp22Vcl@Comctrls@TListItem24Vcl@Comctrls@TItemChange @202 ; __fastcall Iteformoptionpage::TfrmITEFormOptionPage::lvPackagesChange(System::TObject *, Vcl::Comctrls::TListItem *, Vcl::Comctrls::TItemChange)
+    @Iteformoptionpage@TfrmITEFormOptionPage@tsPackageEnter$qqrp14System@TObject @199 ; __fastcall Iteformoptionpage::TfrmITEFormOptionPage::tsPackageEnter(System::TObject *)
+    @Iteformoptionpage@frmITEFormOptionPage @206 ; Iteformoptionpage::frmITEFormOptionPage
+    @Iteformoptionpage@initialization$qqrv @197 ; __fastcall Iteformoptionpage::initialization()
+    @Iteformtype@Finalization$qqrv @7   ; __fastcall Iteformtype::Finalization()
+    @Iteformtype@ITEFormTypes      @16  ; Iteformtype::ITEFormTypes
+    @Iteformtype@TITEFormTypes@    @18  ; Iteformtype::TITEFormTypes::
+    @Iteformtype@TITEFormTypes@$bctr$qqrv @15  ; __fastcall Iteformtype::TITEFormTypes::TITEFormTypes()
+    @Iteformtype@TITEFormTypes@Get$qqri @14  ; __fastcall Iteformtype::TITEFormTypes::Get(int)
+    @Iteformtype@TITEFormTypes@GetCount$qqrv @13  ; __fastcall Iteformtype::TITEFormTypes::GetCount()
+    @Iteformtype@TITEFormTypes@GetExts$qqrv @12  ; __fastcall Iteformtype::TITEFormTypes::GetExts()
+    @Iteformtype@TITEFormTypes@IndexOfExt$qqr20System@UnicodeString @11  ; __fastcall Iteformtype::TITEFormTypes::IndexOfExt(System::UnicodeString)
+    @Iteformtype@TITEFormTypes@IndexOfNotesExt$qqr20System@UnicodeString @10  ; __fastcall Iteformtype::TITEFormTypes::IndexOfNotesExt(System::UnicodeString)
+    @Iteformtype@TITEFormTypes@RegisterFormType$qqr51System@%DelphiInterface$24Iteformtype@IITEFormType% @9   ; Iteformtype::TITEFormTypes::RegisterFormType(System::DelphiInterface<{583}...
+    @Iteformtype@TITEFormTypes@UnregisterFormType$qqr51System@%DelphiInterface$24Iteformtype@IITEFormType% @8   ; Iteformtype::TITEFormTypes::UnregisterFormType(System::DelphiInterface<{583}...
+    @Iteformtype@initialization$qqrv @6   ; __fastcall Iteformtype::initialization()
+    @Iteformutils@Finalization$qqrv @80  ; __fastcall Iteformutils::Finalization()
+    @Iteformutils@ITEEncodeFormString$qqrx20System@UnicodeString @106 ; __fastcall Iteformutils::ITEEncodeFormString(const System::UnicodeString)
+    @Iteformutils@ITEFormDecode$qqrp22System@Classes@TStreamt1ui @105 ; __fastcall Iteformutils::ITEFormDecode(System::Classes::TStream *, System::Classes::TStream *, unsigned int)
+    @Iteformutils@ITEFormEncode$qqrp22System@Classes@TStreamt1ui @104 ; __fastcall Iteformutils::ITEFormEncode(System::Classes::TStream *, System::Classes::TStream *, unsigned int)
+    @Iteformutils@ITEObjectResourceToText$qqrp22System@Classes@TStreamt1ui @103 ; __fastcall Iteformutils::ITEObjectResourceToText(System::Classes::TStream *, System::Classes::TStream *, unsigned int)
+    @Iteformutils@ITEObjectTextToResource$qqrp22System@Classes@TStreamt1ui @102 ; __fastcall Iteformutils::ITEObjectTextToResource(System::Classes::TStream *, System::Classes::TStream *, unsigned int)
+    @Iteformutils@TITEFormDataString@ @111 ; Iteformutils::TITEFormDataString::
+    @Iteformutils@TITEFormStream@  @108 ; Iteformutils::TITEFormStream::
+    @Iteformutils@TITEFormStream@$bctr$qqrui @101 ; __fastcall Iteformutils::TITEFormStream::TITEFormStream(unsigned int)
+    @Iteformutils@TITEFormStream@$bdtr$qqrv @100 ; __fastcall Iteformutils::TITEFormStream::~TITEFormStream()
+    @Iteformutils@TITEFormStream@CheckFormat$qqrv @99  ; __fastcall Iteformutils::TITEFormStream::CheckFormat()
+    @Iteformutils@TITEFormStream@ConvertFormat$qqrp22System@Classes@TStream33Iteformutils@TITEFormStreamFormat @98  ; __fastcall Iteformutils::TITEFormStream::ConvertFormat(System::Classes::TStream *, Iteformutils::TITEFormStreamFormat)
+    @Iteformutils@TITEFormStream@Error$qqrp22System@Classes@TReaderx20System@UnicodeStringro @97  ; __fastcall Iteformutils::TITEFormStream::Error(System::Classes::TReader *, const System::UnicodeString, bool&)
+    @Iteformutils@TITEFormStream@FindMethod$qqrp22System@Classes@TReaderx20System@UnicodeStringrpvro @96  ; __fastcall Iteformutils::TITEFormStream::FindMethod(System::Classes::TReader *, const System::UnicodeString, void *&, bool&)
+    @Iteformutils@TITEFormStream@GetClassAndObjectName$qqrv @95  ; __fastcall Iteformutils::TITEFormStream::GetClassAndObjectName()
+    @Iteformutils@TITEFormStream@GetData$qqrp29Iteutils@TITEStringObjectList @94  ; __fastcall Iteformutils::TITEFormStream::GetData(Iteutils::TITEStringObjectList *)
+    @Iteformutils@TITEFormStream@GetFormClassName$qqrv @93  ; __fastcall Iteformutils::TITEFormStream::GetFormClassName()
+    @Iteformutils@TITEFormStream@GetFormObjectName$qqrv @92  ; __fastcall Iteformutils::TITEFormStream::GetFormObjectName()
+    @Iteformutils@TITEFormStream@GetRootProp$qqrx20System@UnicodeString @91  ; __fastcall Iteformutils::TITEFormStream::GetRootProp(const System::UnicodeString)
+    @Iteformutils@TITEFormStream@InsertRootProp$qqrp26System@Classes@TPersistentx20System@UnicodeString @90  ; __fastcall Iteformutils::TITEFormStream::InsertRootProp(System::Classes::TPersistent *, const System::UnicodeString)
+    @Iteformutils@TITEFormStream@InsertRootStream$qqrp22System@Classes@TStream @89  ; __fastcall Iteformutils::TITEFormStream::InsertRootStream(System::Classes::TStream *)
+    @Iteformutils@TITEFormStream@LoadFromFile$qqrx20System@UnicodeString @88  ; __fastcall Iteformutils::TITEFormStream::LoadFromFile(const System::UnicodeString)
+    @Iteformutils@TITEFormStream@LoadFromStream$qqrp22System@Classes@TStream @87  ; __fastcall Iteformutils::TITEFormStream::LoadFromStream(System::Classes::TStream *)
+    @Iteformutils@TITEFormStream@ReadComponent$qqrp25System@Classes@TComponent @86  ; __fastcall Iteformutils::TITEFormStream::ReadComponent(System::Classes::TComponent *)
+    @Iteformutils@TITEFormStream@RemoveRootProp$qqrx20System@UnicodeString @85  ; __fastcall Iteformutils::TITEFormStream::RemoveRootProp(const System::UnicodeString)
+    @Iteformutils@TITEFormStream@RootPropExists$qqrx20System@UnicodeString @84  ; __fastcall Iteformutils::TITEFormStream::RootPropExists(const System::UnicodeString)
+    @Iteformutils@TITEFormStream@SaveToFile$qqrx20System@UnicodeString33Iteformutils@TITEFormStreamFormat @83  ; __fastcall Iteformutils::TITEFormStream::SaveToFile(const System::UnicodeString, Iteformutils::TITEFormStreamFormat)
+    @Iteformutils@TITEFormStream@SaveToStream$qqrp22System@Classes@TStream33Iteformutils@TITEFormStreamFormat @82  ; __fastcall Iteformutils::TITEFormStream::SaveToStream(System::Classes::TStream *, Iteformutils::TITEFormStreamFormat)
+    @Iteformutils@TITEFormStream@SetRootProp$qqrx20System@UnicodeStringrx14System@Variant @81  ; __fastcall Iteformutils::TITEFormStream::SetRootProp(const System::UnicodeString, const System::Variant&)
+    @Iteformutils@initialization$qqrv @79  ; __fastcall Iteformutils::initialization()
+    Finalize                       @219 ; Finalize
+    Initialize                     @220 ; Initialize

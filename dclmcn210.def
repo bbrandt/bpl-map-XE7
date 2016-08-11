@@ -1,0 +1,34 @@
+LIBRARY     DCLMCN210.BPL
+
+DESCRIPTION 'mbarcadero DataSnap Connection Components'
+
+EXPORTS
+    @$xp$26Midreg@TCOMConnectionSprig @15  ; __tpdsc__ Midreg::TCOMConnectionSprig
+    @$xp$26Midreg@TWebConnectionSprig @19  ; __tpdsc__ Midreg::TWebConnectionSprig
+    @$xp$27Midreg@TDCOMConnectionSprig @13  ; __tpdsc__ Midreg::TDCOMConnectionSprig
+    @$xp$29Midreg@TSocketConnectionSprig @17  ; __tpdsc__ Midreg::TSocketConnectionSprig
+    @$xp$31Midreg@TSimpleObjectBrokerSprig @21  ; __tpdsc__ Midreg::TSimpleObjectBrokerSprig
+    @$xp$35Midreg@TOLEnterpriseConnectionSprig @11  ; __tpdsc__ Midreg::TOLEnterpriseConnectionSprig
+    @Dclmcn@@GetPackageInfoTable$qqrv @26  ; Dclmcn::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclmcn@@PackageLoad$qqrv      @25  ; Dclmcn::__linkproc__ __fastcall PackageLoad()
+    @Dclmcn@@PackageUnload$qqrv    @24  ; Dclmcn::__linkproc__ __fastcall PackageUnload()
+    @Dclmcn@initialization$qqrv    @23  ; __fastcall Dclmcn::initialization()
+    @GetPackageInfoTable           @29  ; GetPackageInfoTable
+    @Midreg@Finalization$qqrv      @2   ; __fastcall Midreg::Finalization()
+    @Midreg@Register$qqrv          @3   ; __fastcall Midreg::Register()
+    @Midreg@TCOMConnectionSprig@   @16  ; Midreg::TCOMConnectionSprig::
+    @Midreg@TCOMConnectionSprig@AnyProblems$qqrv @10  ; __fastcall Midreg::TCOMConnectionSprig::AnyProblems()
+    @Midreg@TDCOMConnectionSprig@  @14  ; Midreg::TDCOMConnectionSprig::
+    @Midreg@TDCOMConnectionSprig@ParentProperty$qqrv @8   ; __fastcall Midreg::TDCOMConnectionSprig::ParentProperty()
+    @Midreg@TOLEnterpriseConnectionSprig@ @12  ; Midreg::TOLEnterpriseConnectionSprig::
+    @Midreg@TSimpleObjectBrokerSprig@ @22  ; Midreg::TSimpleObjectBrokerSprig::
+    @Midreg@TSimpleObjectBrokerSprig@AnyProblems$qqrv @9   ; __fastcall Midreg::TSimpleObjectBrokerSprig::AnyProblems()
+    @Midreg@TSocketConnectionSprig@ @18  ; Midreg::TSocketConnectionSprig::
+    @Midreg@TSocketConnectionSprig@AnyProblems$qqrv @7   ; __fastcall Midreg::TSocketConnectionSprig::AnyProblems()
+    @Midreg@TSocketConnectionSprig@ParentProperty$qqrv @6   ; __fastcall Midreg::TSocketConnectionSprig::ParentProperty()
+    @Midreg@TWebConnectionSprig@   @20  ; Midreg::TWebConnectionSprig::
+    @Midreg@TWebConnectionSprig@AnyProblems$qqrv @5   ; __fastcall Midreg::TWebConnectionSprig::AnyProblems()
+    @Midreg@TWebConnectionSprig@ParentProperty$qqrv @4   ; __fastcall Midreg::TWebConnectionSprig::ParentProperty()
+    @Midreg@initialization$qqrv    @1   ; __fastcall Midreg::initialization()
+    Finalize                       @27  ; Finalize
+    Initialize                     @28  ; Initialize

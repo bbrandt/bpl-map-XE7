@@ -1,0 +1,37 @@
+LIBRARY     BCCIDE.DLL
+
+EXPORTS
+    CppCompile                     @12  ; CppCompile
+    CppCompileAndBrowse            @13  ; CppCompileAndBrowse
+    CppCompileAndKibitz            @14  ; CppCompileAndKibitz
+    CppDemangle                    @32  ; CppDemangle
+    CppFileIndexToName             @25  ; CppFileIndexToName
+    CppFindDeclaration             @17  ; CppFindDeclaration
+    CppFindSymbol                  @16  ; CppFindSymbol
+    CppGetBaseType                 @23  ; CppGetBaseType
+    CppGetCompilerEntryPoint       @4   ; CppGetCompilerEntryPoint
+    CppGetCompilerInfo             @8   ; CppGetCompilerInfo
+    CppGetCompilerName             @3   ; CppGetCompilerName
+    CppGetCurrentCompiler          @2   ; CppGetCurrentCompiler
+    CppGetObjectType               @24  ; CppGetObjectType
+    CppGetResultType               @21  ; CppGetResultType
+    CppGetSymbolFlags              @18  ; CppGetSymbolFlags
+    CppGetSymbolText               @19  ; CppGetSymbolText
+    CppGetSymbols                  @15  ; CppGetSymbols
+    CppGetTypeCode                 @20  ; CppGetTypeCode
+    CppGetTypeSymbol               @22  ; CppGetTypeSymbol
+    CppGetValidSymbols             @26  ; CppGetValidSymbols
+    CppInitialize                  @1   ; CppInitialize
+    CppKibitzGetArgIndex           @30  ; CppKibitzGetArgIndex
+    CppKibitzGetKind               @29  ; CppKibitzGetKind
+    CppKibitzGetOverloads          @27  ; CppKibitzGetOverloads
+    CppLoadCompiler                @5   ; CppLoadCompiler
+    CppPopCompiler                 @7   ; CppPopCompiler
+    CppPushCompiler                @6   ; CppPushCompiler
+    CppShouldCompile               @31  ; CppShouldCompile
+    GetImageSizes                  @33  ; GetImageSizes
+    GetTotalLines                  @11  ; GetTotalLines
+    KibitzKind_str                 @28  ; KibitzKind_str
+    PostDependencies               @9   ; PostDependencies
+    SetTotalLines                  @10  ; SetTotalLines
+    ___CPPdebugHook                @34  ; ___CPPdebugHook

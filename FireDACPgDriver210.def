@@ -1,0 +1,353 @@
+LIBRARY     FIREDACPGDRIVER210.BPL
+
+DESCRIPTION 'mbarcadero FireDAC PostgreSQL Driver Components'
+
+EXPORTS
+    @$xp$22Firedac@Phys@Pgcli@Tid  @90  ; __tpdsc__ Firedac::Phys::Pgcli::Tid
+    @$xp$23Firedac@Phys@Pgcli@POid @91  ; __tpdsc__ Firedac::Phys::Pgcli::POid
+    @$xp$23Firedac@Phys@Pgcli@PTid @89  ; __tpdsc__ Firedac::Phys::Pgcli::PTid
+    @$xp$24Firedac@Phys@Pgcli@TPQdb @78  ; __tpdsc__ Firedac::Phys::Pgcli::TPQdb
+    @$xp$25Firedac@Phys@Pgcli@TPQtty @73  ; __tpdsc__ Firedac::Phys::Pgcli::TPQtty
+    @$xp$26Firedac@Phys@Pgcli@TPQexec @61  ; __tpdsc__ Firedac::Phys::Pgcli::TPQexec
+    @$xp$26Firedac@Phys@Pgcli@TPQfmod @42  ; __tpdsc__ Firedac::Phys::Pgcli::TPQfmod
+    @$xp$26Firedac@Phys@Pgcli@TPQhost @75  ; __tpdsc__ Firedac::Phys::Pgcli::TPQhost
+    @$xp$26Firedac@Phys@Pgcli@TPQpass @76  ; __tpdsc__ Firedac::Phys::Pgcli::TPQpass
+    @$xp$26Firedac@Phys@Pgcli@TPQport @74  ; __tpdsc__ Firedac::Phys::Pgcli::TPQport
+    @$xp$26Firedac@Phys@Pgcli@TPQuser @77  ; __tpdsc__ Firedac::Phys::Pgcli::TPQuser
+    @$xp$27Firedac@Phys@Pgcli@PGnotify @86  ; __tpdsc__ Firedac::Phys::Pgcli::PGnotify
+    @$xp$27Firedac@Phys@Pgcli@TPQclear @52  ; __tpdsc__ Firedac::Phys::Pgcli::TPQclear
+    @$xp$27Firedac@Phys@Pgcli@TPQfname @48  ; __tpdsc__ Firedac::Phys::Pgcli::TPQfname
+    @$xp$27Firedac@Phys@Pgcli@TPQfsize @41  ; __tpdsc__ Firedac::Phys::Pgcli::TPQfsize
+    @$xp$27Firedac@Phys@Pgcli@TPQftype @43  ; __tpdsc__ Firedac::Phys::Pgcli::TPQftype
+    @$xp$27Firedac@Phys@Pgcli@TPQreset @79  ; __tpdsc__ Firedac::Phys::Pgcli::TPQreset
+    @$xp$27Firedac@Phys@Pgcli@Tlo_open @24  ; __tpdsc__ Firedac::Phys::Pgcli::Tlo_open
+    @$xp$27Firedac@Phys@Pgcli@Tlo_read @22  ; __tpdsc__ Firedac::Phys::Pgcli::Tlo_read
+    @$xp$27Firedac@Phys@Pgcli@Tlo_tell @20  ; __tpdsc__ Firedac::Phys::Pgcli::Tlo_tell
+    @$xp$28Firedac@Phys@Pgcli@PPGnotify @85  ; __tpdsc__ Firedac::Phys::Pgcli::PPGnotify
+    @$xp$28Firedac@Phys@Pgcli@PPGresult @92  ; __tpdsc__ Firedac::Phys::Pgcli::PPGresult
+    @$xp$28Firedac@Phys@Pgcli@TPQcancel @26  ; __tpdsc__ Firedac::Phys::Pgcli::TPQcancel
+    @$xp$28Firedac@Phys@Pgcli@TPQfinish @80  ; __tpdsc__ Firedac::Phys::Pgcli::TPQfinish
+    @$xp$28Firedac@Phys@Pgcli@TPQftable @46  ; __tpdsc__ Firedac::Phys::Pgcli::TPQftable
+    @$xp$28Firedac@Phys@Pgcli@TPQsocket @10  ; __tpdsc__ Firedac::Phys::Pgcli::TPQsocket
+    @$xp$28Firedac@Phys@Pgcli@TPQstatus @71  ; __tpdsc__ Firedac::Phys::Pgcli::TPQstatus
+    @$xp$28Firedac@Phys@Pgcli@Tlo_close @19  ; __tpdsc__ Firedac::Phys::Pgcli::Tlo_close
+    @$xp$28Firedac@Phys@Pgcli@Tlo_creat @25  ; __tpdsc__ Firedac::Phys::Pgcli::Tlo_creat
+    @$xp$28Firedac@Phys@Pgcli@Tlo_lseek @21  ; __tpdsc__ Firedac::Phys::Pgcli::Tlo_lseek
+    @$xp$28Firedac@Phys@Pgcli@Tlo_write @23  ; __tpdsc__ Firedac::Phys::Pgcli::Tlo_write
+    @$xp$28Firedac@Phys@Pgcli@pg_result @93  ; __tpdsc__ Firedac::Phys::Pgcli::pg_result
+    @$xp$29Firedac@Phys@Pgcli@TPQfformat @44  ; __tpdsc__ Firedac::Phys::Pgcli::TPQfformat
+    @$xp$29Firedac@Phys@Pgcli@TPQfnumber @47  ; __tpdsc__ Firedac::Phys::Pgcli::TPQfnumber
+    @$xp$29Firedac@Phys@Pgcli@TPQfreemem @12  ; __tpdsc__ Firedac::Phys::Pgcli::TPQfreemem
+    @$xp$29Firedac@Phys@Pgcli@TPQnfields @49  ; __tpdsc__ Firedac::Phys::Pgcli::TPQnfields
+    @$xp$29Firedac@Phys@Pgcli@TPQnparams @36  ; __tpdsc__ Firedac::Phys::Pgcli::TPQnparams
+    @$xp$29Firedac@Phys@Pgcli@TPQntuples @50  ; __tpdsc__ Firedac::Phys::Pgcli::TPQntuples
+    @$xp$29Firedac@Phys@Pgcli@TPQoptions @72  ; __tpdsc__ Firedac::Phys::Pgcli::TPQoptions
+    @$xp$29Firedac@Phys@Pgcli@TPQprepare @59  ; __tpdsc__ Firedac::Phys::Pgcli::TPQprepare
+    @$xp$29Firedac@Phys@Pgcli@Tlo_unlink @18  ; __tpdsc__ Firedac::Phys::Pgcli::Tlo_unlink
+    @$xp$29Firedac@Phys@Pgwrapper@TPgEnv @294 ; __tpdsc__ Firedac::Phys::Pgwrapper::TPgEnv
+    @$xp$29Firedac@Phys@Pgwrapper@TPgLib @302 ; __tpdsc__ Firedac::Phys::Pgwrapper::TPgLib
+    @$xp$30Firedac@Phys@Pgcli@TPQexecBulk @5   ; __tpdsc__ Firedac::Phys::Pgcli::TPQexecBulk
+    @$xp$30Firedac@Phys@Pgcli@TPQgetvalue @39  ; __tpdsc__ Firedac::Phys::Pgcli::TPQgetvalue
+    @$xp$30Firedac@Phys@Pgcli@TPQnotifies @13  ; __tpdsc__ Firedac::Phys::Pgcli::TPQnotifies
+    @$xp$30Firedac@Phys@Pgcli@TPQoidValue @33  ; __tpdsc__ Firedac::Phys::Pgcli::TPQoidValue
+    @$xp$30Firedac@Phys@Pgcli@TPQsendBulk @8   ; __tpdsc__ Firedac::Phys::Pgcli::TPQsendBulk
+    @$xp$30Firedac@Phys@Pgwrapper@TPgType @286 ; __tpdsc__ Firedac::Phys::Pgwrapper::TPgType
+    @$xp$31Firedac@Phys@Pgcli@TPQBulkStart @6   ; __tpdsc__ Firedac::Phys::Pgcli::TPQBulkStart
+    @$xp$31Firedac@Phys@Pgcli@TPQcmdStatus @34  ; __tpdsc__ Firedac::Phys::Pgcli::TPQcmdStatus
+    @$xp$31Firedac@Phys@Pgcli@TPQcmdTuples @31  ; __tpdsc__ Firedac::Phys::Pgcli::TPQcmdTuples
+    @$xp$31Firedac@Phys@Pgcli@TPQconnectdb @82  ; __tpdsc__ Firedac::Phys::Pgcli::TPQconnectdb
+    @$xp$31Firedac@Phys@Pgcli@TPQftablecol @45  ; __tpdsc__ Firedac::Phys::Pgcli::TPQftablecol
+    @$xp$31Firedac@Phys@Pgcli@TPQgetCancel @28  ; __tpdsc__ Firedac::Phys::Pgcli::TPQgetCancel
+    @$xp$31Firedac@Phys@Pgcli@TPQgetResult @16  ; __tpdsc__ Firedac::Phys::Pgcli::TPQgetResult
+    @$xp$31Firedac@Phys@Pgcli@TPQgetisnull @38  ; __tpdsc__ Firedac::Phys::Pgcli::TPQgetisnull
+    @$xp$31Firedac@Phys@Pgcli@TPQgetlength @37  ; __tpdsc__ Firedac::Phys::Pgcli::TPQgetlength
+    @$xp$31Firedac@Phys@Pgcli@TPQoidStatus @32  ; __tpdsc__ Firedac::Phys::Pgcli::TPQoidStatus
+    @$xp$31Firedac@Phys@Pgcli@TPQparamtype @35  ; __tpdsc__ Firedac::Phys::Pgcli::TPQparamtype
+    @$xp$31Firedac@Phys@Pgcli@Tlo_truncate @17  ; __tpdsc__ Firedac::Phys::Pgcli::Tlo_truncate
+    @$xp$31Firedac@Phys@Pgwrapper@TPgBrand @304 ; __tpdsc__ Firedac::Phys::Pgwrapper::TPgBrand
+    @$xp$31Firedac@Phys@Pgwrapper@TPgEnums @288 ; __tpdsc__ Firedac::Phys::Pgwrapper::TPgEnums
+    @$xp$31Firedac@Phys@Pgwrapper@TPgField @271 ; __tpdsc__ Firedac::Phys::Pgwrapper::TPgField
+    @$xp$31Firedac@Phys@Pgwrapper@TPgParam @275 ; __tpdsc__ Firedac::Phys::Pgwrapper::TPgParam
+    @$xp$32Firedac@Phys@Pgcli@TPQBulkFinish @4   ; __tpdsc__ Firedac::Phys::Pgcli::TPQBulkFinish
+    @$xp$32Firedac@Phys@Pgcli@TPQbackendPID @62  ; __tpdsc__ Firedac::Phys::Pgcli::TPQbackendPID
+    @$xp$32Firedac@Phys@Pgcli@TPQexecParams @60  ; __tpdsc__ Firedac::Phys::Pgcli::TPQexecParams
+    @$xp$32Firedac@Phys@Pgcli@TPQfreeCancel @27  ; __tpdsc__ Firedac::Phys::Pgcli::TPQfreeCancel
+    @$xp$32Firedac@Phys@Pgcli@TPQputCopyEnd @14  ; __tpdsc__ Firedac::Phys::Pgcli::TPQputCopyEnd
+    @$xp$32Firedac@Phys@Pgcli@pgresAttValue @97  ; __tpdsc__ Firedac::Phys::Pgcli::pgresAttValue
+    @$xp$32Firedac@Phys@Pgwrapper@TPgFields @269 ; __tpdsc__ Firedac::Phys::Pgwrapper::TPgFields
+    @$xp$32Firedac@Phys@Pgwrapper@TPgMember @292 ; __tpdsc__ Firedac::Phys::Pgwrapper::TPgMember
+    @$xp$32Firedac@Phys@Pgwrapper@TPgObject @300 ; __tpdsc__ Firedac::Phys::Pgwrapper::TPgObject
+    @$xp$32Firedac@Phys@Pgwrapper@TPgParams @273 ; __tpdsc__ Firedac::Phys::Pgwrapper::TPgParams
+    @$xp$33Firedac@Phys@Pgcli@PPGresAttValue @95  ; __tpdsc__ Firedac::Phys::Pgcli::PPGresAttValue
+    @$xp$33Firedac@Phys@Pgcli@TPQputCopyData @15  ; __tpdsc__ Firedac::Phys::Pgcli::TPQputCopyData
+    @$xp$33Firedac@Phys@Pgdef@TFDPGOidAsBlob @335 ; __tpdsc__ Firedac::Phys::Pgdef::TFDPGOidAsBlob
+    @$xp$33Firedac@Phys@Pgwrapper@TFDPgError @298 ; __tpdsc__ Firedac::Phys::Pgwrapper::TFDPgError
+    @$xp$33Firedac@Phys@Pgwrapper@TPgMembers @289 ; __tpdsc__ Firedac::Phys::Pgwrapper::TPgMembers
+    @$xp$34Firedac@Phys@Pgcli@PPPGresAttValue @94  ; __tpdsc__ Firedac::Phys::Pgcli::PPPGresAttValue
+    @$xp$34Firedac@Phys@Pgcli@TPQbinaryTuples @40  ; __tpdsc__ Firedac::Phys::Pgcli::TPQbinaryTuples
+    @$xp$34Firedac@Phys@Pgcli@TPQconndefaults @81  ; __tpdsc__ Firedac::Phys::Pgcli::TPQconndefaults
+    @$xp$34Firedac@Phys@Pgcli@TPQconsumeInput @11  ; __tpdsc__ Firedac::Phys::Pgcli::TPQconsumeInput
+    @$xp$34Firedac@Phys@Pgcli@TPQerrorMessage @63  ; __tpdsc__ Firedac::Phys::Pgcli::TPQerrorMessage
+    @$xp$34Firedac@Phys@Pgcli@TPQexecPrepared @58  ; __tpdsc__ Firedac::Phys::Pgcli::TPQexecPrepared
+    @$xp$34Firedac@Phys@Pgcli@TPQresultStatus @55  ; __tpdsc__ Firedac::Phys::Pgcli::TPQresultStatus
+    @$xp$34Firedac@Phys@Pgcli@TQsendBulkStart @9   ; __tpdsc__ Firedac::Phys::Pgcli::TQsendBulkStart
+    @$xp$34Firedac@Phys@Pgwrapper@TPgVariable @279 ; __tpdsc__ Firedac::Phys::Pgwrapper::TPgVariable
+    @$xp$35Firedac@Phys@Pg@TFDPhysPgDriverLink @340 ; __tpdsc__ Firedac::Phys::Pg::TFDPhysPgDriverLink
+    @$xp$35Firedac@Phys@Pgcli@TPQserverVersion @68  ; __tpdsc__ Firedac::Phys::Pgcli::TPQserverVersion
+    @$xp$35Firedac@Phys@Pgcli@pgresAttValueEDB @96  ; __tpdsc__ Firedac::Phys::Pgcli::pgresAttValueEDB
+    @$xp$35Firedac@Phys@Pgwrapper@TPgStatement @267 ; __tpdsc__ Firedac::Phys::Pgwrapper::TPgStatement
+    @$xp$35Firedac@Phys@Pgwrapper@TPgTypeAttrs @290 ; __tpdsc__ Firedac::Phys::Pgwrapper::TPgTypeAttrs
+    @$xp$35Firedac@Phys@Pgwrapper@TPgVariables @277 ; __tpdsc__ Firedac::Phys::Pgwrapper::TPgVariables
+    @$xp$36Firedac@Phys@Pgcli@PPQconninfoOption @87  ; __tpdsc__ Firedac::Phys::Pgcli::PPQconninfoOption
+    @$xp$36Firedac@Phys@Pgcli@PQConninfoOptions @88  ; __tpdsc__ Firedac::Phys::Pgcli::PQConninfoOptions
+    @$xp$36Firedac@Phys@Pgcli@TPQclientEncoding @65  ; __tpdsc__ Firedac::Phys::Pgcli::TPQclientEncoding
+    @$xp$36Firedac@Phys@Pgcli@TPQdescribePortal @56  ; __tpdsc__ Firedac::Phys::Pgcli::TPQdescribePortal
+    @$xp$36Firedac@Phys@Pgcli@TPQnoticeReceiver @84  ; __tpdsc__ Firedac::Phys::Pgcli::TPQnoticeReceiver
+    @$xp$36Firedac@Phys@Pgcli@TPQsendBulkFinish @7   ; __tpdsc__ Firedac::Phys::Pgcli::TPQsendBulkFinish
+    @$xp$36Firedac@Phys@Pgdef@TFDPGCharacterSet @336 ; __tpdsc__ Firedac::Phys::Pgdef::TFDPGCharacterSet
+    @$xp$36Firedac@Phys@Pgwrapper@TPgConnection @281 ; __tpdsc__ Firedac::Phys::Pgwrapper::TPgConnection
+    @$xp$37Firedac@Phys@Pgcli@TPQnoticeProcessor @83  ; __tpdsc__ Firedac::Phys::Pgcli::TPQnoticeProcessor
+    @$xp$37Firedac@Phys@Pgcli@TPQparameterStatus @70  ; __tpdsc__ Firedac::Phys::Pgcli::TPQparameterStatus
+    @$xp$37Firedac@Phys@Pgcli@TPQprotocolVersion @67  ; __tpdsc__ Firedac::Phys::Pgcli::TPQprotocolVersion
+    @$xp$37Firedac@Phys@Pgdef@TFDPGUnknownFormat @334 ; __tpdsc__ Firedac::Phys::Pgdef::TFDPGUnknownFormat
+    @$xp$37Firedac@Phys@Pgwrapper@TPgLargeObject @265 ; __tpdsc__ Firedac::Phys::Pgwrapper::TPgLargeObject
+    @$xp$38Firedac@Phys@Pgcli@TPQdescribePrepared @57  ; __tpdsc__ Firedac::Phys::Pgcli::TPQdescribePrepared
+    @$xp$38Firedac@Phys@Pgcli@TPQexecBulkPrepared @3   ; __tpdsc__ Firedac::Phys::Pgcli::TPQexecBulkPrepared
+    @$xp$38Firedac@Phys@Pgcli@TPQresultErrorField @53  ; __tpdsc__ Firedac::Phys::Pgcli::TPQresultErrorField
+    @$xp$38Firedac@Phys@Pgwrapper@TPgTypesManager @284 ; __tpdsc__ Firedac::Phys::Pgwrapper::TPgTypesManager
+    @$xp$39Firedac@Phys@Pgcli@TPQmakeEmptyPGresult @51  ; __tpdsc__ Firedac::Phys::Pgcli::TPQmakeEmptyPGresult
+    @$xp$39Firedac@Phys@Pgcli@TPQsetClientEncoding @66  ; __tpdsc__ Firedac::Phys::Pgcli::TPQsetClientEncoding
+    @$xp$39Firedac@Phys@Pgcli@TPQsetNoticeReceiver @30  ; __tpdsc__ Firedac::Phys::Pgcli::TPQsetNoticeReceiver
+    @$xp$39Firedac@Phys@Pgcli@TPQtransactionStatus @69  ; __tpdsc__ Firedac::Phys::Pgcli::TPQtransactionStatus
+    @$xp$39Firedac@Phys@Pgcli@Tpg_encoding_to_char @64  ; __tpdsc__ Firedac::Phys::Pgcli::Tpg_encoding_to_char
+    @$xp$39Firedac@Phys@Pgwrapper@TPgVariableClass @305 ; __tpdsc__ Firedac::Phys::Pgwrapper::TPgVariableClass
+    @$xp$40Firedac@Phys@Pgcli@TPQresultErrorMessage @54  ; __tpdsc__ Firedac::Phys::Pgcli::TPQresultErrorMessage
+    @$xp$40Firedac@Phys@Pgcli@TPQsetNoticeProcessor @29  ; __tpdsc__ Firedac::Phys::Pgcli::TPQsetNoticeProcessor
+    @$xp$41Firedac@Phys@Pgwrapper@EPgNativeException @296 ; __tpdsc__ Firedac::Phys::Pgwrapper::EPgNativeException
+    @$xp$43Firedac@Phys@Pgwrapper@TPgLargeObjectStream @263 ; __tpdsc__ Firedac::Phys::Pgwrapper::TPgLargeObjectStream
+    @$xp$47Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams @332 ; __tpdsc__ Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams
+    @$xp$47Firedac@Phys@Pgwrapper@TPgConnectionNotifyEvent @283 ; __tpdsc__ Firedac::Phys::Pgwrapper::TPgConnectionNotifyEvent
+    @$xp$48Firedac@Phys@Pgwrapper@Firedac_Phys_Pgwrapper__7 @291 ; __tpdsc__ Firedac::Phys::Pgwrapper::Firedac_Phys_Pgwrapper__7
+    @Firedac@Phys@Pg@Finalization$qqrv @338 ; __fastcall Firedac::Phys::Pg::Finalization()
+    @Firedac@Phys@Pg@TFDPhysPgDriverLink@ @341 ; Firedac::Phys::Pg::TFDPhysPgDriverLink::
+    @Firedac@Phys@Pg@TFDPhysPgDriverLink@GetBaseDriverID$qqrv @339 ; __fastcall Firedac::Phys::Pg::TFDPhysPgDriverLink::GetBaseDriverID()
+    @Firedac@Phys@Pg@initialization$qqrv @337 ; __fastcall Firedac::Phys::Pg::initialization()
+    @Firedac@Phys@Pgcli@Finalization$qqrv @2   ; __fastcall Firedac::Phys::Pgcli::Finalization()
+    @Firedac@Phys@Pgcli@initialization$qqrv @1   ; __fastcall Firedac::Phys::Pgcli::initialization()
+    @Firedac@Phys@Pgdef@Finalization$qqrv @307 ; __fastcall Firedac::Phys::Pgdef::Finalization()
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@ @333 ; Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@GetApplicationName$qqrv @315 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::GetApplicationName()
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@GetCharacterSet$qqrv @323 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::GetCharacterSet()
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@GetDriverID$qqrv @331 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::GetDriverID()
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@GetExtendedMetadata$qqrv @321 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::GetExtendedMetadata()
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@GetLoginTimeout$qqrv @325 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::GetLoginTimeout()
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@GetMetaCurSchema$qqrv @309 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::GetMetaCurSchema()
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@GetMetaDefSchema$qqrv @311 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::GetMetaDefSchema()
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@GetOidAsBlob$qqrv @319 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::GetOidAsBlob()
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@GetPGAdvanced$qqrv @313 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::GetPGAdvanced()
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@GetPort$qqrv @327 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::GetPort()
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@GetServer$qqrv @329 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::GetServer()
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@GetUnknownFormat$qqrv @317 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::GetUnknownFormat()
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@SetApplicationName$qqrx20System@UnicodeString @314 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::SetApplicationName(const System::UnicodeString)
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@SetCharacterSet$qqrx36Firedac@Phys@Pgdef@TFDPGCharacterSet @322 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::SetCharacterSet(const Firedac::Phys::Pgdef::TFDPGCharacterSet)
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@SetDriverID$qqrx20System@UnicodeString @330 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::SetDriverID(const System::UnicodeString)
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@SetExtendedMetadata$qqrxo @320 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::SetExtendedMetadata(const bool)
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@SetLoginTimeout$qqrxi @324 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::SetLoginTimeout(const int)
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@SetMetaCurSchema$qqrx20System@UnicodeString @308 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::SetMetaCurSchema(const System::UnicodeString)
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@SetMetaDefSchema$qqrx20System@UnicodeString @310 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::SetMetaDefSchema(const System::UnicodeString)
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@SetOidAsBlob$qqrx33Firedac@Phys@Pgdef@TFDPGOidAsBlob @318 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::SetOidAsBlob(const Firedac::Phys::Pgdef::TFDPGOidAsBlob)
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@SetPGAdvanced$qqrx20System@UnicodeString @312 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::SetPGAdvanced(const System::UnicodeString)
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@SetPort$qqrxi @326 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::SetPort(const int)
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@SetServer$qqrx20System@UnicodeString @328 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::SetServer(const System::UnicodeString)
+    @Firedac@Phys@Pgdef@TFDPhysPGConnectionDefParams@SetUnknownFormat$qqrx37Firedac@Phys@Pgdef@TFDPGUnknownFormat @316 ; __fastcall Firedac::Phys::Pgdef::TFDPhysPGConnectionDefParams::SetUnknownFormat(const Firedac::Phys::Pgdef::TFDPGUnknownFormat)
+    @Firedac@Phys@Pgdef@initialization$qqrv @306 ; __fastcall Firedac::Phys::Pgdef::initialization()
+    @Firedac@Phys@Pgwrapper@EPgNativeException@ @297 ; Firedac::Phys::Pgwrapper::EPgNativeException::
+    @Firedac@Phys@Pgwrapper@EPgNativeException@AppendError$qqrx20System@UnicodeString @256 ; __fastcall Firedac::Phys::Pgwrapper::EPgNativeException::AppendError(const System::UnicodeString)
+    @Firedac@Phys@Pgwrapper@EPgNativeException@AppendError$qqrx20System@UnicodeStringt1t1t1t1iit1t1t1it1 @255 ; Firedac::Phys::Pgwrapper::EPgNativeException::AppendError(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, int, int, const System::UnicodeString, const Syst
+    @Firedac@Phys@Pgwrapper@EPgNativeException@GetErrorClass$qqrv @254 ; __fastcall Firedac::Phys::Pgwrapper::EPgNativeException::GetErrorClass()
+    @Firedac@Phys@Pgwrapper@Finalization$qqrv @99  ; __fastcall Firedac::Phys::Pgwrapper::Finalization()
+    @Firedac@Phys@Pgwrapper@GetPgMoney$qqrpvir15System@Currency @191 ; __fastcall Firedac::Phys::Pgwrapper::GetPgMoney(void *, int, System::Currency&)
+    @Firedac@Phys@Pgwrapper@GetPgNumeric$qqrpvr16Data@Fmtbcd@TBcd @192 ; __fastcall Firedac::Phys::Pgwrapper::GetPgNumeric(void *, Data::Fmtbcd::TBcd&)
+    @Firedac@Phys@Pgwrapper@SetPgMoney$qqrx15System@Currencypvui @189 ; __fastcall Firedac::Phys::Pgwrapper::SetPgMoney(const System::Currency, void *, unsigned int)
+    @Firedac@Phys@Pgwrapper@SetPgNumeric$qqrrx16Data@Fmtbcd@TBcdpvrui @190 ; __fastcall Firedac::Phys::Pgwrapper::SetPgNumeric(const Data::Fmtbcd::TBcd&, void *, unsigned int&)
+    @Firedac@Phys@Pgwrapper@TFDPgError@ @299 ; Firedac::Phys::Pgwrapper::TFDPgError::
+    @Firedac@Phys@Pgwrapper@TFDPgError@Assign$qqrp29Firedac@Stan@Error@TFDDBError @259 ; __fastcall Firedac::Phys::Pgwrapper::TFDPgError::Assign(Firedac::Stan::Error::TFDDBError *)
+    @Firedac@Phys@Pgwrapper@TFDPgError@LoadFromStorage$qqrx59System@%DelphiInterface$32Firedac@Stan@Intf@IFDStanStorage% @258 ; Firedac::Phys::Pgwrapper::TFDPgError::LoadFromStorage(const System::DelphiInterface<{583}...
+    @Firedac@Phys@Pgwrapper@TFDPgError@SaveToStorage$qqrx59System@%DelphiInterface$32Firedac@Stan@Intf@IFDStanStorage% @257 ; Firedac::Phys::Pgwrapper::TFDPgError::SaveToStorage(const System::DelphiInterface<{583}...
+    @Firedac@Phys@Pgwrapper@TPgConnection@ @282 ; Firedac::Phys::Pgwrapper::TPgConnection::
+    @Firedac@Phys@Pgwrapper@TPgConnection@$bctr$qqrp29Firedac@Phys@Pgwrapper@TPgEnvp14System@TObject @228 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::TPgConnection(Firedac::Phys::Pgwrapper::TPgEnv *, System::TObject *)
+    @Firedac@Phys@Pgwrapper@TPgConnection@$bctr$qqrp29Firedac@Phys@Pgwrapper@TPgEnvpvpip14System@TObject @227 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::TPgConnection(Firedac::Phys::Pgwrapper::TPgEnv *, void *, int *, System::TObject *)
+    @Firedac@Phys@Pgwrapper@TPgConnection@$bdtr$qqrv @226 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::~TPgConnection()
+    @Firedac@Phys@Pgwrapper@TPgConnection@Abort$qqrv @202 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::Abort()
+    @Firedac@Phys@Pgwrapper@TPgConnection@Check$qqrv @225 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::Check()
+    @Firedac@Phys@Pgwrapper@TPgConnection@CheckForInput$qqrv @224 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::CheckForInput()
+    @Firedac@Phys@Pgwrapper@TPgConnection@CheckResult$qqrp28Firedac@Phys@Pgcli@pg_resultp14System@TObject @221 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::CheckResult(Firedac::Phys::Pgcli::pg_result *, System::TObject *)
+    @Firedac@Phys@Pgwrapper@TPgConnection@ClearNotices$qqrv @220 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::ClearNotices()
+    @Firedac@Phys@Pgwrapper@TPgConnection@Connect$qqrx20System@UnicodeString @218 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::Connect(const System::UnicodeString)
+    @Firedac@Phys@Pgwrapper@TPgConnection@Disconnect$qqrv @217 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::Disconnect()
+    @Firedac@Phys@Pgwrapper@TPgConnection@DoNoticeReceive$qqrp28Firedac@Phys@Pgcli@pg_result @219 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::DoNoticeReceive(Firedac::Phys::Pgcli::pg_result *)
+    @Firedac@Phys@Pgwrapper@TPgConnection@ExecuteQuery$qqr20System@UnicodeString @203 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::ExecuteQuery(System::UnicodeString)
+    @Firedac@Phys@Pgwrapper@TPgConnection@GenerateName$qqrv @199 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::GenerateName()
+    @Firedac@Phys@Pgwrapper@TPgConnection@GetCLIENT_ENCODING$qqrv @211 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::GetCLIENT_ENCODING()
+    @Firedac@Phys@Pgwrapper@TPgConnection@GetClientEncoding$qqrv @201 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::GetClientEncoding()
+    @Firedac@Phys@Pgwrapper@TPgConnection@GetDATESTYLE$qqrv @208 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::GetDATESTYLE()
+    @Firedac@Phys@Pgwrapper@TPgConnection@GetINTEGER_DATETIMES$qqrv @206 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::GetINTEGER_DATETIMES()
+    @Firedac@Phys@Pgwrapper@TPgConnection@GetIS_SUPERUSER$qqrv @210 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::GetIS_SUPERUSER()
+    @Firedac@Phys@Pgwrapper@TPgConnection@GetIntegerDateTimes$qqrv @205 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::GetIntegerDateTimes()
+    @Firedac@Phys@Pgwrapper@TPgConnection@GetParameterStatus$qqrx20System@UnicodeString @216 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::GetParameterStatus(const System::UnicodeString)
+    @Firedac@Phys@Pgwrapper@TPgConnection@GetSERVER_ENCODING$qqrv @212 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::GetSERVER_ENCODING()
+    @Firedac@Phys@Pgwrapper@TPgConnection@GetSERVER_VERSION$qqrv @213 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::GetSERVER_VERSION()
+    @Firedac@Phys@Pgwrapper@TPgConnection@GetSESSION_AUTHORIZATION$qqrv @209 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::GetSESSION_AUTHORIZATION()
+    @Firedac@Phys@Pgwrapper@TPgConnection@GetSTANDARD_CONFORMING_STRINGS$qqrv @204 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::GetSTANDARD_CONFORMING_STRINGS()
+    @Firedac@Phys@Pgwrapper@TPgConnection@GetServerVersion$qqrv @214 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::GetServerVersion()
+    @Firedac@Phys@Pgwrapper@TPgConnection@GetTIMEZONE$qqrv @207 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::GetTIMEZONE()
+    @Firedac@Phys@Pgwrapper@TPgConnection@GetTransactionStatus$qqrv @215 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::GetTransactionStatus()
+    @Firedac@Phys@Pgwrapper@TPgConnection@ReadNotifies$qqrr20System@UnicodeStringrit1 @223 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::ReadNotifies(System::UnicodeString&, int&, System::UnicodeString&)
+    @Firedac@Phys@Pgwrapper@TPgConnection@ReadResultError$qqrp28Firedac@Phys@Pgcli@pg_resultp41Firedac@Phys@Pgwrapper@EPgNativeException @222 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::ReadResultError(Firedac::Phys::Pgcli::pg_result *, Firedac::Phys::Pgwrapper::EPgNativeException *)
+    @Firedac@Phys@Pgwrapper@TPgConnection@SetClientEncoding$qqrx20System@UnicodeString @200 ; __fastcall Firedac::Phys::Pgwrapper::TPgConnection::SetClientEncoding(const System::UnicodeString)
+    @Firedac@Phys@Pgwrapper@TPgEnv@ @295 ; Firedac::Phys::Pgwrapper::TPgEnv::
+    @Firedac@Phys@Pgwrapper@TPgEnv@$bctr$qqrp29Firedac@Phys@Pgwrapper@TPgLibp14System@TObject @253 ; __fastcall Firedac::Phys::Pgwrapper::TPgEnv::TPgEnv(Firedac::Phys::Pgwrapper::TPgLib *, System::TObject *)
+    @Firedac@Phys@Pgwrapper@TPgEnv@GetTracing$qqrv @252 ; __fastcall Firedac::Phys::Pgwrapper::TPgEnv::GetTracing()
+    @Firedac@Phys@Pgwrapper@TPgEnv@Trace$qqr34Firedac@Stan@Intf@TFDMoniEventKind34Firedac@Stan@Intf@TFDMoniEventStepx20System@UnicodeStringpx14System@TVarRecxi @250 ; __fastcall Firedac::Phys::Pgwrapper::TPgEnv::Trace(Firedac::Stan::Intf::TFDMoniEventKind, Firedac::Stan::Intf::TFDMoniEventStep, const System::UnicodeString, const System::TVarRec *, const int)
+    @Firedac@Phys@Pgwrapper@TPgEnv@Trace$qqrx20System@UnicodeStringpx14System@TVarRecxi @251 ; __fastcall Firedac::Phys::Pgwrapper::TPgEnv::Trace(const System::UnicodeString, const System::TVarRec *, const int)
+    @Firedac@Phys@Pgwrapper@TPgField@ @272 ; Firedac::Phys::Pgwrapper::TPgField::
+    @Firedac@Phys@Pgwrapper@TPgField@$bctr$qqrp35Firedac@Phys@Pgwrapper@TPgVariables @161 ; __fastcall Firedac::Phys::Pgwrapper::TPgField::TPgField(Firedac::Phys::Pgwrapper::TPgVariables *)
+    @Firedac@Phys@Pgwrapper@TPgField@$bdtr$qqrv @160 ; __fastcall Firedac::Phys::Pgwrapper::TPgField::~TPgField()
+    @Firedac@Phys@Pgwrapper@TPgField@DumpValue$qqrv @147 ; __fastcall Firedac::Phys::Pgwrapper::TPgField::DumpValue()
+    @Firedac@Phys@Pgwrapper@TPgField@GetArrayBounds$qqrrit1ro @149 ; __fastcall Firedac::Phys::Pgwrapper::TPgField::GetArrayBounds(int&, int&, bool&)
+    @Firedac@Phys@Pgwrapper@TPgField@GetArrayInfo$qqrpvrit2rorpv @155 ; __fastcall Firedac::Phys::Pgwrapper::TPgField::GetArrayInfo(void *, int&, int&, bool&, void *&)
+    @Firedac@Phys@Pgwrapper@TPgField@GetAsString$qqrv @150 ; __fastcall Firedac::Phys::Pgwrapper::TPgField::GetAsString()
+    @Firedac@Phys@Pgwrapper@TPgField@GetData$qqrpv @151 ; __fastcall Firedac::Phys::Pgwrapper::TPgField::GetData(void *)
+    @Firedac@Phys@Pgwrapper@TPgField@GetData$qqrpvrui @152 ; __fastcall Firedac::Phys::Pgwrapper::TPgField::GetData(void *, unsigned int&)
+    @Firedac@Phys@Pgwrapper@TPgField@GetData$qqrrpvruio @153 ; __fastcall Firedac::Phys::Pgwrapper::TPgField::GetData(void *&, unsigned int&, bool)
+    @Firedac@Phys@Pgwrapper@TPgField@GetDumpLabel$qqrv @148 ; __fastcall Firedac::Phys::Pgwrapper::TPgField::GetDumpLabel()
+    @Firedac@Phys@Pgwrapper@TPgField@GetParentField$qqrv @157 ; __fastcall Firedac::Phys::Pgwrapper::TPgField::GetParentField()
+    @Firedac@Phys@Pgwrapper@TPgField@GetPgData$qqrrpvri @156 ; __fastcall Firedac::Phys::Pgwrapper::TPgField::GetPgData(void *&, int&)
+    @Firedac@Phys@Pgwrapper@TPgField@SetArrayIndex$qqrxi @154 ; __fastcall Firedac::Phys::Pgwrapper::TPgField::SetArrayIndex(const int)
+    @Firedac@Phys@Pgwrapper@TPgField@SetDefaults$qqrv @158 ; __fastcall Firedac::Phys::Pgwrapper::TPgField::SetDefaults()
+    @Firedac@Phys@Pgwrapper@TPgField@SetTypeOid$qqrui @159 ; __fastcall Firedac::Phys::Pgwrapper::TPgField::SetTypeOid(unsigned int)
+    @Firedac@Phys@Pgwrapper@TPgFields@ @270 ; Firedac::Phys::Pgwrapper::TPgFields::
+    @Firedac@Phys@Pgwrapper@TPgFields@$bctr$qqrp31Firedac@Phys@Pgwrapper@TPgField @146 ; __fastcall Firedac::Phys::Pgwrapper::TPgFields::TPgFields(Firedac::Phys::Pgwrapper::TPgField *)
+    @Firedac@Phys@Pgwrapper@TPgFields@GetItems$qqri @144 ; __fastcall Firedac::Phys::Pgwrapper::TPgFields::GetItems(int)
+    @Firedac@Phys@Pgwrapper@TPgFields@GetVariableClass$qqrv @145 ; __fastcall Firedac::Phys::Pgwrapper::TPgFields::GetVariableClass()
+    @Firedac@Phys@Pgwrapper@TPgLargeObject@ @266 ; Firedac::Phys::Pgwrapper::TPgLargeObject::
+    @Firedac@Phys@Pgwrapper@TPgLargeObject@$bctr$qqrp36Firedac@Phys@Pgwrapper@TPgConnection31Firedac@Stan@Intf@TFDStreamModep14System@TObject @120 ; __fastcall Firedac::Phys::Pgwrapper::TPgLargeObject::TPgLargeObject(Firedac::Phys::Pgwrapper::TPgConnection *, Firedac::Stan::Intf::TFDStreamMode, System::TObject *)
+    @Firedac@Phys@Pgwrapper@TPgLargeObject@$bctr$qqrp36Firedac@Phys@Pgwrapper@TPgConnection31Firedac@Stan@Intf@TFDStreamModep14System@TObjectui @119 ; __fastcall Firedac::Phys::Pgwrapper::TPgLargeObject::TPgLargeObject(Firedac::Phys::Pgwrapper::TPgConnection *, Firedac::Stan::Intf::TFDStreamMode, System::TObject *, unsigned int)
+    @Firedac@Phys@Pgwrapper@TPgLargeObject@$bdtr$qqrv @118 ; __fastcall Firedac::Phys::Pgwrapper::TPgLargeObject::~TPgLargeObject()
+    @Firedac@Phys@Pgwrapper@TPgLargeObject@CheckReadWrite$qqrv @113 ; __fastcall Firedac::Phys::Pgwrapper::TPgLargeObject::CheckReadWrite()
+    @Firedac@Phys@Pgwrapper@TPgLargeObject@Close$qqro @110 ; __fastcall Firedac::Phys::Pgwrapper::TPgLargeObject::Close(bool)
+    @Firedac@Phys@Pgwrapper@TPgLargeObject@CreateObj$qqrv @112 ; __fastcall Firedac::Phys::Pgwrapper::TPgLargeObject::CreateObj()
+    @Firedac@Phys@Pgwrapper@TPgLargeObject@Error$qqrx20System@UnicodeStringi @114 ; __fastcall Firedac::Phys::Pgwrapper::TPgLargeObject::Error(const System::UnicodeString, int)
+    @Firedac@Phys@Pgwrapper@TPgLargeObject@GetLen$qqrv @116 ; __fastcall Firedac::Phys::Pgwrapper::TPgLargeObject::GetLen()
+    @Firedac@Phys@Pgwrapper@TPgLargeObject@Mode2PGMode$qqrv @117 ; __fastcall Firedac::Phys::Pgwrapper::TPgLargeObject::Mode2PGMode()
+    @Firedac@Phys@Pgwrapper@TPgLargeObject@Open$qqrv @111 ; __fastcall Firedac::Phys::Pgwrapper::TPgLargeObject::Open()
+    @Firedac@Phys@Pgwrapper@TPgLargeObject@Read$qqrpuci @107 ; __fastcall Firedac::Phys::Pgwrapper::TPgLargeObject::Read(unsigned char *, int)
+    @Firedac@Phys@Pgwrapper@TPgLargeObject@Seek$qqrius @108 ; __fastcall Firedac::Phys::Pgwrapper::TPgLargeObject::Seek(int, unsigned short)
+    @Firedac@Phys@Pgwrapper@TPgLargeObject@SetLen$qqrxi @115 ; __fastcall Firedac::Phys::Pgwrapper::TPgLargeObject::SetLen(const int)
+    @Firedac@Phys@Pgwrapper@TPgLargeObject@UnLink$qqrv @109 ; __fastcall Firedac::Phys::Pgwrapper::TPgLargeObject::UnLink()
+    @Firedac@Phys@Pgwrapper@TPgLargeObject@Write$qqrpuci @106 ; __fastcall Firedac::Phys::Pgwrapper::TPgLargeObject::Write(unsigned char *, int)
+    @Firedac@Phys@Pgwrapper@TPgLargeObjectStream@ @264 ; Firedac::Phys::Pgwrapper::TPgLargeObjectStream::
+    @Firedac@Phys@Pgwrapper@TPgLargeObjectStream@$bctr$qqrp37Firedac@Phys@Pgwrapper@TPgLargeObject @105 ; __fastcall Firedac::Phys::Pgwrapper::TPgLargeObjectStream::TPgLargeObjectStream(Firedac::Phys::Pgwrapper::TPgLargeObject *)
+    @Firedac@Phys@Pgwrapper@TPgLargeObjectStream@$bdtr$qqrv @104 ; __fastcall Firedac::Phys::Pgwrapper::TPgLargeObjectStream::~TPgLargeObjectStream()
+    @Firedac@Phys@Pgwrapper@TPgLargeObjectStream@Read$qqrpvi @103 ; __fastcall Firedac::Phys::Pgwrapper::TPgLargeObjectStream::Read(void *, int)
+    @Firedac@Phys@Pgwrapper@TPgLargeObjectStream@Seek$qqrxj26System@Classes@TSeekOrigin @101 ; __fastcall Firedac::Phys::Pgwrapper::TPgLargeObjectStream::Seek(const __int64, System::Classes::TSeekOrigin)
+    @Firedac@Phys@Pgwrapper@TPgLargeObjectStream@SetSize$qqrxj @100 ; __fastcall Firedac::Phys::Pgwrapper::TPgLargeObjectStream::SetSize(const __int64)
+    @Firedac@Phys@Pgwrapper@TPgLargeObjectStream@Write$qqrpxvi @102 ; __fastcall Firedac::Phys::Pgwrapper::TPgLargeObjectStream::Write(const void *, int)
+    @Firedac@Phys@Pgwrapper@TPgLib@ @303 ; Firedac::Phys::Pgwrapper::TPgLib::
+    @Firedac@Phys@Pgwrapper@TPgLib@$bctr$qqrp14System@TObject @262 ; __fastcall Firedac::Phys::Pgwrapper::TPgLib::TPgLib(System::TObject *)
+    @Firedac@Phys@Pgwrapper@TPgLib@Load$qqrx20System@UnicodeStringt1 @261 ; __fastcall Firedac::Phys::Pgwrapper::TPgLib::Load(const System::UnicodeString, const System::UnicodeString)
+    @Firedac@Phys@Pgwrapper@TPgLib@LoadEntries$qqrv @260 ; __fastcall Firedac::Phys::Pgwrapper::TPgLib::LoadEntries()
+    @Firedac@Phys@Pgwrapper@TPgMember@ @293 ; Firedac::Phys::Pgwrapper::TPgMember::
+    @Firedac@Phys@Pgwrapper@TPgMember@$bctr$qqrv @246 ; __fastcall Firedac::Phys::Pgwrapper::TPgMember::TPgMember()
+    @Firedac@Phys@Pgwrapper@TPgObject@ @301 ; Firedac::Phys::Pgwrapper::TPgObject::
+    @Firedac@Phys@Pgwrapper@TPgObject@$bctr$qqrp29Firedac@Phys@Pgwrapper@TPgEnvp14System@TObject @249 ; __fastcall Firedac::Phys::Pgwrapper::TPgObject::TPgObject(Firedac::Phys::Pgwrapper::TPgEnv *, System::TObject *)
+    @Firedac@Phys@Pgwrapper@TPgObject@DoError$qqrx20System@UnicodeStringi @247 ; __fastcall Firedac::Phys::Pgwrapper::TPgObject::DoError(const System::UnicodeString, int)
+    @Firedac@Phys@Pgwrapper@TPgObject@GetLib$qqrv @248 ; __fastcall Firedac::Phys::Pgwrapper::TPgObject::GetLib()
+    @Firedac@Phys@Pgwrapper@TPgParam@ @276 ; Firedac::Phys::Pgwrapper::TPgParam::
+    @Firedac@Phys@Pgwrapper@TPgParam@$bdtr$qqrv @175 ; __fastcall Firedac::Phys::Pgwrapper::TPgParam::~TPgParam()
+    @Firedac@Phys@Pgwrapper@TPgParam@AllocBuffer$qqrui @173 ; __fastcall Firedac::Phys::Pgwrapper::TPgParam::AllocBuffer(unsigned int)
+    @Firedac@Phys@Pgwrapper@TPgParam@CheckBuffer$qqrv @174 ; __fastcall Firedac::Phys::Pgwrapper::TPgParam::CheckBuffer()
+    @Firedac@Phys@Pgwrapper@TPgParam@DumpValue$qqrv @171 ; __fastcall Firedac::Phys::Pgwrapper::TPgParam::DumpValue()
+    @Firedac@Phys@Pgwrapper@TPgParam@FreeBuffer$qqrv @172 ; __fastcall Firedac::Phys::Pgwrapper::TPgParam::FreeBuffer()
+    @Firedac@Phys@Pgwrapper@TPgParam@SetData$qqrpvuio @169 ; __fastcall Firedac::Phys::Pgwrapper::TPgParam::SetData(void *, unsigned int, bool)
+    @Firedac@Phys@Pgwrapper@TPgParam@SetTypeOid$qqrui @170 ; __fastcall Firedac::Phys::Pgwrapper::TPgParam::SetTypeOid(unsigned int)
+    @Firedac@Phys@Pgwrapper@TPgParams@ @274 ; Firedac::Phys::Pgwrapper::TPgParams::
+    @Firedac@Phys@Pgwrapper@TPgParams@GetItems$qqri @162 ; __fastcall Firedac::Phys::Pgwrapper::TPgParams::GetItems(int)
+    @Firedac@Phys@Pgwrapper@TPgParams@GetValueFormats$qqrv @163 ; __fastcall Firedac::Phys::Pgwrapper::TPgParams::GetValueFormats()
+    @Firedac@Phys@Pgwrapper@TPgParams@GetValueLengths$qqrv @164 ; __fastcall Firedac::Phys::Pgwrapper::TPgParams::GetValueLengths()
+    @Firedac@Phys@Pgwrapper@TPgParams@GetValueRefs$qqrv @165 ; __fastcall Firedac::Phys::Pgwrapper::TPgParams::GetValueRefs()
+    @Firedac@Phys@Pgwrapper@TPgParams@GetValueTypes$qqrv @166 ; __fastcall Firedac::Phys::Pgwrapper::TPgParams::GetValueTypes()
+    @Firedac@Phys@Pgwrapper@TPgParams@GetVariableClass$qqrv @168 ; __fastcall Firedac::Phys::Pgwrapper::TPgParams::GetVariableClass()
+    @Firedac@Phys@Pgwrapper@TPgParams@SetCount$qqri @167 ; __fastcall Firedac::Phys::Pgwrapper::TPgParams::SetCount(int)
+    @Firedac@Phys@Pgwrapper@TPgStatement@ @268 ; Firedac::Phys::Pgwrapper::TPgStatement::
+    @Firedac@Phys@Pgwrapper@TPgStatement@$bctr$qqrp36Firedac@Phys@Pgwrapper@TPgConnectionp14System@TObject @143 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::TPgStatement(Firedac::Phys::Pgwrapper::TPgConnection *, System::TObject *)
+    @Firedac@Phys@Pgwrapper@TPgStatement@$bdtr$qqrv @142 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::~TPgStatement()
+    @Firedac@Phys@Pgwrapper@TPgStatement@Check$qqrp28Firedac@Phys@Pgcli@pg_result @140 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::Check(Firedac::Phys::Pgcli::pg_result *)
+    @Firedac@Phys@Pgwrapper@TPgStatement@Clear$qqrv @138 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::Clear()
+    @Firedac@Phys@Pgwrapper@TPgStatement@Close$qqrv @125 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::Close()
+    @Firedac@Phys@Pgwrapper@TPgStatement@DescribeFields$qqrv @134 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::DescribeFields()
+    @Firedac@Phys@Pgwrapper@TPgStatement@DumpInVars$qqrv @122 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::DumpInVars()
+    @Firedac@Phys@Pgwrapper@TPgStatement@DumpOutVars$qqrv @121 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::DumpOutVars()
+    @Firedac@Phys@Pgwrapper@TPgStatement@Execute$qqrv @130 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::Execute()
+    @Firedac@Phys@Pgwrapper@TPgStatement@ExecuteDirect$qqrx20System@UnicodeString @128 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::ExecuteDirect(const System::UnicodeString)
+    @Firedac@Phys@Pgwrapper@TPgStatement@Fetch$qqrv @126 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::Fetch()
+    @Firedac@Phys@Pgwrapper@TPgStatement@GetNextRowset$qqrv @127 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::GetNextRowset()
+    @Firedac@Phys@Pgwrapper@TPgStatement@GetResultInfo$qqrv @133 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::GetResultInfo()
+    @Firedac@Phys@Pgwrapper@TPgStatement@GetStmtName$qqrr20System@UnicodeStringt1 @141 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::GetStmtName(System::UnicodeString&, System::UnicodeString&)
+    @Firedac@Phys@Pgwrapper@TPgStatement@InternalExecute$qqri @131 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::InternalExecute(int)
+    @Firedac@Phys@Pgwrapper@TPgStatement@InternalExecute$qqrx20System@UnicodeStringipvpit4i @132 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::InternalExecute(const System::UnicodeString, int, void *, int *, int *, int)
+    @Firedac@Phys@Pgwrapper@TPgStatement@InternalExecuteDirect$qqrx20System@UnicodeStringi @129 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::InternalExecuteDirect(const System::UnicodeString, int)
+    @Firedac@Phys@Pgwrapper@TPgStatement@InternalPrepare$qqrx20System@UnicodeStringo @137 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::InternalPrepare(const System::UnicodeString, bool)
+    @Firedac@Phys@Pgwrapper@TPgStatement@InternalUnprepare$qqrr20System@UnicodeString @124 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::InternalUnprepare(System::UnicodeString&)
+    @Firedac@Phys@Pgwrapper@TPgStatement@PrepareCursor$qqrx20System@UnicodeString @135 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::PrepareCursor(const System::UnicodeString)
+    @Firedac@Phys@Pgwrapper@TPgStatement@PrepareSQL$qqrx20System@UnicodeString @136 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::PrepareSQL(const System::UnicodeString)
+    @Firedac@Phys@Pgwrapper@TPgStatement@Reset$qqrv @139 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::Reset()
+    @Firedac@Phys@Pgwrapper@TPgStatement@Unprepare$qqrv @123 ; __fastcall Firedac::Phys::Pgwrapper::TPgStatement::Unprepare()
+    @Firedac@Phys@Pgwrapper@TPgType@ @287 ; Firedac::Phys::Pgwrapper::TPgType::
+    @Firedac@Phys@Pgwrapper@TPgType@$bdtr$qqrv @245 ; __fastcall Firedac::Phys::Pgwrapper::TPgType::~TPgType()
+    @Firedac@Phys@Pgwrapper@TPgType@DumpType$qqrv @243 ; __fastcall Firedac::Phys::Pgwrapper::TPgType::DumpType()
+    @Firedac@Phys@Pgwrapper@TPgType@GetEnumValue$qqrui @241 ; __fastcall Firedac::Phys::Pgwrapper::TPgType::GetEnumValue(unsigned int)
+    @Firedac@Phys@Pgwrapper@TPgType@GetEnums$qqrv @244 ; __fastcall Firedac::Phys::Pgwrapper::TPgType::GetEnums()
+    @Firedac@Phys@Pgwrapper@TPgType@GetIsFlatFixedArray$qqrv @242 ; __fastcall Firedac::Phys::Pgwrapper::TPgType::GetIsFlatFixedArray()
+    @Firedac@Phys@Pgwrapper@TPgTypesManager@ @285 ; Firedac::Phys::Pgwrapper::TPgTypesManager::
+    @Firedac@Phys@Pgwrapper@TPgTypesManager@$bctr$qqrp36Firedac@Phys@Pgwrapper@TPgConnection @240 ; __fastcall Firedac::Phys::Pgwrapper::TPgTypesManager::TPgTypesManager(Firedac::Phys::Pgwrapper::TPgConnection *)
+    @Firedac@Phys@Pgwrapper@TPgTypesManager@$bdtr$qqrv @239 ; __fastcall Firedac::Phys::Pgwrapper::TPgTypesManager::~TPgTypesManager()
+    @Firedac@Phys@Pgwrapper@TPgTypesManager@AddArray$qqruix20System@UnicodeStringuii @234 ; __fastcall Firedac::Phys::Pgwrapper::TPgTypesManager::AddArray(unsigned int, const System::UnicodeString, unsigned int, int)
+    @Firedac@Phys@Pgwrapper@TPgTypesManager@AddBase$qqruix20System@UnicodeStringiii75System@%Set$48Firedac@Phys@Pgwrapper@Firedac_Phys_Pgwrapper__7t1$i0$t1$i6$% @233 ; Firedac::Phys::Pgwrapper::TPgTypesManager::AddBase(unsigned int, const System::UnicodeString, int, int, int, System::Set<{583}...
+    @Firedac@Phys@Pgwrapper@TPgTypesManager@AddType$qqrp30Firedac@Phys@Pgwrapper@TPgType @235 ; __fastcall Firedac::Phys::Pgwrapper::TPgTypesManager::AddType(Firedac::Phys::Pgwrapper::TPgType *)
+    @Firedac@Phys@Pgwrapper@TPgTypesManager@Connected$qqrv @232 ; __fastcall Firedac::Phys::Pgwrapper::TPgTypesManager::Connected()
+    @Firedac@Phys@Pgwrapper@TPgTypesManager@DecodeModifier$qqruiirit3t3 @237 ; __fastcall Firedac::Phys::Pgwrapper::TPgTypesManager::DecodeModifier(unsigned int, int, int&, int&, int&)
+    @Firedac@Phys@Pgwrapper@TPgTypesManager@Describe$qqrui @231 ; __fastcall Firedac::Phys::Pgwrapper::TPgTypesManager::Describe(unsigned int)
+    @Firedac@Phys@Pgwrapper@TPgTypesManager@FindType$qqruio @236 ; __fastcall Firedac::Phys::Pgwrapper::TPgTypesManager::FindType(unsigned int, bool)
+    @Firedac@Phys@Pgwrapper@TPgTypesManager@GetArrays$qqrui @229 ; __fastcall Firedac::Phys::Pgwrapper::TPgTypesManager::GetArrays(unsigned int)
+    @Firedac@Phys@Pgwrapper@TPgTypesManager@GetDefaults$qqruirit2t2 @238 ; __fastcall Firedac::Phys::Pgwrapper::TPgTypesManager::GetDefaults(unsigned int, int&, int&, int&)
+    @Firedac@Phys@Pgwrapper@TPgTypesManager@GetTypes$qqrui @230 ; __fastcall Firedac::Phys::Pgwrapper::TPgTypesManager::GetTypes(unsigned int)
+    @Firedac@Phys@Pgwrapper@TPgVariable@ @280 ; Firedac::Phys::Pgwrapper::TPgVariable::
+    @Firedac@Phys@Pgwrapper@TPgVariable@$bctr$qqrp35Firedac@Phys@Pgwrapper@TPgVariables @188 ; __fastcall Firedac::Phys::Pgwrapper::TPgVariable::TPgVariable(Firedac::Phys::Pgwrapper::TPgVariables *)
+    @Firedac@Phys@Pgwrapper@TPgVariable@AllocBuffer$qqrui @186 ; __fastcall Firedac::Phys::Pgwrapper::TPgVariable::AllocBuffer(unsigned int)
+    @Firedac@Phys@Pgwrapper@TPgVariable@DumpFDValue$qqrpvi @181 ; __fastcall Firedac::Phys::Pgwrapper::TPgVariable::DumpFDValue(void *, int)
+    @Firedac@Phys@Pgwrapper@TPgVariable@DumpSQLDataType$qqrv @182 ; __fastcall Firedac::Phys::Pgwrapper::TPgVariable::DumpSQLDataType()
+    @Firedac@Phys@Pgwrapper@TPgVariable@FD2PgData$qqrp30Firedac@Phys@Pgwrapper@TPgTypepvirpvruirio @184 ; __fastcall Firedac::Phys::Pgwrapper::TPgVariable::FD2PgData(Firedac::Phys::Pgwrapper::TPgType *, void *, int, void *&, unsigned int&, int&, bool)
+    @Firedac@Phys@Pgwrapper@TPgVariable@GetDumpLabel$qqrv @183 ; __fastcall Firedac::Phys::Pgwrapper::TPgVariable::GetDumpLabel()
+    @Firedac@Phys@Pgwrapper@TPgVariable@Pg2FDData$qqrp30Firedac@Phys@Pgwrapper@TPgTypepvirpvruio @185 ; __fastcall Firedac::Phys::Pgwrapper::TPgVariable::Pg2FDData(Firedac::Phys::Pgwrapper::TPgType *, void *, int, void *&, unsigned int&, bool)
+    @Firedac@Phys@Pgwrapper@TPgVariable@SetTypeOid$qqrui @187 ; __fastcall Firedac::Phys::Pgwrapper::TPgVariable::SetTypeOid(unsigned int)
+    @Firedac@Phys@Pgwrapper@TPgVariables@ @278 ; Firedac::Phys::Pgwrapper::TPgVariables::
+    @Firedac@Phys@Pgwrapper@TPgVariables@$bctr$qqrp35Firedac@Phys@Pgwrapper@TPgStatement @180 ; __fastcall Firedac::Phys::Pgwrapper::TPgVariables::TPgVariables(Firedac::Phys::Pgwrapper::TPgStatement *)
+    @Firedac@Phys@Pgwrapper@TPgVariables@$bdtr$qqrv @179 ; __fastcall Firedac::Phys::Pgwrapper::TPgVariables::~TPgVariables()
+    @Firedac@Phys@Pgwrapper@TPgVariables@Add$qqrv @178 ; __fastcall Firedac::Phys::Pgwrapper::TPgVariables::Add()
+    @Firedac@Phys@Pgwrapper@TPgVariables@GetCount$qqrv @177 ; __fastcall Firedac::Phys::Pgwrapper::TPgVariables::GetCount()
+    @Firedac@Phys@Pgwrapper@TPgVariables@SetCount$qqri @176 ; __fastcall Firedac::Phys::Pgwrapper::TPgVariables::SetCount(int)
+    @Firedac@Phys@Pgwrapper@date2j$qqrususus @195 ; __fastcall Firedac::Phys::Pgwrapper::date2j(unsigned short, unsigned short, unsigned short)
+    @Firedac@Phys@Pgwrapper@dtDbl2time$qqrdrust2t2rui @196 ; __fastcall Firedac::Phys::Pgwrapper::dtDbl2time(double, unsigned short&, unsigned short&, unsigned short&, unsigned int&)
+    @Firedac@Phys@Pgwrapper@dtInt2time$qqrjrust2t2rui @197 ; __fastcall Firedac::Phys::Pgwrapper::dtInt2time(__int64, unsigned short&, unsigned short&, unsigned short&, unsigned int&)
+    @Firedac@Phys@Pgwrapper@initialization$qqrv @98  ; __fastcall Firedac::Phys::Pgwrapper::initialization()
+    @Firedac@Phys@Pgwrapper@j2date$qqrxjrust2t2 @198 ; __fastcall Firedac::Phys::Pgwrapper::j2date(const __int64, unsigned short&, unsigned short&, unsigned short&)
+    @Firedac@Phys@Pgwrapper@time2DblT$qqrxusxusxusxui @193 ; __fastcall Firedac::Phys::Pgwrapper::time2DblT(const unsigned short, const unsigned short, const unsigned short, const unsigned int)
+    @Firedac@Phys@Pgwrapper@time2IntT$qqrxusxusxusxui @194 ; __fastcall Firedac::Phys::Pgwrapper::time2IntT(const unsigned short, const unsigned short, const unsigned short, const unsigned int)
+    @Firedacpgdriver@@GetPackageInfoTable$qqrv @345 ; Firedacpgdriver::__linkproc__ __fastcall GetPackageInfoTable()
+    @Firedacpgdriver@@PackageLoad$qqrv @344 ; Firedacpgdriver::__linkproc__ __fastcall PackageLoad()
+    @Firedacpgdriver@@PackageUnload$qqrv @343 ; Firedacpgdriver::__linkproc__ __fastcall PackageUnload()
+    @Firedacpgdriver@initialization$qqrv @342 ; __fastcall Firedacpgdriver::initialization()
+    @GetPackageInfoTable           @348 ; GetPackageInfoTable
+    Finalize                       @346 ; Finalize
+    Initialize                     @347 ; Initialize

@@ -1,0 +1,12 @@
+LIBRARY     BCBENT210.BPL
+
+DESCRIPTION '++Builder Enterprise IDE Package'
+
+EXPORTS
+    @Bcbent@@GetPackageInfoTable$qqrv @4   ; Bcbent::__linkproc__ __fastcall GetPackageInfoTable()
+    @Bcbent@@PackageLoad$qqrv      @3   ; Bcbent::__linkproc__ __fastcall PackageLoad()
+    @Bcbent@@PackageUnload$qqrv    @2   ; Bcbent::__linkproc__ __fastcall PackageUnload()
+    @Bcbent@initialization$qqrv    @1   ; __fastcall Bcbent::initialization()
+    @GetPackageInfoTable           @7   ; GetPackageInfoTable
+    Finalize                       @5   ; Finalize
+    Initialize                     @6   ; Initialize

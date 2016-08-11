@@ -1,0 +1,15 @@
+LIBRARY     DCLEMSCLIENT210.BPL
+
+DESCRIPTION 'mbarcadero EMS Client Components'
+
+EXPORTS
+    @Dclemsclient@@GetPackageInfoTable$qqrv @7   ; Dclemsclient::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclemsclient@@PackageLoad$qqrv @6   ; Dclemsclient::__linkproc__ __fastcall PackageLoad()
+    @Dclemsclient@@PackageUnload$qqrv @5   ; Dclemsclient::__linkproc__ __fastcall PackageUnload()
+    @Dclemsclient@initialization$qqrv @4   ; __fastcall Dclemsclient::initialization()
+    @GetPackageInfoTable           @10  ; GetPackageInfoTable
+    @Rest@Backend@Emsreg@Finalization$qqrv @2   ; __fastcall Rest::Backend::Emsreg::Finalization()
+    @Rest@Backend@Emsreg@Register$qqrv @3   ; __fastcall Rest::Backend::Emsreg::Register()
+    @Rest@Backend@Emsreg@initialization$qqrv @1   ; __fastcall Rest::Backend::Emsreg::initialization()
+    Finalize                       @8   ; Finalize
+    Initialize                     @9   ; Initialize

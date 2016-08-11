@@ -1,0 +1,135 @@
+LIBRARY     HTMLDLGS210.BPL
+
+DESCRIPTION 'mbarcadero HTML Designer Dialogs Package'
+
+EXPORTS
+    @$xp$26Webprojectintf@IWebProject @3   ; __tpdsc__ Webprojectintf::IWebProject
+    @$xp$29Htmlimagedlg@THTMLImageDialog @77  ; __tpdsc__ Htmlimagedlg::THTMLImageDialog
+    @$xp$29Htmlinputdlg@THTMLInputDialog @122 ; __tpdsc__ Htmlinputdlg::THTMLInputDialog
+    @$xp$29Htmltabledlg@THTMLTableDialog @105 ; __tpdsc__ Htmltabledlg::THTMLTableDialog
+    @$xp$32Basehtmltagdlg@TBaseHTMLDlgClass @33  ; __tpdsc__ Basehtmltagdlg::TBaseHTMLDlgClass
+    @$xp$33Basehtmltagdlg@TBaseHTMLTagDialog @34  ; __tpdsc__ Basehtmltagdlg::TBaseHTMLTagDialog
+    @$xp$33Htmlselecturldlg@TSelectURLDialog @62  ; __tpdsc__ Htmlselecturldlg::TSelectURLDialog
+    @$xp$35Htmlselecturldlg@TPreviewUrlBuilder @60  ; __tpdsc__ Htmlselecturldlg::TPreviewUrlBuilder
+    @$xp$38Basehtmltagdlg@TGetInsertionPointEvent @36  ; __tpdsc__ Basehtmltagdlg::TGetInsertionPointEvent
+    @Basehtmltagdlg@ExecHTMLDlg$qqrp17System@TMetaClassp25System@Classes@TComponentp26Webbrowserex@TWebBrowserExx20System@UnicodeString @32  ; __fastcall Basehtmltagdlg::ExecHTMLDlg(System::TMetaClass *, System::Classes::TComponent *, Webbrowserex::TWebBrowserEx *, const System::UnicodeString)
+    @Basehtmltagdlg@Finalization$qqrv @5   ; __fastcall Basehtmltagdlg::Finalization()
+    @Basehtmltagdlg@TBaseHTMLTagDialog@ @35  ; Basehtmltagdlg::TBaseHTMLTagDialog::
+    @Basehtmltagdlg@TBaseHTMLTagDialog@AddColor$qqr20System@UnicodeStringi @30  ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::AddColor(System::UnicodeString, int)
+    @Basehtmltagdlg@TBaseHTMLTagDialog@BrowseImageActionBeforeExecute$qqrp14System@TObject @8   ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::BrowseImageActionBeforeExecute(System::TObject *)
+    @Basehtmltagdlg@TBaseHTMLTagDialog@CheckKeyPress$qqrp14System@TObjectrb @7   ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::CheckKeyPress(System::TObject *, wchar_t&)
+    @Basehtmltagdlg@TBaseHTMLTagDialog@ColorComboEnter$qqrp14System@TObject @21  ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::ColorComboEnter(System::TObject *)
+    @Basehtmltagdlg@TBaseHTMLTagDialog@ControlChange$qqrp14System@TObject @25  ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::ControlChange(System::TObject *)
+    @Basehtmltagdlg@TBaseHTMLTagDialog@DeleteElement$qqrv @16  ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::DeleteElement()
+    @Basehtmltagdlg@TBaseHTMLTagDialog@DoChange$qqrv @17  ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::DoChange()
+    @Basehtmltagdlg@TBaseHTMLTagDialog@ElementCreated$qqrv @24  ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::ElementCreated()
+    @Basehtmltagdlg@TBaseHTMLTagDialog@FormClose$qqrp14System@TObjectr27System@Uitypes@TCloseAction @27  ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::FormClose(System::TObject *, System::Uitypes::TCloseAction&)
+    @Basehtmltagdlg@TBaseHTMLTagDialog@FormCreate$qqrp14System@TObject @31  ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::FormCreate(System::TObject *)
+    @Basehtmltagdlg@TBaseHTMLTagDialog@FormShow$qqrp14System@TObject @6   ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::FormShow(System::TObject *)
+    @Basehtmltagdlg@TBaseHTMLTagDialog@GetAttribute$qqrp25System@Classes@TComponent @19  ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::GetAttribute(System::Classes::TComponent *)
+    @Basehtmltagdlg@TBaseHTMLTagDialog@GetDefaultAttributes$qqrv @15  ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::GetDefaultAttributes()
+    @Basehtmltagdlg@TBaseHTMLTagDialog@GetHTML$qqrv @20  ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::GetHTML()
+    @Basehtmltagdlg@TBaseHTMLTagDialog@GetInnerHTML$qqrv @18  ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::GetInnerHTML()
+    @Basehtmltagdlg@TBaseHTMLTagDialog@HelpButtonClick$qqrp14System@TObject @9   ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::HelpButtonClick(System::TObject *)
+    @Basehtmltagdlg@TBaseHTMLTagDialog@LoadAttributes$qqrv @23  ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::LoadAttributes()
+    @Basehtmltagdlg@TBaseHTMLTagDialog@LoadColorValue$qqrp30Vcl@Comctrls@TCustomComboBoxEx @10  ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::LoadColorValue(Vcl::Comctrls::TCustomComboBoxEx *)
+    @Basehtmltagdlg@TBaseHTMLTagDialog@RemoveAttribute$qqr20System@UnicodeString @14  ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::RemoveAttribute(System::UnicodeString)
+    @Basehtmltagdlg@TBaseHTMLTagDialog@SetElement$qqrx46System@%DelphiInterface$19Mshtml@IHTMLElement% @22  ; Basehtmltagdlg::TBaseHTMLTagDialog::SetElement(const System::DelphiInterface<{583}...
+    @Basehtmltagdlg@TBaseHTMLTagDialog@SetHTMLTag$qqrx20System@UnicodeString @28  ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::SetHTMLTag(const System::UnicodeString)
+    @Basehtmltagdlg@TBaseHTMLTagDialog@SetInsertionPoint$qqr46System@%DelphiInterface$19Mshtml@IHTMLElement%ii @12  ; Basehtmltagdlg::TBaseHTMLTagDialog::SetInsertionPoint(System::DelphiInterface<{583}...
+    @Basehtmltagdlg@TBaseHTMLTagDialog@SetWebBrowser$qqrxp26Webbrowserex@TWebBrowserEx @29  ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::SetWebBrowser(Webbrowserex::TWebBrowserEx * const)
+    @Basehtmltagdlg@TBaseHTMLTagDialog@UpDownClick$qqrp14System@TObject23Vcl@Comctrls@TUDBtnType @11  ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::UpDownClick(System::TObject *, Vcl::Comctrls::TUDBtnType)
+    @Basehtmltagdlg@TBaseHTMLTagDialog@UpdateAttribute$qqrp25System@Classes@TComponent17System@WideString @26  ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::UpdateAttribute(System::Classes::TComponent *, System::WideString)
+    @Basehtmltagdlg@TBaseHTMLTagDialog@UpdateControl$qqrp21Vcl@Controls@TControl17System@WideString @13  ; __fastcall Basehtmltagdlg::TBaseHTMLTagDialog::UpdateControl(Vcl::Controls::TControl *, System::WideString)
+    @Basehtmltagdlg@initialization$qqrv @4   ; __fastcall Basehtmltagdlg::initialization()
+    @GetPackageInfoTable           @130 ; GetPackageInfoTable
+    @Htmldlgs@@GetPackageInfoTable$qqrv @127 ; Htmldlgs::__linkproc__ __fastcall GetPackageInfoTable()
+    @Htmldlgs@@PackageLoad$qqrv    @126 ; Htmldlgs::__linkproc__ __fastcall PackageLoad()
+    @Htmldlgs@@PackageUnload$qqrv  @125 ; Htmldlgs::__linkproc__ __fastcall PackageUnload()
+    @Htmldlgs@initialization$qqrv  @124 ; __fastcall Htmldlgs::initialization()
+    @Htmlimagedlg@Finalization$qqrv @65  ; __fastcall Htmlimagedlg::Finalization()
+    @Htmlimagedlg@HTMLImageDialog  @76  ; Htmlimagedlg::HTMLImageDialog
+    @Htmlimagedlg@THTMLImageDialog@ @78  ; Htmlimagedlg::THTMLImageDialog::
+    @Htmlimagedlg@THTMLImageDialog@BrowseImageAction1Execute$qqrp14System@TObject @66  ; __fastcall Htmlimagedlg::THTMLImageDialog::BrowseImageAction1Execute(System::TObject *)
+    @Htmlimagedlg@THTMLImageDialog@BrowseImageActionAccept$qqrp14System@TObject @74  ; __fastcall Htmlimagedlg::THTMLImageDialog::BrowseImageActionAccept(System::TObject *)
+    @Htmlimagedlg@THTMLImageDialog@FormCreate$qqrp14System@TObject @69  ; __fastcall Htmlimagedlg::THTMLImageDialog::FormCreate(System::TObject *)
+    @Htmlimagedlg@THTMLImageDialog@FormShow$qqrp14System@TObject @73  ; __fastcall Htmlimagedlg::THTMLImageDialog::FormShow(System::TObject *)
+    @Htmlimagedlg@THTMLImageDialog@GetAttribute$qqrp25System@Classes@TComponent @72  ; __fastcall Htmlimagedlg::THTMLImageDialog::GetAttribute(System::Classes::TComponent *)
+    @Htmlimagedlg@THTMLImageDialog@GetImageAttributes$qqrx20System@UnicodeString @70  ; __fastcall Htmlimagedlg::THTMLImageDialog::GetImageAttributes(const System::UnicodeString)
+    @Htmlimagedlg@THTMLImageDialog@ImageMapActionAccept$qqrp14System@TObject @75  ; __fastcall Htmlimagedlg::THTMLImageDialog::ImageMapActionAccept(System::TObject *)
+    @Htmlimagedlg@THTMLImageDialog@LoadAttributes$qqrv @68  ; __fastcall Htmlimagedlg::THTMLImageDialog::LoadAttributes()
+    @Htmlimagedlg@THTMLImageDialog@UpdateAttribute$qqrp25System@Classes@TComponent17System@WideString @67  ; __fastcall Htmlimagedlg::THTMLImageDialog::UpdateAttribute(System::Classes::TComponent *, System::WideString)
+    @Htmlimagedlg@THTMLImageDialog@_srcSelect$qqrp14System@TObject @71  ; __fastcall Htmlimagedlg::THTMLImageDialog::_srcSelect(System::TObject *)
+    @Htmlimagedlg@initialization$qqrv @64  ; __fastcall Htmlimagedlg::initialization()
+    @Htmlinputdlg@Finalization$qqrv @108 ; __fastcall Htmlinputdlg::Finalization()
+    @Htmlinputdlg@HTMLInputDialog  @121 ; Htmlinputdlg::HTMLInputDialog
+    @Htmlinputdlg@THTMLInputDialog@ @123 ; Htmlinputdlg::THTMLInputDialog::
+    @Htmlinputdlg@THTMLInputDialog@CaptionEditChange$qqrp14System@TObject @116 ; __fastcall Htmlinputdlg::THTMLInputDialog::CaptionEditChange(System::TObject *)
+    @Htmlinputdlg@THTMLInputDialog@FormCreate$qqrp14System@TObject @114 ; __fastcall Htmlinputdlg::THTMLInputDialog::FormCreate(System::TObject *)
+    @Htmlinputdlg@THTMLInputDialog@FormShow$qqrp14System@TObject @120 ; __fastcall Htmlinputdlg::THTMLInputDialog::FormShow(System::TObject *)
+    @Htmlinputdlg@THTMLInputDialog@GetDefaultAttributes$qqrv @119 ; __fastcall Htmlinputdlg::THTMLInputDialog::GetDefaultAttributes()
+    @Htmlinputdlg@THTMLInputDialog@LoadAttributes$qqrv @113 ; __fastcall Htmlinputdlg::THTMLInputDialog::LoadAttributes()
+    @Htmlinputdlg@THTMLInputDialog@SelectImageMapURLActionExecute$qqrp14System@TObject @109 ; __fastcall Htmlinputdlg::THTMLInputDialog::SelectImageMapURLActionExecute(System::TObject *)
+    @Htmlinputdlg@THTMLInputDialog@SelectImageURLActionExecute$qqrp14System@TObject @110 ; __fastcall Htmlinputdlg::THTMLInputDialog::SelectImageURLActionExecute(System::TObject *)
+    @Htmlinputdlg@THTMLInputDialog@SetHTMLTag$qqrx20System@UnicodeString @115 ; __fastcall Htmlinputdlg::THTMLInputDialog::SetHTMLTag(const System::UnicodeString)
+    @Htmlinputdlg@THTMLInputDialog@UpDownClick$qqrp14System@TObject23Vcl@Comctrls@TUDBtnType @118 ; __fastcall Htmlinputdlg::THTMLInputDialog::UpDownClick(System::TObject *, Vcl::Comctrls::TUDBtnType)
+    @Htmlinputdlg@THTMLInputDialog@UpdatePageControl$qqrv @112 ; __fastcall Htmlinputdlg::THTMLInputDialog::UpdatePageControl()
+    @Htmlinputdlg@THTMLInputDialog@_alignChange$qqrp14System@TObject @111 ; __fastcall Htmlinputdlg::THTMLInputDialog::_alignChange(System::TObject *)
+    @Htmlinputdlg@THTMLInputDialog@_typeSelect$qqrp14System@TObject @117 ; __fastcall Htmlinputdlg::THTMLInputDialog::_typeSelect(System::TObject *)
+    @Htmlinputdlg@initialization$qqrv @107 ; __fastcall Htmlinputdlg::initialization()
+    @Htmlselecturldlg@Finalization$qqrv @38  ; __fastcall Htmlselecturldlg::Finalization()
+    @Htmlselecturldlg@TPreviewUrlBuilder@ @61  ; Htmlselecturldlg::TPreviewUrlBuilder::
+    @Htmlselecturldlg@TPreviewUrlBuilder@$bctr$qqrx20System@UnicodeStringt1t1 @44  ; __fastcall Htmlselecturldlg::TPreviewUrlBuilder::TPreviewUrlBuilder(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Htmlselecturldlg@TPreviewUrlBuilder@CanGetRootRelativePath$qqrv @45  ; __fastcall Htmlselecturldlg::TPreviewUrlBuilder::CanGetRootRelativePath()
+    @Htmlselecturldlg@TPreviewUrlBuilder@GetDocumentRelativePath$qqrx20System@UnicodeString @41  ; __fastcall Htmlselecturldlg::TPreviewUrlBuilder::GetDocumentRelativePath(const System::UnicodeString)
+    @Htmlselecturldlg@TPreviewUrlBuilder@GetRootRelativePath$qqrx20System@UnicodeString @40  ; __fastcall Htmlselecturldlg::TPreviewUrlBuilder::GetRootRelativePath(const System::UnicodeString)
+    @Htmlselecturldlg@TPreviewUrlBuilder@IsPathWithinPath$qqrx20System@UnicodeStringt1 @43  ; __fastcall Htmlselecturldlg::TPreviewUrlBuilder::IsPathWithinPath(const System::UnicodeString, const System::UnicodeString)
+    @Htmlselecturldlg@TPreviewUrlBuilder@MakeRelativePathWithinPath$qqrx20System@UnicodeStringt1 @42  ; __fastcall Htmlselecturldlg::TPreviewUrlBuilder::MakeRelativePathWithinPath(const System::UnicodeString, const System::UnicodeString)
+    @Htmlselecturldlg@TSelectURLDialog@ @63  ; Htmlselecturldlg::TSelectURLDialog::
+    @Htmlselecturldlg@TSelectURLDialog@$bctr$qqrp25System@Classes@TComponent @59  ; __fastcall Htmlselecturldlg::TSelectURLDialog::TSelectURLDialog(System::Classes::TComponent *)
+    @Htmlselecturldlg@TSelectURLDialog@$bdtr$qqrv @56  ; __fastcall Htmlselecturldlg::TSelectURLDialog::~TSelectURLDialog()
+    @Htmlselecturldlg@TSelectURLDialog@ComboChange$qqrp14System@TObject @47  ; __fastcall Htmlselecturldlg::TSelectURLDialog::ComboChange(System::TObject *)
+    @Htmlselecturldlg@TSelectURLDialog@DoCanClose$qqrv @55  ; __fastcall Htmlselecturldlg::TSelectURLDialog::DoCanClose()
+    @Htmlselecturldlg@TSelectURLDialog@DoClose$qqrv @54  ; __fastcall Htmlselecturldlg::TSelectURLDialog::DoClose()
+    @Htmlselecturldlg@TSelectURLDialog@DoSelectionChange$qqrv @57  ; __fastcall Htmlselecturldlg::TSelectURLDialog::DoSelectionChange()
+    @Htmlselecturldlg@TSelectURLDialog@DoShow$qqrv @52  ; __fastcall Htmlselecturldlg::TSelectURLDialog::DoShow()
+    @Htmlselecturldlg@TSelectURLDialog@Execute$qqrv @51  ; __fastcall Htmlselecturldlg::TSelectURLDialog::Execute()
+    @Htmlselecturldlg@TSelectURLDialog@GetDlgItemRect$qqri @53  ; __fastcall Htmlselecturldlg::TSelectURLDialog::GetDlgItemRect(int)
+    @Htmlselecturldlg@TSelectURLDialog@GetModuleFileName$qqrv @46  ; __fastcall Htmlselecturldlg::TSelectURLDialog::GetModuleFileName()
+    @Htmlselecturldlg@TSelectURLDialog@GetPreviewURL$qqrv @39  ; __fastcall Htmlselecturldlg::TSelectURLDialog::GetPreviewURL()
+    @Htmlselecturldlg@TSelectURLDialog@IsFilterStored$qqrv @50  ; __fastcall Htmlselecturldlg::TSelectURLDialog::IsFilterStored()
+    @Htmlselecturldlg@TSelectURLDialog@OnPreviewTimer$qqrp14System@TObject @58  ; __fastcall Htmlselecturldlg::TSelectURLDialog::OnPreviewTimer(System::TObject *)
+    @Htmlselecturldlg@TSelectURLDialog@UpdatePreviewURL$qqrv @48  ; __fastcall Htmlselecturldlg::TSelectURLDialog::UpdatePreviewURL()
+    @Htmlselecturldlg@TSelectURLDialog@WMSize$qqrr23Winapi@Messages@TWMSize @49  ; __fastcall Htmlselecturldlg::TSelectURLDialog::WMSize(Winapi::Messages::TWMSize&)
+    @Htmlselecturldlg@initialization$qqrv @37  ; __fastcall Htmlselecturldlg::initialization()
+    @Htmltabledlg@Finalization$qqrv @80  ; __fastcall Htmltabledlg::Finalization()
+    @Htmltabledlg@HTMLTableDialog  @104 ; Htmltabledlg::HTMLTableDialog
+    @Htmltabledlg@THTMLTableDialog@ @106 ; Htmltabledlg::THTMLTableDialog::
+    @Htmltabledlg@THTMLTableDialog@$bctr$qqrp25System@Classes@TComponent @81  ; __fastcall Htmltabledlg::THTMLTableDialog::THTMLTableDialog(System::Classes::TComponent *)
+    @Htmltabledlg@THTMLTableDialog@AddColor$qqr20System@UnicodeStringi @103 ; __fastcall Htmltabledlg::THTMLTableDialog::AddColor(System::UnicodeString, int)
+    @Htmltabledlg@THTMLTableDialog@BrowseImageActionAccept$qqrp14System@TObject @101 ; __fastcall Htmltabledlg::THTMLTableDialog::BrowseImageActionAccept(System::TObject *)
+    @Htmltabledlg@THTMLTableDialog@CellBgColorComboChange$qqrp14System@TObject @87  ; __fastcall Htmltabledlg::THTMLTableDialog::CellBgColorComboChange(System::TObject *)
+    @Htmltabledlg@THTMLTableDialog@ColsEditChange$qqrp14System@TObject @90  ; __fastcall Htmltabledlg::THTMLTableDialog::ColsEditChange(System::TObject *)
+    @Htmltabledlg@THTMLTableDialog@CreateCells$qqrx47System@%DelphiInterface$20Mshtml@IHTMLTableRow% @98  ; Htmltabledlg::THTMLTableDialog::CreateCells(const System::DelphiInterface<{583}...
+    @Htmltabledlg@THTMLTableDialog@CreateRows$qqrx44System@%DelphiInterface$17Mshtml@IHTMLTable% @99  ; Htmltabledlg::THTMLTableDialog::CreateRows(const System::DelphiInterface<{583}...
+    @Htmltabledlg@THTMLTableDialog@ElementCreated$qqrv @100 ; __fastcall Htmltabledlg::THTMLTableDialog::ElementCreated()
+    @Htmltabledlg@THTMLTableDialog@FormCreate$qqrp14System@TObject @86  ; __fastcall Htmltabledlg::THTMLTableDialog::FormCreate(System::TObject *)
+    @Htmltabledlg@THTMLTableDialog@FormShow$qqrp14System@TObject @89  ; __fastcall Htmltabledlg::THTMLTableDialog::FormShow(System::TObject *)
+    @Htmltabledlg@THTMLTableDialog@GetAttribute$qqrp25System@Classes@TComponent @92  ; __fastcall Htmltabledlg::THTMLTableDialog::GetAttribute(System::Classes::TComponent *)
+    @Htmltabledlg@THTMLTableDialog@GetInnerHTML$qqrv @88  ; __fastcall Htmltabledlg::THTMLTableDialog::GetInnerHTML()
+    @Htmltabledlg@THTMLTableDialog@LoadAttributes$qqrv @83  ; __fastcall Htmltabledlg::THTMLTableDialog::LoadAttributes()
+    @Htmltabledlg@THTMLTableDialog@MoreColorsActionExecute$qqrp14System@TObject @85  ; __fastcall Htmltabledlg::THTMLTableDialog::MoreColorsActionExecute(System::TObject *)
+    @Htmltabledlg@THTMLTableDialog@MoreColorsActionUpdate$qqrp14System@TObject @84  ; __fastcall Htmltabledlg::THTMLTableDialog::MoreColorsActionUpdate(System::TObject *)
+    @Htmltabledlg@THTMLTableDialog@RefreshCells$qqrv @95  ; __fastcall Htmltabledlg::THTMLTableDialog::RefreshCells()
+    @Htmltabledlg@THTMLTableDialog@RowsEditChange$qqrp14System@TObject @91  ; __fastcall Htmltabledlg::THTMLTableDialog::RowsEditChange(System::TObject *)
+    @Htmltabledlg@THTMLTableDialog@SetElement$qqrx46System@%DelphiInterface$19Mshtml@IHTMLElement% @82  ; Htmltabledlg::THTMLTableDialog::SetElement(const System::DelphiInterface<{583}...
+    @Htmltabledlg@THTMLTableDialog@UpdateCell$qqr46System@%DelphiInterface$19Mshtml@IHTMLElement% @96  ; Htmltabledlg::THTMLTableDialog::UpdateCell(System::DelphiInterface<{583}...
+    @Htmltabledlg@THTMLTableDialog@UpdateCells$qqrv @94  ; __fastcall Htmltabledlg::THTMLTableDialog::UpdateCells()
+    @Htmltabledlg@THTMLTableDialog@UpdateRows$qqrv @97  ; __fastcall Htmltabledlg::THTMLTableDialog::UpdateRows()
+    @Htmltabledlg@THTMLTableDialog@WebColorDlg1Accept$qqrp14System@TObject @102 ; __fastcall Htmltabledlg::THTMLTableDialog::WebColorDlg1Accept(System::TObject *)
+    @Htmltabledlg@THTMLTableDialog@WidthComboSelect$qqrp14System@TObject @93  ; __fastcall Htmltabledlg::THTMLTableDialog::WidthComboSelect(System::TObject *)
+    @Htmltabledlg@initialization$qqrv @79  ; __fastcall Htmltabledlg::initialization()
+    @Webprojectintf@Finalization$qqrv @2   ; __fastcall Webprojectintf::Finalization()
+    @Webprojectintf@initialization$qqrv @1   ; __fastcall Webprojectintf::initialization()
+    Finalize                       @128 ; Finalize
+    Initialize                     @129 ; Initialize

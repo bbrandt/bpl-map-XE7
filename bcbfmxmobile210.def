@@ -1,0 +1,54 @@
+LIBRARY     BCBFMXMOBILE210.BPL
+
+DESCRIPTION '++Builder FMX Mobile Designer IDE Package'
+
+EXPORTS
+    @$xp$36Cppfmxmobileidecmdwizard@TNewFmxType @38  ; __tpdsc__ Cppfmxmobileidecmdwizard::TNewFmxType
+    @$xp$42Cppfmxmobileidecmdwizard@TNewFmxWizardMode @37  ; __tpdsc__ Cppfmxmobileidecmdwizard::TNewFmxWizardMode
+    @$xp$50Cppfmxmobileidecmdwizard@ICppFmxMobileIDECmdWizard @36  ; __tpdsc__ Cppfmxmobileidecmdwizard::ICppFmxMobileIDECmdWizard
+    @$xp$50Cppfmxmobileidecmdwizard@TCppFmxMobileIDECmdWizard @34  ; __tpdsc__ Cppfmxmobileidecmdwizard::TCppFmxMobileIDECmdWizard
+    @$xp$61Cppfmxmobileidecmdwizardnewframe@TCppFmxMobileIDECmdWizardNew @18  ; __tpdsc__ Cppfmxmobileidecmdwizardnewframe::TCppFmxMobileIDECmdWizardNew
+    @Bcbfmxmobile@@GetPackageInfoTable$qqrv @46  ; Bcbfmxmobile::__linkproc__ __fastcall GetPackageInfoTable()
+    @Bcbfmxmobile@@PackageLoad$qqrv @45  ; Bcbfmxmobile::__linkproc__ __fastcall PackageLoad()
+    @Bcbfmxmobile@@PackageUnload$qqrv @44  ; Bcbfmxmobile::__linkproc__ __fastcall PackageUnload()
+    @Bcbfmxmobile@initialization$qqrv @43  ; __fastcall Bcbfmxmobile::initialization()
+    @Cppfmxmobileidecmd@Finalization$qqrv @40  ; __fastcall Cppfmxmobileidecmd::Finalization()
+    @Cppfmxmobileidecmd@IDERegister$qqrv @41  ; __fastcall Cppfmxmobileidecmd::IDERegister()
+    @Cppfmxmobileidecmd@_sNewBCBMobileProjects @42  ; Cppfmxmobileidecmd::_sNewBCBMobileProjects
+    @Cppfmxmobileidecmd@initialization$qqrv @39  ; __fastcall Cppfmxmobileidecmd::initialization()
+    @Cppfmxmobileidecmdwizard@ExecuteFmxMobileIDECmdWizard$qqri42Cppfmxmobileidecmdwizard@TNewFmxWizardMode @33  ; __fastcall Cppfmxmobileidecmdwizard::ExecuteFmxMobileIDECmdWizard(int, Cppfmxmobileidecmdwizard::TNewFmxWizardMode)
+    @Cppfmxmobileidecmdwizard@Finalization$qqrv @21  ; __fastcall Cppfmxmobileidecmdwizard::Finalization()
+    @Cppfmxmobileidecmdwizard@TCppFmxMobileIDECmdWizard@ @35  ; Cppfmxmobileidecmdwizard::TCppFmxMobileIDECmdWizard::
+    @Cppfmxmobileidecmdwizard@TCppFmxMobileIDECmdWizard@AfterRun$qqrxo @27  ; __fastcall Cppfmxmobileidecmdwizard::TCppFmxMobileIDECmdWizard::AfterRun(const bool)
+    @Cppfmxmobileidecmdwizard@TCppFmxMobileIDECmdWizard@GetAppTypeSelection$qqrv @25  ; __fastcall Cppfmxmobileidecmdwizard::TCppFmxMobileIDECmdWizard::GetAppTypeSelection()
+    @Cppfmxmobileidecmdwizard@TCppFmxMobileIDECmdWizard@GetFirstPage$qqrv @31  ; __fastcall Cppfmxmobileidecmdwizard::TCppFmxMobileIDECmdWizard::GetFirstPage()
+    @Cppfmxmobileidecmdwizard@TCppFmxMobileIDECmdWizard@GetNextPage$qqrp29Simplewizardpage@TWizardFrame @30  ; __fastcall Cppfmxmobileidecmdwizard::TCppFmxMobileIDECmdWizard::GetNextPage(Simplewizardpage::TWizardFrame *)
+    @Cppfmxmobileidecmdwizard@TCppFmxMobileIDECmdWizard@GetTitle$qqrv @29  ; __fastcall Cppfmxmobileidecmdwizard::TCppFmxMobileIDECmdWizard::GetTitle()
+    @Cppfmxmobileidecmdwizard@TCppFmxMobileIDECmdWizard@NewPage$qqrv @32  ; __fastcall Cppfmxmobileidecmdwizard::TCppFmxMobileIDECmdWizard::NewPage()
+    @Cppfmxmobileidecmdwizard@TCppFmxMobileIDECmdWizard@Run$qqrv @28  ; __fastcall Cppfmxmobileidecmdwizard::TCppFmxMobileIDECmdWizard::Run()
+    @Cppfmxmobileidecmdwizard@TCppFmxMobileIDECmdWizard@SetAppTypeSelection$qqri @26  ; __fastcall Cppfmxmobileidecmdwizard::TCppFmxMobileIDECmdWizard::SetAppTypeSelection(int)
+    @Cppfmxmobileidecmdwizard@TCppFmxMobileIDECmdWizard@SetModeApp$qqrv @22  ; __fastcall Cppfmxmobileidecmdwizard::TCppFmxMobileIDECmdWizard::SetModeApp()
+    @Cppfmxmobileidecmdwizard@TCppFmxMobileIDECmdWizard@SetModeForm$qqrv @24  ; __fastcall Cppfmxmobileidecmdwizard::TCppFmxMobileIDECmdWizard::SetModeForm()
+    @Cppfmxmobileidecmdwizard@TCppFmxMobileIDECmdWizard@SetModeHRH$qqrv @23  ; __fastcall Cppfmxmobileidecmdwizard::TCppFmxMobileIDECmdWizard::SetModeHRH()
+    @Cppfmxmobileidecmdwizard@initialization$qqrv @20  ; __fastcall Cppfmxmobileidecmdwizard::initialization()
+    @Cppfmxmobileidecmdwizardnewframe@Finalization$qqrv @2   ; __fastcall Cppfmxmobileidecmdwizardnewframe::Finalization()
+    @Cppfmxmobileidecmdwizardnewframe@TCppFmxMobileIDECmdWizardNew@ @19  ; Cppfmxmobileidecmdwizardnewframe::TCppFmxMobileIDECmdWizardNew::
+    @Cppfmxmobileidecmdwizardnewframe@TCppFmxMobileIDECmdWizardNew@$bctr$qqr51System@%DelphiInterface$24Simplewizardpage@IWizard% @17  ; Cppfmxmobileidecmdwizardnewframe::TCppFmxMobileIDECmdWizardNew::TCppFmxMobileIDECmdWizardNew(System::DelphiInterface<{583}...
+    @Cppfmxmobileidecmdwizardnewframe@TCppFmxMobileIDECmdWizardNew@GetDescription$qqrv @15  ; __fastcall Cppfmxmobileidecmdwizardnewframe::TCppFmxMobileIDECmdWizardNew::GetDescription()
+    @Cppfmxmobileidecmdwizardnewframe@TCppFmxMobileIDECmdWizardNew@GetModeText$qqrv @16  ; __fastcall Cppfmxmobileidecmdwizardnewframe::TCppFmxMobileIDECmdWizardNew::GetModeText()
+    @Cppfmxmobileidecmdwizardnewframe@TCppFmxMobileIDECmdWizardNew@GetTitle$qqrv @14  ; __fastcall Cppfmxmobileidecmdwizardnewframe::TCppFmxMobileIDECmdWizardNew::GetTitle()
+    @Cppfmxmobileidecmdwizardnewframe@TCppFmxMobileIDECmdWizardNew@Hide$qqro @12  ; __fastcall Cppfmxmobileidecmdwizardnewframe::TCppFmxMobileIDECmdWizardNew::Hide(bool)
+    @Cppfmxmobileidecmdwizardnewframe@TCppFmxMobileIDECmdWizardNew@ItemDblClick$qqrp14System@TObject @9   ; __fastcall Cppfmxmobileidecmdwizardnewframe::TCppFmxMobileIDECmdWizardNew::ItemDblClick(System::TObject *)
+    @Cppfmxmobileidecmdwizardnewframe@TCppFmxMobileIDECmdWizardNew@RepositionGalleryPanel$qqrv @6   ; __fastcall Cppfmxmobileidecmdwizardnewframe::TCppFmxMobileIDECmdWizardNew::RepositionGalleryPanel()
+    @Cppfmxmobileidecmdwizardnewframe@TCppFmxMobileIDECmdWizardNew@SelectItem$qqrp14System@TObject @10  ; __fastcall Cppfmxmobileidecmdwizardnewframe::TCppFmxMobileIDECmdWizardNew::SelectItem(System::TObject *)
+    @Cppfmxmobileidecmdwizardnewframe@TCppFmxMobileIDECmdWizardNew@SetAppTypeSelection$qqri @7   ; __fastcall Cppfmxmobileidecmdwizardnewframe::TCppFmxMobileIDECmdWizardNew::SetAppTypeSelection(int)
+    @Cppfmxmobileidecmdwizardnewframe@TCppFmxMobileIDECmdWizardNew@SetGalleryBrowseDlg$qqrp25Galbrow@TGalleryBrowseDlg @11  ; __fastcall Cppfmxmobileidecmdwizardnewframe::TCppFmxMobileIDECmdWizardNew::SetGalleryBrowseDlg(Galbrow::TGalleryBrowseDlg *)
+    @Cppfmxmobileidecmdwizardnewframe@TCppFmxMobileIDECmdWizardNew@SetModeApp$qqrv @3   ; __fastcall Cppfmxmobileidecmdwizardnewframe::TCppFmxMobileIDECmdWizardNew::SetModeApp()
+    @Cppfmxmobileidecmdwizardnewframe@TCppFmxMobileIDECmdWizardNew@SetModeForm$qqrv @4   ; __fastcall Cppfmxmobileidecmdwizardnewframe::TCppFmxMobileIDECmdWizardNew::SetModeForm()
+    @Cppfmxmobileidecmdwizardnewframe@TCppFmxMobileIDECmdWizardNew@SetModeHRH$qqrv @5   ; __fastcall Cppfmxmobileidecmdwizardnewframe::TCppFmxMobileIDECmdWizardNew::SetModeHRH()
+    @Cppfmxmobileidecmdwizardnewframe@TCppFmxMobileIDECmdWizardNew@Validate$qqrv @8   ; __fastcall Cppfmxmobileidecmdwizardnewframe::TCppFmxMobileIDECmdWizardNew::Validate()
+    @Cppfmxmobileidecmdwizardnewframe@TCppFmxMobileIDECmdWizardNew@rHDFmxClick$qqrp14System@TObject @13  ; __fastcall Cppfmxmobileidecmdwizardnewframe::TCppFmxMobileIDECmdWizardNew::rHDFmxClick(System::TObject *)
+    @Cppfmxmobileidecmdwizardnewframe@initialization$qqrv @1   ; __fastcall Cppfmxmobileidecmdwizardnewframe::initialization()
+    @GetPackageInfoTable           @49  ; GetPackageInfoTable
+    Finalize                       @47  ; Finalize
+    Initialize                     @48  ; Initialize

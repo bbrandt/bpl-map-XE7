@@ -1,0 +1,163 @@
+LIBRARY     DUNITX_IDE_EXPERT_XE7BCB.BPL
+
+EXPORTS
+    @$xp$38Dunitx@Expert@Codegen@Newunit@TNewUnit @40  ; __tpdsc__ Dunitx::Expert::Codegen::Newunit::TNewUnit
+    @$xp$44Dunitx@Expert@Codegen@Newproject@TNewProject @7   ; __tpdsc__ Dunitx::Expert::Codegen::Newproject::TNewProject
+    @$xp$44Dunitx@Expert@Codegen@Sourcefile@TSourceFile @65  ; __tpdsc__ Dunitx::Expert::Codegen::Sourcefile::TSourceFile
+    @$xp$46Dunitx@Expert@Codegen@Newtestunit@TNewTestUnit @33  ; __tpdsc__ Dunitx::Expert::Codegen::Newtestunit::TNewTestUnit
+    @$xp$48Dunitx@Expert@Newunitwizard@TDUnitXNewUnitWizard @120 ; __tpdsc__ Dunitx::Expert::Newunitwizard::TDUnitXNewUnitWizard
+    @$xp$51Dunitx@Expert@Forms@Newunitwizard@TfrmDunitXNewUnit @111 ; __tpdsc__ Dunitx::Expert::Forms::Newunitwizard::TfrmDunitXNewUnit
+    @$xp$51Dunitx@Expert@Projectwizard@TDUnitXNewProjectWizard @138 ; __tpdsc__ Dunitx::Expert::Projectwizard::TDUnitXNewProjectWizard
+    @$xp$53Dunitx@Expert@Codegen@Newtestproject@TTestProjectFile @26  ; __tpdsc__ Dunitx::Expert::Codegen::Newtestproject::TTestProjectFile
+    @$xp$57Dunitx@Expert@Forms@Newprojectwizard@TfrmDunitXNewProject @100 ; __tpdsc__ Dunitx::Expert::Forms::Newprojectwizard::TfrmDunitXNewProject
+    @@Dunitx_ide_expert_xe7bcb@Finalize @4   ; __linkproc__ Dunitx_ide_expert_xe7bcb::Finalize
+    @@Dunitx_ide_expert_xe7bcb@Initialize @3   ; __linkproc__ Dunitx_ide_expert_xe7bcb::Initialize
+    @Dunitx@Expert@Codegen@Newproject@Finalization$qqrv @23  ; __fastcall Dunitx::Expert::Codegen::Newproject::Finalization()
+    @Dunitx@Expert@Codegen@Newproject@TNewProject@ @6   ; Dunitx::Expert::Codegen::Newproject::TNewProject::
+    @Dunitx@Expert@Codegen@Newproject@TNewProject@GetCreatorType$qqrv @9   ; __fastcall Dunitx::Expert::Codegen::Newproject::TNewProject::GetCreatorType()
+    @Dunitx@Expert@Codegen@Newproject@TNewProject@GetExisting$qqrv @10  ; __fastcall Dunitx::Expert::Codegen::Newproject::TNewProject::GetExisting()
+    @Dunitx@Expert@Codegen@Newproject@TNewProject@GetFileName$qqrv @11  ; __fastcall Dunitx::Expert::Codegen::Newproject::TNewProject::GetFileName()
+    @Dunitx@Expert@Codegen@Newproject@TNewProject@GetFileSystem$qqrv @12  ; __fastcall Dunitx::Expert::Codegen::Newproject::TNewProject::GetFileSystem()
+    @Dunitx@Expert@Codegen@Newproject@TNewProject@GetOptionFileName$qqrv @13  ; __fastcall Dunitx::Expert::Codegen::Newproject::TNewProject::GetOptionFileName()
+    @Dunitx@Expert@Codegen@Newproject@TNewProject@GetOwner$qqrv @14  ; __fastcall Dunitx::Expert::Codegen::Newproject::TNewProject::GetOwner()
+    @Dunitx@Expert@Codegen@Newproject@TNewProject@GetProjectPersonality$qqrv @15  ; __fastcall Dunitx::Expert::Codegen::Newproject::TNewProject::GetProjectPersonality()
+    @Dunitx@Expert@Codegen@Newproject@TNewProject@GetShowSource$qqrv @16  ; __fastcall Dunitx::Expert::Codegen::Newproject::TNewProject::GetShowSource()
+    @Dunitx@Expert@Codegen@Newproject@TNewProject@GetUnnamed$qqrv @17  ; __fastcall Dunitx::Expert::Codegen::Newproject::TNewProject::GetUnnamed()
+    @Dunitx@Expert@Codegen@Newproject@TNewProject@NewDefaultModule$qqrv @18  ; __fastcall Dunitx::Expert::Codegen::Newproject::TNewProject::NewDefaultModule()
+    @Dunitx@Expert@Codegen@Newproject@TNewProject@NewDefaultProjectModule$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject% @19  ; Dunitx::Expert::Codegen::Newproject::TNewProject::NewDefaultProjectModule(const System::DelphiInterface<{583}...
+    @Dunitx@Expert@Codegen@Newproject@TNewProject@NewOptionSource$qqrx20System@UnicodeString @20  ; __fastcall Dunitx::Expert::Codegen::Newproject::TNewProject::NewOptionSource(const System::UnicodeString)
+    @Dunitx@Expert@Codegen@Newproject@TNewProject@NewProjectResource$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject% @21  ; Dunitx::Expert::Codegen::Newproject::TNewProject::NewProjectResource(const System::DelphiInterface<{583}...
+    @Dunitx@Expert@Codegen@Newproject@TNewProject@NewProjectSource$qqrx20System@UnicodeString @8   ; __fastcall Dunitx::Expert::Codegen::Newproject::TNewProject::NewProjectSource(const System::UnicodeString)
+    @Dunitx@Expert@Codegen@Newproject@TNewProject@SetFileName$qqrx20System@UnicodeString @22  ; __fastcall Dunitx::Expert::Codegen::Newproject::TNewProject::SetFileName(const System::UnicodeString)
+    @Dunitx@Expert@Codegen@Newproject@_16385 @5   ; Dunitx::Expert::Codegen::Newproject::_16385
+    @Dunitx@Expert@Codegen@Newproject@initialization$qqrv @24  ; __fastcall Dunitx::Expert::Codegen::Newproject::initialization()
+    @Dunitx@Expert@Codegen@Newtestproject@Finalization$qqrv @30  ; __fastcall Dunitx::Expert::Codegen::Newtestproject::Finalization()
+    @Dunitx@Expert@Codegen@Newtestproject@TTestProjectFile@ @25  ; Dunitx::Expert::Codegen::Newtestproject::TTestProjectFile::
+    @Dunitx@Expert@Codegen@Newtestproject@TTestProjectFile@$bctr$qqrv @27  ; __fastcall Dunitx::Expert::Codegen::Newtestproject::TTestProjectFile::TTestProjectFile()
+    @Dunitx@Expert@Codegen@Newtestproject@TTestProjectFile@$bctr$qqrx20System@UnicodeString @28  ; __fastcall Dunitx::Expert::Codegen::Newtestproject::TTestProjectFile::TTestProjectFile(const System::UnicodeString)
+    @Dunitx@Expert@Codegen@Newtestproject@TTestProjectFile@NewProjectSource$qqrx20System@UnicodeString @29  ; __fastcall Dunitx::Expert::Codegen::Newtestproject::TTestProjectFile::NewProjectSource(const System::UnicodeString)
+    @Dunitx@Expert@Codegen@Newtestproject@initialization$qqrv @31  ; __fastcall Dunitx::Expert::Codegen::Newtestproject::initialization()
+    @Dunitx@Expert@Codegen@Newtestunit@Finalization$qqrv @36  ; __fastcall Dunitx::Expert::Codegen::Newtestunit::Finalization()
+    @Dunitx@Expert@Codegen@Newtestunit@TNewTestUnit@ @32  ; Dunitx::Expert::Codegen::Newtestunit::TNewTestUnit::
+    @Dunitx@Expert@Codegen@Newtestunit@TNewTestUnit@$bctr$qqrxoxox20System@UnicodeStringt3 @34  ; __fastcall Dunitx::Expert::Codegen::Newtestunit::TNewTestUnit::TNewTestUnit(const bool, const bool, const System::UnicodeString, const System::UnicodeString)
+    @Dunitx@Expert@Codegen@Newtestunit@TNewTestUnit@NewImplSource$qqrx20System@UnicodeStringt1t1 @35  ; __fastcall Dunitx::Expert::Codegen::Newtestunit::TNewTestUnit::NewImplSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Dunitx@Expert@Codegen@Newtestunit@initialization$qqrv @37  ; __fastcall Dunitx::Expert::Codegen::Newtestunit::initialization()
+    @Dunitx@Expert@Codegen@Newunit@Finalization$qqrv @61  ; __fastcall Dunitx::Expert::Codegen::Newunit::Finalization()
+    @Dunitx@Expert@Codegen@Newunit@TNewUnit@ @39  ; Dunitx::Expert::Codegen::Newunit::TNewUnit::
+    @Dunitx@Expert@Codegen@Newunit@TNewUnit@FormCreated$qqrx50System@%DelphiInterface$23Toolsapi@IOTAFormEditor% @41  ; Dunitx::Expert::Codegen::Newunit::TNewUnit::FormCreated(const System::DelphiInterface<{583}...
+    @Dunitx@Expert@Codegen@Newunit@TNewUnit@GetAncestorName$qqrv @42  ; __fastcall Dunitx::Expert::Codegen::Newunit::TNewUnit::GetAncestorName()
+    @Dunitx@Expert@Codegen@Newunit@TNewUnit@GetCreatorType$qqrv @43  ; __fastcall Dunitx::Expert::Codegen::Newunit::TNewUnit::GetCreatorType()
+    @Dunitx@Expert@Codegen@Newunit@TNewUnit@GetExisting$qqrv @44  ; __fastcall Dunitx::Expert::Codegen::Newunit::TNewUnit::GetExisting()
+    @Dunitx@Expert@Codegen@Newunit@TNewUnit@GetFileSystem$qqrv @45  ; __fastcall Dunitx::Expert::Codegen::Newunit::TNewUnit::GetFileSystem()
+    @Dunitx@Expert@Codegen@Newunit@TNewUnit@GetFormName$qqrv @46  ; __fastcall Dunitx::Expert::Codegen::Newunit::TNewUnit::GetFormName()
+    @Dunitx@Expert@Codegen@Newunit@TNewUnit@GetImplFileName$qqrv @47  ; __fastcall Dunitx::Expert::Codegen::Newunit::TNewUnit::GetImplFileName()
+    @Dunitx@Expert@Codegen@Newunit@TNewUnit@GetIntfFileName$qqrv @48  ; __fastcall Dunitx::Expert::Codegen::Newunit::TNewUnit::GetIntfFileName()
+    @Dunitx@Expert@Codegen@Newunit@TNewUnit@GetMainForm$qqrv @49  ; __fastcall Dunitx::Expert::Codegen::Newunit::TNewUnit::GetMainForm()
+    @Dunitx@Expert@Codegen@Newunit@TNewUnit@GetOwner$qqrv @50  ; __fastcall Dunitx::Expert::Codegen::Newunit::TNewUnit::GetOwner()
+    @Dunitx@Expert@Codegen@Newunit@TNewUnit@GetShowForm$qqrv @51  ; __fastcall Dunitx::Expert::Codegen::Newunit::TNewUnit::GetShowForm()
+    @Dunitx@Expert@Codegen@Newunit@TNewUnit@GetShowSource$qqrv @52  ; __fastcall Dunitx::Expert::Codegen::Newunit::TNewUnit::GetShowSource()
+    @Dunitx@Expert@Codegen@Newunit@TNewUnit@GetUnnamed$qqrv @53  ; __fastcall Dunitx::Expert::Codegen::Newunit::TNewUnit::GetUnnamed()
+    @Dunitx@Expert@Codegen@Newunit@TNewUnit@NewFormFile$qqrx20System@UnicodeStringt1 @54  ; __fastcall Dunitx::Expert::Codegen::Newunit::TNewUnit::NewFormFile(const System::UnicodeString, const System::UnicodeString)
+    @Dunitx@Expert@Codegen@Newunit@TNewUnit@NewImplSource$qqrx20System@UnicodeStringt1t1 @55  ; __fastcall Dunitx::Expert::Codegen::Newunit::TNewUnit::NewImplSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Dunitx@Expert@Codegen@Newunit@TNewUnit@NewIntfSource$qqrx20System@UnicodeStringt1t1 @56  ; __fastcall Dunitx::Expert::Codegen::Newunit::TNewUnit::NewIntfSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Dunitx@Expert@Codegen@Newunit@TNewUnit@SetAncestorName$qqrx20System@UnicodeString @57  ; __fastcall Dunitx::Expert::Codegen::Newunit::TNewUnit::SetAncestorName(const System::UnicodeString)
+    @Dunitx@Expert@Codegen@Newunit@TNewUnit@SetFormName$qqrx20System@UnicodeString @58  ; __fastcall Dunitx::Expert::Codegen::Newunit::TNewUnit::SetFormName(const System::UnicodeString)
+    @Dunitx@Expert@Codegen@Newunit@TNewUnit@SetImplFileName$qqrx20System@UnicodeString @59  ; __fastcall Dunitx::Expert::Codegen::Newunit::TNewUnit::SetImplFileName(const System::UnicodeString)
+    @Dunitx@Expert@Codegen@Newunit@TNewUnit@SetIntfFileName$qqrx20System@UnicodeString @60  ; __fastcall Dunitx::Expert::Codegen::Newunit::TNewUnit::SetIntfFileName(const System::UnicodeString)
+    @Dunitx@Expert@Codegen@Newunit@_16385 @38  ; Dunitx::Expert::Codegen::Newunit::_16385
+    @Dunitx@Expert@Codegen@Newunit@initialization$qqrv @62  ; __fastcall Dunitx::Expert::Codegen::Newunit::initialization()
+    @Dunitx@Expert@Codegen@Sourcefile@Finalization$qqrv @69  ; __fastcall Dunitx::Expert::Codegen::Sourcefile::Finalization()
+    @Dunitx@Expert@Codegen@Sourcefile@TSourceFile@ @64  ; Dunitx::Expert::Codegen::Sourcefile::TSourceFile::
+    @Dunitx@Expert@Codegen@Sourcefile@TSourceFile@$bctr$qqrx20System@UnicodeStringpx14System@TVarRecxi @66  ; __fastcall Dunitx::Expert::Codegen::Sourcefile::TSourceFile::TSourceFile(const System::UnicodeString, const System::TVarRec *, const int)
+    @Dunitx@Expert@Codegen@Sourcefile@TSourceFile@GetAge$qqrv @67  ; __fastcall Dunitx::Expert::Codegen::Sourcefile::TSourceFile::GetAge()
+    @Dunitx@Expert@Codegen@Sourcefile@TSourceFile@GetSource$qqrv @68  ; __fastcall Dunitx::Expert::Codegen::Sourcefile::TSourceFile::GetSource()
+    @Dunitx@Expert@Codegen@Sourcefile@_16385 @63  ; Dunitx::Expert::Codegen::Sourcefile::_16385
+    @Dunitx@Expert@Codegen@Sourcefile@initialization$qqrv @70  ; __fastcall Dunitx::Expert::Codegen::Sourcefile::initialization()
+    @Dunitx@Expert@Codegen@Templates@Finalization$qqrv @97  ; __fastcall Dunitx::Expert::Codegen::Templates::Finalization()
+    @Dunitx@Expert@Codegen@Templates@_16386 @72  ; Dunitx::Expert::Codegen::Templates::_16386
+    @Dunitx@Expert@Codegen@Templates@_16388 @74  ; Dunitx::Expert::Codegen::Templates::_16388
+    @Dunitx@Expert@Codegen@Templates@_16390 @76  ; Dunitx::Expert::Codegen::Templates::_16390
+    @Dunitx@Expert@Codegen@Templates@_16392 @78  ; Dunitx::Expert::Codegen::Templates::_16392
+    @Dunitx@Expert@Codegen@Templates@_16394 @80  ; Dunitx::Expert::Codegen::Templates::_16394
+    @Dunitx@Expert@Codegen@Templates@_16396 @82  ; Dunitx::Expert::Codegen::Templates::_16396
+    @Dunitx@Expert@Codegen@Templates@_16398 @84  ; Dunitx::Expert::Codegen::Templates::_16398
+    @Dunitx@Expert@Codegen@Templates@_16400 @86  ; Dunitx::Expert::Codegen::Templates::_16400
+    @Dunitx@Expert@Codegen@Templates@_16402 @88  ; Dunitx::Expert::Codegen::Templates::_16402
+    @Dunitx@Expert@Codegen@Templates@_16404 @90  ; Dunitx::Expert::Codegen::Templates::_16404
+    @Dunitx@Expert@Codegen@Templates@_16406 @92  ; Dunitx::Expert::Codegen::Templates::_16406
+    @Dunitx@Expert@Codegen@Templates@_16408 @94  ; Dunitx::Expert::Codegen::Templates::_16408
+    @Dunitx@Expert@Codegen@Templates@_16410 @96  ; Dunitx::Expert::Codegen::Templates::_16410
+    @Dunitx@Expert@Codegen@Templates@_SDefaultClassName @83  ; Dunitx::Expert::Codegen::Templates::_SDefaultClassName
+    @Dunitx@Expert@Codegen@Templates@_SSampleMethodsCPPImpl @95  ; Dunitx::Expert::Codegen::Templates::_SSampleMethodsCPPImpl
+    @Dunitx@Expert@Codegen@Templates@_SSampleMethodsCPPIntf @93  ; Dunitx::Expert::Codegen::Templates::_SSampleMethodsCPPIntf
+    @Dunitx@Expert@Codegen@Templates@_SSampleMethodsImpl @81  ; Dunitx::Expert::Codegen::Templates::_SSampleMethodsImpl
+    @Dunitx@Expert@Codegen@Templates@_SSampleMethodsIntf @79  ; Dunitx::Expert::Codegen::Templates::_SSampleMethodsIntf
+    @Dunitx@Expert@Codegen@Templates@_SSetupTearDownCPPImpl @91  ; Dunitx::Expert::Codegen::Templates::_SSetupTearDownCPPImpl
+    @Dunitx@Expert@Codegen@Templates@_SSetupTearDownCPPIntf @89  ; Dunitx::Expert::Codegen::Templates::_SSetupTearDownCPPIntf
+    @Dunitx@Expert@Codegen@Templates@_SSetupTearDownImpl @77  ; Dunitx::Expert::Codegen::Templates::_SSetupTearDownImpl
+    @Dunitx@Expert@Codegen@Templates@_SSetupTearDownIntf @75  ; Dunitx::Expert::Codegen::Templates::_SSetupTearDownIntf
+    @Dunitx@Expert@Codegen@Templates@_STestCBPROJ @85  ; Dunitx::Expert::Codegen::Templates::_STestCBPROJ
+    @Dunitx@Expert@Codegen@Templates@_STestCPPUnit @87  ; Dunitx::Expert::Codegen::Templates::_STestCPPUnit
+    @Dunitx@Expert@Codegen@Templates@_STestDPR @71  ; Dunitx::Expert::Codegen::Templates::_STestDPR
+    @Dunitx@Expert@Codegen@Templates@_STestUnit @73  ; Dunitx::Expert::Codegen::Templates::_STestUnit
+    @Dunitx@Expert@Codegen@Templates@initialization$qqrv @98  ; __fastcall Dunitx::Expert::Codegen::Templates::initialization()
+    @Dunitx@Expert@Forms@Newprojectwizard@Finalization$qqrv @108 ; __fastcall Dunitx::Expert::Forms::Newprojectwizard::Finalization()
+    @Dunitx@Expert@Forms@Newprojectwizard@TfrmDunitXNewProject@ @99  ; Dunitx::Expert::Forms::Newprojectwizard::TfrmDunitXNewProject::
+    @Dunitx@Expert@Forms@Newprojectwizard@TfrmDunitXNewProject@FormCreate$qqrp14System@TObject @102 ; __fastcall Dunitx::Expert::Forms::Newprojectwizard::TfrmDunitXNewProject::FormCreate(System::TObject *)
+    @Dunitx@Expert@Forms@Newprojectwizard@TfrmDunitXNewProject@GetAddToProjectGroup$qqrv @103 ; __fastcall Dunitx::Expert::Forms::Newprojectwizard::TfrmDunitXNewProject::GetAddToProjectGroup()
+    @Dunitx@Expert@Forms@Newprojectwizard@TfrmDunitXNewProject@GetCreateSampleMethods$qqrv @104 ; __fastcall Dunitx::Expert::Forms::Newprojectwizard::TfrmDunitXNewProject::GetCreateSampleMethods()
+    @Dunitx@Expert@Forms@Newprojectwizard@TfrmDunitXNewProject@GetCreateSetupTearDownMethods$qqrv @105 ; __fastcall Dunitx::Expert::Forms::Newprojectwizard::TfrmDunitXNewProject::GetCreateSetupTearDownMethods()
+    @Dunitx@Expert@Forms@Newprojectwizard@TfrmDunitXNewProject@GetCreateTestUnit$qqrv @106 ; __fastcall Dunitx::Expert::Forms::Newprojectwizard::TfrmDunitXNewProject::GetCreateTestUnit()
+    @Dunitx@Expert@Forms@Newprojectwizard@TfrmDunitXNewProject@GetTestFixtureClassName$qqrv @107 ; __fastcall Dunitx::Expert::Forms::Newprojectwizard::TfrmDunitXNewProject::GetTestFixtureClassName()
+    @Dunitx@Expert@Forms@Newprojectwizard@TfrmDunitXNewProject@chkCreateTestUnitClick$qqrp14System@TObject @101 ; __fastcall Dunitx::Expert::Forms::Newprojectwizard::TfrmDunitXNewProject::chkCreateTestUnitClick(System::TObject *)
+    @Dunitx@Expert@Forms@Newprojectwizard@frmDunitXNewProject @159 ; Dunitx::Expert::Forms::Newprojectwizard::frmDunitXNewProject
+    @Dunitx@Expert@Forms@Newprojectwizard@initialization$qqrv @109 ; __fastcall Dunitx::Expert::Forms::Newprojectwizard::initialization()
+    @Dunitx@Expert@Forms@Newunitwizard@Finalization$qqrv @116 ; __fastcall Dunitx::Expert::Forms::Newunitwizard::Finalization()
+    @Dunitx@Expert@Forms@Newunitwizard@TfrmDunitXNewUnit@ @110 ; Dunitx::Expert::Forms::Newunitwizard::TfrmDunitXNewUnit::
+    @Dunitx@Expert@Forms@Newunitwizard@TfrmDunitXNewUnit@FormCreate$qqrp14System@TObject @112 ; __fastcall Dunitx::Expert::Forms::Newunitwizard::TfrmDunitXNewUnit::FormCreate(System::TObject *)
+    @Dunitx@Expert@Forms@Newunitwizard@TfrmDunitXNewUnit@GetCreateSampleMethods$qqrv @113 ; __fastcall Dunitx::Expert::Forms::Newunitwizard::TfrmDunitXNewUnit::GetCreateSampleMethods()
+    @Dunitx@Expert@Forms@Newunitwizard@TfrmDunitXNewUnit@GetCreateSetupTearDownMethods$qqrv @114 ; __fastcall Dunitx::Expert::Forms::Newunitwizard::TfrmDunitXNewUnit::GetCreateSetupTearDownMethods()
+    @Dunitx@Expert@Forms@Newunitwizard@TfrmDunitXNewUnit@GetTestFixtureClassName$qqrv @115 ; __fastcall Dunitx::Expert::Forms::Newunitwizard::TfrmDunitXNewUnit::GetTestFixtureClassName()
+    @Dunitx@Expert@Forms@Newunitwizard@frmDunitXNewUnit @160 ; Dunitx::Expert::Forms::Newunitwizard::frmDunitXNewUnit
+    @Dunitx@Expert@Forms@Newunitwizard@initialization$qqrv @117 ; __fastcall Dunitx::Expert::Forms::Newunitwizard::initialization()
+    @Dunitx@Expert@Newunitwizard@Finalization$qqrv @134 ; __fastcall Dunitx::Expert::Newunitwizard::Finalization()
+    @Dunitx@Expert@Newunitwizard@TDUnitXNewUnitWizard@ @119 ; Dunitx::Expert::Newunitwizard::TDUnitXNewUnitWizard::
+    @Dunitx@Expert@Newunitwizard@TDUnitXNewUnitWizard@$bctr$qqrv @121 ; __fastcall Dunitx::Expert::Newunitwizard::TDUnitXNewUnitWizard::TDUnitXNewUnitWizard()
+    @Dunitx@Expert@Newunitwizard@TDUnitXNewUnitWizard@$bdtr$qqrv @122 ; __fastcall Dunitx::Expert::Newunitwizard::TDUnitXNewUnitWizard::~TDUnitXNewUnitWizard()
+    @Dunitx@Expert@Newunitwizard@TDUnitXNewUnitWizard@Execute$qqrv @123 ; __fastcall Dunitx::Expert::Newunitwizard::TDUnitXNewUnitWizard::Execute()
+    @Dunitx@Expert@Newunitwizard@TDUnitXNewUnitWizard@GetAuthor$qqrv @124 ; __fastcall Dunitx::Expert::Newunitwizard::TDUnitXNewUnitWizard::GetAuthor()
+    @Dunitx@Expert@Newunitwizard@TDUnitXNewUnitWizard@GetComment$qqrv @125 ; __fastcall Dunitx::Expert::Newunitwizard::TDUnitXNewUnitWizard::GetComment()
+    @Dunitx@Expert@Newunitwizard@TDUnitXNewUnitWizard@GetDesigner$qqrv @126 ; __fastcall Dunitx::Expert::Newunitwizard::TDUnitXNewUnitWizard::GetDesigner()
+    @Dunitx@Expert@Newunitwizard@TDUnitXNewUnitWizard@GetGalleryCategory$qqrv @127 ; __fastcall Dunitx::Expert::Newunitwizard::TDUnitXNewUnitWizard::GetGalleryCategory()
+    @Dunitx@Expert@Newunitwizard@TDUnitXNewUnitWizard@GetGlyph$qqrv @128 ; __fastcall Dunitx::Expert::Newunitwizard::TDUnitXNewUnitWizard::GetGlyph()
+    @Dunitx@Expert@Newunitwizard@TDUnitXNewUnitWizard@GetIDString$qqrv @129 ; __fastcall Dunitx::Expert::Newunitwizard::TDUnitXNewUnitWizard::GetIDString()
+    @Dunitx@Expert@Newunitwizard@TDUnitXNewUnitWizard@GetName$qqrv @130 ; __fastcall Dunitx::Expert::Newunitwizard::TDUnitXNewUnitWizard::GetName()
+    @Dunitx@Expert@Newunitwizard@TDUnitXNewUnitWizard@GetPage$qqrv @131 ; __fastcall Dunitx::Expert::Newunitwizard::TDUnitXNewUnitWizard::GetPage()
+    @Dunitx@Expert@Newunitwizard@TDUnitXNewUnitWizard@GetPersonality$qqrv @132 ; __fastcall Dunitx::Expert::Newunitwizard::TDUnitXNewUnitWizard::GetPersonality()
+    @Dunitx@Expert@Newunitwizard@TDUnitXNewUnitWizard@GetState$qqrv @133 ; __fastcall Dunitx::Expert::Newunitwizard::TDUnitXNewUnitWizard::GetState()
+    @Dunitx@Expert@Newunitwizard@_16385 @118 ; Dunitx::Expert::Newunitwizard::_16385
+    @Dunitx@Expert@Newunitwizard@initialization$qqrv @135 ; __fastcall Dunitx::Expert::Newunitwizard::initialization()
+    @Dunitx@Expert@Projectwizard@Finalization$qqrv @152 ; __fastcall Dunitx::Expert::Projectwizard::Finalization()
+    @Dunitx@Expert@Projectwizard@TDUnitXNewProjectWizard@ @137 ; Dunitx::Expert::Projectwizard::TDUnitXNewProjectWizard::
+    @Dunitx@Expert@Projectwizard@TDUnitXNewProjectWizard@$bctr$qqrv @139 ; __fastcall Dunitx::Expert::Projectwizard::TDUnitXNewProjectWizard::TDUnitXNewProjectWizard()
+    @Dunitx@Expert@Projectwizard@TDUnitXNewProjectWizard@$bdtr$qqrv @140 ; __fastcall Dunitx::Expert::Projectwizard::TDUnitXNewProjectWizard::~TDUnitXNewProjectWizard()
+    @Dunitx@Expert@Projectwizard@TDUnitXNewProjectWizard@Execute$qqrv @141 ; __fastcall Dunitx::Expert::Projectwizard::TDUnitXNewProjectWizard::Execute()
+    @Dunitx@Expert@Projectwizard@TDUnitXNewProjectWizard@GetAuthor$qqrv @142 ; __fastcall Dunitx::Expert::Projectwizard::TDUnitXNewProjectWizard::GetAuthor()
+    @Dunitx@Expert@Projectwizard@TDUnitXNewProjectWizard@GetComment$qqrv @143 ; __fastcall Dunitx::Expert::Projectwizard::TDUnitXNewProjectWizard::GetComment()
+    @Dunitx@Expert@Projectwizard@TDUnitXNewProjectWizard@GetDesigner$qqrv @144 ; __fastcall Dunitx::Expert::Projectwizard::TDUnitXNewProjectWizard::GetDesigner()
+    @Dunitx@Expert@Projectwizard@TDUnitXNewProjectWizard@GetGalleryCategory$qqrv @145 ; __fastcall Dunitx::Expert::Projectwizard::TDUnitXNewProjectWizard::GetGalleryCategory()
+    @Dunitx@Expert@Projectwizard@TDUnitXNewProjectWizard@GetGlyph$qqrv @146 ; __fastcall Dunitx::Expert::Projectwizard::TDUnitXNewProjectWizard::GetGlyph()
+    @Dunitx@Expert@Projectwizard@TDUnitXNewProjectWizard@GetIDString$qqrv @147 ; __fastcall Dunitx::Expert::Projectwizard::TDUnitXNewProjectWizard::GetIDString()
+    @Dunitx@Expert@Projectwizard@TDUnitXNewProjectWizard@GetName$qqrv @148 ; __fastcall Dunitx::Expert::Projectwizard::TDUnitXNewProjectWizard::GetName()
+    @Dunitx@Expert@Projectwizard@TDUnitXNewProjectWizard@GetPage$qqrv @149 ; __fastcall Dunitx::Expert::Projectwizard::TDUnitXNewProjectWizard::GetPage()
+    @Dunitx@Expert@Projectwizard@TDUnitXNewProjectWizard@GetPersonality$qqrv @150 ; __fastcall Dunitx::Expert::Projectwizard::TDUnitXNewProjectWizard::GetPersonality()
+    @Dunitx@Expert@Projectwizard@TDUnitXNewProjectWizard@GetState$qqrv @151 ; __fastcall Dunitx::Expert::Projectwizard::TDUnitXNewProjectWizard::GetState()
+    @Dunitx@Expert@Projectwizard@_16385 @136 ; Dunitx::Expert::Projectwizard::_16385
+    @Dunitx@Expert@Projectwizard@initialization$qqrv @153 ; __fastcall Dunitx::Expert::Projectwizard::initialization()
+    @Dunitx@Expert@Registration@Finalization$qqrv @155 ; __fastcall Dunitx::Expert::Registration::Finalization()
+    @Dunitx@Expert@Registration@Register$qqrv @154 ; __fastcall Dunitx::Expert::Registration::Register()
+    @Dunitx@Expert@Registration@initialization$qqrv @156 ; __fastcall Dunitx::Expert::Registration::initialization()
+    Finalize                       @2   ; Finalize
+    Initialize                     @1   ; Initialize
+    ___CPPdebugHook                @157 ; ___CPPdebugHook
+    __stkchk                       @158 ; __stkchk

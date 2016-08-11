@@ -1,0 +1,25 @@
+LIBRARY     FMXRESTCOMPONENTS210.BPL
+
+DESCRIPTION 'mbarcadero REST Client Components FMX'
+
+EXPORTS
+    @$xp$54Rest@Authenticator@Oauth@Webform@Fmx@Tfrm_OAuthWebForm @10  ; __tpdsc__ Rest::Authenticator::Oauth::Webform::Fmx::Tfrm_OAuthWebForm
+    @$xp$64Rest@Authenticator@Oauth@Webform@Fmx@TOAuth2WebFormRedirectEvent @13  ; __tpdsc__ Rest::Authenticator::Oauth::Webform::Fmx::TOAuth2WebFormRedirectEvent
+    @$xp$68Rest@Authenticator@Oauth@Webform@Fmx@TOAuth2WebFormTitleChangedEvent @12  ; __tpdsc__ Rest::Authenticator::Oauth::Webform::Fmx::TOAuth2WebFormTitleChangedEvent
+    @Fmxrestcomponents@@GetPackageInfoTable$qqrv @17  ; Fmxrestcomponents::__linkproc__ __fastcall GetPackageInfoTable()
+    @Fmxrestcomponents@@PackageLoad$qqrv @16  ; Fmxrestcomponents::__linkproc__ __fastcall PackageLoad()
+    @Fmxrestcomponents@@PackageUnload$qqrv @15  ; Fmxrestcomponents::__linkproc__ __fastcall PackageUnload()
+    @Fmxrestcomponents@initialization$qqrv @14  ; __fastcall Fmxrestcomponents::initialization()
+    @GetPackageInfoTable           @20  ; GetPackageInfoTable
+    @Rest@Authenticator@Oauth@Webform@Fmx@Finalization$qqrv @2   ; __fastcall Rest::Authenticator::Oauth::Webform::Fmx::Finalization()
+    @Rest@Authenticator@Oauth@Webform@Fmx@Tfrm_OAuthWebForm@ @11  ; Rest::Authenticator::Oauth::Webform::Fmx::Tfrm_OAuthWebForm::
+    @Rest@Authenticator@Oauth@Webform@Fmx@Tfrm_OAuthWebForm@FormClose$qqrp14System@TObjectr27System@Uitypes@TCloseAction @7   ; __fastcall Rest::Authenticator::Oauth::Webform::Fmx::Tfrm_OAuthWebForm::FormClose(System::TObject *, System::Uitypes::TCloseAction&)
+    @Rest@Authenticator@Oauth@Webform@Fmx@Tfrm_OAuthWebForm@FormCreate$qqrp14System@TObject @6   ; __fastcall Rest::Authenticator::Oauth::Webform::Fmx::Tfrm_OAuthWebForm::FormCreate(System::TObject *)
+    @Rest@Authenticator@Oauth@Webform@Fmx@Tfrm_OAuthWebForm@ShowWithURL$qqrx20System@UnicodeString @5   ; __fastcall Rest::Authenticator::Oauth::Webform::Fmx::Tfrm_OAuthWebForm::ShowWithURL(const System::UnicodeString)
+    @Rest@Authenticator@Oauth@Webform@Fmx@Tfrm_OAuthWebForm@WebBrowserDidFinishLoad$qqrp14System@TObject @4   ; __fastcall Rest::Authenticator::Oauth::Webform::Fmx::Tfrm_OAuthWebForm::WebBrowserDidFinishLoad(System::TObject *)
+    @Rest@Authenticator@Oauth@Webform@Fmx@Tfrm_OAuthWebForm@WebBrowserShouldStartLoadWithRequest$qqrp14System@TObjectx20System@UnicodeString @3   ; __fastcall Rest::Authenticator::Oauth::Webform::Fmx::Tfrm_OAuthWebForm::WebBrowserShouldStartLoadWithRequest(System::TObject *, const System::UnicodeString)
+    @Rest@Authenticator@Oauth@Webform@Fmx@Tfrm_OAuthWebForm@btn_CloseClick$qqrp14System@TObject @8   ; __fastcall Rest::Authenticator::Oauth::Webform::Fmx::Tfrm_OAuthWebForm::btn_CloseClick(System::TObject *)
+    @Rest@Authenticator@Oauth@Webform@Fmx@frm_OAuthWebForm @9   ; Rest::Authenticator::Oauth::Webform::Fmx::frm_OAuthWebForm
+    @Rest@Authenticator@Oauth@Webform@Fmx@initialization$qqrv @1   ; __fastcall Rest::Authenticator::Oauth::Webform::Fmx::initialization()
+    Finalize                       @18  ; Finalize
+    Initialize                     @19  ; Initialize

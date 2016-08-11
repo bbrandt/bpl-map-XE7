@@ -1,0 +1,246 @@
+LIBRARY     HTMLHELP2210.BPL
+
+DESCRIPTION 'mbarcadero HtmlHelp2 Support Package'
+
+EXPORTS
+    @$xp$15Vshelp_tlb@Help         @47  ; __tpdsc__ Vshelp_tlb::Help
+    @$xp$18Helpreg@THelpMenus      @233 ; __tpdsc__ Helpreg::THelpMenus
+    @$xp$18Vshelp80_tlb@Help2      @62  ; __tpdsc__ Vshelp80_tlb::Help2
+    @$xp$19Vshelp_tlb@HelpDisp     @46  ; __tpdsc__ Vshelp_tlb::HelpDisp
+    @$xp$22Vshelp80_tlb@Help2Disp  @61  ; __tpdsc__ Vshelp80_tlb::Help2Disp
+    @$xp$23Vshelp_tlb@IVsHelpOwner @50  ; __tpdsc__ Vshelp_tlb::IVsHelpOwner
+    @$xp$24Vshelp_tlb@IVsHelpEvents @45  ; __tpdsc__ Vshelp_tlb::IVsHelpEvents
+    @$xp$27Mshelpservices_tlb@IHxIndex @145 ; __tpdsc__ Mshelpservices_tlb::IHxIndex
+    @$xp$27Mshelpservices_tlb@IHxQuery @138 ; __tpdsc__ Mshelpservices_tlb::IHxQuery
+    @$xp$27Mshelpservices_tlb@IHxTopic @154 ; __tpdsc__ Mshelpservices_tlb::IHxTopic
+    @$xp$27Vshelp_tlb@CoDExploreAppObj @43  ; __tpdsc__ Vshelp_tlb::CoDExploreAppObj
+    @$xp$27Vshelp_tlb@IVsHelpOwnerDisp @49  ; __tpdsc__ Vshelp_tlb::IVsHelpOwnerDisp
+    @$xp$28Mshelpservices_tlb@IHxCancel @90  ; __tpdsc__ Mshelpservices_tlb::IHxCancel
+    @$xp$28Mshelpservices_tlb@IHxPlugIn @94  ; __tpdsc__ Mshelpservices_tlb::IHxPlugIn
+    @$xp$28Mshelpservices_tlb@IHxSample @115 ; __tpdsc__ Mshelpservices_tlb::IHxSample
+    @$xp$28Topicsfound@TFormTopicsFound @35  ; __tpdsc__ Topicsfound::TFormTopicsFound
+    @$xp$29Mshelpservices_tlb@IHxFilters @124 ; __tpdsc__ Mshelpservices_tlb::IHxFilters
+    @$xp$29Mshelpservices_tlb@IHxSession @143 ; __tpdsc__ Mshelpservices_tlb::IHxSession
+    @$xp$29Mshelpservices_tlb@PUserType1 @158 ; __tpdsc__ Mshelpservices_tlb::PUserType1
+    @$xp$29Topicsfound@ETopicsFoundError @37  ; __tpdsc__ Topicsfound::ETopicsFoundError
+    @$xp$29Vshelp80_tlb@IVsHelpFavorites @60  ; __tpdsc__ Vshelp80_tlb::IVsHelpFavorites
+    @$xp$29Vshelp80_tlb@SVsHelpFavorites @59  ; __tpdsc__ Vshelp80_tlb::SVsHelpFavorites
+    @$xp$30Mshelpservices_tlb@CoHxSession @83  ; __tpdsc__ Mshelpservices_tlb::CoHxSession
+    @$xp$30Mshelpservices_tlb@IHxAttrName @132 ; __tpdsc__ Mshelpservices_tlb::IHxAttrName
+    @$xp$30Mshelpservices_tlb@IHxRegTitle @106 ; __tpdsc__ Mshelpservices_tlb::IHxRegTitle
+    @$xp$30Mshelpservices_tlb@IHxRegister @147 ; __tpdsc__ Mshelpservices_tlb::IHxRegister
+    @$xp$31Htmlhelp2viewer@THtmlHelp2Index @219 ; __tpdsc__ Htmlhelp2viewer::THtmlHelp2Index
+    @$xp$31Mshelpservices_tlb@IEnumHxTopic @139 ; __tpdsc__ Mshelpservices_tlb::IEnumHxTopic
+    @$xp$31Mshelpservices_tlb@IHxAttrValue @128 ; __tpdsc__ Mshelpservices_tlb::IHxAttrValue
+    @$xp$31Mshelpservices_tlb@IHxAttribute @150 ; __tpdsc__ Mshelpservices_tlb::IHxAttribute
+    @$xp$31Mshelpservices_tlb@IHxHierarchy @156 ; __tpdsc__ Mshelpservices_tlb::IHxHierarchy
+    @$xp$31Mshelpservices_tlb@IHxIndexDisp @144 ; __tpdsc__ Mshelpservices_tlb::IHxIndexDisp
+    @$xp$31Mshelpservices_tlb@IHxQueryDisp @137 ; __tpdsc__ Mshelpservices_tlb::IHxQueryDisp
+    @$xp$31Mshelpservices_tlb@IHxRegFilter @120 ; __tpdsc__ Mshelpservices_tlb::IHxRegFilter
+    @$xp$31Mshelpservices_tlb@IHxRegPlugIn @101 ; __tpdsc__ Mshelpservices_tlb::IHxRegPlugIn
+    @$xp$31Mshelpservices_tlb@IHxTopicDisp @153 ; __tpdsc__ Mshelpservices_tlb::IHxTopicDisp
+    @$xp$31Mshelpservices_tlb@IHxTopicList @141 ; __tpdsc__ Mshelpservices_tlb::IHxTopicList
+    @$xp$31Mshelpservices_tlb@POleVariant1 @157 ; __tpdsc__ Mshelpservices_tlb::POleVariant1
+    @$xp$32Mshelpservices_tlb@IHxCancelDisp @89  ; __tpdsc__ Mshelpservices_tlb::IHxCancelDisp
+    @$xp$32Mshelpservices_tlb@IHxCollection @136 ; __tpdsc__ Mshelpservices_tlb::IHxCollection
+    @$xp$32Mshelpservices_tlb@IHxInitialize @92  ; __tpdsc__ Mshelpservices_tlb::IHxInitialize
+    @$xp$32Mshelpservices_tlb@IHxPlugInDisp @93  ; __tpdsc__ Mshelpservices_tlb::IHxPlugInDisp
+    @$xp$32Mshelpservices_tlb@IHxSampleDisp @114 ; __tpdsc__ Mshelpservices_tlb::IHxSampleDisp
+    @$xp$33Mshelpservices_tlb@IHxFiltersDisp @123 ; __tpdsc__ Mshelpservices_tlb::IHxFiltersDisp
+    @$xp$33Mshelpservices_tlb@IHxSessionDisp @142 ; __tpdsc__ Mshelpservices_tlb::IHxSessionDisp
+    @$xp$33Vshelp_tlb@IVsHelpTopicShowEvents @48  ; __tpdsc__ Vshelp_tlb::IVsHelpTopicShowEvents
+    @$xp$34Mshelpservices_tlb@IEnumHxAttrName @125 ; __tpdsc__ Mshelpservices_tlb::IEnumHxAttrName
+    @$xp$34Mshelpservices_tlb@IEnumHxRegTitle @102 ; __tpdsc__ Mshelpservices_tlb::IEnumHxRegTitle
+    @$xp$34Mshelpservices_tlb@IHxAttrNameDisp @131 ; __tpdsc__ Mshelpservices_tlb::IHxAttrNameDisp
+    @$xp$34Mshelpservices_tlb@IHxAttrNameList @134 ; __tpdsc__ Mshelpservices_tlb::IHxAttrNameList
+    @$xp$34Mshelpservices_tlb@IHxRegNamespace @109 ; __tpdsc__ Mshelpservices_tlb::IHxRegNamespace
+    @$xp$34Mshelpservices_tlb@IHxRegTitleDisp @105 ; __tpdsc__ Mshelpservices_tlb::IHxRegTitleDisp
+    @$xp$34Mshelpservices_tlb@IHxRegTitleList @104 ; __tpdsc__ Mshelpservices_tlb::IHxRegTitleList
+    @$xp$34Mshelpservices_tlb@IHxRegisterDisp @146 ; __tpdsc__ Mshelpservices_tlb::IHxRegisterDisp
+    @$xp$35Mshelpservices_tlb@IEnumHxAttrValue @126 ; __tpdsc__ Mshelpservices_tlb::IEnumHxAttrValue
+    @$xp$35Mshelpservices_tlb@IEnumHxAttribute @148 ; __tpdsc__ Mshelpservices_tlb::IEnumHxAttribute
+    @$xp$35Mshelpservices_tlb@IEnumHxRegFilter @118 ; __tpdsc__ Mshelpservices_tlb::IEnumHxRegFilter
+    @$xp$35Mshelpservices_tlb@IEnumHxRegPlugIn @97  ; __tpdsc__ Mshelpservices_tlb::IEnumHxRegPlugIn
+    @$xp$35Mshelpservices_tlb@IHxAttrValueDisp @127 ; __tpdsc__ Mshelpservices_tlb::IHxAttrValueDisp
+    @$xp$35Mshelpservices_tlb@IHxAttrValueList @130 ; __tpdsc__ Mshelpservices_tlb::IHxAttrValueList
+    @$xp$35Mshelpservices_tlb@IHxAttributeDisp @149 ; __tpdsc__ Mshelpservices_tlb::IHxAttributeDisp
+    @$xp$35Mshelpservices_tlb@IHxAttributeList @152 ; __tpdsc__ Mshelpservices_tlb::IHxAttributeList
+    @$xp$35Mshelpservices_tlb@IHxHierarchyDisp @155 ; __tpdsc__ Mshelpservices_tlb::IHxHierarchyDisp
+    @$xp$35Mshelpservices_tlb@IHxRegFilterDisp @119 ; __tpdsc__ Mshelpservices_tlb::IHxRegFilterDisp
+    @$xp$35Mshelpservices_tlb@IHxRegFilterList @122 ; __tpdsc__ Mshelpservices_tlb::IHxRegFilterList
+    @$xp$35Mshelpservices_tlb@IHxRegPlugInDisp @100 ; __tpdsc__ Mshelpservices_tlb::IHxRegPlugInDisp
+    @$xp$35Mshelpservices_tlb@IHxRegPlugInList @99  ; __tpdsc__ Mshelpservices_tlb::IHxRegPlugInList
+    @$xp$35Mshelpservices_tlb@IHxSessionEvents @88  ; __tpdsc__ Mshelpservices_tlb::IHxSessionEvents
+    @$xp$35Mshelpservices_tlb@IHxTopicListDisp @140 ; __tpdsc__ Mshelpservices_tlb::IHxTopicListDisp
+    @$xp$36Mshelpservices_tlb@IHxCollectionDisp @135 ; __tpdsc__ Mshelpservices_tlb::IHxCollectionDisp
+    @$xp$36Mshelpservices_tlb@IHxInitializeDisp @91  ; __tpdsc__ Mshelpservices_tlb::IHxInitializeDisp
+    @$xp$36Mshelpservices_tlb@IHxRegistryWalker @113 ; __tpdsc__ Mshelpservices_tlb::IHxRegistryWalker
+    @$xp$37Mshelpservices_tlb@CoHxRegistryWalker @81  ; __tpdsc__ Mshelpservices_tlb::CoHxRegistryWalker
+    @$xp$37Mshelpservices_tlb@IHxRegisterSession @96  ; __tpdsc__ Mshelpservices_tlb::IHxRegisterSession
+    @$xp$38Mshelpservices_tlb@CoHxRegisterSession @79  ; __tpdsc__ Mshelpservices_tlb::CoHxRegisterSession
+    @$xp$38Mshelpservices_tlb@IEnumHxRegNamespace @107 ; __tpdsc__ Mshelpservices_tlb::IEnumHxRegNamespace
+    @$xp$38Mshelpservices_tlb@IHxAttrNameListDisp @133 ; __tpdsc__ Mshelpservices_tlb::IHxAttrNameListDisp
+    @$xp$38Mshelpservices_tlb@IHxRegNamespaceDisp @108 ; __tpdsc__ Mshelpservices_tlb::IHxRegNamespaceDisp
+    @$xp$38Mshelpservices_tlb@IHxRegNamespaceList @111 ; __tpdsc__ Mshelpservices_tlb::IHxRegNamespaceList
+    @$xp$38Mshelpservices_tlb@IHxRegTitleListDisp @103 ; __tpdsc__ Mshelpservices_tlb::IHxRegTitleListDisp
+    @$xp$38Mshelpservices_tlb@IHxRegisterProtocol @86  ; __tpdsc__ Mshelpservices_tlb::IHxRegisterProtocol
+    @$xp$38Mshelpservices_tlb@IHxSampleCollection @117 ; __tpdsc__ Mshelpservices_tlb::IHxSampleCollection
+    @$xp$39Mshelpservices_tlb@CoHxRegisterProtocol @77  ; __tpdsc__ Mshelpservices_tlb::CoHxRegisterProtocol
+    @$xp$39Mshelpservices_tlb@IHxAttrValueListDisp @129 ; __tpdsc__ Mshelpservices_tlb::IHxAttrValueListDisp
+    @$xp$39Mshelpservices_tlb@IHxAttributeListDisp @151 ; __tpdsc__ Mshelpservices_tlb::IHxAttributeListDisp
+    @$xp$39Mshelpservices_tlb@IHxRegFilterListDisp @121 ; __tpdsc__ Mshelpservices_tlb::IHxRegFilterListDisp
+    @$xp$39Mshelpservices_tlb@IHxRegPlugInListDisp @98  ; __tpdsc__ Mshelpservices_tlb::IHxRegPlugInListDisp
+    @$xp$40Mshelpservices_tlb@IHxRegistryWalkerDisp @112 ; __tpdsc__ Mshelpservices_tlb::IHxRegistryWalkerDisp
+    @$xp$41Htmlhelp2viewer@EKeyWordNotFoundException @220 ; __tpdsc__ Htmlhelp2viewer::EKeyWordNotFoundException
+    @$xp$41Mshelpservices_tlb@IHxRegisterSessionDisp @95  ; __tpdsc__ Mshelpservices_tlb::IHxRegisterSessionDisp
+    @$xp$42Mshelpservices_tlb@IHxRegNamespaceListDisp @110 ; __tpdsc__ Mshelpservices_tlb::IHxRegNamespaceListDisp
+    @$xp$42Mshelpservices_tlb@IHxRegisterProtocolDisp @85  ; __tpdsc__ Mshelpservices_tlb::IHxRegisterProtocolDisp
+    @$xp$42Mshelpservices_tlb@IHxSampleCollectionDisp @116 ; __tpdsc__ Mshelpservices_tlb::IHxSampleCollectionDisp
+    @$xp$43Mshelpservices_tlb@IHxRegisterSessionEvents @87  ; __tpdsc__ Mshelpservices_tlb::IHxRegisterSessionEvents
+    @Defaulthelp@Finalization$qqrv @223 ; __fastcall Defaulthelp::Finalization()
+    @Defaulthelp@IDERegister$qqrv  @224 ; __fastcall Defaulthelp::IDERegister()
+    @Defaulthelp@initialization$qqrv @222 ; __fastcall Defaulthelp::initialization()
+    @GetPackageInfoTable           @241 ; GetPackageInfoTable
+    @Helpideshim@Finalization$qqrv @2   ; __fastcall Helpideshim::Finalization()
+    @Helpideshim@GetContextIDPrefix$qqrv @21  ; __fastcall Helpideshim::GetContextIDPrefix()
+    @Helpideshim@GetFilterFromPersonality$qqrv @7   ; __fastcall Helpideshim::GetFilterFromPersonality()
+    @Helpideshim@GetHelpIntroPage$qqrv @23  ; __fastcall Helpideshim::GetHelpIntroPage()
+    @Helpideshim@GetHelpNamespace$qqrv @22  ; __fastcall Helpideshim::GetHelpNamespace()
+    @Helpideshim@GetHelpPersonality$qqrv @6   ; __fastcall Helpideshim::GetHelpPersonality()
+    @Helpideshim@GetHelpProductName$qqrv @24  ; __fastcall Helpideshim::GetHelpProductName()
+    @Helpideshim@IsHtmlHelp2VerbosityHigh$qqrv @15  ; __fastcall Helpideshim::IsHtmlHelp2VerbosityHigh()
+    @Helpideshim@ReadRegBool$qqrx20System@UnicodeStringt1o @9   ; __fastcall Helpideshim::ReadRegBool(const System::UnicodeString, const System::UnicodeString, bool)
+    @Helpideshim@ReadRegString$qqrx20System@UnicodeStringt1t1 @10  ; __fastcall Helpideshim::ReadRegString(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Helpideshim@RegisterHelpShim$qqrv @4   ; __fastcall Helpideshim::RegisterHelpShim()
+    @Helpideshim@Trace$qqrx20System@UnicodeStringp14System@TVarRecxi @5   ; __fastcall Helpideshim::Trace(const System::UnicodeString, System::TVarRec *, const int)
+    @Helpideshim@UnregisterHelpShim$qqrv @3   ; __fastcall Helpideshim::UnregisterHelpShim()
+    @Helpideshim@WriteRegString$qqrx20System@UnicodeStringt1t1 @8   ; __fastcall Helpideshim::WriteRegString(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Helpideshim@initialization$qqrv @1   ; __fastcall Helpideshim::initialization()
+    @Helpideshim@isHelp$qqrv       @20  ; __fastcall Helpideshim::isHelp()
+    @Helpideshim@ivHtmlHelp2ContentsKeyword$qqrv @17  ; __fastcall Helpideshim::ivHtmlHelp2ContentsKeyword()
+    @Helpideshim@ivHtmlHelp2DefaultKeyword$qqrv @18  ; __fastcall Helpideshim::ivHtmlHelp2DefaultKeyword()
+    @Helpideshim@ivHtmlHelp2IsDefaultTopic$qqrv @16  ; __fastcall Helpideshim::ivHtmlHelp2IsDefaultTopic()
+    @Helpideshim@ivHtmlHelp2NameSpace$qqrv @19  ; __fastcall Helpideshim::ivHtmlHelp2NameSpace()
+    @Helpideshim@sCBuilderPersonality$qqrv @12  ; __fastcall Helpideshim::sCBuilderPersonality()
+    @Helpideshim@sCSharpPersonality$qqrv @11  ; __fastcall Helpideshim::sCSharpPersonality()
+    @Helpideshim@sDelphiDotNetPersonality$qqrv @13  ; __fastcall Helpideshim::sDelphiDotNetPersonality()
+    @Helpideshim@sDelphiPersonality$qqrv @14  ; __fastcall Helpideshim::sDelphiPersonality()
+    @Helpreg@Finalization$qqrv     @226 ; __fastcall Helpreg::Finalization()
+    @Helpreg@IDERegister$qqrv      @227 ; __fastcall Helpreg::IDERegister()
+    @Helpreg@THelpMenus@           @234 ; Helpreg::THelpMenus::
+    @Helpreg@THelpMenus@$bctr$qqrv @232 ; __fastcall Helpreg::THelpMenus::THelpMenus()
+    @Helpreg@THelpMenus@$bdtr$qqrv @231 ; __fastcall Helpreg::THelpMenus::~THelpMenus()
+    @Helpreg@THelpMenus@DoShowIndex$qqrp14System@TObject @230 ; __fastcall Helpreg::THelpMenus::DoShowIndex(System::TObject *)
+    @Helpreg@THelpMenus@DoShowSearch$qqrp14System@TObject @229 ; __fastcall Helpreg::THelpMenus::DoShowSearch(System::TObject *)
+    @Helpreg@THelpMenus@DoShowToC$qqrp14System@TObject @228 ; __fastcall Helpreg::THelpMenus::DoShowToC(System::TObject *)
+    @Helpreg@initialization$qqrv   @225 ; __fastcall Helpreg::initialization()
+    @Htmlhelp2@@GetPackageInfoTable$qqrv @238 ; Htmlhelp2::__linkproc__ __fastcall GetPackageInfoTable()
+    @Htmlhelp2@@PackageLoad$qqrv   @237 ; Htmlhelp2::__linkproc__ __fastcall PackageLoad()
+    @Htmlhelp2@@PackageUnload$qqrv @236 ; Htmlhelp2::__linkproc__ __fastcall PackageUnload()
+    @Htmlhelp2@initialization$qqrv @235 ; __fastcall Htmlhelp2::initialization()
+    @Htmlhelp2viewer@CanShowALinkEx$qqrx20System@UnicodeStringt131Htmlhelp2viewer@THtmlHelp2Index @218 ; __fastcall Htmlhelp2viewer::CanShowALinkEx(const System::UnicodeString, const System::UnicodeString, Htmlhelp2viewer::THtmlHelp2Index)
+    @Htmlhelp2viewer@CanShowContextEx$qqrxix20System@UnicodeStringt231Htmlhelp2viewer@THtmlHelp2Index @217 ; __fastcall Htmlhelp2viewer::CanShowContextEx(const int, const System::UnicodeString, const System::UnicodeString, Htmlhelp2viewer::THtmlHelp2Index)
+    @Htmlhelp2viewer@EKeyWordNotFoundException@ @221 ; Htmlhelp2viewer::EKeyWordNotFoundException::
+    @Htmlhelp2viewer@ExtractCollection$qqrx20System@UnicodeString @212 ; __fastcall Htmlhelp2viewer::ExtractCollection(const System::UnicodeString)
+    @Htmlhelp2viewer@ExtractNameSpace$qqrx20System@UnicodeString @213 ; __fastcall Htmlhelp2viewer::ExtractNameSpace(const System::UnicodeString)
+    @Htmlhelp2viewer@Finalization$qqrv @206 ; __fastcall Htmlhelp2viewer::Finalization()
+    @Htmlhelp2viewer@FindNameSpace$qqrx20System@UnicodeStringr20System@UnicodeString @215 ; __fastcall Htmlhelp2viewer::FindNameSpace(const System::UnicodeString, System::UnicodeString&)
+    @Htmlhelp2viewer@GetDefaultKeyword$qqrv @210 ; __fastcall Htmlhelp2viewer::GetDefaultKeyword()
+    @Htmlhelp2viewer@GetHelpStringsEx$qqrx20System@UnicodeStringt131Htmlhelp2viewer@THtmlHelp2Index @214 ; __fastcall Htmlhelp2viewer::GetHelpStringsEx(const System::UnicodeString, const System::UnicodeString, Htmlhelp2viewer::THtmlHelp2Index)
+    @Htmlhelp2viewer@IsHelpInstalled$qqrv @209 ; __fastcall Htmlhelp2viewer::IsHelpInstalled()
+    @Htmlhelp2viewer@NameSpaceExists$qqrx20System@UnicodeString @216 ; __fastcall Htmlhelp2viewer::NameSpaceExists(const System::UnicodeString)
+    @Htmlhelp2viewer@NameSpaceToCollection$qqrx20System@UnicodeString @211 ; __fastcall Htmlhelp2viewer::NameSpaceToCollection(const System::UnicodeString)
+    @Htmlhelp2viewer@RegisterHelpViewer$qqrv @208 ; __fastcall Htmlhelp2viewer::RegisterHelpViewer()
+    @Htmlhelp2viewer@UnregisterHelpViewer$qqrv @207 ; __fastcall Htmlhelp2viewer::UnregisterHelpViewer()
+    @Htmlhelp2viewer@initialization$qqrv @205 ; __fastcall Htmlhelp2viewer::initialization()
+    @Mshelpservices_tlb@CLASS_HxRegisterProtocol @159 ; Mshelpservices_tlb::CLASS_HxRegisterProtocol
+    @Mshelpservices_tlb@CLASS_HxRegisterSession @161 ; Mshelpservices_tlb::CLASS_HxRegisterSession
+    @Mshelpservices_tlb@CLASS_HxRegistryWalker @162 ; Mshelpservices_tlb::CLASS_HxRegistryWalker
+    @Mshelpservices_tlb@CLASS_HxSession @163 ; Mshelpservices_tlb::CLASS_HxSession
+    @Mshelpservices_tlb@CoHxRegisterProtocol@ @78  ; Mshelpservices_tlb::CoHxRegisterProtocol::
+    @Mshelpservices_tlb@CoHxRegisterProtocol@Create$qqrv @70  ; __fastcall Mshelpservices_tlb::CoHxRegisterProtocol::Create()
+    @Mshelpservices_tlb@CoHxRegisterProtocol@CreateRemote$qqrx20System@UnicodeString @69  ; __fastcall Mshelpservices_tlb::CoHxRegisterProtocol::CreateRemote(const System::UnicodeString)
+    @Mshelpservices_tlb@CoHxRegisterSession@ @80  ; Mshelpservices_tlb::CoHxRegisterSession::
+    @Mshelpservices_tlb@CoHxRegisterSession@Create$qqrv @72  ; __fastcall Mshelpservices_tlb::CoHxRegisterSession::Create()
+    @Mshelpservices_tlb@CoHxRegisterSession@CreateRemote$qqrx20System@UnicodeString @71  ; __fastcall Mshelpservices_tlb::CoHxRegisterSession::CreateRemote(const System::UnicodeString)
+    @Mshelpservices_tlb@CoHxRegistryWalker@ @82  ; Mshelpservices_tlb::CoHxRegistryWalker::
+    @Mshelpservices_tlb@CoHxRegistryWalker@Create$qqrv @74  ; __fastcall Mshelpservices_tlb::CoHxRegistryWalker::Create()
+    @Mshelpservices_tlb@CoHxRegistryWalker@CreateRemote$qqrx20System@UnicodeString @73  ; __fastcall Mshelpservices_tlb::CoHxRegistryWalker::CreateRemote(const System::UnicodeString)
+    @Mshelpservices_tlb@CoHxSession@ @84  ; Mshelpservices_tlb::CoHxSession::
+    @Mshelpservices_tlb@CoHxSession@Create$qqrv @76  ; __fastcall Mshelpservices_tlb::CoHxSession::Create()
+    @Mshelpservices_tlb@CoHxSession@CreateRemote$qqrx20System@UnicodeString @75  ; __fastcall Mshelpservices_tlb::CoHxSession::CreateRemote(const System::UnicodeString)
+    @Mshelpservices_tlb@DIID_IHxRegisterSessionEvents @164 ; Mshelpservices_tlb::DIID_IHxRegisterSessionEvents
+    @Mshelpservices_tlb@DIID_IHxSessionEvents @165 ; Mshelpservices_tlb::DIID_IHxSessionEvents
+    @Mshelpservices_tlb@Finalization$qqrv @68  ; __fastcall Mshelpservices_tlb::Finalization()
+    @Mshelpservices_tlb@IID_IEnumHxAttrName @186 ; Mshelpservices_tlb::IID_IEnumHxAttrName
+    @Mshelpservices_tlb@IID_IEnumHxAttrValue @187 ; Mshelpservices_tlb::IID_IEnumHxAttrValue
+    @Mshelpservices_tlb@IID_IEnumHxAttribute @199 ; Mshelpservices_tlb::IID_IEnumHxAttribute
+    @Mshelpservices_tlb@IID_IEnumHxRegFilter @182 ; Mshelpservices_tlb::IID_IEnumHxRegFilter
+    @Mshelpservices_tlb@IID_IEnumHxRegNamespace @176 ; Mshelpservices_tlb::IID_IEnumHxRegNamespace
+    @Mshelpservices_tlb@IID_IEnumHxRegPlugIn @170 ; Mshelpservices_tlb::IID_IEnumHxRegPlugIn
+    @Mshelpservices_tlb@IID_IEnumHxRegTitle @173 ; Mshelpservices_tlb::IID_IEnumHxRegTitle
+    @Mshelpservices_tlb@IID_IEnumHxTopic @194 ; Mshelpservices_tlb::IID_IEnumHxTopic
+    @Mshelpservices_tlb@IID_IHxAttrName @190 ; Mshelpservices_tlb::IID_IHxAttrName
+    @Mshelpservices_tlb@IID_IHxAttrNameList @191 ; Mshelpservices_tlb::IID_IHxAttrNameList
+    @Mshelpservices_tlb@IID_IHxAttrValue @188 ; Mshelpservices_tlb::IID_IHxAttrValue
+    @Mshelpservices_tlb@IID_IHxAttrValueList @189 ; Mshelpservices_tlb::IID_IHxAttrValueList
+    @Mshelpservices_tlb@IID_IHxAttribute @200 ; Mshelpservices_tlb::IID_IHxAttribute
+    @Mshelpservices_tlb@IID_IHxAttributeList @201 ; Mshelpservices_tlb::IID_IHxAttributeList
+    @Mshelpservices_tlb@IID_IHxCancel @166 ; Mshelpservices_tlb::IID_IHxCancel
+    @Mshelpservices_tlb@IID_IHxCollection @192 ; Mshelpservices_tlb::IID_IHxCollection
+    @Mshelpservices_tlb@IID_IHxFilters @185 ; Mshelpservices_tlb::IID_IHxFilters
+    @Mshelpservices_tlb@IID_IHxHierarchy @203 ; Mshelpservices_tlb::IID_IHxHierarchy
+    @Mshelpservices_tlb@IID_IHxIndex @197 ; Mshelpservices_tlb::IID_IHxIndex
+    @Mshelpservices_tlb@IID_IHxInitialize @167 ; Mshelpservices_tlb::IID_IHxInitialize
+    @Mshelpservices_tlb@IID_IHxPlugIn @168 ; Mshelpservices_tlb::IID_IHxPlugIn
+    @Mshelpservices_tlb@IID_IHxQuery @193 ; Mshelpservices_tlb::IID_IHxQuery
+    @Mshelpservices_tlb@IID_IHxRegFilter @183 ; Mshelpservices_tlb::IID_IHxRegFilter
+    @Mshelpservices_tlb@IID_IHxRegFilterList @184 ; Mshelpservices_tlb::IID_IHxRegFilterList
+    @Mshelpservices_tlb@IID_IHxRegNamespace @177 ; Mshelpservices_tlb::IID_IHxRegNamespace
+    @Mshelpservices_tlb@IID_IHxRegNamespaceList @178 ; Mshelpservices_tlb::IID_IHxRegNamespaceList
+    @Mshelpservices_tlb@IID_IHxRegPlugIn @172 ; Mshelpservices_tlb::IID_IHxRegPlugIn
+    @Mshelpservices_tlb@IID_IHxRegPlugInList @171 ; Mshelpservices_tlb::IID_IHxRegPlugInList
+    @Mshelpservices_tlb@IID_IHxRegTitle @175 ; Mshelpservices_tlb::IID_IHxRegTitle
+    @Mshelpservices_tlb@IID_IHxRegTitleList @174 ; Mshelpservices_tlb::IID_IHxRegTitleList
+    @Mshelpservices_tlb@IID_IHxRegister @198 ; Mshelpservices_tlb::IID_IHxRegister
+    @Mshelpservices_tlb@IID_IHxRegisterProtocol @160 ; Mshelpservices_tlb::IID_IHxRegisterProtocol
+    @Mshelpservices_tlb@IID_IHxRegisterSession @169 ; Mshelpservices_tlb::IID_IHxRegisterSession
+    @Mshelpservices_tlb@IID_IHxRegistryWalker @179 ; Mshelpservices_tlb::IID_IHxRegistryWalker
+    @Mshelpservices_tlb@IID_IHxSample @180 ; Mshelpservices_tlb::IID_IHxSample
+    @Mshelpservices_tlb@IID_IHxSampleCollection @181 ; Mshelpservices_tlb::IID_IHxSampleCollection
+    @Mshelpservices_tlb@IID_IHxSession @196 ; Mshelpservices_tlb::IID_IHxSession
+    @Mshelpservices_tlb@IID_IHxTopic @202 ; Mshelpservices_tlb::IID_IHxTopic
+    @Mshelpservices_tlb@IID_IHxTopicList @195 ; Mshelpservices_tlb::IID_IHxTopicList
+    @Mshelpservices_tlb@LIBID_MSHelpServices @204 ; Mshelpservices_tlb::LIBID_MSHelpServices
+    @Mshelpservices_tlb@initialization$qqrv @67  ; __fastcall Mshelpservices_tlb::initialization()
+    @Topicsfound@ETopicsFoundError@ @38  ; Topicsfound::ETopicsFoundError::
+    @Topicsfound@Finalization$qqrv @26  ; __fastcall Topicsfound::Finalization()
+    @Topicsfound@TFormTopicsFound@ @36  ; Topicsfound::TFormTopicsFound::
+    @Topicsfound@TFormTopicsFound@AddTopic$qqrx20System@UnicodeStringt1t1i @34  ; __fastcall Topicsfound::TFormTopicsFound::AddTopic(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, int)
+    @Topicsfound@TFormTopicsFound@ClearTopics$qqrv @32  ; __fastcall Topicsfound::TFormTopicsFound::ClearTopics()
+    @Topicsfound@TFormTopicsFound@FormCreate$qqrp14System@TObject @29  ; __fastcall Topicsfound::TFormTopicsFound::FormCreate(System::TObject *)
+    @Topicsfound@TFormTopicsFound@FormShow$qqrp14System@TObject @28  ; __fastcall Topicsfound::TFormTopicsFound::FormShow(System::TObject *)
+    @Topicsfound@TFormTopicsFound@ListViewTopicsColumnClick$qqrp14System@TObjectp24Vcl@Comctrls@TListColumn @30  ; __fastcall Topicsfound::TFormTopicsFound::ListViewTopicsColumnClick(System::TObject *, Vcl::Comctrls::TListColumn *)
+    @Topicsfound@TFormTopicsFound@ListViewTopicsCompare$qqrp14System@TObjectp22Vcl@Comctrls@TListItemt2iri @31  ; __fastcall Topicsfound::TFormTopicsFound::ListViewTopicsCompare(System::TObject *, Vcl::Comctrls::TListItem *, Vcl::Comctrls::TListItem *, int, int&)
+    @Topicsfound@TFormTopicsFound@ListViewTopicsDblClick$qqrp14System@TObject @33  ; __fastcall Topicsfound::TFormTopicsFound::ListViewTopicsDblClick(System::TObject *)
+    @Topicsfound@TFormTopicsFound@ListViewTopicsKeyDown$qqrp14System@TObjectrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @27  ; Topicsfound::TFormTopicsFound::ListViewTopicsKeyDown(System::TObject *, unsigned short&, System::Set<{583}...
+    @Topicsfound@initialization$qqrv @25  ; __fastcall Topicsfound::initialization()
+    @Vshelp80_tlb@Finalization$qqrv @58  ; __fastcall Vshelp80_tlb::Finalization()
+    @Vshelp80_tlb@IID_Help2        @65  ; Vshelp80_tlb::IID_Help2
+    @Vshelp80_tlb@IID_IVsHelpFavorites @64  ; Vshelp80_tlb::IID_IVsHelpFavorites
+    @Vshelp80_tlb@IID_SVsHelpFavorites @63  ; Vshelp80_tlb::IID_SVsHelpFavorites
+    @Vshelp80_tlb@LIBID_VsHelp80   @66  ; Vshelp80_tlb::LIBID_VsHelp80
+    @Vshelp80_tlb@initialization$qqrv @57  ; __fastcall Vshelp80_tlb::initialization()
+    @Vshelp_tlb@CLASS_DExploreAppObj @51  ; Vshelp_tlb::CLASS_DExploreAppObj
+    @Vshelp_tlb@CoDExploreAppObj@  @44  ; Vshelp_tlb::CoDExploreAppObj::
+    @Vshelp_tlb@CoDExploreAppObj@Create$qqrv @42  ; __fastcall Vshelp_tlb::CoDExploreAppObj::Create()
+    @Vshelp_tlb@CoDExploreAppObj@CreateRemote$qqrx20System@UnicodeString @41  ; __fastcall Vshelp_tlb::CoDExploreAppObj::CreateRemote(const System::UnicodeString)
+    @Vshelp_tlb@Finalization$qqrv  @40  ; __fastcall Vshelp_tlb::Finalization()
+    @Vshelp_tlb@IID_Help           @53  ; Vshelp_tlb::IID_Help
+    @Vshelp_tlb@IID_IVsHelpEvents  @52  ; Vshelp_tlb::IID_IVsHelpEvents
+    @Vshelp_tlb@IID_IVsHelpOwner   @55  ; Vshelp_tlb::IID_IVsHelpOwner
+    @Vshelp_tlb@IID_IVsHelpTopicShowEvents @54  ; Vshelp_tlb::IID_IVsHelpTopicShowEvents
+    @Vshelp_tlb@LIBID_VsHelp       @56  ; Vshelp_tlb::LIBID_VsHelp
+    @Vshelp_tlb@initialization$qqrv @39  ; __fastcall Vshelp_tlb::initialization()
+    Finalize                       @239 ; Finalize
+    Initialize                     @240 ; Initialize

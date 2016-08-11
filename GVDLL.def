@@ -1,0 +1,8 @@
+LIBRARY     GVDLL.DLL
+
+EXPORTS
+    gv_FileToFile                 = _gv_FileToFile@12                   
+    gv_StrToFile                  = _gv_StrToFile@12                    
+    gv_StrToModel                 = _gv_StrToModel@12                   
+    gv_exit                       = _gv_exit@0                          
+    gv_init                       = _gv_init@0                          

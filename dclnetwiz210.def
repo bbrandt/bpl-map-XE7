@@ -1,0 +1,15 @@
+LIBRARY     DCLNETWIZ210.BPL
+
+DESCRIPTION 'mbarcadero Internet Server Wizards'
+
+EXPORTS
+    @Dclnetwiz@@GetPackageInfoTable$qqrv @7   ; Dclnetwiz::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclnetwiz@@PackageLoad$qqrv   @6   ; Dclnetwiz::__linkproc__ __fastcall PackageLoad()
+    @Dclnetwiz@@PackageUnload$qqrv @5   ; Dclnetwiz::__linkproc__ __fastcall PackageUnload()
+    @Dclnetwiz@initialization$qqrv @4   ; __fastcall Dclnetwiz::initialization()
+    @GetPackageInfoTable           @10  ; GetPackageInfoTable
+    @Inetwizreg@Finalization$qqrv  @2   ; __fastcall Inetwizreg::Finalization()
+    @Inetwizreg@Register$qqrv      @3   ; __fastcall Inetwizreg::Register()
+    @Inetwizreg@initialization$qqrv @1   ; __fastcall Inetwizreg::initialization()
+    Finalize                       @8   ; Finalize
+    Initialize                     @9   ; Initialize

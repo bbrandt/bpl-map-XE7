@@ -1,0 +1,58 @@
+LIBRARY     FILEEXPLORER210.BPL
+
+DESCRIPTION 'mbarcadero File Explorer IDE Package'
+
+EXPORTS
+    @$xp$26Explorerform@TProjectArray @36  ; __tpdsc__ Explorerform::TProjectArray
+    @$xp$30Explorerform@TFileExplorerForm @34  ; __tpdsc__ Explorerform::TFileExplorerForm
+    @$xp$38Fileexplorercmds@TFileExplorerCommands @45  ; __tpdsc__ Fileexplorercmds::TFileExplorerCommands
+    @Explorerform@Finalization$qqrv @2   ; __fastcall Explorerform::Finalization()
+    @Explorerform@TFileExplorerForm@ @35  ; Explorerform::TFileExplorerForm::
+    @Explorerform@TFileExplorerForm@$bctr$qqrp25System@Classes@TComponent @26  ; __fastcall Explorerform::TFileExplorerForm::TFileExplorerForm(System::Classes::TComponent *)
+    @Explorerform@TFileExplorerForm@AddFileToProject$qqr49System@%DelphiInterface$22Codemgr@ICustomProject%x20System@UnicodeString @33  ; Explorerform::TFileExplorerForm::AddFileToProject(System::DelphiInterface<{583}...
+    @Explorerform@TFileExplorerForm@BelongsToProjects$qqr52System@%DelphiInterface$25Toolsapi@IOTAProjectGroup%x20System@UnicodeString @32  ; Explorerform::TFileExplorerForm::BelongsToProjects(System::DelphiInterface<{583}...
+    @Explorerform@TFileExplorerForm@CanAddToProject$qqr60System@%DynamicArray$p35Idevirtualshellutilities@TNamespace% @31  ; Explorerform::TFileExplorerForm::CanAddToProject(System::DynamicArray<{583}...
+    @Explorerform@TFileExplorerForm@ConfirmFileDelete$qqr60System@%DynamicArray$p35Idevirtualshellutilities@TNamespace% @23  ; Explorerform::TFileExplorerForm::ConfirmFileDelete(System::DynamicArray<{583}...
+    @Explorerform@TFileExplorerForm@FileRenamed$qqrp28Idevirtualtrees@TVirtualNodex20System@UnicodeString @25  ; __fastcall Explorerform::TFileExplorerForm::FileRenamed(Idevirtualtrees::TVirtualNode *, const System::UnicodeString)
+    @Explorerform@TFileExplorerForm@FilesDeleted$qqr60System@%DynamicArray$p35Idevirtualshellutilities@TNamespace% @24  ; Explorerform::TFileExplorerForm::FilesDeleted(System::DynamicArray<{583}...
+    @Explorerform@TFileExplorerForm@FormCreate$qqrp14System@TObject @22  ; __fastcall Explorerform::TFileExplorerForm::FormCreate(System::TObject *)
+    @Explorerform@TFileExplorerForm@FormDestroy$qqrp14System@TObject @21  ; __fastcall Explorerform::TFileExplorerForm::FormDestroy(System::TObject *)
+    @Explorerform@TFileExplorerForm@GetFileMasks$qqrv @20  ; __fastcall Explorerform::TFileExplorerForm::GetFileMasks()
+    @Explorerform@TFileExplorerForm@GetLocation$qqrv @19  ; __fastcall Explorerform::TFileExplorerForm::GetLocation()
+    @Explorerform@TFileExplorerForm@LoadWindowState$qqrp30System@Inifiles@TCustomIniFile @18  ; __fastcall Explorerform::TFileExplorerForm::LoadWindowState(System::Inifiles::TCustomIniFile *)
+    @Explorerform@TFileExplorerForm@ProjectInProjectGroup$qqr52System@%DelphiInterface$25Toolsapi@IOTAProjectGroup%x20System@UnicodeString @17  ; Explorerform::TFileExplorerForm::ProjectInProjectGroup(System::DelphiInterface<{583}...
+    @Explorerform@TFileExplorerForm@SaveWindowState$qqrp30System@Inifiles@TCustomIniFileo @16  ; __fastcall Explorerform::TFileExplorerForm::SaveWindowState(System::Inifiles::TCustomIniFile *, bool)
+    @Explorerform@TFileExplorerForm@SetFileMasks$qqrx20System@UnicodeString @15  ; __fastcall Explorerform::TFileExplorerForm::SetFileMasks(const System::UnicodeString)
+    @Explorerform@TFileExplorerForm@SetLocation$qqrx20System@UnicodeString @14  ; __fastcall Explorerform::TFileExplorerForm::SetLocation(const System::UnicodeString)
+    @Explorerform@TFileExplorerForm@SetMasksActionExecute$qqrp14System@TObject @13  ; __fastcall Explorerform::TFileExplorerForm::SetMasksActionExecute(System::TObject *)
+    @Explorerform@TFileExplorerForm@SetRootActionExecute$qqrp14System@TObject @12  ; __fastcall Explorerform::TFileExplorerForm::SetRootActionExecute(System::TObject *)
+    @Explorerform@TFileExplorerForm@SetRootFolder$qqrx20System@UnicodeString @11  ; __fastcall Explorerform::TFileExplorerForm::SetRootFolder(const System::UnicodeString)
+    @Explorerform@TFileExplorerForm@VETreeViewContextMenuAfterCmd$qqrp49Idevirtualexplorertree@TCustomVirtualExplorerTreep35Idevirtualshellutilities@TNamespace17System@WideStringio @10  ; __fastcall Explorerform::TFileExplorerForm::VETreeViewContextMenuAfterCmd(Idevirtualexplorertree::TCustomVirtualExplorerTree *, Idevirtualshellutilities::TNamespace *, System::WideString, int, bool)
+    @Explorerform@TFileExplorerForm@VETreeViewContextMenuCmd$qqrp49Idevirtualexplorertree@TCustomVirtualExplorerTreep35Idevirtualshellutilities@TNamespace17System@WideStringiro @9   ; __fastcall Explorerform::TFileExplorerForm::VETreeViewContextMenuCmd(Idevirtualexplorertree::TCustomVirtualExplorerTree *, Idevirtualshellutilities::TNamespace *, System::WideString, int, bool&)
+    @Explorerform@TFileExplorerForm@VETreeViewContextMenuShow$qqrp49Idevirtualexplorertree@TCustomVirtualExplorerTreep35Idevirtualshellutilities@TNamespacep7HMENU__ro @8   ; __fastcall Explorerform::TFileExplorerForm::VETreeViewContextMenuShow(Idevirtualexplorertree::TCustomVirtualExplorerTree *, Idevirtualshellutilities::TNamespace *, HMENU__ *, bool&)
+    @Explorerform@TFileExplorerForm@VETreeViewEditCancelled$qqrp32Idevirtualtrees@TBaseVirtualTreei @7   ; __fastcall Explorerform::TFileExplorerForm::VETreeViewEditCancelled(Idevirtualtrees::TBaseVirtualTree *, int)
+    @Explorerform@TFileExplorerForm@VETreeViewEdited$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodei @6   ; __fastcall Explorerform::TFileExplorerForm::VETreeViewEdited(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, int)
+    @Explorerform@TFileExplorerForm@VETreeViewEditing$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodeiro @5   ; __fastcall Explorerform::TFileExplorerForm::VETreeViewEditing(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, int, bool&)
+    @Explorerform@TFileExplorerForm@VETreeViewEnumFolder$qqrp49Idevirtualexplorertree@TCustomVirtualExplorerTreep35Idevirtualshellutilities@TNamespacero @4   ; __fastcall Explorerform::TFileExplorerForm::VETreeViewEnumFolder(Idevirtualexplorertree::TCustomVirtualExplorerTree *, Idevirtualshellutilities::TNamespace *, bool&)
+    @Explorerform@TFileExplorerForm@VETreeViewKeyDown$qqrp14System@TObjectrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @3   ; Explorerform::TFileExplorerForm::VETreeViewKeyDown(System::TObject *, unsigned short&, System::Set<{583}...
+    @Explorerform@TFileExplorerForm@cmaAddToProjectExecute$qqrp14System@TObject @30  ; __fastcall Explorerform::TFileExplorerForm::cmaAddToProjectExecute(System::TObject *)
+    @Explorerform@TFileExplorerForm@cmaAddToProjectUpdate$qqrp14System@TObject @29  ; __fastcall Explorerform::TFileExplorerForm::cmaAddToProjectUpdate(System::TObject *)
+    @Explorerform@TFileExplorerForm@cmaOpenInEditorExecute$qqrp14System@TObject @28  ; __fastcall Explorerform::TFileExplorerForm::cmaOpenInEditorExecute(System::TObject *)
+    @Explorerform@TFileExplorerForm@cmaOpenInEditorUpdate$qqrp14System@TObject @27  ; __fastcall Explorerform::TFileExplorerForm::cmaOpenInEditorUpdate(System::TObject *)
+    @Explorerform@initialization$qqrv @1   ; __fastcall Explorerform::initialization()
+    @Fileexplorer@@GetPackageInfoTable$qqrv @50  ; Fileexplorer::__linkproc__ __fastcall GetPackageInfoTable()
+    @Fileexplorer@@PackageLoad$qqrv @49  ; Fileexplorer::__linkproc__ __fastcall PackageLoad()
+    @Fileexplorer@@PackageUnload$qqrv @48  ; Fileexplorer::__linkproc__ __fastcall PackageUnload()
+    @Fileexplorer@initialization$qqrv @47  ; __fastcall Fileexplorer::initialization()
+    @Fileexplorercmds@FileExplorerCommands @44  ; Fileexplorercmds::FileExplorerCommands
+    @Fileexplorercmds@Finalization$qqrv @38  ; __fastcall Fileexplorercmds::Finalization()
+    @Fileexplorercmds@IDERegister$qqrv @43  ; __fastcall Fileexplorercmds::IDERegister()
+    @Fileexplorercmds@TFileExplorerCommands@ @46  ; Fileexplorercmds::TFileExplorerCommands::
+    @Fileexplorercmds@TFileExplorerCommands@DataModuleCreate$qqrp14System@TObject @42  ; __fastcall Fileexplorercmds::TFileExplorerCommands::DataModuleCreate(System::TObject *)
+    @Fileexplorercmds@TFileExplorerCommands@DataModuleDestroy$qqrp14System@TObject @41  ; __fastcall Fileexplorercmds::TFileExplorerCommands::DataModuleDestroy(System::TObject *)
+    @Fileexplorercmds@TFileExplorerCommands@ProductStartup$qqrp14System@TObject @40  ; __fastcall Fileexplorercmds::TFileExplorerCommands::ProductStartup(System::TObject *)
+    @Fileexplorercmds@TFileExplorerCommands@ViewFileExplorerExecute$qqrp14System@TObject @39  ; __fastcall Fileexplorercmds::TFileExplorerCommands::ViewFileExplorerExecute(System::TObject *)
+    @Fileexplorercmds@initialization$qqrv @37  ; __fastcall Fileexplorercmds::initialization()
+    @GetPackageInfoTable           @53  ; GetPackageInfoTable
+    Finalize                       @51  ; Finalize
+    Initialize                     @52  ; Initialize

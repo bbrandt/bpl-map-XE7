@@ -1,0 +1,20 @@
+LIBRARY     DCLBINDCOMPVCL210.BPL
+
+DESCRIPTION 'mbarcadero LiveBindings Components VCL'
+
+EXPORTS
+    @$xp$39Bindcompvclresources@TBindSourceActions @4   ; __tpdsc__ Bindcompvclresources::TBindSourceActions
+    @Bindcompvclreg@Finalization$qqrv @7   ; __fastcall Bindcompvclreg::Finalization()
+    @Bindcompvclreg@Register$qqrv  @8   ; __fastcall Bindcompvclreg::Register()
+    @Bindcompvclreg@initialization$qqrv @6   ; __fastcall Bindcompvclreg::initialization()
+    @Bindcompvclresources@BindSourceActions @3   ; Bindcompvclresources::BindSourceActions
+    @Bindcompvclresources@Finalization$qqrv @2   ; __fastcall Bindcompvclresources::Finalization()
+    @Bindcompvclresources@TBindSourceActions@ @5   ; Bindcompvclresources::TBindSourceActions::
+    @Bindcompvclresources@initialization$qqrv @1   ; __fastcall Bindcompvclresources::initialization()
+    @Dclbindcompvcl@@GetPackageInfoTable$qqrv @12  ; Dclbindcompvcl::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclbindcompvcl@@PackageLoad$qqrv @11  ; Dclbindcompvcl::__linkproc__ __fastcall PackageLoad()
+    @Dclbindcompvcl@@PackageUnload$qqrv @10  ; Dclbindcompvcl::__linkproc__ __fastcall PackageUnload()
+    @Dclbindcompvcl@initialization$qqrv @9   ; __fastcall Dclbindcompvcl::initialization()
+    @GetPackageInfoTable           @15  ; GetPackageInfoTable
+    Finalize                       @13  ; Finalize
+    Initialize                     @14  ; Initialize

@@ -1,0 +1,15 @@
+LIBRARY     WIN64DEBUGIDE210.BPL
+
+DESCRIPTION 'mbarcadero Win64 Native Code Debugger IDE Package'
+
+EXPORTS
+    @GetPackageInfoTable           @10  ; GetPackageInfoTable
+    @Win64debug@Finalization$qqrv  @2   ; __fastcall Win64debug::Finalization()
+    @Win64debug@IDERegister$qqrv   @3   ; __fastcall Win64debug::IDERegister()
+    @Win64debug@initialization$qqrv @1   ; __fastcall Win64debug::initialization()
+    @Win64debugide@@GetPackageInfoTable$qqrv @7   ; Win64debugide::__linkproc__ __fastcall GetPackageInfoTable()
+    @Win64debugide@@PackageLoad$qqrv @6   ; Win64debugide::__linkproc__ __fastcall PackageLoad()
+    @Win64debugide@@PackageUnload$qqrv @5   ; Win64debugide::__linkproc__ __fastcall PackageUnload()
+    @Win64debugide@initialization$qqrv @4   ; __fastcall Win64debugide::initialization()
+    Finalize                       @8   ; Finalize
+    Initialize                     @9   ; Initialize

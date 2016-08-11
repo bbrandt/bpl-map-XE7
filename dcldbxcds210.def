@@ -1,0 +1,24 @@
+LIBRARY     DCLDBXCDS210.BPL
+
+DESCRIPTION 'mbarcadero SimpleDataset Component (DBX)'
+
+EXPORTS
+    @$xp$32Simpledsreg@TSimpleDataSetEditor @11  ; __tpdsc__ Simpledsreg::TSimpleDataSetEditor
+    @$xp$41Simpledsreg@TSimpleDataSetSelectionEditor @9   ; __tpdsc__ Simpledsreg::TSimpleDataSetSelectionEditor
+    @Dcldbxcds@@GetPackageInfoTable$qqrv @16  ; Dcldbxcds::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dcldbxcds@@PackageLoad$qqrv   @15  ; Dcldbxcds::__linkproc__ __fastcall PackageLoad()
+    @Dcldbxcds@@PackageUnload$qqrv @14  ; Dcldbxcds::__linkproc__ __fastcall PackageUnload()
+    @Dcldbxcds@initialization$qqrv @13  ; __fastcall Dcldbxcds::initialization()
+    @GetPackageInfoTable           @19  ; GetPackageInfoTable
+    @Simpledsreg@Finalization$qqrv @2   ; __fastcall Simpledsreg::Finalization()
+    @Simpledsreg@Register$qqrv     @3   ; __fastcall Simpledsreg::Register()
+    @Simpledsreg@TSimpleDataSetEditor@ @12  ; Simpledsreg::TSimpleDataSetEditor::
+    @Simpledsreg@TSimpleDataSetEditor@ExecuteVerb$qqri @8   ; __fastcall Simpledsreg::TSimpleDataSetEditor::ExecuteVerb(int)
+    @Simpledsreg@TSimpleDataSetEditor@GetVerb$qqri @7   ; __fastcall Simpledsreg::TSimpleDataSetEditor::GetVerb(int)
+    @Simpledsreg@TSimpleDataSetEditor@GetVerbCount$qqrv @6   ; __fastcall Simpledsreg::TSimpleDataSetEditor::GetVerbCount()
+    @Simpledsreg@TSimpleDataSetSelectionEditor@ @10  ; Simpledsreg::TSimpleDataSetSelectionEditor::
+    @Simpledsreg@TSimpleDataSetSelectionEditor@FilterProperties$qqrx57System@%DelphiInterface$30Designintf@IDesignerSelections%x56System@%DelphiInterface$29System@Classes@IInterfaceList% @4   ; Simpledsreg::TSimpleDataSetSelectionEditor::FilterProperties(const System::DelphiInterface<{583}...
+    @Simpledsreg@TSimpleDataSetSelectionEditor@RequiresUnits$qqrynpqqrx20System@UnicodeString$v @5   ; __fastcall Simpledsreg::TSimpleDataSetSelectionEditor::RequiresUnits(void __fastcall __closure(*)(const System::UnicodeString))
+    @Simpledsreg@initialization$qqrv @1   ; __fastcall Simpledsreg::initialization()
+    Finalize                       @17  ; Finalize
+    Initialize                     @18  ; Initialize

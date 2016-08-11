@@ -1,0 +1,10 @@
+LIBRARY     MODELINGCPPBCCGATE.DLL
+
+EXPORTS
+    ___CPPdebugHook                @6   ; ___CPPdebugHook
+    __stkchk                       @7   ; __stkchk
+    do_compile_and_build_tree      @2   ; do_compile_and_build_tree
+    do_free_compiler_structures    @3   ; do_free_compiler_structures
+    do_init_file_system_hooks      @1   ; do_init_file_system_hooks
+    do_unload_compiler_library     @4   ; do_unload_compiler_library
+    set_symbol_tracer              @5   ; set_symbol_tracer

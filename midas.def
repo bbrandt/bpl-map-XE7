@@ -1,0 +1,12 @@
+LIBRARY     MIDAS.DLL
+
+EXPORTS
+    DllCanUnloadNow                @7   ; DllCanUnloadNow
+    DllGetClassObject              @6   ; DllGetClassObject
+    DllGetDataSnapClassObject      @1   ; DllGetDataSnapClassObject
+    DllRegisterServer              @8   ; DllRegisterServer
+    DllUnregisterServer            @9   ; DllUnregisterServer
+    ExitAlchemy                    @3   ; ExitAlchemy
+    InitAlchemy                    @2   ; InitAlchemy
+    WEP                            @4   ; WEP
+    ___CPPdebugHook                @5   ; ___CPPdebugHook

@@ -1,0 +1,115 @@
+LIBRARY     DBXINTERBASEDRIVER210.BPL
+
+DESCRIPTION 'mbarcadero InterBase Client'
+
+EXPORTS
+    @$xp$34Data@Dbxinterbase@TDBXIBToGoDriver @96  ; __tpdsc__ Data::Dbxinterbase::TDBXIBToGoDriver
+    @$xp$37Data@Dbxinterbase@TDBXInterBaseDriver @100 ; __tpdsc__ Data::Dbxinterbase::TDBXInterBaseDriver
+    @$xp$38Data@Dbxinterbase@TDBXIBToGoProperties @98  ; __tpdsc__ Data::Dbxinterbase::TDBXIBToGoProperties
+    @$xp$41Data@Dbxinterbase@TDBXInterBaseProperties @102 ; __tpdsc__ Data::Dbxinterbase::TDBXInterBaseProperties
+    @$xp$59Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader @53  ; __tpdsc__ Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader
+    @$xp$59Data@Dbxinterbasemetadatawriter@TDBXInterbaseMetaDataWriter @76  ; __tpdsc__ Data::Dbxinterbasemetadatawriter::TDBXInterbaseMetaDataWriter
+    @$xp$61Data@Dbxinterbasemetadatareader@TDBXInterbaseTypeFilterCursor @49  ; __tpdsc__ Data::Dbxinterbasemetadatareader::TDBXInterbaseTypeFilterCursor
+    @$xp$65Data@Dbxinterbasemetadatareader@TDBXInterbaseCustomMetaDataReader @55  ; __tpdsc__ Data::Dbxinterbasemetadatareader::TDBXInterbaseCustomMetaDataReader
+    @$xp$65Data@Dbxinterbasemetadatawriter@TDBXInterbaseCustomMetaDataWriter @78  ; __tpdsc__ Data::Dbxinterbasemetadatawriter::TDBXInterbaseCustomMetaDataWriter
+    @$xp$69Data@Dbxinterbasereadonlymetadata@TDBXInterbaseMetaDataCommandFactory @60  ; __tpdsc__ Data::Dbxinterbasereadonlymetadata::TDBXInterbaseMetaDataCommandFactory
+    @$xp$74Data@Dbxinterbasemetadatareader@TDBXInterbaseTypeFilterCursor@Tibase_const @51  ; __tpdsc__ Data::Dbxinterbasemetadatareader::TDBXInterbaseTypeFilterCursor::Tibase_const
+    @Data@Dbxinterbase@Finalization$qqrv @83  ; __fastcall Data::Dbxinterbase::Finalization()
+    @Data@Dbxinterbase@TDBXIBToGoDriver@ @97  ; Data::Dbxinterbase::TDBXIBToGoDriver::
+    @Data@Dbxinterbase@TDBXIBToGoDriver@$bctr$qqrrx28Data@Dbxcommon@TDBXDriverDef @84  ; __fastcall Data::Dbxinterbase::TDBXIBToGoDriver::TDBXIBToGoDriver(const Data::Dbxcommon::TDBXDriverDef&)
+    @Data@Dbxinterbase@TDBXIBToGoProperties@ @99  ; Data::Dbxinterbase::TDBXIBToGoProperties::
+    @Data@Dbxinterbase@TDBXIBToGoProperties@$bctr$qqrp26Data@Dbxcommon@TDBXContext @85  ; __fastcall Data::Dbxinterbase::TDBXIBToGoProperties::TDBXIBToGoProperties(Data::Dbxcommon::TDBXContext *)
+    @Data@Dbxinterbase@TDBXInterBaseDriver@ @101 ; Data::Dbxinterbase::TDBXInterBaseDriver::
+    @Data@Dbxinterbase@TDBXInterBaseDriver@$bctr$qqrrx28Data@Dbxcommon@TDBXDriverDef @95  ; __fastcall Data::Dbxinterbase::TDBXInterBaseDriver::TDBXInterBaseDriver(const Data::Dbxcommon::TDBXDriverDef&)
+    @Data@Dbxinterbase@TDBXInterBaseProperties@ @103 ; Data::Dbxinterbase::TDBXInterBaseProperties::
+    @Data@Dbxinterbase@TDBXInterBaseProperties@$bctr$qqrp26Data@Dbxcommon@TDBXContext @94  ; __fastcall Data::Dbxinterbase::TDBXInterBaseProperties::TDBXInterBaseProperties(Data::Dbxcommon::TDBXContext *)
+    @Data@Dbxinterbase@TDBXInterBaseProperties@GetDatabase$qqrv @93  ; __fastcall Data::Dbxinterbase::TDBXInterBaseProperties::GetDatabase()
+    @Data@Dbxinterbase@TDBXInterBaseProperties@GetPassword$qqrv @92  ; __fastcall Data::Dbxinterbase::TDBXInterBaseProperties::GetPassword()
+    @Data@Dbxinterbase@TDBXInterBaseProperties@GetServerCharSet$qqrv @91  ; __fastcall Data::Dbxinterbase::TDBXInterBaseProperties::GetServerCharSet()
+    @Data@Dbxinterbase@TDBXInterBaseProperties@GetUserName$qqrv @90  ; __fastcall Data::Dbxinterbase::TDBXInterBaseProperties::GetUserName()
+    @Data@Dbxinterbase@TDBXInterBaseProperties@SetDatabase$qqrx20System@UnicodeString @89  ; __fastcall Data::Dbxinterbase::TDBXInterBaseProperties::SetDatabase(const System::UnicodeString)
+    @Data@Dbxinterbase@TDBXInterBaseProperties@SetPassword$qqrx20System@UnicodeString @88  ; __fastcall Data::Dbxinterbase::TDBXInterBaseProperties::SetPassword(const System::UnicodeString)
+    @Data@Dbxinterbase@TDBXInterBaseProperties@SetServerCharSet$qqrx20System@UnicodeString @87  ; __fastcall Data::Dbxinterbase::TDBXInterBaseProperties::SetServerCharSet(const System::UnicodeString)
+    @Data@Dbxinterbase@TDBXInterBaseProperties@SetUserName$qqrx20System@UnicodeString @86  ; __fastcall Data::Dbxinterbase::TDBXInterBaseProperties::SetUserName(const System::UnicodeString)
+    @Data@Dbxinterbase@initialization$qqrv @82  ; __fastcall Data::Dbxinterbase::initialization()
+    @Data@Dbxinterbasemetadata@Finalization$qqrv @81  ; __fastcall Data::Dbxinterbasemetadata::Finalization()
+    @Data@Dbxinterbasemetadata@initialization$qqrv @80  ; __fastcall Data::Dbxinterbasemetadata::initialization()
+    @Data@Dbxinterbasemetadatareader@Finalization$qqrv @2   ; __fastcall Data::Dbxinterbasemetadatareader::Finalization()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseCustomMetaDataReader@ @56  ; Data::Dbxinterbasemetadatareader::TDBXInterbaseCustomMetaDataReader::
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseCustomMetaDataReader@$bdtr$qqrv @48  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseCustomMetaDataReader::~TDBXInterbaseCustomMetaDataReader()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseCustomMetaDataReader@FetchColumns$qqrx20System@UnicodeStringt1t1 @40  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseCustomMetaDataReader::FetchColumns(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseCustomMetaDataReader@FetchProcedureParameters$qqrx20System@UnicodeStringt1t1t1 @39  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseCustomMetaDataReader::FetchProcedureParameters(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseCustomMetaDataReader@GetAllDataTypes$qqrv @41  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseCustomMetaDataReader::GetAllDataTypes()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseCustomMetaDataReader@GetDataTypeDescriptions$qqrv @42  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseCustomMetaDataReader::GetDataTypeDescriptions()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseCustomMetaDataReader@GetSqlIdentifierQuoteChar$qqrv @43  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseCustomMetaDataReader::GetSqlIdentifierQuoteChar()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseCustomMetaDataReader@GetSqlIdentifierQuotePrefix$qqrv @45  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseCustomMetaDataReader::GetSqlIdentifierQuotePrefix()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseCustomMetaDataReader@GetSqlIdentifierQuoteSuffix$qqrv @44  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseCustomMetaDataReader::GetSqlIdentifierQuoteSuffix()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseCustomMetaDataReader@IsDefaultCharSetUnicode$qqrv @46  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseCustomMetaDataReader::IsDefaultCharSetUnicode()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseCustomMetaDataReader@SetContext$qqrxp42Data@Dbxmetadatareader@TDBXProviderContext @47  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseCustomMetaDataReader::SetContext(Data::Dbxmetadatareader::TDBXProviderContext * const)
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@ @54  ; Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@FetchCatalogs$qqrv @33  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::FetchCatalogs()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@FetchColumnConstraints$qqrx20System@UnicodeStringt1t1 @28  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::FetchColumnConstraints(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@FetchPackageProcedureParameters$qqrx20System@UnicodeStringt1t1t1t1 @17  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::FetchPackageProcedureParameters(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@FetchPackageProcedures$qqrx20System@UnicodeStringt1t1t1t1 @18  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::FetchPackageProcedures(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@FetchPackageSources$qqrx20System@UnicodeStringt1t1 @16  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::FetchPackageSources(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@FetchPackages$qqrx20System@UnicodeStringt1t1 @19  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::FetchPackages(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@FetchSchemas$qqrx20System@UnicodeString @32  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::FetchSchemas(const System::UnicodeString)
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@FetchSynonyms$qqrx20System@UnicodeStringt1t1 @23  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::FetchSynonyms(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@GetProductName$qqrv @38  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::GetProductName()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@GetReservedWords$qqrv @13  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::GetReservedWords()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@GetSqlForColumns$qqrv @29  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::GetSqlForColumns()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@GetSqlForForeignKeyColumns$qqrv @24  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::GetSqlForForeignKeyColumns()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@GetSqlForForeignKeys$qqrv @25  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::GetSqlForForeignKeys()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@GetSqlForIndexColumns$qqrv @26  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::GetSqlForIndexColumns()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@GetSqlForIndexes$qqrv @27  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::GetSqlForIndexes()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@GetSqlForProcedureParameters$qqrv @20  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::GetSqlForProcedureParameters()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@GetSqlForProcedureSources$qqrv @21  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::GetSqlForProcedureSources()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@GetSqlForProcedures$qqrv @22  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::GetSqlForProcedures()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@GetSqlForRoles$qqrv @14  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::GetSqlForRoles()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@GetSqlForTables$qqrv @31  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::GetSqlForTables()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@GetSqlForUsers$qqrv @15  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::GetSqlForUsers()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@GetSqlForViews$qqrv @30  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::GetSqlForViews()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@IsDescendingIndexColumnsSupported$qqrv @36  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::IsDescendingIndexColumnsSupported()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@IsDescendingIndexSupported$qqrv @37  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::IsDescendingIndexSupported()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@IsNestedTransactionsSupported$qqrv @35  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::IsNestedTransactionsSupported()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseMetaDataReader@IsParameterMetadataSupported$qqrv @34  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseMetaDataReader::IsParameterMetadataSupported()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseTypeFilterCursor@ @50  ; Data::Dbxinterbasemetadatareader::TDBXInterbaseTypeFilterCursor::
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseTypeFilterCursor@$bctr$qqrxp65Data@Dbxinterbasemetadatareader@TDBXInterbaseCustomMetaDataReaderx20System@UnicodeStringx53System@%DynamicArray$p28Data@Dbxcommon@TDBXValueType%xp29Data@Db4jE9TUTlQu7Tu7Kw0w/1Fg @12  ; Data::Dbxinterbasemetadatareader::TDBXInterbaseTypeFilterCursor::TDBXInterbaseTypeFilterCursor(Data::Dbxinterbasemetadatareader::TDBXInterbaseCustomMetaDataReader * const, const System::UnicodeString, const System::DynamicArray<{583}...
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseTypeFilterCursor@$bdtr$qqrv @11  ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseTypeFilterCursor::~TDBXInterbaseTypeFilterCursor()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseTypeFilterCursor@ComputeDataType$qqrv @7   ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseTypeFilterCursor::ComputeDataType()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseTypeFilterCursor@ComputeDefaultValue$qqrv @4   ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseTypeFilterCursor::ComputeDefaultValue()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseTypeFilterCursor@ComputeTypeName$qqrv @6   ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseTypeFilterCursor::ComputeTypeName()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseTypeFilterCursor@ComputeUnicode$qqrv @5   ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseTypeFilterCursor::ComputeUnicode()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseTypeFilterCursor@FindStringSize$qqrxix53System@%DynamicArray$p28Data@Dbxcommon@TDBXValueType% @10  ; Data::Dbxinterbasemetadatareader::TDBXInterbaseTypeFilterCursor::FindStringSize(const int, const System::DynamicArray<{583}...
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseTypeFilterCursor@GetIBType$qqrxsxsxs @3   ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseTypeFilterCursor::GetIBType(const short, const short, const short)
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseTypeFilterCursor@GetWritableValue$qqrxi @8   ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseTypeFilterCursor::GetWritableValue(const int)
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseTypeFilterCursor@Next$qqrv @9   ; __fastcall Data::Dbxinterbasemetadatareader::TDBXInterbaseTypeFilterCursor::Next()
+    @Data@Dbxinterbasemetadatareader@TDBXInterbaseTypeFilterCursor@Tibase_const@ @52  ; Data::Dbxinterbasemetadatareader::TDBXInterbaseTypeFilterCursor::Tibase_const::
+    @Data@Dbxinterbasemetadatareader@initialization$qqrv @1   ; __fastcall Data::Dbxinterbasemetadatareader::initialization()
+    @Data@Dbxinterbasemetadatawriter@Finalization$qqrv @63  ; __fastcall Data::Dbxinterbasemetadatawriter::Finalization()
+    @Data@Dbxinterbasemetadatawriter@TDBXInterbaseCustomMetaDataWriter@ @79  ; Data::Dbxinterbasemetadatawriter::TDBXInterbaseCustomMetaDataWriter::
+    @Data@Dbxinterbasemetadatawriter@TDBXInterbaseCustomMetaDataWriter@FormatBlobType$qqrxp30System@Sysutils@TStringBuilderxp46Data@Dbxmetadatareader@TDBXDataTypeDescriptionxp32Data@Dbxcommontable@TDBXTableRowx23System@%DynamicArray$i% @73  ; Data::Dbxinterbasemetadatawriter::TDBXInterbaseCustomMetaDataWriter::FormatBlobType(System::Sysutils::TStringBuilder * const, Data::Dbxmetadatareader::TDBXDataTypeDescription * const, Data::Dbxcommontable::TDBXTableRow * const, const System::DynamicArr
+    @Data@Dbxinterbasemetadatawriter@TDBXInterbaseCustomMetaDataWriter@FormatStringType$qqrxp30System@Sysutils@TStringBuilderxp46Data@Dbxmetadatareader@TDBXDataTypeDescriptionxp32Data@Dbxcommontable@TDBXTableRowx23System@%DynamicArray$i% @74  ; Data::Dbxinterbasemetadatawriter::TDBXInterbaseCustomMetaDataWriter::FormatStringType(System::Sysutils::TStringBuilder * const, Data::Dbxmetadatareader::TDBXDataTypeDescription * const, Data::Dbxcommontable::TDBXTableRow * const, const System::DynamicA
+    @Data@Dbxinterbasemetadatawriter@TDBXInterbaseCustomMetaDataWriter@MakeSqlDataType$qqrxp30System@Sysutils@TStringBuilderxp46Data@Dbxmetadatareader@TDBXDataTypeDescriptionxp32Data@Dbxcommontable@TDBXTableRowx23System@%DynamicArray$i% @75  ; Data::Dbxinterbasemetadatawriter::TDBXInterbaseCustomMetaDataWriter::MakeSqlDataType(System::Sysutils::TStringBuilder * const, Data::Dbxmetadatareader::TDBXDataTypeDescription * const, Data::Dbxcommontable::TDBXTableRow * const, const System::DynamicAr
+    @Data@Dbxinterbasemetadatawriter@TDBXInterbaseCustomMetaDataWriter@UnicodeSpecificationRequired$qqrxp32Data@Dbxcommontable@TDBXTableRow @72  ; __fastcall Data::Dbxinterbasemetadatawriter::TDBXInterbaseCustomMetaDataWriter::UnicodeSpecificationRequired(Data::Dbxcommontable::TDBXTableRow * const)
+    @Data@Dbxinterbasemetadatawriter@TDBXInterbaseMetaDataWriter@ @77  ; Data::Dbxinterbasemetadatawriter::TDBXInterbaseMetaDataWriter::
+    @Data@Dbxinterbasemetadatawriter@TDBXInterbaseMetaDataWriter@$bctr$qqrv @71  ; __fastcall Data::Dbxinterbasemetadatawriter::TDBXInterbaseMetaDataWriter::TDBXInterbaseMetaDataWriter()
+    @Data@Dbxinterbasemetadatawriter@TDBXInterbaseMetaDataWriter@GetAlterTableSupport$qqrv @66  ; __fastcall Data::Dbxinterbasemetadatawriter::TDBXInterbaseMetaDataWriter::GetAlterTableSupport()
+    @Data@Dbxinterbasemetadatawriter@TDBXInterbaseMetaDataWriter@GetSqlKeyGeneratedIndexName$qqrv @65  ; __fastcall Data::Dbxinterbasemetadatawriter::TDBXInterbaseMetaDataWriter::GetSqlKeyGeneratedIndexName()
+    @Data@Dbxinterbasemetadatawriter@TDBXInterbaseMetaDataWriter@IsIndexNamesGlobal$qqrv @69  ; __fastcall Data::Dbxinterbasemetadatawriter::TDBXInterbaseMetaDataWriter::IsIndexNamesGlobal()
+    @Data@Dbxinterbasemetadatawriter@TDBXInterbaseMetaDataWriter@IsMixed_DDL_DML_Supported$qqrv @67  ; __fastcall Data::Dbxinterbasemetadatawriter::TDBXInterbaseMetaDataWriter::IsMixed_DDL_DML_Supported()
+    @Data@Dbxinterbasemetadatawriter@TDBXInterbaseMetaDataWriter@IsSchemasSupported$qqrv @64  ; __fastcall Data::Dbxinterbasemetadatawriter::TDBXInterbaseMetaDataWriter::IsSchemasSupported()
+    @Data@Dbxinterbasemetadatawriter@TDBXInterbaseMetaDataWriter@IsSerializedIsolationSupported$qqrv @68  ; __fastcall Data::Dbxinterbasemetadatawriter::TDBXInterbaseMetaDataWriter::IsSerializedIsolationSupported()
+    @Data@Dbxinterbasemetadatawriter@TDBXInterbaseMetaDataWriter@Open$qqrv @70  ; __fastcall Data::Dbxinterbasemetadatawriter::TDBXInterbaseMetaDataWriter::Open()
+    @Data@Dbxinterbasemetadatawriter@initialization$qqrv @62  ; __fastcall Data::Dbxinterbasemetadatawriter::initialization()
+    @Data@Dbxinterbasereadonlymetadata@Finalization$qqrv @58  ; __fastcall Data::Dbxinterbasereadonlymetadata::Finalization()
+    @Data@Dbxinterbasereadonlymetadata@TDBXInterbaseMetaDataCommandFactory@ @61  ; Data::Dbxinterbasereadonlymetadata::TDBXInterbaseMetaDataCommandFactory::
+    @Data@Dbxinterbasereadonlymetadata@TDBXInterbaseMetaDataCommandFactory@CreateMetaDataReader$qqrv @59  ; __fastcall Data::Dbxinterbasereadonlymetadata::TDBXInterbaseMetaDataCommandFactory::CreateMetaDataReader()
+    @Data@Dbxinterbasereadonlymetadata@initialization$qqrv @57  ; __fastcall Data::Dbxinterbasereadonlymetadata::initialization()
+    @Dbxinterbasedriver@@GetPackageInfoTable$qqrv @107 ; Dbxinterbasedriver::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dbxinterbasedriver@@PackageLoad$qqrv @106 ; Dbxinterbasedriver::__linkproc__ __fastcall PackageLoad()
+    @Dbxinterbasedriver@@PackageUnload$qqrv @105 ; Dbxinterbasedriver::__linkproc__ __fastcall PackageUnload()
+    @Dbxinterbasedriver@initialization$qqrv @104 ; __fastcall Dbxinterbasedriver::initialization()
+    @GetPackageInfoTable           @110 ; GetPackageInfoTable
+    Finalize                       @108 ; Finalize
+    Initialize                     @109 ; Initialize

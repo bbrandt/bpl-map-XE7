@@ -1,0 +1,5 @@
+LIBRARY     SQLB.DLL
+
+EXPORTS
+    SQLBuilder                     @1   ; SQLBuilder
+    launchModal                    @2   ; launchModal

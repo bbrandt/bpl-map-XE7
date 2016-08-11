@@ -1,0 +1,35 @@
+LIBRARY     PROJPAGEIDE210.BPL
+
+DESCRIPTION 'mbarcadero Project Page IDE Package'
+
+EXPORTS
+    @$xp$32Projectpagecmds@TProjectPageCmds @22  ; __tpdsc__ Projectpagecmds::TProjectPageCmds
+    @$xp$44Projectpageoptionsdlg@TDlgProjectPageOptions @15  ; __tpdsc__ Projectpageoptionsdlg::TDlgProjectPageOptions
+    @GetPackageInfoTable           @30  ; GetPackageInfoTable
+    @Projectpagecmds@Finalization$qqrv @18  ; __fastcall Projectpagecmds::Finalization()
+    @Projectpagecmds@TProjectPageCmds@ @23  ; Projectpagecmds::TProjectPageCmds::
+    @Projectpagecmds@TProjectPageCmds@ProductStartup$qqrp14System@TObject @21  ; __fastcall Projectpagecmds::TProjectPageCmds::ProductStartup(System::TObject *)
+    @Projectpagecmds@TProjectPageCmds@ProjectWelcomeOptionsExecute$qqrp14System@TObject @20  ; __fastcall Projectpagecmds::TProjectPageCmds::ProjectWelcomeOptionsExecute(System::TObject *)
+    @Projectpagecmds@TProjectPageCmds@ProjectWelcomeOptionsUpdate$qqrp14System@TObject @19  ; __fastcall Projectpagecmds::TProjectPageCmds::ProjectWelcomeOptionsUpdate(System::TObject *)
+    @Projectpagecmds@initialization$qqrv @17  ; __fastcall Projectpagecmds::initialization()
+    @Projectpageoptions@Finalization$qqrv @2   ; __fastcall Projectpageoptions::Finalization()
+    @Projectpageoptions@IDERegister$qqrv @3   ; __fastcall Projectpageoptions::IDERegister()
+    @Projectpageoptions@initialization$qqrv @1   ; __fastcall Projectpageoptions::initialization()
+    @Projectpageoptionsdlg@DlgProjectPageOptions @14  ; Projectpageoptionsdlg::DlgProjectPageOptions
+    @Projectpageoptionsdlg@Finalization$qqrv @5   ; __fastcall Projectpageoptionsdlg::Finalization()
+    @Projectpageoptionsdlg@TDlgProjectPageOptions@ @16  ; Projectpageoptionsdlg::TDlgProjectPageOptions::
+    @Projectpageoptionsdlg@TDlgProjectPageOptions@CanExecute$qqr49System@%DelphiInterface$22Codemgr@ICustomProject% @8   ; Projectpageoptionsdlg::TDlgProjectPageOptions::CanExecute(System::DelphiInterface<{583}...
+    @Projectpageoptionsdlg@TDlgProjectPageOptions@Execute$qqr49System@%DelphiInterface$22Codemgr@ICustomProject% @6   ; Projectpageoptionsdlg::TDlgProjectPageOptions::Execute(System::DelphiInterface<{583}...
+    @Projectpageoptionsdlg@TDlgProjectPageOptions@ExpandPath$qqrx20System@UnicodeString @11  ; __fastcall Projectpageoptionsdlg::TDlgProjectPageOptions::ExpandPath(const System::UnicodeString)
+    @Projectpageoptionsdlg@TDlgProjectPageOptions@ListAvailableFiles$qqrp23System@Classes@TStrings @7   ; __fastcall Projectpageoptionsdlg::TDlgProjectPageOptions::ListAvailableFiles(System::Classes::TStrings *)
+    @Projectpageoptionsdlg@TDlgProjectPageOptions@MakeRelative$qqrx20System@UnicodeString @10  ; __fastcall Projectpageoptionsdlg::TDlgProjectPageOptions::MakeRelative(const System::UnicodeString)
+    @Projectpageoptionsdlg@TDlgProjectPageOptions@Validate$qqrv @12  ; __fastcall Projectpageoptionsdlg::TDlgProjectPageOptions::Validate()
+    @Projectpageoptionsdlg@TDlgProjectPageOptions@bpHelpClick$qqrp14System@TObject @13  ; __fastcall Projectpageoptionsdlg::TDlgProjectPageOptions::bpHelpClick(System::TObject *)
+    @Projectpageoptionsdlg@TDlgProjectPageOptions@bpOKClick$qqrp14System@TObject @9   ; __fastcall Projectpageoptionsdlg::TDlgProjectPageOptions::bpOKClick(System::TObject *)
+    @Projectpageoptionsdlg@initialization$qqrv @4   ; __fastcall Projectpageoptionsdlg::initialization()
+    @Projpageide@@GetPackageInfoTable$qqrv @27  ; Projpageide::__linkproc__ __fastcall GetPackageInfoTable()
+    @Projpageide@@PackageLoad$qqrv @26  ; Projpageide::__linkproc__ __fastcall PackageLoad()
+    @Projpageide@@PackageUnload$qqrv @25  ; Projpageide::__linkproc__ __fastcall PackageUnload()
+    @Projpageide@initialization$qqrv @24  ; __fastcall Projpageide::initialization()
+    Finalize                       @28  ; Finalize
+    Initialize                     @29  ; Initialize

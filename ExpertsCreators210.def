@@ -1,0 +1,495 @@
+LIBRARY     EXPERTSCREATORS210.BPL
+
+DESCRIPTION 'mbarcadero Experts Creators Components'
+
+EXPORTS
+    @$xp$104System@Generics@Collections@%TEnumerable__1$57System@%DelphiInterface$30Expertstemplates@IPropertyPair%% @129 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<System::DelphiInterface<{583}...
+    @$xp$104System@Generics@Collections@%TEnumerator__1$57System@%DelphiInterface$30Expertstemplates@IPropertyPair%% @131 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<System::DelphiInterface<{583}...
+    @$xp$105System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%% @121 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @$xp$114System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TItem$% @147 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @$xp$115System@Generics@Collections@%TCollectionNotifyEvent__1$57System@%DelphiInterface$30Expertstemplates@IPropertyPair%% @143 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<System::DelphiInterface<{583}...
+    @$xp$119System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TItemArray$% @146 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @$xp$120System@%TArray__1$99System@Generics@Collections@%TPair__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%% @152 ; __tpdsc__ System::TArray__1<System::Generics::Collections::TPair__2<int, System::DelphiInterface<{583}...
+    @$xp$123System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TKeyCollection$% @134 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @$xp$123System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TKeyEnumerator$% @136 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @$xp$124System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TPairEnumerator$% @123 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @$xp$125System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TValueCollection$% @125 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @$xp$125System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TValueEnumerator$% @127 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @$xp$146System@Generics@Collections@%TEnumerable__1$99System@Generics@Collections@%TPair__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%% @148 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<int, System::DelphiInterface<{583}...
+    @$xp$146System@Generics@Collections@%TEnumerator__1$99System@Generics@Collections@%TPair__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%% @150 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<System::Generics::Collections::TPair__2<int, System::DelphiInterface<{583}...
+    @$xp$20System@%TArray__1$i%    @142 ; __tpdsc__ System::TArray__1<int>
+    @$xp$27Expertsmodules@TExpertsUnit @466 ; __tpdsc__ Expertsmodules::TExpertsUnit
+    @$xp$28Expertsbasecreators@TCreator @260 ; __tpdsc__ Expertsbasecreators::TCreator
+    @$xp$28Expertsbasecreators@TOTAFile @250 ; __tpdsc__ Expertsbasecreators::TOTAFile
+    @$xp$29Expertsmodules@TExpertsModule @474 ; __tpdsc__ Expertsmodules::TExpertsModule
+    @$xp$29System@Sysutils@%TFunc__1$ui% @353 ; __tpdsc__ System::Sysutils::TFunc__1<unsigned int>
+    @$xp$30Expertsproject@TExpertsProject @296 ; __tpdsc__ Expertsproject::TExpertsProject
+    @$xp$30Expertstemplates@IPropertyPair @165 ; __tpdsc__ Expertstemplates::IPropertyPair
+    @$xp$30Expertstemplates@TPropertyPair @162 ; __tpdsc__ Expertstemplates::TPropertyPair
+    @$xp$31Expertsbasecreators@TPchCreator @252 ; __tpdsc__ Expertsbasecreators::TPchCreator
+    @$xp$31Expertsmodules@TExpertsTextFile @462 ; __tpdsc__ Expertsmodules::TExpertsTextFile
+    @$xp$31Expertstemplates@IPropertyPairs @164 ; __tpdsc__ Expertstemplates::IPropertyPairs
+    @$xp$32Expertsbasecreators@TUnitCreator @258 ; __tpdsc__ Expertsbasecreators::TUnitCreator
+    @$xp$32Expertsmodules@TExpertsClassUnit @470 ; __tpdsc__ Expertsmodules::TExpertsClassUnit
+    @$xp$32Expertsmodules@TExpertsPchModule @458 ; __tpdsc__ Expertsmodules::TExpertsPchModule
+    @$xp$33Expertsmodules@TCustomExpertsUnit @468 ; __tpdsc__ Expertsmodules::TCustomExpertsUnit
+    @$xp$34Expertsbasecreators@TModuleCreator @254 ; __tpdsc__ Expertsbasecreators::TModuleCreator
+    @$xp$34Expertsintf@IExpertsModuleAccessor @9   ; __tpdsc__ Expertsintf::IExpertsModuleAccessor
+    @$xp$34Expertsproject@TExpertsProjectType @302 ; __tpdsc__ Expertsproject::TExpertsProjectType
+    @$xp$35Expertsintf@IExpertsProjectAccessor @10  ; __tpdsc__ Expertsintf::IExpertsProjectAccessor
+    @$xp$35Expertsmodules@TCustomExpertsModule @476 ; __tpdsc__ Expertsmodules::TCustomExpertsModule
+    @$xp$36Expertsbasecreators@TTextFileCreator @256 ; __tpdsc__ Expertsbasecreators::TTextFileCreator
+    @$xp$36Expertsproject@TCustomExpertsProject @298 ; __tpdsc__ Expertsproject::TCustomExpertsProject
+    @$xp$37Expertsmodules@TCustomExpertsTextFile @464 ; __tpdsc__ Expertsmodules::TCustomExpertsTextFile
+    @$xp$37Expertstemplates@TExpertsTemplateFile @170 ; __tpdsc__ Expertstemplates::TExpertsTemplateFile
+    @$xp$38Expertsmodules@TCustomExpertsClassUnit @472 ; __tpdsc__ Expertsmodules::TCustomExpertsClassUnit
+    @$xp$38Expertsmodules@TCustomExpertsPCHModule @460 ; __tpdsc__ Expertsmodules::TCustomExpertsPCHModule
+    @$xp$39Expertsmodules@TExpertsModulesComponent @482 ; __tpdsc__ Expertsmodules::TExpertsModulesComponent
+    @$xp$40Expertsmodulecreators@TExpertsPchCreator @393 ; __tpdsc__ Expertsmodulecreators::TExpertsPchCreator
+    @$xp$40Expertstemplates@TExpertsPropertiesPairs @158 ; __tpdsc__ Expertstemplates::TExpertsPropertiesPairs
+    @$xp$40Expertstemplates@TStringsPropertiesPairs @160 ; __tpdsc__ Expertstemplates::TStringsPropertiesPairs
+    @$xp$41Expertsmodulecreators@TExpertsUnitCreator @397 ; __tpdsc__ Expertsmodulecreators::TExpertsUnitCreator
+    @$xp$41Expertsproject@TExpertsCreateProjectEvent @300 ; __tpdsc__ Expertsproject::TExpertsCreateProjectEvent
+    @$xp$41System@%TArray__1$20System@UnicodeString% @280 ; __tpdsc__ System::TArray__1<System::UnicodeString>
+    @$xp$42Expertsrepository@TExpertsRepositoryWizard @366 ; __tpdsc__ Expertsrepository::TExpertsRepositoryWizard
+    @$xp$43Expertsmodulecreators@TExpertsModuleCreator @401 ; __tpdsc__ Expertsmodulecreators::TExpertsModuleCreator
+    @$xp$43Expertstemplates@TCustomExpertsTemplateFile @172 ; __tpdsc__ Expertstemplates::TCustomExpertsTemplateFile
+    @$xp$43Expertstemplates@TExpertsTemplateProperties @166 ; __tpdsc__ Expertstemplates::TExpertsTemplateProperties
+    @$xp$44Expertstemplates@TExpertsTemplateFileManager @178 ; __tpdsc__ Expertstemplates::TExpertsTemplateFileManager
+    @$xp$45Expertsmodulecreators@TExpertsTextFileCreator @395 ; __tpdsc__ Expertsmodulecreators::TExpertsTextFileCreator
+    @$xp$45Expertsmodules@TExpertsGenericModuleComponent @478 ; __tpdsc__ Expertsmodules::TExpertsGenericModuleComponent
+    @$xp$45Expertsprojectcreators@TExpertsProjectCreator @281 ; __tpdsc__ Expertsprojectcreators::TExpertsProjectCreator
+    @$xp$46Expertsproject@TExpertsProjectPersonalityEvent @301 ; __tpdsc__ Expertsproject::TExpertsProjectPersonalityEvent
+    @$xp$46Expertsrepository@TExpertsRepositoryFileWizard @356 ; __tpdsc__ Expertsrepository::TExpertsRepositoryFileWizard
+    @$xp$46System@Generics@Collections@%TEnumerable__1$i% @138 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<int>
+    @$xp$46System@Generics@Collections@%TEnumerator__1$i% @140 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<int>
+    @$xp$47Expertsmodulecreators@TExpertsModuleUnitCreator @399 ; __tpdsc__ Expertsmodulecreators::TExpertsModuleUnitCreator
+    @$xp$47Expertsmodulecreators@TExpertsNewImplSourceProc @403 ; __tpdsc__ Expertsmodulecreators::TExpertsNewImplSourceProc
+    @$xp$48Expertsrepository@TExpertsRepositoryModuleWizard @364 ; __tpdsc__ Expertsrepository::TExpertsRepositoryModuleWizard
+    @$xp$49Expertsmodules@TExpertsPersonalityModuleComponent @480 ; __tpdsc__ Expertsmodules::TExpertsPersonalityModuleComponent
+    @$xp$49Expertsrepository@TExpertsRepositoryProjectWizard @362 ; __tpdsc__ Expertsrepository::TExpertsRepositoryProjectWizard
+    @$xp$49Expertstemplates@TCustomExpertsTemplateProperties @168 ; __tpdsc__ Expertstemplates::TCustomExpertsTemplateProperties
+    @$xp$49Expertstemplates@TExpertsTemplatePersonalityFiles @174 ; __tpdsc__ Expertstemplates::TExpertsTemplatePersonalityFiles
+    @$xp$49System@Generics@Defaults@%IEqualityComparer__1$i% @145 ; __tpdsc__ System::Generics::Defaults::IEqualityComparer__1<int>
+    @$xp$50Expertstemplates@TExpertsPropertiesPairsEnumerator @156 ; __tpdsc__ Expertstemplates::TExpertsPropertiesPairsEnumerator
+    @$xp$54Expertsrepository@TExpertsRepositoryFileWizardWithProc @354 ; __tpdsc__ Expertsrepository::TExpertsRepositoryFileWizardWithProc
+    @$xp$55Expertstemplates@TCustomExpertsTemplatePersonalityFiles @176 ; __tpdsc__ Expertstemplates::TCustomExpertsTemplatePersonalityFiles
+    @$xp$56Expertsrepository@TExpertsRepositoryModuleWizardWithProc @358 ; __tpdsc__ Expertsrepository::TExpertsRepositoryModuleWizardWithProc
+    @$xp$57Expertsrepository@TExpertsRepositoryProjectWizardWithProc @360 ; __tpdsc__ Expertsrepository::TExpertsRepositoryProjectWizardWithProc
+    @$xp$57System@Generics@Collections@%TCollectionNotifyEvent__1$i% @144 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<int>
+    @$xp$78System@%TArray__1$57System@%DelphiInterface$30Expertstemplates@IPropertyPair%% @133 ; __tpdsc__ System::TArray__1<System::DelphiInterface<{583}...
+    @$xp$83System@%IEnumerable__1$57System@%DelphiInterface$30Expertstemplates@IPropertyPair%% @154 ; __tpdsc__ System::IEnumerable__1<System::DelphiInterface<{583}...
+    @$xp$83System@%IEnumerator__1$57System@%DelphiInterface$30Expertstemplates@IPropertyPair%% @155 ; __tpdsc__ System::IEnumerator__1<System::DelphiInterface<{583}...
+    @$xp$99System@Generics@Collections@%TPair__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%% @153 ; __tpdsc__ System::Generics::Collections::TPair__2<int, System::DelphiInterface<{583}...
+    @Expertsbasecreators@Finalization$qqrv @181 ; __fastcall Expertsbasecreators::Finalization()
+    @Expertsbasecreators@GetNewModuleFileName$qqrx20System@UnicodeStringt1t1or20System@UnicodeStringt1 @249 ; __fastcall Expertsbasecreators::GetNewModuleFileName(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, bool, System::UnicodeString&, const System::UnicodeString)
+    @Expertsbasecreators@TCreator@ @261 ; Expertsbasecreators::TCreator::
+    @Expertsbasecreators@TCreator@GetExisting$qqrv @248 ; __fastcall Expertsbasecreators::TCreator::GetExisting()
+    @Expertsbasecreators@TCreator@GetFileSystem$qqrv @247 ; __fastcall Expertsbasecreators::TCreator::GetFileSystem()
+    @Expertsbasecreators@TCreator@GetOwner$qqrv @246 ; __fastcall Expertsbasecreators::TCreator::GetOwner()
+    @Expertsbasecreators@TCreator@GetUnnamed$qqrv @245 ; __fastcall Expertsbasecreators::TCreator::GetUnnamed()
+    @Expertsbasecreators@TModuleCreator@ @255 ; Expertsbasecreators::TModuleCreator::
+    @Expertsbasecreators@TModuleCreator@$bctr$qqrx20System@UnicodeStringt1 @214 ; __fastcall Expertsbasecreators::TModuleCreator::TModuleCreator(const System::UnicodeString, const System::UnicodeString)
+    @Expertsbasecreators@TModuleCreator@FormCreated$qqrx50System@%DelphiInterface$23Toolsapi@IOTAFormEditor% @213 ; Expertsbasecreators::TModuleCreator::FormCreated(const System::DelphiInterface<{583}...
+    @Expertsbasecreators@TModuleCreator@GetAncestorName$qqrv @212 ; __fastcall Expertsbasecreators::TModuleCreator::GetAncestorName()
+    @Expertsbasecreators@TModuleCreator@GetCreatorType$qqrv @211 ; __fastcall Expertsbasecreators::TModuleCreator::GetCreatorType()
+    @Expertsbasecreators@TModuleCreator@GetFormName$qqrv @201 ; __fastcall Expertsbasecreators::TModuleCreator::GetFormName()
+    @Expertsbasecreators@TModuleCreator@GetImplFileName$qqrv @200 ; __fastcall Expertsbasecreators::TModuleCreator::GetImplFileName()
+    @Expertsbasecreators@TModuleCreator@GetIntfFileName$qqrv @210 ; __fastcall Expertsbasecreators::TModuleCreator::GetIntfFileName()
+    @Expertsbasecreators@TModuleCreator@GetMainForm$qqrv @209 ; __fastcall Expertsbasecreators::TModuleCreator::GetMainForm()
+    @Expertsbasecreators@TModuleCreator@GetNewModuleAndClassName$qqrr20System@UnicodeStringt1 @202 ; __fastcall Expertsbasecreators::TModuleCreator::GetNewModuleAndClassName(System::UnicodeString&, System::UnicodeString&)
+    @Expertsbasecreators@TModuleCreator@GetOwner$qqrv @208 ; __fastcall Expertsbasecreators::TModuleCreator::GetOwner()
+    @Expertsbasecreators@TModuleCreator@GetShowForm$qqrv @207 ; __fastcall Expertsbasecreators::TModuleCreator::GetShowForm()
+    @Expertsbasecreators@TModuleCreator@GetShowSource$qqrv @206 ; __fastcall Expertsbasecreators::TModuleCreator::GetShowSource()
+    @Expertsbasecreators@TModuleCreator@NewFormFile$qqrx20System@UnicodeStringt1 @205 ; __fastcall Expertsbasecreators::TModuleCreator::NewFormFile(const System::UnicodeString, const System::UnicodeString)
+    @Expertsbasecreators@TModuleCreator@NewImplSource$qqrx20System@UnicodeStringt1t1 @204 ; __fastcall Expertsbasecreators::TModuleCreator::NewImplSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Expertsbasecreators@TModuleCreator@NewIntfSource$qqrx20System@UnicodeStringt1t1 @203 ; __fastcall Expertsbasecreators::TModuleCreator::NewIntfSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Expertsbasecreators@TOTAFile@ @251 ; Expertsbasecreators::TOTAFile::
+    @Expertsbasecreators@TOTAFile@$bctr$qqrx20System@UnicodeString @199 ; __fastcall Expertsbasecreators::TOTAFile::TOTAFile(const System::UnicodeString)
+    @Expertsbasecreators@TOTAFile@GetAge$qqrv @198 ; __fastcall Expertsbasecreators::TOTAFile::GetAge()
+    @Expertsbasecreators@TOTAFile@GetSource$qqrv @197 ; __fastcall Expertsbasecreators::TOTAFile::GetSource()
+    @Expertsbasecreators@TPchCreator@ @253 ; Expertsbasecreators::TPchCreator::
+    @Expertsbasecreators@TPchCreator@$bctr$qqrx20System@UnicodeStringt1 @196 ; __fastcall Expertsbasecreators::TPchCreator::TPchCreator(const System::UnicodeString, const System::UnicodeString)
+    @Expertsbasecreators@TPchCreator@FormCreated$qqrx50System@%DelphiInterface$23Toolsapi@IOTAFormEditor% @195 ; Expertsbasecreators::TPchCreator::FormCreated(const System::DelphiInterface<{583}...
+    @Expertsbasecreators@TPchCreator@GetAncestorName$qqrv @194 ; __fastcall Expertsbasecreators::TPchCreator::GetAncestorName()
+    @Expertsbasecreators@TPchCreator@GetCreatorType$qqrv @193 ; __fastcall Expertsbasecreators::TPchCreator::GetCreatorType()
+    @Expertsbasecreators@TPchCreator@GetFormName$qqrv @183 ; __fastcall Expertsbasecreators::TPchCreator::GetFormName()
+    @Expertsbasecreators@TPchCreator@GetImplFileName$qqrv @182 ; __fastcall Expertsbasecreators::TPchCreator::GetImplFileName()
+    @Expertsbasecreators@TPchCreator@GetIntfFileName$qqrv @192 ; __fastcall Expertsbasecreators::TPchCreator::GetIntfFileName()
+    @Expertsbasecreators@TPchCreator@GetMainForm$qqrv @191 ; __fastcall Expertsbasecreators::TPchCreator::GetMainForm()
+    @Expertsbasecreators@TPchCreator@GetNewPCHFileName$qqrr20System@UnicodeString @184 ; __fastcall Expertsbasecreators::TPchCreator::GetNewPCHFileName(System::UnicodeString&)
+    @Expertsbasecreators@TPchCreator@GetOwner$qqrv @190 ; __fastcall Expertsbasecreators::TPchCreator::GetOwner()
+    @Expertsbasecreators@TPchCreator@GetShowForm$qqrv @189 ; __fastcall Expertsbasecreators::TPchCreator::GetShowForm()
+    @Expertsbasecreators@TPchCreator@GetShowSource$qqrv @188 ; __fastcall Expertsbasecreators::TPchCreator::GetShowSource()
+    @Expertsbasecreators@TPchCreator@NewFormFile$qqrx20System@UnicodeStringt1 @187 ; __fastcall Expertsbasecreators::TPchCreator::NewFormFile(const System::UnicodeString, const System::UnicodeString)
+    @Expertsbasecreators@TPchCreator@NewImplSource$qqrx20System@UnicodeStringt1t1 @186 ; __fastcall Expertsbasecreators::TPchCreator::NewImplSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Expertsbasecreators@TPchCreator@NewIntfSource$qqrx20System@UnicodeStringt1t1 @185 ; __fastcall Expertsbasecreators::TPchCreator::NewIntfSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Expertsbasecreators@TTextFileCreator@ @257 ; Expertsbasecreators::TTextFileCreator::
+    @Expertsbasecreators@TTextFileCreator@$bctr$qqrx20System@UnicodeStringt1 @229 ; __fastcall Expertsbasecreators::TTextFileCreator::TTextFileCreator(const System::UnicodeString, const System::UnicodeString)
+    @Expertsbasecreators@TTextFileCreator@FormCreated$qqrx50System@%DelphiInterface$23Toolsapi@IOTAFormEditor% @228 ; Expertsbasecreators::TTextFileCreator::FormCreated(const System::DelphiInterface<{583}...
+    @Expertsbasecreators@TTextFileCreator@GetAncestorName$qqrv @227 ; __fastcall Expertsbasecreators::TTextFileCreator::GetAncestorName()
+    @Expertsbasecreators@TTextFileCreator@GetCreatorType$qqrv @226 ; __fastcall Expertsbasecreators::TTextFileCreator::GetCreatorType()
+    @Expertsbasecreators@TTextFileCreator@GetFormName$qqrv @216 ; __fastcall Expertsbasecreators::TTextFileCreator::GetFormName()
+    @Expertsbasecreators@TTextFileCreator@GetImplFileName$qqrv @215 ; __fastcall Expertsbasecreators::TTextFileCreator::GetImplFileName()
+    @Expertsbasecreators@TTextFileCreator@GetIntfFileName$qqrv @225 ; __fastcall Expertsbasecreators::TTextFileCreator::GetIntfFileName()
+    @Expertsbasecreators@TTextFileCreator@GetMainForm$qqrv @224 ; __fastcall Expertsbasecreators::TTextFileCreator::GetMainForm()
+    @Expertsbasecreators@TTextFileCreator@GetNewTextFileName$qqrr20System@UnicodeString @217 ; __fastcall Expertsbasecreators::TTextFileCreator::GetNewTextFileName(System::UnicodeString&)
+    @Expertsbasecreators@TTextFileCreator@GetOwner$qqrv @223 ; __fastcall Expertsbasecreators::TTextFileCreator::GetOwner()
+    @Expertsbasecreators@TTextFileCreator@GetShowForm$qqrv @222 ; __fastcall Expertsbasecreators::TTextFileCreator::GetShowForm()
+    @Expertsbasecreators@TTextFileCreator@GetShowSource$qqrv @221 ; __fastcall Expertsbasecreators::TTextFileCreator::GetShowSource()
+    @Expertsbasecreators@TTextFileCreator@NewFormFile$qqrx20System@UnicodeStringt1 @220 ; __fastcall Expertsbasecreators::TTextFileCreator::NewFormFile(const System::UnicodeString, const System::UnicodeString)
+    @Expertsbasecreators@TTextFileCreator@NewImplSource$qqrx20System@UnicodeStringt1t1 @219 ; __fastcall Expertsbasecreators::TTextFileCreator::NewImplSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Expertsbasecreators@TTextFileCreator@NewIntfSource$qqrx20System@UnicodeStringt1t1 @218 ; __fastcall Expertsbasecreators::TTextFileCreator::NewIntfSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Expertsbasecreators@TUnitCreator@ @259 ; Expertsbasecreators::TUnitCreator::
+    @Expertsbasecreators@TUnitCreator@$bctr$qqrx20System@UnicodeString @244 ; __fastcall Expertsbasecreators::TUnitCreator::TUnitCreator(const System::UnicodeString)
+    @Expertsbasecreators@TUnitCreator@FormCreated$qqrx50System@%DelphiInterface$23Toolsapi@IOTAFormEditor% @243 ; Expertsbasecreators::TUnitCreator::FormCreated(const System::DelphiInterface<{583}...
+    @Expertsbasecreators@TUnitCreator@GetAncestorName$qqrv @242 ; __fastcall Expertsbasecreators::TUnitCreator::GetAncestorName()
+    @Expertsbasecreators@TUnitCreator@GetCreatorType$qqrv @241 ; __fastcall Expertsbasecreators::TUnitCreator::GetCreatorType()
+    @Expertsbasecreators@TUnitCreator@GetFormName$qqrv @231 ; __fastcall Expertsbasecreators::TUnitCreator::GetFormName()
+    @Expertsbasecreators@TUnitCreator@GetImplFileName$qqrv @230 ; __fastcall Expertsbasecreators::TUnitCreator::GetImplFileName()
+    @Expertsbasecreators@TUnitCreator@GetIntfFileName$qqrv @240 ; __fastcall Expertsbasecreators::TUnitCreator::GetIntfFileName()
+    @Expertsbasecreators@TUnitCreator@GetMainForm$qqrv @239 ; __fastcall Expertsbasecreators::TUnitCreator::GetMainForm()
+    @Expertsbasecreators@TUnitCreator@GetNewUnitFileName$qqrv @232 ; __fastcall Expertsbasecreators::TUnitCreator::GetNewUnitFileName()
+    @Expertsbasecreators@TUnitCreator@GetOwner$qqrv @238 ; __fastcall Expertsbasecreators::TUnitCreator::GetOwner()
+    @Expertsbasecreators@TUnitCreator@GetShowForm$qqrv @237 ; __fastcall Expertsbasecreators::TUnitCreator::GetShowForm()
+    @Expertsbasecreators@TUnitCreator@GetShowSource$qqrv @236 ; __fastcall Expertsbasecreators::TUnitCreator::GetShowSource()
+    @Expertsbasecreators@TUnitCreator@NewFormFile$qqrx20System@UnicodeStringt1 @235 ; __fastcall Expertsbasecreators::TUnitCreator::NewFormFile(const System::UnicodeString, const System::UnicodeString)
+    @Expertsbasecreators@TUnitCreator@NewImplSource$qqrx20System@UnicodeStringt1t1 @234 ; __fastcall Expertsbasecreators::TUnitCreator::NewImplSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Expertsbasecreators@TUnitCreator@NewIntfSource$qqrx20System@UnicodeStringt1t1 @233 ; __fastcall Expertsbasecreators::TUnitCreator::NewIntfSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Expertsbasecreators@initialization$qqrv @180 ; __fastcall Expertsbasecreators::initialization()
+    @Expertscreators@@GetPackageInfoTable$qqrv @487 ; Expertscreators::__linkproc__ __fastcall GetPackageInfoTable()
+    @Expertscreators@@PackageLoad$qqrv @486 ; Expertscreators::__linkproc__ __fastcall PackageLoad()
+    @Expertscreators@@PackageUnload$qqrv @485 ; Expertscreators::__linkproc__ __fastcall PackageUnload()
+    @Expertscreators@initialization$qqrv @484 ; __fastcall Expertscreators::initialization()
+    @Expertsintf@Finalization$qqrv @8   ; __fastcall Expertsintf::Finalization()
+    @Expertsintf@initialization$qqrv @7   ; __fastcall Expertsintf::initialization()
+    @Expertsmodulecreators@Finalization$qqrv @369 ; __fastcall Expertsmodulecreators::Finalization()
+    @Expertsmodulecreators@TExpertsModuleCreator@ @402 ; Expertsmodulecreators::TExpertsModuleCreator::
+    @Expertsmodulecreators@TExpertsModuleCreator@$bctr$qqrx20System@UnicodeStringx61System@%DelphiInterface$34Expertsintf@IExpertsModuleAccessor%74System@%DelphiInterface$47Expertsmodulecreators@TExpertsNewImplSourceProc% @392 ; Expertsmodulecreators::TExpertsModuleCreator::TExpertsModuleCreator(const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Expertsmodulecreators@TExpertsModuleCreator@GetAncestorName$qqrv @391 ; __fastcall Expertsmodulecreators::TExpertsModuleCreator::GetAncestorName()
+    @Expertsmodulecreators@TExpertsModuleCreator@GetOwner$qqrv @390 ; __fastcall Expertsmodulecreators::TExpertsModuleCreator::GetOwner()
+    @Expertsmodulecreators@TExpertsModuleCreator@GetUnnamed$qqrv @389 ; __fastcall Expertsmodulecreators::TExpertsModuleCreator::GetUnnamed()
+    @Expertsmodulecreators@TExpertsModuleCreator@NewFormFile$qqrx20System@UnicodeStringt1 @386 ; __fastcall Expertsmodulecreators::TExpertsModuleCreator::NewFormFile(const System::UnicodeString, const System::UnicodeString)
+    @Expertsmodulecreators@TExpertsModuleCreator@NewImplSource$qqrx20System@UnicodeStringt1t1 @388 ; __fastcall Expertsmodulecreators::TExpertsModuleCreator::NewImplSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Expertsmodulecreators@TExpertsModuleCreator@NewIntfSource$qqrx20System@UnicodeStringt1t1 @387 ; __fastcall Expertsmodulecreators::TExpertsModuleCreator::NewIntfSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Expertsmodulecreators@TExpertsModuleUnitCreator@ @400 ; Expertsmodulecreators::TExpertsModuleUnitCreator::
+    @Expertsmodulecreators@TExpertsModuleUnitCreator@GetCreatorType$qqrv @375 ; __fastcall Expertsmodulecreators::TExpertsModuleUnitCreator::GetCreatorType()
+    @Expertsmodulecreators@TExpertsModuleUnitCreator@GetOwner$qqrv @374 ; __fastcall Expertsmodulecreators::TExpertsModuleUnitCreator::GetOwner()
+    @Expertsmodulecreators@TExpertsPchCreator@ @394 ; Expertsmodulecreators::TExpertsPchCreator::
+    @Expertsmodulecreators@TExpertsPchCreator@$bctr$qqrx61System@%DelphiInterface$34Expertsintf@IExpertsModuleAccessor% @373 ; Expertsmodulecreators::TExpertsPchCreator::TExpertsPchCreator(const System::DelphiInterface<{583}...
+    @Expertsmodulecreators@TExpertsPchCreator@GetOwner$qqrv @372 ; __fastcall Expertsmodulecreators::TExpertsPchCreator::GetOwner()
+    @Expertsmodulecreators@TExpertsPchCreator@GetUnnamed$qqrv @371 ; __fastcall Expertsmodulecreators::TExpertsPchCreator::GetUnnamed()
+    @Expertsmodulecreators@TExpertsPchCreator@NewImplSource$qqrx20System@UnicodeStringt1t1 @370 ; __fastcall Expertsmodulecreators::TExpertsPchCreator::NewImplSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Expertsmodulecreators@TExpertsTextFileCreator@ @396 ; Expertsmodulecreators::TExpertsTextFileCreator::
+    @Expertsmodulecreators@TExpertsTextFileCreator@$bctr$qqrx61System@%DelphiInterface$34Expertsintf@IExpertsModuleAccessor% @379 ; Expertsmodulecreators::TExpertsTextFileCreator::TExpertsTextFileCreator(const System::DelphiInterface<{583}...
+    @Expertsmodulecreators@TExpertsTextFileCreator@GetOwner$qqrv @378 ; __fastcall Expertsmodulecreators::TExpertsTextFileCreator::GetOwner()
+    @Expertsmodulecreators@TExpertsTextFileCreator@GetUnnamed$qqrv @377 ; __fastcall Expertsmodulecreators::TExpertsTextFileCreator::GetUnnamed()
+    @Expertsmodulecreators@TExpertsTextFileCreator@NewImplSource$qqrx20System@UnicodeStringt1t1 @376 ; __fastcall Expertsmodulecreators::TExpertsTextFileCreator::NewImplSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Expertsmodulecreators@TExpertsUnitCreator@ @398 ; Expertsmodulecreators::TExpertsUnitCreator::
+    @Expertsmodulecreators@TExpertsUnitCreator@$bctr$qqrx20System@UnicodeStringx61System@%DelphiInterface$34Expertsintf@IExpertsModuleAccessor%74System@%DelphiInterface$47Expertsmodulecreators@TExpertsNewImplSourceProc% @385 ; Expertsmodulecreators::TExpertsUnitCreator::TExpertsUnitCreator(const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Expertsmodulecreators@TExpertsUnitCreator@GetAncestorName$qqrv @384 ; __fastcall Expertsmodulecreators::TExpertsUnitCreator::GetAncestorName()
+    @Expertsmodulecreators@TExpertsUnitCreator@GetOwner$qqrv @383 ; __fastcall Expertsmodulecreators::TExpertsUnitCreator::GetOwner()
+    @Expertsmodulecreators@TExpertsUnitCreator@GetUnnamed$qqrv @382 ; __fastcall Expertsmodulecreators::TExpertsUnitCreator::GetUnnamed()
+    @Expertsmodulecreators@TExpertsUnitCreator@NewImplSource$qqrx20System@UnicodeStringt1t1 @381 ; __fastcall Expertsmodulecreators::TExpertsUnitCreator::NewImplSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Expertsmodulecreators@TExpertsUnitCreator@NewIntfSource$qqrx20System@UnicodeStringt1t1 @380 ; __fastcall Expertsmodulecreators::TExpertsUnitCreator::NewIntfSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Expertsmodulecreators@initialization$qqrv @368 ; __fastcall Expertsmodulecreators::initialization()
+    @Expertsmodules@Finalization$qqrv @405 ; __fastcall Expertsmodules::Finalization()
+    @Expertsmodules@TCustomExpertsClassUnit@ @473 ; Expertsmodules::TCustomExpertsClassUnit::
+    @Expertsmodules@TCustomExpertsClassUnit@$bctr$qqrp25System@Classes@TComponent @446 ; __fastcall Expertsmodules::TCustomExpertsClassUnit::TCustomExpertsClassUnit(System::Classes::TComponent *)
+    @Expertsmodules@TCustomExpertsClassUnit@$bdtr$qqrv @442 ; __fastcall Expertsmodules::TCustomExpertsClassUnit::~TCustomExpertsClassUnit()
+    @Expertsmodules@TCustomExpertsClassUnit@CreateAccessor$qqrx20System@UnicodeString @445 ; __fastcall Expertsmodules::TCustomExpertsClassUnit::CreateAccessor(const System::UnicodeString)
+    @Expertsmodules@TCustomExpertsClassUnit@CreateModule$qqrx20System@UnicodeString @444 ; __fastcall Expertsmodules::TCustomExpertsClassUnit::CreateModule(const System::UnicodeString)
+    @Expertsmodules@TCustomExpertsClassUnit@CreateModuleIdents$qqrx20System@UnicodeStringr20System@UnicodeStringt2t2 @443 ; __fastcall Expertsmodules::TCustomExpertsClassUnit::CreateModuleIdents(const System::UnicodeString, System::UnicodeString&, System::UnicodeString&, System::UnicodeString&)
+    @Expertsmodules@TCustomExpertsClassUnit@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @441 ; __fastcall Expertsmodules::TCustomExpertsClassUnit::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Expertsmodules@TCustomExpertsClassUnit@SetFileDirectory$qqrx20System@UnicodeString @439 ; __fastcall Expertsmodules::TCustomExpertsClassUnit::SetFileDirectory(const System::UnicodeString)
+    @Expertsmodules@TCustomExpertsClassUnit@SetFileName$qqrx20System@UnicodeString @438 ; __fastcall Expertsmodules::TCustomExpertsClassUnit::SetFileName(const System::UnicodeString)
+    @Expertsmodules@TCustomExpertsClassUnit@SetInterfaceTemplateFile$qqrxp43Expertstemplates@TCustomExpertsTemplateFile @437 ; __fastcall Expertsmodules::TCustomExpertsClassUnit::SetInterfaceTemplateFile(Expertstemplates::TCustomExpertsTemplateFile * const)
+    @Expertsmodules@TCustomExpertsClassUnit@SetSourceTemplateFile$qqrxp43Expertstemplates@TCustomExpertsTemplateFile @440 ; __fastcall Expertsmodules::TCustomExpertsClassUnit::SetSourceTemplateFile(Expertstemplates::TCustomExpertsTemplateFile * const)
+    @Expertsmodules@TCustomExpertsModule@ @477 ; Expertsmodules::TCustomExpertsModule::
+    @Expertsmodules@TCustomExpertsModule@$bctr$qqrp25System@Classes@TComponent @457 ; __fastcall Expertsmodules::TCustomExpertsModule::TCustomExpertsModule(System::Classes::TComponent *)
+    @Expertsmodules@TCustomExpertsModule@$bdtr$qqrv @453 ; __fastcall Expertsmodules::TCustomExpertsModule::~TCustomExpertsModule()
+    @Expertsmodules@TCustomExpertsModule@CreateAccessor$qqrx20System@UnicodeString @456 ; __fastcall Expertsmodules::TCustomExpertsModule::CreateAccessor(const System::UnicodeString)
+    @Expertsmodules@TCustomExpertsModule@CreateModule$qqrx20System@UnicodeString @455 ; __fastcall Expertsmodules::TCustomExpertsModule::CreateModule(const System::UnicodeString)
+    @Expertsmodules@TCustomExpertsModule@CreateModuleIdents$qqrx20System@UnicodeStringr20System@UnicodeStringt2t2 @454 ; __fastcall Expertsmodules::TCustomExpertsModule::CreateModuleIdents(const System::UnicodeString, System::UnicodeString&, System::UnicodeString&, System::UnicodeString&)
+    @Expertsmodules@TCustomExpertsModule@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @452 ; __fastcall Expertsmodules::TCustomExpertsModule::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Expertsmodules@TCustomExpertsModule@SetFileDirectory$qqrx20System@UnicodeString @450 ; __fastcall Expertsmodules::TCustomExpertsModule::SetFileDirectory(const System::UnicodeString)
+    @Expertsmodules@TCustomExpertsModule@SetFileName$qqrx20System@UnicodeString @449 ; __fastcall Expertsmodules::TCustomExpertsModule::SetFileName(const System::UnicodeString)
+    @Expertsmodules@TCustomExpertsModule@SetFormTemplateFile$qqrxp43Expertstemplates@TCustomExpertsTemplateFile @448 ; __fastcall Expertsmodules::TCustomExpertsModule::SetFormTemplateFile(Expertstemplates::TCustomExpertsTemplateFile * const)
+    @Expertsmodules@TCustomExpertsModule@SetInterfaceTemplateFile$qqrxp43Expertstemplates@TCustomExpertsTemplateFile @447 ; __fastcall Expertsmodules::TCustomExpertsModule::SetInterfaceTemplateFile(Expertstemplates::TCustomExpertsTemplateFile * const)
+    @Expertsmodules@TCustomExpertsModule@SetSourceTemplateFile$qqrxp43Expertstemplates@TCustomExpertsTemplateFile @451 ; __fastcall Expertsmodules::TCustomExpertsModule::SetSourceTemplateFile(Expertstemplates::TCustomExpertsTemplateFile * const)
+    @Expertsmodules@TCustomExpertsPCHModule@ @461 ; Expertsmodules::TCustomExpertsPCHModule::
+    @Expertsmodules@TCustomExpertsPCHModule@$bctr$qqrp25System@Classes@TComponent @413 ; __fastcall Expertsmodules::TCustomExpertsPCHModule::TCustomExpertsPCHModule(System::Classes::TComponent *)
+    @Expertsmodules@TCustomExpertsPCHModule@$bdtr$qqrv @411 ; __fastcall Expertsmodules::TCustomExpertsPCHModule::~TCustomExpertsPCHModule()
+    @Expertsmodules@TCustomExpertsPCHModule@CreateModule$qqrv @412 ; __fastcall Expertsmodules::TCustomExpertsPCHModule::CreateModule()
+    @Expertsmodules@TCustomExpertsPCHModule@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @410 ; __fastcall Expertsmodules::TCustomExpertsPCHModule::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Expertsmodules@TCustomExpertsPCHModule@SetFileDirectory$qqrx20System@UnicodeString @409 ; __fastcall Expertsmodules::TCustomExpertsPCHModule::SetFileDirectory(const System::UnicodeString)
+    @Expertsmodules@TCustomExpertsPCHModule@SetFileName$qqrx20System@UnicodeString @408 ; __fastcall Expertsmodules::TCustomExpertsPCHModule::SetFileName(const System::UnicodeString)
+    @Expertsmodules@TCustomExpertsPCHModule@SetFileNameExt$qqrx20System@UnicodeString @407 ; __fastcall Expertsmodules::TCustomExpertsPCHModule::SetFileNameExt(const System::UnicodeString)
+    @Expertsmodules@TCustomExpertsPCHModule@SetSourceTemplateFile$qqrxp43Expertstemplates@TCustomExpertsTemplateFile @406 ; __fastcall Expertsmodules::TCustomExpertsPCHModule::SetSourceTemplateFile(Expertstemplates::TCustomExpertsTemplateFile * const)
+    @Expertsmodules@TCustomExpertsTextFile@ @465 ; Expertsmodules::TCustomExpertsTextFile::
+    @Expertsmodules@TCustomExpertsTextFile@$bctr$qqrp25System@Classes@TComponent @426 ; __fastcall Expertsmodules::TCustomExpertsTextFile::TCustomExpertsTextFile(System::Classes::TComponent *)
+    @Expertsmodules@TCustomExpertsTextFile@$bdtr$qqrv @424 ; __fastcall Expertsmodules::TCustomExpertsTextFile::~TCustomExpertsTextFile()
+    @Expertsmodules@TCustomExpertsTextFile@CreateModule$qqrv @425 ; __fastcall Expertsmodules::TCustomExpertsTextFile::CreateModule()
+    @Expertsmodules@TCustomExpertsTextFile@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @423 ; __fastcall Expertsmodules::TCustomExpertsTextFile::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Expertsmodules@TCustomExpertsTextFile@SetFileDirectory$qqrx20System@UnicodeString @422 ; __fastcall Expertsmodules::TCustomExpertsTextFile::SetFileDirectory(const System::UnicodeString)
+    @Expertsmodules@TCustomExpertsTextFile@SetFileName$qqrx20System@UnicodeString @421 ; __fastcall Expertsmodules::TCustomExpertsTextFile::SetFileName(const System::UnicodeString)
+    @Expertsmodules@TCustomExpertsTextFile@SetFileNameExt$qqrx20System@UnicodeString @420 ; __fastcall Expertsmodules::TCustomExpertsTextFile::SetFileNameExt(const System::UnicodeString)
+    @Expertsmodules@TCustomExpertsTextFile@SetSourceTemplateFile$qqrxp43Expertstemplates@TCustomExpertsTemplateFile @419 ; __fastcall Expertsmodules::TCustomExpertsTextFile::SetSourceTemplateFile(Expertstemplates::TCustomExpertsTemplateFile * const)
+    @Expertsmodules@TCustomExpertsUnit@ @469 ; Expertsmodules::TCustomExpertsUnit::
+    @Expertsmodules@TCustomExpertsUnit@$bctr$qqrp25System@Classes@TComponent @436 ; __fastcall Expertsmodules::TCustomExpertsUnit::TCustomExpertsUnit(System::Classes::TComponent *)
+    @Expertsmodules@TCustomExpertsUnit@$bdtr$qqrv @432 ; __fastcall Expertsmodules::TCustomExpertsUnit::~TCustomExpertsUnit()
+    @Expertsmodules@TCustomExpertsUnit@CreateAccessor$qqrx20System@UnicodeString @434 ; __fastcall Expertsmodules::TCustomExpertsUnit::CreateAccessor(const System::UnicodeString)
+    @Expertsmodules@TCustomExpertsUnit@CreateModule$qqrx20System@UnicodeString @435 ; __fastcall Expertsmodules::TCustomExpertsUnit::CreateModule(const System::UnicodeString)
+    @Expertsmodules@TCustomExpertsUnit@CreateModuleIdents$qqrx20System@UnicodeStringr20System@UnicodeStringt2t2 @433 ; __fastcall Expertsmodules::TCustomExpertsUnit::CreateModuleIdents(const System::UnicodeString, System::UnicodeString&, System::UnicodeString&, System::UnicodeString&)
+    @Expertsmodules@TCustomExpertsUnit@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @431 ; __fastcall Expertsmodules::TCustomExpertsUnit::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Expertsmodules@TCustomExpertsUnit@SetFileDirectory$qqrx20System@UnicodeString @429 ; __fastcall Expertsmodules::TCustomExpertsUnit::SetFileDirectory(const System::UnicodeString)
+    @Expertsmodules@TCustomExpertsUnit@SetFileName$qqrx20System@UnicodeString @428 ; __fastcall Expertsmodules::TCustomExpertsUnit::SetFileName(const System::UnicodeString)
+    @Expertsmodules@TCustomExpertsUnit@SetInterfaceTemplateFile$qqrxp43Expertstemplates@TCustomExpertsTemplateFile @427 ; __fastcall Expertsmodules::TCustomExpertsUnit::SetInterfaceTemplateFile(Expertstemplates::TCustomExpertsTemplateFile * const)
+    @Expertsmodules@TCustomExpertsUnit@SetSourceTemplateFile$qqrxp43Expertstemplates@TCustomExpertsTemplateFile @430 ; __fastcall Expertsmodules::TCustomExpertsUnit::SetSourceTemplateFile(Expertstemplates::TCustomExpertsTemplateFile * const)
+    @Expertsmodules@TExpertsClassUnit@ @471 ; Expertsmodules::TExpertsClassUnit::
+    @Expertsmodules@TExpertsGenericModuleComponent@ @479 ; Expertsmodules::TExpertsGenericModuleComponent::
+    @Expertsmodules@TExpertsModule@ @475 ; Expertsmodules::TExpertsModule::
+    @Expertsmodules@TExpertsModulesComponent@ @483 ; Expertsmodules::TExpertsModulesComponent::
+    @Expertsmodules@TExpertsModulesComponent@$bctr$qqrp25System@Classes@TComponent @418 ; __fastcall Expertsmodules::TExpertsModulesComponent::TExpertsModulesComponent(System::Classes::TComponent *)
+    @Expertsmodules@TExpertsModulesComponent@$bdtr$qqrv @417 ; __fastcall Expertsmodules::TExpertsModulesComponent::~TExpertsModulesComponent()
+    @Expertsmodules@TExpertsModulesComponent@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @414 ; __fastcall Expertsmodules::TExpertsModulesComponent::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Expertsmodules@TExpertsModulesComponent@SetTemplateProperties$qqrxp49Expertstemplates@TCustomExpertsTemplateProperties @416 ; __fastcall Expertsmodules::TExpertsModulesComponent::SetTemplateProperties(Expertstemplates::TCustomExpertsTemplateProperties * const)
+    @Expertsmodules@TExpertsModulesComponent@SetTemplatePropertiesDoc$qqrxp23System@Classes@TStrings @415 ; __fastcall Expertsmodules::TExpertsModulesComponent::SetTemplatePropertiesDoc(System::Classes::TStrings * const)
+    @Expertsmodules@TExpertsPchModule@ @459 ; Expertsmodules::TExpertsPchModule::
+    @Expertsmodules@TExpertsPersonalityModuleComponent@ @481 ; Expertsmodules::TExpertsPersonalityModuleComponent::
+    @Expertsmodules@TExpertsTextFile@ @463 ; Expertsmodules::TExpertsTextFile::
+    @Expertsmodules@TExpertsUnit@  @467 ; Expertsmodules::TExpertsUnit::
+    @Expertsmodules@initialization$qqrv @404 ; __fastcall Expertsmodules::initialization()
+    @Expertsproject@Finalization$qqrv @284 ; __fastcall Expertsproject::Finalization()
+    @Expertsproject@TCustomExpertsProject@ @299 ; Expertsproject::TCustomExpertsProject::
+    @Expertsproject@TCustomExpertsProject@$bctr$qqrp25System@Classes@TComponent @295 ; __fastcall Expertsproject::TCustomExpertsProject::TCustomExpertsProject(System::Classes::TComponent *)
+    @Expertsproject@TCustomExpertsProject@$bdtr$qqrv @293 ; __fastcall Expertsproject::TCustomExpertsProject::~TCustomExpertsProject()
+    @Expertsproject@TCustomExpertsProject@CreateProject$qqrx20System@UnicodeString @294 ; __fastcall Expertsproject::TCustomExpertsProject::CreateProject(const System::UnicodeString)
+    @Expertsproject@TCustomExpertsProject@DoOnCreateModules$qqrx20System@UnicodeString @292 ; __fastcall Expertsproject::TCustomExpertsProject::DoOnCreateModules(const System::UnicodeString)
+    @Expertsproject@TCustomExpertsProject@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @291 ; __fastcall Expertsproject::TCustomExpertsProject::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Expertsproject@TCustomExpertsProject@ProjectTypeToString$qqr34Expertsproject@TExpertsProjectType @290 ; __fastcall Expertsproject::TCustomExpertsProject::ProjectTypeToString(Expertsproject::TExpertsProjectType)
+    @Expertsproject@TCustomExpertsProject@SetProjectDirectory$qqrx20System@UnicodeString @287 ; __fastcall Expertsproject::TCustomExpertsProject::SetProjectDirectory(const System::UnicodeString)
+    @Expertsproject@TCustomExpertsProject@SetProjectFile$qqrxp43Expertstemplates@TCustomExpertsTemplateFile @289 ; __fastcall Expertsproject::TCustomExpertsProject::SetProjectFile(Expertstemplates::TCustomExpertsTemplateFile * const)
+    @Expertsproject@TCustomExpertsProject@SetProjectFileName$qqrx20System@UnicodeString @288 ; __fastcall Expertsproject::TCustomExpertsProject::SetProjectFileName(const System::UnicodeString)
+    @Expertsproject@TCustomExpertsProject@SetTemplateProperties$qqrxp49Expertstemplates@TCustomExpertsTemplateProperties @286 ; __fastcall Expertsproject::TCustomExpertsProject::SetTemplateProperties(Expertstemplates::TCustomExpertsTemplateProperties * const)
+    @Expertsproject@TCustomExpertsProject@SetTemplatePropertiesDoc$qqrxp23System@Classes@TStrings @285 ; __fastcall Expertsproject::TCustomExpertsProject::SetTemplatePropertiesDoc(System::Classes::TStrings * const)
+    @Expertsproject@TExpertsProject@ @297 ; Expertsproject::TExpertsProject::
+    @Expertsproject@initialization$qqrv @283 ; __fastcall Expertsproject::initialization()
+    @Expertsprojectcreators@Finalization$qqrv @263 ; __fastcall Expertsprojectcreators::Finalization()
+    @Expertsprojectcreators@TExpertsProjectCreator@ @282 ; Expertsprojectcreators::TExpertsProjectCreator::
+    @Expertsprojectcreators@TExpertsProjectCreator@$bctr$qqrx20System@UnicodeStringx62System@%DelphiInterface$35Expertsintf@IExpertsProjectAccessor% @279 ; Expertsprojectcreators::TExpertsProjectCreator::TExpertsProjectCreator(const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Expertsprojectcreators@TExpertsProjectCreator@GetCreatorType$qqrv @278 ; __fastcall Expertsprojectcreators::TExpertsProjectCreator::GetCreatorType()
+    @Expertsprojectcreators@TExpertsProjectCreator@GetFileName$qqrv @277 ; __fastcall Expertsprojectcreators::TExpertsProjectCreator::GetFileName()
+    @Expertsprojectcreators@TExpertsProjectCreator@GetFrameworkType$qqrv @276 ; __fastcall Expertsprojectcreators::TExpertsProjectCreator::GetFrameworkType()
+    @Expertsprojectcreators@TExpertsProjectCreator@GetOptionFileName$qqrv @275 ; __fastcall Expertsprojectcreators::TExpertsProjectCreator::GetOptionFileName()
+    @Expertsprojectcreators@TExpertsProjectCreator@GetPlatforms$qqrv @274 ; __fastcall Expertsprojectcreators::TExpertsProjectCreator::GetPlatforms()
+    @Expertsprojectcreators@TExpertsProjectCreator@GetPreferredPlatform$qqrv @273 ; __fastcall Expertsprojectcreators::TExpertsProjectCreator::GetPreferredPlatform()
+    @Expertsprojectcreators@TExpertsProjectCreator@GetProjectPersonality$qqrv @272 ; __fastcall Expertsprojectcreators::TExpertsProjectCreator::GetProjectPersonality()
+    @Expertsprojectcreators@TExpertsProjectCreator@GetShowSource$qqrv @271 ; __fastcall Expertsprojectcreators::TExpertsProjectCreator::GetShowSource()
+    @Expertsprojectcreators@TExpertsProjectCreator@GetUnnamed$qqrv @270 ; __fastcall Expertsprojectcreators::TExpertsProjectCreator::GetUnnamed()
+    @Expertsprojectcreators@TExpertsProjectCreator@NewDefaultModule$qqrv @269 ; __fastcall Expertsprojectcreators::TExpertsProjectCreator::NewDefaultModule()
+    @Expertsprojectcreators@TExpertsProjectCreator@NewDefaultProjectModule$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject% @268 ; Expertsprojectcreators::TExpertsProjectCreator::NewDefaultProjectModule(const System::DelphiInterface<{583}...
+    @Expertsprojectcreators@TExpertsProjectCreator@NewOptionSource$qqrx20System@UnicodeString @267 ; __fastcall Expertsprojectcreators::TExpertsProjectCreator::NewOptionSource(const System::UnicodeString)
+    @Expertsprojectcreators@TExpertsProjectCreator@NewProjectResource$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject% @266 ; Expertsprojectcreators::TExpertsProjectCreator::NewProjectResource(const System::DelphiInterface<{583}...
+    @Expertsprojectcreators@TExpertsProjectCreator@NewProjectSource$qqrx20System@UnicodeString @265 ; __fastcall Expertsprojectcreators::TExpertsProjectCreator::NewProjectSource(const System::UnicodeString)
+    @Expertsprojectcreators@TExpertsProjectCreator@SetInitialOptions$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject% @264 ; Expertsprojectcreators::TExpertsProjectCreator::SetInitialOptions(const System::DelphiInterface<{583}...
+    @Expertsprojectcreators@initialization$qqrv @262 ; __fastcall Expertsprojectcreators::initialization()
+    @Expertsrepository@Finalization$qqrv @304 ; __fastcall Expertsrepository::Finalization()
+    @Expertsrepository@TExpertsRepositoryFileWizard@ @357 ; Expertsrepository::TExpertsRepositoryFileWizard::
+    @Expertsrepository@TExpertsRepositoryFileWizard@IsVisible$qqr47System@%DelphiInterface$20Toolsapi@IOTAProject% @320 ; Expertsrepository::TExpertsRepositoryFileWizard::IsVisible(System::DelphiInterface<{583}...
+    @Expertsrepository@TExpertsRepositoryFileWizardWithProc@ @355 ; Expertsrepository::TExpertsRepositoryFileWizardWithProc::
+    @Expertsrepository@TExpertsRepositoryFileWizardWithProc@$bctr$qqrx20System@UnicodeStringt1t1t1t1t148System@%DelphiInterface$21System@Sysutils@TProc%56System@%DelphiInterface$29System@Sysutils@%TFunc__1$ui%% @307 ; Expertsrepository::TExpertsRepositoryFileWizardWithProc::TExpertsRepositoryFileWizardWithProc(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System:
+    @Expertsrepository@TExpertsRepositoryFileWizardWithProc@Execute$qqrv @306 ; __fastcall Expertsrepository::TExpertsRepositoryFileWizardWithProc::Execute()
+    @Expertsrepository@TExpertsRepositoryFileWizardWithProc@LoadIcon$qqrv @305 ; __fastcall Expertsrepository::TExpertsRepositoryFileWizardWithProc::LoadIcon()
+    @Expertsrepository@TExpertsRepositoryModuleWizard@ @365 ; Expertsrepository::TExpertsRepositoryModuleWizard::
+    @Expertsrepository@TExpertsRepositoryModuleWizard@$bctr$qqrx20System@UnicodeStringt1t1t1t1t1 @319 ; Expertsrepository::TExpertsRepositoryModuleWizard::TExpertsRepositoryModuleWizard(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Expertsrepository@TExpertsRepositoryModuleWizard@$bctr$qqrx20System@UnicodeStringt1t1t1t1t1x44System@%DynamicArray$20System@UnicodeString%t7 @318 ; Expertsrepository::TExpertsRepositoryModuleWizard::TExpertsRepositoryModuleWizard(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeStri
+    @Expertsrepository@TExpertsRepositoryModuleWizard@GetDesigner$qqrv @314 ; __fastcall Expertsrepository::TExpertsRepositoryModuleWizard::GetDesigner()
+    @Expertsrepository@TExpertsRepositoryModuleWizard@GetFrameworkTypes$qqrv @313 ; __fastcall Expertsrepository::TExpertsRepositoryModuleWizard::GetFrameworkTypes()
+    @Expertsrepository@TExpertsRepositoryModuleWizard@GetGalleryCategory$qqrv @312 ; __fastcall Expertsrepository::TExpertsRepositoryModuleWizard::GetGalleryCategory()
+    @Expertsrepository@TExpertsRepositoryModuleWizard@GetIDString$qqrv @317 ; __fastcall Expertsrepository::TExpertsRepositoryModuleWizard::GetIDString()
+    @Expertsrepository@TExpertsRepositoryModuleWizard@GetPersonality$qqrv @316 ; __fastcall Expertsrepository::TExpertsRepositoryModuleWizard::GetPersonality()
+    @Expertsrepository@TExpertsRepositoryModuleWizard@GetPlatforms$qqrv @315 ; __fastcall Expertsrepository::TExpertsRepositoryModuleWizard::GetPlatforms()
+    @Expertsrepository@TExpertsRepositoryModuleWizardWithProc@ @359 ; Expertsrepository::TExpertsRepositoryModuleWizardWithProc::
+    @Expertsrepository@TExpertsRepositoryModuleWizardWithProc@$bctr$qqrx20System@UnicodeStringt1t1t1t1t148System@%DelphiInterface$21System@Sysutils@TProc%56System@%DelphiInterface$29System@Sysutils@%TFunc__1$ui%% @311 ; Expertsrepository::TExpertsRepositoryModuleWizardWithProc::TExpertsRepositoryModuleWizardWithProc(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const Sys
+    @Expertsrepository@TExpertsRepositoryModuleWizardWithProc@$bctr$qqrx20System@UnicodeStringt1t1t1t1t148System@%DelphiInterface$21System@Sysutils@TProc%56System@%DelphiInterface$29System@Sysutils@%TFunc__1$ui%%x44System@%DynamicArrayvmpy1XqXkDrKnCJs5bK9SA @310 ; Expertsrepository::TExpertsRepositoryModuleWizardWithProc::TExpertsRepositoryModuleWizardWithProc(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const Sys
+    @Expertsrepository@TExpertsRepositoryModuleWizardWithProc@Execute$qqrv @309 ; __fastcall Expertsrepository::TExpertsRepositoryModuleWizardWithProc::Execute()
+    @Expertsrepository@TExpertsRepositoryModuleWizardWithProc@LoadIcon$qqrv @308 ; __fastcall Expertsrepository::TExpertsRepositoryModuleWizardWithProc::LoadIcon()
+    @Expertsrepository@TExpertsRepositoryProjectWizard@ @363 ; Expertsrepository::TExpertsRepositoryProjectWizard::
+    @Expertsrepository@TExpertsRepositoryProjectWizard@$bctr$qqrx20System@UnicodeStringt1t1t1t1t1 @352 ; Expertsrepository::TExpertsRepositoryProjectWizard::TExpertsRepositoryProjectWizard(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeSt
+    @Expertsrepository@TExpertsRepositoryProjectWizard@$bctr$qqrx20System@UnicodeStringt1t1t1t1t1x44System@%DynamicArray$20System@UnicodeString%t7 @351 ; Expertsrepository::TExpertsRepositoryProjectWizard::TExpertsRepositoryProjectWizard(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeSt
+    @Expertsrepository@TExpertsRepositoryProjectWizard@$bdtr$qqrv @350 ; __fastcall Expertsrepository::TExpertsRepositoryProjectWizard::~TExpertsRepositoryProjectWizard()
+    @Expertsrepository@TExpertsRepositoryProjectWizard@Execute$qqrv @341 ; __fastcall Expertsrepository::TExpertsRepositoryProjectWizard::Execute()
+    @Expertsrepository@TExpertsRepositoryProjectWizard@GetAuthor$qqrv @348 ; __fastcall Expertsrepository::TExpertsRepositoryProjectWizard::GetAuthor()
+    @Expertsrepository@TExpertsRepositoryProjectWizard@GetComment$qqrv @347 ; __fastcall Expertsrepository::TExpertsRepositoryProjectWizard::GetComment()
+    @Expertsrepository@TExpertsRepositoryProjectWizard@GetDesigner$qqrv @340 ; __fastcall Expertsrepository::TExpertsRepositoryProjectWizard::GetDesigner()
+    @Expertsrepository@TExpertsRepositoryProjectWizard@GetFrameworkTypes$qqrv @339 ; __fastcall Expertsrepository::TExpertsRepositoryProjectWizard::GetFrameworkTypes()
+    @Expertsrepository@TExpertsRepositoryProjectWizard@GetGalleryCategory$qqrv @338 ; __fastcall Expertsrepository::TExpertsRepositoryProjectWizard::GetGalleryCategory()
+    @Expertsrepository@TExpertsRepositoryProjectWizard@GetGlyph$qqrv @345 ; __fastcall Expertsrepository::TExpertsRepositoryProjectWizard::GetGlyph()
+    @Expertsrepository@TExpertsRepositoryProjectWizard@GetIDString$qqrv @342 ; __fastcall Expertsrepository::TExpertsRepositoryProjectWizard::GetIDString()
+    @Expertsrepository@TExpertsRepositoryProjectWizard@GetName$qqrv @349 ; __fastcall Expertsrepository::TExpertsRepositoryProjectWizard::GetName()
+    @Expertsrepository@TExpertsRepositoryProjectWizard@GetPage$qqrv @346 ; __fastcall Expertsrepository::TExpertsRepositoryProjectWizard::GetPage()
+    @Expertsrepository@TExpertsRepositoryProjectWizard@GetPersonality$qqrv @337 ; __fastcall Expertsrepository::TExpertsRepositoryProjectWizard::GetPersonality()
+    @Expertsrepository@TExpertsRepositoryProjectWizard@GetPlatforms$qqrv @336 ; __fastcall Expertsrepository::TExpertsRepositoryProjectWizard::GetPlatforms()
+    @Expertsrepository@TExpertsRepositoryProjectWizard@GetState$qqrv @344 ; __fastcall Expertsrepository::TExpertsRepositoryProjectWizard::GetState()
+    @Expertsrepository@TExpertsRepositoryProjectWizard@LoadIcon$qqrv @343 ; __fastcall Expertsrepository::TExpertsRepositoryProjectWizard::LoadIcon()
+    @Expertsrepository@TExpertsRepositoryProjectWizardWithProc@ @361 ; Expertsrepository::TExpertsRepositoryProjectWizardWithProc::
+    @Expertsrepository@TExpertsRepositoryProjectWizardWithProc@$bctr$qqrx20System@UnicodeStringt1t1t1t1t148System@%DelphiInterface$21System@Sysutils@TProc%56System@%DelphiInterface$29System@Sysutils@%TFunc__1$ui%% @335 ; Expertsrepository::TExpertsRepositoryProjectWizardWithProc::TExpertsRepositoryProjectWizardWithProc(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const S
+    @Expertsrepository@TExpertsRepositoryProjectWizardWithProc@$bctr$qqrx20System@UnicodeStringt1t1t1t1t148System@%DelphiInterface$21System@Sysutils@TProc%56System@%DelphiInterface$29System@Sysutils@%TFunc__1$ui%%x44System@%DynamicArra3TxJUeTxXgBHPlgbUnte6Q @334 ; Expertsrepository::TExpertsRepositoryProjectWizardWithProc::TExpertsRepositoryProjectWizardWithProc(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const S
+    @Expertsrepository@TExpertsRepositoryProjectWizardWithProc@Execute$qqrv @333 ; __fastcall Expertsrepository::TExpertsRepositoryProjectWizardWithProc::Execute()
+    @Expertsrepository@TExpertsRepositoryProjectWizardWithProc@LoadIcon$qqrv @332 ; __fastcall Expertsrepository::TExpertsRepositoryProjectWizardWithProc::LoadIcon()
+    @Expertsrepository@TExpertsRepositoryWizard@ @367 ; Expertsrepository::TExpertsRepositoryWizard::
+    @Expertsrepository@TExpertsRepositoryWizard@$bctr$qqrx20System@UnicodeStringt1t1t1t1 @331 ; __fastcall Expertsrepository::TExpertsRepositoryWizard::TExpertsRepositoryWizard(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Expertsrepository@TExpertsRepositoryWizard@Execute$qqrv @322 ; __fastcall Expertsrepository::TExpertsRepositoryWizard::Execute()
+    @Expertsrepository@TExpertsRepositoryWizard@GetAuthor$qqrv @329 ; __fastcall Expertsrepository::TExpertsRepositoryWizard::GetAuthor()
+    @Expertsrepository@TExpertsRepositoryWizard@GetComment$qqrv @328 ; __fastcall Expertsrepository::TExpertsRepositoryWizard::GetComment()
+    @Expertsrepository@TExpertsRepositoryWizard@GetDesigner$qqrv @321 ; __fastcall Expertsrepository::TExpertsRepositoryWizard::GetDesigner()
+    @Expertsrepository@TExpertsRepositoryWizard@GetGlyph$qqrv @326 ; __fastcall Expertsrepository::TExpertsRepositoryWizard::GetGlyph()
+    @Expertsrepository@TExpertsRepositoryWizard@GetIDString$qqrv @325 ; __fastcall Expertsrepository::TExpertsRepositoryWizard::GetIDString()
+    @Expertsrepository@TExpertsRepositoryWizard@GetName$qqrv @330 ; __fastcall Expertsrepository::TExpertsRepositoryWizard::GetName()
+    @Expertsrepository@TExpertsRepositoryWizard@GetPage$qqrv @327 ; __fastcall Expertsrepository::TExpertsRepositoryWizard::GetPage()
+    @Expertsrepository@TExpertsRepositoryWizard@GetState$qqrv @324 ; __fastcall Expertsrepository::TExpertsRepositoryWizard::GetState()
+    @Expertsrepository@TExpertsRepositoryWizard@LoadIcon$qqrv @323 ; __fastcall Expertsrepository::TExpertsRepositoryWizard::LoadIcon()
+    @Expertsrepository@initialization$qqrv @303 ; __fastcall Expertsrepository::initialization()
+    @Expertsresstrs@Finalization$qqrv @2   ; __fastcall Expertsresstrs::Finalization()
+    @Expertsresstrs@_rsExpertsComponents @6   ; Expertsresstrs::_rsExpertsComponents
+    @Expertsresstrs@_rsNotImplemented @4   ; Expertsresstrs::_rsNotImplemented
+    @Expertsresstrs@_rsNotSupported @5   ; Expertsresstrs::_rsNotSupported
+    @Expertsresstrs@_sUnknownPersonality @3   ; Expertsresstrs::_sUnknownPersonality
+    @Expertsresstrs@initialization$qqrv @1   ; __fastcall Expertsresstrs::initialization()
+    @Expertstemplates@Finalization$qqrv @86  ; __fastcall Expertstemplates::Finalization()
+    @Expertstemplates@FindTemplateFile$qqrx20System@UnicodeStringr20System@UnicodeString @119 ; __fastcall Expertstemplates::FindTemplateFile(const System::UnicodeString, System::UnicodeString&)
+    @Expertstemplates@MergePropertyPairs$qqr58System@%DelphiInterface$31Expertstemplates@IPropertyPairs%t1 @120 ; Expertstemplates::MergePropertyPairs(System::DelphiInterface<{583}...
+    @Expertstemplates@TCustomExpertsTemplateFile@ @173 ; Expertstemplates::TCustomExpertsTemplateFile::
+    @Expertstemplates@TCustomExpertsTemplateFile@$bctr$qqrp25System@Classes@TComponent @118 ; __fastcall Expertstemplates::TCustomExpertsTemplateFile::TCustomExpertsTemplateFile(System::Classes::TComponent *)
+    @Expertstemplates@TCustomExpertsTemplateFile@$bdtr$qqrv @117 ; __fastcall Expertstemplates::TCustomExpertsTemplateFile::~TCustomExpertsTemplateFile()
+    @Expertstemplates@TCustomExpertsTemplateFile@CreateFile$qqrx20System@UnicodeString58System@%DelphiInterface$31Expertstemplates@IPropertyPairs% @108 ; Expertstemplates::TCustomExpertsTemplateFile::CreateFile(const System::UnicodeString, System::DelphiInterface<{583}...
+    @Expertstemplates@TCustomExpertsTemplateFile@CreateSource$qqrx20System@UnicodeString58System@%DelphiInterface$31Expertstemplates@IPropertyPairs% @109 ; Expertstemplates::TCustomExpertsTemplateFile::CreateSource(const System::UnicodeString, System::DelphiInterface<{583}...
+    @Expertstemplates@TCustomExpertsTemplateFile@GetTemplateFileName$qqrv @110 ; __fastcall Expertstemplates::TCustomExpertsTemplateFile::GetTemplateFileName()
+    @Expertstemplates@TCustomExpertsTemplateFile@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @114 ; __fastcall Expertstemplates::TCustomExpertsTemplateFile::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Expertstemplates@TCustomExpertsTemplateFile@SetTemplateDoc$qqrp23System@Classes@TStrings @111 ; __fastcall Expertstemplates::TCustomExpertsTemplateFile::SetTemplateDoc(System::Classes::TStrings *)
+    @Expertstemplates@TCustomExpertsTemplateFile@SetTemplateFile$qqrx20System@UnicodeString @116 ; __fastcall Expertstemplates::TCustomExpertsTemplateFile::SetTemplateFile(const System::UnicodeString)
+    @Expertstemplates@TCustomExpertsTemplateFile@SetTemplateFileManager$qqrxp44Expertstemplates@TExpertsTemplateFileManager @115 ; __fastcall Expertstemplates::TCustomExpertsTemplateFile::SetTemplateFileManager(Expertstemplates::TExpertsTemplateFileManager * const)
+    @Expertstemplates@TCustomExpertsTemplateFile@SetTemplateProperties$qqrxp49Expertstemplates@TCustomExpertsTemplateProperties @113 ; __fastcall Expertstemplates::TCustomExpertsTemplateFile::SetTemplateProperties(Expertstemplates::TCustomExpertsTemplateProperties * const)
+    @Expertstemplates@TCustomExpertsTemplateFile@SetTemplatePropertiesDoc$qqrxp23System@Classes@TStrings @112 ; __fastcall Expertstemplates::TCustomExpertsTemplateFile::SetTemplatePropertiesDoc(System::Classes::TStrings * const)
+    @Expertstemplates@TCustomExpertsTemplatePersonalityFiles@ @177 ; Expertstemplates::TCustomExpertsTemplatePersonalityFiles::
+    @Expertstemplates@TCustomExpertsTemplatePersonalityFiles@GetFileName$qqrx20System@UnicodeString @87  ; __fastcall Expertstemplates::TCustomExpertsTemplatePersonalityFiles::GetFileName(const System::UnicodeString)
+    @Expertstemplates@TCustomExpertsTemplateProperties@ @169 ; Expertstemplates::TCustomExpertsTemplateProperties::
+    @Expertstemplates@TCustomExpertsTemplateProperties@$bctr$qqrp25System@Classes@TComponent @107 ; __fastcall Expertstemplates::TCustomExpertsTemplateProperties::TCustomExpertsTemplateProperties(System::Classes::TComponent *)
+    @Expertstemplates@TCustomExpertsTemplateProperties@$bdtr$qqrv @106 ; __fastcall Expertstemplates::TCustomExpertsTemplateProperties::~TCustomExpertsTemplateProperties()
+    @Expertstemplates@TCustomExpertsTemplateProperties@SetProperties$qqrxp23System@Classes@TStrings @105 ; __fastcall Expertstemplates::TCustomExpertsTemplateProperties::SetProperties(System::Classes::TStrings * const)
+    @Expertstemplates@TExpertsPropertiesPairs@ @159 ; Expertstemplates::TExpertsPropertiesPairs::
+    @Expertstemplates@TExpertsPropertiesPairs@$bctr$qqrp49Expertstemplates@TCustomExpertsTemplateProperties @88  ; __fastcall Expertstemplates::TExpertsPropertiesPairs::TExpertsPropertiesPairs(Expertstemplates::TCustomExpertsTemplateProperties *)
+    @Expertstemplates@TExpertsPropertiesPairsEnumerator@ @157 ; Expertstemplates::TExpertsPropertiesPairsEnumerator::
+    @Expertstemplates@TExpertsPropertiesPairsEnumerator@$bctr$qqrxp23System@Classes@TStrings @95  ; __fastcall Expertstemplates::TExpertsPropertiesPairsEnumerator::TExpertsPropertiesPairsEnumerator(System::Classes::TStrings * const)
+    @Expertstemplates@TExpertsPropertiesPairsEnumerator@$bdtr$qqrv @93  ; __fastcall Expertstemplates::TExpertsPropertiesPairsEnumerator::~TExpertsPropertiesPairsEnumerator()
+    @Expertstemplates@TExpertsPropertiesPairsEnumerator@GenericGetCurrent$qqrv @92  ; __fastcall Expertstemplates::TExpertsPropertiesPairsEnumerator::GenericGetCurrent()
+    @Expertstemplates@TExpertsPropertiesPairsEnumerator@GetCurrent$qqrv @91  ; __fastcall Expertstemplates::TExpertsPropertiesPairsEnumerator::GetCurrent()
+    @Expertstemplates@TExpertsPropertiesPairsEnumerator@GetItem$qqri @94  ; __fastcall Expertstemplates::TExpertsPropertiesPairsEnumerator::GetItem(int)
+    @Expertstemplates@TExpertsPropertiesPairsEnumerator@MoveNext$qqrv @90  ; __fastcall Expertstemplates::TExpertsPropertiesPairsEnumerator::MoveNext()
+    @Expertstemplates@TExpertsPropertiesPairsEnumerator@Reset$qqrv @89  ; __fastcall Expertstemplates::TExpertsPropertiesPairsEnumerator::Reset()
+    @Expertstemplates@TExpertsTemplateFile@ @171 ; Expertstemplates::TExpertsTemplateFile::
+    @Expertstemplates@TExpertsTemplateFileManager@ @179 ; Expertstemplates::TExpertsTemplateFileManager::
+    @Expertstemplates@TExpertsTemplatePersonalityFiles@ @175 ; Expertstemplates::TExpertsTemplatePersonalityFiles::
+    @Expertstemplates@TExpertsTemplateProperties@ @167 ; Expertstemplates::TExpertsTemplateProperties::
+    @Expertstemplates@TPropertyPair@ @163 ; Expertstemplates::TPropertyPair::
+    @Expertstemplates@TPropertyPair@$bctr$qqrx20System@UnicodeStringt1 @98  ; __fastcall Expertstemplates::TPropertyPair::TPropertyPair(const System::UnicodeString, const System::UnicodeString)
+    @Expertstemplates@TPropertyPair@Name$qqrv @97  ; __fastcall Expertstemplates::TPropertyPair::Name()
+    @Expertstemplates@TPropertyPair@Value$qqrv @96  ; __fastcall Expertstemplates::TPropertyPair::Value()
+    @Expertstemplates@TStringsPropertiesPairs@ @161 ; Expertstemplates::TStringsPropertiesPairs::
+    @Expertstemplates@TStringsPropertiesPairs@$bctr$qqrp23System@Classes@TStringso @103 ; __fastcall Expertstemplates::TStringsPropertiesPairs::TStringsPropertiesPairs(System::Classes::TStrings *, bool)
+    @Expertstemplates@TStringsPropertiesPairs@$bdtr$qqrv @102 ; __fastcall Expertstemplates::TStringsPropertiesPairs::~TStringsPropertiesPairs()
+    @Expertstemplates@TStringsPropertiesPairs@Count$qqrv @104 ; __fastcall Expertstemplates::TStringsPropertiesPairs::Count()
+    @Expertstemplates@TStringsPropertiesPairs@GetEnumerator$qqrv @101 ; __fastcall Expertstemplates::TStringsPropertiesPairs::GetEnumerator()
+    @Expertstemplates@TStringsPropertiesPairs@GetGenericEnumerator$qqrv @100 ; __fastcall Expertstemplates::TStringsPropertiesPairs::GetGenericEnumerator()
+    @Expertstemplates@TStringsPropertiesPairs@GetItem$qqri @99  ; __fastcall Expertstemplates::TStringsPropertiesPairs::GetItem(int)
+    @Expertstemplates@initialization$qqrv @85  ; __fastcall Expertstemplates::initialization()
+    @GetPackageInfoTable           @490 ; GetPackageInfoTable
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@ @122 ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@$bctr$qqri @64  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@$bctr$qqrix76System@%DelphiInterface$49System@Generics@Defaults@%IEqualityComparer__1$i%% @62  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@$bctr$qqrx76System@%DelphiInterface$49System@Generics@Defaults@%IEqualityComparer__1$i%% @63  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@$bctr$qqrxp146System@Generics@Collections@%TEnumerable__1$99System@Generics@Collections@%TPair__2$i57System@%DelphiInterfaceM7sh/G6hzzNfmgEtC6RQZA @60  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@$bctr$qqrxp146System@Generics@Collections@%TEnumerable__1$99System@Generics@Collections@%TPair__2$i57System@%DelphiInterfaceqaDD8s07G8gT/rzxtDFaBg @61  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@$bdtr$qqrv @59  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TKeyCollection$%@ @135 ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TKeyCollection$%@$bctr$qqrxp105System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%% @38  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TKeyCollection$%@DoGetEnumerator$qqrv @39  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TKeyCollection$%@GetCount$qqrv @40  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TKeyCollection$%@GetEnumerator$qqrv @37  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TKeyCollection$%@ToArray$qqrv @36  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TKeyEnumerator$%@ @137 ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TKeyEnumerator$%@$bctr$qqrxp105System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%% @32  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TKeyEnumerator$%@DoGetCurrent$qqrv @34  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TKeyEnumerator$%@DoMoveNext$qqrv @33  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TKeyEnumerator$%@GetCurrent$qqrv @35  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TKeyEnumerator$%@MoveNext$qqrv @31  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TPairEnumerator$%@ @124 ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TPairEnumerator$%@$bctr$qqrxp105System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%% @12  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TPairEnumerator$%@DoGetCurrent$qqrv @14  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TPairEnumerator$%@DoMoveNext$qqrv @13  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TPairEnumerator$%@GetCurrent$qqrv @15  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TPairEnumerator$%@MoveNext$qqrv @11  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TValueCollection$%@ @126 ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TValueCollection$%@$bctr$qqrxp105System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%% @23  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TValueCollection$%@DoGetEnumerator$qqrv @24  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TValueCollection$%@GetCount$qqrv @25  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TValueCollection$%@GetEnumerator$qqrv @22  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TValueCollection$%@ToArray$qqrv @21  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TValueEnumerator$%@ @128 ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TValueEnumerator$%@$bctr$qqrxp105System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%% @17  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TValueEnumerator$%@DoGetCurrent$qqrv @19  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TValueEnumerator$%@DoMoveNext$qqrv @18  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TValueEnumerator$%@GetCurrent$qqrv @20  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@%TValueEnumerator$%@MoveNext$qqrv @16  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@Add$qqrxix57System@%DelphiInterface$30Expertstemplates@IPropertyPair% @58  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@AddOrSetValue$qqrxix57System@%DelphiInterface$30Expertstemplates@IPropertyPair% @52  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@Clear$qqrv @55  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@ContainsKey$qqrxi @51  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@ContainsValue$qqrx57System@%DelphiInterface$30Expertstemplates@IPropertyPair% @50  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@DoAdd$qqriixix57System@%DelphiInterface$30Expertstemplates@IPropertyPair% @70  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@DoGetEnumerator$qqrv @67  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@DoRemove$qqrxii51System@Generics@Collections@TCollectionNotification @68  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@DoSetValue$qqrix57System@%DelphiInterface$30Expertstemplates@IPropertyPair% @69  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@ExtractPair$qqrxi @56  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@GetBucketIndex$qqrxii @75  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@GetEnumerator$qqrv @46  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@GetItem$qqrxi @73  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@GetKeys$qqrv @48  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@GetValues$qqrv @47  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@Grow$qqrv @76  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@Hash$qqrxi @74  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@KeyNotify$qqrxi51System@Generics@Collections@TCollectionNotification @66  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@Rehash$qqri @77  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@RehashAdd$qqrixix57System@%DelphiInterface$30Expertstemplates@IPropertyPair% @71  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@Remove$qqrxi @57  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@SetCapacity$qqri @78  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@SetItem$qqrxix57System@%DelphiInterface$30Expertstemplates@IPropertyPair% @72  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@ToArray$qqrv @49  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@TrimExcess$qqrv @54  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@TryGetValue$qqrxir57System@%DelphiInterface$30Expertstemplates@IPropertyPair% @53  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@ValueNotify$qqrx57System@%DelphiInterface$30Expertstemplates@IPropertyPair%51System@Generics@Collections@TCollectionNotification @65  ; System::Generics::Collections::TDictionary__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@ @130 ; System::Generics::Collections::TEnumerable__1<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@$bdtr$qqrv @29  ; System::Generics::Collections::TEnumerable__1<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@GetEnumerator$qqrv @28  ; System::Generics::Collections::TEnumerable__1<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@ToArray$qqrv @27  ; System::Generics::Collections::TEnumerable__1<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@ToArrayImpl$qqri @30  ; System::Generics::Collections::TEnumerable__1<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$99System@Generics@Collections@%TPair__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%%@ @149 ; System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$99System@Generics@Collections@%TPair__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%%@$bdtr$qqrv @82  ; System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$99System@Generics@Collections@%TPair__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%%@GetEnumerator$qqrv @81  ; System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$99System@Generics@Collections@%TPair__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%%@ToArray$qqrv @80  ; System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$99System@Generics@Collections@%TPair__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%%@ToArrayImpl$qqri @83  ; System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$i%@ @139 ; System::Generics::Collections::TEnumerable__1<int>::
+    @System@Generics@Collections@%TEnumerable__1$i%@$bdtr$qqrv @44  ; __fastcall System::Generics::Collections::TEnumerable__1<int>::~TEnumerable__1<int>()
+    @System@Generics@Collections@%TEnumerable__1$i%@GetEnumerator$qqrv @43  ; __fastcall System::Generics::Collections::TEnumerable__1<int>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$i%@ToArray$qqrv @42  ; __fastcall System::Generics::Collections::TEnumerable__1<int>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$i%@ToArrayImpl$qqri @45  ; __fastcall System::Generics::Collections::TEnumerable__1<int>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerator__1$57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@ @132 ; System::Generics::Collections::TEnumerator__1<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerator__1$57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@MoveNext$qqrv @26  ; System::Generics::Collections::TEnumerator__1<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerator__1$99System@Generics@Collections@%TPair__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%%@ @151 ; System::Generics::Collections::TEnumerator__1<System::Generics::Collections::TPair__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerator__1$99System@Generics@Collections@%TPair__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%%@MoveNext$qqrv @79  ; System::Generics::Collections::TEnumerator__1<System::Generics::Collections::TPair__2<int, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerator__1$i%@ @141 ; System::Generics::Collections::TEnumerator__1<int>::
+    @System@Generics@Collections@%TEnumerator__1$i%@MoveNext$qqrv @41  ; __fastcall System::Generics::Collections::TEnumerator__1<int>::MoveNext()
+    @System@Generics@Collections@%TPair__2$i57System@%DelphiInterface$30Expertstemplates@IPropertyPair%%@$bctr$qqrxix57System@%DelphiInterface$30Expertstemplates@IPropertyPair% @84  ; System::Generics::Collections::TPair__2<int, System::DelphiInterface<{583}...
+    Finalize                       @488 ; Finalize
+    Initialize                     @489 ; Initialize

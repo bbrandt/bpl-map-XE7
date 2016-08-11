@@ -1,0 +1,101 @@
+LIBRARY     WIN32DEBUGPROIDE210.BPL
+
+DESCRIPTION 'mbarcadero Win32 Native Code Debugger IDE Professional Package'
+
+EXPORTS
+    @$xp$18Fpuview@TFPUWindow      @52  ; __tpdsc__ Fpuview::TFPUWindow
+    @$xp$19Fpuview@TDbkFPURegs     @57  ; __tpdsc__ Fpuview::TDbkFPURegs
+    @$xp$19Fpuview@TDbkXMMRegs     @55  ; __tpdsc__ Fpuview::TDbkXMMRegs
+    @$xp$20Databpadd@TAddDataBP    @72  ; __tpdsc__ Databpadd::TAddDataBP
+    @$xp$21Fpuview@TMMXSupported   @54  ; __tpdsc__ Fpuview::TMMXSupported
+    @$xp$26Databpmodify@TModifyDataBP @77  ; __tpdsc__ Databpmodify::TModifyDataBP
+    @$xp$26Fpuview@TDbkFPUStatusFlags @61  ; __tpdsc__ Fpuview::TDbkFPUStatusFlags
+    @$xp$27Fpuview@TDbkFPUControlFlags @59  ; __tpdsc__ Fpuview::TDbkFPUControlFlags
+    @$xp$39Win32debugprocmd@TWin32DebugProCommands @88  ; __tpdsc__ Win32debugprocmd::TWin32DebugProCommands
+    @Databpadd@Finalization$qqrv   @64  ; __fastcall Databpadd::Finalization()
+    @Databpadd@TAddDataBP@         @73  ; Databpadd::TAddDataBP::
+    @Databpadd@TAddDataBP@AddressEditExit$qqrp14System@TObject @68  ; __fastcall Databpadd::TAddDataBP::AddressEditExit(System::TObject *)
+    @Databpadd@TAddDataBP@DisableKeyChanges$qqrv @67  ; __fastcall Databpadd::TAddDataBP::DisableKeyChanges()
+    @Databpadd@TAddDataBP@GetData$qqrr17Dbk@DbkProcAddr_trir20System@UnicodeStringt3t3t2t3t3t3t3t3t2rotdtdtd @69  ; Databpadd::TAddDataBP::GetData(Dbk::DbkProcAddr_t&, int&, System::UnicodeString&, System::UnicodeString&, System::UnicodeString&, int&, System::UnicodeString&, System::UnicodeString&, System::UnicodeString&, System::UnicodeString&, System::UnicodeStrin
+    @Databpadd@TAddDataBP@SetData$qqrx20System@UnicodeStringit1t1it1t1t1t1t1ioooo @70  ; Databpadd::TAddDataBP::SetData(const System::UnicodeString, int, const System::UnicodeString, const System::UnicodeString, int, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const Sy
+    @Databpadd@TAddDataBP@ValidContents$qqrv @71  ; __fastcall Databpadd::TAddDataBP::ValidContents()
+    @Databpadd@TAddDataBP@cbHandleExceptionsClick$qqrp14System@TObject @66  ; __fastcall Databpadd::TAddDataBP::cbHandleExceptionsClick(System::TObject *)
+    @Databpadd@TAddDataBP@cbIgnoreExceptionsClick$qqrp14System@TObject @65  ; __fastcall Databpadd::TAddDataBP::cbIgnoreExceptionsClick(System::TObject *)
+    @Databpadd@initialization$qqrv @63  ; __fastcall Databpadd::initialization()
+    @Databpmodify@Finalization$qqrv @75  ; __fastcall Databpmodify::Finalization()
+    @Databpmodify@TModifyDataBP@   @78  ; Databpmodify::TModifyDataBP::
+    @Databpmodify@TModifyDataBP@OKButtonClick$qqrp14System@TObject @76  ; __fastcall Databpmodify::TModifyDataBP::OKButtonClick(System::TObject *)
+    @Databpmodify@initialization$qqrv @74  ; __fastcall Databpmodify::initialization()
+    @Fpuview@Finalization$qqrv     @2   ; __fastcall Fpuview::Finalization()
+    @Fpuview@TDbkFPUControlFlags@  @60  ; Fpuview::TDbkFPUControlFlags::
+    @Fpuview@TDbkFPUControlFlags@Update$qqrrx21Dbkhelper@TDbkContext22Dbkhelper@TProcessType @50  ; __fastcall Fpuview::TDbkFPUControlFlags::Update(const Dbkhelper::TDbkContext&, Dbkhelper::TProcessType)
+    @Fpuview@TDbkFPURegs@          @58  ; Fpuview::TDbkFPURegs::
+    @Fpuview@TDbkFPURegs@Update$qqrrx21Dbkhelper@TDbkContext22Dbkhelper@TProcessType @49  ; __fastcall Fpuview::TDbkFPURegs::Update(const Dbkhelper::TDbkContext&, Dbkhelper::TProcessType)
+    @Fpuview@TDbkFPUStatusFlags@   @62  ; Fpuview::TDbkFPUStatusFlags::
+    @Fpuview@TDbkFPUStatusFlags@Update$qqrrx21Dbkhelper@TDbkContext22Dbkhelper@TProcessType @51  ; __fastcall Fpuview::TDbkFPUStatusFlags::Update(const Dbkhelper::TDbkContext&, Dbkhelper::TProcessType)
+    @Fpuview@TDbkXMMRegs@          @56  ; Fpuview::TDbkXMMRegs::
+    @Fpuview@TDbkXMMRegs@Update$qqrp15Debug@TDebugger @48  ; __fastcall Fpuview::TDbkXMMRegs::Update(Debug::TDebugger *)
+    @Fpuview@TFPUWindow@           @53  ; Fpuview::TFPUWindow::
+    @Fpuview@TFPUWindow@Change$qqrr31System@%StaticArray$uci$i1024$%ri20System@UnicodeString17Discomp@TViewType55System@%Set$28Disviewutils@TParseFlagsTypet1$i0$t1$i2$% @26  ; Fpuview::TFPUWindow::Change(System::StaticArray<unsigned char, 1024>&, int&, System::UnicodeString, Discomp::TViewType, System::Set<{583}...
+    @Fpuview@TFPUWindow@ChangeDisplayAs$qqrp14System@TObject @35  ; __fastcall Fpuview::TFPUWindow::ChangeDisplayAs(System::TObject *)
+    @Fpuview@TFPUWindow@ChangeRadix$qqrp14System@TObject @18  ; __fastcall Fpuview::TFPUWindow::ChangeRadix(System::TObject *)
+    @Fpuview@TFPUWindow@ChangeShowRegisters$qqrp14System@TObject @36  ; __fastcall Fpuview::TFPUWindow::ChangeShowRegisters(System::TObject *)
+    @Fpuview@TFPUWindow@ControlFlagsPopupMenuPopup$qqrp14System@TObject @4   ; __fastcall Fpuview::TFPUWindow::ControlFlagsPopupMenuPopup(System::TObject *)
+    @Fpuview@TFPUWindow@ControlFlagsViewHintShow$qqrp14System@TObjectr22Vcl@Controls@THintInforo @13  ; __fastcall Fpuview::TFPUWindow::ControlFlagsViewHintShow(System::TObject *, Vcl::Controls::THintInfo&, bool&)
+    @Fpuview@TFPUWindow@CurrentDebuggerChanged$qqrp14System@TObject @12  ; __fastcall Fpuview::TFPUWindow::CurrentDebuggerChanged(System::TObject *)
+    @Fpuview@TFPUWindow@DownPaneItemClick$qqrp14System@TObject @20  ; __fastcall Fpuview::TFPUWindow::DownPaneItemClick(System::TObject *)
+    @Fpuview@TFPUWindow@EditAction$qqr22Designintf@TEditAction @11  ; __fastcall Fpuview::TFPUWindow::EditAction(Designintf::TEditAction)
+    @Fpuview@TFPUWindow@FPUChangeItemClick$qqrp14System@TObject @30  ; __fastcall Fpuview::TFPUWindow::FPUChangeItemClick(System::TObject *)
+    @Fpuview@TFPUWindow@FPUDisplayAsItemClick$qqrp14System@TObject @38  ; __fastcall Fpuview::TFPUWindow::FPUDisplayAsItemClick(System::TObject *)
+    @Fpuview@TFPUWindow@FPUEmptyItemClick$qqrp14System@TObject @31  ; __fastcall Fpuview::TFPUWindow::FPUEmptyItemClick(System::TObject *)
+    @Fpuview@TFPUWindow@FPULongDoublesItemClick$qqrp14System@TObject @39  ; __fastcall Fpuview::TFPUWindow::FPULongDoublesItemClick(System::TObject *)
+    @Fpuview@TFPUWindow@FPURadixItemClick$qqrp14System@TObject @19  ; __fastcall Fpuview::TFPUWindow::FPURadixItemClick(System::TObject *)
+    @Fpuview@TFPUWindow@FPUShowItemClick$qqrp14System@TObject @37  ; __fastcall Fpuview::TFPUWindow::FPUShowItemClick(System::TObject *)
+    @Fpuview@TFPUWindow@FPUZeroItemClick$qqrp14System@TObject @32  ; __fastcall Fpuview::TFPUWindow::FPUZeroItemClick(System::TObject *)
+    @Fpuview@TFPUWindow@FormCreate$qqrp14System@TObject @47  ; __fastcall Fpuview::TFPUWindow::FormCreate(System::TObject *)
+    @Fpuview@TFPUWindow@FormDestroy$qqrp14System@TObject @46  ; __fastcall Fpuview::TFPUWindow::FormDestroy(System::TObject *)
+    @Fpuview@TFPUWindow@FormHide$qqrp14System@TObject @44  ; __fastcall Fpuview::TFPUWindow::FormHide(System::TObject *)
+    @Fpuview@TFPUWindow@FormShow$qqrp14System@TObject @45  ; __fastcall Fpuview::TFPUWindow::FormShow(System::TObject *)
+    @Fpuview@TFPUWindow@GetEditState$qqrv @10  ; __fastcall Fpuview::TFPUWindow::GetEditState()
+    @Fpuview@TFPUWindow@GetMMXSupported$qqrv @27  ; __fastcall Fpuview::TFPUWindow::GetMMXSupported()
+    @Fpuview@TFPUWindow@InternalUpdate$qqrv @41  ; __fastcall Fpuview::TFPUWindow::InternalUpdate()
+    @Fpuview@TFPUWindow@LeftPaneItemClick$qqrp14System@TObject @23  ; __fastcall Fpuview::TFPUWindow::LeftPaneItemClick(System::TObject *)
+    @Fpuview@TFPUWindow@LoadWindowState$qqrp30System@Inifiles@TCustomIniFile @15  ; __fastcall Fpuview::TFPUWindow::LoadWindowState(System::Inifiles::TCustomIniFile *)
+    @Fpuview@TFPUWindow@LocalMenuItemClick$qqrp14System@TObject @24  ; __fastcall Fpuview::TFPUWindow::LocalMenuItemClick(System::TObject *)
+    @Fpuview@TFPUWindow@OptionsChanged$qqrp14System@TObject @40  ; __fastcall Fpuview::TFPUWindow::OptionsChanged(System::TObject *)
+    @Fpuview@TFPUWindow@ProcessDebugUpdate$qqrp14System@TObjectx47System@%DelphiInterface$20Toolsapi@IOTAProcess% @43  ; Fpuview::TFPUWindow::ProcessDebugUpdate(System::TObject *, const System::DelphiInterface<{583}...
+    @Fpuview@TFPUWindow@RegisterChangeProcedure$qqr20System@UnicodeString @29  ; __fastcall Fpuview::TFPUWindow::RegisterChangeProcedure(System::UnicodeString)
+    @Fpuview@TFPUWindow@RegisterPopupMenuPopup$qqrp14System@TObject @25  ; __fastcall Fpuview::TFPUWindow::RegisterPopupMenuPopup(System::TObject *)
+    @Fpuview@TFPUWindow@RightPaneItemClick$qqrp14System@TObject @22  ; __fastcall Fpuview::TFPUWindow::RightPaneItemClick(System::TObject *)
+    @Fpuview@TFPUWindow@SaveWindowState$qqrp30System@Inifiles@TCustomIniFileo @17  ; __fastcall Fpuview::TFPUWindow::SaveWindowState(System::Inifiles::TCustomIniFile *, bool)
+    @Fpuview@TFPUWindow@SetDisabled$qqro @16  ; __fastcall Fpuview::TFPUWindow::SetDisabled(bool)
+    @Fpuview@TFPUWindow@StatusFlagsPopupMenuPopup$qqrp14System@TObject @3   ; __fastcall Fpuview::TFPUWindow::StatusFlagsPopupMenuPopup(System::TObject *)
+    @Fpuview@TFPUWindow@ThreadDebugUpdate$qqrp14System@TObjectx46System@%DelphiInterface$19Toolsapi@IOTAThread% @42  ; Fpuview::TFPUWindow::ThreadDebugUpdate(System::TObject *, const System::DelphiInterface<{583}...
+    @Fpuview@TFPUWindow@ToggleControlFlagItemClick$qqrp14System@TObject @33  ; __fastcall Fpuview::TFPUWindow::ToggleControlFlagItemClick(System::TObject *)
+    @Fpuview@TFPUWindow@ToggleStatusFlagItemClick$qqrp14System@TObject @34  ; __fastcall Fpuview::TFPUWindow::ToggleStatusFlagItemClick(System::TObject *)
+    @Fpuview@TFPUWindow@UpPaneItemClick$qqrp14System@TObject @21  ; __fastcall Fpuview::TFPUWindow::UpPaneItemClick(System::TObject *)
+    @Fpuview@TFPUWindow@UpdateCaption$qqrv @14  ; __fastcall Fpuview::TFPUWindow::UpdateCaption()
+    @Fpuview@TFPUWindow@XMMChangeItemClick$qqrp14System@TObject @8   ; __fastcall Fpuview::TFPUWindow::XMMChangeItemClick(System::TObject *)
+    @Fpuview@TFPUWindow@XMMDisplayAsClick$qqrp14System@TObject @7   ; __fastcall Fpuview::TFPUWindow::XMMDisplayAsClick(System::TObject *)
+    @Fpuview@TFPUWindow@XMMDisplayAsItemClick$qqrp14System@TObject @6   ; __fastcall Fpuview::TFPUWindow::XMMDisplayAsItemClick(System::TObject *)
+    @Fpuview@TFPUWindow@XMMRegisterChangeProcedure$qqr20System@UnicodeString @28  ; __fastcall Fpuview::TFPUWindow::XMMRegisterChangeProcedure(System::UnicodeString)
+    @Fpuview@TFPUWindow@XMMRegisterPopupMenuPopup$qqrp14System@TObject @5   ; __fastcall Fpuview::TFPUWindow::XMMRegisterPopupMenuPopup(System::TObject *)
+    @Fpuview@TFPUWindow@XMMZeroItemClick$qqrp14System@TObject @9   ; __fastcall Fpuview::TFPUWindow::XMMZeroItemClick(System::TObject *)
+    @Fpuview@initialization$qqrv   @1   ; __fastcall Fpuview::initialization()
+    @GetPackageInfoTable           @96  ; GetPackageInfoTable
+    @Win32debugprocmd@Finalization$qqrv @80  ; __fastcall Win32debugprocmd::Finalization()
+    @Win32debugprocmd@IDERegister$qqrv @85  ; __fastcall Win32debugprocmd::IDERegister()
+    @Win32debugprocmd@TWin32DebugProCommands@ @89  ; Win32debugprocmd::TWin32DebugProCommands::
+    @Win32debugprocmd@TWin32DebugProCommands@DebugFPUCommandExecute$qqrp14System@TObject @81  ; __fastcall Win32debugprocmd::TWin32DebugProCommands::DebugFPUCommandExecute(System::TObject *)
+    @Win32debugprocmd@TWin32DebugProCommands@DebugFPUCommandUpdate$qqrp14System@TObject @82  ; __fastcall Win32debugprocmd::TWin32DebugProCommands::DebugFPUCommandUpdate(System::TObject *)
+    @Win32debugprocmd@TWin32DebugProCommands@DebugProCommandsCreate$qqrp14System@TObject @87  ; __fastcall Win32debugprocmd::TWin32DebugProCommands::DebugProCommandsCreate(System::TObject *)
+    @Win32debugprocmd@TWin32DebugProCommands@DebugProCommandsDestroy$qqrp14System@TObject @86  ; __fastcall Win32debugprocmd::TWin32DebugProCommands::DebugProCommandsDestroy(System::TObject *)
+    @Win32debugprocmd@TWin32DebugProCommands@RunAddDataBreakpointCommandExecute$qqrp14System@TObject @84  ; __fastcall Win32debugprocmd::TWin32DebugProCommands::RunAddDataBreakpointCommandExecute(System::TObject *)
+    @Win32debugprocmd@TWin32DebugProCommands@RunAddDataBreakpointCommandUpdate$qqrp14System@TObject @83  ; __fastcall Win32debugprocmd::TWin32DebugProCommands::RunAddDataBreakpointCommandUpdate(System::TObject *)
+    @Win32debugprocmd@initialization$qqrv @79  ; __fastcall Win32debugprocmd::initialization()
+    @Win32debugproide@@GetPackageInfoTable$qqrv @93  ; Win32debugproide::__linkproc__ __fastcall GetPackageInfoTable()
+    @Win32debugproide@@PackageLoad$qqrv @92  ; Win32debugproide::__linkproc__ __fastcall PackageLoad()
+    @Win32debugproide@@PackageUnload$qqrv @91  ; Win32debugproide::__linkproc__ __fastcall PackageUnload()
+    @Win32debugproide@initialization$qqrv @90  ; __fastcall Win32debugproide::initialization()
+    Finalize                       @94  ; Finalize
+    Initialize                     @95  ; Initialize

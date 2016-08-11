@@ -1,0 +1,1061 @@
+LIBRARY     INET210.BPL
+
+DESCRIPTION 'mbarcadero Internet/World Wide Web components'
+
+EXPORTS
+    @$xp$110System@Generics@Collections@%TEnumerable__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%% @176 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString> >
+    @$xp$110System@Generics@Collections@%TEnumerator__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%% @178 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString> >
+    @$xp$17Web@Httpprod@TTag       @645 ; __tpdsc__ Web::Httpprod::TTag
+    @$xp$19Web@Httpapp@TCookie     @505 ; __tpdsc__ Web::Httpapp::TCookie
+    @$xp$19Webcomp@IWebContent     @987 ; __tpdsc__ Webcomp::IWebContent
+    @$xp$21Httpparse@THTTPParser   @808 ; __tpdsc__ Httpparse::THTTPParser
+    @$xp$21Webcomp@IGetXMLStream   @1005; __tpdsc__ Webcomp::IGetXMLStream
+    @$xp$21Webcomp@IWebComponent   @994 ; __tpdsc__ Webcomp::IWebComponent
+    @$xp$22Web@Httpapp@TWebModule  @466 ; __tpdsc__ Web::Httpapp::TWebModule
+    @$xp$22Webcomp@TLabelPosition  @986 ; __tpdsc__ Webcomp::TLabelPosition
+    @$xp$23Web@Httpapp@TMethodType @518 ; __tpdsc__ Web::Httpapp::TMethodType
+    @$xp$23Web@Httpapp@TWebRequest @516 ; __tpdsc__ Web::Httpapp::TWebRequest
+    @$xp$23Web@Httpprod@THTMLAlign @665 ; __tpdsc__ Web::Httpprod::THTMLAlign
+    @$xp$23Webcomp@TWebContentFlag @991 ; __tpdsc__ Webcomp::TWebContentFlag
+    @$xp$24Reqfiles@TWebRequestFile @1027; __tpdsc__ Reqfiles::TWebRequestFile
+    @$xp$24Web@Copyprsr@TCopyParser @555 ; __tpdsc__ Web::Copyprsr::TCopyParser
+    @$xp$24Web@Httpapp@IWebDispatch @477 ; __tpdsc__ Web::Httpapp::IWebDispatch
+    @$xp$24Web@Httpapp@TWebResponse @501 ; __tpdsc__ Web::Httpapp::TWebResponse
+    @$xp$24Web@Httpprod@THTMLVAlign @664 ; __tpdsc__ Web::Httpprod::THTMLVAlign
+    @$xp$24Web@Webcntxt@IWebEndUser @731 ; __tpdsc__ Web::Webcntxt::IWebEndUser
+    @$xp$24Web@Webcntxt@TWebContext @727 ; __tpdsc__ Web::Webcntxt::TWebContext
+    @$xp$24Webcomp@IAddFieldsEditor @998 ; __tpdsc__ Webcomp::IAddFieldsEditor
+    @$xp$24Webcomp@TWebContentFlags @990 ; __tpdsc__ Webcomp::TWebContentFlags
+    @$xp$25Reqfiles@TWebRequestFiles @1025; __tpdsc__ Reqfiles::TWebRequestFiles
+    @$xp$25Web@Autodisp@TWebDispatch @681 ; __tpdsc__ Web::Autodisp::TWebDispatch
+    @$xp$25Web@Autodisp@TWebPathInfo @679 ; __tpdsc__ Web::Autodisp::TWebPathInfo
+    @$xp$25Web@Httpprod@EScriptError @632 ; __tpdsc__ Web::Httpprod::EScriptError
+    @$xp$25Web@Httpprod@THTMLBgColor @663 ; __tpdsc__ Web::Httpprod::THTMLBgColor
+    @$xp$25Web@Webcntxt@IWebPageInfo @734 ; __tpdsc__ Web::Webcntxt::IWebPageInfo
+    @$xp$25Webcomp@ILayoutWebContent @983 ; __tpdsc__ Webcomp::ILayoutWebContent
+    @$xp$25Webcomp@TLayoutAttributes @984 ; __tpdsc__ Webcomp::TLayoutAttributes
+    @$xp$25Webcomp@TLayoutWebContent @981 ; __tpdsc__ Webcomp::TLayoutWebContent
+    @$xp$25Webcomp@TWebComponentList @979 ; __tpdsc__ Webcomp::TWebComponentList
+    @$xp$26Web@Httpapp@TContentParser @512 ; __tpdsc__ Web::Httpapp::TContentParser
+    @$xp$26Web@Httpapp@TWebActionItem @480 ; __tpdsc__ Web::Httpapp::TWebActionItem
+    @$xp$26Web@Httpapp@TWebDispatcher @473 ; __tpdsc__ Web::Httpapp::TWebDispatcher
+    @$xp$26Web@Httpprod@THTMLTagEvent @644 ; __tpdsc__ Web::Httpprod::THTMLTagEvent
+    @$xp$26Web@Httpprod@TPageProducer @637 ; __tpdsc__ Web::Httpprod::TPageProducer
+    @$xp$26Webcomp@INotifyWebActivate @1003; __tpdsc__ Webcomp::INotifyWebActivate
+    @$xp$26Webcomp@TWebContentOptions @988 ; __tpdsc__ Webcomp::TWebContentOptions
+    @$xp$27Web@Httpapp@IProduceContent @496 ; __tpdsc__ Web::Httpapp::IProduceContent
+    @$xp$27Web@Httpapp@IWebAppServices @491 ; __tpdsc__ Web::Httpapp::IWebAppServices
+    @$xp$27Web@Httpapp@TWebActionItems @478 ; __tpdsc__ Web::Httpapp::TWebActionItems
+    @$xp$27Web@Httpprod@IScriptContext @627 ; __tpdsc__ Web::Httpprod::IScriptContext
+    @$xp$27Web@Httpprod@THandleTagProc @636 ; __tpdsc__ Web::Httpprod::THandleTagProc
+    @$xp$27Web@Win@Adstypes@IADsObject @774 ; __tpdsc__ Web::Win::Adstypes::IADsObject
+    @$xp$27Webcomp@IWebComponentEditor @999 ; __tpdsc__ Webcomp::IWebComponentEditor
+    @$xp$28Web@Httpapp@THTTPMethodEvent @482 ; __tpdsc__ Web::Httpapp::THTTPMethodEvent
+    @$xp$28Web@Httpapp@TModuleAddedProc @457 ; __tpdsc__ Web::Httpapp::TModuleAddedProc
+    @$xp$28Web@Httpprod@IScriptProducer @626 ; __tpdsc__ Web::Httpprod::IScriptProducer
+    @$xp$28Web@Httpprod@THandledTagProc @635 ; __tpdsc__ Web::Httpprod::THandledTagProc
+    @$xp$28Web@Webcntxt@TFindPageOption @733 ; __tpdsc__ Web::Webcntxt::TFindPageOption
+    @$xp$28Web@Win@Adstypes@TWebDirList @778 ; __tpdsc__ Web::Win::Adstypes::TWebDirList
+    @$xp$28Webcomp@IGetWebComponentList @992 ; __tpdsc__ Webcomp::IGetWebComponentList
+    @$xp$29Web@Httpapp@IGetAppDispatcher @497 ; __tpdsc__ Web::Httpapp::IGetAppDispatcher
+    @$xp$29Web@Httpapp@ISetAppDispatcher @498 ; __tpdsc__ Web::Httpapp::ISetAppDispatcher
+    @$xp$29Web@Httpapp@IWebModuleContext @493 ; __tpdsc__ Web::Httpapp::IWebModuleContext
+    @$xp$29Web@Httpapp@TCookieCollection @503 ; __tpdsc__ Web::Httpapp::TCookieCollection
+    @$xp$29Web@Httpprod@IWebVariableName @661 ; __tpdsc__ Web::Httpprod::IWebVariableName
+    @$xp$29Web@Httpprod@Web_Httpprod__51 @621 ; __tpdsc__ Web::Httpprod::Web_Httpprod__51
+    @$xp$29Web@Httpprod@Web_Httpprod__61 @619 ; __tpdsc__ Web::Httpprod::Web_Httpprod__61
+    @$xp$29Web@Webcntxt@TFindPageOptions @732 ; __tpdsc__ Web::Webcntxt::TFindPageOptions
+    @$xp$29Webcomp@INotifyActivateModule @1002; __tpdsc__ Webcomp::INotifyActivateModule
+    @$xp$29Webcomp@ISetWebContentOptions @1004; __tpdsc__ Webcomp::ISetWebContentOptions
+    @$xp$29Webcomp@ITopLevelWebComponent @993 ; __tpdsc__ Webcomp::ITopLevelWebComponent
+    @$xp$29Webcomp@IWebComponentCommands @995 ; __tpdsc__ Webcomp::IWebComponentCommands
+    @$xp$30Reqfiles@TWebRequestFileStream @1023; __tpdsc__ Reqfiles::TWebRequestFileStream
+    @$xp$30Web@Httpapp@IGetWebAppServices @489 ; __tpdsc__ Web::Httpapp::IGetWebAppServices
+    @$xp$30Web@Httpapp@IWebAppServices180 @492 ; __tpdsc__ Web::Httpapp::IWebAppServices180
+    @$xp$30Web@Httpapp@IWebRequestHandler @488 ; __tpdsc__ Web::Httpapp::IWebRequestHandler
+    @$xp$30Web@Httpapp@TDispatchFileEvent @472 ; __tpdsc__ Web::Httpapp::TDispatchFileEvent
+    @$xp$30Web@Httpapp@TWebExceptionEvent @519 ; __tpdsc__ Web::Httpapp::TWebExceptionEvent
+    @$xp$30Web@Httpapp@TWebFileDispatcher @468 ; __tpdsc__ Web::Httpapp::TWebFileDispatcher
+    @$xp$30Web@Httpprod@TBasePageProducer @641 ; __tpdsc__ Web::Httpprod::TBasePageProducer
+    @$xp$30Web@Win@Adstypes@EAdsException @782 ; __tpdsc__ Web::Win::Adstypes::EAdsException
+    @$xp$30Web@Win@Adstypes@IAdsContainer @773 ; __tpdsc__ Web::Win::Adstypes::IAdsContainer
+    @$xp$30Web@Win@Adstypes@TAdsOpenStyle @784 ; __tpdsc__ Web::Win::Adstypes::TAdsOpenStyle
+    @$xp$30Web@Win@Adstypes@TWebDirStruct @780 ; __tpdsc__ Web::Win::Adstypes::TWebDirStruct
+    @$xp$30Webcomp@IWebComponentContainer @1000; __tpdsc__ Webcomp::IWebComponentContainer
+    @$xp$30Webcomp@TEnumWebComponentsProc @976 ; __tpdsc__ Webcomp::TEnumWebComponentsProc
+    @$xp$30Webcomp@TGetComponentListEvent @973 ; __tpdsc__ Webcomp::TGetComponentListEvent
+    @$xp$30Webcomp@TSetComponentListEvent @972 ; __tpdsc__ Webcomp::TSetComponentListEvent
+    @$xp$30Webcomp@TWebContainedComponent @964 ; __tpdsc__ Webcomp::TWebContainedComponent
+    @$xp$30Webcomp@TWebContainerComponent @968 ; __tpdsc__ Webcomp::TWebContainerComponent
+    @$xp$31Web@Httpapp@EWebBrokerException @451 ; __tpdsc__ Web::Httpapp::EWebBrokerException
+    @$xp$31Web@Httpapp@IMultiModuleSupport @494 ; __tpdsc__ Web::Httpapp::IMultiModuleSupport
+    @$xp$31Web@Httpapp@IProduceContentFrom @495 ; __tpdsc__ Web::Httpapp::IProduceContentFrom
+    @$xp$31Web@Httpapp@IWebDispatchActions @487 ; __tpdsc__ Web::Httpapp::IWebDispatchActions
+    @$xp$31Web@Httpapp@TAbstractWebSession @499 ; __tpdsc__ Web::Httpapp::TAbstractWebSession
+    @$xp$31Web@Httpapp@TContentParserClass @511 ; __tpdsc__ Web::Httpapp::TContentParserClass
+    @$xp$31Web@Httpapp@TWebModuleCacheMode @464 ; __tpdsc__ Web::Httpapp::TWebModuleCacheMode
+    @$xp$31Web@Httpprod@ILocateFileService @662 ; __tpdsc__ Web::Httpprod::ILocateFileService
+    @$xp$31Web@Httpprod@THTMLTagAttributes @656 ; __tpdsc__ Web::Httpprod::THTMLTagAttributes
+    @$xp$31Web@Webcntxt@TGetWebContextProc @722 ; __tpdsc__ Web::Webcntxt::TGetWebContextProc
+    @$xp$31Web@Webcntxt@TGetWebEndUserProc @720 ; __tpdsc__ Web::Webcntxt::TGetWebEndUserProc
+    @$xp$31Web@Webcntxt@TSetWebContextProc @721 ; __tpdsc__ Web::Webcntxt::TSetWebContextProc
+    @$xp$31Web@Win@Adstypes@IVirtualWebDir @777 ; __tpdsc__ Web::Win::Adstypes::IVirtualWebDir
+    @$xp$31Web@Win@Adstypes@TVirtualWebDir @775 ; __tpdsc__ Web::Win::Adstypes::TVirtualWebDir
+    @$xp$32Reqmulti@TMultipartContentParser @1048; __tpdsc__ Reqmulti::TMultipartContentParser
+    @$xp$32Web@Httpapp@IWebDispatcherAccess @485 ; __tpdsc__ Web::Httpapp::IWebDispatcherAccess
+    @$xp$32Web@Httpapp@IWebExceptionHandler @490 ; __tpdsc__ Web::Httpapp::IWebExceptionHandler
+    @$xp$32Web@Httpapp@TAbstractWebPageInfo @458 ; __tpdsc__ Web::Httpapp::TAbstractWebPageInfo
+    @$xp$32Web@Httpapp@TCustomWebDispatcher @475 ; __tpdsc__ Web::Httpapp::TCustomWebDispatcher
+    @$xp$32Web@Httpapp@TWebModuleCreateMode @465 ; __tpdsc__ Web::Httpapp::TWebModuleCreateMode
+    @$xp$32Web@Httpprod@TCustomPageProducer @639 ; __tpdsc__ Web::Httpprod::TCustomPageProducer
+    @$xp$32Web@Webcntxt@TAbstractWebContext @729 ; __tpdsc__ Web::Webcntxt::TAbstractWebContext
+    @$xp$32Webcomp@IGetWebComponentNodeName @997 ; __tpdsc__ Webcomp::IGetWebComponentNodeName
+    @$xp$33Web@Httpapp@IGetWebRequestHandler @486 ; __tpdsc__ Web::Httpapp::IGetWebRequestHandler
+    @$xp$33Web@Httpprod@IDesignerFileManager @658 ; __tpdsc__ Web::Httpprod::IDesignerFileManager
+    @$xp$33Web@Httpprod@IGetProducerTemplate @643 ; __tpdsc__ Web::Httpprod::IGetProducerTemplate
+    @$xp$33Web@Httpprod@TAbstractScriptError @630 ; __tpdsc__ Web::Httpprod::TAbstractScriptError
+    @$xp$33Web@Httpprod@THTMLTableAttributes @654 ; __tpdsc__ Web::Httpprod::THTMLTableAttributes
+    @$xp$33Web@Httpprod@TScriptProducerClass @634 ; __tpdsc__ Web::Httpprod::TScriptProducerClass
+    @$xp$33Webcomp@IWebComponentEditorHelper @996 ; __tpdsc__ Webcomp::IWebComponentEditorHelper
+    @$xp$34Web@Httpapp@TAbstractContentParser @514 ; __tpdsc__ Web::Httpapp::TAbstractContentParser
+    @$xp$34Web@Httpapp@TAbstractWebModuleList @455 ; __tpdsc__ Web::Httpapp::TAbstractWebModuleList
+    @$xp$34Web@Httpapp@TCustomContentProducer @483 ; __tpdsc__ Web::Httpapp::TCustomContentProducer
+    @$xp$34Web@Httpapp@TDefaultWebAppServices @453 ; __tpdsc__ Web::Httpapp::TDefaultWebAppServices
+    @$xp$34Web@Httpprod@IGetLocateFileService @659 ; __tpdsc__ Web::Httpprod::IGetLocateFileService
+    @$xp$34Web@Httpprod@TAbstractScriptErrors @628 ; __tpdsc__ Web::Httpprod::TAbstractScriptErrors
+    @$xp$34Webcomp@IProducerEditorViewSupport @1006; __tpdsc__ Webcomp::IProducerEditorViewSupport
+    @$xp$34Webcomp@IWebVariablesContainerName @1001; __tpdsc__ Webcomp::IWebVariablesContainerName
+    @$xp$34Webcomp@TWebComponentsEditorHelper @974 ; __tpdsc__ Webcomp::TWebComponentsEditorHelper
+    @$xp$35Web@Httpapp@TAbstractWebRequestFile @507 ; __tpdsc__ Web::Httpapp::TAbstractWebRequestFile
+    @$xp$35Web@Httpprod@IWebVariablesContainer @660 ; __tpdsc__ Web::Httpprod::IWebVariablesContainer
+    @$xp$36Utf8contentparser@TUTF8ContentParser @1034; __tpdsc__ Utf8contentparser::TUTF8ContentParser
+    @$xp$36Web@Httpapp@TAbstractWebRequestFiles @509 ; __tpdsc__ Web::Httpapp::TAbstractWebRequestFiles
+    @$xp$36Web@Httpapp@TCustomWebFileDispatcher @470 ; __tpdsc__ Web::Httpapp::TCustomWebFileDispatcher
+    @$xp$36Web@Httpprod@TAbstractScriptProducer @624 ; __tpdsc__ Web::Httpprod::TAbstractScriptProducer
+    @$xp$36Web@Httpprod@THTMLTableRowAttributes @648 ; __tpdsc__ Web::Httpprod::THTMLTableRowAttributes
+    @$xp$36Web@Webcntxt@TAbstractAdapterRequest @725 ; __tpdsc__ Web::Webcntxt::TAbstractAdapterRequest
+    @$xp$36Webcomp@TWebContainedComponentHelper @966 ; __tpdsc__ Webcomp::TWebContainedComponentHelper
+    @$xp$36Webcomp@TWebContainerComponentHelper @970 ; __tpdsc__ Webcomp::TWebContainerComponentHelper
+    @$xp$37Web@Httpapp@TAbstractWebModuleFactory @462 ; __tpdsc__ Web::Httpapp::TAbstractWebModuleFactory
+    @$xp$37Web@Httpprod@THTMLTableCellAttributes @646 ; __tpdsc__ Web::Httpprod::THTMLTableCellAttributes
+    @$xp$37Web@Webcntxt@TAbstractAdapterResponse @723 ; __tpdsc__ Web::Webcntxt::TAbstractAdapterResponse
+    @$xp$37Web@Webfiledispatcher@TLookupMimeType @184 ; __tpdsc__ Web::Webfiledispatcher::TLookupMimeType
+    @$xp$37Web@Webfiledispatcher@TWebDirectories @185 ; __tpdsc__ Web::Webfiledispatcher::TWebDirectories
+    @$xp$37Webcomp@TWebComponentClassDescription @977 ; __tpdsc__ Webcomp::TWebComponentClassDescription
+    @$xp$38Web@Webfiledispatcher@TExtensionMethod @182 ; __tpdsc__ Web::Webfiledispatcher::TExtensionMethod
+    @$xp$39Web@Httpprod@TAbstractScriptEnginesList @622 ; __tpdsc__ Web::Httpprod::TAbstractScriptEnginesList
+    @$xp$39Web@Httpprod@THTMLTableHeaderAttributes @650 ; __tpdsc__ Web::Httpprod::THTMLTableHeaderAttributes
+    @$xp$39Web@Webfiledispatcher@TLookupExtensions @183 ; __tpdsc__ Web::Webfiledispatcher::TLookupExtensions
+    @$xp$39Web@Webfiledispatcher@TWebDirectoryItem @187 ; __tpdsc__ Web::Webfiledispatcher::TWebDirectoryItem
+    @$xp$39Webcomp@TWebContainedContainerComponent @962 ; __tpdsc__ Webcomp::TWebContainedContainerComponent
+    @$xp$40Web@Httpprod@THTMLTableElementAttributes @652 ; __tpdsc__ Web::Httpprod::THTMLTableElementAttributes
+    @$xp$40Web@Webfiledispatcher@TWebFileExtensions @190 ; __tpdsc__ Web::Webfiledispatcher::TWebFileExtensions
+    @$xp$41System@%TArray__1$20System@UnicodeString% @171 ; __tpdsc__ System::TArray__1<System::UnicodeString>
+    @$xp$41Web@Httpapp@TAbstractWebPageModuleFactory @460 ; __tpdsc__ Web::Httpapp::TAbstractWebPageModuleFactory
+    @$xp$41Web@Webfiledispatcher@TWebDirectoryAction @189 ; __tpdsc__ Web::Webfiledispatcher::TWebDirectoryAction
+    @$xp$42Web@Webfiledispatcher@TDispatchFileRequest @196 ; __tpdsc__ Web::Webfiledispatcher::TDispatchFileRequest
+    @$xp$43Web@Webfiledispatcher@TWebFileExtensionItem @192 ; __tpdsc__ Web::Webfiledispatcher::TWebFileExtensionItem
+    @$xp$47System@%TArray__1$p25System@Classes@TComponent% @450 ; __tpdsc__ System::TArray__1<System::Classes::TComponent *>
+    @$xp$50Web@Webfiledispatcher@TWebFileDispatcherProperties @194 ; __tpdsc__ Web::Webfiledispatcher::TWebFileDispatcherProperties
+    @$xp$52System@%IEnumerable__1$p25System@Classes@TComponent% @439 ; __tpdsc__ System::IEnumerable__1<System::Classes::TComponent *>
+    @$xp$52System@%IEnumerator__1$p25System@Classes@TComponent% @440 ; __tpdsc__ System::IEnumerator__1<System::Classes::TComponent *>
+    @$xp$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1% @181 ; __tpdsc__ System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString>
+    @$xp$67System@Generics@Collections@%TEnumerable__1$20System@UnicodeString% @167 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<System::UnicodeString>
+    @$xp$67System@Generics@Collections@%TEnumerator__1$20System@UnicodeString% @169 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<System::UnicodeString>
+    @$xp$67System@Generics@Collections@%TList__1$p25System@Classes@TComponent% @434 ; __tpdsc__ System::Generics::Collections::TList__1<System::Classes::TComponent *>
+    @$xp$68System@Generics@Defaults@%IComparer__1$p25System@Classes@TComponent% @444 ; __tpdsc__ System::Generics::Defaults::IComparer__1<System::Classes::TComponent *>
+    @$xp$69System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1% @155 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>
+    @$xp$70System@Generics@Defaults@%IEqualityComparer__1$20System@UnicodeString% @173 ; __tpdsc__ System::Generics::Defaults::IEqualityComparer__1<System::UnicodeString>
+    @$xp$73System@Generics@Collections@%TEnumerable__1$p25System@Classes@TComponent% @446 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<System::Classes::TComponent *>
+    @$xp$73System@Generics@Collections@%TEnumerator__1$p25System@Classes@TComponent% @448 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<System::Classes::TComponent *>
+    @$xp$73System@Generics@Collections@%TObjectList__1$p25System@Classes@TComponent% @432 ; __tpdsc__ System::Generics::Collections::TObjectList__1<System::Classes::TComponent *>
+    @$xp$75System@Generics@Collections@%TArrayManager__1$p25System@Classes@TComponent% @441 ; __tpdsc__ System::Generics::Collections::TArrayManager__1<System::Classes::TComponent *>
+    @$xp$78System@Generics@Collections@%TCollectionNotifyEvent__1$20System@UnicodeString% @172 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<System::UnicodeString>
+    @$xp$78System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TItem$% @175 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TItem<>
+    @$xp$79System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@%arrayofT$% @445 ; __tpdsc__ System::Generics::Collections::TList__1<System::Classes::TComponent *>::arrayofT<>
+    @$xp$81System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@%TEmptyFunc$% @438 ; __tpdsc__ System::Generics::Collections::TList__1<System::Classes::TComponent *>::TEmptyFunc<>
+    @$xp$82System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@%TEnumerator$% @436 ; __tpdsc__ System::Generics::Collections::TList__1<System::Classes::TComponent *>::TEnumerator<>
+    @$xp$83System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TItemArray$% @174 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TItemArray<>
+    @$xp$84System@%TArray__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%% @180 ; __tpdsc__ System::TArray__1<System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString> >
+    @$xp$84System@Generics@Collections@%TCollectionNotifyEvent__1$p25System@Classes@TComponent% @443 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<System::Classes::TComponent *>
+    @$xp$87System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyCollection$% @163 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyCollection<>
+    @$xp$87System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyEnumerator$% @165 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyEnumerator<>
+    @$xp$88System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TPairEnumerator$% @157 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TPairEnumerator<>
+    @$xp$89System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueCollection$% @159 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueCollection<>
+    @$xp$89System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueEnumerator$% @161 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueEnumerator<>
+    @GetPackageInfoTable           @1056; GetPackageInfoTable
+    @Httpparse@Finalization$qqrv   @786 ; __fastcall Httpparse::Finalization()
+    @Httpparse@THTTPParser@        @809 ; Httpparse::THTTPParser::
+    @Httpparse@THTTPParser@$bctr$qqrp22System@Classes@TStream @807 ; __fastcall Httpparse::THTTPParser::THTTPParser(System::Classes::TStream *)
+    @Httpparse@THTTPParser@$bdtr$qqrv @805 ; __fastcall Httpparse::THTTPParser::~THTTPParser()
+    @Httpparse@THTTPParser@BufferRequest$qqri @806 ; __fastcall Httpparse::THTTPParser::BufferRequest(int)
+    @Httpparse@THTTPParser@CheckToken$qqrc @804 ; __fastcall Httpparse::THTTPParser::CheckToken(char)
+    @Httpparse@THTTPParser@CheckTokenSymbol$qqrx27System@%AnsiStringT$us$i0$% @803 ; __fastcall Httpparse::THTTPParser::CheckTokenSymbol(const System::AnsiStringT<0>)
+    @Httpparse@THTTPParser@CopyTo$qqri @802 ; __fastcall Httpparse::THTTPParser::CopyTo(int)
+    @Httpparse@THTTPParser@CopyToEOF$qqrv @800 ; __fastcall Httpparse::THTTPParser::CopyToEOF()
+    @Httpparse@THTTPParser@CopyToEOL$qqrv @801 ; __fastcall Httpparse::THTTPParser::CopyToEOL()
+    @Httpparse@THTTPParser@Error$qqrx20System@UnicodeString @799 ; __fastcall Httpparse::THTTPParser::Error(const System::UnicodeString)
+    @Httpparse@THTTPParser@ErrorFmt$qqrx20System@UnicodeStringpx14System@TVarRecxi @798 ; __fastcall Httpparse::THTTPParser::ErrorFmt(const System::UnicodeString, const System::TVarRec *, const int)
+    @Httpparse@THTTPParser@ErrorStr$qqrx20System@UnicodeString @797 ; __fastcall Httpparse::THTTPParser::ErrorStr(const System::UnicodeString)
+    @Httpparse@THTTPParser@HexToBinary$qqrp22System@Classes@TStream @796 ; __fastcall Httpparse::THTTPParser::HexToBinary(System::Classes::TStream *)
+    @Httpparse@THTTPParser@NextToken$qqrv @795 ; __fastcall Httpparse::THTTPParser::NextToken()
+    @Httpparse@THTTPParser@ReadBuffer$qqrv @794 ; __fastcall Httpparse::THTTPParser::ReadBuffer()
+    @Httpparse@THTTPParser@SkipBlanks$qqrv @793 ; __fastcall Httpparse::THTTPParser::SkipBlanks()
+    @Httpparse@THTTPParser@SkipEOL$qqrv @791 ; __fastcall Httpparse::THTTPParser::SkipEOL()
+    @Httpparse@THTTPParser@SourcePos$qqrv @792 ; __fastcall Httpparse::THTTPParser::SourcePos()
+    @Httpparse@THTTPParser@TokenFloat$qqrv @790 ; __fastcall Httpparse::THTTPParser::TokenFloat()
+    @Httpparse@THTTPParser@TokenInt$qqrv @789 ; __fastcall Httpparse::THTTPParser::TokenInt()
+    @Httpparse@THTTPParser@TokenString$qqrv @788 ; __fastcall Httpparse::THTTPParser::TokenString()
+    @Httpparse@THTTPParser@TokenSymbolIs$qqrx27System@%AnsiStringT$us$i0$% @787 ; __fastcall Httpparse::THTTPParser::TokenSymbolIs(const System::AnsiStringT<0>)
+    @Httpparse@initialization$qqrv @785 ; __fastcall Httpparse::initialization()
+    @Inet@@GetPackageInfoTable$qqrv @1053; Inet::__linkproc__ __fastcall GetPackageInfoTable()
+    @Inet@@PackageLoad$qqrv        @1052; Inet::__linkproc__ __fastcall PackageLoad()
+    @Inet@@PackageUnload$qqrv      @1051; Inet::__linkproc__ __fastcall PackageUnload()
+    @Inet@initialization$qqrv      @1050; __fastcall Inet::initialization()
+    @Reqfiles@Finalization$qqrv    @1008; __fastcall Reqfiles::Finalization()
+    @Reqfiles@TWebRequestFile@     @1028; Reqfiles::TWebRequestFile::
+    @Reqfiles@TWebRequestFile@$bctr$qqrx27System@%AnsiStringT$us$i0$%t1t1pvi @1016; __fastcall Reqfiles::TWebRequestFile::TWebRequestFile(const System::AnsiStringT<0>, const System::AnsiStringT<0>, const System::AnsiStringT<0>, void *, int)
+    @Reqfiles@TWebRequestFile@$bdtr$qqrv @1015; __fastcall Reqfiles::TWebRequestFile::~TWebRequestFile()
+    @Reqfiles@TWebRequestFile@GetContentType$qqrv @1014; __fastcall Reqfiles::TWebRequestFile::GetContentType()
+    @Reqfiles@TWebRequestFile@GetFieldName$qqrv @1013; __fastcall Reqfiles::TWebRequestFile::GetFieldName()
+    @Reqfiles@TWebRequestFile@GetFileName$qqrv @1012; __fastcall Reqfiles::TWebRequestFile::GetFileName()
+    @Reqfiles@TWebRequestFile@GetStream$qqrv @1011; __fastcall Reqfiles::TWebRequestFile::GetStream()
+    @Reqfiles@TWebRequestFileStream@ @1024; Reqfiles::TWebRequestFileStream::
+    @Reqfiles@TWebRequestFileStream@$bctr$qqrpvi @1010; __fastcall Reqfiles::TWebRequestFileStream::TWebRequestFileStream(void *, int)
+    @Reqfiles@TWebRequestFileStream@Write$qqrpxvi @1009; __fastcall Reqfiles::TWebRequestFileStream::Write(const void *, int)
+    @Reqfiles@TWebRequestFiles@    @1026; Reqfiles::TWebRequestFiles::
+    @Reqfiles@TWebRequestFiles@$bctr$qqrv @1020; __fastcall Reqfiles::TWebRequestFiles::TWebRequestFiles()
+    @Reqfiles@TWebRequestFiles@$bdtr$qqrv @1019; __fastcall Reqfiles::TWebRequestFiles::~TWebRequestFiles()
+    @Reqfiles@TWebRequestFiles@Add$qqrp24Reqfiles@TWebRequestFile @1021; __fastcall Reqfiles::TWebRequestFiles::Add(Reqfiles::TWebRequestFile *)
+    @Reqfiles@TWebRequestFiles@Add$qqrx27System@%AnsiStringT$us$i0$%t1t1pvi @1022; __fastcall Reqfiles::TWebRequestFiles::Add(const System::AnsiStringT<0>, const System::AnsiStringT<0>, const System::AnsiStringT<0>, void *, int)
+    @Reqfiles@TWebRequestFiles@GetCount$qqrv @1018; __fastcall Reqfiles::TWebRequestFiles::GetCount()
+    @Reqfiles@TWebRequestFiles@GetItem$qqri @1017; __fastcall Reqfiles::TWebRequestFiles::GetItem(int)
+    @Reqfiles@initialization$qqrv  @1007; __fastcall Reqfiles::initialization()
+    @Reqmulti@Finalization$qqrv    @1037; __fastcall Reqmulti::Finalization()
+    @Reqmulti@TMultipartContentParser@ @1049; Reqmulti::TMultipartContentParser::
+    @Reqmulti@TMultipartContentParser@$bdtr$qqrv @1047; __fastcall Reqmulti::TMultipartContentParser::~TMultipartContentParser()
+    @Reqmulti@TMultipartContentParser@BufferContent$qqrv @1046; __fastcall Reqmulti::TMultipartContentParser::BufferContent()
+    @Reqmulti@TMultipartContentParser@CanParse$qqrp23Web@Httpapp@TWebRequest @1038; __fastcall Reqmulti::TMultipartContentParser::CanParse(Web::Httpapp::TWebRequest *)
+    @Reqmulti@TMultipartContentParser@ExtractContentTypeFields$qqrp23System@Classes@TStrings @1044; __fastcall Reqmulti::TMultipartContentParser::ExtractContentTypeFields(System::Classes::TStrings *)
+    @Reqmulti@TMultipartContentParser@ExtractMultipartContentFields$qqrv @1045; __fastcall Reqmulti::TMultipartContentParser::ExtractMultipartContentFields()
+    @Reqmulti@TMultipartContentParser@GetContentFields$qqrv @1040; __fastcall Reqmulti::TMultipartContentParser::GetContentFields()
+    @Reqmulti@TMultipartContentParser@GetFiles$qqrv @1039; __fastcall Reqmulti::TMultipartContentParser::GetFiles()
+    @Reqmulti@TMultipartContentParser@ParseMultiPart$qqrpvi @1041; __fastcall Reqmulti::TMultipartContentParser::ParseMultiPart(void *, int)
+    @Reqmulti@TMultipartContentParser@ParseMultiPartContent$qqrv @1043; __fastcall Reqmulti::TMultipartContentParser::ParseMultiPartContent()
+    @Reqmulti@TMultipartContentParser@ParseMultipartHeaders$qqrp21Httpparse@THTTPParserpvi @1042; __fastcall Reqmulti::TMultipartContentParser::ParseMultipartHeaders(Httpparse::THTTPParser *, void *, int)
+    @Reqmulti@initialization$qqrv  @1036; __fastcall Reqmulti::initialization()
+    @System@Generics@Collections@%TArrayManager__1$p25System@Classes@TComponent%@ @442 ; System::Generics::Collections::TArrayManager__1<System::Classes::TComponent *>::
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@ @156 ; System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@$bctr$qqri @84  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TDictionary__2<System::UnicodeString, System::UnicodeString>(int)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@$bctr$qqrix97System@%DelphiInterface$70System@Generics@Defaults@%IEqualityComparer__1$20System@UnicodeString%% @82  ; System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TDictionary__2<System::UnicodeString, System::UnicodeString>(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@$bctr$qqrx97System@%DelphiInterface$70System@Generics@Defaults@%IEqualityComparer__1$20System@UnicodeString%% @83  ; System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TDictionary__2<System::UnicodeString, System::UnicodeString>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@$bctr$qqrxp110System@Generics@Collections@%TEnumerable__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%% @81  ; System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TDictionary__2<System::UnicodeString, System::UnicodeString>(System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<System::Unic
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@$bctr$qqrxp110System@Generics@Collections@%TEnumerable__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%%x97System@%DelphiInterface$70System@A1GwiSeupRgINcnCyiJmgQ @80  ; System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TDictionary__2<System::UnicodeString, System::UnicodeString>(System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<System::Unic
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@$bdtr$qqrv @79  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::~TDictionary__2<System::UnicodeString, System::UnicodeString>()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyCollection$%@ @164 ; System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyCollection<>::
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyCollection$%@$bctr$qqrxp69System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1% @58  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyCollection<>::TKeyCollection<>(System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString> * const)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyCollection$%@DoGetEnumerator$qqrv @59  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyCollection<>::DoGetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyCollection$%@GetCount$qqrv @60  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyCollection<>::GetCount()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyCollection$%@GetEnumerator$qqrv @57  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyCollection<>::GetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyCollection$%@ToArray$qqrv @56  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyCollection<>::ToArray()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyEnumerator$%@ @166 ; System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyEnumerator<>::
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyEnumerator$%@$bctr$qqrxp69System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1% @52  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyEnumerator<>::TKeyEnumerator<>(System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString> * const)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyEnumerator$%@DoGetCurrent$qqrv @54  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyEnumerator$%@DoMoveNext$qqrv @53  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyEnumerator$%@GetCurrent$qqrv @55  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyEnumerator$%@MoveNext$qqrv @51  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TPairEnumerator$%@ @158 ; System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TPairEnumerator<>::
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TPairEnumerator$%@$bctr$qqrxp69System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1% @37  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TPairEnumerator<>::TPairEnumerator<>(System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString> * const)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TPairEnumerator$%@DoGetCurrent$qqrv @39  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TPairEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TPairEnumerator$%@DoMoveNext$qqrv @38  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TPairEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TPairEnumerator$%@GetCurrent$qqrv @40  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TPairEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TPairEnumerator$%@MoveNext$qqrv @36  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TPairEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueCollection$%@ @160 ; System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueCollection<>::
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueCollection$%@$bctr$qqrxp69System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1% @48  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueCollection<>::TValueCollection<>(System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString> * const)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueCollection$%@DoGetEnumerator$qqrv @49  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueCollection<>::DoGetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueCollection$%@GetCount$qqrv @50  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueCollection<>::GetCount()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueCollection$%@GetEnumerator$qqrv @47  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueCollection<>::GetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueCollection$%@ToArray$qqrv @46  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueCollection<>::ToArray()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueEnumerator$%@ @162 ; System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueEnumerator<>::
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueEnumerator$%@$bctr$qqrxp69System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1% @42  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueEnumerator<>::TValueEnumerator<>(System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString> * const)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueEnumerator$%@DoGetCurrent$qqrv @44  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueEnumerator$%@DoMoveNext$qqrv @43  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueEnumerator$%@GetCurrent$qqrv @45  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueEnumerator$%@MoveNext$qqrv @41  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@Add$qqrx20System@UnicodeStringt1 @78  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::Add(const System::UnicodeString, const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@AddOrSetValue$qqrx20System@UnicodeStringt1 @72  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::AddOrSetValue(const System::UnicodeString, const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@Clear$qqrv @75  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::Clear()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@ContainsKey$qqrx20System@UnicodeString @71  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::ContainsKey(const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@ContainsValue$qqrx20System@UnicodeString @70  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::ContainsValue(const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@DoAdd$qqriix20System@UnicodeStringt3 @90  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::DoAdd(int, int, const System::UnicodeString, const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@DoGetEnumerator$qqrv @87  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::DoGetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@DoRemove$qqrx20System@UnicodeStringi51System@Generics@Collections@TCollectionNotification @88  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::DoRemove(const System::UnicodeString, int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@DoSetValue$qqrix20System@UnicodeString @89  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::DoSetValue(int, const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@ExtractPair$qqrx20System@UnicodeString @76  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::ExtractPair(const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@GetBucketIndex$qqrx20System@UnicodeStringi @95  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::GetBucketIndex(const System::UnicodeString, int)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@GetEnumerator$qqrv @66  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::GetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@GetItem$qqrx20System@UnicodeString @93  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::GetItem(const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@GetKeys$qqrv @68  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::GetKeys()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@GetValues$qqrv @67  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::GetValues()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@Grow$qqrv @96  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::Grow()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@Hash$qqrx20System@UnicodeString @94  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::Hash(const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@KeyNotify$qqrx20System@UnicodeString51System@Generics@Collections@TCollectionNotification @86  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::KeyNotify(const System::UnicodeString, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@Rehash$qqri @97  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::Rehash(int)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@RehashAdd$qqrix20System@UnicodeStringt2 @91  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::RehashAdd(int, const System::UnicodeString, const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@Remove$qqrx20System@UnicodeString @77  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::Remove(const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@SetCapacity$qqri @98  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::SetCapacity(int)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@SetItem$qqrx20System@UnicodeStringt1 @92  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::SetItem(const System::UnicodeString, const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@ToArray$qqrv @69  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::ToArray()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@TrimExcess$qqrv @74  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TrimExcess()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@TryGetValue$qqrx20System@UnicodeStringr20System@UnicodeString @73  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TryGetValue(const System::UnicodeString, System::UnicodeString&)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@ValueNotify$qqrx20System@UnicodeString51System@Generics@Collections@TCollectionNotification @85  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::ValueNotify(const System::UnicodeString, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TEnumerable__1$20System@UnicodeString%@ @168 ; System::Generics::Collections::TEnumerable__1<System::UnicodeString>::
+    @System@Generics@Collections@%TEnumerable__1$20System@UnicodeString%@$bdtr$qqrv @64  ; __fastcall System::Generics::Collections::TEnumerable__1<System::UnicodeString>::~TEnumerable__1<System::UnicodeString>()
+    @System@Generics@Collections@%TEnumerable__1$20System@UnicodeString%@GetEnumerator$qqrv @63  ; __fastcall System::Generics::Collections::TEnumerable__1<System::UnicodeString>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$20System@UnicodeString%@ToArray$qqrv @62  ; __fastcall System::Generics::Collections::TEnumerable__1<System::UnicodeString>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$20System@UnicodeString%@ToArrayImpl$qqri @65  ; __fastcall System::Generics::Collections::TEnumerable__1<System::UnicodeString>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerable__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%%@ @177 ; System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString> >::
+    @System@Generics@Collections@%TEnumerable__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%%@$bdtr$qqrv @102 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString> >::~TEnumerable__1<System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString> >()
+    @System@Generics@Collections@%TEnumerable__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%%@GetEnumerator$qqrv @101 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString> >::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%%@ToArray$qqrv @100 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString> >::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%%@ToArrayImpl$qqri @103 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString> >::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerable__1$p25System@Classes@TComponent%@ @447 ; System::Generics::Collections::TEnumerable__1<System::Classes::TComponent *>::
+    @System@Generics@Collections@%TEnumerable__1$p25System@Classes@TComponent%@$bdtr$qqrv @272 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Classes::TComponent *>::~TEnumerable__1<System::Classes::TComponent *>()
+    @System@Generics@Collections@%TEnumerable__1$p25System@Classes@TComponent%@GetEnumerator$qqrv @271 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Classes::TComponent *>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$p25System@Classes@TComponent%@ToArray$qqrv @270 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Classes::TComponent *>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$p25System@Classes@TComponent%@ToArrayImpl$qqri @273 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Classes::TComponent *>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerator__1$20System@UnicodeString%@ @170 ; System::Generics::Collections::TEnumerator__1<System::UnicodeString>::
+    @System@Generics@Collections@%TEnumerator__1$20System@UnicodeString%@MoveNext$qqrv @61  ; __fastcall System::Generics::Collections::TEnumerator__1<System::UnicodeString>::MoveNext()
+    @System@Generics@Collections@%TEnumerator__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%%@ @179 ; System::Generics::Collections::TEnumerator__1<System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString> >::
+    @System@Generics@Collections@%TEnumerator__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%%@MoveNext$qqrv @99  ; __fastcall System::Generics::Collections::TEnumerator__1<System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString> >::MoveNext()
+    @System@Generics@Collections@%TEnumerator__1$p25System@Classes@TComponent%@ @449 ; System::Generics::Collections::TEnumerator__1<System::Classes::TComponent *>::
+    @System@Generics@Collections@%TEnumerator__1$p25System@Classes@TComponent%@MoveNext$qqrv @269 ; __fastcall System::Generics::Collections::TEnumerator__1<System::Classes::TComponent *>::MoveNext()
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@ @435 ; System::Generics::Collections::TList__1<System::Classes::TComponent *>::
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@$bctr$qqrv @257 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::TList__1<System::Classes::TComponent *>()
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@$bctr$qqrx95System@%DelphiInterface$68System@Generics@Defaults@%IComparer__1$p25System@Classes@TComponent%% @256 ; System::Generics::Collections::TList__1<System::Classes::TComponent *>::TList__1<System::Classes::TComponent *>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@$bctr$qqrxp73System@Generics@Collections@%TEnumerable__1$p25System@Classes@TComponent% @255 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::TList__1<System::Classes::TComponent *>(System::Generics::Collections::TEnumerable__1<System::Classes::TComponent *> * const)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@$bdtr$qqrv @254 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::~TList__1<System::Classes::TComponent *>()
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@%TEnumerator$%@ @437 ; System::Generics::Collections::TList__1<System::Classes::TComponent *>::TEnumerator<>::
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@%TEnumerator$%@$bctr$qqrxp67System@Generics@Collections@%TList__1$p25System@Classes@TComponent% @214 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::TEnumerator<>::TEnumerator<>(System::Generics::Collections::TList__1<System::Classes::TComponent *> * const)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@%TEnumerator$%@DoGetCurrent$qqrv @216 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::TEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@%TEnumerator$%@DoMoveNext$qqrv @215 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::TEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@%TEnumerator$%@GetCurrent$qqrv @217 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::TEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@%TEnumerator$%@MoveNext$qqrv @213 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::TEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@Add$qqrxp25System@Classes@TComponent @251 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::Add(System::Classes::TComponent * const)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@AddRange$qqrpxp25System@Classes@TComponentxi @250 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::AddRange(System::Classes::TComponent * const *, const int)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@AddRange$qqrx79System@%DelphiInterface$52System@%IEnumerable__1$p25System@Classes@TComponent%% @249 ; System::Generics::Collections::TList__1<System::Classes::TComponent *>::AddRange(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@AddRange$qqrxp73System@Generics@Collections@%TEnumerable__1$p25System@Classes@TComponent% @248 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::AddRange(System::Generics::Collections::TEnumerable__1<System::Classes::TComponent *> * const)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@BinarySearch$qqrxp25System@Classes@TComponentri @222 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::BinarySearch(System::Classes::TComponent * const, int&)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@BinarySearch$qqrxp25System@Classes@TComponentrix95System@%DelphiInterface$68System@Generics@Defaults@%IComparer__1$p25System@Classes@TComponent%% @221 ; System::Generics::Collections::TList__1<System::Classes::TComponent *>::BinarySearch(System::Classes::TComponent * const, int&, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@Clear$qqrv @231 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::Clear()
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@Contains$qqrxp25System@Classes@TComponent @229 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::Contains(System::Classes::TComponent * const)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@Delete$qqri @239 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::Delete(int)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@DeleteRange$qqrii @238 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::DeleteRange(int, int)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@DoDelete$qqri51System@Generics@Collections@TCollectionNotification @261 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::DoDelete(int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@DoGetEnumerator$qqrv @259 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::DoGetEnumerator()
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@Error$qqrp20System@TResStringReci @252 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::Error(System::TResStringRec *, int)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@Error$qqrx20System@UnicodeStringi @253 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::Error(const System::UnicodeString, int)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@Exchange$qqrii @235 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::Exchange(int, int)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@Expand$qqrv @230 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::Expand()
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@Extract$qqrxp25System@Classes@TComponent @237 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::Extract(System::Classes::TComponent * const)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@ExtractItem$qqrxp25System@Classes@TComponent23System@Types@TDirection @236 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::ExtractItem(System::Classes::TComponent * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@First$qqrv @233 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::First()
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@GetCapacity$qqrv @268 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::GetCapacity()
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@GetEnumerator$qqrv @218 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::GetEnumerator()
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@GetItem$qqri @265 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::GetItem(int)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@Grow$qqri @263 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::Grow(int)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@GrowCheck$qqri @262 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::GrowCheck(int)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@IndexOf$qqrxp25System@Classes@TComponent @228 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::IndexOf(System::Classes::TComponent * const)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@IndexOfItem$qqrxp25System@Classes@TComponent23System@Types@TDirection @227 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::IndexOfItem(System::Classes::TComponent * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@Insert$qqrixp25System@Classes@TComponent @247 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::Insert(int, System::Classes::TComponent * const)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@InsertRange$qqripxp25System@Classes@TComponentxi @246 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::InsertRange(int, System::Classes::TComponent * const *, const int)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@InsertRange$qqrix79System@%DelphiInterface$52System@%IEnumerable__1$p25System@Classes@TComponent%% @245 ; System::Generics::Collections::TList__1<System::Classes::TComponent *>::InsertRange(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@InsertRange$qqrixp73System@Generics@Collections@%TEnumerable__1$p25System@Classes@TComponent% @244 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::InsertRange(int, System::Generics::Collections::TEnumerable__1<System::Classes::TComponent *> * const)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@ItemValue$qqrxp25System@Classes@TComponent @260 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::ItemValue(System::Classes::TComponent * const)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@Last$qqrv @232 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::Last()
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@LastIndexOf$qqrxp25System@Classes@TComponent @226 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::LastIndexOf(System::Classes::TComponent * const)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@Move$qqrii @234 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::Move(int, int)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@Notify$qqrxp25System@Classes@TComponent51System@Generics@Collections@TCollectionNotification @258 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::Notify(System::Classes::TComponent * const, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@Pack$qqrv @243 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::Pack()
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@Pack$qqrx108System@%DelphiInterface$81System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@%TEmptyFunc$%% @242 ; System::Generics::Collections::TList__1<System::Classes::TComponent *>::Pack(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@Remove$qqrxp25System@Classes@TComponent @241 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::Remove(System::Classes::TComponent * const)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@RemoveItem$qqrxp25System@Classes@TComponent23System@Types@TDirection @240 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::RemoveItem(System::Classes::TComponent * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@Reverse$qqrv @225 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::Reverse()
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@SetCapacity$qqri @267 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::SetCapacity(int)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@SetCount$qqri @266 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::SetCount(int)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@SetItem$qqrixp25System@Classes@TComponent @264 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::SetItem(int, System::Classes::TComponent * const)
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@Sort$qqrv @224 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::Sort()
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@Sort$qqrx95System@%DelphiInterface$68System@Generics@Defaults@%IComparer__1$p25System@Classes@TComponent%% @223 ; System::Generics::Collections::TList__1<System::Classes::TComponent *>::Sort(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@ToArray$qqrv @219 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::ToArray()
+    @System@Generics@Collections@%TList__1$p25System@Classes@TComponent%@TrimExcess$qqrv @220 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TComponent *>::TrimExcess()
+    @System@Generics@Collections@%TObjectList__1$p25System@Classes@TComponent%@ @433 ; System::Generics::Collections::TObjectList__1<System::Classes::TComponent *>::
+    @System@Generics@Collections@%TObjectList__1$p25System@Classes@TComponent%@$bctr$qqro @211 ; __fastcall System::Generics::Collections::TObjectList__1<System::Classes::TComponent *>::TObjectList__1<System::Classes::TComponent *>(bool)
+    @System@Generics@Collections@%TObjectList__1$p25System@Classes@TComponent%@$bctr$qqrx95System@%DelphiInterface$68System@Generics@Defaults@%IComparer__1$p25System@Classes@TComponent%%o @210 ; System::Generics::Collections::TObjectList__1<System::Classes::TComponent *>::TObjectList__1<System::Classes::TComponent *>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TObjectList__1$p25System@Classes@TComponent%@$bctr$qqrxp73System@Generics@Collections@%TEnumerable__1$p25System@Classes@TComponent%o @209 ; __fastcall System::Generics::Collections::TObjectList__1<System::Classes::TComponent *>::TObjectList__1<System::Classes::TComponent *>(System::Generics::Collections::TEnumerable__1<System::Classes::TComponent *> * const, bool)
+    @System@Generics@Collections@%TObjectList__1$p25System@Classes@TComponent%@Notify$qqrxp25System@Classes@TComponent51System@Generics@Collections@TCollectionNotification @212 ; __fastcall System::Generics::Collections::TObjectList__1<System::Classes::TComponent *>::Notify(System::Classes::TComponent * const, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%@$bctr$qqrx20System@UnicodeStringt1 @104 ; __fastcall System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString>::TPair__2<System::UnicodeString, System::UnicodeString>(const System::UnicodeString, const System::UnicodeString)
+    @Utf8contentparser@Finalization$qqrv @1030; __fastcall Utf8contentparser::Finalization()
+    @Utf8contentparser@TUTF8ContentParser@ @1035; Utf8contentparser::TUTF8ContentParser::
+    @Utf8contentparser@TUTF8ContentParser@$bdtr$qqrv @1032; __fastcall Utf8contentparser::TUTF8ContentParser::~TUTF8ContentParser()
+    @Utf8contentparser@TUTF8ContentParser@CanParse$qqrp23Web@Httpapp@TWebRequest @1033; __fastcall Utf8contentparser::TUTF8ContentParser::CanParse(Web::Httpapp::TWebRequest *)
+    @Utf8contentparser@TUTF8ContentParser@GetContentFields$qqrv @1031; __fastcall Utf8contentparser::TUTF8ContentParser::GetContentFields()
+    @Utf8contentparser@initialization$qqrv @1029; __fastcall Utf8contentparser::initialization()
+    @Wbmconst@Finalization$qqrv    @811 ; __fastcall Wbmconst::Finalization()
+    @Wbmconst@_ScriptDocumentVarName @824 ; Wbmconst::_ScriptDocumentVarName
+    @Wbmconst@_ScriptIDsVar        @840 ; Wbmconst::_ScriptIDsVar
+    @Wbmconst@_ScriptNamesVar      @841 ; Wbmconst::_ScriptNamesVar
+    @Wbmconst@_ScriptRowSetVarName @821 ; Wbmconst::_ScriptRowSetVarName
+    @Wbmconst@_ScriptTableName     @850 ; Wbmconst::_ScriptTableName
+    @Wbmconst@_ScriptXMLDisplayName @839 ; Wbmconst::_ScriptXMLDisplayName
+    @Wbmconst@_ScriptXMLVarName    @823 ; Wbmconst::_ScriptXMLVarName
+    @Wbmconst@_sApplyUpdates       @844 ; Wbmconst::_sApplyUpdates
+    @Wbmconst@_sApplyUpdatesError  @820 ; Wbmconst::_sApplyUpdatesError
+    @Wbmconst@_sDataSetFieldBlank  @853 ; Wbmconst::_sDataSetFieldBlank
+    @Wbmconst@_sDataSetFieldNotFound @852 ; Wbmconst::_sDataSetFieldNotFound
+    @Wbmconst@_sDataSetNotActive   @817 ; Wbmconst::_sDataSetNotActive
+    @Wbmconst@_sDeleteButton       @829 ; Wbmconst::_sDeleteButton
+    @Wbmconst@_sDeltaNotFound      @819 ; Wbmconst::_sDeltaNotFound
+    @Wbmconst@_sDuplicateStatusField @836 ; Wbmconst::_sDuplicateStatusField
+    @Wbmconst@_sFieldNameBlank     @843 ; Wbmconst::_sFieldNameBlank
+    @Wbmconst@_sFieldNotFound      @848 ; Wbmconst::_sFieldNotFound
+    @Wbmconst@_sFileOpenError      @815 ; Wbmconst::_sFileOpenError
+    @Wbmconst@_sFileSaveError      @816 ; Wbmconst::_sFileSaveError
+    @Wbmconst@_sFirstButton        @835 ; Wbmconst::_sFirstButton
+    @Wbmconst@_sInsertButton       @828 ; Wbmconst::_sInsertButton
+    @Wbmconst@_sInvalidParent      @838 ; Wbmconst::_sInvalidParent
+    @Wbmconst@_sInvalidParentClass @837 ; Wbmconst::_sInvalidParentClass
+    @Wbmconst@_sInvalidWebComponentsCreation @822 ; Wbmconst::_sInvalidWebComponentsCreation
+    @Wbmconst@_sLastButton         @834 ; Wbmconst::_sLastButton
+    @Wbmconst@_sNextButton         @832 ; Wbmconst::_sNextButton
+    @Wbmconst@_sNextPageButton     @830 ; Wbmconst::_sNextPageButton
+    @Wbmconst@_sNoXMLBroker        @849 ; Wbmconst::_sNoXMLBroker
+    @Wbmconst@_sNotDataSetField    @851 ; Wbmconst::_sNotDataSetField
+    @Wbmconst@_sParseError         @812 ; Wbmconst::_sParseError
+    @Wbmconst@_sPostButton         @826 ; Wbmconst::_sPostButton
+    @Wbmconst@_sPriorButton        @833 ; Wbmconst::_sPriorButton
+    @Wbmconst@_sPriorPageButton    @831 ; Wbmconst::_sPriorPageButton
+    @Wbmconst@_sResetQuery         @845 ; Wbmconst::_sResetQuery
+    @Wbmconst@_sSubmitQuery        @846 ; Wbmconst::_sSubmitQuery
+    @Wbmconst@_sUndoButton         @827 ; Wbmconst::_sUndoButton
+    @Wbmconst@_sWarningsBody       @825 ; Wbmconst::_sWarningsBody
+    @Wbmconst@_sXMLBrokerNotConnected @818 ; Wbmconst::_sXMLBrokerNotConnected
+    @Wbmconst@_sXMLBrokerNotDefined @847 ; Wbmconst::_sXMLBrokerNotDefined
+    @Wbmconst@_sXMLComponentNotDefined @842 ; Wbmconst::_sXMLComponentNotDefined
+    @Wbmconst@_sXMLFileOpenError   @814 ; Wbmconst::_sXMLFileOpenError
+    @Wbmconst@_sXMLLoadError       @813 ; Wbmconst::_sXMLLoadError
+    @Wbmconst@initialization$qqrv  @810 ; __fastcall Wbmconst::initialization()
+    @Web@Autodisp@Finalization$qqrv @667 ; __fastcall Web::Autodisp::Finalization()
+    @Web@Autodisp@TWebDispatch@    @682 ; Web::Autodisp::TWebDispatch::
+    @Web@Autodisp@TWebDispatch@$bctr$qqrp25System@Classes@TComponent @678 ; __fastcall Web::Autodisp::TWebDispatch::TWebDispatch(System::Classes::TComponent *)
+    @Web@Autodisp@TWebDispatch@$bdtr$qqrv @677 ; __fastcall Web::Autodisp::TWebDispatch::~TWebDispatch()
+    @Web@Autodisp@TWebDispatch@AssignTo$qqrp26System@Classes@TPersistent @675 ; __fastcall Web::Autodisp::TWebDispatch::AssignTo(System::Classes::TPersistent *)
+    @Web@Autodisp@TWebDispatch@GetMask$qqrv @673 ; __fastcall Web::Autodisp::TWebDispatch::GetMask()
+    @Web@Autodisp@TWebDispatch@GetPathInfo$qqrv @674 ; __fastcall Web::Autodisp::TWebDispatch::GetPathInfo()
+    @Web@Autodisp@TWebDispatch@SetPathInfo$qqrx20System@UnicodeString @676 ; __fastcall Web::Autodisp::TWebDispatch::SetPathInfo(const System::UnicodeString)
+    @Web@Autodisp@TWebPathInfo@    @680 ; Web::Autodisp::TWebPathInfo::
+    @Web@Autodisp@TWebPathInfo@$bctr$qqrp25System@Classes@TComponent @672 ; __fastcall Web::Autodisp::TWebPathInfo::TWebPathInfo(System::Classes::TComponent *)
+    @Web@Autodisp@TWebPathInfo@$bdtr$qqrv @671 ; __fastcall Web::Autodisp::TWebPathInfo::~TWebPathInfo()
+    @Web@Autodisp@TWebPathInfo@GetMask$qqrv @670 ; __fastcall Web::Autodisp::TWebPathInfo::GetMask()
+    @Web@Autodisp@TWebPathInfo@GetPathInfo$qqrv @669 ; __fastcall Web::Autodisp::TWebPathInfo::GetPathInfo()
+    @Web@Autodisp@TWebPathInfo@SetPathInfo$qqrx20System@UnicodeString @668 ; __fastcall Web::Autodisp::TWebPathInfo::SetPathInfo(const System::UnicodeString)
+    @Web@Autodisp@initialization$qqrv @666 ; __fastcall Web::Autodisp::initialization()
+    @Web@Brkrconst@Finalization$qqrv @199 ; __fastcall Web::Brkrconst::Finalization()
+    @Web@Brkrconst@_sDocumentMoved @202 ; Web::Brkrconst::_sDocumentMoved
+    @Web@Brkrconst@_sInternalServerError @203 ; Web::Brkrconst::_sInternalServerError
+    @Web@Brkrconst@_sNoDataModulesRegistered @207 ; Web::Brkrconst::_sNoDataModulesRegistered
+    @Web@Brkrconst@_sNoDispatcherComponent @206 ; Web::Brkrconst::_sNoDispatcherComponent
+    @Web@Brkrconst@_sNoWebModulesActivated @205 ; Web::Brkrconst::_sNoWebModulesActivated
+    @Web@Brkrconst@_sNotAValidDay  @201 ; Web::Brkrconst::_sNotAValidDay
+    @Web@Brkrconst@_sNotAValidMonth @200 ; Web::Brkrconst::_sNotAValidMonth
+    @Web@Brkrconst@_sOnlyOneDataModuleAllowed @208 ; Web::Brkrconst::_sOnlyOneDataModuleAllowed
+    @Web@Brkrconst@_sTooManyActiveConnections @204 ; Web::Brkrconst::_sTooManyActiveConnections
+    @Web@Brkrconst@initialization$qqrv @198 ; __fastcall Web::Brkrconst::initialization()
+    @Web@Copyprsr@Finalization$qqrv @521 ; __fastcall Web::Copyprsr::Finalization()
+    @Web@Copyprsr@TCopyParser@     @556 ; Web::Copyprsr::TCopyParser::
+    @Web@Copyprsr@TCopyParser@$bctr$qqrp22System@Classes@TStreamt1 @554 ; __fastcall Web::Copyprsr::TCopyParser::TCopyParser(System::Classes::TStream *, System::Classes::TStream *)
+    @Web@Copyprsr@TCopyParser@$bdtr$qqrv @553 ; __fastcall Web::Copyprsr::TCopyParser::~TCopyParser()
+    @Web@Copyprsr@TCopyParser@CheckToken$qqrc @552 ; __fastcall Web::Copyprsr::TCopyParser::CheckToken(char)
+    @Web@Copyprsr@TCopyParser@CheckTokenSymbol$qqrx27System@%AnsiStringT$us$i0$% @551 ; __fastcall Web::Copyprsr::TCopyParser::CheckTokenSymbol(const System::AnsiStringT<0>)
+    @Web@Copyprsr@TCopyParser@CopySkipTo$qqrio @550 ; __fastcall Web::Copyprsr::TCopyParser::CopySkipTo(int, bool)
+    @Web@Copyprsr@TCopyParser@CopySkipToEOF$qqro @548 ; __fastcall Web::Copyprsr::TCopyParser::CopySkipToEOF(bool)
+    @Web@Copyprsr@TCopyParser@CopySkipToEOL$qqro @549 ; __fastcall Web::Copyprsr::TCopyParser::CopySkipToEOL(bool)
+    @Web@Copyprsr@TCopyParser@CopySkipToToken$qqrco @547 ; __fastcall Web::Copyprsr::TCopyParser::CopySkipToToken(char, bool)
+    @Web@Copyprsr@TCopyParser@CopyTo$qqri @546 ; __fastcall Web::Copyprsr::TCopyParser::CopyTo(int)
+    @Web@Copyprsr@TCopyParser@CopyToEOF$qqrv @543 ; __fastcall Web::Copyprsr::TCopyParser::CopyToEOF()
+    @Web@Copyprsr@TCopyParser@CopyToEOL$qqrv @544 ; __fastcall Web::Copyprsr::TCopyParser::CopyToEOL()
+    @Web@Copyprsr@TCopyParser@CopyToToken$qqrc @545 ; __fastcall Web::Copyprsr::TCopyParser::CopyToToken(char)
+    @Web@Copyprsr@TCopyParser@CopyTokenToOutput$qqrv @542 ; __fastcall Web::Copyprsr::TCopyParser::CopyTokenToOutput()
+    @Web@Copyprsr@TCopyParser@Error$qqrx20System@UnicodeString @541 ; __fastcall Web::Copyprsr::TCopyParser::Error(const System::UnicodeString)
+    @Web@Copyprsr@TCopyParser@ErrorFmt$qqrx20System@UnicodeStringpx14System@TVarRecxi @540 ; __fastcall Web::Copyprsr::TCopyParser::ErrorFmt(const System::UnicodeString, const System::TVarRec *, const int)
+    @Web@Copyprsr@TCopyParser@ErrorStr$qqrx20System@UnicodeString @539 ; __fastcall Web::Copyprsr::TCopyParser::ErrorStr(const System::UnicodeString)
+    @Web@Copyprsr@TCopyParser@NextToken$qqrv @538 ; __fastcall Web::Copyprsr::TCopyParser::NextToken()
+    @Web@Copyprsr@TCopyParser@ReadBuffer$qqrv @531 ; __fastcall Web::Copyprsr::TCopyParser::ReadBuffer()
+    @Web@Copyprsr@TCopyParser@SkipBlanks$qqro @530 ; __fastcall Web::Copyprsr::TCopyParser::SkipBlanks(bool)
+    @Web@Copyprsr@TCopyParser@SkipEOL$qqrv @528 ; __fastcall Web::Copyprsr::TCopyParser::SkipEOL()
+    @Web@Copyprsr@TCopyParser@SkipTo$qqri @537 ; __fastcall Web::Copyprsr::TCopyParser::SkipTo(int)
+    @Web@Copyprsr@TCopyParser@SkipToEOF$qqrv @534 ; __fastcall Web::Copyprsr::TCopyParser::SkipToEOF()
+    @Web@Copyprsr@TCopyParser@SkipToEOL$qqrv @535 ; __fastcall Web::Copyprsr::TCopyParser::SkipToEOL()
+    @Web@Copyprsr@TCopyParser@SkipToNextToken$qqroo @533 ; __fastcall Web::Copyprsr::TCopyParser::SkipToNextToken(bool, bool)
+    @Web@Copyprsr@TCopyParser@SkipToToken$qqrc @536 ; __fastcall Web::Copyprsr::TCopyParser::SkipToToken(char)
+    @Web@Copyprsr@TCopyParser@SkipToken$qqro @532 ; __fastcall Web::Copyprsr::TCopyParser::SkipToken(bool)
+    @Web@Copyprsr@TCopyParser@SourcePos$qqrv @529 ; __fastcall Web::Copyprsr::TCopyParser::SourcePos()
+    @Web@Copyprsr@TCopyParser@TokenComponentIdent$qqrv @523 ; __fastcall Web::Copyprsr::TCopyParser::TokenComponentIdent()
+    @Web@Copyprsr@TCopyParser@TokenFloat$qqrv @527 ; __fastcall Web::Copyprsr::TCopyParser::TokenFloat()
+    @Web@Copyprsr@TCopyParser@TokenInt$qqrv @526 ; __fastcall Web::Copyprsr::TCopyParser::TokenInt()
+    @Web@Copyprsr@TCopyParser@TokenString$qqrv @525 ; __fastcall Web::Copyprsr::TCopyParser::TokenString()
+    @Web@Copyprsr@TCopyParser@TokenSymbolIs$qqrx27System@%AnsiStringT$us$i0$% @524 ; __fastcall Web::Copyprsr::TCopyParser::TokenSymbolIs(const System::AnsiStringT<0>)
+    @Web@Copyprsr@TCopyParser@UpdateOutStream$qqrpc @522 ; __fastcall Web::Copyprsr::TCopyParser::UpdateOutStream(char *)
+    @Web@Copyprsr@initialization$qqrv @520 ; __fastcall Web::Copyprsr::initialization()
+    @Web@Httpapp@DayOfWeekStr$qqr16System@TDateTime @315 ; __fastcall Web::Httpapp::DayOfWeekStr(System::TDateTime)
+    @Web@Httpapp@DosPathToUnixPath$qqrx20System@UnicodeString @317 ; __fastcall Web::Httpapp::DosPathToUnixPath(const System::UnicodeString)
+    @Web@Httpapp@EWebBrokerException@ @452 ; Web::Httpapp::EWebBrokerException::
+    @Web@Httpapp@EncodingFromContentType$qqrx27System@%AnsiStringT$us$i0$% @331 ; __fastcall Web::Httpapp::EncodingFromContentType(const System::AnsiStringT<0>)
+    @Web@Httpapp@EncodingGetBytes$qqrx27System@%AnsiStringT$us$i0$%x20System@UnicodeString @329 ; __fastcall Web::Httpapp::EncodingGetBytes(const System::AnsiStringT<0>, const System::UnicodeString)
+    @Web@Httpapp@EncodingGetString$qqrx27System@%AnsiStringT$us$i0$%t1 @330 ; __fastcall Web::Httpapp::EncodingGetString(const System::AnsiStringT<0>, const System::AnsiStringT<0>)
+    @Web@Httpapp@ExtractHTTPFields$qqrrx25System@%Set$cc$i0$c$i-1$%t1pbp23System@Classes@TStringso @321 ; Web::Httpapp::ExtractHTTPFields(const System::Set<{583}...
+    @Web@Httpapp@ExtractHTTPFields$qqrrx25System@%Set$cc$i0$c$i-1$%t1x27System@%AnsiStringT$us$i0$%p23System@Classes@TStringso @320 ; Web::Httpapp::ExtractHTTPFields(const System::Set<{583}...
+    @Web@Httpapp@ExtractHeaderFields$qqrrx25System@%Set$cc$i0$c$i-1$%t1pbp23System@Classes@TStringsoo @322 ; Web::Httpapp::ExtractHeaderFields(const System::Set<{583}...
+    @Web@Httpapp@ExtractHeaderFields$qqrrx25System@%Set$cc$i0$c$i-1$%t1x27System@%AnsiStringT$us$i0$%p23System@Classes@TStringsoo @323 ; Web::Httpapp::ExtractHeaderFields(const System::Set<{583}...
+    @Web@Httpapp@FWebApplicationFileName @431 ; Web::Httpapp::FWebApplicationFileName
+    @Web@Httpapp@Finalization$qqrv @275 ; __fastcall Web::Httpapp::Finalization()
+    @Web@Httpapp@HTMLDecode$qqrx20System@UnicodeString @325 ; __fastcall Web::Httpapp::HTMLDecode(const System::UnicodeString)
+    @Web@Httpapp@HTMLEncode$qqrx20System@UnicodeString @326 ; __fastcall Web::Httpapp::HTMLEncode(const System::UnicodeString)
+    @Web@Httpapp@HTTPDecode$qqrx27System@%AnsiStringT$us$i0$% @328 ; __fastcall Web::Httpapp::HTTPDecode(const System::AnsiStringT<0>)
+    @Web@Httpapp@HTTPEncode$qqrx27System@%AnsiStringT$us$i0$% @327 ; __fastcall Web::Httpapp::HTTPEncode(const System::AnsiStringT<0>)
+    @Web@Httpapp@MonthStr$qqr16System@TDateTime @316 ; __fastcall Web::Httpapp::MonthStr(System::TDateTime)
+    @Web@Httpapp@ParseDate$qqrx20System@UnicodeString @324 ; __fastcall Web::Httpapp::ParseDate(const System::UnicodeString)
+    @Web@Httpapp@RegisterContentParser$qqrp17System@TMetaClass @428 ; __fastcall Web::Httpapp::RegisterContentParser(System::TMetaClass *)
+    @Web@Httpapp@StatusString$qqri @319 ; __fastcall Web::Httpapp::StatusString(int)
+    @Web@Httpapp@TAbstractContentParser@ @515 ; Web::Httpapp::TAbstractContentParser::
+    @Web@Httpapp@TAbstractContentParser@$bctr$qqrp23Web@Httpapp@TWebRequest @292 ; __fastcall Web::Httpapp::TAbstractContentParser::TAbstractContentParser(Web::Httpapp::TWebRequest *)
+    @Web@Httpapp@TAbstractContentParser@CanParse$qqrp23Web@Httpapp@TWebRequest @293 ; __fastcall Web::Httpapp::TAbstractContentParser::CanParse(Web::Httpapp::TWebRequest *)
+    @Web@Httpapp@TAbstractWebModuleFactory@ @463 ; Web::Httpapp::TAbstractWebModuleFactory::
+    @Web@Httpapp@TAbstractWebModuleFactory@GetWebPageInfo$qqrv @306 ; __fastcall Web::Httpapp::TAbstractWebModuleFactory::GetWebPageInfo()
+    @Web@Httpapp@TAbstractWebModuleList@ @456 ; Web::Httpapp::TAbstractWebModuleList::
+    @Web@Httpapp@TAbstractWebPageInfo@ @459 ; Web::Httpapp::TAbstractWebPageInfo::
+    @Web@Httpapp@TAbstractWebPageInfo@GetFactory$qqrv @310 ; __fastcall Web::Httpapp::TAbstractWebPageInfo::GetFactory()
+    @Web@Httpapp@TAbstractWebPageInfo@GetIsLoginRequired$qqrv @308 ; __fastcall Web::Httpapp::TAbstractWebPageInfo::GetIsLoginRequired()
+    @Web@Httpapp@TAbstractWebPageInfo@GetIsPublished$qqrv @314 ; __fastcall Web::Httpapp::TAbstractWebPageInfo::GetIsPublished()
+    @Web@Httpapp@TAbstractWebPageInfo@GetPageDescription$qqrv @313 ; __fastcall Web::Httpapp::TAbstractWebPageInfo::GetPageDescription()
+    @Web@Httpapp@TAbstractWebPageInfo@GetPageHREF$qqrv @312 ; __fastcall Web::Httpapp::TAbstractWebPageInfo::GetPageHREF()
+    @Web@Httpapp@TAbstractWebPageInfo@GetPageTitle$qqrv @311 ; __fastcall Web::Httpapp::TAbstractWebPageInfo::GetPageTitle()
+    @Web@Httpapp@TAbstractWebPageInfo@GetViewAccess$qqrv @307 ; __fastcall Web::Httpapp::TAbstractWebPageInfo::GetViewAccess()
+    @Web@Httpapp@TAbstractWebPageInfo@SetFactory$qqrp41Web@Httpapp@TAbstractWebPageModuleFactory @309 ; __fastcall Web::Httpapp::TAbstractWebPageInfo::SetFactory(Web::Httpapp::TAbstractWebPageModuleFactory *)
+    @Web@Httpapp@TAbstractWebPageModuleFactory@ @461 ; Web::Httpapp::TAbstractWebPageModuleFactory::
+    @Web@Httpapp@TAbstractWebPageModuleFactory@$bctr$qqrp32Web@Httpapp@TAbstractWebPageInfo @305 ; __fastcall Web::Httpapp::TAbstractWebPageModuleFactory::TAbstractWebPageModuleFactory(Web::Httpapp::TAbstractWebPageInfo *)
+    @Web@Httpapp@TAbstractWebPageModuleFactory@$bdtr$qqrv @304 ; __fastcall Web::Httpapp::TAbstractWebPageModuleFactory::~TAbstractWebPageModuleFactory()
+    @Web@Httpapp@TAbstractWebPageModuleFactory@GetWebPageInfo$qqrv @303 ; __fastcall Web::Httpapp::TAbstractWebPageModuleFactory::GetWebPageInfo()
+    @Web@Httpapp@TAbstractWebRequestFile@ @508 ; Web::Httpapp::TAbstractWebRequestFile::
+    @Web@Httpapp@TAbstractWebRequestFiles@ @510 ; Web::Httpapp::TAbstractWebRequestFiles::
+    @Web@Httpapp@TAbstractWebSession@ @500 ; Web::Httpapp::TAbstractWebSession::
+    @Web@Httpapp@TContentParser@   @513 ; Web::Httpapp::TContentParser::
+    @Web@Httpapp@TContentParser@$bdtr$qqrv @290 ; __fastcall Web::Httpapp::TContentParser::~TContentParser()
+    @Web@Httpapp@TContentParser@CanParse$qqrp23Web@Httpapp@TWebRequest @291 ; __fastcall Web::Httpapp::TContentParser::CanParse(Web::Httpapp::TWebRequest *)
+    @Web@Httpapp@TContentParser@GetContentFields$qqrv @289 ; __fastcall Web::Httpapp::TContentParser::GetContentFields()
+    @Web@Httpapp@TContentParser@GetFiles$qqrv @288 ; __fastcall Web::Httpapp::TContentParser::GetFiles()
+    @Web@Httpapp@TCookie@          @506 ; Web::Httpapp::TCookie::
+    @Web@Httpapp@TCookie@$bctr$qqrp26System@Classes@TCollection @408 ; __fastcall Web::Httpapp::TCookie::TCookie(System::Classes::TCollection *)
+    @Web@Httpapp@TCookie@AssignTo$qqrp26System@Classes@TPersistent @407 ; __fastcall Web::Httpapp::TCookie::AssignTo(System::Classes::TPersistent *)
+    @Web@Httpapp@TCookie@GetHeaderValue$qqrv @406 ; __fastcall Web::Httpapp::TCookie::GetHeaderValue()
+    @Web@Httpapp@TCookieCollection@ @504 ; Web::Httpapp::TCookieCollection::
+    @Web@Httpapp@TCookieCollection@$bctr$qqrp24Web@Httpapp@TWebResponsep17System@TMetaClass @405 ; __fastcall Web::Httpapp::TCookieCollection::TCookieCollection(Web::Httpapp::TWebResponse *, System::TMetaClass *)
+    @Web@Httpapp@TCookieCollection@Add$qqrv @404 ; __fastcall Web::Httpapp::TCookieCollection::Add()
+    @Web@Httpapp@TCookieCollection@GetCookie$qqri @403 ; __fastcall Web::Httpapp::TCookieCollection::GetCookie(int)
+    @Web@Httpapp@TCookieCollection@SetCookie$qqrip19Web@Httpapp@TCookie @402 ; __fastcall Web::Httpapp::TCookieCollection::SetCookie(int, Web::Httpapp::TCookie *)
+    @Web@Httpapp@TCustomContentProducer@ @484 ; Web::Httpapp::TCustomContentProducer::
+    @Web@Httpapp@TCustomContentProducer@Content$qqrv @387 ; __fastcall Web::Httpapp::TCustomContentProducer::Content()
+    @Web@Httpapp@TCustomContentProducer@ContentFromStream$qqrp22System@Classes@TStream @386 ; __fastcall Web::Httpapp::TCustomContentProducer::ContentFromStream(System::Classes::TStream *)
+    @Web@Httpapp@TCustomContentProducer@ContentFromString$qqrx20System@UnicodeString @385 ; __fastcall Web::Httpapp::TCustomContentProducer::ContentFromString(const System::UnicodeString)
+    @Web@Httpapp@TCustomContentProducer@GetAppDispatcher$qqrv @379 ; __fastcall Web::Httpapp::TCustomContentProducer::GetAppDispatcher()
+    @Web@Httpapp@TCustomContentProducer@GetDispatcher$qqrv @383 ; __fastcall Web::Httpapp::TCustomContentProducer::GetDispatcher()
+    @Web@Httpapp@TCustomContentProducer@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @389 ; __fastcall Web::Httpapp::TCustomContentProducer::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Web@Httpapp@TCustomContentProducer@ProduceContent$qqrv @382 ; __fastcall Web::Httpapp::TCustomContentProducer::ProduceContent()
+    @Web@Httpapp@TCustomContentProducer@ProduceContentFromStream$qqrp22System@Classes@TStream @381 ; __fastcall Web::Httpapp::TCustomContentProducer::ProduceContentFromStream(System::Classes::TStream *)
+    @Web@Httpapp@TCustomContentProducer@ProduceContentFromString$qqrx20System@UnicodeString @380 ; __fastcall Web::Httpapp::TCustomContentProducer::ProduceContentFromString(const System::UnicodeString)
+    @Web@Httpapp@TCustomContentProducer@SetAppDispatcher$qqrxp25System@Classes@TComponent @384 ; __fastcall Web::Httpapp::TCustomContentProducer::SetAppDispatcher(System::Classes::TComponent * const)
+    @Web@Httpapp@TCustomContentProducer@SetDispatcher$qqrp25System@Classes@TComponent @388 ; __fastcall Web::Httpapp::TCustomContentProducer::SetDispatcher(System::Classes::TComponent *)
+    @Web@Httpapp@TCustomWebDispatcher@ @476 ; Web::Httpapp::TCustomWebDispatcher::
+    @Web@Httpapp@TCustomWebDispatcher@$bctr$qqrp25System@Classes@TComponent @352 ; __fastcall Web::Httpapp::TCustomWebDispatcher::TCustomWebDispatcher(System::Classes::TComponent *)
+    @Web@Httpapp@TCustomWebDispatcher@$bdtr$qqrv @351 ; __fastcall Web::Httpapp::TCustomWebDispatcher::~TCustomWebDispatcher()
+    @Web@Httpapp@TCustomWebDispatcher@Access_Request$qqrv @339 ; __fastcall Web::Httpapp::TCustomWebDispatcher::Access_Request()
+    @Web@Httpapp@TCustomWebDispatcher@Access_Response$qqrv @338 ; __fastcall Web::Httpapp::TCustomWebDispatcher::Access_Response()
+    @Web@Httpapp@TCustomWebDispatcher@ActionByName$qqrx20System@UnicodeString @349 ; __fastcall Web::Httpapp::TCustomWebDispatcher::ActionByName(const System::UnicodeString)
+    @Web@Httpapp@TCustomWebDispatcher@DispatchAction$qqrp23Web@Httpapp@TWebRequestp24Web@Httpapp@TWebResponse @346 ; __fastcall Web::Httpapp::TCustomWebDispatcher::DispatchAction(Web::Httpapp::TWebRequest *, Web::Httpapp::TWebResponse *)
+    @Web@Httpapp@TCustomWebDispatcher@DoAfterDispatch$qqrp23Web@Httpapp@TWebRequestp24Web@Httpapp@TWebResponse @348 ; __fastcall Web::Httpapp::TCustomWebDispatcher::DoAfterDispatch(Web::Httpapp::TWebRequest *, Web::Httpapp::TWebResponse *)
+    @Web@Httpapp@TCustomWebDispatcher@DoBeforeDispatch$qqrp23Web@Httpapp@TWebRequestp24Web@Httpapp@TWebResponse @347 ; __fastcall Web::Httpapp::TCustomWebDispatcher::DoBeforeDispatch(Web::Httpapp::TWebRequest *, Web::Httpapp::TWebResponse *)
+    @Web@Httpapp@TCustomWebDispatcher@FinishContext$qqrv @337 ; __fastcall Web::Httpapp::TCustomWebDispatcher::FinishContext()
+    @Web@Httpapp@TCustomWebDispatcher@FinishMultiContext$qqrv @336 ; __fastcall Web::Httpapp::TCustomWebDispatcher::FinishMultiContext()
+    @Web@Httpapp@TCustomWebDispatcher@GetAction$qqri @345 ; __fastcall Web::Httpapp::TCustomWebDispatcher::GetAction(int)
+    @Web@Httpapp@TCustomWebDispatcher@GetRequest$qqrv @341 ; __fastcall Web::Httpapp::TCustomWebDispatcher::GetRequest()
+    @Web@Httpapp@TCustomWebDispatcher@GetResponse$qqrv @340 ; __fastcall Web::Httpapp::TCustomWebDispatcher::GetResponse()
+    @Web@Httpapp@TCustomWebDispatcher@HandleException$qqrp25System@Sysutils@Exceptionro @350 ; __fastcall Web::Httpapp::TCustomWebDispatcher::HandleException(System::Sysutils::Exception *, bool&)
+    @Web@Httpapp@TCustomWebDispatcher@HandleRequest$qqrp23Web@Httpapp@TWebRequestp24Web@Httpapp@TWebResponse @343 ; __fastcall Web::Httpapp::TCustomWebDispatcher::HandleRequest(Web::Httpapp::TWebRequest *, Web::Httpapp::TWebResponse *)
+    @Web@Httpapp@TCustomWebDispatcher@InitContext$qqrp23Web@Httpapp@TWebRequestp24Web@Httpapp@TWebResponse @335 ; __fastcall Web::Httpapp::TCustomWebDispatcher::InitContext(Web::Httpapp::TWebRequest *, Web::Httpapp::TWebResponse *)
+    @Web@Httpapp@TCustomWebDispatcher@InitModule$qqrp25System@Classes@TComponent @333 ; __fastcall Web::Httpapp::TCustomWebDispatcher::InitModule(System::Classes::TComponent *)
+    @Web@Httpapp@TCustomWebDispatcher@InitMultiContext$qqrp23Web@Httpapp@TWebRequestp24Web@Httpapp@TWebResponse @334 ; __fastcall Web::Httpapp::TCustomWebDispatcher::InitMultiContext(Web::Httpapp::TWebRequest *, Web::Httpapp::TWebResponse *)
+    @Web@Httpapp@TCustomWebDispatcher@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @344 ; __fastcall Web::Httpapp::TCustomWebDispatcher::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Web@Httpapp@TCustomWebDispatcher@SetActions$qqrp27Web@Httpapp@TWebActionItems @342 ; __fastcall Web::Httpapp::TCustomWebDispatcher::SetActions(Web::Httpapp::TWebActionItems *)
+    @Web@Httpapp@TCustomWebFileDispatcher@ @471 ; Web::Httpapp::TCustomWebFileDispatcher::
+    @Web@Httpapp@TCustomWebFileDispatcher@$bctr$qqrp25System@Classes@TComponent @287 ; __fastcall Web::Httpapp::TCustomWebFileDispatcher::TCustomWebFileDispatcher(System::Classes::TComponent *)
+    @Web@Httpapp@TCustomWebFileDispatcher@$bdtr$qqrv @286 ; __fastcall Web::Httpapp::TCustomWebFileDispatcher::~TCustomWebFileDispatcher()
+    @Web@Httpapp@TCustomWebFileDispatcher@DispatchEnabled$qqrv @285 ; __fastcall Web::Httpapp::TCustomWebFileDispatcher::DispatchEnabled()
+    @Web@Httpapp@TCustomWebFileDispatcher@DispatchMask$qqrv @284 ; __fastcall Web::Httpapp::TCustomWebFileDispatcher::DispatchMask()
+    @Web@Httpapp@TCustomWebFileDispatcher@DispatchMethodType$qqrv @283 ; __fastcall Web::Httpapp::TCustomWebFileDispatcher::DispatchMethodType()
+    @Web@Httpapp@TCustomWebFileDispatcher@DispatchRequest$qqrp14System@TObjectp23Web@Httpapp@TWebRequestp24Web@Httpapp@TWebResponse @276 ; __fastcall Web::Httpapp::TCustomWebFileDispatcher::DispatchRequest(System::TObject *, Web::Httpapp::TWebRequest *, Web::Httpapp::TWebResponse *)
+    @Web@Httpapp@TCustomWebFileDispatcher@GetRootDirectory$qqrv @282 ; __fastcall Web::Httpapp::TCustomWebFileDispatcher::GetRootDirectory()
+    @Web@Httpapp@TCustomWebFileDispatcher@GetWebDirectories$qqrv @280 ; __fastcall Web::Httpapp::TCustomWebFileDispatcher::GetWebDirectories()
+    @Web@Httpapp@TCustomWebFileDispatcher@GetWebFileExtensions$qqrv @281 ; __fastcall Web::Httpapp::TCustomWebFileDispatcher::GetWebFileExtensions()
+    @Web@Httpapp@TCustomWebFileDispatcher@SetRootDirectory$qqrx20System@UnicodeString @279 ; __fastcall Web::Httpapp::TCustomWebFileDispatcher::SetRootDirectory(const System::UnicodeString)
+    @Web@Httpapp@TCustomWebFileDispatcher@SetWebDirectories$qqrxp37Web@Webfiledispatcher@TWebDirectories @277 ; __fastcall Web::Httpapp::TCustomWebFileDispatcher::SetWebDirectories(Web::Webfiledispatcher::TWebDirectories * const)
+    @Web@Httpapp@TCustomWebFileDispatcher@SetWebFileExtensions$qqrxp40Web@Webfiledispatcher@TWebFileExtensions @278 ; __fastcall Web::Httpapp::TCustomWebFileDispatcher::SetWebFileExtensions(Web::Webfiledispatcher::TWebFileExtensions * const)
+    @Web@Httpapp@TDefaultWebAppServices@ @454 ; Web::Httpapp::TDefaultWebAppServices::
+    @Web@Httpapp@TDefaultWebAppServices@FindRequestHandler$qqrv @302 ; __fastcall Web::Httpapp::TDefaultWebAppServices::FindRequestHandler()
+    @Web@Httpapp@TDefaultWebAppServices@FindWebDispatcher$qqrv @296 ; __fastcall Web::Httpapp::TDefaultWebAppServices::FindWebDispatcher()
+    @Web@Httpapp@TDefaultWebAppServices@FinishContext$qqrv @298 ; __fastcall Web::Httpapp::TDefaultWebAppServices::FinishContext()
+    @Web@Httpapp@TDefaultWebAppServices@GetActive$qqrv @295 ; __fastcall Web::Httpapp::TDefaultWebAppServices::GetActive()
+    @Web@Httpapp@TDefaultWebAppServices@GetExceptionHandler$qqrv @294 ; __fastcall Web::Httpapp::TDefaultWebAppServices::GetExceptionHandler()
+    @Web@Httpapp@TDefaultWebAppServices@GetRequestHandler$qqrv @301 ; __fastcall Web::Httpapp::TDefaultWebAppServices::GetRequestHandler()
+    @Web@Httpapp@TDefaultWebAppServices@HandleRequest$qqrv @300 ; __fastcall Web::Httpapp::TDefaultWebAppServices::HandleRequest()
+    @Web@Httpapp@TDefaultWebAppServices@InitContext$qqrp34Web@Httpapp@TAbstractWebModuleListp23Web@Httpapp@TWebRequestp24Web@Httpapp@TWebResponse @299 ; __fastcall Web::Httpapp::TDefaultWebAppServices::InitContext(Web::Httpapp::TAbstractWebModuleList *, Web::Httpapp::TWebRequest *, Web::Httpapp::TWebResponse *)
+    @Web@Httpapp@TDefaultWebAppServices@InvokeDispatcher$qqrv @297 ; __fastcall Web::Httpapp::TDefaultWebAppServices::InvokeDispatcher()
+    @Web@Httpapp@TWebActionItem@   @481 ; Web::Httpapp::TWebActionItem::
+    @Web@Httpapp@TWebActionItem@$bctr$qqrp26System@Classes@TCollection @378 ; __fastcall Web::Httpapp::TWebActionItem::TWebActionItem(System::Classes::TCollection *)
+    @Web@Httpapp@TWebActionItem@$bdtr$qqrv @377 ; __fastcall Web::Httpapp::TWebActionItem::~TWebActionItem()
+    @Web@Httpapp@TWebActionItem@AssignTo$qqrp26System@Classes@TPersistent @376 ; __fastcall Web::Httpapp::TWebActionItem::AssignTo(System::Classes::TPersistent *)
+    @Web@Httpapp@TWebActionItem@DispatchAction$qqrp23Web@Httpapp@TWebRequestp24Web@Httpapp@TWebResponseo @375 ; __fastcall Web::Httpapp::TWebActionItem::DispatchAction(Web::Httpapp::TWebRequest *, Web::Httpapp::TWebResponse *, bool)
+    @Web@Httpapp@TWebActionItem@GetDisplayName$qqrv @374 ; __fastcall Web::Httpapp::TWebActionItem::GetDisplayName()
+    @Web@Httpapp@TWebActionItem@GetMask$qqrv @364 ; __fastcall Web::Httpapp::TWebActionItem::GetMask()
+    @Web@Httpapp@TWebActionItem@GetPathInfo$qqrv @365 ; __fastcall Web::Httpapp::TWebActionItem::GetPathInfo()
+    @Web@Httpapp@TWebActionItem@ProducerPathInfo$qqrv @366 ; __fastcall Web::Httpapp::TWebActionItem::ProducerPathInfo()
+    @Web@Httpapp@TWebActionItem@SetDefault$qqro @373 ; __fastcall Web::Httpapp::TWebActionItem::SetDefault(bool)
+    @Web@Httpapp@TWebActionItem@SetDisplayName$qqrx20System@UnicodeString @370 ; __fastcall Web::Httpapp::TWebActionItem::SetDisplayName(const System::UnicodeString)
+    @Web@Httpapp@TWebActionItem@SetEnabled$qqro @372 ; __fastcall Web::Httpapp::TWebActionItem::SetEnabled(bool)
+    @Web@Httpapp@TWebActionItem@SetMethodType$qqr23Web@Httpapp@TMethodType @371 ; __fastcall Web::Httpapp::TWebActionItem::SetMethodType(Web::Httpapp::TMethodType)
+    @Web@Httpapp@TWebActionItem@SetOnAction$qqrynpqqrp14System@TObjectp23Web@Httpapp@TWebRequestp24Web@Httpapp@TWebResponsero$v @369 ; __fastcall Web::Httpapp::TWebActionItem::SetOnAction(void __fastcall __closure(*)(System::TObject *, Web::Httpapp::TWebRequest *, Web::Httpapp::TWebResponse *, bool&))
+    @Web@Httpapp@TWebActionItem@SetPathInfo$qqrx20System@UnicodeString @368 ; __fastcall Web::Httpapp::TWebActionItem::SetPathInfo(const System::UnicodeString)
+    @Web@Httpapp@TWebActionItem@SetProducer$qqrxp34Web@Httpapp@TCustomContentProducer @367 ; __fastcall Web::Httpapp::TWebActionItem::SetProducer(Web::Httpapp::TCustomContentProducer * const)
+    @Web@Httpapp@TWebActionItem@SetProducerContent$qqrxp25System@Classes@TComponent @363 ; __fastcall Web::Httpapp::TWebActionItem::SetProducerContent(System::Classes::TComponent * const)
+    @Web@Httpapp@TWebActionItems@  @479 ; Web::Httpapp::TWebActionItems::
+    @Web@Httpapp@TWebActionItems@$bctr$qqrp32Web@Httpapp@TCustomWebDispatcherp17System@TMetaClass @362 ; __fastcall Web::Httpapp::TWebActionItems::TWebActionItems(Web::Httpapp::TCustomWebDispatcher *, System::TMetaClass *)
+    @Web@Httpapp@TWebActionItems@Add$qqrv @361 ; __fastcall Web::Httpapp::TWebActionItems::Add()
+    @Web@Httpapp@TWebActionItems@GetActionItem$qqri @360 ; __fastcall Web::Httpapp::TWebActionItems::GetActionItem(int)
+    @Web@Httpapp@TWebActionItems@GetAttr$qqri @358 ; __fastcall Web::Httpapp::TWebActionItems::GetAttr(int)
+    @Web@Httpapp@TWebActionItems@GetAttrCount$qqrv @359 ; __fastcall Web::Httpapp::TWebActionItems::GetAttrCount()
+    @Web@Httpapp@TWebActionItems@GetItemAttr$qqrii @357 ; __fastcall Web::Httpapp::TWebActionItems::GetItemAttr(int, int)
+    @Web@Httpapp@TWebActionItems@GetOwner$qqrv @356 ; __fastcall Web::Httpapp::TWebActionItems::GetOwner()
+    @Web@Httpapp@TWebActionItems@SetActionItem$qqrip26Web@Httpapp@TWebActionItem @355 ; __fastcall Web::Httpapp::TWebActionItems::SetActionItem(int, Web::Httpapp::TWebActionItem *)
+    @Web@Httpapp@TWebActionItems@SetItemName$qqrp30System@Classes@TCollectionItem @354 ; __fastcall Web::Httpapp::TWebActionItems::SetItemName(System::Classes::TCollectionItem *)
+    @Web@Httpapp@TWebActionItems@Update$qqrp30System@Classes@TCollectionItem @353 ; __fastcall Web::Httpapp::TWebActionItems::Update(System::Classes::TCollectionItem *)
+    @Web@Httpapp@TWebDispatcher@   @474 ; Web::Httpapp::TWebDispatcher::
+    @Web@Httpapp@TWebFileDispatcher@ @469 ; Web::Httpapp::TWebFileDispatcher::
+    @Web@Httpapp@TWebModule@       @467 ; Web::Httpapp::TWebModule::
+    @Web@Httpapp@TWebModule@$bctr$qqrp25System@Classes@TComponent @332 ; __fastcall Web::Httpapp::TWebModule::TWebModule(System::Classes::TComponent *)
+    @Web@Httpapp@TWebRequest@      @517 ; Web::Httpapp::TWebRequest::
+    @Web@Httpapp@TWebRequest@$bctr$qqrv @427 ; __fastcall Web::Httpapp::TWebRequest::TWebRequest()
+    @Web@Httpapp@TWebRequest@$bdtr$qqrv @425 ; __fastcall Web::Httpapp::TWebRequest::~TWebRequest()
+    @Web@Httpapp@TWebRequest@ExtractContentFields$qqrp23System@Classes@TStrings @422 ; __fastcall Web::Httpapp::TWebRequest::ExtractContentFields(System::Classes::TStrings *)
+    @Web@Httpapp@TWebRequest@ExtractCookieFields$qqrp23System@Classes@TStrings @421 ; __fastcall Web::Httpapp::TWebRequest::ExtractCookieFields(System::Classes::TStrings *)
+    @Web@Httpapp@TWebRequest@ExtractFields$qqrrx25System@%Set$cc$i0$c$i-1$%t1pbp23System@Classes@TStrings @424 ; Web::Httpapp::TWebRequest::ExtractFields(const System::Set<{583}...
+    @Web@Httpapp@TWebRequest@ExtractFields$qqrrx25System@%Set$cc$i0$c$i-1$%t1x27System@%AnsiStringT$us$i0$%p23System@Classes@TStrings @423 ; Web::Httpapp::TWebRequest::ExtractFields(const System::Set<{583}...
+    @Web@Httpapp@TWebRequest@ExtractQueryFields$qqrp23System@Classes@TStrings @420 ; __fastcall Web::Httpapp::TWebRequest::ExtractQueryFields(System::Classes::TStrings *)
+    @Web@Httpapp@TWebRequest@GetContent$qqrv @419 ; __fastcall Web::Httpapp::TWebRequest::GetContent()
+    @Web@Httpapp@TWebRequest@GetContentFields$qqrv @418 ; __fastcall Web::Httpapp::TWebRequest::GetContentFields()
+    @Web@Httpapp@TWebRequest@GetContentParser$qqrv @409 ; __fastcall Web::Httpapp::TWebRequest::GetContentParser()
+    @Web@Httpapp@TWebRequest@GetCookieFields$qqrv @417 ; __fastcall Web::Httpapp::TWebRequest::GetCookieFields()
+    @Web@Httpapp@TWebRequest@GetFiles$qqrv @410 ; __fastcall Web::Httpapp::TWebRequest::GetFiles()
+    @Web@Httpapp@TWebRequest@GetInternalPathInfo$qqrv @414 ; __fastcall Web::Httpapp::TWebRequest::GetInternalPathInfo()
+    @Web@Httpapp@TWebRequest@GetInternalScriptName$qqrv @411 ; __fastcall Web::Httpapp::TWebRequest::GetInternalScriptName()
+    @Web@Httpapp@TWebRequest@GetQueryFields$qqrv @416 ; __fastcall Web::Httpapp::TWebRequest::GetQueryFields()
+    @Web@Httpapp@TWebRequest@GetRawPathInfo$qqrv @413 ; __fastcall Web::Httpapp::TWebRequest::GetRawPathInfo()
+    @Web@Httpapp@TWebRequest@GetRemoteIP$qqrv @412 ; __fastcall Web::Httpapp::TWebRequest::GetRemoteIP()
+    @Web@Httpapp@TWebRequest@ReadUnicodeString$qqri @415 ; __fastcall Web::Httpapp::TWebRequest::ReadUnicodeString(int)
+    @Web@Httpapp@TWebRequest@UpdateMethodType$qqrv @426 ; __fastcall Web::Httpapp::TWebRequest::UpdateMethodType()
+    @Web@Httpapp@TWebResponse@     @502 ; Web::Httpapp::TWebResponse::
+    @Web@Httpapp@TWebResponse@$bctr$qqrp23Web@Httpapp@TWebRequest @401 ; __fastcall Web::Httpapp::TWebResponse::TWebResponse(Web::Httpapp::TWebRequest *)
+    @Web@Httpapp@TWebResponse@$bdtr$qqrv @400 ; __fastcall Web::Httpapp::TWebResponse::~TWebResponse()
+    @Web@Httpapp@TWebResponse@AddCustomHeaders$qqrr20System@UnicodeString @399 ; __fastcall Web::Httpapp::TWebResponse::AddCustomHeaders(System::UnicodeString&)
+    @Web@Httpapp@TWebResponse@FormatAuthenticate$qqrv @390 ; __fastcall Web::Httpapp::TWebResponse::FormatAuthenticate()
+    @Web@Httpapp@TWebResponse@GetCustomHeader$qqrx20System@UnicodeString @398 ; __fastcall Web::Httpapp::TWebResponse::GetCustomHeader(const System::UnicodeString)
+    @Web@Httpapp@TWebResponse@GetUnicodeContent$qqrv @397 ; __fastcall Web::Httpapp::TWebResponse::GetUnicodeContent()
+    @Web@Httpapp@TWebResponse@Sent$qqrv @396 ; __fastcall Web::Httpapp::TWebResponse::Sent()
+    @Web@Httpapp@TWebResponse@SetContentStream$qqrp22System@Classes@TStream @395 ; __fastcall Web::Httpapp::TWebResponse::SetContentStream(System::Classes::TStream *)
+    @Web@Httpapp@TWebResponse@SetCookieField$qqrp23System@Classes@TStringsx27System@%AnsiStringT$us$i0$%t216System@TDateTimeo @394 ; __fastcall Web::Httpapp::TWebResponse::SetCookieField(System::Classes::TStrings *, const System::AnsiStringT<0>, const System::AnsiStringT<0>, System::TDateTime, bool)
+    @Web@Httpapp@TWebResponse@SetCustomHeader$qqrx20System@UnicodeStringt1 @393 ; __fastcall Web::Httpapp::TWebResponse::SetCustomHeader(const System::UnicodeString, const System::UnicodeString)
+    @Web@Httpapp@TWebResponse@SetCustomHeaders$qqrp23System@Classes@TStrings @392 ; __fastcall Web::Httpapp::TWebResponse::SetCustomHeaders(System::Classes::TStrings *)
+    @Web@Httpapp@TWebResponse@SetUnicodeContent$qqrx20System@UnicodeString @391 ; __fastcall Web::Httpapp::TWebResponse::SetUnicodeContent(const System::UnicodeString)
+    @Web@Httpapp@UnixPathToDosPath$qqrx20System@UnicodeString @318 ; __fastcall Web::Httpapp::UnixPathToDosPath(const System::UnicodeString)
+    @Web@Httpapp@WebApplicationDirectory$qqrv @430 ; __fastcall Web::Httpapp::WebApplicationDirectory()
+    @Web@Httpapp@WebApplicationFileName$qqrv @429 ; __fastcall Web::Httpapp::WebApplicationFileName()
+    @Web@Httpapp@initialization$qqrv @274 ; __fastcall Web::Httpapp::initialization()
+    @Web@Httpprod@ContentFromScriptFile$qqrx20System@UnicodeStringp14System@TObjectoynpqqrx20System@UnicodeStringp23System@Classes@TStrings$20System@UnicodeStringynpqqrx20System@UnicodeStringp23System@Classes@TStringsr20System@UnicodeSYwmbtGLMXYuhbapnK+Hlig @565 ; Web::Httpprod::ContentFromScriptFile(const System::UnicodeString, System::TObject *, bool, System::UnicodeString __fastcall __closure(*)(const System::UnicodeString, System::Classes::TStrings *), __closure(*)(const System::UnicodeString, System::Classe
+    @Web@Httpprod@ContentFromScriptStream$qqrp22System@Classes@TStreamp14System@TObjectoynpqqrx20System@UnicodeStringp23System@Classes@TStrings$20System@UnicodeStringynpqqrx20System@UnicodeStringp23System@Classes@TStringsr20System@Unic6Z0WLMvFiDQLAdaBViYm1g @566 ; Web::Httpprod::ContentFromScriptStream(System::Classes::TStream *, System::TObject *, bool, System::UnicodeString __fastcall __closure(*)(const System::UnicodeString, System::Classes::TStrings *), __closure(*)(const System::UnicodeString, System::Class
+    @Web@Httpprod@ContentFromStream$qqrp22System@Classes@TStreamoynpqqrx20System@UnicodeStringp23System@Classes@TStrings$20System@UnicodeStringynpqqrx20System@UnicodeStringp23System@Classes@TStringsr20System@UnicodeString$o @568 ; Web::Httpprod::ContentFromStream(System::Classes::TStream *, bool, System::UnicodeString __fastcall __closure(*)(const System::UnicodeString, System::Classes::TStrings *), __closure(*)(const System::UnicodeString, System::Classes::TStrings *, System::U
+    @Web@Httpprod@ContentFromString$qqrx20System@UnicodeStringoynpqqrx20System@UnicodeStringp23System@Classes@TStrings$20System@UnicodeStringynpqqrx20System@UnicodeStringp23System@Classes@TStringsr20System@UnicodeString$o @567 ; Web::Httpprod::ContentFromString(const System::UnicodeString, bool, System::UnicodeString __fastcall __closure(*)(const System::UnicodeString, System::Classes::TStrings *), __closure(*)(const System::UnicodeString, System::Classes::TStrings *, System::
+    @Web@Httpprod@DesignerFileManager @616 ; Web::Httpprod::DesignerFileManager
+    @Web@Httpprod@EScriptError@    @633 ; Web::Httpprod::EScriptError::
+    @Web@Httpprod@EScriptError@$bctr$qqrxp34Web@Httpprod@TAbstractScriptErrorsx20System@UnicodeString @561 ; __fastcall Web::Httpprod::EScriptError::EScriptError(Web::Httpprod::TAbstractScriptErrors * const, const System::UnicodeString)
+    @Web@Httpprod@EScriptError@$bdtr$qqrv @560 ; __fastcall Web::Httpprod::EScriptError::~EScriptError()
+    @Web@Httpprod@Finalization$qqrv @558 ; __fastcall Web::Httpprod::Finalization()
+    @Web@Httpprod@FindComponentWebModuleContext$qqrp25System@Classes@TComponent @564 ; __fastcall Web::Httpprod::FindComponentWebModuleContext(System::Classes::TComponent *)
+    @Web@Httpprod@GetEncodingOfStream$qqrp22System@Classes@TStreamri @569 ; __fastcall Web::Httpprod::GetEncodingOfStream(System::Classes::TStream *, int&)
+    @Web@Httpprod@GetTagID$qqrx20System@UnicodeString @586 ; __fastcall Web::Httpprod::GetTagID(const System::UnicodeString)
+    @Web@Httpprod@HTMLAlign        @620 ; Web::Httpprod::HTMLAlign
+    @Web@Httpprod@HTMLVAlign       @618 ; Web::Httpprod::HTMLVAlign
+    @Web@Httpprod@ScriptEnginesList @617 ; Web::Httpprod::ScriptEnginesList
+    @Web@Httpprod@TAbstractScriptEnginesList@ @623 ; Web::Httpprod::TAbstractScriptEnginesList::
+    @Web@Httpprod@TAbstractScriptEnginesList@$bctr$qqrv @559 ; __fastcall Web::Httpprod::TAbstractScriptEnginesList::TAbstractScriptEnginesList()
+    @Web@Httpprod@TAbstractScriptError@ @631 ; Web::Httpprod::TAbstractScriptError::
+    @Web@Httpprod@TAbstractScriptErrors@ @629 ; Web::Httpprod::TAbstractScriptErrors::
+    @Web@Httpprod@TAbstractScriptProducer@ @625 ; Web::Httpprod::TAbstractScriptProducer::
+    @Web@Httpprod@TAbstractScriptProducer@$bctr$qqrp14System@TObjectoynpqqrx20System@UnicodeStringp23System@Classes@TStrings$20System@UnicodeStringx20System@UnicodeString58System@%DelphiInterface$31Web@Httpprod@ILocateFileService% @562 ; Web::Httpprod::TAbstractScriptProducer::TAbstractScriptProducer(System::TObject *, bool, System::UnicodeString __fastcall __closure(*)(const System::UnicodeString, System::Classes::TStrings *), const System::UnicodeString, System::DelphiInterface<{5
+    @Web@Httpprod@TBasePageProducer@ @642 ; Web::Httpprod::TBasePageProducer::
+    @Web@Httpprod@TBasePageProducer@$bctr$qqrp25System@Classes@TComponent @594 ; __fastcall Web::Httpprod::TBasePageProducer::TBasePageProducer(System::Classes::TComponent *)
+    @Web@Httpprod@TBasePageProducer@Content$qqrv @585 ; __fastcall Web::Httpprod::TBasePageProducer::Content()
+    @Web@Httpprod@TBasePageProducer@ContentFromStream$qqrp22System@Classes@TStream @593 ; __fastcall Web::Httpprod::TBasePageProducer::ContentFromStream(System::Classes::TStream *)
+    @Web@Httpprod@TBasePageProducer@ContentFromString$qqrx20System@UnicodeString @591 ; __fastcall Web::Httpprod::TBasePageProducer::ContentFromString(const System::UnicodeString)
+    @Web@Httpprod@TBasePageProducer@DoTagEvent$qqr17Web@Httpprod@TTagx20System@UnicodeStringp23System@Classes@TStringsr20System@UnicodeString @584 ; __fastcall Web::Httpprod::TBasePageProducer::DoTagEvent(Web::Httpprod::TTag, const System::UnicodeString, System::Classes::TStrings *, System::UnicodeString&)
+    @Web@Httpprod@TBasePageProducer@GetLocateFileService$qqrv @580 ; __fastcall Web::Httpprod::TBasePageProducer::GetLocateFileService()
+    @Web@Httpprod@TBasePageProducer@GetProducerTemplateFileName$qqrv @577 ; __fastcall Web::Httpprod::TBasePageProducer::GetProducerTemplateFileName()
+    @Web@Httpprod@TBasePageProducer@GetProducerTemplateStream$qqrro @578 ; __fastcall Web::Httpprod::TBasePageProducer::GetProducerTemplateStream(bool&)
+    @Web@Httpprod@TBasePageProducer@GetScriptEngine$qqrv @582 ; __fastcall Web::Httpprod::TBasePageProducer::GetScriptEngine()
+    @Web@Httpprod@TBasePageProducer@GetTagID$qqrx20System@UnicodeString @587 ; __fastcall Web::Httpprod::TBasePageProducer::GetTagID(const System::UnicodeString)
+    @Web@Httpprod@TBasePageProducer@GetTemplateFileName$qqrv @576 ; __fastcall Web::Httpprod::TBasePageProducer::GetTemplateFileName()
+    @Web@Httpprod@TBasePageProducer@GetTemplateStream$qqrro @579 ; __fastcall Web::Httpprod::TBasePageProducer::GetTemplateStream(bool&)
+    @Web@Httpprod@TBasePageProducer@GetWebModuleContext$qqrv @588 ; __fastcall Web::Httpprod::TBasePageProducer::GetWebModuleContext()
+    @Web@Httpprod@TBasePageProducer@HandleScriptTag$qqrx20System@UnicodeStringp23System@Classes@TStringsr20System@UnicodeString @589 ; __fastcall Web::Httpprod::TBasePageProducer::HandleScriptTag(const System::UnicodeString, System::Classes::TStrings *, System::UnicodeString&)
+    @Web@Httpprod@TBasePageProducer@HandleTag$qqrx20System@UnicodeStringp23System@Classes@TStrings @590 ; __fastcall Web::Httpprod::TBasePageProducer::HandleTag(const System::UnicodeString, System::Classes::TStrings *)
+    @Web@Httpprod@TBasePageProducer@ImplHandleTag$qqrx20System@UnicodeStringp23System@Classes@TStrings @583 ; __fastcall Web::Httpprod::TBasePageProducer::ImplHandleTag(const System::UnicodeString, System::Classes::TStrings *)
+    @Web@Httpprod@TBasePageProducer@ServerScriptFromStream$qqrp22System@Classes@TStream @592 ; __fastcall Web::Httpprod::TBasePageProducer::ServerScriptFromStream(System::Classes::TStream *)
+    @Web@Httpprod@TBasePageProducer@UseScriptEngine$qqrv @581 ; __fastcall Web::Httpprod::TBasePageProducer::UseScriptEngine()
+    @Web@Httpprod@TCustomPageProducer@ @640 ; Web::Httpprod::TCustomPageProducer::
+    @Web@Httpprod@TCustomPageProducer@$bctr$qqrp25System@Classes@TComponent @575 ; __fastcall Web::Httpprod::TCustomPageProducer::TCustomPageProducer(System::Classes::TComponent *)
+    @Web@Httpprod@TCustomPageProducer@$bdtr$qqrv @574 ; __fastcall Web::Httpprod::TCustomPageProducer::~TCustomPageProducer()
+    @Web@Httpprod@TCustomPageProducer@GetTemplateFileName$qqrv @563 ; __fastcall Web::Httpprod::TCustomPageProducer::GetTemplateFileName()
+    @Web@Httpprod@TCustomPageProducer@GetTemplateStream$qqrro @573 ; __fastcall Web::Httpprod::TCustomPageProducer::GetTemplateStream(bool&)
+    @Web@Httpprod@TCustomPageProducer@HandleTag$qqrx20System@UnicodeStringp23System@Classes@TStrings @570 ; __fastcall Web::Httpprod::TCustomPageProducer::HandleTag(const System::UnicodeString, System::Classes::TStrings *)
+    @Web@Httpprod@TCustomPageProducer@SetHTMLDoc$qqrp23System@Classes@TStrings @571 ; __fastcall Web::Httpprod::TCustomPageProducer::SetHTMLDoc(System::Classes::TStrings *)
+    @Web@Httpprod@TCustomPageProducer@SetHTMLFile$qqrx20System@UnicodeString @572 ; __fastcall Web::Httpprod::TCustomPageProducer::SetHTMLFile(const System::UnicodeString)
+    @Web@Httpprod@THTMLTableAttributes@ @655 ; Web::Httpprod::THTMLTableAttributes::
+    @Web@Httpprod@THTMLTableAttributes@$bctr$qqrp34Web@Httpapp@TCustomContentProducer @611 ; __fastcall Web::Httpprod::THTMLTableAttributes::THTMLTableAttributes(Web::Httpapp::TCustomContentProducer *)
+    @Web@Httpprod@THTMLTableAttributes@AssignTo$qqrp26System@Classes@TPersistent @610 ; __fastcall Web::Httpprod::THTMLTableAttributes::AssignTo(System::Classes::TPersistent *)
+    @Web@Httpprod@THTMLTableAttributes@RestoreDefaults$qqrv @609 ; __fastcall Web::Httpprod::THTMLTableAttributes::RestoreDefaults()
+    @Web@Httpprod@THTMLTableAttributes@SetAlign$qqr23Web@Httpprod@THTMLAlign @608 ; __fastcall Web::Httpprod::THTMLTableAttributes::SetAlign(Web::Httpprod::THTMLAlign)
+    @Web@Httpprod@THTMLTableAttributes@SetBGColor$qqr20System@UnicodeString @606 ; __fastcall Web::Httpprod::THTMLTableAttributes::SetBGColor(System::UnicodeString)
+    @Web@Httpprod@THTMLTableAttributes@SetBorder$qqri @607 ; __fastcall Web::Httpprod::THTMLTableAttributes::SetBorder(int)
+    @Web@Httpprod@THTMLTableAttributes@SetCellPadding$qqri @604 ; __fastcall Web::Httpprod::THTMLTableAttributes::SetCellPadding(int)
+    @Web@Httpprod@THTMLTableAttributes@SetCellSpacing$qqri @605 ; __fastcall Web::Httpprod::THTMLTableAttributes::SetCellSpacing(int)
+    @Web@Httpprod@THTMLTableAttributes@SetWidth$qqri @603 ; __fastcall Web::Httpprod::THTMLTableAttributes::SetWidth(int)
+    @Web@Httpprod@THTMLTableCellAttributes@ @647 ; Web::Httpprod::THTMLTableCellAttributes::
+    @Web@Httpprod@THTMLTableElementAttributes@ @653 ; Web::Httpprod::THTMLTableElementAttributes::
+    @Web@Httpprod@THTMLTableElementAttributes@AssignTo$qqrp26System@Classes@TPersistent @602 ; __fastcall Web::Httpprod::THTMLTableElementAttributes::AssignTo(System::Classes::TPersistent *)
+    @Web@Httpprod@THTMLTableElementAttributes@RestoreDefaults$qqrv @601 ; __fastcall Web::Httpprod::THTMLTableElementAttributes::RestoreDefaults()
+    @Web@Httpprod@THTMLTableElementAttributes@SetAlign$qqr23Web@Httpprod@THTMLAlign @600 ; __fastcall Web::Httpprod::THTMLTableElementAttributes::SetAlign(Web::Httpprod::THTMLAlign)
+    @Web@Httpprod@THTMLTableElementAttributes@SetBGColor$qqr20System@UnicodeString @599 ; __fastcall Web::Httpprod::THTMLTableElementAttributes::SetBGColor(System::UnicodeString)
+    @Web@Httpprod@THTMLTableElementAttributes@SetVAlign$qqr24Web@Httpprod@THTMLVAlign @598 ; __fastcall Web::Httpprod::THTMLTableElementAttributes::SetVAlign(Web::Httpprod::THTMLVAlign)
+    @Web@Httpprod@THTMLTableHeaderAttributes@ @651 ; Web::Httpprod::THTMLTableHeaderAttributes::
+    @Web@Httpprod@THTMLTableHeaderAttributes@AssignTo$qqrp26System@Classes@TPersistent @597 ; __fastcall Web::Httpprod::THTMLTableHeaderAttributes::AssignTo(System::Classes::TPersistent *)
+    @Web@Httpprod@THTMLTableHeaderAttributes@RestoreDefaults$qqrv @596 ; __fastcall Web::Httpprod::THTMLTableHeaderAttributes::RestoreDefaults()
+    @Web@Httpprod@THTMLTableHeaderAttributes@SetCaption$qqr20System@UnicodeString @595 ; __fastcall Web::Httpprod::THTMLTableHeaderAttributes::SetCaption(System::UnicodeString)
+    @Web@Httpprod@THTMLTableRowAttributes@ @649 ; Web::Httpprod::THTMLTableRowAttributes::
+    @Web@Httpprod@THTMLTagAttributes@ @657 ; Web::Httpprod::THTMLTagAttributes::
+    @Web@Httpprod@THTMLTagAttributes@$bctr$qqrp34Web@Httpapp@TCustomContentProducer @615 ; __fastcall Web::Httpprod::THTMLTagAttributes::THTMLTagAttributes(Web::Httpapp::TCustomContentProducer *)
+    @Web@Httpprod@THTMLTagAttributes@Changed$qqrv @614 ; __fastcall Web::Httpprod::THTMLTagAttributes::Changed()
+    @Web@Httpprod@THTMLTagAttributes@RestoreDefaults$qqrv @613 ; __fastcall Web::Httpprod::THTMLTagAttributes::RestoreDefaults()
+    @Web@Httpprod@THTMLTagAttributes@SetCustom$qqrx20System@UnicodeString @612 ; __fastcall Web::Httpprod::THTMLTagAttributes::SetCustom(const System::UnicodeString)
+    @Web@Httpprod@TPageProducer@   @638 ; Web::Httpprod::TPageProducer::
+    @Web@Httpprod@initialization$qqrv @557 ; __fastcall Web::Httpprod::initialization()
+    @Web@Webcntxt@Finalization$qqrv @684 ; __fastcall Web::Webcntxt::Finalization()
+    @Web@Webcntxt@GetModuleFileNameProc @716 ; Web::Webcntxt::GetModuleFileNameProc
+    @Web@Webcntxt@GetWebContextProc @719 ; Web::Webcntxt::GetWebContextProc
+    @Web@Webcntxt@GetWebEndUserProc @717 ; Web::Webcntxt::GetWebEndUserProc
+    @Web@Webcntxt@SetWebContextProc @718 ; Web::Webcntxt::SetWebContextProc
+    @Web@Webcntxt@TAbstractAdapterRequest@ @726 ; Web::Webcntxt::TAbstractAdapterRequest::
+    @Web@Webcntxt@TAbstractAdapterRequest@$bctr$qqrv @688 ; __fastcall Web::Webcntxt::TAbstractAdapterRequest::TAbstractAdapterRequest()
+    @Web@Webcntxt@TAbstractAdapterRequest@GetRequest$qqrv @687 ; __fastcall Web::Webcntxt::TAbstractAdapterRequest::GetRequest()
+    @Web@Webcntxt@TAbstractAdapterResponse@ @724 ; Web::Webcntxt::TAbstractAdapterResponse::
+    @Web@Webcntxt@TAbstractAdapterResponse@$bctr$qqrv @686 ; __fastcall Web::Webcntxt::TAbstractAdapterResponse::TAbstractAdapterResponse()
+    @Web@Webcntxt@TAbstractAdapterResponse@GetResponse$qqrv @685 ; __fastcall Web::Webcntxt::TAbstractAdapterResponse::GetResponse()
+    @Web@Webcntxt@TAbstractWebContext@ @730 ; Web::Webcntxt::TAbstractWebContext::
+    @Web@Webcntxt@TAbstractWebContext@$bctr$qqrv @690 ; __fastcall Web::Webcntxt::TAbstractWebContext::TAbstractWebContext()
+    @Web@Webcntxt@TAbstractWebContext@$bdtr$qqrv @689 ; __fastcall Web::Webcntxt::TAbstractWebContext::~TAbstractWebContext()
+    @Web@Webcntxt@TWebContext@     @728 ; Web::Webcntxt::TWebContext::
+    @Web@Webcntxt@TWebContext@$bctr$qqrp34Web@Httpapp@TAbstractWebModuleListp23Web@Httpapp@TWebRequestp24Web@Httpapp@TWebResponsep31Web@Httpapp@TAbstractWebSession @714 ; __fastcall Web::Webcntxt::TWebContext::TWebContext(Web::Httpapp::TAbstractWebModuleList *, Web::Httpapp::TWebRequest *, Web::Httpapp::TWebResponse *, Web::Httpapp::TAbstractWebSession *)
+    @Web@Webcntxt@TWebContext@$bdtr$qqrv @713 ; __fastcall Web::Webcntxt::TWebContext::~TWebContext()
+    @Web@Webcntxt@TWebContext@FindApplicationModule$qqrp14System@TObject @698 ; __fastcall Web::Webcntxt::TWebContext::FindApplicationModule(System::TObject *)
+    @Web@Webcntxt@TWebContext@FindDefaultPageInfo$qqrp17System@TMetaClassrp32Web@Httpapp@TAbstractWebPageInfo @710 ; __fastcall Web::Webcntxt::TWebContext::FindDefaultPageInfo(System::TMetaClass *, Web::Httpapp::TAbstractWebPageInfo *&)
+    @Web@Webcntxt@TWebContext@FindModuleClass$qqrp17System@TMetaClass @709 ; __fastcall Web::Webcntxt::TWebContext::FindModuleClass(System::TMetaClass *)
+    @Web@Webcntxt@TWebContext@FindModuleName$qqrx20System@UnicodeString @708 ; __fastcall Web::Webcntxt::TWebContext::FindModuleName(const System::UnicodeString)
+    @Web@Webcntxt@TWebContext@FindPage$qqrx20System@UnicodeString55System@%Set$28Web@Webcntxt@TFindPageOptiont1$i0$t1$i1$%rp14System@TObject @712 ; Web::Webcntxt::TWebContext::FindPage(const System::UnicodeString, System::Set<{583}...
+    @Web@Webcntxt@TWebContext@FindPageInfo$qqrx20System@UnicodeString55System@%Set$28Web@Webcntxt@TFindPageOptiont1$i0$t1$i1$%rp32Web@Httpapp@TAbstractWebPageInfo @711 ; Web::Webcntxt::TWebContext::FindPageInfo(const System::UnicodeString, System::Set<{583}...
+    @Web@Webcntxt@TWebContext@FindVariableContainer$qqrx20System@UnicodeString @701 ; __fastcall Web::Webcntxt::TWebContext::FindVariableContainer(const System::UnicodeString)
+    @Web@Webcntxt@TWebContext@GetAdapterRequest$qqrv @703 ; __fastcall Web::Webcntxt::TWebContext::GetAdapterRequest()
+    @Web@Webcntxt@TWebContext@GetAdapterResponse$qqrv @702 ; __fastcall Web::Webcntxt::TWebContext::GetAdapterResponse()
+    @Web@Webcntxt@TWebContext@GetDispatchedPageName$qqrv @694 ; __fastcall Web::Webcntxt::TWebContext::GetDispatchedPageName()
+    @Web@Webcntxt@TWebContext@GetEndUser$qqrv @706 ; __fastcall Web::Webcntxt::TWebContext::GetEndUser()
+    @Web@Webcntxt@TWebContext@GetPageCount$qqrv @700 ; __fastcall Web::Webcntxt::TWebContext::GetPageCount()
+    @Web@Webcntxt@TWebContext@GetPageInfo$qqri @699 ; __fastcall Web::Webcntxt::TWebContext::GetPageInfo(int)
+    @Web@Webcntxt@TWebContext@GetRequestedPageName$qqrv @693 ; __fastcall Web::Webcntxt::TWebContext::GetRequestedPageName()
+    @Web@Webcntxt@TWebContext@GetSession$qqrv @697 ; __fastcall Web::Webcntxt::TWebContext::GetSession()
+    @Web@Webcntxt@TWebContext@GetWebModules$qqrv @707 ; __fastcall Web::Webcntxt::TWebContext::GetWebModules()
+    @Web@Webcntxt@TWebContext@GetWebRequest$qqrv @705 ; __fastcall Web::Webcntxt::TWebContext::GetWebRequest()
+    @Web@Webcntxt@TWebContext@GetWebResponse$qqrv @704 ; __fastcall Web::Webcntxt::TWebContext::GetWebResponse()
+    @Web@Webcntxt@TWebContext@SetAdapterRequest$qqr44System@%DelphiInterface$17System@IInterface% @696 ; Web::Webcntxt::TWebContext::SetAdapterRequest(System::DelphiInterface<{583}...
+    @Web@Webcntxt@TWebContext@SetAdapterResponse$qqr44System@%DelphiInterface$17System@IInterface% @695 ; Web::Webcntxt::TWebContext::SetAdapterResponse(System::DelphiInterface<{583}...
+    @Web@Webcntxt@TWebContext@SetDispatchedPageName$qqrx20System@UnicodeString @692 ; __fastcall Web::Webcntxt::TWebContext::SetDispatchedPageName(const System::UnicodeString)
+    @Web@Webcntxt@TWebContext@SetRequestedPageName$qqrx20System@UnicodeString @691 ; __fastcall Web::Webcntxt::TWebContext::SetRequestedPageName(const System::UnicodeString)
+    @Web@Webcntxt@WebContext$qqrv  @715 ; __fastcall Web::Webcntxt::WebContext()
+    @Web@Webcntxt@initialization$qqrv @683 ; __fastcall Web::Webcntxt::initialization()
+    @Web@Webconst@Finalization$qqrv @2   ; __fastcall Web::Webconst::Finalization()
+    @Web@Webconst@_sActionCantRedirectToBlankURL @12  ; Web::Webconst::_sActionCantRedirectToBlankURL
+    @Web@Webconst@_sActionCantRespondToUnkownHTTPMethod @13  ; Web::Webconst::_sActionCantRespondToUnkownHTTPMethod
+    @Web@Webconst@_sActionDoesNotProvideResponse @14  ; Web::Webconst::_sActionDoesNotProvideResponse
+    @Web@Webconst@_sAppFactoryAlreadyRegistered @32  ; Web::Webconst::_sAppFactoryAlreadyRegistered
+    @Web@Webconst@_sDuplicateActionName @34  ; Web::Webconst::_sDuplicateActionName
+    @Web@Webconst@_sDuplicateMimeTypes @9   ; Web::Webconst::_sDuplicateMimeTypes
+    @Web@Webconst@_sFactoryAlreadyRegistered @33  ; Web::Webconst::_sFactoryAlreadyRegistered
+    @Web@Webconst@_sFieldNameColumn @22  ; Web::Webconst::_sFieldNameColumn
+    @Web@Webconst@_sFieldTypeColumn @21  ; Web::Webconst::_sFieldTypeColumn
+    @Web@Webconst@_sHTTPItemDefault @27  ; Web::Webconst::_sHTTPItemDefault
+    @Web@Webconst@_sHTTPItemEnabled @28  ; Web::Webconst::_sHTTPItemEnabled
+    @Web@Webconst@_sHTTPItemMethod @25  ; Web::Webconst::_sHTTPItemMethod
+    @Web@Webconst@_sHTTPItemName   @30  ; Web::Webconst::_sHTTPItemName
+    @Web@Webconst@_sHTTPItemProducer @26  ; Web::Webconst::_sHTTPItemProducer
+    @Web@Webconst@_sHTTPItemURI    @29  ; Web::Webconst::_sHTTPItemURI
+    @Web@Webconst@_sInternalApplicationError @16  ; Web::Webconst::_sInternalApplicationError
+    @Web@Webconst@_sInvalidActionRegistration @35  ; Web::Webconst::_sInvalidActionRegistration
+    @Web@Webconst@_sInvalidParent  @15  ; Web::Webconst::_sInvalidParent
+    @Web@Webconst@_sInvalidWebComponentsEnumeration @19  ; Web::Webconst::_sInvalidWebComponentsEnumeration
+    @Web@Webconst@_sInvalidWebComponentsRegistration @20  ; Web::Webconst::_sInvalidWebComponentsRegistration
+    @Web@Webconst@_sInvalidWebParent @18  ; Web::Webconst::_sInvalidWebParent
+    @Web@Webconst@_sOnlyOneDispatcher @31  ; Web::Webconst::_sOnlyOneDispatcher
+    @Web@Webconst@_sResNotFound    @24  ; Web::Webconst::_sResNotFound
+    @Web@Webconst@_sTooManyColumns @23  ; Web::Webconst::_sTooManyColumns
+    @Web@Webconst@_sVariableIsNotAContainer @17  ; Web::Webconst::_sVariableIsNotAContainer
+    @Web@Webconst@_sWebDirectoryExclude @4   ; Web::Webconst::_sWebDirectoryExclude
+    @Web@Webconst@_sWebDirectoryInclude @5   ; Web::Webconst::_sWebDirectoryInclude
+    @Web@Webconst@_sWebDirectoryItemDisplayName @3   ; Web::Webconst::_sWebDirectoryItemDisplayName
+    @Web@Webconst@_sWebFileDirectoryItemAction @7   ; Web::Webconst::_sWebFileDirectoryItemAction
+    @Web@Webconst@_sWebFileDirectoryItemMask @8   ; Web::Webconst::_sWebFileDirectoryItemMask
+    @Web@Webconst@_sWebFileExtensionItemExtensions @11  ; Web::Webconst::_sWebFileExtensionItemExtensions
+    @Web@Webconst@_sWebFileExtensionItemMimeType @10  ; Web::Webconst::_sWebFileExtensionItemMimeType
+    @Web@Webconst@_sWebFileExtensionsItemDisplayName @6   ; Web::Webconst::_sWebFileExtensionsItemDisplayName
+    @Web@Webconst@initialization$qqrv @1   ; __fastcall Web::Webconst::initialization()
+    @Web@Webfiledispatcher@EnumerateExtensions$qqrx20System@UnicodeStringo65System@%DelphiInterface$38Web@Webfiledispatcher@TExtensionMethod% @152 ; Web::Webfiledispatcher::EnumerateExtensions(const System::UnicodeString, bool, System::DelphiInterface<{583}...
+    @Web@Webfiledispatcher@FLookupExtensions @153 ; Web::Webfiledispatcher::FLookupExtensions
+    @Web@Webfiledispatcher@FLookupMimeType @154 ; Web::Webfiledispatcher::FLookupMimeType
+    @Web@Webfiledispatcher@Finalization$qqrv @106 ; __fastcall Web::Webfiledispatcher::Finalization()
+    @Web@Webfiledispatcher@TDispatchFileRequest@ @197 ; Web::Webfiledispatcher::TDispatchFileRequest::
+    @Web@Webfiledispatcher@TDispatchFileRequest@$bctr$qqrp50Web@Webfiledispatcher@TWebFileDispatcherProperties @149 ; __fastcall Web::Webfiledispatcher::TDispatchFileRequest::TDispatchFileRequest(Web::Webfiledispatcher::TWebFileDispatcherProperties *)
+    @Web@Webfiledispatcher@TDispatchFileRequest@$bdtr$qqrv @148 ; __fastcall Web::Webfiledispatcher::TDispatchFileRequest::~TDispatchFileRequest()
+    @Web@Webfiledispatcher@TDispatchFileRequest@CanDispatchFileName$qqrx20System@UnicodeString @150 ; __fastcall Web::Webfiledispatcher::TDispatchFileRequest::CanDispatchFileName(const System::UnicodeString)
+    @Web@Webfiledispatcher@TDispatchFileRequest@DispatchFileRequest$qqrv @143 ; __fastcall Web::Webfiledispatcher::TDispatchFileRequest::DispatchFileRequest()
+    @Web@Webfiledispatcher@TDispatchFileRequest@GetApplicationPath$qqrv @147 ; __fastcall Web::Webfiledispatcher::TDispatchFileRequest::GetApplicationPath()
+    @Web@Webfiledispatcher@TDispatchFileRequest@GetDispatchFileName$qqrx20System@UnicodeStringr20System@UnicodeString @142 ; __fastcall Web::Webfiledispatcher::TDispatchFileRequest::GetDispatchFileName(const System::UnicodeString, System::UnicodeString&)
+    @Web@Webfiledispatcher@TDispatchFileRequest@GetMimeType$qqrx20System@UnicodeString @145 ; __fastcall Web::Webfiledispatcher::TDispatchFileRequest::GetMimeType(const System::UnicodeString)
+    @Web@Webfiledispatcher@TDispatchFileRequest@IsDispatchFileName$qqrx20System@UnicodeString @140 ; __fastcall Web::Webfiledispatcher::TDispatchFileRequest::IsDispatchFileName(const System::UnicodeString)
+    @Web@Webfiledispatcher@TDispatchFileRequest@IsIncludeDirectory$qqrx20System@UnicodeString @151 ; __fastcall Web::Webfiledispatcher::TDispatchFileRequest::IsIncludeDirectory(const System::UnicodeString)
+    @Web@Webfiledispatcher@TDispatchFileRequest@QualifyFileName$qqr20System@UnicodeString @146 ; __fastcall Web::Webfiledispatcher::TDispatchFileRequest::QualifyFileName(System::UnicodeString)
+    @Web@Webfiledispatcher@TDispatchFileRequest@SetResponse$qqrx20System@UnicodeString @144 ; __fastcall Web::Webfiledispatcher::TDispatchFileRequest::SetResponse(const System::UnicodeString)
+    @Web@Webfiledispatcher@TDispatchFileRequest@UpdateExtensionMimeType$qqrv @141 ; __fastcall Web::Webfiledispatcher::TDispatchFileRequest::UpdateExtensionMimeType()
+    @Web@Webfiledispatcher@TWebDirectories@ @186 ; Web::Webfiledispatcher::TWebDirectories::
+    @Web@Webfiledispatcher@TWebDirectories@$bctr$qqrp25System@Classes@TComponent @119 ; __fastcall Web::Webfiledispatcher::TWebDirectories::TWebDirectories(System::Classes::TComponent *)
+    @Web@Webfiledispatcher@TWebDirectories@Add$qqrv @120 ; __fastcall Web::Webfiledispatcher::TWebDirectories::Add()
+    @Web@Webfiledispatcher@TWebDirectories@GetAttr$qqri @114 ; __fastcall Web::Webfiledispatcher::TWebDirectories::GetAttr(int)
+    @Web@Webfiledispatcher@TWebDirectories@GetAttrCount$qqrv @115 ; __fastcall Web::Webfiledispatcher::TWebDirectories::GetAttrCount()
+    @Web@Webfiledispatcher@TWebDirectories@GetItem$qqri @117 ; __fastcall Web::Webfiledispatcher::TWebDirectories::GetItem(int)
+    @Web@Webfiledispatcher@TWebDirectories@GetItemAttr$qqrii @113 ; __fastcall Web::Webfiledispatcher::TWebDirectories::GetItemAttr(int, int)
+    @Web@Webfiledispatcher@TWebDirectories@GetOwner$qqrv @112 ; __fastcall Web::Webfiledispatcher::TWebDirectories::GetOwner()
+    @Web@Webfiledispatcher@TWebDirectories@SetDefaultDirectories$qqrv @118 ; __fastcall Web::Webfiledispatcher::TWebDirectories::SetDefaultDirectories()
+    @Web@Webfiledispatcher@TWebDirectories@SetItem$qqrixp39Web@Webfiledispatcher@TWebDirectoryItem @116 ; __fastcall Web::Webfiledispatcher::TWebDirectories::SetItem(int, Web::Webfiledispatcher::TWebDirectoryItem * const)
+    @Web@Webfiledispatcher@TWebDirectoryItem@ @188 ; Web::Webfiledispatcher::TWebDirectoryItem::
+    @Web@Webfiledispatcher@TWebDirectoryItem@$bctr$qqrp26System@Classes@TCollection41Web@Webfiledispatcher@TWebDirectoryActionx20System@UnicodeString @125 ; __fastcall Web::Webfiledispatcher::TWebDirectoryItem::TWebDirectoryItem(System::Classes::TCollection *, Web::Webfiledispatcher::TWebDirectoryAction, const System::UnicodeString)
+    @Web@Webfiledispatcher@TWebDirectoryItem@$bdtr$qqrv @124 ; __fastcall Web::Webfiledispatcher::TWebDirectoryItem::~TWebDirectoryItem()
+    @Web@Webfiledispatcher@TWebDirectoryItem@GetDisplayName$qqrv @123 ; __fastcall Web::Webfiledispatcher::TWebDirectoryItem::GetDisplayName()
+    @Web@Webfiledispatcher@TWebDirectoryItem@SetDirectoryMask$qqrx20System@UnicodeString @122 ; __fastcall Web::Webfiledispatcher::TWebDirectoryItem::SetDirectoryMask(const System::UnicodeString)
+    @Web@Webfiledispatcher@TWebDirectoryItem@UpdateMask$qqrv @121 ; __fastcall Web::Webfiledispatcher::TWebDirectoryItem::UpdateMask()
+    @Web@Webfiledispatcher@TWebFileDispatcherProperties@ @195 ; Web::Webfiledispatcher::TWebFileDispatcherProperties::
+    @Web@Webfiledispatcher@TWebFileDispatcherProperties@$bctr$qqrp25System@Classes@TComponent @111 ; __fastcall Web::Webfiledispatcher::TWebFileDispatcherProperties::TWebFileDispatcherProperties(System::Classes::TComponent *)
+    @Web@Webfiledispatcher@TWebFileDispatcherProperties@$bdtr$qqrv @110 ; __fastcall Web::Webfiledispatcher::TWebFileDispatcherProperties::~TWebFileDispatcherProperties()
+    @Web@Webfiledispatcher@TWebFileDispatcherProperties@GetRootDirectory$qqrv @109 ; __fastcall Web::Webfiledispatcher::TWebFileDispatcherProperties::GetRootDirectory()
+    @Web@Webfiledispatcher@TWebFileDispatcherProperties@SetWebDirectories$qqrxp37Web@Webfiledispatcher@TWebDirectories @107 ; __fastcall Web::Webfiledispatcher::TWebFileDispatcherProperties::SetWebDirectories(Web::Webfiledispatcher::TWebDirectories * const)
+    @Web@Webfiledispatcher@TWebFileDispatcherProperties@SetWebFileExtension$qqrxp40Web@Webfiledispatcher@TWebFileExtensions @108 ; __fastcall Web::Webfiledispatcher::TWebFileDispatcherProperties::SetWebFileExtension(Web::Webfiledispatcher::TWebFileExtensions * const)
+    @Web@Webfiledispatcher@TWebFileExtensionItem@ @193 ; Web::Webfiledispatcher::TWebFileExtensionItem::
+    @Web@Webfiledispatcher@TWebFileExtensionItem@$bctr$qqrp26System@Classes@TCollectionx20System@UnicodeStringt2 @139 ; __fastcall Web::Webfiledispatcher::TWebFileExtensionItem::TWebFileExtensionItem(System::Classes::TCollection *, const System::UnicodeString, const System::UnicodeString)
+    @Web@Webfiledispatcher@TWebFileExtensionItem@GetComponentState$qqrv @138 ; __fastcall Web::Webfiledispatcher::TWebFileExtensionItem::GetComponentState()
+    @Web@Webfiledispatcher@TWebFileExtensionItem@GetDisplayName$qqrv @137 ; __fastcall Web::Webfiledispatcher::TWebFileExtensionItem::GetDisplayName()
+    @Web@Webfiledispatcher@TWebFileExtensionItem@SetExtensions$qqrx20System@UnicodeString @135 ; __fastcall Web::Webfiledispatcher::TWebFileExtensionItem::SetExtensions(const System::UnicodeString)
+    @Web@Webfiledispatcher@TWebFileExtensionItem@SetMimeType$qqrx20System@UnicodeString @136 ; __fastcall Web::Webfiledispatcher::TWebFileExtensionItem::SetMimeType(const System::UnicodeString)
+    @Web@Webfiledispatcher@TWebFileExtensions@ @191 ; Web::Webfiledispatcher::TWebFileExtensions::
+    @Web@Webfiledispatcher@TWebFileExtensions@$bctr$qqrp25System@Classes@TComponent @133 ; __fastcall Web::Webfiledispatcher::TWebFileExtensions::TWebFileExtensions(System::Classes::TComponent *)
+    @Web@Webfiledispatcher@TWebFileExtensions@Add$qqrv @134 ; __fastcall Web::Webfiledispatcher::TWebFileExtensions::Add()
+    @Web@Webfiledispatcher@TWebFileExtensions@GetAttr$qqri @128 ; __fastcall Web::Webfiledispatcher::TWebFileExtensions::GetAttr(int)
+    @Web@Webfiledispatcher@TWebFileExtensions@GetAttrCount$qqrv @129 ; __fastcall Web::Webfiledispatcher::TWebFileExtensions::GetAttrCount()
+    @Web@Webfiledispatcher@TWebFileExtensions@GetItem$qqri @131 ; __fastcall Web::Webfiledispatcher::TWebFileExtensions::GetItem(int)
+    @Web@Webfiledispatcher@TWebFileExtensions@GetItemAttr$qqrii @127 ; __fastcall Web::Webfiledispatcher::TWebFileExtensions::GetItemAttr(int, int)
+    @Web@Webfiledispatcher@TWebFileExtensions@GetOwner$qqrv @126 ; __fastcall Web::Webfiledispatcher::TWebFileExtensions::GetOwner()
+    @Web@Webfiledispatcher@TWebFileExtensions@SetDefaultExtensions$qqrv @132 ; __fastcall Web::Webfiledispatcher::TWebFileExtensions::SetDefaultExtensions()
+    @Web@Webfiledispatcher@TWebFileExtensions@SetItem$qqrixp43Web@Webfiledispatcher@TWebFileExtensionItem @130 ; __fastcall Web::Webfiledispatcher::TWebFileExtensions::SetItem(int, Web::Webfiledispatcher::TWebFileExtensionItem * const)
+    @Web@Webfiledispatcher@initialization$qqrv @105 ; __fastcall Web::Webfiledispatcher::initialization()
+    @Web@Win@Adsconst@Finalization$qqrv @736 ; __fastcall Web::Win::Adsconst::Finalization()
+    @Web@Win@Adsconst@_sADSAccessFailureVista @737 ; Web::Win::Adsconst::_sADSAccessFailureVista
+    @Web@Win@Adsconst@_sIISNotRunning @738 ; Web::Win::Adsconst::_sIISNotRunning
+    @Web@Win@Adsconst@_sLoadError  @739 ; Web::Win::Adsconst::_sLoadError
+    @Web@Win@Adsconst@initialization$qqrv @735 ; __fastcall Web::Win::Adsconst::initialization()
+    @Web@Win@Adstypes@ADsBuildEnumerator$qqsx57System@%DelphiInterface$30Web@Win@Adstypes@IAdsContainer%r39System@%DelphiInterface$12IEnumVARIANT% @747 ; Web::Win::Adstypes::ADsBuildEnumerator(const System::DelphiInterface<{583}...
+    @Web@Win@Adstypes@ADsEnumerateNext$qqs39System@%DelphiInterface$12IEnumVARIANT%uir17System@OleVariantrui @745 ; Web::Win::Adstypes::ADsEnumerateNext(System::DelphiInterface<{583}...
+    @Web@Win@Adstypes@ADsFreeEnumerator$qqs39System@%DelphiInterface$12IEnumVARIANT% @746 ; Web::Win::Adstypes::ADsFreeEnumerator(System::DelphiInterface<{583}...
+    @Web@Win@Adstypes@ADsGetObject$qqs17System@WideStringrx5_GUIDpv @749 ; __stdcall Web::Win::Adstypes::ADsGetObject(System::WideString, const _GUID&, void *)
+    @Web@Win@Adstypes@ADsOpenObject$qqs17System@WideStringt1t1uirx5_GUIDpv @748 ; __stdcall Web::Win::Adstypes::ADsOpenObject(System::WideString, System::WideString, System::WideString, unsigned int, const _GUID&, void *)
+    @Web@Win@Adstypes@CheckForIIS$qqrv @771 ; __fastcall Web::Win::Adstypes::CheckForIIS()
+    @Web@Win@Adstypes@EAdsException@ @783 ; Web::Win::Adstypes::EAdsException::
+    @Web@Win@Adstypes@Finalization$qqrv @741 ; __fastcall Web::Win::Adstypes::Finalization()
+    @Web@Win@Adstypes@GetVirtualWebDirObject$qqrv @770 ; __fastcall Web::Win::Adstypes::GetVirtualWebDirObject()
+    @Web@Win@Adstypes@IID_IADsContainer @772 ; Web::Win::Adstypes::IID_IADsContainer
+    @Web@Win@Adstypes@TVirtualWebDir@ @776 ; Web::Win::Adstypes::TVirtualWebDir::
+    @Web@Win@Adstypes@TVirtualWebDir@$bctr$qqrv @767 ; __fastcall Web::Win::Adstypes::TVirtualWebDir::TVirtualWebDir()
+    @Web@Win@Adstypes@TVirtualWebDir@$bdtr$qqrv @766 ; __fastcall Web::Win::Adstypes::TVirtualWebDir::~TVirtualWebDir()
+    @Web@Win@Adstypes@TVirtualWebDir@CreateVRoot$qqrxp30Web@Win@Adstypes@TWebDirStruct @753 ; __fastcall Web::Win::Adstypes::TVirtualWebDir::CreateVRoot(Web::Win::Adstypes::TWebDirStruct * const)
+    @Web@Win@Adstypes@TVirtualWebDir@DeleteVRoot$qqrx17System@WideString @754 ; __fastcall Web::Win::Adstypes::TVirtualWebDir::DeleteVRoot(const System::WideString)
+    @Web@Win@Adstypes@TVirtualWebDir@GetRemoteWebDirInfo$qqrv @755 ; __fastcall Web::Win::Adstypes::TVirtualWebDir::GetRemoteWebDirInfo()
+    @Web@Win@Adstypes@TVirtualWebDir@GetWebDirChildInfo$qqrx20System@UnicodeString @756 ; __fastcall Web::Win::Adstypes::TVirtualWebDir::GetWebDirChildInfo(const System::UnicodeString)
+    @Web@Win@Adstypes@TVirtualWebDir@GetWebDirInfo$qqrv @757 ; __fastcall Web::Win::Adstypes::TVirtualWebDir::GetWebDirInfo()
+    @Web@Win@Adstypes@TVirtualWebDir@LoadContainer$qqrv @760 ; __fastcall Web::Win::Adstypes::TVirtualWebDir::LoadContainer()
+    @Web@Win@Adstypes@TVirtualWebDir@LoadWebDirArray$qqrx57System@%DelphiInterface$30Web@Win@Adstypes@IAdsContainer%p28Web@Win@Adstypes@TWebDirListx20System@UnicodeStringoot3 @761 ; Web::Win::Adstypes::TVirtualWebDir::LoadWebDirArray(const System::DelphiInterface<{583}...
+    @Web@Win@Adstypes@TVirtualWebDir@LoadWebDirChildList$qqrx20System@UnicodeString @758 ; __fastcall Web::Win::Adstypes::TVirtualWebDir::LoadWebDirChildList(const System::UnicodeString)
+    @Web@Win@Adstypes@TVirtualWebDir@LoadWebDirList$qqrv @759 ; __fastcall Web::Win::Adstypes::TVirtualWebDir::LoadWebDirList()
+    @Web@Win@Adstypes@TVirtualWebDir@MatchFilter$qqrp30Web@Win@Adstypes@TWebDirStruct @763 ; __fastcall Web::Win::Adstypes::TVirtualWebDir::MatchFilter(Web::Win::Adstypes::TWebDirStruct *)
+    @Web@Win@Adstypes@TVirtualWebDir@QueryInterface$qqsrx5_GUIDpv @752 ; __stdcall Web::Win::Adstypes::TVirtualWebDir::QueryInterface(const _GUID&, void *)
+    @Web@Win@Adstypes@TVirtualWebDir@SetFilter$qqrxp30Web@Win@Adstypes@TWebDirStruct @762 ; __fastcall Web::Win::Adstypes::TVirtualWebDir::SetFilter(Web::Win::Adstypes::TWebDirStruct * const)
+    @Web@Win@Adstypes@TVirtualWebDir@SetIISPath$qqrx17System@WideStringt1x20System@UnicodeStringt3 @764 ; __fastcall Web::Win::Adstypes::TVirtualWebDir::SetIISPath(const System::WideString, const System::WideString, const System::UnicodeString, const System::UnicodeString)
+    @Web@Win@Adstypes@TVirtualWebDir@SetOpenStyle$qqr30Web@Win@Adstypes@TAdsOpenStyle @765 ; __fastcall Web::Win::Adstypes::TVirtualWebDir::SetOpenStyle(Web::Win::Adstypes::TAdsOpenStyle)
+    @Web@Win@Adstypes@TVirtualWebDir@_AddRef$qqsv @751 ; __stdcall Web::Win::Adstypes::TVirtualWebDir::_AddRef()
+    @Web@Win@Adstypes@TVirtualWebDir@_Release$qqsv @750 ; __stdcall Web::Win::Adstypes::TVirtualWebDir::_Release()
+    @Web@Win@Adstypes@TWebDirList@ @779 ; Web::Win::Adstypes::TWebDirList::
+    @Web@Win@Adstypes@TWebDirList@$bdtr$qqrv @769 ; __fastcall Web::Win::Adstypes::TWebDirList::~TWebDirList()
+    @Web@Win@Adstypes@TWebDirList@GetWebDirStruct$qqrxi @768 ; __fastcall Web::Win::Adstypes::TWebDirList::GetWebDirStruct(const int)
+    @Web@Win@Adstypes@TWebDirStruct@ @781 ; Web::Win::Adstypes::TWebDirStruct::
+    @Web@Win@Adstypes@TWebDirStruct@$bctr$qqrv @744 ; __fastcall Web::Win::Adstypes::TWebDirStruct::TWebDirStruct()
+    @Web@Win@Adstypes@TWebDirStruct@$bdtr$qqrv @743 ; __fastcall Web::Win::Adstypes::TWebDirStruct::~TWebDirStruct()
+    @Web@Win@Adstypes@TWebDirStruct@Assign$qqrp26System@Classes@TPersistent @742 ; __fastcall Web::Win::Adstypes::TWebDirStruct::Assign(System::Classes::TPersistent *)
+    @Web@Win@Adstypes@initialization$qqrv @740 ; __fastcall Web::Win::Adstypes::initialization()
+    @Webcomp@DesigningComponent$qqrp25System@Classes@TComponent @956 ; __fastcall Webcomp::DesigningComponent(System::Classes::TComponent *)
+    @Webcomp@EnumRegisteredWebComponents$qqrynpqqrp37Webcomp@TWebComponentClassDescriptionpv$vpv @953 ; __fastcall Webcomp::EnumRegisteredWebComponents(void __fastcall __closure(*)(Webcomp::TWebComponentClassDescription *, void *), void *)
+    @Webcomp@EnumRegisteredWebComponentsProc @959 ; Webcomp::EnumRegisteredWebComponentsProc
+    @Webcomp@Finalization$qqrv     @855 ; __fastcall Webcomp::Finalization()
+    @Webcomp@FindWebComponentEditorHelper$qqrp17System@TMetaClass @952 ; __fastcall Webcomp::FindWebComponentEditorHelper(System::TMetaClass *)
+    @Webcomp@FindWebComponentEditorHelperProc @958 ; Webcomp::FindWebComponentEditorHelperProc
+    @Webcomp@QualifyFileName$qqrx20System@UnicodeString @957 ; __fastcall Webcomp::QualifyFileName(const System::UnicodeString)
+    @Webcomp@RegisterWebComponents$qqrpxp17System@TMetaClassxip14System@TObject @955 ; __fastcall Webcomp::RegisterWebComponents(System::TMetaClass * const *, const int, System::TObject *)
+    @Webcomp@RegisterWebComponentsProc @961 ; Webcomp::RegisterWebComponentsProc
+    @Webcomp@TLayoutAttributes@    @985 ; Webcomp::TLayoutAttributes::
+    @Webcomp@TLayoutAttributes@$bctr$qqrv @921 ; __fastcall Webcomp::TLayoutAttributes::TLayoutAttributes()
+    @Webcomp@TLayoutWebContent@    @982 ; Webcomp::TLayoutWebContent::
+    @Webcomp@TLayoutWebContent@$bctr$qqrp14System@TObject @923 ; __fastcall Webcomp::TLayoutWebContent::TLayoutWebContent(System::TObject *)
+    @Webcomp@TLayoutWebContent@LayoutButton$qqrx20System@UnicodeStringp25Webcomp@TLayoutAttributes @929 ; __fastcall Webcomp::TLayoutWebContent::LayoutButton(const System::UnicodeString, Webcomp::TLayoutAttributes *)
+    @Webcomp@TLayoutWebContent@LayoutField$qqrx20System@UnicodeStringp25Webcomp@TLayoutAttributes @928 ; __fastcall Webcomp::TLayoutWebContent::LayoutField(const System::UnicodeString, Webcomp::TLayoutAttributes *)
+    @Webcomp@TLayoutWebContent@LayoutLabelAndField$qqrx20System@UnicodeStringt1p25Webcomp@TLayoutAttributes @927 ; __fastcall Webcomp::TLayoutWebContent::LayoutLabelAndField(const System::UnicodeString, const System::UnicodeString, Webcomp::TLayoutAttributes *)
+    @Webcomp@TLayoutWebContent@LayoutTable$qqrx20System@UnicodeStringp25Webcomp@TLayoutAttributes @922 ; __fastcall Webcomp::TLayoutWebContent::LayoutTable(const System::UnicodeString, Webcomp::TLayoutAttributes *)
+    @Webcomp@TLayoutWebContent@QueryInterface$qqsrx5_GUIDpv @924 ; __stdcall Webcomp::TLayoutWebContent::QueryInterface(const _GUID&, void *)
+    @Webcomp@TLayoutWebContent@_AddRef$qqsv @926 ; __stdcall Webcomp::TLayoutWebContent::_AddRef()
+    @Webcomp@TLayoutWebContent@_Release$qqsv @925 ; __stdcall Webcomp::TLayoutWebContent::_Release()
+    @Webcomp@TWebComponentClassDescription@ @978 ; Webcomp::TWebComponentClassDescription::
+    @Webcomp@TWebComponentList@    @980 ; Webcomp::TWebComponentList::
+    @Webcomp@TWebComponentList@$bctr$qqrp25System@Classes@TComponent @945 ; __fastcall Webcomp::TWebComponentList::TWebComponentList(System::Classes::TComponent *)
+    @Webcomp@TWebComponentList@$bdtr$qqrv @944 ; __fastcall Webcomp::TWebComponentList::~TWebComponentList()
+    @Webcomp@TWebComponentList@Add$qqrp25System@Classes@TComponent @948 ; __fastcall Webcomp::TWebComponentList::Add(System::Classes::TComponent *)
+    @Webcomp@TWebComponentList@Changed$qqrv @947 ; __fastcall Webcomp::TWebComponentList::Changed()
+    @Webcomp@TWebComponentList@Clear$qqrv @946 ; __fastcall Webcomp::TWebComponentList::Clear()
+    @Webcomp@TWebComponentList@GetComponent$qqri @943 ; __fastcall Webcomp::TWebComponentList::GetComponent(int)
+    @Webcomp@TWebComponentList@GetCount$qqrv @942 ; __fastcall Webcomp::TWebComponentList::GetCount()
+    @Webcomp@TWebComponentList@GetOwner$qqrv @934 ; __fastcall Webcomp::TWebComponentList::GetOwner()
+    @Webcomp@TWebComponentList@IndexOf$qqrp25System@Classes@TComponent @941 ; __fastcall Webcomp::TWebComponentList::IndexOf(System::Classes::TComponent *)
+    @Webcomp@TWebComponentList@LockNotify$qqrv @933 ; __fastcall Webcomp::TWebComponentList::LockNotify()
+    @Webcomp@TWebComponentList@NewComponent$qqrp25System@Classes@TComponent @935 ; __fastcall Webcomp::TWebComponentList::NewComponent(System::Classes::TComponent *)
+    @Webcomp@TWebComponentList@NotifyLocked$qqrv @932 ; __fastcall Webcomp::TWebComponentList::NotifyLocked()
+    @Webcomp@TWebComponentList@QueryInterface$qqsrx5_GUIDpv @940 ; __stdcall Webcomp::TWebComponentList::QueryInterface(const _GUID&, void *)
+    @Webcomp@TWebComponentList@Remove$qqrp25System@Classes@TComponent @939 ; __fastcall Webcomp::TWebComponentList::Remove(System::Classes::TComponent *)
+    @Webcomp@TWebComponentList@SetComponentIndex$qqrp25System@Classes@TComponenti @938 ; __fastcall Webcomp::TWebComponentList::SetComponentIndex(System::Classes::TComponent *, int)
+    @Webcomp@TWebComponentList@UnlockNotify$qqrv @931 ; __fastcall Webcomp::TWebComponentList::UnlockNotify()
+    @Webcomp@TWebComponentList@WebComponentContainer_GetComponent$qqri @937 ; __fastcall Webcomp::TWebComponentList::WebComponentContainer_GetComponent(int)
+    @Webcomp@TWebComponentList@WebComponentContainer_GetComponentCount$qqrv @936 ; __fastcall Webcomp::TWebComponentList::WebComponentContainer_GetComponentCount()
+    @Webcomp@TWebComponentList@_AddRef$qqsv @950 ; __stdcall Webcomp::TWebComponentList::_AddRef()
+    @Webcomp@TWebComponentList@_Release$qqsv @949 ; __stdcall Webcomp::TWebComponentList::_Release()
+    @Webcomp@TWebComponentsEditorHelper@ @975 ; Webcomp::TWebComponentsEditorHelper::
+    @Webcomp@TWebComponentsEditorHelper@CanAddClassHelper$qqrp25System@Classes@TComponentt1p17System@TMetaClass @920 ; __fastcall Webcomp::TWebComponentsEditorHelper::CanAddClassHelper(System::Classes::TComponent *, System::Classes::TComponent *, System::TMetaClass *)
+    @Webcomp@TWebComponentsEditorHelper@ImplCanAddClassHelper$qqrp25System@Classes@TComponentt1p17System@TMetaClass @919 ; __fastcall Webcomp::TWebComponentsEditorHelper::ImplCanAddClassHelper(System::Classes::TComponent *, System::Classes::TComponent *, System::TMetaClass *)
+    @Webcomp@TWebComponentsEditorHelper@QueryInterface$qqsrx5_GUIDpv @916 ; __stdcall Webcomp::TWebComponentsEditorHelper::QueryInterface(const _GUID&, void *)
+    @Webcomp@TWebComponentsEditorHelper@_AddRef$qqsv @918 ; __stdcall Webcomp::TWebComponentsEditorHelper::_AddRef()
+    @Webcomp@TWebComponentsEditorHelper@_Release$qqsv @917 ; __stdcall Webcomp::TWebComponentsEditorHelper::_Release()
+    @Webcomp@TWebContainedComponent@ @965 ; Webcomp::TWebContainedComponent::
+    @Webcomp@TWebContainedComponent@$bctr$qqrp25System@Classes@TComponent @881 ; __fastcall Webcomp::TWebContainedComponent::TWebContainedComponent(System::Classes::TComponent *)
+    @Webcomp@TWebContainedComponent@$bdtr$qqrv @883 ; __fastcall Webcomp::TWebContainedComponent::~TWebContainedComponent()
+    @Webcomp@TWebContainedComponent@GetContainerList$qqrv @877 ; __fastcall Webcomp::TWebContainedComponent::GetContainerList()
+    @Webcomp@TWebContainedComponent@GetParentComponent$qqrv @887 ; __fastcall Webcomp::TWebContainedComponent::GetParentComponent()
+    @Webcomp@TWebContainedComponent@GetWebParent$qqrv @876 ; __fastcall Webcomp::TWebContainedComponent::GetWebParent()
+    @Webcomp@TWebContainedComponent@HasParent$qqrv @886 ; __fastcall Webcomp::TWebContainedComponent::HasParent()
+    @Webcomp@TWebContainedComponent@IsDefaultField$qqrv @882 ; __fastcall Webcomp::TWebContainedComponent::IsDefaultField()
+    @Webcomp@TWebContainedComponent@OnParentChanged$qqrp14System@TObject @879 ; __fastcall Webcomp::TWebContainedComponent::OnParentChanged(System::TObject *)
+    @Webcomp@TWebContainedComponent@ParentChanged$qqrv @880 ; __fastcall Webcomp::TWebContainedComponent::ParentChanged()
+    @Webcomp@TWebContainedComponent@ReadState$qqrp22System@Classes@TReader @885 ; __fastcall Webcomp::TWebContainedComponent::ReadState(System::Classes::TReader *)
+    @Webcomp@TWebContainedComponent@SetParentComponent$qqrp25System@Classes@TComponent @884 ; __fastcall Webcomp::TWebContainedComponent::SetParentComponent(System::Classes::TComponent *)
+    @Webcomp@TWebContainedComponent@SetWebParent$qqrp25System@Classes@TComponent @878 ; __fastcall Webcomp::TWebContainedComponent::SetWebParent(System::Classes::TComponent *)
+    @Webcomp@TWebContainedComponentHelper@ @967 ; Webcomp::TWebContainedComponentHelper::
+    @Webcomp@TWebContainedComponentHelper@$bctr$qqrp25System@Classes@TComponentynpqqrp14System@TObject$v @889 ; __fastcall Webcomp::TWebContainedComponentHelper::TWebContainedComponentHelper(System::Classes::TComponent *, void __fastcall __closure(*)(System::TObject *))
+    @Webcomp@TWebContainedComponentHelper@$bdtr$qqrv @893 ; __fastcall Webcomp::TWebContainedComponentHelper::~TWebContainedComponentHelper()
+    @Webcomp@TWebContainedComponentHelper@GetContainer$qqrv @891 ; __fastcall Webcomp::TWebContainedComponentHelper::GetContainer()
+    @Webcomp@TWebContainedComponentHelper@GetIndex$qqrv @897 ; __fastcall Webcomp::TWebContainedComponentHelper::GetIndex()
+    @Webcomp@TWebContainedComponentHelper@IsDefaultField$qqrv @890 ; __fastcall Webcomp::TWebContainedComponentHelper::IsDefaultField()
+    @Webcomp@TWebContainedComponentHelper@ParentChanged$qqrv @888 ; __fastcall Webcomp::TWebContainedComponentHelper::ParentChanged()
+    @Webcomp@TWebContainedComponentHelper@SetComponentList$qqrp14System@TObject @892 ; __fastcall Webcomp::TWebContainedComponentHelper::SetComponentList(System::TObject *)
+    @Webcomp@TWebContainedComponentHelper@SetContainer$qqrp14System@TObject @896 ; __fastcall Webcomp::TWebContainedComponentHelper::SetContainer(System::TObject *)
+    @Webcomp@TWebContainedComponentHelper@SetIndex$qqri @895 ; __fastcall Webcomp::TWebContainedComponentHelper::SetIndex(int)
+    @Webcomp@TWebContainedComponentHelper@SetWebParent$qqrp25System@Classes@TComponent @894 ; __fastcall Webcomp::TWebContainedComponentHelper::SetWebParent(System::Classes::TComponent *)
+    @Webcomp@TWebContainedContainerComponent@ @963 ; Webcomp::TWebContainedContainerComponent::
+    @Webcomp@TWebContainedContainerComponent@$bctr$qqrp25System@Classes@TComponent @875 ; __fastcall Webcomp::TWebContainedContainerComponent::TWebContainedContainerComponent(System::Classes::TComponent *)
+    @Webcomp@TWebContainedContainerComponent@$bdtr$qqrv @874 ; __fastcall Webcomp::TWebContainedContainerComponent::~TWebContainedContainerComponent()
+    @Webcomp@TWebContainedContainerComponent@GetChildren$qqrynpqqrp25System@Classes@TComponent$vp25System@Classes@TComponent @873 ; __fastcall Webcomp::TWebContainedContainerComponent::GetChildren(void __fastcall __closure(*)(System::Classes::TComponent *), System::Classes::TComponent *)
+    @Webcomp@TWebContainedContainerComponent@GetContainerList$qqrv @859 ; __fastcall Webcomp::TWebContainedContainerComponent::GetContainerList()
+    @Webcomp@TWebContainedContainerComponent@GetDefaultWebComponents$qqrv @858 ; __fastcall Webcomp::TWebContainedContainerComponent::GetDefaultWebComponents()
+    @Webcomp@TWebContainedContainerComponent@GetParentComponent$qqrv @868 ; __fastcall Webcomp::TWebContainedContainerComponent::GetParentComponent()
+    @Webcomp@TWebContainedContainerComponent@GetWebComponents$qqrv @869 ; __fastcall Webcomp::TWebContainedContainerComponent::GetWebComponents()
+    @Webcomp@TWebContainedContainerComponent@GetWebParent$qqrv @857 ; __fastcall Webcomp::TWebContainedContainerComponent::GetWebParent()
+    @Webcomp@TWebContainedContainerComponent@HasParent$qqrv @867 ; __fastcall Webcomp::TWebContainedContainerComponent::HasParent()
+    @Webcomp@TWebContainedContainerComponent@ImplGetDefaultComponentList$qqrv @871 ; __fastcall Webcomp::TWebContainedContainerComponent::ImplGetDefaultComponentList()
+    @Webcomp@TWebContainedContainerComponent@IsDefaultField$qqrv @864 ; __fastcall Webcomp::TWebContainedContainerComponent::IsDefaultField()
+    @Webcomp@TWebContainedContainerComponent@OnGetDefaultComponentList$qqrp14System@TObjectrp25Webcomp@TWebComponentList @872 ; __fastcall Webcomp::TWebContainedContainerComponent::OnGetDefaultComponentList(System::TObject *, Webcomp::TWebComponentList *&)
+    @Webcomp@TWebContainedContainerComponent@OnParentChanged$qqrp14System@TObject @861 ; __fastcall Webcomp::TWebContainedContainerComponent::OnParentChanged(System::TObject *)
+    @Webcomp@TWebContainedContainerComponent@OnSetDefaultComponentList$qqrp14System@TObjectp25Webcomp@TWebComponentList @863 ; __fastcall Webcomp::TWebContainedContainerComponent::OnSetDefaultComponentList(System::TObject *, Webcomp::TWebComponentList *)
+    @Webcomp@TWebContainedContainerComponent@ParentChanged$qqrv @862 ; __fastcall Webcomp::TWebContainedContainerComponent::ParentChanged()
+    @Webcomp@TWebContainedContainerComponent@ReadState$qqrp22System@Classes@TReader @866 ; __fastcall Webcomp::TWebContainedContainerComponent::ReadState(System::Classes::TReader *)
+    @Webcomp@TWebContainedContainerComponent@SetChildOrder$qqrp25System@Classes@TComponenti @870 ; __fastcall Webcomp::TWebContainedContainerComponent::SetChildOrder(System::Classes::TComponent *, int)
+    @Webcomp@TWebContainedContainerComponent@SetDefaultWebComponents$qqrp25Webcomp@TWebComponentList @856 ; __fastcall Webcomp::TWebContainedContainerComponent::SetDefaultWebComponents(Webcomp::TWebComponentList *)
+    @Webcomp@TWebContainedContainerComponent@SetParentComponent$qqrp25System@Classes@TComponent @865 ; __fastcall Webcomp::TWebContainedContainerComponent::SetParentComponent(System::Classes::TComponent *)
+    @Webcomp@TWebContainedContainerComponent@SetWebParent$qqrp25System@Classes@TComponent @860 ; __fastcall Webcomp::TWebContainedContainerComponent::SetWebParent(System::Classes::TComponent *)
+    @Webcomp@TWebContainerComponent@ @969 ; Webcomp::TWebContainerComponent::
+    @Webcomp@TWebContainerComponent@$bctr$qqrp25System@Classes@TComponent @907 ; __fastcall Webcomp::TWebContainerComponent::TWebContainerComponent(System::Classes::TComponent *)
+    @Webcomp@TWebContainerComponent@$bdtr$qqrv @905 ; __fastcall Webcomp::TWebContainerComponent::~TWebContainerComponent()
+    @Webcomp@TWebContainerComponent@GetChildren$qqrynpqqrp25System@Classes@TComponent$vp25System@Classes@TComponent @904 ; __fastcall Webcomp::TWebContainerComponent::GetChildren(void __fastcall __closure(*)(System::Classes::TComponent *), System::Classes::TComponent *)
+    @Webcomp@TWebContainerComponent@GetDefaultWebComponents$qqrv @900 ; __fastcall Webcomp::TWebContainerComponent::GetDefaultWebComponents()
+    @Webcomp@TWebContainerComponent@GetWebComponents$qqrv @906 ; __fastcall Webcomp::TWebContainerComponent::GetWebComponents()
+    @Webcomp@TWebContainerComponent@ImplGetDefaultComponentList$qqrv @902 ; __fastcall Webcomp::TWebContainerComponent::ImplGetDefaultComponentList()
+    @Webcomp@TWebContainerComponent@OnGetDefaultComponentList$qqrp14System@TObjectrp25Webcomp@TWebComponentList @903 ; __fastcall Webcomp::TWebContainerComponent::OnGetDefaultComponentList(System::TObject *, Webcomp::TWebComponentList *&)
+    @Webcomp@TWebContainerComponent@OnSetDefaultComponentList$qqrp14System@TObjectp25Webcomp@TWebComponentList @899 ; __fastcall Webcomp::TWebContainerComponent::OnSetDefaultComponentList(System::TObject *, Webcomp::TWebComponentList *)
+    @Webcomp@TWebContainerComponent@SetChildOrder$qqrp25System@Classes@TComponenti @901 ; __fastcall Webcomp::TWebContainerComponent::SetChildOrder(System::Classes::TComponent *, int)
+    @Webcomp@TWebContainerComponent@SetDefaultWebComponents$qqrp25Webcomp@TWebComponentList @898 ; __fastcall Webcomp::TWebContainerComponent::SetDefaultWebComponents(Webcomp::TWebComponentList *)
+    @Webcomp@TWebContainerComponentHelper@ @971 ; Webcomp::TWebContainerComponentHelper::
+    @Webcomp@TWebContainerComponentHelper@$bctr$qqrp25System@Classes@TComponentynpqqrp14System@TObjectrp25Webcomp@TWebComponentList$vynpqqrp14System@TObjectp25Webcomp@TWebComponentList$v @915 ; Webcomp::TWebContainerComponentHelper::TWebContainerComponentHelper(System::Classes::TComponent *, void __fastcall __closure(*)(System::TObject *, Webcomp::TWebComponentList *&), __closure(*)(System::TObject *, Webcomp::TWebComponentList *)void __fastcall
+    @Webcomp@TWebContainerComponentHelper@$bdtr$qqrv @914 ; __fastcall Webcomp::TWebContainerComponentHelper::~TWebContainerComponentHelper()
+    @Webcomp@TWebContainerComponentHelper@GetChildren$qqrynpqqrp25System@Classes@TComponent$vp25System@Classes@TComponent @913 ; __fastcall Webcomp::TWebContainerComponentHelper::GetChildren(void __fastcall __closure(*)(System::Classes::TComponent *), System::Classes::TComponent *)
+    @Webcomp@TWebContainerComponentHelper@GetComponentList$qqrv @912 ; __fastcall Webcomp::TWebContainerComponentHelper::GetComponentList()
+    @Webcomp@TWebContainerComponentHelper@GetDefaultComponentList$qqrv @911 ; __fastcall Webcomp::TWebContainerComponentHelper::GetDefaultComponentList()
+    @Webcomp@TWebContainerComponentHelper@GetDefaultWebComponents$qqrv @910 ; __fastcall Webcomp::TWebContainerComponentHelper::GetDefaultWebComponents()
+    @Webcomp@TWebContainerComponentHelper@SetChildOrder$qqrp25System@Classes@TComponenti @909 ; __fastcall Webcomp::TWebContainerComponentHelper::SetChildOrder(System::Classes::TComponent *, int)
+    @Webcomp@TWebContainerComponentHelper@SetDefaultWebComponents$qqrp25Webcomp@TWebComponentList @908 ; __fastcall Webcomp::TWebContainerComponentHelper::SetDefaultWebComponents(Webcomp::TWebComponentList *)
+    @Webcomp@TWebContentOptions@   @989 ; Webcomp::TWebContentOptions::
+    @Webcomp@TWebContentOptions@$bctr$qqr50System@%Set$23Webcomp@TWebContentFlagt1$i0$t1$i2$% @930 ; Webcomp::TWebContentOptions::TWebContentOptions(System::Set<{583}...
+    @Webcomp@UnRegisterWebComponents$qqrpxp17System@TMetaClassxi @954 ; __fastcall Webcomp::UnRegisterWebComponents(System::TMetaClass * const *, const int)
+    @Webcomp@UnRegisterWebComponentsProc @960 ; Webcomp::UnRegisterWebComponentsProc
+    @Webcomp@ValidateWebParent$qqrp25System@Classes@TComponentt1 @951 ; __fastcall Webcomp::ValidateWebParent(System::Classes::TComponent *, System::Classes::TComponent *)
+    @Webcomp@initialization$qqrv   @854 ; __fastcall Webcomp::initialization()
+    Finalize                       @1054; Finalize
+    Initialize                     @1055; Initialize

@@ -1,0 +1,32 @@
+LIBRARY     DCLFIREDAC210.BPL
+
+DESCRIPTION 'mbarcadero FireDAC Components'
+
+EXPORTS
+    @$xp$32Firedac@Dcl@Assignds@TFDDataForm @16  ; __tpdsc__ Firedac::Dcl::Assignds::TFDDataForm
+    @Dclfiredac@@GetPackageInfoTable$qqrv @24  ; Dclfiredac::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclfiredac@@PackageLoad$qqrv  @23  ; Dclfiredac::__linkproc__ __fastcall PackageLoad()
+    @Dclfiredac@@PackageUnload$qqrv @22  ; Dclfiredac::__linkproc__ __fastcall PackageUnload()
+    @Dclfiredac@initialization$qqrv @21  ; __fastcall Dclfiredac::initialization()
+    @Firedac@Dcl@Assignds@FDMemTableAssign$qqrp37Firedac@Comp@Client@TFDCustomMemTable47System@%DelphiInterface$20Designintf@IDesigner% @15  ; Firedac::Dcl::Assignds::FDMemTableAssign(Firedac::Comp::Client::TFDCustomMemTable *, System::DelphiInterface<{583}...
+    @Firedac@Dcl@Assignds@Finalization$qqrv @9   ; __fastcall Firedac::Dcl::Assignds::Finalization()
+    @Firedac@Dcl@Assignds@TFDDataForm@ @17  ; Firedac::Dcl::Assignds::TFDDataForm::
+    @Firedac@Dcl@Assignds@TFDDataForm@CheckComponent$qqrx20System@UnicodeString @14  ; __fastcall Firedac::Dcl::Assignds::TFDDataForm::CheckComponent(const System::UnicodeString)
+    @Firedac@Dcl@Assignds@TFDDataForm@DataSetListDblClick$qqrp14System@TObject @11  ; __fastcall Firedac::Dcl::Assignds::TFDDataForm::DataSetListDblClick(System::TObject *)
+    @Firedac@Dcl@Assignds@TFDDataForm@DataSetListKeyPress$qqrp14System@TObjectrb @10  ; __fastcall Firedac::Dcl::Assignds::TFDDataForm::DataSetListKeyPress(System::TObject *, wchar_t&)
+    @Firedac@Dcl@Assignds@TFDDataForm@Edit$qqrv @13  ; __fastcall Firedac::Dcl::Assignds::TFDDataForm::Edit()
+    @Firedac@Dcl@Assignds@TFDDataForm@OkBtnClick$qqrp14System@TObject @12  ; __fastcall Firedac::Dcl::Assignds::TFDDataForm::OkBtnClick(System::TObject *)
+    @Firedac@Dcl@Assignds@initialization$qqrv @8   ; __fastcall Firedac::Dcl::Assignds::initialization()
+    @Firedac@Dcl@Reg@Finalization$qqrv @19  ; __fastcall Firedac::Dcl::Reg::Finalization()
+    @Firedac@Dcl@Reg@Register$qqrv @20  ; __fastcall Firedac::Dcl::Reg::Register()
+    @Firedac@Dcl@Reg@initialization$qqrv @18  ; __fastcall Firedac::Dcl::Reg::initialization()
+    @Firedac@Dcl@Resstrs@Finalization$qqrv @2   ; __fastcall Firedac::Dcl::Resstrs::Finalization()
+    @Firedac@Dcl@Resstrs@_SAssignDataSet @4   ; Firedac::Dcl::Resstrs::_SAssignDataSet
+    @Firedac@Dcl@Resstrs@_SClear   @7   ; Firedac::Dcl::Resstrs::_SClear
+    @Firedac@Dcl@Resstrs@_SFDMemTableEditor @3   ; Firedac::Dcl::Resstrs::_SFDMemTableEditor
+    @Firedac@Dcl@Resstrs@_SLoadFromFile @6   ; Firedac::Dcl::Resstrs::_SLoadFromFile
+    @Firedac@Dcl@Resstrs@_SSaveToFile @5   ; Firedac::Dcl::Resstrs::_SSaveToFile
+    @Firedac@Dcl@Resstrs@initialization$qqrv @1   ; __fastcall Firedac::Dcl::Resstrs::initialization()
+    @GetPackageInfoTable           @27  ; GetPackageInfoTable
+    Finalize                       @25  ; Finalize
+    Initialize                     @26  ; Initialize

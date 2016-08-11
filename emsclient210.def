@@ -1,0 +1,457 @@
+LIBRARY     EMSCLIENT210.BPL
+
+DESCRIPTION 'mbarcadero EMS client package'
+
+EXPORTS
+    @$xp$33Rest@Backend@Emsapi@TEMSClientAPI @121 ; __tpdsc__ Rest::Backend::Emsapi::TEMSClientAPI
+    @$xp$35Rest@Backend@Emsmetatypes@TMetaUser @194 ; __tpdsc__ Rest::Backend::Emsmetatypes::TMetaUser
+    @$xp$35Rest@Backend@Emsprovider@IGetEMSApi @342 ; __tpdsc__ Rest::Backend::Emsprovider::IGetEMSApi
+    @$xp$36Rest@Backend@Emsmetatypes@TMetaClass @200 ; __tpdsc__ Rest::Backend::Emsmetatypes::TMetaClass
+    @$xp$36Rest@Backend@Emsmetatypes@TMetaGroup @192 ; __tpdsc__ Rest::Backend::Emsmetatypes::TMetaGroup
+    @$xp$36Rest@Backend@Emsmetatypes@TMetaLogin @190 ; __tpdsc__ Rest::Backend::Emsmetatypes::TMetaLogin
+    @$xp$37Rest@Backend@Emsprovider@TEMSProvider @345 ; __tpdsc__ Rest::Backend::Emsprovider::TEMSProvider
+    @$xp$37Rest@Backend@Emsservices@TEMSLoginAPI @440 ; __tpdsc__ Rest::Backend::Emsservices::TEMSLoginAPI
+    @$xp$37Rest@Backend@Emsservices@TEMSQueryAPI @444 ; __tpdsc__ Rest::Backend::Emsservices::TEMSQueryAPI
+    @$xp$37Rest@Backend@Emsservices@TEMSUsersAPI @436 ; __tpdsc__ Rest::Backend::Emsservices::TEMSUsersAPI
+    @$xp$38Rest@Backend@Emsapi@EEMSClientAPIError @119 ; __tpdsc__ Rest::Backend::Emsapi::EEMSClientAPIError
+    @$xp$38Rest@Backend@Emsmetatypes@TMetaFactory @202 ; __tpdsc__ Rest::Backend::Emsmetatypes::TMetaFactory
+    @$xp$38Rest@Backend@Emsservices@TEMSGroupsAPI @432 ; __tpdsc__ Rest::Backend::Emsservices::TEMSGroupsAPI
+    @$xp$39Rest@Backend@Emsapi@EEMSClientHTTPError @116 ; __tpdsc__ Rest::Backend::Emsapi::EEMSClientHTTPError
+    @$xp$39Rest@Backend@Emsapi@TEMSClientAPI@TUser @133 ; __tpdsc__ Rest::Backend::Emsapi::TEMSClientAPI::TUser
+    @$xp$39Rest@Backend@Emsmetatypes@TMetaDataType @196 ; __tpdsc__ Rest::Backend::Emsmetatypes::TMetaDataType
+    @$xp$39Rest@Backend@Emsprovider@TEMSServiceAPI @340 ; __tpdsc__ Rest::Backend::Emsprovider::TEMSServiceAPI
+    @$xp$40Rest@Backend@Emsapi@TEMSClientAPI@TGroup @132 ; __tpdsc__ Rest::Backend::Emsapi::TEMSClientAPI::TGroup
+    @$xp$40Rest@Backend@Emsapi@TEMSClientAPI@TLogin @131 ; __tpdsc__ Rest::Backend::Emsapi::TEMSClientAPI::TLogin
+    @$xp$40Rest@Backend@Emsmetatypes@TMetaClassName @198 ; __tpdsc__ Rest::Backend::Emsmetatypes::TMetaClassName
+    @$xp$40Rest@Backend@Emsmetatypes@TMetaFoundUser @186 ; __tpdsc__ Rest::Backend::Emsmetatypes::TMetaFoundUser
+    @$xp$40Rest@Backend@Emsmetatypes@TMetaLoginUser @182 ; __tpdsc__ Rest::Backend::Emsmetatypes::TMetaLoginUser
+    @$xp$40Rest@Backend@Emsmetatypes@TMetaUpdatedAt @178 ; __tpdsc__ Rest::Backend::Emsmetatypes::TMetaUpdatedAt
+    @$xp$41Rest@Backend@Emsmetatypes@TEMSMetaFactory @176 ; __tpdsc__ Rest::Backend::Emsmetatypes::TEMSMetaFactory
+    @$xp$41Rest@Backend@Emsmetatypes@TMetaFoundGroup @184 ; __tpdsc__ Rest::Backend::Emsmetatypes::TMetaFoundGroup
+    @$xp$41Rest@Backend@Emsmetatypes@TMetaSignupUser @180 ; __tpdsc__ Rest::Backend::Emsmetatypes::TMetaSignupUser
+    @$xp$41Rest@Backend@Emsservices@TEMSLoginService @438 ; __tpdsc__ Rest::Backend::Emsservices::TEMSLoginService
+    @$xp$41Rest@Backend@Emsservices@TEMSQueryService @442 ; __tpdsc__ Rest::Backend::Emsservices::TEMSQueryService
+    @$xp$41Rest@Backend@Emsservices@TEMSUsersService @434 ; __tpdsc__ Rest::Backend::Emsservices::TEMSUsersService
+    @$xp$41System@%TArray__1$20System@UnicodeString% @103 ; __tpdsc__ System::TArray__1<System::UnicodeString>
+    @$xp$42Rest@Backend@Emsapi@EEMSClientHTTPNotFound @112 ; __tpdsc__ Rest::Backend::Emsapi::EEMSClientHTTPNotFound
+    @$xp$42Rest@Backend@Emsmetatypes@TMetaUpdatedUser @188 ; __tpdsc__ Rest::Backend::Emsmetatypes::TMetaUpdatedUser
+    @$xp$42Rest@Backend@Emsprovider@EEMSProviderError @336 ; __tpdsc__ Rest::Backend::Emsprovider::EEMSProviderError
+    @$xp$42Rest@Backend@Emsservices@TEMSGroupsService @430 ; __tpdsc__ Rest::Backend::Emsservices::TEMSGroupsService
+    @$xp$43Rest@Backend@Emsapi@EEMSClientHTTPDuplicate @110 ; __tpdsc__ Rest::Backend::Emsapi::EEMSClientHTTPDuplicate
+    @$xp$43Rest@Backend@Emsapi@EEMSClientHTTPForbidden @106 ; __tpdsc__ Rest::Backend::Emsapi::EEMSClientHTTPForbidden
+    @$xp$43Rest@Backend@Emsprovider@TCustomEMSProvider @347 ; __tpdsc__ Rest::Backend::Emsprovider::TCustomEMSProvider
+    @$xp$43Rest@Backend@Emsprovider@TEMSBackendService @343 ; __tpdsc__ Rest::Backend::Emsprovider::TEMSBackendService
+    @$xp$43Rest@Backend@Emsprovider@TEMSServiceAPIAuth @338 ; __tpdsc__ Rest::Backend::Emsprovider::TEMSServiceAPIAuth
+    @$xp$44Rest@Backend@Emsapi@EEMSClientHTTPBadRequest @114 ; __tpdsc__ Rest::Backend::Emsapi::EEMSClientHTTPBadRequest
+    @$xp$44Rest@Backend@Emsapi@TEMSClientAPI@TJSONNames @137 ; __tpdsc__ Rest::Backend::Emsapi::TEMSClientAPI::TJSONNames
+    @$xp$44Rest@Backend@Emsapi@TEMSClientAPI@TLoginProc @125 ; __tpdsc__ Rest::Backend::Emsapi::TEMSClientAPI::TLoginProc
+    @$xp$44Rest@Backend@Emsapi@TEMSClientAPI@TUpdatedAt @134 ; __tpdsc__ Rest::Backend::Emsapi::TEMSClientAPI::TUpdatedAt
+    @$xp$44Rest@Backend@Emsapi@TEMSClientHTTPErrorClass @140 ; __tpdsc__ Rest::Backend::Emsapi::TEMSClientHTTPErrorClass
+    @$xp$44System@%TArray__1$ynpqqrp14System@TObject$v% @335 ; __tpdsc__ System::TArray__1<void __fastcall __closure(*)(System::TObject *)>
+    @$xp$46Rest@Backend@Emsapi@EEMSClientHTTPError@TCodes @118 ; __tpdsc__ Rest::Backend::Emsapi::EEMSClientHTTPError::TCodes
+    @$xp$46Rest@Backend@Emsapi@EEMSClientHTTPUnauthorized @108 ; __tpdsc__ Rest::Backend::Emsapi::EEMSClientHTTPUnauthorized
+    @$xp$46Rest@Backend@Emsapi@TEMSClientAPI@THeaderNames @138 ; __tpdsc__ Rest::Backend::Emsapi::TEMSClientAPI::THeaderNames
+    @$xp$46Rest@Backend@Emsservices@TEMSCustomEndpointAPI @428 ; __tpdsc__ Rest::Backend::Emsservices::TEMSCustomEndpointAPI
+    @$xp$47Rest@Backend@Emsapi@TEMSClientAPI@TSegmentNames @136 ; __tpdsc__ Rest::Backend::Emsapi::TEMSClientAPI::TSegmentNames
+    @$xp$49Rest@Backend@Emsapi@TEMSClientAPI@TAuthentication @130 ; __tpdsc__ Rest::Backend::Emsapi::TEMSClientAPI::TAuthentication
+    @$xp$49Rest@Backend@Emsapi@TEMSClientAPI@TConnectionInfo @139 ; __tpdsc__ Rest::Backend::Emsapi::TEMSClientAPI::TConnectionInfo
+    @$xp$49Rest@Backend@Emsprovider@TCustomEMSConnectionInfo @349 ; __tpdsc__ Rest::Backend::Emsprovider::TCustomEMSConnectionInfo
+    @$xp$49System@%IEnumerable__1$ynpqqrp14System@TObject$v% @324 ; __tpdsc__ System::IEnumerable__1<void __fastcall __closure(*)(System::TObject *)>
+    @$xp$49System@%IEnumerator__1$ynpqqrp14System@TObject$v% @325 ; __tpdsc__ System::IEnumerator__1<void __fastcall __closure(*)(System::TObject *)>
+    @$xp$50Rest@Backend@Emsapi@TEMSClientAPI@TAuthentications @129 ; __tpdsc__ Rest::Backend::Emsapi::TEMSClientAPI::TAuthentications
+    @$xp$50Rest@Backend@Emsapi@TEMSClientAPI@TQueryParamNames @135 ; __tpdsc__ Rest::Backend::Emsapi::TEMSClientAPI::TQueryParamNames
+    @$xp$50Rest@Backend@Emsservices@TEMSCustomEndpointService @426 ; __tpdsc__ Rest::Backend::Emsservices::TEMSCustomEndpointService
+    @$xp$51Rest@Backend@Emsapi@TEMSClientAPI@TAppHandshakeProc @127 ; __tpdsc__ Rest::Backend::Emsapi::TEMSClientAPI::TAppHandshakeProc
+    @$xp$51Rest@Backend@Emsapi@TEMSClientAPI@TRetrieveUserProc @124 ; __tpdsc__ Rest::Backend::Emsapi::TEMSClientAPI::TRetrieveUserProc
+    @$xp$52Rest@Backend@Emsapi@TEMSClientAPI@TQueryUserNameProc @126 ; __tpdsc__ Rest::Backend::Emsapi::TEMSClientAPI::TQueryUserNameProc
+    @$xp$52Rest@Backend@Emsapi@TEMSClientAPI@TRetrieveGroupProc @123 ; __tpdsc__ Rest::Backend::Emsapi::TEMSClientAPI::TRetrieveGroupProc
+    @$xp$56Rest@Backend@Emsapi@TEMSClientAPI@TDefaultAuthentication @128 ; __tpdsc__ Rest::Backend::Emsapi::TEMSClientAPI::TDefaultAuthentication
+    @$xp$60System@%TArray__1$39Rest@Backend@Emsapi@TEMSClientAPI@TUser% @105 ; __tpdsc__ System::TArray__1<Rest::Backend::Emsapi::TEMSClientAPI::TUser>
+    @$xp$61Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@TNotifyList @352 ; __tpdsc__ Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::TNotifyList
+    @$xp$61System@%TArray__1$40Rest@Backend@Emsapi@TEMSClientAPI@TGroup% @104 ; __tpdsc__ System::TArray__1<Rest::Backend::Emsapi::TEMSClientAPI::TGroup>
+    @$xp$63System@%TArray__1$42Rest@Backend@Metatypes@TBackendEntityValue% @425 ; __tpdsc__ System::TArray__1<Rest::Backend::Metatypes::TBackendEntityValue>
+    @$xp$64Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@TProtocolNames @351 ; __tpdsc__ Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::TProtocolNames
+    @$xp$64System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v% @319 ; __tpdsc__ System::Generics::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>
+    @$xp$65System@Generics@Defaults@%IComparer__1$ynpqqrp14System@TObject$v% @329 ; __tpdsc__ System::Generics::Defaults::IComparer__1<void __fastcall __closure(*)(System::TObject *)>
+    @$xp$70System@Generics@Collections@%TEnumerable__1$ynpqqrp14System@TObject$v% @331 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<void __fastcall __closure(*)(System::TObject *)>
+    @$xp$70System@Generics@Collections@%TEnumerator__1$ynpqqrp14System@TObject$v% @333 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<void __fastcall __closure(*)(System::TObject *)>
+    @$xp$72System@Generics@Collections@%TArrayManager__1$ynpqqrp14System@TObject$v% @326 ; __tpdsc__ System::Generics::Collections::TArrayManager__1<void __fastcall __closure(*)(System::TObject *)>
+    @$xp$76System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@%arrayofT$% @330 ; __tpdsc__ System::Generics::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::arrayofT<>
+    @$xp$78System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@%TEmptyFunc$% @323 ; __tpdsc__ System::Generics::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::TEmptyFunc<>
+    @$xp$79System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@%TEnumerator$% @321 ; __tpdsc__ System::Generics::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::TEnumerator<>
+    @$xp$81System@Generics@Collections@%TCollectionNotifyEvent__1$ynpqqrp14System@TObject$v% @328 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<void __fastcall __closure(*)(System::TObject *)>
+    @$xp$89Rest@Backend@Emsprovider@%TEMSBackendService__1$p37Rest@Backend@Emsservices@TEMSLoginAPI% @421 ; __tpdsc__ Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSLoginAPI *>
+    @$xp$89Rest@Backend@Emsprovider@%TEMSBackendService__1$p37Rest@Backend@Emsservices@TEMSQueryAPI% @423 ; __tpdsc__ Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSQueryAPI *>
+    @$xp$89Rest@Backend@Emsprovider@%TEMSBackendService__1$p37Rest@Backend@Emsservices@TEMSUsersAPI% @419 ; __tpdsc__ Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSUsersAPI *>
+    @$xp$90Rest@Backend@Emsprovider@%TEMSBackendService__1$p38Rest@Backend@Emsservices@TEMSGroupsAPI% @417 ; __tpdsc__ Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSGroupsAPI *>
+    @$xp$98Rest@Backend@Emsprovider@%TEMSBackendService__1$p46Rest@Backend@Emsservices@TEMSCustomEndpointAPI% @415 ; __tpdsc__ Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSCustomEndpointAPI *>
+    @Emsclient@@GetPackageInfoTable$qqrv @449 ; Emsclient::__linkproc__ __fastcall GetPackageInfoTable()
+    @Emsclient@@PackageLoad$qqrv   @448 ; Emsclient::__linkproc__ __fastcall PackageLoad()
+    @Emsclient@@PackageUnload$qqrv @447 ; Emsclient::__linkproc__ __fastcall PackageUnload()
+    @Emsclient@initialization$qqrv @446 ; __fastcall Emsclient::initialization()
+    @GetPackageInfoTable           @452 ; GetPackageInfoTable
+    @Rest@Backend@Emsapi@EEMSClientAPIError@ @120 ; Rest::Backend::Emsapi::EEMSClientAPIError::
+    @Rest@Backend@Emsapi@EEMSClientHTTPBadRequest@ @115 ; Rest::Backend::Emsapi::EEMSClientHTTPBadRequest::
+    @Rest@Backend@Emsapi@EEMSClientHTTPDuplicate@ @111 ; Rest::Backend::Emsapi::EEMSClientHTTPDuplicate::
+    @Rest@Backend@Emsapi@EEMSClientHTTPError@ @117 ; Rest::Backend::Emsapi::EEMSClientHTTPError::
+    @Rest@Backend@Emsapi@EEMSClientHTTPError@$bctr$qqrix20System@UnicodeStringt2 @26  ; __fastcall Rest::Backend::Emsapi::EEMSClientHTTPError::EEMSClientHTTPError(int, const System::UnicodeString, const System::UnicodeString)
+    @Rest@Backend@Emsapi@EEMSClientHTTPForbidden@ @107 ; Rest::Backend::Emsapi::EEMSClientHTTPForbidden::
+    @Rest@Backend@Emsapi@EEMSClientHTTPNotFound@ @113 ; Rest::Backend::Emsapi::EEMSClientHTTPNotFound::
+    @Rest@Backend@Emsapi@EEMSClientHTTPUnauthorized@ @109 ; Rest::Backend::Emsapi::EEMSClientHTTPUnauthorized::
+    @Rest@Backend@Emsapi@Finalization$qqrv @25  ; __fastcall Rest::Backend::Emsapi::Finalization()
+    @Rest@Backend@Emsapi@TEMSClientAPI@ @122 ; Rest::Backend::Emsapi::TEMSClientAPI::
+    @Rest@Backend@Emsapi@TEMSClientAPI@$bctr$qqrp25System@Classes@TComponentxp25Rest@Client@TRESTResponse @80  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::TEMSClientAPI(System::Classes::TComponent *, Rest::Client::TRESTResponse * const)
+    @Rest@Backend@Emsapi@TEMSClientAPI@$bctr$qqrv @86  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::TEMSClientAPI()
+    @Rest@Backend@Emsapi@TEMSClientAPI@$bdtr$qqrv @79  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::~TEMSClientAPI()
+    @Rest@Backend@Emsapi@TEMSClientAPI@AddAppSecret$qqrxp30Rest@Client@TCustomRESTRequestx20System@UnicodeString @95  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::AddAppSecret(Rest::Client::TCustomRESTRequest * const, const System::UnicodeString)
+    @Rest@Backend@Emsapi@TEMSClientAPI@AddAuthParameters$qqr49Rest@Backend@Emsapi@TEMSClientAPI@TAuthentication @90  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::AddAuthParameters(Rest::Backend::Emsapi::TEMSClientAPI::TAuthentication)
+    @Rest@Backend@Emsapi@TEMSClientAPI@AddAuthParameters$qqrv @92  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::AddAuthParameters()
+    @Rest@Backend@Emsapi@TEMSClientAPI@AddAuthParameters$qqrxp30Rest@Client@TCustomRESTRequest @91  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::AddAuthParameters(Rest::Client::TCustomRESTRequest * const)
+    @Rest@Backend@Emsapi@TEMSClientAPI@AddAuthParameters$qqrxp30Rest@Client@TCustomRESTRequest49Rest@Backend@Emsapi@TEMSClientAPI@TAuthentication @89  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::AddAuthParameters(Rest::Client::TCustomRESTRequest * const, Rest::Backend::Emsapi::TEMSClientAPI::TAuthentication)
+    @Rest@Backend@Emsapi@TEMSClientAPI@AddHeader$qqrxp30Rest@Client@TCustomRESTRequestx20System@UnicodeStringt2 @96  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::AddHeader(Rest::Client::TCustomRESTRequest * const, const System::UnicodeString, const System::UnicodeString)
+    @Rest@Backend@Emsapi@TEMSClientAPI@AddMasterKey$qqrxp30Rest@Client@TCustomRESTRequestx20System@UnicodeString @98  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::AddMasterKey(Rest::Client::TCustomRESTRequest * const, const System::UnicodeString)
+    @Rest@Backend@Emsapi@TEMSClientAPI@AddResource$qqrx20System@UnicodeStringxp23System@Json@TJSONObject @49  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::AddResource(const System::UnicodeString, System::Json::TJSONObject * const)
+    @Rest@Backend@Emsapi@TEMSClientAPI@AddSessionToken$qqrxp30Rest@Client@TCustomRESTRequestx20System@UnicodeStringt2 @97  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::AddSessionToken(Rest::Client::TCustomRESTRequest * const, const System::UnicodeString, const System::UnicodeString)
+    @Rest@Backend@Emsapi@TEMSClientAPI@AddUser$qqrx20System@UnicodeStringt1xp23System@Json@TJSONObjectr39Rest@Backend@Emsapi@TEMSClientAPI@TUser @48  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::AddUser(const System::UnicodeString, const System::UnicodeString, System::Json::TJSONObject * const, Rest::Backend::Emsapi::TEMSClientAPI::TUser&)
+    @Rest@Backend@Emsapi@TEMSClientAPI@AddUsersToGroup$qqrx20System@UnicodeStringx44System@%DynamicArray$20System@UnicodeString%r44Rest@Backend@Emsapi@TEMSClientAPI@TUpdatedAt @35  ; Rest::Backend::Emsapi::TEMSClientAPI::AddUsersToGroup(const System::UnicodeString, const System::DynamicArray<{583}...
+    @Rest@Backend@Emsapi@TEMSClientAPI@AppHandshake$qqrx78System@%DelphiInterface$51Rest@Backend@Emsapi@TEMSClientAPI@TAppHandshakeProc% @101 ; Rest::Backend::Emsapi::TEMSClientAPI::AppHandshake(const System::DelphiInterface<{583}...
+    @Rest@Backend@Emsapi@TEMSClientAPI@AppHandshake$qqrxp22System@Json@TJSONArray @102 ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::AppHandshake(System::Json::TJSONArray * const)
+    @Rest@Backend@Emsapi@TEMSClientAPI@ApplyConnectionInfo$qqrv @100 ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::ApplyConnectionInfo()
+    @Rest@Backend@Emsapi@TEMSClientAPI@ApplyConnectionInfo$qqrxp29Rest@Client@TCustomRESTClient @99  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::ApplyConnectionInfo(Rest::Client::TCustomRESTClient * const)
+    @Rest@Backend@Emsapi@TEMSClientAPI@CheckAuthentication$qqr76System@%Set$49Rest@Backend@Emsapi@TEMSClientAPI@TAuthenticationt1$i0$t1$i4$% @94  ; Rest::Backend::Emsapi::TEMSClientAPI::CheckAuthentication(System::Set<{583}...
+    @Rest@Backend@Emsapi@TEMSClientAPI@CheckForResponseError$qqrpixi @81  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::CheckForResponseError(int *, const int)
+    @Rest@Backend@Emsapi@TEMSClientAPI@CheckForResponseError$qqrv @87  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::CheckForResponseError()
+    @Rest@Backend@Emsapi@TEMSClientAPI@CheckForResponseError$qqrxp31Rest@Client@TCustomRESTResponse @83  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::CheckForResponseError(Rest::Client::TCustomRESTResponse * const)
+    @Rest@Backend@Emsapi@TEMSClientAPI@CheckForResponseError$qqrxp31Rest@Client@TCustomRESTResponsepxixi @82  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::CheckForResponseError(Rest::Client::TCustomRESTResponse * const, const int *, const int)
+    @Rest@Backend@Emsapi@TEMSClientAPI@CreateGroup$qqrx20System@UnicodeStringxp23System@Json@TJSONObjectr40Rest@Backend@Emsapi@TEMSClientAPI@TGroup @88  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::CreateGroup(const System::UnicodeString, System::Json::TJSONObject * const, Rest::Backend::Emsapi::TEMSClientAPI::TGroup&)
+    @Rest@Backend@Emsapi@TEMSClientAPI@CreateHTTPException$qqrxp31Rest@Client@TCustomRESTResponse @85  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::CreateHTTPException(Rest::Client::TCustomRESTResponse * const)
+    @Rest@Backend@Emsapi@TEMSClientAPI@CreateHTTPException$qqrxp31Rest@Client@TCustomRESTResponsexp17System@TMetaClass @84  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::CreateHTTPException(Rest::Client::TCustomRESTResponse * const, System::TMetaClass * const)
+    @Rest@Backend@Emsapi@TEMSClientAPI@DeleteGroup$qqrrx40Rest@Backend@Emsapi@TEMSClientAPI@TGroup @64  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::DeleteGroup(const Rest::Backend::Emsapi::TEMSClientAPI::TGroup&)
+    @Rest@Backend@Emsapi@TEMSClientAPI@DeleteGroup$qqrx20System@UnicodeString @63  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::DeleteGroup(const System::UnicodeString)
+    @Rest@Backend@Emsapi@TEMSClientAPI@DeleteUser$qqrrx39Rest@Backend@Emsapi@TEMSClientAPI@TUser @62  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::DeleteUser(const Rest::Backend::Emsapi::TEMSClientAPI::TUser&)
+    @Rest@Backend@Emsapi@TEMSClientAPI@DeleteUser$qqrx20System@UnicodeString @61  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::DeleteUser(const System::UnicodeString)
+    @Rest@Backend@Emsapi@TEMSClientAPI@EmptyConnectionInfo @141 ; Rest::Backend::Emsapi::TEMSClientAPI::EmptyConnectionInfo
+    @Rest@Backend@Emsapi@TEMSClientAPI@GetActualAuthentication$qqrv @93  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::GetActualAuthentication()
+    @Rest@Backend@Emsapi@TEMSClientAPI@GetLoggedIn$qqrv @78  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::GetLoggedIn()
+    @Rest@Backend@Emsapi@TEMSClientAPI@GroupFromObject$qqrx20System@UnicodeStringxp23System@Json@TJSONObject @67  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::GroupFromObject(const System::UnicodeString, System::Json::TJSONObject * const)
+    @Rest@Backend@Emsapi@TEMSClientAPI@GroupFromObject$qqrxp23System@Json@TJSONObject @68  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::GroupFromObject(System::Json::TJSONObject * const)
+    @Rest@Backend@Emsapi@TEMSClientAPI@Login$qqrrx40Rest@Backend@Emsapi@TEMSClientAPI@TLogin @76  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::Login(const Rest::Backend::Emsapi::TEMSClientAPI::TLogin&)
+    @Rest@Backend@Emsapi@TEMSClientAPI@Login$qqrx20System@UnicodeString @77  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::Login(const System::UnicodeString)
+    @Rest@Backend@Emsapi@TEMSClientAPI@LoginFromObject$qqrx20System@UnicodeStringxp23System@Json@TJSONObject @75  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::LoginFromObject(const System::UnicodeString, System::Json::TJSONObject * const)
+    @Rest@Backend@Emsapi@TEMSClientAPI@LoginUser$qqrx20System@UnicodeStringt171System@%DelphiInterface$44Rest@Backend@Emsapi@TEMSClientAPI@TLoginProc% @55  ; Rest::Backend::Emsapi::TEMSClientAPI::LoginUser(const System::UnicodeString, const System::UnicodeString, System::DelphiInterface<{583}...
+    @Rest@Backend@Emsapi@TEMSClientAPI@LoginUser$qqrx20System@UnicodeStringt1r40Rest@Backend@Emsapi@TEMSClientAPI@TLoginxp22System@Json@TJSONArray @56  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::LoginUser(const System::UnicodeString, const System::UnicodeString, Rest::Backend::Emsapi::TEMSClientAPI::TLogin&, System::Json::TJSONArray * const)
+    @Rest@Backend@Emsapi@TEMSClientAPI@LoginUser$qqrx20System@UnicodeStringt1r40Rest@Backend@Emsapi@TEMSClientAPI@TLoginxp22System@Json@TJSONArray71System@%DelphiInterface$44Rest@Backend@Emsapi@TEMSClientAPI@TLoginProc% @57  ; Rest::Backend::Emsapi::TEMSClientAPI::LoginUser(const System::UnicodeString, const System::UnicodeString, Rest::Backend::Emsapi::TEMSClientAPI::TLogin&, System::Json::TJSONArray * const, System::DelphiInterface<{583}...
+    @Rest@Backend@Emsapi@TEMSClientAPI@Logout$qqrv @52  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::Logout()
+    @Rest@Backend@Emsapi@TEMSClientAPI@LogoutUser$qqrv @51  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::LogoutUser()
+    @Rest@Backend@Emsapi@TEMSClientAPI@QueryGroups$qqrpx20System@UnicodeStringxixp22System@Json@TJSONArray @54  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::QueryGroups(const System::UnicodeString *, const int, System::Json::TJSONArray * const)
+    @Rest@Backend@Emsapi@TEMSClientAPI@QueryGroups$qqrpx20System@UnicodeStringxixp22System@Json@TJSONArrayr64System@%DynamicArray$40Rest@Backend@Emsapi@TEMSClientAPI@TGroup% @53  ; Rest::Backend::Emsapi::TEMSClientAPI::QueryGroups(const System::UnicodeString *, const int, System::Json::TJSONArray * const, System::DynamicArray<{583}...
+    @Rest@Backend@Emsapi@TEMSClientAPI@QueryResource$qqrx20System@UnicodeStringpx20System@UnicodeStringxixp22System@Json@TJSONArrayo @65  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::QueryResource(const System::UnicodeString, const System::UnicodeString *, const int, System::Json::TJSONArray * const, bool)
+    @Rest@Backend@Emsapi@TEMSClientAPI@QueryUserName$qqrx20System@UnicodeString79System@%DelphiInterface$52Rest@Backend@Emsapi@TEMSClientAPI@TQueryUserNameProc% @46  ; Rest::Backend::Emsapi::TEMSClientAPI::QueryUserName(const System::UnicodeString, System::DelphiInterface<{583}...
+    @Rest@Backend@Emsapi@TEMSClientAPI@QueryUserName$qqrx20System@UnicodeStringr39Rest@Backend@Emsapi@TEMSClientAPI@TUserxp22System@Json@TJSONArray @45  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::QueryUserName(const System::UnicodeString, Rest::Backend::Emsapi::TEMSClientAPI::TUser&, System::Json::TJSONArray * const)
+    @Rest@Backend@Emsapi@TEMSClientAPI@QueryUserName$qqrx20System@UnicodeStringr39Rest@Backend@Emsapi@TEMSClientAPI@TUserxp22System@Json@TJSONArray79System@%DelphiInterface$52Rest@Backend@Emsapi@TEMSClientAPI@TQueryUserNameProc% @47  ; Rest::Backend::Emsapi::TEMSClientAPI::QueryUserName(const System::UnicodeString, Rest::Backend::Emsapi::TEMSClientAPI::TUser&, System::Json::TJSONArray * const, System::DelphiInterface<{583}...
+    @Rest@Backend@Emsapi@TEMSClientAPI@QueryUsers$qqrpx20System@UnicodeStringxixp22System@Json@TJSONArray @59  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::QueryUsers(const System::UnicodeString *, const int, System::Json::TJSONArray * const)
+    @Rest@Backend@Emsapi@TEMSClientAPI@QueryUsers$qqrpx20System@UnicodeStringxixp22System@Json@TJSONArrayr63System@%DynamicArray$39Rest@Backend@Emsapi@TEMSClientAPI@TUser% @58  ; Rest::Backend::Emsapi::TEMSClientAPI::QueryUsers(const System::UnicodeString *, const int, System::Json::TJSONArray * const, System::DynamicArray<{583}...
+    @Rest@Backend@Emsapi@TEMSClientAPI@RemoveUsersFromGroup$qqrx20System@UnicodeStringx44System@%DynamicArray$20System@UnicodeString%r44Rest@Backend@Emsapi@TEMSClientAPI@TUpdatedAt @34  ; Rest::Backend::Emsapi::TEMSClientAPI::RemoveUsersFromGroup(const System::UnicodeString, const System::DynamicArray<{583}...
+    @Rest@Backend@Emsapi@TEMSClientAPI@RetrieveCurrentUser$qqr78System@%DelphiInterface$51Rest@Backend@Emsapi@TEMSClientAPI@TRetrieveUserProc% @39  ; Rest::Backend::Emsapi::TEMSClientAPI::RetrieveCurrentUser(System::DelphiInterface<{583}...
+    @Rest@Backend@Emsapi@TEMSClientAPI@RetrieveCurrentUser$qqrr39Rest@Backend@Emsapi@TEMSClientAPI@TUserxp22System@Json@TJSONArray @38  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::RetrieveCurrentUser(Rest::Backend::Emsapi::TEMSClientAPI::TUser&, System::Json::TJSONArray * const)
+    @Rest@Backend@Emsapi@TEMSClientAPI@RetrieveGroup$qqrrx40Rest@Backend@Emsapi@TEMSClientAPI@TGroup79System@%DelphiInterface$52Rest@Backend@Emsapi@TEMSClientAPI@TRetrieveGroupProc% @31  ; Rest::Backend::Emsapi::TEMSClientAPI::RetrieveGroup(const Rest::Backend::Emsapi::TEMSClientAPI::TGroup&, System::DelphiInterface<{583}...
+    @Rest@Backend@Emsapi@TEMSClientAPI@RetrieveGroup$qqrrx40Rest@Backend@Emsapi@TEMSClientAPI@TGroupr40Rest@Backend@Emsapi@TEMSClientAPI@TGroupxp22System@Json@TJSONArray @32  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::RetrieveGroup(const Rest::Backend::Emsapi::TEMSClientAPI::TGroup&, Rest::Backend::Emsapi::TEMSClientAPI::TGroup&, System::Json::TJSONArray * const)
+    @Rest@Backend@Emsapi@TEMSClientAPI@RetrieveGroup$qqrx20System@UnicodeString79System@%DelphiInterface$52Rest@Backend@Emsapi@TEMSClientAPI@TRetrieveGroupProc% @33  ; Rest::Backend::Emsapi::TEMSClientAPI::RetrieveGroup(const System::UnicodeString, System::DelphiInterface<{583}...
+    @Rest@Backend@Emsapi@TEMSClientAPI@RetrieveGroup$qqrx20System@UnicodeStringr40Rest@Backend@Emsapi@TEMSClientAPI@TGroupxp22System@Json@TJSONArray @36  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::RetrieveGroup(const System::UnicodeString, Rest::Backend::Emsapi::TEMSClientAPI::TGroup&, System::Json::TJSONArray * const)
+    @Rest@Backend@Emsapi@TEMSClientAPI@RetrieveGroup$qqrx20System@UnicodeStringr40Rest@Backend@Emsapi@TEMSClientAPI@TGroupxp22System@Json@TJSONArray79System@%DelphiInterface$52Rest@Backend@Emsapi@TEMSClientAPI@TRetrieveGroupProc% @37  ; Rest::Backend::Emsapi::TEMSClientAPI::RetrieveGroup(const System::UnicodeString, Rest::Backend::Emsapi::TEMSClientAPI::TGroup&, System::Json::TJSONArray * const, System::DelphiInterface<{583}...
+    @Rest@Backend@Emsapi@TEMSClientAPI@RetrieveUser$qqrrx39Rest@Backend@Emsapi@TEMSClientAPI@TUser78System@%DelphiInterface$51Rest@Backend@Emsapi@TEMSClientAPI@TRetrieveUserProc% @41  ; Rest::Backend::Emsapi::TEMSClientAPI::RetrieveUser(const Rest::Backend::Emsapi::TEMSClientAPI::TUser&, System::DelphiInterface<{583}...
+    @Rest@Backend@Emsapi@TEMSClientAPI@RetrieveUser$qqrrx39Rest@Backend@Emsapi@TEMSClientAPI@TUserr39Rest@Backend@Emsapi@TEMSClientAPI@TUserxp22System@Json@TJSONArray @42  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::RetrieveUser(const Rest::Backend::Emsapi::TEMSClientAPI::TUser&, Rest::Backend::Emsapi::TEMSClientAPI::TUser&, System::Json::TJSONArray * const)
+    @Rest@Backend@Emsapi@TEMSClientAPI@RetrieveUser$qqrx20System@UnicodeString78System@%DelphiInterface$51Rest@Backend@Emsapi@TEMSClientAPI@TRetrieveUserProc% @43  ; Rest::Backend::Emsapi::TEMSClientAPI::RetrieveUser(const System::UnicodeString, System::DelphiInterface<{583}...
+    @Rest@Backend@Emsapi@TEMSClientAPI@RetrieveUser$qqrx20System@UnicodeStringr39Rest@Backend@Emsapi@TEMSClientAPI@TUserxp22System@Json@TJSONArray @40  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::RetrieveUser(const System::UnicodeString, Rest::Backend::Emsapi::TEMSClientAPI::TUser&, System::Json::TJSONArray * const)
+    @Rest@Backend@Emsapi@TEMSClientAPI@RetrieveUser$qqrx20System@UnicodeStringr39Rest@Backend@Emsapi@TEMSClientAPI@TUserxp22System@Json@TJSONArray78System@%DelphiInterface$51Rest@Backend@Emsapi@TEMSClientAPI@TRetrieveUserProc% @44  ; Rest::Backend::Emsapi::TEMSClientAPI::RetrieveUser(const System::UnicodeString, Rest::Backend::Emsapi::TEMSClientAPI::TUser&, System::Json::TJSONArray * const, System::DelphiInterface<{583}...
+    @Rest@Backend@Emsapi@TEMSClientAPI@SetConnectionInfo$qqrrx49Rest@Backend@Emsapi@TEMSClientAPI@TConnectionInfo @66  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::SetConnectionInfo(const Rest::Backend::Emsapi::TEMSClientAPI::TConnectionInfo&)
+    @Rest@Backend@Emsapi@TEMSClientAPI@SignupUser$qqrx20System@UnicodeStringt1xp23System@Json@TJSONObjectr40Rest@Backend@Emsapi@TEMSClientAPI@TLogin @50  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::SignupUser(const System::UnicodeString, const System::UnicodeString, System::Json::TJSONObject * const, Rest::Backend::Emsapi::TEMSClientAPI::TLogin&)
+    @Rest@Backend@Emsapi@TEMSClientAPI@TGroup@$bctr$qqrx20System@UnicodeString @29  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::TGroup::TGroup(const System::UnicodeString)
+    @Rest@Backend@Emsapi@TEMSClientAPI@TLogin@$bctr$qqrx20System@UnicodeStringrx39Rest@Backend@Emsapi@TEMSClientAPI@TUser @28  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::TLogin::TLogin(const System::UnicodeString, const Rest::Backend::Emsapi::TEMSClientAPI::TUser&)
+    @Rest@Backend@Emsapi@TEMSClientAPI@TUpdatedAt@$bctr$qqr16System@TDateTime @27  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::TUpdatedAt::TUpdatedAt(System::TDateTime)
+    @Rest@Backend@Emsapi@TEMSClientAPI@TUser@$bctr$qqrx20System@UnicodeStringt1 @30  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::TUser::TUser(const System::UnicodeString, const System::UnicodeString)
+    @Rest@Backend@Emsapi@TEMSClientAPI@UpdateGroup$qqrrx40Rest@Backend@Emsapi@TEMSClientAPI@TGroupxp23System@Json@TJSONObjectr44Rest@Backend@Emsapi@TEMSClientAPI@TUpdatedAt @72  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::UpdateGroup(const Rest::Backend::Emsapi::TEMSClientAPI::TGroup&, System::Json::TJSONObject * const, Rest::Backend::Emsapi::TEMSClientAPI::TUpdatedAt&)
+    @Rest@Backend@Emsapi@TEMSClientAPI@UpdateGroup$qqrx20System@UnicodeStringxp23System@Json@TJSONObjectr44Rest@Backend@Emsapi@TEMSClientAPI@TUpdatedAt @73  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::UpdateGroup(const System::UnicodeString, System::Json::TJSONObject * const, Rest::Backend::Emsapi::TEMSClientAPI::TUpdatedAt&)
+    @Rest@Backend@Emsapi@TEMSClientAPI@UpdateUser$qqrrx39Rest@Backend@Emsapi@TEMSClientAPI@TUserxp23System@Json@TJSONObjectr44Rest@Backend@Emsapi@TEMSClientAPI@TUpdatedAt @71  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::UpdateUser(const Rest::Backend::Emsapi::TEMSClientAPI::TUser&, System::Json::TJSONObject * const, Rest::Backend::Emsapi::TEMSClientAPI::TUpdatedAt&)
+    @Rest@Backend@Emsapi@TEMSClientAPI@UpdateUser$qqrx20System@UnicodeStringxp23System@Json@TJSONObjectr44Rest@Backend@Emsapi@TEMSClientAPI@TUpdatedAt @60  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::UpdateUser(const System::UnicodeString, System::Json::TJSONObject * const, Rest::Backend::Emsapi::TEMSClientAPI::TUpdatedAt&)
+    @Rest@Backend@Emsapi@TEMSClientAPI@UpdatedAtFromObject$qqrxp23System@Json@TJSONObject @74  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::UpdatedAtFromObject(System::Json::TJSONObject * const)
+    @Rest@Backend@Emsapi@TEMSClientAPI@UserFromObject$qqrx20System@UnicodeStringxp23System@Json@TJSONObject @70  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::UserFromObject(const System::UnicodeString, System::Json::TJSONObject * const)
+    @Rest@Backend@Emsapi@TEMSClientAPI@UserFromObject$qqrxp23System@Json@TJSONObject @69  ; __fastcall Rest::Backend::Emsapi::TEMSClientAPI::UserFromObject(System::Json::TJSONObject * const)
+    @Rest@Backend@Emsapi@initialization$qqrv @24  ; __fastcall Rest::Backend::Emsapi::initialization()
+    @Rest@Backend@Emsconsts@Finalization$qqrv @2   ; __fastcall Rest::Backend::Emsconsts::Finalization()
+    @Rest@Backend@Emsconsts@_sAPIKeyRequired @7   ; Rest::Backend::Emsconsts::_sAPIKeyRequired
+    @Rest@Backend@Emsconsts@_sAppKeyRequired @16  ; Rest::Backend::Emsconsts::_sAppKeyRequired
+    @Rest@Backend@Emsconsts@_sAppSecretRequired @15  ; Rest::Backend::Emsconsts::_sAppSecretRequired
+    @Rest@Backend@Emsconsts@_sAuthTokenRequired @17  ; Rest::Backend::Emsconsts::_sAuthTokenRequired
+    @Rest@Backend@Emsconsts@_sBackendCollectionNameRequired @9   ; Rest::Backend::Emsconsts::_sBackendCollectionNameRequired
+    @Rest@Backend@Emsconsts@_sFormatEMSError @23  ; Rest::Backend::Emsconsts::_sFormatEMSError
+    @Rest@Backend@Emsconsts@_sFormatEMSErrorDescription @22  ; Rest::Backend::Emsconsts::_sFormatEMSErrorDescription
+    @Rest@Backend@Emsconsts@_sGroupNameRequired @11  ; Rest::Backend::Emsconsts::_sGroupNameRequired
+    @Rest@Backend@Emsconsts@_sGroupNotFound @3   ; Rest::Backend::Emsconsts::_sGroupNotFound
+    @Rest@Backend@Emsconsts@_sInvalidAuthenticationForThisOperation @6   ; Rest::Backend::Emsconsts::_sInvalidAuthenticationForThisOperation
+    @Rest@Backend@Emsconsts@_sJSONObjectExpected @20  ; Rest::Backend::Emsconsts::_sJSONObjectExpected
+    @Rest@Backend@Emsconsts@_sJSONObjectRequired @21  ; Rest::Backend::Emsconsts::_sJSONObjectRequired
+    @Rest@Backend@Emsconsts@_sMasterKeyRequired @10  ; Rest::Backend::Emsconsts::_sMasterKeyRequired
+    @Rest@Backend@Emsconsts@_sMasterSecretRequired @14  ; Rest::Backend::Emsconsts::_sMasterSecretRequired
+    @Rest@Backend@Emsconsts@_sOneUserExpected @19  ; Rest::Backend::Emsconsts::_sOneUserExpected
+    @Rest@Backend@Emsconsts@_sSessionIDRequired @8   ; Rest::Backend::Emsconsts::_sSessionIDRequired
+    @Rest@Backend@Emsconsts@_sSessionTokenExpected @12  ; Rest::Backend::Emsconsts::_sSessionTokenExpected
+    @Rest@Backend@Emsconsts@_sUseValidAuthentication @5   ; Rest::Backend::Emsconsts::_sUseValidAuthentication
+    @Rest@Backend@Emsconsts@_sUseValidAuthentications @4   ; Rest::Backend::Emsconsts::_sUseValidAuthentications
+    @Rest@Backend@Emsconsts@_sUserIDRequired @18  ; Rest::Backend::Emsconsts::_sUserIDRequired
+    @Rest@Backend@Emsconsts@_sUserNameRequired @13  ; Rest::Backend::Emsconsts::_sUserNameRequired
+    @Rest@Backend@Emsconsts@initialization$qqrv @1   ; __fastcall Rest::Backend::Emsconsts::initialization()
+    @Rest@Backend@Emsmetatypes@Finalization$qqrv @143 ; __fastcall Rest::Backend::Emsmetatypes::Finalization()
+    @Rest@Backend@Emsmetatypes@TEMSMetaFactory@ @177 ; Rest::Backend::Emsmetatypes::TEMSMetaFactory::
+    @Rest@Backend@Emsmetatypes@TEMSMetaFactory@CreateMetaClass$qqrx20System@UnicodeString @159 ; __fastcall Rest::Backend::Emsmetatypes::TEMSMetaFactory::CreateMetaClass(const System::UnicodeString)
+    @Rest@Backend@Emsmetatypes@TEMSMetaFactory@CreateMetaDataType$qqrx20System@UnicodeStringt1 @155 ; __fastcall Rest::Backend::Emsmetatypes::TEMSMetaFactory::CreateMetaDataType(const System::UnicodeString, const System::UnicodeString)
+    @Rest@Backend@Emsmetatypes@TEMSMetaFactory@CreateMetaFoundGroup$qqrrx40Rest@Backend@Emsapi@TEMSClientAPI@TGroup @157 ; __fastcall Rest::Backend::Emsmetatypes::TEMSMetaFactory::CreateMetaFoundGroup(const Rest::Backend::Emsapi::TEMSClientAPI::TGroup&)
+    @Rest@Backend@Emsmetatypes@TEMSMetaFactory@CreateMetaFoundUser$qqrrx39Rest@Backend@Emsapi@TEMSClientAPI@TUser @158 ; __fastcall Rest::Backend::Emsmetatypes::TEMSMetaFactory::CreateMetaFoundUser(const Rest::Backend::Emsapi::TEMSClientAPI::TUser&)
+    @Rest@Backend@Emsmetatypes@TEMSMetaFactory@CreateMetaGroupObject$qqrrx40Rest@Backend@Emsapi@TEMSClientAPI@TGroup @150 ; __fastcall Rest::Backend::Emsmetatypes::TEMSMetaFactory::CreateMetaGroupObject(const Rest::Backend::Emsapi::TEMSClientAPI::TGroup&)
+    @Rest@Backend@Emsmetatypes@TEMSMetaFactory@CreateMetaGroupObject$qqrx20System@UnicodeString @148 ; __fastcall Rest::Backend::Emsmetatypes::TEMSMetaFactory::CreateMetaGroupObject(const System::UnicodeString)
+    @Rest@Backend@Emsmetatypes@TEMSMetaFactory@CreateMetaLoginUser$qqrrx40Rest@Backend@Emsapi@TEMSClientAPI@TLogin @156 ; __fastcall Rest::Backend::Emsmetatypes::TEMSMetaFactory::CreateMetaLoginUser(const Rest::Backend::Emsapi::TEMSClientAPI::TLogin&)
+    @Rest@Backend@Emsmetatypes@TEMSMetaFactory@CreateMetaSignupUser$qqrrx40Rest@Backend@Emsapi@TEMSClientAPI@TLogin @154 ; __fastcall Rest::Backend::Emsmetatypes::TEMSMetaFactory::CreateMetaSignupUser(const Rest::Backend::Emsapi::TEMSClientAPI::TLogin&)
+    @Rest@Backend@Emsmetatypes@TEMSMetaFactory@CreateMetaUpdatedGroup$qqrrx44Rest@Backend@Emsapi@TEMSClientAPI@TUpdatedAt @152 ; __fastcall Rest::Backend::Emsmetatypes::TEMSMetaFactory::CreateMetaUpdatedGroup(const Rest::Backend::Emsapi::TEMSClientAPI::TUpdatedAt&)
+    @Rest@Backend@Emsmetatypes@TEMSMetaFactory@CreateMetaUpdatedUser$qqrrx44Rest@Backend@Emsapi@TEMSClientAPI@TUpdatedAt @153 ; __fastcall Rest::Backend::Emsmetatypes::TEMSMetaFactory::CreateMetaUpdatedUser(const Rest::Backend::Emsapi::TEMSClientAPI::TUpdatedAt&)
+    @Rest@Backend@Emsmetatypes@TEMSMetaFactory@CreateMetaUserObject$qqrrx39Rest@Backend@Emsapi@TEMSClientAPI@TUser @151 ; __fastcall Rest::Backend::Emsmetatypes::TEMSMetaFactory::CreateMetaUserObject(const Rest::Backend::Emsapi::TEMSClientAPI::TUser&)
+    @Rest@Backend@Emsmetatypes@TEMSMetaFactory@CreateMetaUserObject$qqrx20System@UnicodeString @149 ; __fastcall Rest::Backend::Emsmetatypes::TEMSMetaFactory::CreateMetaUserObject(const System::UnicodeString)
+    @Rest@Backend@Emsmetatypes@TMetaClass@ @201 ; Rest::Backend::Emsmetatypes::TMetaClass::
+    @Rest@Backend@Emsmetatypes@TMetaClass@$bctr$qqrx20System@UnicodeString @175 ; __fastcall Rest::Backend::Emsmetatypes::TMetaClass::TMetaClass(const System::UnicodeString)
+    @Rest@Backend@Emsmetatypes@TMetaClass@$bctr$qqrx20System@UnicodeStringt1 @174 ; __fastcall Rest::Backend::Emsmetatypes::TMetaClass::TMetaClass(const System::UnicodeString, const System::UnicodeString)
+    @Rest@Backend@Emsmetatypes@TMetaClass@GetClassName$qqrv @173 ; __fastcall Rest::Backend::Emsmetatypes::TMetaClass::GetClassName()
+    @Rest@Backend@Emsmetatypes@TMetaClass@GetDataType$qqrv @172 ; __fastcall Rest::Backend::Emsmetatypes::TMetaClass::GetDataType()
+    @Rest@Backend@Emsmetatypes@TMetaClassName@ @199 ; Rest::Backend::Emsmetatypes::TMetaClassName::
+    @Rest@Backend@Emsmetatypes@TMetaDataType@ @197 ; Rest::Backend::Emsmetatypes::TMetaDataType::
+    @Rest@Backend@Emsmetatypes@TMetaFactory@ @203 ; Rest::Backend::Emsmetatypes::TMetaFactory::
+    @Rest@Backend@Emsmetatypes@TMetaFactory@CreateMetaDataType$qqrx20System@UnicodeStringt1 @162 ; __fastcall Rest::Backend::Emsmetatypes::TMetaFactory::CreateMetaDataType(const System::UnicodeString, const System::UnicodeString)
+    @Rest@Backend@Emsmetatypes@TMetaFactory@CreateMetaGroupObject$qqrx20System@UnicodeString @161 ; __fastcall Rest::Backend::Emsmetatypes::TMetaFactory::CreateMetaGroupObject(const System::UnicodeString)
+    @Rest@Backend@Emsmetatypes@TMetaFactory@CreateMetaUserObject$qqrx20System@UnicodeString @160 ; __fastcall Rest::Backend::Emsmetatypes::TMetaFactory::CreateMetaUserObject(const System::UnicodeString)
+    @Rest@Backend@Emsmetatypes@TMetaFoundGroup@ @185 ; Rest::Backend::Emsmetatypes::TMetaFoundGroup::
+    @Rest@Backend@Emsmetatypes@TMetaFoundUser@ @187 ; Rest::Backend::Emsmetatypes::TMetaFoundUser::
+    @Rest@Backend@Emsmetatypes@TMetaGroup@ @193 ; Rest::Backend::Emsmetatypes::TMetaGroup::
+    @Rest@Backend@Emsmetatypes@TMetaGroup@$bctr$qqrrx40Rest@Backend@Emsapi@TEMSClientAPI@TGroup @166 ; __fastcall Rest::Backend::Emsmetatypes::TMetaGroup::TMetaGroup(const Rest::Backend::Emsapi::TEMSClientAPI::TGroup&)
+    @Rest@Backend@Emsmetatypes@TMetaGroup@GetCreatedAt$qqrv @165 ; __fastcall Rest::Backend::Emsmetatypes::TMetaGroup::GetCreatedAt()
+    @Rest@Backend@Emsmetatypes@TMetaGroup@GetGroupName$qqrv @163 ; __fastcall Rest::Backend::Emsmetatypes::TMetaGroup::GetGroupName()
+    @Rest@Backend@Emsmetatypes@TMetaGroup@GetUpdatedAt$qqrv @164 ; __fastcall Rest::Backend::Emsmetatypes::TMetaGroup::GetUpdatedAt()
+    @Rest@Backend@Emsmetatypes@TMetaLogin@ @191 ; Rest::Backend::Emsmetatypes::TMetaLogin::
+    @Rest@Backend@Emsmetatypes@TMetaLogin@$bctr$qqrrx40Rest@Backend@Emsapi@TEMSClientAPI@TLogin @145 ; __fastcall Rest::Backend::Emsmetatypes::TMetaLogin::TMetaLogin(const Rest::Backend::Emsapi::TEMSClientAPI::TLogin&)
+    @Rest@Backend@Emsmetatypes@TMetaLogin@GetAuthTOken$qqrv @144 ; __fastcall Rest::Backend::Emsmetatypes::TMetaLogin::GetAuthTOken()
+    @Rest@Backend@Emsmetatypes@TMetaLoginUser@ @183 ; Rest::Backend::Emsmetatypes::TMetaLoginUser::
+    @Rest@Backend@Emsmetatypes@TMetaSignupUser@ @181 ; Rest::Backend::Emsmetatypes::TMetaSignupUser::
+    @Rest@Backend@Emsmetatypes@TMetaUpdatedAt@ @179 ; Rest::Backend::Emsmetatypes::TMetaUpdatedAt::
+    @Rest@Backend@Emsmetatypes@TMetaUpdatedAt@$bctr$qqrrx44Rest@Backend@Emsapi@TEMSClientAPI@TUpdatedAt @147 ; __fastcall Rest::Backend::Emsmetatypes::TMetaUpdatedAt::TMetaUpdatedAt(const Rest::Backend::Emsapi::TEMSClientAPI::TUpdatedAt&)
+    @Rest@Backend@Emsmetatypes@TMetaUpdatedAt@GetUpdatedAt$qqrv @146 ; __fastcall Rest::Backend::Emsmetatypes::TMetaUpdatedAt::GetUpdatedAt()
+    @Rest@Backend@Emsmetatypes@TMetaUpdatedUser@ @189 ; Rest::Backend::Emsmetatypes::TMetaUpdatedUser::
+    @Rest@Backend@Emsmetatypes@TMetaUser@ @195 ; Rest::Backend::Emsmetatypes::TMetaUser::
+    @Rest@Backend@Emsmetatypes@TMetaUser@$bctr$qqrrx39Rest@Backend@Emsapi@TEMSClientAPI@TUser @171 ; __fastcall Rest::Backend::Emsmetatypes::TMetaUser::TMetaUser(const Rest::Backend::Emsapi::TEMSClientAPI::TUser&)
+    @Rest@Backend@Emsmetatypes@TMetaUser@GetCreatedAt$qqrv @170 ; __fastcall Rest::Backend::Emsmetatypes::TMetaUser::GetCreatedAt()
+    @Rest@Backend@Emsmetatypes@TMetaUser@GetObjectID$qqrv @169 ; __fastcall Rest::Backend::Emsmetatypes::TMetaUser::GetObjectID()
+    @Rest@Backend@Emsmetatypes@TMetaUser@GetUpdatedAt$qqrv @168 ; __fastcall Rest::Backend::Emsmetatypes::TMetaUser::GetUpdatedAt()
+    @Rest@Backend@Emsmetatypes@TMetaUser@GetUserName$qqrv @167 ; __fastcall Rest::Backend::Emsmetatypes::TMetaUser::GetUserName()
+    @Rest@Backend@Emsmetatypes@initialization$qqrv @142 ; __fastcall Rest::Backend::Emsmetatypes::initialization()
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p37Rest@Backend@Emsservices@TEMSLoginAPI%@ @422 ; Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSLoginAPI *>::
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p37Rest@Backend@Emsservices@TEMSLoginAPI%@CreateBackendApi$qqrv @368 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSLoginAPI *>::CreateBackendApi()
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p37Rest@Backend@Emsservices@TEMSLoginAPI%@DoAfterConnectionChanged$qqrv @366 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSLoginAPI *>::DoAfterConnectionChanged()
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p37Rest@Backend@Emsservices@TEMSLoginAPI%@EnsureBackendApi$qqrv @367 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSLoginAPI *>::EnsureBackendApi()
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p37Rest@Backend@Emsservices@TEMSLoginAPI%@GetEMSAPI$qqrv @369 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSLoginAPI *>::GetEMSAPI()
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p37Rest@Backend@Emsservices@TEMSQueryAPI%@ @424 ; Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSQueryAPI *>::
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p37Rest@Backend@Emsservices@TEMSQueryAPI%@CreateBackendApi$qqrv @372 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSQueryAPI *>::CreateBackendApi()
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p37Rest@Backend@Emsservices@TEMSQueryAPI%@DoAfterConnectionChanged$qqrv @370 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSQueryAPI *>::DoAfterConnectionChanged()
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p37Rest@Backend@Emsservices@TEMSQueryAPI%@EnsureBackendApi$qqrv @371 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSQueryAPI *>::EnsureBackendApi()
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p37Rest@Backend@Emsservices@TEMSQueryAPI%@GetEMSAPI$qqrv @373 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSQueryAPI *>::GetEMSAPI()
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p37Rest@Backend@Emsservices@TEMSUsersAPI%@ @420 ; Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSUsersAPI *>::
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p37Rest@Backend@Emsservices@TEMSUsersAPI%@CreateBackendApi$qqrv @364 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSUsersAPI *>::CreateBackendApi()
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p37Rest@Backend@Emsservices@TEMSUsersAPI%@DoAfterConnectionChanged$qqrv @362 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSUsersAPI *>::DoAfterConnectionChanged()
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p37Rest@Backend@Emsservices@TEMSUsersAPI%@EnsureBackendApi$qqrv @363 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSUsersAPI *>::EnsureBackendApi()
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p37Rest@Backend@Emsservices@TEMSUsersAPI%@GetEMSAPI$qqrv @365 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSUsersAPI *>::GetEMSAPI()
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p38Rest@Backend@Emsservices@TEMSGroupsAPI%@ @418 ; Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSGroupsAPI *>::
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p38Rest@Backend@Emsservices@TEMSGroupsAPI%@CreateBackendApi$qqrv @360 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSGroupsAPI *>::CreateBackendApi()
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p38Rest@Backend@Emsservices@TEMSGroupsAPI%@DoAfterConnectionChanged$qqrv @358 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSGroupsAPI *>::DoAfterConnectionChanged()
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p38Rest@Backend@Emsservices@TEMSGroupsAPI%@EnsureBackendApi$qqrv @359 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSGroupsAPI *>::EnsureBackendApi()
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p38Rest@Backend@Emsservices@TEMSGroupsAPI%@GetEMSAPI$qqrv @361 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSGroupsAPI *>::GetEMSAPI()
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p46Rest@Backend@Emsservices@TEMSCustomEndpointAPI%@ @416 ; Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSCustomEndpointAPI *>::
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p46Rest@Backend@Emsservices@TEMSCustomEndpointAPI%@CreateBackendApi$qqrv @356 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSCustomEndpointAPI *>::CreateBackendApi()
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p46Rest@Backend@Emsservices@TEMSCustomEndpointAPI%@DoAfterConnectionChanged$qqrv @354 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSCustomEndpointAPI *>::DoAfterConnectionChanged()
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p46Rest@Backend@Emsservices@TEMSCustomEndpointAPI%@EnsureBackendApi$qqrv @355 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSCustomEndpointAPI *>::EnsureBackendApi()
+    @Rest@Backend@Emsprovider@%TEMSBackendService__1$p46Rest@Backend@Emsservices@TEMSCustomEndpointAPI%@GetEMSAPI$qqrv @357 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService__1<Rest::Backend::Emsservices::TEMSCustomEndpointAPI *>::GetEMSAPI()
+    @Rest@Backend@Emsprovider@EEMSProviderError@ @337 ; Rest::Backend::Emsprovider::EEMSProviderError::
+    @Rest@Backend@Emsprovider@Finalization$qqrv @266 ; __fastcall Rest::Backend::Emsprovider::Finalization()
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@ @350 ; Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@$bctr$qqrp25System@Classes@TComponent @316 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::TCustomEMSConnectionInfo(System::Classes::TComponent *)
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@$bdtr$qqrv @315 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::~TCustomEMSConnectionInfo()
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@AppHandshake$qqrx78System@%DelphiInterface$51Rest@Backend@Emsapi@TEMSClientAPI@TAppHandshakeProc% @318 ; Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::AppHandshake(const System::DelphiInterface<{583}...
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@CheckURL$qqrv @317 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::CheckURL()
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@DoChanged$qqrv @314 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::DoChanged()
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@GetApiVersion$qqrv @313 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::GetApiVersion()
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@GetAppSecret$qqrv @311 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::GetAppSecret()
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@GetApplicationId$qqrv @312 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::GetApplicationId()
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@GetBaseURL$qqrv @302 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::GetBaseURL()
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@GetMasterSecret$qqrv @310 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::GetMasterSecret()
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@GetPassword$qqrv @309 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::GetPassword()
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@GetProxyPassword$qqrv @308 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::GetProxyPassword()
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@GetProxyPort$qqrv @307 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::GetProxyPort()
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@GetProxyServer$qqrv @306 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::GetProxyServer()
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@GetProxyUsername$qqrv @305 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::GetProxyUsername()
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@GetUserName$qqrv @304 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::GetUserName()
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@IsURLProtocolStored$qqrv @303 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::IsURLProtocolStored()
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@SetApiVersion$qqrx20System@UnicodeString @301 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::SetApiVersion(const System::UnicodeString)
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@SetAppSecret$qqrx20System@UnicodeString @299 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::SetAppSecret(const System::UnicodeString)
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@SetApplicationId$qqrx20System@UnicodeString @300 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::SetApplicationId(const System::UnicodeString)
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@SetMasterSecret$qqrx20System@UnicodeString @298 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::SetMasterSecret(const System::UnicodeString)
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@SetPassword$qqrx20System@UnicodeString @297 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::SetPassword(const System::UnicodeString)
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@SetProxyPassword$qqrx20System@UnicodeString @292 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::SetProxyPassword(const System::UnicodeString)
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@SetProxyPort$qqrxi @291 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::SetProxyPort(const int)
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@SetProxyServer$qqrx20System@UnicodeString @290 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::SetProxyServer(const System::UnicodeString)
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@SetProxyUsername$qqrx20System@UnicodeString @289 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::SetProxyUsername(const System::UnicodeString)
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@SetURLBasePath$qqrx20System@UnicodeString @296 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::SetURLBasePath(const System::UnicodeString)
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@SetURLHost$qqrx20System@UnicodeString @295 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::SetURLHost(const System::UnicodeString)
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@SetURLPort$qqrxi @294 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::SetURLPort(const int)
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@SetURLProtocol$qqrx20System@UnicodeString @293 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::SetURLProtocol(const System::UnicodeString)
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@SetUserName$qqrx20System@UnicodeString @288 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::SetUserName(const System::UnicodeString)
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@TNotifyList@ @353 ; Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::TNotifyList::
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@TNotifyList@$bctr$qqrv @285 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::TNotifyList::TNotifyList()
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@TNotifyList@$bdtr$qqrv @284 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::TNotifyList::~TNotifyList()
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@TNotifyList@Add$qqrxynpqqrp14System@TObject$v @286 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::TNotifyList::Add(void __fastcall __closure(*)(System::TObject *) const)
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@TNotifyList@Notify$qqrp14System@TObject @283 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::TNotifyList::Notify(System::TObject *)
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@TNotifyList@Remove$qqrxynpqqrp14System@TObject$v @282 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::TNotifyList::Remove(void __fastcall __closure(*)(System::TObject *) const)
+    @Rest@Backend@Emsprovider@TCustomEMSConnectionInfo@UpdateApi$qqrxp33Rest@Backend@Emsapi@TEMSClientAPI @287 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSConnectionInfo::UpdateApi(Rest::Backend::Emsapi::TEMSClientAPI * const)
+    @Rest@Backend@Emsprovider@TCustomEMSProvider@ @348 ; Rest::Backend::Emsprovider::TCustomEMSProvider::
+    @Rest@Backend@Emsprovider@TCustomEMSProvider@GetProviderID$qqrv @281 ; __fastcall Rest::Backend::Emsprovider::TCustomEMSProvider::GetProviderID()
+    @Rest@Backend@Emsprovider@TEMSBackendService@ @344 ; Rest::Backend::Emsprovider::TEMSBackendService::
+    @Rest@Backend@Emsprovider@TEMSBackendService@$bctr$qqrx66System@%DelphiInterface$39Rest@Backend@Providers@IBackendProvider% @280 ; Rest::Backend::Emsprovider::TEMSBackendService::TEMSBackendService(const System::DelphiInterface<{583}...
+    @Rest@Backend@Emsprovider@TEMSBackendService@$bdtr$qqrv @279 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService::~TEMSBackendService()
+    @Rest@Backend@Emsprovider@TEMSBackendService@DoAfterConnectionChanged$qqrv @278 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService::DoAfterConnectionChanged()
+    @Rest@Backend@Emsprovider@TEMSBackendService@OnConnectionChanged$qqrp14System@TObject @277 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService::OnConnectionChanged(System::TObject *)
+    @Rest@Backend@Emsprovider@TEMSBackendService@SetConnectionInfo$qqrxp49Rest@Backend@Emsprovider@TCustomEMSConnectionInfo @276 ; __fastcall Rest::Backend::Emsprovider::TEMSBackendService::SetConnectionInfo(Rest::Backend::Emsprovider::TCustomEMSConnectionInfo * const)
+    @Rest@Backend@Emsprovider@TEMSProvider@ @346 ; Rest::Backend::Emsprovider::TEMSProvider::
+    @Rest@Backend@Emsprovider@TEMSServiceAPI@ @341 ; Rest::Backend::Emsprovider::TEMSServiceAPI::
+    @Rest@Backend@Emsprovider@TEMSServiceAPI@$bctr$qqrv @275 ; __fastcall Rest::Backend::Emsprovider::TEMSServiceAPI::TEMSServiceAPI()
+    @Rest@Backend@Emsprovider@TEMSServiceAPI@$bdtr$qqrv @274 ; __fastcall Rest::Backend::Emsprovider::TEMSServiceAPI::~TEMSServiceAPI()
+    @Rest@Backend@Emsprovider@TEMSServiceAPI@GetEMSAPI$qqrv @273 ; __fastcall Rest::Backend::Emsprovider::TEMSServiceAPI::GetEMSAPI()
+    @Rest@Backend@Emsprovider@TEMSServiceAPIAuth@ @339 ; Rest::Backend::Emsprovider::TEMSServiceAPIAuth::
+    @Rest@Backend@Emsprovider@TEMSServiceAPIAuth@GetAuthentication$qqrv @272 ; __fastcall Rest::Backend::Emsprovider::TEMSServiceAPIAuth::GetAuthentication()
+    @Rest@Backend@Emsprovider@TEMSServiceAPIAuth@GetDefaultAuthentication$qqrv @271 ; __fastcall Rest::Backend::Emsprovider::TEMSServiceAPIAuth::GetDefaultAuthentication()
+    @Rest@Backend@Emsprovider@TEMSServiceAPIAuth@Login$qqrrx42Rest@Backend@Metatypes@TBackendEntityValue @270 ; __fastcall Rest::Backend::Emsprovider::TEMSServiceAPIAuth::Login(const Rest::Backend::Metatypes::TBackendEntityValue&)
+    @Rest@Backend@Emsprovider@TEMSServiceAPIAuth@Logout$qqrv @269 ; __fastcall Rest::Backend::Emsprovider::TEMSServiceAPIAuth::Logout()
+    @Rest@Backend@Emsprovider@TEMSServiceAPIAuth@SetAuthentication$qqr45Rest@Backend@Providers@TBackendAuthentication @268 ; __fastcall Rest::Backend::Emsprovider::TEMSServiceAPIAuth::SetAuthentication(Rest::Backend::Providers::TBackendAuthentication)
+    @Rest@Backend@Emsprovider@TEMSServiceAPIAuth@SetDefaultAuthentication$qqr52Rest@Backend@Providers@TBackendDefaultAuthentication @267 ; __fastcall Rest::Backend::Emsprovider::TEMSServiceAPIAuth::SetDefaultAuthentication(Rest::Backend::Providers::TBackendDefaultAuthentication)
+    @Rest@Backend@Emsprovider@initialization$qqrv @265 ; __fastcall Rest::Backend::Emsprovider::initialization()
+    @Rest@Backend@Emsservices@Finalization$qqrv @375 ; __fastcall Rest::Backend::Emsservices::Finalization()
+    @Rest@Backend@Emsservices@TEMSCustomEndpointAPI@ @429 ; Rest::Backend::Emsservices::TEMSCustomEndpointAPI::
+    @Rest@Backend@Emsservices@TEMSCustomEndpointAPI@CheckForResponseErrors$qqrxp31Rest@Client@TCustomRESTResponsepixi @394 ; __fastcall Rest::Backend::Emsservices::TEMSCustomEndpointAPI::CheckForResponseErrors(Rest::Client::TCustomRESTResponse * const, int *, const int)
+    @Rest@Backend@Emsservices@TEMSCustomEndpointAPI@PrepareClient$qqrxp29Rest@Client@TCustomRESTClient @393 ; __fastcall Rest::Backend::Emsservices::TEMSCustomEndpointAPI::PrepareClient(Rest::Client::TCustomRESTClient * const)
+    @Rest@Backend@Emsservices@TEMSCustomEndpointAPI@PrepareRequest$qqrxp30Rest@Client@TCustomRESTRequest @392 ; __fastcall Rest::Backend::Emsservices::TEMSCustomEndpointAPI::PrepareRequest(Rest::Client::TCustomRESTRequest * const)
+    @Rest@Backend@Emsservices@TEMSCustomEndpointService@ @427 ; Rest::Backend::Emsservices::TEMSCustomEndpointService::
+    @Rest@Backend@Emsservices@TEMSCustomEndpointService@CreateCustomEndpointApi$qqrv @396 ; __fastcall Rest::Backend::Emsservices::TEMSCustomEndpointService::CreateCustomEndpointApi()
+    @Rest@Backend@Emsservices@TEMSCustomEndpointService@GetCustomEndpointAPI$qqrv @395 ; __fastcall Rest::Backend::Emsservices::TEMSCustomEndpointService::GetCustomEndpointAPI()
+    @Rest@Backend@Emsservices@TEMSGroupsAPI@ @433 ; Rest::Backend::Emsservices::TEMSGroupsAPI::
+    @Rest@Backend@Emsservices@TEMSGroupsAPI@AddUsers$qqrx20System@UnicodeStringx44System@%DynamicArray$20System@UnicodeString%r42Rest@Backend@Metatypes@TBackendEntityValue @382 ; Rest::Backend::Emsservices::TEMSGroupsAPI::AddUsers(const System::UnicodeString, const System::DynamicArray<{583}...
+    @Rest@Backend@Emsservices@TEMSGroupsAPI@CreateGroup$qqrx20System@UnicodeStringp23System@Json@TJSONObjectr42Rest@Backend@Metatypes@TBackendEntityValue @380 ; __fastcall Rest::Backend::Emsservices::TEMSGroupsAPI::CreateGroup(const System::UnicodeString, System::Json::TJSONObject *, Rest::Backend::Metatypes::TBackendEntityValue&)
+    @Rest@Backend@Emsservices@TEMSGroupsAPI@DeleteGroup$qqrrx42Rest@Backend@Metatypes@TBackendEntityValue @379 ; __fastcall Rest::Backend::Emsservices::TEMSGroupsAPI::DeleteGroup(const Rest::Backend::Metatypes::TBackendEntityValue&)
+    @Rest@Backend@Emsservices@TEMSGroupsAPI@FindGroup$qqrrx42Rest@Backend@Metatypes@TBackendEntityValue68System@%DelphiInterface$41Rest@Backend@Servicetypes@TFindObjectProc% @378 ; Rest::Backend::Emsservices::TEMSGroupsAPI::FindGroup(const Rest::Backend::Metatypes::TBackendEntityValue&, System::DelphiInterface<{583}...
+    @Rest@Backend@Emsservices@TEMSGroupsAPI@GetMetaFactory$qqrv @376 ; __fastcall Rest::Backend::Emsservices::TEMSGroupsAPI::GetMetaFactory()
+    @Rest@Backend@Emsservices@TEMSGroupsAPI@RemoveUsers$qqrx20System@UnicodeStringx44System@%DynamicArray$20System@UnicodeString%r42Rest@Backend@Metatypes@TBackendEntityValue @381 ; Rest::Backend::Emsservices::TEMSGroupsAPI::RemoveUsers(const System::UnicodeString, const System::DynamicArray<{583}...
+    @Rest@Backend@Emsservices@TEMSGroupsAPI@UpdateGroup$qqrrx42Rest@Backend@Metatypes@TBackendEntityValuexp23System@Json@TJSONObjectr42Rest@Backend@Metatypes@TBackendEntityValue @377 ; __fastcall Rest::Backend::Emsservices::TEMSGroupsAPI::UpdateGroup(const Rest::Backend::Metatypes::TBackendEntityValue&, System::Json::TJSONObject * const, Rest::Backend::Metatypes::TBackendEntityValue&)
+    @Rest@Backend@Emsservices@TEMSGroupsService@ @431 ; Rest::Backend::Emsservices::TEMSGroupsService::
+    @Rest@Backend@Emsservices@TEMSGroupsService@CreateGroupsApi$qqrv @406 ; __fastcall Rest::Backend::Emsservices::TEMSGroupsService::CreateGroupsApi()
+    @Rest@Backend@Emsservices@TEMSGroupsService@GetGroupsApi$qqrv @405 ; __fastcall Rest::Backend::Emsservices::TEMSGroupsService::GetGroupsApi()
+    @Rest@Backend@Emsservices@TEMSLoginAPI@ @441 ; Rest::Backend::Emsservices::TEMSLoginAPI::
+    @Rest@Backend@Emsservices@TEMSLoginAPI@FindCurrentUser$qqrrx42Rest@Backend@Metatypes@TBackendEntityValue68System@%DelphiInterface$41Rest@Backend@Servicetypes@TFindObjectProc% @388 ; Rest::Backend::Emsservices::TEMSLoginAPI::FindCurrentUser(const Rest::Backend::Metatypes::TBackendEntityValue&, System::DelphiInterface<{583}...
+    @Rest@Backend@Emsservices@TEMSLoginAPI@FindCurrentUser$qqrrx42Rest@Backend@Metatypes@TBackendEntityValuer42Rest@Backend@Metatypes@TBackendEntityValuexp22System@Json@TJSONArray @387 ; __fastcall Rest::Backend::Emsservices::TEMSLoginAPI::FindCurrentUser(const Rest::Backend::Metatypes::TBackendEntityValue&, Rest::Backend::Metatypes::TBackendEntityValue&, System::Json::TJSONArray * const)
+    @Rest@Backend@Emsservices@TEMSLoginAPI@GetMetaFactory$qqrv @389 ; __fastcall Rest::Backend::Emsservices::TEMSLoginAPI::GetMetaFactory()
+    @Rest@Backend@Emsservices@TEMSLoginAPI@LoginUser$qqrx20System@UnicodeStringt168System@%DelphiInterface$41Rest@Backend@Servicetypes@TFindObjectProc% @386 ; Rest::Backend::Emsservices::TEMSLoginAPI::LoginUser(const System::UnicodeString, const System::UnicodeString, System::DelphiInterface<{583}...
+    @Rest@Backend@Emsservices@TEMSLoginAPI@LoginUser$qqrx20System@UnicodeStringt1r42Rest@Backend@Metatypes@TBackendEntityValuexp22System@Json@TJSONArray @385 ; __fastcall Rest::Backend::Emsservices::TEMSLoginAPI::LoginUser(const System::UnicodeString, const System::UnicodeString, Rest::Backend::Metatypes::TBackendEntityValue&, System::Json::TJSONArray * const)
+    @Rest@Backend@Emsservices@TEMSLoginAPI@SignupUser$qqrx20System@UnicodeStringt1xp23System@Json@TJSONObjectr42Rest@Backend@Metatypes@TBackendEntityValue @384 ; __fastcall Rest::Backend::Emsservices::TEMSLoginAPI::SignupUser(const System::UnicodeString, const System::UnicodeString, System::Json::TJSONObject * const, Rest::Backend::Metatypes::TBackendEntityValue&)
+    @Rest@Backend@Emsservices@TEMSLoginAPI@UpdateUser$qqrrx42Rest@Backend@Metatypes@TBackendEntityValuexp23System@Json@TJSONObjectr42Rest@Backend@Metatypes@TBackendEntityValue @383 ; __fastcall Rest::Backend::Emsservices::TEMSLoginAPI::UpdateUser(const Rest::Backend::Metatypes::TBackendEntityValue&, System::Json::TJSONObject * const, Rest::Backend::Metatypes::TBackendEntityValue&)
+    @Rest@Backend@Emsservices@TEMSLoginService@ @439 ; Rest::Backend::Emsservices::TEMSLoginService::
+    @Rest@Backend@Emsservices@TEMSLoginService@CreateAuthApi$qqrv @391 ; __fastcall Rest::Backend::Emsservices::TEMSLoginService::CreateAuthApi()
+    @Rest@Backend@Emsservices@TEMSLoginService@GetAuthApi$qqrv @390 ; __fastcall Rest::Backend::Emsservices::TEMSLoginService::GetAuthApi()
+    @Rest@Backend@Emsservices@TEMSQueryAPI@ @445 ; Rest::Backend::Emsservices::TEMSQueryAPI::
+    @Rest@Backend@Emsservices@TEMSQueryAPI@GetMetaFactory$qqrv @413 ; __fastcall Rest::Backend::Emsservices::TEMSQueryAPI::GetMetaFactory()
+    @Rest@Backend@Emsservices@TEMSQueryAPI@GetServiceNames$qqrr44System@%DynamicArray$20System@UnicodeString% @414 ; Rest::Backend::Emsservices::TEMSQueryAPI::GetServiceNames(System::DynamicArray<{583}...
+    @Rest@Backend@Emsservices@TEMSQueryAPI@Query$qqrx41Rest@Backend@Metatypes@TBackendClassValuepx20System@UnicodeStringxixp22System@Json@TJSONArray @412 ; __fastcall Rest::Backend::Emsservices::TEMSQueryAPI::Query(const Rest::Backend::Metatypes::TBackendClassValue, const System::UnicodeString *, const int, System::Json::TJSONArray * const)
+    @Rest@Backend@Emsservices@TEMSQueryAPI@Query$qqrx41Rest@Backend@Metatypes@TBackendClassValuepx20System@UnicodeStringxixp22System@Json@TJSONArrayr66System@%DynamicArray$42Rest@Backend@Metatypes@TBackendEntityValue% @411 ; Rest::Backend::Emsservices::TEMSQueryAPI::Query(const Rest::Backend::Metatypes::TBackendClassValue, const System::UnicodeString *, const int, System::Json::TJSONArray * const, System::DynamicArray<{583}...
+    @Rest@Backend@Emsservices@TEMSQueryService@ @443 ; Rest::Backend::Emsservices::TEMSQueryService::
+    @Rest@Backend@Emsservices@TEMSQueryService@CreateQueryApi$qqrv @410 ; __fastcall Rest::Backend::Emsservices::TEMSQueryService::CreateQueryApi()
+    @Rest@Backend@Emsservices@TEMSQueryService@GetQueryApi$qqrv @409 ; __fastcall Rest::Backend::Emsservices::TEMSQueryService::GetQueryApi()
+    @Rest@Backend@Emsservices@TEMSUsersAPI@ @437 ; Rest::Backend::Emsservices::TEMSUsersAPI::
+    @Rest@Backend@Emsservices@TEMSUsersAPI@DeleteUser$qqrrx42Rest@Backend@Metatypes@TBackendEntityValue @404 ; __fastcall Rest::Backend::Emsservices::TEMSUsersAPI::DeleteUser(const Rest::Backend::Metatypes::TBackendEntityValue&)
+    @Rest@Backend@Emsservices@TEMSUsersAPI@FindUser$qqrrx42Rest@Backend@Metatypes@TBackendEntityValue68System@%DelphiInterface$41Rest@Backend@Servicetypes@TFindObjectProc% @403 ; Rest::Backend::Emsservices::TEMSUsersAPI::FindUser(const Rest::Backend::Metatypes::TBackendEntityValue&, System::DelphiInterface<{583}...
+    @Rest@Backend@Emsservices@TEMSUsersAPI@FindUser$qqrrx42Rest@Backend@Metatypes@TBackendEntityValuer42Rest@Backend@Metatypes@TBackendEntityValuexp22System@Json@TJSONArray @402 ; __fastcall Rest::Backend::Emsservices::TEMSUsersAPI::FindUser(const Rest::Backend::Metatypes::TBackendEntityValue&, Rest::Backend::Metatypes::TBackendEntityValue&, System::Json::TJSONArray * const)
+    @Rest@Backend@Emsservices@TEMSUsersAPI@QueryUserName$qqrx20System@UnicodeString68System@%DelphiInterface$41Rest@Backend@Servicetypes@TFindObjectProc% @401 ; Rest::Backend::Emsservices::TEMSUsersAPI::QueryUserName(const System::UnicodeString, System::DelphiInterface<{583}...
+    @Rest@Backend@Emsservices@TEMSUsersAPI@QueryUserName$qqrx20System@UnicodeStringr42Rest@Backend@Metatypes@TBackendEntityValuexp22System@Json@TJSONArray @400 ; __fastcall Rest::Backend::Emsservices::TEMSUsersAPI::QueryUserName(const System::UnicodeString, Rest::Backend::Metatypes::TBackendEntityValue&, System::Json::TJSONArray * const)
+    @Rest@Backend@Emsservices@TEMSUsersAPI@QueryUsers$qqrpx20System@UnicodeStringxixp22System@Json@TJSONArray @399 ; __fastcall Rest::Backend::Emsservices::TEMSUsersAPI::QueryUsers(const System::UnicodeString *, const int, System::Json::TJSONArray * const)
+    @Rest@Backend@Emsservices@TEMSUsersAPI@QueryUsers$qqrpx20System@UnicodeStringxixp22System@Json@TJSONArrayr66System@%DynamicArray$42Rest@Backend@Metatypes@TBackendEntityValue% @398 ; Rest::Backend::Emsservices::TEMSUsersAPI::QueryUsers(const System::UnicodeString *, const int, System::Json::TJSONArray * const, System::DynamicArray<{583}...
+    @Rest@Backend@Emsservices@TEMSUsersAPI@UpdateUser$qqrrx42Rest@Backend@Metatypes@TBackendEntityValuexp23System@Json@TJSONObjectr42Rest@Backend@Metatypes@TBackendEntityValue @397 ; __fastcall Rest::Backend::Emsservices::TEMSUsersAPI::UpdateUser(const Rest::Backend::Metatypes::TBackendEntityValue&, System::Json::TJSONObject * const, Rest::Backend::Metatypes::TBackendEntityValue&)
+    @Rest@Backend@Emsservices@TEMSUsersService@ @435 ; Rest::Backend::Emsservices::TEMSUsersService::
+    @Rest@Backend@Emsservices@TEMSUsersService@CreateUsersApi$qqrv @408 ; __fastcall Rest::Backend::Emsservices::TEMSUsersService::CreateUsersApi()
+    @Rest@Backend@Emsservices@TEMSUsersService@GetUsersApi$qqrv @407 ; __fastcall Rest::Backend::Emsservices::TEMSUsersService::GetUsersApi()
+    @Rest@Backend@Emsservices@initialization$qqrv @374 ; __fastcall Rest::Backend::Emsservices::initialization()
+    @System@Generics@Collections@%TArrayManager__1$ynpqqrp14System@TObject$v%@ @327 ; System::Generics::Collections::TArrayManager__1<void __fastcall __closure(*)(System::TObject *)>::
+    @System@Generics@Collections@%TEnumerable__1$ynpqqrp14System@TObject$v%@ @332 ; System::Generics::Collections::TEnumerable__1<void __fastcall __closure(*)(System::TObject *)>::
+    @System@Generics@Collections@%TEnumerable__1$ynpqqrp14System@TObject$v%@$bdtr$qqrv @263 ; System::Generics__fastcall ::Collections::TEnumerable__1<void __fastcall __closure(*)(System::TObject *)>::~oid __fastcall __closure(*)(System::TObject *)>()
+    @System@Generics@Collections@%TEnumerable__1$ynpqqrp14System@TObject$v%@GetEnumerator$qqrv @262 ; System::Generics__fastcall ::Collections::TEnumerable__1<void __fastcall __closure(*)(System::TObject *)>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$ynpqqrp14System@TObject$v%@ToArray$qqrv @261 ; System::Generics__fastcall ::Collections::TEnumerable__1<void __fastcall __closure(*)(System::TObject *)>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$ynpqqrp14System@TObject$v%@ToArrayImpl$qqri @264 ; System::Generics__fastcall ::Collections::TEnumerable__1<void __fastcall __closure(*)(System::TObject *)>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerator__1$ynpqqrp14System@TObject$v%@ @334 ; System::Generics::Collections::TEnumerator__1<void __fastcall __closure(*)(System::TObject *)>::
+    @System@Generics@Collections@%TEnumerator__1$ynpqqrp14System@TObject$v%@MoveNext$qqrv @260 ; System::Generics__fastcall ::Collections::TEnumerator__1<void __fastcall __closure(*)(System::TObject *)>::MoveNext()
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@ @320 ; System::Generics::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@$bctr$qqrv @248 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::fastcall __closure(*)(System::TObject *)>()
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@$bctr$qqrx92System@%DelphiInterface$65System@Generics@Defaults@%IComparer__1$ynpqqrp14System@TObject$v%% @247 ; System::Generics::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::fastcall __closure(*)(System::TObject *)>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@$bctr$qqrxp70System@Generics@Collections@%TEnumerable__1$ynpqqrp14System@TObject$v% @246 ; System::Generics::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::TList__1<void __fastcall __closure(*)(System::TObject *)>(System::Generics::Collections::TEnumerable__1<void __fastcall __closure(*)(System::TObject *)> * const)__fa
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@$bdtr$qqrv @245 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::~fastcall __closure(*)(System::TObject *)>()
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@%TEnumerator$%@ @322 ; System::Generics::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::TEnumerator<>::
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@%TEnumerator$%@$bctr$qqrxp64System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v% @205 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::TEnumerator<>::TEnumerator<>(System::Generics::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)> * const)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@%TEnumerator$%@DoGetCurrent$qqrv @207 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::TEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@%TEnumerator$%@DoMoveNext$qqrv @206 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::TEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@%TEnumerator$%@GetCurrent$qqrv @208 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::TEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@%TEnumerator$%@MoveNext$qqrv @204 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::TEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@Add$qqrxynpqqrp14System@TObject$v @242 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::Add(void __fastcall __closure(*)(System::TObject *) const)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@AddRange$qqrpxynpqqrp14System@TObject$vxi @241 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::AddRange(void __fastcall __closure(*)(System::TObject *) const *, const int)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@AddRange$qqrx76System@%DelphiInterface$49System@%IEnumerable__1$ynpqqrp14System@TObject$v%% @240 ; System::Generics::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::AddRange(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@AddRange$qqrxp70System@Generics@Collections@%TEnumerable__1$ynpqqrp14System@TObject$v% @239 ; __fastcall System::Generics::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::AddRange(System::Generics::Collections::TEnumerable__1<void __fastcall __closure(*)(System::TObject *)> * const)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@BinarySearch$qqrxynpqqrp14System@TObject$vri @213 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::BinarySearch(void __fastcall __closure(*)(System::TObject *) const, int&)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@BinarySearch$qqrxynpqqrp14System@TObject$vrix92System@%DelphiInterface$65System@Generics@Defaults@%IComparer__1$ynpqqrp14System@TObject$v%% @212 ; System::Generics::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::BinarySearch(void __fastcall __closure(*)(System::TObject *) const, int&, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@Clear$qqrv @222 ; __fastcall System::Generics::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::Clear()
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@Contains$qqrxynpqqrp14System@TObject$v @220 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::Contains(void __fastcall __closure(*)(System::TObject *) const)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@Delete$qqri @230 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::Delete(int)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@DeleteRange$qqrii @229 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::DeleteRange(int, int)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@DoDelete$qqri51System@Generics@Collections@TCollectionNotification @252 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::DoDelete(int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@DoGetEnumerator$qqrv @250 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::DoGetEnumerator()
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@Error$qqrp20System@TResStringReci @243 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::Error(System::TResStringRec *, int)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@Error$qqrx20System@UnicodeStringi @244 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::Error(const System::UnicodeString, int)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@Exchange$qqrii @226 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::Exchange(int, int)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@Expand$qqrv @221 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::Expand()
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@Extract$qqrxynpqqrp14System@TObject$v @228 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::Extract(void __fastcall __closure(*)(System::TObject *) const)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@ExtractItem$qqrxynpqqrp14System@TObject$v23System@Types@TDirection @227 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::ExtractItem(void __fastcall __closure(*)(System::TObject *) const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@First$qqrv @224 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::First()
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@GetCapacity$qqrv @259 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::GetCapacity()
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@GetEnumerator$qqrv @209 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::GetEnumerator()
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@GetItem$qqri @256 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::GetItem(int)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@Grow$qqri @254 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::Grow(int)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@GrowCheck$qqri @253 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::GrowCheck(int)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@IndexOf$qqrxynpqqrp14System@TObject$v @219 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::IndexOf(void __fastcall __closure(*)(System::TObject *) const)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@IndexOfItem$qqrxynpqqrp14System@TObject$v23System@Types@TDirection @218 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::IndexOfItem(void __fastcall __closure(*)(System::TObject *) const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@Insert$qqrixynpqqrp14System@TObject$v @238 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::Insert(int, void __fastcall __closure(*)(System::TObject *) const)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@InsertRange$qqripxynpqqrp14System@TObject$vxi @237 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::InsertRange(int, void __fastcall __closure(*)(System::TObject *) const *, const int)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@InsertRange$qqrix76System@%DelphiInterface$49System@%IEnumerable__1$ynpqqrp14System@TObject$v%% @236 ; System::Generics::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::InsertRange(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@InsertRange$qqrixp70System@Generics@Collections@%TEnumerable__1$ynpqqrp14System@TObject$v% @235 ; __fastcall System::Generics::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::InsertRange(int, System::Generics::Collections::TEnumerable__1<void __fastcall __closure(*)(System::TObject *)> * const)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@ItemValue$qqrxynpqqrp14System@TObject$v @251 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::ItemValue(void __fastcall __closure(*)(System::TObject *) const)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@Last$qqrv @223 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::Last()
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@LastIndexOf$qqrxynpqqrp14System@TObject$v @217 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::LastIndexOf(void __fastcall __closure(*)(System::TObject *) const)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@Move$qqrii @225 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::Move(int, int)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@Notify$qqrxynpqqrp14System@TObject$v51System@Generics@Collections@TCollectionNotification @249 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::Notify(void __fastcall __closure(*)(System::TObject *) const, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@Pack$qqrv @234 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::Pack()
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@Pack$qqrx105System@%DelphiInterface$78System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@%TEmptyFunc$%% @233 ; System::Generics::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::Pack(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@Remove$qqrxynpqqrp14System@TObject$v @232 ; __fastcall System::Generics::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::Remove(void __fastcall __closure(*)(System::TObject *) const)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@RemoveItem$qqrxynpqqrp14System@TObject$v23System@Types@TDirection @231 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::RemoveItem(void __fastcall __closure(*)(System::TObject *) const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@Reverse$qqrv @216 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::Reverse()
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@SetCapacity$qqri @258 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::SetCapacity(int)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@SetCount$qqri @257 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::SetCount(int)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@SetItem$qqrixynpqqrp14System@TObject$v @255 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::SetItem(int, void __fastcall __closure(*)(System::TObject *) const)
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@Sort$qqrv @215 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::Sort()
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@Sort$qqrx92System@%DelphiInterface$65System@Generics@Defaults@%IComparer__1$ynpqqrp14System@TObject$v%% @214 ; System::Generics::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::Sort(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@ToArray$qqrv @210 ; __fastcall System::Generics::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::ToArray()
+    @System@Generics@Collections@%TList__1$ynpqqrp14System@TObject$v%@TrimExcess$qqrv @211 ; System::Generics__fastcall ::Collections::TList__1<void __fastcall __closure(*)(System::TObject *)>::TrimExcess()
+    Finalize                       @450 ; Finalize
+    Initialize                     @451 ; Initialize

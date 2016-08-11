@@ -1,0 +1,45 @@
+LIBRARY     BCBPRO210.BPL
+
+DESCRIPTION '++Builder Professional IDE Package'
+
+EXPORTS
+    @$xp$32Cppcfilehandler@TCppCFileHandler @10  ; __tpdsc__ Cppcfilehandler::TCppCFileHandler
+    @$xp$35Idetodocppmgr@TCppSourceToDoManager @28  ; __tpdsc__ Idetodocppmgr::TCppSourceToDoManager
+    @$xp$38Idetodocppmgr@TCppSourceManagerCreator @26  ; __tpdsc__ Idetodocppmgr::TCppSourceManagerCreator
+    @$xp$38Idetodocppmgr@THeaderSourceToDoManager @30  ; __tpdsc__ Idetodocppmgr::THeaderSourceToDoManager
+    @$xp$41Idetodocppmgr@THeaderSourceManagerCreator @24  ; __tpdsc__ Idetodocppmgr::THeaderSourceManagerCreator
+    @Bcbpro@@GetPackageInfoTable$qqrv @37  ; Bcbpro::__linkproc__ __fastcall GetPackageInfoTable()
+    @Bcbpro@@PackageLoad$qqrv      @36  ; Bcbpro::__linkproc__ __fastcall PackageLoad()
+    @Bcbpro@@PackageUnload$qqrv    @35  ; Bcbpro::__linkproc__ __fastcall PackageUnload()
+    @Bcbpro@initialization$qqrv    @34  ; __fastcall Bcbpro::initialization()
+    @Cppcfilehandler@Finalization$qqrv @2   ; __fastcall Cppcfilehandler::Finalization()
+    @Cppcfilehandler@TCppCFileHandler@ @11  ; Cppcfilehandler::TCppCFileHandler::
+    @Cppcfilehandler@TCppCFileHandler@AddText$qqri20System@UnicodeString22Codemgr@TSourceSection @9   ; __fastcall Cppcfilehandler::TCppCFileHandler::AddText(int, System::UnicodeString, Codemgr::TSourceSection)
+    @Cppcfilehandler@TCppCFileHandler@CanHandleFile$qqr20System@UnicodeString @8   ; __fastcall Cppcfilehandler::TCppCFileHandler::CanHandleFile(System::UnicodeString)
+    @Cppcfilehandler@TCppCFileHandler@CommentType$qqrv @7   ; __fastcall Cppcfilehandler::TCppCFileHandler::CommentType()
+    @Cppcfilehandler@TCppCFileHandler@DeleteText$qqrii22Codemgr@TSourceSection @6   ; __fastcall Cppcfilehandler::TCppCFileHandler::DeleteText(int, int, Codemgr::TSourceSection)
+    @Cppcfilehandler@TCppCFileHandler@MakeComment$qqrr20System@UnicodeString @5   ; __fastcall Cppcfilehandler::TCppCFileHandler::MakeComment(System::UnicodeString&)
+    @Cppcfilehandler@TCppCFileHandler@ParseItems$qqrynpqqrx31System@%AnsiStringT$us$i65001$%i$vi @4   ; __fastcall Cppcfilehandler::TCppCFileHandler::ParseItems(void __fastcall __closure(*)(const System::AnsiStringT<65001>, int), int)
+    @Cppcfilehandler@TCppCFileHandler@UpdateText$qqrii20System@UnicodeString22Codemgr@TSourceSection @3   ; __fastcall Cppcfilehandler::TCppCFileHandler::UpdateText(int, int, System::UnicodeString, Codemgr::TSourceSection)
+    @Cppcfilehandler@initialization$qqrv @1   ; __fastcall Cppcfilehandler::initialization()
+    @Cppclassexplorer@Finalization$qqrv @33  ; __fastcall Cppclassexplorer::Finalization()
+    @Cppclassexplorer@initialization$qqrv @32  ; __fastcall Cppclassexplorer::initialization()
+    @GetPackageInfoTable           @40  ; GetPackageInfoTable
+    @Idetodocppmgr@Finalization$qqrv @13  ; __fastcall Idetodocppmgr::Finalization()
+    @Idetodocppmgr@TCppSourceManagerCreator@ @27  ; Idetodocppmgr::TCppSourceManagerCreator::
+    @Idetodocppmgr@TCppSourceManagerCreator@CanHandleFile$qqrx20System@UnicodeString @23  ; __fastcall Idetodocppmgr::TCppSourceManagerCreator::CanHandleFile(const System::UnicodeString)
+    @Idetodocppmgr@TCppSourceManagerCreator@CreateManager$qqrx20System@UnicodeStringo @22  ; __fastcall Idetodocppmgr::TCppSourceManagerCreator::CreateManager(const System::UnicodeString, bool)
+    @Idetodocppmgr@TCppSourceToDoManager@ @29  ; Idetodocppmgr::TCppSourceToDoManager::
+    @Idetodocppmgr@TCppSourceToDoManager@Parse$qqrv @15  ; __fastcall Idetodocppmgr::TCppSourceToDoManager::Parse()
+    @Idetodocppmgr@TCppSourceToDoManager@SetIsParsed$qqrxo @14  ; __fastcall Idetodocppmgr::TCppSourceToDoManager::SetIsParsed(const bool)
+    @Idetodocppmgr@THeaderSourceManagerCreator@ @25  ; Idetodocppmgr::THeaderSourceManagerCreator::
+    @Idetodocppmgr@THeaderSourceManagerCreator@CanHandleFile$qqrx20System@UnicodeString @21  ; __fastcall Idetodocppmgr::THeaderSourceManagerCreator::CanHandleFile(const System::UnicodeString)
+    @Idetodocppmgr@THeaderSourceManagerCreator@CreateManager$qqrx20System@UnicodeStringo @20  ; __fastcall Idetodocppmgr::THeaderSourceManagerCreator::CreateManager(const System::UnicodeString, bool)
+    @Idetodocppmgr@THeaderSourceToDoManager@ @31  ; Idetodocppmgr::THeaderSourceToDoManager::
+    @Idetodocppmgr@THeaderSourceToDoManager@Add$qqri20System@UnicodeString22Codemgr@TSourceSection @19  ; __fastcall Idetodocppmgr::THeaderSourceToDoManager::Add(int, System::UnicodeString, Codemgr::TSourceSection)
+    @Idetodocppmgr@THeaderSourceToDoManager@Delete$qqrii22Codemgr@TSourceSection @18  ; __fastcall Idetodocppmgr::THeaderSourceToDoManager::Delete(int, int, Codemgr::TSourceSection)
+    @Idetodocppmgr@THeaderSourceToDoManager@GetUpdater$qqrv @17  ; __fastcall Idetodocppmgr::THeaderSourceToDoManager::GetUpdater()
+    @Idetodocppmgr@THeaderSourceToDoManager@Parse$qqrv @16  ; __fastcall Idetodocppmgr::THeaderSourceToDoManager::Parse()
+    @Idetodocppmgr@initialization$qqrv @12  ; __fastcall Idetodocppmgr::initialization()
+    Finalize                       @38  ; Finalize
+    Initialize                     @39  ; Initialize

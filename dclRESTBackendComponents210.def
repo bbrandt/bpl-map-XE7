@@ -1,0 +1,43 @@
+LIBRARY     DCLRESTBACKENDCOMPONENTS210.BPL
+
+DESCRIPTION 'mbarcadero REST-Backend Components'
+
+EXPORTS
+    @$xp$41System@%TArray__1$20System@UnicodeString% @15  ; __tpdsc__ System::TArray__1<System::UnicodeString>
+    @$xp$52Rest@Backend@Componentregistration@TProviderProperty @18  ; __tpdsc__ Rest::Backend::Componentregistration::TProviderProperty
+    @$xp$55Rest@Backend@Componentregistration@TPushSelectionEditor @26  ; __tpdsc__ Rest::Backend::Componentregistration::TPushSelectionEditor
+    @$xp$58Rest@Backend@Componentregistration@TBackendServiceProperty @16  ; __tpdsc__ Rest::Backend::Componentregistration::TBackendServiceProperty
+    @$xp$65Rest@Backend@Componentregistration@TBackendOpenSSLSelectionEditor @28  ; __tpdsc__ Rest::Backend::Componentregistration::TBackendOpenSSLSelectionEditor
+    @$xp$67Rest@Backend@Componentregistration@TBackendMetaTypesSelectionEditor @22  ; __tpdsc__ Rest::Backend::Componentregistration::TBackendMetaTypesSelectionEditor
+    @$xp$69Rest@Backend@Componentregistration@TBackendIPComponentSelectionEditor @30  ; __tpdsc__ Rest::Backend::Componentregistration::TBackendIPComponentSelectionEditor
+    @$xp$70Rest@Backend@Componentregistration@TBackendServiceTypesSelectionEditor @20  ; __tpdsc__ Rest::Backend::Componentregistration::TBackendServiceTypesSelectionEditor
+    @$xp$74Rest@Backend@Componentregistration@TBackendServiceComponentSelectionEditor @24  ; __tpdsc__ Rest::Backend::Componentregistration::TBackendServiceComponentSelectionEditor
+    @Dclrestbackendcomponents@@GetPackageInfoTable$qqrv @35  ; Dclrestbackendcomponents::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclrestbackendcomponents@@PackageLoad$qqrv @34  ; Dclrestbackendcomponents::__linkproc__ __fastcall PackageLoad()
+    @Dclrestbackendcomponents@@PackageUnload$qqrv @33  ; Dclrestbackendcomponents::__linkproc__ __fastcall PackageUnload()
+    @Dclrestbackendcomponents@initialization$qqrv @32  ; __fastcall Dclrestbackendcomponents::initialization()
+    @GetPackageInfoTable           @38  ; GetPackageInfoTable
+    @Rest@Backend@Componentregistration@Finalization$qqrv @2   ; __fastcall Rest::Backend::Componentregistration::Finalization()
+    @Rest@Backend@Componentregistration@Register$qqrv @7   ; __fastcall Rest::Backend::Componentregistration::Register()
+    @Rest@Backend@Componentregistration@TBackendIPComponentSelectionEditor@ @31  ; Rest::Backend::Componentregistration::TBackendIPComponentSelectionEditor::
+    @Rest@Backend@Componentregistration@TBackendIPComponentSelectionEditor@RequiresUnits$qqrynpqqrx20System@UnicodeString$v @14  ; __fastcall Rest::Backend::Componentregistration::TBackendIPComponentSelectionEditor::RequiresUnits(void __fastcall __closure(*)(const System::UnicodeString))
+    @Rest@Backend@Componentregistration@TBackendMetaTypesSelectionEditor@ @23  ; Rest::Backend::Componentregistration::TBackendMetaTypesSelectionEditor::
+    @Rest@Backend@Componentregistration@TBackendMetaTypesSelectionEditor@RequiresUnits$qqrynpqqrx20System@UnicodeString$v @12  ; __fastcall Rest::Backend::Componentregistration::TBackendMetaTypesSelectionEditor::RequiresUnits(void __fastcall __closure(*)(const System::UnicodeString))
+    @Rest@Backend@Componentregistration@TBackendOpenSSLSelectionEditor@ @29  ; Rest::Backend::Componentregistration::TBackendOpenSSLSelectionEditor::
+    @Rest@Backend@Componentregistration@TBackendOpenSSLSelectionEditor@RequiresUnits$qqrynpqqrx20System@UnicodeString$v @3   ; __fastcall Rest::Backend::Componentregistration::TBackendOpenSSLSelectionEditor::RequiresUnits(void __fastcall __closure(*)(const System::UnicodeString))
+    @Rest@Backend@Componentregistration@TBackendServiceComponentSelectionEditor@ @25  ; Rest::Backend::Componentregistration::TBackendServiceComponentSelectionEditor::
+    @Rest@Backend@Componentregistration@TBackendServiceComponentSelectionEditor@RequiresUnits$qqrynpqqrx20System@UnicodeString$v @10  ; __fastcall Rest::Backend::Componentregistration::TBackendServiceComponentSelectionEditor::RequiresUnits(void __fastcall __closure(*)(const System::UnicodeString))
+    @Rest@Backend@Componentregistration@TBackendServiceProperty@ @17  ; Rest::Backend::Componentregistration::TBackendServiceProperty::
+    @Rest@Backend@Componentregistration@TBackendServiceProperty@GetAttributes$qqrv @4   ; __fastcall Rest::Backend::Componentregistration::TBackendServiceProperty::GetAttributes()
+    @Rest@Backend@Componentregistration@TBackendServiceProperty@GetValueList$qqrv @6   ; __fastcall Rest::Backend::Componentregistration::TBackendServiceProperty::GetValueList()
+    @Rest@Backend@Componentregistration@TBackendServiceProperty@GetValues$qqrynpqqrx20System@UnicodeString$v @5   ; __fastcall Rest::Backend::Componentregistration::TBackendServiceProperty::GetValues(void __fastcall __closure(*)(const System::UnicodeString))
+    @Rest@Backend@Componentregistration@TBackendServiceTypesSelectionEditor@ @21  ; Rest::Backend::Componentregistration::TBackendServiceTypesSelectionEditor::
+    @Rest@Backend@Componentregistration@TBackendServiceTypesSelectionEditor@RequiresUnits$qqrynpqqrx20System@UnicodeString$v @13  ; __fastcall Rest::Backend::Componentregistration::TBackendServiceTypesSelectionEditor::RequiresUnits(void __fastcall __closure(*)(const System::UnicodeString))
+    @Rest@Backend@Componentregistration@TProviderProperty@ @19  ; Rest::Backend::Componentregistration::TProviderProperty::
+    @Rest@Backend@Componentregistration@TProviderProperty@CheckComponent$qqrx20System@UnicodeString @9   ; __fastcall Rest::Backend::Componentregistration::TProviderProperty::CheckComponent(const System::UnicodeString)
+    @Rest@Backend@Componentregistration@TProviderProperty@GetValues$qqrynpqqrx20System@UnicodeString$v @8   ; __fastcall Rest::Backend::Componentregistration::TProviderProperty::GetValues(void __fastcall __closure(*)(const System::UnicodeString))
+    @Rest@Backend@Componentregistration@TPushSelectionEditor@ @27  ; Rest::Backend::Componentregistration::TPushSelectionEditor::
+    @Rest@Backend@Componentregistration@TPushSelectionEditor@RequiresUnits$qqrynpqqrx20System@UnicodeString$v @11  ; __fastcall Rest::Backend::Componentregistration::TPushSelectionEditor::RequiresUnits(void __fastcall __closure(*)(const System::UnicodeString))
+    @Rest@Backend@Componentregistration@initialization$qqrv @1   ; __fastcall Rest::Backend::Componentregistration::initialization()
+    Finalize                       @36  ; Finalize
+    Initialize                     @37  ; Initialize

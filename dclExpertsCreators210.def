@@ -1,0 +1,15 @@
+LIBRARY     DCLEXPERTSCREATORS210.BPL
+
+DESCRIPTION 'mbarcadero Experts Creators Design Components'
+
+EXPORTS
+    @Dclexpertscreators@@GetPackageInfoTable$qqrv @7   ; Dclexpertscreators::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclexpertscreators@@PackageLoad$qqrv @6   ; Dclexpertscreators::__linkproc__ __fastcall PackageLoad()
+    @Dclexpertscreators@@PackageUnload$qqrv @5   ; Dclexpertscreators::__linkproc__ __fastcall PackageUnload()
+    @Dclexpertscreators@initialization$qqrv @4   ; __fastcall Dclexpertscreators::initialization()
+    @Expertsreg@Finalization$qqrv  @2   ; __fastcall Expertsreg::Finalization()
+    @Expertsreg@Register$qqrv      @3   ; __fastcall Expertsreg::Register()
+    @Expertsreg@initialization$qqrv @1   ; __fastcall Expertsreg::initialization()
+    @GetPackageInfoTable           @10  ; GetPackageInfoTable
+    Finalize                       @8   ; Finalize
+    Initialize                     @9   ; Initialize

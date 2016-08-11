@@ -1,0 +1,37 @@
+LIBRARY     FMXOBJ210.BPL
+
+DESCRIPTION 'mbarcadero FMX OBJ Import Library'
+
+EXPORTS
+    @$xp$22Fmx@Obj@Model@TOBJMesh  @17  ; __tpdsc__ Fmx::Obj::Model::TOBJMesh
+    @$xp$23Fmx@Obj@Model@TOBJModel @14  ; __tpdsc__ Fmx::Obj::Model::TOBJModel
+    @$xp$30Fmx@Obj@Model@TOBJMeshDynArray @16  ; __tpdsc__ Fmx::Obj::Model::TOBJMeshDynArray
+    @$xp$34Fmx@Obj@Importer@TOBJModelImporter @24  ; __tpdsc__ Fmx::Obj::Importer::TOBJModelImporter
+    @Fmx@Obj@Importer@Finalization$qqrv @20  ; __fastcall Fmx::Obj::Importer::Finalization()
+    @Fmx@Obj@Importer@TOBJModelImporter@ @25  ; Fmx::Obj::Importer::TOBJModelImporter::
+    @Fmx@Obj@Importer@TOBJModelImporter@GetDescription$qqrv @23  ; __fastcall Fmx::Obj::Importer::TOBJModelImporter::GetDescription()
+    @Fmx@Obj@Importer@TOBJModelImporter@GetExt$qqrv @22  ; __fastcall Fmx::Obj::Importer::TOBJModelImporter::GetExt()
+    @Fmx@Obj@Importer@TOBJModelImporter@LoadFromFile$qqrx20System@UnicodeStringr44System@%DynamicArray$p19Fmx@Objects3d@TMesh%xp25System@Classes@TComponent @21  ; Fmx::Obj::Importer::TOBJModelImporter::LoadFromFile(const System::UnicodeString, System::DynamicArray<{583}...
+    @Fmx@Obj@Importer@initialization$qqrv @19  ; __fastcall Fmx::Obj::Importer::initialization()
+    @Fmx@Obj@Model@Finalization$qqrv @2   ; __fastcall Fmx::Obj::Model::Finalization()
+    @Fmx@Obj@Model@TOBJMesh@       @18  ; Fmx::Obj::Model::TOBJMesh::
+    @Fmx@Obj@Model@TOBJMesh@$bctr$qqrv @13  ; __fastcall Fmx::Obj::Model::TOBJMesh::TOBJMesh()
+    @Fmx@Obj@Model@TOBJMesh@$bdtr$qqrv @10  ; __fastcall Fmx::Obj::Model::TOBJMesh::~TOBJMesh()
+    @Fmx@Obj@Model@TOBJMesh@ReadUseMaterial$qqrx20System@UnicodeStringxp26Fmx@Import@TGEVertexSource @8   ; __fastcall Fmx::Obj::Model::TOBJMesh::ReadUseMaterial(const System::UnicodeString, Fmx::Import::TGEVertexSource * const)
+    @Fmx@Obj@Model@TOBJModel@      @15  ; Fmx::Obj::Model::TOBJModel::
+    @Fmx@Obj@Model@TOBJModel@$bctr$qqrv @12  ; __fastcall Fmx::Obj::Model::TOBJModel::TOBJModel()
+    @Fmx@Obj@Model@TOBJModel@$bdtr$qqrv @11  ; __fastcall Fmx::Obj::Model::TOBJModel::~TOBJModel()
+    @Fmx@Obj@Model@TOBJModel@LoadFromFile$qqrx20System@UnicodeString @3   ; __fastcall Fmx::Obj::Model::TOBJModel::LoadFromFile(const System::UnicodeString)
+    @Fmx@Obj@Model@TOBJModel@ReadFaces$qqrxp18Fmx@Import@TGEMeshx20System@UnicodeString @9   ; __fastcall Fmx::Obj::Model::TOBJModel::ReadFaces(Fmx::Import::TGEMesh * const, const System::UnicodeString)
+    @Fmx@Obj@Model@TOBJModel@ReadGeometry$qqrx20System@UnicodeString @4   ; __fastcall Fmx::Obj::Model::TOBJModel::ReadGeometry(const System::UnicodeString)
+    @Fmx@Obj@Model@TOBJModel@ReadMaterials$qqrx20System@UnicodeString @7   ; __fastcall Fmx::Obj::Model::TOBJModel::ReadMaterials(const System::UnicodeString)
+    @Fmx@Obj@Model@TOBJModel@ReadSmoothGroup$qqrx20System@UnicodeString @6   ; __fastcall Fmx::Obj::Model::TOBJModel::ReadSmoothGroup(const System::UnicodeString)
+    @Fmx@Obj@Model@TOBJModel@ReadSources$qqrx20System@UnicodeString @5   ; __fastcall Fmx::Obj::Model::TOBJModel::ReadSources(const System::UnicodeString)
+    @Fmx@Obj@Model@initialization$qqrv @1   ; __fastcall Fmx::Obj::Model::initialization()
+    @Fmxobj@@GetPackageInfoTable$qqrv @29  ; Fmxobj::__linkproc__ __fastcall GetPackageInfoTable()
+    @Fmxobj@@PackageLoad$qqrv      @28  ; Fmxobj::__linkproc__ __fastcall PackageLoad()
+    @Fmxobj@@PackageUnload$qqrv    @27  ; Fmxobj::__linkproc__ __fastcall PackageUnload()
+    @Fmxobj@initialization$qqrv    @26  ; __fastcall Fmxobj::initialization()
+    @GetPackageInfoTable           @32  ; GetPackageInfoTable
+    Finalize                       @30  ; Finalize
+    Initialize                     @31  ; Initialize

@@ -1,0 +1,9 @@
+LIBRARY     RLINK32.DLL
+
+EXPORTS
+    BindToExe                      @1   ; BindToExe
+    GetRLinkVersion                @2   ; GetRLinkVersion
+    GetResObjSize                  @3   ; GetResObjSize
+    RemoveFromExe                  @4   ; RemoveFromExe
+    WriteResObj                    @5   ; WriteResObj
+    ___CPPdebugHook                @6   ; ___CPPdebugHook

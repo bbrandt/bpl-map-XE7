@@ -1,0 +1,442 @@
+LIBRARY     UNITTESTIDE210.BPL
+
+DESCRIPTION 'mbarcadero Unit Testing IDE Package'
+
+EXPORTS
+    @$xp$24Cppparser@ICppUnitParser @368 ; __tpdsc__ Cppparser::ICppUnitParser
+    @$xp$24Cppparserimporter@IScope @318 ; __tpdsc__ Cppparserimporter::IScope
+    @$xp$26Cppparserimporter@ICPPFile @314 ; __tpdsc__ Cppparserimporter::ICPPFile
+    @$xp$27Cppparserimporter@CoCPPFile @275 ; __tpdsc__ Cppparserimporter::CoCPPFile
+    @$xp$27Cppparserimporter@IBaseDecl @324 ; __tpdsc__ Cppparserimporter::IBaseDecl
+    @$xp$27Cppparserimporter@ITypeDecl @320 ; __tpdsc__ Cppparserimporter::ITypeDecl
+    @$xp$28Cppparserimporter@IScopeDisp @317 ; __tpdsc__ Cppparserimporter::IScopeDisp
+    @$xp$29Cppparserimporter@IMemberDecl @316 ; __tpdsc__ Cppparserimporter::IMemberDecl
+    @$xp$30Cppparserimporter@ICPPFileDisp @313 ; __tpdsc__ Cppparserimporter::ICPPFileDisp
+    @$xp$30Testcasewizardform@TStateImage @410 ; __tpdsc__ Testcasewizardform::TStateImage
+    @$xp$30Unittest_engine_tlb@IClassDecl @30  ; __tpdsc__ Unittest_engine_tlb::IClassDecl
+    @$xp$31Cppparserimporter@CoCPPBaseDecl @279 ; __tpdsc__ Cppparserimporter::CoCPPBaseDecl
+    @$xp$31Cppparserimporter@CoCPPEnumDecl @263 ; __tpdsc__ Cppparserimporter::CoCPPEnumDecl
+    @$xp$31Cppparserimporter@CoCPPTypeDecl @281 ; __tpdsc__ Cppparserimporter::CoCPPTypeDecl
+    @$xp$31Cppparserimporter@IBaseDeclDisp @323 ; __tpdsc__ Cppparserimporter::IBaseDeclDisp
+    @$xp$31Cppparserimporter@IBlockManager @326 ; __tpdsc__ Cppparserimporter::IBlockManager
+    @$xp$31Cppparserimporter@IFunctionDecl @312 ; __tpdsc__ Cppparserimporter::IFunctionDecl
+    @$xp$31Cppparserimporter@ITypeDeclDisp @319 ; __tpdsc__ Cppparserimporter::ITypeDeclDisp
+    @$xp$31Unittest_engine_tlb@IMethodDecl @34  ; __tpdsc__ Unittest_engine_tlb::IMethodDecl
+    @$xp$32Cppparserimporter@CoBlockManager @277 ; __tpdsc__ Cppparserimporter::CoBlockManager
+    @$xp$32Cppparserimporter@CoCPPClassDecl @261 ; __tpdsc__ Cppparserimporter::CoCPPClassDecl
+    @$xp$32Cppparserimporter@CoCPPScopeDecl @285 ; __tpdsc__ Cppparserimporter::CoCPPScopeDecl
+    @$xp$32Cppparserimporter@ISymbolManager @300 ; __tpdsc__ Cppparserimporter::ISymbolManager
+    @$xp$32Unittest_engine_tlb@IMethodParam @38  ; __tpdsc__ Unittest_engine_tlb::IMethodParam
+    @$xp$33Cppparserimporter@CoCPPMemberDecl @289 ; __tpdsc__ Cppparserimporter::CoCPPMemberDecl
+    @$xp$33Cppparserimporter@CoSymbolManager @259 ; __tpdsc__ Cppparserimporter::CoSymbolManager
+    @$xp$33Cppparserimporter@ICPPBlockParser @306 ; __tpdsc__ Cppparserimporter::ICPPBlockParser
+    @$xp$33Cppparserimporter@IDefaultFactory @310 ; __tpdsc__ Cppparserimporter::IDefaultFactory
+    @$xp$33Cppparserimporter@IMemberDeclDisp @315 ; __tpdsc__ Cppparserimporter::IMemberDeclDisp
+    @$xp$33Unittest_engine_tlb@CoTestFactory @5   ; __tpdsc__ Unittest_engine_tlb::CoTestFactory
+    @$xp$33Unittest_engine_tlb@IUnitTestUnit @22  ; __tpdsc__ Unittest_engine_tlb::IUnitTestUnit
+    @$xp$33Unittestcreators@IUnitTestCreator @180 ; __tpdsc__ Unittestcreators::IUnitTestCreator
+    @$xp$33Unittestintf@IOTAUnitTestServices @87  ; __tpdsc__ Unittestintf::IOTAUnitTestServices
+    @$xp$33Unittestnotifiers@TModuleNotifier @426 ; __tpdsc__ Unittestnotifiers::TModuleNotifier
+    @$xp$34Cppparserimporter@CoCPPBlockParser @273 ; __tpdsc__ Cppparserimporter::CoCPPBlockParser
+    @$xp$34Cppparserimporter@CoCPPFuncPtrDecl @293 ; __tpdsc__ Cppparserimporter::CoCPPFuncPtrDecl
+    @$xp$34Cppparserimporter@CoCPPIncludeDecl @291 ; __tpdsc__ Cppparserimporter::CoCPPIncludeDecl
+    @$xp$34Cppparserimporter@CoDefaultFactory @271 ; __tpdsc__ Cppparserimporter::CoDefaultFactory
+    @$xp$34Cppparserimporter@IDefaultSettings @308 ; __tpdsc__ Cppparserimporter::IDefaultSettings
+    @$xp$34Testcasewizardform@TTestCaseWizard @406 ; __tpdsc__ Testcasewizardform::TTestCaseWizard
+    @$xp$34Unittest_engine_tlb@IClassDeclDisp @29  ; __tpdsc__ Unittest_engine_tlb::IClassDeclDisp
+    @$xp$34Unittestutils@TUnitTestProjectType @126 ; __tpdsc__ Unittestutils::TUnitTestProjectType
+    @$xp$35Cppparserimporter@CoCPPFunctionDecl @267 ; __tpdsc__ Cppparserimporter::CoCPPFunctionDecl
+    @$xp$35Cppparserimporter@CoDefaultSettings @269 ; __tpdsc__ Cppparserimporter::CoDefaultSettings
+    @$xp$35Cppparserimporter@IBlockManagerDisp @325 ; __tpdsc__ Cppparserimporter::IBlockManagerDisp
+    @$xp$35Cppparserimporter@IFunctionDeclDisp @311 ; __tpdsc__ Cppparserimporter::IFunctionDeclDisp
+    @$xp$35Unittest_engine_tlb@IMethodDeclDisp @33  ; __tpdsc__ Unittest_engine_tlb::IMethodDeclDisp
+    @$xp$35Unittest_engine_tlb@IUnitTestRunner @20  ; __tpdsc__ Unittest_engine_tlb::IUnitTestRunner
+    @$xp$35Unittestutils@TUnitTestProjectTypes @125 ; __tpdsc__ Unittestutils::TUnitTestProjectTypes
+    @$xp$36Cppparserimporter@CoCPPNamespaceDecl @287 ; __tpdsc__ Cppparserimporter::CoCPPNamespaceDecl
+    @$xp$36Cppparserimporter@ICPPMethodNavigate @296 ; __tpdsc__ Cppparserimporter::ICPPMethodNavigate
+    @$xp$36Cppparserimporter@ISymbolManagerDisp @299 ; __tpdsc__ Cppparserimporter::ISymbolManagerDisp
+    @$xp$36Unittest_engine_tlb@IMethodParamDisp @37  ; __tpdsc__ Unittest_engine_tlb::IMethodParamDisp
+    @$xp$36Unittest_engine_tlb@INamespaceImport @26  ; __tpdsc__ Unittest_engine_tlb::INamespaceImport
+    @$xp$36Unittest_engine_tlb@IUnitTestManager @8   ; __tpdsc__ Unittest_engine_tlb::IUnitTestManager
+    @$xp$36Unittest_engine_tlb@IUnitTestRunners @18  ; __tpdsc__ Unittest_engine_tlb::IUnitTestRunners
+    @$xp$37Cppparserimporter@CoCPPEnumMemberDecl @265 ; __tpdsc__ Cppparserimporter::CoCPPEnumMemberDecl
+    @$xp$37Cppparserimporter@ICPPBlockParserDisp @305 ; __tpdsc__ Cppparserimporter::ICPPBlockParserDisp
+    @$xp$37Cppparserimporter@ICPPStructureParser @322 ; __tpdsc__ Cppparserimporter::ICPPStructureParser
+    @$xp$37Cppparserimporter@IDefaultFactoryDisp @309 ; __tpdsc__ Cppparserimporter::IDefaultFactoryDisp
+    @$xp$37Unittest_engine_tlb@IUnitTestUnitDisp @21  ; __tpdsc__ Unittest_engine_tlb::IUnitTestUnitDisp
+    @$xp$38Cppparserimporter@CoCPPStructureParser @283 ; __tpdsc__ Cppparserimporter::CoCPPStructureParser
+    @$xp$38Cppparserimporter@IDefaultSettingsDisp @307 ; __tpdsc__ Cppparserimporter::IDefaultSettingsDisp
+    @$xp$38Unittest_engine_tlb@IUnitTestFramework @12  ; __tpdsc__ Unittest_engine_tlb::IUnitTestFramework
+    @$xp$38Unittest_engine_tlb@IUnitTestGenerator @46  ; __tpdsc__ Unittest_engine_tlb::IUnitTestGenerator
+    @$xp$38Unittestintf@IOTAUnitTestProjectModule @85  ; __tpdsc__ Unittestintf::IOTAUnitTestProjectModule
+    @$xp$39Testcasewizardform@TTestableItemWrapper @408 ; __tpdsc__ Testcasewizardform::TTestableItemWrapper
+    @$xp$39Unittest_engine_tlb@ITestableCodeObject @40  ; __tpdsc__ Unittest_engine_tlb::ITestableCodeObject
+    @$xp$39Unittest_engine_tlb@IUnitTestFrameworks @10  ; __tpdsc__ Unittest_engine_tlb::IUnitTestFrameworks
+    @$xp$39Unittest_engine_tlb@IUnitTestProperties @42  ; __tpdsc__ Unittest_engine_tlb::IUnitTestProperties
+    @$xp$39Unittest_engine_tlb@IUnitTestRunnerDisp @19  ; __tpdsc__ Unittest_engine_tlb::IUnitTestRunnerDisp
+    @$xp$39Unittestcreators@TUnitTestModuleCreator @178 ; __tpdsc__ Unittestcreators::TUnitTestModuleCreator
+    @$xp$40Cppparserimporter@ICPPBlockParserFactory @304 ; __tpdsc__ Cppparserimporter::ICPPBlockParserFactory
+    @$xp$40Cppparserimporter@ICPPMethodNavigateDisp @295 ; __tpdsc__ Cppparserimporter::ICPPMethodNavigateDisp
+    @$xp$40Testprojectwizardform@TTestProjectWizard @207 ; __tpdsc__ Testprojectwizardform::TTestProjectWizard
+    @$xp$40Unittest_engine_tlb@IClassDeclCollection @28  ; __tpdsc__ Unittest_engine_tlb::IClassDeclCollection
+    @$xp$40Unittest_engine_tlb@INamespaceImportDisp @25  ; __tpdsc__ Unittest_engine_tlb::INamespaceImportDisp
+    @$xp$40Unittest_engine_tlb@IUnitTestManagerDisp @7   ; __tpdsc__ Unittest_engine_tlb::IUnitTestManagerDisp
+    @$xp$40Unittest_engine_tlb@IUnitTestRunnersDisp @17  ; __tpdsc__ Unittest_engine_tlb::IUnitTestRunnersDisp
+    @$xp$40Unittestcreators@TUnitTestProjectCreator @176 ; __tpdsc__ Unittestcreators::TUnitTestProjectCreator
+    @$xp$40Unittestintf@IOTAUnitTestProjectSettings @86  ; __tpdsc__ Unittestintf::IOTAUnitTestProjectSettings
+    @$xp$41Cppparserimporter@CoCPPBlockParserFactory @257 ; __tpdsc__ Cppparserimporter::CoCPPBlockParserFactory
+    @$xp$41Cppparserimporter@ICPPStructureParserDisp @321 ; __tpdsc__ Cppparserimporter::ICPPStructureParserDisp
+    @$xp$41System@%TArray__1$20System@UnicodeString% @175 ; __tpdsc__ System::TArray__1<System::UnicodeString>
+    @$xp$41Unittest_engine_tlb@IMethodDeclCollection @32  ; __tpdsc__ Unittest_engine_tlb::IMethodDeclCollection
+    @$xp$42Unittest_engine_tlb@IMethodParamCollection @36  ; __tpdsc__ Unittest_engine_tlb::IMethodParamCollection
+    @$xp$42Unittest_engine_tlb@IUnitTestFrameworkDisp @11  ; __tpdsc__ Unittest_engine_tlb::IUnitTestFrameworkDisp
+    @$xp$42Unittest_engine_tlb@IUnitTestGeneratorDisp @45  ; __tpdsc__ Unittest_engine_tlb::IUnitTestGeneratorDisp
+    @$xp$43Cppparserimporter@ICPPMethodNavigateFactory @298 ; __tpdsc__ Cppparserimporter::ICPPMethodNavigateFactory
+    @$xp$43Unittest_engine_tlb@ITestableCodeObjectDisp @39  ; __tpdsc__ Unittest_engine_tlb::ITestableCodeObjectDisp
+    @$xp$43Unittest_engine_tlb@IUnitTestCodeGenOptions @44  ; __tpdsc__ Unittest_engine_tlb::IUnitTestCodeGenOptions
+    @$xp$43Unittest_engine_tlb@IUnitTestFrameworksDisp @9   ; __tpdsc__ Unittest_engine_tlb::IUnitTestFrameworksDisp
+    @$xp$43Unittest_engine_tlb@IUnitTestProjectOptions @16  ; __tpdsc__ Unittest_engine_tlb::IUnitTestProjectOptions
+    @$xp$43Unittest_engine_tlb@IUnitTestPropertiesDisp @41  ; __tpdsc__ Unittest_engine_tlb::IUnitTestPropertiesDisp
+    @$xp$44Cppparserimporter@CoCPPMethodNavigateFactory @253 ; __tpdsc__ Cppparserimporter::CoCPPMethodNavigateFactory
+    @$xp$44Cppparserimporter@ICPPBlockParserFactoryDisp @303 ; __tpdsc__ Cppparserimporter::ICPPBlockParserFactoryDisp
+    @$xp$44Cppparserimporter@ICPPStructureParserFactory @302 ; __tpdsc__ Cppparserimporter::ICPPStructureParserFactory
+    @$xp$44Unittest_engine_tlb@IClassDeclCollectionDisp @27  ; __tpdsc__ Unittest_engine_tlb::IClassDeclCollectionDisp
+    @$xp$44Unittest_engine_tlb@IUnitTestProjectSettings @14  ; __tpdsc__ Unittest_engine_tlb::IUnitTestProjectSettings
+    @$xp$45Cppparserimporter@CoCPPStructureParserFactory @255 ; __tpdsc__ Cppparserimporter::CoCPPStructureParserFactory
+    @$xp$45Unittest_engine_tlb@IMethodDeclCollectionDisp @31  ; __tpdsc__ Unittest_engine_tlb::IMethodDeclCollectionDisp
+    @$xp$46Unittest_engine_tlb@IMethodParamCollectionDisp @35  ; __tpdsc__ Unittest_engine_tlb::IMethodParamCollectionDisp
+    @$xp$46Unittest_engine_tlb@INamespaceImportCollection @24  ; __tpdsc__ Unittest_engine_tlb::INamespaceImportCollection
+    @$xp$47Cppparserimporter@ICPPMethodNavigateFactoryDisp @297 ; __tpdsc__ Cppparserimporter::ICPPMethodNavigateFactoryDisp
+    @$xp$47Unittest_engine_tlb@IUnitTestCodeGenOptionsDisp @43  ; __tpdsc__ Unittest_engine_tlb::IUnitTestCodeGenOptionsDisp
+    @$xp$47Unittest_engine_tlb@IUnitTestProjectOptionsDisp @15  ; __tpdsc__ Unittest_engine_tlb::IUnitTestProjectOptionsDisp
+    @$xp$48Cppparserimporter@ICPPStructureParserFactoryDisp @301 ; __tpdsc__ Cppparserimporter::ICPPStructureParserFactoryDisp
+    @$xp$48Unittest_engine_tlb@IUnitTestProjectSettingsDisp @13  ; __tpdsc__ Unittest_engine_tlb::IUnitTestProjectSettingsDisp
+    @$xp$50Unittest_engine_tlb@INamespaceImportCollectionDisp @23  ; __tpdsc__ Unittest_engine_tlb::INamespaceImportCollectionDisp
+    @Cppparser@Finalization$qqrv   @366 ; __fastcall Cppparser::Finalization()
+    @Cppparser@GetCppUnitParser$qqrv @367 ; __fastcall Cppparser::GetCppUnitParser()
+    @Cppparser@initialization$qqrv @365 ; __fastcall Cppparser::initialization()
+    @Cppparserimporter@CLASS_BlockManager @345 ; Cppparserimporter::CLASS_BlockManager
+    @Cppparserimporter@CLASS_CPPBaseDecl @346 ; Cppparserimporter::CLASS_CPPBaseDecl
+    @Cppparserimporter@CLASS_CPPBlockParser @341 ; Cppparserimporter::CLASS_CPPBlockParser
+    @Cppparserimporter@CLASS_CPPBlockParserFactory @331 ; Cppparserimporter::CLASS_CPPBlockParserFactory
+    @Cppparserimporter@CLASS_CPPClassDecl @333 ; Cppparserimporter::CLASS_CPPClassDecl
+    @Cppparserimporter@CLASS_CPPEnumDecl @335 ; Cppparserimporter::CLASS_CPPEnumDecl
+    @Cppparserimporter@CLASS_CPPEnumMemberDecl @336 ; Cppparserimporter::CLASS_CPPEnumMemberDecl
+    @Cppparserimporter@CLASS_CPPFile @342 ; Cppparserimporter::CLASS_CPPFile
+    @Cppparserimporter@CLASS_CPPFuncPtrDecl @356 ; Cppparserimporter::CLASS_CPPFuncPtrDecl
+    @Cppparserimporter@CLASS_CPPFunctionDecl @337 ; Cppparserimporter::CLASS_CPPFunctionDecl
+    @Cppparserimporter@CLASS_CPPIncludeDecl @354 ; Cppparserimporter::CLASS_CPPIncludeDecl
+    @Cppparserimporter@CLASS_CPPMemberDecl @353 ; Cppparserimporter::CLASS_CPPMemberDecl
+    @Cppparserimporter@CLASS_CPPMethodNavigateFactory @327 ; Cppparserimporter::CLASS_CPPMethodNavigateFactory
+    @Cppparserimporter@CLASS_CPPNamespaceDecl @352 ; Cppparserimporter::CLASS_CPPNamespaceDecl
+    @Cppparserimporter@CLASS_CPPScopeDecl @351 ; Cppparserimporter::CLASS_CPPScopeDecl
+    @Cppparserimporter@CLASS_CPPStructureParser @350 ; Cppparserimporter::CLASS_CPPStructureParser
+    @Cppparserimporter@CLASS_CPPStructureParserFactory @329 ; Cppparserimporter::CLASS_CPPStructureParserFactory
+    @Cppparserimporter@CLASS_CPPTypeDecl @349 ; Cppparserimporter::CLASS_CPPTypeDecl
+    @Cppparserimporter@CLASS_DefaultFactory @339 ; Cppparserimporter::CLASS_DefaultFactory
+    @Cppparserimporter@CLASS_DefaultSettings @338 ; Cppparserimporter::CLASS_DefaultSettings
+    @Cppparserimporter@CLASS_SymbolManager @332 ; Cppparserimporter::CLASS_SymbolManager
+    @Cppparserimporter@CoBlockManager@ @278 ; Cppparserimporter::CoBlockManager::
+    @Cppparserimporter@CoBlockManager@Create$qqrv @236 ; __fastcall Cppparserimporter::CoBlockManager::Create()
+    @Cppparserimporter@CoBlockManager@CreateRemote$qqrx20System@UnicodeString @235 ; __fastcall Cppparserimporter::CoBlockManager::CreateRemote(const System::UnicodeString)
+    @Cppparserimporter@CoCPPBaseDecl@ @280 ; Cppparserimporter::CoCPPBaseDecl::
+    @Cppparserimporter@CoCPPBaseDecl@Create$qqrv @238 ; __fastcall Cppparserimporter::CoCPPBaseDecl::Create()
+    @Cppparserimporter@CoCPPBaseDecl@CreateRemote$qqrx20System@UnicodeString @237 ; __fastcall Cppparserimporter::CoCPPBaseDecl::CreateRemote(const System::UnicodeString)
+    @Cppparserimporter@CoCPPBlockParser@ @274 ; Cppparserimporter::CoCPPBlockParser::
+    @Cppparserimporter@CoCPPBlockParser@Create$qqrv @232 ; __fastcall Cppparserimporter::CoCPPBlockParser::Create()
+    @Cppparserimporter@CoCPPBlockParser@CreateRemote$qqrx20System@UnicodeString @231 ; __fastcall Cppparserimporter::CoCPPBlockParser::CreateRemote(const System::UnicodeString)
+    @Cppparserimporter@CoCPPBlockParserFactory@ @258 ; Cppparserimporter::CoCPPBlockParserFactory::
+    @Cppparserimporter@CoCPPBlockParserFactory@Create$qqrv @216 ; __fastcall Cppparserimporter::CoCPPBlockParserFactory::Create()
+    @Cppparserimporter@CoCPPBlockParserFactory@CreateRemote$qqrx20System@UnicodeString @215 ; __fastcall Cppparserimporter::CoCPPBlockParserFactory::CreateRemote(const System::UnicodeString)
+    @Cppparserimporter@CoCPPClassDecl@ @262 ; Cppparserimporter::CoCPPClassDecl::
+    @Cppparserimporter@CoCPPClassDecl@Create$qqrv @220 ; __fastcall Cppparserimporter::CoCPPClassDecl::Create()
+    @Cppparserimporter@CoCPPClassDecl@CreateRemote$qqrx20System@UnicodeString @219 ; __fastcall Cppparserimporter::CoCPPClassDecl::CreateRemote(const System::UnicodeString)
+    @Cppparserimporter@CoCPPEnumDecl@ @264 ; Cppparserimporter::CoCPPEnumDecl::
+    @Cppparserimporter@CoCPPEnumDecl@Create$qqrv @222 ; __fastcall Cppparserimporter::CoCPPEnumDecl::Create()
+    @Cppparserimporter@CoCPPEnumDecl@CreateRemote$qqrx20System@UnicodeString @221 ; __fastcall Cppparserimporter::CoCPPEnumDecl::CreateRemote(const System::UnicodeString)
+    @Cppparserimporter@CoCPPEnumMemberDecl@ @266 ; Cppparserimporter::CoCPPEnumMemberDecl::
+    @Cppparserimporter@CoCPPEnumMemberDecl@Create$qqrv @224 ; __fastcall Cppparserimporter::CoCPPEnumMemberDecl::Create()
+    @Cppparserimporter@CoCPPEnumMemberDecl@CreateRemote$qqrx20System@UnicodeString @223 ; __fastcall Cppparserimporter::CoCPPEnumMemberDecl::CreateRemote(const System::UnicodeString)
+    @Cppparserimporter@CoCPPFile@  @276 ; Cppparserimporter::CoCPPFile::
+    @Cppparserimporter@CoCPPFile@Create$qqrv @234 ; __fastcall Cppparserimporter::CoCPPFile::Create()
+    @Cppparserimporter@CoCPPFile@CreateRemote$qqrx20System@UnicodeString @233 ; __fastcall Cppparserimporter::CoCPPFile::CreateRemote(const System::UnicodeString)
+    @Cppparserimporter@CoCPPFuncPtrDecl@ @294 ; Cppparserimporter::CoCPPFuncPtrDecl::
+    @Cppparserimporter@CoCPPFuncPtrDecl@Create$qqrv @252 ; __fastcall Cppparserimporter::CoCPPFuncPtrDecl::Create()
+    @Cppparserimporter@CoCPPFuncPtrDecl@CreateRemote$qqrx20System@UnicodeString @251 ; __fastcall Cppparserimporter::CoCPPFuncPtrDecl::CreateRemote(const System::UnicodeString)
+    @Cppparserimporter@CoCPPFunctionDecl@ @268 ; Cppparserimporter::CoCPPFunctionDecl::
+    @Cppparserimporter@CoCPPFunctionDecl@Create$qqrv @226 ; __fastcall Cppparserimporter::CoCPPFunctionDecl::Create()
+    @Cppparserimporter@CoCPPFunctionDecl@CreateRemote$qqrx20System@UnicodeString @225 ; __fastcall Cppparserimporter::CoCPPFunctionDecl::CreateRemote(const System::UnicodeString)
+    @Cppparserimporter@CoCPPIncludeDecl@ @292 ; Cppparserimporter::CoCPPIncludeDecl::
+    @Cppparserimporter@CoCPPIncludeDecl@Create$qqrv @250 ; __fastcall Cppparserimporter::CoCPPIncludeDecl::Create()
+    @Cppparserimporter@CoCPPIncludeDecl@CreateRemote$qqrx20System@UnicodeString @249 ; __fastcall Cppparserimporter::CoCPPIncludeDecl::CreateRemote(const System::UnicodeString)
+    @Cppparserimporter@CoCPPMemberDecl@ @290 ; Cppparserimporter::CoCPPMemberDecl::
+    @Cppparserimporter@CoCPPMemberDecl@Create$qqrv @248 ; __fastcall Cppparserimporter::CoCPPMemberDecl::Create()
+    @Cppparserimporter@CoCPPMemberDecl@CreateRemote$qqrx20System@UnicodeString @247 ; __fastcall Cppparserimporter::CoCPPMemberDecl::CreateRemote(const System::UnicodeString)
+    @Cppparserimporter@CoCPPMethodNavigateFactory@ @254 ; Cppparserimporter::CoCPPMethodNavigateFactory::
+    @Cppparserimporter@CoCPPMethodNavigateFactory@Create$qqrv @212 ; __fastcall Cppparserimporter::CoCPPMethodNavigateFactory::Create()
+    @Cppparserimporter@CoCPPMethodNavigateFactory@CreateRemote$qqrx20System@UnicodeString @211 ; __fastcall Cppparserimporter::CoCPPMethodNavigateFactory::CreateRemote(const System::UnicodeString)
+    @Cppparserimporter@CoCPPNamespaceDecl@ @288 ; Cppparserimporter::CoCPPNamespaceDecl::
+    @Cppparserimporter@CoCPPNamespaceDecl@Create$qqrv @246 ; __fastcall Cppparserimporter::CoCPPNamespaceDecl::Create()
+    @Cppparserimporter@CoCPPNamespaceDecl@CreateRemote$qqrx20System@UnicodeString @245 ; __fastcall Cppparserimporter::CoCPPNamespaceDecl::CreateRemote(const System::UnicodeString)
+    @Cppparserimporter@CoCPPScopeDecl@ @286 ; Cppparserimporter::CoCPPScopeDecl::
+    @Cppparserimporter@CoCPPScopeDecl@Create$qqrv @244 ; __fastcall Cppparserimporter::CoCPPScopeDecl::Create()
+    @Cppparserimporter@CoCPPScopeDecl@CreateRemote$qqrx20System@UnicodeString @243 ; __fastcall Cppparserimporter::CoCPPScopeDecl::CreateRemote(const System::UnicodeString)
+    @Cppparserimporter@CoCPPStructureParser@ @284 ; Cppparserimporter::CoCPPStructureParser::
+    @Cppparserimporter@CoCPPStructureParser@Create$qqrv @242 ; __fastcall Cppparserimporter::CoCPPStructureParser::Create()
+    @Cppparserimporter@CoCPPStructureParser@CreateRemote$qqrx20System@UnicodeString @241 ; __fastcall Cppparserimporter::CoCPPStructureParser::CreateRemote(const System::UnicodeString)
+    @Cppparserimporter@CoCPPStructureParserFactory@ @256 ; Cppparserimporter::CoCPPStructureParserFactory::
+    @Cppparserimporter@CoCPPStructureParserFactory@Create$qqrv @214 ; __fastcall Cppparserimporter::CoCPPStructureParserFactory::Create()
+    @Cppparserimporter@CoCPPStructureParserFactory@CreateRemote$qqrx20System@UnicodeString @213 ; __fastcall Cppparserimporter::CoCPPStructureParserFactory::CreateRemote(const System::UnicodeString)
+    @Cppparserimporter@CoCPPTypeDecl@ @282 ; Cppparserimporter::CoCPPTypeDecl::
+    @Cppparserimporter@CoCPPTypeDecl@Create$qqrv @240 ; __fastcall Cppparserimporter::CoCPPTypeDecl::Create()
+    @Cppparserimporter@CoCPPTypeDecl@CreateRemote$qqrx20System@UnicodeString @239 ; __fastcall Cppparserimporter::CoCPPTypeDecl::CreateRemote(const System::UnicodeString)
+    @Cppparserimporter@CoDefaultFactory@ @272 ; Cppparserimporter::CoDefaultFactory::
+    @Cppparserimporter@CoDefaultFactory@Create$qqrv @230 ; __fastcall Cppparserimporter::CoDefaultFactory::Create()
+    @Cppparserimporter@CoDefaultFactory@CreateRemote$qqrx20System@UnicodeString @229 ; __fastcall Cppparserimporter::CoDefaultFactory::CreateRemote(const System::UnicodeString)
+    @Cppparserimporter@CoDefaultSettings@ @270 ; Cppparserimporter::CoDefaultSettings::
+    @Cppparserimporter@CoDefaultSettings@Create$qqrv @228 ; __fastcall Cppparserimporter::CoDefaultSettings::Create()
+    @Cppparserimporter@CoDefaultSettings@CreateRemote$qqrx20System@UnicodeString @227 ; __fastcall Cppparserimporter::CoDefaultSettings::CreateRemote(const System::UnicodeString)
+    @Cppparserimporter@CoSymbolManager@ @260 ; Cppparserimporter::CoSymbolManager::
+    @Cppparserimporter@CoSymbolManager@Create$qqrv @218 ; __fastcall Cppparserimporter::CoSymbolManager::Create()
+    @Cppparserimporter@CoSymbolManager@CreateRemote$qqrx20System@UnicodeString @217 ; __fastcall Cppparserimporter::CoSymbolManager::CreateRemote(const System::UnicodeString)
+    @Cppparserimporter@Finalization$qqrv @210 ; __fastcall Cppparserimporter::Finalization()
+    @Cppparserimporter@IID_IBaseDecl @362 ; Cppparserimporter::IID_IBaseDecl
+    @Cppparserimporter@IID_IBlockManager @363 ; Cppparserimporter::IID_IBlockManager
+    @Cppparserimporter@IID_ICPPBlockParser @344 ; Cppparserimporter::IID_ICPPBlockParser
+    @Cppparserimporter@IID_ICPPBlockParserFactory @343 ; Cppparserimporter::IID_ICPPBlockParserFactory
+    @Cppparserimporter@IID_ICPPFile @357 ; Cppparserimporter::IID_ICPPFile
+    @Cppparserimporter@IID_ICPPMethodNavigate @328 ; Cppparserimporter::IID_ICPPMethodNavigate
+    @Cppparserimporter@IID_ICPPMethodNavigateFactory @330 ; Cppparserimporter::IID_ICPPMethodNavigateFactory
+    @Cppparserimporter@IID_ICPPStructureParser @361 ; Cppparserimporter::IID_ICPPStructureParser
+    @Cppparserimporter@IID_ICPPStructureParserFactory @340 ; Cppparserimporter::IID_ICPPStructureParserFactory
+    @Cppparserimporter@IID_IDefaultFactory @348 ; Cppparserimporter::IID_IDefaultFactory
+    @Cppparserimporter@IID_IDefaultSettings @347 ; Cppparserimporter::IID_IDefaultSettings
+    @Cppparserimporter@IID_IFunctionDecl @355 ; Cppparserimporter::IID_IFunctionDecl
+    @Cppparserimporter@IID_IMemberDecl @358 ; Cppparserimporter::IID_IMemberDecl
+    @Cppparserimporter@IID_IScope  @359 ; Cppparserimporter::IID_IScope
+    @Cppparserimporter@IID_ISymbolManager @334 ; Cppparserimporter::IID_ISymbolManager
+    @Cppparserimporter@IID_ITypeDecl @360 ; Cppparserimporter::IID_ITypeDecl
+    @Cppparserimporter@LIBID_Borland_Studio_Cpp_Structure @364 ; Cppparserimporter::LIBID_Borland_Studio_Cpp_Structure
+    @Cppparserimporter@initialization$qqrv @209 ; __fastcall Cppparserimporter::initialization()
+    @GetPackageInfoTable           @437 ; GetPackageInfoTable
+    @Testcasewizardform@Finalization$qqrv @370 ; __fastcall Testcasewizardform::Finalization()
+    @Testcasewizardform@TTestCaseWizard@ @407 ; Testcasewizardform::TTestCaseWizard::
+    @Testcasewizardform@TTestCaseWizard@AddUnitUnderTestToProject$qqrv @401 ; __fastcall Testcasewizardform::TTestCaseWizard::AddUnitUnderTestToProject()
+    @Testcasewizardform@TTestCaseWizard@CancelButtonClick$qqrp14System@TObject @388 ; __fastcall Testcasewizardform::TTestCaseWizard::CancelButtonClick(System::TObject *)
+    @Testcasewizardform@TTestCaseWizard@ClearItemTree$qqrv @390 ; __fastcall Testcasewizardform::TTestCaseWizard::ClearItemTree()
+    @Testcasewizardform@TTestCaseWizard@ClickedOnStateIcon$qqrrp22Vcl@Comctrls@TTreeNode @394 ; __fastcall Testcasewizardform::TTestCaseWizard::ClickedOnStateIcon(Vcl::Comctrls::TTreeNode *&)
+    @Testcasewizardform@TTestCaseWizard@FileOpenAccept$qqrp14System@TObject @387 ; __fastcall Testcasewizardform::TTestCaseWizard::FileOpenAccept(System::TObject *)
+    @Testcasewizardform@TTestCaseWizard@FileOpenBeforeExecute$qqrp14System@TObject @386 ; __fastcall Testcasewizardform::TTestCaseWizard::FileOpenBeforeExecute(System::TObject *)
+    @Testcasewizardform@TTestCaseWizard@FinishWizardExecute$qqrp14System@TObject @385 ; __fastcall Testcasewizardform::TTestCaseWizard::FinishWizardExecute(System::TObject *)
+    @Testcasewizardform@TTestCaseWizard@FinishWizardUpdate$qqrp14System@TObject @384 ; __fastcall Testcasewizardform::TTestCaseWizard::FinishWizardUpdate(System::TObject *)
+    @Testcasewizardform@TTestCaseWizard@FormCloseQuery$qqrp14System@TObjectro @383 ; __fastcall Testcasewizardform::TTestCaseWizard::FormCloseQuery(System::TObject *, bool&)
+    @Testcasewizardform@TTestCaseWizard@FormCreate$qqrp14System@TObject @403 ; __fastcall Testcasewizardform::TTestCaseWizard::FormCreate(System::TObject *)
+    @Testcasewizardform@TTestCaseWizard@FormDestroy$qqrp14System@TObject @402 ; __fastcall Testcasewizardform::TTestCaseWizard::FormDestroy(System::TObject *)
+    @Testcasewizardform@TTestCaseWizard@GenerateTestCaseExecute$qqrp14System@TObject @382 ; __fastcall Testcasewizardform::TTestCaseWizard::GenerateTestCaseExecute(System::TObject *)
+    @Testcasewizardform@TTestCaseWizard@GetCodeObject$qqrxp22Vcl@Comctrls@TTreeNode @395 ; __fastcall Testcasewizardform::TTestCaseWizard::GetCodeObject(Vcl::Comctrls::TTreeNode * const)
+    @Testcasewizardform@TTestCaseWizard@GetUnitUnderTestProject$qqrv @389 ; __fastcall Testcasewizardform::TTestCaseWizard::GetUnitUnderTestProject()
+    @Testcasewizardform@TTestCaseWizard@HelpDisplayExecute$qqrp14System@TObject @381 ; __fastcall Testcasewizardform::TTestCaseWizard::HelpDisplayExecute(System::TObject *)
+    @Testcasewizardform@TTestCaseWizard@ItemTreeClick$qqrp14System@TObject @380 ; __fastcall Testcasewizardform::TTestCaseWizard::ItemTreeClick(System::TObject *)
+    @Testcasewizardform@TTestCaseWizard@ItemTreeDeletion$qqrp14System@TObjectp22Vcl@Comctrls@TTreeNode @371 ; __fastcall Testcasewizardform::TTestCaseWizard::ItemTreeDeletion(System::TObject *, Vcl::Comctrls::TTreeNode *)
+    @Testcasewizardform@TTestCaseWizard@NextPageUpdate$qqrp14System@TObject @379 ; __fastcall Testcasewizardform::TTestCaseWizard::NextPageUpdate(System::TObject *)
+    @Testcasewizardform@TTestCaseWizard@PopulateFileList$qqrv @400 ; __fastcall Testcasewizardform::TTestCaseWizard::PopulateFileList()
+    @Testcasewizardform@TTestCaseWizard@PopulateItemTree$qqrv @399 ; __fastcall Testcasewizardform::TTestCaseWizard::PopulateItemTree()
+    @Testcasewizardform@TTestCaseWizard@PopulateProjectList$qqrv @398 ; __fastcall Testcasewizardform::TTestCaseWizard::PopulateProjectList()
+    @Testcasewizardform@TTestCaseWizard@SetInputMade$qqrv @396 ; __fastcall Testcasewizardform::TTestCaseWizard::SetInputMade()
+    @Testcasewizardform@TTestCaseWizard@SetNodeState$qqrxp22Vcl@Comctrls@TTreeNodexo @393 ; __fastcall Testcasewizardform::TTestCaseWizard::SetNodeState(Vcl::Comctrls::TTreeNode * const, const bool)
+    @Testcasewizardform@TTestCaseWizard@SourceFileNameChange$qqrp14System@TObject @378 ; __fastcall Testcasewizardform::TTestCaseWizard::SourceFileNameChange(System::TObject *)
+    @Testcasewizardform@TTestCaseWizard@SourceFileNameCloseUp$qqrp14System@TObject @377 ; __fastcall Testcasewizardform::TTestCaseWizard::SourceFileNameCloseUp(System::TObject *)
+    @Testcasewizardform@TTestCaseWizard@SourceFileSelected$qqrv @397 ; __fastcall Testcasewizardform::TTestCaseWizard::SourceFileSelected()
+    @Testcasewizardform@TTestCaseWizard@TestCaseBaseClassNameChange$qqrp14System@TObject @376 ; __fastcall Testcasewizardform::TTestCaseWizard::TestCaseBaseClassNameChange(System::TObject *)
+    @Testcasewizardform@TTestCaseWizard@TestFrameworkChange$qqrp14System@TObject @374 ; __fastcall Testcasewizardform::TTestCaseWizard::TestFrameworkChange(System::TObject *)
+    @Testcasewizardform@TTestCaseWizard@TestProjectNameChange$qqrp14System@TObject @375 ; __fastcall Testcasewizardform::TTestCaseWizard::TestProjectNameChange(System::TObject *)
+    @Testcasewizardform@TTestCaseWizard@UnitTestFileNameChange$qqrp14System@TObject @373 ; __fastcall Testcasewizardform::TTestCaseWizard::UnitTestFileNameChange(System::TObject *)
+    @Testcasewizardform@TTestCaseWizard@UpdateNodeImage$qqrxp22Vcl@Comctrls@TTreeNode @391 ; __fastcall Testcasewizardform::TTestCaseWizard::UpdateNodeImage(Vcl::Comctrls::TTreeNode * const)
+    @Testcasewizardform@TTestCaseWizard@UpdateNodeState$qqrxp22Vcl@Comctrls@TTreeNode @392 ; __fastcall Testcasewizardform::TTestCaseWizard::UpdateNodeState(Vcl::Comctrls::TTreeNode * const)
+    @Testcasewizardform@TTestCaseWizard@WizardPagesChange$qqrp14System@TObject @372 ; __fastcall Testcasewizardform::TTestCaseWizard::WizardPagesChange(System::TObject *)
+    @Testcasewizardform@TTestableItemWrapper@ @409 ; Testcasewizardform::TTestableItemWrapper::
+    @Testcasewizardform@TTestableItemWrapper@$bctr$qqr66System@%DelphiInterface$39Unittest_engine_tlb@ITestableCodeObject% @404 ; Testcasewizardform::TTestableItemWrapper::TTestableItemWrapper(System::DelphiInterface<{583}...
+    @Testcasewizardform@TestCaseWizardExecute$qqrv @405 ; __fastcall Testcasewizardform::TestCaseWizardExecute()
+    @Testcasewizardform@initialization$qqrv @369 ; __fastcall Testcasewizardform::initialization()
+    @Testprojectwizardform@Finalization$qqrv @182 ; __fastcall Testprojectwizardform::Finalization()
+    @Testprojectwizardform@TTestProjectWizard@ @208 ; Testprojectwizardform::TTestProjectWizard::
+    @Testprojectwizardform@TTestProjectWizard@BrowseForFolderAccept$qqrp14System@TObject @188 ; __fastcall Testprojectwizardform::TTestProjectWizard::BrowseForFolderAccept(System::TObject *)
+    @Testprojectwizardform@TTestProjectWizard@BrowseForFolderBeforeExecute$qqrp14System@TObject @189 ; __fastcall Testprojectwizardform::TTestProjectWizard::BrowseForFolderBeforeExecute(System::TObject *)
+    @Testprojectwizardform@TTestProjectWizard@CancelButtonClick$qqrp14System@TObject @190 ; __fastcall Testprojectwizardform::TTestProjectWizard::CancelButtonClick(System::TObject *)
+    @Testprojectwizardform@TTestProjectWizard@FinishWizardExecute$qqrp14System@TObject @194 ; __fastcall Testprojectwizardform::TTestProjectWizard::FinishWizardExecute(System::TObject *)
+    @Testprojectwizardform@TTestProjectWizard@FinishWizardUpdate$qqrp14System@TObject @191 ; __fastcall Testprojectwizardform::TTestProjectWizard::FinishWizardUpdate(System::TObject *)
+    @Testprojectwizardform@TTestProjectWizard@FormCloseQuery$qqrp14System@TObjectro @197 ; __fastcall Testprojectwizardform::TTestProjectWizard::FormCloseQuery(System::TObject *, bool&)
+    @Testprojectwizardform@TTestProjectWizard@FormCreate$qqrp14System@TObject @205 ; __fastcall Testprojectwizardform::TTestProjectWizard::FormCreate(System::TObject *)
+    @Testprojectwizardform@TTestProjectWizard@GenerateTestProjectExecute$qqrp14System@TObject @195 ; __fastcall Testprojectwizardform::TTestProjectWizard::GenerateTestProjectExecute(System::TObject *)
+    @Testprojectwizardform@TTestProjectWizard@GetSelectedPersonality$qqrv @198 ; __fastcall Testprojectwizardform::TTestProjectWizard::GetSelectedPersonality()
+    @Testprojectwizardform@TTestProjectWizard@HelpDisplayExecute$qqrp14System@TObject @196 ; __fastcall Testprojectwizardform::TTestProjectWizard::HelpDisplayExecute(System::TObject *)
+    @Testprojectwizardform@TTestProjectWizard@InitProjectSettings$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject% @202 ; Testprojectwizardform::TTestProjectWizard::InitProjectSettings(const System::DelphiInterface<{583}...
+    @Testprojectwizardform@TTestProjectWizard@NextPageUpdate$qqrp14System@TObject @192 ; __fastcall Testprojectwizardform::TTestProjectWizard::NextPageUpdate(System::TObject *)
+    @Testprojectwizardform@TTestProjectWizard@PopulatePersonalityList$qqrv @201 ; __fastcall Testprojectwizardform::TTestProjectWizard::PopulatePersonalityList()
+    @Testprojectwizardform@TTestProjectWizard@PopulateSourceProjectList$qqrv @200 ; __fastcall Testprojectwizardform::TTestProjectWizard::PopulateSourceProjectList()
+    @Testprojectwizardform@TTestProjectWizard@PopulateTestRunnerList$qqrv @199 ; __fastcall Testprojectwizardform::TTestProjectWizard::PopulateTestRunnerList()
+    @Testprojectwizardform@TTestProjectWizard@SetInputMade$qqrv @204 ; __fastcall Testprojectwizardform::TTestProjectWizard::SetInputMade()
+    @Testprojectwizardform@TTestProjectWizard@SourceProjectNameChange$qqrp14System@TObject @203 ; __fastcall Testprojectwizardform::TTestProjectWizard::SourceProjectNameChange(System::TObject *)
+    @Testprojectwizardform@TTestProjectWizard@TestFrameworkChange$qqrp14System@TObject @184 ; __fastcall Testprojectwizardform::TTestProjectWizard::TestFrameworkChange(System::TObject *)
+    @Testprojectwizardform@TTestProjectWizard@TestPersonalityChange$qqrp14System@TObject @183 ; __fastcall Testprojectwizardform::TTestProjectWizard::TestPersonalityChange(System::TObject *)
+    @Testprojectwizardform@TTestProjectWizard@TestProjectLocationChange$qqrp14System@TObject @185 ; __fastcall Testprojectwizardform::TTestProjectWizard::TestProjectLocationChange(System::TObject *)
+    @Testprojectwizardform@TTestProjectWizard@TestProjectLocationKeyPress$qqrp14System@TObjectrb @186 ; __fastcall Testprojectwizardform::TTestProjectWizard::TestProjectLocationKeyPress(System::TObject *, wchar_t&)
+    @Testprojectwizardform@TTestProjectWizard@TestProjectNameKeyPress$qqrp14System@TObjectrb @187 ; __fastcall Testprojectwizardform::TTestProjectWizard::TestProjectNameKeyPress(System::TObject *, wchar_t&)
+    @Testprojectwizardform@TTestProjectWizard@WizardPagesChange$qqrp14System@TObject @193 ; __fastcall Testprojectwizardform::TTestProjectWizard::WizardPagesChange(System::TObject *)
+    @Testprojectwizardform@TestProjectWizardExecute$qqrv @206 ; __fastcall Testprojectwizardform::TestProjectWizardExecute()
+    @Testprojectwizardform@initialization$qqrv @181 ; __fastcall Testprojectwizardform::initialization()
+    @Unittest_engine_tlb@CLASS_TestFactory @47  ; Unittest_engine_tlb::CLASS_TestFactory
+    @Unittest_engine_tlb@CoTestFactory@ @6   ; Unittest_engine_tlb::CoTestFactory::
+    @Unittest_engine_tlb@CoTestFactory@Create$qqrv @4   ; __fastcall Unittest_engine_tlb::CoTestFactory::Create()
+    @Unittest_engine_tlb@CoTestFactory@CreateRemote$qqrx20System@UnicodeString @3   ; __fastcall Unittest_engine_tlb::CoTestFactory::CreateRemote(const System::UnicodeString)
+    @Unittest_engine_tlb@Finalization$qqrv @2   ; __fastcall Unittest_engine_tlb::Finalization()
+    @Unittest_engine_tlb@IID_IClassDecl @59  ; Unittest_engine_tlb::IID_IClassDecl
+    @Unittest_engine_tlb@IID_IClassDeclCollection @58  ; Unittest_engine_tlb::IID_IClassDeclCollection
+    @Unittest_engine_tlb@IID_IMethodDecl @61  ; Unittest_engine_tlb::IID_IMethodDecl
+    @Unittest_engine_tlb@IID_IMethodDeclCollection @60  ; Unittest_engine_tlb::IID_IMethodDeclCollection
+    @Unittest_engine_tlb@IID_IMethodParam @63  ; Unittest_engine_tlb::IID_IMethodParam
+    @Unittest_engine_tlb@IID_IMethodParamCollection @62  ; Unittest_engine_tlb::IID_IMethodParamCollection
+    @Unittest_engine_tlb@IID_INamespaceImport @57  ; Unittest_engine_tlb::IID_INamespaceImport
+    @Unittest_engine_tlb@IID_INamespaceImportCollection @56  ; Unittest_engine_tlb::IID_INamespaceImportCollection
+    @Unittest_engine_tlb@IID_ITestableCodeObject @64  ; Unittest_engine_tlb::IID_ITestableCodeObject
+    @Unittest_engine_tlb@IID_IUnitTestCodeGenOptions @66  ; Unittest_engine_tlb::IID_IUnitTestCodeGenOptions
+    @Unittest_engine_tlb@IID_IUnitTestFramework @50  ; Unittest_engine_tlb::IID_IUnitTestFramework
+    @Unittest_engine_tlb@IID_IUnitTestFrameworks @49  ; Unittest_engine_tlb::IID_IUnitTestFrameworks
+    @Unittest_engine_tlb@IID_IUnitTestGenerator @67  ; Unittest_engine_tlb::IID_IUnitTestGenerator
+    @Unittest_engine_tlb@IID_IUnitTestManager @48  ; Unittest_engine_tlb::IID_IUnitTestManager
+    @Unittest_engine_tlb@IID_IUnitTestProjectOptions @52  ; Unittest_engine_tlb::IID_IUnitTestProjectOptions
+    @Unittest_engine_tlb@IID_IUnitTestProjectSettings @51  ; Unittest_engine_tlb::IID_IUnitTestProjectSettings
+    @Unittest_engine_tlb@IID_IUnitTestProperties @65  ; Unittest_engine_tlb::IID_IUnitTestProperties
+    @Unittest_engine_tlb@IID_IUnitTestRunner @54  ; Unittest_engine_tlb::IID_IUnitTestRunner
+    @Unittest_engine_tlb@IID_IUnitTestRunners @53  ; Unittest_engine_tlb::IID_IUnitTestRunners
+    @Unittest_engine_tlb@IID_IUnitTestUnit @55  ; Unittest_engine_tlb::IID_IUnitTestUnit
+    @Unittest_engine_tlb@LIBID_UnitTest_Engine @68  ; Unittest_engine_tlb::LIBID_UnitTest_Engine
+    @Unittest_engine_tlb@initialization$qqrv @1   ; __fastcall Unittest_engine_tlb::initialization()
+    @Unittestconsts@Finalization$qqrv @70  ; __fastcall Unittestconsts::Finalization()
+    @Unittestconsts@_SProjectExists @77  ; Unittestconsts::_SProjectExists
+    @Unittestconsts@_sCase         @82  ; Unittestconsts::_sCase
+    @Unittestconsts@_sConfirmClose @78  ; Unittestconsts::_sConfirmClose
+    @Unittestconsts@_sCppSourceFiles @71  ; Unittestconsts::_sCppSourceFiles
+    @Unittestconsts@_sGalleryCategoryUnitTest @76  ; Unittestconsts::_sGalleryCategoryUnitTest
+    @Unittestconsts@_sNewTestCase  @75  ; Unittestconsts::_sNewTestCase
+    @Unittestconsts@_sNewTestCaseIcon @73  ; Unittestconsts::_sNewTestCaseIcon
+    @Unittestconsts@_sNewTestProject @74  ; Unittestconsts::_sNewTestProject
+    @Unittestconsts@_sNewTestProjectIcon @72  ; Unittestconsts::_sNewTestProjectIcon
+    @Unittestconsts@_sNone         @80  ; Unittestconsts::_sNone
+    @Unittestconsts@_sProject      @81  ; Unittestconsts::_sProject
+    @Unittestconsts@_sWizardCaption @79  ; Unittestconsts::_sWizardCaption
+    @Unittestconsts@initialization$qqrv @69  ; __fastcall Unittestconsts::initialization()
+    @Unittestcreators@CreateUnitTestCaseModule$qqr66System@%DelphiInterface$39Unittest_engine_tlb@IUnitTestProperties%67System@%DelphiInterface$40Unittest_engine_tlb@IClassDeclCollection% @174 ; Unittestcreators::CreateUnitTestCaseModule(System::DelphiInterface<{583}...
+    @Unittestcreators@CreateUnitTestProject$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject%x20System@UnicodeStringt2t265System@%DelphiInterface$38Unittest_engine_tlb@IUnitTestFramework%o @173 ; Unittestcreators::CreateUnitTestProject(const System::DelphiInterface<{583}...
+    @Unittestcreators@Finalization$qqrv @128 ; __fastcall Unittestcreators::Finalization()
+    @Unittestcreators@TUnitTestModuleCreator@ @179 ; Unittestcreators::TUnitTestModuleCreator::
+    @Unittestcreators@TUnitTestModuleCreator@$bctr$qqrx66System@%DelphiInterface$39Unittest_engine_tlb@IUnitTestProperties%67System@%DelphiInterface$40Unittest_engine_tlb@IClassDeclCollection% @172 ; Unittestcreators::TUnitTestModuleCreator::TUnitTestModuleCreator(const System::DelphiInterface<{583}...
+    @Unittestcreators@TUnitTestModuleCreator@FormCreated$qqrx50System@%DelphiInterface$23Toolsapi@IOTAFormEditor% @171 ; Unittestcreators::TUnitTestModuleCreator::FormCreated(const System::DelphiInterface<{583}...
+    @Unittestcreators@TUnitTestModuleCreator@GetAncestorName$qqrv @170 ; __fastcall Unittestcreators::TUnitTestModuleCreator::GetAncestorName()
+    @Unittestcreators@TUnitTestModuleCreator@GetCreatorType$qqrv @169 ; __fastcall Unittestcreators::TUnitTestModuleCreator::GetCreatorType()
+    @Unittestcreators@TUnitTestModuleCreator@GetExisting$qqrv @167 ; __fastcall Unittestcreators::TUnitTestModuleCreator::GetExisting()
+    @Unittestcreators@TUnitTestModuleCreator@GetFileSystem$qqrv @166 ; __fastcall Unittestcreators::TUnitTestModuleCreator::GetFileSystem()
+    @Unittestcreators@TUnitTestModuleCreator@GetFormName$qqrv @165 ; __fastcall Unittestcreators::TUnitTestModuleCreator::GetFormName()
+    @Unittestcreators@TUnitTestModuleCreator@GetImplFileName$qqrv @164 ; __fastcall Unittestcreators::TUnitTestModuleCreator::GetImplFileName()
+    @Unittestcreators@TUnitTestModuleCreator@GetIntfFileName$qqrv @163 ; __fastcall Unittestcreators::TUnitTestModuleCreator::GetIntfFileName()
+    @Unittestcreators@TUnitTestModuleCreator@GetMainForm$qqrv @162 ; __fastcall Unittestcreators::TUnitTestModuleCreator::GetMainForm()
+    @Unittestcreators@TUnitTestModuleCreator@GetOwner$qqrv @161 ; __fastcall Unittestcreators::TUnitTestModuleCreator::GetOwner()
+    @Unittestcreators@TUnitTestModuleCreator@GetShowForm$qqrv @160 ; __fastcall Unittestcreators::TUnitTestModuleCreator::GetShowForm()
+    @Unittestcreators@TUnitTestModuleCreator@GetShowSource$qqrv @159 ; __fastcall Unittestcreators::TUnitTestModuleCreator::GetShowSource()
+    @Unittestcreators@TUnitTestModuleCreator@GetTestRegisterCode$qqrv @168 ; __fastcall Unittestcreators::TUnitTestModuleCreator::GetTestRegisterCode()
+    @Unittestcreators@TUnitTestModuleCreator@GetUnnamed$qqrv @158 ; __fastcall Unittestcreators::TUnitTestModuleCreator::GetUnnamed()
+    @Unittestcreators@TUnitTestModuleCreator@NewFormFile$qqrx20System@UnicodeStringt1 @157 ; __fastcall Unittestcreators::TUnitTestModuleCreator::NewFormFile(const System::UnicodeString, const System::UnicodeString)
+    @Unittestcreators@TUnitTestModuleCreator@NewImplSource$qqrx20System@UnicodeStringt1t1 @156 ; __fastcall Unittestcreators::TUnitTestModuleCreator::NewImplSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Unittestcreators@TUnitTestModuleCreator@NewImplSourceAsString$qqrx20System@UnicodeString @155 ; __fastcall Unittestcreators::TUnitTestModuleCreator::NewImplSourceAsString(const System::UnicodeString)
+    @Unittestcreators@TUnitTestModuleCreator@NewIntfSource$qqrx20System@UnicodeStringt1t1 @154 ; __fastcall Unittestcreators::TUnitTestModuleCreator::NewIntfSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Unittestcreators@TUnitTestProjectCreator@ @177 ; Unittestcreators::TUnitTestProjectCreator::
+    @Unittestcreators@TUnitTestProjectCreator@$bctr$qqrx20System@UnicodeStringt165System@%DelphiInterface$38Unittest_engine_tlb@IUnitTestFramework% @153 ; Unittestcreators::TUnitTestProjectCreator::TUnitTestProjectCreator(const System::UnicodeString, const System::UnicodeString, System::DelphiInterface<{583}...
+    @Unittestcreators@TUnitTestProjectCreator@CreateDefaultModule$qqrv @151 ; __fastcall Unittestcreators::TUnitTestProjectCreator::CreateDefaultModule()
+    @Unittestcreators@TUnitTestProjectCreator@CreateDefaultModule$qqrxp14System@TObject @152 ; __fastcall Unittestcreators::TUnitTestProjectCreator::CreateDefaultModule(System::TObject * const)
+    @Unittestcreators@TUnitTestProjectCreator@CreateMainSource$qqrxp19Docmodul@TDocModule @136 ; __fastcall Unittestcreators::TUnitTestProjectCreator::CreateMainSource(Docmodul::TDocModule * const)
+    @Unittestcreators@TUnitTestProjectCreator@GetAppType$qqrv @132 ; __fastcall Unittestcreators::TUnitTestProjectCreator::GetAppType()
+    @Unittestcreators@TUnitTestProjectCreator@GetBaseName$qqrv @150 ; __fastcall Unittestcreators::TUnitTestProjectCreator::GetBaseName()
+    @Unittestcreators@TUnitTestProjectCreator@GetExisting$qqrv @149 ; __fastcall Unittestcreators::TUnitTestProjectCreator::GetExisting()
+    @Unittestcreators@TUnitTestProjectCreator@GetFileName$qqrv @131 ; __fastcall Unittestcreators::TUnitTestProjectCreator::GetFileName()
+    @Unittestcreators@TUnitTestProjectCreator@GetFileSystem$qqrv @147 ; __fastcall Unittestcreators::TUnitTestProjectCreator::GetFileSystem()
+    @Unittestcreators@TUnitTestProjectCreator@GetFrameworkType$qqrv @146 ; __fastcall Unittestcreators::TUnitTestProjectCreator::GetFrameworkType()
+    @Unittestcreators@TUnitTestProjectCreator@GetIncludeInProject$qqrv @148 ; __fastcall Unittestcreators::TUnitTestProjectCreator::GetIncludeInProject()
+    @Unittestcreators@TUnitTestProjectCreator@GetLanguage$qqrv @142 ; __fastcall Unittestcreators::TUnitTestProjectCreator::GetLanguage()
+    @Unittestcreators@TUnitTestProjectCreator@GetMainFormName$qqrv @134 ; __fastcall Unittestcreators::TUnitTestProjectCreator::GetMainFormName()
+    @Unittestcreators@TUnitTestProjectCreator@GetMainSourceFileName$qqrv @135 ; __fastcall Unittestcreators::TUnitTestProjectCreator::GetMainSourceFileName()
+    @Unittestcreators@TUnitTestProjectCreator@GetMainSourceTemplate$qqrv @129 ; __fastcall Unittestcreators::TUnitTestProjectCreator::GetMainSourceTemplate()
+    @Unittestcreators@TUnitTestProjectCreator@GetMakeSource$qqrv @141 ; __fastcall Unittestcreators::TUnitTestProjectCreator::GetMakeSource()
+    @Unittestcreators@TUnitTestProjectCreator@GetPersonality$qqrv @130 ; __fastcall Unittestcreators::TUnitTestProjectCreator::GetPersonality()
+    @Unittestcreators@TUnitTestProjectCreator@GetProjectFileName$qqrv @133 ; __fastcall Unittestcreators::TUnitTestProjectCreator::GetProjectFileName()
+    @Unittestcreators@TUnitTestProjectCreator@GetResFile$qqrx20System@UnicodeStringo @140 ; __fastcall Unittestcreators::TUnitTestProjectCreator::GetResFile(const System::UnicodeString, bool)
+    @Unittestcreators@TUnitTestProjectCreator@GetShowSource$qqrv @139 ; __fastcall Unittestcreators::TUnitTestProjectCreator::GetShowSource()
+    @Unittestcreators@TUnitTestProjectCreator@GetSource$qqrv @138 ; __fastcall Unittestcreators::TUnitTestProjectCreator::GetSource()
+    @Unittestcreators@TUnitTestProjectCreator@GetSupportedPlatforms$qqrv @137 ; __fastcall Unittestcreators::TUnitTestProjectCreator::GetSupportedPlatforms()
+    @Unittestcreators@TUnitTestProjectCreator@GetUnNamed$qqrv @145 ; __fastcall Unittestcreators::TUnitTestProjectCreator::GetUnNamed()
+    @Unittestcreators@TUnitTestProjectCreator@PreferredPlatform$qqrv @144 ; __fastcall Unittestcreators::TUnitTestProjectCreator::PreferredPlatform()
+    @Unittestcreators@TUnitTestProjectCreator@SetInitialOptions$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject% @143 ; Unittestcreators::TUnitTestProjectCreator::SetInitialOptions(const System::DelphiInterface<{583}...
+    @Unittestcreators@initialization$qqrv @127 ; __fastcall Unittestcreators::initialization()
+    @Unittestide@@GetPackageInfoTable$qqrv @434 ; Unittestide::__linkproc__ __fastcall GetPackageInfoTable()
+    @Unittestide@@PackageLoad$qqrv @433 ; Unittestide::__linkproc__ __fastcall PackageLoad()
+    @Unittestide@@PackageUnload$qqrv @432 ; Unittestide::__linkproc__ __fastcall PackageUnload()
+    @Unittestide@initialization$qqrv @431 ; __fastcall Unittestide::initialization()
+    @Unittestintf@Finalization$qqrv @84  ; __fastcall Unittestintf::Finalization()
+    @Unittestintf@initialization$qqrv @83  ; __fastcall Unittestintf::initialization()
+    @Unittestmodule@Finalization$qqrv @412 ; __fastcall Unittestmodule::Finalization()
+    @Unittestmodule@RegisterModuleGauntletHandler$qqrv @414 ; __fastcall Unittestmodule::RegisterModuleGauntletHandler()
+    @Unittestmodule@UnregisterModuleGauntletHandler$qqrv @413 ; __fastcall Unittestmodule::UnregisterModuleGauntletHandler()
+    @Unittestmodule@initialization$qqrv @411 ; __fastcall Unittestmodule::initialization()
+    @Unittestnotifiers@Finalization$qqrv @416 ; __fastcall Unittestnotifiers::Finalization()
+    @Unittestnotifiers@TModuleNotifier@ @427 ; Unittestnotifiers::TModuleNotifier::
+    @Unittestnotifiers@TModuleNotifier@$bctr$qqrv @425 ; __fastcall Unittestnotifiers::TModuleNotifier::TModuleNotifier()
+    @Unittestnotifiers@TModuleNotifier@$bdtr$qqrv @424 ; __fastcall Unittestnotifiers::TModuleNotifier::~TModuleNotifier()
+    @Unittestnotifiers@TModuleNotifier@AfterCompile$qqro @423 ; __fastcall Unittestnotifiers::TModuleNotifier::AfterCompile(bool)
+    @Unittestnotifiers@TModuleNotifier@AfterSave$qqrv @422 ; __fastcall Unittestnotifiers::TModuleNotifier::AfterSave()
+    @Unittestnotifiers@TModuleNotifier@BeforeCompile$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject%ro @421 ; Unittestnotifiers::TModuleNotifier::BeforeCompile(const System::DelphiInterface<{583}...
+    @Unittestnotifiers@TModuleNotifier@BeforeSave$qqrv @420 ; __fastcall Unittestnotifiers::TModuleNotifier::BeforeSave()
+    @Unittestnotifiers@TModuleNotifier@Destroyed$qqrv @419 ; __fastcall Unittestnotifiers::TModuleNotifier::Destroyed()
+    @Unittestnotifiers@TModuleNotifier@FileNotification$qqr29Toolsapi@TOTAFileNotificationx20System@UnicodeStringro @418 ; __fastcall Unittestnotifiers::TModuleNotifier::FileNotification(Toolsapi::TOTAFileNotification, const System::UnicodeString, bool&)
+    @Unittestnotifiers@TModuleNotifier@Modified$qqrv @417 ; __fastcall Unittestnotifiers::TModuleNotifier::Modified()
+    @Unittestnotifiers@initialization$qqrv @415 ; __fastcall Unittestnotifiers::initialization()
+    @Unittestreg@Finalization$qqrv @429 ; __fastcall Unittestreg::Finalization()
+    @Unittestreg@IDERegister$qqrv  @430 ; __fastcall Unittestreg::IDERegister()
+    @Unittestreg@initialization$qqrv @428 ; __fastcall Unittestreg::initialization()
+    @Unittestutils@AddAssemblyRefs$qqrx72System@%DelphiInterface$45Borland_studio_toolsapi_tlb@IOTADotNetProject%x20System@UnicodeString @124 ; Unittestutils::AddAssemblyRefs(const System::DelphiInterface<{583}...
+    @Unittestutils@AddConditionalDefineToProject$qqrx49System@%DelphiInterface$22Codemgr@ICustomProject%x20System@UnicodeString @123 ; Unittestutils::AddConditionalDefineToProject(const System::DelphiInterface<{583}...
+    @Unittestutils@AddReferencesToProject$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject%x65System@%DelphiInterface$38Unittest_engine_tlb@IUnitTestFramework% @122 ; Unittestutils::AddReferencesToProject(const System::DelphiInterface<{583}...
+    @Unittestutils@AddSearchPathToProject$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject%x65System@%DelphiInterface$38Unittest_engine_tlb@IUnitTestFramework% @121 ; Unittestutils::AddSearchPathToProject(const System::DelphiInterface<{583}...
+    @Unittestutils@AddUnitDirToProject$qqrx49System@%DelphiInterface$22Codemgr@ICustomProject%x20System@UnicodeString @120 ; Unittestutils::AddUnitDirToProject(const System::DelphiInterface<{583}...
+    @Unittestutils@AssemblePath$qqrpx20System@UnicodeStringxixo @118 ; __fastcall Unittestutils::AssemblePath(const System::UnicodeString *, const int, const bool)
+    @Unittestutils@AssignTestProjectSettings$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject%t120System@UnicodeStringt3 @90  ; Unittestutils::AssignTestProjectSettings(const System::DelphiInterface<{583}...
+    @Unittestutils@ConfirmDlg$qqr20System@UnicodeString @117 ; __fastcall Unittestutils::ConfirmDlg(System::UnicodeString)
+    @Unittestutils@CopyProjectReferences$qqr47System@%DelphiInterface$20Toolsapi@IOTAProject%t1 @115 ; Unittestutils::CopyProjectReferences(System::DelphiInterface<{583}...
+    @Unittestutils@CreateProjectSettings$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject% @91  ; Unittestutils::CreateProjectSettings(const System::DelphiInterface<{583}...
+    @Unittestutils@ExpandProgIDToPath$qqrx20System@UnicodeString @116 ; __fastcall Unittestutils::ExpandProgIDToPath(const System::UnicodeString)
+    @Unittestutils@ExtractBaseName$qqrx20System@UnicodeString @114 ; __fastcall Unittestutils::ExtractBaseName(const System::UnicodeString)
+    @Unittestutils@ExtractBasePersonalityName$qqrx20System@UnicodeString @113 ; __fastcall Unittestutils::ExtractBasePersonalityName(const System::UnicodeString)
+    @Unittestutils@Finalization$qqrv @89  ; __fastcall Unittestutils::Finalization()
+    @Unittestutils@GetActiveProjectPersonality$qqro @111 ; __fastcall Unittestutils::GetActiveProjectPersonality(bool)
+    @Unittestutils@GetCodeFileNameForModule$qqrp19Docmodul@TDocModule @110 ; __fastcall Unittestutils::GetCodeFileNameForModule(Docmodul::TDocModule *)
+    @Unittestutils@GetOTAProject$qqrx20System@UnicodeString @109 ; __fastcall Unittestutils::GetOTAProject(const System::UnicodeString)
+    @Unittestutils@GetPersonalityFullName$qqrx20System@UnicodeString @112 ; __fastcall Unittestutils::GetPersonalityFullName(const System::UnicodeString)
+    @Unittestutils@GetProjectCodeModules$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject%p23System@Classes@TStrings @108 ; Unittestutils::GetProjectCodeModules(const System::DelphiInterface<{583}...
+    @Unittestutils@GetProjectForFile$qqrx20System@UnicodeString @106 ; __fastcall Unittestutils::GetProjectForFile(const System::UnicodeString)
+    @Unittestutils@GetProjectNames$qqrp23System@Classes@TStrings61System@%Set$34Unittestutils@TUnitTestProjectTypet1$i0$t1$i3$% @105 ; Unittestutils::GetProjectNames(System::Classes::TStrings *, System::Set<{583}...
+    @Unittestutils@GetProjectTestFramework$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject% @107 ; Unittestutils::GetProjectTestFramework(const System::DelphiInterface<{583}...
+    @Unittestutils@IsCodeModule$qqrx20System@UnicodeString @104 ; __fastcall Unittestutils::IsCodeModule(const System::UnicodeString)
+    @Unittestutils@IsCppProject$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject% @102 ; Unittestutils::IsCppProject(const System::DelphiInterface<{583}...
+    @Unittestutils@IsUnitTestProject$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject% @103 ; Unittestutils::IsUnitTestProject(const System::DelphiInterface<{583}...
+    @Unittestutils@MakeUniqueDirectoryName$qqrx20System@UnicodeStringt1o @101 ; __fastcall Unittestutils::MakeUniqueDirectoryName(const System::UnicodeString, const System::UnicodeString, bool)
+    @Unittestutils@MakeUniqueProjectName$qqrx20System@UnicodeStringt1 @100 ; __fastcall Unittestutils::MakeUniqueProjectName(const System::UnicodeString, const System::UnicodeString)
+    @Unittestutils@ModuleServices$qqrv @95  ; __fastcall Unittestutils::ModuleServices()
+    @Unittestutils@OTAServices$qqrv @94  ; __fastcall Unittestutils::OTAServices()
+    @Unittestutils@PopulateFrameworkList$qqrp22Vcl@Stdctrls@TComboBoxx20System@UnicodeStringt2 @99  ; __fastcall Unittestutils::PopulateFrameworkList(Vcl::Stdctrls::TComboBox *, const System::UnicodeString, const System::UnicodeString)
+    @Unittestutils@ProjectExists$qqrx20System@UnicodeString @98  ; __fastcall Unittestutils::ProjectExists(const System::UnicodeString)
+    @Unittestutils@ProjectStorageServices$qqrv @93  ; __fastcall Unittestutils::ProjectStorageServices()
+    @Unittestutils@SetProjectHostApplication$qqrx49System@%DelphiInterface$22Codemgr@ICustomProject%x20System@UnicodeString @97  ; Unittestutils::SetProjectHostApplication(const System::DelphiInterface<{583}...
+    @Unittestutils@SetProjectUnitOutputDir$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject%x20System@UnicodeString @119 ; Unittestutils::SetProjectUnitOutputDir(const System::DelphiInterface<{583}...
+    @Unittestutils@StringToIOTAFile$qqrx20System@UnicodeString @96  ; __fastcall Unittestutils::StringToIOTAFile(const System::UnicodeString)
+    @Unittestutils@UnitTestManager$qqrv @92  ; __fastcall Unittestutils::UnitTestManager()
+    @Unittestutils@initialization$qqrv @88  ; __fastcall Unittestutils::initialization()
+    Finalize                       @435 ; Finalize
+    Initialize                     @436 ; Initialize

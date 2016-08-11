@@ -1,0 +1,34 @@
+LIBRARY     DSNAPXML210.BPL
+
+DESCRIPTION 'mbarcadero XML Transform Components'
+
+EXPORTS
+    @$xp$37Datasnap@Xmlxform@TXMLTransformClient @19  ; __tpdsc__ Datasnap::Xmlxform::TXMLTransformClient
+    @$xp$39Datasnap@Xmlxform@TXMLTransformProvider @21  ; __tpdsc__ Datasnap::Xmlxform::TXMLTransformProvider
+    @Datasnap@Xmlxform@Finalization$qqrv @2   ; __fastcall Datasnap::Xmlxform::Finalization()
+    @Datasnap@Xmlxform@TXMLTransformClient@ @20  ; Datasnap::Xmlxform::TXMLTransformClient::
+    @Datasnap@Xmlxform@TXMLTransformClient@$bctr$qqrp25System@Classes@TComponent @12  ; __fastcall Datasnap::Xmlxform::TXMLTransformClient::TXMLTransformClient(System::Classes::TComponent *)
+    @Datasnap@Xmlxform@TXMLTransformClient@$bdtr$qqrv @11  ; __fastcall Datasnap::Xmlxform::TXMLTransformClient::~TXMLTransformClient()
+    @Datasnap@Xmlxform@TXMLTransformClient@ApplyUpdates$qqrx20System@UnicodeStringt1i @8   ; __fastcall Datasnap::Xmlxform::TXMLTransformClient::ApplyUpdates(const System::UnicodeString, const System::UnicodeString, int)
+    @Datasnap@Xmlxform@TXMLTransformClient@GetDataAsXml$qqrx20System@UnicodeString @9   ; __fastcall Datasnap::Xmlxform::TXMLTransformClient::GetDataAsXml(const System::UnicodeString)
+    @Datasnap@Xmlxform@TXMLTransformClient@GetProviderName$qqrv @7   ; __fastcall Datasnap::Xmlxform::TXMLTransformClient::GetProviderName()
+    @Datasnap@Xmlxform@TXMLTransformClient@GetRemoteServer$qqrv @5   ; __fastcall Datasnap::Xmlxform::TXMLTransformClient::GetRemoteServer()
+    @Datasnap@Xmlxform@TXMLTransformClient@SetParams$qqrx20System@UnicodeStringt1 @3   ; __fastcall Datasnap::Xmlxform::TXMLTransformClient::SetParams(const System::UnicodeString, const System::UnicodeString)
+    @Datasnap@Xmlxform@TXMLTransformClient@SetProviderName$qqrx20System@UnicodeString @6   ; __fastcall Datasnap::Xmlxform::TXMLTransformClient::SetProviderName(const System::UnicodeString)
+    @Datasnap@Xmlxform@TXMLTransformClient@SetRemoteServer$qqrxp37Datasnap@Dbclient@TCustomRemoteServer @4   ; __fastcall Datasnap::Xmlxform::TXMLTransformClient::SetRemoteServer(Datasnap::Dbclient::TCustomRemoteServer * const)
+    @Datasnap@Xmlxform@TXMLTransformClient@SetupAppServer$qqrv @10  ; __fastcall Datasnap::Xmlxform::TXMLTransformClient::SetupAppServer()
+    @Datasnap@Xmlxform@TXMLTransformProvider@ @22  ; Datasnap::Xmlxform::TXMLTransformProvider::
+    @Datasnap@Xmlxform@TXMLTransformProvider@$bctr$qqrp25System@Classes@TComponent @18  ; __fastcall Datasnap::Xmlxform::TXMLTransformProvider::TXMLTransformProvider(System::Classes::TComponent *)
+    @Datasnap@Xmlxform@TXMLTransformProvider@$bdtr$qqrv @17  ; __fastcall Datasnap::Xmlxform::TXMLTransformProvider::~TXMLTransformProvider()
+    @Datasnap@Xmlxform@TXMLTransformProvider@GetXMLDataFile$qqrv @14  ; __fastcall Datasnap::Xmlxform::TXMLTransformProvider::GetXMLDataFile()
+    @Datasnap@Xmlxform@TXMLTransformProvider@InternalApplyUpdates$qqrrx17System@OleVariantiri @15  ; __fastcall Datasnap::Xmlxform::TXMLTransformProvider::InternalApplyUpdates(const System::OleVariant&, int, int&)
+    @Datasnap@Xmlxform@TXMLTransformProvider@InternalGetRecords$qqriri61System@%Set$34Datasnap@Provider@TGetRecordOptiont1$i0$t1$i3$%x17System@WideStringr17System@OleVariant @16  ; Datasnap::Xmlxform::TXMLTransformProvider::InternalGetRecords(int, int&, System::Set<{583}...
+    @Datasnap@Xmlxform@TXMLTransformProvider@SetXMLDataFile$qqrx20System@UnicodeString @13  ; __fastcall Datasnap::Xmlxform::TXMLTransformProvider::SetXMLDataFile(const System::UnicodeString)
+    @Datasnap@Xmlxform@initialization$qqrv @1   ; __fastcall Datasnap::Xmlxform::initialization()
+    @Dsnapxml@@GetPackageInfoTable$qqrv @26  ; Dsnapxml::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dsnapxml@@PackageLoad$qqrv    @25  ; Dsnapxml::__linkproc__ __fastcall PackageLoad()
+    @Dsnapxml@@PackageUnload$qqrv  @24  ; Dsnapxml::__linkproc__ __fastcall PackageUnload()
+    @Dsnapxml@initialization$qqrv  @23  ; __fastcall Dsnapxml::initialization()
+    @GetPackageInfoTable           @29  ; GetPackageInfoTable
+    Finalize                       @27  ; Finalize
+    Initialize                     @28  ; Initialize

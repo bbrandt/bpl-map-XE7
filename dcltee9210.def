@@ -1,0 +1,143 @@
+LIBRARY     DCLTEE9210.BPL
+
+DESCRIPTION 'eeChart Standard VCL Components'
+
+EXPORTS
+    @$xp$28Teechartreg@TChartCompEditor @109 ; __tpdsc__ Teechartreg::TChartCompEditor
+    @$xp$29Teechartreg@TChartPenProperty @99  ; __tpdsc__ Teechartreg::TChartPenProperty
+    @$xp$29Teechartreg@TTeeClassProperty @113 ; __tpdsc__ Teechartreg::TTeeClassProperty
+    @$xp$30Teechartreg@TChartSeriesEditor @101 ; __tpdsc__ Teechartreg::TChartSeriesEditor
+    @$xp$30Teechartreg@TDBChartCompEditor @103 ; __tpdsc__ Teechartreg::TDBChartCompEditor
+    @$xp$30Teechartreg@TTeeEditSeriesProc @96  ; __tpdsc__ Teechartreg::TTeeEditSeriesProc
+    @$xp$31Teechartreg@TChartBrushProperty @97  ; __tpdsc__ Teechartreg::TChartBrushProperty
+    @$xp$31Teechartreg@TChartClassProperty @111 ; __tpdsc__ Teechartreg::TChartClassProperty
+    @$xp$31Teechartreg@TTeeChartEditorHook @95  ; __tpdsc__ Teechartreg::TTeeChartEditorHook
+    @$xp$31Vcltee@Teeexpform@TTeeDlgWizard @61  ; __tpdsc__ Vcltee::Teeexpform::TTeeDlgWizard
+    @$xp$33Teechartreg@TTeeDesignOptionsHook @94  ; __tpdsc__ Teechartreg::TTeeDesignOptionsHook
+    @$xp$33Teechartreg@TTeeGDIPlusCompEditor @107 ; __tpdsc__ Teechartreg::TTeeGDIPlusCompEditor
+    @$xp$34Vcltee@Teechartexp@TTeeChartWizard @130 ; __tpdsc__ Vcltee::Teechartexp::TTeeChartWizard
+    @$xp$36Teechartreg@TTeePanelSelectionEditor @105 ; __tpdsc__ Teechartreg::TTeePanelSelectionEditor
+    @$xp$36Vcltee@Teedesignoptions@TOptionsForm @18  ; __tpdsc__ Vcltee::Teedesignoptions::TOptionsForm
+    @Dcltee@@GetPackageInfoTable$qqrv @135 ; Dcltee::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dcltee@@PackageLoad$qqrv      @134 ; Dcltee::__linkproc__ __fastcall PackageLoad()
+    @Dcltee@@PackageUnload$qqrv    @133 ; Dcltee::__linkproc__ __fastcall PackageUnload()
+    @Dcltee@initialization$qqrv    @132 ; __fastcall Dcltee::initialization()
+    @GetPackageInfoTable           @138 ; GetPackageInfoTable
+    @Teechartreg@EditChartDesign$qqrp25Vcltee@Chart@TCustomChart @89  ; __fastcall Teechartreg::EditChartDesign(Vcltee::Chart::TCustomChart *)
+    @Teechartreg@EditSeriesProc$qqrp28Vcltee@Teengine@TChartSeries47System@%DelphiInterface$20Designintf@IDesigner% @88  ; Teechartreg::EditSeriesProc(Vcltee::Teengine::TChartSeries *, System::DelphiInterface<{583}...
+    @Teechartreg@Finalization$qqrv @64  ; __fastcall Teechartreg::Finalization()
+    @Teechartreg@Register$qqrv     @65  ; __fastcall Teechartreg::Register()
+    @Teechartreg@TChartBrushProperty@ @98  ; Teechartreg::TChartBrushProperty::
+    @Teechartreg@TChartBrushProperty@Edit$qqrv @69  ; __fastcall Teechartreg::TChartBrushProperty::Edit()
+    @Teechartreg@TChartClassProperty@ @112 ; Teechartreg::TChartClassProperty::
+    @Teechartreg@TChartClassProperty@GetAttributes$qqrv @72  ; __fastcall Teechartreg::TChartClassProperty::GetAttributes()
+    @Teechartreg@TChartClassProperty@InternalEditPage$qqrp25Vcltee@Chart@TCustomCharti @71  ; __fastcall Teechartreg::TChartClassProperty::InternalEditPage(Vcltee::Chart::TCustomChart *, int)
+    @Teechartreg@TChartCompEditor@ @110 ; Teechartreg::TChartCompEditor::
+    @Teechartreg@TChartCompEditor@Chart$qqrv @87  ; __fastcall Teechartreg::TChartCompEditor::Chart()
+    @Teechartreg@TChartCompEditor@Edit$qqrv @86  ; __fastcall Teechartreg::TChartCompEditor::Edit()
+    @Teechartreg@TChartCompEditor@ExecuteVerb$qqri @85  ; __fastcall Teechartreg::TChartCompEditor::ExecuteVerb(int)
+    @Teechartreg@TChartCompEditor@GetVerb$qqri @83  ; __fastcall Teechartreg::TChartCompEditor::GetVerb(int)
+    @Teechartreg@TChartCompEditor@GetVerbCount$qqrv @84  ; __fastcall Teechartreg::TChartCompEditor::GetVerbCount()
+    @Teechartreg@TChartPenProperty@ @100 ; Teechartreg::TChartPenProperty::
+    @Teechartreg@TChartPenProperty@Edit$qqrv @70  ; __fastcall Teechartreg::TChartPenProperty::Edit()
+    @Teechartreg@TChartSeriesEditor@ @102 ; Teechartreg::TChartSeriesEditor::
+    @Teechartreg@TChartSeriesEditor@Edit$qqrv @82  ; __fastcall Teechartreg::TChartSeriesEditor::Edit()
+    @Teechartreg@TChartSeriesEditor@ExecuteVerb$qqri @81  ; __fastcall Teechartreg::TChartSeriesEditor::ExecuteVerb(int)
+    @Teechartreg@TChartSeriesEditor@GetVerb$qqri @79  ; __fastcall Teechartreg::TChartSeriesEditor::GetVerb(int)
+    @Teechartreg@TChartSeriesEditor@GetVerbCount$qqrv @80  ; __fastcall Teechartreg::TChartSeriesEditor::GetVerbCount()
+    @Teechartreg@TDBChartCompEditor@ @104 ; Teechartreg::TDBChartCompEditor::
+    @Teechartreg@TDBChartCompEditor@ExecuteVerb$qqri @68  ; __fastcall Teechartreg::TDBChartCompEditor::ExecuteVerb(int)
+    @Teechartreg@TDBChartCompEditor@GetVerb$qqri @66  ; __fastcall Teechartreg::TDBChartCompEditor::GetVerb(int)
+    @Teechartreg@TDBChartCompEditor@GetVerbCount$qqrv @67  ; __fastcall Teechartreg::TDBChartCompEditor::GetVerbCount()
+    @Teechartreg@TTeeClassProperty@ @114 ; Teechartreg::TTeeClassProperty::
+    @Teechartreg@TTeeClassProperty@GetObject$qqrv @91  ; __fastcall Teechartreg::TTeeClassProperty::GetObject()
+    @Teechartreg@TTeeClassProperty@GetValue$qqrv @90  ; __fastcall Teechartreg::TTeeClassProperty::GetValue()
+    @Teechartreg@TTeeGDIPlusCompEditor@ @108 ; Teechartreg::TTeeGDIPlusCompEditor::
+    @Teechartreg@TTeeGDIPlusCompEditor@Edit$qqrv @77  ; __fastcall Teechartreg::TTeeGDIPlusCompEditor::Edit()
+    @Teechartreg@TTeeGDIPlusCompEditor@ExecuteVerb$qqri @76  ; __fastcall Teechartreg::TTeeGDIPlusCompEditor::ExecuteVerb(int)
+    @Teechartreg@TTeeGDIPlusCompEditor@GDIPlus$qqrv @78  ; __fastcall Teechartreg::TTeeGDIPlusCompEditor::GDIPlus()
+    @Teechartreg@TTeeGDIPlusCompEditor@GetVerb$qqri @74  ; __fastcall Teechartreg::TTeeGDIPlusCompEditor::GetVerb(int)
+    @Teechartreg@TTeeGDIPlusCompEditor@GetVerbCount$qqrv @75  ; __fastcall Teechartreg::TTeeGDIPlusCompEditor::GetVerbCount()
+    @Teechartreg@TTeePanelSelectionEditor@ @106 ; Teechartreg::TTeePanelSelectionEditor::
+    @Teechartreg@TTeePanelSelectionEditor@RequiresUnits$qqrynpqqrx20System@UnicodeString$v @73  ; __fastcall Teechartreg::TTeePanelSelectionEditor::RequiresUnits(void __fastcall __closure(*)(const System::UnicodeString))
+    @Teechartreg@TeeChartEditorHook @93  ; Teechartreg::TeeChartEditorHook
+    @Teechartreg@TeeDesignOptionsHook @92  ; Teechartreg::TeeDesignOptionsHook
+    @Teechartreg@initialization$qqrv @63  ; __fastcall Teechartreg::initialization()
+    @Vcltee@Teechartexp@Finalization$qqrv @116 ; __fastcall Vcltee::Teechartexp::Finalization()
+    @Vcltee@Teechartexp@Register$qqrv @117 ; __fastcall Vcltee::Teechartexp::Register()
+    @Vcltee@Teechartexp@TTeeChartWizard@ @131 ; Vcltee::Teechartexp::TTeeChartWizard::
+    @Vcltee@Teechartexp@TTeeChartWizard@Execute$qqrv @119 ; __fastcall Vcltee::Teechartexp::TTeeChartWizard::Execute()
+    @Vcltee@Teechartexp@TTeeChartWizard@GetAuthor$qqrv @121 ; __fastcall Vcltee::Teechartexp::TTeeChartWizard::GetAuthor()
+    @Vcltee@Teechartexp@TTeeChartWizard@GetComment$qqrv @128 ; __fastcall Vcltee::Teechartexp::TTeeChartWizard::GetComment()
+    @Vcltee@Teechartexp@TTeeChartWizard@GetDesigner$qqrv @126 ; __fastcall Vcltee::Teechartexp::TTeeChartWizard::GetDesigner()
+    @Vcltee@Teechartexp@TTeeChartWizard@GetGalleryCategory$qqrv @125 ; __fastcall Vcltee::Teechartexp::TTeeChartWizard::GetGalleryCategory()
+    @Vcltee@Teechartexp@TTeeChartWizard@GetGlyph$qqrv @127 ; __fastcall Vcltee::Teechartexp::TTeeChartWizard::GetGlyph()
+    @Vcltee@Teechartexp@TTeeChartWizard@GetIDString$qqrv @122 ; __fastcall Vcltee::Teechartexp::TTeeChartWizard::GetIDString()
+    @Vcltee@Teechartexp@TTeeChartWizard@GetMenuText$qqrv @118 ; __fastcall Vcltee::Teechartexp::TTeeChartWizard::GetMenuText()
+    @Vcltee@Teechartexp@TTeeChartWizard@GetName$qqrv @129 ; __fastcall Vcltee::Teechartexp::TTeeChartWizard::GetName()
+    @Vcltee@Teechartexp@TTeeChartWizard@GetPage$qqrv @120 ; __fastcall Vcltee::Teechartexp::TTeeChartWizard::GetPage()
+    @Vcltee@Teechartexp@TTeeChartWizard@GetPersonality$qqrv @124 ; __fastcall Vcltee::Teechartexp::TTeeChartWizard::GetPersonality()
+    @Vcltee@Teechartexp@TTeeChartWizard@GetState$qqrv @123 ; __fastcall Vcltee::Teechartexp::TTeeChartWizard::GetState()
+    @Vcltee@Teechartexp@initialization$qqrv @115 ; __fastcall Vcltee::Teechartexp::initialization()
+    @Vcltee@Teedesignoptions@Finalization$qqrv @2   ; __fastcall Vcltee::Teedesignoptions::Finalization()
+    @Vcltee@Teedesignoptions@TOptionsForm@ @19  ; Vcltee::Teedesignoptions::TOptionsForm::
+    @Vcltee@Teedesignoptions@TOptionsForm@BEditorFontClick$qqrp14System@TObject @7   ; __fastcall Vcltee::Teedesignoptions::TOptionsForm::BEditorFontClick(System::TObject *)
+    @Vcltee@Teedesignoptions@TOptionsForm@Button2Click$qqrp14System@TObject @12  ; __fastcall Vcltee::Teedesignoptions::TOptionsForm::Button2Click(System::TObject *)
+    @Vcltee@Teedesignoptions@TOptionsForm@Button3Click$qqrp14System@TObject @14  ; __fastcall Vcltee::Teedesignoptions::TOptionsForm::Button3Click(System::TObject *)
+    @Vcltee@Teedesignoptions@TOptionsForm@Button4Click$qqrp14System@TObject @11  ; __fastcall Vcltee::Teedesignoptions::TOptionsForm::Button4Click(System::TObject *)
+    @Vcltee@Teedesignoptions@TOptionsForm@CBDefaultFontClick$qqrp14System@TObject @5   ; __fastcall Vcltee::Teedesignoptions::TOptionsForm::CBDefaultFontClick(System::TObject *)
+    @Vcltee@Teedesignoptions@TOptionsForm@CBPaletteChange$qqrp14System@TObject @8   ; __fastcall Vcltee::Teedesignoptions::TOptionsForm::CBPaletteChange(System::TObject *)
+    @Vcltee@Teedesignoptions@TOptionsForm@FormCreate$qqrp14System@TObject @15  ; __fastcall Vcltee::Teedesignoptions::TOptionsForm::FormCreate(System::TObject *)
+    @Vcltee@Teedesignoptions@TOptionsForm@FormDestroy$qqrp14System@TObject @6   ; __fastcall Vcltee::Teedesignoptions::TOptionsForm::FormDestroy(System::TObject *)
+    @Vcltee@Teedesignoptions@TOptionsForm@FormResize$qqrp14System@TObject @3   ; __fastcall Vcltee::Teedesignoptions::TOptionsForm::FormResize(System::TObject *)
+    @Vcltee@Teedesignoptions@TOptionsForm@LBThemeClick$qqrp14System@TObject @10  ; __fastcall Vcltee::Teedesignoptions::TOptionsForm::LBThemeClick(System::TObject *)
+    @Vcltee@Teedesignoptions@TOptionsForm@PageControl1Change$qqrp14System@TObject @9   ; __fastcall Vcltee::Teedesignoptions::TOptionsForm::PageControl1Change(System::TObject *)
+    @Vcltee@Teedesignoptions@TOptionsForm@ResizeImage$qqrv @4   ; __fastcall Vcltee::Teedesignoptions::TOptionsForm::ResizeImage()
+    @Vcltee@Teedesignoptions@TOptionsForm@Save$qqrv @13  ; __fastcall Vcltee::Teedesignoptions::TOptionsForm::Save()
+    @Vcltee@Teedesignoptions@TeeNewChartPalette @16  ; Vcltee::Teedesignoptions::TeeNewChartPalette
+    @Vcltee@Teedesignoptions@TeeNewChartTheme @17  ; Vcltee::Teedesignoptions::TeeNewChartTheme
+    @Vcltee@Teedesignoptions@initialization$qqrv @1   ; __fastcall Vcltee::Teedesignoptions::initialization()
+    @Vcltee@Teeexpform@Finalization$qqrv @21  ; __fastcall Vcltee::Teeexpform::Finalization()
+    @Vcltee@Teeexpform@TTeeDlgWizard@ @62  ; Vcltee::Teeexpform::TTeeDlgWizard::
+    @Vcltee@Teeexpform@TTeeDlgWizard@BBrowseClick$qqrp14System@TObject @29  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::BBrowseClick(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@BThemeClick$qqrp14System@TObject @23  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::BThemeClick(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@CB3DOptionClick$qqrp14System@TObject @49  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::CB3DOptionClick(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@CBAliasChange$qqrp14System@TObject @36  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::CBAliasChange(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@CBColorEachClick$qqrp14System@TObject @30  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::CBColorEachClick(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@CBDBStyleChange$qqrp14System@TObject @34  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::CBDBStyleChange(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@CBShowErrorClick$qqrp14System@TObject @22  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::CBShowErrorClick(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@CBShowLegendOptionClick$qqrp14System@TObject @48  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::CBShowLegendOptionClick(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@CBShowMarksOptionClick$qqrp14System@TObject @47  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::CBShowMarksOptionClick(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@CBSmoothClick$qqrp14System@TObject @24  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::CBSmoothClick(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@CBTablesChange$qqrp14System@TObject @37  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::CBTablesChange(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@CancelClick$qqrp14System@TObject @57  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::CancelClick(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@ChangeGalleryPalette$qqrv @55  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::ChangeGalleryPalette()
+    @Vcltee@Teeexpform@TTeeDlgWizard@CheckPreviewOptions$qqrv @39  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::CheckPreviewOptions()
+    @Vcltee@Teeexpform@TTeeDlgWizard@CopyPreviewChart$qqrrp25Vcltee@Chart@TCustomChart @26  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::CopyPreviewChart(Vcltee::Chart::TCustomChart *&)
+    @Vcltee@Teeexpform@TTeeDlgWizard@CreatePreviewChart$qqrv @60  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::CreatePreviewChart()
+    @Vcltee@Teeexpform@TTeeDlgWizard@CreateSeries$qqrp25System@Classes@TComponentp25Vcltee@Chart@TCustomCharto @51  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::CreateSeries(System::Classes::TComponent *, Vcltee::Chart::TCustomChart *, bool)
+    @Vcltee@Teeexpform@TTeeDlgWizard@EFileChange$qqrp14System@TObject @27  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::EFileChange(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@FormClose$qqrp14System@TObjectr27System@Uitypes@TCloseAction @43  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::FormClose(System::TObject *, System::Uitypes::TCloseAction&)
+    @Vcltee@Teeexpform@TTeeDlgWizard@FormCloseQuery$qqrp14System@TObjectro @46  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::FormCloseQuery(System::TObject *, bool&)
+    @Vcltee@Teeexpform@TTeeDlgWizard@FormCreate$qqrp14System@TObject @58  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::FormCreate(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@FormDestroy$qqrp14System@TObject @31  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::FormDestroy(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@FormKeyDown$qqrp14System@TObjectrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @38  ; Vcltee::Teeexpform::TTeeDlgWizard::FormKeyDown(System::TObject *, unsigned short&, System::Set<{583}...
+    @Vcltee@Teeexpform@TTeeDlgWizard@FormResize$qqrp14System@TObject @25  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::FormResize(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@HelpButtonClick$qqrp14System@TObject @45  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::HelpButtonClick(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@Image1Click$qqrp14System@TObject @50  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::Image1Click(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@LabelURLClick$qqrp14System@TObject @42  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::LabelURLClick(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@LoadChart$qqrrp25Vcltee@Chart@TCustomChart @53  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::LoadChart(Vcltee::Chart::TCustomChart *&)
+    @Vcltee@Teeexpform@TTeeDlgWizard@NextClick$qqrp14System@TObject @54  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::NextClick(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@PrevClick$qqrp14System@TObject @56  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::PrevClick(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@PreviewChartDblClick$qqrp14System@TObject @59  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::PreviewChartDblClick(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@RBFileClick$qqrp14System@TObject @28  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::RBFileClick(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@RG3DClick$qqrp14System@TObject @41  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::RG3DClick(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@RefreshAlias$qqrv @33  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::RefreshAlias()
+    @Vcltee@Teeexpform@TTeeDlgWizard@RefreshButtons$qqrv @52  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::RefreshButtons()
+    @Vcltee@Teeexpform@TTeeDlgWizard@SpeedButton1Click$qqrp14System@TObject @35  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::SpeedButton1Click(System::TObject *)
+    @Vcltee@Teeexpform@TTeeDlgWizard@StyleBDE$qqrv @32  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::StyleBDE()
+    @Vcltee@Teeexpform@TTeeDlgWizard@TryChangeFolder$qqrx20System@UnicodeString @44  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::TryChangeFolder(const System::UnicodeString)
+    @Vcltee@Teeexpform@TTeeDlgWizard@tmpGallerySelectedChart$qqrp14System@TObject @40  ; __fastcall Vcltee::Teeexpform::TTeeDlgWizard::tmpGallerySelectedChart(System::TObject *)
+    @Vcltee@Teeexpform@initialization$qqrv @20  ; __fastcall Vcltee::Teeexpform::initialization()
+    Finalize                       @136 ; Finalize
+    Initialize                     @137 ; Initialize

@@ -1,0 +1,5 @@
+LIBRARY     BOREDITU.DLL
+
+EXPORTS
+    EK_INIT                        @1   ; EK_INIT
+    ___CPPdebugHook                @2   ; ___CPPdebugHook

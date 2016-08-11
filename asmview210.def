@@ -1,0 +1,902 @@
+LIBRARY     ASMVIEW210.BPL
+
+DESCRIPTION 'mbarcadero Assembly Plug'
+
+EXPORTS
+    @$xp$13Idecor@OSINFO           @15  ; __tpdsc__ Idecor::OSINFO
+    @$xp$15Assembly@TBlock         @541 ; __tpdsc__ Assembly::TBlock
+    @$xp$15Assembly@TClass         @524 ; __tpdsc__ Assembly::TClass
+    @$xp$15Assembly@TEvent         @539 ; __tpdsc__ Assembly::TEvent
+    @$xp$15Assembly@TField         @535 ; __tpdsc__ Assembly::TField
+    @$xp$15IMetaDataImport         @4   ; __tpdsc__ IMetaDataImport
+    @$xp$16Assembly@TMethod        @549 ; __tpdsc__ Assembly::TMethod
+    @$xp$17TGetCachePathProc       @281 ; __tpdsc__ TGetCachePathProc
+    @$xp$18Assembly@TAssembly      @509 ; __tpdsc__ Assembly::TAssembly
+    @$xp$18Assembly@TProperty      @553 ; __tpdsc__ Assembly::TProperty
+    @$xp$18Assembly@TTypeBase      @573 ; __tpdsc__ Assembly::TTypeBase
+    @$xp$18Assembly@TTypeInfo      @566 ; __tpdsc__ Assembly::TTypeInfo
+    @$xp$18IMetaDataDispenser      @6   ; __tpdsc__ IMetaDataDispenser
+    @$xp$19Assembly@TAttribute     @557 ; __tpdsc__ Assembly::TAttribute
+    @$xp$19Assembly@TClassList     @522 ; __tpdsc__ Assembly::TClassList
+    @$xp$19Assembly@TEventList     @537 ; __tpdsc__ Assembly::TEventList
+    @$xp$19Assembly@TFieldList     @533 ; __tpdsc__ Assembly::TFieldList
+    @$xp$19Assembly@TInterface     @531 ; __tpdsc__ Assembly::TInterface
+    @$xp$19Assembly@TNamespace     @513 ; __tpdsc__ Assembly::TNamespace
+    @$xp$19Assembly@TParameter     @517 ; __tpdsc__ Assembly::TParameter
+    @$xp$19Assembly@TStatement     @545 ; __tpdsc__ Assembly::TStatement
+    @$xp$20Assembly@TMethodList    @547 ; __tpdsc__ Assembly::TMethodList
+    @$xp$20Assembly@TReferences    @505 ; __tpdsc__ Assembly::TReferences
+    @$xp$20Assembly@TTypeObject    @571 ; __tpdsc__ Assembly::TTypeObject
+    @$xp$20Fusion@IAssemblyEnum    @288 ; __tpdsc__ Fusion::IAssemblyEnum
+    @$xp$20Fusion@IAssemblyName    @289 ; __tpdsc__ Fusion::IAssemblyName
+    @$xp$20IMetaDataDispenserEx    @5   ; __tpdsc__ IMetaDataDispenserEx
+    @$xp$21Assembly@TClassIDList   @519 ; __tpdsc__ Assembly::TClassIDList
+    @$xp$21Assembly@TVariantList   @559 ; __tpdsc__ Assembly::TVariantList
+    @$xp$21Fusion@IAssemblyCache   @291 ; __tpdsc__ Fusion::IAssemblyCache
+    @$xp$21Fusion@_ASSEMBLY_INFO   @292 ; __tpdsc__ Fusion::_ASSEMBLY_INFO
+    @$xp$21Idecor@PCOR_SIGNATURE   @13  ; __tpdsc__ Idecor::PCOR_SIGNATURE
+    @$xp$22Assembly@TAssemblyList  @507 ; __tpdsc__ Assembly::TAssemblyList
+    @$xp$22Assembly@TPropertyList  @551 ; __tpdsc__ Assembly::TPropertyList
+    @$xp$22Assemblyplug@IFileList  @857 ; __tpdsc__ Assemblyplug::IFileList
+    @$xp$22Idecor@PCCOR_SIGNATURE  @12  ; __tpdsc__ Idecor::PCCOR_SIGNATURE
+    @$xp$22Idecor@PCorFieldOffset  @17  ; __tpdsc__ Idecor::PCorFieldOffset
+    @$xp$23Assembly@TAttributeList @555 ; __tpdsc__ Assembly::TAttributeList
+    @$xp$23Assembly@TInterfaceList @529 ; __tpdsc__ Assembly::TInterfaceList
+    @$xp$23Assembly@TNamespaceList @511 ; __tpdsc__ Assembly::TNamespaceList
+    @$xp$23Assembly@TParameterList @515 ; __tpdsc__ Assembly::TParameterList
+    @$xp$23Assembly@TStatementList @543 ; __tpdsc__ Assembly::TStatementList
+    @$xp$23Assemblyflags@TTypeFlag @218 ; __tpdsc__ Assemblyflags::TTypeFlag
+    @$xp$23Assemblyplug@IClassNode @884 ; __tpdsc__ Assemblyplug::IClassNode
+    @$xp$23Assemblyplug@IEventNode @881 ; __tpdsc__ Assemblyplug::IEventNode
+    @$xp$23Assemblyplug@IFieldNode @879 ; __tpdsc__ Assemblyplug::IFieldNode
+    @$xp$23Assemblyplug@TClassNode @874 ; __tpdsc__ Assemblyplug::TClassNode
+    @$xp$23Assemblyplug@TEventNode @868 ; __tpdsc__ Assemblyplug::TEventNode
+    @$xp$23Assemblyplug@TFieldNode @864 ; __tpdsc__ Assemblyplug::TFieldNode
+    @$xp$23IMetaDataAssemblyImport @3   ; __tpdsc__ IMetaDataAssemblyImport
+    @$xp$23Idecor@ASSEMBLYMETADATA @14  ; __tpdsc__ Idecor::ASSEMBLYMETADATA
+    @$xp$23Idecor@COR_FIELD_OFFSET @18  ; __tpdsc__ Idecor::COR_FIELD_OFFSET
+    @$xp$23TCreateAssemblyEnumProc @284 ; __tpdsc__ TCreateAssemblyEnumProc
+    @$xp$24Assembly@TTypeObjectList @568 ; __tpdsc__ Assembly::TTypeObjectList
+    @$xp$24Assemblyflags@TEventFlag @210 ; __tpdsc__ Assemblyflags::TEventFlag
+    @$xp$24Assemblyflags@TTypeFlags @217 ; __tpdsc__ Assemblyflags::TTypeFlags
+    @$xp$24Assemblyplug@IMethodNode @880 ; __tpdsc__ Assemblyplug::IMethodNode
+    @$xp$24Assemblyplug@TMethodNode @866 ; __tpdsc__ Assemblyplug::TMethodNode
+    @$xp$24TCreateAssemblyCacheProc @282 ; __tpdsc__ TCreateAssemblyCacheProc
+    @$xp$25Assembly@TInterfaceIDList @526 ; __tpdsc__ Assembly::TInterfaceIDList
+    @$xp$25Assembly@_TClassIDList@_1 @521 ; __tpdsc__ Assembly::_TClassIDList::_1
+    @$xp$25Assembly@_TVariantList@_1 @561 ; __tpdsc__ Assembly::_TVariantList::_1
+    @$xp$25Assemblyflags@TEventFlags @209 ; __tpdsc__ Assemblyflags::TEventFlags
+    @$xp$25Assemblyflags@TMethodFlag @213 ; __tpdsc__ Assemblyflags::TMethodFlag
+    @$xp$25Assemblyutils@TCodeParser @265 ; __tpdsc__ Assemblyutils::TCodeParser
+    @$xp$25Fusion@IAssemblyCacheItem @290 ; __tpdsc__ Fusion::IAssemblyCacheItem
+    @$xp$25Idecor@IMAGE_COR_ILMETHOD @19  ; __tpdsc__ Idecor::IMAGE_COR_ILMETHOD
+    @$xp$26Assemblyflags@TElementType @216 ; __tpdsc__ Assemblyflags::TElementType
+    @$xp$26Assemblyflags@TMethodFlags @212 ; __tpdsc__ Assemblyflags::TMethodFlags
+    @$xp$26Assemblyplug@IAssemblyNode @878 ; __tpdsc__ Assemblyplug::IAssemblyNode
+    @$xp$26Assemblyplug@IPropertyNode @882 ; __tpdsc__ Assemblyplug::IPropertyNode
+    @$xp$26Assemblyplug@TAssemblyNode @862 ; __tpdsc__ Assemblyplug::TAssemblyNode
+    @$xp$26Assemblyplug@TAssemblyTree @858 ; __tpdsc__ Assemblyplug::TAssemblyTree
+    @$xp$26Assemblyplug@TPropertyNode @870 ; __tpdsc__ Assemblyplug::TPropertyNode
+    @$xp$26Assemblyutils@TILException @269 ; __tpdsc__ Assemblyutils::TILException
+    @$xp$27Assembly@TAttributeProperty @564 ; __tpdsc__ Assembly::TAttributeProperty
+    @$xp$27Assemblyflags@TPropertyFlag @215 ; __tpdsc__ Assemblyflags::TPropertyFlag
+    @$xp$27Assemblyflags@TPropertyKind @221 ; __tpdsc__ Assemblyflags::TPropertyKind
+    @$xp$27Assemblyflags@TPropertyType @222 ; __tpdsc__ Assemblyflags::TPropertyType
+    @$xp$27Assemblyplug@IInterfaceNode @883 ; __tpdsc__ Assemblyplug::IInterfaceNode
+    @$xp$27Assemblyplug@TInterfaceNode @872 ; __tpdsc__ Assemblyplug::TInterfaceNode
+    @$xp$27Assemblyplug@TNamespaceNode @876 ; __tpdsc__ Assemblyplug::TNamespaceNode
+    @$xp$27Idecor@IMAGE_COR_FIXUPENTRY @16  ; __tpdsc__ Idecor::IMAGE_COR_FIXUPENTRY
+    @$xp$28Assembly@_TTypeObjectList@_1 @570 ; __tpdsc__ Assembly::_TTypeObjectList::_1
+    @$xp$28Assemblyflags@TParameterFlag @208 ; __tpdsc__ Assemblyflags::TParameterFlag
+    @$xp$28Assemblyflags@TPropertyFlags @214 ; __tpdsc__ Assemblyflags::TPropertyFlags
+    @$xp$28Fusion@IInstallReferenceEnum @286 ; __tpdsc__ Fusion::IInstallReferenceEnum
+    @$xp$28Fusion@IInstallReferenceItem @287 ; __tpdsc__ Fusion::IInstallReferenceItem
+    @$xp$29Assembly@_TInterfaceIDList@_1 @528 ; __tpdsc__ Assembly::_TInterfaceIDList::_1
+    @$xp$29Assemblyflags@TExceptionTypes @223 ; __tpdsc__ Assemblyflags::TExceptionTypes
+    @$xp$29Assemblyflags@TMethodCodeType @220 ; __tpdsc__ Assemblyflags::TMethodCodeType
+    @$xp$29Assemblyflags@TParameterFlags @207 ; __tpdsc__ Assemblyflags::TParameterFlags
+    @$xp$29Assemblyplug@TAssemblyFactory @853 ; __tpdsc__ Assemblyplug::TAssemblyFactory
+    @$xp$29Idecor@IMAGE_COR_ILMETHOD_FAT @20  ; __tpdsc__ Idecor::IMAGE_COR_ILMETHOD_FAT
+    @$xp$29TCreateAssemblyNameObjectProc @283 ; __tpdsc__ TCreateAssemblyNameObjectProc
+    @$xp$30Assemblyflags@TILParameterType @219 ; __tpdsc__ Assemblyflags::TILParameterType
+    @$xp$30Assemblyplug@TAssemblyBaseTree @860 ; __tpdsc__ Assemblyplug::TAssemblyBaseTree
+    @$xp$30Assemblyutils@TILExceptionList @267 ; __tpdsc__ Assemblyutils::TILExceptionList
+    @$xp$30Assemblyutils@TSignatureParser @271 ; __tpdsc__ Assemblyutils::TSignatureParser
+    @$xp$30Idecor@IMAGE_COR_ILMETHOD_TINY @21  ; __tpdsc__ Idecor::IMAGE_COR_ILMETHOD_TINY
+    @$xp$31Assembly@TAttributePropertyList @562 ; __tpdsc__ Assembly::TAttributePropertyList
+    @$xp$31Assemblyflags@TMethodInvokeKind @211 ; __tpdsc__ Assemblyflags::TMethodInvokeKind
+    @$xp$31Assemblyplug@TPluggableNodeType @886 ; __tpdsc__ Assemblyplug::TPluggableNodeType
+    @$xp$31TCreateInstallReferenceEnumProc @285 ; __tpdsc__ TCreateInstallReferenceEnumProc
+    @$xp$33Callgraphpageplug@TCallGraphFrame @604 ; __tpdsc__ Callgraphpageplug::TCallGraphFrame
+    @$xp$33Fusion@LPFUSION_INSTALL_REFERENCE @294 ; __tpdsc__ Fusion::LPFUSION_INSTALL_REFERENCE
+    @$xp$33Fusion@_FUSION_INSTALL_REFERENCE_ @293 ; __tpdsc__ Fusion::_FUSION_INSTALL_REFERENCE_
+    @$xp$33Idecor@IMAGE_COR_ILMETHOD_SECT_EH @22  ; __tpdsc__ Idecor::IMAGE_COR_ILMETHOD_SECT_EH
+    @$xp$34Assemblyimages@TAssemblyDataModule @610 ; __tpdsc__ Assemblyimages::TAssemblyDataModule
+    @$xp$34Idecor@IMAGE_COR_ILMETHOD_SECT_FAT @27  ; __tpdsc__ Idecor::IMAGE_COR_ILMETHOD_SECT_FAT
+    @$xp$35Assemblyplug@TAssemblyNamespaceTree @855 ; __tpdsc__ Assemblyplug::TAssemblyNamespaceTree
+    @$xp$35Assemblyplug@TPluggableNodeRootType @885 ; __tpdsc__ Assemblyplug::TPluggableNodeRootType
+    @$xp$36Assemblyflags@TCallingConventionFlag @206 ; __tpdsc__ Assemblyflags::TCallingConventionFlag
+    @$xp$36Callgraphpageplug@ICallGraphPagePlug @603 ; __tpdsc__ Callgraphpageplug::ICallGraphPagePlug
+    @$xp$36Callgraphpageplug@TCallGraphPagePlug @599 ; __tpdsc__ Callgraphpageplug::TCallGraphPagePlug
+    @$xp$36Idecor@IMAGE_COR_ILMETHOD_SECT_SMALL @28  ; __tpdsc__ Idecor::IMAGE_COR_ILMETHOD_SECT_SMALL
+    @$xp$37Assemblyflags@TCallingConventionFlags @205 ; __tpdsc__ Assemblyflags::TCallingConventionFlags
+    @$xp$37Idecor@IMAGE_COR_ILMETHOD_SECT_EH_FAT @25  ; __tpdsc__ Idecor::IMAGE_COR_ILMETHOD_SECT_EH_FAT
+    @$xp$38Assemblyplug@TAssemblyNamespaceFactory @851 ; __tpdsc__ Assemblyplug::TAssemblyNamespaceFactory
+    @$xp$39Callgraphpageplug@TCallGraphPageFactory @601 ; __tpdsc__ Callgraphpageplug::TCallGraphPageFactory
+    @$xp$39Idecor@IMAGE_COR_ILMETHOD_SECT_EH_SMALL @23  ; __tpdsc__ Idecor::IMAGE_COR_ILMETHOD_SECT_EH_SMALL
+    @$xp$40Assemblyoperations@Assemblyoperations__1 @308 ; __tpdsc__ Assemblyoperations::Assemblyoperations__1
+    @$xp$40Assemblyoperations@Assemblyoperations__2 @304 ; __tpdsc__ Assemblyoperations::Assemblyoperations__2
+    @$xp$44Idecor@IMAGE_COR_ILMETHOD_SECT_EH_CLAUSE_FAT @26  ; __tpdsc__ Idecor::IMAGE_COR_ILMETHOD_SECT_EH_CLAUSE_FAT
+    @$xp$46Idecor@IMAGE_COR_ILMETHOD_SECT_EH_CLAUSE_SMALL @24  ; __tpdsc__ Idecor::IMAGE_COR_ILMETHOD_SECT_EH_CLAUSE_SMALL
+    @Asmview@@GetPackageInfoTable$qqrv @894 ; Asmview::__linkproc__ __fastcall GetPackageInfoTable()
+    @Asmview@@PackageLoad$qqrv     @893 ; Asmview::__linkproc__ __fastcall PackageLoad()
+    @Asmview@@PackageUnload$qqrv   @892 ; Asmview::__linkproc__ __fastcall PackageUnload()
+    @Asmview@initialization$qqrv   @891 ; __fastcall Asmview::initialization()
+    @Assembly@Finalization$qqrv    @310 ; __fastcall Assembly::Finalization()
+    @Assembly@LoadGACAssemblies$qqrp26System@Classes@TStringList @504 ; __fastcall Assembly::LoadGACAssemblies(System::Classes::TStringList *)
+    @Assembly@TAssembly@           @510 ; Assembly::TAssembly::
+    @Assembly@TAssembly@$bctr$qqrv @336 ; __fastcall Assembly::TAssembly::TAssembly()
+    @Assembly@TAssembly@$bdtr$qqrv @335 ; __fastcall Assembly::TAssembly::~TAssembly()
+    @Assembly@TAssembly@Close$qqrv @333 ; __fastcall Assembly::TAssembly::Close()
+    @Assembly@TAssembly@GetNamespaces$qqrv @331 ; __fastcall Assembly::TAssembly::GetNamespaces()
+    @Assembly@TAssembly@LoadFromFile$qqrx20System@UnicodeString @334 ; __fastcall Assembly::TAssembly::LoadFromFile(const System::UnicodeString)
+    @Assembly@TAssembly@Open$qqr20System@UnicodeString @332 ; __fastcall Assembly::TAssembly::Open(System::UnicodeString)
+    @Assembly@TAssemblyList@       @508 ; Assembly::TAssemblyList::
+    @Assembly@TAssemblyList@$bctr$qqrv @330 ; __fastcall Assembly::TAssemblyList::TAssemblyList()
+    @Assembly@TAssemblyList@$bdtr$qqrv @329 ; __fastcall Assembly::TAssemblyList::~TAssemblyList()
+    @Assembly@TAssemblyList@Add$qqrp18Assembly@TAssembly @326 ; __fastcall Assembly::TAssemblyList::Add(Assembly::TAssembly *)
+    @Assembly@TAssemblyList@Clear$qqrv @325 ; __fastcall Assembly::TAssemblyList::Clear()
+    @Assembly@TAssemblyList@Delete$qqri @324 ; __fastcall Assembly::TAssemblyList::Delete(int)
+    @Assembly@TAssemblyList@GetCount$qqrv @328 ; __fastcall Assembly::TAssemblyList::GetCount()
+    @Assembly@TAssemblyList@GetItem$qqri @327 ; __fastcall Assembly::TAssemblyList::GetItem(int)
+    @Assembly@TAttribute@          @558 ; Assembly::TAttribute::
+    @Assembly@TAttribute@$bctr$qqrx42System@%DelphiInterface$15IMetaDataImport%ipci @465 ; Assembly::TAttribute::TAttribute(const System::DelphiInterface<{583}...
+    @Assembly@TAttribute@$bdtr$qqrv @464 ; __fastcall Assembly::TAttribute::~TAttribute()
+    @Assembly@TAttribute@ToString$qqrv @463 ; __fastcall Assembly::TAttribute::ToString()
+    @Assembly@TAttributeList@      @556 ; Assembly::TAttributeList::
+    @Assembly@TAttributeList@$bctr$qqrv @462 ; __fastcall Assembly::TAttributeList::TAttributeList()
+    @Assembly@TAttributeList@$bctr$qqrx42System@%DelphiInterface$15IMetaDataImport%i @460 ; Assembly::TAttributeList::TAttributeList(const System::DelphiInterface<{583}...
+    @Assembly@TAttributeList@$bdtr$qqrv @461 ; __fastcall Assembly::TAttributeList::~TAttributeList()
+    @Assembly@TAttributeList@Add$qqrp19Assembly@TAttribute @456 ; __fastcall Assembly::TAttributeList::Add(Assembly::TAttribute *)
+    @Assembly@TAttributeList@Clear$qqrv @455 ; __fastcall Assembly::TAttributeList::Clear()
+    @Assembly@TAttributeList@Delete$qqri @454 ; __fastcall Assembly::TAttributeList::Delete(int)
+    @Assembly@TAttributeList@GetCount$qqrv @459 ; __fastcall Assembly::TAttributeList::GetCount()
+    @Assembly@TAttributeList@GetItem$qqri @458 ; __fastcall Assembly::TAttributeList::GetItem(int)
+    @Assembly@TAttributeList@GetModified$qqrv @457 ; __fastcall Assembly::TAttributeList::GetModified()
+    @Assembly@TAttributeProperty@  @565 ; Assembly::TAttributeProperty::
+    @Assembly@TAttributeProperty@$bctr$qqrpxcri @482 ; __fastcall Assembly::TAttributeProperty::TAttributeProperty(const char *, int&)
+    @Assembly@TAttributePropertyList@ @563 ; Assembly::TAttributePropertyList::
+    @Assembly@TAttributePropertyList@$bctr$qqrv @481 ; __fastcall Assembly::TAttributePropertyList::TAttributePropertyList()
+    @Assembly@TAttributePropertyList@$bdtr$qqrv @480 ; __fastcall Assembly::TAttributePropertyList::~TAttributePropertyList()
+    @Assembly@TAttributePropertyList@Add$qqrp27Assembly@TAttributeProperty @476 ; __fastcall Assembly::TAttributePropertyList::Add(Assembly::TAttributeProperty *)
+    @Assembly@TAttributePropertyList@Clear$qqrv @475 ; __fastcall Assembly::TAttributePropertyList::Clear()
+    @Assembly@TAttributePropertyList@Delete$qqri @474 ; __fastcall Assembly::TAttributePropertyList::Delete(int)
+    @Assembly@TAttributePropertyList@GetCount$qqrv @479 ; __fastcall Assembly::TAttributePropertyList::GetCount()
+    @Assembly@TAttributePropertyList@GetItem$qqri @478 ; __fastcall Assembly::TAttributePropertyList::GetItem(int)
+    @Assembly@TAttributePropertyList@GetModified$qqrv @477 ; __fastcall Assembly::TAttributePropertyList::GetModified()
+    @Assembly@TBlock@              @542 ; Assembly::TBlock::
+    @Assembly@TBlock@$bctr$qqrp18Assembly@TAssemblyp18Assembly@TTypeBase @419 ; __fastcall Assembly::TBlock::TBlock(Assembly::TAssembly *, Assembly::TTypeBase *)
+    @Assembly@TBlock@$bctr$qqrp18Assembly@TAssemblyp18Assembly@TTypeBase42System@%DelphiInterface$15IMetaDataImport%pvi @418 ; Assembly::TBlock::TBlock(Assembly::TAssembly *, Assembly::TTypeBase *, System::DelphiInterface<{583}...
+    @Assembly@TBlock@$bdtr$qqrv    @417 ; __fastcall Assembly::TBlock::~TBlock()
+    @Assembly@TBlock@Render$qqrp23System@Classes@TStrings20System@UnicodeString @415 ; __fastcall Assembly::TBlock::Render(System::Classes::TStrings *, System::UnicodeString)
+    @Assembly@TBlock@ToString$qqrx20System@UnicodeString @416 ; __fastcall Assembly::TBlock::ToString(const System::UnicodeString)
+    @Assembly@TClass@              @525 ; Assembly::TClass::
+    @Assembly@TClass@$bctr$qqrp18Assembly@TAssemblyx42System@%DelphiInterface$15IMetaDataImport%i @374 ; Assembly::TClass::TClass(Assembly::TAssembly *, const System::DelphiInterface<{583}...
+    @Assembly@TClass@$bctr$qqrp18Assembly@TAssemblyx42System@%DelphiInterface$15IMetaDataImport%i51System@%Set$23Assemblyflags@TTypeFlagt1$i0$t1$i23$%x20System@UnicodeStringi @373 ; Assembly::TClass::TClass(Assembly::TAssembly *, const System::DelphiInterface<{583}...
+    @Assembly@TClass@$bdtr$qqrv    @372 ; __fastcall Assembly::TClass::~TClass()
+    @Assembly@TClass@Initialize$qqrx42System@%DelphiInterface$15IMetaDataImport%i @371 ; Assembly::TClass::Initialize(const System::DelphiInterface<{583}...
+    @Assembly@TClassIDList@        @520 ; Assembly::TClassIDList::
+    @Assembly@TClassIDList@$bctr$qqrp32Collections@TIntegerObjHashTable @363 ; __fastcall Assembly::TClassIDList::TClassIDList(Collections::TIntegerObjHashTable *)
+    @Assembly@TClassIDList@Add$qqri @360 ; __fastcall Assembly::TClassIDList::Add(int)
+    @Assembly@TClassIDList@Clear$qqrv @359 ; __fastcall Assembly::TClassIDList::Clear()
+    @Assembly@TClassIDList@Delete$qqri @358 ; __fastcall Assembly::TClassIDList::Delete(int)
+    @Assembly@TClassIDList@GetCount$qqrv @362 ; __fastcall Assembly::TClassIDList::GetCount()
+    @Assembly@TClassIDList@GetItem$qqri @361 ; __fastcall Assembly::TClassIDList::GetItem(int)
+    @Assembly@TClassList@          @523 ; Assembly::TClassList::
+    @Assembly@TClassList@$bctr$qqrv @370 ; __fastcall Assembly::TClassList::TClassList()
+    @Assembly@TClassList@$bdtr$qqrv @369 ; __fastcall Assembly::TClassList::~TClassList()
+    @Assembly@TClassList@Add$qqrp15Assembly@TClass @366 ; __fastcall Assembly::TClassList::Add(Assembly::TClass *)
+    @Assembly@TClassList@Clear$qqrv @365 ; __fastcall Assembly::TClassList::Clear()
+    @Assembly@TClassList@Delete$qqri @364 ; __fastcall Assembly::TClassList::Delete(int)
+    @Assembly@TClassList@GetCount$qqrv @368 ; __fastcall Assembly::TClassList::GetCount()
+    @Assembly@TClassList@GetItem$qqri @367 ; __fastcall Assembly::TClassList::GetItem(int)
+    @Assembly@TEvent@              @540 ; Assembly::TEvent::
+    @Assembly@TEvent@$bctr$qqrp20Assembly@TTypeObjectx42System@%DelphiInterface$15IMetaDataImport%ii @414 ; Assembly::TEvent::TEvent(Assembly::TTypeObject *, const System::DelphiInterface<{583}...
+    @Assembly@TEventList@          @538 ; Assembly::TEventList::
+    @Assembly@TEventList@$bctr$qqrp20Assembly@TTypeObjectx42System@%DelphiInterface$15IMetaDataImport%i @412 ; Assembly::TEventList::TEventList(Assembly::TTypeObject *, const System::DelphiInterface<{583}...
+    @Assembly@TEventList@$bctr$qqrv @413 ; __fastcall Assembly::TEventList::TEventList()
+    @Assembly@TEventList@$bdtr$qqrv @411 ; __fastcall Assembly::TEventList::~TEventList()
+    @Assembly@TEventList@Add$qqrp15Assembly@TEvent @408 ; __fastcall Assembly::TEventList::Add(Assembly::TEvent *)
+    @Assembly@TEventList@Clear$qqrv @407 ; __fastcall Assembly::TEventList::Clear()
+    @Assembly@TEventList@Delete$qqri @406 ; __fastcall Assembly::TEventList::Delete(int)
+    @Assembly@TEventList@GetByID$qqri @405 ; __fastcall Assembly::TEventList::GetByID(int)
+    @Assembly@TEventList@GetCount$qqrv @410 ; __fastcall Assembly::TEventList::GetCount()
+    @Assembly@TEventList@GetItem$qqri @409 ; __fastcall Assembly::TEventList::GetItem(int)
+    @Assembly@TField@              @536 ; Assembly::TField::
+    @Assembly@TField@$bctr$qqrp20Assembly@TTypeObjectx42System@%DelphiInterface$15IMetaDataImport%i @404 ; Assembly::TField::TField(Assembly::TTypeObject *, const System::DelphiInterface<{583}...
+    @Assembly@TField@$bdtr$qqrv    @403 ; __fastcall Assembly::TField::~TField()
+    @Assembly@TField@ToString$qqrv @402 ; __fastcall Assembly::TField::ToString()
+    @Assembly@TFieldList@          @534 ; Assembly::TFieldList::
+    @Assembly@TFieldList@$bctr$qqrp20Assembly@TTypeObjectx42System@%DelphiInterface$15IMetaDataImport%i @400 ; Assembly::TFieldList::TFieldList(Assembly::TTypeObject *, const System::DelphiInterface<{583}...
+    @Assembly@TFieldList@$bctr$qqrv @401 ; __fastcall Assembly::TFieldList::TFieldList()
+    @Assembly@TFieldList@$bdtr$qqrv @399 ; __fastcall Assembly::TFieldList::~TFieldList()
+    @Assembly@TFieldList@Add$qqrp15Assembly@TField @396 ; __fastcall Assembly::TFieldList::Add(Assembly::TField *)
+    @Assembly@TFieldList@Clear$qqrv @395 ; __fastcall Assembly::TFieldList::Clear()
+    @Assembly@TFieldList@Delete$qqri @394 ; __fastcall Assembly::TFieldList::Delete(int)
+    @Assembly@TFieldList@GetByID$qqri @393 ; __fastcall Assembly::TFieldList::GetByID(int)
+    @Assembly@TFieldList@GetCount$qqrv @398 ; __fastcall Assembly::TFieldList::GetCount()
+    @Assembly@TFieldList@GetItem$qqri @397 ; __fastcall Assembly::TFieldList::GetItem(int)
+    @Assembly@TInterface@          @532 ; Assembly::TInterface::
+    @Assembly@TInterface@$bctr$qqrp18Assembly@TAssemblyx42System@%DelphiInterface$15IMetaDataImport%i @392 ; Assembly::TInterface::TInterface(Assembly::TAssembly *, const System::DelphiInterface<{583}...
+    @Assembly@TInterface@$bctr$qqrp18Assembly@TAssemblyx42System@%DelphiInterface$15IMetaDataImport%i51System@%Set$23Assemblyflags@TTypeFlagt1$i0$t1$i23$%x20System@UnicodeStringi @391 ; Assembly::TInterface::TInterface(Assembly::TAssembly *, const System::DelphiInterface<{583}...
+    @Assembly@TInterface@$bdtr$qqrv @390 ; __fastcall Assembly::TInterface::~TInterface()
+    @Assembly@TInterfaceIDList@    @527 ; Assembly::TInterfaceIDList::
+    @Assembly@TInterfaceIDList@$bctr$qqrp32Collections@TIntegerObjHashTable @382 ; __fastcall Assembly::TInterfaceIDList::TInterfaceIDList(Collections::TIntegerObjHashTable *)
+    @Assembly@TInterfaceIDList@$bctr$qqrp32Collections@TIntegerObjHashTablex42System@%DelphiInterface$15IMetaDataImport%i @381 ; Assembly::TInterfaceIDList::TInterfaceIDList(Collections::TIntegerObjHashTable *, const System::DelphiInterface<{583}...
+    @Assembly@TInterfaceIDList@Add$qqri @377 ; __fastcall Assembly::TInterfaceIDList::Add(int)
+    @Assembly@TInterfaceIDList@Clear$qqrv @376 ; __fastcall Assembly::TInterfaceIDList::Clear()
+    @Assembly@TInterfaceIDList@Delete$qqri @375 ; __fastcall Assembly::TInterfaceIDList::Delete(int)
+    @Assembly@TInterfaceIDList@GetCount$qqrv @380 ; __fastcall Assembly::TInterfaceIDList::GetCount()
+    @Assembly@TInterfaceIDList@GetItem$qqri @379 ; __fastcall Assembly::TInterfaceIDList::GetItem(int)
+    @Assembly@TInterfaceIDList@SetItem$qqrip20Assembly@TTypeObject @378 ; __fastcall Assembly::TInterfaceIDList::SetItem(int, Assembly::TTypeObject *)
+    @Assembly@TInterfaceList@      @530 ; Assembly::TInterfaceList::
+    @Assembly@TInterfaceList@$bctr$qqrv @389 ; __fastcall Assembly::TInterfaceList::TInterfaceList()
+    @Assembly@TInterfaceList@$bdtr$qqrv @388 ; __fastcall Assembly::TInterfaceList::~TInterfaceList()
+    @Assembly@TInterfaceList@Add$qqrp19Assembly@TInterface @385 ; __fastcall Assembly::TInterfaceList::Add(Assembly::TInterface *)
+    @Assembly@TInterfaceList@Clear$qqrv @384 ; __fastcall Assembly::TInterfaceList::Clear()
+    @Assembly@TInterfaceList@Delete$qqri @383 ; __fastcall Assembly::TInterfaceList::Delete(int)
+    @Assembly@TInterfaceList@GetCount$qqrv @387 ; __fastcall Assembly::TInterfaceList::GetCount()
+    @Assembly@TInterfaceList@GetItem$qqri @386 ; __fastcall Assembly::TInterfaceList::GetItem(int)
+    @Assembly@TMethod@             @550 ; Assembly::TMethod::
+    @Assembly@TMethod@$bctr$qqrp20Assembly@TTypeObjectx42System@%DelphiInterface$15IMetaDataImport%i @443 ; Assembly::TMethod::TMethod(Assembly::TTypeObject *, const System::DelphiInterface<{583}...
+    @Assembly@TMethod@$bdtr$qqrv   @442 ; __fastcall Assembly::TMethod::~TMethod()
+    @Assembly@TMethod@GetCode$qqrv @439 ; __fastcall Assembly::TMethod::GetCode()
+    @Assembly@TMethod@Read$qqrx42System@%DelphiInterface$15IMetaDataImport%ipuci @441 ; Assembly::TMethod::Read(const System::DelphiInterface<{583}...
+    @Assembly@TMethod@ToString$qqro @440 ; __fastcall Assembly::TMethod::ToString(bool)
+    @Assembly@TMethodList@         @548 ; Assembly::TMethodList::
+    @Assembly@TMethodList@$bctr$qqrp20Assembly@TTypeObject42System@%DelphiInterface$15IMetaDataImport%i @437 ; Assembly::TMethodList::TMethodList(Assembly::TTypeObject *, System::DelphiInterface<{583}...
+    @Assembly@TMethodList@$bctr$qqrv @438 ; __fastcall Assembly::TMethodList::TMethodList()
+    @Assembly@TMethodList@$bdtr$qqrv @436 ; __fastcall Assembly::TMethodList::~TMethodList()
+    @Assembly@TMethodList@Add$qqrp16Assembly@TMethod @433 ; __fastcall Assembly::TMethodList::Add(Assembly::TMethod *)
+    @Assembly@TMethodList@Clear$qqrv @432 ; __fastcall Assembly::TMethodList::Clear()
+    @Assembly@TMethodList@Delete$qqri @431 ; __fastcall Assembly::TMethodList::Delete(int)
+    @Assembly@TMethodList@GetByID$qqri @430 ; __fastcall Assembly::TMethodList::GetByID(int)
+    @Assembly@TMethodList@GetCount$qqrv @435 ; __fastcall Assembly::TMethodList::GetCount()
+    @Assembly@TMethodList@GetItem$qqri @434 ; __fastcall Assembly::TMethodList::GetItem(int)
+    @Assembly@TNamespace@          @514 ; Assembly::TNamespace::
+    @Assembly@TNamespace@$bctr$qqrx20System@UnicodeString @348 ; __fastcall Assembly::TNamespace::TNamespace(const System::UnicodeString)
+    @Assembly@TNamespace@$bdtr$qqrv @347 ; __fastcall Assembly::TNamespace::~TNamespace()
+    @Assembly@TNamespace@Clear$qqrv @345 ; __fastcall Assembly::TNamespace::Clear()
+    @Assembly@TNamespace@FindOrCreate$qqrx20System@UnicodeStringt1 @346 ; __fastcall Assembly::TNamespace::FindOrCreate(const System::UnicodeString, const System::UnicodeString)
+    @Assembly@TNamespaceList@      @512 ; Assembly::TNamespaceList::
+    @Assembly@TNamespaceList@$bctr$qqrv @344 ; __fastcall Assembly::TNamespaceList::TNamespaceList()
+    @Assembly@TNamespaceList@$bdtr$qqrv @343 ; __fastcall Assembly::TNamespaceList::~TNamespaceList()
+    @Assembly@TNamespaceList@Add$qqrp19Assembly@TNamespace @340 ; __fastcall Assembly::TNamespaceList::Add(Assembly::TNamespace *)
+    @Assembly@TNamespaceList@Clear$qqrv @339 ; __fastcall Assembly::TNamespaceList::Clear()
+    @Assembly@TNamespaceList@Delete$qqri @338 ; __fastcall Assembly::TNamespaceList::Delete(int)
+    @Assembly@TNamespaceList@Find$qqrx20System@UnicodeString @337 ; __fastcall Assembly::TNamespaceList::Find(const System::UnicodeString)
+    @Assembly@TNamespaceList@GetCount$qqrv @342 ; __fastcall Assembly::TNamespaceList::GetCount()
+    @Assembly@TNamespaceList@GetItem$qqri @341 ; __fastcall Assembly::TNamespaceList::GetItem(int)
+    @Assembly@TParameter@          @518 ; Assembly::TParameter::
+    @Assembly@TParameter@$bctr$qqrp16Assembly@TMethodx42System@%DelphiInterface$15IMetaDataImport%ii26Assemblyflags@TElementTypei @357 ; Assembly::TParameter::TParameter(Assembly::TMethod *, const System::DelphiInterface<{583}...
+    @Assembly@TParameter@$bdtr$qqrv @356 ; __fastcall Assembly::TParameter::~TParameter()
+    @Assembly@TParameterList@      @516 ; Assembly::TParameterList::
+    @Assembly@TParameterList@$bctr$qqrv @355 ; __fastcall Assembly::TParameterList::TParameterList()
+    @Assembly@TParameterList@$bdtr$qqrv @354 ; __fastcall Assembly::TParameterList::~TParameterList()
+    @Assembly@TParameterList@Add$qqrp19Assembly@TParameter @351 ; __fastcall Assembly::TParameterList::Add(Assembly::TParameter *)
+    @Assembly@TParameterList@Clear$qqrv @350 ; __fastcall Assembly::TParameterList::Clear()
+    @Assembly@TParameterList@Delete$qqri @349 ; __fastcall Assembly::TParameterList::Delete(int)
+    @Assembly@TParameterList@GetCount$qqrv @353 ; __fastcall Assembly::TParameterList::GetCount()
+    @Assembly@TParameterList@GetItem$qqri @352 ; __fastcall Assembly::TParameterList::GetItem(int)
+    @Assembly@TProperty@           @554 ; Assembly::TProperty::
+    @Assembly@TProperty@$bctr$qqrp20Assembly@TTypeObjectx42System@%DelphiInterface$15IMetaDataImport%ii @453 ; Assembly::TProperty::TProperty(Assembly::TTypeObject *, const System::DelphiInterface<{583}...
+    @Assembly@TProperty@$bdtr$qqrv @452 ; __fastcall Assembly::TProperty::~TProperty()
+    @Assembly@TPropertyList@       @552 ; Assembly::TPropertyList::
+    @Assembly@TPropertyList@$bctr$qqrp20Assembly@TTypeObjectx42System@%DelphiInterface$15IMetaDataImport%i @450 ; Assembly::TPropertyList::TPropertyList(Assembly::TTypeObject *, const System::DelphiInterface<{583}...
+    @Assembly@TPropertyList@$bctr$qqrv @451 ; __fastcall Assembly::TPropertyList::TPropertyList()
+    @Assembly@TPropertyList@$bdtr$qqrv @449 ; __fastcall Assembly::TPropertyList::~TPropertyList()
+    @Assembly@TPropertyList@Add$qqrp18Assembly@TProperty @446 ; __fastcall Assembly::TPropertyList::Add(Assembly::TProperty *)
+    @Assembly@TPropertyList@Clear$qqrv @445 ; __fastcall Assembly::TPropertyList::Clear()
+    @Assembly@TPropertyList@Delete$qqri @444 ; __fastcall Assembly::TPropertyList::Delete(int)
+    @Assembly@TPropertyList@GetCount$qqrv @448 ; __fastcall Assembly::TPropertyList::GetCount()
+    @Assembly@TPropertyList@GetItem$qqri @447 ; __fastcall Assembly::TPropertyList::GetItem(int)
+    @Assembly@TReferences@         @506 ; Assembly::TReferences::
+    @Assembly@TReferences@$bctr$qqrp20Assembly@TReferences @323 ; __fastcall Assembly::TReferences::TReferences(Assembly::TReferences *)
+    @Assembly@TReferences@$bdtr$qqrv @322 ; __fastcall Assembly::TReferences::~TReferences()
+    @Assembly@TReferences@Add$qqr20System@UnicodeString @314 ; __fastcall Assembly::TReferences::Add(System::UnicodeString)
+    @Assembly@TReferences@BuildAssembliesList$qqrui @318 ; __fastcall Assembly::TReferences::BuildAssembliesList(unsigned int)
+    @Assembly@TReferences@Clear$qqrv @313 ; __fastcall Assembly::TReferences::Clear()
+    @Assembly@TReferences@Delete$qqri @312 ; __fastcall Assembly::TReferences::Delete(int)
+    @Assembly@TReferences@Find$qqrx20System@UnicodeStringt1i @311 ; __fastcall Assembly::TReferences::Find(const System::UnicodeString, const System::UnicodeString, int)
+    @Assembly@TReferences@GetAssemblies$qqri @315 ; __fastcall Assembly::TReferences::GetAssemblies(int)
+    @Assembly@TReferences@GetAssembly$qqr20System@UnicodeString @320 ; __fastcall Assembly::TReferences::GetAssembly(System::UnicodeString)
+    @Assembly@TReferences@GetCount$qqrv @317 ; __fastcall Assembly::TReferences::GetCount()
+    @Assembly@TReferences@GetItem$qqri @316 ; __fastcall Assembly::TReferences::GetItem(int)
+    @Assembly@TReferences@LoadAssembly$qqr20System@UnicodeString @319 ; __fastcall Assembly::TReferences::LoadAssembly(System::UnicodeString)
+    @Assembly@TReferences@ParentAdd$qqr20System@UnicodeString @321 ; __fastcall Assembly::TReferences::ParentAdd(System::UnicodeString)
+    @Assembly@TStatement@          @546 ; Assembly::TStatement::
+    @Assembly@TStatement@$bctr$qqrv @429 ; __fastcall Assembly::TStatement::TStatement()
+    @Assembly@TStatement@ToString$qqr20System@UnicodeString @428 ; __fastcall Assembly::TStatement::ToString(System::UnicodeString)
+    @Assembly@TStatementList@      @544 ; Assembly::TStatementList::
+    @Assembly@TStatementList@$bctr$qqrp18Assembly@TAssemblyx42System@%DelphiInterface$15IMetaDataImport%pvi @426 ; Assembly::TStatementList::TStatementList(Assembly::TAssembly *, const System::DelphiInterface<{583}...
+    @Assembly@TStatementList@$bctr$qqrv @427 ; __fastcall Assembly::TStatementList::TStatementList()
+    @Assembly@TStatementList@$bdtr$qqrv @425 ; __fastcall Assembly::TStatementList::~TStatementList()
+    @Assembly@TStatementList@Add$qqrp19Assembly@TStatement @422 ; __fastcall Assembly::TStatementList::Add(Assembly::TStatement *)
+    @Assembly@TStatementList@Clear$qqrv @421 ; __fastcall Assembly::TStatementList::Clear()
+    @Assembly@TStatementList@Delete$qqri @420 ; __fastcall Assembly::TStatementList::Delete(int)
+    @Assembly@TStatementList@GetCount$qqrv @424 ; __fastcall Assembly::TStatementList::GetCount()
+    @Assembly@TStatementList@GetItem$qqri @423 ; __fastcall Assembly::TStatementList::GetItem(int)
+    @Assembly@TTypeBase@           @574 ; Assembly::TTypeBase::
+    @Assembly@TTypeInfo@           @567 ; Assembly::TTypeInfo::
+    @Assembly@TTypeInfo@$bctr$qqrp18Assembly@TAssembly26Assemblyflags@TElementTypei @486 ; __fastcall Assembly::TTypeInfo::TTypeInfo(Assembly::TAssembly *, Assemblyflags::TElementType, int)
+    @Assembly@TTypeInfo@$bdtr$qqrv @485 ; __fastcall Assembly::TTypeInfo::~TTypeInfo()
+    @Assembly@TTypeInfo@GetRef$qqrv @484 ; __fastcall Assembly::TTypeInfo::GetRef()
+    @Assembly@TTypeInfo@ToString$qqro @483 ; __fastcall Assembly::TTypeInfo::ToString(bool)
+    @Assembly@TTypeObject@         @572 ; Assembly::TTypeObject::
+    @Assembly@TTypeObject@$bctr$qqrp18Assembly@TAssemblyx42System@%DelphiInterface$15IMetaDataImport%i @503 ; Assembly::TTypeObject::TTypeObject(Assembly::TAssembly *, const System::DelphiInterface<{583}...
+    @Assembly@TTypeObject@$bctr$qqrp18Assembly@TAssemblyx42System@%DelphiInterface$15IMetaDataImport%i51System@%Set$23Assemblyflags@TTypeFlagt1$i0$t1$i23$%x20System@UnicodeStringi @502 ; Assembly::TTypeObject::TTypeObject(Assembly::TAssembly *, const System::DelphiInterface<{583}...
+    @Assembly@TTypeObject@$bdtr$qqrv @501 ; __fastcall Assembly::TTypeObject::~TTypeObject()
+    @Assembly@TTypeObject@GetExtends$qqrv @500 ; __fastcall Assembly::TTypeObject::GetExtends()
+    @Assembly@TTypeObject@GetNamespace$qqrv @499 ; __fastcall Assembly::TTypeObject::GetNamespace()
+    @Assembly@TTypeObjectList@     @569 ; Assembly::TTypeObjectList::
+    @Assembly@TTypeObjectList@$bctr$qqrv @498 ; __fastcall Assembly::TTypeObjectList::TTypeObjectList()
+    @Assembly@TTypeObjectList@$bdtr$qqrv @497 ; __fastcall Assembly::TTypeObjectList::~TTypeObjectList()
+    @Assembly@TTypeObjectList@Add$qqrp20Assembly@TTypeObjecto @489 ; __fastcall Assembly::TTypeObjectList::Add(Assembly::TTypeObject *, bool)
+    @Assembly@TTypeObjectList@Clear$qqrv @488 ; __fastcall Assembly::TTypeObjectList::Clear()
+    @Assembly@TTypeObjectList@Delete$qqri @487 ; __fastcall Assembly::TTypeObjectList::Delete(int)
+    @Assembly@TTypeObjectList@GetCount$qqrv @496 ; __fastcall Assembly::TTypeObjectList::GetCount()
+    @Assembly@TTypeObjectList@GetItem$qqri @495 ; __fastcall Assembly::TTypeObjectList::GetItem(int)
+    @Assembly@TTypeObjectList@GetItemOwner$qqri @493 ; __fastcall Assembly::TTypeObjectList::GetItemOwner(int)
+    @Assembly@TTypeObjectList@GetModified$qqrv @491 ; __fastcall Assembly::TTypeObjectList::GetModified()
+    @Assembly@TTypeObjectList@IndexOf$qqrp20Assembly@TTypeObject @490 ; __fastcall Assembly::TTypeObjectList::IndexOf(Assembly::TTypeObject *)
+    @Assembly@TTypeObjectList@SetItem$qqrip20Assembly@TTypeObject @494 ; __fastcall Assembly::TTypeObjectList::SetItem(int, Assembly::TTypeObject *)
+    @Assembly@TTypeObjectList@SetItemOwner$qqrio @492 ; __fastcall Assembly::TTypeObjectList::SetItemOwner(int, bool)
+    @Assembly@TVariantList@        @560 ; Assembly::TVariantList::
+    @Assembly@TVariantList@$bctr$qqrv @473 ; __fastcall Assembly::TVariantList::TVariantList()
+    @Assembly@TVariantList@$bdtr$qqrv @472 ; __fastcall Assembly::TVariantList::~TVariantList()
+    @Assembly@TVariantList@Add$qqrrx14System@Variantus @468 ; __fastcall Assembly::TVariantList::Add(const System::Variant&, unsigned short)
+    @Assembly@TVariantList@Clear$qqrv @467 ; __fastcall Assembly::TVariantList::Clear()
+    @Assembly@TVariantList@Delete$qqri @466 ; __fastcall Assembly::TVariantList::Delete(int)
+    @Assembly@TVariantList@GetCount$qqrv @471 ; __fastcall Assembly::TVariantList::GetCount()
+    @Assembly@TVariantList@GetItem$qqri @470 ; __fastcall Assembly::TVariantList::GetItem(int)
+    @Assembly@TVariantList@GetModified$qqrv @469 ; __fastcall Assembly::TVariantList::GetModified()
+    @Assembly@initialization$qqrv  @309 ; __fastcall Assembly::initialization()
+    @Assemblyconst@Finalization$qqrv @30  ; __fastcall Assemblyconst::Finalization()
+    @Assemblyconst@_SAbstract      @124 ; Assemblyconst::_SAbstract
+    @Assemblyconst@_SAnsTClass     @154 ; Assemblyconst::_SAnsTClass
+    @Assemblyconst@_SAnsiClass     @121 ; Assemblyconst::_SAnsiClass
+    @Assemblyconst@_SArray         @156 ; Assemblyconst::_SArray
+    @Assemblyconst@_SAssembly      @178 ; Assemblyconst::_SAssembly
+    @Assemblyconst@_SAttributes    @162 ; Assemblyconst::_SAttributes
+    @Assemblyconst@_SAutoClass     @155 ; Assemblyconst::_SAutoClass
+    @Assemblyconst@_SAutoLayout    @153 ; Assemblyconst::_SAutoLayout
+    @Assemblyconst@_SBeforeFieldInit @119 ; Assemblyconst::_SBeforeFieldInit
+    @Assemblyconst@_SBuildNumber   @138 ; Assemblyconst::_SBuildNumber
+    @Assemblyconst@_SCallGraph     @103 ; Assemblyconst::_SCallGraph
+    @Assemblyconst@_SCannotOpenFile @92  ; Assemblyconst::_SCannotOpenFile
+    @Assemblyconst@_SClass         @129 ; Assemblyconst::_SClass
+    @Assemblyconst@_SClose         @101 ; Assemblyconst::_SClose
+    @Assemblyconst@_SCode          @115 ; Assemblyconst::_SCode
+    @Assemblyconst@_SDLLEntry      @166 ; Assemblyconst::_SDLLEntry
+    @Assemblyconst@_SDLLName       @165 ; Assemblyconst::_SDLLName
+    @Assemblyconst@_SDefault       @142 ; Assemblyconst::_SDefault
+    @Assemblyconst@_SDescription   @106 ; Assemblyconst::_SDescription
+    @Assemblyconst@_SDispID        @169 ; Assemblyconst::_SDispID
+    @Assemblyconst@_SDoesNotExist  @90  ; Assemblyconst::_SDoesNotExist
+    @Assemblyconst@_SErrorLoading  @95  ; Assemblyconst::_SErrorLoading
+    @Assemblyconst@_SEvent         @125 ; Assemblyconst::_SEvent
+    @Assemblyconst@_SExplicitLayout @130 ; Assemblyconst::_SExplicitLayout
+    @Assemblyconst@_SExtends       @160 ; Assemblyconst::_SExtends
+    @Assemblyconst@_SExtendsID     @159 ; Assemblyconst::_SExtendsID
+    @Assemblyconst@_SExtension     @105 ; Assemblyconst::_SExtension
+    @Assemblyconst@_SField         @127 ; Assemblyconst::_SField
+    @Assemblyconst@_SFileDoesNotExist @94  ; Assemblyconst::_SFileDoesNotExist
+    @Assemblyconst@_SFileName      @181 ; Assemblyconst::_SFileName
+    @Assemblyconst@_SFlagAbstract  @72  ; Assemblyconst::_SFlagAbstract
+    @Assemblyconst@_SFlagAnsiClass @67  ; Assemblyconst::_SFlagAnsiClass
+    @Assemblyconst@_SFlagAssem     @56  ; Assemblyconst::_SFlagAssem
+    @Assemblyconst@_SFlagAutoClass @65  ; Assemblyconst::_SFlagAutoClass
+    @Assemblyconst@_SFlagAutoLayout @77  ; Assemblyconst::_SFlagAutoLayout
+    @Assemblyconst@_SFlagBeforeFieldInit @64  ; Assemblyconst::_SFlagBeforeFieldInit
+    @Assemblyconst@_SFlagClass     @74  ; Assemblyconst::_SFlagClass
+    @Assemblyconst@_SFlagClassConstructor @43  ; Assemblyconst::_SFlagClassConstructor
+    @Assemblyconst@_SFlagDefault   @38  ; Assemblyconst::_SFlagDefault
+    @Assemblyconst@_SFlagExplicitLayout @75  ; Assemblyconst::_SFlagExplicitLayout
+    @Assemblyconst@_SFlagExplicitThis @31  ; Assemblyconst::_SFlagExplicitThis
+    @Assemblyconst@_SFlagFamAndAssem @57  ; Assemblyconst::_SFlagFamAndAssem
+    @Assemblyconst@_SFlagFamORAssem @54  ; Assemblyconst::_SFlagFamORAssem
+    @Assemblyconst@_SFlagFamily    @55  ; Assemblyconst::_SFlagFamily
+    @Assemblyconst@_SFlagFatFormat @86  ; Assemblyconst::_SFlagFatFormat
+    @Assemblyconst@_SFlagField     @36  ; Assemblyconst::_SFlagField
+    @Assemblyconst@_SFlagFinal     @52  ; Assemblyconst::_SFlagFinal
+    @Assemblyconst@_SFlagHasDefault @61  ; Assemblyconst::_SFlagHasDefault
+    @Assemblyconst@_SFlagHasFieldMarshal @39  ; Assemblyconst::_SFlagHasFieldMarshal
+    @Assemblyconst@_SFlagHasSecurity @62  ; Assemblyconst::_SFlagHasSecurity
+    @Assemblyconst@_SFlagHasThis   @32  ; Assemblyconst::_SFlagHasThis
+    @Assemblyconst@_SFlagHideBySig @50  ; Assemblyconst::_SFlagHideBySig
+    @Assemblyconst@_SFlagImport    @69  ; Assemblyconst::_SFlagImport
+    @Assemblyconst@_SFlagIn        @42  ; Assemblyconst::_SFlagIn
+    @Assemblyconst@_SFlagInstanceInitializer @44  ; Assemblyconst::_SFlagInstanceInitializer
+    @Assemblyconst@_SFlagInterface @73  ; Assemblyconst::_SFlagInterface
+    @Assemblyconst@_SFlagLocalSig  @35  ; Assemblyconst::_SFlagLocalSig
+    @Assemblyconst@_SFlagNestedAssembly @80  ; Assemblyconst::_SFlagNestedAssembly
+    @Assemblyconst@_SFlagNestedFamANDAssem @79  ; Assemblyconst::_SFlagNestedFamANDAssem
+    @Assemblyconst@_SFlagNestedFamORAssem @78  ; Assemblyconst::_SFlagNestedFamORAssem
+    @Assemblyconst@_SFlagNestedFamily @81  ; Assemblyconst::_SFlagNestedFamily
+    @Assemblyconst@_SFlagNestedPrivate @82  ; Assemblyconst::_SFlagNestedPrivate
+    @Assemblyconst@_SFlagNestedPublic @83  ; Assemblyconst::_SFlagNestedPublic
+    @Assemblyconst@_SFlagNewSlot   @48  ; Assemblyconst::_SFlagNewSlot
+    @Assemblyconst@_SFlagNotPublic @85  ; Assemblyconst::_SFlagNotPublic
+    @Assemblyconst@_SFlagOptional  @40  ; Assemblyconst::_SFlagOptional
+    @Assemblyconst@_SFlagOut       @41  ; Assemblyconst::_SFlagOut
+    @Assemblyconst@_SFlagPinvokeImpl @47  ; Assemblyconst::_SFlagPinvokeImpl
+    @Assemblyconst@_SFlagPrivate   @58  ; Assemblyconst::_SFlagPrivate
+    @Assemblyconst@_SFlagPrivateScope @59  ; Assemblyconst::_SFlagPrivateScope
+    @Assemblyconst@_SFlagProperty  @34  ; Assemblyconst::_SFlagProperty
+    @Assemblyconst@_SFlagPublic    @84  ; Assemblyconst::_SFlagPublic
+    @Assemblyconst@_SFlagRTSpecialName @63  ; Assemblyconst::_SFlagRTSpecialName
+    @Assemblyconst@_SFlagRequireSecObject @45  ; Assemblyconst::_SFlagRequireSecObject
+    @Assemblyconst@_SFlagReuseSlot @49  ; Assemblyconst::_SFlagReuseSlot
+    @Assemblyconst@_SFlagSealed    @71  ; Assemblyconst::_SFlagSealed
+    @Assemblyconst@_SFlagSequentialLayout @76  ; Assemblyconst::_SFlagSequentialLayout
+    @Assemblyconst@_SFlagSerializable @68  ; Assemblyconst::_SFlagSerializable
+    @Assemblyconst@_SFlagSmallFormat @87  ; Assemblyconst::_SFlagSmallFormat
+    @Assemblyconst@_SFlagSpecialName @70  ; Assemblyconst::_SFlagSpecialName
+    @Assemblyconst@_SFlagStatic    @53  ; Assemblyconst::_SFlagStatic
+    @Assemblyconst@_SFlagTinyFormat @89  ; Assemblyconst::_SFlagTinyFormat
+    @Assemblyconst@_SFlagTinyFormat1 @88  ; Assemblyconst::_SFlagTinyFormat1
+    @Assemblyconst@_SFlagUnicodeClass @66  ; Assemblyconst::_SFlagUnicodeClass
+    @Assemblyconst@_SFlagUnmanaged @33  ; Assemblyconst::_SFlagUnmanaged
+    @Assemblyconst@_SFlagUnmanagedExport @46  ; Assemblyconst::_SFlagUnmanagedExport
+    @Assemblyconst@_SFlagUnused    @60  ; Assemblyconst::_SFlagUnused
+    @Assemblyconst@_SFlagVarArg    @37  ; Assemblyconst::_SFlagVarArg
+    @Assemblyconst@_SFlagVirtual   @51  ; Assemblyconst::_SFlagVirtual
+    @Assemblyconst@_SFlags         @116 ; Assemblyconst::_SFlags
+    @Assemblyconst@_SGetter        @108 ; Assemblyconst::_SGetter
+    @Assemblyconst@_SGetterID      @107 ; Assemblyconst::_SGetterID
+    @Assemblyconst@_SGuid          @179 ; Assemblyconst::_SGuid
+    @Assemblyconst@_SHasSecurity   @117 ; Assemblyconst::_SHasSecurity
+    @Assemblyconst@_SHelpContext   @175 ; Assemblyconst::_SHelpContext
+    @Assemblyconst@_SHelpFile      @173 ; Assemblyconst::_SHelpFile
+    @Assemblyconst@_SHelpString    @176 ; Assemblyconst::_SHelpString
+    @Assemblyconst@_SHelpStringContext @174 ; Assemblyconst::_SHelpStringContext
+    @Assemblyconst@_SHelpStringDLL @172 ; Assemblyconst::_SHelpStringDLL
+    @Assemblyconst@_SID            @112 ; Assemblyconst::_SID
+    @Assemblyconst@_SImplementors  @146 ; Assemblyconst::_SImplementors
+    @Assemblyconst@_SImplements    @147 ; Assemblyconst::_SImplements
+    @Assemblyconst@_SImport        @122 ; Assemblyconst::_SImport
+    @Assemblyconst@_SIndexOutOfBounds @97  ; Assemblyconst::_SIndexOutOfBounds
+    @Assemblyconst@_SInterface     @145 ; Assemblyconst::_SInterface
+    @Assemblyconst@_SInvalidString @99  ; Assemblyconst::_SInvalidString
+    @Assemblyconst@_SInvokeKind    @168 ; Assemblyconst::_SInvokeKind
+    @Assemblyconst@_SLCID          @170 ; Assemblyconst::_SLCID
+    @Assemblyconst@_SLayoutSequential @152 ; Assemblyconst::_SLayoutSequential
+    @Assemblyconst@_SLocale        @140 ; Assemblyconst::_SLocale
+    @Assemblyconst@_SMethod        @126 ; Assemblyconst::_SMethod
+    @Assemblyconst@_SModifier      @102 ; Assemblyconst::_SModifier
+    @Assemblyconst@_SName          @180 ; Assemblyconst::_SName
+    @Assemblyconst@_SNamespace     @158 ; Assemblyconst::_SNamespace
+    @Assemblyconst@_SNestedAssembly @134 ; Assemblyconst::_SNestedAssembly
+    @Assemblyconst@_SNestedFamANDAssem @133 ; Assemblyconst::_SNestedFamANDAssem
+    @Assemblyconst@_SNestedFamORAssem @132 ; Assemblyconst::_SNestedFamORAssem
+    @Assemblyconst@_SNestedFamily  @135 ; Assemblyconst::_SNestedFamily
+    @Assemblyconst@_SNestedPrivate @136 ; Assemblyconst::_SNestedPrivate
+    @Assemblyconst@_SNestedPublic  @137 ; Assemblyconst::_SNestedPublic
+    @Assemblyconst@_SNeutral       @96  ; Assemblyconst::_SNeutral
+    @Assemblyconst@_SNotPublic     @149 ; Assemblyconst::_SNotPublic
+    @Assemblyconst@_SNotValid      @91  ; Assemblyconst::_SNotValid
+    @Assemblyconst@_SOpen          @100 ; Assemblyconst::_SOpen
+    @Assemblyconst@_SParameters    @114 ; Assemblyconst::_SParameters
+    @Assemblyconst@_SPrimitive     @151 ; Assemblyconst::_SPrimitive
+    @Assemblyconst@_SProperties    @161 ; Assemblyconst::_SProperties
+    @Assemblyconst@_SProperty      @128 ; Assemblyconst::_SProperty
+    @Assemblyconst@_SPublic        @150 ; Assemblyconst::_SPublic
+    @Assemblyconst@_SRTSpecialName @118 ; Assemblyconst::_SRTSpecialName
+    @Assemblyconst@_SRegisteredLocation @171 ; Assemblyconst::_SRegisteredLocation
+    @Assemblyconst@_SRestricted    @141 ; Assemblyconst::_SRestricted
+    @Assemblyconst@_SReturnType    @111 ; Assemblyconst::_SReturnType
+    @Assemblyconst@_SRevision      @139 ; Assemblyconst::_SRevision
+    @Assemblyconst@_SSealed        @157 ; Assemblyconst::_SSealed
+    @Assemblyconst@_SSequentialLayout @131 ; Assemblyconst::_SSequentialLayout
+    @Assemblyconst@_SSerializable  @148 ; Assemblyconst::_SSerializable
+    @Assemblyconst@_SSetter        @110 ; Assemblyconst::_SSetter
+    @Assemblyconst@_SSetterID      @109 ; Assemblyconst::_SSetterID
+    @Assemblyconst@_SSource        @143 ; Assemblyconst::_SSource
+    @Assemblyconst@_SSpecialName   @123 ; Assemblyconst::_SSpecialName
+    @Assemblyconst@_SType          @163 ; Assemblyconst::_SType
+    @Assemblyconst@_SUnicodeClass  @120 ; Assemblyconst::_SUnicodeClass
+    @Assemblyconst@_SUnknown       @98  ; Assemblyconst::_SUnknown
+    @Assemblyconst@_SUnknownNamespace @93  ; Assemblyconst::_SUnknownNamespace
+    @Assemblyconst@_SUses          @113 ; Assemblyconst::_SUses
+    @Assemblyconst@_SVTable        @144 ; Assemblyconst::_SVTable
+    @Assemblyconst@_SVTableOffset  @167 ; Assemblyconst::_SVTableOffset
+    @Assemblyconst@_SValue         @164 ; Assemblyconst::_SValue
+    @Assemblyconst@_SValueType     @104 ; Assemblyconst::_SValueType
+    @Assemblyconst@_SVersion       @177 ; Assemblyconst::_SVersion
+    @Assemblyconst@initialization$qqrv @29  ; __fastcall Assemblyconst::initialization()
+    @Assemblyflags@CallingConventionFlagToString$qqr36Assemblyflags@TCallingConventionFlag @185 ; __fastcall Assemblyflags::CallingConventionFlagToString(Assemblyflags::TCallingConventionFlag)
+    @Assemblyflags@CallingConventionFlagToString$qqr63System@%Set$36Assemblyflags@TCallingConventionFlagt1$i0$t1$i8$% @184 ; Assemblyflags::CallingConventionFlagToString(System::Set<{583}...
+    @Assemblyflags@ElementTypeToString$qqr26Assemblyflags@TElementType @198 ; __fastcall Assemblyflags::ElementTypeToString(Assemblyflags::TElementType)
+    @Assemblyflags@EventFlagsToString$qqr24Assemblyflags@TEventFlag @188 ; __fastcall Assemblyflags::EventFlagsToString(Assemblyflags::TEventFlag)
+    @Assemblyflags@Finalization$qqrv @183 ; __fastcall Assemblyflags::Finalization()
+    @Assemblyflags@IntToMethodCodeType$qqri @204 ; __fastcall Assemblyflags::IntToMethodCodeType(int)
+    @Assemblyflags@MethodCodeTypeToString$qqr29Assemblyflags@TMethodCodeType @203 ; __fastcall Assemblyflags::MethodCodeTypeToString(Assemblyflags::TMethodCodeType)
+    @Assemblyflags@MethodFlagToString$qqr25Assemblyflags@TMethodFlag @192 ; __fastcall Assemblyflags::MethodFlagToString(Assemblyflags::TMethodFlag)
+    @Assemblyflags@MethodFlagsToString$qqr53System@%Set$25Assemblyflags@TMethodFlagt1$i0$t1$i21$% @191 ; Assemblyflags::MethodFlagsToString(System::Set<{583}...
+    @Assemblyflags@ParameterFlagsToString$qqr28Assemblyflags@TParameterFlag @187 ; __fastcall Assemblyflags::ParameterFlagsToString(Assemblyflags::TParameterFlag)
+    @Assemblyflags@PropertyFlagsToString$qqr27Assemblyflags@TPropertyFlag @195 ; __fastcall Assemblyflags::PropertyFlagsToString(Assemblyflags::TPropertyFlag)
+    @Assemblyflags@StringToElementType$qqr20System@UnicodeString @197 ; __fastcall Assemblyflags::StringToElementType(System::UnicodeString)
+    @Assemblyflags@TypeFlagToString$qqr23Assemblyflags@TTypeFlag @201 ; __fastcall Assemblyflags::TypeFlagToString(Assemblyflags::TTypeFlag)
+    @Assemblyflags@TypeFlagsToString$qqr51System@%Set$23Assemblyflags@TTypeFlagt1$i0$t1$i23$% @200 ; Assemblyflags::TypeFlagsToString(System::Set<{583}...
+    @Assemblyflags@WordToCallingConventionFlags$qqri @186 ; __fastcall Assemblyflags::WordToCallingConventionFlags(int)
+    @Assemblyflags@WordToElementType$qqri @199 ; __fastcall Assemblyflags::WordToElementType(int)
+    @Assemblyflags@WordToEventFlags$qqri @189 ; __fastcall Assemblyflags::WordToEventFlags(int)
+    @Assemblyflags@WordToMethodFlags$qqri @194 ; __fastcall Assemblyflags::WordToMethodFlags(int)
+    @Assemblyflags@WordToMethodFlags$qqri20System@UnicodeString @193 ; __fastcall Assemblyflags::WordToMethodFlags(int, System::UnicodeString)
+    @Assemblyflags@WordToParameterFlags$qqri @190 ; __fastcall Assemblyflags::WordToParameterFlags(int)
+    @Assemblyflags@WordToPropertyFlags$qqri @196 ; __fastcall Assemblyflags::WordToPropertyFlags(int)
+    @Assemblyflags@WordToTypeFlags$qqri @202 ; __fastcall Assemblyflags::WordToTypeFlags(int)
+    @Assemblyflags@initialization$qqrv @182 ; __fastcall Assemblyflags::initialization()
+    @Assemblyimages@AssemblyDataModule @609 ; Assemblyimages::AssemblyDataModule
+    @Assemblyimages@Finalization$qqrv @608 ; __fastcall Assemblyimages::Finalization()
+    @Assemblyimages@TAssemblyDataModule@ @611 ; Assemblyimages::TAssemblyDataModule::
+    @Assemblyimages@initialization$qqrv @607 ; __fastcall Assemblyimages::initialization()
+    @Assemblyoperations@Finalization$qqrv @300 ; __fastcall Assemblyoperations::Finalization()
+    @Assemblyoperations@SDoubleInstructions @303 ; Assemblyoperations::SDoubleInstructions
+    @Assemblyoperations@SDoubleInstructionsParams @302 ; Assemblyoperations::SDoubleInstructionsParams
+    @Assemblyoperations@SDoubleInstructionsTypes @301 ; Assemblyoperations::SDoubleInstructionsTypes
+    @Assemblyoperations@SInstructions @307 ; Assemblyoperations::SInstructions
+    @Assemblyoperations@SInstructionsParams @306 ; Assemblyoperations::SInstructionsParams
+    @Assemblyoperations@SInstructionsTypes @305 ; Assemblyoperations::SInstructionsTypes
+    @Assemblyoperations@initialization$qqrv @299 ; __fastcall Assemblyoperations::initialization()
+    @Assemblyplug@AddClassColumns$qqrx59System@%DelphiInterface$32Pluggableviewer@IPluggableSearch% @850 ; Assemblyplug::AddClassColumns(const System::DelphiInterface<{583}...
+    @Assemblyplug@AddClassRows$qqrx59System@%DelphiInterface$32Pluggableviewer@IPluggableSearch%x61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @849 ; Assemblyplug::AddClassRows(const System::DelphiInterface<{583}...
+    @Assemblyplug@AddEventColumns$qqrx59System@%DelphiInterface$32Pluggableviewer@IPluggableSearch% @840 ; Assemblyplug::AddEventColumns(const System::DelphiInterface<{583}...
+    @Assemblyplug@AddEventRows$qqrx59System@%DelphiInterface$32Pluggableviewer@IPluggableSearch%x61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @839 ; Assemblyplug::AddEventRows(const System::DelphiInterface<{583}...
+    @Assemblyplug@AddFieldColumns$qqrx59System@%DelphiInterface$32Pluggableviewer@IPluggableSearch% @842 ; Assemblyplug::AddFieldColumns(const System::DelphiInterface<{583}...
+    @Assemblyplug@AddFieldRows$qqrx59System@%DelphiInterface$32Pluggableviewer@IPluggableSearch%x61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @841 ; Assemblyplug::AddFieldRows(const System::DelphiInterface<{583}...
+    @Assemblyplug@AddInterfaceColumns$qqrx59System@%DelphiInterface$32Pluggableviewer@IPluggableSearch% @848 ; Assemblyplug::AddInterfaceColumns(const System::DelphiInterface<{583}...
+    @Assemblyplug@AddInterfaceRows$qqrx59System@%DelphiInterface$32Pluggableviewer@IPluggableSearch%x61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @847 ; Assemblyplug::AddInterfaceRows(const System::DelphiInterface<{583}...
+    @Assemblyplug@AddMethodColumns$qqrx59System@%DelphiInterface$32Pluggableviewer@IPluggableSearch% @846 ; Assemblyplug::AddMethodColumns(const System::DelphiInterface<{583}...
+    @Assemblyplug@AddMethodRows$qqrx59System@%DelphiInterface$32Pluggableviewer@IPluggableSearch%x61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @845 ; Assemblyplug::AddMethodRows(const System::DelphiInterface<{583}...
+    @Assemblyplug@AddPropertyColumns$qqrx59System@%DelphiInterface$32Pluggableviewer@IPluggableSearch% @844 ; Assemblyplug::AddPropertyColumns(const System::DelphiInterface<{583}...
+    @Assemblyplug@AddPropertyRows$qqrx59System@%DelphiInterface$32Pluggableviewer@IPluggableSearch%x61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @843 ; Assemblyplug::AddPropertyRows(const System::DelphiInterface<{583}...
+    @Assemblyplug@Finalization$qqrv @613 ; __fastcall Assemblyplug::Finalization()
+    @Assemblyplug@GUID_AssemblyNamespacePlugID @887 ; Assemblyplug::GUID_AssemblyNamespacePlugID
+    @Assemblyplug@GUID_AssemblyPlugID @888 ; Assemblyplug::GUID_AssemblyPlugID
+    @Assemblyplug@TAssemblyBaseTree@ @861 ; Assemblyplug::TAssemblyBaseTree::
+    @Assemblyplug@TAssemblyBaseTree@$bctr$qqrv @665 ; __fastcall Assemblyplug::TAssemblyBaseTree::TAssemblyBaseTree()
+    @Assemblyplug@TAssemblyBaseTree@$bdtr$qqrv @664 ; __fastcall Assemblyplug::TAssemblyBaseTree::~TAssemblyBaseTree()
+    @Assemblyplug@TAssemblyBaseTree@AddClass$qqrp30Assemblyplug@TAssemblyBaseTreex61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode%p15Assembly@TClass @658 ; Assemblyplug::TAssemblyBaseTree::AddClass(Assemblyplug::TAssemblyBaseTree *, const System::DelphiInterface<{583}...
+    @Assemblyplug@TAssemblyBaseTree@AddClasses$qqrp30Assemblyplug@TAssemblyBaseTreex61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode%p19Assembly@TClassList @656 ; Assemblyplug::TAssemblyBaseTree::AddClasses(Assemblyplug::TAssemblyBaseTree *, const System::DelphiInterface<{583}...
+    @Assemblyplug@TAssemblyBaseTree@AddEvents$qqrp30Assemblyplug@TAssemblyBaseTreex61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode%p19Assembly@TEventList @661 ; Assemblyplug::TAssemblyBaseTree::AddEvents(Assemblyplug::TAssemblyBaseTree *, const System::DelphiInterface<{583}...
+    @Assemblyplug@TAssemblyBaseTree@AddFields$qqrp30Assemblyplug@TAssemblyBaseTreex61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode%p19Assembly@TFieldList @659 ; Assemblyplug::TAssemblyBaseTree::AddFields(Assemblyplug::TAssemblyBaseTree *, const System::DelphiInterface<{583}...
+    @Assemblyplug@TAssemblyBaseTree@AddInterfaces$qqrp30Assemblyplug@TAssemblyBaseTreex61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode%p23Assembly@TInterfaceList @655 ; Assemblyplug::TAssemblyBaseTree::AddInterfaces(Assemblyplug::TAssemblyBaseTree *, const System::DelphiInterface<{583}...
+    @Assemblyplug@TAssemblyBaseTree@AddMethod$qqrp30Assemblyplug@TAssemblyBaseTreex61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode%p16Assembly@TMethod @663 ; Assemblyplug::TAssemblyBaseTree::AddMethod(Assemblyplug::TAssemblyBaseTree *, const System::DelphiInterface<{583}...
+    @Assemblyplug@TAssemblyBaseTree@AddMethods$qqrp30Assemblyplug@TAssemblyBaseTreex61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode%p20Assembly@TMethodList @660 ; Assemblyplug::TAssemblyBaseTree::AddMethods(Assemblyplug::TAssemblyBaseTree *, const System::DelphiInterface<{583}...
+    @Assemblyplug@TAssemblyBaseTree@AddNamespace$qqrp30Assemblyplug@TAssemblyBaseTreex61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode%p19Assembly@TNamespace @653 ; Assemblyplug::TAssemblyBaseTree::AddNamespace(Assemblyplug::TAssemblyBaseTree *, const System::DelphiInterface<{583}...
+    @Assemblyplug@TAssemblyBaseTree@AddNamespaces$qqrp30Assemblyplug@TAssemblyBaseTreex61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode%p23Assembly@TNamespaceList @654 ; Assemblyplug::TAssemblyBaseTree::AddNamespaces(Assemblyplug::TAssemblyBaseTree *, const System::DelphiInterface<{583}...
+    @Assemblyplug@TAssemblyBaseTree@AddNestedClasses$qqrp30Assemblyplug@TAssemblyBaseTreex61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode%p19Assembly@TClassList @657 ; Assemblyplug::TAssemblyBaseTree::AddNestedClasses(Assemblyplug::TAssemblyBaseTree *, const System::DelphiInterface<{583}...
+    @Assemblyplug@TAssemblyBaseTree@AddProperties$qqrp30Assemblyplug@TAssemblyBaseTreex61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode%p22Assembly@TPropertyList @662 ; Assemblyplug::TAssemblyBaseTree::AddProperties(Assemblyplug::TAssemblyBaseTree *, const System::DelphiInterface<{583}...
+    @Assemblyplug@TAssemblyBaseTree@BrowseToSymbol$qqrx20System@UnicodeString @644 ; __fastcall Assemblyplug::TAssemblyBaseTree::BrowseToSymbol(const System::UnicodeString)
+    @Assemblyplug@TAssemblyBaseTree@GetHelpID$qqrv @646 ; __fastcall Assemblyplug::TAssemblyBaseTree::GetHelpID()
+    @Assemblyplug@TAssemblyBaseTree@GetIcons$qqrv @650 ; __fastcall Assemblyplug::TAssemblyBaseTree::GetIcons()
+    @Assemblyplug@TAssemblyBaseTree@GetPageManager$qqrv @652 ; __fastcall Assemblyplug::TAssemblyBaseTree::GetPageManager()
+    @Assemblyplug@TAssemblyBaseTree@GetTree$qqrv @649 ; __fastcall Assemblyplug::TAssemblyBaseTree::GetTree()
+    @Assemblyplug@TAssemblyBaseTree@OnClose$qqrp14System@TObject @647 ; __fastcall Assemblyplug::TAssemblyBaseTree::OnClose(System::TObject *)
+    @Assemblyplug@TAssemblyBaseTree@SetHelpID$qqri @645 ; __fastcall Assemblyplug::TAssemblyBaseTree::SetHelpID(int)
+    @Assemblyplug@TAssemblyBaseTree@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @651 ; Assemblyplug::TAssemblyBaseTree::SetPageManager(const System::DelphiInterface<{583}...
+    @Assemblyplug@TAssemblyBaseTree@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @648 ; Assemblyplug::TAssemblyBaseTree::SetTree(const System::DelphiInterface<{583}...
+    @Assemblyplug@TAssemblyFactory@ @854 ; Assemblyplug::TAssemblyFactory::
+    @Assemblyplug@TAssemblyFactory@CreateInstance$qqrv @625 ; __fastcall Assemblyplug::TAssemblyFactory::CreateInstance()
+    @Assemblyplug@TAssemblyFactory@Description$qqrv @620 ; __fastcall Assemblyplug::TAssemblyFactory::Description()
+    @Assemblyplug@TAssemblyFactory@Extensions$qqrv @622 ; __fastcall Assemblyplug::TAssemblyFactory::Extensions()
+    @Assemblyplug@TAssemblyFactory@Filter$qqrv @623 ; __fastcall Assemblyplug::TAssemblyFactory::Filter()
+    @Assemblyplug@TAssemblyFactory@GetID$qqrv @624 ; __fastcall Assemblyplug::TAssemblyFactory::GetID()
+    @Assemblyplug@TAssemblyFactory@IsType$qqrx20System@UnicodeString @621 ; __fastcall Assemblyplug::TAssemblyFactory::IsType(const System::UnicodeString)
+    @Assemblyplug@TAssemblyNamespaceFactory@ @852 ; Assemblyplug::TAssemblyNamespaceFactory::
+    @Assemblyplug@TAssemblyNamespaceFactory@CreateInstance$qqrv @619 ; __fastcall Assemblyplug::TAssemblyNamespaceFactory::CreateInstance()
+    @Assemblyplug@TAssemblyNamespaceFactory@Description$qqrv @614 ; __fastcall Assemblyplug::TAssemblyNamespaceFactory::Description()
+    @Assemblyplug@TAssemblyNamespaceFactory@Extensions$qqrv @616 ; __fastcall Assemblyplug::TAssemblyNamespaceFactory::Extensions()
+    @Assemblyplug@TAssemblyNamespaceFactory@Filter$qqrv @617 ; __fastcall Assemblyplug::TAssemblyNamespaceFactory::Filter()
+    @Assemblyplug@TAssemblyNamespaceFactory@GetID$qqrv @618 ; __fastcall Assemblyplug::TAssemblyNamespaceFactory::GetID()
+    @Assemblyplug@TAssemblyNamespaceFactory@IsType$qqrx20System@UnicodeString @615 ; __fastcall Assemblyplug::TAssemblyNamespaceFactory::IsType(const System::UnicodeString)
+    @Assemblyplug@TAssemblyNamespaceTree@ @856 ; Assemblyplug::TAssemblyNamespaceTree::
+    @Assemblyplug@TAssemblyNamespaceTree@$bctr$qqrv @635 ; __fastcall Assemblyplug::TAssemblyNamespaceTree::TAssemblyNamespaceTree()
+    @Assemblyplug@TAssemblyNamespaceTree@$bdtr$qqrv @634 ; __fastcall Assemblyplug::TAssemblyNamespaceTree::~TAssemblyNamespaceTree()
+    @Assemblyplug@TAssemblyNamespaceTree@Close$qqrv @627 ; __fastcall Assemblyplug::TAssemblyNamespaceTree::Close()
+    @Assemblyplug@TAssemblyNamespaceTree@GetCount$qqrv @632 ; __fastcall Assemblyplug::TAssemblyNamespaceTree::GetCount()
+    @Assemblyplug@TAssemblyNamespaceTree@GetItem$qqri @633 ; __fastcall Assemblyplug::TAssemblyNamespaceTree::GetItem(int)
+    @Assemblyplug@TAssemblyNamespaceTree@GetSourceName$qqrv @629 ; __fastcall Assemblyplug::TAssemblyNamespaceTree::GetSourceName()
+    @Assemblyplug@TAssemblyNamespaceTree@LoadFromSource$qqrx20System@UnicodeString @631 ; __fastcall Assemblyplug::TAssemblyNamespaceTree::LoadFromSource(const System::UnicodeString)
+    @Assemblyplug@TAssemblyNamespaceTree@OnClose$qqrp14System@TObject @626 ; __fastcall Assemblyplug::TAssemblyNamespaceTree::OnClose(System::TObject *)
+    @Assemblyplug@TAssemblyNamespaceTree@SaveToSource$qqrx20System@UnicodeString @630 ; __fastcall Assemblyplug::TAssemblyNamespaceTree::SaveToSource(const System::UnicodeString)
+    @Assemblyplug@TAssemblyNamespaceTree@Show$qqrv @628 ; __fastcall Assemblyplug::TAssemblyNamespaceTree::Show()
+    @Assemblyplug@TAssemblyNode@   @863 ; Assemblyplug::TAssemblyNode::
+    @Assemblyplug@TAssemblyNode@$bctr$qqrp18Assembly@TAssembly @689 ; __fastcall Assemblyplug::TAssemblyNode::TAssemblyNode(Assembly::TAssembly *)
+    @Assemblyplug@TAssemblyNode@$bdtr$qqrv @667 ; __fastcall Assemblyplug::TAssemblyNode::~TAssemblyNode()
+    @Assemblyplug@TAssemblyNode@GetCaption$qqrv @688 ; __fastcall Assemblyplug::TAssemblyNode::GetCaption()
+    @Assemblyplug@TAssemblyNode@GetData$qqrv @666 ; __fastcall Assemblyplug::TAssemblyNode::GetData()
+    @Assemblyplug@TAssemblyNode@GetHash$qqrv @673 ; __fastcall Assemblyplug::TAssemblyNode::GetHash()
+    @Assemblyplug@TAssemblyNode@GetHelpID$qqrv @669 ; __fastcall Assemblyplug::TAssemblyNode::GetHelpID()
+    @Assemblyplug@TAssemblyNode@GetImageIndex$qqrv @676 ; __fastcall Assemblyplug::TAssemblyNode::GetImageIndex()
+    @Assemblyplug@TAssemblyNode@GetNodeType$qqrv @674 ; __fastcall Assemblyplug::TAssemblyNode::GetNodeType()
+    @Assemblyplug@TAssemblyNode@GetPageManager$qqrv @683 ; __fastcall Assemblyplug::TAssemblyNode::GetPageManager()
+    @Assemblyplug@TAssemblyNode@GetParent$qqrv @671 ; __fastcall Assemblyplug::TAssemblyNode::GetParent()
+    @Assemblyplug@TAssemblyNode@GetSelectedIndex$qqrv @675 ; __fastcall Assemblyplug::TAssemblyNode::GetSelectedIndex()
+    @Assemblyplug@TAssemblyNode@GetTree$qqrv @681 ; __fastcall Assemblyplug::TAssemblyNode::GetTree()
+    @Assemblyplug@TAssemblyNode@IsValidName$qqrx20System@UnicodeString @684 ; __fastcall Assemblyplug::TAssemblyNode::IsValidName(const System::UnicodeString)
+    @Assemblyplug@TAssemblyNode@OnChange$qqrrx5_GUID @679 ; __fastcall Assemblyplug::TAssemblyNode::OnChange(const _GUID&)
+    @Assemblyplug@TAssemblyNode@OnClose$qqrp14System@TObject @678 ; __fastcall Assemblyplug::TAssemblyNode::OnClose(System::TObject *)
+    @Assemblyplug@TAssemblyNode@OnExpanding$qqrv @685 ; __fastcall Assemblyplug::TAssemblyNode::OnExpanding()
+    @Assemblyplug@TAssemblyNode@OnOpen$qqrp14System@TObject @677 ; __fastcall Assemblyplug::TAssemblyNode::OnOpen(System::TObject *)
+    @Assemblyplug@TAssemblyNode@OnSelect$qqrv @686 ; __fastcall Assemblyplug::TAssemblyNode::OnSelect()
+    @Assemblyplug@TAssemblyNode@SetCaption$qqrx20System@UnicodeString @687 ; __fastcall Assemblyplug::TAssemblyNode::SetCaption(const System::UnicodeString)
+    @Assemblyplug@TAssemblyNode@SetHash$qqri @672 ; __fastcall Assemblyplug::TAssemblyNode::SetHash(int)
+    @Assemblyplug@TAssemblyNode@SetHelpID$qqri @668 ; __fastcall Assemblyplug::TAssemblyNode::SetHelpID(int)
+    @Assemblyplug@TAssemblyNode@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @682 ; Assemblyplug::TAssemblyNode::SetPageManager(const System::DelphiInterface<{583}...
+    @Assemblyplug@TAssemblyNode@SetParent$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @670 ; Assemblyplug::TAssemblyNode::SetParent(const System::DelphiInterface<{583}...
+    @Assemblyplug@TAssemblyNode@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @680 ; Assemblyplug::TAssemblyNode::SetTree(const System::DelphiInterface<{583}...
+    @Assemblyplug@TAssemblyTree@   @859 ; Assemblyplug::TAssemblyTree::
+    @Assemblyplug@TAssemblyTree@$bctr$qqrv @643 ; __fastcall Assemblyplug::TAssemblyTree::TAssemblyTree()
+    @Assemblyplug@TAssemblyTree@$bdtr$qqrv @642 ; __fastcall Assemblyplug::TAssemblyTree::~TAssemblyTree()
+    @Assemblyplug@TAssemblyTree@Close$qqrv @637 ; __fastcall Assemblyplug::TAssemblyTree::Close()
+    @Assemblyplug@TAssemblyTree@GetSourceName$qqrv @639 ; __fastcall Assemblyplug::TAssemblyTree::GetSourceName()
+    @Assemblyplug@TAssemblyTree@LoadFromSource$qqrx20System@UnicodeString @641 ; __fastcall Assemblyplug::TAssemblyTree::LoadFromSource(const System::UnicodeString)
+    @Assemblyplug@TAssemblyTree@OnClose$qqrp14System@TObject @636 ; __fastcall Assemblyplug::TAssemblyTree::OnClose(System::TObject *)
+    @Assemblyplug@TAssemblyTree@SaveToSource$qqrx20System@UnicodeString @640 ; __fastcall Assemblyplug::TAssemblyTree::SaveToSource(const System::UnicodeString)
+    @Assemblyplug@TAssemblyTree@Show$qqrv @638 ; __fastcall Assemblyplug::TAssemblyTree::Show()
+    @Assemblyplug@TClassNode@      @875 ; Assemblyplug::TClassNode::
+    @Assemblyplug@TClassNode@$bctr$qqrxp15Assembly@TClass @817 ; __fastcall Assemblyplug::TClassNode::TClassNode(Assembly::TClass * const)
+    @Assemblyplug@TClassNode@$bdtr$qqrv @797 ; __fastcall Assemblyplug::TClassNode::~TClassNode()
+    @Assemblyplug@TClassNode@GetCaption$qqrv @816 ; __fastcall Assemblyplug::TClassNode::GetCaption()
+    @Assemblyplug@TClassNode@GetData$qqrv @796 ; __fastcall Assemblyplug::TClassNode::GetData()
+    @Assemblyplug@TClassNode@GetHash$qqrv @803 ; __fastcall Assemblyplug::TClassNode::GetHash()
+    @Assemblyplug@TClassNode@GetHelpID$qqrv @799 ; __fastcall Assemblyplug::TClassNode::GetHelpID()
+    @Assemblyplug@TClassNode@GetImageIndex$qqrv @806 ; __fastcall Assemblyplug::TClassNode::GetImageIndex()
+    @Assemblyplug@TClassNode@GetNodeType$qqrv @804 ; __fastcall Assemblyplug::TClassNode::GetNodeType()
+    @Assemblyplug@TClassNode@GetPageManager$qqrv @811 ; __fastcall Assemblyplug::TClassNode::GetPageManager()
+    @Assemblyplug@TClassNode@GetParent$qqrv @801 ; __fastcall Assemblyplug::TClassNode::GetParent()
+    @Assemblyplug@TClassNode@GetSelectedIndex$qqrv @805 ; __fastcall Assemblyplug::TClassNode::GetSelectedIndex()
+    @Assemblyplug@TClassNode@GetTree$qqrv @809 ; __fastcall Assemblyplug::TClassNode::GetTree()
+    @Assemblyplug@TClassNode@IsValidName$qqrx20System@UnicodeString @812 ; __fastcall Assemblyplug::TClassNode::IsValidName(const System::UnicodeString)
+    @Assemblyplug@TClassNode@OnChange$qqrrx5_GUID @807 ; __fastcall Assemblyplug::TClassNode::OnChange(const _GUID&)
+    @Assemblyplug@TClassNode@OnExpanding$qqrv @813 ; __fastcall Assemblyplug::TClassNode::OnExpanding()
+    @Assemblyplug@TClassNode@OnSelect$qqrv @814 ; __fastcall Assemblyplug::TClassNode::OnSelect()
+    @Assemblyplug@TClassNode@SetCaption$qqrx20System@UnicodeString @815 ; __fastcall Assemblyplug::TClassNode::SetCaption(const System::UnicodeString)
+    @Assemblyplug@TClassNode@SetHash$qqri @802 ; __fastcall Assemblyplug::TClassNode::SetHash(int)
+    @Assemblyplug@TClassNode@SetHelpID$qqri @798 ; __fastcall Assemblyplug::TClassNode::SetHelpID(int)
+    @Assemblyplug@TClassNode@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @810 ; Assemblyplug::TClassNode::SetPageManager(const System::DelphiInterface<{583}...
+    @Assemblyplug@TClassNode@SetParent$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @800 ; Assemblyplug::TClassNode::SetParent(const System::DelphiInterface<{583}...
+    @Assemblyplug@TClassNode@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @808 ; Assemblyplug::TClassNode::SetTree(const System::DelphiInterface<{583}...
+    @Assemblyplug@TEventNode@      @869 ; Assemblyplug::TEventNode::
+    @Assemblyplug@TEventNode@$bctr$qqrp15Assembly@TEvent @753 ; __fastcall Assemblyplug::TEventNode::TEventNode(Assembly::TEvent *)
+    @Assemblyplug@TEventNode@GetCaption$qqrv @752 ; __fastcall Assemblyplug::TEventNode::GetCaption()
+    @Assemblyplug@TEventNode@GetData$qqrv @733 ; __fastcall Assemblyplug::TEventNode::GetData()
+    @Assemblyplug@TEventNode@GetHash$qqrv @739 ; __fastcall Assemblyplug::TEventNode::GetHash()
+    @Assemblyplug@TEventNode@GetHelpID$qqrv @735 ; __fastcall Assemblyplug::TEventNode::GetHelpID()
+    @Assemblyplug@TEventNode@GetImageIndex$qqrv @742 ; __fastcall Assemblyplug::TEventNode::GetImageIndex()
+    @Assemblyplug@TEventNode@GetNodeType$qqrv @740 ; __fastcall Assemblyplug::TEventNode::GetNodeType()
+    @Assemblyplug@TEventNode@GetPageManager$qqrv @747 ; __fastcall Assemblyplug::TEventNode::GetPageManager()
+    @Assemblyplug@TEventNode@GetParent$qqrv @737 ; __fastcall Assemblyplug::TEventNode::GetParent()
+    @Assemblyplug@TEventNode@GetSelectedIndex$qqrv @741 ; __fastcall Assemblyplug::TEventNode::GetSelectedIndex()
+    @Assemblyplug@TEventNode@GetTree$qqrv @745 ; __fastcall Assemblyplug::TEventNode::GetTree()
+    @Assemblyplug@TEventNode@IsValidName$qqrx20System@UnicodeString @748 ; __fastcall Assemblyplug::TEventNode::IsValidName(const System::UnicodeString)
+    @Assemblyplug@TEventNode@OnChange$qqrrx5_GUID @743 ; __fastcall Assemblyplug::TEventNode::OnChange(const _GUID&)
+    @Assemblyplug@TEventNode@OnExpanding$qqrv @749 ; __fastcall Assemblyplug::TEventNode::OnExpanding()
+    @Assemblyplug@TEventNode@OnSelect$qqrv @750 ; __fastcall Assemblyplug::TEventNode::OnSelect()
+    @Assemblyplug@TEventNode@SetCaption$qqrx20System@UnicodeString @751 ; __fastcall Assemblyplug::TEventNode::SetCaption(const System::UnicodeString)
+    @Assemblyplug@TEventNode@SetHash$qqri @738 ; __fastcall Assemblyplug::TEventNode::SetHash(int)
+    @Assemblyplug@TEventNode@SetHelpID$qqri @734 ; __fastcall Assemblyplug::TEventNode::SetHelpID(int)
+    @Assemblyplug@TEventNode@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @746 ; Assemblyplug::TEventNode::SetPageManager(const System::DelphiInterface<{583}...
+    @Assemblyplug@TEventNode@SetParent$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @736 ; Assemblyplug::TEventNode::SetParent(const System::DelphiInterface<{583}...
+    @Assemblyplug@TEventNode@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @744 ; Assemblyplug::TEventNode::SetTree(const System::DelphiInterface<{583}...
+    @Assemblyplug@TFieldNode@      @865 ; Assemblyplug::TFieldNode::
+    @Assemblyplug@TFieldNode@$bctr$qqrp15Assembly@TField @710 ; __fastcall Assemblyplug::TFieldNode::TFieldNode(Assembly::TField *)
+    @Assemblyplug@TFieldNode@GetCaption$qqrv @709 ; __fastcall Assemblyplug::TFieldNode::GetCaption()
+    @Assemblyplug@TFieldNode@GetData$qqrv @692 ; __fastcall Assemblyplug::TFieldNode::GetData()
+    @Assemblyplug@TFieldNode@GetHash$qqrv @696 ; __fastcall Assemblyplug::TFieldNode::GetHash()
+    @Assemblyplug@TFieldNode@GetHelpID$qqrv @691 ; __fastcall Assemblyplug::TFieldNode::GetHelpID()
+    @Assemblyplug@TFieldNode@GetImageIndex$qqrv @699 ; __fastcall Assemblyplug::TFieldNode::GetImageIndex()
+    @Assemblyplug@TFieldNode@GetNodeType$qqrv @697 ; __fastcall Assemblyplug::TFieldNode::GetNodeType()
+    @Assemblyplug@TFieldNode@GetPageManager$qqrv @704 ; __fastcall Assemblyplug::TFieldNode::GetPageManager()
+    @Assemblyplug@TFieldNode@GetParent$qqrv @694 ; __fastcall Assemblyplug::TFieldNode::GetParent()
+    @Assemblyplug@TFieldNode@GetSelectedIndex$qqrv @698 ; __fastcall Assemblyplug::TFieldNode::GetSelectedIndex()
+    @Assemblyplug@TFieldNode@GetTree$qqrv @702 ; __fastcall Assemblyplug::TFieldNode::GetTree()
+    @Assemblyplug@TFieldNode@IsValidName$qqrx20System@UnicodeString @705 ; __fastcall Assemblyplug::TFieldNode::IsValidName(const System::UnicodeString)
+    @Assemblyplug@TFieldNode@OnChange$qqrrx5_GUID @700 ; __fastcall Assemblyplug::TFieldNode::OnChange(const _GUID&)
+    @Assemblyplug@TFieldNode@OnExpanding$qqrv @706 ; __fastcall Assemblyplug::TFieldNode::OnExpanding()
+    @Assemblyplug@TFieldNode@OnSelect$qqrv @707 ; __fastcall Assemblyplug::TFieldNode::OnSelect()
+    @Assemblyplug@TFieldNode@SetCaption$qqrx20System@UnicodeString @708 ; __fastcall Assemblyplug::TFieldNode::SetCaption(const System::UnicodeString)
+    @Assemblyplug@TFieldNode@SetHash$qqri @695 ; __fastcall Assemblyplug::TFieldNode::SetHash(int)
+    @Assemblyplug@TFieldNode@SetHelpID$qqri @690 ; __fastcall Assemblyplug::TFieldNode::SetHelpID(int)
+    @Assemblyplug@TFieldNode@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @703 ; Assemblyplug::TFieldNode::SetPageManager(const System::DelphiInterface<{583}...
+    @Assemblyplug@TFieldNode@SetParent$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @693 ; Assemblyplug::TFieldNode::SetParent(const System::DelphiInterface<{583}...
+    @Assemblyplug@TFieldNode@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @701 ; Assemblyplug::TFieldNode::SetTree(const System::DelphiInterface<{583}...
+    @Assemblyplug@TInterfaceNode@  @873 ; Assemblyplug::TInterfaceNode::
+    @Assemblyplug@TInterfaceNode@$bctr$qqrxp19Assembly@TInterface @795 ; __fastcall Assemblyplug::TInterfaceNode::TInterfaceNode(Assembly::TInterface * const)
+    @Assemblyplug@TInterfaceNode@GetCaption$qqrv @794 ; __fastcall Assemblyplug::TInterfaceNode::GetCaption()
+    @Assemblyplug@TInterfaceNode@GetData$qqrv @775 ; __fastcall Assemblyplug::TInterfaceNode::GetData()
+    @Assemblyplug@TInterfaceNode@GetHash$qqrv @781 ; __fastcall Assemblyplug::TInterfaceNode::GetHash()
+    @Assemblyplug@TInterfaceNode@GetHelpID$qqrv @777 ; __fastcall Assemblyplug::TInterfaceNode::GetHelpID()
+    @Assemblyplug@TInterfaceNode@GetImageIndex$qqrv @784 ; __fastcall Assemblyplug::TInterfaceNode::GetImageIndex()
+    @Assemblyplug@TInterfaceNode@GetNodeType$qqrv @782 ; __fastcall Assemblyplug::TInterfaceNode::GetNodeType()
+    @Assemblyplug@TInterfaceNode@GetPageManager$qqrv @789 ; __fastcall Assemblyplug::TInterfaceNode::GetPageManager()
+    @Assemblyplug@TInterfaceNode@GetParent$qqrv @779 ; __fastcall Assemblyplug::TInterfaceNode::GetParent()
+    @Assemblyplug@TInterfaceNode@GetSelectedIndex$qqrv @783 ; __fastcall Assemblyplug::TInterfaceNode::GetSelectedIndex()
+    @Assemblyplug@TInterfaceNode@GetTree$qqrv @787 ; __fastcall Assemblyplug::TInterfaceNode::GetTree()
+    @Assemblyplug@TInterfaceNode@IsValidName$qqrx20System@UnicodeString @790 ; __fastcall Assemblyplug::TInterfaceNode::IsValidName(const System::UnicodeString)
+    @Assemblyplug@TInterfaceNode@OnChange$qqrrx5_GUID @785 ; __fastcall Assemblyplug::TInterfaceNode::OnChange(const _GUID&)
+    @Assemblyplug@TInterfaceNode@OnExpanding$qqrv @791 ; __fastcall Assemblyplug::TInterfaceNode::OnExpanding()
+    @Assemblyplug@TInterfaceNode@OnSelect$qqrv @792 ; __fastcall Assemblyplug::TInterfaceNode::OnSelect()
+    @Assemblyplug@TInterfaceNode@SetCaption$qqrx20System@UnicodeString @793 ; __fastcall Assemblyplug::TInterfaceNode::SetCaption(const System::UnicodeString)
+    @Assemblyplug@TInterfaceNode@SetHash$qqri @780 ; __fastcall Assemblyplug::TInterfaceNode::SetHash(int)
+    @Assemblyplug@TInterfaceNode@SetHelpID$qqri @776 ; __fastcall Assemblyplug::TInterfaceNode::SetHelpID(int)
+    @Assemblyplug@TInterfaceNode@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @788 ; Assemblyplug::TInterfaceNode::SetPageManager(const System::DelphiInterface<{583}...
+    @Assemblyplug@TInterfaceNode@SetParent$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @778 ; Assemblyplug::TInterfaceNode::SetParent(const System::DelphiInterface<{583}...
+    @Assemblyplug@TInterfaceNode@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @786 ; Assemblyplug::TInterfaceNode::SetTree(const System::DelphiInterface<{583}...
+    @Assemblyplug@TMethodNode@     @867 ; Assemblyplug::TMethodNode::
+    @Assemblyplug@TMethodNode@$bctr$qqrp16Assembly@TMethod @732 ; __fastcall Assemblyplug::TMethodNode::TMethodNode(Assembly::TMethod *)
+    @Assemblyplug@TMethodNode@$bdtr$qqrv @711 ; __fastcall Assemblyplug::TMethodNode::~TMethodNode()
+    @Assemblyplug@TMethodNode@GetCaption$qqrv @731 ; __fastcall Assemblyplug::TMethodNode::GetCaption()
+    @Assemblyplug@TMethodNode@GetData$qqrv @714 ; __fastcall Assemblyplug::TMethodNode::GetData()
+    @Assemblyplug@TMethodNode@GetHash$qqrv @718 ; __fastcall Assemblyplug::TMethodNode::GetHash()
+    @Assemblyplug@TMethodNode@GetHelpID$qqrv @713 ; __fastcall Assemblyplug::TMethodNode::GetHelpID()
+    @Assemblyplug@TMethodNode@GetImageIndex$qqrv @721 ; __fastcall Assemblyplug::TMethodNode::GetImageIndex()
+    @Assemblyplug@TMethodNode@GetNodeType$qqrv @719 ; __fastcall Assemblyplug::TMethodNode::GetNodeType()
+    @Assemblyplug@TMethodNode@GetPageManager$qqrv @726 ; __fastcall Assemblyplug::TMethodNode::GetPageManager()
+    @Assemblyplug@TMethodNode@GetParent$qqrv @716 ; __fastcall Assemblyplug::TMethodNode::GetParent()
+    @Assemblyplug@TMethodNode@GetSelectedIndex$qqrv @720 ; __fastcall Assemblyplug::TMethodNode::GetSelectedIndex()
+    @Assemblyplug@TMethodNode@GetTree$qqrv @724 ; __fastcall Assemblyplug::TMethodNode::GetTree()
+    @Assemblyplug@TMethodNode@IsValidName$qqrx20System@UnicodeString @727 ; __fastcall Assemblyplug::TMethodNode::IsValidName(const System::UnicodeString)
+    @Assemblyplug@TMethodNode@OnChange$qqrrx5_GUID @722 ; __fastcall Assemblyplug::TMethodNode::OnChange(const _GUID&)
+    @Assemblyplug@TMethodNode@OnExpanding$qqrv @728 ; __fastcall Assemblyplug::TMethodNode::OnExpanding()
+    @Assemblyplug@TMethodNode@OnSelect$qqrv @729 ; __fastcall Assemblyplug::TMethodNode::OnSelect()
+    @Assemblyplug@TMethodNode@SetCaption$qqrx20System@UnicodeString @730 ; __fastcall Assemblyplug::TMethodNode::SetCaption(const System::UnicodeString)
+    @Assemblyplug@TMethodNode@SetHash$qqri @717 ; __fastcall Assemblyplug::TMethodNode::SetHash(int)
+    @Assemblyplug@TMethodNode@SetHelpID$qqri @712 ; __fastcall Assemblyplug::TMethodNode::SetHelpID(int)
+    @Assemblyplug@TMethodNode@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @725 ; Assemblyplug::TMethodNode::SetPageManager(const System::DelphiInterface<{583}...
+    @Assemblyplug@TMethodNode@SetParent$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @715 ; Assemblyplug::TMethodNode::SetParent(const System::DelphiInterface<{583}...
+    @Assemblyplug@TMethodNode@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @723 ; Assemblyplug::TMethodNode::SetTree(const System::DelphiInterface<{583}...
+    @Assemblyplug@TNamespaceNode@  @877 ; Assemblyplug::TNamespaceNode::
+    @Assemblyplug@TNamespaceNode@$bctr$qqrp19Assembly@TNamespace @838 ; __fastcall Assemblyplug::TNamespaceNode::TNamespaceNode(Assembly::TNamespace *)
+    @Assemblyplug@TNamespaceNode@$bdtr$qqrv @818 ; __fastcall Assemblyplug::TNamespaceNode::~TNamespaceNode()
+    @Assemblyplug@TNamespaceNode@GetCaption$qqrv @837 ; __fastcall Assemblyplug::TNamespaceNode::GetCaption()
+    @Assemblyplug@TNamespaceNode@GetHash$qqrv @824 ; __fastcall Assemblyplug::TNamespaceNode::GetHash()
+    @Assemblyplug@TNamespaceNode@GetHelpID$qqrv @820 ; __fastcall Assemblyplug::TNamespaceNode::GetHelpID()
+    @Assemblyplug@TNamespaceNode@GetImageIndex$qqrv @827 ; __fastcall Assemblyplug::TNamespaceNode::GetImageIndex()
+    @Assemblyplug@TNamespaceNode@GetNodeType$qqrv @825 ; __fastcall Assemblyplug::TNamespaceNode::GetNodeType()
+    @Assemblyplug@TNamespaceNode@GetPageManager$qqrv @832 ; __fastcall Assemblyplug::TNamespaceNode::GetPageManager()
+    @Assemblyplug@TNamespaceNode@GetParent$qqrv @822 ; __fastcall Assemblyplug::TNamespaceNode::GetParent()
+    @Assemblyplug@TNamespaceNode@GetSelectedIndex$qqrv @826 ; __fastcall Assemblyplug::TNamespaceNode::GetSelectedIndex()
+    @Assemblyplug@TNamespaceNode@GetTree$qqrv @830 ; __fastcall Assemblyplug::TNamespaceNode::GetTree()
+    @Assemblyplug@TNamespaceNode@IsValidName$qqrx20System@UnicodeString @833 ; __fastcall Assemblyplug::TNamespaceNode::IsValidName(const System::UnicodeString)
+    @Assemblyplug@TNamespaceNode@OnChange$qqrrx5_GUID @828 ; __fastcall Assemblyplug::TNamespaceNode::OnChange(const _GUID&)
+    @Assemblyplug@TNamespaceNode@OnExpanding$qqrv @834 ; __fastcall Assemblyplug::TNamespaceNode::OnExpanding()
+    @Assemblyplug@TNamespaceNode@OnSelect$qqrv @835 ; __fastcall Assemblyplug::TNamespaceNode::OnSelect()
+    @Assemblyplug@TNamespaceNode@SetCaption$qqrx20System@UnicodeString @836 ; __fastcall Assemblyplug::TNamespaceNode::SetCaption(const System::UnicodeString)
+    @Assemblyplug@TNamespaceNode@SetHash$qqri @823 ; __fastcall Assemblyplug::TNamespaceNode::SetHash(int)
+    @Assemblyplug@TNamespaceNode@SetHelpID$qqri @819 ; __fastcall Assemblyplug::TNamespaceNode::SetHelpID(int)
+    @Assemblyplug@TNamespaceNode@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @831 ; Assemblyplug::TNamespaceNode::SetPageManager(const System::DelphiInterface<{583}...
+    @Assemblyplug@TNamespaceNode@SetParent$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @821 ; Assemblyplug::TNamespaceNode::SetParent(const System::DelphiInterface<{583}...
+    @Assemblyplug@TNamespaceNode@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @829 ; Assemblyplug::TNamespaceNode::SetTree(const System::DelphiInterface<{583}...
+    @Assemblyplug@TPropertyNode@   @871 ; Assemblyplug::TPropertyNode::
+    @Assemblyplug@TPropertyNode@$bctr$qqrp18Assembly@TProperty @774 ; __fastcall Assemblyplug::TPropertyNode::TPropertyNode(Assembly::TProperty *)
+    @Assemblyplug@TPropertyNode@GetCaption$qqrv @773 ; __fastcall Assemblyplug::TPropertyNode::GetCaption()
+    @Assemblyplug@TPropertyNode@GetData$qqrv @754 ; __fastcall Assemblyplug::TPropertyNode::GetData()
+    @Assemblyplug@TPropertyNode@GetHash$qqrv @760 ; __fastcall Assemblyplug::TPropertyNode::GetHash()
+    @Assemblyplug@TPropertyNode@GetHelpID$qqrv @756 ; __fastcall Assemblyplug::TPropertyNode::GetHelpID()
+    @Assemblyplug@TPropertyNode@GetImageIndex$qqrv @763 ; __fastcall Assemblyplug::TPropertyNode::GetImageIndex()
+    @Assemblyplug@TPropertyNode@GetNodeType$qqrv @761 ; __fastcall Assemblyplug::TPropertyNode::GetNodeType()
+    @Assemblyplug@TPropertyNode@GetPageManager$qqrv @768 ; __fastcall Assemblyplug::TPropertyNode::GetPageManager()
+    @Assemblyplug@TPropertyNode@GetParent$qqrv @758 ; __fastcall Assemblyplug::TPropertyNode::GetParent()
+    @Assemblyplug@TPropertyNode@GetSelectedIndex$qqrv @762 ; __fastcall Assemblyplug::TPropertyNode::GetSelectedIndex()
+    @Assemblyplug@TPropertyNode@GetTree$qqrv @766 ; __fastcall Assemblyplug::TPropertyNode::GetTree()
+    @Assemblyplug@TPropertyNode@IsValidName$qqrx20System@UnicodeString @769 ; __fastcall Assemblyplug::TPropertyNode::IsValidName(const System::UnicodeString)
+    @Assemblyplug@TPropertyNode@OnChange$qqrrx5_GUID @764 ; __fastcall Assemblyplug::TPropertyNode::OnChange(const _GUID&)
+    @Assemblyplug@TPropertyNode@OnExpanding$qqrv @770 ; __fastcall Assemblyplug::TPropertyNode::OnExpanding()
+    @Assemblyplug@TPropertyNode@OnSelect$qqrv @771 ; __fastcall Assemblyplug::TPropertyNode::OnSelect()
+    @Assemblyplug@TPropertyNode@SetCaption$qqrx20System@UnicodeString @772 ; __fastcall Assemblyplug::TPropertyNode::SetCaption(const System::UnicodeString)
+    @Assemblyplug@TPropertyNode@SetHash$qqri @759 ; __fastcall Assemblyplug::TPropertyNode::SetHash(int)
+    @Assemblyplug@TPropertyNode@SetHelpID$qqri @755 ; __fastcall Assemblyplug::TPropertyNode::SetHelpID(int)
+    @Assemblyplug@TPropertyNode@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @767 ; Assemblyplug::TPropertyNode::SetPageManager(const System::DelphiInterface<{583}...
+    @Assemblyplug@TPropertyNode@SetParent$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @757 ; Assemblyplug::TPropertyNode::SetParent(const System::DelphiInterface<{583}...
+    @Assemblyplug@TPropertyNode@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @765 ; Assemblyplug::TPropertyNode::SetTree(const System::DelphiInterface<{583}...
+    @Assemblyplug@initialization$qqrv @612 ; __fastcall Assemblyplug::initialization()
+    @Assemblyutils@CorSigUncompressData$qqrpucri @228 ; __fastcall Assemblyutils::CorSigUncompressData(unsigned char *, int&)
+    @Assemblyutils@CorSigUncompressToken$qqrpucri @227 ; __fastcall Assemblyutils::CorSigUncompressToken(unsigned char *, int&)
+    @Assemblyutils@FillVariant$qqruipv @226 ; __fastcall Assemblyutils::FillVariant(unsigned int, void *)
+    @Assemblyutils@Finalization$qqrv @225 ; __fastcall Assemblyutils::Finalization()
+    @Assemblyutils@GCorEncodeToken @273 ; Assemblyutils::GCorEncodeToken
+    @Assemblyutils@GetImageCorMethodFlags$qqrrx29Idecor@IMAGE_COR_ILMETHOD_FAT @235 ; __fastcall Assemblyutils::GetImageCorMethodFlags(const Idecor::IMAGE_COR_ILMETHOD_FAT&)
+    @Assemblyutils@GetImageCorMethodSectDataSize$qqr34Idecor@IMAGE_COR_ILMETHOD_SECT_FAT @233 ; __fastcall Assemblyutils::GetImageCorMethodSectDataSize(Idecor::IMAGE_COR_ILMETHOD_SECT_FAT)
+    @Assemblyutils@GetImageCorMethodSize$qqrrx29Idecor@IMAGE_COR_ILMETHOD_FAT @234 ; __fastcall Assemblyutils::GetImageCorMethodSize(const Idecor::IMAGE_COR_ILMETHOD_FAT&)
+    @Assemblyutils@IntToIndent$qqri20System@UnicodeString @264 ; __fastcall Assemblyutils::IntToIndent(int, System::UnicodeString)
+    @Assemblyutils@IsAssembly$qqrx20System@UnicodeString @240 ; __fastcall Assemblyutils::IsAssembly(const System::UnicodeString)
+    @Assemblyutils@IsPrint$qqrb    @232 ; __fastcall Assemblyutils::IsPrint(wchar_t)
+    @Assemblyutils@ReadString$qqrpxcrixi @231 ; __fastcall Assemblyutils::ReadString(const char *, int&, const int)
+    @Assemblyutils@RidFromToken$qqri @238 ; __fastcall Assemblyutils::RidFromToken(int)
+    @Assemblyutils@TCodeParser@    @266 ; Assemblyutils::TCodeParser::
+    @Assemblyutils@TCodeParser@$bctr$qqrpv @246 ; __fastcall Assemblyutils::TCodeParser::TCodeParser(void *)
+    @Assemblyutils@TCodeParser@$bdtr$qqrv @245 ; __fastcall Assemblyutils::TCodeParser::~TCodeParser()
+    @Assemblyutils@TCodeParser@GetCodeSize$qqrv @243 ; __fastcall Assemblyutils::TCodeParser::GetCodeSize()
+    @Assemblyutils@TCodeParser@GetItem$qqri @241 ; __fastcall Assemblyutils::TCodeParser::GetItem(int)
+    @Assemblyutils@TCodeParser@GetLocalVarSigToken$qqrv @242 ; __fastcall Assemblyutils::TCodeParser::GetLocalVarSigToken()
+    @Assemblyutils@TCodeParser@GetMaxStack$qqrv @244 ; __fastcall Assemblyutils::TCodeParser::GetMaxStack()
+    @Assemblyutils@TILException@   @270 ; Assemblyutils::TILException::
+    @Assemblyutils@TILException@$bctr$qqrrx44Idecor@IMAGE_COR_ILMETHOD_SECT_EH_CLAUSE_FAT @258 ; __fastcall Assemblyutils::TILException::TILException(const Idecor::IMAGE_COR_ILMETHOD_SECT_EH_CLAUSE_FAT&)
+    @Assemblyutils@TILException@$bctr$qqrrx46Idecor@IMAGE_COR_ILMETHOD_SECT_EH_CLAUSE_SMALL @257 ; __fastcall Assemblyutils::TILException::TILException(const Idecor::IMAGE_COR_ILMETHOD_SECT_EH_CLAUSE_SMALL&)
+    @Assemblyutils@TILExceptionList@ @268 ; Assemblyutils::TILExceptionList::
+    @Assemblyutils@TILExceptionList@$bctr$qqrpv @255 ; __fastcall Assemblyutils::TILExceptionList::TILExceptionList(void *)
+    @Assemblyutils@TILExceptionList@$bctr$qqrv @256 ; __fastcall Assemblyutils::TILExceptionList::TILExceptionList()
+    @Assemblyutils@TILExceptionList@$bdtr$qqrv @254 ; __fastcall Assemblyutils::TILExceptionList::~TILExceptionList()
+    @Assemblyutils@TILExceptionList@Add$qqrp26Assemblyutils@TILException @250 ; __fastcall Assemblyutils::TILExceptionList::Add(Assemblyutils::TILException *)
+    @Assemblyutils@TILExceptionList@Assign$qqrp30Assemblyutils@TILExceptionList @249 ; __fastcall Assemblyutils::TILExceptionList::Assign(Assemblyutils::TILExceptionList *)
+    @Assemblyutils@TILExceptionList@Clear$qqrv @248 ; __fastcall Assemblyutils::TILExceptionList::Clear()
+    @Assemblyutils@TILExceptionList@Delete$qqri @247 ; __fastcall Assemblyutils::TILExceptionList::Delete(int)
+    @Assemblyutils@TILExceptionList@GetCount$qqrv @253 ; __fastcall Assemblyutils::TILExceptionList::GetCount()
+    @Assemblyutils@TILExceptionList@GetItem$qqri @252 ; __fastcall Assemblyutils::TILExceptionList::GetItem(int)
+    @Assemblyutils@TILExceptionList@Read$qqrpv @251 ; __fastcall Assemblyutils::TILExceptionList::Read(void *)
+    @Assemblyutils@TSignatureParser@ @272 ; Assemblyutils::TSignatureParser::
+    @Assemblyutils@TSignatureParser@$bctr$qqrpuci @263 ; __fastcall Assemblyutils::TSignatureParser::TSignatureParser(unsigned char *, int)
+    @Assemblyutils@TSignatureParser@Done$qqrv @260 ; __fastcall Assemblyutils::TSignatureParser::Done()
+    @Assemblyutils@TSignatureParser@GetItem$qqri @259 ; __fastcall Assemblyutils::TSignatureParser::GetItem(int)
+    @Assemblyutils@TSignatureParser@Next$qqrv @262 ; __fastcall Assemblyutils::TSignatureParser::Next()
+    @Assemblyutils@TSignatureParser@Reset$qqrv @261 ; __fastcall Assemblyutils::TSignatureParser::Reset()
+    @Assemblyutils@TokenFromRid$qqrii @239 ; __fastcall Assemblyutils::TokenFromRid(int, int)
+    @Assemblyutils@TokenFromType$qqri @236 ; __fastcall Assemblyutils::TokenFromType(int)
+    @Assemblyutils@TypeFromToken$qqri @237 ; __fastcall Assemblyutils::TypeFromToken(int)
+    @Assemblyutils@VarTypeToString$qqri @230 ; __fastcall Assemblyutils::VarTypeToString(int)
+    @Assemblyutils@VariantToString$qqrrx14System@Variant @229 ; __fastcall Assemblyutils::VariantToString(const System::Variant&)
+    @Assemblyutils@initialization$qqrv @224 ; __fastcall Assemblyutils::initialization()
+    @Assemblyviewreg@Finalization$qqrv @890 ; __fastcall Assemblyviewreg::Finalization()
+    @Assemblyviewreg@initialization$qqrv @889 ; __fastcall Assemblyviewreg::initialization()
+    @Callgraphpageplug@Finalization$qqrv @576 ; __fastcall Callgraphpageplug::Finalization()
+    @Callgraphpageplug@GUID_CallGraphPagePlugID @606 ; Callgraphpageplug::GUID_CallGraphPagePlugID
+    @Callgraphpageplug@TCallGraphFrame@ @605 ; Callgraphpageplug::TCallGraphFrame::
+    @Callgraphpageplug@TCallGraphPageFactory@ @602 ; Callgraphpageplug::TCallGraphPageFactory::
+    @Callgraphpageplug@TCallGraphPageFactory@CreateInstance$qqrx20System@UnicodeString @598 ; __fastcall Callgraphpageplug::TCallGraphPageFactory::CreateInstance(const System::UnicodeString)
+    @Callgraphpageplug@TCallGraphPageFactory@GetID$qqrv @597 ; __fastcall Callgraphpageplug::TCallGraphPageFactory::GetID()
+    @Callgraphpageplug@TCallGraphPagePlug@ @600 ; Callgraphpageplug::TCallGraphPagePlug::
+    @Callgraphpageplug@TCallGraphPagePlug@$bctr$qqrv @596 ; __fastcall Callgraphpageplug::TCallGraphPagePlug::TCallGraphPagePlug()
+    @Callgraphpageplug@TCallGraphPagePlug@$bdtr$qqrv @595 ; __fastcall Callgraphpageplug::TCallGraphPagePlug::~TCallGraphPagePlug()
+    @Callgraphpageplug@TCallGraphPagePlug@AddAssemblyTree$qqrp30Assemblyplug@TAssemblyBaseTree @579 ; __fastcall Callgraphpageplug::TCallGraphPagePlug::AddAssemblyTree(Assemblyplug::TAssemblyBaseTree *)
+    @Callgraphpageplug@TCallGraphPagePlug@AddMethod$qqrp16Assembly@TMethod @578 ; __fastcall Callgraphpageplug::TCallGraphPagePlug::AddMethod(Assembly::TMethod *)
+    @Callgraphpageplug@TCallGraphPagePlug@Clear$qqrv @594 ; __fastcall Callgraphpageplug::TCallGraphPagePlug::Clear()
+    @Callgraphpageplug@TCallGraphPagePlug@DisplayCallGraph$qqrv @577 ; __fastcall Callgraphpageplug::TCallGraphPagePlug::DisplayCallGraph()
+    @Callgraphpageplug@TCallGraphPagePlug@GetCaption$qqrv @593 ; __fastcall Callgraphpageplug::TCallGraphPagePlug::GetCaption()
+    @Callgraphpageplug@TCallGraphPagePlug@GetID$qqrv @586 ; __fastcall Callgraphpageplug::TCallGraphPagePlug::GetID()
+    @Callgraphpageplug@TCallGraphPagePlug@GetPage$qqrv @585 ; __fastcall Callgraphpageplug::TCallGraphPagePlug::GetPage()
+    @Callgraphpageplug@TCallGraphPagePlug@GetPageManager$qqrv @584 ; __fastcall Callgraphpageplug::TCallGraphPagePlug::GetPageManager()
+    @Callgraphpageplug@TCallGraphPagePlug@GetReadOnly$qqrv @581 ; __fastcall Callgraphpageplug::TCallGraphPagePlug::GetReadOnly()
+    @Callgraphpageplug@TCallGraphPagePlug@GetVisible$qqrv @588 ; __fastcall Callgraphpageplug::TCallGraphPagePlug::GetVisible()
+    @Callgraphpageplug@TCallGraphPagePlug@Modified$qqrv @582 ; __fastcall Callgraphpageplug::TCallGraphPagePlug::Modified()
+    @Callgraphpageplug@TCallGraphPagePlug@OnBegin$qqrv @590 ; __fastcall Callgraphpageplug::TCallGraphPagePlug::OnBegin()
+    @Callgraphpageplug@TCallGraphPagePlug@OnEnd$qqrv @589 ; __fastcall Callgraphpageplug::TCallGraphPagePlug::OnEnd()
+    @Callgraphpageplug@TCallGraphPagePlug@OnSelect$qqrv @591 ; __fastcall Callgraphpageplug::TCallGraphPagePlug::OnSelect()
+    @Callgraphpageplug@TCallGraphPagePlug@SetCaption$qqrx20System@UnicodeString @592 ; __fastcall Callgraphpageplug::TCallGraphPagePlug::SetCaption(const System::UnicodeString)
+    @Callgraphpageplug@TCallGraphPagePlug@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @583 ; Callgraphpageplug::TCallGraphPagePlug::SetPageManager(const System::DelphiInterface<{583}...
+    @Callgraphpageplug@TCallGraphPagePlug@SetReadOnly$qqro @580 ; __fastcall Callgraphpageplug::TCallGraphPagePlug::SetReadOnly(bool)
+    @Callgraphpageplug@TCallGraphPagePlug@SetVisible$qqrxo @587 ; __fastcall Callgraphpageplug::TCallGraphPagePlug::SetVisible(const bool)
+    @Callgraphpageplug@initialization$qqrv @575 ; __fastcall Callgraphpageplug::initialization()
+    @Fusion@CreateAssemblyCache    @277 ; Fusion::CreateAssemblyCache
+    @Fusion@CreateAssemblyEnum     @279 ; Fusion::CreateAssemblyEnum
+    @Fusion@CreateAssemblyNameObject @278 ; Fusion::CreateAssemblyNameObject
+    @Fusion@CreateInstallReferenceEnum @280 ; Fusion::CreateInstallReferenceEnum
+    @Fusion@FUSION_REFCOUNT_FILEPATH_GUID @297 ; Fusion::FUSION_REFCOUNT_FILEPATH_GUID
+    @Fusion@FUSION_REFCOUNT_MSI_GUID @295 ; Fusion::FUSION_REFCOUNT_MSI_GUID
+    @Fusion@FUSION_REFCOUNT_OPAQUE_STRING_GUID @296 ; Fusion::FUSION_REFCOUNT_OPAQUE_STRING_GUID
+    @Fusion@FUSION_REFCOUNT_UNINSTALL_SUBKEY_GUID @298 ; Fusion::FUSION_REFCOUNT_UNINSTALL_SUBKEY_GUID
+    @Fusion@Finalization$qqrv      @275 ; __fastcall Fusion::Finalization()
+    @Fusion@GetCachePath           @276 ; Fusion::GetCachePath
+    @Fusion@initialization$qqrv    @274 ; __fastcall Fusion::initialization()
+    @GetPackageInfoTable           @897 ; GetPackageInfoTable
+    @Idecor@CLSID_CorMetaDataDispenser @7   ; Idecor::CLSID_CorMetaDataDispenser
+    @Idecor@Finalization$qqrv      @2   ; __fastcall Idecor::Finalization()
+    @Idecor@IID_IMetaDataAssemblyImport @8   ; Idecor::IID_IMetaDataAssemblyImport
+    @Idecor@IID_IMetaDataDispenser @11  ; Idecor::IID_IMetaDataDispenser
+    @Idecor@IID_IMetaDataDispenserEx @10  ; Idecor::IID_IMetaDataDispenserEx
+    @Idecor@IID_IMetaDataImport    @9   ; Idecor::IID_IMetaDataImport
+    @Idecor@initialization$qqrv    @1   ; __fastcall Idecor::initialization()
+    Finalize                       @895 ; Finalize
+    Initialize                     @896 ; Initialize

@@ -1,0 +1,31 @@
+LIBRARY     DCLXML210.BPL
+
+DESCRIPTION 'mbarcadero XML Components'
+
+EXPORTS
+    @$xp$31Xmlreg@TXMLDocumentFileProperty @18  ; __tpdsc__ Xmlreg::TXMLDocumentFileProperty
+    @$xp$35Xmlreg@TXMLTransformSelectionEditor @16  ; __tpdsc__ Xmlreg::TXMLTransformSelectionEditor
+    @Dclxml@@GetPackageInfoTable$qqrv @23  ; Dclxml::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclxml@@PackageLoad$qqrv      @22  ; Dclxml::__linkproc__ __fastcall PackageLoad()
+    @Dclxml@@PackageUnload$qqrv    @21  ; Dclxml::__linkproc__ __fastcall PackageUnload()
+    @Dclxml@initialization$qqrv    @20  ; __fastcall Dclxml::initialization()
+    @GetPackageInfoTable           @26  ; GetPackageInfoTable
+    @Xmlreg@Finalization$qqrv      @11  ; __fastcall Xmlreg::Finalization()
+    @Xmlreg@Register$qqrv          @12  ; __fastcall Xmlreg::Register()
+    @Xmlreg@TXMLDocumentFileProperty@ @19  ; Xmlreg::TXMLDocumentFileProperty::
+    @Xmlreg@TXMLDocumentFileProperty@Edit$qqrv @14  ; __fastcall Xmlreg::TXMLDocumentFileProperty::Edit()
+    @Xmlreg@TXMLDocumentFileProperty@GetAttributes$qqrv @15  ; __fastcall Xmlreg::TXMLDocumentFileProperty::GetAttributes()
+    @Xmlreg@TXMLTransformSelectionEditor@ @17  ; Xmlreg::TXMLTransformSelectionEditor::
+    @Xmlreg@TXMLTransformSelectionEditor@RequiresUnits$qqrynpqqrx20System@UnicodeString$v @13  ; __fastcall Xmlreg::TXMLTransformSelectionEditor::RequiresUnits(void __fastcall __closure(*)(const System::UnicodeString))
+    @Xmlreg@initialization$qqrv    @10  ; __fastcall Xmlreg::initialization()
+    @Xmlresstrs@Finalization$qqrv  @2   ; __fastcall Xmlresstrs::Finalization()
+    @Xmlresstrs@_sOpenTransformFileFilter @5   ; Xmlresstrs::_sOpenTransformFileFilter
+    @Xmlresstrs@_sOpenTransformFileTitle @3   ; Xmlresstrs::_sOpenTransformFileTitle
+    @Xmlresstrs@_sOpenXmlFileFilter @9   ; Xmlresstrs::_sOpenXmlFileFilter
+    @Xmlresstrs@_sOpenXmlFileTitle @7   ; Xmlresstrs::_sOpenXmlFileTitle
+    @Xmlresstrs@_sTransformFileExt @4   ; Xmlresstrs::_sTransformFileExt
+    @Xmlresstrs@_sXmlFileExt       @8   ; Xmlresstrs::_sXmlFileExt
+    @Xmlresstrs@_srXML             @6   ; Xmlresstrs::_srXML
+    @Xmlresstrs@initialization$qqrv @1   ; __fastcall Xmlresstrs::initialization()
+    Finalize                       @24  ; Finalize
+    Initialize                     @25  ; Initialize

@@ -1,0 +1,314 @@
+LIBRARY     DSNAPCON210.BPL
+
+DESCRIPTION 'mbarcadero DataSnap Connection Components'
+
+EXPORTS
+    @$xp$23TPacketInterceptFactory @203 ; __tpdsc__ TPacketInterceptFactory
+    @$xp$30Datasnap@Win@Sconnect@TVarFlag @226 ; __tpdsc__ Datasnap::Win::Sconnect::TVarFlag
+    @$xp$31Datasnap@Win@Sconnect@PIntArray @230 ; __tpdsc__ Datasnap::Win::Sconnect::PIntArray
+    @$xp$31Datasnap@Win@Sconnect@TIntArray @229 ; __tpdsc__ Datasnap::Win::Sconnect::TIntArray
+    @$xp$31Datasnap@Win@Sconnect@TVarFlags @225 ; __tpdsc__ Datasnap::Win::Sconnect::TVarFlags
+    @$xp$32Datasnap@Win@Objbrkr@TServerItem @299 ; __tpdsc__ Datasnap::Win::Objbrkr::TServerItem
+    @$xp$32Datasnap@Win@Sconnect@IDataBlock @236 ; __tpdsc__ Datasnap::Win::Sconnect::IDataBlock
+    @$xp$32Datasnap@Win@Sconnect@ITransport @234 ; __tpdsc__ Datasnap::Win::Sconnect::ITransport
+    @$xp$32Datasnap@Win@Sconnect@TDataBlock @231 ; __tpdsc__ Datasnap::Win::Sconnect::TDataBlock
+    @$xp$34Datasnap@Win@Midascon@TConnectType @246 ; __tpdsc__ Datasnap::Win::Midascon::TConnectType
+    @$xp$34Datasnap@Win@Mtsrdm@TMtsDataModule @270 ; __tpdsc__ Datasnap::Win::Mtsrdm::TMtsDataModule
+    @$xp$35Datasnap@Win@Midascon@TRemoteServer @247 ; __tpdsc__ Datasnap::Win::Midascon::TRemoteServer
+    @$xp$35Datasnap@Win@Sconnect@PVariantArray @228 ; __tpdsc__ Datasnap::Win::Sconnect::PVariantArray
+    @$xp$35Datasnap@Win@Sconnect@TDataDispatch @217 ; __tpdsc__ Datasnap::Win::Sconnect::TDataDispatch
+    @$xp$35Datasnap@Win@Sconnect@TVariantArray @227 ; __tpdsc__ Datasnap::Win::Sconnect::TVariantArray
+    @$xp$36Datasnap@Win@Mconnect@TCOMConnection @54  ; __tpdsc__ Datasnap::Win::Mconnect::TCOMConnection
+    @$xp$36Datasnap@Win@Sconnect@IDataIntercept @233 ; __tpdsc__ Datasnap::Win::Sconnect::IDataIntercept
+    @$xp$36Datasnap@Win@Sconnect@ISendDataBlock @235 ; __tpdsc__ Datasnap::Win::Sconnect::ISendDataBlock
+    @$xp$36Datasnap@Win@Sconnect@TWebConnection @205 ; __tpdsc__ Datasnap::Win::Sconnect::TWebConnection
+    @$xp$37Datasnap@Win@Mconnect@TDCOMConnection @52  ; __tpdsc__ Datasnap::Win::Mconnect::TDCOMConnection
+    @$xp$37Datasnap@Win@Objbrkr@EBrokerException @301 ; __tpdsc__ Datasnap::Win::Objbrkr::EBrokerException
+    @$xp$38Datasnap@Win@Midascon@TMidasConnection @244 ; __tpdsc__ Datasnap::Win::Midascon::TMidasConnection
+    @$xp$38Datasnap@Win@Objbrkr@TServerCollection @297 ; __tpdsc__ Datasnap::Win::Objbrkr::TServerCollection
+    @$xp$38Datasnap@Win@Sconnect@TSocketTransport @209 ; __tpdsc__ Datasnap::Win::Sconnect::TSocketTransport
+    @$xp$38Datasnap@Win@Sconnect@TTransportThread @215 ; __tpdsc__ Datasnap::Win::Sconnect::TTransportThread
+    @$xp$38Datasnap@Win@Tconnect@TLocalConnection @83  ; __tpdsc__ Datasnap::Win::Tconnect::TLocalConnection
+    @$xp$39Datasnap@Win@Mconnect@TSharedConnection @48  ; __tpdsc__ Datasnap::Win::Mconnect::TSharedConnection
+    @$xp$39Datasnap@Win@Sconnect@EInterpreterError @223 ; __tpdsc__ Datasnap::Win::Sconnect::EInterpreterError
+    @$xp$39Datasnap@Win@Sconnect@TSocketConnection @207 ; __tpdsc__ Datasnap::Win::Sconnect::TSocketConnection
+    @$xp$40Datasnap@Win@Mconnect@TDispatchAppServer @58  ; __tpdsc__ Datasnap::Win::Mconnect::TDispatchAppServer
+    @$xp$40Datasnap@Win@Objbrkr@TSimpleObjectBroker @295 ; __tpdsc__ Datasnap::Win::Objbrkr::TSimpleObjectBroker
+    @$xp$41Datasnap@Win@Mconnect@TCustomObjectBroker @60  ; __tpdsc__ Datasnap::Win::Mconnect::TCustomObjectBroker
+    @$xp$41Datasnap@Win@Mconnect@TDispatchConnection @56  ; __tpdsc__ Datasnap::Win::Mconnect::TDispatchConnection
+    @$xp$41Datasnap@Win@Sconnect@TStreamedConnection @213 ; __tpdsc__ Datasnap::Win::Sconnect::TStreamedConnection
+    @$xp$43Datasnap@Win@Sconnect@TDataBlockInterpreter @219 ; __tpdsc__ Datasnap::Win::Sconnect::TDataBlockInterpreter
+    @$xp$44Datasnap@Win@Sconnect@ESocketConnectionError @211 ; __tpdsc__ Datasnap::Win::Sconnect::ESocketConnectionError
+    @$xp$45Datasnap@Win@Mconnect@TOLEnterpriseConnection @50  ; __tpdsc__ Datasnap::Win::Mconnect::TOLEnterpriseConnection
+    @$xp$49Datasnap@Win@Sconnect@TCustomDataBlockInterpreter @221 ; __tpdsc__ Datasnap::Win::Sconnect::TCustomDataBlockInterpreter
+    @Datasnap@Win@Mconnect@Finalization$qqrv @2   ; __fastcall Datasnap::Win::Mconnect::Finalization()
+    @Datasnap@Win@Mconnect@GetMIDASAppServerList$qqrp26System@Classes@TStringListx20System@UnicodeString @47  ; __fastcall Datasnap::Win::Mconnect::GetMIDASAppServerList(System::Classes::TStringList *, const System::UnicodeString)
+    @Datasnap@Win@Mconnect@TCOMConnection@ @55  ; Datasnap::Win::Mconnect::TCOMConnection::
+    @Datasnap@Win@Mconnect@TCOMConnection@DoConnect$qqrv @19  ; __fastcall Datasnap::Win::Mconnect::TCOMConnection::DoConnect()
+    @Datasnap@Win@Mconnect@TCOMConnection@SetConnected$qqro @20  ; __fastcall Datasnap::Win::Mconnect::TCOMConnection::SetConnected(bool)
+    @Datasnap@Win@Mconnect@TCustomObjectBroker@ @61  ; Datasnap::Win::Mconnect::TCustomObjectBroker::
+    @Datasnap@Win@Mconnect@TDCOMConnection@ @53  ; Datasnap::Win::Mconnect::TDCOMConnection::
+    @Datasnap@Win@Mconnect@TDCOMConnection@$bctr$qqrp25System@Classes@TComponent @18  ; __fastcall Datasnap::Win::Mconnect::TDCOMConnection::TDCOMConnection(System::Classes::TComponent *)
+    @Datasnap@Win@Mconnect@TDCOMConnection@DoConnect$qqrv @15  ; __fastcall Datasnap::Win::Mconnect::TDCOMConnection::DoConnect()
+    @Datasnap@Win@Mconnect@TDCOMConnection@IsComputerNameStored$qqrv @16  ; __fastcall Datasnap::Win::Mconnect::TDCOMConnection::IsComputerNameStored()
+    @Datasnap@Win@Mconnect@TDCOMConnection@SetComputerName$qqrx20System@UnicodeString @17  ; __fastcall Datasnap::Win::Mconnect::TDCOMConnection::SetComputerName(const System::UnicodeString)
+    @Datasnap@Win@Mconnect@TDispatchAppServer@ @59  ; Datasnap::Win::Mconnect::TDispatchAppServer::
+    @Datasnap@Win@Mconnect@TDispatchAppServer@$bctr$qqrx56System@%DelphiInterface$29Datasnap@Midas@IAppServerDisp% @46  ; Datasnap::Win::Mconnect::TDispatchAppServer::TDispatchAppServer(const System::DelphiInterface<{583}...
+    @Datasnap@Win@Mconnect@TDispatchAppServer@AS_ApplyUpdates$qqsx17System@WideStringx17System@OleVariantirir17System@OleVariantt5 @41  ; __stdcall Datasnap::Win::Mconnect::TDispatchAppServer::AS_ApplyUpdates(const System::WideString, const System::OleVariant, int, int&, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Win@Mconnect@TDispatchAppServer@AS_DataRequest$qqsx17System@WideStringx17System@OleVariantr17System@OleVariant @39  ; __stdcall Datasnap::Win::Mconnect::TDispatchAppServer::AS_DataRequest(const System::WideString, const System::OleVariant, System::OleVariant&)
+    @Datasnap@Win@Mconnect@TDispatchAppServer@AS_Execute$qqsx17System@WideStringt1r17System@OleVariantt3 @35  ; __stdcall Datasnap::Win::Mconnect::TDispatchAppServer::AS_Execute(const System::WideString, const System::WideString, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Win@Mconnect@TDispatchAppServer@AS_GetParams$qqsx17System@WideStringr17System@OleVariantt2 @37  ; __stdcall Datasnap::Win::Mconnect::TDispatchAppServer::AS_GetParams(const System::WideString, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Win@Mconnect@TDispatchAppServer@AS_GetProviderNames$qqsr17System@OleVariant @38  ; __stdcall Datasnap::Win::Mconnect::TDispatchAppServer::AS_GetProviderNames(System::OleVariant&)
+    @Datasnap@Win@Mconnect@TDispatchAppServer@AS_GetRecords$qqsx17System@WideStringiriit1r17System@OleVariantt6t6 @40  ; __stdcall Datasnap::Win::Mconnect::TDispatchAppServer::AS_GetRecords(const System::WideString, int, int&, int, const System::WideString, System::OleVariant&, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Win@Mconnect@TDispatchAppServer@AS_RowRequest$qqsx17System@WideStringx17System@OleVariantir17System@OleVariantt4 @36  ; __stdcall Datasnap::Win::Mconnect::TDispatchAppServer::AS_RowRequest(const System::WideString, const System::OleVariant, int, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Win@Mconnect@TDispatchAppServer@GetIDsOfNames$qqsrx5_GUIDpviit2 @43  ; __stdcall Datasnap::Win::Mconnect::TDispatchAppServer::GetIDsOfNames(const _GUID&, void *, int, int, void *)
+    @Datasnap@Win@Mconnect@TDispatchAppServer@GetTypeInfo$qqsiipv @44  ; __stdcall Datasnap::Win::Mconnect::TDispatchAppServer::GetTypeInfo(int, int, void *)
+    @Datasnap@Win@Mconnect@TDispatchAppServer@GetTypeInfoCount$qqsri @45  ; __stdcall Datasnap::Win::Mconnect::TDispatchAppServer::GetTypeInfoCount(int&)
+    @Datasnap@Win@Mconnect@TDispatchAppServer@InterfaceSupportsErrorInfo$qqsrx5_GUID @34  ; __stdcall Datasnap::Win::Mconnect::TDispatchAppServer::InterfaceSupportsErrorInfo(const _GUID&)
+    @Datasnap@Win@Mconnect@TDispatchAppServer@Invoke$qqsirx5_GUIDiuspvt5t5t5 @42  ; __stdcall Datasnap::Win::Mconnect::TDispatchAppServer::Invoke(int, const _GUID&, int, unsigned short, void *, void *, void *, void *)
+    @Datasnap@Win@Mconnect@TDispatchAppServer@SafeCallException$qqrp14System@TObjectpv @33  ; __fastcall Datasnap::Win::Mconnect::TDispatchAppServer::SafeCallException(System::TObject *, void *)
+    @Datasnap@Win@Mconnect@TDispatchConnection@ @57  ; Datasnap::Win::Mconnect::TDispatchConnection::
+    @Datasnap@Win@Mconnect@TDispatchConnection@$bctr$qqrp25System@Classes@TComponent @32  ; __fastcall Datasnap::Win::Mconnect::TDispatchConnection::TDispatchConnection(System::Classes::TComponent *)
+    @Datasnap@Win@Mconnect@TDispatchConnection@DoDisconnect$qqrv @23  ; __fastcall Datasnap::Win::Mconnect::TDispatchConnection::DoDisconnect()
+    @Datasnap@Win@Mconnect@TDispatchConnection@GetConnected$qqrv @25  ; __fastcall Datasnap::Win::Mconnect::TDispatchConnection::GetConnected()
+    @Datasnap@Win@Mconnect@TDispatchConnection@GetServer$qqrv @22  ; __fastcall Datasnap::Win::Mconnect::TDispatchConnection::GetServer()
+    @Datasnap@Win@Mconnect@TDispatchConnection@GetServerCLSID$qqrv @21  ; __fastcall Datasnap::Win::Mconnect::TDispatchConnection::GetServerCLSID()
+    @Datasnap@Win@Mconnect@TDispatchConnection@GetServerGUID$qqrv @28  ; __fastcall Datasnap::Win::Mconnect::TDispatchConnection::GetServerGUID()
+    @Datasnap@Win@Mconnect@TDispatchConnection@GetServerList$qqrv @31  ; __fastcall Datasnap::Win::Mconnect::TDispatchConnection::GetServerList()
+    @Datasnap@Win@Mconnect@TDispatchConnection@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @30  ; __fastcall Datasnap::Win::Mconnect::TDispatchConnection::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Datasnap@Win@Mconnect@TDispatchConnection@SetConnected$qqro @24  ; __fastcall Datasnap::Win::Mconnect::TDispatchConnection::SetConnected(bool)
+    @Datasnap@Win@Mconnect@TDispatchConnection@SetObjectBroker$qqrp41Datasnap@Win@Mconnect@TCustomObjectBroker @29  ; __fastcall Datasnap::Win::Mconnect::TDispatchConnection::SetObjectBroker(Datasnap::Win::Mconnect::TCustomObjectBroker *)
+    @Datasnap@Win@Mconnect@TDispatchConnection@SetServerGUID$qqrx20System@UnicodeString @27  ; __fastcall Datasnap::Win::Mconnect::TDispatchConnection::SetServerGUID(const System::UnicodeString)
+    @Datasnap@Win@Mconnect@TDispatchConnection@SetServerName$qqrx20System@UnicodeString @26  ; __fastcall Datasnap::Win::Mconnect::TDispatchConnection::SetServerName(const System::UnicodeString)
+    @Datasnap@Win@Mconnect@TOLEnterpriseConnection@ @51  ; Datasnap::Win::Mconnect::TOLEnterpriseConnection::
+    @Datasnap@Win@Mconnect@TOLEnterpriseConnection@DoConnect$qqrv @12  ; __fastcall Datasnap::Win::Mconnect::TOLEnterpriseConnection::DoConnect()
+    @Datasnap@Win@Mconnect@TOLEnterpriseConnection@SetBrokerName$qqrx20System@UnicodeString @13  ; __fastcall Datasnap::Win::Mconnect::TOLEnterpriseConnection::SetBrokerName(const System::UnicodeString)
+    @Datasnap@Win@Mconnect@TOLEnterpriseConnection@SetComputerName$qqrx20System@UnicodeString @14  ; __fastcall Datasnap::Win::Mconnect::TOLEnterpriseConnection::SetComputerName(const System::UnicodeString)
+    @Datasnap@Win@Mconnect@TSharedConnection@ @49  ; Datasnap::Win::Mconnect::TSharedConnection::
+    @Datasnap@Win@Mconnect@TSharedConnection@$bctr$qqrp25System@Classes@TComponent @11  ; __fastcall Datasnap::Win::Mconnect::TSharedConnection::TSharedConnection(System::Classes::TComponent *)
+    @Datasnap@Win@Mconnect@TSharedConnection@$bdtr$qqrv @4   ; __fastcall Datasnap::Win::Mconnect::TSharedConnection::~TSharedConnection()
+    @Datasnap@Win@Mconnect@TSharedConnection@ConnectEvent$qqrp14System@TObjecto @9   ; __fastcall Datasnap::Win::Mconnect::TSharedConnection::ConnectEvent(System::TObject *, bool)
+    @Datasnap@Win@Mconnect@TSharedConnection@DoConnect$qqrv @7   ; __fastcall Datasnap::Win::Mconnect::TSharedConnection::DoConnect()
+    @Datasnap@Win@Mconnect@TSharedConnection@DoDisconnect$qqrv @6   ; __fastcall Datasnap::Win::Mconnect::TSharedConnection::DoDisconnect()
+    @Datasnap@Win@Mconnect@TSharedConnection@GetConnected$qqrv @8   ; __fastcall Datasnap::Win::Mconnect::TSharedConnection::GetConnected()
+    @Datasnap@Win@Mconnect@TSharedConnection@GetServer$qqrv @3   ; __fastcall Datasnap::Win::Mconnect::TSharedConnection::GetServer()
+    @Datasnap@Win@Mconnect@TSharedConnection@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @5   ; __fastcall Datasnap::Win::Mconnect::TSharedConnection::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Datasnap@Win@Mconnect@TSharedConnection@SetParentConnection$qqrxp41Datasnap@Win@Mconnect@TDispatchConnection @10  ; __fastcall Datasnap::Win::Mconnect::TSharedConnection::SetParentConnection(Datasnap::Win::Mconnect::TDispatchConnection * const)
+    @Datasnap@Win@Mconnect@initialization$qqrv @1   ; __fastcall Datasnap::Win::Mconnect::initialization()
+    @Datasnap@Win@Midascon@Finalization$qqrv @238 ; __fastcall Datasnap::Win::Midascon::Finalization()
+    @Datasnap@Win@Midascon@TMidasConnection@ @245 ; Datasnap::Win::Midascon::TMidasConnection::
+    @Datasnap@Win@Midascon@TMidasConnection@$bctr$qqrp25System@Classes@TComponent @243 ; __fastcall Datasnap::Win::Midascon::TMidasConnection::TMidasConnection(System::Classes::TComponent *)
+    @Datasnap@Win@Midascon@TMidasConnection@DoConnect$qqrv @242 ; __fastcall Datasnap::Win::Midascon::TMidasConnection::DoConnect()
+    @Datasnap@Win@Midascon@TMidasConnection@DoDisconnect$qqrv @241 ; __fastcall Datasnap::Win::Midascon::TMidasConnection::DoDisconnect()
+    @Datasnap@Win@Midascon@TMidasConnection@SetConnectType$qqr34Datasnap@Win@Midascon@TConnectType @240 ; __fastcall Datasnap::Win::Midascon::TMidasConnection::SetConnectType(Datasnap::Win::Midascon::TConnectType)
+    @Datasnap@Win@Midascon@TMidasConnection@SetUseBroker$qqro @239 ; __fastcall Datasnap::Win::Midascon::TMidasConnection::SetUseBroker(bool)
+    @Datasnap@Win@Midascon@TRemoteServer@ @248 ; Datasnap::Win::Midascon::TRemoteServer::
+    @Datasnap@Win@Midascon@initialization$qqrv @237 ; __fastcall Datasnap::Win::Midascon::initialization()
+    @Datasnap@Win@Mtsrdm@Finalization$qqrv @250 ; __fastcall Datasnap::Win::Mtsrdm::Finalization()
+    @Datasnap@Win@Mtsrdm@TMtsDataModule@ @271 ; Datasnap::Win::Mtsrdm::TMtsDataModule::
+    @Datasnap@Win@Mtsrdm@TMtsDataModule@$bctr$qqrp25System@Classes@TComponent @269 ; __fastcall Datasnap::Win::Mtsrdm::TMtsDataModule::TMtsDataModule(System::Classes::TComponent *)
+    @Datasnap@Win@Mtsrdm@TMtsDataModule@AS_ApplyUpdates$qqsx17System@WideStringx17System@OleVariantirir17System@OleVariantt5 @256 ; __stdcall Datasnap::Win::Mtsrdm::TMtsDataModule::AS_ApplyUpdates(const System::WideString, const System::OleVariant, int, int&, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Win@Mtsrdm@TMtsDataModule@AS_DataRequest$qqsx17System@WideStringx17System@OleVariantr17System@OleVariant @254 ; __stdcall Datasnap::Win::Mtsrdm::TMtsDataModule::AS_DataRequest(const System::WideString, const System::OleVariant, System::OleVariant&)
+    @Datasnap@Win@Mtsrdm@TMtsDataModule@AS_Execute$qqsx17System@WideStringt1r17System@OleVariantt3 @251 ; __stdcall Datasnap::Win::Mtsrdm::TMtsDataModule::AS_Execute(const System::WideString, const System::WideString, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Win@Mtsrdm@TMtsDataModule@AS_GetParams$qqsx17System@WideStringr17System@OleVariantt2 @253 ; __stdcall Datasnap::Win::Mtsrdm::TMtsDataModule::AS_GetParams(const System::WideString, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Win@Mtsrdm@TMtsDataModule@AS_GetProviderNames$qqsr17System@OleVariant @257 ; __stdcall Datasnap::Win::Mtsrdm::TMtsDataModule::AS_GetProviderNames(System::OleVariant&)
+    @Datasnap@Win@Mtsrdm@TMtsDataModule@AS_GetRecords$qqsx17System@WideStringiriit1r17System@OleVariantt6t6 @255 ; __stdcall Datasnap::Win::Mtsrdm::TMtsDataModule::AS_GetRecords(const System::WideString, int, int&, int, const System::WideString, System::OleVariant&, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Win@Mtsrdm@TMtsDataModule@AS_RowRequest$qqsx17System@WideStringx17System@OleVariantir17System@OleVariantt4 @252 ; __stdcall Datasnap::Win::Mtsrdm::TMtsDataModule::AS_RowRequest(const System::WideString, const System::OleVariant, int, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Win@Mtsrdm@TMtsDataModule@Activate$qqsv @268 ; __stdcall Datasnap::Win::Mtsrdm::TMtsDataModule::Activate()
+    @Datasnap@Win@Mtsrdm@TMtsDataModule@CallComplete$qqro @258 ; __fastcall Datasnap::Win::Mtsrdm::TMtsDataModule::CallComplete(bool)
+    @Datasnap@Win@Mtsrdm@TMtsDataModule@CanBePooled$qqsv @266 ; __stdcall Datasnap::Win::Mtsrdm::TMtsDataModule::CanBePooled()
+    @Datasnap@Win@Mtsrdm@TMtsDataModule@Deactivate$qqsv @267 ; __stdcall Datasnap::Win::Mtsrdm::TMtsDataModule::Deactivate()
+    @Datasnap@Win@Mtsrdm@TMtsDataModule@DisableCommit$qqrv @262 ; __fastcall Datasnap::Win::Mtsrdm::TMtsDataModule::DisableCommit()
+    @Datasnap@Win@Mtsrdm@TMtsDataModule@EnableCommit$qqrv @263 ; __fastcall Datasnap::Win::Mtsrdm::TMtsDataModule::EnableCommit()
+    @Datasnap@Win@Mtsrdm@TMtsDataModule@IsCallerInRole$qqrx17System@WideString @259 ; __fastcall Datasnap::Win::Mtsrdm::TMtsDataModule::IsCallerInRole(const System::WideString)
+    @Datasnap@Win@Mtsrdm@TMtsDataModule@IsInTransaction$qqrv @261 ; __fastcall Datasnap::Win::Mtsrdm::TMtsDataModule::IsInTransaction()
+    @Datasnap@Win@Mtsrdm@TMtsDataModule@IsSecurityEnabled$qqrv @260 ; __fastcall Datasnap::Win::Mtsrdm::TMtsDataModule::IsSecurityEnabled()
+    @Datasnap@Win@Mtsrdm@TMtsDataModule@SetAbort$qqrv @264 ; __fastcall Datasnap::Win::Mtsrdm::TMtsDataModule::SetAbort()
+    @Datasnap@Win@Mtsrdm@TMtsDataModule@SetComplete$qqrv @265 ; __fastcall Datasnap::Win::Mtsrdm::TMtsDataModule::SetComplete()
+    @Datasnap@Win@Mtsrdm@initialization$qqrv @249 ; __fastcall Datasnap::Win::Mtsrdm::initialization()
+    @Datasnap@Win@Objbrkr@EBrokerException@ @302 ; Datasnap::Win::Objbrkr::EBrokerException::
+    @Datasnap@Win@Objbrkr@Finalization$qqrv @273 ; __fastcall Datasnap::Win::Objbrkr::Finalization()
+    @Datasnap@Win@Objbrkr@TServerCollection@ @298 ; Datasnap::Win::Objbrkr::TServerCollection::
+    @Datasnap@Win@Objbrkr@TServerCollection@$bctr$qqrp25System@Classes@TComponent @292 ; __fastcall Datasnap::Win::Objbrkr::TServerCollection::TServerCollection(System::Classes::TComponent *)
+    @Datasnap@Win@Objbrkr@TServerCollection@FindServer$qqrx20System@UnicodeString @291 ; __fastcall Datasnap::Win::Objbrkr::TServerCollection::FindServer(const System::UnicodeString)
+    @Datasnap@Win@Objbrkr@TServerCollection@GetBalancedName$qqrv @288 ; __fastcall Datasnap::Win::Objbrkr::TServerCollection::GetBalancedName()
+    @Datasnap@Win@Objbrkr@TServerCollection@GetItem$qqri @290 ; __fastcall Datasnap::Win::Objbrkr::TServerCollection::GetItem(int)
+    @Datasnap@Win@Objbrkr@TServerCollection@GetNextName$qqrv @289 ; __fastcall Datasnap::Win::Objbrkr::TServerCollection::GetNextName()
+    @Datasnap@Win@Objbrkr@TServerCollection@SetItem$qqrip32Datasnap@Win@Objbrkr@TServerItem @287 ; __fastcall Datasnap::Win::Objbrkr::TServerCollection::SetItem(int, Datasnap::Win::Objbrkr::TServerItem *)
+    @Datasnap@Win@Objbrkr@TServerItem@ @300 ; Datasnap::Win::Objbrkr::TServerItem::
+    @Datasnap@Win@Objbrkr@TServerItem@$bctr$qqrp26System@Classes@TCollection @294 ; __fastcall Datasnap::Win::Objbrkr::TServerItem::TServerItem(System::Classes::TCollection *)
+    @Datasnap@Win@Objbrkr@TServerItem@GetDisplayName$qqrv @293 ; __fastcall Datasnap::Win::Objbrkr::TServerItem::GetDisplayName()
+    @Datasnap@Win@Objbrkr@TSimpleObjectBroker@ @296 ; Datasnap::Win::Objbrkr::TSimpleObjectBroker::
+    @Datasnap@Win@Objbrkr@TSimpleObjectBroker@$bctr$qqrp25System@Classes@TComponent @286 ; __fastcall Datasnap::Win::Objbrkr::TSimpleObjectBroker::TSimpleObjectBroker(System::Classes::TComponent *)
+    @Datasnap@Win@Objbrkr@TSimpleObjectBroker@$bdtr$qqrv @285 ; __fastcall Datasnap::Win::Objbrkr::TSimpleObjectBroker::~TSimpleObjectBroker()
+    @Datasnap@Win@Objbrkr@TSimpleObjectBroker@GetComputerForGUID$qqrrx5_GUID @279 ; __fastcall Datasnap::Win::Objbrkr::TSimpleObjectBroker::GetComputerForGUID(const _GUID&)
+    @Datasnap@Win@Objbrkr@TSimpleObjectBroker@GetComputerForProgID$qqrpxv @278 ; __fastcall Datasnap::Win::Objbrkr::TSimpleObjectBroker::GetComputerForProgID(const void *)
+    @Datasnap@Win@Objbrkr@TSimpleObjectBroker@GetNextComputer$qqrv @280 ; __fastcall Datasnap::Win::Objbrkr::TSimpleObjectBroker::GetNextComputer()
+    @Datasnap@Win@Objbrkr@TSimpleObjectBroker@GetPortForComputer$qqrx20System@UnicodeString @277 ; __fastcall Datasnap::Win::Objbrkr::TSimpleObjectBroker::GetPortForComputer(const System::UnicodeString)
+    @Datasnap@Win@Objbrkr@TSimpleObjectBroker@GetServerData$qqrv @284 ; __fastcall Datasnap::Win::Objbrkr::TSimpleObjectBroker::GetServerData()
+    @Datasnap@Win@Objbrkr@TSimpleObjectBroker@IsServersStored$qqrv @276 ; __fastcall Datasnap::Win::Objbrkr::TSimpleObjectBroker::IsServersStored()
+    @Datasnap@Win@Objbrkr@TSimpleObjectBroker@LoadFromStream$qqrp22System@Classes@TStream @281 ; __fastcall Datasnap::Win::Objbrkr::TSimpleObjectBroker::LoadFromStream(System::Classes::TStream *)
+    @Datasnap@Win@Objbrkr@TSimpleObjectBroker@SaveToStream$qqrp22System@Classes@TStream @282 ; __fastcall Datasnap::Win::Objbrkr::TSimpleObjectBroker::SaveToStream(System::Classes::TStream *)
+    @Datasnap@Win@Objbrkr@TSimpleObjectBroker@SetConnectStatus$qqr20System@UnicodeStringo @275 ; __fastcall Datasnap::Win::Objbrkr::TSimpleObjectBroker::SetConnectStatus(System::UnicodeString, bool)
+    @Datasnap@Win@Objbrkr@TSimpleObjectBroker@SetServerData$qqrrx17System@OleVariant @283 ; __fastcall Datasnap::Win::Objbrkr::TSimpleObjectBroker::SetServerData(const System::OleVariant&)
+    @Datasnap@Win@Objbrkr@TSimpleObjectBroker@SetServers$qqrp38Datasnap@Win@Objbrkr@TServerCollection @274 ; __fastcall Datasnap::Win::Objbrkr::TSimpleObjectBroker::SetServers(Datasnap::Win::Objbrkr::TServerCollection *)
+    @Datasnap@Win@Objbrkr@initialization$qqrv @272 ; __fastcall Datasnap::Win::Objbrkr::initialization()
+    @Datasnap@Win@Sconnect@EInterpreterError@ @224 ; Datasnap::Win::Sconnect::EInterpreterError::
+    @Datasnap@Win@Sconnect@ESocketConnectionError@ @212 ; Datasnap::Win::Sconnect::ESocketConnectionError::
+    @Datasnap@Win@Sconnect@Finalization$qqrv @86  ; __fastcall Datasnap::Win::Sconnect::Finalization()
+    @Datasnap@Win@Sconnect@GetPacketInterceptorList$qqrp26System@Classes@TStringList @197 ; __fastcall Datasnap::Win::Sconnect::GetPacketInterceptorList(System::Classes::TStringList *)
+    @Datasnap@Win@Sconnect@LoadWinSock2$qqrv @198 ; __fastcall Datasnap::Win::Sconnect::LoadWinSock2()
+    @Datasnap@Win@Sconnect@TCustomDataBlockInterpreter@ @222 ; Datasnap::Win::Sconnect::TCustomDataBlockInterpreter::
+    @Datasnap@Win@Sconnect@TDataBlock@ @232 ; Datasnap::Win::Sconnect::TDataBlock::
+    @Datasnap@Win@Sconnect@TDataBlock@$bctr$qqrv @196 ; __fastcall Datasnap::Win::Sconnect::TDataBlock::TDataBlock()
+    @Datasnap@Win@Sconnect@TDataBlock@$bdtr$qqrv @195 ; __fastcall Datasnap::Win::Sconnect::TDataBlock::~TDataBlock()
+    @Datasnap@Win@Sconnect@TDataBlock@Clear$qqsv @187 ; __stdcall Datasnap::Win::Sconnect::TDataBlock::Clear()
+    @Datasnap@Win@Sconnect@TDataBlock@GetBytesReserved$qqsv @194 ; __stdcall Datasnap::Win::Sconnect::TDataBlock::GetBytesReserved()
+    @Datasnap@Win@Sconnect@TDataBlock@GetMemory$qqsv @193 ; __stdcall Datasnap::Win::Sconnect::TDataBlock::GetMemory()
+    @Datasnap@Win@Sconnect@TDataBlock@GetSignature$qqsv @189 ; __stdcall Datasnap::Win::Sconnect::TDataBlock::GetSignature()
+    @Datasnap@Win@Sconnect@TDataBlock@GetSize$qqsv @192 ; __stdcall Datasnap::Win::Sconnect::TDataBlock::GetSize()
+    @Datasnap@Win@Sconnect@TDataBlock@GetStream$qqsv @190 ; __stdcall Datasnap::Win::Sconnect::TDataBlock::GetStream()
+    @Datasnap@Win@Sconnect@TDataBlock@IgnoreStream$qqsv @184 ; __stdcall Datasnap::Win::Sconnect::TDataBlock::IgnoreStream()
+    @Datasnap@Win@Sconnect@TDataBlock@InitData$qqspvio @183 ; __stdcall Datasnap::Win::Sconnect::TDataBlock::InitData(void *, int, bool)
+    @Datasnap@Win@Sconnect@TDataBlock@Read$qqspvi @185 ; __stdcall Datasnap::Win::Sconnect::TDataBlock::Read(void *, int)
+    @Datasnap@Win@Sconnect@TDataBlock@SetSignature$qqsi @188 ; __stdcall Datasnap::Win::Sconnect::TDataBlock::SetSignature(int)
+    @Datasnap@Win@Sconnect@TDataBlock@SetSize$qqsi @191 ; __stdcall Datasnap::Win::Sconnect::TDataBlock::SetSize(int)
+    @Datasnap@Win@Sconnect@TDataBlock@Write$qqspxvi @186 ; __stdcall Datasnap::Win::Sconnect::TDataBlock::Write(const void *, int)
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@ @220 ; Datasnap::Win::Sconnect::TDataBlockInterpreter::
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@$bctr$qqr63System@%DelphiInterface$36Datasnap@Win@Sconnect@ISendDataBlock%20System@UnicodeString @182 ; Datasnap::Win::Sconnect::TDataBlockInterpreter::TDataBlockInterpreter(System::DelphiInterface<{583}...
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@$bdtr$qqrv @181 ; __fastcall Datasnap::Win::Sconnect::TDataBlockInterpreter::~TDataBlockInterpreter()
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@AddDispatch$qqrp35Datasnap@Win@Sconnect@TDataDispatch @180 ; __fastcall Datasnap::Win::Sconnect::TDataBlockInterpreter::AddDispatch(Datasnap::Win::Sconnect::TDataDispatch *)
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@CallCreateObject$qqr20System@UnicodeString @164 ; __fastcall Datasnap::Win::Sconnect::TDataBlockInterpreter::CallCreateObject(System::UnicodeString)
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@CallFreeObject$qqri @163 ; __fastcall Datasnap::Win::Sconnect::TDataBlockInterpreter::CallFreeObject(int)
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@CallGetIDsOfNames$qqsirx5_GUIDpviit3 @162 ; __stdcall Datasnap::Win::Sconnect::TDataBlockInterpreter::CallGetIDsOfNames(int, const _GUID&, void *, int, int, void *)
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@CallGetServerList$qqrv @165 ; __fastcall Datasnap::Win::Sconnect::TDataBlockInterpreter::CallGetServerList()
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@CallInvoke$qqsiirx5_GUIDiuspvt6t6t6 @161 ; __stdcall Datasnap::Win::Sconnect::TDataBlockInterpreter::CallInvoke(int, int, const _GUID&, int, unsigned short, void *, void *, void *, void *)
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@CanCreateObject$qqrrx5_GUID @173 ; __fastcall Datasnap::Win::Sconnect::TDataBlockInterpreter::CanCreateObject(const _GUID&)
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@CopyDataByRef$qqrrx8TVarDatar8TVarData @177 ; __fastcall Datasnap::Win::Sconnect::TDataBlockInterpreter::CopyDataByRef(const TVarData&, TVarData&)
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@CreateObject$qqrx20System@UnicodeString @171 ; __fastcall Datasnap::Win::Sconnect::TDataBlockInterpreter::CreateObject(const System::UnicodeString)
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@DoCreateObject$qqrx59System@%DelphiInterface$32Datasnap@Win@Sconnect@IDataBlock% @156 ; Datasnap::Win::Sconnect::TDataBlockInterpreter::DoCreateObject(const System::DelphiInterface<{583}...
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@DoCustomAction$qqrix59System@%DelphiInterface$32Datasnap@Win@Sconnect@IDataBlock% @152 ; Datasnap::Win::Sconnect::TDataBlockInterpreter::DoCustomAction(int, const System::DelphiInterface<{583}...
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@DoException$qqrx59System@%DelphiInterface$32Datasnap@Win@Sconnect@IDataBlock% @159 ; Datasnap::Win::Sconnect::TDataBlockInterpreter::DoException(const System::DelphiInterface<{583}...
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@DoFreeObject$qqrx59System@%DelphiInterface$32Datasnap@Win@Sconnect@IDataBlock% @155 ; Datasnap::Win::Sconnect::TDataBlockInterpreter::DoFreeObject(const System::DelphiInterface<{583}...
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@DoGetAppServerList$qqrx59System@%DelphiInterface$32Datasnap@Win@Sconnect@IDataBlock% @158 ; Datasnap::Win::Sconnect::TDataBlockInterpreter::DoGetAppServerList(const System::DelphiInterface<{583}...
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@DoGetIDsOfNames$qqrx59System@%DelphiInterface$32Datasnap@Win@Sconnect@IDataBlock% @154 ; Datasnap::Win::Sconnect::TDataBlockInterpreter::DoGetIDsOfNames(const System::DelphiInterface<{583}...
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@DoGetServerList$qqrx59System@%DelphiInterface$32Datasnap@Win@Sconnect@IDataBlock% @157 ; Datasnap::Win::Sconnect::TDataBlockInterpreter::DoGetServerList(const System::DelphiInterface<{583}...
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@DoInvoke$qqrx59System@%DelphiInterface$32Datasnap@Win@Sconnect@IDataBlock% @153 ; Datasnap::Win::Sconnect::TDataBlockInterpreter::DoInvoke(const System::DelphiInterface<{583}...
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@GetVariantPointer$qqrrx17System@OleVariant @178 ; __fastcall Datasnap::Win::Sconnect::TDataBlockInterpreter::GetVariantPointer(const System::OleVariant&)
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@InternalCreateObject$qqrrx5_GUID @172 ; __fastcall Datasnap::Win::Sconnect::TDataBlockInterpreter::InternalCreateObject(const _GUID&)
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@InterpretData$qqrx59System@%DelphiInterface$32Datasnap@Win@Sconnect@IDataBlock% @160 ; Datasnap::Win::Sconnect::TDataBlockInterpreter::InterpretData(const System::DelphiInterface<{583}...
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@LockObject$qqri @169 ; __fastcall Datasnap::Win::Sconnect::TDataBlockInterpreter::LockObject(int)
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@ReadArray$qqrix59System@%DelphiInterface$32Datasnap@Win@Sconnect@IDataBlock% @176 ; Datasnap::Win::Sconnect::TDataBlockInterpreter::ReadArray(int, const System::DelphiInterface<{583}...
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@ReadVariant$qqrr57System@%Set$30Datasnap@Win@Sconnect@TVarFlagt1$i0$t1$i1$%x59System@%DelphiInterface$32Datasnap@Win@Sconnect@IDataBlock% @174 ; Datasnap::Win::Sconnect::TDataBlockInterpreter::ReadVariant(System::Set<{583}...
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@ReleaseObject$qqri @167 ; __fastcall Datasnap::Win::Sconnect::TDataBlockInterpreter::ReleaseObject(int)
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@RemoveDispatch$qqrp35Datasnap@Win@Sconnect@TDataDispatch @179 ; __fastcall Datasnap::Win::Sconnect::TDataBlockInterpreter::RemoveDispatch(Datasnap::Win::Sconnect::TDataDispatch *)
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@StoreObject$qqrrx17System@OleVariant @170 ; __fastcall Datasnap::Win::Sconnect::TDataBlockInterpreter::StoreObject(const System::OleVariant&)
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@UnlockObject$qqrix35System@%DelphiInterface$9IDispatch% @168 ; Datasnap::Win::Sconnect::TDataBlockInterpreter::UnlockObject(int, const System::DelphiInterface<{583}...
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@WriteArray$qqrrx17System@OleVariantx59System@%DelphiInterface$32Datasnap@Win@Sconnect@IDataBlock% @175 ; Datasnap::Win::Sconnect::TDataBlockInterpreter::WriteArray(const System::OleVariant&, const System::DelphiInterface<{583}...
+    @Datasnap@Win@Sconnect@TDataBlockInterpreter@WriteVariant$qqrrx17System@OleVariantx59System@%DelphiInterface$32Datasnap@Win@Sconnect@IDataBlock% @166 ; Datasnap::Win::Sconnect::TDataBlockInterpreter::WriteVariant(const System::OleVariant&, const System::DelphiInterface<{583}...
+    @Datasnap@Win@Sconnect@TDataDispatch@ @218 ; Datasnap::Win::Sconnect::TDataDispatch::
+    @Datasnap@Win@Sconnect@TDataDispatch@$bctr$qqrp49Datasnap@Win@Sconnect@TCustomDataBlockInterpreteri @151 ; __fastcall Datasnap::Win::Sconnect::TDataDispatch::TDataDispatch(Datasnap::Win::Sconnect::TCustomDataBlockInterpreter *, int)
+    @Datasnap@Win@Sconnect@TDataDispatch@$bdtr$qqrv @150 ; __fastcall Datasnap::Win::Sconnect::TDataDispatch::~TDataDispatch()
+    @Datasnap@Win@Sconnect@TDataDispatch@GetIDsOfNames$qqsrx5_GUIDpviit2 @147 ; __stdcall Datasnap::Win::Sconnect::TDataDispatch::GetIDsOfNames(const _GUID&, void *, int, int, void *)
+    @Datasnap@Win@Sconnect@TDataDispatch@GetTypeInfo$qqsiipv @148 ; __stdcall Datasnap::Win::Sconnect::TDataDispatch::GetTypeInfo(int, int, void *)
+    @Datasnap@Win@Sconnect@TDataDispatch@GetTypeInfoCount$qqsri @149 ; __stdcall Datasnap::Win::Sconnect::TDataDispatch::GetTypeInfoCount(int&)
+    @Datasnap@Win@Sconnect@TDataDispatch@Invoke$qqsirx5_GUIDiuspvt5t5t5 @146 ; __stdcall Datasnap::Win::Sconnect::TDataDispatch::Invoke(int, const _GUID&, int, unsigned short, void *, void *, void *, void *)
+    @Datasnap@Win@Sconnect@TPacketInterceptFactory@ @204 ; Datasnap::Win::Sconnect::TPacketInterceptFactory::
+    @Datasnap@Win@Sconnect@TPacketInterceptFactory@UpdateRegistry$qqro @87  ; __fastcall Datasnap::Win::Sconnect::TPacketInterceptFactory::UpdateRegistry(bool)
+    @Datasnap@Win@Sconnect@TSocketConnection@ @208 ; Datasnap::Win::Sconnect::TSocketConnection::
+    @Datasnap@Win@Sconnect@TSocketConnection@$bctr$qqrp25System@Classes@TComponent @108 ; __fastcall Datasnap::Win::Sconnect::TSocketConnection::TSocketConnection(System::Classes::TComponent *)
+    @Datasnap@Win@Sconnect@TSocketConnection@CreateTransport$qqrv @103 ; __fastcall Datasnap::Win::Sconnect::TSocketConnection::CreateTransport()
+    @Datasnap@Win@Sconnect@TSocketConnection@DoConnect$qqrv @102 ; __fastcall Datasnap::Win::Sconnect::TSocketConnection::DoConnect()
+    @Datasnap@Win@Sconnect@TSocketConnection@IsAddressStored$qqrv @107 ; __fastcall Datasnap::Win::Sconnect::TSocketConnection::IsAddressStored()
+    @Datasnap@Win@Sconnect@TSocketConnection@IsHostStored$qqrv @105 ; __fastcall Datasnap::Win::Sconnect::TSocketConnection::IsHostStored()
+    @Datasnap@Win@Sconnect@TSocketConnection@SetAddress$qqr20System@UnicodeString @106 ; __fastcall Datasnap::Win::Sconnect::TSocketConnection::SetAddress(System::UnicodeString)
+    @Datasnap@Win@Sconnect@TSocketConnection@SetHost$qqr20System@UnicodeString @104 ; __fastcall Datasnap::Win::Sconnect::TSocketConnection::SetHost(System::UnicodeString)
+    @Datasnap@Win@Sconnect@TSocketTransport@ @210 ; Datasnap::Win::Sconnect::TSocketTransport::
+    @Datasnap@Win@Sconnect@TSocketTransport@$bctr$qqrv @118 ; __fastcall Datasnap::Win::Sconnect::TSocketTransport::TSocketTransport()
+    @Datasnap@Win@Sconnect@TSocketTransport@$bdtr$qqrv @117 ; __fastcall Datasnap::Win::Sconnect::TSocketTransport::~TSocketTransport()
+    @Datasnap@Win@Sconnect@TSocketTransport@CheckInterceptor$qqrv @111 ; __fastcall Datasnap::Win::Sconnect::TSocketTransport::CheckInterceptor()
+    @Datasnap@Win@Sconnect@TSocketTransport@GetConnected$qqsv @115 ; __stdcall Datasnap::Win::Sconnect::TSocketTransport::GetConnected()
+    @Datasnap@Win@Sconnect@TSocketTransport@GetWaitEvent$qqsv @116 ; __stdcall Datasnap::Win::Sconnect::TSocketTransport::GetWaitEvent()
+    @Datasnap@Win@Sconnect@TSocketTransport@InterceptIncoming$qqrx59System@%DelphiInterface$32Datasnap@Win@Sconnect@IDataBlock% @110 ; Datasnap::Win::Sconnect::TSocketTransport::InterceptIncoming(const System::DelphiInterface<{583}...
+    @Datasnap@Win@Sconnect@TSocketTransport@InterceptOutgoing$qqrx59System@%DelphiInterface$32Datasnap@Win@Sconnect@IDataBlock% @109 ; Datasnap::Win::Sconnect::TSocketTransport::InterceptOutgoing(const System::DelphiInterface<{583}...
+    @Datasnap@Win@Sconnect@TSocketTransport@Receive$qqsoi @113 ; __stdcall Datasnap::Win::Sconnect::TSocketTransport::Receive(bool, int)
+    @Datasnap@Win@Sconnect@TSocketTransport@Send$qqsx59System@%DelphiInterface$32Datasnap@Win@Sconnect@IDataBlock% @112 ; Datasnap::Win::Sconnect::TSocketTransport::Send(const System::DelphiInterface<{583}...
+    @Datasnap@Win@Sconnect@TSocketTransport@SetConnected$qqso @114 ; __stdcall Datasnap::Win::Sconnect::TSocketTransport::SetConnected(bool)
+    @Datasnap@Win@Sconnect@TStreamedConnection@ @214 ; Datasnap::Win::Sconnect::TStreamedConnection::
+    @Datasnap@Win@Sconnect@TStreamedConnection@$bctr$qqrp25System@Classes@TComponent @142 ; __fastcall Datasnap::Win::Sconnect::TStreamedConnection::TStreamedConnection(System::Classes::TComponent *)
+    @Datasnap@Win@Sconnect@TStreamedConnection@$bdtr$qqrv @141 ; __fastcall Datasnap::Win::Sconnect::TStreamedConnection::~TStreamedConnection()
+    @Datasnap@Win@Sconnect@TStreamedConnection@CreateTransport$qqrv @124 ; __fastcall Datasnap::Win::Sconnect::TStreamedConnection::CreateTransport()
+    @Datasnap@Win@Sconnect@TStreamedConnection@DoConnect$qqrv @126 ; __fastcall Datasnap::Win::Sconnect::TStreamedConnection::DoConnect()
+    @Datasnap@Win@Sconnect@TStreamedConnection@DoDisconnect$qqrv @125 ; __fastcall Datasnap::Win::Sconnect::TStreamedConnection::DoDisconnect()
+    @Datasnap@Win@Sconnect@TStreamedConnection@DoError$qqrp25System@Sysutils@Exception @128 ; __fastcall Datasnap::Win::Sconnect::TStreamedConnection::DoError(System::Sysutils::Exception *)
+    @Datasnap@Win@Sconnect@TStreamedConnection@GetHandle$qqrv @132 ; __fastcall Datasnap::Win::Sconnect::TStreamedConnection::GetHandle()
+    @Datasnap@Win@Sconnect@TStreamedConnection@GetInterceptGUID$qqrv @140 ; __fastcall Datasnap::Win::Sconnect::TStreamedConnection::GetInterceptGUID()
+    @Datasnap@Win@Sconnect@TStreamedConnection@GetInterceptorList$qqrv @133 ; __fastcall Datasnap::Win::Sconnect::TStreamedConnection::GetInterceptorList()
+    @Datasnap@Win@Sconnect@TStreamedConnection@GetInterpreter$qqrv @123 ; __fastcall Datasnap::Win::Sconnect::TStreamedConnection::GetInterpreter()
+    @Datasnap@Win@Sconnect@TStreamedConnection@GetServerList$qqrv @134 ; __fastcall Datasnap::Win::Sconnect::TStreamedConnection::GetServerList()
+    @Datasnap@Win@Sconnect@TStreamedConnection@InternalClose$qqrv @135 ; __fastcall Datasnap::Win::Sconnect::TStreamedConnection::InternalClose()
+    @Datasnap@Win@Sconnect@TStreamedConnection@InternalOpen$qqrv @136 ; __fastcall Datasnap::Win::Sconnect::TStreamedConnection::InternalOpen()
+    @Datasnap@Win@Sconnect@TStreamedConnection@QueryInterface$qqsrx5_GUIDpv @122 ; __stdcall Datasnap::Win::Sconnect::TStreamedConnection::QueryInterface(const _GUID&, void *)
+    @Datasnap@Win@Sconnect@TStreamedConnection@Send$qqsx59System@%DelphiInterface$32Datasnap@Win@Sconnect@IDataBlock%o @119 ; Datasnap::Win::Sconnect::TStreamedConnection::Send(const System::DelphiInterface<{583}...
+    @Datasnap@Win@Sconnect@TStreamedConnection@SetInterceptGUID$qqrx20System@UnicodeString @139 ; __fastcall Datasnap::Win::Sconnect::TStreamedConnection::SetInterceptGUID(const System::UnicodeString)
+    @Datasnap@Win@Sconnect@TStreamedConnection@SetInterceptName$qqrx20System@UnicodeString @138 ; __fastcall Datasnap::Win::Sconnect::TStreamedConnection::SetInterceptName(const System::UnicodeString)
+    @Datasnap@Win@Sconnect@TStreamedConnection@SetSupportCallbacks$qqro @137 ; __fastcall Datasnap::Win::Sconnect::TStreamedConnection::SetSupportCallbacks(bool)
+    @Datasnap@Win@Sconnect@TStreamedConnection@ThreadException$qqrr24Winapi@Messages@TMessage @129 ; __fastcall Datasnap::Win::Sconnect::TStreamedConnection::ThreadException(Winapi::Messages::TMessage&)
+    @Datasnap@Win@Sconnect@TStreamedConnection@ThreadReceivedStream$qqrr24Winapi@Messages@TMessage @130 ; __fastcall Datasnap::Win::Sconnect::TStreamedConnection::ThreadReceivedStream(Winapi::Messages::TMessage&)
+    @Datasnap@Win@Sconnect@TStreamedConnection@TransportTerminated$qqrp14System@TObject @127 ; __fastcall Datasnap::Win::Sconnect::TStreamedConnection::TransportTerminated(System::TObject *)
+    @Datasnap@Win@Sconnect@TStreamedConnection@WndProc$qqrr24Winapi@Messages@TMessage @131 ; __fastcall Datasnap::Win::Sconnect::TStreamedConnection::WndProc(Winapi::Messages::TMessage&)
+    @Datasnap@Win@Sconnect@TStreamedConnection@_AddRef$qqsv @121 ; __stdcall Datasnap::Win::Sconnect::TStreamedConnection::_AddRef()
+    @Datasnap@Win@Sconnect@TStreamedConnection@_Release$qqsv @120 ; __stdcall Datasnap::Win::Sconnect::TStreamedConnection::_Release()
+    @Datasnap@Win@Sconnect@TTransportThread@ @216 ; Datasnap::Win::Sconnect::TTransportThread::
+    @Datasnap@Win@Sconnect@TTransportThread@$bctr$qqrui59System@%DelphiInterface$32Datasnap@Win@Sconnect@ITransport% @145 ; Datasnap::Win::Sconnect::TTransportThread::TTransportThread(unsigned int, System::DelphiInterface<{583}...
+    @Datasnap@Win@Sconnect@TTransportThread@$bdtr$qqrv @144 ; __fastcall Datasnap::Win::Sconnect::TTransportThread::~TTransportThread()
+    @Datasnap@Win@Sconnect@TTransportThread@Execute$qqrv @143 ; __fastcall Datasnap::Win::Sconnect::TTransportThread::Execute()
+    @Datasnap@Win@Sconnect@TWebConnection@ @206 ; Datasnap::Win::Sconnect::TWebConnection::
+    @Datasnap@Win@Sconnect@TWebConnection@$bctr$qqrp25System@Classes@TComponent @101 ; __fastcall Datasnap::Win::Sconnect::TWebConnection::TWebConnection(System::Classes::TComponent *)
+    @Datasnap@Win@Sconnect@TWebConnection@$bdtr$qqrv @100 ; __fastcall Datasnap::Win::Sconnect::TWebConnection::~TWebConnection()
+    @Datasnap@Win@Sconnect@TWebConnection@Check$qqro @95  ; __fastcall Datasnap::Win::Sconnect::TWebConnection::Check(bool)
+    @Datasnap@Win@Sconnect@TWebConnection@CreateTransport$qqrv @97  ; __fastcall Datasnap::Win::Sconnect::TWebConnection::CreateTransport()
+    @Datasnap@Win@Sconnect@TWebConnection@DoConnect$qqrv @89  ; __fastcall Datasnap::Win::Sconnect::TWebConnection::DoConnect()
+    @Datasnap@Win@Sconnect@TWebConnection@GetInterpreter$qqrv @99  ; __fastcall Datasnap::Win::Sconnect::TWebConnection::GetInterpreter()
+    @Datasnap@Win@Sconnect@TWebConnection@GetWaitEvent$qqsv @94  ; __stdcall Datasnap::Win::Sconnect::TWebConnection::GetWaitEvent()
+    @Datasnap@Win@Sconnect@TWebConnection@IsURLStored$qqrv @96  ; __fastcall Datasnap::Win::Sconnect::TWebConnection::IsURLStored()
+    @Datasnap@Win@Sconnect@TWebConnection@Receive$qqsoi @91  ; __stdcall Datasnap::Win::Sconnect::TWebConnection::Receive(bool, int)
+    @Datasnap@Win@Sconnect@TWebConnection@Send$qqsx59System@%DelphiInterface$32Datasnap@Win@Sconnect@IDataBlock% @90  ; Datasnap::Win::Sconnect::TWebConnection::Send(const System::DelphiInterface<{583}...
+    @Datasnap@Win@Sconnect@TWebConnection@SetConnected$qqro @88  ; __fastcall Datasnap::Win::Sconnect::TWebConnection::SetConnected(bool)
+    @Datasnap@Win@Sconnect@TWebConnection@SetURL$qqrx20System@UnicodeString @98  ; __fastcall Datasnap::Win::Sconnect::TWebConnection::SetURL(const System::UnicodeString)
+    @Datasnap@Win@Sconnect@TWebConnection@Transport_GetConnected$qqsv @93  ; __stdcall Datasnap::Win::Sconnect::TWebConnection::Transport_GetConnected()
+    @Datasnap@Win@Sconnect@TWebConnection@Transport_SetConnected$qqso @92  ; __stdcall Datasnap::Win::Sconnect::TWebConnection::Transport_SetConnected(bool)
+    @Datasnap@Win@Sconnect@WSACloseEvent @200 ; Datasnap::Win::Sconnect::WSACloseEvent
+    @Datasnap@Win@Sconnect@WSACreateEvent @202 ; Datasnap::Win::Sconnect::WSACreateEvent
+    @Datasnap@Win@Sconnect@WSAEventSelect @199 ; Datasnap::Win::Sconnect::WSAEventSelect
+    @Datasnap@Win@Sconnect@WSAResetEvent @201 ; Datasnap::Win::Sconnect::WSAResetEvent
+    @Datasnap@Win@Sconnect@initialization$qqrv @85  ; __fastcall Datasnap::Win::Sconnect::initialization()
+    @Datasnap@Win@Tconnect@Finalization$qqrv @63  ; __fastcall Datasnap::Win::Tconnect::Finalization()
+    @Datasnap@Win@Tconnect@TLocalConnection@ @84  ; Datasnap::Win::Tconnect::TLocalConnection::
+    @Datasnap@Win@Tconnect@TLocalConnection@$bctr$qqrp25System@Classes@TComponent @80  ; __fastcall Datasnap::Win::Tconnect::TLocalConnection::TLocalConnection(System::Classes::TComponent *)
+    @Datasnap@Win@Tconnect@TLocalConnection@$bdtr$qqrv @79  ; __fastcall Datasnap::Win::Tconnect::TLocalConnection::~TLocalConnection()
+    @Datasnap@Win@Tconnect@TLocalConnection@AS_ApplyUpdates$qqsx17System@WideStringx17System@OleVariantirir17System@OleVariantt5 @72  ; __stdcall Datasnap::Win::Tconnect::TLocalConnection::AS_ApplyUpdates(const System::WideString, const System::OleVariant, int, int&, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Win@Tconnect@TLocalConnection@AS_DataRequest$qqsx17System@WideStringx17System@OleVariantr17System@OleVariant @69  ; __stdcall Datasnap::Win::Tconnect::TLocalConnection::AS_DataRequest(const System::WideString, const System::OleVariant, System::OleVariant&)
+    @Datasnap@Win@Tconnect@TLocalConnection@AS_Execute$qqsx17System@WideStringt1r17System@OleVariantt3 @67  ; __stdcall Datasnap::Win::Tconnect::TLocalConnection::AS_Execute(const System::WideString, const System::WideString, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Win@Tconnect@TLocalConnection@AS_GetParams$qqsx17System@WideStringr17System@OleVariantt2 @68  ; __stdcall Datasnap::Win::Tconnect::TLocalConnection::AS_GetParams(const System::WideString, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Win@Tconnect@TLocalConnection@AS_GetProviderNames$qqsr17System@OleVariant @73  ; __stdcall Datasnap::Win::Tconnect::TLocalConnection::AS_GetProviderNames(System::OleVariant&)
+    @Datasnap@Win@Tconnect@TLocalConnection@AS_GetRecords$qqsx17System@WideStringiriit1r17System@OleVariantt6t6 @71  ; __stdcall Datasnap::Win::Tconnect::TLocalConnection::AS_GetRecords(const System::WideString, int, int&, int, const System::WideString, System::OleVariant&, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Win@Tconnect@TLocalConnection@AS_RowRequest$qqsx17System@WideStringx17System@OleVariantir17System@OleVariantt4 @70  ; __stdcall Datasnap::Win::Tconnect::TLocalConnection::AS_RowRequest(const System::WideString, const System::OleVariant, int, System::OleVariant&, System::OleVariant&)
+    @Datasnap@Win@Tconnect@TLocalConnection@GetConnected$qqrv @81  ; __fastcall Datasnap::Win::Tconnect::TLocalConnection::GetConnected()
+    @Datasnap@Win@Tconnect@TLocalConnection@GetProvider$qqrx20System@UnicodeString @66  ; __fastcall Datasnap::Win::Tconnect::TLocalConnection::GetProvider(const System::UnicodeString)
+    @Datasnap@Win@Tconnect@TLocalConnection@GetProviderCount$qqrv @82  ; __fastcall Datasnap::Win::Tconnect::TLocalConnection::GetProviderCount()
+    @Datasnap@Win@Tconnect@TLocalConnection@GetProviderNames$qqrynpqqrx20System@UnicodeString$v @77  ; __fastcall Datasnap::Win::Tconnect::TLocalConnection::GetProviderNames(void __fastcall __closure(*)(const System::UnicodeString))
+    @Datasnap@Win@Tconnect@TLocalConnection@GetServer$qqrv @78  ; __fastcall Datasnap::Win::Tconnect::TLocalConnection::GetServer()
+    @Datasnap@Win@Tconnect@TLocalConnection@InterfaceSupportsErrorInfo$qqsrx5_GUID @65  ; __stdcall Datasnap::Win::Tconnect::TLocalConnection::InterfaceSupportsErrorInfo(const _GUID&)
+    @Datasnap@Win@Tconnect@TLocalConnection@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @76  ; __fastcall Datasnap::Win::Tconnect::TLocalConnection::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Datasnap@Win@Tconnect@TLocalConnection@RegisterProvider$qqrp33Datasnap@Provider@TCustomProvider @75  ; __fastcall Datasnap::Win::Tconnect::TLocalConnection::RegisterProvider(Datasnap::Provider::TCustomProvider *)
+    @Datasnap@Win@Tconnect@TLocalConnection@SafeCallException$qqrp14System@TObjectpv @64  ; __fastcall Datasnap::Win::Tconnect::TLocalConnection::SafeCallException(System::TObject *, void *)
+    @Datasnap@Win@Tconnect@TLocalConnection@UnRegisterProvider$qqrp33Datasnap@Provider@TCustomProvider @74  ; __fastcall Datasnap::Win::Tconnect::TLocalConnection::UnRegisterProvider(Datasnap::Provider::TCustomProvider *)
+    @Datasnap@Win@Tconnect@initialization$qqrv @62  ; __fastcall Datasnap::Win::Tconnect::initialization()
+    @Dsnapcon@@GetPackageInfoTable$qqrv @306 ; Dsnapcon::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dsnapcon@@PackageLoad$qqrv    @305 ; Dsnapcon::__linkproc__ __fastcall PackageLoad()
+    @Dsnapcon@@PackageUnload$qqrv  @304 ; Dsnapcon::__linkproc__ __fastcall PackageUnload()
+    @Dsnapcon@initialization$qqrv  @303 ; __fastcall Dsnapcon::initialization()
+    @GetPackageInfoTable           @309 ; GetPackageInfoTable
+    Finalize                       @307 ; Finalize
+    Initialize                     @308 ; Initialize

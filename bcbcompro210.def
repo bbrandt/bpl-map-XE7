@@ -1,0 +1,292 @@
+LIBRARY     BCBCOMPRO210.BPL
+
+DESCRIPTION 'mbarcadero C++Builder COM Professional Support'
+
+EXPORTS
+    @$xp$17Ccommgr@TGenTable       @73  ; __tpdsc__ Ccommgr::TGenTable
+    @$xp$17Ccommgr@TVarRange       @75  ; __tpdsc__ Ccommgr::TVarRange
+    @$xp$18Ccommgr@TUserTable      @72  ; __tpdsc__ Ccommgr::TUserTable
+    @$xp$20Ccommgr@TUserDefines    @74  ; __tpdsc__ Ccommgr::TUserDefines
+    @$xp$22Ccommgr@TCoClassExpert  @86  ; __tpdsc__ Ccommgr::TCoClassExpert
+    @$xp$24Ccommgr@TInterfaceMethod @82  ; __tpdsc__ Ccommgr::TInterfaceMethod
+    @$xp$25Ccommgr@TInterfaceMethods @80  ; __tpdsc__ Ccommgr::TInterfaceMethods
+    @$xp$26Ccommgr@TCppCoClassUpdater @76  ; __tpdsc__ Ccommgr::TCppCoClassUpdater
+    @$xp$26Cppprocmd@TCppNewComObject @232 ; __tpdsc__ Cppprocmd::TCppNewComObject
+    @$xp$26Cppprocrtrs@Cppprocrtrs__1 @177 ; __tpdsc__ Cppprocrtrs::Cppprocrtrs__1
+    @$xp$26Cppprocrtrs@TCppCOMCreator @172 ; __tpdsc__ Cppprocrtrs::TCppCOMCreator
+    @$xp$26Cppprocrtrs@TCppProCreator @174 ; __tpdsc__ Cppprocrtrs::TCppProCreator
+    @$xp$27Ccommgr@TCoClassExpertClass @85  ; __tpdsc__ Ccommgr::TCoClassExpertClass
+    @$xp$27Cppprocmd@TCppActiveLibrary @234 ; __tpdsc__ Cppprocmd::TCppActiveLibrary
+    @$xp$27Cppprocmd@TCppNewActiveForm @228 ; __tpdsc__ Cppprocmd::TCppNewActiveForm
+    @$xp$27Cppprocmd@TCppNewAutoObject @230 ; __tpdsc__ Cppprocmd::TCppNewAutoObject
+    @$xp$27Cppprocrtrs@TATLUnitCreator @154 ; __tpdsc__ Cppprocrtrs::TATLUnitCreator
+    @$xp$28Ccombrow@TCppBrowserCompiler @273 ; __tpdsc__ Ccombrow::TCppBrowserCompiler
+    @$xp$28Ccommgr@TInterfaceMethodKind @84  ; __tpdsc__ Ccommgr::TInterfaceMethodKind
+    @$xp$28Cppprocmd@TCppNewTypeLibrary @236 ; __tpdsc__ Cppprocmd::TCppNewTypeLibrary
+    @$xp$29Ccommgr@TActiveXCoClassExpert @70  ; __tpdsc__ Ccommgr::TActiveXCoClassExpert
+    @$xp$29Ccommgr@TInterfaceDescription @78  ; __tpdsc__ Ccommgr::TInterfaceDescription
+    @$xp$29Cppprocmd@TCppNewPropertyPage @224 ; __tpdsc__ Cppprocmd::TCppNewPropertyPage
+    @$xp$30Cppprocrtrs@TCppCoClassCreator @170 ; __tpdsc__ Cppprocrtrs::TCppCoClassCreator
+    @$xp$30Cppproupdaters@TProCppUpdaters @91  ; __tpdsc__ Cppproupdaters::TProCppUpdaters
+    @$xp$31Cppprocmd@TCppNewActiveXControl @226 ; __tpdsc__ Cppprocmd::TCppNewActiveXControl
+    @$xp$31Cppprocrtrs@TCppAboutBoxCreator @160 ; __tpdsc__ Cppprocrtrs::TCppAboutBoxCreator
+    @$xp$32Ccommgr@TActiveFormCoClassExpert @66  ; __tpdsc__ Ccommgr::TActiveFormCoClassExpert
+    @$xp$32Ccommgr@TCoClassComponentBrowser @62  ; __tpdsc__ Ccommgr::TCoClassComponentBrowser
+    @$xp$32Cppprocrtrs@TCppCOMObjectCreator @158 ; __tpdsc__ Cppprocrtrs::TCppCOMObjectCreator
+    @$xp$33Cppprocrtrs@TCppActiveFormCreator @164 ; __tpdsc__ Cppprocrtrs::TCppActiveFormCreator
+    @$xp$33Cppprocrtrs@TCppAutoObjectCreator @156 ; __tpdsc__ Cppprocrtrs::TCppAutoObjectCreator
+    @$xp$33Cppprocrtrs@TCppCoClassLicCreator @168 ; __tpdsc__ Cppprocrtrs::TCppCoClassLicCreator
+    @$xp$34Ccommgr@TCppActiveServerPageExpert @60  ; __tpdsc__ Ccommgr::TCppActiveServerPageExpert
+    @$xp$34Cpptraits@TCppImportComponentTrait @251 ; __tpdsc__ Cpptraits::TCppImportComponentTrait
+    @$xp$35Cppprocmd@TCppNewActiveServerObject @218 ; __tpdsc__ Cppprocmd::TCppNewActiveServerObject
+    @$xp$35Cppprocmd@TCppNewComPlusEventObject @222 ; __tpdsc__ Cppprocmd::TCppNewComPlusEventObject
+    @$xp$35Cppprocmd@TCppNewSubscriptionObject @220 ; __tpdsc__ Cppprocmd::TCppNewSubscriptionObject
+    @$xp$35Cppprocrtrs@TCppPropertyPageCreator @162 ; __tpdsc__ Cppprocrtrs::TCppPropertyPageCreator
+    @$xp$36Ccommgr@TActiveXControlCoClassExpert @68  ; __tpdsc__ Ccommgr::TActiveXControlCoClassExpert
+    @$xp$36Cppprocrtrs@TCppActiveControlCreator @166 ; __tpdsc__ Cppprocrtrs::TCppActiveControlCreator
+    @$xp$36Cppprocrtrs@TCppActiveLibraryCreator @152 ; __tpdsc__ Cppprocrtrs::TCppActiveLibraryCreator
+    @$xp$38Ccommgr@TRemoteDataModuleCoClassExpert @64  ; __tpdsc__ Ccommgr::TRemoteDataModuleCoClassExpert
+    @$xp$39Cppprocrtrs@TCppActiveServerPageCreator @148 ; __tpdsc__ Cppprocrtrs::TCppActiveServerPageCreator
+    @$xp$39Cppprocrtrs@TCppBaseActiveServerCreator @150 ; __tpdsc__ Cppprocrtrs::TCppBaseActiveServerCreator
+    @$xp$41System@%TArray__1$20System@UnicodeString% @145 ; __tpdsc__ System::TArray__1<System::UnicodeString>
+    @$xp$42Cppprocrtrs@TCppActiveServerPageMTSCreator @146 ; __tpdsc__ Cppprocrtrs::TCppActiveServerPageMTSCreator
+    @$xp$44Cpptypelibraryoptionspage@TCppTypeLibOptions @279 ; __tpdsc__ Cpptypelibraryoptionspage::TCppTypeLibOptions
+    @Bcbcompro@@GetPackageInfoTable$qqrv @284 ; Bcbcompro::__linkproc__ __fastcall GetPackageInfoTable()
+    @Bcbcompro@@PackageLoad$qqrv   @283 ; Bcbcompro::__linkproc__ __fastcall PackageLoad()
+    @Bcbcompro@@PackageUnload$qqrv @282 ; Bcbcompro::__linkproc__ __fastcall PackageUnload()
+    @Bcbcompro@initialization$qqrv @281 ; __fastcall Bcbcompro::initialization()
+    @Ccombrow@Finalization$qqrv    @257 ; __fastcall Ccombrow::Finalization()
+    @Ccombrow@TCppBrowserCompiler@ @274 ; Ccombrow::TCppBrowserCompiler::
+    @Ccombrow@TCppBrowserCompiler@AllowPascalCompile$qqrx20System@UnicodeString @270 ; __fastcall Ccombrow::TCppBrowserCompiler::AllowPascalCompile(const System::UnicodeString)
+    @Ccombrow@TCppBrowserCompiler@Compile$qqrx20System@UnicodeStringt1ynpqqrp16Compintf@TSymbol$o @271 ; __fastcall Ccombrow::TCppBrowserCompiler::Compile(const System::UnicodeString, const System::UnicodeString, bool __fastcall __closure(*)(Compintf::TSymbol *))
+    @Ccombrow@TCppBrowserCompiler@EnableBrowser$qqrv @272 ; __fastcall Ccombrow::TCppBrowserCompiler::EnableBrowser()
+    @Ccombrow@TCppBrowserCompiler@FindSymbol$qqrx20System@UnicodeStringp16Compintf@TSymbolus @258 ; __fastcall Ccombrow::TCppBrowserCompiler::FindSymbol(const System::UnicodeString, Compintf::TSymbol *, unsigned short)
+    @Ccombrow@TCppBrowserCompiler@GetBaseTypeCode$qqrp16Compintf@TSymbol @265 ; __fastcall Ccombrow::TCppBrowserCompiler::GetBaseTypeCode(Compintf::TSymbol *)
+    @Ccombrow@TCppBrowserCompiler@GetBaseTypeSymbol$qqrp16Compintf@TSymbol @261 ; __fastcall Ccombrow::TCppBrowserCompiler::GetBaseTypeSymbol(Compintf::TSymbol *)
+    @Ccombrow@TCppBrowserCompiler@GetCompiler$qqrv @260 ; __fastcall Ccombrow::TCppBrowserCompiler::GetCompiler()
+    @Ccombrow@TCppBrowserCompiler@GetFlags$qqrp16Compintf@TSymbol @268 ; __fastcall Ccombrow::TCppBrowserCompiler::GetFlags(Compintf::TSymbol *)
+    @Ccombrow@TCppBrowserCompiler@GetMembers$qqrp16Compintf@TSymboluip49System@%StaticArray$p16Compintf@TSymboli$i16380$% @269 ; __fastcall Ccombrow::TCppBrowserCompiler::GetMembers(Compintf::TSymbol *, unsigned int, System::StaticArray<Compintf::TSymbol *, 16380> *)
+    @Ccombrow@TCppBrowserCompiler@GetObjectType$qqrp16Compintf@TSymbolus @259 ; __fastcall Ccombrow::TCppBrowserCompiler::GetObjectType(Compintf::TSymbol *, unsigned short)
+    @Ccombrow@TCppBrowserCompiler@GetResultType$qqrp16Compintf@TSymbol @264 ; __fastcall Ccombrow::TCppBrowserCompiler::GetResultType(Compintf::TSymbol *)
+    @Ccombrow@TCppBrowserCompiler@GetText$qqrp16Compintf@TSymbolr20System@UnicodeStringus @267 ; __fastcall Ccombrow::TCppBrowserCompiler::GetText(Compintf::TSymbol *, System::UnicodeString&, unsigned short)
+    @Ccombrow@TCppBrowserCompiler@GetTypeCode$qqrp16Compintf@TSymbol @266 ; __fastcall Ccombrow::TCppBrowserCompiler::GetTypeCode(Compintf::TSymbol *)
+    @Ccombrow@TCppBrowserCompiler@GetTypeSymbol$qqrp16Compintf@TSymbol @263 ; __fastcall Ccombrow::TCppBrowserCompiler::GetTypeSymbol(Compintf::TSymbol *)
+    @Ccombrow@TCppBrowserCompiler@SetPlatform$qqrx20System@UnicodeString @262 ; __fastcall Ccombrow::TCppBrowserCompiler::SetPlatform(const System::UnicodeString)
+    @Ccombrow@initialization$qqrv  @256 ; __fastcall Ccombrow::initialization()
+    @Ccommgr@Finalization$qqrv     @2   ; __fastcall Ccommgr::Finalization()
+    @Ccommgr@RegisterCoClassExpert$qqrp17System@TMetaClass @59  ; __fastcall Ccommgr::RegisterCoClassExpert(System::TMetaClass *)
+    @Ccommgr@TActiveFormCoClassExpert@ @67  ; Ccommgr::TActiveFormCoClassExpert::
+    @Ccommgr@TActiveFormCoClassExpert@ConnectToClass$qqrp19Cppmgr@TClassSymbol @9   ; __fastcall Ccommgr::TActiveFormCoClassExpert::ConnectToClass(Cppmgr::TClassSymbol *)
+    @Ccommgr@TActiveFormCoClassExpert@CreateComponentBrowser$qqrp26Ccommgr@TCppCoClassUpdaterx20System@UnicodeStringp20Typelib@TCoClassInfo @8   ; __fastcall Ccommgr::TActiveFormCoClassExpert::CreateComponentBrowser(Ccommgr::TCppCoClassUpdater *, const System::UnicodeString, Typelib::TCoClassInfo *)
+    @Ccommgr@TActiveXCoClassExpert@ @71  ; Ccommgr::TActiveXCoClassExpert::
+    @Ccommgr@TActiveXCoClassExpert@GenAux$qqrp24Ccommgr@TInterfaceMethodp20Codemgr@TCodeUpdater @13  ; __fastcall Ccommgr::TActiveXCoClassExpert::GenAux(Ccommgr::TInterfaceMethod *, Codemgr::TCodeUpdater *)
+    @Ccommgr@TActiveXCoClassExpert@GenEvent$qqrp24Ccommgr@TInterfaceMethod @14  ; __fastcall Ccommgr::TActiveXCoClassExpert::GenEvent(Ccommgr::TInterfaceMethod *)
+    @Ccommgr@TActiveXCoClassExpert@GenMethod$qqrp24Ccommgr@TInterfaceMethod @16  ; __fastcall Ccommgr::TActiveXCoClassExpert::GenMethod(Ccommgr::TInterfaceMethod *)
+    @Ccommgr@TActiveXCoClassExpert@GenProperty$qqrp24Ccommgr@TInterfaceMethodrx49System@%StaticArray$20System@UnicodeStringi$i30$%rx48System@%StaticArray$20System@UnicodeStringi$i5$% @19  ; __fastcall Ccommgr::TActiveXCoClassExpert::GenProperty(Ccommgr::TInterfaceMethod *, const System::StaticArray<System::UnicodeString, 30>&, const System::StaticArray<System::UnicodeString, 5>&)
+    @Ccommgr@TActiveXCoClassExpert@GenPropertyGet$qqrp24Ccommgr@TInterfaceMethod @18  ; __fastcall Ccommgr::TActiveXCoClassExpert::GenPropertyGet(Ccommgr::TInterfaceMethod *)
+    @Ccommgr@TActiveXCoClassExpert@GenPropertySet$qqrp24Ccommgr@TInterfaceMethod @17  ; __fastcall Ccommgr::TActiveXCoClassExpert::GenPropertySet(Ccommgr::TInterfaceMethod *)
+    @Ccommgr@TActiveXCoClassExpert@GetEventInfo$qqrp19Typelib@TTypeMember @15  ; __fastcall Ccommgr::TActiveXCoClassExpert::GetEventInfo(Typelib::TTypeMember *)
+    @Ccommgr@TActiveXCoClassExpert@GetUnits$qqrp23System@Classes@TStrings @20  ; __fastcall Ccommgr::TActiveXCoClassExpert::GetUnits(System::Classes::TStrings *)
+    @Ccommgr@TActiveXCoClassExpert@LookupClassSymbol$qqrx20System@UnicodeString @21  ; __fastcall Ccommgr::TActiveXCoClassExpert::LookupClassSymbol(const System::UnicodeString)
+    @Ccommgr@TActiveXControlCoClassExpert@ @69  ; Ccommgr::TActiveXControlCoClassExpert::
+    @Ccommgr@TActiveXControlCoClassExpert@ConnectToClass$qqrp19Cppmgr@TClassSymbol @12  ; __fastcall Ccommgr::TActiveXControlCoClassExpert::ConnectToClass(Cppmgr::TClassSymbol *)
+    @Ccommgr@TActiveXControlCoClassExpert@CreateComponentBrowser$qqrp26Ccommgr@TCppCoClassUpdaterx20System@UnicodeStringp20Typelib@TCoClassInfo @11  ; __fastcall Ccommgr::TActiveXControlCoClassExpert::CreateComponentBrowser(Ccommgr::TCppCoClassUpdater *, const System::UnicodeString, Typelib::TCoClassInfo *)
+    @Ccommgr@TActiveXControlCoClassExpert@GetClassName$qqrx20System@UnicodeString @10  ; __fastcall Ccommgr::TActiveXControlCoClassExpert::GetClassName(const System::UnicodeString)
+    @Ccommgr@TCoClassComponentBrowser@ @63  ; Ccommgr::TCoClassComponentBrowser::
+    @Ccommgr@TCoClassComponentBrowser@$bctr$qqrx20System@UnicodeStringt1p26Ccommgr@TCppCoClassUpdatert1p20Typelib@TCoClassInfo @5   ; __fastcall Ccommgr::TCoClassComponentBrowser::TCoClassComponentBrowser(const System::UnicodeString, const System::UnicodeString, Ccommgr::TCppCoClassUpdater *, const System::UnicodeString, Typelib::TCoClassInfo *)
+    @Ccommgr@TCoClassExpert@       @87  ; Ccommgr::TCoClassExpert::
+    @Ccommgr@TCoClassExpert@$bctr$qqrp23Cppmgr@TCppClassManager @58  ; __fastcall Ccommgr::TCoClassExpert::TCoClassExpert(Cppmgr::TCppClassManager *)
+    @Ccommgr@TCoClassExpert@ConnectToClass$qqrp19Cppmgr@TClassSymbol @56  ; __fastcall Ccommgr::TCoClassExpert::ConnectToClass(Cppmgr::TClassSymbol *)
+    @Ccommgr@TCoClassExpert@CreateComponentBrowser$qqrp26Ccommgr@TCppCoClassUpdaterx20System@UnicodeStringp20Typelib@TCoClassInfo @49  ; __fastcall Ccommgr::TCoClassExpert::CreateComponentBrowser(Ccommgr::TCppCoClassUpdater *, const System::UnicodeString, Typelib::TCoClassInfo *)
+    @Ccommgr@TCoClassExpert@ExecuteUpdateInterface$qqrp26Combrows@TComponentBrowser @46  ; __fastcall Ccommgr::TCoClassExpert::ExecuteUpdateInterface(Combrows::TComponentBrowser *)
+    @Ccommgr@TCoClassExpert@GenAux$qqrp24Ccommgr@TInterfaceMethodp20Codemgr@TCodeUpdater @50  ; __fastcall Ccommgr::TCoClassExpert::GenAux(Ccommgr::TInterfaceMethod *, Codemgr::TCodeUpdater *)
+    @Ccommgr@TCoClassExpert@GenEvent$qqrp24Ccommgr@TInterfaceMethod @51  ; __fastcall Ccommgr::TCoClassExpert::GenEvent(Ccommgr::TInterfaceMethod *)
+    @Ccommgr@TCoClassExpert@GenMethod$qqrp24Ccommgr@TInterfaceMethod @53  ; __fastcall Ccommgr::TCoClassExpert::GenMethod(Ccommgr::TInterfaceMethod *)
+    @Ccommgr@TCoClassExpert@GenPropertyGet$qqrp24Ccommgr@TInterfaceMethod @55  ; __fastcall Ccommgr::TCoClassExpert::GenPropertyGet(Ccommgr::TInterfaceMethod *)
+    @Ccommgr@TCoClassExpert@GenPropertySet$qqrp24Ccommgr@TInterfaceMethod @54  ; __fastcall Ccommgr::TCoClassExpert::GenPropertySet(Ccommgr::TInterfaceMethod *)
+    @Ccommgr@TCoClassExpert@GetComponentBrowser$qqrv @48  ; __fastcall Ccommgr::TCoClassExpert::GetComponentBrowser()
+    @Ccommgr@TCoClassExpert@GetEventInfo$qqrp19Typelib@TTypeMember @52  ; __fastcall Ccommgr::TCoClassExpert::GetEventInfo(Typelib::TTypeMember *)
+    @Ccommgr@TCoClassExpert@GetUnits$qqrp23System@Classes@TStrings @57  ; __fastcall Ccommgr::TCoClassExpert::GetUnits(System::Classes::TStrings *)
+    @Ccommgr@TCoClassExpert@UpdateInterface$qqrp26Ccommgr@TCppCoClassUpdaterx20System@UnicodeStringp20Typelib@TCoClassInfo @47  ; __fastcall Ccommgr::TCoClassExpert::UpdateInterface(Ccommgr::TCppCoClassUpdater *, const System::UnicodeString, Typelib::TCoClassInfo *)
+    @Ccommgr@TCoClassExpert@UpdateInterfaceInternal$qqrp26Ccommgr@TCppCoClassUpdaterx20System@UnicodeStringp20Typelib@TCoClassInfo @45  ; __fastcall Ccommgr::TCoClassExpert::UpdateInterfaceInternal(Ccommgr::TCppCoClassUpdater *, const System::UnicodeString, Typelib::TCoClassInfo *)
+    @Ccommgr@TCppActiveServerPageExpert@ @61  ; Ccommgr::TCppActiveServerPageExpert::
+    @Ccommgr@TCppActiveServerPageExpert@ConnectToClass$qqrp19Cppmgr@TClassSymbol @4   ; __fastcall Ccommgr::TCppActiveServerPageExpert::ConnectToClass(Cppmgr::TClassSymbol *)
+    @Ccommgr@TCppActiveServerPageExpert@GenMethod$qqrp24Ccommgr@TInterfaceMethod @3   ; __fastcall Ccommgr::TCppActiveServerPageExpert::GenMethod(Ccommgr::TInterfaceMethod *)
+    @Ccommgr@TCppCoClassUpdater@   @77  ; Ccommgr::TCppCoClassUpdater::
+    @Ccommgr@TCppCoClassUpdater@$bctr$qqrp23Cppmgr@TCppClassManager @32  ; __fastcall Ccommgr::TCppCoClassUpdater::TCppCoClassUpdater(Cppmgr::TCppClassManager *)
+    @Ccommgr@TCppCoClassUpdater@AddCorbaFactory$qqrp14System@TObject @22  ; __fastcall Ccommgr::TCppCoClassUpdater::AddCorbaFactory(System::TObject *)
+    @Ccommgr@TCppCoClassUpdater@CanAddCorbaFactory$qqrp14System@TObject @23  ; __fastcall Ccommgr::TCppCoClassUpdater::CanAddCorbaFactory(System::TObject *)
+    @Ccommgr@TCppCoClassUpdater@ClearReceiver$qqrv @24  ; __fastcall Ccommgr::TCppCoClassUpdater::ClearReceiver()
+    @Ccommgr@TCppCoClassUpdater@MakeComObject$qqrx20System@UnicodeStringt1xp23System@Classes@TStrings @26  ; __fastcall Ccommgr::TCppCoClassUpdater::MakeComObject(const System::UnicodeString, const System::UnicodeString, System::Classes::TStrings * const)
+    @Ccommgr@TCppCoClassUpdater@RenameClass$qqrx20System@UnicodeStringt1 @28  ; __fastcall Ccommgr::TCppCoClassUpdater::RenameClass(const System::UnicodeString, const System::UnicodeString)
+    @Ccommgr@TCppCoClassUpdater@RenameIncludeFile$qqrx20System@UnicodeStringt1 @31  ; __fastcall Ccommgr::TCppCoClassUpdater::RenameIncludeFile(const System::UnicodeString, const System::UnicodeString)
+    @Ccommgr@TCppCoClassUpdater@SetReceiver$qqr58System@%DelphiInterface$31Comupdater@ICoClassInfoReceiver% @25  ; Ccommgr::TCppCoClassUpdater::SetReceiver(System::DelphiInterface<{583}...
+    @Ccommgr@TCppCoClassUpdater@ShowMethod$qqrx20System@UnicodeStringp14System@TObject @27  ; __fastcall Ccommgr::TCppCoClassUpdater::ShowMethod(const System::UnicodeString, System::TObject *)
+    @Ccommgr@TCppCoClassUpdater@Update$qqr43System@%DelphiInterface$16Codemgr@IProject% @29  ; Ccommgr::TCppCoClassUpdater::Update(System::DelphiInterface<{583}...
+    @Ccommgr@TCppCoClassUpdater@UpdateInterface$qqrp29Ccommgr@TInterfaceDescriptionp19Cppmgr@TClassSymbolp22Ccommgr@TCoClassExpert @30  ; __fastcall Ccommgr::TCppCoClassUpdater::UpdateInterface(Ccommgr::TInterfaceDescription *, Cppmgr::TClassSymbol *, Ccommgr::TCoClassExpert *)
+    @Ccommgr@TInterfaceDescription@ @79  ; Ccommgr::TInterfaceDescription::
+    @Ccommgr@TInterfaceDescription@$bctr$qqrp22Typelib@TInterfaceInfop20Typelib@TCoClassInfo @36  ; __fastcall Ccommgr::TInterfaceDescription::TInterfaceDescription(Typelib::TInterfaceInfo *, Typelib::TCoClassInfo *)
+    @Ccommgr@TInterfaceDescription@$bctr$qqrp22Typelib@TInterfaceInfop22Ccommgr@TCoClassExpert @35  ; __fastcall Ccommgr::TInterfaceDescription::TInterfaceDescription(Typelib::TInterfaceInfo *, Ccommgr::TCoClassExpert *)
+    @Ccommgr@TInterfaceDescription@$bdtr$qqrv @33  ; __fastcall Ccommgr::TInterfaceDescription::~TInterfaceDescription()
+    @Ccommgr@TInterfaceDescription@Init$qqrp22Typelib@TInterfaceInfo @34  ; __fastcall Ccommgr::TInterfaceDescription::Init(Typelib::TInterfaceInfo *)
+    @Ccommgr@TInterfaceMethod@     @83  ; Ccommgr::TInterfaceMethod::
+    @Ccommgr@TInterfaceMethod@$bctr$qqr28Ccommgr@TInterfaceMethodKindp19Typelib@TTypeMemberp24System@Typinfo@TTypeInfox20System@UnicodeString @44  ; __fastcall Ccommgr::TInterfaceMethod::TInterfaceMethod(Ccommgr::TInterfaceMethodKind, Typelib::TTypeMember *, System::Typinfo::TTypeInfo *, const System::UnicodeString)
+    @Ccommgr@TInterfaceMethod@$bdtr$qqrv @43  ; __fastcall Ccommgr::TInterfaceMethod::~TInterfaceMethod()
+    @Ccommgr@TInterfaceMethod@GetMethodHeaderType$qqrv @42  ; __fastcall Ccommgr::TInterfaceMethod::GetMethodHeaderType()
+    @Ccommgr@TInterfaceMethods@    @81  ; Ccommgr::TInterfaceMethods::
+    @Ccommgr@TInterfaceMethods@$bctr$qqrv @41  ; __fastcall Ccommgr::TInterfaceMethods::TInterfaceMethods()
+    @Ccommgr@TInterfaceMethods@$bdtr$qqrv @40  ; __fastcall Ccommgr::TInterfaceMethods::~TInterfaceMethods()
+    @Ccommgr@TInterfaceMethods@Add$qqrp24Ccommgr@TInterfaceMethod @39  ; __fastcall Ccommgr::TInterfaceMethods::Add(Ccommgr::TInterfaceMethod *)
+    @Ccommgr@TInterfaceMethods@GetCount$qqrv @38  ; __fastcall Ccommgr::TInterfaceMethods::GetCount()
+    @Ccommgr@TInterfaceMethods@GetMethods$qqri @37  ; __fastcall Ccommgr::TInterfaceMethods::GetMethods(int)
+    @Ccommgr@TRemoteDataModuleCoClassExpert@ @65  ; Ccommgr::TRemoteDataModuleCoClassExpert::
+    @Ccommgr@TRemoteDataModuleCoClassExpert@ConnectToClass$qqrp19Cppmgr@TClassSymbol @7   ; __fastcall Ccommgr::TRemoteDataModuleCoClassExpert::ConnectToClass(Cppmgr::TClassSymbol *)
+    @Ccommgr@TRemoteDataModuleCoClassExpert@GenPropertyGet$qqrp24Ccommgr@TInterfaceMethod @6   ; __fastcall Ccommgr::TRemoteDataModuleCoClassExpert::GenPropertyGet(Ccommgr::TInterfaceMethod *)
+    @Ccommgr@initialization$qqrv   @1   ; __fastcall Ccommgr::initialization()
+    @Cppcomexpertcodegen@FilterExpertFile$qqrx53System@%DelphiInterface$26Expertfilter@IExpertFilter%x20System@UnicodeStringt2t2 @95  ; Cppcomexpertcodegen::FilterExpertFile(const System::DelphiInterface<{583}...
+    @Cppcomexpertcodegen@Finalization$qqrv @94  ; __fastcall Cppcomexpertcodegen::Finalization()
+    @Cppcomexpertcodegen@initialization$qqrv @93  ; __fastcall Cppcomexpertcodegen::initialization()
+    @Cppprocmd@AddComObjectToProject$qqrx43System@%DelphiInterface$16Codemgr@IProject%x20System@UnicodeStringt2 @216 ; Cppprocmd::AddComObjectToProject(const System::DelphiInterface<{583}...
+    @Cppprocmd@Finalization$qqrv   @179 ; __fastcall Cppprocmd::Finalization()
+    @Cppprocmd@IDERegister$qqrv    @217 ; __fastcall Cppprocmd::IDERegister()
+    @Cppprocmd@TCppActiveLibrary@  @235 ; Cppprocmd::TCppActiveLibrary::
+    @Cppprocmd@TCppActiveLibrary@$bctr$qqrv @181 ; __fastcall Cppprocmd::TCppActiveLibrary::TCppActiveLibrary()
+    @Cppprocmd@TCppActiveLibrary@GetProjectCreator$qqrv @180 ; __fastcall Cppprocmd::TCppActiveLibrary::GetProjectCreator()
+    @Cppprocmd@TCppNewActiveForm@  @229 ; Cppprocmd::TCppNewActiveForm::
+    @Cppprocmd@TCppNewActiveForm@$bctr$qqrv @201 ; __fastcall Cppprocmd::TCppNewActiveForm::TCppNewActiveForm()
+    @Cppprocmd@TCppNewActiveForm@EndWizard$qqrv @202 ; __fastcall Cppprocmd::TCppNewActiveForm::EndWizard()
+    @Cppprocmd@TCppNewActiveForm@GetAboutUnitCreator$qqrv @205 ; __fastcall Cppprocmd::TCppNewActiveForm::GetAboutUnitCreator()
+    @Cppprocmd@TCppNewActiveForm@GetFrameworkTypes$qqrv @204 ; __fastcall Cppprocmd::TCppNewActiveForm::GetFrameworkTypes()
+    @Cppprocmd@TCppNewActiveForm@GetPlatforms$qqrv @203 ; __fastcall Cppprocmd::TCppNewActiveForm::GetPlatforms()
+    @Cppprocmd@TCppNewActiveForm@GetUnitCreator$qqrv @206 ; __fastcall Cppprocmd::TCppNewActiveForm::GetUnitCreator()
+    @Cppprocmd@TCppNewActiveServerObject@ @219 ; Cppprocmd::TCppNewActiveServerObject::
+    @Cppprocmd@TCppNewActiveServerObject@$bctr$qqrv @185 ; __fastcall Cppprocmd::TCppNewActiveServerObject::TCppNewActiveServerObject()
+    @Cppprocmd@TCppNewActiveServerObject@EndWizard$qqrv @183 ; __fastcall Cppprocmd::TCppNewActiveServerObject::EndWizard()
+    @Cppprocmd@TCppNewActiveServerObject@GenerateTestPage$qqrv @182 ; __fastcall Cppprocmd::TCppNewActiveServerObject::GenerateTestPage()
+    @Cppprocmd@TCppNewActiveServerObject@GetUnitCreator$qqrv @184 ; __fastcall Cppprocmd::TCppNewActiveServerObject::GetUnitCreator()
+    @Cppprocmd@TCppNewActiveXControl@ @227 ; Cppprocmd::TCppNewActiveXControl::
+    @Cppprocmd@TCppNewActiveXControl@$bctr$qqrv @196 ; __fastcall Cppprocmd::TCppNewActiveXControl::TCppNewActiveXControl()
+    @Cppprocmd@TCppNewActiveXControl@EndWizard$qqrv @195 ; __fastcall Cppprocmd::TCppNewActiveXControl::EndWizard()
+    @Cppprocmd@TCppNewActiveXControl@GetAboutUnitCreator$qqrv @199 ; __fastcall Cppprocmd::TCppNewActiveXControl::GetAboutUnitCreator()
+    @Cppprocmd@TCppNewActiveXControl@GetFrameworkTypes$qqrv @198 ; __fastcall Cppprocmd::TCppNewActiveXControl::GetFrameworkTypes()
+    @Cppprocmd@TCppNewActiveXControl@GetPlatforms$qqrv @197 ; __fastcall Cppprocmd::TCppNewActiveXControl::GetPlatforms()
+    @Cppprocmd@TCppNewActiveXControl@GetUnitCreator$qqrv @200 ; __fastcall Cppprocmd::TCppNewActiveXControl::GetUnitCreator()
+    @Cppprocmd@TCppNewAutoObject@  @231 ; Cppprocmd::TCppNewAutoObject::
+    @Cppprocmd@TCppNewAutoObject@$bctr$qqrv @207 ; __fastcall Cppprocmd::TCppNewAutoObject::TCppNewAutoObject()
+    @Cppprocmd@TCppNewAutoObject@EndWizard$qqrv @208 ; __fastcall Cppprocmd::TCppNewAutoObject::EndWizard()
+    @Cppprocmd@TCppNewAutoObject@GetUnitCreator$qqrv @209 ; __fastcall Cppprocmd::TCppNewAutoObject::GetUnitCreator()
+    @Cppprocmd@TCppNewComObject@   @233 ; Cppprocmd::TCppNewComObject::
+    @Cppprocmd@TCppNewComObject@$bctr$qqrv @210 ; __fastcall Cppprocmd::TCppNewComObject::TCppNewComObject()
+    @Cppprocmd@TCppNewComObject@CollectData$qqrx48System@%DelphiInterface$21Comwizards@IComWizard% @212 ; Cppprocmd::TCppNewComObject::CollectData(const System::DelphiInterface<{583}...
+    @Cppprocmd@TCppNewComObject@EndWizard$qqrv @211 ; __fastcall Cppprocmd::TCppNewComObject::EndWizard()
+    @Cppprocmd@TCppNewComObject@GetUnitCreator$qqrv @213 ; __fastcall Cppprocmd::TCppNewComObject::GetUnitCreator()
+    @Cppprocmd@TCppNewComPlusEventObject@ @223 ; Cppprocmd::TCppNewComPlusEventObject::
+    @Cppprocmd@TCppNewComPlusEventObject@$bctr$qqrv @189 ; __fastcall Cppprocmd::TCppNewComPlusEventObject::TCppNewComPlusEventObject()
+    @Cppprocmd@TCppNewComPlusEventObject@EndWizard$qqrv @191 ; __fastcall Cppprocmd::TCppNewComPlusEventObject::EndWizard()
+    @Cppprocmd@TCppNewComPlusEventObject@GetUnitCreator$qqrv @190 ; __fastcall Cppprocmd::TCppNewComPlusEventObject::GetUnitCreator()
+    @Cppprocmd@TCppNewPropertyPage@ @225 ; Cppprocmd::TCppNewPropertyPage::
+    @Cppprocmd@TCppNewPropertyPage@$bctr$qqrv @192 ; __fastcall Cppprocmd::TCppNewPropertyPage::TCppNewPropertyPage()
+    @Cppprocmd@TCppNewPropertyPage@EndWizard$qqrv @194 ; __fastcall Cppprocmd::TCppNewPropertyPage::EndWizard()
+    @Cppprocmd@TCppNewPropertyPage@GetUnitCreator$qqrv @193 ; __fastcall Cppprocmd::TCppNewPropertyPage::GetUnitCreator()
+    @Cppprocmd@TCppNewSubscriptionObject@ @221 ; Cppprocmd::TCppNewSubscriptionObject::
+    @Cppprocmd@TCppNewSubscriptionObject@$bctr$qqrv @186 ; __fastcall Cppprocmd::TCppNewSubscriptionObject::TCppNewSubscriptionObject()
+    @Cppprocmd@TCppNewSubscriptionObject@EndWizard$qqrv @188 ; __fastcall Cppprocmd::TCppNewSubscriptionObject::EndWizard()
+    @Cppprocmd@TCppNewSubscriptionObject@GetUnitCreator$qqrv @187 ; __fastcall Cppprocmd::TCppNewSubscriptionObject::GetUnitCreator()
+    @Cppprocmd@TCppNewTypeLibrary@ @237 ; Cppprocmd::TCppNewTypeLibrary::
+    @Cppprocmd@TCppNewTypeLibrary@$bctr$qqrv @215 ; __fastcall Cppprocmd::TCppNewTypeLibrary::TCppNewTypeLibrary()
+    @Cppprocmd@TCppNewTypeLibrary@GetProjectCreator$qqrv @214 ; __fastcall Cppprocmd::TCppNewTypeLibrary::GetProjectCreator()
+    @Cppprocmd@initialization$qqrv @178 ; __fastcall Cppprocmd::initialization()
+    @Cppprocrtrs@FALSETRUE         @176 ; Cppprocrtrs::FALSETRUE
+    @Cppprocrtrs@Finalization$qqrv @97  ; __fastcall Cppprocrtrs::Finalization()
+    @Cppprocrtrs@NewProjectsUseDAX$qqrv @144 ; __fastcall Cppprocrtrs::NewProjectsUseDAX()
+    @Cppprocrtrs@TATLUnitCreator@  @155 ; Cppprocrtrs::TATLUnitCreator::
+    @Cppprocrtrs@TATLUnitCreator@GetInterfaceSource$qqrv @111 ; __fastcall Cppprocrtrs::TATLUnitCreator::GetInterfaceSource()
+    @Cppprocrtrs@TATLUnitCreator@GetShowSource$qqrv @113 ; __fastcall Cppprocrtrs::TATLUnitCreator::GetShowSource()
+    @Cppprocrtrs@TATLUnitCreator@GetSource$qqrv @112 ; __fastcall Cppprocrtrs::TATLUnitCreator::GetSource()
+    @Cppprocrtrs@TCppAboutBoxCreator@ @161 ; Cppprocrtrs::TCppAboutBoxCreator::
+    @Cppprocrtrs@TCppAboutBoxCreator@$bctr$qqrx20System@UnicodeStringt1 @123 ; __fastcall Cppprocrtrs::TCppAboutBoxCreator::TCppAboutBoxCreator(const System::UnicodeString, const System::UnicodeString)
+    @Cppprocrtrs@TCppAboutBoxCreator@GetAncestorName$qqrv @122 ; __fastcall Cppprocrtrs::TCppAboutBoxCreator::GetAncestorName()
+    @Cppprocrtrs@TCppAboutBoxCreator@GetForm$qqrv @120 ; __fastcall Cppprocrtrs::TCppAboutBoxCreator::GetForm()
+    @Cppprocrtrs@TCppAboutBoxCreator@GetInterfaceSource$qqrv @119 ; __fastcall Cppprocrtrs::TCppAboutBoxCreator::GetInterfaceSource()
+    @Cppprocrtrs@TCppAboutBoxCreator@GetSource$qqrv @121 ; __fastcall Cppprocrtrs::TCppAboutBoxCreator::GetSource()
+    @Cppprocrtrs@TCppActiveControlCreator@ @167 ; Cppprocrtrs::TCppActiveControlCreator::
+    @Cppprocrtrs@TCppActiveControlCreator@$bctr$qqrx20System@UnicodeStringt1t1t1t1io20System@UnicodeString @136 ; __fastcall Cppprocrtrs::TCppActiveControlCreator::TCppActiveControlCreator(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, int, bool, System::UnicodeString)
+    @Cppprocrtrs@TCppActiveControlCreator@GetInterfaceSource$qqrv @134 ; __fastcall Cppprocrtrs::TCppActiveControlCreator::GetInterfaceSource()
+    @Cppprocrtrs@TCppActiveControlCreator@GetSource$qqrv @135 ; __fastcall Cppprocrtrs::TCppActiveControlCreator::GetSource()
+    @Cppprocrtrs@TCppActiveFormCreator@ @165 ; Cppprocrtrs::TCppActiveFormCreator::
+    @Cppprocrtrs@TCppActiveFormCreator@$bctr$qqrx20System@UnicodeStringt1t1t1io @133 ; __fastcall Cppprocrtrs::TCppActiveFormCreator::TCppActiveFormCreator(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, int, bool)
+    @Cppprocrtrs@TCppActiveFormCreator@GetAncestorName$qqrv @129 ; __fastcall Cppprocrtrs::TCppActiveFormCreator::GetAncestorName()
+    @Cppprocrtrs@TCppActiveFormCreator@GetFormName$qqrv @130 ; __fastcall Cppprocrtrs::TCppActiveFormCreator::GetFormName()
+    @Cppprocrtrs@TCppActiveFormCreator@GetInterfaceSource$qqrv @131 ; __fastcall Cppprocrtrs::TCppActiveFormCreator::GetInterfaceSource()
+    @Cppprocrtrs@TCppActiveFormCreator@GetSource$qqrv @132 ; __fastcall Cppprocrtrs::TCppActiveFormCreator::GetSource()
+    @Cppprocrtrs@TCppActiveLibraryCreator@ @153 ; Cppprocrtrs::TCppActiveLibraryCreator::
+    @Cppprocrtrs@TCppActiveLibraryCreator@$bctr$qqrv @109 ; __fastcall Cppprocrtrs::TCppActiveLibraryCreator::TCppActiveLibraryCreator()
+    @Cppprocrtrs@TCppActiveLibraryCreator@$bctr$qqrx20System@UnicodeString26Pascppcompopts@TTargetType @110 ; __fastcall Cppprocrtrs::TCppActiveLibraryCreator::TCppActiveLibraryCreator(const System::UnicodeString, Pascppcompopts::TTargetType)
+    @Cppprocrtrs@TCppActiveLibraryCreator@GetFrameworkType$qqrv @105 ; __fastcall Cppprocrtrs::TCppActiveLibraryCreator::GetFrameworkType()
+    @Cppprocrtrs@TCppActiveLibraryCreator@GetSource$qqrv @108 ; __fastcall Cppprocrtrs::TCppActiveLibraryCreator::GetSource()
+    @Cppprocrtrs@TCppActiveLibraryCreator@GetSupportedPlatforms$qqrv @107 ; __fastcall Cppprocrtrs::TCppActiveLibraryCreator::GetSupportedPlatforms()
+    @Cppprocrtrs@TCppActiveLibraryCreator@SetInitialOptions$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject% @106 ; Cppprocrtrs::TCppActiveLibraryCreator::SetInitialOptions(const System::DelphiInterface<{583}...
+    @Cppprocrtrs@TCppActiveServerPageCreator@ @149 ; Cppprocrtrs::TCppActiveServerPageCreator::
+    @Cppprocrtrs@TCppActiveServerPageCreator@$bctr$qqrx20System@UnicodeStringt1t1t1t1ot1o @102 ; Cppprocrtrs::TCppActiveServerPageCreator::TCppActiveServerPageCreator(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, bool, const System::UnicodeString, bool)
+    @Cppprocrtrs@TCppActiveServerPageCreator@GetInterfaceSource$qqrv @100 ; __fastcall Cppprocrtrs::TCppActiveServerPageCreator::GetInterfaceSource()
+    @Cppprocrtrs@TCppActiveServerPageCreator@GetSource$qqrv @101 ; __fastcall Cppprocrtrs::TCppActiveServerPageCreator::GetSource()
+    @Cppprocrtrs@TCppActiveServerPageMTSCreator@ @147 ; Cppprocrtrs::TCppActiveServerPageMTSCreator::
+    @Cppprocrtrs@TCppActiveServerPageMTSCreator@GetInterfaceSource$qqrv @98  ; __fastcall Cppprocrtrs::TCppActiveServerPageMTSCreator::GetInterfaceSource()
+    @Cppprocrtrs@TCppActiveServerPageMTSCreator@GetSource$qqrv @99  ; __fastcall Cppprocrtrs::TCppActiveServerPageMTSCreator::GetSource()
+    @Cppprocrtrs@TCppAutoObjectCreator@ @157 ; Cppprocrtrs::TCppAutoObjectCreator::
+    @Cppprocrtrs@TCppAutoObjectCreator@$bctr$qqrx20System@UnicodeStringt1t1t1t1ot1o @114 ; __fastcall Cppprocrtrs::TCppAutoObjectCreator::TCppAutoObjectCreator(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, bool, const System::UnicodeString, bool)
+    @Cppprocrtrs@TCppBaseActiveServerCreator@ @151 ; Cppprocrtrs::TCppBaseActiveServerCreator::
+    @Cppprocrtrs@TCppBaseActiveServerCreator@$bctr$qqrx20System@UnicodeStringt1t1t1t1ot1o @103 ; Cppprocrtrs::TCppBaseActiveServerCreator::TCppBaseActiveServerCreator(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, bool, const System::UnicodeString, bool)
+    @Cppprocrtrs@TCppBaseActiveServerCreator@AspFile$qqrx20System@UnicodeStringt1 @104 ; __fastcall Cppprocrtrs::TCppBaseActiveServerCreator::AspFile(const System::UnicodeString, const System::UnicodeString)
+    @Cppprocrtrs@TCppCOMCreator@   @173 ; Cppprocrtrs::TCppCOMCreator::
+    @Cppprocrtrs@TCppCOMCreator@$bctr$qqrx20System@UnicodeStringt1 @143 ; __fastcall Cppprocrtrs::TCppCOMCreator::TCppCOMCreator(const System::UnicodeString, const System::UnicodeString)
+    @Cppprocrtrs@TCppCOMObjectCreator@ @159 ; Cppprocrtrs::TCppCOMObjectCreator::
+    @Cppprocrtrs@TCppCOMObjectCreator@$bctr$qqrx20System@UnicodeStringt1t1t1t1ot1oo @118 ; Cppprocrtrs::TCppCOMObjectCreator::TCppCOMObjectCreator(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, bool, const System::UnicodeString, bool, bool)__fastca
+    @Cppprocrtrs@TCppCOMObjectCreator@GetClasses$qqrp23System@Classes@TStrings @117 ; __fastcall Cppprocrtrs::TCppCOMObjectCreator::GetClasses(System::Classes::TStrings *)
+    @Cppprocrtrs@TCppCOMObjectCreator@GetInterfaceSource$qqrv @115 ; __fastcall Cppprocrtrs::TCppCOMObjectCreator::GetInterfaceSource()
+    @Cppprocrtrs@TCppCOMObjectCreator@GetSource$qqrv @116 ; __fastcall Cppprocrtrs::TCppCOMObjectCreator::GetSource()
+    @Cppprocrtrs@TCppCoClassCreator@ @171 ; Cppprocrtrs::TCppCoClassCreator::
+    @Cppprocrtrs@TCppCoClassCreator@$bctr$qqrx20System@UnicodeStringt1t1t1t1ot1o @140 ; __fastcall Cppprocrtrs::TCppCoClassCreator::TCppCoClassCreator(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, bool, const System::UnicodeString, bool)
+    @Cppprocrtrs@TCppCoClassCreator@GetClasses$qqrp23System@Classes@TStrings @139 ; __fastcall Cppprocrtrs::TCppCoClassCreator::GetClasses(System::Classes::TStrings *)
+    @Cppprocrtrs@TCppCoClassLicCreator@ @169 ; Cppprocrtrs::TCppCoClassLicCreator::
+    @Cppprocrtrs@TCppCoClassLicCreator@$bctr$qqrx20System@UnicodeStringt1t1t1oi @138 ; __fastcall Cppprocrtrs::TCppCoClassLicCreator::TCppCoClassLicCreator(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, bool, int)
+    @Cppprocrtrs@TCppCoClassLicCreator@GetLicenseString$qqrv @137 ; __fastcall Cppprocrtrs::TCppCoClassLicCreator::GetLicenseString()
+    @Cppprocrtrs@TCppProCreator@   @175 ; Cppprocrtrs::TCppProCreator::
+    @Cppprocrtrs@TCppProCreator@$bctr$qqrx20System@UnicodeString @142 ; __fastcall Cppprocrtrs::TCppProCreator::TCppProCreator(const System::UnicodeString)
+    @Cppprocrtrs@TCppProCreator@FilterExpertFile$qqrx53System@%DelphiInterface$26Expertfilter@IExpertFilter%x20System@UnicodeStringt2t2 @141 ; Cppprocrtrs::TCppProCreator::FilterExpertFile(const System::DelphiInterface<{583}...
+    @Cppprocrtrs@TCppPropertyPageCreator@ @163 ; Cppprocrtrs::TCppPropertyPageCreator::
+    @Cppprocrtrs@TCppPropertyPageCreator@$bctr$qqrx20System@UnicodeStringt1 @128 ; __fastcall Cppprocrtrs::TCppPropertyPageCreator::TCppPropertyPageCreator(const System::UnicodeString, const System::UnicodeString)
+    @Cppprocrtrs@TCppPropertyPageCreator@GetAncestorName$qqrv @124 ; __fastcall Cppprocrtrs::TCppPropertyPageCreator::GetAncestorName()
+    @Cppprocrtrs@TCppPropertyPageCreator@GetFormName$qqrv @125 ; __fastcall Cppprocrtrs::TCppPropertyPageCreator::GetFormName()
+    @Cppprocrtrs@TCppPropertyPageCreator@GetInterfaceSource$qqrv @126 ; __fastcall Cppprocrtrs::TCppPropertyPageCreator::GetInterfaceSource()
+    @Cppprocrtrs@TCppPropertyPageCreator@GetSource$qqrv @127 ; __fastcall Cppprocrtrs::TCppPropertyPageCreator::GetSource()
+    @Cppprocrtrs@initialization$qqrv @96  ; __fastcall Cppprocrtrs::initialization()
+    @Cppproreg@Finalization$qqrv   @254 ; __fastcall Cppproreg::Finalization()
+    @Cppproreg@IDERegister$qqrv    @255 ; __fastcall Cppproreg::IDERegister()
+    @Cppproreg@initialization$qqrv @253 ; __fastcall Cppproreg::initialization()
+    @Cppproupdaters@Finalization$qqrv @89  ; __fastcall Cppproupdaters::Finalization()
+    @Cppproupdaters@TProCppUpdaters@ @92  ; Cppproupdaters::TProCppUpdaters::
+    @Cppproupdaters@TProCppUpdaters@CreateCoClassUpdater$qqr42System@%DelphiInterface$15Codemgr@IModule%p23System@Classes@TStrings @90  ; Cppproupdaters::TProCppUpdaters::CreateCoClassUpdater(System::DelphiInterface<{583}...
+    @Cppproupdaters@initialization$qqrv @88  ; __fastcall Cppproupdaters::initialization()
+    @Cpptraits@Finalization$qqrv   @239 ; __fastcall Cpptraits::Finalization()
+    @Cpptraits@TCppImportComponentTrait@ @252 ; Cpptraits::TCppImportComponentTrait::
+    @Cpptraits@TCppImportComponentTrait@GetCallbackId$qqrv @243 ; __fastcall Cpptraits::TCppImportComponentTrait::GetCallbackId()
+    @Cpptraits@TCppImportComponentTrait@GetCaption$qqrv @250 ; __fastcall Cpptraits::TCppImportComponentTrait::GetCaption()
+    @Cpptraits@TCppImportComponentTrait@GetDTLWriter$qqrv @249 ; __fastcall Cpptraits::TCppImportComponentTrait::GetDTLWriter()
+    @Cpptraits@TCppImportComponentTrait@GetMrWizard$qqrv @248 ; __fastcall Cpptraits::TCppImportComponentTrait::GetMrWizard()
+    @Cpptraits@TCppImportComponentTrait@GetPackageExtension$qqrv @245 ; __fastcall Cpptraits::TCppImportComponentTrait::GetPackageExtension()
+    @Cpptraits@TCppImportComponentTrait@GetPersonality$qqrv @247 ; __fastcall Cpptraits::TCppImportComponentTrait::GetPersonality()
+    @Cpptraits@TCppImportComponentTrait@GetPlatform$qqrv @242 ; __fastcall Cpptraits::TCppImportComponentTrait::GetPlatform()
+    @Cpptraits@TCppImportComponentTrait@GetProjectExtension$qqrv @246 ; __fastcall Cpptraits::TCppImportComponentTrait::GetProjectExtension()
+    @Cpptraits@TCppImportComponentTrait@GetProjectFilter$qqrv @244 ; __fastcall Cpptraits::TCppImportComponentTrait::GetProjectFilter()
+    @Cpptraits@TCppImportComponentTrait@ImportAssembly$qqrx20System@UnicodeStringt1t1 @241 ; __fastcall Cpptraits::TCppImportComponentTrait::ImportAssembly(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Cpptraits@TCppImportComponentTrait@ImportTLB$qqrx20System@UnicodeStringt1t1op23System@Classes@TStrings @240 ; __fastcall Cpptraits::TCppImportComponentTrait::ImportTLB(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, bool, System::Classes::TStrings *)
+    @Cpptraits@initialization$qqrv @238 ; __fastcall Cpptraits::initialization()
+    @Cpptypelibraryoptionspage@Finalization$qqrv @276 ; __fastcall Cpptypelibraryoptionspage::Finalization()
+    @Cpptypelibraryoptionspage@SKU @278 ; Cpptypelibraryoptionspage::SKU
+    @Cpptypelibraryoptionspage@TCppTypeLibOptions@ @280 ; Cpptypelibraryoptionspage::TCppTypeLibOptions::
+    @Cpptypelibraryoptionspage@TCppTypeLibOptions@PropChkChangeOcxSuffixClick$qqrp14System@TObject @277 ; __fastcall Cpptypelibraryoptionspage::TCppTypeLibOptions::PropChkChangeOcxSuffixClick(System::TObject *)
+    @Cpptypelibraryoptionspage@initialization$qqrv @275 ; __fastcall Cpptypelibraryoptionspage::initialization()
+    @GetPackageInfoTable           @287 ; GetPackageInfoTable
+    Finalize                       @285 ; Finalize
+    Initialize                     @286 ; Initialize

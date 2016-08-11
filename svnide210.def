@@ -1,0 +1,639 @@
+LIBRARY     SVNIDE210.BPL
+
+DESCRIPTION 'mbarcadero Subversion Integration'
+
+EXPORTS
+    @$xp$101System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@%arrayofT$% @393 ; __tpdsc__ System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::arrayofT<>
+    @$xp$103System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@%TEmptyFunc$% @386 ; __tpdsc__ System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::TEmptyFunc<>
+    @$xp$104System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@%TEnumerator$% @384 ; __tpdsc__ System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::TEnumerator<>
+    @$xp$106System@Generics@Collections@%TCollectionNotifyEvent__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile% @391 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>
+    @$xp$20Svnidemenus@TSvnMenu    @554 ; __tpdsc__ Svnidemenus::TSvnMenu
+    @$xp$20System@%TArray__1$i%    @379 ; __tpdsc__ System::TArray__1<int>
+    @$xp$21Svnidemenus@TRootType   @553 ; __tpdsc__ Svnidemenus::TRootType
+    @$xp$23Svnidecolors@TSvnColors @9   ; __tpdsc__ Svnidecolors::TSvnColors
+    @$xp$24Svnideclient@TSvnOptions @626 ; __tpdsc__ Svnideclient::TSvnOptions
+    @$xp$24Svnidelog@TDirLogSvnMenu @428 ; __tpdsc__ Svnidelog::TDirLogSvnMenu
+    @$xp$24Svnidetypes@TMergeThread @413 ; __tpdsc__ Svnidetypes::TMergeThread
+    @$xp$25Svnidelog@TBaseLogSvnMenu @436 ; __tpdsc__ Svnidelog::TBaseLogSvnMenu
+    @$xp$25Svnidetypes@TSwitchThread @409 ; __tpdsc__ Svnidetypes::TSwitchThread
+    @$xp$25System@%IEnumerable__1$i% @368 ; __tpdsc__ System::IEnumerable__1<int>
+    @$xp$25System@%IEnumerator__1$i% @369 ; __tpdsc__ System::IEnumerator__1<int>
+    @$xp$26Svnideclient@TSvnIDEClient @624 ; __tpdsc__ Svnideclient::TSvnIDEClient
+    @$xp$26Svnidecolors@TSvnColorKind @12  ; __tpdsc__ Svnidecolors::TSvnColorKind
+    @$xp$27Svnidecolors@TSvnColorArray @11  ; __tpdsc__ Svnidecolors::TSvnColorArray
+    @$xp$27Svnidelog@TParentLogSvnMenu @434 ; __tpdsc__ Svnidelog::TParentLogSvnMenu
+    @$xp$28Svnideclean@TDirCleanSvnMenu @107 ; __tpdsc__ Svnideclean::TDirCleanSvnMenu
+    @$xp$28Svnidelog@TRootDirLogSvnMenu @432 ; __tpdsc__ Svnidelog::TRootDirLogSvnMenu
+    @$xp$28Svnidemerge@TDirMergeSvnMenu @484 ; __tpdsc__ Svnidemerge::TDirMergeSvnMenu
+    @$xp$28Svnidetypes@TLogDialogHelper @399 ; __tpdsc__ Svnidetypes::TLogDialogHelper
+    @$xp$29Svnideclean@TBaseCleanSvnMenu @115 ; __tpdsc__ Svnideclean::TBaseCleanSvnMenu
+    @$xp$29Svnidehistory@ISvnFileHistory @572 ; __tpdsc__ Svnidehistory::ISvnFileHistory
+    @$xp$29Svnidemerge@TBaseMergeSvnMenu @492 ; __tpdsc__ Svnidemerge::TBaseMergeSvnMenu
+    @$xp$29Svnidemessageview@TSvnMessage @92  ; __tpdsc__ Svnidemessageview::TSvnMessage
+    @$xp$29Svnidetypes@TMergeRangeThread @411 ; __tpdsc__ Svnidetypes::TMergeRangeThread
+    @$xp$30Svnidecommit@TDirCommitSvnMenu @146 ; __tpdsc__ Svnidecommit::TDirCommitSvnMenu
+    @$xp$30Svnideswitch@TDirSwitchSvnMenu @512 ; __tpdsc__ Svnideswitch::TDirSwitchSvnMenu
+    @$xp$30Svnideupdate@TDirUpdateSvnMenu @178 ; __tpdsc__ Svnideupdate::TDirUpdateSvnMenu
+    @$xp$31Svnideclean@TParentCleanSvnMenu @113 ; __tpdsc__ Svnideclean::TParentCleanSvnMenu
+    @$xp$31Svnidecommit@TBaseCommitSvnMenu @158 ; __tpdsc__ Svnidecommit::TBaseCommitSvnMenu
+    @$xp$31Svnidecommit@TFileCommitSvnMenu @148 ; __tpdsc__ Svnidecommit::TFileCommitSvnMenu
+    @$xp$31Svnidelog@TProjectDirLogSvnMenu @430 ; __tpdsc__ Svnidelog::TProjectDirLogSvnMenu
+    @$xp$31Svnidemerge@TParentMergeSvnMenu @490 ; __tpdsc__ Svnidemerge::TParentMergeSvnMenu
+    @$xp$31Svniderevert@TFileRevertSvnMenu @499 ; __tpdsc__ Svniderevert::TFileRevertSvnMenu
+    @$xp$31Svnideswitch@TBaseSwitchSvnMenu @518 ; __tpdsc__ Svnideswitch::TBaseSwitchSvnMenu
+    @$xp$31Svnidetypes@TCustomUpdateThread @415 ; __tpdsc__ Svnidetypes::TCustomUpdateThread
+    @$xp$31Svnidetypes@TSaveRevisionThread @401 ; __tpdsc__ Svnidetypes::TSaveRevisionThread
+    @$xp$31Svnideupdate@TBaseUpdateSvnMenu @190 ; __tpdsc__ Svnideupdate::TBaseUpdateSvnMenu
+    @$xp$31Svnideupdate@TFileUpdateSvnMenu @180 ; __tpdsc__ Svnideupdate::TFileUpdateSvnMenu
+    @$xp$32Svnideclean@TRootDirCleanSvnMenu @111 ; __tpdsc__ Svnideclean::TRootDirCleanSvnMenu
+    @$xp$32Svnidemerge@TRootDirMergeSvnMenu @488 ; __tpdsc__ Svnidemerge::TRootDirMergeSvnMenu
+    @$xp$33Svnidecommit@TParentCommitSvnMenu @156 ; __tpdsc__ Svnidecommit::TParentCommitSvnMenu
+    @$xp$33Svnidemessageview@TSvnMessageView @94  ; __tpdsc__ Svnidemessageview::TSvnMessageView
+    @$xp$33Svniderepobrowser@TDirRepoSvnMenu @458 ; __tpdsc__ Svniderepobrowser::TDirRepoSvnMenu
+    @$xp$33Svnideswitch@TParentSwitchSvnMenu @516 ; __tpdsc__ Svnideswitch::TParentSwitchSvnMenu
+    @$xp$33Svnidetypes@TCustomProgressThread @407 ; __tpdsc__ Svnidetypes::TCustomProgressThread
+    @$xp$33Svnideupdate@TParentUpdateSvnMenu @188 ; __tpdsc__ Svnideupdate::TParentUpdateSvnMenu
+    @$xp$34Svnidecommit@TRootDirCommitSvnMenu @154 ; __tpdsc__ Svnidecommit::TRootDirCommitSvnMenu
+    @$xp$34Svniderepobrowser@TBaseRepoSvnMenu @468 ; __tpdsc__ Svniderepobrowser::TBaseRepoSvnMenu
+    @$xp$34Svniderepobrowser@TFileRepoSvnMenu @460 ; __tpdsc__ Svniderepobrowser::TFileRepoSvnMenu
+    @$xp$34Svnideswitch@TRootDirSwitchSvnMenu @514 ; __tpdsc__ Svnideswitch::TRootDirSwitchSvnMenu
+    @$xp$34Svnidetypes@TCompareRevisionThread @403 ; __tpdsc__ Svnidetypes::TCompareRevisionThread
+    @$xp$34Svnideupdate@TRootDirUpdateSvnMenu @186 ; __tpdsc__ Svnideupdate::TRootDirUpdateSvnMenu
+    @$xp$35Svnideaddinoptions@TSvnAddInOptions @591 ; __tpdsc__ Svnideaddinoptions::TSvnAddInOptions
+    @$xp$35Svnideclean@TProjectDirCleanSvnMenu @109 ; __tpdsc__ Svnideclean::TProjectDirCleanSvnMenu
+    @$xp$35Svnidehistory@TDispInterfacedObject @575 ; __tpdsc__ Svnidehistory::TDispInterfacedObject
+    @$xp$35Svnidemerge@TProjectDirMergeSvnMenu @486 ; __tpdsc__ Svnidemerge::TProjectDirMergeSvnMenu
+    @$xp$36Svniderepobrowser@TParentRepoSvnMenu @466 ; __tpdsc__ Svniderepobrowser::TParentRepoSvnMenu
+    @$xp$37Svnidecommit@TProjectDirCommitSvnMenu @152 ; __tpdsc__ Svnidecommit::TProjectDirCommitSvnMenu
+    @$xp$37Svnidehistory@TSvnFileHistoryProvider @573 ; __tpdsc__ Svnidehistory::TSvnFileHistoryProvider
+    @$xp$37Svniderepobrowser@TRootDirRepoSvnMenu @464 ; __tpdsc__ Svniderepobrowser::TRootDirRepoSvnMenu
+    @$xp$37Svnideupdate@TProjectDirUpdateSvnMenu @184 ; __tpdsc__ Svnideupdate::TProjectDirUpdateSvnMenu
+    @$xp$39Svnidecommit@TExpicitFilesCommitSvnMenu @150 ; __tpdsc__ Svnidecommit::TExpicitFilesCommitSvnMenu
+    @$xp$39Svnideupdate@TExpicitFilesUpdateSvnMenu @182 ; __tpdsc__ Svnideupdate::TExpicitFilesUpdateSvnMenu
+    @$xp$40Svniderepobrowser@TProjectDirRepoSvnMenu @462 ; __tpdsc__ Svniderepobrowser::TProjectDirRepoSvnMenu
+    @$xp$40System@Generics@Collections@%TList__1$i% @363 ; __tpdsc__ System::Generics::Collections::TList__1<int>
+    @$xp$41System@Generics@Defaults@%IComparer__1$i% @373 ; __tpdsc__ System::Generics::Defaults::IComparer__1<int>
+    @$xp$46System@Generics@Collections@%TEnumerable__1$i% @375 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<int>
+    @$xp$46System@Generics@Collections@%TEnumerator__1$i% @377 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<int>
+    @$xp$47Svnidetypes@TCompareRevisionThread@TCompareFile @405 ; __tpdsc__ Svnidetypes::TCompareRevisionThread::TCompareFile
+    @$xp$48System@Generics@Collections@%TArrayManager__1$i% @370 ; __tpdsc__ System::Generics::Collections::TArrayManager__1<int>
+    @$xp$52System@Generics@Collections@%TList__1$i%@%arrayofT$% @374 ; __tpdsc__ System::Generics::Collections::TList__1<int>::arrayofT<>
+    @$xp$54System@Generics@Collections@%TList__1$i%@%TEmptyFunc$% @367 ; __tpdsc__ System::Generics::Collections::TList__1<int>::TEmptyFunc<>
+    @$xp$55System@Generics@Collections@%TList__1$i%@%TEnumerator$% @365 ; __tpdsc__ System::Generics::Collections::TList__1<int>::TEnumerator<>
+    @$xp$57System@Generics@Collections@%TCollectionNotifyEvent__1$i% @372 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<int>
+    @$xp$69System@%TArray__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile% @398 ; __tpdsc__ System::TArray__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>
+    @$xp$74System@%IEnumerable__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile% @387 ; __tpdsc__ System::IEnumerable__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>
+    @$xp$74System@%IEnumerator__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile% @388 ; __tpdsc__ System::IEnumerator__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>
+    @$xp$89System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile% @382 ; __tpdsc__ System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>
+    @$xp$90System@Generics@Defaults@%IComparer__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile% @392 ; __tpdsc__ System::Generics::Defaults::IComparer__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>
+    @$xp$95System@Generics@Collections@%TEnumerable__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile% @394 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>
+    @$xp$95System@Generics@Collections@%TEnumerator__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile% @396 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>
+    @$xp$95System@Generics@Collections@%TObjectList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile% @380 ; __tpdsc__ System::Generics::Collections::TObjectList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>
+    @$xp$97System@Generics@Collections@%TArrayManager__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile% @389 ; __tpdsc__ System::Generics::Collections::TArrayManager__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>
+    @GetPackageInfoTable           @634 ; GetPackageInfoTable
+    @Svnide@@GetPackageInfoTable$qqrv @631 ; Svnide::__linkproc__ __fastcall GetPackageInfoTable()
+    @Svnide@@PackageLoad$qqrv      @630 ; Svnide::__linkproc__ __fastcall PackageLoad()
+    @Svnide@@PackageUnload$qqrv    @629 ; Svnide::__linkproc__ __fastcall PackageUnload()
+    @Svnide@initialization$qqrv    @628 ; __fastcall Svnide::initialization()
+    @Svnideaddinoptions@Finalization$qqrv @581 ; __fastcall Svnideaddinoptions::Finalization()
+    @Svnideaddinoptions@RegisterAddInOptions$qqrv @582 ; __fastcall Svnideaddinoptions::RegisterAddInOptions()
+    @Svnideaddinoptions@TSvnAddInOptions@ @592 ; Svnideaddinoptions::TSvnAddInOptions::
+    @Svnideaddinoptions@TSvnAddInOptions@DialogClosed$qqro @590 ; __fastcall Svnideaddinoptions::TSvnAddInOptions::DialogClosed(bool)
+    @Svnideaddinoptions@TSvnAddInOptions@FrameCreated$qqrp22Vcl@Forms@TCustomFrame @589 ; __fastcall Svnideaddinoptions::TSvnAddInOptions::FrameCreated(Vcl::Forms::TCustomFrame *)
+    @Svnideaddinoptions@TSvnAddInOptions@GetArea$qqrv @588 ; __fastcall Svnideaddinoptions::TSvnAddInOptions::GetArea()
+    @Svnideaddinoptions@TSvnAddInOptions@GetCaption$qqrv @587 ; __fastcall Svnideaddinoptions::TSvnAddInOptions::GetCaption()
+    @Svnideaddinoptions@TSvnAddInOptions@GetFrameClass$qqrv @586 ; __fastcall Svnideaddinoptions::TSvnAddInOptions::GetFrameClass()
+    @Svnideaddinoptions@TSvnAddInOptions@GetHelpContext$qqrv @585 ; __fastcall Svnideaddinoptions::TSvnAddInOptions::GetHelpContext()
+    @Svnideaddinoptions@TSvnAddInOptions@IncludeInIDEInsight$qqrv @584 ; __fastcall Svnideaddinoptions::TSvnAddInOptions::IncludeInIDEInsight()
+    @Svnideaddinoptions@TSvnAddInOptions@ValidateContents$qqrv @583 ; __fastcall Svnideaddinoptions::TSvnAddInOptions::ValidateContents()
+    @Svnideaddinoptions@initialization$qqrv @580 ; __fastcall Svnideaddinoptions::initialization()
+    @Svnidecheckout@DoCheckOutProject$qqrr20System@UnicodeStringx20System@UnicodeString @444 ; __fastcall Svnidecheckout::DoCheckOutProject(System::UnicodeString&, const System::UnicodeString)
+    @Svnidecheckout@Finalization$qqrv @443 ; __fastcall Svnidecheckout::Finalization()
+    @Svnidecheckout@initialization$qqrv @442 ; __fastcall Svnidecheckout::initialization()
+    @Svnideclean@DoClean$qqrxp20Svnclient@TSvnClientxp26System@Classes@TStringList @104 ; __fastcall Svnideclean::DoClean(Svnclient::TSvnClient * const, System::Classes::TStringList * const)
+    @Svnideclean@Finalization$qqrv @97  ; __fastcall Svnideclean::Finalization()
+    @Svnideclean@TBaseCleanSvnMenu@ @116 ; Svnideclean::TBaseCleanSvnMenu::
+    @Svnideclean@TBaseCleanSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @106 ; __fastcall Svnideclean::TBaseCleanSvnMenu::TBaseCleanSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnideclean@TBaseCleanSvnMenu@Execute$qqrx56System@%DelphiInterface$29System@Classes@IInterfaceList% @105 ; Svnideclean::TBaseCleanSvnMenu::Execute(const System::DelphiInterface<{583}...
+    @Svnideclean@TDirCleanSvnMenu@ @108 ; Svnideclean::TDirCleanSvnMenu::
+    @Svnideclean@TDirCleanSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @99  ; __fastcall Svnideclean::TDirCleanSvnMenu::TDirCleanSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnideclean@TDirCleanSvnMenu@GetImageIndex$qqrv @98  ; __fastcall Svnideclean::TDirCleanSvnMenu::GetImageIndex()
+    @Svnideclean@TParentCleanSvnMenu@ @114 ; Svnideclean::TParentCleanSvnMenu::
+    @Svnideclean@TParentCleanSvnMenu@$bctr$qqrv @103 ; __fastcall Svnideclean::TParentCleanSvnMenu::TParentCleanSvnMenu()
+    @Svnideclean@TParentCleanSvnMenu@GetImageIndex$qqrv @102 ; __fastcall Svnideclean::TParentCleanSvnMenu::GetImageIndex()
+    @Svnideclean@TProjectDirCleanSvnMenu@ @110 ; Svnideclean::TProjectDirCleanSvnMenu::
+    @Svnideclean@TProjectDirCleanSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @100 ; __fastcall Svnideclean::TProjectDirCleanSvnMenu::TProjectDirCleanSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnideclean@TRootDirCleanSvnMenu@ @112 ; Svnideclean::TRootDirCleanSvnMenu::
+    @Svnideclean@TRootDirCleanSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @101 ; __fastcall Svnideclean::TRootDirCleanSvnMenu::TRootDirCleanSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnideclean@initialization$qqrv @96  ; __fastcall Svnideclean::initialization()
+    @Svnideclient@BaseRegKey$qqrv  @600 ; __fastcall Svnideclient::BaseRegKey()
+    @Svnideclient@Finalization$qqrv @594 ; __fastcall Svnideclient::Finalization()
+    @Svnideclient@GetSvnExceptionMessage$qqrp14System@TObjectr20System@UnicodeString @596 ; __fastcall Svnideclient::GetSvnExceptionMessage(System::TObject *, System::UnicodeString&)
+    @Svnideclient@HandleSvnException$qqrp14System@TObject @597 ; __fastcall Svnideclient::HandleSvnException(System::TObject *)
+    @Svnideclient@IDEClient        @623 ; Svnideclient::IDEClient
+    @Svnideclient@LoadURLHistory$qqrxp26System@Classes@TStringList @599 ; __fastcall Svnideclient::LoadURLHistory(System::Classes::TStringList * const)
+    @Svnideclient@Register$qqrv    @622 ; __fastcall Svnideclient::Register()
+    @Svnideclient@SaveURLHistory$qqrxp26System@Classes@TStringList @598 ; __fastcall Svnideclient::SaveURLHistory(System::Classes::TStringList * const)
+    @Svnideclient@ShowSvnExceptionMessage$qqrx20System@UnicodeString @595 ; __fastcall Svnideclient::ShowSvnExceptionMessage(const System::UnicodeString)
+    @Svnideclient@TSvnIDEClient@   @625 ; Svnideclient::TSvnIDEClient::
+    @Svnideclient@TSvnIDEClient@$bctr$qqrv @617 ; __fastcall Svnideclient::TSvnIDEClient::TSvnIDEClient()
+    @Svnideclient@TSvnIDEClient@$bdtr$qqrv @616 ; __fastcall Svnideclient::TSvnIDEClient::~TSvnIDEClient()
+    @Svnideclient@TSvnIDEClient@Finalize$qqrv @615 ; __fastcall Svnideclient::TSvnIDEClient::Finalize()
+    @Svnideclient@TSvnIDEClient@GetSvnClient$qqrv @614 ; __fastcall Svnideclient::TSvnIDEClient::GetSvnClient()
+    @Svnideclient@TSvnIDEClient@Initialize$qqrv @613 ; __fastcall Svnideclient::TSvnIDEClient::Initialize()
+    @Svnideclient@TSvnIDEClient@SettingsModified$qqrv @612 ; __fastcall Svnideclient::TSvnIDEClient::SettingsModified()
+    @Svnideclient@TSvnIDEClient@SvnClientLoginPrompt$qqrp14System@TObjectx20System@UnicodeStringr20System@UnicodeStringt3rot5 @611 ; __fastcall Svnideclient::TSvnIDEClient::SvnClientLoginPrompt(System::TObject *, const System::UnicodeString, System::UnicodeString&, System::UnicodeString&, bool&, bool&)
+    @Svnideclient@TSvnIDEClient@SvnClientSSLClientCertPrompt$qqrp14System@TObjectx20System@UnicodeStringr20System@UnicodeStringrot4 @610 ; __fastcall Svnideclient::TSvnIDEClient::SvnClientSSLClientCertPrompt(System::TObject *, const System::UnicodeString, System::UnicodeString&, bool&, bool&)
+    @Svnideclient@TSvnIDEClient@SvnClientSSLClientPasswordPrompt$qqrp14System@TObjectx20System@UnicodeStringr20System@UnicodeStringrot4 @609 ; __fastcall Svnideclient::TSvnIDEClient::SvnClientSSLClientPasswordPrompt(System::TObject *, const System::UnicodeString, System::UnicodeString&, bool&, bool&)
+    @Svnideclient@TSvnIDEClient@SvnClientSSLServerTrustPrompt$qqrp14System@TObjectx20System@UnicodeStringrx36Svn_client@TSvnAuthSSLServerCertInfo50System@%Set$23Svnclient@Svnclient__31t1$i0$t1$i4$%rot5 @608 ; Svnideclient::TSvnIDEClient::SvnClientSSLServerTrustPrompt(System::TObject *, const System::UnicodeString, const Svn_client::TSvnAuthSSLServerCertInfo&, System::Set<{583}...
+    @Svnideclient@TSvnIDEClient@SvnClientUserNamePrompt$qqrp14System@TObjectx20System@UnicodeStringr20System@UnicodeStringrot4 @607 ; __fastcall Svnideclient::TSvnIDEClient::SvnClientUserNamePrompt(System::TObject *, const System::UnicodeString, System::UnicodeString&, bool&, bool&)
+    @Svnideclient@TSvnIDEClient@SvnInitialize$qqrv @606 ; __fastcall Svnideclient::TSvnIDEClient::SvnInitialize()
+    @Svnideclient@TSvnIDEClient@SyncLoginPrompt$qqrv @605 ; __fastcall Svnideclient::TSvnIDEClient::SyncLoginPrompt()
+    @Svnideclient@TSvnIDEClient@SyncSSLClientCertPrompt$qqrv @604 ; __fastcall Svnideclient::TSvnIDEClient::SyncSSLClientCertPrompt()
+    @Svnideclient@TSvnIDEClient@SyncSSLClientPasswordPrompt$qqrv @603 ; __fastcall Svnideclient::TSvnIDEClient::SyncSSLClientPasswordPrompt()
+    @Svnideclient@TSvnIDEClient@SyncSSLServerTrustPrompt$qqrv @602 ; __fastcall Svnideclient::TSvnIDEClient::SyncSSLServerTrustPrompt()
+    @Svnideclient@TSvnIDEClient@SyncUserNamePrompt$qqrv @601 ; __fastcall Svnideclient::TSvnIDEClient::SyncUserNamePrompt()
+    @Svnideclient@TSvnOptions@     @627 ; Svnideclient::TSvnOptions::
+    @Svnideclient@TSvnOptions@$bctr$qqrv @621 ; __fastcall Svnideclient::TSvnOptions::TSvnOptions()
+    @Svnideclient@TSvnOptions@$bdtr$qqrv @620 ; __fastcall Svnideclient::TSvnOptions::~TSvnOptions()
+    @Svnideclient@TSvnOptions@Load$qqrv @619 ; __fastcall Svnideclient::TSvnOptions::Load()
+    @Svnideclient@TSvnOptions@Save$qqrv @618 ; __fastcall Svnideclient::TSvnOptions::Save()
+    @Svnideclient@initialization$qqrv @593 ; __fastcall Svnideclient::initialization()
+    @Svnidecolors@Finalization$qqrv @2   ; __fastcall Svnidecolors::Finalization()
+    @Svnidecolors@TSvnColors@      @10  ; Svnidecolors::TSvnColors::
+    @Svnidecolors@TSvnColors@$bctr$qqrv @8   ; __fastcall Svnidecolors::TSvnColors::TSvnColors()
+    @Svnidecolors@TSvnColors@GetLogActionColor$qqrb @7   ; __fastcall Svnidecolors::TSvnColors::GetLogActionColor(wchar_t)
+    @Svnidecolors@TSvnColors@GetNotifyActionColor$qqr29Svn_client@TSvnWcNotifyAction28Svn_client@TSvnWcNotifyState @6   ; __fastcall Svnidecolors::TSvnColors::GetNotifyActionColor(Svn_client::TSvnWcNotifyAction, Svn_client::TSvnWcNotifyState)
+    @Svnidecolors@TSvnColors@GetStatusColor$qqr27Svn_client@TSvnWcStatusKind @5   ; __fastcall Svnidecolors::TSvnColors::GetStatusColor(Svn_client::TSvnWcStatusKind)
+    @Svnidecolors@TSvnColors@Load$qqrv @4   ; __fastcall Svnidecolors::TSvnColors::Load()
+    @Svnidecolors@TSvnColors@Save$qqrv @3   ; __fastcall Svnidecolors::TSvnColors::Save()
+    @Svnidecolors@initialization$qqrv @1   ; __fastcall Svnidecolors::initialization()
+    @Svnidecommit@DoCommit$qqrxp20Svnclient@TSvnClientxp26System@Classes@TStringListx20System@UnicodeStringt2o @134 ; __fastcall Svnidecommit::DoCommit(Svnclient::TSvnClient * const, System::Classes::TStringList * const, const System::UnicodeString, System::Classes::TStringList * const, bool)
+    @Svnidecommit@Finalization$qqrv @130 ; __fastcall Svnidecommit::Finalization()
+    @Svnidecommit@LoadRecentComments$qqrxp26System@Classes@TStringList @133 ; __fastcall Svnidecommit::LoadRecentComments(System::Classes::TStringList * const)
+    @Svnidecommit@Register$qqrv    @131 ; __fastcall Svnidecommit::Register()
+    @Svnidecommit@SaveRecentComments$qqrxp26System@Classes@TStringList @132 ; __fastcall Svnidecommit::SaveRecentComments(System::Classes::TStringList * const)
+    @Svnidecommit@TBaseCommitSvnMenu@ @159 ; Svnidecommit::TBaseCommitSvnMenu::
+    @Svnidecommit@TBaseCommitSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @145 ; __fastcall Svnidecommit::TBaseCommitSvnMenu::TBaseCommitSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnidecommit@TBaseCommitSvnMenu@Execute$qqrx56System@%DelphiInterface$29System@Classes@IInterfaceList% @144 ; Svnidecommit::TBaseCommitSvnMenu::Execute(const System::DelphiInterface<{583}...
+    @Svnidecommit@TDirCommitSvnMenu@ @147 ; Svnidecommit::TDirCommitSvnMenu::
+    @Svnidecommit@TDirCommitSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @136 ; __fastcall Svnidecommit::TDirCommitSvnMenu::TDirCommitSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnidecommit@TDirCommitSvnMenu@GetImageIndex$qqrv @135 ; __fastcall Svnidecommit::TDirCommitSvnMenu::GetImageIndex()
+    @Svnidecommit@TExpicitFilesCommitSvnMenu@ @151 ; Svnidecommit::TExpicitFilesCommitSvnMenu::
+    @Svnidecommit@TExpicitFilesCommitSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @139 ; __fastcall Svnidecommit::TExpicitFilesCommitSvnMenu::TExpicitFilesCommitSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnidecommit@TFileCommitSvnMenu@ @149 ; Svnidecommit::TFileCommitSvnMenu::
+    @Svnidecommit@TFileCommitSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @138 ; __fastcall Svnidecommit::TFileCommitSvnMenu::TFileCommitSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnidecommit@TFileCommitSvnMenu@GetImageIndex$qqrv @137 ; __fastcall Svnidecommit::TFileCommitSvnMenu::GetImageIndex()
+    @Svnidecommit@TParentCommitSvnMenu@ @157 ; Svnidecommit::TParentCommitSvnMenu::
+    @Svnidecommit@TParentCommitSvnMenu@$bctr$qqrv @143 ; __fastcall Svnidecommit::TParentCommitSvnMenu::TParentCommitSvnMenu()
+    @Svnidecommit@TParentCommitSvnMenu@GetImageIndex$qqrv @142 ; __fastcall Svnidecommit::TParentCommitSvnMenu::GetImageIndex()
+    @Svnidecommit@TProjectDirCommitSvnMenu@ @153 ; Svnidecommit::TProjectDirCommitSvnMenu::
+    @Svnidecommit@TProjectDirCommitSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @140 ; __fastcall Svnidecommit::TProjectDirCommitSvnMenu::TProjectDirCommitSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnidecommit@TRootDirCommitSvnMenu@ @155 ; Svnidecommit::TRootDirCommitSvnMenu::
+    @Svnidecommit@TRootDirCommitSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @141 ; __fastcall Svnidecommit::TRootDirCommitSvnMenu::TRootDirCommitSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnidecommit@initialization$qqrv @129 ; __fastcall Svnidecommit::initialization()
+    @Svnideconst@Finalization$qqrv @14  ; __fastcall Svnideconst::Finalization()
+    @Svnideconst@_sCleaning        @27  ; Svnideconst::_sCleaning
+    @Svnideconst@_sCommit          @35  ; Svnideconst::_sCommit
+    @Svnideconst@_sCommitCompleted @31  ; Svnideconst::_sCommitCompleted
+    @Svnideconst@_sCommitLoaded    @30  ; Svnideconst::_sCommitLoaded
+    @Svnideconst@_sCommited        @32  ; Svnideconst::_sCommited
+    @Svnideconst@_sFilesUnderDir   @24  ; Svnideconst::_sFilesUnderDir
+    @Svnideconst@_sHead            @18  ; Svnideconst::_sHead
+    @Svnideconst@_sImport          @25  ; Svnideconst::_sImport
+    @Svnideconst@_sLoadError       @51  ; Svnideconst::_sLoadError
+    @Svnideconst@_sLog             @26  ; Svnideconst::_sLog
+    @Svnideconst@_sMenuAddToVersionControl @37  ; Svnideconst::_sMenuAddToVersionControl
+    @Svnideconst@_sMenuOpenFromVersionControl @36  ; Svnideconst::_sMenuOpenFromVersionControl
+    @Svnideconst@_sMergeDialogCaption @20  ; Svnideconst::_sMergeDialogCaption
+    @Svnideconst@_sMergeDialogCaptionRange @19  ; Svnideconst::_sMergeDialogCaptionRange
+    @Svnideconst@_sNeedToClean     @29  ; Svnideconst::_sNeedToClean
+    @Svnideconst@_sPMMClean        @47  ; Svnideconst::_sPMMClean
+    @Svnideconst@_sPMMCommit       @49  ; Svnideconst::_sPMMCommit
+    @Svnideconst@_sPMMExpicitFiles @42  ; Svnideconst::_sPMMExpicitFiles
+    @Svnideconst@_sPMMLog          @45  ; Svnideconst::_sPMMLog
+    @Svnideconst@_sPMMMerge        @40  ; Svnideconst::_sPMMMerge
+    @Svnideconst@_sPMMProjectDir   @43  ; Svnideconst::_sPMMProjectDir
+    @Svnideconst@_sPMMRepo         @41  ; Svnideconst::_sPMMRepo
+    @Svnideconst@_sPMMRevert       @39  ; Svnideconst::_sPMMRevert
+    @Svnideconst@_sPMMRootDir      @44  ; Svnideconst::_sPMMRootDir
+    @Svnideconst@_sPMMSvnParent    @46  ; Svnideconst::_sPMMSvnParent
+    @Svnideconst@_sPMMSwitch       @38  ; Svnideconst::_sPMMSwitch
+    @Svnideconst@_sPMMUpdate       @48  ; Svnideconst::_sPMMUpdate
+    @Svnideconst@_sRepoBrowser     @22  ; Svnideconst::_sRepoBrowser
+    @Svnideconst@_sRetrievingFileRevision @16  ; Svnideconst::_sRetrievingFileRevision
+    @Svnideconst@_sRunClean        @28  ; Svnideconst::_sRunClean
+    @Svnideconst@_sSavingFileRevision @15  ; Svnideconst::_sSavingFileRevision
+    @Svnideconst@_sSubversion      @50  ; Svnideconst::_sSubversion
+    @Svnideconst@_sSwitchDialogCaption @17  ; Svnideconst::_sSwitchDialogCaption
+    @Svnideconst@_sUpdateCompletedAtRevision @33  ; Svnideconst::_sUpdateCompletedAtRevision
+    @Svnideconst@_sUpdated         @34  ; Svnideconst::_sUpdated
+    @Svnideconst@_sVersionControlAddInOptionArea @21  ; Svnideconst::_sVersionControlAddInOptionArea
+    @Svnideconst@_sWorking         @23  ; Svnideconst::_sWorking
+    @Svnideconst@initialization$qqrv @13  ; __fastcall Svnideconst::initialization()
+    @Svnidefilestates@Finalization$qqrv @123 ; __fastcall Svnidefilestates::Finalization()
+    @Svnidefilestates@FlushFileListFileStates$qqrp26System@Classes@TStringList @128 ; __fastcall Svnidefilestates::FlushFileListFileStates(System::Classes::TStringList *)
+    @Svnidefilestates@FlushFileState$qqrx20System@UnicodeString @127 ; __fastcall Svnidefilestates::FlushFileState(const System::UnicodeString)
+    @Svnidefilestates@GetFileStateProvider$qqrv @126 ; __fastcall Svnidefilestates::GetFileStateProvider()
+    @Svnidefilestates@RegisterFileStateProvider$qqrv @125 ; __fastcall Svnidefilestates::RegisterFileStateProvider()
+    @Svnidefilestates@UnregisterFileStateProvider$qqrv @124 ; __fastcall Svnidefilestates::UnregisterFileStateProvider()
+    @Svnidefilestates@initialization$qqrv @122 ; __fastcall Svnidefilestates::initialization()
+    @Svnidehistory@Finalization$qqrv @557 ; __fastcall Svnidehistory::Finalization()
+    @Svnidehistory@TDispInterfacedObject@ @576 ; Svnidehistory::TDispInterfacedObject::
+    @Svnidehistory@TDispInterfacedObject@GetIDsOfNames$qqsrx5_GUIDpviit2 @571 ; __stdcall Svnidehistory::TDispInterfacedObject::GetIDsOfNames(const _GUID&, void *, int, int, void *)
+    @Svnidehistory@TDispInterfacedObject@GetTypeInfo$qqsiipv @570 ; __stdcall Svnidehistory::TDispInterfacedObject::GetTypeInfo(int, int, void *)
+    @Svnidehistory@TDispInterfacedObject@GetTypeInfoCount$qqsri @569 ; __stdcall Svnidehistory::TDispInterfacedObject::GetTypeInfoCount(int&)
+    @Svnidehistory@TDispInterfacedObject@Invoke$qqsirx5_GUIDiuspvt5t5t5 @568 ; __stdcall Svnidehistory::TDispInterfacedObject::Invoke(int, const _GUID&, int, unsigned short, void *, void *, void *, void *)
+    @Svnidehistory@TSvnFileHistoryProvider@ @574 ; Svnidehistory::TSvnFileHistoryProvider::
+    @Svnidehistory@TSvnFileHistoryProvider@$bctr$qqrp26Svnideclient@TSvnIDEClient @565 ; __fastcall Svnidehistory::TSvnFileHistoryProvider::TSvnFileHistoryProvider(Svnideclient::TSvnIDEClient *)
+    @Svnidehistory@TSvnFileHistoryProvider@$bdtr$qqrv @564 ; __fastcall Svnidehistory::TSvnFileHistoryProvider::~TSvnFileHistoryProvider()
+    @Svnidehistory@TSvnFileHistoryProvider@CheckSvnInitalize$qqrv @567 ; __fastcall Svnidehistory::TSvnFileHistoryProvider::CheckSvnInitalize()
+    @Svnidehistory@TSvnFileHistoryProvider@ClearItems$qqrv @566 ; __fastcall Svnidehistory::TSvnFileHistoryProvider::ClearItems()
+    @Svnidehistory@TSvnFileHistoryProvider@GetFileHistory$qqsx17System@WideStringr57System@%DelphiInterface$30Filehistoryapi@IOTAFileHistory% @563 ; Svnidehistory::TSvnFileHistoryProvider::GetFileHistory(const System::WideString, System::DelphiInterface<{583}...
+    @Svnidehistory@TSvnFileHistoryProvider@Get_Ident$qqsr17System@WideString @562 ; __stdcall Svnidehistory::TSvnFileHistoryProvider::Get_Ident(System::WideString&)
+    @Svnidehistory@TSvnFileHistoryProvider@Get_Name$qqsr17System@WideString @561 ; __stdcall Svnidehistory::TSvnFileHistoryProvider::Get_Name(System::WideString&)
+    @Svnidehistory@TSvnFileHistoryProvider@SafeCallException$qqrp14System@TObjectpv @560 ; __fastcall Svnidehistory::TSvnFileHistoryProvider::SafeCallException(System::TObject *, void *)
+    @Svnidehistory@TSvnFileHistoryProvider@StartAsynchronousUpdate$qqrx17System@WideStringx72System@%DelphiInterface$45Filehistoryapi@IOTAAsynchronousHistoryUpdater% @559 ; Svnidehistory::TSvnFileHistoryProvider::StartAsynchronousUpdate(const System::WideString, const System::DelphiInterface<{583}...
+    @Svnidehistory@TSvnFileHistoryProvider@TerminateAsynchronousUpdate$qqrx17System@WideStringo @558 ; __fastcall Svnidehistory::TSvnFileHistoryProvider::TerminateAsynchronousUpdate(const System::WideString, bool)
+    @Svnidehistory@initialization$qqrv @556 ; __fastcall Svnidehistory::initialization()
+    @Svnideicons@CleanImageIndex   @60  ; Svnideicons::CleanImageIndex
+    @Svnideicons@CommitImageIndex  @63  ; Svnideicons::CommitImageIndex
+    @Svnideicons@Finalization$qqrv @53  ; __fastcall Svnideicons::Finalization()
+    @Svnideicons@LogImageIndex     @61  ; Svnideicons::LogImageIndex
+    @Svnideicons@MergeImageIndex   @58  ; Svnideicons::MergeImageIndex
+    @Svnideicons@RegisterImages$qqrv @54  ; __fastcall Svnideicons::RegisterImages()
+    @Svnideicons@RepoBrowserImageIndex @59  ; Svnideicons::RepoBrowserImageIndex
+    @Svnideicons@RevertImageIndex  @57  ; Svnideicons::RevertImageIndex
+    @Svnideicons@SubversionImageIndex @64  ; Svnideicons::SubversionImageIndex
+    @Svnideicons@SubversionMessageViewImageIndex @55  ; Svnideicons::SubversionMessageViewImageIndex
+    @Svnideicons@SwitchImageIndex  @56  ; Svnideicons::SwitchImageIndex
+    @Svnideicons@UpdateImageIndex  @62  ; Svnideicons::UpdateImageIndex
+    @Svnideicons@initialization$qqrv @52  ; __fastcall Svnideicons::initialization()
+    @Svnideimport@Finalization$qqrv @439 ; __fastcall Svnideimport::Finalization()
+    @Svnideimport@ImportProject$qqrxp26Svnideclient@TSvnIDEClientx47System@%DelphiInterface$20Toolsapi@IOTAProject% @441 ; Svnideimport::ImportProject(Svnideclient::TSvnIDEClient * const, const System::DelphiInterface<{583}...
+    @Svnideimport@Register$qqrv    @440 ; __fastcall Svnideimport::Register()
+    @Svnideimport@initialization$qqrv @438 ; __fastcall Svnideimport::initialization()
+    @Svnidelog@Finalization$qqrv   @418 ; __fastcall Svnidelog::Finalization()
+    @Svnidelog@Register$qqrv       @419 ; __fastcall Svnidelog::Register()
+    @Svnidelog@TBaseLogSvnMenu@    @437 ; Svnidelog::TBaseLogSvnMenu::
+    @Svnidelog@TBaseLogSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @427 ; __fastcall Svnidelog::TBaseLogSvnMenu::TBaseLogSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnidelog@TBaseLogSvnMenu@Execute$qqrx56System@%DelphiInterface$29System@Classes@IInterfaceList% @426 ; Svnidelog::TBaseLogSvnMenu::Execute(const System::DelphiInterface<{583}...
+    @Svnidelog@TDirLogSvnMenu@     @429 ; Svnidelog::TDirLogSvnMenu::
+    @Svnidelog@TDirLogSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @421 ; __fastcall Svnidelog::TDirLogSvnMenu::TDirLogSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnidelog@TDirLogSvnMenu@GetImageIndex$qqrv @420 ; __fastcall Svnidelog::TDirLogSvnMenu::GetImageIndex()
+    @Svnidelog@TParentLogSvnMenu@  @435 ; Svnidelog::TParentLogSvnMenu::
+    @Svnidelog@TParentLogSvnMenu@$bctr$qqrv @425 ; __fastcall Svnidelog::TParentLogSvnMenu::TParentLogSvnMenu()
+    @Svnidelog@TParentLogSvnMenu@GetImageIndex$qqrv @424 ; __fastcall Svnidelog::TParentLogSvnMenu::GetImageIndex()
+    @Svnidelog@TProjectDirLogSvnMenu@ @431 ; Svnidelog::TProjectDirLogSvnMenu::
+    @Svnidelog@TProjectDirLogSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @422 ; __fastcall Svnidelog::TProjectDirLogSvnMenu::TProjectDirLogSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnidelog@TRootDirLogSvnMenu@ @433 ; Svnidelog::TRootDirLogSvnMenu::
+    @Svnidelog@TRootDirLogSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @423 ; __fastcall Svnidelog::TRootDirLogSvnMenu::TRootDirLogSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnidelog@initialization$qqrv @417 ; __fastcall Svnidelog::initialization()
+    @Svnidemenus@BuildFileList$qqrx56System@%DelphiInterface$29System@Classes@IInterfaceList%xp26System@Classes@TStringListxp20Svnclient@TSvnClient21Svnidemenus@TRootTypero @551 ; Svnidemenus::BuildFileList(const System::DelphiInterface<{583}...
+    @Svnidemenus@Finalization$qqrv @521 ; __fastcall Svnidemenus::Finalization()
+    @Svnidemenus@RegisterMenus$qqrp26Svnideclient@TSvnIDEClient @523 ; __fastcall Svnidemenus::RegisterMenus(Svnideclient::TSvnIDEClient *)
+    @Svnidemenus@RootDirectory$qqrxp20Svnclient@TSvnClientx20System@UnicodeString @552 ; __fastcall Svnidemenus::RootDirectory(Svnclient::TSvnClient * const, const System::UnicodeString)
+    @Svnidemenus@TSvnMenu@         @555 ; Svnidemenus::TSvnMenu::
+    @Svnidemenus@TSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @548 ; __fastcall Svnidemenus::TSvnMenu::TSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnidemenus@TSvnMenu@AfterSave$qqrv @550 ; __fastcall Svnidemenus::TSvnMenu::AfterSave()
+    @Svnidemenus@TSvnMenu@BeforeSave$qqrv @549 ; __fastcall Svnidemenus::TSvnMenu::BeforeSave()
+    @Svnidemenus@TSvnMenu@Destroyed$qqrv @547 ; __fastcall Svnidemenus::TSvnMenu::Destroyed()
+    @Svnidemenus@TSvnMenu@Execute$qqrx56System@%DelphiInterface$29System@Classes@IInterfaceList% @546 ; Svnidemenus::TSvnMenu::Execute(const System::DelphiInterface<{583}...
+    @Svnidemenus@TSvnMenu@GetCaption$qqrv @545 ; __fastcall Svnidemenus::TSvnMenu::GetCaption()
+    @Svnidemenus@TSvnMenu@GetChecked$qqrv @544 ; __fastcall Svnidemenus::TSvnMenu::GetChecked()
+    @Svnidemenus@TSvnMenu@GetEnabled$qqrv @543 ; __fastcall Svnidemenus::TSvnMenu::GetEnabled()
+    @Svnidemenus@TSvnMenu@GetHelpContext$qqrv @542 ; __fastcall Svnidemenus::TSvnMenu::GetHelpContext()
+    @Svnidemenus@TSvnMenu@GetImageIndex$qqrv @541 ; __fastcall Svnidemenus::TSvnMenu::GetImageIndex()
+    @Svnidemenus@TSvnMenu@GetIsMultiSelectable$qqrv @540 ; __fastcall Svnidemenus::TSvnMenu::GetIsMultiSelectable()
+    @Svnidemenus@TSvnMenu@GetName$qqrv @539 ; __fastcall Svnidemenus::TSvnMenu::GetName()
+    @Svnidemenus@TSvnMenu@GetParent$qqrv @538 ; __fastcall Svnidemenus::TSvnMenu::GetParent()
+    @Svnidemenus@TSvnMenu@GetPosition$qqrv @537 ; __fastcall Svnidemenus::TSvnMenu::GetPosition()
+    @Svnidemenus@TSvnMenu@GetVerb$qqrv @536 ; __fastcall Svnidemenus::TSvnMenu::GetVerb()
+    @Svnidemenus@TSvnMenu@Modified$qqrv @535 ; __fastcall Svnidemenus::TSvnMenu::Modified()
+    @Svnidemenus@TSvnMenu@PostExecute$qqrx56System@%DelphiInterface$29System@Classes@IInterfaceList% @534 ; Svnidemenus::TSvnMenu::PostExecute(const System::DelphiInterface<{583}...
+    @Svnidemenus@TSvnMenu@PreExecute$qqrx56System@%DelphiInterface$29System@Classes@IInterfaceList% @533 ; Svnidemenus::TSvnMenu::PreExecute(const System::DelphiInterface<{583}...
+    @Svnidemenus@TSvnMenu@SetCaption$qqrx20System@UnicodeString @532 ; __fastcall Svnidemenus::TSvnMenu::SetCaption(const System::UnicodeString)
+    @Svnidemenus@TSvnMenu@SetChecked$qqro @531 ; __fastcall Svnidemenus::TSvnMenu::SetChecked(bool)
+    @Svnidemenus@TSvnMenu@SetEnabled$qqro @530 ; __fastcall Svnidemenus::TSvnMenu::SetEnabled(bool)
+    @Svnidemenus@TSvnMenu@SetHelpContext$qqri @529 ; __fastcall Svnidemenus::TSvnMenu::SetHelpContext(int)
+    @Svnidemenus@TSvnMenu@SetIsMultiSelectable$qqro @528 ; __fastcall Svnidemenus::TSvnMenu::SetIsMultiSelectable(bool)
+    @Svnidemenus@TSvnMenu@SetName$qqrx20System@UnicodeString @527 ; __fastcall Svnidemenus::TSvnMenu::SetName(const System::UnicodeString)
+    @Svnidemenus@TSvnMenu@SetParent$qqrx20System@UnicodeString @526 ; __fastcall Svnidemenus::TSvnMenu::SetParent(const System::UnicodeString)
+    @Svnidemenus@TSvnMenu@SetPosition$qqri @525 ; __fastcall Svnidemenus::TSvnMenu::SetPosition(int)
+    @Svnidemenus@TSvnMenu@SetVerb$qqrx20System@UnicodeString @524 ; __fastcall Svnidemenus::TSvnMenu::SetVerb(const System::UnicodeString)
+    @Svnidemenus@UnRegisterMenus$qqrv @522 ; __fastcall Svnidemenus::UnRegisterMenus()
+    @Svnidemenus@initialization$qqrv @520 ; __fastcall Svnidemenus::initialization()
+    @Svnidemerge@Finalization$qqrv @471 ; __fastcall Svnidemerge::Finalization()
+    @Svnidemerge@TBaseMergeSvnMenu@ @493 ; Svnidemerge::TBaseMergeSvnMenu::
+    @Svnidemerge@TBaseMergeSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @483 ; __fastcall Svnidemerge::TBaseMergeSvnMenu::TBaseMergeSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnidemerge@TBaseMergeSvnMenu@DoMerge$qqrrx30Svnclientmerge@TMergeParameter @482 ; __fastcall Svnidemerge::TBaseMergeSvnMenu::DoMerge(const Svnclientmerge::TMergeParameter&)
+    @Svnidemerge@TBaseMergeSvnMenu@Execute$qqrx56System@%DelphiInterface$29System@Classes@IInterfaceList% @481 ; Svnidemerge::TBaseMergeSvnMenu::Execute(const System::DelphiInterface<{583}...
+    @Svnidemerge@TBaseMergeSvnMenu@SelectLogRevisionsCallBack$qqrx20System@UnicodeStringp40System@Generics@Collections@%TList__1$i% @480 ; __fastcall Svnidemerge::TBaseMergeSvnMenu::SelectLogRevisionsCallBack(const System::UnicodeString, System::Generics::Collections::TList__1<int> *)
+    @Svnidemerge@TBaseMergeSvnMenu@ShowLogCallBack$qqrx20System@UnicodeString @479 ; __fastcall Svnidemerge::TBaseMergeSvnMenu::ShowLogCallBack(const System::UnicodeString)
+    @Svnidemerge@TBaseMergeSvnMenu@TestMergeCallBack$qqrrx30Svnclientmerge@TMergeParameter @478 ; __fastcall Svnidemerge::TBaseMergeSvnMenu::TestMergeCallBack(const Svnclientmerge::TMergeParameter&)
+    @Svnidemerge@TDirMergeSvnMenu@ @485 ; Svnidemerge::TDirMergeSvnMenu::
+    @Svnidemerge@TDirMergeSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @473 ; __fastcall Svnidemerge::TDirMergeSvnMenu::TDirMergeSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnidemerge@TDirMergeSvnMenu@GetImageIndex$qqrv @472 ; __fastcall Svnidemerge::TDirMergeSvnMenu::GetImageIndex()
+    @Svnidemerge@TParentMergeSvnMenu@ @491 ; Svnidemerge::TParentMergeSvnMenu::
+    @Svnidemerge@TParentMergeSvnMenu@$bctr$qqrv @477 ; __fastcall Svnidemerge::TParentMergeSvnMenu::TParentMergeSvnMenu()
+    @Svnidemerge@TParentMergeSvnMenu@GetImageIndex$qqrv @476 ; __fastcall Svnidemerge::TParentMergeSvnMenu::GetImageIndex()
+    @Svnidemerge@TProjectDirMergeSvnMenu@ @487 ; Svnidemerge::TProjectDirMergeSvnMenu::
+    @Svnidemerge@TProjectDirMergeSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @474 ; __fastcall Svnidemerge::TProjectDirMergeSvnMenu::TProjectDirMergeSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnidemerge@TRootDirMergeSvnMenu@ @489 ; Svnidemerge::TRootDirMergeSvnMenu::
+    @Svnidemerge@TRootDirMergeSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @475 ; __fastcall Svnidemerge::TRootDirMergeSvnMenu::TRootDirMergeSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnidemerge@initialization$qqrv @470 ; __fastcall Svnidemerge::initialization()
+    @Svnidemessageview@Finalization$qqrv @66  ; __fastcall Svnidemessageview::Finalization()
+    @Svnidemessageview@SvnMessageView @91  ; Svnidemessageview::SvnMessageView
+    @Svnidemessageview@TSvnMessage@ @93  ; Svnidemessageview::TSvnMessage::
+    @Svnidemessageview@TSvnMessage@$bctr$qqrx20System@UnicodeString29Svn_client@TSvnWcNotifyAction28Svn_client@TSvnWcNotifyState @89  ; __fastcall Svnidemessageview::TSvnMessage::TSvnMessage(const System::UnicodeString, Svn_client::TSvnWcNotifyAction, Svn_client::TSvnWcNotifyState)
+    @Svnidemessageview@TSvnMessage@CanGotoSource$qqrro @90  ; __fastcall Svnidemessageview::TSvnMessage::CanGotoSource(bool&)
+    @Svnidemessageview@TSvnMessage@GetChild$qqri @88  ; __fastcall Svnidemessageview::TSvnMessage::GetChild(int)
+    @Svnidemessageview@TSvnMessage@GetChildCount$qqrv @87  ; __fastcall Svnidemessageview::TSvnMessage::GetChildCount()
+    @Svnidemessageview@TSvnMessage@GetColumnNumber$qqrv @86  ; __fastcall Svnidemessageview::TSvnMessage::GetColumnNumber()
+    @Svnidemessageview@TSvnMessage@GetFileName$qqrv @85  ; __fastcall Svnidemessageview::TSvnMessage::GetFileName()
+    @Svnidemessageview@TSvnMessage@GetLineNumber$qqrv @84  ; __fastcall Svnidemessageview::TSvnMessage::GetLineNumber()
+    @Svnidemessageview@TSvnMessage@GetLineText$qqrv @83  ; __fastcall Svnidemessageview::TSvnMessage::GetLineText()
+    @Svnidemessageview@TSvnMessage@GotoSource$qqrro @82  ; __fastcall Svnidemessageview::TSvnMessage::GotoSource(bool&)
+    @Svnidemessageview@TSvnMessage@ShowHelp$qqrv @81  ; __fastcall Svnidemessageview::TSvnMessage::ShowHelp()
+    @Svnidemessageview@TSvnMessage@TrackSource$qqrro @80  ; __fastcall Svnidemessageview::TSvnMessage::TrackSource(bool&)
+    @Svnidemessageview@TSvnMessageView@ @95  ; Svnidemessageview::TSvnMessageView::
+    @Svnidemessageview@TSvnMessageView@$bctr$qqrv @76  ; __fastcall Svnidemessageview::TSvnMessageView::TSvnMessageView()
+    @Svnidemessageview@TSvnMessageView@$bdtr$qqrv @75  ; __fastcall Svnidemessageview::TSvnMessageView::~TSvnMessageView()
+    @Svnidemessageview@TSvnMessageView@AfterSave$qqrv @79  ; __fastcall Svnidemessageview::TSvnMessageView::AfterSave()
+    @Svnidemessageview@TSvnMessageView@BeforeSave$qqrv @78  ; __fastcall Svnidemessageview::TSvnMessageView::BeforeSave()
+    @Svnidemessageview@TSvnMessageView@CheckMessageGroup$qqro @77  ; __fastcall Svnidemessageview::TSvnMessageView::CheckMessageGroup(bool)
+    @Svnidemessageview@TSvnMessageView@Destroyed$qqrv @74  ; __fastcall Svnidemessageview::TSvnMessageView::Destroyed()
+    @Svnidemessageview@TSvnMessageView@GetMessageGroup$qqrv @73  ; __fastcall Svnidemessageview::TSvnMessageView::GetMessageGroup()
+    @Svnidemessageview@TSvnMessageView@MessageGroupAdded$qqrx52System@%DelphiInterface$25Toolsapi@IOTAMessageGroup% @72  ; Svnidemessageview::TSvnMessageView::MessageGroupAdded(const System::DelphiInterface<{583}...
+    @Svnidemessageview@TSvnMessageView@MessageGroupDeleted$qqrx52System@%DelphiInterface$25Toolsapi@IOTAMessageGroup% @71  ; Svnidemessageview::TSvnMessageView::MessageGroupDeleted(const System::DelphiInterface<{583}...
+    @Svnidemessageview@TSvnMessageView@MessageViewCallBack$qqrp14System@TObjectx20System@UnicodeStringt229Svn_client@TSvnWcNotifyAction23Svn_client@TSvnNodeKind28Svn_client@TSvnWcNotifyStatet6iro @70  ; Svnidemessageview::TSvnMessageView::MessageViewCallBack(System::TObject *, const System::UnicodeString, const System::UnicodeString, Svn_client::TSvnWcNotifyAction, Svn_client::TSvnNodeKind, Svn_client::TSvnWcNotifyState, Svn_client::TSvnWcNotifyState,
+    @Svnidemessageview@TSvnMessageView@Modified$qqrv @69  ; __fastcall Svnidemessageview::TSvnMessageView::Modified()
+    @Svnidemessageview@TSvnMessageView@WriteMessage$qqrx20System@UnicodeString29Svn_client@TSvnWcNotifyAction28Svn_client@TSvnWcNotifyState @68  ; __fastcall Svnidemessageview::TSvnMessageView::WriteMessage(const System::UnicodeString, Svn_client::TSvnWcNotifyAction, Svn_client::TSvnWcNotifyState)
+    @Svnidemessageview@TSvnMessageView@WriteTitle$qqrx20System@UnicodeString @67  ; __fastcall Svnidemessageview::TSvnMessageView::WriteTitle(const System::UnicodeString)
+    @Svnidemessageview@initialization$qqrv @65  ; __fastcall Svnidemessageview::initialization()
+    @Svnidenotifier@Finalization$qqrv @578 ; __fastcall Svnidenotifier::Finalization()
+    @Svnidenotifier@RegisterFileNotification$qqrv @579 ; __fastcall Svnidenotifier::RegisterFileNotification()
+    @Svnidenotifier@initialization$qqrv @577 ; __fastcall Svnidenotifier::initialization()
+    @Svniderepobrowser@Finalization$qqrv @446 ; __fastcall Svniderepobrowser::Finalization()
+    @Svniderepobrowser@TBaseRepoSvnMenu@ @469 ; Svniderepobrowser::TBaseRepoSvnMenu::
+    @Svniderepobrowser@TBaseRepoSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @457 ; __fastcall Svniderepobrowser::TBaseRepoSvnMenu::TBaseRepoSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svniderepobrowser@TBaseRepoSvnMenu@Execute$qqrx56System@%DelphiInterface$29System@Classes@IInterfaceList% @456 ; Svniderepobrowser::TBaseRepoSvnMenu::Execute(const System::DelphiInterface<{583}...
+    @Svniderepobrowser@TDirRepoSvnMenu@ @459 ; Svniderepobrowser::TDirRepoSvnMenu::
+    @Svniderepobrowser@TDirRepoSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @448 ; __fastcall Svniderepobrowser::TDirRepoSvnMenu::TDirRepoSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svniderepobrowser@TDirRepoSvnMenu@GetImageIndex$qqrv @447 ; __fastcall Svniderepobrowser::TDirRepoSvnMenu::GetImageIndex()
+    @Svniderepobrowser@TFileRepoSvnMenu@ @461 ; Svniderepobrowser::TFileRepoSvnMenu::
+    @Svniderepobrowser@TFileRepoSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @451 ; __fastcall Svniderepobrowser::TFileRepoSvnMenu::TFileRepoSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svniderepobrowser@TFileRepoSvnMenu@Execute$qqrx56System@%DelphiInterface$29System@Classes@IInterfaceList% @450 ; Svniderepobrowser::TFileRepoSvnMenu::Execute(const System::DelphiInterface<{583}...
+    @Svniderepobrowser@TFileRepoSvnMenu@GetImageIndex$qqrv @449 ; __fastcall Svniderepobrowser::TFileRepoSvnMenu::GetImageIndex()
+    @Svniderepobrowser@TParentRepoSvnMenu@ @467 ; Svniderepobrowser::TParentRepoSvnMenu::
+    @Svniderepobrowser@TParentRepoSvnMenu@$bctr$qqrv @455 ; __fastcall Svniderepobrowser::TParentRepoSvnMenu::TParentRepoSvnMenu()
+    @Svniderepobrowser@TParentRepoSvnMenu@GetImageIndex$qqrv @454 ; __fastcall Svniderepobrowser::TParentRepoSvnMenu::GetImageIndex()
+    @Svniderepobrowser@TProjectDirRepoSvnMenu@ @463 ; Svniderepobrowser::TProjectDirRepoSvnMenu::
+    @Svniderepobrowser@TProjectDirRepoSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @452 ; __fastcall Svniderepobrowser::TProjectDirRepoSvnMenu::TProjectDirRepoSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svniderepobrowser@TRootDirRepoSvnMenu@ @465 ; Svniderepobrowser::TRootDirRepoSvnMenu::
+    @Svniderepobrowser@TRootDirRepoSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @453 ; __fastcall Svniderepobrowser::TRootDirRepoSvnMenu::TRootDirRepoSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svniderepobrowser@initialization$qqrv @445 ; __fastcall Svniderepobrowser::initialization()
+    @Svniderevert@Finalization$qqrv @495 ; __fastcall Svniderevert::Finalization()
+    @Svniderevert@TFileRevertSvnMenu@ @500 ; Svniderevert::TFileRevertSvnMenu::
+    @Svniderevert@TFileRevertSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @498 ; __fastcall Svniderevert::TFileRevertSvnMenu::TFileRevertSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svniderevert@TFileRevertSvnMenu@Execute$qqrx56System@%DelphiInterface$29System@Classes@IInterfaceList% @497 ; Svniderevert::TFileRevertSvnMenu::Execute(const System::DelphiInterface<{583}...
+    @Svniderevert@TFileRevertSvnMenu@GetImageIndex$qqrv @496 ; __fastcall Svniderevert::TFileRevertSvnMenu::GetImageIndex()
+    @Svniderevert@initialization$qqrv @494 ; __fastcall Svniderevert::initialization()
+    @Svnideswitch@Finalization$qqrv @502 ; __fastcall Svnideswitch::Finalization()
+    @Svnideswitch@TBaseSwitchSvnMenu@ @519 ; Svnideswitch::TBaseSwitchSvnMenu::
+    @Svnideswitch@TBaseSwitchSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @511 ; __fastcall Svnideswitch::TBaseSwitchSvnMenu::TBaseSwitchSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnideswitch@TBaseSwitchSvnMenu@DoSwitch$qqrrx32Svnclientswitch@TSwitchParameter @510 ; __fastcall Svnideswitch::TBaseSwitchSvnMenu::DoSwitch(const Svnclientswitch::TSwitchParameter&)
+    @Svnideswitch@TBaseSwitchSvnMenu@Execute$qqrx56System@%DelphiInterface$29System@Classes@IInterfaceList% @509 ; Svnideswitch::TBaseSwitchSvnMenu::Execute(const System::DelphiInterface<{583}...
+    @Svnideswitch@TBaseSwitchSvnMenu@SelectLogRevisionCallBack$qqrx20System@UnicodeStringri @508 ; __fastcall Svnideswitch::TBaseSwitchSvnMenu::SelectLogRevisionCallBack(const System::UnicodeString, int&)
+    @Svnideswitch@TDirSwitchSvnMenu@ @513 ; Svnideswitch::TDirSwitchSvnMenu::
+    @Svnideswitch@TDirSwitchSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @504 ; __fastcall Svnideswitch::TDirSwitchSvnMenu::TDirSwitchSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnideswitch@TDirSwitchSvnMenu@GetImageIndex$qqrv @503 ; __fastcall Svnideswitch::TDirSwitchSvnMenu::GetImageIndex()
+    @Svnideswitch@TParentSwitchSvnMenu@ @517 ; Svnideswitch::TParentSwitchSvnMenu::
+    @Svnideswitch@TParentSwitchSvnMenu@$bctr$qqrv @507 ; __fastcall Svnideswitch::TParentSwitchSvnMenu::TParentSwitchSvnMenu()
+    @Svnideswitch@TParentSwitchSvnMenu@GetImageIndex$qqrv @506 ; __fastcall Svnideswitch::TParentSwitchSvnMenu::GetImageIndex()
+    @Svnideswitch@TRootDirSwitchSvnMenu@ @515 ; Svnideswitch::TRootDirSwitchSvnMenu::
+    @Svnideswitch@TRootDirSwitchSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @505 ; __fastcall Svnideswitch::TRootDirSwitchSvnMenu::TRootDirSwitchSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnideswitch@initialization$qqrv @501 ; __fastcall Svnideswitch::initialization()
+    @Svnidetypes@Finalization$qqrv @319 ; __fastcall Svnidetypes::Finalization()
+    @Svnidetypes@TCompareRevisionThread@ @404 ; Svnidetypes::TCompareRevisionThread::
+    @Svnidetypes@TCompareRevisionThread@$bctr$qqrv @339 ; __fastcall Svnidetypes::TCompareRevisionThread::TCompareRevisionThread()
+    @Svnidetypes@TCompareRevisionThread@$bdtr$qqrv @338 ; __fastcall Svnidetypes::TCompareRevisionThread::~TCompareRevisionThread()
+    @Svnidetypes@TCompareRevisionThread@AddFile$qqrx20System@UnicodeStringii @337 ; __fastcall Svnidetypes::TCompareRevisionThread::AddFile(const System::UnicodeString, int, int)
+    @Svnidetypes@TCompareRevisionThread@Execute$qqrv @336 ; __fastcall Svnidetypes::TCompareRevisionThread::Execute()
+    @Svnidetypes@TCompareRevisionThread@SyncCallCompare$qqrv @335 ; __fastcall Svnidetypes::TCompareRevisionThread::SyncCallCompare()
+    @Svnidetypes@TCompareRevisionThread@TCompareFile@ @406 ; Svnidetypes::TCompareRevisionThread::TCompareFile::
+    @Svnidetypes@TCompareRevisionThread@TCompareFile@$bctr$qqrx20System@UnicodeStringii @340 ; __fastcall Svnidetypes::TCompareRevisionThread::TCompareFile::TCompareFile(const System::UnicodeString, int, int)
+    @Svnidetypes@TCustomProgressThread@ @408 ; Svnidetypes::TCustomProgressThread::
+    @Svnidetypes@TCustomProgressThread@$bctr$qqrv @347 ; __fastcall Svnidetypes::TCustomProgressThread::TCustomProgressThread()
+    @Svnidetypes@TCustomProgressThread@AbortCallBack$qqrv @346 ; __fastcall Svnidetypes::TCustomProgressThread::AbortCallBack()
+    @Svnidetypes@TCustomProgressThread@SyncCloseDialog$qqrv @345 ; __fastcall Svnidetypes::TCustomProgressThread::SyncCloseDialog()
+    @Svnidetypes@TCustomProgressThread@SyncUpdateCaption$qqrv @344 ; __fastcall Svnidetypes::TCustomProgressThread::SyncUpdateCaption()
+    @Svnidetypes@TCustomProgressThread@SyncUpdateProgress$qqrv @343 ; __fastcall Svnidetypes::TCustomProgressThread::SyncUpdateProgress()
+    @Svnidetypes@TCustomProgressThread@UpdateCaption$qqrx20System@UnicodeString @342 ; __fastcall Svnidetypes::TCustomProgressThread::UpdateCaption(const System::UnicodeString)
+    @Svnidetypes@TCustomProgressThread@UpdateProgress$qqrii @341 ; __fastcall Svnidetypes::TCustomProgressThread::UpdateProgress(int, int)
+    @Svnidetypes@TCustomUpdateThread@ @416 ; Svnidetypes::TCustomUpdateThread::
+    @Svnidetypes@TCustomUpdateThread@$bctr$qqrp26Svnideclient@TSvnIDEClient @358 ; __fastcall Svnidetypes::TCustomUpdateThread::TCustomUpdateThread(Svnideclient::TSvnIDEClient *)
+    @Svnidetypes@TCustomUpdateThread@AbortCallBack$qqrv @362 ; __fastcall Svnidetypes::TCustomUpdateThread::AbortCallBack()
+    @Svnidetypes@TCustomUpdateThread@Add$qqrx20System@UnicodeStringt1o21System@Uitypes@TColor @361 ; __fastcall Svnidetypes::TCustomUpdateThread::Add(const System::UnicodeString, const System::UnicodeString, bool, System::Uitypes::TColor)
+    @Svnidetypes@TCustomUpdateThread@CancelCallback$qqrp14System@TObjectro @360 ; __fastcall Svnidetypes::TCustomUpdateThread::CancelCallback(System::TObject *, bool&)
+    @Svnidetypes@TCustomUpdateThread@ConflictCallback$qqrp14System@TObjectr20System@UnicodeStringr31Svn_client@TSvnWcConflictChoicep36Svn_client@TSvnWcConflictDescription @359 ; __fastcall Svnidetypes::TCustomUpdateThread::ConflictCallback(System::TObject *, System::UnicodeString&, Svn_client::TSvnWcConflictChoice&, Svn_client::TSvnWcConflictDescription *)
+    @Svnidetypes@TCustomUpdateThread@SyncAdd$qqrv @357 ; __fastcall Svnidetypes::TCustomUpdateThread::SyncAdd()
+    @Svnidetypes@TCustomUpdateThread@SyncCompleted$qqrv @356 ; __fastcall Svnidetypes::TCustomUpdateThread::SyncCompleted()
+    @Svnidetypes@TCustomUpdateThread@UpdateCallBack$qqrp14System@TObjectx20System@UnicodeStringt229Svn_client@TSvnWcNotifyAction23Svn_client@TSvnNodeKind28Svn_client@TSvnWcNotifyStatet6iro @355 ; Svnidetypes::TCustomUpdateThread::UpdateCallBack(System::TObject *, const System::UnicodeString, const System::UnicodeString, Svn_client::TSvnWcNotifyAction, Svn_client::TSvnNodeKind, Svn_client::TSvnWcNotifyState, Svn_client::TSvnWcNotifyState, int, bool
+    @Svnidetypes@TLogDialogHelper@ @400 ; Svnidetypes::TLogDialogHelper::
+    @Svnidetypes@TLogDialogHelper@$bctr$qqrp20Svnclient@TSvnClientx20System@UnicodeStringt2 @330 ; __fastcall Svnidetypes::TLogDialogHelper::TLogDialogHelper(Svnclient::TSvnClient *, const System::UnicodeString, const System::UnicodeString)
+    @Svnidetypes@TLogDialogHelper@$bdtr$qqrv @329 ; __fastcall Svnidetypes::TLogDialogHelper::~TLogDialogHelper()
+    @Svnidetypes@TLogDialogHelper@Completed$qqrv @327 ; __fastcall Svnidetypes::TLogDialogHelper::Completed()
+    @Svnidetypes@TLogDialogHelper@FileColorCallBack$qqrb @328 ; __fastcall Svnidetypes::TLogDialogHelper::FileColorCallBack(wchar_t)
+    @Svnidetypes@TLogDialogHelper@LoadRevisionsCallBack$qqriii @326 ; __fastcall Svnidetypes::TLogDialogHelper::LoadRevisionsCallBack(int, int, int)
+    @Svnidetypes@TLogDialogHelper@QueryInterface$qqsrx5_GUIDpv @325 ; __stdcall Svnidetypes::TLogDialogHelper::QueryInterface(const _GUID&, void *)
+    @Svnidetypes@TLogDialogHelper@Show$qqrp40System@Generics@Collections@%TList__1$i% @323 ; __fastcall Svnidetypes::TLogDialogHelper::Show(System::Generics::Collections::TList__1<int> *)
+    @Svnidetypes@TLogDialogHelper@Show$qqrv @324 ; __fastcall Svnidetypes::TLogDialogHelper::Show()
+    @Svnidetypes@TLogDialogHelper@UpdateHistoryItems$qqrp18Svnclient@TSvnItemiio @322 ; __fastcall Svnidetypes::TLogDialogHelper::UpdateHistoryItems(Svnclient::TSvnItem *, int, int, bool)
+    @Svnidetypes@TLogDialogHelper@_AddRef$qqsv @321 ; __stdcall Svnidetypes::TLogDialogHelper::_AddRef()
+    @Svnidetypes@TLogDialogHelper@_Release$qqsv @320 ; __stdcall Svnidetypes::TLogDialogHelper::_Release()
+    @Svnidetypes@TMergeRangeThread@ @412 ; Svnidetypes::TMergeRangeThread::
+    @Svnidetypes@TMergeRangeThread@$bctr$qqrp26Svnideclient@TSvnIDEClientx20System@UnicodeStringp31Svnclient@TSvnMergeRevisionListit220Svn_client@TSvnDepthiiiiooo @352 ; __fastcall Svnidetypes::TMergeRangeThread::TMergeRangeThread(Svnideclient::TSvnIDEClient *, const System::UnicodeString, Svnclient::TSvnMergeRevisionList *, int, const System::UnicodeString, Svn_client::TSvnDepth, int, int, int, int, bool, bool, bool)
+    @Svnidetypes@TMergeRangeThread@$bdtr$qqrv @351 ; __fastcall Svnidetypes::TMergeRangeThread::~TMergeRangeThread()
+    @Svnidetypes@TMergeRangeThread@Execute$qqrv @350 ; __fastcall Svnidetypes::TMergeRangeThread::Execute()
+    @Svnidetypes@TMergeThread@     @414 ; Svnidetypes::TMergeThread::
+    @Svnidetypes@TMergeThread@$bctr$qqrp26Svnideclient@TSvnIDEClient20System@UnicodeStringt2ii @354 ; __fastcall Svnidetypes::TMergeThread::TMergeThread(Svnideclient::TSvnIDEClient *, System::UnicodeString, System::UnicodeString, int, int)
+    @Svnidetypes@TMergeThread@Execute$qqrv @353 ; __fastcall Svnidetypes::TMergeThread::Execute()
+    @Svnidetypes@TSaveRevisionThread@ @402 ; Svnidetypes::TSaveRevisionThread::
+    @Svnidetypes@TSaveRevisionThread@$bctr$qqrix20System@UnicodeString @334 ; __fastcall Svnidetypes::TSaveRevisionThread::TSaveRevisionThread(int, const System::UnicodeString)
+    @Svnidetypes@TSaveRevisionThread@$bdtr$qqrv @333 ; __fastcall Svnidetypes::TSaveRevisionThread::~TSaveRevisionThread()
+    @Svnidetypes@TSaveRevisionThread@AddFile$qqrx20System@UnicodeString @332 ; __fastcall Svnidetypes::TSaveRevisionThread::AddFile(const System::UnicodeString)
+    @Svnidetypes@TSaveRevisionThread@Execute$qqrv @331 ; __fastcall Svnidetypes::TSaveRevisionThread::Execute()
+    @Svnidetypes@TSwitchThread@    @410 ; Svnidetypes::TSwitchThread::
+    @Svnidetypes@TSwitchThread@$bctr$qqrp26Svnideclient@TSvnIDEClientx20System@UnicodeStringt2ii20Svn_client@TSvnDepthii @349 ; __fastcall Svnidetypes::TSwitchThread::TSwitchThread(Svnideclient::TSvnIDEClient *, const System::UnicodeString, const System::UnicodeString, int, int, Svn_client::TSvnDepth, int, int)
+    @Svnidetypes@TSwitchThread@Execute$qqrv @348 ; __fastcall Svnidetypes::TSwitchThread::Execute()
+    @Svnidetypes@initialization$qqrv @318 ; __fastcall Svnidetypes::initialization()
+    @Svnideupdate@Finalization$qqrv @161 ; __fastcall Svnideupdate::Finalization()
+    @Svnideupdate@Merge$qqrx57System@%DelphiInterface$30Toolsapi@IOTACustomMergeViewer%x20System@UnicodeStringt2t2t2 @177 ; Svnideupdate::Merge(const System::DelphiInterface<{583}...
+    @Svnideupdate@Resolve$qqrp20Svnclient@TSvnClientx20System@UnicodeString @176 ; __fastcall Svnideupdate::Resolve(Svnclient::TSvnClient *, const System::UnicodeString)
+    @Svnideupdate@TBaseUpdateSvnMenu@ @191 ; Svnideupdate::TBaseUpdateSvnMenu::
+    @Svnideupdate@TBaseUpdateSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @175 ; __fastcall Svnideupdate::TBaseUpdateSvnMenu::TBaseUpdateSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnideupdate@TBaseUpdateSvnMenu@Execute$qqrx56System@%DelphiInterface$29System@Classes@IInterfaceList% @174 ; Svnideupdate::TBaseUpdateSvnMenu::Execute(const System::DelphiInterface<{583}...
+    @Svnideupdate@TBaseUpdateSvnMenu@FileRefresh$qqrxp26System@Classes@TStringListo @173 ; __fastcall Svnideupdate::TBaseUpdateSvnMenu::FileRefresh(System::Classes::TStringList * const, bool)
+    @Svnideupdate@TBaseUpdateSvnMenu@FileRefreshCallBack$qqrxp26System@Classes@TStringList @172 ; __fastcall Svnideupdate::TBaseUpdateSvnMenu::FileRefreshCallBack(System::Classes::TStringList * const)
+    @Svnideupdate@TBaseUpdateSvnMenu@ResolveCallBack$qqrx20System@UnicodeString @171 ; __fastcall Svnideupdate::TBaseUpdateSvnMenu::ResolveCallBack(const System::UnicodeString)
+    @Svnideupdate@TDirUpdateSvnMenu@ @179 ; Svnideupdate::TDirUpdateSvnMenu::
+    @Svnideupdate@TDirUpdateSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @163 ; __fastcall Svnideupdate::TDirUpdateSvnMenu::TDirUpdateSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnideupdate@TDirUpdateSvnMenu@GetImageIndex$qqrv @162 ; __fastcall Svnideupdate::TDirUpdateSvnMenu::GetImageIndex()
+    @Svnideupdate@TExpicitFilesUpdateSvnMenu@ @183 ; Svnideupdate::TExpicitFilesUpdateSvnMenu::
+    @Svnideupdate@TExpicitFilesUpdateSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @166 ; __fastcall Svnideupdate::TExpicitFilesUpdateSvnMenu::TExpicitFilesUpdateSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnideupdate@TFileUpdateSvnMenu@ @181 ; Svnideupdate::TFileUpdateSvnMenu::
+    @Svnideupdate@TFileUpdateSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @165 ; __fastcall Svnideupdate::TFileUpdateSvnMenu::TFileUpdateSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnideupdate@TFileUpdateSvnMenu@GetImageIndex$qqrv @164 ; __fastcall Svnideupdate::TFileUpdateSvnMenu::GetImageIndex()
+    @Svnideupdate@TParentUpdateSvnMenu@ @189 ; Svnideupdate::TParentUpdateSvnMenu::
+    @Svnideupdate@TParentUpdateSvnMenu@$bctr$qqrv @170 ; __fastcall Svnideupdate::TParentUpdateSvnMenu::TParentUpdateSvnMenu()
+    @Svnideupdate@TParentUpdateSvnMenu@GetImageIndex$qqrv @169 ; __fastcall Svnideupdate::TParentUpdateSvnMenu::GetImageIndex()
+    @Svnideupdate@TProjectDirUpdateSvnMenu@ @185 ; Svnideupdate::TProjectDirUpdateSvnMenu::
+    @Svnideupdate@TProjectDirUpdateSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @167 ; __fastcall Svnideupdate::TProjectDirUpdateSvnMenu::TProjectDirUpdateSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnideupdate@TRootDirUpdateSvnMenu@ @187 ; Svnideupdate::TRootDirUpdateSvnMenu::
+    @Svnideupdate@TRootDirUpdateSvnMenu@$bctr$qqrp26Svnideclient@TSvnIDEClient @168 ; __fastcall Svnideupdate::TRootDirUpdateSvnMenu::TRootDirUpdateSvnMenu(Svnideclient::TSvnIDEClient *)
+    @Svnideupdate@initialization$qqrv @160 ; __fastcall Svnideupdate::initialization()
+    @Svnideutils@EditActionToSvnEditAction$qqr22Designintf@TEditAction @121 ; __fastcall Svnideutils::EditActionToSvnEditAction(Designintf::TEditAction)
+    @Svnideutils@Finalization$qqrv @118 ; __fastcall Svnideutils::Finalization()
+    @Svnideutils@SaveAll$qqrv      @119 ; __fastcall Svnideutils::SaveAll()
+    @Svnideutils@SvnEditStateToEditState$qqr52System@%Set$25Svnuitypes@TSvnEditStatest1$i0$t1$i6$% @120 ; Svnideutils::SvnEditStateToEditState(System::Set<{583}...
+    @Svnideutils@initialization$qqrv @117 ; __fastcall Svnideutils::initialization()
+    @System@Generics@Collections@%TArrayManager__1$i%@ @371 ; System::Generics::Collections::TArrayManager__1<int>::
+    @System@Generics@Collections@%TArrayManager__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@ @390 ; System::Generics::Collections::TArrayManager__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::
+    @System@Generics@Collections@%TEnumerable__1$i%@ @376 ; System::Generics::Collections::TEnumerable__1<int>::
+    @System@Generics@Collections@%TEnumerable__1$i%@$bdtr$qqrv @251 ; __fastcall System::Generics::Collections::TEnumerable__1<int>::~TEnumerable__1<int>()
+    @System@Generics@Collections@%TEnumerable__1$i%@GetEnumerator$qqrv @250 ; __fastcall System::Generics::Collections::TEnumerable__1<int>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$i%@ToArray$qqrv @249 ; __fastcall System::Generics::Collections::TEnumerable__1<int>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$i%@ToArrayImpl$qqri @252 ; __fastcall System::Generics::Collections::TEnumerable__1<int>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerable__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@ @395 ; System::Generics::Collections::TEnumerable__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::
+    @System@Generics@Collections@%TEnumerable__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@$bdtr$qqrv @316 ; __fastcall System::Generics::Collections::TEnumerable__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::~TEnumerable__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>()
+    @System@Generics@Collections@%TEnumerable__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@GetEnumerator$qqrv @315 ; __fastcall System::Generics::Collections::TEnumerable__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@ToArray$qqrv @314 ; __fastcall System::Generics::Collections::TEnumerable__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@ToArrayImpl$qqri @317 ; __fastcall System::Generics::Collections::TEnumerable__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerator__1$i%@ @378 ; System::Generics::Collections::TEnumerator__1<int>::
+    @System@Generics@Collections@%TEnumerator__1$i%@MoveNext$qqrv @248 ; __fastcall System::Generics::Collections::TEnumerator__1<int>::MoveNext()
+    @System@Generics@Collections@%TEnumerator__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@ @397 ; System::Generics::Collections::TEnumerator__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::
+    @System@Generics@Collections@%TEnumerator__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@MoveNext$qqrv @313 ; __fastcall System::Generics::Collections::TEnumerator__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::MoveNext()
+    @System@Generics@Collections@%TList__1$i%@ @364 ; System::Generics::Collections::TList__1<int>::
+    @System@Generics@Collections@%TList__1$i%@$bctr$qqrv @236 ; __fastcall System::Generics::Collections::TList__1<int>::TList__1<int>()
+    @System@Generics@Collections@%TList__1$i%@$bctr$qqrx68System@%DelphiInterface$41System@Generics@Defaults@%IComparer__1$i%% @235 ; System::Generics::Collections::TList__1<int>::TList__1<int>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$i%@$bctr$qqrxp46System@Generics@Collections@%TEnumerable__1$i% @234 ; __fastcall System::Generics::Collections::TList__1<int>::TList__1<int>(System::Generics::Collections::TEnumerable__1<int> * const)
+    @System@Generics@Collections@%TList__1$i%@$bdtr$qqrv @233 ; __fastcall System::Generics::Collections::TList__1<int>::~TList__1<int>()
+    @System@Generics@Collections@%TList__1$i%@%TEnumerator$%@ @366 ; System::Generics::Collections::TList__1<int>::TEnumerator<>::
+    @System@Generics@Collections@%TList__1$i%@%TEnumerator$%@$bctr$qqrxp40System@Generics@Collections@%TList__1$i% @193 ; __fastcall System::Generics::Collections::TList__1<int>::TEnumerator<>::TEnumerator<>(System::Generics::Collections::TList__1<int> * const)
+    @System@Generics@Collections@%TList__1$i%@%TEnumerator$%@DoGetCurrent$qqrv @195 ; __fastcall System::Generics::Collections::TList__1<int>::TEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TList__1$i%@%TEnumerator$%@DoMoveNext$qqrv @194 ; __fastcall System::Generics::Collections::TList__1<int>::TEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TList__1$i%@%TEnumerator$%@GetCurrent$qqrv @196 ; __fastcall System::Generics::Collections::TList__1<int>::TEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TList__1$i%@%TEnumerator$%@MoveNext$qqrv @192 ; __fastcall System::Generics::Collections::TList__1<int>::TEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TList__1$i%@Add$qqrxi @230 ; __fastcall System::Generics::Collections::TList__1<int>::Add(const int)
+    @System@Generics@Collections@%TList__1$i%@AddRange$qqrpxixi @229 ; __fastcall System::Generics::Collections::TList__1<int>::AddRange(const int *, const int)
+    @System@Generics@Collections@%TList__1$i%@AddRange$qqrx52System@%DelphiInterface$25System@%IEnumerable__1$i%% @228 ; System::Generics::Collections::TList__1<int>::AddRange(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$i%@AddRange$qqrxp46System@Generics@Collections@%TEnumerable__1$i% @227 ; __fastcall System::Generics::Collections::TList__1<int>::AddRange(System::Generics::Collections::TEnumerable__1<int> * const)
+    @System@Generics@Collections@%TList__1$i%@BinarySearch$qqrxiri @201 ; __fastcall System::Generics::Collections::TList__1<int>::BinarySearch(const int, int&)
+    @System@Generics@Collections@%TList__1$i%@BinarySearch$qqrxirix68System@%DelphiInterface$41System@Generics@Defaults@%IComparer__1$i%% @200 ; System::Generics::Collections::TList__1<int>::BinarySearch(const int, int&, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$i%@Clear$qqrv @210 ; __fastcall System::Generics::Collections::TList__1<int>::Clear()
+    @System@Generics@Collections@%TList__1$i%@Contains$qqrxi @208 ; __fastcall System::Generics::Collections::TList__1<int>::Contains(const int)
+    @System@Generics@Collections@%TList__1$i%@Delete$qqri @218 ; __fastcall System::Generics::Collections::TList__1<int>::Delete(int)
+    @System@Generics@Collections@%TList__1$i%@DeleteRange$qqrii @217 ; __fastcall System::Generics::Collections::TList__1<int>::DeleteRange(int, int)
+    @System@Generics@Collections@%TList__1$i%@DoDelete$qqri51System@Generics@Collections@TCollectionNotification @240 ; __fastcall System::Generics::Collections::TList__1<int>::DoDelete(int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$i%@DoGetEnumerator$qqrv @238 ; __fastcall System::Generics::Collections::TList__1<int>::DoGetEnumerator()
+    @System@Generics@Collections@%TList__1$i%@Error$qqrp20System@TResStringReci @231 ; __fastcall System::Generics::Collections::TList__1<int>::Error(System::TResStringRec *, int)
+    @System@Generics@Collections@%TList__1$i%@Error$qqrx20System@UnicodeStringi @232 ; __fastcall System::Generics::Collections::TList__1<int>::Error(const System::UnicodeString, int)
+    @System@Generics@Collections@%TList__1$i%@Exchange$qqrii @214 ; __fastcall System::Generics::Collections::TList__1<int>::Exchange(int, int)
+    @System@Generics@Collections@%TList__1$i%@Expand$qqrv @209 ; __fastcall System::Generics::Collections::TList__1<int>::Expand()
+    @System@Generics@Collections@%TList__1$i%@Extract$qqrxi @216 ; __fastcall System::Generics::Collections::TList__1<int>::Extract(const int)
+    @System@Generics@Collections@%TList__1$i%@ExtractItem$qqrxi23System@Types@TDirection @215 ; __fastcall System::Generics::Collections::TList__1<int>::ExtractItem(const int, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$i%@First$qqrv @212 ; __fastcall System::Generics::Collections::TList__1<int>::First()
+    @System@Generics@Collections@%TList__1$i%@GetCapacity$qqrv @247 ; __fastcall System::Generics::Collections::TList__1<int>::GetCapacity()
+    @System@Generics@Collections@%TList__1$i%@GetEnumerator$qqrv @197 ; __fastcall System::Generics::Collections::TList__1<int>::GetEnumerator()
+    @System@Generics@Collections@%TList__1$i%@GetItem$qqri @244 ; __fastcall System::Generics::Collections::TList__1<int>::GetItem(int)
+    @System@Generics@Collections@%TList__1$i%@Grow$qqri @242 ; __fastcall System::Generics::Collections::TList__1<int>::Grow(int)
+    @System@Generics@Collections@%TList__1$i%@GrowCheck$qqri @241 ; __fastcall System::Generics::Collections::TList__1<int>::GrowCheck(int)
+    @System@Generics@Collections@%TList__1$i%@IndexOf$qqrxi @207 ; __fastcall System::Generics::Collections::TList__1<int>::IndexOf(const int)
+    @System@Generics@Collections@%TList__1$i%@IndexOfItem$qqrxi23System@Types@TDirection @206 ; __fastcall System::Generics::Collections::TList__1<int>::IndexOfItem(const int, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$i%@Insert$qqrixi @226 ; __fastcall System::Generics::Collections::TList__1<int>::Insert(int, const int)
+    @System@Generics@Collections@%TList__1$i%@InsertRange$qqripxixi @225 ; __fastcall System::Generics::Collections::TList__1<int>::InsertRange(int, const int *, const int)
+    @System@Generics@Collections@%TList__1$i%@InsertRange$qqrix52System@%DelphiInterface$25System@%IEnumerable__1$i%% @224 ; System::Generics::Collections::TList__1<int>::InsertRange(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$i%@InsertRange$qqrixp46System@Generics@Collections@%TEnumerable__1$i% @223 ; __fastcall System::Generics::Collections::TList__1<int>::InsertRange(int, System::Generics::Collections::TEnumerable__1<int> * const)
+    @System@Generics@Collections@%TList__1$i%@ItemValue$qqrxi @239 ; __fastcall System::Generics::Collections::TList__1<int>::ItemValue(const int)
+    @System@Generics@Collections@%TList__1$i%@Last$qqrv @211 ; __fastcall System::Generics::Collections::TList__1<int>::Last()
+    @System@Generics@Collections@%TList__1$i%@LastIndexOf$qqrxi @205 ; __fastcall System::Generics::Collections::TList__1<int>::LastIndexOf(const int)
+    @System@Generics@Collections@%TList__1$i%@Move$qqrii @213 ; __fastcall System::Generics::Collections::TList__1<int>::Move(int, int)
+    @System@Generics@Collections@%TList__1$i%@Notify$qqrxi51System@Generics@Collections@TCollectionNotification @237 ; __fastcall System::Generics::Collections::TList__1<int>::Notify(const int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$i%@Pack$qqrv @222 ; __fastcall System::Generics::Collections::TList__1<int>::Pack()
+    @System@Generics@Collections@%TList__1$i%@Pack$qqrx81System@%DelphiInterface$54System@Generics@Collections@%TList__1$i%@%TEmptyFunc$%% @221 ; System::Generics::Collections::TList__1<int>::Pack(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$i%@Remove$qqrxi @220 ; __fastcall System::Generics::Collections::TList__1<int>::Remove(const int)
+    @System@Generics@Collections@%TList__1$i%@RemoveItem$qqrxi23System@Types@TDirection @219 ; __fastcall System::Generics::Collections::TList__1<int>::RemoveItem(const int, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$i%@Reverse$qqrv @204 ; __fastcall System::Generics::Collections::TList__1<int>::Reverse()
+    @System@Generics@Collections@%TList__1$i%@SetCapacity$qqri @246 ; __fastcall System::Generics::Collections::TList__1<int>::SetCapacity(int)
+    @System@Generics@Collections@%TList__1$i%@SetCount$qqri @245 ; __fastcall System::Generics::Collections::TList__1<int>::SetCount(int)
+    @System@Generics@Collections@%TList__1$i%@SetItem$qqrixi @243 ; __fastcall System::Generics::Collections::TList__1<int>::SetItem(int, const int)
+    @System@Generics@Collections@%TList__1$i%@Sort$qqrv @203 ; __fastcall System::Generics::Collections::TList__1<int>::Sort()
+    @System@Generics@Collections@%TList__1$i%@Sort$qqrx68System@%DelphiInterface$41System@Generics@Defaults@%IComparer__1$i%% @202 ; System::Generics::Collections::TList__1<int>::Sort(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$i%@ToArray$qqrv @198 ; __fastcall System::Generics::Collections::TList__1<int>::ToArray()
+    @System@Generics@Collections@%TList__1$i%@TrimExcess$qqrv @199 ; __fastcall System::Generics::Collections::TList__1<int>::TrimExcess()
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@ @383 ; System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@$bctr$qqrv @301 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>()
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@$bctr$qqrx117System@%DelphiInterface$90System@Generics@Defaults@%IComparer__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%% @300 ; System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@$bctr$qqrxp95System@Generics@Collections@%TEnumerable__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile% @299 ; System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>(System::Generics::Collections::TEnumerable__1<Svnidetypes::TCompareRevisionThread::TCompareFile *> 
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@$bdtr$qqrv @298 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::~TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>()
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@%TEnumerator$%@ @385 ; System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::TEnumerator<>::
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@%TEnumerator$%@$bctr$qqrxp89System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile% @258 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::TEnumerator<>::TEnumerator<>(System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *> * const)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@%TEnumerator$%@DoGetCurrent$qqrv @260 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::TEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@%TEnumerator$%@DoMoveNext$qqrv @259 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::TEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@%TEnumerator$%@GetCurrent$qqrv @261 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::TEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@%TEnumerator$%@MoveNext$qqrv @257 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::TEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@Add$qqrxp47Svnidetypes@TCompareRevisionThread@TCompareFile @295 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::Add(Svnidetypes::TCompareRevisionThread::TCompareFile * const)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@AddRange$qqrpxp47Svnidetypes@TCompareRevisionThread@TCompareFilexi @294 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::AddRange(Svnidetypes::TCompareRevisionThread::TCompareFile * const *, const int)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@AddRange$qqrx101System@%DelphiInterface$74System@%IEnumerable__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%% @293 ; System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::AddRange(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@AddRange$qqrxp95System@Generics@Collections@%TEnumerable__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile% @292 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::AddRange(System::Generics::Collections::TEnumerable__1<Svnidetypes::TCompareRevisionThread::TCompareFile *> * const)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@BinarySearch$qqrxp47Svnidetypes@TCompareRevisionThread@TCompareFileri @266 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::BinarySearch(Svnidetypes::TCompareRevisionThread::TCompareFile * const, int&)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@BinarySearch$qqrxp47Svnidetypes@TCompareRevisionThread@TCompareFilerix117System@%DelphiInterface$90System@Generics@Defaults@%IComparer__1$p4gOvVAjPDTX6qc2N2SwGcXg @265 ; System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::BinarySearch(Svnidetypes::TCompareRevisionThread::TCompareFile * const, int&, ...
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@Clear$qqrv @275 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::Clear()
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@Contains$qqrxp47Svnidetypes@TCompareRevisionThread@TCompareFile @273 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::Contains(Svnidetypes::TCompareRevisionThread::TCompareFile * const)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@Delete$qqri @283 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::Delete(int)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@DeleteRange$qqrii @282 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::DeleteRange(int, int)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@DoDelete$qqri51System@Generics@Collections@TCollectionNotification @305 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::DoDelete(int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@DoGetEnumerator$qqrv @303 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::DoGetEnumerator()
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@Error$qqrp20System@TResStringReci @296 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::Error(System::TResStringRec *, int)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@Error$qqrx20System@UnicodeStringi @297 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::Error(const System::UnicodeString, int)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@Exchange$qqrii @279 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::Exchange(int, int)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@Expand$qqrv @274 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::Expand()
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@Extract$qqrxp47Svnidetypes@TCompareRevisionThread@TCompareFile @281 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::Extract(Svnidetypes::TCompareRevisionThread::TCompareFile * const)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@ExtractItem$qqrxp47Svnidetypes@TCompareRevisionThread@TCompareFile23System@Types@TDirection @280 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::ExtractItem(Svnidetypes::TCompareRevisionThread::TCompareFile * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@First$qqrv @277 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::First()
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@GetCapacity$qqrv @312 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::GetCapacity()
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@GetEnumerator$qqrv @262 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::GetEnumerator()
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@GetItem$qqri @309 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::GetItem(int)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@Grow$qqri @307 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::Grow(int)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@GrowCheck$qqri @306 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::GrowCheck(int)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@IndexOf$qqrxp47Svnidetypes@TCompareRevisionThread@TCompareFile @272 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::IndexOf(Svnidetypes::TCompareRevisionThread::TCompareFile * const)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@IndexOfItem$qqrxp47Svnidetypes@TCompareRevisionThread@TCompareFile23System@Types@TDirection @271 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::IndexOfItem(Svnidetypes::TCompareRevisionThread::TCompareFile * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@Insert$qqrixp47Svnidetypes@TCompareRevisionThread@TCompareFile @291 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::Insert(int, Svnidetypes::TCompareRevisionThread::TCompareFile * const)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@InsertRange$qqripxp47Svnidetypes@TCompareRevisionThread@TCompareFilexi @290 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::InsertRange(int, Svnidetypes::TCompareRevisionThread::TCompareFile * const *, const int)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@InsertRange$qqrix101System@%DelphiInterface$74System@%IEnumerable__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%% @289 ; System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::InsertRange(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@InsertRange$qqrixp95System@Generics@Collections@%TEnumerable__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile% @288 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::InsertRange(int, System::Generics::Collections::TEnumerable__1<Svnidetypes::TCompareRevisionThread::TCompareFile *> * const)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@ItemValue$qqrxp47Svnidetypes@TCompareRevisionThread@TCompareFile @304 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::ItemValue(Svnidetypes::TCompareRevisionThread::TCompareFile * const)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@Last$qqrv @276 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::Last()
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@LastIndexOf$qqrxp47Svnidetypes@TCompareRevisionThread@TCompareFile @270 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::LastIndexOf(Svnidetypes::TCompareRevisionThread::TCompareFile * const)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@Move$qqrii @278 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::Move(int, int)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@Notify$qqrxp47Svnidetypes@TCompareRevisionThread@TCompareFile51System@Generics@Collections@TCollectionNotification @302 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::Notify(Svnidetypes::TCompareRevisionThread::TCompareFile * const, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@Pack$qqrv @287 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::Pack()
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@Pack$qqrx131System@%DelphiInterface$103System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@%TEmptyFunc$%% @286 ; System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::Pack(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@Remove$qqrxp47Svnidetypes@TCompareRevisionThread@TCompareFile @285 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::Remove(Svnidetypes::TCompareRevisionThread::TCompareFile * const)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@RemoveItem$qqrxp47Svnidetypes@TCompareRevisionThread@TCompareFile23System@Types@TDirection @284 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::RemoveItem(Svnidetypes::TCompareRevisionThread::TCompareFile * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@Reverse$qqrv @269 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::Reverse()
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@SetCapacity$qqri @311 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::SetCapacity(int)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@SetCount$qqri @310 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::SetCount(int)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@SetItem$qqrixp47Svnidetypes@TCompareRevisionThread@TCompareFile @308 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::SetItem(int, Svnidetypes::TCompareRevisionThread::TCompareFile * const)
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@Sort$qqrv @268 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::Sort()
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@Sort$qqrx117System@%DelphiInterface$90System@Generics@Defaults@%IComparer__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%% @267 ; System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::Sort(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@ToArray$qqrv @263 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::ToArray()
+    @System@Generics@Collections@%TList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@TrimExcess$qqrv @264 ; __fastcall System::Generics::Collections::TList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::TrimExcess()
+    @System@Generics@Collections@%TObjectList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@ @381 ; System::Generics::Collections::TObjectList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::
+    @System@Generics@Collections@%TObjectList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@$bctr$qqro @255 ; __fastcall System::Generics::Collections::TObjectList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::TObjectList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>(bool)
+    @System@Generics@Collections@%TObjectList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@$bctr$qqrx117System@%DelphiInterface$90System@Generics@Defaults@%IComparer__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%%o @254 ; System::Generics::Collections::TObjectList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::TObjectList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TObjectList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@$bctr$qqrxp95System@Generics@Collections@%TEnumerable__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%o @253 ; System::Generics::Collections::TObjectList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::TObjectList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>(System::Generics::Collections::TEnumerable__1<Svnidetypes::TCompareRevisionThread::T
+    @System@Generics@Collections@%TObjectList__1$p47Svnidetypes@TCompareRevisionThread@TCompareFile%@Notify$qqrxp47Svnidetypes@TCompareRevisionThread@TCompareFile51System@Generics@Collections@TCollectionNotification @256 ; __fastcall System::Generics::Collections::TObjectList__1<Svnidetypes::TCompareRevisionThread::TCompareFile *>::Notify(Svnidetypes::TCompareRevisionThread::TCompareFile * const, System::Generics::Collections::TCollectionNotification)
+    Finalize                       @632 ; Finalize
+    Initialize                     @633 ; Initialize

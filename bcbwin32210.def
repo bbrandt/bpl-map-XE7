@@ -1,0 +1,20 @@
+LIBRARY     BCBWIN32210.BPL
+
+EXPORTS
+    @$xp$49Cppaddinoptionswindows@TCppAddInEnvOptionsWindows @6   ; __tpdsc__ Cppaddinoptionswindows::TCppAddInEnvOptionsWindows
+    @Bcbwin32@@GetPackageInfoTable$qqrv @14  ; Bcbwin32::__linkproc__ __fastcall GetPackageInfoTable()
+    @Bcbwin32@@PackageLoad$qqrv    @13  ; Bcbwin32::__linkproc__ __fastcall PackageLoad()
+    @Bcbwin32@@PackageUnload$qqrv  @12  ; Bcbwin32::__linkproc__ __fastcall PackageUnload()
+    @Bcbwin32@initialization$qqrv  @11  ; __fastcall Bcbwin32::initialization()
+    @Cppaddinoptionswindows@CppAddInEnvOptionsWindows @5   ; Cppaddinoptionswindows::CppAddInEnvOptionsWindows
+    @Cppaddinoptionswindows@Finalization$qqrv @2   ; __fastcall Cppaddinoptionswindows::Finalization()
+    @Cppaddinoptionswindows@TCppAddInEnvOptionsWindows@ @7   ; Cppaddinoptionswindows::TCppAddInEnvOptionsWindows::
+    @Cppaddinoptionswindows@TCppAddInEnvOptionsWindows@CustomizeDialog$qqrp28Idepropsheet@TPropertySheetsp40Baseenvirondialog@TBaseEnvironmentDialog @4   ; __fastcall Cppaddinoptionswindows::TCppAddInEnvOptionsWindows::CustomizeDialog(Idepropsheet::TPropertySheets *, Baseenvirondialog::TBaseEnvironmentDialog *)
+    @Cppaddinoptionswindows@TCppAddInEnvOptionsWindows@PlatformName$qqrv @3   ; __fastcall Cppaddinoptionswindows::TCppAddInEnvOptionsWindows::PlatformName()
+    @Cppaddinoptionswindows@initialization$qqrv @1   ; __fastcall Cppaddinoptionswindows::initialization()
+    @Cppwin32platform@Finalization$qqrv @9   ; __fastcall Cppwin32platform::Finalization()
+    @Cppwin32platform@IDERegister$qqrv @10  ; __fastcall Cppwin32platform::IDERegister()
+    @Cppwin32platform@initialization$qqrv @8   ; __fastcall Cppwin32platform::initialization()
+    @GetPackageInfoTable           @17  ; GetPackageInfoTable
+    Finalize                       @15  ; Finalize
+    Initialize                     @16  ; Initialize

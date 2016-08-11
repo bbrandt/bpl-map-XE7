@@ -1,0 +1,133 @@
+LIBRARY     DCLRESTCOMPONENTS210.BPL
+
+DESCRIPTION 'mbarcadero REST-Library Components (Designtime)'
+
+EXPORTS
+    @$xp$47Rest@Componenteditor@TRESTClientComponentEditor @111 ; __tpdsc__ Rest::Componenteditor::TRESTClientComponentEditor
+    @$xp$47Rest@Componenteditor@TRESTClientSelectionEditor @99  ; __tpdsc__ Rest::Componenteditor::TRESTClientSelectionEditor
+    @$xp$48Rest@Componenteditor@TRESTRequestComponentEditor @117 ; __tpdsc__ Rest::Componenteditor::TRESTRequestComponentEditor
+    @$xp$48Rest@Componenteditor@TRESTResourcePropertyEditor @101 ; __tpdsc__ Rest::Componenteditor::TRESTResourcePropertyEditor
+    @$xp$48Rest@Componenteditor@TRESTResponsePropertyEditor @113 ; __tpdsc__ Rest::Componenteditor::TRESTResponsePropertyEditor
+    @$xp$49Rest@Componenteditor@TRESTResponseComponentEditor @115 ; __tpdsc__ Rest::Componenteditor::TRESTResponseComponentEditor
+    @$xp$55Rest@Componenteditor@TRESTDataSetAdapterComponentEditor @103 ; __tpdsc__ Rest::Componenteditor::TRESTDataSetAdapterComponentEditor
+    @$xp$56Rest@Componenteditor@TCustomAuthenticatorComponentEditor @109 ; __tpdsc__ Rest::Componenteditor::TCustomAuthenticatorComponentEditor
+    @$xp$56Rest@Componenteditor@TOAuth1AuthenticatorComponentEditor @107 ; __tpdsc__ Rest::Componenteditor::TOAuth1AuthenticatorComponentEditor
+    @$xp$56Rest@Componenteditor@TOAuth1AuthenticatorSelectionEditor @97  ; __tpdsc__ Rest::Componenteditor::TOAuth1AuthenticatorSelectionEditor
+    @$xp$56Rest@Componenteditor@TOAuth2AuthenticatorComponentEditor @105 ; __tpdsc__ Rest::Componenteditor::TOAuth2AuthenticatorComponentEditor
+    @$xp$56Rest@Oauth1ideconfiguration_frm@Tfrm_OAuth1Configuration @16  ; __tpdsc__ Rest::Oauth1ideconfiguration_frm::Tfrm_OAuth1Configuration
+    @$xp$56Rest@Oauth2ideconfiguration_frm@Tfrm_OAuth2Configuration @35  ; __tpdsc__ Rest::Oauth2ideconfiguration_frm::Tfrm_OAuth2Configuration
+    @$xp$61Rest@Responsecontentviewer_frm@Tfrm_RESTResponseContentViewer @44  ; __tpdsc__ Rest::Responsecontentviewer_frm::Tfrm_RESTResponseContentViewer
+    @Dclrestcomponents@@GetPackageInfoTable$qqrv @125 ; Dclrestcomponents::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclrestcomponents@@PackageLoad$qqrv @124 ; Dclrestcomponents::__linkproc__ __fastcall PackageLoad()
+    @Dclrestcomponents@@PackageUnload$qqrv @123 ; Dclrestcomponents::__linkproc__ __fastcall PackageUnload()
+    @Dclrestcomponents@initialization$qqrv @122 ; __fastcall Dclrestcomponents::initialization()
+    @GetPackageInfoTable           @128 ; GetPackageInfoTable
+    @Rest@Componenteditor@Finalization$qqrv @47  ; __fastcall Rest::Componenteditor::Finalization()
+    @Rest@Componenteditor@TCustomAuthenticatorComponentEditor@ @110 ; Rest::Componenteditor::TCustomAuthenticatorComponentEditor::
+    @Rest@Componenteditor@TCustomAuthenticatorComponentEditor@Edit$qqrv @57  ; __fastcall Rest::Componenteditor::TCustomAuthenticatorComponentEditor::Edit()
+    @Rest@Componenteditor@TCustomAuthenticatorComponentEditor@ExecuteVerb$qqri @56  ; __fastcall Rest::Componenteditor::TCustomAuthenticatorComponentEditor::ExecuteVerb(int)
+    @Rest@Componenteditor@TCustomAuthenticatorComponentEditor@GetVerb$qqri @55  ; __fastcall Rest::Componenteditor::TCustomAuthenticatorComponentEditor::GetVerb(int)
+    @Rest@Componenteditor@TCustomAuthenticatorComponentEditor@GetVerbCount$qqrv @54  ; __fastcall Rest::Componenteditor::TCustomAuthenticatorComponentEditor::GetVerbCount()
+    @Rest@Componenteditor@TCustomAuthenticatorComponentEditor@PrepareItem$qqrix48System@%DelphiInterface$21Designmenus@IMenuItem% @53  ; Rest::Componenteditor::TCustomAuthenticatorComponentEditor::PrepareItem(int, const System::DelphiInterface<{583}...
+    @Rest@Componenteditor@TOAuth1AuthenticatorComponentEditor@ @108 ; Rest::Componenteditor::TOAuth1AuthenticatorComponentEditor::
+    @Rest@Componenteditor@TOAuth1AuthenticatorComponentEditor@DoShowEditorForm$qqrv @77  ; __fastcall Rest::Componenteditor::TOAuth1AuthenticatorComponentEditor::DoShowEditorForm()
+    @Rest@Componenteditor@TOAuth1AuthenticatorComponentEditor@Edit$qqrv @76  ; __fastcall Rest::Componenteditor::TOAuth1AuthenticatorComponentEditor::Edit()
+    @Rest@Componenteditor@TOAuth1AuthenticatorComponentEditor@ExecuteVerb$qqri @75  ; __fastcall Rest::Componenteditor::TOAuth1AuthenticatorComponentEditor::ExecuteVerb(int)
+    @Rest@Componenteditor@TOAuth1AuthenticatorComponentEditor@GetVerb$qqri @74  ; __fastcall Rest::Componenteditor::TOAuth1AuthenticatorComponentEditor::GetVerb(int)
+    @Rest@Componenteditor@TOAuth1AuthenticatorComponentEditor@GetVerbCount$qqrv @73  ; __fastcall Rest::Componenteditor::TOAuth1AuthenticatorComponentEditor::GetVerbCount()
+    @Rest@Componenteditor@TOAuth1AuthenticatorComponentEditor@PrepareItem$qqrix48System@%DelphiInterface$21Designmenus@IMenuItem% @72  ; Rest::Componenteditor::TOAuth1AuthenticatorComponentEditor::PrepareItem(int, const System::DelphiInterface<{583}...
+    @Rest@Componenteditor@TOAuth1AuthenticatorSelectionEditor@ @98  ; Rest::Componenteditor::TOAuth1AuthenticatorSelectionEditor::
+    @Rest@Componenteditor@TOAuth1AuthenticatorSelectionEditor@RequiresUnits$qqrynpqqrx20System@UnicodeString$v @48  ; __fastcall Rest::Componenteditor::TOAuth1AuthenticatorSelectionEditor::RequiresUnits(void __fastcall __closure(*)(const System::UnicodeString))
+    @Rest@Componenteditor@TOAuth2AuthenticatorComponentEditor@ @106 ; Rest::Componenteditor::TOAuth2AuthenticatorComponentEditor::
+    @Rest@Componenteditor@TOAuth2AuthenticatorComponentEditor@DoShowEditorForm$qqrv @83  ; __fastcall Rest::Componenteditor::TOAuth2AuthenticatorComponentEditor::DoShowEditorForm()
+    @Rest@Componenteditor@TOAuth2AuthenticatorComponentEditor@Edit$qqrv @82  ; __fastcall Rest::Componenteditor::TOAuth2AuthenticatorComponentEditor::Edit()
+    @Rest@Componenteditor@TOAuth2AuthenticatorComponentEditor@ExecuteVerb$qqri @81  ; __fastcall Rest::Componenteditor::TOAuth2AuthenticatorComponentEditor::ExecuteVerb(int)
+    @Rest@Componenteditor@TOAuth2AuthenticatorComponentEditor@GetVerb$qqri @80  ; __fastcall Rest::Componenteditor::TOAuth2AuthenticatorComponentEditor::GetVerb(int)
+    @Rest@Componenteditor@TOAuth2AuthenticatorComponentEditor@GetVerbCount$qqrv @79  ; __fastcall Rest::Componenteditor::TOAuth2AuthenticatorComponentEditor::GetVerbCount()
+    @Rest@Componenteditor@TOAuth2AuthenticatorComponentEditor@PrepareItem$qqrix48System@%DelphiInterface$21Designmenus@IMenuItem% @78  ; Rest::Componenteditor::TOAuth2AuthenticatorComponentEditor::PrepareItem(int, const System::DelphiInterface<{583}...
+    @Rest@Componenteditor@TRESTClientComponentEditor@ @112 ; Rest::Componenteditor::TRESTClientComponentEditor::
+    @Rest@Componenteditor@TRESTClientComponentEditor@DoReset$qqrv @96  ; __fastcall Rest::Componenteditor::TRESTClientComponentEditor::DoReset()
+    @Rest@Componenteditor@TRESTClientComponentEditor@Edit$qqrv @95  ; __fastcall Rest::Componenteditor::TRESTClientComponentEditor::Edit()
+    @Rest@Componenteditor@TRESTClientComponentEditor@ExecuteVerb$qqri @94  ; __fastcall Rest::Componenteditor::TRESTClientComponentEditor::ExecuteVerb(int)
+    @Rest@Componenteditor@TRESTClientComponentEditor@GetVerb$qqri @93  ; __fastcall Rest::Componenteditor::TRESTClientComponentEditor::GetVerb(int)
+    @Rest@Componenteditor@TRESTClientComponentEditor@GetVerbCount$qqrv @92  ; __fastcall Rest::Componenteditor::TRESTClientComponentEditor::GetVerbCount()
+    @Rest@Componenteditor@TRESTClientComponentEditor@PrepareItem$qqrix48System@%DelphiInterface$21Designmenus@IMenuItem% @91  ; Rest::Componenteditor::TRESTClientComponentEditor::PrepareItem(int, const System::DelphiInterface<{583}...
+    @Rest@Componenteditor@TRESTClientSelectionEditor@ @100 ; Rest::Componenteditor::TRESTClientSelectionEditor::
+    @Rest@Componenteditor@TRESTClientSelectionEditor@RequiresUnits$qqrynpqqrx20System@UnicodeString$v @52  ; __fastcall Rest::Componenteditor::TRESTClientSelectionEditor::RequiresUnits(void __fastcall __closure(*)(const System::UnicodeString))
+    @Rest@Componenteditor@TRESTDataSetAdapterComponentEditor@ @104 ; Rest::Componenteditor::TRESTDataSetAdapterComponentEditor::
+    @Rest@Componenteditor@TRESTDataSetAdapterComponentEditor@DoClearDataSet$qqrv @90  ; __fastcall Rest::Componenteditor::TRESTDataSetAdapterComponentEditor::DoClearDataSet()
+    @Rest@Componenteditor@TRESTDataSetAdapterComponentEditor@DoUpdateDataSet$qqrv @89  ; __fastcall Rest::Componenteditor::TRESTDataSetAdapterComponentEditor::DoUpdateDataSet()
+    @Rest@Componenteditor@TRESTDataSetAdapterComponentEditor@Edit$qqrv @88  ; __fastcall Rest::Componenteditor::TRESTDataSetAdapterComponentEditor::Edit()
+    @Rest@Componenteditor@TRESTDataSetAdapterComponentEditor@ExecuteVerb$qqri @87  ; __fastcall Rest::Componenteditor::TRESTDataSetAdapterComponentEditor::ExecuteVerb(int)
+    @Rest@Componenteditor@TRESTDataSetAdapterComponentEditor@GetVerb$qqri @86  ; __fastcall Rest::Componenteditor::TRESTDataSetAdapterComponentEditor::GetVerb(int)
+    @Rest@Componenteditor@TRESTDataSetAdapterComponentEditor@GetVerbCount$qqrv @85  ; __fastcall Rest::Componenteditor::TRESTDataSetAdapterComponentEditor::GetVerbCount()
+    @Rest@Componenteditor@TRESTDataSetAdapterComponentEditor@PrepareItem$qqrix48System@%DelphiInterface$21Designmenus@IMenuItem% @84  ; Rest::Componenteditor::TRESTDataSetAdapterComponentEditor::PrepareItem(int, const System::DelphiInterface<{583}...
+    @Rest@Componenteditor@TRESTRequestComponentEditor@ @118 ; Rest::Componenteditor::TRESTRequestComponentEditor::
+    @Rest@Componenteditor@TRESTRequestComponentEditor@DoExecuteRequest$qqrv @71  ; __fastcall Rest::Componenteditor::TRESTRequestComponentEditor::DoExecuteRequest()
+    @Rest@Componenteditor@TRESTRequestComponentEditor@DoReset$qqrv @70  ; __fastcall Rest::Componenteditor::TRESTRequestComponentEditor::DoReset()
+    @Rest@Componenteditor@TRESTRequestComponentEditor@Edit$qqrv @69  ; __fastcall Rest::Componenteditor::TRESTRequestComponentEditor::Edit()
+    @Rest@Componenteditor@TRESTRequestComponentEditor@ExecuteVerb$qqri @68  ; __fastcall Rest::Componenteditor::TRESTRequestComponentEditor::ExecuteVerb(int)
+    @Rest@Componenteditor@TRESTRequestComponentEditor@GetVerb$qqri @67  ; __fastcall Rest::Componenteditor::TRESTRequestComponentEditor::GetVerb(int)
+    @Rest@Componenteditor@TRESTRequestComponentEditor@GetVerbCount$qqrv @66  ; __fastcall Rest::Componenteditor::TRESTRequestComponentEditor::GetVerbCount()
+    @Rest@Componenteditor@TRESTRequestComponentEditor@PrepareItem$qqrix48System@%DelphiInterface$21Designmenus@IMenuItem% @65  ; Rest::Componenteditor::TRESTRequestComponentEditor::PrepareItem(int, const System::DelphiInterface<{583}...
+    @Rest@Componenteditor@TRESTResourcePropertyEditor@ @102 ; Rest::Componenteditor::TRESTResourcePropertyEditor::
+    @Rest@Componenteditor@TRESTResourcePropertyEditor@SetValue$qqrx20System@UnicodeString @64  ; __fastcall Rest::Componenteditor::TRESTResourcePropertyEditor::SetValue(const System::UnicodeString)
+    @Rest@Componenteditor@TRESTResponseComponentEditor@ @116 ; Rest::Componenteditor::TRESTResponseComponentEditor::
+    @Rest@Componenteditor@TRESTResponseComponentEditor@DoReset$qqrv @63  ; __fastcall Rest::Componenteditor::TRESTResponseComponentEditor::DoReset()
+    @Rest@Componenteditor@TRESTResponseComponentEditor@Edit$qqrv @62  ; __fastcall Rest::Componenteditor::TRESTResponseComponentEditor::Edit()
+    @Rest@Componenteditor@TRESTResponseComponentEditor@ExecuteVerb$qqri @61  ; __fastcall Rest::Componenteditor::TRESTResponseComponentEditor::ExecuteVerb(int)
+    @Rest@Componenteditor@TRESTResponseComponentEditor@GetVerb$qqri @60  ; __fastcall Rest::Componenteditor::TRESTResponseComponentEditor::GetVerb(int)
+    @Rest@Componenteditor@TRESTResponseComponentEditor@GetVerbCount$qqrv @59  ; __fastcall Rest::Componenteditor::TRESTResponseComponentEditor::GetVerbCount()
+    @Rest@Componenteditor@TRESTResponseComponentEditor@PrepareItem$qqrix48System@%DelphiInterface$21Designmenus@IMenuItem% @58  ; Rest::Componenteditor::TRESTResponseComponentEditor::PrepareItem(int, const System::DelphiInterface<{583}...
+    @Rest@Componenteditor@TRESTResponsePropertyEditor@ @114 ; Rest::Componenteditor::TRESTResponsePropertyEditor::
+    @Rest@Componenteditor@TRESTResponsePropertyEditor@Edit$qqrv @51  ; __fastcall Rest::Componenteditor::TRESTResponsePropertyEditor::Edit()
+    @Rest@Componenteditor@TRESTResponsePropertyEditor@GetAttributes$qqrv @50  ; __fastcall Rest::Componenteditor::TRESTResponsePropertyEditor::GetAttributes()
+    @Rest@Componenteditor@TRESTResponsePropertyEditor@GetValue$qqrv @49  ; __fastcall Rest::Componenteditor::TRESTResponsePropertyEditor::GetValue()
+    @Rest@Componenteditor@initialization$qqrv @46  ; __fastcall Rest::Componenteditor::initialization()
+    @Rest@Componentregistration@Finalization$qqrv @120 ; __fastcall Rest::Componentregistration::Finalization()
+    @Rest@Componentregistration@Register$qqrv @121 ; __fastcall Rest::Componentregistration::Register()
+    @Rest@Componentregistration@initialization$qqrv @119 ; __fastcall Rest::Componentregistration::initialization()
+    @Rest@Oauth1ideconfiguration_frm@Finalization$qqrv @2   ; __fastcall Rest::Oauth1ideconfiguration_frm::Finalization()
+    @Rest@Oauth1ideconfiguration_frm@Tfrm_OAuth1Configuration@ @17  ; Rest::Oauth1ideconfiguration_frm::Tfrm_OAuth1Configuration::
+    @Rest@Oauth1ideconfiguration_frm@Tfrm_OAuth1Configuration@ClearControls$qqrv @12  ; __fastcall Rest::Oauth1ideconfiguration_frm::Tfrm_OAuth1Configuration::ClearControls()
+    @Rest@Oauth1ideconfiguration_frm@Tfrm_OAuth1Configuration@DoGetTokens$qqrv @11  ; __fastcall Rest::Oauth1ideconfiguration_frm::Tfrm_OAuth1Configuration::DoGetTokens()
+    @Rest@Oauth1ideconfiguration_frm@Tfrm_OAuth1Configuration@FormClose$qqrp14System@TObjectr27System@Uitypes@TCloseAction @10  ; __fastcall Rest::Oauth1ideconfiguration_frm::Tfrm_OAuth1Configuration::FormClose(System::TObject *, System::Uitypes::TCloseAction&)
+    @Rest@Oauth1ideconfiguration_frm@Tfrm_OAuth1Configuration@FormCreate$qqrp14System@TObject @9   ; __fastcall Rest::Oauth1ideconfiguration_frm::Tfrm_OAuth1Configuration::FormCreate(System::TObject *)
+    @Rest@Oauth1ideconfiguration_frm@Tfrm_OAuth1Configuration@FormDestroy$qqrp14System@TObject @8   ; __fastcall Rest::Oauth1ideconfiguration_frm::Tfrm_OAuth1Configuration::FormDestroy(System::TObject *)
+    @Rest@Oauth1ideconfiguration_frm@Tfrm_OAuth1Configuration@FormKeyPress$qqrp14System@TObjectrb @7   ; __fastcall Rest::Oauth1ideconfiguration_frm::Tfrm_OAuth1Configuration::FormKeyPress(System::TObject *, wchar_t&)
+    @Rest@Oauth1ideconfiguration_frm@Tfrm_OAuth1Configuration@FormShow$qqrp14System@TObject @6   ; __fastcall Rest::Oauth1ideconfiguration_frm::Tfrm_OAuth1Configuration::FormShow(System::TObject *)
+    @Rest@Oauth1ideconfiguration_frm@Tfrm_OAuth1Configuration@InitializeSigningClassCombo$qqrv @5   ; __fastcall Rest::Oauth1ideconfiguration_frm::Tfrm_OAuth1Configuration::InitializeSigningClassCombo()
+    @Rest@Oauth1ideconfiguration_frm@Tfrm_OAuth1Configuration@UpdateAuthenticatorFromControls$qqrv @4   ; __fastcall Rest::Oauth1ideconfiguration_frm::Tfrm_OAuth1Configuration::UpdateAuthenticatorFromControls()
+    @Rest@Oauth1ideconfiguration_frm@Tfrm_OAuth1Configuration@UpdateControlsFromAuthenticator$qqrv @3   ; __fastcall Rest::Oauth1ideconfiguration_frm::Tfrm_OAuth1Configuration::UpdateControlsFromAuthenticator()
+    @Rest@Oauth1ideconfiguration_frm@Tfrm_OAuth1Configuration@btn_GetAccessTokenClick$qqrp14System@TObject @13  ; __fastcall Rest::Oauth1ideconfiguration_frm::Tfrm_OAuth1Configuration::btn_GetAccessTokenClick(System::TObject *)
+    @Rest@Oauth1ideconfiguration_frm@Tfrm_OAuth1Configuration@btn_GetRequestTokenClick$qqrp14System@TObject @14  ; __fastcall Rest::Oauth1ideconfiguration_frm::Tfrm_OAuth1Configuration::btn_GetRequestTokenClick(System::TObject *)
+    @Rest@Oauth1ideconfiguration_frm@frm_OAuth1Configuration @15  ; Rest::Oauth1ideconfiguration_frm::frm_OAuth1Configuration
+    @Rest@Oauth1ideconfiguration_frm@initialization$qqrv @1   ; __fastcall Rest::Oauth1ideconfiguration_frm::initialization()
+    @Rest@Oauth2ideconfiguration_frm@Finalization$qqrv @19  ; __fastcall Rest::Oauth2ideconfiguration_frm::Finalization()
+    @Rest@Oauth2ideconfiguration_frm@Tfrm_OAuth2Configuration@ @36  ; Rest::Oauth2ideconfiguration_frm::Tfrm_OAuth2Configuration::
+    @Rest@Oauth2ideconfiguration_frm@Tfrm_OAuth2Configuration@ClearControls$qqrv @31  ; __fastcall Rest::Oauth2ideconfiguration_frm::Tfrm_OAuth2Configuration::ClearControls()
+    @Rest@Oauth2ideconfiguration_frm@Tfrm_OAuth2Configuration@FormClose$qqrp14System@TObjectr27System@Uitypes@TCloseAction @29  ; __fastcall Rest::Oauth2ideconfiguration_frm::Tfrm_OAuth2Configuration::FormClose(System::TObject *, System::Uitypes::TCloseAction&)
+    @Rest@Oauth2ideconfiguration_frm@Tfrm_OAuth2Configuration@FormCreate$qqrp14System@TObject @28  ; __fastcall Rest::Oauth2ideconfiguration_frm::Tfrm_OAuth2Configuration::FormCreate(System::TObject *)
+    @Rest@Oauth2ideconfiguration_frm@Tfrm_OAuth2Configuration@FormDestroy$qqrp14System@TObject @27  ; __fastcall Rest::Oauth2ideconfiguration_frm::Tfrm_OAuth2Configuration::FormDestroy(System::TObject *)
+    @Rest@Oauth2ideconfiguration_frm@Tfrm_OAuth2Configuration@FormKeyPress$qqrp14System@TObjectrb @26  ; __fastcall Rest::Oauth2ideconfiguration_frm::Tfrm_OAuth2Configuration::FormKeyPress(System::TObject *, wchar_t&)
+    @Rest@Oauth2ideconfiguration_frm@Tfrm_OAuth2Configuration@FormShow$qqrp14System@TObject @25  ; __fastcall Rest::Oauth2ideconfiguration_frm::Tfrm_OAuth2Configuration::FormShow(System::TObject *)
+    @Rest@Oauth2ideconfiguration_frm@Tfrm_OAuth2Configuration@InitializeResponseTypeCombo$qqrv @24  ; __fastcall Rest::Oauth2ideconfiguration_frm::Tfrm_OAuth2Configuration::InitializeResponseTypeCombo()
+    @Rest@Oauth2ideconfiguration_frm@Tfrm_OAuth2Configuration@UpdateAuthenticatorFromControls$qqrv @23  ; __fastcall Rest::Oauth2ideconfiguration_frm::Tfrm_OAuth2Configuration::UpdateAuthenticatorFromControls()
+    @Rest@Oauth2ideconfiguration_frm@Tfrm_OAuth2Configuration@UpdateControlsFromAuthenticator$qqrv @22  ; __fastcall Rest::Oauth2ideconfiguration_frm::Tfrm_OAuth2Configuration::UpdateControlsFromAuthenticator()
+    @Rest@Oauth2ideconfiguration_frm@Tfrm_OAuth2Configuration@WebViewAfterRedirectHandler$qqrx20System@UnicodeStringro @21  ; __fastcall Rest::Oauth2ideconfiguration_frm::Tfrm_OAuth2Configuration::WebViewAfterRedirectHandler(const System::UnicodeString, bool&)
+    @Rest@Oauth2ideconfiguration_frm@Tfrm_OAuth2Configuration@WebViewTitleChangedHandler$qqrx20System@UnicodeStringro @20  ; __fastcall Rest::Oauth2ideconfiguration_frm::Tfrm_OAuth2Configuration::WebViewTitleChangedHandler(const System::UnicodeString, bool&)
+    @Rest@Oauth2ideconfiguration_frm@Tfrm_OAuth2Configuration@btn_AuthorizeClick$qqrp14System@TObject @33  ; __fastcall Rest::Oauth2ideconfiguration_frm::Tfrm_OAuth2Configuration::btn_AuthorizeClick(System::TObject *)
+    @Rest@Oauth2ideconfiguration_frm@Tfrm_OAuth2Configuration@btn_GetTokenClick$qqrp14System@TObject @32  ; __fastcall Rest::Oauth2ideconfiguration_frm::Tfrm_OAuth2Configuration::btn_GetTokenClick(System::TObject *)
+    @Rest@Oauth2ideconfiguration_frm@Tfrm_OAuth2Configuration@edt_AuthenticationCodeChange$qqrp14System@TObject @30  ; __fastcall Rest::Oauth2ideconfiguration_frm::Tfrm_OAuth2Configuration::edt_AuthenticationCodeChange(System::TObject *)
+    @Rest@Oauth2ideconfiguration_frm@frm_OAuth2Configuration @34  ; Rest::Oauth2ideconfiguration_frm::frm_OAuth2Configuration
+    @Rest@Oauth2ideconfiguration_frm@initialization$qqrv @18  ; __fastcall Rest::Oauth2ideconfiguration_frm::initialization()
+    @Rest@Responsecontentviewer_frm@Finalization$qqrv @38  ; __fastcall Rest::Responsecontentviewer_frm::Finalization()
+    @Rest@Responsecontentviewer_frm@Tfrm_RESTResponseContentViewer@ @45  ; Rest::Responsecontentviewer_frm::Tfrm_RESTResponseContentViewer::
+    @Rest@Responsecontentviewer_frm@Tfrm_RESTResponseContentViewer@FormCreate$qqrp14System@TObject @42  ; __fastcall Rest::Responsecontentviewer_frm::Tfrm_RESTResponseContentViewer::FormCreate(System::TObject *)
+    @Rest@Responsecontentviewer_frm@Tfrm_RESTResponseContentViewer@FormKeyPress$qqrp14System@TObjectrb @41  ; __fastcall Rest::Responsecontentviewer_frm::Tfrm_RESTResponseContentViewer::FormKeyPress(System::TObject *, wchar_t&)
+    @Rest@Responsecontentviewer_frm@Tfrm_RESTResponseContentViewer@InitFromString$qqrx20System@UnicodeString @40  ; __fastcall Rest::Responsecontentviewer_frm::Tfrm_RESTResponseContentViewer::InitFromString(const System::UnicodeString)
+    @Rest@Responsecontentviewer_frm@Tfrm_RESTResponseContentViewer@TrySetMonospaceFont$qqrv @39  ; __fastcall Rest::Responsecontentviewer_frm::Tfrm_RESTResponseContentViewer::TrySetMonospaceFont()
+    @Rest@Responsecontentviewer_frm@frm_RESTResponseContentViewer @43  ; Rest::Responsecontentviewer_frm::frm_RESTResponseContentViewer
+    @Rest@Responsecontentviewer_frm@initialization$qqrv @37  ; __fastcall Rest::Responsecontentviewer_frm::initialization()
+    Finalize                       @126 ; Finalize
+    Initialize                     @127 ; Initialize

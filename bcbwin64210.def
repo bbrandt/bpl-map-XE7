@@ -1,0 +1,20 @@
+LIBRARY     BCBWIN64210.BPL
+
+EXPORTS
+    @$xp$53Cpp64addinoptionswindows@TCpp64AddInEnvOptionsWindows @6   ; __tpdsc__ Cpp64addinoptionswindows::TCpp64AddInEnvOptionsWindows
+    @Bcbwin64@@GetPackageInfoTable$qqrv @14  ; Bcbwin64::__linkproc__ __fastcall GetPackageInfoTable()
+    @Bcbwin64@@PackageLoad$qqrv    @13  ; Bcbwin64::__linkproc__ __fastcall PackageLoad()
+    @Bcbwin64@@PackageUnload$qqrv  @12  ; Bcbwin64::__linkproc__ __fastcall PackageUnload()
+    @Bcbwin64@initialization$qqrv  @11  ; __fastcall Bcbwin64::initialization()
+    @Cpp64addinoptionswindows@Cpp64AddInEnvOptionsWindows @5   ; Cpp64addinoptionswindows::Cpp64AddInEnvOptionsWindows
+    @Cpp64addinoptionswindows@Finalization$qqrv @2   ; __fastcall Cpp64addinoptionswindows::Finalization()
+    @Cpp64addinoptionswindows@TCpp64AddInEnvOptionsWindows@ @7   ; Cpp64addinoptionswindows::TCpp64AddInEnvOptionsWindows::
+    @Cpp64addinoptionswindows@TCpp64AddInEnvOptionsWindows@CustomizeDialog$qqrp28Idepropsheet@TPropertySheetsp40Baseenvirondialog@TBaseEnvironmentDialog @4   ; __fastcall Cpp64addinoptionswindows::TCpp64AddInEnvOptionsWindows::CustomizeDialog(Idepropsheet::TPropertySheets *, Baseenvirondialog::TBaseEnvironmentDialog *)
+    @Cpp64addinoptionswindows@TCpp64AddInEnvOptionsWindows@PlatformName$qqrv @3   ; __fastcall Cpp64addinoptionswindows::TCpp64AddInEnvOptionsWindows::PlatformName()
+    @Cpp64addinoptionswindows@initialization$qqrv @1   ; __fastcall Cpp64addinoptionswindows::initialization()
+    @Cppwin64platform@Finalization$qqrv @9   ; __fastcall Cppwin64platform::Finalization()
+    @Cppwin64platform@IDERegister$qqrv @10  ; __fastcall Cppwin64platform::IDERegister()
+    @Cppwin64platform@initialization$qqrv @8   ; __fastcall Cppwin64platform::initialization()
+    @GetPackageInfoTable           @17  ; GetPackageInfoTable
+    Finalize                       @15  ; Finalize
+    Initialize                     @16  ; Initialize

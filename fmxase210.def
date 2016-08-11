@@ -1,0 +1,75 @@
+LIBRARY     FMXASE210.BPL
+
+DESCRIPTION 'mbarcadero FMX ASE Import Library'
+
+EXPORTS
+    @$xp$22Fmx@Ase@Lexer@TKeyWord  @24  ; __tpdsc__ Fmx::Ase::Lexer::TKeyWord
+    @$xp$22Fmx@Ase@Model@TAseMesh  @52  ; __tpdsc__ Fmx::Ase::Model::TAseMesh
+    @$xp$23Fmx@Ase@Lexer@TASEToken @27  ; __tpdsc__ Fmx::Ase::Lexer::TASEToken
+    @$xp$23Fmx@Ase@Lexer@TAseLexer @19  ; __tpdsc__ Fmx::Ase::Lexer::TAseLexer
+    @$xp$23Fmx@Ase@Model@TAseModel @49  ; __tpdsc__ Fmx::Ase::Model::TAseModel
+    @$xp$25Fmx@Ase@Lexer@TKeyWordRec @23  ; __tpdsc__ Fmx::Ase::Lexer::TKeyWordRec
+    @$xp$26Fmx@Ase@Model@TAseMaterial @54  ; __tpdsc__ Fmx::Ase::Model::TAseMaterial
+    @$xp$26Fmx@Ase@Model@_TAseMesh@_1 @53  ; __tpdsc__ Fmx::Ase::Model::_TAseMesh::_1
+    @$xp$28Fmx@Ase@Lexer@EAseLexerError @17  ; __tpdsc__ Fmx::Ase::Lexer::EAseLexerError
+    @$xp$29Fmx@Ase@Lexer@TASETokenHelper @25  ; __tpdsc__ Fmx::Ase::Lexer::TASETokenHelper
+    @$xp$29Fmx@Ase@Model@EAseParserError @47  ; __tpdsc__ Fmx::Ase::Model::EAseParserError
+    @$xp$30Fmx@Ase@Lexer@Fmx_Ase_Lexer__1 @22  ; __tpdsc__ Fmx::Ase::Lexer::Fmx_Ase_Lexer__1
+    @$xp$30Fmx@Ase@Model@TAseMeshDynArray @51  ; __tpdsc__ Fmx::Ase::Model::TAseMeshDynArray
+    @$xp$34Fmx@Ase@Importer@TASEModelImporter @62  ; __tpdsc__ Fmx::Ase::Importer::TASEModelImporter
+    @$xp$34Fmx@Ase@Model@TAseMaterialDynArray @56  ; __tpdsc__ Fmx::Ase::Model::TAseMaterialDynArray
+    @Fmx@Ase@Importer@Finalization$qqrv @58  ; __fastcall Fmx::Ase::Importer::Finalization()
+    @Fmx@Ase@Importer@TASEModelImporter@ @63  ; Fmx::Ase::Importer::TASEModelImporter::
+    @Fmx@Ase@Importer@TASEModelImporter@GetDescription$qqrv @61  ; __fastcall Fmx::Ase::Importer::TASEModelImporter::GetDescription()
+    @Fmx@Ase@Importer@TASEModelImporter@GetExt$qqrv @60  ; __fastcall Fmx::Ase::Importer::TASEModelImporter::GetExt()
+    @Fmx@Ase@Importer@TASEModelImporter@LoadFromFile$qqrx20System@UnicodeStringr44System@%DynamicArray$p19Fmx@Objects3d@TMesh%xp25System@Classes@TComponent @59  ; Fmx::Ase::Importer::TASEModelImporter::LoadFromFile(const System::UnicodeString, System::DynamicArray<{583}...
+    @Fmx@Ase@Importer@initialization$qqrv @57  ; __fastcall Fmx::Ase::Importer::initialization()
+    @Fmx@Ase@Lexer@EAseLexerError@ @18  ; Fmx::Ase::Lexer::EAseLexerError::
+    @Fmx@Ase@Lexer@Finalization$qqrv @2   ; __fastcall Fmx::Ase::Lexer::Finalization()
+    @Fmx@Ase@Lexer@KEY_WORDS       @21  ; Fmx::Ase::Lexer::KEY_WORDS
+    @Fmx@Ase@Lexer@TASETokenHelper@ @26  ; Fmx::Ase::Lexer::TASETokenHelper::
+    @Fmx@Ase@Lexer@TAseLexer@      @20  ; Fmx::Ase::Lexer::TAseLexer::
+    @Fmx@Ase@Lexer@TAseLexer@$bctr$qqrx20System@UnicodeString @16  ; __fastcall Fmx::Ase::Lexer::TAseLexer::TAseLexer(const System::UnicodeString)
+    @Fmx@Ase@Lexer@TAseLexer@$bdtr$qqrv @15  ; __fastcall Fmx::Ase::Lexer::TAseLexer::~TAseLexer()
+    @Fmx@Ase@Lexer@TAseLexer@GetChar$qqrv @14  ; __fastcall Fmx::Ase::Lexer::TAseLexer::GetChar()
+    @Fmx@Ase@Lexer@TAseLexer@GetTokenFloat$qqrv @13  ; __fastcall Fmx::Ase::Lexer::TAseLexer::GetTokenFloat()
+    @Fmx@Ase@Lexer@TAseLexer@GetTokenInteger$qqrv @12  ; __fastcall Fmx::Ase::Lexer::TAseLexer::GetTokenInteger()
+    @Fmx@Ase@Lexer@TAseLexer@IsChar$qqrv @6   ; __fastcall Fmx::Ase::Lexer::TAseLexer::IsChar()
+    @Fmx@Ase@Lexer@TAseLexer@IsCharUpper$qqrv @5   ; __fastcall Fmx::Ase::Lexer::TAseLexer::IsCharUpper()
+    @Fmx@Ase@Lexer@TAseLexer@IsDigit$qqrv @4   ; __fastcall Fmx::Ase::Lexer::TAseLexer::IsDigit()
+    @Fmx@Ase@Lexer@TAseLexer@IsExpectedToken$qqr23Fmx@Ase@Lexer@TASEToken @3   ; __fastcall Fmx::Ase::Lexer::TAseLexer::IsExpectedToken(Fmx::Ase::Lexer::TASEToken)
+    @Fmx@Ase@Lexer@TAseLexer@NextToken$qqrv @11  ; __fastcall Fmx::Ase::Lexer::TAseLexer::NextToken()
+    @Fmx@Ase@Lexer@TAseLexer@NextTokenExpected$qqr23Fmx@Ase@Lexer@TASEToken @10  ; __fastcall Fmx::Ase::Lexer::TAseLexer::NextTokenExpected(Fmx::Ase::Lexer::TASEToken)
+    @Fmx@Ase@Lexer@TAseLexer@SkipBlanks$qqrv @9   ; __fastcall Fmx::Ase::Lexer::TAseLexer::SkipBlanks()
+    @Fmx@Ase@Lexer@TAseLexer@SkipKeyWordBlock$qqrv @8   ; __fastcall Fmx::Ase::Lexer::TAseLexer::SkipKeyWordBlock()
+    @Fmx@Ase@Lexer@TAseLexer@StringToKeyWord$qqrv @7   ; __fastcall Fmx::Ase::Lexer::TAseLexer::StringToKeyWord()
+    @Fmx@Ase@Lexer@initialization$qqrv @1   ; __fastcall Fmx::Ase::Lexer::initialization()
+    @Fmx@Ase@Model@EAseParserError@ @48  ; Fmx::Ase::Model::EAseParserError::
+    @Fmx@Ase@Model@Finalization$qqrv @29  ; __fastcall Fmx::Ase::Model::Finalization()
+    @Fmx@Ase@Model@TAseMaterial@   @55  ; Fmx::Ase::Model::TAseMaterial::
+    @Fmx@Ase@Model@TAseMaterial@$bctr$qqrv @31  ; __fastcall Fmx::Ase::Model::TAseMaterial::TAseMaterial()
+    @Fmx@Ase@Model@TAseMaterial@$bdtr$qqrv @30  ; __fastcall Fmx::Ase::Model::TAseMaterial::~TAseMaterial()
+    @Fmx@Ase@Model@TAseModel@      @50  ; Fmx::Ase::Model::TAseModel::
+    @Fmx@Ase@Model@TAseModel@$bctr$qqrv @46  ; __fastcall Fmx::Ase::Model::TAseModel::TAseModel()
+    @Fmx@Ase@Model@TAseModel@$bdtr$qqrv @45  ; __fastcall Fmx::Ase::Model::TAseModel::~TAseModel()
+    @Fmx@Ase@Model@TAseModel@AddSubMesh$qqrxp26Fmx@Import@TGEVertexSource @36  ; __fastcall Fmx::Ase::Model::TAseModel::AddSubMesh(Fmx::Import::TGEVertexSource * const)
+    @Fmx@Ase@Model@TAseModel@LoadFromFile$qqrx20System@UnicodeString @32  ; __fastcall Fmx::Ase::Model::TAseModel::LoadFromFile(const System::UnicodeString)
+    @Fmx@Ase@Model@TAseModel@ParseFaceList$qqrxp23Fmx@Ase@Lexer@TAseLexerxir22Fmx@Ase@Model@TAseMesh @38  ; __fastcall Fmx::Ase::Model::TAseModel::ParseFaceList(Fmx::Ase::Lexer::TAseLexer * const, const int, Fmx::Ase::Model::TAseMesh&)
+    @Fmx@Ase@Model@TAseModel@ParseGeometry$qqrxp23Fmx@Ase@Lexer@TAseLexer @34  ; __fastcall Fmx::Ase::Model::TAseModel::ParseGeometry(Fmx::Ase::Lexer::TAseLexer * const)
+    @Fmx@Ase@Model@TAseModel@ParseMap$qqrxp23Fmx@Ase@Lexer@TAseLexerr20System@UnicodeString @44  ; __fastcall Fmx::Ase::Model::TAseModel::ParseMap(Fmx::Ase::Lexer::TAseLexer * const, System::UnicodeString&)
+    @Fmx@Ase@Model@TAseModel@ParseMaterial$qqrxp23Fmx@Ase@Lexer@TAseLexerp26Fmx@Ase@Model@TAseMaterial @43  ; __fastcall Fmx::Ase::Model::TAseModel::ParseMaterial(Fmx::Ase::Lexer::TAseLexer * const, Fmx::Ase::Model::TAseMaterial *)
+    @Fmx@Ase@Model@TAseModel@ParseMaterialList$qqrxp23Fmx@Ase@Lexer@TAseLexer @42  ; __fastcall Fmx::Ase::Model::TAseModel::ParseMaterialList(Fmx::Ase::Lexer::TAseLexer * const)
+    @Fmx@Ase@Model@TAseModel@ParseMesh$qqrxp23Fmx@Ase@Lexer@TAseLexerr22Fmx@Ase@Model@TAseMesh @35  ; __fastcall Fmx::Ase::Model::TAseModel::ParseMesh(Fmx::Ase::Lexer::TAseLexer * const, Fmx::Ase::Model::TAseMesh&)
+    @Fmx@Ase@Model@TAseModel@ParseModel$qqrxp23Fmx@Ase@Lexer@TAseLexer @33  ; __fastcall Fmx::Ase::Model::TAseModel::ParseModel(Fmx::Ase::Lexer::TAseLexer * const)
+    @Fmx@Ase@Model@TAseModel@ParseNormalList$qqrxp23Fmx@Ase@Lexer@TAseLexerxixir22Fmx@Ase@Model@TAseMesh @40  ; __fastcall Fmx::Ase::Model::TAseModel::ParseNormalList(Fmx::Ase::Lexer::TAseLexer * const, const int, const int, Fmx::Ase::Model::TAseMesh&)
+    @Fmx@Ase@Model@TAseModel@ParseTFaceList$qqrxp23Fmx@Ase@Lexer@TAseLexerxir22Fmx@Ase@Model@TAseMesh @37  ; __fastcall Fmx::Ase::Model::TAseModel::ParseTFaceList(Fmx::Ase::Lexer::TAseLexer * const, const int, Fmx::Ase::Model::TAseMesh&)
+    @Fmx@Ase@Model@TAseModel@ParseTexCoordList$qqrxp23Fmx@Ase@Lexer@TAseLexerxixp26Fmx@Import@TGEVertexSource @39  ; __fastcall Fmx::Ase::Model::TAseModel::ParseTexCoordList(Fmx::Ase::Lexer::TAseLexer * const, const int, Fmx::Import::TGEVertexSource * const)
+    @Fmx@Ase@Model@TAseModel@ParseVertexList$qqrxp23Fmx@Ase@Lexer@TAseLexerxixp26Fmx@Import@TGEVertexSource @41  ; __fastcall Fmx::Ase::Model::TAseModel::ParseVertexList(Fmx::Ase::Lexer::TAseLexer * const, const int, Fmx::Import::TGEVertexSource * const)
+    @Fmx@Ase@Model@initialization$qqrv @28  ; __fastcall Fmx::Ase::Model::initialization()
+    @Fmxase@@GetPackageInfoTable$qqrv @67  ; Fmxase::__linkproc__ __fastcall GetPackageInfoTable()
+    @Fmxase@@PackageLoad$qqrv      @66  ; Fmxase::__linkproc__ __fastcall PackageLoad()
+    @Fmxase@@PackageUnload$qqrv    @65  ; Fmxase::__linkproc__ __fastcall PackageUnload()
+    @Fmxase@initialization$qqrv    @64  ; __fastcall Fmxase::initialization()
+    @GetPackageInfoTable           @70  ; GetPackageInfoTable
+    Finalize                       @68  ; Finalize
+    Initialize                     @69  ; Initialize

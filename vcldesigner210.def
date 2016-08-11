@@ -1,0 +1,243 @@
+LIBRARY     VCLDESIGNER210.BPL
+
+DESCRIPTION 'CL Form designer and property and component editors'
+
+EXPORTS
+    @$xp$21Ocxreg@TOleFontEditor   @132 ; __tpdsc__ Ocxreg::TOleFontEditor
+    @$xp$21Vclmenus@TMenuWrapper   @74  ; __tpdsc__ Vclmenus::TMenuWrapper
+    @$xp$23Ocxreg@TOleEnumProperty @124 ; __tpdsc__ Ocxreg::TOleEnumProperty
+    @$xp$23Ocxreg@TOleObjectEditor @134 ; __tpdsc__ Ocxreg::TOleObjectEditor
+    @$xp$23Vclsurface@IHintMessage @94  ; __tpdsc__ Vclsurface::IHintMessage
+    @$xp$24Ocxreg@TOleControlEditor @136 ; __tpdsc__ Ocxreg::TOleControlEditor
+    @$xp$25Ocxreg@TOleCustomProperty @128 ; __tpdsc__ Ocxreg::TOleCustomProperty
+    @$xp$25Ocxreg@TOleObjectProperty @130 ; __tpdsc__ Ocxreg::TOleObjectProperty
+    @$xp$25Vcldesignintf@TDragTarget @11  ; __tpdsc__ Vcldesignintf::TDragTarget
+    @$xp$25Vclmenus@TMainMenuWrapper @72  ; __tpdsc__ Vclmenus::TMainMenuWrapper
+    @$xp$25Vclmenus@TMenuItemWrapper @76  ; __tpdsc__ Vclmenus::TMenuItemWrapper
+    @$xp$25Vclsurface@TVCLIDEActions @91  ; __tpdsc__ Vclsurface::TVCLIDEActions
+    @$xp$26Vclmenus@TMenuItemsWrapper @78  ; __tpdsc__ Vclmenus::TMenuItemsWrapper
+    @$xp$26Vclmenus@TPopupMenuWrapper @70  ; __tpdsc__ Vclmenus::TPopupMenuWrapper
+    @$xp$27Ocxreg@TOlePropPageProperty @126 ; __tpdsc__ Ocxreg::TOlePropPageProperty
+    @$xp$27Vclformcontainer@TFormShape @219 ; __tpdsc__ Vclformcontainer::TFormShape
+    @$xp$28Ocxreg@TOleObjectEditorClass @123 ; __tpdsc__ Ocxreg::TOleObjectEditorClass
+    @$xp$29Vclformcontainer@TAnchorPoint @218 ; __tpdsc__ Vclformcontainer::TAnchorPoint
+    @$xp$29Vclformcontainer@TFrameModule @208 ; __tpdsc__ Vclformcontainer::TFrameModule
+    @$xp$29Vclsurface@IImageListProvider @93  ; __tpdsc__ Vclsurface::IImageListProvider
+    @$xp$30Vcldesignintf@TDragTargetClass @10  ; __tpdsc__ Vcldesignintf::TDragTargetClass
+    @$xp$30Vclformcontainer@TControlSizer @221 ; __tpdsc__ Vclformcontainer::TControlSizer
+    @$xp$31Vclformcontainer@TSizeDimension @224 ; __tpdsc__ Vclformcontainer::TSizeDimension
+    @$xp$32Vclformcontainer@TIDEFrameModule @206 ; __tpdsc__ Vclformcontainer::TIDEFrameModule
+    @$xp$32Vclformcontainer@TSizeDimensions @223 ; __tpdsc__ Vclformcontainer::TSizeDimensions
+    @$xp$32Vclformcontainer@TVirtualDisplay @216 ; __tpdsc__ Vclformcontainer::TVirtualDisplay
+    @$xp$35Vclformcontainer@TFormContainerForm @214 ; __tpdsc__ Vclformcontainer::TFormContainerForm
+    @$xp$37Vcldesignintf@TRegisterDragTargetProc @9   ; __tpdsc__ Vcldesignintf::TRegisterDragTargetProc
+    @$xp$39Vcldesignintf@TRegisterDesignDragObject @7   ; __tpdsc__ Vcldesignintf::TRegisterDesignDragObject
+    @$xp$40Vclformcontainer@TCustomFormCustomModule @212 ; __tpdsc__ Vclformcontainer::TCustomFormCustomModule
+    @$xp$40Vclformcontainer@TWinControlCustomModule @204 ; __tpdsc__ Vclformcontainer::TWinControlCustomModule
+    @$xp$45Vclformcontainer@TIDESourceModuleCustomModule @210 ; __tpdsc__ Vclformcontainer::TIDESourceModuleCustomModule
+    @GetPackageInfoTable           @238 ; GetPackageInfoTable
+    @Ocxreg@Finalization$qqrv      @96  ; __fastcall Ocxreg::Finalization()
+    @Ocxreg@Register$qqrv          @97  ; __fastcall Ocxreg::Register()
+    @Ocxreg@RegisterOleObjectEditor$qqrrx5_GUIDx20System@UnicodeStringp17System@TMetaClass @98  ; __fastcall Ocxreg::RegisterOleObjectEditor(const _GUID&, const System::UnicodeString, System::TMetaClass *)
+    @Ocxreg@TOleControlEditor@     @137 ; Ocxreg::TOleControlEditor::
+    @Ocxreg@TOleControlEditor@$bctr$qqrp25System@Classes@TComponent47System@%DelphiInterface$20Designintf@IDesigner% @122 ; Ocxreg::TOleControlEditor::TOleControlEditor(System::Classes::TComponent *, System::DelphiInterface<{583}...
+    @Ocxreg@TOleControlEditor@$bdtr$qqrv @121 ; __fastcall Ocxreg::TOleControlEditor::~TOleControlEditor()
+    @Ocxreg@TOleControlEditor@DoVerb$qqri @120 ; __fastcall Ocxreg::TOleControlEditor::DoVerb(int)
+    @Ocxreg@TOleControlEditor@Edit$qqrv @119 ; __fastcall Ocxreg::TOleControlEditor::Edit()
+    @Ocxreg@TOleControlEditor@ExecuteVerb$qqri @118 ; __fastcall Ocxreg::TOleControlEditor::ExecuteVerb(int)
+    @Ocxreg@TOleControlEditor@GetVerb$qqri @117 ; __fastcall Ocxreg::TOleControlEditor::GetVerb(int)
+    @Ocxreg@TOleControlEditor@GetVerbCount$qqrv @116 ; __fastcall Ocxreg::TOleControlEditor::GetVerbCount()
+    @Ocxreg@TOleCustomProperty@    @129 ; Ocxreg::TOleCustomProperty::
+    @Ocxreg@TOleCustomProperty@GetAttributes$qqrv @115 ; __fastcall Ocxreg::TOleCustomProperty::GetAttributes()
+    @Ocxreg@TOleCustomProperty@GetValue$qqrv @114 ; __fastcall Ocxreg::TOleCustomProperty::GetValue()
+    @Ocxreg@TOleCustomProperty@GetValues$qqrynpqqrx20System@UnicodeString$v @113 ; __fastcall Ocxreg::TOleCustomProperty::GetValues(void __fastcall __closure(*)(const System::UnicodeString))
+    @Ocxreg@TOleCustomProperty@SetValue$qqrx20System@UnicodeString @112 ; __fastcall Ocxreg::TOleCustomProperty::SetValue(const System::UnicodeString)
+    @Ocxreg@TOleEnumProperty@      @125 ; Ocxreg::TOleEnumProperty::
+    @Ocxreg@TOleEnumProperty@GetAttributes$qqrv @109 ; __fastcall Ocxreg::TOleEnumProperty::GetAttributes()
+    @Ocxreg@TOleEnumProperty@GetValue$qqrv @108 ; __fastcall Ocxreg::TOleEnumProperty::GetValue()
+    @Ocxreg@TOleEnumProperty@GetValues$qqrynpqqrx20System@UnicodeString$v @107 ; __fastcall Ocxreg::TOleEnumProperty::GetValues(void __fastcall __closure(*)(const System::UnicodeString))
+    @Ocxreg@TOleEnumProperty@Initialize$qqrv @106 ; __fastcall Ocxreg::TOleEnumProperty::Initialize()
+    @Ocxreg@TOleEnumProperty@SetValue$qqrx20System@UnicodeString @105 ; __fastcall Ocxreg::TOleEnumProperty::SetValue(const System::UnicodeString)
+    @Ocxreg@TOleFontEditor@        @133 ; Ocxreg::TOleFontEditor::
+    @Ocxreg@TOleFontEditor@Edit$qqrrx14System@Variant @102 ; __fastcall Ocxreg::TOleFontEditor::Edit(const System::Variant&)
+    @Ocxreg@TOleObjectEditor@      @135 ; Ocxreg::TOleObjectEditor::
+    @Ocxreg@TOleObjectEditor@$bctr$qqrp29Designeditors@TPropertyEditor @104 ; __fastcall Ocxreg::TOleObjectEditor::TOleObjectEditor(Designeditors::TPropertyEditor *)
+    @Ocxreg@TOleObjectEditor@Edit$qqrrx14System@Variant @103 ; __fastcall Ocxreg::TOleObjectEditor::Edit(const System::Variant&)
+    @Ocxreg@TOleObjectProperty@    @131 ; Ocxreg::TOleObjectProperty::
+    @Ocxreg@TOleObjectProperty@Edit$qqrv @101 ; __fastcall Ocxreg::TOleObjectProperty::Edit()
+    @Ocxreg@TOleObjectProperty@GetAttributes$qqrv @100 ; __fastcall Ocxreg::TOleObjectProperty::GetAttributes()
+    @Ocxreg@TOleObjectProperty@GetValue$qqrv @99  ; __fastcall Ocxreg::TOleObjectProperty::GetValue()
+    @Ocxreg@TOlePropPageProperty@  @127 ; Ocxreg::TOlePropPageProperty::
+    @Ocxreg@TOlePropPageProperty@Edit$qqrv @110 ; __fastcall Ocxreg::TOlePropPageProperty::Edit()
+    @Ocxreg@TOlePropPageProperty@GetAttributes$qqrv @111 ; __fastcall Ocxreg::TOlePropPageProperty::GetAttributes()
+    @Ocxreg@initialization$qqrv    @95  ; __fastcall Ocxreg::initialization()
+    @Vcldesigner@@GetPackageInfoTable$qqrv @235 ; Vcldesigner::__linkproc__ __fastcall GetPackageInfoTable()
+    @Vcldesigner@@PackageLoad$qqrv @234 ; Vcldesigner::__linkproc__ __fastcall PackageLoad()
+    @Vcldesigner@@PackageUnload$qqrv @233 ; Vcldesigner::__linkproc__ __fastcall PackageUnload()
+    @Vcldesigner@initialization$qqrv @232 ; __fastcall Vcldesigner::initialization()
+    @Vcldesignintf@Finalization$qqrv @2   ; __fastcall Vcldesignintf::Finalization()
+    @Vcldesignintf@RegisterDesignDragObject$qqrp17System@TMetaClass @3   ; __fastcall Vcldesignintf::RegisterDesignDragObject(System::TMetaClass *)
+    @Vcldesignintf@RegisterDesignDragObjectProc @6   ; Vcldesignintf::RegisterDesignDragObjectProc
+    @Vcldesignintf@RegisterDragTarget$qqrx20System@UnicodeStringp17System@TMetaClass @4   ; __fastcall Vcldesignintf::RegisterDragTarget(const System::UnicodeString, System::TMetaClass *)
+    @Vcldesignintf@RegisterDragTargetProc @8   ; Vcldesignintf::RegisterDragTargetProc
+    @Vcldesignintf@TDragTarget@    @12  ; Vcldesignintf::TDragTarget::
+    @Vcldesignintf@TDragTarget@$bctr$qqrx47System@%DelphiInterface$20Designintf@IDesigner% @5   ; Vcldesignintf::TDragTarget::TDragTarget(const System::DelphiInterface<{583}...
+    @Vcldesignintf@initialization$qqrv @1   ; __fastcall Vcldesignintf::initialization()
+    @Vclformcontainer@DataModuleCreateDesignerForm$qqrp27Designeditors@TCustomModulex47System@%DelphiInterface$20Designintf@IDesigner%p25System@Classes@TComponentr47System@%DelphiInterface$20Designintf@IHostForm%rp24Vcl@Controls@TWinControl @171 ; Vclformcontainer::DataModuleCreateDesignerForm(Designeditors::TCustomModule *, const System::DelphiInterface<{583}...
+    @Vclformcontainer@Finalization$qqrv @139 ; __fastcall Vclformcontainer::Finalization()
+    @Vclformcontainer@IDERegister$qqrv @187 ; __fastcall Vclformcontainer::IDERegister()
+    @Vclformcontainer@TControlSizer@ @222 ; Vclformcontainer::TControlSizer::
+    @Vclformcontainer@TControlSizer@$bctr$qqrp25System@Classes@TComponent @202 ; __fastcall Vclformcontainer::TControlSizer::TControlSizer(System::Classes::TComponent *)
+    @Vclformcontainer@TControlSizer@$bdtr$qqrv @201 ; __fastcall Vclformcontainer::TControlSizer::~TControlSizer()
+    @Vclformcontainer@TControlSizer@ControlWndProc$qqrr24Winapi@Messages@TMessage @203 ; __fastcall Vclformcontainer::TControlSizer::ControlWndProc(Winapi::Messages::TMessage&)
+    @Vclformcontainer@TControlSizer@GetSizeDimension$qqrii @200 ; __fastcall Vclformcontainer::TControlSizer::GetSizeDimension(int, int)
+    @Vclformcontainer@TControlSizer@MouseDown$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @199 ; Vclformcontainer::TControlSizer::MouseDown(System::Uitypes::TMouseButton, System::Set<{583}...
+    @Vclformcontainer@TControlSizer@MouseMove$qqr60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @198 ; Vclformcontainer::TControlSizer::MouseMove(System::Set<{583}...
+    @Vclformcontainer@TControlSizer@MouseUp$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @197 ; Vclformcontainer::TControlSizer::MouseUp(System::Uitypes::TMouseButton, System::Set<{583}...
+    @Vclformcontainer@TControlSizer@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @196 ; __fastcall Vclformcontainer::TControlSizer::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Vclformcontainer@TControlSizer@Paint$qqrv @195 ; __fastcall Vclformcontainer::TControlSizer::Paint()
+    @Vclformcontainer@TControlSizer@Resize$qqrv @194 ; __fastcall Vclformcontainer::TControlSizer::Resize()
+    @Vclformcontainer@TControlSizer@ResizeContainer$qqrv @193 ; __fastcall Vclformcontainer::TControlSizer::ResizeContainer()
+    @Vclformcontainer@TControlSizer@ResizeControl$qqrv @192 ; __fastcall Vclformcontainer::TControlSizer::ResizeControl()
+    @Vclformcontainer@TControlSizer@SetControl$qqrp21Vcl@Controls@TControl @191 ; __fastcall Vclformcontainer::TControlSizer::SetControl(Vcl::Controls::TControl *)
+    @Vclformcontainer@TControlSizer@SetLocked$qqro @190 ; __fastcall Vclformcontainer::TControlSizer::SetLocked(bool)
+    @Vclformcontainer@TControlSizer@SetShowSizer$qqro @189 ; __fastcall Vclformcontainer::TControlSizer::SetShowSizer(bool)
+    @Vclformcontainer@TCustomFormCustomModule@ @213 ; Vclformcontainer::TCustomFormCustomModule::
+    @Vclformcontainer@TCustomFormCustomModule@CreateDesignerForm$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p25System@Classes@TComponentr47System@%DelphiInterface$20Designintf@IHostForm%rp24Vcl@Controls@TWinControl @188 ; Vclformcontainer::TCustomFormCustomModule::CreateDesignerForm(const System::DelphiInterface<{583}...
+    @Vclformcontainer@TFormContainerForm@ @215 ; Vclformcontainer::TFormContainerForm::
+    @Vclformcontainer@TFormContainerForm@$bctr$qqrx47System@%DelphiInterface$20Designintf@IDesigner% @184 ; Vclformcontainer::TFormContainerForm::TFormContainerForm(const System::DelphiInterface<{583}...
+    @Vclformcontainer@TFormContainerForm@$bdtr$qqrv @180 ; __fastcall Vclformcontainer::TFormContainerForm::~TFormContainerForm()
+    @Vclformcontainer@TFormContainerForm@AdjustClientRect$qqrr18System@Types@TRect @186 ; __fastcall Vclformcontainer::TFormContainerForm::AdjustClientRect(System::Types::TRect&)
+    @Vclformcontainer@TFormContainerForm@AfterConstruction$qqrv @185 ; __fastcall Vclformcontainer::TFormContainerForm::AfterConstruction()
+    @Vclformcontainer@TFormContainerForm@DesignWndProc$qqrr24Winapi@Messages@TMessage @181 ; __fastcall Vclformcontainer::TFormContainerForm::DesignWndProc(Winapi::Messages::TMessage&)
+    @Vclformcontainer@TFormContainerForm@DesignerClosed$qqrx47System@%DelphiInterface$20Designintf@IDesigner%o @183 ; Vclformcontainer::TFormContainerForm::DesignerClosed(const System::DelphiInterface<{583}...
+    @Vclformcontainer@TFormContainerForm@DesignerOpened$qqrx47System@%DelphiInterface$20Designintf@IDesigner%o @182 ; Vclformcontainer::TFormContainerForm::DesignerOpened(const System::DelphiInterface<{583}...
+    @Vclformcontainer@TFormContainerForm@FormMoved$qqrp14System@TObject @179 ; __fastcall Vclformcontainer::TFormContainerForm::FormMoved(System::TObject *)
+    @Vclformcontainer@TFormContainerForm@GetFormWrapper$qqrv @178 ; __fastcall Vclformcontainer::TFormContainerForm::GetFormWrapper()
+    @Vclformcontainer@TFormContainerForm@ItemDeleted$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p26System@Classes@TPersistent @177 ; Vclformcontainer::TFormContainerForm::ItemDeleted(const System::DelphiInterface<{583}...
+    @Vclformcontainer@TFormContainerForm@ItemInserted$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p26System@Classes@TPersistent @176 ; Vclformcontainer::TFormContainerForm::ItemInserted(const System::DelphiInterface<{583}...
+    @Vclformcontainer@TFormContainerForm@ItemsModified$qqrx47System@%DelphiInterface$20Designintf@IDesigner% @175 ; Vclformcontainer::TFormContainerForm::ItemsModified(const System::DelphiInterface<{583}...
+    @Vclformcontainer@TFormContainerForm@Resizing$qqr27System@Uitypes@TWindowState @174 ; __fastcall Vclformcontainer::TFormContainerForm::Resizing(System::Uitypes::TWindowState)
+    @Vclformcontainer@TFormContainerForm@SelectionChanged$qqrx47System@%DelphiInterface$20Designintf@IDesigner%x57System@%DelphiInterface$30Designintf@IDesignerSelections% @173 ; Vclformcontainer::TFormContainerForm::SelectionChanged(const System::DelphiInterface<{583}...
+    @Vclformcontainer@TFormContainerForm@WndProc$qqrr24Winapi@Messages@TMessage @172 ; __fastcall Vclformcontainer::TFormContainerForm::WndProc(Winapi::Messages::TMessage&)
+    @Vclformcontainer@TFormShape@  @220 ; Vclformcontainer::TFormShape::
+    @Vclformcontainer@TFormShape@$bctr$qqrp25System@Classes@TComponent @144 ; __fastcall Vclformcontainer::TFormShape::TFormShape(System::Classes::TComponent *)
+    @Vclformcontainer@TFormShape@CMHintShow$qqrr24Vcl@Controls@TCMHintShow @140 ; __fastcall Vclformcontainer::TFormShape::CMHintShow(Vcl::Controls::TCMHintShow&)
+    @Vclformcontainer@TFormShape@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @143 ; __fastcall Vclformcontainer::TFormShape::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Vclformcontainer@TFormShape@SetDesignedForm$qqro @142 ; __fastcall Vclformcontainer::TFormShape::SetDesignedForm(bool)
+    @Vclformcontainer@TFormShape@SetForm$qqrp21Vcl@Forms@TCustomForm @141 ; __fastcall Vclformcontainer::TFormShape::SetForm(Vcl::Forms::TCustomForm *)
+    @Vclformcontainer@TFrameModule@ @209 ; Vclformcontainer::TFrameModule::
+    @Vclformcontainer@TFrameModule@ExecuteVerb$qqri @166 ; __fastcall Vclformcontainer::TFrameModule::ExecuteVerb(int)
+    @Vclformcontainer@TFrameModule@GetVerb$qqri @165 ; __fastcall Vclformcontainer::TFrameModule::GetVerb(int)
+    @Vclformcontainer@TFrameModule@GetVerbCount$qqrv @164 ; __fastcall Vclformcontainer::TFrameModule::GetVerbCount()
+    @Vclformcontainer@TFrameModule@Nestable$qqrv @167 ; __fastcall Vclformcontainer::TFrameModule::Nestable()
+    @Vclformcontainer@TFrameModule@ValidateComponent$qqrp25System@Classes@TComponent @163 ; __fastcall Vclformcontainer::TFrameModule::ValidateComponent(System::Classes::TComponent *)
+    @Vclformcontainer@TIDEFrameModule@ @207 ; Vclformcontainer::TIDEFrameModule::
+    @Vclformcontainer@TIDESourceModuleCustomModule@ @211 ; Vclformcontainer::TIDESourceModuleCustomModule::
+    @Vclformcontainer@TIDESourceModuleCustomModule@CreateDesignerForm$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p25System@Classes@TComponentr47System@%DelphiInterface$20Designintf@IHostForm%rp24Vcl@Controls@TWinControl @170 ; Vclformcontainer::TIDESourceModuleCustomModule::CreateDesignerForm(const System::DelphiInterface<{583}...
+    @Vclformcontainer@TIDESourceModuleCustomModule@DesignClass$qqrv @169 ; __fastcall Vclformcontainer::TIDESourceModuleCustomModule::DesignClass()
+    @Vclformcontainer@TIDESourceModuleCustomModule@ValidateComponentClass$qqrp17System@TMetaClass @168 ; __fastcall Vclformcontainer::TIDESourceModuleCustomModule::ValidateComponentClass(System::TMetaClass *)
+    @Vclformcontainer@TVirtualDisplay@ @217 ; Vclformcontainer::TVirtualDisplay::
+    @Vclformcontainer@TVirtualDisplay@$bctr$qqrp25System@Classes@TComponent @156 ; __fastcall Vclformcontainer::TVirtualDisplay::TVirtualDisplay(System::Classes::TComponent *)
+    @Vclformcontainer@TVirtualDisplay@AddForm$qqrp21Vcl@Forms@TCustomFormo @160 ; __fastcall Vclformcontainer::TVirtualDisplay::AddForm(Vcl::Forms::TCustomForm *, bool)
+    @Vclformcontainer@TVirtualDisplay@AdjustAnchorPosition$qqrii @159 ; __fastcall Vclformcontainer::TVirtualDisplay::AdjustAnchorPosition(int, int)
+    @Vclformcontainer@TVirtualDisplay@AdjustShape$qqrp21Vcl@Forms@TCustomFormp27Vclformcontainer@TFormShape @158 ; __fastcall Vclformcontainer::TVirtualDisplay::AdjustShape(Vcl::Forms::TCustomForm *, Vclformcontainer::TFormShape *)
+    @Vclformcontainer@TVirtualDisplay@Click$qqrv @157 ; __fastcall Vclformcontainer::TVirtualDisplay::Click()
+    @Vclformcontainer@TVirtualDisplay@Resize$qqrv @155 ; __fastcall Vclformcontainer::TVirtualDisplay::Resize()
+    @Vclformcontainer@TVirtualDisplay@SetAnchorPoint$qqr29Vclformcontainer@TAnchorPoint @154 ; __fastcall Vclformcontainer::TVirtualDisplay::SetAnchorPoint(Vclformcontainer::TAnchorPoint)
+    @Vclformcontainer@TVirtualDisplay@SetButtonMode$qqro @153 ; __fastcall Vclformcontainer::TVirtualDisplay::SetButtonMode(bool)
+    @Vclformcontainer@TVirtualDisplay@SetParent$qqrp24Vcl@Controls@TWinControl @152 ; __fastcall Vclformcontainer::TVirtualDisplay::SetParent(Vcl::Controls::TWinControl *)
+    @Vclformcontainer@TVirtualDisplay@ShapeMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @151 ; Vclformcontainer::TVirtualDisplay::ShapeMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Vclformcontainer@TVirtualDisplay@ShapeMouseMove$qqrp14System@TObject60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @150 ; Vclformcontainer::TVirtualDisplay::ShapeMouseMove(System::TObject *, System::Set<{583}...
+    @Vclformcontainer@TVirtualDisplay@ShapeMouseUp$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @149 ; Vclformcontainer::TVirtualDisplay::ShapeMouseUp(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Vclformcontainer@TVirtualDisplay@TimerEvent$qqrp14System@TObject @148 ; __fastcall Vclformcontainer::TVirtualDisplay::TimerEvent(System::TObject *)
+    @Vclformcontainer@TVirtualDisplay@UpdateShapes$qqrv @147 ; __fastcall Vclformcontainer::TVirtualDisplay::UpdateShapes()
+    @Vclformcontainer@TVirtualDisplay@WMNCHitTest$qqrr28Winapi@Messages@TWMNCHitTest @146 ; __fastcall Vclformcontainer::TVirtualDisplay::WMNCHitTest(Winapi::Messages::TWMNCHitTest&)
+    @Vclformcontainer@TVirtualDisplay@WMWindowPosChanging$qqrr31Winapi@Messages@TWMWindowPosMsg @145 ; __fastcall Vclformcontainer::TVirtualDisplay::WMWindowPosChanging(Winapi::Messages::TWMWindowPosMsg&)
+    @Vclformcontainer@TWinControlCustomModule@ @205 ; Vclformcontainer::TWinControlCustomModule::
+    @Vclformcontainer@TWinControlCustomModule@CreateDesignerForm$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p25System@Classes@TComponentr47System@%DelphiInterface$20Designintf@IHostForm%rp24Vcl@Controls@TWinControl @162 ; Vclformcontainer::TWinControlCustomModule::CreateDesignerForm(const System::DelphiInterface<{583}...
+    @Vclformcontainer@WinControlCreateDesignerForm$qqrp27Designeditors@TCustomModulex47System@%DelphiInterface$20Designintf@IDesigner%p25System@Classes@TComponentr47System@%DelphiInterface$20Designintf@IHostForm%rp24Vcl@Controls@TWinControl @161 ; Vclformcontainer::WinControlCreateDesignerForm(Designeditors::TCustomModule *, const System::DelphiInterface<{583}...
+    @Vclformcontainer@initialization$qqrv @138 ; __fastcall Vclformcontainer::initialization()
+    @Vclformdesigner@Designer$qqrv @228 ; __fastcall Vclformdesigner::Designer()
+    @Vclformdesigner@Finalization$qqrv @226 ; __fastcall Vclformdesigner::Finalization()
+    @Vclformdesigner@IDERegister$qqrv @227 ; __fastcall Vclformdesigner::IDERegister()
+    @Vclformdesigner@InitializeDesigner$qqrx63System@%DelphiInterface$36Componentdesigner@IDesignEnvironment% @229 ; Vclformdesigner::InitializeDesigner(const System::DelphiInterface<{583}...
+    @Vclformdesigner@_sNoHelpFile  @231 ; Vclformdesigner::_sNoHelpFile
+    @Vclformdesigner@_sRedirectLinks @230 ; Vclformdesigner::_sRedirectLinks
+    @Vclformdesigner@initialization$qqrv @225 ; __fastcall Vclformdesigner::initialization()
+    @Vclmenus@Finalization$qqrv    @14  ; __fastcall Vclmenus::Finalization()
+    @Vclmenus@IMainMenuFor$qqrp19Vcl@Menus@TMainMenu @69  ; __fastcall Vclmenus::IMainMenuFor(Vcl::Menus::TMainMenu *)
+    @Vclmenus@IMenuItemFor$qqrp19Vcl@Menus@TMenuItem @67  ; __fastcall Vclmenus::IMenuItemFor(Vcl::Menus::TMenuItem *)
+    @Vclmenus@IMenuItemsFor$qqrp19Vcl@Menus@TMenuItem @66  ; __fastcall Vclmenus::IMenuItemsFor(Vcl::Menus::TMenuItem *)
+    @Vclmenus@IPopupMenuFor$qqrp20Vcl@Menus@TPopupMenu @68  ; __fastcall Vclmenus::IPopupMenuFor(Vcl::Menus::TPopupMenu *)
+    @Vclmenus@TMainMenuWrapper@    @73  ; Vclmenus::TMainMenuWrapper::
+    @Vclmenus@TMainMenuWrapper@$bctr$qqrp19Vcl@Menus@TMainMenu @18  ; __fastcall Vclmenus::TMainMenuWrapper::TMainMenuWrapper(Vcl::Menus::TMainMenu *)
+    @Vclmenus@TMenuItemWrapper@    @77  ; Vclmenus::TMenuItemWrapper::
+    @Vclmenus@TMenuItemWrapper@Click$qqrv @47  ; __fastcall Vclmenus::TMenuItemWrapper::Click()
+    @Vclmenus@TMenuItemWrapper@GetCaption$qqrv @46  ; __fastcall Vclmenus::TMenuItemWrapper::GetCaption()
+    @Vclmenus@TMenuItemWrapper@GetChecked$qqrv @45  ; __fastcall Vclmenus::TMenuItemWrapper::GetChecked()
+    @Vclmenus@TMenuItemWrapper@GetEnabled$qqrv @44  ; __fastcall Vclmenus::TMenuItemWrapper::GetEnabled()
+    @Vclmenus@TMenuItemWrapper@GetGroupIndex$qqrv @43  ; __fastcall Vclmenus::TMenuItemWrapper::GetGroupIndex()
+    @Vclmenus@TMenuItemWrapper@GetHelpContext$qqrv @42  ; __fastcall Vclmenus::TMenuItemWrapper::GetHelpContext()
+    @Vclmenus@TMenuItemWrapper@GetHint$qqrv @41  ; __fastcall Vclmenus::TMenuItemWrapper::GetHint()
+    @Vclmenus@TMenuItemWrapper@GetRadioItem$qqrv @40  ; __fastcall Vclmenus::TMenuItemWrapper::GetRadioItem()
+    @Vclmenus@TMenuItemWrapper@GetShortCut$qqrv @39  ; __fastcall Vclmenus::TMenuItemWrapper::GetShortCut()
+    @Vclmenus@TMenuItemWrapper@GetTag$qqrv @38  ; __fastcall Vclmenus::TMenuItemWrapper::GetTag()
+    @Vclmenus@TMenuItemWrapper@GetVisible$qqrv @37  ; __fastcall Vclmenus::TMenuItemWrapper::GetVisible()
+    @Vclmenus@TMenuItemWrapper@HasParent$qqrv @36  ; __fastcall Vclmenus::TMenuItemWrapper::HasParent()
+    @Vclmenus@TMenuItemWrapper@IsLine$qqrv @35  ; __fastcall Vclmenus::TMenuItemWrapper::IsLine()
+    @Vclmenus@TMenuItemWrapper@MenuIndex$qqrv @34  ; __fastcall Vclmenus::TMenuItemWrapper::MenuIndex()
+    @Vclmenus@TMenuItemWrapper@Name$qqrv @33  ; __fastcall Vclmenus::TMenuItemWrapper::Name()
+    @Vclmenus@TMenuItemWrapper@Parent$qqrv @32  ; __fastcall Vclmenus::TMenuItemWrapper::Parent()
+    @Vclmenus@TMenuItemWrapper@SetCaption$qqrx17System@WideString @31  ; __fastcall Vclmenus::TMenuItemWrapper::SetCaption(const System::WideString)
+    @Vclmenus@TMenuItemWrapper@SetChecked$qqro @30  ; __fastcall Vclmenus::TMenuItemWrapper::SetChecked(bool)
+    @Vclmenus@TMenuItemWrapper@SetEnabled$qqro @29  ; __fastcall Vclmenus::TMenuItemWrapper::SetEnabled(bool)
+    @Vclmenus@TMenuItemWrapper@SetGroupIndex$qqruc @28  ; __fastcall Vclmenus::TMenuItemWrapper::SetGroupIndex(unsigned char)
+    @Vclmenus@TMenuItemWrapper@SetHelpContext$qqri @27  ; __fastcall Vclmenus::TMenuItemWrapper::SetHelpContext(int)
+    @Vclmenus@TMenuItemWrapper@SetHint$qqrx20System@UnicodeString @26  ; __fastcall Vclmenus::TMenuItemWrapper::SetHint(const System::UnicodeString)
+    @Vclmenus@TMenuItemWrapper@SetRadioItem$qqro @25  ; __fastcall Vclmenus::TMenuItemWrapper::SetRadioItem(bool)
+    @Vclmenus@TMenuItemWrapper@SetShortCut$qqrus @24  ; __fastcall Vclmenus::TMenuItemWrapper::SetShortCut(unsigned short)
+    @Vclmenus@TMenuItemWrapper@SetTag$qqri @23  ; __fastcall Vclmenus::TMenuItemWrapper::SetTag(int)
+    @Vclmenus@TMenuItemWrapper@SetVisible$qqro @22  ; __fastcall Vclmenus::TMenuItemWrapper::SetVisible(bool)
+    @Vclmenus@TMenuItemsWrapper@   @79  ; Vclmenus::TMenuItemsWrapper::
+    @Vclmenus@TMenuItemsWrapper@$bctr$qqrp19Vcl@Menus@TMenuItem @60  ; __fastcall Vclmenus::TMenuItemsWrapper::TMenuItemsWrapper(Vcl::Menus::TMenuItem *)
+    @Vclmenus@TMenuItemsWrapper@AddItem$qqrp27System@Classes@TBasicActionx20System@UnicodeString @65  ; __fastcall Vclmenus::TMenuItemsWrapper::AddItem(System::Classes::TBasicAction *, const System::UnicodeString)
+    @Vclmenus@TMenuItemsWrapper@AddItem$qqrx17System@WideStringusooynpqqrp14System@TObject$vix20System@UnicodeString @64  ; __fastcall Vclmenus::TMenuItemsWrapper::AddItem(const System::WideString, unsigned short, bool, bool, void __fastcall __closure(*)(System::TObject *), int, const System::UnicodeString)
+    @Vclmenus@TMenuItemsWrapper@AddLine$qqrx20System@UnicodeString @63  ; __fastcall Vclmenus::TMenuItemsWrapper::AddLine(const System::UnicodeString)
+    @Vclmenus@TMenuItemsWrapper@Clear$qqrv @62  ; __fastcall Vclmenus::TMenuItemsWrapper::Clear()
+    @Vclmenus@TMenuItemsWrapper@Count$qqrv @61  ; __fastcall Vclmenus::TMenuItemsWrapper::Count()
+    @Vclmenus@TMenuItemsWrapper@Find$qqrx17System@WideString @59  ; __fastcall Vclmenus::TMenuItemsWrapper::Find(const System::WideString)
+    @Vclmenus@TMenuItemsWrapper@FindByName$qqrx20System@UnicodeString @58  ; __fastcall Vclmenus::TMenuItemsWrapper::FindByName(const System::UnicodeString)
+    @Vclmenus@TMenuItemsWrapper@GetComponent$qqrv @57  ; __fastcall Vclmenus::TMenuItemsWrapper::GetComponent()
+    @Vclmenus@TMenuItemsWrapper@GetItem$qqri @56  ; __fastcall Vclmenus::TMenuItemsWrapper::GetItem(int)
+    @Vclmenus@TMenuItemsWrapper@InsertItem$qqrip19Vcl@Menus@TMenuItem @51  ; __fastcall Vclmenus::TMenuItemsWrapper::InsertItem(int, Vcl::Menus::TMenuItem *)
+    @Vclmenus@TMenuItemsWrapper@InsertItem$qqrip27System@Classes@TBasicActionx20System@UnicodeString @54  ; __fastcall Vclmenus::TMenuItemsWrapper::InsertItem(int, System::Classes::TBasicAction *, const System::UnicodeString)
+    @Vclmenus@TMenuItemsWrapper@InsertItem$qqrix17System@WideStringusooynpqqrp14System@TObject$vix20System@UnicodeString @52  ; __fastcall Vclmenus::TMenuItemsWrapper::InsertItem(int, const System::WideString, unsigned short, bool, bool, void __fastcall __closure(*)(System::TObject *), int, const System::UnicodeString)
+    @Vclmenus@TMenuItemsWrapper@InsertItem$qqrp27System@Classes@TBasicActionx20System@UnicodeString @55  ; __fastcall Vclmenus::TMenuItemsWrapper::InsertItem(System::Classes::TBasicAction *, const System::UnicodeString)
+    @Vclmenus@TMenuItemsWrapper@InsertItem$qqrx17System@WideStringusooynpqqrp14System@TObject$vix20System@UnicodeString @53  ; __fastcall Vclmenus::TMenuItemsWrapper::InsertItem(const System::WideString, unsigned short, bool, bool, void __fastcall __closure(*)(System::TObject *), int, const System::UnicodeString)
+    @Vclmenus@TMenuItemsWrapper@InsertLine$qqrix20System@UnicodeString @49  ; __fastcall Vclmenus::TMenuItemsWrapper::InsertLine(int, const System::UnicodeString)
+    @Vclmenus@TMenuItemsWrapper@InsertLine$qqrx20System@UnicodeString @50  ; __fastcall Vclmenus::TMenuItemsWrapper::InsertLine(const System::UnicodeString)
+    @Vclmenus@TMenuItemsWrapper@SameAs$qqrx44System@%DelphiInterface$17System@IInterface% @48  ; Vclmenus::TMenuItemsWrapper::SameAs(const System::DelphiInterface<{583}...
+    @Vclmenus@TMenuWrapper@        @75  ; Vclmenus::TMenuWrapper::
+    @Vclmenus@TMenuWrapper@$bctr$qqrp15Vcl@Menus@TMenu @21  ; __fastcall Vclmenus::TMenuWrapper::TMenuWrapper(Vcl::Menus::TMenu *)
+    @Vclmenus@TMenuWrapper@GetComponent$qqrv @20  ; __fastcall Vclmenus::TMenuWrapper::GetComponent()
+    @Vclmenus@TMenuWrapper@Items$qqrv @19  ; __fastcall Vclmenus::TMenuWrapper::Items()
+    @Vclmenus@TPopupMenuWrapper@   @71  ; Vclmenus::TPopupMenuWrapper::
+    @Vclmenus@TPopupMenuWrapper@$bctr$qqrp20Vcl@Menus@TPopupMenu @17  ; __fastcall Vclmenus::TPopupMenuWrapper::TPopupMenuWrapper(Vcl::Menus::TPopupMenu *)
+    @Vclmenus@TPopupMenuWrapper@Popup$qqrii @16  ; __fastcall Vclmenus::TPopupMenuWrapper::Popup(int, int)
+    @Vclmenus@TPopupMenuWrapper@PopupComponent$qqrv @15  ; __fastcall Vclmenus::TPopupMenuWrapper::PopupComponent()
+    @Vclmenus@initialization$qqrv  @13  ; __fastcall Vclmenus::initialization()
+    @Vclsurface@Finalization$qqrv  @81  ; __fastcall Vclsurface::Finalization()
+    @Vclsurface@GetVCLDesignSurface$qqrx47System@%DelphiInterface$20Designintf@IHostForm%p24Vcl@Controls@TWinControlxp25System@Classes@TComponentx57System@%DelphiInterface$30Componentdesigner@ISurfaceHost%x50System@%DelphiInterface$23D5x6ROlYnGX25VCKoaH8euQ @82  ; Vclsurface::GetVCLDesignSurface(const System::DelphiInterface<{583}...
+    @Vclsurface@TVCLIDEActions@    @92  ; Vclsurface::TVCLIDEActions::
+    @Vclsurface@TVCLIDEActions@AssignAction$qqrp27System@Classes@TBasicActiont1 @90  ; __fastcall Vclsurface::TVCLIDEActions::AssignAction(System::Classes::TBasicAction *, System::Classes::TBasicAction *)
+    @Vclsurface@TVCLIDEActions@BaseActionClass$qqrv @89  ; __fastcall Vclsurface::TVCLIDEActions::BaseActionClass()
+    @Vclsurface@TVCLIDEActions@BaseActionListClass$qqrv @88  ; __fastcall Vclsurface::TVCLIDEActions::BaseActionListClass()
+    @Vclsurface@TVCLIDEActions@CopyImageIfAvailable$qqrxp31System@Actions@TContainedActionxp35System@Actions@TContainedActionList @83  ; __fastcall Vclsurface::TVCLIDEActions::CopyImageIfAvailable(System::Actions::TContainedAction * const, System::Actions::TContainedActionList * const)
+    @Vclsurface@TVCLIDEActions@CreateImageList$qqrp35System@Actions@TContainedActionList @84  ; __fastcall Vclsurface::TVCLIDEActions::CreateImageList(System::Actions::TContainedActionList *)
+    @Vclsurface@TVCLIDEActions@DefaultActionClass$qqrv @87  ; __fastcall Vclsurface::TVCLIDEActions::DefaultActionClass()
+    @Vclsurface@TVCLIDEActions@RegisterImageLink$qqrxp35System@Actions@TContainedActionListxp23Vcl@Imglist@TChangeLink @86  ; __fastcall Vclsurface::TVCLIDEActions::RegisterImageLink(System::Actions::TContainedActionList * const, Vcl::Imglist::TChangeLink * const)
+    @Vclsurface@TVCLIDEActions@UnregisterImageLink$qqrxp35System@Actions@TContainedActionListxp23Vcl@Imglist@TChangeLink @85  ; __fastcall Vclsurface::TVCLIDEActions::UnregisterImageLink(System::Actions::TContainedActionList * const, Vcl::Imglist::TChangeLink * const)
+    @Vclsurface@initialization$qqrv @80  ; __fastcall Vclsurface::initialization()
+    Finalize                       @236 ; Finalize
+    Initialize                     @237 ; Initialize

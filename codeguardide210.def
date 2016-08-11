@@ -1,0 +1,46 @@
+LIBRARY     CODEGUARDIDE210.BPL
+
+DESCRIPTION 'odeGuard IDE Addon Package'
+
+EXPORTS
+    @$xp$25Codeguardcmds@TCGCommands @30  ; __tpdsc__ Codeguardcmds::TCGCommands
+    @$xp$28Codeguardline@ICodeGuardLine @27  ; __tpdsc__ Codeguardline::ICodeGuardLine
+    @$xp$28Codeguardline@TCodeGuardLine @25  ; __tpdsc__ Codeguardline::TCodeGuardLine
+    @Codeguardaddin@Finalization$qqrv @33  ; __fastcall Codeguardaddin::Finalization()
+    @Codeguardaddin@IDERegister$qqrv @34  ; __fastcall Codeguardaddin::IDERegister()
+    @Codeguardaddin@initialization$qqrv @32  ; __fastcall Codeguardaddin::initialization()
+    @Codeguardcmds@Finalization$qqrv @29  ; __fastcall Codeguardcmds::Finalization()
+    @Codeguardcmds@TCGCommands@    @31  ; Codeguardcmds::TCGCommands::
+    @Codeguardcmds@initialization$qqrv @28  ; __fastcall Codeguardcmds::initialization()
+    @Codeguardide@@GetPackageInfoTable$qqrv @38  ; Codeguardide::__linkproc__ __fastcall GetPackageInfoTable()
+    @Codeguardide@@PackageLoad$qqrv @37  ; Codeguardide::__linkproc__ __fastcall PackageLoad()
+    @Codeguardide@@PackageUnload$qqrv @36  ; Codeguardide::__linkproc__ __fastcall PackageUnload()
+    @Codeguardide@initialization$qqrv @35  ; __fastcall Codeguardide::initialization()
+    @Codeguardline@Finalization$qqrv @2   ; __fastcall Codeguardline::Finalization()
+    @Codeguardline@TCodeGuardLine@ @26  ; Codeguardline::TCodeGuardLine::
+    @Codeguardline@TCodeGuardLine@$bctr$qqrx20System@UnicodeStringrp29System@Classes@TInterfaceList @21  ; __fastcall Codeguardline::TCodeGuardLine::TCodeGuardLine(const System::UnicodeString, System::Classes::TInterfaceList *&)
+    @Codeguardline@TCodeGuardLine@$bctr$qqrx20System@UnicodeStringt1ii @23  ; __fastcall Codeguardline::TCodeGuardLine::TCodeGuardLine(const System::UnicodeString, const System::UnicodeString, int, int)
+    @Codeguardline@TCodeGuardLine@$bctr$qqrx20System@UnicodeStringujx47System@%DelphiInterface$20Toolsapi@IOTAProcess% @22  ; Codeguardline::TCodeGuardLine::TCodeGuardLine(const System::UnicodeString, unsigned __int64, const System::DelphiInterface<{583}...
+    @Codeguardline@TCodeGuardLine@$bdtr$qqrv @20  ; __fastcall Codeguardline::TCodeGuardLine::~TCodeGuardLine()
+    @Codeguardline@TCodeGuardLine@AddChild$qqr44System@%DelphiInterface$17System@IInterface% @19  ; Codeguardline::TCodeGuardLine::AddChild(System::DelphiInterface<{583}...
+    @Codeguardline@TCodeGuardLine@BreakpointAdded$qqrx50System@%DelphiInterface$23Toolsapi@IOTABreakpoint% @4   ; Codeguardline::TCodeGuardLine::BreakpointAdded(const System::DelphiInterface<{583}...
+    @Codeguardline@TCodeGuardLine@BreakpointDeleted$qqrx50System@%DelphiInterface$23Toolsapi@IOTABreakpoint% @3   ; Codeguardline::TCodeGuardLine::BreakpointDeleted(const System::DelphiInterface<{583}...
+    @Codeguardline@TCodeGuardLine@CanGotoSource$qqrro @9   ; __fastcall Codeguardline::TCodeGuardLine::CanGotoSource(bool&)
+    @Codeguardline@TCodeGuardLine@GetAddress$qqrv @17  ; __fastcall Codeguardline::TCodeGuardLine::GetAddress()
+    @Codeguardline@TCodeGuardLine@GetChild$qqri @10  ; __fastcall Codeguardline::TCodeGuardLine::GetChild(int)
+    @Codeguardline@TCodeGuardLine@GetChildCount$qqrv @11  ; __fastcall Codeguardline::TCodeGuardLine::GetChildCount()
+    @Codeguardline@TCodeGuardLine@GetColumnNumber$qqrv @16  ; __fastcall Codeguardline::TCodeGuardLine::GetColumnNumber()
+    @Codeguardline@TCodeGuardLine@GetFileName$qqrv @15  ; __fastcall Codeguardline::TCodeGuardLine::GetFileName()
+    @Codeguardline@TCodeGuardLine@GetLineNumber$qqrv @14  ; __fastcall Codeguardline::TCodeGuardLine::GetLineNumber()
+    @Codeguardline@TCodeGuardLine@GetLineText$qqrv @13  ; __fastcall Codeguardline::TCodeGuardLine::GetLineText()
+    @Codeguardline@TCodeGuardLine@GotoSource$qqrro @7   ; __fastcall Codeguardline::TCodeGuardLine::GotoSource(bool&)
+    @Codeguardline@TCodeGuardLine@Init$qqrx20System@UnicodeString @24  ; __fastcall Codeguardline::TCodeGuardLine::Init(const System::UnicodeString)
+    @Codeguardline@TCodeGuardLine@ProcessCreated$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProcess% @6   ; Codeguardline::TCodeGuardLine::ProcessCreated(const System::DelphiInterface<{583}...
+    @Codeguardline@TCodeGuardLine@ProcessDestroyed$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProcess% @5   ; Codeguardline::TCodeGuardLine::ProcessDestroyed(const System::DelphiInterface<{583}...
+    @Codeguardline@TCodeGuardLine@SetAddress$qqrujx47System@%DelphiInterface$20Toolsapi@IOTAProcess% @18  ; Codeguardline::TCodeGuardLine::SetAddress(unsigned __int64, const System::DelphiInterface<{583}...
+    @Codeguardline@TCodeGuardLine@ShowHelp$qqrv @12  ; __fastcall Codeguardline::TCodeGuardLine::ShowHelp()
+    @Codeguardline@TCodeGuardLine@TrackSource$qqrro @8   ; __fastcall Codeguardline::TCodeGuardLine::TrackSource(bool&)
+    @Codeguardline@initialization$qqrv @1   ; __fastcall Codeguardline::initialization()
+    @GetPackageInfoTable           @41  ; GetPackageInfoTable
+    Finalize                       @39  ; Finalize
+    Initialize                     @40  ; Initialize

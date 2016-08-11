@@ -1,0 +1,55 @@
+LIBRARY     DCLVCLDB210.BPL
+
+DESCRIPTION 'mbarcadero VCL Database Components'
+
+EXPORTS
+    @$xp$22Dboleedt@TDataBindForm  @39  ; __tpdsc__ Dboleedt::TDataBindForm
+    @$xp$24Dboleedt@TDataBindEditor @37  ; __tpdsc__ Dboleedt::TDataBindEditor
+    @$xp$26Dboleedt@TDataBindProperty @35  ; __tpdsc__ Dboleedt::TDataBindProperty
+    @$xp$29Dbcolned@TDBGridColumnsEditor @15  ; __tpdsc__ Dbcolned::TDBGridColumnsEditor
+    @$xp$32Dbactres@TStandardDatasetActions @4   ; __tpdsc__ Dbactres::TStandardDatasetActions
+    @Dbactres@Finalization$qqrv    @2   ; __fastcall Dbactres::Finalization()
+    @Dbactres@StandardDatasetActions @3   ; Dbactres::StandardDatasetActions
+    @Dbactres@TStandardDatasetActions@ @5   ; Dbactres::TStandardDatasetActions::
+    @Dbactres@initialization$qqrv  @1   ; __fastcall Dbactres::initialization()
+    @Dbcolned@Finalization$qqrv    @7   ; __fastcall Dbcolned::Finalization()
+    @Dbcolned@TDBGridColumnsEditor@ @16  ; Dbcolned::TDBGridColumnsEditor::
+    @Dbcolned@TDBGridColumnsEditor@AddAllFieldsClick$qqrp14System@TObject @13  ; __fastcall Dbcolned::TDBGridColumnsEditor::AddAllFieldsClick(System::TObject *)
+    @Dbcolned@TDBGridColumnsEditor@AddAllFieldsCmdUpdate$qqrp14System@TObject @11  ; __fastcall Dbcolned::TDBGridColumnsEditor::AddAllFieldsCmdUpdate(System::TObject *)
+    @Dbcolned@TDBGridColumnsEditor@CanAdd$qqri @9   ; __fastcall Dbcolned::TDBGridColumnsEditor::CanAdd(int)
+    @Dbcolned@TDBGridColumnsEditor@GetDataSource$qqrv @14  ; __fastcall Dbcolned::TDBGridColumnsEditor::GetDataSource()
+    @Dbcolned@TDBGridColumnsEditor@ListView1DragOver$qqrp14System@TObjectt1ii25System@Uitypes@TDragStatero @8   ; __fastcall Dbcolned::TDBGridColumnsEditor::ListView1DragOver(System::TObject *, System::TObject *, int, int, System::Uitypes::TDragState, bool&)
+    @Dbcolned@TDBGridColumnsEditor@RestoreDefaultsClick$qqrp14System@TObject @12  ; __fastcall Dbcolned::TDBGridColumnsEditor::RestoreDefaultsClick(System::TObject *)
+    @Dbcolned@TDBGridColumnsEditor@RestoreDefaultsCmdUpdate$qqrp14System@TObject @10  ; __fastcall Dbcolned::TDBGridColumnsEditor::RestoreDefaultsCmdUpdate(System::TObject *)
+    @Dbcolned@initialization$qqrv  @6   ; __fastcall Dbcolned::initialization()
+    @Dboleedt@Finalization$qqrv    @18  ; __fastcall Dboleedt::Finalization()
+    @Dboleedt@TDataBindEditor@     @38  ; Dboleedt::TDataBindEditor::
+    @Dboleedt@TDataBindEditor@DoVerb$qqri @32  ; __fastcall Dboleedt::TDataBindEditor::DoVerb(int)
+    @Dboleedt@TDataBindEditor@GetVerbCount$qqrv @31  ; __fastcall Dboleedt::TDataBindEditor::GetVerbCount()
+    @Dboleedt@TDataBindForm@       @40  ; Dboleedt::TDataBindForm::
+    @Dboleedt@TDataBindForm@BindBtnClick$qqrp14System@TObject @30  ; __fastcall Dboleedt::TDataBindForm::BindBtnClick(System::TObject *)
+    @Dboleedt@TDataBindForm@ClearBoundList$qqrv @29  ; __fastcall Dboleedt::TDataBindForm::ClearBoundList()
+    @Dboleedt@TDataBindForm@ClearBtnClick$qqrp14System@TObject @28  ; __fastcall Dboleedt::TDataBindForm::ClearBtnClick(System::TObject *)
+    @Dboleedt@TDataBindForm@DeleteBtnClick$qqrp14System@TObject @27  ; __fastcall Dboleedt::TDataBindForm::DeleteBtnClick(System::TObject *)
+    @Dboleedt@TDataBindForm@DoEditControl$qqrp26Vcl@Dbolectl@TDBOleControl @26  ; __fastcall Dboleedt::TDataBindForm::DoEditControl(Vcl::Dbolectl::TDBOleControl *)
+    @Dboleedt@TDataBindForm@EnableButtons$qqrv @25  ; __fastcall Dboleedt::TDataBindForm::EnableButtons()
+    @Dboleedt@TDataBindForm@FieldNameLBClick$qqrp14System@TObject @21  ; __fastcall Dboleedt::TDataBindForm::FieldNameLBClick(System::TObject *)
+    @Dboleedt@TDataBindForm@FillDialog$qqrv @24  ; __fastcall Dboleedt::TDataBindForm::FillDialog()
+    @Dboleedt@TDataBindForm@FormCreate$qqrp14System@TObject @19  ; __fastcall Dboleedt::TDataBindForm::FormCreate(System::TObject *)
+    @Dboleedt@TDataBindForm@FormDestroy$qqrp14System@TObject @23  ; __fastcall Dboleedt::TDataBindForm::FormDestroy(System::TObject *)
+    @Dboleedt@TDataBindForm@HelpBtnClick$qqrp14System@TObject @20  ; __fastcall Dboleedt::TDataBindForm::HelpBtnClick(System::TObject *)
+    @Dboleedt@TDataBindForm@PropNameLBDblClick$qqrp14System@TObject @22  ; __fastcall Dboleedt::TDataBindForm::PropNameLBDblClick(System::TObject *)
+    @Dboleedt@TDataBindProperty@   @36  ; Dboleedt::TDataBindProperty::
+    @Dboleedt@TDataBindProperty@Edit$qqrv @34  ; __fastcall Dboleedt::TDataBindProperty::Edit()
+    @Dboleedt@TDataBindProperty@GetAttributes$qqrv @33  ; __fastcall Dboleedt::TDataBindProperty::GetAttributes()
+    @Dboleedt@initialization$qqrv  @17  ; __fastcall Dboleedt::initialization()
+    @Dclvcldb@@GetPackageInfoTable$qqrv @47  ; Dclvcldb::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclvcldb@@PackageLoad$qqrv    @46  ; Dclvcldb::__linkproc__ __fastcall PackageLoad()
+    @Dclvcldb@@PackageUnload$qqrv  @45  ; Dclvcldb::__linkproc__ __fastcall PackageUnload()
+    @Dclvcldb@initialization$qqrv  @44  ; __fastcall Dclvcldb::initialization()
+    @GetPackageInfoTable           @50  ; GetPackageInfoTable
+    @Vcldbreg@Finalization$qqrv    @42  ; __fastcall Vcldbreg::Finalization()
+    @Vcldbreg@Register$qqrv        @43  ; __fastcall Vcldbreg::Register()
+    @Vcldbreg@initialization$qqrv  @41  ; __fastcall Vcldbreg::initialization()
+    Finalize                       @48  ; Finalize
+    Initialize                     @49  ; Initialize

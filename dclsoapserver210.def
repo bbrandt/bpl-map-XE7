@@ -1,0 +1,44 @@
+LIBRARY     DCLSOAPSERVER210.BPL
+
+DESCRIPTION 'mbarcadero SOAP Server Components'
+
+EXPORTS
+    @$xp$30Invokablewizard@TSoapSourceGen @25  ; __tpdsc__ Invokablewizard::TSoapSourceGen
+    @$xp$31Invokablewizard@TIntfImplOption @29  ; __tpdsc__ Invokablewizard::TIntfImplOption
+    @$xp$37Invokablewizard@TSOAPWebCodeGenWizard @27  ; __tpdsc__ Invokablewizard::TSOAPWebCodeGenWizard
+    @$xp$41System@%TArray__1$20System@UnicodeString% @24  ; __tpdsc__ System::TArray__1<System::UnicodeString>
+    @Dclsoapserver@@GetPackageInfoTable$qqrv @36  ; Dclsoapserver::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclsoapserver@@PackageLoad$qqrv @35  ; Dclsoapserver::__linkproc__ __fastcall PackageLoad()
+    @Dclsoapserver@@PackageUnload$qqrv @34  ; Dclsoapserver::__linkproc__ __fastcall PackageUnload()
+    @Dclsoapserver@initialization$qqrv @33  ; __fastcall Dclsoapserver::initialization()
+    @GetPackageInfoTable           @39  ; GetPackageInfoTable
+    @Invokablewizard@Finalization$qqrv @5   ; __fastcall Invokablewizard::Finalization()
+    @Invokablewizard@Register$qqrv @23  ; __fastcall Invokablewizard::Register()
+    @Invokablewizard@TSOAPWebCodeGenWizard@ @28  ; Invokablewizard::TSOAPWebCodeGenWizard::
+    @Invokablewizard@TSOAPWebCodeGenWizard@$bctr$qqrx20System@UnicodeString @22  ; __fastcall Invokablewizard::TSOAPWebCodeGenWizard::TSOAPWebCodeGenWizard(const System::UnicodeString)
+    @Invokablewizard@TSOAPWebCodeGenWizard@$bctr$qqrx20System@UnicodeString20System@UnicodeString @21  ; __fastcall Invokablewizard::TSOAPWebCodeGenWizard::TSOAPWebCodeGenWizard(const System::UnicodeString, System::UnicodeString)
+    @Invokablewizard@TSOAPWebCodeGenWizard@CreateUnits$qqrx20System@UnicodeStringt1t1xoxoxo20System@UnicodeString @20  ; __fastcall Invokablewizard::TSOAPWebCodeGenWizard::CreateUnits(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const bool, const bool, const bool, System::UnicodeString)
+    @Invokablewizard@TSOAPWebCodeGenWizard@Execute$qqrv @19  ; __fastcall Invokablewizard::TSOAPWebCodeGenWizard::Execute()
+    @Invokablewizard@TSOAPWebCodeGenWizard@GetFrameworkTypes$qqrv @18  ; __fastcall Invokablewizard::TSOAPWebCodeGenWizard::GetFrameworkTypes()
+    @Invokablewizard@TSOAPWebCodeGenWizard@GetPlatforms$qqrv @17  ; __fastcall Invokablewizard::TSOAPWebCodeGenWizard::GetPlatforms()
+    @Invokablewizard@TSoapSourceGen@ @26  ; Invokablewizard::TSoapSourceGen::
+    @Invokablewizard@TSoapSourceGen@$bctr$qqrx20System@UnicodeStringt1t1xoxoxo20System@UnicodeString @16  ; __fastcall Invokablewizard::TSoapSourceGen::TSoapSourceGen(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const bool, const bool, const bool, System::UnicodeString)
+    @Invokablewizard@TSoapSourceGen@GetExpertFilter$qqrv @6   ; __fastcall Invokablewizard::TSoapSourceGen::GetExpertFilter()
+    @Invokablewizard@TSoapSourceGen@GetImplFileUnit$qqrv @14  ; __fastcall Invokablewizard::TSoapSourceGen::GetImplFileUnit()
+    @Invokablewizard@TSoapSourceGen@GetImplSource$qqrv @7   ; __fastcall Invokablewizard::TSoapSourceGen::GetImplSource()
+    @Invokablewizard@TSoapSourceGen@GetImplSourceCBuilder$qqrv @9   ; __fastcall Invokablewizard::TSoapSourceGen::GetImplSourceCBuilder()
+    @Invokablewizard@TSoapSourceGen@GetImplSourcePascal$qqrv @11  ; __fastcall Invokablewizard::TSoapSourceGen::GetImplSourcePascal()
+    @Invokablewizard@TSoapSourceGen@GetIntfFileUnit$qqrv @13  ; __fastcall Invokablewizard::TSoapSourceGen::GetIntfFileUnit()
+    @Invokablewizard@TSoapSourceGen@GetIntfSource$qqrv @8   ; __fastcall Invokablewizard::TSoapSourceGen::GetIntfSource()
+    @Invokablewizard@TSoapSourceGen@GetIntfSourceCBuilder$qqrv @10  ; __fastcall Invokablewizard::TSoapSourceGen::GetIntfSourceCBuilder()
+    @Invokablewizard@TSoapSourceGen@GetIntfSourcePascal$qqrv @12  ; __fastcall Invokablewizard::TSoapSourceGen::GetIntfSourcePascal()
+    @Invokablewizard@TSoapSourceGen@SetOption$qqr31Invokablewizard@TIntfImplOption @15  ; __fastcall Invokablewizard::TSoapSourceGen::SetOption(Invokablewizard::TIntfImplOption)
+    @Invokablewizard@initialization$qqrv @4   ; __fastcall Invokablewizard::initialization()
+    @Soapserverreg@Finalization$qqrv @2   ; __fastcall Soapserverreg::Finalization()
+    @Soapserverreg@Register$qqrv   @3   ; __fastcall Soapserverreg::Register()
+    @Soapserverreg@initialization$qqrv @1   ; __fastcall Soapserverreg::initialization()
+    @Soapserverwiz@Finalization$qqrv @31  ; __fastcall Soapserverwiz::Finalization()
+    @Soapserverwiz@Register$qqrv   @32  ; __fastcall Soapserverwiz::Register()
+    @Soapserverwiz@initialization$qqrv @30  ; __fastcall Soapserverwiz::initialization()
+    Finalize                       @37  ; Finalize
+    Initialize                     @38  ; Initialize

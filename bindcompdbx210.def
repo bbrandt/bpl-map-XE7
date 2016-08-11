@@ -1,0 +1,103 @@
+LIBRARY     BINDCOMPDBX210.BPL
+
+DESCRIPTION 'ata Binding Expression Components DBExpress'
+
+EXPORTS
+    @$xp$33Data@Bind@Dbxscope@TBindSourceDBX @78  ; __tpdsc__ Data::Bind::Dbxscope::TBindSourceDBX
+    @$xp$33Data@Bind@Dbxscope@TParamsAdapter @88  ; __tpdsc__ Data::Bind::Dbxscope::TParamsAdapter
+    @$xp$33Data@Bind@Dbxscope@TSubSQLDataSet @84  ; __tpdsc__ Data::Bind::Dbxscope::TSubSQLDataSet
+    @$xp$36Data@Bind@Dbxscope@TSubClientDataSet @82  ; __tpdsc__ Data::Bind::Dbxscope::TSubClientDataSet
+    @$xp$38Data@Bind@Dbxscope@TSubDataSetProvider @86  ; __tpdsc__ Data::Bind::Dbxscope::TSubDataSetProvider
+    @$xp$39Data@Bind@Dbxscope@TCustomBindSourceDBX @80  ; __tpdsc__ Data::Bind::Dbxscope::TCustomBindSourceDBX
+    @$xp$39Data@Bind@Dbxscope@TCustomParamsAdapter @90  ; __tpdsc__ Data::Bind::Dbxscope::TCustomParamsAdapter
+    @Bindcompdbx@@GetPackageInfoTable$qqrv @95  ; Bindcompdbx::__linkproc__ __fastcall GetPackageInfoTable()
+    @Bindcompdbx@@PackageLoad$qqrv @94  ; Bindcompdbx::__linkproc__ __fastcall PackageLoad()
+    @Bindcompdbx@@PackageUnload$qqrv @93  ; Bindcompdbx::__linkproc__ __fastcall PackageUnload()
+    @Bindcompdbx@initialization$qqrv @92  ; __fastcall Bindcompdbx::initialization()
+    @Data@Bind@Dbxscope@Finalization$qqrv @2   ; __fastcall Data::Bind::Dbxscope::Finalization()
+    @Data@Bind@Dbxscope@TBindSourceDBX@ @79  ; Data::Bind::Dbxscope::TBindSourceDBX::
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@ @81  ; Data::Bind::Dbxscope::TCustomBindSourceDBX::
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@$bctr$qqrp25System@Classes@TComponent @77  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::TCustomBindSourceDBX(System::Classes::TComponent *)
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@$bdtr$qqrv @76  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::~TCustomBindSourceDBX()
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@AllocClientDataSet$qqrv @44  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::AllocClientDataSet()
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@AllocProvider$qqrv @43  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::AllocProvider()
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@AllocSQLDataSet$qqrv @45  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::AllocSQLDataSet()
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@GetActive$qqrv @75  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::GetActive()
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@GetChildren$qqrynpqqrp25System@Classes@TComponent$vp25System@Classes@TComponent @74  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::GetChildren(void __fastcall __closure(*)(System::Classes::TComponent *), System::Classes::TComponent *)
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@GetCommandText$qqrv @73  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::GetCommandText()
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@GetCommandType$qqrv @72  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::GetCommandType()
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@GetDbxCommandType$qqrv @71  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::GetDbxCommandType()
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@GetIndexFieldNames$qqrv @70  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::GetIndexFieldNames()
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@GetMasterFields$qqrv @67  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::GetMasterFields()
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@GetMasterSource$qqrv @66  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::GetMasterSource()
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@GetMaxBlobSize$qqrv @65  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::GetMaxBlobSize()
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@GetParamCheck$qqrv @64  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::GetParamCheck()
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@GetParams$qqrv @63  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::GetParams()
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@GetSchemaName$qqrv @62  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::GetSchemaName()
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@GetSortFieldNames$qqrv @61  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::GetSortFieldNames()
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@GetSqlConnection$qqrv @60  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::GetSqlConnection()
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@GetSubDataSet$qqrv @69  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::GetSubDataSet()
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@GetSubDataSource$qqrv @68  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::GetSubDataSource()
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@Reactivate$qqrv @58  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::Reactivate()
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@SetActive$qqrxo @59  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::SetActive(const bool)
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@SetCommandText$qqrx20System@UnicodeString @57  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::SetCommandText(const System::UnicodeString)
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@SetCommandType$qqrx22Data@Db@TPSCommandType @56  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::SetCommandType(const Data::Db::TPSCommandType)
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@SetDbxCommandType$qqrx20System@UnicodeString @55  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::SetDbxCommandType(const System::UnicodeString)
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@SetIndexFieldNames$qqrx20System@UnicodeString @54  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::SetIndexFieldNames(const System::UnicodeString)
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@SetMasterDataSource$qqrxp39Data@Bind@Dbxscope@TCustomBindSourceDBX @53  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::SetMasterDataSource(Data::Bind::Dbxscope::TCustomBindSourceDBX * const)
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@SetMasterFields$qqrx20System@UnicodeString @52  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::SetMasterFields(const System::UnicodeString)
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@SetMaxBlobSize$qqrxi @51  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::SetMaxBlobSize(const int)
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@SetParamCheck$qqrxo @50  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::SetParamCheck(const bool)
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@SetParams$qqrxp15Data@Db@TParams @49  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::SetParams(Data::Db::TParams * const)
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@SetSchemaName$qqrx20System@UnicodeString @48  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::SetSchemaName(const System::UnicodeString)
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@SetSortFieldNames$qqrx20System@UnicodeString @47  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::SetSortFieldNames(const System::UnicodeString)
+    @Data@Bind@Dbxscope@TCustomBindSourceDBX@SetSqlConnection$qqrxp27Data@Sqlexpr@TSQLConnection @46  ; __fastcall Data::Bind::Dbxscope::TCustomBindSourceDBX::SetSqlConnection(Data::Sqlexpr::TSQLConnection * const)
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@ @91  ; Data::Bind::Dbxscope::TCustomParamsAdapter::
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@$bctr$qqrp25System@Classes@TComponent @29  ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::TCustomParamsAdapter(System::Classes::TComponent *)
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@$bdtr$qqrv @22  ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::~TCustomParamsAdapter()
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@AddFields$qqrv @4   ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::AddFields()
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@DoAfterClose$qqrv @25  ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::DoAfterClose()
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@DoAfterExecute$qqrv @24  ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::DoAfterExecute()
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@DoAfterOpen$qqrv @28  ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::DoAfterOpen()
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@DoBeforeExecute$qqrv @27  ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::DoBeforeExecute()
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@DoBeforeOpen$qqrv @26  ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::DoBeforeOpen()
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@DoExecute$qqrv @21  ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::DoExecute()
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@Execute$qqrv @20  ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::Execute()
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@GetCanActivate$qqrv @3   ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::GetCanActivate()
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@GetCanModify$qqrv @23  ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::GetCanModify()
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@GetCount$qqrv @19  ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::GetCount()
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@GetParams$qqrv @17  ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::GetParams()
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@GetSQLDataSet$qqrv @18  ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::GetSQLDataSet()
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@GetSQLQuery$qqrv @16  ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::GetSQLQuery()
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@GetSQLServerMethod$qqrv @15  ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::GetSQLServerMethod()
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@GetSQLStoredProc$qqrv @14  ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::GetSQLStoredProc()
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@Loaded$qqrv @13  ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::Loaded()
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @12  ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@OnActiveChanged$qqrp14System@TObject @11  ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::OnActiveChanged(System::TObject *)
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@SetActive$qqro @10  ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::SetActive(bool)
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@SetCustomSQLDataSet$qqrxp30Data@Sqlexpr@TCustomSQLDataSet @9   ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::SetCustomSQLDataSet(Data::Sqlexpr::TCustomSQLDataSet * const)
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@SetSQLDataSet$qqrxp24Data@Sqlexpr@TSQLDataSet @8   ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::SetSQLDataSet(Data::Sqlexpr::TSQLDataSet * const)
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@SetSQLQuery$qqrxp22Data@Sqlexpr@TSQLQuery @7   ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::SetSQLQuery(Data::Sqlexpr::TSQLQuery * const)
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@SetSQLServerMethod$qqrxp29Data@Sqlexpr@TSqlServerMethod @6   ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::SetSQLServerMethod(Data::Sqlexpr::TSqlServerMethod * const)
+    @Data@Bind@Dbxscope@TCustomParamsAdapter@SetSQLStoredProc$qqrxp27Data@Sqlexpr@TSQLStoredProc @5   ; __fastcall Data::Bind::Dbxscope::TCustomParamsAdapter::SetSQLStoredProc(Data::Sqlexpr::TSQLStoredProc * const)
+    @Data@Bind@Dbxscope@TParamsAdapter@ @89  ; Data::Bind::Dbxscope::TParamsAdapter::
+    @Data@Bind@Dbxscope@TSubClientDataSet@ @83  ; Data::Bind::Dbxscope::TSubClientDataSet::
+    @Data@Bind@Dbxscope@TSubClientDataSet@AutoApplyUpdates$qqrv @41  ; __fastcall Data::Bind::Dbxscope::TSubClientDataSet::AutoApplyUpdates()
+    @Data@Bind@Dbxscope@TSubClientDataSet@DefaultOnReconcileError$qqrp38Datasnap@Dbclient@TCustomClientDataSetp33Datasnap@Dbclient@EReconcileError19Data@Db@TUpdateKindr34Datasnap@Dbclient@TReconcileAction @42  ; __fastcall Data::Bind::Dbxscope::TSubClientDataSet::DefaultOnReconcileError(Datasnap::Dbclient::TCustomClientDataSet *, Datasnap::Dbclient::EReconcileError *, Data::Db::TUpdateKind, Datasnap::Dbclient::TReconcileAction&)
+    @Data@Bind@Dbxscope@TSubClientDataSet@DoAfterDelete$qqrv @40  ; __fastcall Data::Bind::Dbxscope::TSubClientDataSet::DoAfterDelete()
+    @Data@Bind@Dbxscope@TSubClientDataSet@DoAfterPost$qqrv @39  ; __fastcall Data::Bind::Dbxscope::TSubClientDataSet::DoAfterPost()
+    @Data@Bind@Dbxscope@TSubClientDataSet@GetBindScope$qqrv @38  ; __fastcall Data::Bind::Dbxscope::TSubClientDataSet::GetBindScope()
+    @Data@Bind@Dbxscope@TSubClientDataSet@GetProviderName$qqrv @37  ; __fastcall Data::Bind::Dbxscope::TSubClientDataSet::GetProviderName()
+    @Data@Bind@Dbxscope@TSubClientDataSet@SetProviderName$qqrx20System@UnicodeString @36  ; __fastcall Data::Bind::Dbxscope::TSubClientDataSet::SetProviderName(const System::UnicodeString)
+    @Data@Bind@Dbxscope@TSubDataSetProvider@ @87  ; Data::Bind::Dbxscope::TSubDataSetProvider::
+    @Data@Bind@Dbxscope@TSubDataSetProvider@$bdtr$qqrv @32  ; __fastcall Data::Bind::Dbxscope::TSubDataSetProvider::~TSubDataSetProvider()
+    @Data@Bind@Dbxscope@TSubDataSetProvider@GetDataSet$qqrv @31  ; __fastcall Data::Bind::Dbxscope::TSubDataSetProvider::GetDataSet()
+    @Data@Bind@Dbxscope@TSubDataSetProvider@SetDataSet$qqrp16Data@Db@TDataSet @30  ; __fastcall Data::Bind::Dbxscope::TSubDataSetProvider::SetDataSet(Data::Db::TDataSet *)
+    @Data@Bind@Dbxscope@TSubSQLDataSet@ @85  ; Data::Bind::Dbxscope::TSubSQLDataSet::
+    @Data@Bind@Dbxscope@TSubSQLDataSet@$bdtr$qqrv @35  ; __fastcall Data::Bind::Dbxscope::TSubSQLDataSet::~TSubSQLDataSet()
+    @Data@Bind@Dbxscope@TSubSQLDataSet@GetSQLConnection$qqrv @34  ; __fastcall Data::Bind::Dbxscope::TSubSQLDataSet::GetSQLConnection()
+    @Data@Bind@Dbxscope@TSubSQLDataSet@SetSQLConnection$qqrp27Data@Sqlexpr@TSQLConnection @33  ; __fastcall Data::Bind::Dbxscope::TSubSQLDataSet::SetSQLConnection(Data::Sqlexpr::TSQLConnection *)
+    @Data@Bind@Dbxscope@initialization$qqrv @1   ; __fastcall Data::Bind::Dbxscope::initialization()
+    @GetPackageInfoTable           @98  ; GetPackageInfoTable
+    Finalize                       @96  ; Finalize
+    Initialize                     @97  ; Initialize

@@ -1,0 +1,118 @@
+LIBRARY     DCLINDYCORE210.BPL
+
+DESCRIPTION 'ndy 10 Core Design Time'
+
+EXPORTS
+    @$xp$20Idaboutvcl@TfrmAbout    @56  ; __tpdsc__ Idaboutvcl::TfrmAbout
+    @$xp$30Vcl@Idantifreeze@TIdAntiFreeze @61  ; __tpdsc__ Vcl::Idantifreeze::TIdAntiFreeze
+    @$xp$34Idcoredsnregister@TIdPropEdBinding @100 ; __tpdsc__ Idcoredsnregister::TIdPropEdBinding
+    @$xp$40Idcoredsnregister@TIdBaseComponentEditor @102 ; __tpdsc__ Idcoredsnregister::TIdBaseComponentEditor
+    @$xp$44Iddsnpropedbindingvcl@TIdDsnPropEdBindingVCL @88  ; __tpdsc__ Iddsnpropedbindingvcl::TIdDsnPropEdBindingVCL
+    @Dclindycore@@GetPackageInfoTable$qqrv @110 ; Dclindycore::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclindycore@@PackageLoad$qqrv @109 ; Dclindycore::__linkproc__ __fastcall PackageLoad()
+    @Dclindycore@@PackageUnload$qqrv @108 ; Dclindycore::__linkproc__ __fastcall PackageUnload()
+    @Dclindycore@initialization$qqrv @107 ; __fastcall Dclindycore::initialization()
+    @GetPackageInfoTable           @113 ; GetPackageInfoTable
+    @Idaboutvcl@Finalization$qqrv  @46  ; __fastcall Idaboutvcl::Finalization()
+    @Idaboutvcl@TfrmAbout@         @57  ; Idaboutvcl::TfrmAbout::
+    @Idaboutvcl@TfrmAbout@$bctr$qqrp25System@Classes@TComponent @55  ; __fastcall Idaboutvcl::TfrmAbout::TfrmAbout(System::Classes::TComponent *)
+    @Idaboutvcl@TfrmAbout@$bctr$qqrv @47  ; __fastcall Idaboutvcl::TfrmAbout::TfrmAbout()
+    @Idaboutvcl@TfrmAbout@GetProductName$qqrv @53  ; __fastcall Idaboutvcl::TfrmAbout::GetProductName()
+    @Idaboutvcl@TfrmAbout@GetVersion$qqrv @54  ; __fastcall Idaboutvcl::TfrmAbout::GetVersion()
+    @Idaboutvcl@TfrmAbout@SetProductName$qqrx20System@UnicodeString @50  ; __fastcall Idaboutvcl::TfrmAbout::SetProductName(const System::UnicodeString)
+    @Idaboutvcl@TfrmAbout@SetVersion$qqrx20System@UnicodeString @51  ; __fastcall Idaboutvcl::TfrmAbout::SetVersion(const System::UnicodeString)
+    @Idaboutvcl@TfrmAbout@ShowAboutBox$qqrx20System@UnicodeStringt1 @49  ; __fastcall Idaboutvcl::TfrmAbout::ShowAboutBox(const System::UnicodeString, const System::UnicodeString)
+    @Idaboutvcl@TfrmAbout@ShowDlg$qqrv @48  ; __fastcall Idaboutvcl::TfrmAbout::ShowDlg()
+    @Idaboutvcl@TfrmAbout@lblURLClick$qqrp14System@TObject @52  ; __fastcall Idaboutvcl::TfrmAbout::lblURLClick(System::TObject *)
+    @Idaboutvcl@initialization$qqrv @45  ; __fastcall Idaboutvcl::initialization()
+    @Idcoredsnregister@Finalization$qqrv @91  ; __fastcall Idcoredsnregister::Finalization()
+    @Idcoredsnregister@Register$qqrv @92  ; __fastcall Idcoredsnregister::Register()
+    @Idcoredsnregister@TIdBaseComponentEditor@ @103 ; Idcoredsnregister::TIdBaseComponentEditor::
+    @Idcoredsnregister@TIdBaseComponentEditor@ExecuteVerb$qqri @95  ; __fastcall Idcoredsnregister::TIdBaseComponentEditor::ExecuteVerb(int)
+    @Idcoredsnregister@TIdBaseComponentEditor@GetVerb$qqri @94  ; __fastcall Idcoredsnregister::TIdBaseComponentEditor::GetVerb(int)
+    @Idcoredsnregister@TIdBaseComponentEditor@GetVerbCount$qqrv @93  ; __fastcall Idcoredsnregister::TIdBaseComponentEditor::GetVerbCount()
+    @Idcoredsnregister@TIdPropEdBinding@ @101 ; Idcoredsnregister::TIdPropEdBinding::
+    @Idcoredsnregister@TIdPropEdBinding@Edit$qqrv @99  ; __fastcall Idcoredsnregister::TIdPropEdBinding::Edit()
+    @Idcoredsnregister@TIdPropEdBinding@GetAttributes$qqrv @98  ; __fastcall Idcoredsnregister::TIdPropEdBinding::GetAttributes()
+    @Idcoredsnregister@TIdPropEdBinding@GetValue$qqrv @97  ; __fastcall Idcoredsnregister::TIdPropEdBinding::GetValue()
+    @Idcoredsnregister@TIdPropEdBinding@SetValue$qqrx20System@UnicodeString @96  ; __fastcall Idcoredsnregister::TIdPropEdBinding::SetValue(const System::UnicodeString)
+    @Idcoredsnregister@initialization$qqrv @90  ; __fastcall Idcoredsnregister::initialization()
+    @Iddsncoreresourcestrings@Finalization$qqrv @2   ; __fastcall Iddsncoreresourcestrings::Finalization()
+    @Iddsncoreresourcestrings@_RSAAboutBoxCompName @43  ; Iddsncoreresourcestrings::_RSAAboutBoxCompName
+    @Iddsncoreresourcestrings@_RSAAboutBoxCopyright @40  ; Iddsncoreresourcestrings::_RSAAboutBoxCopyright
+    @Iddsncoreresourcestrings@_RSAAboutBoxIndyWebsite @38  ; Iddsncoreresourcestrings::_RSAAboutBoxIndyWebsite
+    @Iddsncoreresourcestrings@_RSAAboutBoxPleaseVisit @39  ; Iddsncoreresourcestrings::_RSAAboutBoxPleaseVisit
+    @Iddsncoreresourcestrings@_RSAAboutBoxVersion @41  ; Iddsncoreresourcestrings::_RSAAboutBoxVersion
+    @Iddsncoreresourcestrings@_RSAAboutCreditsCoCordinator @36  ; Iddsncoreresourcestrings::_RSAAboutCreditsCoCordinator
+    @Iddsncoreresourcestrings@_RSAAboutCreditsCoordinator @37  ; Iddsncoreresourcestrings::_RSAAboutCreditsCoordinator
+    @Iddsncoreresourcestrings@_RSAAboutCreditsDemos @34  ; Iddsncoreresourcestrings::_RSAAboutCreditsDemos
+    @Iddsncoreresourcestrings@_RSAAboutCreditsDocumentation @35  ; Iddsncoreresourcestrings::_RSAAboutCreditsDocumentation
+    @Iddsncoreresourcestrings@_RSAAboutCreditsIndyCrew @32  ; Iddsncoreresourcestrings::_RSAAboutCreditsIndyCrew
+    @Iddsncoreresourcestrings@_RSAAboutCreditsRetiredPast @33  ; Iddsncoreresourcestrings::_RSAAboutCreditsRetiredPast
+    @Iddsncoreresourcestrings@_RSAAboutFormCaption @44  ; Iddsncoreresourcestrings::_RSAAboutFormCaption
+    @Iddsncoreresourcestrings@_RSAAboutKitchenSink @31  ; Iddsncoreresourcestrings::_RSAAboutKitchenSink
+    @Iddsncoreresourcestrings@_RSAAboutMenuItemName @42  ; Iddsncoreresourcestrings::_RSAAboutMenuItemName
+    @Iddsncoreresourcestrings@_RSADlgSLAdd @18  ; Iddsncoreresourcestrings::_RSADlgSLAdd
+    @Iddsncoreresourcestrings@_RSADlgSLAssigned @14  ; Iddsncoreresourcestrings::_RSADlgSLAssigned
+    @Iddsncoreresourcestrings@_RSADlgSLAvailable @15  ; Iddsncoreresourcestrings::_RSADlgSLAvailable
+    @Iddsncoreresourcestrings@_RSADlgSLCaption @16  ; Iddsncoreresourcestrings::_RSADlgSLCaption
+    @Iddsncoreresourcestrings@_RSADlgSLEditList @13  ; Iddsncoreresourcestrings::_RSADlgSLEditList
+    @Iddsncoreresourcestrings@_RSADlgSLMoveDown @19  ; Iddsncoreresourcestrings::_RSADlgSLMoveDown
+    @Iddsncoreresourcestrings@_RSADlgSLMoveUp @20  ; Iddsncoreresourcestrings::_RSADlgSLMoveUp
+    @Iddsncoreresourcestrings@_RSADlgSLRemove @17  ; Iddsncoreresourcestrings::_RSADlgSLRemove
+    @Iddsncoreresourcestrings@_RSBindingAll @12  ; Iddsncoreresourcestrings::_RSBindingAll
+    @Iddsncoreresourcestrings@_RSBindingAny @11  ; Iddsncoreresourcestrings::_RSBindingAny
+    @Iddsncoreresourcestrings@_RSBindingDeleteCaption @28  ; Iddsncoreresourcestrings::_RSBindingDeleteCaption
+    @Iddsncoreresourcestrings@_RSBindingFormCaption @30  ; Iddsncoreresourcestrings::_RSBindingFormCaption
+    @Iddsncoreresourcestrings@_RSBindingHostnameLabel @25  ; Iddsncoreresourcestrings::_RSBindingHostnameLabel
+    @Iddsncoreresourcestrings@_RSBindingIPV4Item @22  ; Iddsncoreresourcestrings::_RSBindingIPV4Item
+    @Iddsncoreresourcestrings@_RSBindingIPV6Item @21  ; Iddsncoreresourcestrings::_RSBindingIPV6Item
+    @Iddsncoreresourcestrings@_RSBindingIPVerLabel @23  ; Iddsncoreresourcestrings::_RSBindingIPVerLabel
+    @Iddsncoreresourcestrings@_RSBindingLabelBindings @26  ; Iddsncoreresourcestrings::_RSBindingLabelBindings
+    @Iddsncoreresourcestrings@_RSBindingNewCaption @29  ; Iddsncoreresourcestrings::_RSBindingNewCaption
+    @Iddsncoreresourcestrings@_RSBindingPortLabel @24  ; Iddsncoreresourcestrings::_RSBindingPortLabel
+    @Iddsncoreresourcestrings@_RSBindingRemoveCaption @27  ; Iddsncoreresourcestrings::_RSBindingRemoveCaption
+    @Iddsncoreresourcestrings@_RSCancel @9   ; Iddsncoreresourcestrings::_RSCancel
+    @Iddsncoreresourcestrings@_RSHelp @8   ; Iddsncoreresourcestrings::_RSHelp
+    @Iddsncoreresourcestrings@_RSOk @10  ; Iddsncoreresourcestrings::_RSOk
+    @Iddsncoreresourcestrings@_RSRegIndyClients @7   ; Iddsncoreresourcestrings::_RSRegIndyClients
+    @Iddsncoreresourcestrings@_RSRegIndyIOHandlers @4   ; Iddsncoreresourcestrings::_RSRegIndyIOHandlers
+    @Iddsncoreresourcestrings@_RSRegIndyIntercepts @5   ; Iddsncoreresourcestrings::_RSRegIndyIntercepts
+    @Iddsncoreresourcestrings@_RSRegIndyMisc @3   ; Iddsncoreresourcestrings::_RSRegIndyMisc
+    @Iddsncoreresourcestrings@_RSRegIndyServers @6   ; Iddsncoreresourcestrings::_RSRegIndyServers
+    @Iddsncoreresourcestrings@initialization$qqrv @1   ; __fastcall Iddsncoreresourcestrings::initialization()
+    @Iddsnpropedbindingvcl@FillHandleList$qqrx20System@UnicodeStringp31Idsockethandle@TIdSocketHandles @86  ; __fastcall Iddsnpropedbindingvcl::FillHandleList(const System::UnicodeString, Idsockethandle::TIdSocketHandles *)
+    @Iddsnpropedbindingvcl@Finalization$qqrv @64  ; __fastcall Iddsnpropedbindingvcl::Finalization()
+    @Iddsnpropedbindingvcl@GetListValues$qqrxp31Idsockethandle@TIdSocketHandles @85  ; __fastcall Iddsnpropedbindingvcl::GetListValues(Idsockethandle::TIdSocketHandles * const)
+    @Iddsnpropedbindingvcl@IdPropEdBindingEntry @87  ; Iddsnpropedbindingvcl::IdPropEdBindingEntry
+    @Iddsnpropedbindingvcl@TIdDsnPropEdBindingVCL@ @89  ; Iddsnpropedbindingvcl::TIdDsnPropEdBindingVCL::
+    @Iddsnpropedbindingvcl@TIdDsnPropEdBindingVCL@$bctr$qqrp25System@Classes@TComponent @84  ; __fastcall Iddsnpropedbindingvcl::TIdDsnPropEdBindingVCL::TIdDsnPropEdBindingVCL(System::Classes::TComponent *)
+    @Iddsnpropedbindingvcl@TIdDsnPropEdBindingVCL@$bctr$qqrv @65  ; __fastcall Iddsnpropedbindingvcl::TIdDsnPropEdBindingVCL::TIdDsnPropEdBindingVCL()
+    @Iddsnpropedbindingvcl@TIdDsnPropEdBindingVCL@$bdtr$qqrv @83  ; __fastcall Iddsnpropedbindingvcl::TIdDsnPropEdBindingVCL::~TIdDsnPropEdBindingVCL()
+    @Iddsnpropedbindingvcl@TIdDsnPropEdBindingVCL@Execute$qqrv @66  ; __fastcall Iddsnpropedbindingvcl::TIdDsnPropEdBindingVCL::Execute()
+    @Iddsnpropedbindingvcl@TIdDsnPropEdBindingVCL@GetList$qqrv @70  ; __fastcall Iddsnpropedbindingvcl::TIdDsnPropEdBindingVCL::GetList()
+    @Iddsnpropedbindingvcl@TIdDsnPropEdBindingVCL@PortDescription$qqrxi @82  ; __fastcall Iddsnpropedbindingvcl::TIdDsnPropEdBindingVCL::PortDescription(const int)
+    @Iddsnpropedbindingvcl@TIdDsnPropEdBindingVCL@SetHandles$qqrxp31Idsockethandle@TIdSocketHandles @81  ; __fastcall Iddsnpropedbindingvcl::TIdDsnPropEdBindingVCL::SetHandles(Idsockethandle::TIdSocketHandles * const)
+    @Iddsnpropedbindingvcl@TIdDsnPropEdBindingVCL@SetIPv4Addresses$qqrxp23System@Classes@TStrings @76  ; __fastcall Iddsnpropedbindingvcl::TIdDsnPropEdBindingVCL::SetIPv4Addresses(System::Classes::TStrings * const)
+    @Iddsnpropedbindingvcl@TIdDsnPropEdBindingVCL@SetIPv6Addresses$qqrxp23System@Classes@TStrings @75  ; __fastcall Iddsnpropedbindingvcl::TIdDsnPropEdBindingVCL::SetIPv6Addresses(System::Classes::TStrings * const)
+    @Iddsnpropedbindingvcl@TIdDsnPropEdBindingVCL@SetList$qqrx20System@UnicodeString @68  ; __fastcall Iddsnpropedbindingvcl::TIdDsnPropEdBindingVCL::SetList(const System::UnicodeString)
+    @Iddsnpropedbindingvcl@TIdDsnPropEdBindingVCL@UpdateBindingList$qqrv @67  ; __fastcall Iddsnpropedbindingvcl::TIdDsnPropEdBindingVCL::UpdateBindingList()
+    @Iddsnpropedbindingvcl@TIdDsnPropEdBindingVCL@UpdateEditControls$qqrv @79  ; __fastcall Iddsnpropedbindingvcl::TIdDsnPropEdBindingVCL::UpdateEditControls()
+    @Iddsnpropedbindingvcl@TIdDsnPropEdBindingVCL@btnBindingsDeleteExecute$qqrp14System@TObject @78  ; __fastcall Iddsnpropedbindingvcl::TIdDsnPropEdBindingVCL::btnBindingsDeleteExecute(System::TObject *)
+    @Iddsnpropedbindingvcl@TIdDsnPropEdBindingVCL@btnBindingsDeleteUpdate$qqrp14System@TObject @77  ; __fastcall Iddsnpropedbindingvcl::TIdDsnPropEdBindingVCL::btnBindingsDeleteUpdate(System::TObject *)
+    @Iddsnpropedbindingvcl@TIdDsnPropEdBindingVCL@btnBindingsNewExecute$qqrp14System@TObject @80  ; __fastcall Iddsnpropedbindingvcl::TIdDsnPropEdBindingVCL::btnBindingsNewExecute(System::TObject *)
+    @Iddsnpropedbindingvcl@TIdDsnPropEdBindingVCL@edtIPAddressChange$qqrp14System@TObject @73  ; __fastcall Iddsnpropedbindingvcl::TIdDsnPropEdBindingVCL::edtIPAddressChange(System::TObject *)
+    @Iddsnpropedbindingvcl@TIdDsnPropEdBindingVCL@edtPortChange$qqrp14System@TObject @72  ; __fastcall Iddsnpropedbindingvcl::TIdDsnPropEdBindingVCL::edtPortChange(System::TObject *)
+    @Iddsnpropedbindingvcl@TIdDsnPropEdBindingVCL@edtPortKeyPress$qqrp14System@TObjectrb @74  ; __fastcall Iddsnpropedbindingvcl::TIdDsnPropEdBindingVCL::edtPortKeyPress(System::TObject *, wchar_t&)
+    @Iddsnpropedbindingvcl@TIdDsnPropEdBindingVCL@lbBindingsClick$qqrp14System@TObject @69  ; __fastcall Iddsnpropedbindingvcl::TIdDsnPropEdBindingVCL::lbBindingsClick(System::TObject *)
+    @Iddsnpropedbindingvcl@TIdDsnPropEdBindingVCL@rdoBindingTypeClick$qqrp14System@TObject @71  ; __fastcall Iddsnpropedbindingvcl::TIdDsnPropEdBindingVCL::rdoBindingTypeClick(System::TObject *)
+    @Iddsnpropedbindingvcl@initialization$qqrv @63  ; __fastcall Iddsnpropedbindingvcl::initialization()
+    @Idregistercore@Finalization$qqrv @105 ; __fastcall Idregistercore::Finalization()
+    @Idregistercore@Register$qqrv  @106 ; __fastcall Idregistercore::Register()
+    @Idregistercore@initialization$qqrv @104 ; __fastcall Idregistercore::initialization()
+    @Vcl@Idantifreeze@Finalization$qqrv @59  ; __fastcall Vcl::Idantifreeze::Finalization()
+    @Vcl@Idantifreeze@TIdAntiFreeze@ @62  ; Vcl::Idantifreeze::TIdAntiFreeze::
+    @Vcl@Idantifreeze@TIdAntiFreeze@Process$qqrv @60  ; __fastcall Vcl::Idantifreeze::TIdAntiFreeze::Process()
+    @Vcl@Idantifreeze@initialization$qqrv @58  ; __fastcall Vcl::Idantifreeze::initialization()
+    Finalize                       @111 ; Finalize
+    Initialize                     @112 ; Initialize

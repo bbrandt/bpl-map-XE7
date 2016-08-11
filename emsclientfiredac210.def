@@ -1,0 +1,41 @@
+LIBRARY     EMSCLIENTFIREDAC210.BPL
+
+DESCRIPTION 'mbarcadero EMS FireDAC client package'
+
+EXPORTS
+    @$xp$41Rest@Backend@Emsfiredac@TEMSFireDACClient @26  ; __tpdsc__ Rest::Backend::Emsfiredac::TEMSFireDACClient
+    @$xp$47Rest@Backend@Emsfiredac@TCustomEMSFireDACClient @28  ; __tpdsc__ Rest::Backend::Emsfiredac::TCustomEMSFireDACClient
+    @$xp$47Rest@Backend@Emsfiredac@TEEMSFireDACClientError @24  ; __tpdsc__ Rest::Backend::Emsfiredac::TEEMSFireDACClientError
+    @Emsclientfiredac@@GetPackageInfoTable$qqrv @33  ; Emsclientfiredac::__linkproc__ __fastcall GetPackageInfoTable()
+    @Emsclientfiredac@@PackageLoad$qqrv @32  ; Emsclientfiredac::__linkproc__ __fastcall PackageLoad()
+    @Emsclientfiredac@@PackageUnload$qqrv @31  ; Emsclientfiredac::__linkproc__ __fastcall PackageUnload()
+    @Emsclientfiredac@initialization$qqrv @30  ; __fastcall Emsclientfiredac::initialization()
+    @GetPackageInfoTable           @36  ; GetPackageInfoTable
+    @Rest@Backend@Emsfiredac@Finalization$qqrv @10  ; __fastcall Rest::Backend::Emsfiredac::Finalization()
+    @Rest@Backend@Emsfiredac@TCustomEMSFireDACClient@ @29  ; Rest::Backend::Emsfiredac::TCustomEMSFireDACClient::
+    @Rest@Backend@Emsfiredac@TCustomEMSFireDACClient@$bctr$qqrp25System@Classes@TComponent @23  ; __fastcall Rest::Backend::Emsfiredac::TCustomEMSFireDACClient::TCustomEMSFireDACClient(System::Classes::TComponent *)
+    @Rest@Backend@Emsfiredac@TCustomEMSFireDACClient@$bdtr$qqrv @22  ; __fastcall Rest::Backend::Emsfiredac::TCustomEMSFireDACClient::~TCustomEMSFireDACClient()
+    @Rest@Backend@Emsfiredac@TCustomEMSFireDACClient@CheckProvider$qqrv @18  ; __fastcall Rest::Backend::Emsfiredac::TCustomEMSFireDACClient::CheckProvider()
+    @Rest@Backend@Emsfiredac@TCustomEMSFireDACClient@CheckResource$qqrv @21  ; __fastcall Rest::Backend::Emsfiredac::TCustomEMSFireDACClient::CheckResource()
+    @Rest@Backend@Emsfiredac@TCustomEMSFireDACClient@CheckSchemaAdapter$qqrv @19  ; __fastcall Rest::Backend::Emsfiredac::TCustomEMSFireDACClient::CheckSchemaAdapter()
+    @Rest@Backend@Emsfiredac@TCustomEMSFireDACClient@GetCanPostUpdates$qqrv @17  ; __fastcall Rest::Backend::Emsfiredac::TCustomEMSFireDACClient::GetCanPostUpdates()
+    @Rest@Backend@Emsfiredac@TCustomEMSFireDACClient@GetData$qqrv @16  ; __fastcall Rest::Backend::Emsfiredac::TCustomEMSFireDACClient::GetData()
+    @Rest@Backend@Emsfiredac@TCustomEMSFireDACClient@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @15  ; __fastcall Rest::Backend::Emsfiredac::TCustomEMSFireDACClient::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Rest@Backend@Emsfiredac@TCustomEMSFireDACClient@PostUpdates$qqrv @14  ; __fastcall Rest::Backend::Emsfiredac::TCustomEMSFireDACClient::PostUpdates()
+    @Rest@Backend@Emsfiredac@TCustomEMSFireDACClient@SetAuth$qqrx65System@%DelphiInterface$38Rest@Backend@Providers@IBackendAuthReg% @13  ; Rest::Backend::Emsfiredac::TCustomEMSFireDACClient::SetAuth(const System::DelphiInterface<{583}...
+    @Rest@Backend@Emsfiredac@TCustomEMSFireDACClient@SetProvider$qqrxp37Rest@Backend@Emsprovider@TEMSProvider @12  ; __fastcall Rest::Backend::Emsfiredac::TCustomEMSFireDACClient::SetProvider(Rest::Backend::Emsprovider::TEMSProvider * const)
+    @Rest@Backend@Emsfiredac@TCustomEMSFireDACClient@SetSchemaAdapter$qqrxp36Firedac@Comp@Client@TFDSchemaAdapter @11  ; __fastcall Rest::Backend::Emsfiredac::TCustomEMSFireDACClient::SetSchemaAdapter(Firedac::Comp::Client::TFDSchemaAdapter * const)
+    @Rest@Backend@Emsfiredac@TCustomEMSFireDACClient@UpdateEndpoints$qqrv @20  ; __fastcall Rest::Backend::Emsfiredac::TCustomEMSFireDACClient::UpdateEndpoints()
+    @Rest@Backend@Emsfiredac@TEEMSFireDACClientError@ @25  ; Rest::Backend::Emsfiredac::TEEMSFireDACClientError::
+    @Rest@Backend@Emsfiredac@TEMSFireDACClient@ @27  ; Rest::Backend::Emsfiredac::TEMSFireDACClient::
+    @Rest@Backend@Emsfiredac@initialization$qqrv @9   ; __fastcall Rest::Backend::Emsfiredac::initialization()
+    @Rest@Backend@Emsfiredacconsts@Finalization$qqrv @2   ; __fastcall Rest::Backend::Emsfiredacconsts::Finalization()
+    @Rest@Backend@Emsfiredacconsts@_sProviderIsRequired @3   ; Rest::Backend::Emsfiredacconsts::_sProviderIsRequired
+    @Rest@Backend@Emsfiredacconsts@_sResourceMustNotBeBlank @8   ; Rest::Backend::Emsfiredacconsts::_sResourceMustNotBeBlank
+    @Rest@Backend@Emsfiredacconsts@_sResponseHasNoContent @4   ; Rest::Backend::Emsfiredacconsts::_sResponseHasNoContent
+    @Rest@Backend@Emsfiredacconsts@_sSchemaAdapterHasNoData @6   ; Rest::Backend::Emsfiredacconsts::_sSchemaAdapterHasNoData
+    @Rest@Backend@Emsfiredacconsts@_sSchemaAdapterIsRequired @7   ; Rest::Backend::Emsfiredacconsts::_sSchemaAdapterIsRequired
+    @Rest@Backend@Emsfiredacconsts@_sUnexpectedContentType @5   ; Rest::Backend::Emsfiredacconsts::_sUnexpectedContentType
+    @Rest@Backend@Emsfiredacconsts@initialization$qqrv @1   ; __fastcall Rest::Backend::Emsfiredacconsts::initialization()
+    Finalize                       @34  ; Finalize
+    Initialize                     @35  ; Initialize

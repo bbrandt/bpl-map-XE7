@@ -1,0 +1,191 @@
+LIBRARY     VCLSHLCTRLS210.BPL
+
+DESCRIPTION 'in32 Shell Controls'
+
+EXPORTS
+    @$xp$26Vcl@Shell@Shellctrls@TRoot @179 ; __tpdsc__ Vcl::Shell::Shellctrls::TRoot
+    @$xp$32Vcl@Shell@Shellctrls@TRootFolder @178 ; __tpdsc__ Vcl::Shell::Shellctrls::TRootFolder
+    @$xp$33Vcl@Shell@Shellctrls@EInvalidPath @170 ; __tpdsc__ Vcl::Shell::Shellctrls::EInvalidPath
+    @$xp$33Vcl@Shell@Shellctrls@TShellFolder @167 ; __tpdsc__ Vcl::Shell::Shellctrls::TShellFolder
+    @$xp$34Vcl@Shell@Shellctrls@TNotifyFilter @166 ; __tpdsc__ Vcl::Shell::Shellctrls::TNotifyFilter
+    @$xp$35Vcl@Shell@Shellctrls@TNotifyFilters @165 ; __tpdsc__ Vcl::Shell::Shellctrls::TNotifyFilters
+    @$xp$35Vcl@Shell@Shellctrls@TShellComboBox @149 ; __tpdsc__ Vcl::Shell::Shellctrls::TShellComboBox
+    @$xp$35Vcl@Shell@Shellctrls@TShellListView @145 ; __tpdsc__ Vcl::Shell::Shellctrls::TShellListView
+    @$xp$35Vcl@Shell@Shellctrls@TShellTreeView @153 ; __tpdsc__ Vcl::Shell::Shellctrls::TShellTreeView
+    @$xp$36Vcl@Shell@Shellctrls@TAddFolderEvent @158 ; __tpdsc__ Vcl::Shell::Shellctrls::TAddFolderEvent
+    @$xp$37Vcl@Shell@Shellctrls@TShellObjectType @173 ; __tpdsc__ Vcl::Shell::Shellctrls::TShellObjectType
+    @$xp$38Vcl@Shell@Shellctrls@IShellCommandVerb @169 ; __tpdsc__ Vcl::Shell::Shellctrls::IShellCommandVerb
+    @$xp$38Vcl@Shell@Shellctrls@TShellObjectTypes @172 ; __tpdsc__ Vcl::Shell::Shellctrls::TShellObjectTypes
+    @$xp$39Vcl@Shell@Shellctrls@TShellChangeThread @163 ; __tpdsc__ Vcl::Shell::Shellctrls::TShellChangeThread
+    @$xp$40Vcl@Shell@Shellctrls@TGetImageIndexEvent @157 ; __tpdsc__ Vcl::Shell::Shellctrls::TGetImageIndexEvent
+    @$xp$41Vcl@Shell@Shellctrls@TCustomShellComboBox @151 ; __tpdsc__ Vcl::Shell::Shellctrls::TCustomShellComboBox
+    @$xp$41Vcl@Shell@Shellctrls@TCustomShellListView @147 ; __tpdsc__ Vcl::Shell::Shellctrls::TCustomShellListView
+    @$xp$41Vcl@Shell@Shellctrls@TCustomShellTreeView @155 ; __tpdsc__ Vcl::Shell::Shellctrls::TCustomShellTreeView
+    @$xp$41Vcl@Shell@Shellctrls@TShellChangeNotifier @159 ; __tpdsc__ Vcl::Shell::Shellctrls::TShellChangeNotifier
+    @$xp$41Vcl@Shell@Shellctrls@TShellFolderProperty @175 ; __tpdsc__ Vcl::Shell::Shellctrls::TShellFolderProperty
+    @$xp$43Vcl@Shell@Shellctrls@TShellFolderCapability @177 ; __tpdsc__ Vcl::Shell::Shellctrls::TShellFolderCapability
+    @$xp$43Vcl@Shell@Shellctrls@TShellFolderProperties @174 ; __tpdsc__ Vcl::Shell::Shellctrls::TShellFolderProperties
+    @$xp$45Vcl@Shell@Shellctrls@TShellFolderCapabilities @176 ; __tpdsc__ Vcl::Shell::Shellctrls::TShellFolderCapabilities
+    @$xp$47Vcl@Shell@Shellctrls@TCustomShellChangeNotifier @161 ; __tpdsc__ Vcl::Shell::Shellctrls::TCustomShellChangeNotifier
+    @GetPackageInfoTable           @186 ; GetPackageInfoTable
+    @Vcl@Shell@Shellconsts@Finalization$qqrv @2   ; __fastcall Vcl::Shell::Shellconsts::Finalization()
+    @Vcl@Shell@Shellconsts@_SCallLoadDetails @6   ; Vcl::Shell::Shellconsts::_SCallLoadDetails
+    @Vcl@Shell@Shellconsts@_SPalletePage @5   ; Vcl::Shell::Shellconsts::_SPalletePage
+    @Vcl@Shell@Shellconsts@_SPropertyName @4   ; Vcl::Shell::Shellconsts::_SPropertyName
+    @Vcl@Shell@Shellconsts@_SRenamedFailedError @3   ; Vcl::Shell::Shellconsts::_SRenamedFailedError
+    @Vcl@Shell@Shellconsts@_SShellDefaultModifiedStr @8   ; Vcl::Shell::Shellconsts::_SShellDefaultModifiedStr
+    @Vcl@Shell@Shellconsts@_SShellDefaultNameStr @11  ; Vcl::Shell::Shellconsts::_SShellDefaultNameStr
+    @Vcl@Shell@Shellconsts@_SShellDefaultSizeStr @10  ; Vcl::Shell::Shellconsts::_SShellDefaultSizeStr
+    @Vcl@Shell@Shellconsts@_SShellDefaultTypeStr @9   ; Vcl::Shell::Shellconsts::_SShellDefaultTypeStr
+    @Vcl@Shell@Shellconsts@_SShellNoDetails @7   ; Vcl::Shell::Shellconsts::_SShellNoDetails
+    @Vcl@Shell@Shellconsts@initialization$qqrv @1   ; __fastcall Vcl::Shell::Shellconsts::initialization()
+    @Vcl@Shell@Shellctrls@EInvalidPath@ @171 ; Vcl::Shell::Shellctrls::EInvalidPath::
+    @Vcl@Shell@Shellctrls@Finalization$qqrv @13  ; __fastcall Vcl::Shell::Shellctrls::Finalization()
+    @Vcl@Shell@Shellctrls@InvokeContextMenu$qqrp24Vcl@Controls@TWinControlp33Vcl@Shell@Shellctrls@TShellFolderii @144 ; __fastcall Vcl::Shell::Shellctrls::InvokeContextMenu(Vcl::Controls::TWinControl *, Vcl::Shell::Shellctrls::TShellFolder *, int, int)
+    @Vcl@Shell@Shellctrls@TCustomShellChangeNotifier@ @162 ; Vcl::Shell::Shellctrls::TCustomShellChangeNotifier::
+    @Vcl@Shell@Shellctrls@TCustomShellChangeNotifier@$bctr$qqrp25System@Classes@TComponent @124 ; __fastcall Vcl::Shell::Shellctrls::TCustomShellChangeNotifier::TCustomShellChangeNotifier(System::Classes::TComponent *)
+    @Vcl@Shell@Shellctrls@TCustomShellChangeNotifier@$bdtr$qqrv @123 ; __fastcall Vcl::Shell::Shellctrls::TCustomShellChangeNotifier::~TCustomShellChangeNotifier()
+    @Vcl@Shell@Shellctrls@TCustomShellChangeNotifier@Change$qqrv @125 ; __fastcall Vcl::Shell::Shellctrls::TCustomShellChangeNotifier::Change()
+    @Vcl@Shell@Shellctrls@TCustomShellChangeNotifier@SetFilters$qqrx61System@%Set$34Vcl@Shell@Shellctrls@TNotifyFiltert1$i0$t1$i5$% @121 ; Vcl::Shell::Shellctrls::TCustomShellChangeNotifier::SetFilters(const System::Set<{583}...
+    @Vcl@Shell@Shellctrls@TCustomShellChangeNotifier@SetOnChange$qqrxynpqqrv$v @120 ; __fastcall Vcl::Shell::Shellctrls::TCustomShellChangeNotifier::SetOnChange(void __fastcall __closure(*)() const)
+    @Vcl@Shell@Shellctrls@TCustomShellChangeNotifier@SetRoot$qqrx20System@UnicodeString @122 ; __fastcall Vcl::Shell::Shellctrls::TCustomShellChangeNotifier::SetRoot(const System::UnicodeString)
+    @Vcl@Shell@Shellctrls@TCustomShellChangeNotifier@SetWatchSubTree$qqrxo @119 ; __fastcall Vcl::Shell::Shellctrls::TCustomShellChangeNotifier::SetWatchSubTree(const bool)
+    @Vcl@Shell@Shellctrls@TCustomShellChangeNotifier@Start$qqrv @118 ; __fastcall Vcl::Shell::Shellctrls::TCustomShellChangeNotifier::Start()
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@ @152 ; Vcl::Shell::Shellctrls::TCustomShellComboBox::
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@$bctr$qqrp25System@Classes@TComponent @74  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::TCustomShellComboBox(System::Classes::TComponent *)
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@$bdtr$qqrv @52  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::~TCustomShellComboBox()
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@AddItems$qqrip33Vcl@Shell@Shellctrls@TShellFolder @62  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::AddItems(int, Vcl::Shell::Shellctrls::TShellFolder *)
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@Change$qqrv @50  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::Change()
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@ClearItems$qqrv @73  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::ClearItems()
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@Click$qqrv @49  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::Click()
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@CreateRoot$qqrv @72  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::CreateRoot()
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@CreateWnd$qqrv @71  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::CreateWnd()
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@DestroyWnd$qqrv @70  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::DestroyWnd()
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@GetFolder$qqri @64  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::GetFolder(int)
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@GetPath$qqrv @57  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::GetPath()
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@GetShellImageIndex$qqrp33Vcl@Shell@Shellctrls@TShellFolder @54  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::GetShellImageIndex(Vcl::Shell::Shellctrls::TShellFolder *)
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@IndexFromID$qqrp11_ITEMIDLIST @60  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::IndexFromID(_ITEMIDLIST *)
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@Init$qqrv @61  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::Init()
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@InitItem$qqrp33Vcl@Shell@Shellctrls@TShellFolderp11_ITEMIDLIST @63  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::InitItem(Vcl::Shell::Shellctrls::TShellFolder *, _ITEMIDLIST *)
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@Loaded$qqrv @51  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::Loaded()
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @65  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@RootChanged$qqrv @58  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::RootChanged()
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@SetListView$qqrp41Vcl@Shell@Shellctrls@TCustomShellListView @66  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::SetListView(Vcl::Shell::Shellctrls::TCustomShellListView *)
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@SetObjectTypes$qqr64System@%Set$37Vcl@Shell@Shellctrls@TShellObjectTypet1$i0$t1$i2$% @69  ; Vcl::Shell::Shellctrls::TCustomShellComboBox::SetObjectTypes(System::Set<{583}...
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@SetPath$qqrx20System@UnicodeString @56  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::SetPath(const System::UnicodeString)
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@SetPathFromID$qqrp11_ITEMIDLIST @55  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::SetPathFromID(_ITEMIDLIST *)
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@SetRoot$qqrx20System@UnicodeString @59  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::SetRoot(const System::UnicodeString)
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@SetTreeView$qqrp41Vcl@Shell@Shellctrls@TCustomShellTreeView @67  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::SetTreeView(Vcl::Shell::Shellctrls::TCustomShellTreeView *)
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@SetUseShellImages$qqrxo @53  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::SetUseShellImages(const bool)
+    @Vcl@Shell@Shellctrls@TCustomShellComboBox@TreeUpdate$qqrp11_ITEMIDLIST @68  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellComboBox::TreeUpdate(_ITEMIDLIST *)
+    @Vcl@Shell@Shellctrls@TCustomShellListView@ @148 ; Vcl::Shell::Shellctrls::TCustomShellListView::
+    @Vcl@Shell@Shellctrls@TCustomShellListView@$bctr$qqrp25System@Classes@TComponent @48  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::TCustomShellListView(System::Classes::TComponent *)
+    @Vcl@Shell@Shellctrls@TCustomShellListView@$bdtr$qqrv @47  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::~TCustomShellListView()
+    @Vcl@Shell@Shellctrls@TCustomShellListView@Back$qqrv @25  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::Back()
+    @Vcl@Shell@Shellctrls@TCustomShellListView@ClearItems$qqrv @46  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::ClearItems()
+    @Vcl@Shell@Shellctrls@TCustomShellListView@CommandCompleted$qqr20System@UnicodeStringo @45  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::CommandCompleted(System::UnicodeString, bool)
+    @Vcl@Shell@Shellctrls@TCustomShellListView@CreateRoot$qqrv @15  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::CreateRoot()
+    @Vcl@Shell@Shellctrls@TCustomShellListView@CreateWnd$qqrv @43  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::CreateWnd()
+    @Vcl@Shell@Shellctrls@TCustomShellListView@DblClick$qqrv @37  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::DblClick()
+    @Vcl@Shell@Shellctrls@TCustomShellListView@DestroyWnd$qqrv @42  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::DestroyWnd()
+    @Vcl@Shell@Shellctrls@TCustomShellListView@DoContextPopup$qqrrx19System@Types@TPointro @26  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::DoContextPopup(const System::Types::TPoint&, bool&)
+    @Vcl@Shell@Shellctrls@TCustomShellListView@Edit$qqrrx10tagLVITEMW @35  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::Edit(const tagLVITEMW&)
+    @Vcl@Shell@Shellctrls@TCustomShellListView@EditText$qqrv @36  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::EditText()
+    @Vcl@Shell@Shellctrls@TCustomShellListView@EnumColumns$qqrv @24  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::EnumColumns()
+    @Vcl@Shell@Shellctrls@TCustomShellListView@ExecuteCommand$qqr20System@UnicodeStringro @44  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::ExecuteCommand(System::UnicodeString, bool&)
+    @Vcl@Shell@Shellctrls@TCustomShellListView@GetFolder$qqri @30  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::GetFolder(int)
+    @Vcl@Shell@Shellctrls@TCustomShellListView@KeyDown$qqrrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @23  ; Vcl::Shell::Shellctrls::TCustomShellListView::KeyDown(unsigned short&, System::Set<{583}...
+    @Vcl@Shell@Shellctrls@TCustomShellListView@Loaded$qqrv @27  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::Loaded()
+    @Vcl@Shell@Shellctrls@TCustomShellListView@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @38  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Vcl@Shell@Shellctrls@TCustomShellListView@OwnerDataFetch$qqrp22Vcl@Comctrls@TListItem53System@%Set$26Vcl@Comctrls@TItemRequestst1$i0$t1$i4$% @31  ; Vcl::Shell::Shellctrls::TCustomShellListView::OwnerDataFetch(Vcl::Comctrls::TListItem *, System::Set<{583}...
+    @Vcl@Shell@Shellctrls@TCustomShellListView@OwnerDataFind$qqr22Vcl@Comctrls@TItemFindx20System@UnicodeStringrx19System@Types@TPointpvi29Vcl@Comctrls@TSearchDirectiono @29  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::OwnerDataFind(Vcl::Comctrls::TItemFind, const System::UnicodeString, const System::Types::TPoint&, void *, int, Vcl::Comctrls::TSearchDirection, bool)
+    @Vcl@Shell@Shellctrls@TCustomShellListView@Populate$qqrv @39  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::Populate()
+    @Vcl@Shell@Shellctrls@TCustomShellListView@Refresh$qqrv @17  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::Refresh()
+    @Vcl@Shell@Shellctrls@TCustomShellListView@RootChanged$qqrv @40  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::RootChanged()
+    @Vcl@Shell@Shellctrls@TCustomShellListView@SelectedFolder$qqrv @32  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::SelectedFolder()
+    @Vcl@Shell@Shellctrls@TCustomShellListView@SetAutoRefresh$qqrxo @34  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::SetAutoRefresh(const bool)
+    @Vcl@Shell@Shellctrls@TCustomShellListView@SetComboBox$qqrp41Vcl@Shell@Shellctrls@TCustomShellComboBox @20  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::SetComboBox(Vcl::Shell::Shellctrls::TCustomShellComboBox *)
+    @Vcl@Shell@Shellctrls@TCustomShellListView@SetObjectTypes$qqr64System@%Set$37Vcl@Shell@Shellctrls@TShellObjectTypet1$i0$t1$i2$% @41  ; Vcl::Shell::Shellctrls::TCustomShellListView::SetObjectTypes(System::Set<{583}...
+    @Vcl@Shell@Shellctrls@TCustomShellListView@SetPathFromID$qqrp11_ITEMIDLIST @16  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::SetPathFromID(_ITEMIDLIST *)
+    @Vcl@Shell@Shellctrls@TCustomShellListView@SetRoot$qqrx20System@UnicodeString @33  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::SetRoot(const System::UnicodeString)
+    @Vcl@Shell@Shellctrls@TCustomShellListView@SetSorted$qqrxo @28  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::SetSorted(const bool)
+    @Vcl@Shell@Shellctrls@TCustomShellListView@SetTreeView$qqrp41Vcl@Shell@Shellctrls@TCustomShellTreeView @21  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::SetTreeView(Vcl::Shell::Shellctrls::TCustomShellTreeView *)
+    @Vcl@Shell@Shellctrls@TCustomShellListView@SetViewStyle$qqr23Vcl@Comctrls@TViewStyle @22  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::SetViewStyle(Vcl::Comctrls::TViewStyle)
+    @Vcl@Shell@Shellctrls@TCustomShellListView@SynchPaths$qqrv @14  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::SynchPaths()
+    @Vcl@Shell@Shellctrls@TCustomShellListView@TreeUpdate$qqrp11_ITEMIDLIST @19  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::TreeUpdate(_ITEMIDLIST *)
+    @Vcl@Shell@Shellctrls@TCustomShellListView@WndProc$qqrr24Winapi@Messages@TMessage @18  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellListView::WndProc(Winapi::Messages::TMessage&)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@ @156 ; Vcl::Shell::Shellctrls::TCustomShellTreeView::
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@$bctr$qqrp25System@Classes@TComponent @113 ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::TCustomShellTreeView(System::Classes::TComponent *)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@$bdtr$qqrv @110 ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::~TCustomShellTreeView()
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@CanChange$qqrp22Vcl@Comctrls@TTreeNode @91  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::CanChange(Vcl::Comctrls::TTreeNode *)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@CanExpand$qqrp22Vcl@Comctrls@TTreeNode @102 ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::CanExpand(Vcl::Comctrls::TTreeNode *)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@ClearItems$qqrv @112 ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::ClearItems()
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@CommandCompleted$qqr20System@UnicodeStringo @108 ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::CommandCompleted(System::UnicodeString, bool)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@CreateRoot$qqrv @103 ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::CreateRoot()
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@CreateWnd$qqrv @111 ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::CreateWnd()
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@Delete$qqrp22Vcl@Comctrls@TTreeNode @97  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::Delete(Vcl::Comctrls::TTreeNode *)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@DestroyWnd$qqrv @109 ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::DestroyWnd()
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@DoContextPopup$qqrrx19System@Types@TPointro @78  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::DoContextPopup(const System::Types::TPoint&, bool&)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@Edit$qqrrx10tagTVITEMW @101 ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::Edit(const tagTVITEMW&)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@ExecuteCommand$qqr20System@UnicodeStringro @107 ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::ExecuteCommand(System::UnicodeString, bool&)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@FolderExists$qqrp11_ITEMIDLISTp22Vcl@Comctrls@TTreeNode @95  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::FolderExists(_ITEMIDLIST *, Vcl::Comctrls::TTreeNode *)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@GetFolder$qqri @90  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::GetFolder(int)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@GetImageIndex$qqrp22Vcl@Comctrls@TTreeNode @84  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::GetImageIndex(Vcl::Comctrls::TTreeNode *)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@GetPath$qqrv @88  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::GetPath()
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@GetSelectedIndex$qqrp22Vcl@Comctrls@TTreeNode @83  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::GetSelectedIndex(Vcl::Comctrls::TTreeNode *)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@InitNode$qqrp22Vcl@Comctrls@TTreeNodep11_ITEMIDLISTt1 @106 ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::InitNode(Vcl::Comctrls::TTreeNode *, _ITEMIDLIST *, Vcl::Comctrls::TTreeNode *)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@Loaded$qqrv @79  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::Loaded()
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@MouseUp$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @100 ; Vcl::Shell::Shellctrls::TCustomShellTreeView::MouseUp(System::Uitypes::TMouseButton, System::Set<{583}...
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@NodeFromAbsoluteID$qqrp22Vcl@Comctrls@TTreeNodep11_ITEMIDLIST @98  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::NodeFromAbsoluteID(Vcl::Comctrls::TTreeNode *, _ITEMIDLIST *)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@NodeFromRelativeID$qqrp22Vcl@Comctrls@TTreeNodep11_ITEMIDLIST @99  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::NodeFromRelativeID(Vcl::Comctrls::TTreeNode *, _ITEMIDLIST *)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @92  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@PopulateNode$qqrp22Vcl@Comctrls@TTreeNode @105 ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::PopulateNode(Vcl::Comctrls::TTreeNode *)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@Refresh$qqrp22Vcl@Comctrls@TTreeNode @93  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::Refresh(Vcl::Comctrls::TTreeNode *)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@RefreshEvent$qqrv @94  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::RefreshEvent()
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@RootChanged$qqrv @96  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::RootChanged()
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@SelectedFolder$qqrv @89  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::SelectedFolder()
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@SetAutoRefresh$qqrxo @75  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::SetAutoRefresh(const bool)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@SetComboBox$qqrp41Vcl@Shell@Shellctrls@TCustomShellComboBox @77  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::SetComboBox(Vcl::Shell::Shellctrls::TCustomShellComboBox *)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@SetListView$qqrxp41Vcl@Shell@Shellctrls@TCustomShellListView @76  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::SetListView(Vcl::Shell::Shellctrls::TCustomShellListView * const)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@SetObjectTypes$qqr64System@%Set$37Vcl@Shell@Shellctrls@TShellObjectTypet1$i0$t1$i2$% @104 ; Vcl::Shell::Shellctrls::TCustomShellTreeView::SetObjectTypes(System::Set<{583}...
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@SetPath$qqrx20System@UnicodeString @87  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::SetPath(const System::UnicodeString)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@SetPathFromID$qqrp11_ITEMIDLIST @86  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::SetPathFromID(_ITEMIDLIST *)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@SetRoot$qqrx20System@UnicodeString @85  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::SetRoot(const System::UnicodeString)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@SetUseShellImages$qqrxo @81  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::SetUseShellImages(const bool)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@WMDestroy$qqrr27Winapi@Messages@TWMNoParams @80  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::WMDestroy(Winapi::Messages::TWMNoParams&)
+    @Vcl@Shell@Shellctrls@TCustomShellTreeView@WndProc$qqrr24Winapi@Messages@TMessage @82  ; __fastcall Vcl::Shell::Shellctrls::TCustomShellTreeView::WndProc(Winapi::Messages::TMessage&)
+    @Vcl@Shell@Shellctrls@TShellChangeNotifier@ @160 ; Vcl::Shell::Shellctrls::TShellChangeNotifier::
+    @Vcl@Shell@Shellctrls@TShellChangeThread@ @164 ; Vcl::Shell::Shellctrls::TShellChangeThread::
+    @Vcl@Shell@Shellctrls@TShellChangeThread@$bctr$qqrynpqqrv$v @117 ; __fastcall Vcl::Shell::Shellctrls::TShellChangeThread::TShellChangeThread(void __fastcall __closure(*)())
+    @Vcl@Shell@Shellctrls@TShellChangeThread@$bdtr$qqrv @116 ; __fastcall Vcl::Shell::Shellctrls::TShellChangeThread::~TShellChangeThread()
+    @Vcl@Shell@Shellctrls@TShellChangeThread@Execute$qqrv @115 ; __fastcall Vcl::Shell::Shellctrls::TShellChangeThread::Execute()
+    @Vcl@Shell@Shellctrls@TShellChangeThread@SetDirectoryOptions$qqr20System@UnicodeStringoui @114 ; __fastcall Vcl::Shell::Shellctrls::TShellChangeThread::SetDirectoryOptions(System::UnicodeString, bool, unsigned int)
+    @Vcl@Shell@Shellctrls@TShellComboBox@ @150 ; Vcl::Shell::Shellctrls::TShellComboBox::
+    @Vcl@Shell@Shellctrls@TShellFolder@ @168 ; Vcl::Shell::Shellctrls::TShellFolder::
+    @Vcl@Shell@Shellctrls@TShellFolder@$bctr$qqrp33Vcl@Shell@Shellctrls@TShellFolderp11_ITEMIDLIST39System@%DelphiInterface$12IShellFolder% @143 ; Vcl::Shell::Shellctrls::TShellFolder::TShellFolder(Vcl::Shell::Shellctrls::TShellFolder *, _ITEMIDLIST *, System::DelphiInterface<{583}...
+    @Vcl@Shell@Shellctrls@TShellFolder@$bdtr$qqrv @142 ; __fastcall Vcl::Shell::Shellctrls::TShellFolder::~TShellFolder()
+    @Vcl@Shell@Shellctrls@TShellFolder@Capabilities$qqrv @133 ; __fastcall Vcl::Shell::Shellctrls::TShellFolder::Capabilities()
+    @Vcl@Shell@Shellctrls@TShellFolder@DisplayName$qqrv @129 ; __fastcall Vcl::Shell::Shellctrls::TShellFolder::DisplayName()
+    @Vcl@Shell@Shellctrls@TShellFolder@ExecuteDefault$qqrv @126 ; __fastcall Vcl::Shell::Shellctrls::TShellFolder::ExecuteDefault()
+    @Vcl@Shell@Shellctrls@TShellFolder@GetDetailInterface$qqrv @141 ; __fastcall Vcl::Shell::Shellctrls::TShellFolder::GetDetailInterface()
+    @Vcl@Shell@Shellctrls@TShellFolder@GetDetails$qqri @137 ; __fastcall Vcl::Shell::Shellctrls::TShellFolder::GetDetails(int)
+    @Vcl@Shell@Shellctrls@TShellFolder@GetShellDetails$qqrv @140 ; __fastcall Vcl::Shell::Shellctrls::TShellFolder::GetShellDetails()
+    @Vcl@Shell@Shellctrls@TShellFolder@GetShellFolder2$qqrv @139 ; __fastcall Vcl::Shell::Shellctrls::TShellFolder::GetShellFolder2()
+    @Vcl@Shell@Shellctrls@TShellFolder@ImageIndex$qqro @127 ; __fastcall Vcl::Shell::Shellctrls::TShellFolder::ImageIndex(bool)
+    @Vcl@Shell@Shellctrls@TShellFolder@IsFolder$qqrv @131 ; __fastcall Vcl::Shell::Shellctrls::TShellFolder::IsFolder()
+    @Vcl@Shell@Shellctrls@TShellFolder@LoadColumnDetails$qqrp33Vcl@Shell@Shellctrls@TShellFolderuii @138 ; __fastcall Vcl::Shell::Shellctrls::TShellFolder::LoadColumnDetails(Vcl::Shell::Shellctrls::TShellFolder *, unsigned int, int)
+    @Vcl@Shell@Shellctrls@TShellFolder@ParentShellFolder$qqrv @135 ; __fastcall Vcl::Shell::Shellctrls::TShellFolder::ParentShellFolder()
+    @Vcl@Shell@Shellctrls@TShellFolder@PathName$qqrv @130 ; __fastcall Vcl::Shell::Shellctrls::TShellFolder::PathName()
+    @Vcl@Shell@Shellctrls@TShellFolder@Properties$qqrv @134 ; __fastcall Vcl::Shell::Shellctrls::TShellFolder::Properties()
+    @Vcl@Shell@Shellctrls@TShellFolder@Rename$qqrx17System@WideString @128 ; __fastcall Vcl::Shell::Shellctrls::TShellFolder::Rename(const System::WideString)
+    @Vcl@Shell@Shellctrls@TShellFolder@SetDetails$qqrix20System@UnicodeString @136 ; __fastcall Vcl::Shell::Shellctrls::TShellFolder::SetDetails(int, const System::UnicodeString)
+    @Vcl@Shell@Shellctrls@TShellFolder@SubFolders$qqrv @132 ; __fastcall Vcl::Shell::Shellctrls::TShellFolder::SubFolders()
+    @Vcl@Shell@Shellctrls@TShellListView@ @146 ; Vcl::Shell::Shellctrls::TShellListView::
+    @Vcl@Shell@Shellctrls@TShellTreeView@ @154 ; Vcl::Shell::Shellctrls::TShellTreeView::
+    @Vcl@Shell@Shellctrls@initialization$qqrv @12  ; __fastcall Vcl::Shell::Shellctrls::initialization()
+    @Vclshlctrls@@GetPackageInfoTable$qqrv @183 ; Vclshlctrls::__linkproc__ __fastcall GetPackageInfoTable()
+    @Vclshlctrls@@PackageLoad$qqrv @182 ; Vclshlctrls::__linkproc__ __fastcall PackageLoad()
+    @Vclshlctrls@@PackageUnload$qqrv @181 ; Vclshlctrls::__linkproc__ __fastcall PackageUnload()
+    @Vclshlctrls@initialization$qqrv @180 ; __fastcall Vclshlctrls::initialization()
+    Finalize                       @184 ; Finalize
+    Initialize                     @185 ; Initialize

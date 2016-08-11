@@ -1,0 +1,7 @@
+LIBRARY     HTTPSRVR.DLL
+
+EXPORTS
+    GetExtensionVersion            @4   ; GetExtensionVersion
+    HttpExtensionProc              @3   ; HttpExtensionProc
+    TMethodImplementationIntercept @1   ; TMethodImplementationIntercept
+    TerminateExtension             @2   ; TerminateExtension

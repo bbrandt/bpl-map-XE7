@@ -1,0 +1,183 @@
+LIBRARY     APPLET210.BPL
+
+DESCRIPTION 'mbarcadero Control Panel Applet Package'
+
+EXPORTS
+    @$xp$19Ctlpanel@TInitEvent     @52  ; __tpdsc__ Ctlpanel::TInitEvent
+    @$xp$19Ctlpanel@TStopEvent     @49  ; __tpdsc__ Ctlpanel::TStopEvent
+    @$xp$20Ctlpanel@TCountEvent    @51  ; __tpdsc__ Ctlpanel::TCountEvent
+    @$xp$22Ctlpanel@TAppletModule  @44  ; __tpdsc__ Ctlpanel::TAppletModule
+    @$xp$22Ctlpanel@TInquireEvent  @48  ; __tpdsc__ Ctlpanel::TInquireEvent
+    @$xp$23Ctlpanel@TActivateEvent @50  ; __tpdsc__ Ctlpanel::TActivateEvent
+    @$xp$24Ctlpanel@TCPLAppletClass @42  ; __tpdsc__ Ctlpanel::TCPLAppletClass
+    @$xp$25Ctlpanel@EAppletException @53  ; __tpdsc__ Ctlpanel::EAppletException
+    @$xp$25Ctlpanel@TDataModuleClass @41  ; __tpdsc__ Ctlpanel::TDataModuleClass
+    @$xp$25Ctlpanel@TNewInquireEvent @47  ; __tpdsc__ Ctlpanel::TNewInquireEvent
+    @$xp$26Ctlpanel@TStartWParmsEvent @46  ; __tpdsc__ Ctlpanel::TStartWParmsEvent
+    @$xp$26Unit_otapplet@TProjectFile @152 ; __tpdsc__ Unit_otapplet::TProjectFile
+    @$xp$27Ctlpanel@TAppletApplication @38  ; __tpdsc__ Ctlpanel::TAppletApplication
+    @$xp$27Ctlpanel@TAppletModuleClass @43  ; __tpdsc__ Ctlpanel::TAppletModuleClass
+    @$xp$27Unit_otapplet@ECPLException @170 ; __tpdsc__ Unit_otapplet::ECPLException
+    @$xp$30Unit_otapplet@TAppletAppWizard @166 ; __tpdsc__ Unit_otapplet::TAppletAppWizard
+    @$xp$31Unit_otapplet@TAppletModuleFile @148 ; __tpdsc__ Unit_otapplet::TAppletModuleFile
+    @$xp$32Ctlpanel@TOnAppletExceptionEvent @40  ; __tpdsc__ Ctlpanel::TOnAppletExceptionEvent
+    @$xp$33Unit_otapplet@TAppletModuleWizard @162 ; __tpdsc__ Unit_otapplet::TAppletModuleWizard
+    @$xp$33Unit_otapplet@TCppAppletAppWizard @164 ; __tpdsc__ Unit_otapplet::TCppAppletAppWizard
+    @$xp$33Unit_otapplet@TCustomAppletModule @168 ; __tpdsc__ Unit_otapplet::TCustomAppletModule
+    @$xp$34Unit_otapplet@TAppletModuleCreator @154 ; __tpdsc__ Unit_otapplet::TAppletModuleCreator
+    @$xp$35Unit_otapplet@TAppletModuleFileBase @150 ; __tpdsc__ Unit_otapplet::TAppletModuleFileBase
+    @$xp$35Unit_otapplet@TAppletModuleIntfFile @146 ; __tpdsc__ Unit_otapplet::TAppletModuleIntfFile
+    @$xp$35Unit_otapplet@TAppletProjectCreator @158 ; __tpdsc__ Unit_otapplet::TAppletProjectCreator
+    @$xp$36Unit_otapplet@TCppAppletModuleWizard @160 ; __tpdsc__ Unit_otapplet::TCppAppletModuleWizard
+    @$xp$38Unit_otapplet@TCppAppletProjectCreator @156 ; __tpdsc__ Unit_otapplet::TCppAppletProjectCreator
+    @$xp$41System@%TArray__1$20System@UnicodeString% @145 ; __tpdsc__ System::TArray__1<System::UnicodeString>
+    @Applet@@GetPackageInfoTable$qqrv @175 ; Applet::__linkproc__ __fastcall GetPackageInfoTable()
+    @Applet@@PackageLoad$qqrv      @174 ; Applet::__linkproc__ __fastcall PackageLoad()
+    @Applet@@PackageUnload$qqrv    @173 ; Applet::__linkproc__ __fastcall PackageUnload()
+    @Applet@initialization$qqrv    @172 ; __fastcall Applet::initialization()
+    @Ctlconsts@Finalization$qqrv   @2   ; __fastcall Ctlconsts::Finalization()
+    @Ctlconsts@_sInvalidClassReference @3   ; Ctlconsts::_sInvalidClassReference
+    @Ctlconsts@initialization$qqrv @1   ; __fastcall Ctlconsts::initialization()
+    @Ctlpanel@Application          @37  ; Ctlpanel::Application
+    @Ctlpanel@CPlApplet$qqsuiuiii  @23  ; __stdcall Ctlpanel::CPlApplet(unsigned int, unsigned int, int, int)
+    @Ctlpanel@EAppletException@    @54  ; Ctlpanel::EAppletException::
+    @Ctlpanel@Finalization$qqrv    @5   ; __fastcall Ctlpanel::Finalization()
+    @Ctlpanel@TAppletApplication@  @39  ; Ctlpanel::TAppletApplication::
+    @Ctlpanel@TAppletApplication@$bctr$qqrp25System@Classes@TComponent @36  ; __fastcall Ctlpanel::TAppletApplication::TAppletApplication(System::Classes::TComponent *)
+    @Ctlpanel@TAppletApplication@$bdtr$qqrv @34  ; __fastcall Ctlpanel::TAppletApplication::~TAppletApplication()
+    @Ctlpanel@TAppletApplication@CreateForm$qqrp17System@TMetaClasspv @35  ; __fastcall Ctlpanel::TAppletApplication::CreateForm(System::TMetaClass *, void *)
+    @Ctlpanel@TAppletApplication@DoCount$qqrri @33  ; __fastcall Ctlpanel::TAppletApplication::DoCount(int&)
+    @Ctlpanel@TAppletApplication@DoExit$qqrv @32  ; __fastcall Ctlpanel::TAppletApplication::DoExit()
+    @Ctlpanel@TAppletApplication@DoHandleException$qqrp14System@TObjectp25System@Sysutils@Exception @31  ; __fastcall Ctlpanel::TAppletApplication::DoHandleException(System::TObject *, System::Sysutils::Exception *)
+    @Ctlpanel@TAppletApplication@DoInit$qqrro @30  ; __fastcall Ctlpanel::TAppletApplication::DoInit(bool&)
+    @Ctlpanel@TAppletApplication@DoSetup$qqrv @29  ; __fastcall Ctlpanel::TAppletApplication::DoSetup()
+    @Ctlpanel@TAppletApplication@GetModuleCount$qqrv @28  ; __fastcall Ctlpanel::TAppletApplication::GetModuleCount()
+    @Ctlpanel@TAppletApplication@GetModules$qqri @27  ; __fastcall Ctlpanel::TAppletApplication::GetModules(int)
+    @Ctlpanel@TAppletApplication@HandleException$qqrp14System@TObject @25  ; __fastcall Ctlpanel::TAppletApplication::HandleException(System::TObject *)
+    @Ctlpanel@TAppletApplication@Initialize$qqrv @26  ; __fastcall Ctlpanel::TAppletApplication::Initialize()
+    @Ctlpanel@TAppletApplication@Run$qqrv @24  ; __fastcall Ctlpanel::TAppletApplication::Run()
+    @Ctlpanel@TAppletApplication@SetModuleCount$qqrxi @7   ; __fastcall Ctlpanel::TAppletApplication::SetModuleCount(const int)
+    @Ctlpanel@TAppletApplication@SetModules$qqrixp22Ctlpanel@TAppletModule @6   ; __fastcall Ctlpanel::TAppletApplication::SetModules(int, Ctlpanel::TAppletModule * const)
+    @Ctlpanel@TAppletModule@       @45  ; Ctlpanel::TAppletModule::
+    @Ctlpanel@TAppletModule@$bctr$qqrp25System@Classes@TComponent @22  ; __fastcall Ctlpanel::TAppletModule::TAppletModule(System::Classes::TComponent *)
+    @Ctlpanel@TAppletModule@$bdtr$qqrv @21  ; __fastcall Ctlpanel::TAppletModule::~TAppletModule()
+    @Ctlpanel@TAppletModule@DoActivate$qqri @19  ; __fastcall Ctlpanel::TAppletModule::DoActivate(int)
+    @Ctlpanel@TAppletModule@DoInquire$qqrr10tagCPLINFO @18  ; __fastcall Ctlpanel::TAppletModule::DoInquire(tagCPLINFO&)
+    @Ctlpanel@TAppletModule@DoNewInquire$qqrr14tagNEWCPLINFOW @17  ; __fastcall Ctlpanel::TAppletModule::DoNewInquire(tagNEWCPLINFOW&)
+    @Ctlpanel@TAppletModule@DoStartWParms$qqr20System@UnicodeString @16  ; __fastcall Ctlpanel::TAppletModule::DoStartWParms(System::UnicodeString)
+    @Ctlpanel@TAppletModule@DoStop$qqri @15  ; __fastcall Ctlpanel::TAppletModule::DoStop(int)
+    @Ctlpanel@TAppletModule@GetCaption$qqrv @20  ; __fastcall Ctlpanel::TAppletModule::GetCaption()
+    @Ctlpanel@TAppletModule@SetAppletIcon$qqrxp18Vcl@Graphics@TIcon @14  ; __fastcall Ctlpanel::TAppletModule::SetAppletIcon(Vcl::Graphics::TIcon * const)
+    @Ctlpanel@TAppletModule@SetCaption$qqrx20System@UnicodeString @13  ; __fastcall Ctlpanel::TAppletModule::SetCaption(const System::UnicodeString)
+    @Ctlpanel@TAppletModule@SetData$qqrxi @12  ; __fastcall Ctlpanel::TAppletModule::SetData(const int)
+    @Ctlpanel@TAppletModule@SetHelp$qqrx20System@UnicodeString @11  ; __fastcall Ctlpanel::TAppletModule::SetHelp(const System::UnicodeString)
+    @Ctlpanel@TAppletModule@SetResidIcon$qqrxi @10  ; __fastcall Ctlpanel::TAppletModule::SetResidIcon(const int)
+    @Ctlpanel@TAppletModule@SetResidInfo$qqrxi @9   ; __fastcall Ctlpanel::TAppletModule::SetResidInfo(const int)
+    @Ctlpanel@TAppletModule@SetResidName$qqrxi @8   ; __fastcall Ctlpanel::TAppletModule::SetResidName(const int)
+    @Ctlpanel@initialization$qqrv  @4   ; __fastcall Ctlpanel::initialization()
+    @GetPackageInfoTable           @178 ; GetPackageInfoTable
+    @Unit_otapplet@ECPLException@  @171 ; Unit_otapplet::ECPLException::
+    @Unit_otapplet@Finalization$qqrv @56  ; __fastcall Unit_otapplet::Finalization()
+    @Unit_otapplet@Register$qqrv   @144 ; __fastcall Unit_otapplet::Register()
+    @Unit_otapplet@TAppletAppWizard@ @167 ; Unit_otapplet::TAppletAppWizard::
+    @Unit_otapplet@TAppletAppWizard@Execute$qqrv @143 ; __fastcall Unit_otapplet::TAppletAppWizard::Execute()
+    @Unit_otapplet@TAppletAppWizard@GetAuthor$qqrv @142 ; __fastcall Unit_otapplet::TAppletAppWizard::GetAuthor()
+    @Unit_otapplet@TAppletAppWizard@GetComment$qqrv @141 ; __fastcall Unit_otapplet::TAppletAppWizard::GetComment()
+    @Unit_otapplet@TAppletAppWizard@GetDesigner$qqrv @140 ; __fastcall Unit_otapplet::TAppletAppWizard::GetDesigner()
+    @Unit_otapplet@TAppletAppWizard@GetFrameworkTypes$qqrv @139 ; __fastcall Unit_otapplet::TAppletAppWizard::GetFrameworkTypes()
+    @Unit_otapplet@TAppletAppWizard@GetGalleryCategory$qqrv @138 ; __fastcall Unit_otapplet::TAppletAppWizard::GetGalleryCategory()
+    @Unit_otapplet@TAppletAppWizard@GetGlyph$qqrv @137 ; __fastcall Unit_otapplet::TAppletAppWizard::GetGlyph()
+    @Unit_otapplet@TAppletAppWizard@GetIDString$qqrv @136 ; __fastcall Unit_otapplet::TAppletAppWizard::GetIDString()
+    @Unit_otapplet@TAppletAppWizard@GetName$qqrv @135 ; __fastcall Unit_otapplet::TAppletAppWizard::GetName()
+    @Unit_otapplet@TAppletAppWizard@GetPage$qqrv @134 ; __fastcall Unit_otapplet::TAppletAppWizard::GetPage()
+    @Unit_otapplet@TAppletAppWizard@GetPersonality$qqrv @133 ; __fastcall Unit_otapplet::TAppletAppWizard::GetPersonality()
+    @Unit_otapplet@TAppletAppWizard@GetPlatforms$qqrv @132 ; __fastcall Unit_otapplet::TAppletAppWizard::GetPlatforms()
+    @Unit_otapplet@TAppletAppWizard@GetState$qqrv @131 ; __fastcall Unit_otapplet::TAppletAppWizard::GetState()
+    @Unit_otapplet@TAppletModuleCreator@ @155 ; Unit_otapplet::TAppletModuleCreator::
+    @Unit_otapplet@TAppletModuleCreator@$bctr$qqr20System@UnicodeString @94  ; __fastcall Unit_otapplet::TAppletModuleCreator::TAppletModuleCreator(System::UnicodeString)
+    @Unit_otapplet@TAppletModuleCreator@FormCreated$qqrx50System@%DelphiInterface$23Toolsapi@IOTAFormEditor% @93  ; Unit_otapplet::TAppletModuleCreator::FormCreated(const System::DelphiInterface<{583}...
+    @Unit_otapplet@TAppletModuleCreator@GetAncestorName$qqrv @92  ; __fastcall Unit_otapplet::TAppletModuleCreator::GetAncestorName()
+    @Unit_otapplet@TAppletModuleCreator@GetCreatorType$qqrv @91  ; __fastcall Unit_otapplet::TAppletModuleCreator::GetCreatorType()
+    @Unit_otapplet@TAppletModuleCreator@GetExisting$qqrv @90  ; __fastcall Unit_otapplet::TAppletModuleCreator::GetExisting()
+    @Unit_otapplet@TAppletModuleCreator@GetFileSystem$qqrv @89  ; __fastcall Unit_otapplet::TAppletModuleCreator::GetFileSystem()
+    @Unit_otapplet@TAppletModuleCreator@GetFormName$qqrv @88  ; __fastcall Unit_otapplet::TAppletModuleCreator::GetFormName()
+    @Unit_otapplet@TAppletModuleCreator@GetImplFileName$qqrv @87  ; __fastcall Unit_otapplet::TAppletModuleCreator::GetImplFileName()
+    @Unit_otapplet@TAppletModuleCreator@GetIntfFileName$qqrv @86  ; __fastcall Unit_otapplet::TAppletModuleCreator::GetIntfFileName()
+    @Unit_otapplet@TAppletModuleCreator@GetMainForm$qqrv @85  ; __fastcall Unit_otapplet::TAppletModuleCreator::GetMainForm()
+    @Unit_otapplet@TAppletModuleCreator@GetOwner$qqrv @84  ; __fastcall Unit_otapplet::TAppletModuleCreator::GetOwner()
+    @Unit_otapplet@TAppletModuleCreator@GetShowForm$qqrv @83  ; __fastcall Unit_otapplet::TAppletModuleCreator::GetShowForm()
+    @Unit_otapplet@TAppletModuleCreator@GetShowSource$qqrv @82  ; __fastcall Unit_otapplet::TAppletModuleCreator::GetShowSource()
+    @Unit_otapplet@TAppletModuleCreator@GetUnnamed$qqrv @81  ; __fastcall Unit_otapplet::TAppletModuleCreator::GetUnnamed()
+    @Unit_otapplet@TAppletModuleCreator@NewFormFile$qqrx20System@UnicodeStringt1 @80  ; __fastcall Unit_otapplet::TAppletModuleCreator::NewFormFile(const System::UnicodeString, const System::UnicodeString)
+    @Unit_otapplet@TAppletModuleCreator@NewImplSource$qqrx20System@UnicodeStringt1t1 @79  ; __fastcall Unit_otapplet::TAppletModuleCreator::NewImplSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Unit_otapplet@TAppletModuleCreator@NewIntfSource$qqrx20System@UnicodeStringt1t1 @78  ; __fastcall Unit_otapplet::TAppletModuleCreator::NewIntfSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Unit_otapplet@TAppletModuleFile@ @149 ; Unit_otapplet::TAppletModuleFile::
+    @Unit_otapplet@TAppletModuleFile@GetAge$qqrv @71  ; __fastcall Unit_otapplet::TAppletModuleFile::GetAge()
+    @Unit_otapplet@TAppletModuleFile@GetSource$qqrv @70  ; __fastcall Unit_otapplet::TAppletModuleFile::GetSource()
+    @Unit_otapplet@TAppletModuleFileBase@ @151 ; Unit_otapplet::TAppletModuleFileBase::
+    @Unit_otapplet@TAppletModuleFileBase@$bctr$qqrx20System@UnicodeStringt1t1t1 @69  ; __fastcall Unit_otapplet::TAppletModuleFileBase::TAppletModuleFileBase(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Unit_otapplet@TAppletModuleIntfFile@ @147 ; Unit_otapplet::TAppletModuleIntfFile::
+    @Unit_otapplet@TAppletModuleIntfFile@GetAge$qqrv @73  ; __fastcall Unit_otapplet::TAppletModuleIntfFile::GetAge()
+    @Unit_otapplet@TAppletModuleIntfFile@GetSource$qqrv @72  ; __fastcall Unit_otapplet::TAppletModuleIntfFile::GetSource()
+    @Unit_otapplet@TAppletModuleWizard@ @163 ; Unit_otapplet::TAppletModuleWizard::
+    @Unit_otapplet@TAppletModuleWizard@Execute$qqrv @109 ; __fastcall Unit_otapplet::TAppletModuleWizard::Execute()
+    @Unit_otapplet@TAppletModuleWizard@GetAuthor$qqrv @108 ; __fastcall Unit_otapplet::TAppletModuleWizard::GetAuthor()
+    @Unit_otapplet@TAppletModuleWizard@GetComment$qqrv @107 ; __fastcall Unit_otapplet::TAppletModuleWizard::GetComment()
+    @Unit_otapplet@TAppletModuleWizard@GetDesigner$qqrv @106 ; __fastcall Unit_otapplet::TAppletModuleWizard::GetDesigner()
+    @Unit_otapplet@TAppletModuleWizard@GetFrameworkTypes$qqrv @105 ; __fastcall Unit_otapplet::TAppletModuleWizard::GetFrameworkTypes()
+    @Unit_otapplet@TAppletModuleWizard@GetGalleryCategory$qqrv @104 ; __fastcall Unit_otapplet::TAppletModuleWizard::GetGalleryCategory()
+    @Unit_otapplet@TAppletModuleWizard@GetGlyph$qqrv @103 ; __fastcall Unit_otapplet::TAppletModuleWizard::GetGlyph()
+    @Unit_otapplet@TAppletModuleWizard@GetIDString$qqrv @102 ; __fastcall Unit_otapplet::TAppletModuleWizard::GetIDString()
+    @Unit_otapplet@TAppletModuleWizard@GetName$qqrv @101 ; __fastcall Unit_otapplet::TAppletModuleWizard::GetName()
+    @Unit_otapplet@TAppletModuleWizard@GetPage$qqrv @100 ; __fastcall Unit_otapplet::TAppletModuleWizard::GetPage()
+    @Unit_otapplet@TAppletModuleWizard@GetPersonality$qqrv @99  ; __fastcall Unit_otapplet::TAppletModuleWizard::GetPersonality()
+    @Unit_otapplet@TAppletModuleWizard@GetPlatforms$qqrv @98  ; __fastcall Unit_otapplet::TAppletModuleWizard::GetPlatforms()
+    @Unit_otapplet@TAppletModuleWizard@GetProjectOutputExt$qqr47System@%DelphiInterface$20Toolsapi@IOTAProject% @97  ; Unit_otapplet::TAppletModuleWizard::GetProjectOutputExt(System::DelphiInterface<{583}...
+    @Unit_otapplet@TAppletModuleWizard@GetState$qqrv @96  ; __fastcall Unit_otapplet::TAppletModuleWizard::GetState()
+    @Unit_otapplet@TAppletModuleWizard@IsVisible$qqr47System@%DelphiInterface$20Toolsapi@IOTAProject% @95  ; Unit_otapplet::TAppletModuleWizard::IsVisible(System::DelphiInterface<{583}...
+    @Unit_otapplet@TAppletProjectCreator@ @159 ; Unit_otapplet::TAppletProjectCreator::
+    @Unit_otapplet@TAppletProjectCreator@GetCreatorType$qqrv @130 ; __fastcall Unit_otapplet::TAppletProjectCreator::GetCreatorType()
+    @Unit_otapplet@TAppletProjectCreator@GetExisting$qqrv @129 ; __fastcall Unit_otapplet::TAppletProjectCreator::GetExisting()
+    @Unit_otapplet@TAppletProjectCreator@GetFileName$qqrv @128 ; __fastcall Unit_otapplet::TAppletProjectCreator::GetFileName()
+    @Unit_otapplet@TAppletProjectCreator@GetFileSystem$qqrv @127 ; __fastcall Unit_otapplet::TAppletProjectCreator::GetFileSystem()
+    @Unit_otapplet@TAppletProjectCreator@GetFrameworkType$qqrv @126 ; __fastcall Unit_otapplet::TAppletProjectCreator::GetFrameworkType()
+    @Unit_otapplet@TAppletProjectCreator@GetOptionFileName$qqrv @125 ; __fastcall Unit_otapplet::TAppletProjectCreator::GetOptionFileName()
+    @Unit_otapplet@TAppletProjectCreator@GetOwner$qqrv @124 ; __fastcall Unit_otapplet::TAppletProjectCreator::GetOwner()
+    @Unit_otapplet@TAppletProjectCreator@GetPlatforms$qqrv @123 ; __fastcall Unit_otapplet::TAppletProjectCreator::GetPlatforms()
+    @Unit_otapplet@TAppletProjectCreator@GetPreferredPlatform$qqrv @122 ; __fastcall Unit_otapplet::TAppletProjectCreator::GetPreferredPlatform()
+    @Unit_otapplet@TAppletProjectCreator@GetProjectPersonality$qqrv @120 ; __fastcall Unit_otapplet::TAppletProjectCreator::GetProjectPersonality()
+    @Unit_otapplet@TAppletProjectCreator@GetShowSource$qqrv @119 ; __fastcall Unit_otapplet::TAppletProjectCreator::GetShowSource()
+    @Unit_otapplet@TAppletProjectCreator@GetUnnamed$qqrv @118 ; __fastcall Unit_otapplet::TAppletProjectCreator::GetUnnamed()
+    @Unit_otapplet@TAppletProjectCreator@NewDefaultModule$qqrv @117 ; __fastcall Unit_otapplet::TAppletProjectCreator::NewDefaultModule()
+    @Unit_otapplet@TAppletProjectCreator@NewDefaultProjectModule$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject% @116 ; Unit_otapplet::TAppletProjectCreator::NewDefaultProjectModule(const System::DelphiInterface<{583}...
+    @Unit_otapplet@TAppletProjectCreator@NewOptionSource$qqrx20System@UnicodeString @115 ; __fastcall Unit_otapplet::TAppletProjectCreator::NewOptionSource(const System::UnicodeString)
+    @Unit_otapplet@TAppletProjectCreator@NewProjectResource$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject% @114 ; Unit_otapplet::TAppletProjectCreator::NewProjectResource(const System::DelphiInterface<{583}...
+    @Unit_otapplet@TAppletProjectCreator@NewProjectSource$qqrx20System@UnicodeString @113 ; __fastcall Unit_otapplet::TAppletProjectCreator::NewProjectSource(const System::UnicodeString)
+    @Unit_otapplet@TAppletProjectCreator@SetInitialOptions$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject% @121 ; Unit_otapplet::TAppletProjectCreator::SetInitialOptions(const System::DelphiInterface<{583}...
+    @Unit_otapplet@TCppAppletAppWizard@ @165 ; Unit_otapplet::TCppAppletAppWizard::
+    @Unit_otapplet@TCppAppletAppWizard@Execute$qqrv @66  ; __fastcall Unit_otapplet::TCppAppletAppWizard::Execute()
+    @Unit_otapplet@TCppAppletAppWizard@GetGalleryCategory$qqrv @67  ; __fastcall Unit_otapplet::TCppAppletAppWizard::GetGalleryCategory()
+    @Unit_otapplet@TCppAppletAppWizard@GetIDString$qqrv @68  ; __fastcall Unit_otapplet::TCppAppletAppWizard::GetIDString()
+    @Unit_otapplet@TCppAppletAppWizard@GetName$qqrv @65  ; __fastcall Unit_otapplet::TCppAppletAppWizard::GetName()
+    @Unit_otapplet@TCppAppletAppWizard@GetPersonality$qqrv @64  ; __fastcall Unit_otapplet::TCppAppletAppWizard::GetPersonality()
+    @Unit_otapplet@TCppAppletModuleWizard@ @161 ; Unit_otapplet::TCppAppletModuleWizard::
+    @Unit_otapplet@TCppAppletModuleWizard@GetGalleryCategory$qqrv @61  ; __fastcall Unit_otapplet::TCppAppletModuleWizard::GetGalleryCategory()
+    @Unit_otapplet@TCppAppletModuleWizard@GetIDString$qqrv @63  ; __fastcall Unit_otapplet::TCppAppletModuleWizard::GetIDString()
+    @Unit_otapplet@TCppAppletModuleWizard@GetName$qqrv @62  ; __fastcall Unit_otapplet::TCppAppletModuleWizard::GetName()
+    @Unit_otapplet@TCppAppletModuleWizard@GetPersonality$qqrv @60  ; __fastcall Unit_otapplet::TCppAppletModuleWizard::GetPersonality()
+    @Unit_otapplet@TCppAppletModuleWizard@IsVisible$qqr47System@%DelphiInterface$20Toolsapi@IOTAProject% @59  ; Unit_otapplet::TCppAppletModuleWizard::IsVisible(System::DelphiInterface<{583}...
+    @Unit_otapplet@TCppAppletProjectCreator@ @157 ; Unit_otapplet::TCppAppletProjectCreator::
+    @Unit_otapplet@TCppAppletProjectCreator@GetCreatorType$qqrv @58  ; __fastcall Unit_otapplet::TCppAppletProjectCreator::GetCreatorType()
+    @Unit_otapplet@TCppAppletProjectCreator@GetProjectPersonality$qqrv @57  ; __fastcall Unit_otapplet::TCppAppletProjectCreator::GetProjectPersonality()
+    @Unit_otapplet@TCustomAppletModule@ @169 ; Unit_otapplet::TCustomAppletModule::
+    @Unit_otapplet@TCustomAppletModule@ExecuteVerb$qqri @77  ; __fastcall Unit_otapplet::TCustomAppletModule::ExecuteVerb(int)
+    @Unit_otapplet@TCustomAppletModule@GetVerb$qqri @76  ; __fastcall Unit_otapplet::TCustomAppletModule::GetVerb(int)
+    @Unit_otapplet@TCustomAppletModule@GetVerbCount$qqrv @75  ; __fastcall Unit_otapplet::TCustomAppletModule::GetVerbCount()
+    @Unit_otapplet@TCustomAppletModule@ValidateComponent$qqrp25System@Classes@TComponent @74  ; __fastcall Unit_otapplet::TCustomAppletModule::ValidateComponent(System::Classes::TComponent *)
+    @Unit_otapplet@TProjectFile@   @153 ; Unit_otapplet::TProjectFile::
+    @Unit_otapplet@TProjectFile@$bctr$qqr20System@UnicodeStringt1 @112 ; __fastcall Unit_otapplet::TProjectFile::TProjectFile(System::UnicodeString, System::UnicodeString)
+    @Unit_otapplet@TProjectFile@GetAge$qqrv @111 ; __fastcall Unit_otapplet::TProjectFile::GetAge()
+    @Unit_otapplet@TProjectFile@GetSource$qqrv @110 ; __fastcall Unit_otapplet::TProjectFile::GetSource()
+    @Unit_otapplet@initialization$qqrv @55  ; __fastcall Unit_otapplet::initialization()
+    Finalize                       @176 ; Finalize
+    Initialize                     @177 ; Initialize

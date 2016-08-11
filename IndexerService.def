@@ -1,0 +1,30 @@
+LIBRARY     INDEXERSERVICE.DLL
+
+EXPORTS
+    COMPILER_CloseProject          @2   ; COMPILER_CloseProject
+    COMPILER_CloseProjectGroup     @3   ; COMPILER_CloseProjectGroup
+    COMPILER_FileAdded             @4   ; COMPILER_FileAdded
+    COMPILER_FileModified          @5   ; COMPILER_FileModified
+    COMPILER_FileRemoved           @6   ; COMPILER_FileRemoved
+    COMPILER_FileRenamed           @1   ; COMPILER_FileRenamed
+    COMPILER_GetCompilerInfo       @7   ; COMPILER_GetCompilerInfo
+    COMPILER_InitCppCallbacks      @8   ; COMPILER_InitCppCallbacks
+    COMPILER_OpenProject           @9   ; COMPILER_OpenProject
+    COMPILER_OpenProjectGroup      @10  ; COMPILER_OpenProjectGroup
+    COMPILER_ReindexProject        @11  ; COMPILER_ReindexProject
+    COMPILER_RenameProject         @12  ; COMPILER_RenameProject
+    DATA_FindByPattern             @13  ; DATA_FindByPattern
+    DATA_FindDefinition            @14  ; DATA_FindDefinition
+    DATA_FindHeaderDependency      @15  ; DATA_FindHeaderDependency
+    DATA_FindReferences            @16  ; DATA_FindReferences
+    DATA_FindTypeDeclaration       @17  ; DATA_FindTypeDeclaration
+    DATA_FindTypeHierarchy         @18  ; DATA_FindTypeHierarchy
+    DATA_GetFQN                    @19  ; DATA_GetFQN
+    DATA_GetScopeFQN               @20  ; DATA_GetScopeFQN
+    DATA_VisitDecls                @21  ; DATA_VisitDecls
+    DATA_VisitFiles                @22  ; DATA_VisitFiles
+    INFO_GetFileStatus             @23  ; INFO_GetFileStatus
+    INFO_IsFileIndexed             @24  ; INFO_IsFileIndexed
+    INFO_IsKnownLocation           @25  ; INFO_IsKnownLocation
+    NOTIFY_Subscribe               @26  ; NOTIFY_Subscribe
+    NOTIFY_Unsubscribe             @27  ; NOTIFY_Unsubscribe

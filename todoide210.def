@@ -1,0 +1,377 @@
+LIBRARY     TODOIDE210.BPL
+
+DESCRIPTION 'mbarcadero IDE ToDo Manager'
+
+EXPORTS
+    @$xp$21Idetodolist@TToDoList   @275 ; __tpdsc__ Idetodolist::TToDoList
+    @$xp$21Idetodotable@TColType   @84  ; __tpdsc__ Idetodotable::TColType
+    @$xp$22Idetodomgr@TToDoSymbol  @228 ; __tpdsc__ Idetodomgr::TToDoSymbol
+    @$xp$22Idetodotable@THTMLFont  @83  ; __tpdsc__ Idetodotable::THTMLFont
+    @$xp$23Idetodolist@TSortPivots @277 ; __tpdsc__ Idetodolist::TSortPivots
+    @$xp$23Idetodomgr@TToDoComment @227 ; __tpdsc__ Idetodomgr::TToDoComment
+    @$xp$23Idetodotable@THTMLTable @78  ; __tpdsc__ Idetodotable::THTMLTable
+    @$xp$24Idetodocmd@TToDoCommands @364 ; __tpdsc__ Idetodocmd::TToDoCommands
+    @$xp$24Idetodotable@THTMLColumn @81  ; __tpdsc__ Idetodotable::THTMLColumn
+    @$xp$24Idetodotable@TVAlignment @85  ; __tpdsc__ Idetodotable::TVAlignment
+    @$xp$25Idetodofilter@TFilterType @314 ; __tpdsc__ Idetodofilter::TFilterType
+    @$xp$25Idetodotable@THTMLColumns @80  ; __tpdsc__ Idetodotable::THTMLColumns
+    @$xp$26Idetodolist@Idetodolist__1 @279 ; __tpdsc__ Idetodolist::Idetodolist__1
+    @$xp$26Idetodomgr@TSourceToDoItem @225 ; __tpdsc__ Idetodomgr::TSourceToDoItem
+    @$xp$27Idetodoform@TToDoListWindow @353 ; __tpdsc__ Idetodoform::TToDoListWindow
+    @$xp$27Idetodomgr@TProjectToDoItem @223 ; __tpdsc__ Idetodomgr::TProjectToDoItem
+    @$xp$27Idetodoupdaters@TToDoModule @131 ; __tpdsc__ Idetodoupdaters::TToDoModule
+    @$xp$28Idetodofilter@TToDoFilterDlg @312 ; __tpdsc__ Idetodofilter::TToDoFilterDlg
+    @$xp$28Idetodoutils@TCommentScanner @18  ; __tpdsc__ Idetodoutils::TCommentScanner
+    @$xp$28Idetodoutils@TToDoFilterList @14  ; __tpdsc__ Idetodoutils::TToDoFilterList
+    @$xp$29Idetodomgr@TSourceToDoManager @221 ; __tpdsc__ Idetodomgr::TSourceToDoManager
+    @$xp$29Idetodotable@TTableOptionsDlg @76  ; __tpdsc__ Idetodotable::TTableOptionsDlg
+    @$xp$30Idetodoadddlg@TAddToDoItemForm @148 ; __tpdsc__ Idetodoadddlg::TAddToDoItemForm
+    @$xp$30Idetodomgr@TProjectToDoManager @219 ; __tpdsc__ Idetodomgr::TProjectToDoManager
+    @$xp$32Idetodoupdaters@TToDoFileCreator @133 ; __tpdsc__ Idetodoupdaters::TToDoFileCreator
+    @$xp$32Idetodoupdaters@TToDoFileUpdater @135 ; __tpdsc__ Idetodoupdaters::TToDoFileUpdater
+    @$xp$32Idetodoutils@TToDoFilterListItem @16  ; __tpdsc__ Idetodoutils::TToDoFilterListItem
+    @$xp$33Idetodomgr@TProjectManagerCreator @217 ; __tpdsc__ Idetodomgr::TProjectManagerCreator
+    @$xp$35Idetodoupdaters@TToDoCreateUpdaters @137 ; __tpdsc__ Idetodoupdaters::TToDoCreateUpdaters
+    @$xp$35Idetodoutils@TSortableInterfaceList @20  ; __tpdsc__ Idetodoutils::TSortableInterfaceList
+    @$xp$38Idetodoutils@TInterfaceListSortCompare @22  ; __tpdsc__ Idetodoutils::TInterfaceListSortCompare
+    @GetPackageInfoTable           @372 ; GetPackageInfoTable
+    @Idetodoadddlg@AddToDoItemForm @147 ; Idetodoadddlg::AddToDoItemForm
+    @Idetodoadddlg@Finalization$qqrv @140 ; __fastcall Idetodoadddlg::Finalization()
+    @Idetodoadddlg@TAddToDoItemForm@ @149 ; Idetodoadddlg::TAddToDoItemForm::
+    @Idetodoadddlg@TAddToDoItemForm@Add$qqrv @144 ; __fastcall Idetodoadddlg::TAddToDoItemForm::Add()
+    @Idetodoadddlg@TAddToDoItemForm@Edit$qqrp26Idetodomgr@TSourceToDoItem @143 ; __fastcall Idetodoadddlg::TAddToDoItemForm::Edit(Idetodomgr::TSourceToDoItem *)
+    @Idetodoadddlg@TAddToDoItemForm@FormShow$qqrp14System@TObject @142 ; __fastcall Idetodoadddlg::TAddToDoItemForm::FormShow(System::TObject *)
+    @Idetodoadddlg@TAddToDoItemForm@HelpButtonClick$qqrp14System@TObject @141 ; __fastcall Idetodoadddlg::TAddToDoItemForm::HelpButtonClick(System::TObject *)
+    @Idetodoadddlg@TAddToDoItemForm@MemoKeyPress$qqrp14System@TObjectrb @145 ; __fastcall Idetodoadddlg::TAddToDoItemForm::MemoKeyPress(System::TObject *, wchar_t&)
+    @Idetodoadddlg@TAddToDoItemForm@OKButtonClick$qqrp14System@TObject @146 ; __fastcall Idetodoadddlg::TAddToDoItemForm::OKButtonClick(System::TObject *)
+    @Idetodoadddlg@initialization$qqrv @139 ; __fastcall Idetodoadddlg::initialization()
+    @Idetodocmd@Finalization$qqrv  @356 ; __fastcall Idetodocmd::Finalization()
+    @Idetodocmd@IDERegister$qqrv   @362 ; __fastcall Idetodocmd::IDERegister()
+    @Idetodocmd@TToDoCommands@     @365 ; Idetodocmd::TToDoCommands::
+    @Idetodocmd@TToDoCommands@DataModuleDestroy$qqrp14System@TObject @357 ; __fastcall Idetodocmd::TToDoCommands::DataModuleDestroy(System::TObject *)
+    @Idetodocmd@TToDoCommands@EditAddToDoItemCommandExecute$qqrp14System@TObject @360 ; __fastcall Idetodocmd::TToDoCommands::EditAddToDoItemCommandExecute(System::TObject *)
+    @Idetodocmd@TToDoCommands@EditAddToDoItemCommandUpdate$qqrp14System@TObject @361 ; __fastcall Idetodocmd::TToDoCommands::EditAddToDoItemCommandUpdate(System::TObject *)
+    @Idetodocmd@TToDoCommands@ProductStartup$qqrp14System@TObject @363 ; __fastcall Idetodocmd::TToDoCommands::ProductStartup(System::TObject *)
+    @Idetodocmd@TToDoCommands@ToDoCommandsCreate$qqrp14System@TObject @358 ; __fastcall Idetodocmd::TToDoCommands::ToDoCommandsCreate(System::TObject *)
+    @Idetodocmd@TToDoCommands@ViewToDoListCommandExecute$qqrp14System@TObject @359 ; __fastcall Idetodocmd::TToDoCommands::ViewToDoListCommandExecute(System::TObject *)
+    @Idetodocmd@initialization$qqrv @355 ; __fastcall Idetodocmd::initialization()
+    @Idetodofilter@Finalization$qqrv @304 ; __fastcall Idetodofilter::Finalization()
+    @Idetodofilter@TToDoFilterDlg@ @313 ; Idetodofilter::TToDoFilterDlg::
+    @Idetodofilter@TToDoFilterDlg@CheckListClick$qqrp14System@TObject @310 ; __fastcall Idetodofilter::TToDoFilterDlg::CheckListClick(System::TObject *)
+    @Idetodofilter@TToDoFilterDlg@EditFilter$qqr25Idetodofilter@TFilterType @311 ; __fastcall Idetodofilter::TToDoFilterDlg::EditFilter(Idetodofilter::TFilterType)
+    @Idetodofilter@TToDoFilterDlg@FormShow$qqrp14System@TObject @308 ; __fastcall Idetodofilter::TToDoFilterDlg::FormShow(System::TObject *)
+    @Idetodofilter@TToDoFilterDlg@UpdateButtons$qqrv @309 ; __fastcall Idetodofilter::TToDoFilterDlg::UpdateButtons()
+    @Idetodofilter@TToDoFilterDlg@btnAddClick$qqrp14System@TObject @307 ; __fastcall Idetodofilter::TToDoFilterDlg::btnAddClick(System::TObject *)
+    @Idetodofilter@TToDoFilterDlg@btnHelpClick$qqrp14System@TObject @305 ; __fastcall Idetodofilter::TToDoFilterDlg::btnHelpClick(System::TObject *)
+    @Idetodofilter@TToDoFilterDlg@btnShowAllClick$qqrp14System@TObject @306 ; __fastcall Idetodofilter::TToDoFilterDlg::btnShowAllClick(System::TObject *)
+    @Idetodofilter@initialization$qqrv @303 ; __fastcall Idetodofilter::initialization()
+    @Idetodoform@Finalization$qqrv @316 ; __fastcall Idetodoform::Finalization()
+    @Idetodoform@TToDoListWindow@  @354 ; Idetodoform::TToDoListWindow::
+    @Idetodoform@TToDoListWindow@AddActionExecute$qqrp14System@TObject @339 ; __fastcall Idetodoform::TToDoListWindow::AddActionExecute(System::TObject *)
+    @Idetodoform@TToDoListWindow@CopyAsTableActionExecute$qqrp14System@TObject @320 ; __fastcall Idetodoform::TToDoListWindow::CopyAsTableActionExecute(System::TObject *)
+    @Idetodoform@TToDoListWindow@CopyAsTextActionExecute$qqrp14System@TObject @319 ; __fastcall Idetodoform::TToDoListWindow::CopyAsTextActionExecute(System::TObject *)
+    @Idetodoform@TToDoListWindow@CreateWnd$qqrv @317 ; __fastcall Idetodoform::TToDoListWindow::CreateWnd()
+    @Idetodoform@TToDoListWindow@CurrentItem$qqrv @347 ; __fastcall Idetodoform::TToDoListWindow::CurrentItem()
+    @Idetodoform@TToDoListWindow@DeleteActionExecute$qqrp14System@TObject @346 ; __fastcall Idetodoform::TToDoListWindow::DeleteActionExecute(System::TObject *)
+    @Idetodoform@TToDoListWindow@DrawHeader$qqrirx18System@Types@TRect @345 ; __fastcall Idetodoform::TToDoListWindow::DrawHeader(int, const System::Types::TRect&)
+    @Idetodoform@TToDoListWindow@EditActionExecute$qqrp14System@TObject @341 ; __fastcall Idetodoform::TToDoListWindow::EditActionExecute(System::TObject *)
+    @Idetodoform@TToDoListWindow@FilterCategoryActionExecute$qqrp14System@TObject @323 ; __fastcall Idetodoform::TToDoListWindow::FilterCategoryActionExecute(System::TObject *)
+    @Idetodoform@TToDoListWindow@FormCreate$qqrp14System@TObject @351 ; __fastcall Idetodoform::TToDoListWindow::FormCreate(System::TObject *)
+    @Idetodoform@TToDoListWindow@FormDestroy$qqrp14System@TObject @325 ; __fastcall Idetodoform::TToDoListWindow::FormDestroy(System::TObject *)
+    @Idetodoform@TToDoListWindow@FormShow$qqrp14System@TObject @349 ; __fastcall Idetodoform::TToDoListWindow::FormShow(System::TObject *)
+    @Idetodoform@TToDoListWindow@GetEditState$qqrv @329 ; __fastcall Idetodoform::TToDoListWindow::GetEditState()
+    @Idetodoform@TToDoListWindow@GetShowChecked$qqrv @328 ; __fastcall Idetodoform::TToDoListWindow::GetShowChecked()
+    @Idetodoform@TToDoListWindow@GetSortOrder$qqrv @330 ; __fastcall Idetodoform::TToDoListWindow::GetSortOrder()
+    @Idetodoform@TToDoListWindow@GridDblClick$qqrp14System@TObject @335 ; __fastcall Idetodoform::TToDoListWindow::GridDblClick(System::TObject *)
+    @Idetodoform@TToDoListWindow@GridDrawCell$qqrp14System@TObjectiirx18System@Types@TRect49System@%Set$22Vcl@Grids@Vcl_Grids__3t1$i0$t1$i5$% @344 ; Idetodoform::TToDoListWindow::GridDrawCell(System::TObject *, int, int, const System::Types::TRect&, System::Set<{583}...
+    @Idetodoform@TToDoListWindow@GridHint$qqrp14System@TObjectp22Vcl@Controls@THintInfo @334 ; __fastcall Idetodoform::TToDoListWindow::GridHint(System::TObject *, Vcl::Controls::THintInfo *)
+    @Idetodoform@TToDoListWindow@GridKeyPress$qqrp14System@TObjectrb @318 ; __fastcall Idetodoform::TToDoListWindow::GridKeyPress(System::TObject *, wchar_t&)
+    @Idetodoform@TToDoListWindow@GridMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @324 ; Idetodoform::TToDoListWindow::GridMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Idetodoform@TToDoListWindow@GridMouseMove$qqrp14System@TObject60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @338 ; Idetodoform::TToDoListWindow::GridMouseMove(System::TObject *, System::Set<{583}...
+    @Idetodoform@TToDoListWindow@GridMouseUp$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @342 ; Idetodoform::TToDoListWindow::GridMouseUp(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Idetodoform@TToDoListWindow@GridSelectCell$qqrp14System@TObjectiiro @343 ; __fastcall Idetodoform::TToDoListWindow::GridSelectCell(System::TObject *, int, int, bool&)
+    @Idetodoform@TToDoListWindow@IDEMUpdate$qqrr6tagMSG @350 ; __fastcall Idetodoform::TToDoListWindow::IDEMUpdate(tagMSG&)
+    @Idetodoform@TToDoListWindow@LoadWindowState$qqrp30System@Inifiles@TCustomIniFile @337 ; __fastcall Idetodoform::TToDoListWindow::LoadWindowState(System::Inifiles::TCustomIniFile *)
+    @Idetodoform@TToDoListWindow@OpenActionExecute$qqrp14System@TObject @340 ; __fastcall Idetodoform::TToDoListWindow::OpenActionExecute(System::TObject *)
+    @Idetodoform@TToDoListWindow@SaveWindowState$qqrp30System@Inifiles@TCustomIniFileo @336 ; __fastcall Idetodoform::TToDoListWindow::SaveWindowState(System::Inifiles::TCustomIniFile *, bool)
+    @Idetodoform@TToDoListWindow@SetShowChecked$qqrxo @327 ; __fastcall Idetodoform::TToDoListWindow::SetShowChecked(const bool)
+    @Idetodoform@TToDoListWindow@SetSortOrder$qqr26Idetodointf@TToDoSortOrder @331 ; __fastcall Idetodoform::TToDoListWindow::SetSortOrder(Idetodointf::TToDoSortOrder)
+    @Idetodoform@TToDoListWindow@ShowCheckedActionExecute$qqrp14System@TObject @332 ; __fastcall Idetodoform::TToDoListWindow::ShowCheckedActionExecute(System::TObject *)
+    @Idetodoform@TToDoListWindow@ShowHintsActionExecute$qqrp14System@TObject @333 ; __fastcall Idetodoform::TToDoListWindow::ShowHintsActionExecute(System::TObject *)
+    @Idetodoform@TToDoListWindow@SortAlphaActionUpdate$qqrp14System@TObject @326 ; __fastcall Idetodoform::TToDoListWindow::SortAlphaActionUpdate(System::TObject *)
+    @Idetodoform@TToDoListWindow@SortCategoryClick$qqrp14System@TObject @322 ; __fastcall Idetodoform::TToDoListWindow::SortCategoryClick(System::TObject *)
+    @Idetodoform@TToDoListWindow@TableOptionsActionExecute$qqrp14System@TObject @321 ; __fastcall Idetodoform::TToDoListWindow::TableOptionsActionExecute(System::TObject *)
+    @Idetodoform@TToDoListWindow@ToDoItemsUpdate$qqrp14System@TObject @348 ; __fastcall Idetodoform::TToDoListWindow::ToDoItemsUpdate(System::TObject *)
+    @Idetodoform@TToDoListWindow@WndProc$qqrr24Winapi@Messages@TMessage @352 ; __fastcall Idetodoform::TToDoListWindow::WndProc(Winapi::Messages::TMessage&)
+    @Idetodoform@initialization$qqrv @315 ; __fastcall Idetodoform::initialization()
+    @Idetodolist@Finalization$qqrv @230 ; __fastcall Idetodolist::Finalization()
+    @Idetodolist@RegisterToDoManagerCreator$qqrp31Idetodointf@TToDoManagerCreator @272 ; __fastcall Idetodolist::RegisterToDoManagerCreator(Idetodointf::TToDoManagerCreator *)
+    @Idetodolist@Status            @278 ; Idetodolist::Status
+    @Idetodolist@TToDoList@        @276 ; Idetodolist::TToDoList::
+    @Idetodolist@TToDoList@$bctr$qqrv @270 ; __fastcall Idetodolist::TToDoList::TToDoList()
+    @Idetodolist@TToDoList@$bdtr$qqrv @268 ; __fastcall Idetodolist::TToDoList::~TToDoList()
+    @Idetodolist@TToDoList@ActiveProjectChanged$qqrp14System@TObject @252 ; __fastcall Idetodolist::TToDoList::ActiveProjectChanged(System::TObject *)
+    @Idetodolist@TToDoList@AddItem$qqrx20System@UnicodeString @259 ; __fastcall Idetodolist::TToDoList::AddItem(const System::UnicodeString)
+    @Idetodolist@TToDoList@AddNotifier$qqrx48System@%DelphiInterface$21Toolsapi@IOTANotifier% @245 ; Idetodolist::TToDoList::AddNotifier(const System::DelphiInterface<{583}...
+    @Idetodolist@TToDoList@BeforeDestruction$qqrv @269 ; __fastcall Idetodolist::TToDoList::BeforeDestruction()
+    @Idetodolist@TToDoList@Collate$qqrv @262 ; __fastcall Idetodolist::TToDoList::Collate()
+    @Idetodolist@TToDoList@CopyTableToClipboard$qqrv @235 ; __fastcall Idetodolist::TToDoList::CopyTableToClipboard()
+    @Idetodolist@TToDoList@CopyTextToClipboard$qqrv @236 ; __fastcall Idetodolist::TToDoList::CopyTextToClipboard()
+    @Idetodolist@TToDoList@CreateManager$qqrx20System@UnicodeStringo51System@%DelphiInterface$24Idetodointf@IToDoManager% @258 ; Idetodolist::TToDoList::CreateManager(const System::UnicodeString, bool, System::DelphiInterface<{583}...
+    @Idetodolist@TToDoList@DeleteManager$qqr51System@%DelphiInterface$24Idetodointf@IToDoManager% @257 ; Idetodolist::TToDoList::DeleteManager(System::DelphiInterface<{583}...
+    @Idetodolist@TToDoList@EnumProjectUnits$qqrx49System@%DelphiInterface$22Codemgr@ICustomProject% @248 ; Idetodolist::TToDoList::EnumProjectUnits(const System::DelphiInterface<{583}...
+    @Idetodolist@TToDoList@FindManager$qqrx20System@UnicodeString @265 ; __fastcall Idetodolist::TToDoList::FindManager(const System::UnicodeString)
+    @Idetodolist@TToDoList@GetDisplayFormVisible$qqrv @231 ; __fastcall Idetodolist::TToDoList::GetDisplayFormVisible()
+    @Idetodolist@TToDoList@GetItem$qqri @267 ; __fastcall Idetodolist::TToDoList::GetItem(int)
+    @Idetodolist@TToDoList@GetItemCount$qqrv @266 ; __fastcall Idetodolist::TToDoList::GetItemCount()
+    @Idetodolist@TToDoList@IOTAToDoServices_AddManager$qqr51System@%DelphiInterface$24Toolsapi@IOTAToDoManager% @240 ; Idetodolist::TToDoList::IOTAToDoServices_AddManager(System::DelphiInterface<{583}...
+    @Idetodolist@TToDoList@InternalAdd$qqr48System@%DelphiInterface$21Toolsapi@INTAToDoItem% @239 ; Idetodolist::TToDoList::InternalAdd(System::DelphiInterface<{583}...
+    @Idetodolist@TToDoList@ModuleActivated$qqrp14System@TObject @232 ; __fastcall Idetodolist::TToDoList::ModuleActivated(System::TObject *)
+    @Idetodolist@TToDoList@NotifyListChanged$qqr44System@%DelphiInterface$17System@IInterface%t1 @243 ; Idetodolist::TToDoList::NotifyListChanged(System::DelphiInterface<{583}...
+    @Idetodolist@TToDoList@Parse$qqrv @264 ; __fastcall Idetodolist::TToDoList::Parse()
+    @Idetodolist@TToDoList@ProjectModuleAdded$qqrp14System@TObjectp24Codemgr@TCustomFileEntry @254 ; __fastcall Idetodolist::TToDoList::ProjectModuleAdded(System::TObject *, Codemgr::TCustomFileEntry *)
+    @Idetodolist@TToDoList@ProjectModuleModified$qqrp14System@TObjectx20System@UnicodeString @253 ; __fastcall Idetodolist::TToDoList::ProjectModuleModified(System::TObject *, const System::UnicodeString)
+    @Idetodolist@TToDoList@ProjectModuleRemoved$qqrp14System@TObjectx20System@UnicodeString @251 ; __fastcall Idetodolist::TToDoList::ProjectModuleRemoved(System::TObject *, const System::UnicodeString)
+    @Idetodolist@TToDoList@ProjectModuleRenamed$qqrp14System@TObjectx20System@UnicodeStringt2t2t2 @250 ; __fastcall Idetodolist::TToDoList::ProjectModuleRenamed(System::TObject *, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Idetodolist@TToDoList@ProjectRenamed$qqrp14System@TObjectx20System@UnicodeStringt2 @249 ; __fastcall Idetodolist::TToDoList::ProjectRenamed(System::TObject *, const System::UnicodeString, const System::UnicodeString)
+    @Idetodolist@TToDoList@ReadFilters$qqrv @238 ; __fastcall Idetodolist::TToDoList::ReadFilters()
+    @Idetodolist@TToDoList@ReadTableOptions$qqrv @234 ; __fastcall Idetodolist::TToDoList::ReadTableOptions()
+    @Idetodolist@TToDoList@RemoveManager$qqri @242 ; __fastcall Idetodolist::TToDoList::RemoveManager(int)
+    @Idetodolist@TToDoList@RemoveNotifier$qqri @244 ; __fastcall Idetodolist::TToDoList::RemoveNotifier(int)
+    @Idetodolist@TToDoList@SetDisplayForm$qqrxp21Vcl@Forms@TCustomForm @256 ; __fastcall Idetodolist::TToDoList::SetDisplayForm(Vcl::Forms::TCustomForm * const)
+    @Idetodolist@TToDoList@SetShowChecked$qqrxo @260 ; __fastcall Idetodolist::TToDoList::SetShowChecked(const bool)
+    @Idetodolist@TToDoList@SetSortOrder$qqrx26Idetodointf@TToDoSortOrder @261 ; __fastcall Idetodolist::TToDoList::SetSortOrder(const Idetodointf::TToDoSortOrder)
+    @Idetodolist@TToDoList@SortAscending$qqrv @233 ; __fastcall Idetodolist::TToDoList::SortAscending()
+    @Idetodolist@TToDoList@SortCompare$qqr44System@%DelphiInterface$17System@IInterface%t1 @263 ; Idetodolist::TToDoList::SortCompare(System::DelphiInterface<{583}...
+    @Idetodolist@TToDoList@UpdateDisplay$qqri @255 ; __fastcall Idetodolist::TToDoList::UpdateDisplay(int)
+    @Idetodolist@TToDoList@UpdateDisplayCaption$qqrv @246 ; __fastcall Idetodolist::TToDoList::UpdateDisplayCaption()
+    @Idetodolist@TToDoList@UpdateList$qqrv @241 ; __fastcall Idetodolist::TToDoList::UpdateList()
+    @Idetodolist@TToDoList@ViewNotification$qqrp22Editorbuffer@TEditView25System@Classes@TOperation @247 ; __fastcall Idetodolist::TToDoList::ViewNotification(Editorbuffer::TEditView *, System::Classes::TOperation)
+    @Idetodolist@TToDoList@WriteFilters$qqrv @237 ; __fastcall Idetodolist::TToDoList::WriteFilters()
+    @Idetodolist@ToDoList          @274 ; Idetodolist::ToDoList
+    @Idetodolist@ToDoManagerCreators @273 ; Idetodolist::ToDoManagerCreators
+    @Idetodolist@UnRegisterToDoManagerCreator$qqrp31Idetodointf@TToDoManagerCreator @271 ; __fastcall Idetodolist::UnRegisterToDoManagerCreator(Idetodointf::TToDoManagerCreator *)
+    @Idetodolist@_ikHasView        @282 ; Idetodolist::_ikHasView
+    @Idetodolist@_ikInProject      @281 ; Idetodolist::_ikInProject
+    @Idetodolist@_ikProjectItem    @280 ; Idetodolist::_ikProjectItem
+    @Idetodolist@_sActionItem      @302 ; Idetodolist::_sActionItem
+    @Idetodolist@_sAddCategory     @289 ; Idetodolist::_sAddCategory
+    @Idetodolist@_sAddOwner        @288 ; Idetodolist::_sAddOwner
+    @Idetodolist@_sAddToDoItem     @292 ; Idetodolist::_sAddToDoItem
+    @Idetodolist@_sCategory        @296 ; Idetodolist::_sCategory
+    @Idetodolist@_sEditToDoItem    @291 ; Idetodolist::_sEditToDoItem
+    @Idetodolist@_sFilterOnCategory @287 ; Idetodolist::_sFilterOnCategory
+    @Idetodolist@_sFilterOnKind    @285 ; Idetodolist::_sFilterOnKind
+    @Idetodolist@_sFilterOnOwner   @286 ; Idetodolist::_sFilterOnOwner
+    @Idetodolist@_sInvalidPriorityValue @293 ; Idetodolist::_sInvalidPriorityValue
+    @Idetodolist@_sModule          @295 ; Idetodolist::_sModule
+    @Idetodolist@_sOwner           @297 ; Idetodolist::_sOwner
+    @Idetodolist@_sPriority        @301 ; Idetodolist::_sPriority
+    @Idetodolist@_sStatus          @300 ; Idetodolist::_sStatus
+    @Idetodolist@_sStatusBarItems  @284 ; Idetodolist::_sStatusBarItems
+    @Idetodolist@_sStatusBarPending @283 ; Idetodolist::_sStatusBarPending
+    @Idetodolist@_sStatusDone      @298 ; Idetodolist::_sStatusDone
+    @Idetodolist@_sStatusPending   @299 ; Idetodolist::_sStatusPending
+    @Idetodolist@_sToDoProjectItemName @290 ; Idetodolist::_sToDoProjectItemName
+    @Idetodolist@_sToDoTableTitle  @294 ; Idetodolist::_sToDoTableTitle
+    @Idetodolist@initialization$qqrv @229 ; __fastcall Idetodolist::initialization()
+    @Idetodomgr@Finalization$qqrv  @151 ; __fastcall Idetodomgr::Finalization()
+    @Idetodomgr@TProjectManagerCreator@ @218 ; Idetodomgr::TProjectManagerCreator::
+    @Idetodomgr@TProjectManagerCreator@CanHandleFile$qqrx20System@UnicodeString @153 ; __fastcall Idetodomgr::TProjectManagerCreator::CanHandleFile(const System::UnicodeString)
+    @Idetodomgr@TProjectManagerCreator@CreateManager$qqrx20System@UnicodeStringo @152 ; __fastcall Idetodomgr::TProjectManagerCreator::CreateManager(const System::UnicodeString, bool)
+    @Idetodomgr@TProjectToDoItem@  @224 ; Idetodomgr::TProjectToDoItem::
+    @Idetodomgr@TProjectToDoItem@CanDelete$qqrv @191 ; __fastcall Idetodomgr::TProjectToDoItem::CanDelete()
+    @Idetodomgr@TProjectToDoItem@CanEdit$qqrv @190 ; __fastcall Idetodomgr::TProjectToDoItem::CanEdit()
+    @Idetodomgr@TProjectToDoItem@CanShow$qqrv @189 ; __fastcall Idetodomgr::TProjectToDoItem::CanShow()
+    @Idetodomgr@TProjectToDoItem@Delete$qqrv @188 ; __fastcall Idetodomgr::TProjectToDoItem::Delete()
+    @Idetodomgr@TProjectToDoItem@DoubleClicked$qqrv @187 ; __fastcall Idetodomgr::TProjectToDoItem::DoubleClicked()
+    @Idetodomgr@TProjectToDoItem@DrawImage$qqrxp20Vcl@Graphics@TCanvasrx18System@Types@TRect @186 ; __fastcall Idetodomgr::TProjectToDoItem::DrawImage(Vcl::Graphics::TCanvas * const, const System::Types::TRect&)
+    @Idetodomgr@TProjectToDoItem@GetKind$qqrv @185 ; __fastcall Idetodomgr::TProjectToDoItem::GetKind()
+    @Idetodomgr@TProjectToDoItem@GetModuleName$qqrv @184 ; __fastcall Idetodomgr::TProjectToDoItem::GetModuleName()
+    @Idetodomgr@TProjectToDoManager@ @220 ; Idetodomgr::TProjectToDoManager::
+    @Idetodomgr@TProjectToDoManager@$bctr$qqrx20System@UnicodeStringt1o @154 ; __fastcall Idetodomgr::TProjectToDoManager::TProjectToDoManager(const System::UnicodeString, const System::UnicodeString, bool)
+    @Idetodomgr@TProjectToDoManager@AddItem$qqri20System@UnicodeString @160 ; __fastcall Idetodomgr::TProjectToDoManager::AddItem(int, System::UnicodeString)
+    @Idetodomgr@TProjectToDoManager@CreateItem$qqrv @159 ; __fastcall Idetodomgr::TProjectToDoManager::CreateItem()
+    @Idetodomgr@TProjectToDoManager@CreateUpdater$qqrv @155 ; __fastcall Idetodomgr::TProjectToDoManager::CreateUpdater()
+    @Idetodomgr@TProjectToDoManager@InProject$qqrv @156 ; __fastcall Idetodomgr::TProjectToDoManager::InProject()
+    @Idetodomgr@TProjectToDoManager@Parse$qqrv @157 ; __fastcall Idetodomgr::TProjectToDoManager::Parse()
+    @Idetodomgr@TProjectToDoManager@ProjectChanged$qqrv @158 ; __fastcall Idetodomgr::TProjectToDoManager::ProjectChanged()
+    @Idetodomgr@TSourceToDoItem@   @226 ; Idetodomgr::TSourceToDoItem::
+    @Idetodomgr@TSourceToDoItem@$bctr$qqrp29Idetodomgr@TSourceToDoManager @213 ; __fastcall Idetodomgr::TSourceToDoItem::TSourceToDoItem(Idetodomgr::TSourceToDoManager *)
+    @Idetodomgr@TSourceToDoItem@CanDelete$qqrv @216 ; __fastcall Idetodomgr::TSourceToDoItem::CanDelete()
+    @Idetodomgr@TSourceToDoItem@CanEdit$qqrv @215 ; __fastcall Idetodomgr::TSourceToDoItem::CanEdit()
+    @Idetodomgr@TSourceToDoItem@CanShow$qqrv @214 ; __fastcall Idetodomgr::TSourceToDoItem::CanShow()
+    @Idetodomgr@TSourceToDoItem@Delete$qqrv @212 ; __fastcall Idetodomgr::TSourceToDoItem::Delete()
+    @Idetodomgr@TSourceToDoItem@DoubleClicked$qqrv @211 ; __fastcall Idetodomgr::TSourceToDoItem::DoubleClicked()
+    @Idetodomgr@TSourceToDoItem@DrawImage$qqrxp20Vcl@Graphics@TCanvasrx18System@Types@TRect @210 ; __fastcall Idetodomgr::TSourceToDoItem::DrawImage(Vcl::Graphics::TCanvas * const, const System::Types::TRect&)
+    @Idetodomgr@TSourceToDoItem@Edit$qqrv @209 ; __fastcall Idetodomgr::TSourceToDoItem::Edit()
+    @Idetodomgr@TSourceToDoItem@GetCategory$qqrv @208 ; __fastcall Idetodomgr::TSourceToDoItem::GetCategory()
+    @Idetodomgr@TSourceToDoItem@GetChecked$qqrv @207 ; __fastcall Idetodomgr::TSourceToDoItem::GetChecked()
+    @Idetodomgr@TSourceToDoItem@GetData$qqrv @206 ; __fastcall Idetodomgr::TSourceToDoItem::GetData()
+    @Idetodomgr@TSourceToDoItem@GetInstance$qqrv @205 ; __fastcall Idetodomgr::TSourceToDoItem::GetInstance()
+    @Idetodomgr@TSourceToDoItem@GetKind$qqrv @204 ; __fastcall Idetodomgr::TSourceToDoItem::GetKind()
+    @Idetodomgr@TSourceToDoItem@GetModuleName$qqrv @203 ; __fastcall Idetodomgr::TSourceToDoItem::GetModuleName()
+    @Idetodomgr@TSourceToDoItem@GetOwner$qqrv @202 ; __fastcall Idetodomgr::TSourceToDoItem::GetOwner()
+    @Idetodomgr@TSourceToDoItem@GetPriority$qqrv @201 ; __fastcall Idetodomgr::TSourceToDoItem::GetPriority()
+    @Idetodomgr@TSourceToDoItem@GetText$qqrv @200 ; __fastcall Idetodomgr::TSourceToDoItem::GetText()
+    @Idetodomgr@TSourceToDoItem@InProject$qqrv @199 ; __fastcall Idetodomgr::TSourceToDoItem::InProject()
+    @Idetodomgr@TSourceToDoItem@IsValid$qqrv @198 ; __fastcall Idetodomgr::TSourceToDoItem::IsValid()
+    @Idetodomgr@TSourceToDoItem@SetCategory$qqr20System@UnicodeString @197 ; __fastcall Idetodomgr::TSourceToDoItem::SetCategory(System::UnicodeString)
+    @Idetodomgr@TSourceToDoItem@SetChecked$qqrxo @196 ; __fastcall Idetodomgr::TSourceToDoItem::SetChecked(const bool)
+    @Idetodomgr@TSourceToDoItem@SetOwner$qqr20System@UnicodeString @195 ; __fastcall Idetodomgr::TSourceToDoItem::SetOwner(System::UnicodeString)
+    @Idetodomgr@TSourceToDoItem@SetPriority$qqrxzc @194 ; __fastcall Idetodomgr::TSourceToDoItem::SetPriority(const signed char)
+    @Idetodomgr@TSourceToDoItem@SetText$qqrx20System@UnicodeString @193 ; __fastcall Idetodomgr::TSourceToDoItem::SetText(const System::UnicodeString)
+    @Idetodomgr@TSourceToDoItem@Show$qqrv @192 ; __fastcall Idetodomgr::TSourceToDoItem::Show()
+    @Idetodomgr@TSourceToDoManager@ @222 ; Idetodomgr::TSourceToDoManager::
+    @Idetodomgr@TSourceToDoManager@$bctr$qqrx20System@UnicodeStringt1o @183 ; __fastcall Idetodomgr::TSourceToDoManager::TSourceToDoManager(const System::UnicodeString, const System::UnicodeString, bool)
+    @Idetodomgr@TSourceToDoManager@$bdtr$qqrv @182 ; __fastcall Idetodomgr::TSourceToDoManager::~TSourceToDoManager()
+    @Idetodomgr@TSourceToDoManager@Add$qqri20System@UnicodeString22Codemgr@TSourceSection @174 ; __fastcall Idetodomgr::TSourceToDoManager::Add(int, System::UnicodeString, Codemgr::TSourceSection)
+    @Idetodomgr@TSourceToDoManager@AddItem$qqri20System@UnicodeString @163 ; __fastcall Idetodomgr::TSourceToDoManager::AddItem(int, System::UnicodeString)
+    @Idetodomgr@TSourceToDoManager@AddManagedItem$qqrx51System@%DelphiInterface$24Idetodointf@IToDoManager% @168 ; Idetodomgr::TSourceToDoManager::AddManagedItem(const System::DelphiInterface<{583}...
+    @Idetodomgr@TSourceToDoManager@CreateItem$qqrv @181 ; __fastcall Idetodomgr::TSourceToDoManager::CreateItem()
+    @Idetodomgr@TSourceToDoManager@Delete$qqrii22Codemgr@TSourceSection @180 ; __fastcall Idetodomgr::TSourceToDoManager::Delete(int, int, Codemgr::TSourceSection)
+    @Idetodomgr@TSourceToDoManager@GetIsParsed$qqrv @179 ; __fastcall Idetodomgr::TSourceToDoManager::GetIsParsed()
+    @Idetodomgr@TSourceToDoManager@GetItem$qqri @178 ; __fastcall Idetodomgr::TSourceToDoManager::GetItem(int)
+    @Idetodomgr@TSourceToDoManager@GetItemCount$qqrv @177 ; __fastcall Idetodomgr::TSourceToDoManager::GetItemCount()
+    @Idetodomgr@TSourceToDoManager@GetManagedItem$qqri @166 ; __fastcall Idetodomgr::TSourceToDoManager::GetManagedItem(int)
+    @Idetodomgr@TSourceToDoManager@GetManagedItemCount$qqrv @167 ; __fastcall Idetodomgr::TSourceToDoManager::GetManagedItemCount()
+    @Idetodomgr@TSourceToDoManager@GetSourceFileName$qqrv @173 ; __fastcall Idetodomgr::TSourceToDoManager::GetSourceFileName()
+    @Idetodomgr@TSourceToDoManager@GetUpdater$qqrv @162 ; __fastcall Idetodomgr::TSourceToDoManager::GetUpdater()
+    @Idetodomgr@TSourceToDoManager@HasView$qqrv @161 ; __fastcall Idetodomgr::TSourceToDoManager::HasView()
+    @Idetodomgr@TSourceToDoManager@InProject$qqrv @175 ; __fastcall Idetodomgr::TSourceToDoManager::InProject()
+    @Idetodomgr@TSourceToDoManager@IsManager$qqrx20System@UnicodeString @176 ; __fastcall Idetodomgr::TSourceToDoManager::IsManager(const System::UnicodeString)
+    @Idetodomgr@TSourceToDoManager@Parse$qqrv @172 ; __fastcall Idetodomgr::TSourceToDoManager::Parse()
+    @Idetodomgr@TSourceToDoManager@ParseComment$qqrx31System@%AnsiStringT$us$i65001$%i @171 ; __fastcall Idetodomgr::TSourceToDoManager::ParseComment(const System::AnsiStringT<65001>, int)
+    @Idetodomgr@TSourceToDoManager@ProjectChanged$qqrv @170 ; __fastcall Idetodomgr::TSourceToDoManager::ProjectChanged()
+    @Idetodomgr@TSourceToDoManager@Rename$qqrx20System@UnicodeStringt1 @165 ; __fastcall Idetodomgr::TSourceToDoManager::Rename(const System::UnicodeString, const System::UnicodeString)
+    @Idetodomgr@TSourceToDoManager@SetIsParsed$qqrxo @169 ; __fastcall Idetodomgr::TSourceToDoManager::SetIsParsed(const bool)
+    @Idetodomgr@TSourceToDoManager@SetUpdater$qqr51System@%DelphiInterface$24Idetodointf@IToDoUpdater% @164 ; Idetodomgr::TSourceToDoManager::SetUpdater(System::DelphiInterface<{583}...
+    @Idetodomgr@initialization$qqrv @150 ; __fastcall Idetodomgr::initialization()
+    @Idetodotable@Finalization$qqrv @24  ; __fastcall Idetodotable::Finalization()
+    @Idetodotable@THTMLColumn@     @82  ; Idetodotable::THTMLColumn::
+    @Idetodotable@THTMLColumn@$bctr$qqrp25System@Classes@TComponent20System@UnicodeString @73  ; __fastcall Idetodotable::THTMLColumn::THTMLColumn(System::Classes::TComponent *, System::UnicodeString)
+    @Idetodotable@THTMLColumn@Append$qqr20System@UnicodeString @72  ; __fastcall Idetodotable::THTMLColumn::Append(System::UnicodeString)
+    @Idetodotable@THTMLColumn@AssignTo$qqrp26System@Classes@TPersistent @70  ; __fastcall Idetodotable::THTMLColumn::AssignTo(System::Classes::TPersistent *)
+    @Idetodotable@THTMLColumn@BuildTags$qqrv @71  ; __fastcall Idetodotable::THTMLColumn::BuildTags()
+    @Idetodotable@THTMLColumn@DefineProperties$qqrp21System@Classes@TFiler @59  ; __fastcall Idetodotable::THTMLColumn::DefineProperties(System::Classes::TFiler *)
+    @Idetodotable@THTMLColumn@GetData$qqr48System@%DelphiInterface$21Toolsapi@INTAToDoItem% @63  ; Idetodotable::THTMLColumn::GetData(System::DelphiInterface<{583}...
+    @Idetodotable@THTMLColumn@ReadFont$qqrp22System@Classes@TReader @58  ; __fastcall Idetodotable::THTMLColumn::ReadFont(System::Classes::TReader *)
+    @Idetodotable@THTMLColumn@SetAlign$qqrx25System@Classes@TAlignment @69  ; __fastcall Idetodotable::THTMLColumn::SetAlign(const System::Classes::TAlignment)
+    @Idetodotable@THTMLColumn@SetFont$qqrrx22Idetodotable@THTMLFont @68  ; __fastcall Idetodotable::THTMLColumn::SetFont(const Idetodotable::THTMLFont&)
+    @Idetodotable@THTMLColumn@SetHeight$qqrxi @67  ; __fastcall Idetodotable::THTMLColumn::SetHeight(const int)
+    @Idetodotable@THTMLColumn@SetTitle$qqrx20System@UnicodeString @62  ; __fastcall Idetodotable::THTMLColumn::SetTitle(const System::UnicodeString)
+    @Idetodotable@THTMLColumn@SetVAlign$qqrx24Idetodotable@TVAlignment @66  ; __fastcall Idetodotable::THTMLColumn::SetVAlign(const Idetodotable::TVAlignment)
+    @Idetodotable@THTMLColumn@SetWidth$qqrxi @65  ; __fastcall Idetodotable::THTMLColumn::SetWidth(const int)
+    @Idetodotable@THTMLColumn@SetWrap$qqrxo @64  ; __fastcall Idetodotable::THTMLColumn::SetWrap(const bool)
+    @Idetodotable@THTMLColumn@Tags$qqr48System@%DelphiInterface$21Toolsapi@INTAToDoItem% @61  ; Idetodotable::THTMLColumn::Tags(System::DelphiInterface<{583}...
+    @Idetodotable@THTMLColumn@TitleTags$qqrv @60  ; __fastcall Idetodotable::THTMLColumn::TitleTags()
+    @Idetodotable@THTMLColumn@WriteFont$qqrp22System@Classes@TWriter @57  ; __fastcall Idetodotable::THTMLColumn::WriteFont(System::Classes::TWriter *)
+    @Idetodotable@THTMLTable@      @79  ; Idetodotable::THTMLTable::
+    @Idetodotable@THTMLTable@$bctr$qqrp25System@Classes@TComponent @53  ; __fastcall Idetodotable::THTMLTable::THTMLTable(System::Classes::TComponent *)
+    @Idetodotable@THTMLTable@$bdtr$qqrv @40  ; __fastcall Idetodotable::THTMLTable::~THTMLTable()
+    @Idetodotable@THTMLTable@Append$qqr20System@UnicodeString @56  ; __fastcall Idetodotable::THTMLTable::Append(System::UnicodeString)
+    @Idetodotable@THTMLTable@AssignTo$qqrp26System@Classes@TPersistent @55  ; __fastcall Idetodotable::THTMLTable::AssignTo(System::Classes::TPersistent *)
+    @Idetodotable@THTMLTable@CopyToClipboard$qqrv @54  ; __fastcall Idetodotable::THTMLTable::CopyToClipboard()
+    @Idetodotable@THTMLTable@DefineProperties$qqrp21System@Classes@TFiler @41  ; __fastcall Idetodotable::THTMLTable::DefineProperties(System::Classes::TFiler *)
+    @Idetodotable@THTMLTable@GenerateTable$qqrv @35  ; __fastcall Idetodotable::THTMLTable::GenerateTable()
+    @Idetodotable@THTMLTable@GetColumn$qqri @39  ; __fastcall Idetodotable::THTMLTable::GetColumn(int)
+    @Idetodotable@THTMLTable@ReadColumns$qqrp22System@Classes@TStream @43  ; __fastcall Idetodotable::THTMLTable::ReadColumns(System::Classes::TStream *)
+    @Idetodotable@THTMLTable@SaveToFile$qqr20System@UnicodeString @36  ; __fastcall Idetodotable::THTMLTable::SaveToFile(System::UnicodeString)
+    @Idetodotable@THTMLTable@WriteColumns$qqrp22System@Classes@TStream @42  ; __fastcall Idetodotable::THTMLTable::WriteColumns(System::Classes::TStream *)
+    @Idetodotable@TTableOptionsDlg@ @77  ; Idetodotable::TTableOptionsDlg::
+    @Idetodotable@TTableOptionsDlg@Apply$qqrv @33  ; __fastcall Idetodotable::TTableOptionsDlg::Apply()
+    @Idetodotable@TTableOptionsDlg@BrowserDocumentComplete$qqrp14System@TObjectx35System@%DelphiInterface$9IDispatch%rx17System@OleVariant @28  ; Idetodotable::TTableOptionsDlg::BrowserDocumentComplete(System::TObject *, const System::DelphiInterface<{583}...
+    @Idetodotable@TTableOptionsDlg@BrowserDownloadComplete$qqrp14System@TObject @27  ; __fastcall Idetodotable::TTableOptionsDlg::BrowserDownloadComplete(System::TObject *)
+    @Idetodotable@TTableOptionsDlg@ColListClick$qqrp14System@TObject @49  ; __fastcall Idetodotable::TTableOptionsDlg::ColListClick(System::TObject *)
+    @Idetodotable@TTableOptionsDlg@Contract$qqrv @32  ; __fastcall Idetodotable::TTableOptionsDlg::Contract()
+    @Idetodotable@TTableOptionsDlg@Edit$qqrv @52  ; __fastcall Idetodotable::TTableOptionsDlg::Edit()
+    @Idetodotable@TTableOptionsDlg@Expand$qqrv @31  ; __fastcall Idetodotable::TTableOptionsDlg::Expand()
+    @Idetodotable@TTableOptionsDlg@FormClose$qqrp14System@TObjectr27System@Uitypes@TCloseAction @37  ; __fastcall Idetodotable::TTableOptionsDlg::FormClose(System::TObject *, System::Uitypes::TCloseAction&)
+    @Idetodotable@TTableOptionsDlg@FormCreate$qqrp14System@TObject @48  ; __fastcall Idetodotable::TTableOptionsDlg::FormCreate(System::TObject *)
+    @Idetodotable@TTableOptionsDlg@FormDestroy$qqrp14System@TObject @44  ; __fastcall Idetodotable::TTableOptionsDlg::FormDestroy(System::TObject *)
+    @Idetodotable@TTableOptionsDlg@FormShow$qqrp14System@TObject @46  ; __fastcall Idetodotable::TTableOptionsDlg::FormShow(System::TObject *)
+    @Idetodotable@TTableOptionsDlg@PageControlChange$qqrp14System@TObject @47  ; __fastcall Idetodotable::TTableOptionsDlg::PageControlChange(System::TObject *)
+    @Idetodotable@TTableOptionsDlg@ReadData$qqrv @51  ; __fastcall Idetodotable::TTableOptionsDlg::ReadData()
+    @Idetodotable@TTableOptionsDlg@SaveData$qqrv @50  ; __fastcall Idetodotable::TTableOptionsDlg::SaveData()
+    @Idetodotable@TTableOptionsDlg@btnApplyClick$qqrp14System@TObject @34  ; __fastcall Idetodotable::TTableOptionsDlg::btnApplyClick(System::TObject *)
+    @Idetodotable@TTableOptionsDlg@btnColColorClick$qqrp14System@TObject @29  ; __fastcall Idetodotable::TTableOptionsDlg::btnColColorClick(System::TObject *)
+    @Idetodotable@TTableOptionsDlg@btnColorClick$qqrp14System@TObject @30  ; __fastcall Idetodotable::TTableOptionsDlg::btnColorClick(System::TObject *)
+    @Idetodotable@TTableOptionsDlg@btnHelpClick$qqrp14System@TObject @26  ; __fastcall Idetodotable::TTableOptionsDlg::btnHelpClick(System::TObject *)
+    @Idetodotable@TTableOptionsDlg@btnOKClick$qqrp14System@TObject @45  ; __fastcall Idetodotable::TTableOptionsDlg::btnOKClick(System::TObject *)
+    @Idetodotable@TTableOptionsDlg@btnPreviewClick$qqrp14System@TObject @38  ; __fastcall Idetodotable::TTableOptionsDlg::btnPreviewClick(System::TObject *)
+    @Idetodotable@TTableOptionsDlg@eColTitleChange$qqrp14System@TObject @25  ; __fastcall Idetodotable::TTableOptionsDlg::eColTitleChange(System::TObject *)
+    @Idetodotable@Table            @74  ; Idetodotable::Table
+    @Idetodotable@TableOptionsDlg  @75  ; Idetodotable::TableOptionsDlg
+    @Idetodotable@initialization$qqrv @23  ; __fastcall Idetodotable::initialization()
+    @Idetodoupdaters@Finalization$qqrv @87  ; __fastcall Idetodoupdaters::Finalization()
+    @Idetodoupdaters@TToDoCreateUpdaters@ @138 ; Idetodoupdaters::TToDoCreateUpdaters::
+    @Idetodoupdaters@TToDoCreateUpdaters@CanHandleFile$qqrx20System@UnicodeString @98  ; __fastcall Idetodoupdaters::TToDoCreateUpdaters::CanHandleFile(const System::UnicodeString)
+    @Idetodoupdaters@TToDoCreateUpdaters@CreateModuleUpdater$qqr42System@%DelphiInterface$15Codemgr@IModule% @97  ; Idetodoupdaters::TToDoCreateUpdaters::CreateModuleUpdater(System::DelphiInterface<{583}...
+    @Idetodoupdaters@TToDoFileCreator@ @134 ; Idetodoupdaters::TToDoFileCreator::
+    @Idetodoupdaters@TToDoFileCreator@$bctr$qqrx20System@UnicodeString @96  ; __fastcall Idetodoupdaters::TToDoFileCreator::TToDoFileCreator(const System::UnicodeString)
+    @Idetodoupdaters@TToDoFileCreator@GetIncludeInProject$qqrv @95  ; __fastcall Idetodoupdaters::TToDoFileCreator::GetIncludeInProject()
+    @Idetodoupdaters@TToDoFileCreator@GetShowSource$qqrv @94  ; __fastcall Idetodoupdaters::TToDoFileCreator::GetShowSource()
+    @Idetodoupdaters@TToDoFileCreator@GetSource$qqrv @93  ; __fastcall Idetodoupdaters::TToDoFileCreator::GetSource()
+    @Idetodoupdaters@TToDoFileUpdater@ @136 ; Idetodoupdaters::TToDoFileUpdater::
+    @Idetodoupdaters@TToDoFileUpdater@$bctr$qqr42System@%DelphiInterface$15Codemgr@IModule% @130 ; Idetodoupdaters::TToDoFileUpdater::TToDoFileUpdater(System::DelphiInterface<{583}...
+    @Idetodoupdaters@TToDoFileUpdater@AddText$qqri20System@UnicodeString22Codemgr@TSourceSection @102 ; __fastcall Idetodoupdaters::TToDoFileUpdater::AddText(int, System::UnicodeString, Codemgr::TSourceSection)
+    @Idetodoupdaters@TToDoFileUpdater@DeleteText$qqrii22Codemgr@TSourceSection @101 ; __fastcall Idetodoupdaters::TToDoFileUpdater::DeleteText(int, int, Codemgr::TSourceSection)
+    @Idetodoupdaters@TToDoFileUpdater@EnsureUnitsUsed$qqrxp23System@Classes@TStrings @123 ; __fastcall Idetodoupdaters::TToDoFileUpdater::EnsureUnitsUsed(System::Classes::TStrings * const)
+    @Idetodoupdaters@TToDoFileUpdater@FilterUsedUnits$qqrp23System@Classes@TStrings @104 ; __fastcall Idetodoupdaters::TToDoFileUpdater::FilterUsedUnits(System::Classes::TStrings *)
+    @Idetodoupdaters@TToDoFileUpdater@GetAdditionalFiles$qqrp23System@Classes@TStrings @112 ; __fastcall Idetodoupdaters::TToDoFileUpdater::GetAdditionalFiles(System::Classes::TStrings *)
+    @Idetodoupdaters@TToDoFileUpdater@GetAncestorClassName$qqrx20System@UnicodeString @122 ; __fastcall Idetodoupdaters::TToDoFileUpdater::GetAncestorClassName(const System::UnicodeString)
+    @Idetodoupdaters@TToDoFileUpdater@GetClassGroup$qqrv @125 ; __fastcall Idetodoupdaters::TToDoFileUpdater::GetClassGroup()
+    @Idetodoupdaters@TToDoFileUpdater@GetClassGroupClass$qqrv @124 ; __fastcall Idetodoupdaters::TToDoFileUpdater::GetClassGroupClass()
+    @Idetodoupdaters@TToDoFileUpdater@GetCompanionFileName$qqrx20System@UnicodeString @121 ; __fastcall Idetodoupdaters::TToDoFileUpdater::GetCompanionFileName(const System::UnicodeString)
+    @Idetodoupdaters@TToDoFileUpdater@GetIsEditable$qqrv @129 ; __fastcall Idetodoupdaters::TToDoFileUpdater::GetIsEditable()
+    @Idetodoupdaters@TToDoFileUpdater@GetModuleName$qqrv @120 ; __fastcall Idetodoupdaters::TToDoFileUpdater::GetModuleName()
+    @Idetodoupdaters@TToDoFileUpdater@GetModuleTab$qqrv @119 ; __fastcall Idetodoupdaters::TToDoFileUpdater::GetModuleTab()
+    @Idetodoupdaters@TToDoFileUpdater@GetUsedImplementationUnits$qqrp23System@Classes@TStrings @117 ; __fastcall Idetodoupdaters::TToDoFileUpdater::GetUsedImplementationUnits(System::Classes::TStrings *)
+    @Idetodoupdaters@TToDoFileUpdater@GetUsedInterfaceUnits$qqrp23System@Classes@TStrings @118 ; __fastcall Idetodoupdaters::TToDoFileUpdater::GetUsedInterfaceUnits(System::Classes::TStrings *)
+    @Idetodoupdaters@TToDoFileUpdater@GetUsedPackages$qqrp23System@Classes@TStrings @116 ; __fastcall Idetodoupdaters::TToDoFileUpdater::GetUsedPackages(System::Classes::TStrings *)
+    @Idetodoupdaters@TToDoFileUpdater@HasClassGroup$qqrv @115 ; __fastcall Idetodoupdaters::TToDoFileUpdater::HasClassGroup()
+    @Idetodoupdaters@TToDoFileUpdater@HasCompanionFile$qqrx20System@UnicodeString @114 ; __fastcall Idetodoupdaters::TToDoFileUpdater::HasCompanionFile(const System::UnicodeString)
+    @Idetodoupdaters@TToDoFileUpdater@HasForm$qqrpx20System@UnicodeStringxi @113 ; __fastcall Idetodoupdaters::TToDoFileUpdater::HasForm(const System::UnicodeString *, const int)
+    @Idetodoupdaters@TToDoFileUpdater@ImportUnit$qqrx20System@UnicodeStringo @108 ; __fastcall Idetodoupdaters::TToDoFileUpdater::ImportUnit(const System::UnicodeString, bool)
+    @Idetodoupdaters@TToDoFileUpdater@Imports$qqrx20System@UnicodeString @109 ; __fastcall Idetodoupdaters::TToDoFileUpdater::Imports(const System::UnicodeString)
+    @Idetodoupdaters@TToDoFileUpdater@MakeComment$qqrr20System@UnicodeString @99  ; __fastcall Idetodoupdaters::TToDoFileUpdater::MakeComment(System::UnicodeString&)
+    @Idetodoupdaters@TToDoFileUpdater@Modified$qqrv @128 ; __fastcall Idetodoupdaters::TToDoFileUpdater::Modified()
+    @Idetodoupdaters@TToDoFileUpdater@ModuleClosed$qqrv @105 ; __fastcall Idetodoupdaters::TToDoFileUpdater::ModuleClosed()
+    @Idetodoupdaters@TToDoFileUpdater@ParseItems$qqrynpqqrx31System@%AnsiStringT$us$i65001$%i$vi @103 ; __fastcall Idetodoupdaters::TToDoFileUpdater::ParseItems(void __fastcall __closure(*)(const System::AnsiStringT<65001>, int), int)
+    @Idetodoupdaters@TToDoFileUpdater@SetClassGroup$qqrx20System@UnicodeString @111 ; __fastcall Idetodoupdaters::TToDoFileUpdater::SetClassGroup(const System::UnicodeString)
+    @Idetodoupdaters@TToDoFileUpdater@SetModuleName$qqrx20System@UnicodeString @110 ; __fastcall Idetodoupdaters::TToDoFileUpdater::SetModuleName(const System::UnicodeString)
+    @Idetodoupdaters@TToDoFileUpdater@ShowSource$qqrv @107 ; __fastcall Idetodoupdaters::TToDoFileUpdater::ShowSource()
+    @Idetodoupdaters@TToDoFileUpdater@SourceIsValid$qqrv @127 ; __fastcall Idetodoupdaters::TToDoFileUpdater::SourceIsValid()
+    @Idetodoupdaters@TToDoFileUpdater@UpdateText$qqrii20System@UnicodeString22Codemgr@TSourceSection @100 ; __fastcall Idetodoupdaters::TToDoFileUpdater::UpdateText(int, int, System::UnicodeString, Codemgr::TSourceSection)
+    @Idetodoupdaters@TToDoFileUpdater@Validate$qqrv @126 ; __fastcall Idetodoupdaters::TToDoFileUpdater::Validate()
+    @Idetodoupdaters@TToDoFileUpdater@ValidateIdent$qqrx20System@UnicodeString @106 ; __fastcall Idetodoupdaters::TToDoFileUpdater::ValidateIdent(const System::UnicodeString)
+    @Idetodoupdaters@TToDoModule@  @132 ; Idetodoupdaters::TToDoModule::
+    @Idetodoupdaters@TToDoModule@$bdtr$qqrv @91  ; __fastcall Idetodoupdaters::TToDoModule::~TToDoModule()
+    @Idetodoupdaters@TToDoModule@CanAddClosedFile$qqrv @92  ; __fastcall Idetodoupdaters::TToDoModule::CanAddClosedFile()
+    @Idetodoupdaters@TToDoModule@Modified$qqrv @90  ; __fastcall Idetodoupdaters::TToDoModule::Modified()
+    @Idetodoupdaters@TToDoModule@MustPromptForSaveName$qqrv @89  ; __fastcall Idetodoupdaters::TToDoModule::MustPromptForSaveName()
+    @Idetodoupdaters@TToDoModule@Save$qqroo @88  ; __fastcall Idetodoupdaters::TToDoModule::Save(bool, bool)
+    @Idetodoupdaters@initialization$qqrv @86  ; __fastcall Idetodoupdaters::initialization()
+    @Idetodoutils@Finalization$qqrv @2   ; __fastcall Idetodoutils::Finalization()
+    @Idetodoutils@GetCFileHandler$qqrx20System@UnicodeString @7   ; __fastcall Idetodoutils::GetCFileHandler(const System::UnicodeString)
+    @Idetodoutils@RegisterCFileHandler$qqrp17System@TMetaClass @9   ; __fastcall Idetodoutils::RegisterCFileHandler(System::TMetaClass *)
+    @Idetodoutils@TCommentScanner@ @19  ; Idetodoutils::TCommentScanner::
+    @Idetodoutils@TCommentScanner@GetHashCode$qqrx20System@UnicodeString @12  ; __fastcall Idetodoutils::TCommentScanner::GetHashCode(const System::UnicodeString)
+    @Idetodoutils@TCommentScanner@NextToken$qqrv @11  ; __fastcall Idetodoutils::TCommentScanner::NextToken()
+    @Idetodoutils@TCommentScanner@ScannerStarted$qqrv @10  ; __fastcall Idetodoutils::TCommentScanner::ScannerStarted()
+    @Idetodoutils@TSortableInterfaceList@ @21  ; Idetodoutils::TSortableInterfaceList::
+    @Idetodoutils@TSortableInterfaceList@Sort$qqrynpqqr44System@%DelphiInterface$17System@IInterface%t1$i @6   ; Idetodoutils::TSortableInterfaceList::Sort(__closure(*)(System::DelphiInterface<{583}...
+    @Idetodoutils@TToDoFilterList@ @15  ; Idetodoutils::TToDoFilterList::
+    @Idetodoutils@TToDoFilterList@ListValues$qqrp23System@Classes@TStringsoo @4   ; __fastcall Idetodoutils::TToDoFilterList::ListValues(System::Classes::TStrings *, bool, bool)
+    @Idetodoutils@TToDoFilterList@Reset$qqrv @5   ; __fastcall Idetodoutils::TToDoFilterList::Reset()
+    @Idetodoutils@TToDoFilterListItem@ @17  ; Idetodoutils::TToDoFilterListItem::
+    @Idetodoutils@TToDoFilterListItem@$bctr$qqri @3   ; __fastcall Idetodoutils::TToDoFilterListItem::TToDoFilterListItem(int)
+    @Idetodoutils@TrimText$qqrx20System@UnicodeString @13  ; __fastcall Idetodoutils::TrimText(const System::UnicodeString)
+    @Idetodoutils@UnregisterCFileHandler$qqrp17System@TMetaClass @8   ; __fastcall Idetodoutils::UnregisterCFileHandler(System::TMetaClass *)
+    @Idetodoutils@initialization$qqrv @1   ; __fastcall Idetodoutils::initialization()
+    @Todoide@@GetPackageInfoTable$qqrv @369 ; Todoide::__linkproc__ __fastcall GetPackageInfoTable()
+    @Todoide@@PackageLoad$qqrv     @368 ; Todoide::__linkproc__ __fastcall PackageLoad()
+    @Todoide@@PackageUnload$qqrv   @367 ; Todoide::__linkproc__ __fastcall PackageUnload()
+    @Todoide@initialization$qqrv   @366 ; __fastcall Todoide::initialization()
+    Finalize                       @370 ; Finalize
+    Initialize                     @371 ; Initialize

@@ -1,0 +1,628 @@
+LIBRARY     DUNITRTL210.BPL
+
+DESCRIPTION 'Unit Runtime Package'
+
+EXPORTS
+    @$xp$19Testframework@ITest     @283 ; __tpdsc__ Testframework::ITest
+    @$xp$20System@%TArray__1$b%    @258 ; __tpdsc__ System::TArray__1<wchar_t>
+    @$xp$21Testframework@PObject   @269 ; __tpdsc__ Testframework::PObject
+    @$xp$23Guitesting@TGUITestCase @511 ; __tpdsc__ Guitesting::TGUITestCase
+    @$xp$23Guitestrunner@TTestFunc @447 ; __tpdsc__ Guitestrunner::TTestFunc
+    @$xp$23Testframework@TTestCase @270 ; __tpdsc__ Testframework::TTestCase
+    @$xp$23Testframework@TTestProc @302 ; __tpdsc__ Testframework::TTestProc
+    @$xp$24Dunitmainform@TDUnitForm @465 ; __tpdsc__ Dunitmainform::TDUnitForm
+    @$xp$24Testframework@ETestError @294 ; __tpdsc__ Testframework::ETestError
+    @$xp$24Testframework@ITestSuite @278 ; __tpdsc__ Testframework::ITestSuite
+    @$xp$24Testframework@TTestSuite @265 ; __tpdsc__ Testframework::TTestSuite
+    @$xp$24Testmodules@TGetTestFunc @455 ; __tpdsc__ Testmodules::TGetTestFunc
+    @$xp$25Dunitabout@TDUnitAboutBox @9   ; __tpdsc__ Dunitabout::TDUnitAboutBox
+    @$xp$25Testextensions@TTestSetup @550 ; __tpdsc__ Testextensions::TTestSetup
+    @$xp$25Testframework@TTestMethod @303 ; __tpdsc__ Testframework::TTestMethod
+    @$xp$25Testframework@TTestResult @274 ; __tpdsc__ Testframework::TTestResult
+    @$xp$25Testmodules@TModuleRecord @456 ; __tpdsc__ Testmodules::TModuleRecord
+    @$xp$26Testextensions@TActiveTest @545 ; __tpdsc__ Testextensions::TActiveTest
+    @$xp$26Testextensions@TMemoryTest @537 ; __tpdsc__ Testextensions::TMemoryTest
+    @$xp$26Testframework@ETestFailure @298 ; __tpdsc__ Testframework::ETestFailure
+    @$xp$26Testframework@TTestFailure @263 ; __tpdsc__ Testframework::TTestFailure
+    @$xp$26Testmodules@Testmodules__1 @454 ; __tpdsc__ Testmodules::Testmodules__1
+    @$xp$27Testextensions@EMemoryError @541 ; __tpdsc__ Testextensions::EMemoryError
+    @$xp$27Testframework@ITestListener @280 ; __tpdsc__ Testframework::ITestListener
+    @$xp$27Testframework@TAbstractTest @272 ; __tpdsc__ Testframework::TAbstractTest
+    @$xp$27Testframework@TListIterator @288 ; __tpdsc__ Testframework::TListIterator
+    @$xp$28Guitestrunner@TGUITestRunner @445 ; __tpdsc__ Guitestrunner::TGUITestRunner
+    @$xp$28Testextensions@IRepeatedTest @549 ; __tpdsc__ Testextensions::IRepeatedTest
+    @$xp$28Testextensions@TRepeatedTest @547 ; __tpdsc__ Testextensions::TRepeatedTest
+    @$xp$28Testframework@ExceptionClass @300 ; __tpdsc__ Testframework::ExceptionClass
+    @$xp$28Testframework@ITestDecorator @282 ; __tpdsc__ Testframework::ITestDecorator
+    @$xp$28Testframework@ITestListenerX @279 ; __tpdsc__ Testframework::ITestListenerX
+    @$xp$28Testframework@TTestCaseClass @301 ; __tpdsc__ Testframework::TTestCaseClass
+    @$xp$29Testextensions@TTestDecorator @552 ; __tpdsc__ Testextensions::TTestDecorator
+    @$xp$29Testframework@EDunitException @296 ; __tpdsc__ Testframework::EDunitException
+    @$xp$29Testframework@IMemLeakMonitor @287 ; __tpdsc__ Testframework::IMemLeakMonitor
+    @$xp$29Testframework@IStatusListener @281 ; __tpdsc__ Testframework::IStatusListener
+    @$xp$30Testframework@EPostTestFailure @290 ; __tpdsc__ Testframework::EPostTestFailure
+    @$xp$30Testframework@TGenericTestCase @267 ; __tpdsc__ Testframework::TGenericTestCase
+    @$xp$30Xmltestrunner@TXMLTestListener @608 ; __tpdsc__ Xmltestrunner::TXMLTestListener
+    @$xp$31Testextensions@TMemoryTestTypes @540 ; __tpdsc__ Testextensions::TMemoryTestTypes
+    @$xp$31Testframework@EStopTestsFailure @292 ; __tpdsc__ Testframework::EStopTestsFailure
+    @$xp$31Testframework@RunCountAttribute @304 ; __tpdsc__ Testframework::RunCountAttribute
+    @$xp$31Testframework@TAllowedLeakArray @289 ; __tpdsc__ Testframework::TAllowedLeakArray
+    @$xp$31Testframework@TMethodEnumerator @259 ; __tpdsc__ Testframework::TMethodEnumerator
+    @$xp$32Texttestrunner@TTextTestListener @581 ; __tpdsc__ Texttestrunner::TTextTestListener
+    @$xp$33Testextensions@TExceptionTestCase @543 ; __tpdsc__ Testextensions::TExceptionTestCase
+    @$xp$34Testextensions@TMemoryTestTypesSet @539 ; __tpdsc__ Testextensions::TMemoryTestTypesSet
+    @$xp$34Testframework@EBreakingTestFailure @284 ; __tpdsc__ Testframework::EBreakingTestFailure
+    @$xp$34Testframework@IDUnitMemLeakMonitor @286 ; __tpdsc__ Testframework::IDUnitMemLeakMonitor
+    @$xp$34Texttestrunner@TRunnerExitBehavior @583 ; __tpdsc__ Texttestrunner::TRunnerExitBehavior
+    @$xp$35Testframework@_TMethodEnumerator@_1 @262 ; __tpdsc__ Testframework::_TMethodEnumerator::_1
+    @$xp$35Testframework@_TMethodEnumerator@_2 @261 ; __tpdsc__ Testframework::_TMethodEnumerator::_2
+    @$xp$36Testframework@TStatusToResultAdapter @276 ; __tpdsc__ Testframework::TStatusToResultAdapter
+    @$xp$38Msbuildtestrunner@TMSBuildTestListener @615 ; __tpdsc__ Msbuildtestrunner::TMSBuildTestListener
+    @Dunitabout@Finalization$qqrv  @2   ; __fastcall Dunitabout::Finalization()
+    @Dunitabout@Splash$qqrv        @4   ; __fastcall Dunitabout::Splash()
+    @Dunitabout@TDUnitAboutBox@    @10  ; Dunitabout::TDUnitAboutBox::
+    @Dunitabout@TDUnitAboutBox@FormClose$qqrp14System@TObjectr27System@Uitypes@TCloseAction @8   ; __fastcall Dunitabout::TDUnitAboutBox::FormClose(System::TObject *, System::Uitypes::TCloseAction&)
+    @Dunitabout@TDUnitAboutBox@FormCreate$qqrp14System@TObject @3   ; __fastcall Dunitabout::TDUnitAboutBox::FormCreate(System::TObject *)
+    @Dunitabout@TDUnitAboutBox@FormKeyDown$qqrp14System@TObjectrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @5   ; Dunitabout::TDUnitAboutBox::FormKeyDown(System::TObject *, unsigned short&, System::Set<{583}...
+    @Dunitabout@TDUnitAboutBox@MainPanelClick$qqrp14System@TObject @6   ; __fastcall Dunitabout::TDUnitAboutBox::MainPanelClick(System::TObject *)
+    @Dunitabout@TDUnitAboutBox@TimerTimer$qqrp14System@TObject @7   ; __fastcall Dunitabout::TDUnitAboutBox::TimerTimer(System::TObject *)
+    @Dunitabout@initialization$qqrv @1   ; __fastcall Dunitabout::initialization()
+    @Dunitabout@rcs_id             @11  ; Dunitabout::rcs_id
+    @Dunitconsts@Finalization$qqrv @13  ; __fastcall Dunitconsts::Finalization()
+    @Dunitconsts@_sAllowLeakArrayValues @35  ; Dunitconsts::_sAllowLeakArrayValues
+    @Dunitconsts@_sDUnitTesting    @17  ; Dunitconsts::_sDUnitTesting
+    @Dunitconsts@_sDecodeTime      @16  ; Dunitconsts::_sDecodeTime
+    @Dunitconsts@_sEmptyTest       @37  ; Dunitconsts::_sEmptyTest
+    @Dunitconsts@_sErrorsCount     @18  ; Dunitconsts::_sErrorsCount
+    @Dunitconsts@_sExceptionNothig @36  ; Dunitconsts::_sExceptionNothig
+    @Dunitconsts@_sExceptionUnexpected @33  ; Dunitconsts::_sExceptionUnexpected
+    @Dunitconsts@_sExpectedException @38  ; Dunitconsts::_sExpectedException
+    @Dunitconsts@_sExportFunction  @30  ; Dunitconsts::_sExportFunction
+    @Dunitconsts@_sFailedSetup     @43  ; Dunitconsts::_sFailedSetup
+    @Dunitconsts@_sFailedTearDown  @42  ; Dunitconsts::_sFailedTearDown
+    @Dunitconsts@_sFailedTestDetails @26  ; Dunitconsts::_sFailedTestDetails
+    @Dunitconsts@_sFailureCount    @19  ; Dunitconsts::_sFailureCount
+    @Dunitconsts@_sIdenticalContent @39  ; Dunitconsts::_sIdenticalContent
+    @Dunitconsts@_sLoadModule      @31  ; Dunitconsts::_sLoadModule
+    @Dunitconsts@_sMemoryChanged   @45  ; Dunitconsts::_sMemoryChanged
+    @Dunitconsts@_sMethodNotFound  @32  ; Dunitconsts::_sMethodNotFound
+    @Dunitconsts@_sNilListener     @44  ; Dunitconsts::_sNilListener
+    @Dunitconsts@_sNoChecksExecuted @34  ; Dunitconsts::_sNoChecksExecuted
+    @Dunitconsts@_sNonNilTestResult @41  ; Dunitconsts::_sNonNilTestResult
+    @Dunitconsts@_sPopupNext       @48  ; Dunitconsts::_sPopupNext
+    @Dunitconsts@_sPopupPrevious   @50  ; Dunitconsts::_sPopupPrevious
+    @Dunitconsts@_sPopupRun        @49  ; Dunitconsts::_sPopupRun
+    @Dunitconsts@_sPopupTitle      @51  ; Dunitconsts::_sPopupTitle
+    @Dunitconsts@_sPressReturn     @15  ; Dunitconsts::_sPressReturn
+    @Dunitconsts@_sPrintError      @28  ; Dunitconsts::_sPrintError
+    @Dunitconsts@_sPrintErrors     @27  ; Dunitconsts::_sPrintErrors
+    @Dunitconsts@_sPrintFailure    @25  ; Dunitconsts::_sPrintFailure
+    @Dunitconsts@_sPrintFailures   @24  ; Dunitconsts::_sPrintFailures
+    @Dunitconsts@_sReturnInterface @29  ; Dunitconsts::_sReturnInterface
+    @Dunitconsts@_sRunCount        @20  ; Dunitconsts::_sRunCount
+    @Dunitconsts@_sSetupDecorator  @47  ; Dunitconsts::_sSetupDecorator
+    @Dunitconsts@_sTestMemory      @46  ; Dunitconsts::_sTestMemory
+    @Dunitconsts@_sTestResults     @21  ; Dunitconsts::_sTestResults
+    @Dunitconsts@_sTestResultsFailures @22  ; Dunitconsts::_sTestResultsFailures
+    @Dunitconsts@_sTestResultsOk   @23  ; Dunitconsts::_sTestResultsOk
+    @Dunitconsts@_sTests           @40  ; Dunitconsts::_sTests
+    @Dunitconsts@_sTitle           @52  ; Dunitconsts::_sTitle
+    @Dunitconsts@_sUnsupportedTypeInfo @14  ; Dunitconsts::_sUnsupportedTypeInfo
+    @Dunitconsts@initialization$qqrv @12  ; __fastcall Dunitconsts::initialization()
+    @Dunitmainform@DUnitForm       @464 ; Dunitmainform::DUnitForm
+    @Dunitmainform@Finalization$qqrv @459 ; __fastcall Dunitmainform::Finalization()
+    @Dunitmainform@TDUnitForm@     @466 ; Dunitmainform::TDUnitForm::
+    @Dunitmainform@TDUnitForm@AboutActionExecute$qqrp14System@TObject @460 ; __fastcall Dunitmainform::TDUnitForm::AboutActionExecute(System::TObject *)
+    @Dunitmainform@TDUnitForm@FormCreate$qqrp14System@TObject @462 ; __fastcall Dunitmainform::TDUnitForm::FormCreate(System::TObject *)
+    @Dunitmainform@TDUnitForm@FormDestroy$qqrp14System@TObject @461 ; __fastcall Dunitmainform::TDUnitForm::FormDestroy(System::TObject *)
+    @Dunitmainform@TDUnitForm@LoadTestsActionExecute$qqrp14System@TObject @463 ; __fastcall Dunitmainform::TDUnitForm::LoadTestsActionExecute(System::TObject *)
+    @Dunitmainform@initialization$qqrv @458 ; __fastcall Dunitmainform::initialization()
+    @Dunitmainform@rcs_id          @467 ; Dunitmainform::rcs_id
+    @Dunitrtl@@GetPackageInfoTable$qqrv @620 ; Dunitrtl::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dunitrtl@@PackageLoad$qqrv    @619 ; Dunitrtl::__linkproc__ __fastcall PackageLoad()
+    @Dunitrtl@@PackageUnload$qqrv  @618 ; Dunitrtl::__linkproc__ __fastcall PackageUnload()
+    @Dunitrtl@initialization$qqrv  @617 ; __fastcall Dunitrtl::initialization()
+    @GetPackageInfoTable           @623 ; GetPackageInfoTable
+    @Guitesting@Finalization$qqrv  @469 ; __fastcall Guitesting::Finalization()
+    @Guitesting@TGUITestCase@      @512 ; Guitesting::TGUITestCase::
+    @Guitesting@TGUITestCase@$bctr$qqr20System@UnicodeString @510 ; __fastcall Guitesting::TGUITestCase::TGUITestCase(System::UnicodeString)
+    @Guitesting@TGUITestCase@$bdtr$qqrv @509 ; __fastcall Guitesting::TGUITestCase::~TGUITestCase()
+    @Guitesting@TGUITestCase@CheckEnabled$qqr20System@UnicodeString @475 ; __fastcall Guitesting::TGUITestCase::CheckEnabled(System::UnicodeString)
+    @Guitesting@TGUITestCase@CheckEnabled$qqrp21Vcl@Controls@TControlpv @476 ; __fastcall Guitesting::TGUITestCase::CheckEnabled(Vcl::Controls::TControl *, void *)
+    @Guitesting@TGUITestCase@CheckFocused$qqr20System@UnicodeString @478 ; __fastcall Guitesting::TGUITestCase::CheckFocused(System::UnicodeString)
+    @Guitesting@TGUITestCase@CheckFocused$qqrp21Vcl@Controls@TControlpv @479 ; __fastcall Guitesting::TGUITestCase::CheckFocused(Vcl::Controls::TControl *, void *)
+    @Guitesting@TGUITestCase@CheckTabTo$qqr20System@UnicodeString @477 ; __fastcall Guitesting::TGUITestCase::CheckTabTo(System::UnicodeString)
+    @Guitesting@TGUITestCase@CheckTabTo$qqrp21Vcl@Controls@TControlpv @480 ; __fastcall Guitesting::TGUITestCase::CheckTabTo(Vcl::Controls::TControl *, void *)
+    @Guitesting@TGUITestCase@CheckVisible$qqr20System@UnicodeString @471 ; __fastcall Guitesting::TGUITestCase::CheckVisible(System::UnicodeString)
+    @Guitesting@TGUITestCase@CheckVisible$qqrp21Vcl@Controls@TControlpv @472 ; __fastcall Guitesting::TGUITestCase::CheckVisible(Vcl::Controls::TControl *, void *)
+    @Guitesting@TGUITestCase@CheckVisible$qqrv @470 ; __fastcall Guitesting::TGUITestCase::CheckVisible()
+    @Guitesting@TGUITestCase@Click$qqr20System@UnicodeString @500 ; __fastcall Guitesting::TGUITestCase::Click(System::UnicodeString)
+    @Guitesting@TGUITestCase@Click$qqrp21Vcl@Controls@TControl @499 ; __fastcall Guitesting::TGUITestCase::Click(Vcl::Controls::TControl *)
+    @Guitesting@TGUITestCase@Click$qqrv @501 ; __fastcall Guitesting::TGUITestCase::Click()
+    @Guitesting@TGUITestCase@ClickLeftMouseButtonOn$qqrp21Vcl@Controls@TControl @506 ; __fastcall Guitesting::TGUITestCase::ClickLeftMouseButtonOn(Vcl::Controls::TControl *)
+    @Guitesting@TGUITestCase@EnterKey$qqrbx60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @495 ; Guitesting::TGUITestCase::EnterKey(wchar_t, const System::Set<{583}...
+    @Guitesting@TGUITestCase@EnterKey$qqrusx60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @498 ; Guitesting::TGUITestCase::EnterKey(unsigned short, const System::Set<{583}...
+    @Guitesting@TGUITestCase@EnterKeyInto$qqr20System@UnicodeStringbx60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @493 ; Guitesting::TGUITestCase::EnterKeyInto(System::UnicodeString, wchar_t, const System::Set<{583}...
+    @Guitesting@TGUITestCase@EnterKeyInto$qqr20System@UnicodeStringusx60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @496 ; Guitesting::TGUITestCase::EnterKeyInto(System::UnicodeString, unsigned short, const System::Set<{583}...
+    @Guitesting@TGUITestCase@EnterKeyInto$qqrp21Vcl@Controls@TControlbx60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @494 ; Guitesting::TGUITestCase::EnterKeyInto(Vcl::Controls::TControl *, wchar_t, const System::Set<{583}...
+    @Guitesting@TGUITestCase@EnterKeyInto$qqrp21Vcl@Controls@TControlusx60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @497 ; Guitesting::TGUITestCase::EnterKeyInto(Vcl::Controls::TControl *, unsigned short, const System::Set<{583}...
+    @Guitesting@TGUITestCase@EnterText$qqr20System@UnicodeString @492 ; __fastcall Guitesting::TGUITestCase::EnterText(System::UnicodeString)
+    @Guitesting@TGUITestCase@EnterTextInto$qqr20System@UnicodeStringt1 @491 ; __fastcall Guitesting::TGUITestCase::EnterTextInto(System::UnicodeString, System::UnicodeString)
+    @Guitesting@TGUITestCase@EnterTextInto$qqrp21Vcl@Controls@TControl20System@UnicodeString @490 ; __fastcall Guitesting::TGUITestCase::EnterTextInto(Vcl::Controls::TControl *, System::UnicodeString)
+    @Guitesting@TGUITestCase@FindControl$qqrp25System@Classes@TComponentx20System@UnicodeStringpv @507 ; __fastcall Guitesting::TGUITestCase::FindControl(System::Classes::TComponent *, const System::UnicodeString, void *)
+    @Guitesting@TGUITestCase@FindControl$qqrx20System@UnicodeStringpv @505 ; __fastcall Guitesting::TGUITestCase::FindControl(const System::UnicodeString, void *)
+    @Guitesting@TGUITestCase@FindParentWinControl$qqrp21Vcl@Controls@TControl @504 ; __fastcall Guitesting::TGUITestCase::FindParentWinControl(Vcl::Controls::TControl *)
+    @Guitesting@TGUITestCase@GetFocused$qqrv @482 ; __fastcall Guitesting::TGUITestCase::GetFocused()
+    @Guitesting@TGUITestCase@Hide$qqr20System@UnicodeString @485 ; __fastcall Guitesting::TGUITestCase::Hide(System::UnicodeString)
+    @Guitesting@TGUITestCase@Hide$qqrp21Vcl@Controls@TControl @484 ; __fastcall Guitesting::TGUITestCase::Hide(Vcl::Controls::TControl *)
+    @Guitesting@TGUITestCase@Hide$qqrv @486 ; __fastcall Guitesting::TGUITestCase::Hide()
+    @Guitesting@TGUITestCase@IsFocused$qqrp21Vcl@Controls@TControl @481 ; __fastcall Guitesting::TGUITestCase::IsFocused(Vcl::Controls::TControl *)
+    @Guitesting@TGUITestCase@SetFocus$qqr20System@UnicodeString @473 ; __fastcall Guitesting::TGUITestCase::SetFocus(System::UnicodeString)
+    @Guitesting@TGUITestCase@SetFocus$qqrp21Vcl@Controls@TControlpv @474 ; __fastcall Guitesting::TGUITestCase::SetFocus(Vcl::Controls::TControl *, void *)
+    @Guitesting@TGUITestCase@SetKeyboardStateDown$qqrp24Vcl@Controls@TWinControl60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @503 ; Guitesting::TGUITestCase::SetKeyboardStateDown(Vcl::Controls::TWinControl *, System::Set<{583}...
+    @Guitesting@TGUITestCase@SetKeyboardStateUp$qqrp24Vcl@Controls@TWinControl60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @502 ; Guitesting::TGUITestCase::SetKeyboardStateUp(Vcl::Controls::TWinControl *, System::Set<{583}...
+    @Guitesting@TGUITestCase@Show$qqr20System@UnicodeStringo @488 ; __fastcall Guitesting::TGUITestCase::Show(System::UnicodeString, bool)
+    @Guitesting@TGUITestCase@Show$qqro @489 ; __fastcall Guitesting::TGUITestCase::Show(bool)
+    @Guitesting@TGUITestCase@Show$qqrp21Vcl@Controls@TControlo @487 ; __fastcall Guitesting::TGUITestCase::Show(Vcl::Controls::TControl *, bool)
+    @Guitesting@TGUITestCase@Tab$qqri @483 ; __fastcall Guitesting::TGUITestCase::Tab(int)
+    @Guitesting@TGUITestCase@TearDown$qqrv @508 ; __fastcall Guitesting::TGUITestCase::TearDown()
+    @Guitesting@initialization$qqrv @468 ; __fastcall Guitesting::initialization()
+    @Guitesting@rcs_id             @513 ; Guitesting::rcs_id
+    @Guitestrunner@Finalization$qqrv @309 ; __fastcall Guitestrunner::Finalization()
+    @Guitestrunner@RunRegisteredTests$qqrv @442 ; __fastcall Guitestrunner::RunRegisteredTests()
+    @Guitestrunner@RunRegisteredTestsModeless$qqrv @441 ; __fastcall Guitestrunner::RunRegisteredTestsModeless()
+    @Guitestrunner@RunRegisteredTestsModelessUnattended$qqrv @440 ; __fastcall Guitestrunner::RunRegisteredTestsModelessUnattended()
+    @Guitestrunner@RunTest$qqr46System@%DelphiInterface$19Testframework@ITest% @444 ; Guitestrunner::RunTest(System::DelphiInterface<{583}...
+    @Guitestrunner@RunTestModeless$qqr46System@%DelphiInterface$19Testframework@ITest% @443 ; Guitestrunner::RunTestModeless(System::DelphiInterface<{583}...
+    @Guitestrunner@TGUITestRunner@ @446 ; Guitestrunner::TGUITestRunner::
+    @Guitestrunner@TGUITestRunner@AddError$qqrp26Testframework@TTestFailure @430 ; __fastcall Guitestrunner::TGUITestRunner::AddError(Testframework::TTestFailure *)
+    @Guitestrunner@TGUITestRunner@AddFailure$qqrp26Testframework@TTestFailure @429 ; __fastcall Guitestrunner::TGUITestRunner::AddFailure(Testframework::TTestFailure *)
+    @Guitestrunner@TGUITestRunner@AddFailureItem$qqrp26Testframework@TTestFailure @415 ; __fastcall Guitestrunner::TGUITestRunner::AddFailureItem(Testframework::TTestFailure *)
+    @Guitestrunner@TGUITestRunner@AddSuccess$qqr46System@%DelphiInterface$19Testframework@ITest% @431 ; Guitestrunner::TGUITestRunner::AddSuccess(System::DelphiInterface<{583}...
+    @Guitestrunner@TGUITestRunner@AllowedLeakSizeMemuItemClick$qqrp14System@TObject @315 ; __fastcall Guitestrunner::TGUITestRunner::AllowedLeakSizeMemuItemClick(System::TObject *)
+    @Guitestrunner@TGUITestRunner@AllowedLeakSizeMemuItemDrawItem$qqrp14System@TObjectp20Vcl@Graphics@TCanvasrx18System@Types@TRecto @321 ; __fastcall Guitestrunner::TGUITestRunner::AllowedLeakSizeMemuItemDrawItem(System::TObject *, Vcl::Graphics::TCanvas *, const System::Types::TRect&, bool)
+    @Guitestrunner@TGUITestRunner@ApplyToTests$qqrp22Vcl@Comctrls@TTreeNodexynpqqr46System@%DelphiInterface$19Testframework@ITest%$o @396 ; Guitestrunner::TGUITestRunner::ApplyToTests(Vcl::Comctrls::TTreeNode *, __closure(*)(System::DelphiInterface<{583}...
+    @Guitestrunner@TGUITestRunner@AutoSaveActionExecute$qqrp14System@TObject @389 ; __fastcall Guitestrunner::TGUITestRunner::AutoSaveActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@AutoSaveConfiguration$qqrv @424 ; __fastcall Guitestrunner::TGUITestRunner::AutoSaveConfiguration()
+    @Guitestrunner@TGUITestRunner@BreakOnFailuresActionExecute$qqrp14System@TObject @377 ; __fastcall Guitestrunner::TGUITestRunner::BreakOnFailuresActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@ClearFailureMessage$qqrv @409 ; __fastcall Guitestrunner::TGUITestRunner::ClearFailureMessage()
+    @Guitestrunner@TGUITestRunner@ClearResult$qqrv @408 ; __fastcall Guitestrunner::TGUITestRunner::ClearResult()
+    @Guitestrunner@TGUITestRunner@ClearStatusMessage$qqrv @353 ; __fastcall Guitestrunner::TGUITestRunner::ClearStatusMessage()
+    @Guitestrunner@TGUITestRunner@CollapseNonGrandparentNodes$qqrp22Vcl@Comctrls@TTreeNode @384 ; __fastcall Guitestrunner::TGUITestRunner::CollapseNonGrandparentNodes(Vcl::Comctrls::TTreeNode *)
+    @Guitestrunner@TGUITestRunner@CopyMessageToClipboardActionExecute$qqrp14System@TObject @366 ; __fastcall Guitestrunner::TGUITestRunner::CopyMessageToClipboardActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@CopyMessageToClipboardActionUpdate$qqrp14System@TObject @360 ; __fastcall Guitestrunner::TGUITestRunner::CopyMessageToClipboardActionUpdate(System::TObject *)
+    @Guitestrunner@TGUITestRunner@CopyProcnameToClipboardActionExecute$qqrp14System@TObject @352 ; __fastcall Guitestrunner::TGUITestRunner::CopyProcnameToClipboardActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@CopyProcnameToClipboardActionUpdate$qqrp14System@TObject @350 ; __fastcall Guitestrunner::TGUITestRunner::CopyProcnameToClipboardActionUpdate(System::TObject *)
+    @Guitestrunner@TGUITestRunner@CopyTestNametoClipboard$qqrp22Vcl@Comctrls@TTreeNode @351 ; __fastcall Guitestrunner::TGUITestRunner::CopyTestNametoClipboard(Vcl::Comctrls::TTreeNode *)
+    @Guitestrunner@TGUITestRunner@DeselectAllActionExecute$qqrp14System@TObject @393 ; __fastcall Guitestrunner::TGUITestRunner::DeselectAllActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@DeselectCurrentActionExecute$qqrp14System@TObject @358 ; __fastcall Guitestrunner::TGUITestRunner::DeselectCurrentActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@DisableTest$qqr46System@%DelphiInterface$19Testframework@ITest% @398 ; Guitestrunner::TGUITestRunner::DisableTest(System::DelphiInterface<{583}...
+    @Guitestrunner@TGUITestRunner@DisplayFailureMessage$qqrp22Vcl@Comctrls@TListItem @410 ; __fastcall Guitestrunner::TGUITestRunner::DisplayFailureMessage(Vcl::Comctrls::TListItem *)
+    @Guitestrunner@TGUITestRunner@EnableTest$qqr46System@%DelphiInterface$19Testframework@ITest% @397 ; Guitestrunner::TGUITestRunner::EnableTest(System::DelphiInterface<{583}...
+    @Guitestrunner@TGUITestRunner@EnableUI$qqro @406 ; __fastcall Guitestrunner::TGUITestRunner::EnableUI(bool)
+    @Guitestrunner@TGUITestRunner@EndSuite$qqr46System@%DelphiInterface$19Testframework@ITest% @343 ; Guitestrunner::TGUITestRunner::EndSuite(System::DelphiInterface<{583}...
+    @Guitestrunner@TGUITestRunner@EndTest$qqr46System@%DelphiInterface$19Testframework@ITest% @433 ; Guitestrunner::TGUITestRunner::EndTest(System::DelphiInterface<{583}...
+    @Guitestrunner@TGUITestRunner@ErrorBoxPanelResize$qqrp14System@TObject @386 ; __fastcall Guitestrunner::TGUITestRunner::ErrorBoxPanelResize(System::TObject *)
+    @Guitestrunner@TGUITestRunner@ErrorBoxSplitterMoved$qqrp14System@TObject @387 ; __fastcall Guitestrunner::TGUITestRunner::ErrorBoxSplitterMoved(System::TObject *)
+    @Guitestrunner@TGUITestRunner@ErrorBoxVisibleActionExecute$qqrp14System@TObject @388 ; __fastcall Guitestrunner::TGUITestRunner::ErrorBoxVisibleActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@ExitActionExecute$qqrp14System@TObject @378 ; __fastcall Guitestrunner::TGUITestRunner::ExitActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@ExpandAllNodesActionExecute$qqrp14System@TObject @381 ; __fastcall Guitestrunner::TGUITestRunner::ExpandAllNodesActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@FailIfNoChecksExecutedActionExecute$qqrp14System@TObject @376 ; __fastcall Guitestrunner::TGUITestRunner::FailIfNoChecksExecutedActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@FailNoCheckExecutedMenuItemClick$qqrp14System@TObject @317 ; __fastcall Guitestrunner::TGUITestRunner::FailNoCheckExecutedMenuItemClick(System::TObject *)
+    @Guitestrunner@TGUITestRunner@FailNoCheckExecutedMenuItemDrawItem$qqrp14System@TObjectp20Vcl@Graphics@TCanvasrx18System@Types@TRecto @324 ; __fastcall Guitestrunner::TGUITestRunner::FailNoCheckExecutedMenuItemDrawItem(System::TObject *, Vcl::Graphics::TCanvas *, const System::Types::TRect&, bool)
+    @Guitestrunner@TGUITestRunner@FailTestCaseIfMemoryLeakedActionExecute$qqrp14System@TObject @375 ; __fastcall Guitestrunner::TGUITestRunner::FailTestCaseIfMemoryLeakedActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@FailsOnMemoryLeakMenuItemClick$qqrp14System@TObject @316 ; __fastcall Guitestrunner::TGUITestRunner::FailsOnMemoryLeakMenuItemClick(System::TObject *)
+    @Guitestrunner@TGUITestRunner@FailsOnMemoryLeakMenuItemDrawItem$qqrp14System@TObjectp20Vcl@Graphics@TCanvasrx18System@Types@TRecto @323 ; __fastcall Guitestrunner::TGUITestRunner::FailsOnMemoryLeakMenuItemDrawItem(System::TObject *, Vcl::Graphics::TCanvas *, const System::Types::TRect&, bool)
+    @Guitestrunner@TGUITestRunner@FailsOnMemoryRecoveryMenuItemClick$qqrp14System@TObject @314 ; __fastcall Guitestrunner::TGUITestRunner::FailsOnMemoryRecoveryMenuItemClick(System::TObject *)
+    @Guitestrunner@TGUITestRunner@FailsOnMemoryRecoveryMenuItemDrawItem$qqrp14System@TObjectp20Vcl@Graphics@TCanvasrx18System@Types@TRecto @322 ; __fastcall Guitestrunner::TGUITestRunner::FailsOnMemoryRecoveryMenuItemDrawItem(System::TObject *, Vcl::Graphics::TCanvas *, const System::Types::TRect&, bool)
+    @Guitestrunner@TGUITestRunner@FailureListViewClick$qqrp14System@TObject @400 ; __fastcall Guitestrunner::TGUITestRunner::FailureListViewClick(System::TObject *)
+    @Guitestrunner@TGUITestRunner@FailureListViewSelectItem$qqrp14System@TObjectp22Vcl@Comctrls@TListItemo @399 ; __fastcall Guitestrunner::TGUITestRunner::FailureListViewSelectItem(System::TObject *, Vcl::Comctrls::TListItem *, bool)
+    @Guitestrunner@TGUITestRunner@FillTestTree$qqr46System@%DelphiInterface$19Testframework@ITest% @413 ; Guitestrunner::TGUITestRunner::FillTestTree(System::DelphiInterface<{583}...
+    @Guitestrunner@TGUITestRunner@FillTestTree$qqrp22Vcl@Comctrls@TTreeNode46System@%DelphiInterface$19Testframework@ITest% @414 ; Guitestrunner::TGUITestRunner::FillTestTree(Vcl::Comctrls::TTreeNode *, System::DelphiInterface<{583}...
+    @Guitestrunner@TGUITestRunner@FormCreate$qqrp14System@TObject @405 ; __fastcall Guitestrunner::TGUITestRunner::FormCreate(System::TObject *)
+    @Guitestrunner@TGUITestRunner@FormDestroy$qqrp14System@TObject @404 ; __fastcall Guitestrunner::TGUITestRunner::FormDestroy(System::TObject *)
+    @Guitestrunner@TGUITestRunner@FormShow$qqrp14System@TObject @403 ; __fastcall Guitestrunner::TGUITestRunner::FormShow(System::TObject *)
+    @Guitestrunner@TGUITestRunner@GetIniFile$qqrx20System@UnicodeString @364 ; __fastcall Guitestrunner::TGUITestRunner::GetIniFile(const System::UnicodeString)
+    @Guitestrunner@TGUITestRunner@GetPropertyName$qqrx20System@UnicodeString @318 ; __fastcall Guitestrunner::TGUITestRunner::GetPropertyName(const System::UnicodeString)
+    @Guitestrunner@TGUITestRunner@GoToNextSelectedTestActionExecute$qqrp14System@TObject @340 ; __fastcall Guitestrunner::TGUITestRunner::GoToNextSelectedTestActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@GoToPrevSelectedTestActionExecute$qqrp14System@TObject @338 ; __fastcall Guitestrunner::TGUITestRunner::GoToPrevSelectedTestActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@HideTestNodesActionExecute$qqrp14System@TObject @383 ; __fastcall Guitestrunner::TGUITestRunner::HideTestNodesActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@HideTestNodesOnOpenActionExecute$qqrp14System@TObject @382 ; __fastcall Guitestrunner::TGUITestRunner::HideTestNodesOnOpenActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@IgnoreMemoryLeakInSetUpTearDownActionExecute$qqrp14System@TObject @311 ; __fastcall Guitestrunner::TGUITestRunner::IgnoreMemoryLeakInSetUpTearDownActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@IniFileName$qqrv @428 ; __fastcall Guitestrunner::TGUITestRunner::IniFileName()
+    @Guitestrunner@TGUITestRunner@InitTree$qqrv @439 ; __fastcall Guitestrunner::TGUITestRunner::InitTree()
+    @Guitestrunner@TGUITestRunner@ListSelectedTests$qqrv @348 ; __fastcall Guitestrunner::TGUITestRunner::ListSelectedTests()
+    @Guitestrunner@TGUITestRunner@LoadConfiguration$qqrv @425 ; __fastcall Guitestrunner::TGUITestRunner::LoadConfiguration()
+    @Guitestrunner@TGUITestRunner@LoadFormPlacement$qqrv @427 ; __fastcall Guitestrunner::TGUITestRunner::LoadFormPlacement()
+    @Guitestrunner@TGUITestRunner@LoadRegistryAction$qqrv @363 ; __fastcall Guitestrunner::TGUITestRunner::LoadRegistryAction()
+    @Guitestrunner@TGUITestRunner@LoadSuiteConfiguration$qqrv @370 ; __fastcall Guitestrunner::TGUITestRunner::LoadSuiteConfiguration()
+    @Guitestrunner@TGUITestRunner@MakeNodeVisible$qqrp22Vcl@Comctrls@TTreeNode @369 ; __fastcall Guitestrunner::TGUITestRunner::MakeNodeVisible(Vcl::Comctrls::TTreeNode *)
+    @Guitestrunner@TGUITestRunner@MenuLooksActive$qqrp20Vcl@Graphics@TCanvasrx18System@Types@TRecto20System@UnicodeStringui @329 ; __fastcall Guitestrunner::TGUITestRunner::MenuLooksActive(Vcl::Graphics::TCanvas *, const System::Types::TRect&, bool, System::UnicodeString, unsigned int)
+    @Guitestrunner@TGUITestRunner@MenuLooksInactive$qqrp20Vcl@Graphics@TCanvasrx18System@Types@TRecto20System@UnicodeStringuio @330 ; __fastcall Guitestrunner::TGUITestRunner::MenuLooksInactive(Vcl::Graphics::TCanvas *, const System::Types::TRect&, bool, System::UnicodeString, unsigned int, bool)
+    @Guitestrunner@TGUITestRunner@Next1Click$qqrp14System@TObject @332 ; __fastcall Guitestrunner::TGUITestRunner::Next1Click(System::TObject *)
+    @Guitestrunner@TGUITestRunner@Next1DrawItem$qqrp14System@TObjectp20Vcl@Graphics@TCanvasrx18System@Types@TRecto @325 ; __fastcall Guitestrunner::TGUITestRunner::Next1DrawItem(System::TObject *, Vcl::Graphics::TCanvas *, const System::Types::TRect&, bool)
+    @Guitestrunner@TGUITestRunner@NodeIsGrandparent$qqrp22Vcl@Comctrls@TTreeNode @385 ; __fastcall Guitestrunner::TGUITestRunner::NodeIsGrandparent(Vcl::Comctrls::TTreeNode *)
+    @Guitestrunner@TGUITestRunner@NodeToTest$qqrp22Vcl@Comctrls@TTreeNode @438 ; __fastcall Guitestrunner::TGUITestRunner::NodeToTest(Vcl::Comctrls::TTreeNode *)
+    @Guitestrunner@TGUITestRunner@OnUpdateTimer$qqrp14System@TObject @437 ; __fastcall Guitestrunner::TGUITestRunner::OnUpdateTimer(System::TObject *)
+    @Guitestrunner@TGUITestRunner@Previous1Click$qqrp14System@TObject @333 ; __fastcall Guitestrunner::TGUITestRunner::Previous1Click(System::TObject *)
+    @Guitestrunner@TGUITestRunner@Previous1DrawItem$qqrp14System@TObjectp20Vcl@Graphics@TCanvasrx18System@Types@TRecto @327 ; __fastcall Guitestrunner::TGUITestRunner::Previous1DrawItem(System::TObject *, Vcl::Graphics::TCanvas *, const System::Types::TRect&, bool)
+    @Guitestrunner@TGUITestRunner@ProcessClickOnStateIcon$qqrv @368 ; __fastcall Guitestrunner::TGUITestRunner::ProcessClickOnStateIcon()
+    @Guitestrunner@TGUITestRunner@ReportMemoryLeakTypeOnShutdownActionExecute$qqrp14System@TObject @310 ; __fastcall Guitestrunner::TGUITestRunner::ReportMemoryLeakTypeOnShutdownActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@ResetProgress$qqrv @416 ; __fastcall Guitestrunner::TGUITestRunner::ResetProgress()
+    @Guitestrunner@TGUITestRunner@RestoreSavedActionExecute$qqrp14System@TObject @390 ; __fastcall Guitestrunner::TGUITestRunner::RestoreSavedActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@RunActionExecute$qqrp14System@TObject @379 ; __fastcall Guitestrunner::TGUITestRunner::RunActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@RunActionUpdate$qqrp14System@TObject @361 ; __fastcall Guitestrunner::TGUITestRunner::RunActionUpdate(System::TObject *)
+    @Guitestrunner@TGUITestRunner@RunRegisteredTests$qqrv @344 ; __fastcall Guitestrunner::TGUITestRunner::RunRegisteredTests()
+    @Guitestrunner@TGUITestRunner@RunSelectedTest1DrawItem$qqrp14System@TObjectp20Vcl@Graphics@TCanvasrx18System@Types@TRecto @326 ; __fastcall Guitestrunner::TGUITestRunner::RunSelectedTest1DrawItem(System::TObject *, Vcl::Graphics::TCanvas *, const System::Types::TRect&, bool)
+    @Guitestrunner@TGUITestRunner@RunSelectedTestActionExecute$qqrp14System@TObject @347 ; __fastcall Guitestrunner::TGUITestRunner::RunSelectedTestActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@RunSelectedTestActionUpdate$qqrp14System@TObject @346 ; __fastcall Guitestrunner::TGUITestRunner::RunSelectedTestActionUpdate(System::TObject *)
+    @Guitestrunner@TGUITestRunner@RunSelectedTestAltActionExecute$qqrp14System@TObject @312 ; __fastcall Guitestrunner::TGUITestRunner::RunSelectedTestAltActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@RunTest$qqr46System@%DelphiInterface$19Testframework@ITest% @345 ; Guitestrunner::TGUITestRunner::RunTest(System::DelphiInterface<{583}...
+    @Guitestrunner@TGUITestRunner@RunTheTest$qqr46System@%DelphiInterface$19Testframework@ITest% @380 ; Guitestrunner::TGUITestRunner::RunTheTest(System::DelphiInterface<{583}...
+    @Guitestrunner@TGUITestRunner@SaveConfiguration$qqrv @423 ; __fastcall Guitestrunner::TGUITestRunner::SaveConfiguration()
+    @Guitestrunner@TGUITestRunner@SaveConfigurationActionExecute$qqrp14System@TObject @391 ; __fastcall Guitestrunner::TGUITestRunner::SaveConfigurationActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@SaveFormPlacement$qqrv @426 ; __fastcall Guitestrunner::TGUITestRunner::SaveFormPlacement()
+    @Guitestrunner@TGUITestRunner@SaveRegistryAction$qqrv @362 ; __fastcall Guitestrunner::TGUITestRunner::SaveRegistryAction()
+    @Guitestrunner@TGUITestRunner@SelectAllActionExecute$qqrp14System@TObject @394 ; __fastcall Guitestrunner::TGUITestRunner::SelectAllActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@SelectCurrentActionExecute$qqrp14System@TObject @359 ; __fastcall Guitestrunner::TGUITestRunner::SelectCurrentActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@SelectFailedActionExecute$qqrp14System@TObject @392 ; __fastcall Guitestrunner::TGUITestRunner::SelectFailedActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@SelectNode$qqrp22Vcl@Comctrls@TTreeNode @337 ; __fastcall Guitestrunner::TGUITestRunner::SelectNode(Vcl::Comctrls::TTreeNode *)
+    @Guitestrunner@TGUITestRunner@SelectNodeIfTestEnabled$qqrp22Vcl@Comctrls@TTreeNode @339 ; __fastcall Guitestrunner::TGUITestRunner::SelectNodeIfTestEnabled(Vcl::Comctrls::TTreeNode *)
+    @Guitestrunner@TGUITestRunner@SelectedTest$qqrv @349 ; __fastcall Guitestrunner::TGUITestRunner::SelectedTest()
+    @Guitestrunner@TGUITestRunner@SetNodeState$qqrp22Vcl@Comctrls@TTreeNodeo @420 ; __fastcall Guitestrunner::TGUITestRunner::SetNodeState(Vcl::Comctrls::TTreeNode *, bool)
+    @Guitestrunner@TGUITestRunner@SetSuite$qqr46System@%DelphiInterface$19Testframework@ITest% @411 ; Guitestrunner::TGUITestRunner::SetSuite(System::DelphiInterface<{583}...
+    @Guitestrunner@TGUITestRunner@SetTreeNodeImage$qqrp22Vcl@Comctrls@TTreeNodei @412 ; __fastcall Guitestrunner::TGUITestRunner::SetTreeNodeImage(Vcl::Comctrls::TTreeNode *, int)
+    @Guitestrunner@TGUITestRunner@SetUpStateImages$qqrv @371 ; __fastcall Guitestrunner::TGUITestRunner::SetUpStateImages()
+    @Guitestrunner@TGUITestRunner@Setup$qqrv @407 ; __fastcall Guitestrunner::TGUITestRunner::Setup()
+    @Guitestrunner@TGUITestRunner@SetupCustomShortcuts$qqrv @336 ; __fastcall Guitestrunner::TGUITestRunner::SetupCustomShortcuts()
+    @Guitestrunner@TGUITestRunner@SetupGUINodes$qqrv @335 ; __fastcall Guitestrunner::TGUITestRunner::SetupGUINodes()
+    @Guitestrunner@TGUITestRunner@ShouldRunTest$qqr46System@%DelphiInterface$19Testframework@ITest% @435 ; Guitestrunner::TGUITestRunner::ShouldRunTest(System::DelphiInterface<{583}...
+    @Guitestrunner@TGUITestRunner@ShowTestCasesWithRunTimePropertiesActionExecute$qqrp14System@TObject @374 ; __fastcall Guitestrunner::TGUITestRunner::ShowTestCasesWithRunTimePropertiesActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@ShowTestedNodeActionExecute$qqrp14System@TObject @372 ; __fastcall Guitestrunner::TGUITestRunner::ShowTestedNodeActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@StartSuite$qqr46System@%DelphiInterface$19Testframework@ITest% @342 ; Guitestrunner::TGUITestRunner::StartSuite(System::DelphiInterface<{583}...
+    @Guitestrunner@TGUITestRunner@StartTest$qqr46System@%DelphiInterface$19Testframework@ITest% @434 ; Guitestrunner::TGUITestRunner::StartTest(System::DelphiInterface<{583}...
+    @Guitestrunner@TGUITestRunner@Status$qqr46System@%DelphiInterface$19Testframework@ITest%x20System@UnicodeString @355 ; Guitestrunner::TGUITestRunner::Status(System::DelphiInterface<{583}...
+    @Guitestrunner@TGUITestRunner@StopActionExecute$qqrp14System@TObject @357 ; __fastcall Guitestrunner::TGUITestRunner::StopActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@StopActionUpdate$qqrp14System@TObject @356 ; __fastcall Guitestrunner::TGUITestRunner::StopActionUpdate(System::TObject *)
+    @Guitestrunner@TGUITestRunner@SwitchNodeState$qqrp22Vcl@Comctrls@TTreeNode @419 ; __fastcall Guitestrunner::TGUITestRunner::SwitchNodeState(Vcl::Comctrls::TTreeNode *)
+    @Guitestrunner@TGUITestRunner@TestCaseIgnoreSetUpTearDownLeaksMenuItemClick$qqrp14System@TObject @313 ; __fastcall Guitestrunner::TGUITestRunner::TestCaseIgnoreSetUpTearDownLeaksMenuItemClick(System::TObject *)
+    @Guitestrunner@TGUITestRunner@TestCaseIgnoreSetUpTearDownLeaksMenuItemDrawItem$qqrp14System@TObjectp20Vcl@Graphics@TCanvasrx18System@Types@TRecto @320 ; __fastcall Guitestrunner::TGUITestRunner::TestCaseIgnoreSetUpTearDownLeaksMenuItemDrawItem(System::TObject *, Vcl::Graphics::TCanvas *, const System::Types::TRect&, bool)
+    @Guitestrunner@TGUITestRunner@TestCasePropertiesActionExecute$qqrp14System@TObject @334 ; __fastcall Guitestrunner::TGUITestRunner::TestCasePropertiesActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@TestCasePropertiesDrawItem$qqrp14System@TObjectp20Vcl@Graphics@TCanvasrx18System@Types@TRecto @328 ; __fastcall Guitestrunner::TGUITestRunner::TestCasePropertiesDrawItem(System::TObject *, Vcl::Graphics::TCanvas *, const System::Types::TRect&, bool)
+    @Guitestrunner@TGUITestRunner@TestCasePropertiesMeasureItem$qqrp14System@TObjectp20Vcl@Graphics@TCanvasrit3 @331 ; __fastcall Guitestrunner::TGUITestRunner::TestCasePropertiesMeasureItem(System::TObject *, Vcl::Graphics::TCanvas *, int&, int&)
+    @Guitestrunner@TGUITestRunner@TestToNode$qqr46System@%DelphiInterface$19Testframework@ITest% @436 ; Guitestrunner::TGUITestRunner::TestToNode(System::DelphiInterface<{583}...
+    @Guitestrunner@TGUITestRunner@TestTreeChange$qqrp14System@TObjectp22Vcl@Comctrls@TTreeNode @401 ; __fastcall Guitestrunner::TGUITestRunner::TestTreeChange(System::TObject *, Vcl::Comctrls::TTreeNode *)
+    @Guitestrunner@TGUITestRunner@TestTreeClick$qqrp14System@TObject @402 ; __fastcall Guitestrunner::TGUITestRunner::TestTreeClick(System::TObject *)
+    @Guitestrunner@TGUITestRunner@TestTreeKeyPress$qqrp14System@TObjectrb @395 ; __fastcall Guitestrunner::TGUITestRunner::TestTreeKeyPress(System::TObject *, wchar_t&)
+    @Guitestrunner@TGUITestRunner@TestTreeMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @341 ; Guitestrunner::TGUITestRunner::TestTreeMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Guitestrunner@TGUITestRunner@TestingEnds$qqrp25Testframework@TTestResult @422 ; __fastcall Guitestrunner::TGUITestRunner::TestingEnds(Testframework::TTestResult *)
+    @Guitestrunner@TGUITestRunner@TestingStarts$qqrv @432 ; __fastcall Guitestrunner::TGUITestRunner::TestingStarts()
+    @Guitestrunner@TGUITestRunner@UpdateNodeImage$qqrp22Vcl@Comctrls@TTreeNode @367 ; __fastcall Guitestrunner::TGUITestRunner::UpdateNodeImage(Vcl::Comctrls::TTreeNode *)
+    @Guitestrunner@TGUITestRunner@UpdateNodeState$qqrp22Vcl@Comctrls@TTreeNode @421 ; __fastcall Guitestrunner::TGUITestRunner::UpdateNodeState(Vcl::Comctrls::TTreeNode *)
+    @Guitestrunner@TGUITestRunner@UpdateStatus$qqrxo @417 ; __fastcall Guitestrunner::TGUITestRunner::UpdateStatus(const bool)
+    @Guitestrunner@TGUITestRunner@UpdateTestTreeState$qqrv @418 ; __fastcall Guitestrunner::TGUITestRunner::UpdateTestTreeState()
+    @Guitestrunner@TGUITestRunner@UseRegistryActionExecute$qqrp14System@TObject @365 ; __fastcall Guitestrunner::TGUITestRunner::UseRegistryActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@WarnOnFailTestOverrideActionExecute$qqrp14System@TObject @373 ; __fastcall Guitestrunner::TGUITestRunner::WarnOnFailTestOverrideActionExecute(System::TObject *)
+    @Guitestrunner@TGUITestRunner@Warning$qqr46System@%DelphiInterface$19Testframework@ITest%x20System@UnicodeString @354 ; Guitestrunner::TGUITestRunner::Warning(System::DelphiInterface<{583}...
+    @Guitestrunner@TGUITestRunner@pmTestTreePopup$qqrp14System@TObject @319 ; __fastcall Guitestrunner::TGUITestRunner::pmTestTreePopup(System::TObject *)
+    @Guitestrunner@initialization$qqrv @308 ; __fastcall Guitestrunner::initialization()
+    @Msbuildtestrunner@Finalization$qqrv @611 ; __fastcall Msbuildtestrunner::Finalization()
+    @Msbuildtestrunner@RunRegisteredTests$qqr20System@UnicodeString @613 ; __fastcall Msbuildtestrunner::RunRegisteredTests(System::UnicodeString)
+    @Msbuildtestrunner@RunTest$qqr46System@%DelphiInterface$19Testframework@ITest%20System@UnicodeString @614 ; Msbuildtestrunner::RunTest(System::DelphiInterface<{583}...
+    @Msbuildtestrunner@TMSBuildTestListener@ @616 ; Msbuildtestrunner::TMSBuildTestListener::
+    @Msbuildtestrunner@TMSBuildTestListener@TestingEnds$qqrp25Testframework@TTestResult @612 ; __fastcall Msbuildtestrunner::TMSBuildTestListener::TestingEnds(Testframework::TTestResult *)
+    @Msbuildtestrunner@initialization$qqrv @610 ; __fastcall Msbuildtestrunner::initialization()
+    @Testextensions@EMemoryError@  @542 ; Testextensions::EMemoryError::
+    @Testextensions@Finalization$qqrv @515 ; __fastcall Testextensions::Finalization()
+    @Testextensions@TActiveTest@   @546 ; Testextensions::TActiveTest::
+    @Testextensions@TExceptionTestCase@ @544 ; Testextensions::TExceptionTestCase::
+    @Testextensions@TMemoryTest@   @538 ; Testextensions::TMemoryTest::
+    @Testextensions@TMemoryTest@GetName$qqrv @518 ; __fastcall Testextensions::TMemoryTest::GetName()
+    @Testextensions@TMemoryTest@MemoryAllocated$qqrv @517 ; __fastcall Testextensions::TMemoryTest::MemoryAllocated()
+    @Testextensions@TMemoryTest@RunTest$qqrp25Testframework@TTestResult @516 ; __fastcall Testextensions::TMemoryTest::RunTest(Testframework::TTestResult *)
+    @Testextensions@TRepeatedTest@ @548 ; Testextensions::TRepeatedTest::
+    @Testextensions@TRepeatedTest@$bctr$qqr46System@%DelphiInterface$19Testframework@ITest%i20System@UnicodeString @523 ; Testextensions::TRepeatedTest::TRepeatedTest(System::DelphiInterface<{583}...
+    @Testextensions@TRepeatedTest@CountEnabledTestCases$qqrv @525 ; __fastcall Testextensions::TRepeatedTest::CountEnabledTestCases()
+    @Testextensions@TRepeatedTest@CountTestCases$qqrv @524 ; __fastcall Testextensions::TRepeatedTest::CountTestCases()
+    @Testextensions@TRepeatedTest@GetHaltOnError$qqrv @522 ; __fastcall Testextensions::TRepeatedTest::GetHaltOnError()
+    @Testextensions@TRepeatedTest@GetName$qqrv @520 ; __fastcall Testextensions::TRepeatedTest::GetName()
+    @Testextensions@TRepeatedTest@RunTest$qqrp25Testframework@TTestResult @519 ; __fastcall Testextensions::TRepeatedTest::RunTest(Testframework::TTestResult *)
+    @Testextensions@TRepeatedTest@SetHaltOnError$qqrxo @521 ; __fastcall Testextensions::TRepeatedTest::SetHaltOnError(const bool)
+    @Testextensions@TTestDecorator@ @553 ; Testextensions::TTestDecorator::
+    @Testextensions@TTestDecorator@$bctr$qqr46System@%DelphiInterface$19Testframework@ITest%20System@UnicodeString @533 ; Testextensions::TTestDecorator::TTestDecorator(System::DelphiInterface<{583}...
+    @Testextensions@TTestDecorator@CountEnabledTestCases$qqrv @535 ; __fastcall Testextensions::TTestDecorator::CountEnabledTestCases()
+    @Testextensions@TTestDecorator@CountTestCases$qqrv @534 ; __fastcall Testextensions::TTestDecorator::CountTestCases()
+    @Testextensions@TTestDecorator@GetName$qqrv @528 ; __fastcall Testextensions::TTestDecorator::GetName()
+    @Testextensions@TTestDecorator@GetTest$qqrv @532 ; __fastcall Testextensions::TTestDecorator::GetTest()
+    @Testextensions@TTestDecorator@LoadConfiguration$qqrxp30System@Inifiles@TCustomIniFilex20System@UnicodeString @531 ; __fastcall Testextensions::TTestDecorator::LoadConfiguration(System::Inifiles::TCustomIniFile * const, const System::UnicodeString)
+    @Testextensions@TTestDecorator@RunTest$qqrp25Testframework@TTestResult @536 ; __fastcall Testextensions::TTestDecorator::RunTest(Testframework::TTestResult *)
+    @Testextensions@TTestDecorator@SaveConfiguration$qqrxp30System@Inifiles@TCustomIniFilex20System@UnicodeString @530 ; __fastcall Testextensions::TTestDecorator::SaveConfiguration(System::Inifiles::TCustomIniFile * const, const System::UnicodeString)
+    @Testextensions@TTestDecorator@Tests$qqrv @529 ; __fastcall Testextensions::TTestDecorator::Tests()
+    @Testextensions@TTestSetup@    @551 ; Testextensions::TTestSetup::
+    @Testextensions@TTestSetup@$bctr$qqr46System@%DelphiInterface$19Testframework@ITest%20System@UnicodeString @527 ; Testextensions::TTestSetup::TTestSetup(System::DelphiInterface<{583}...
+    @Testextensions@TTestSetup@GetName$qqrv @526 ; __fastcall Testextensions::TTestSetup::GetName()
+    @Testextensions@initialization$qqrv @514 ; __fastcall Testextensions::initialization()
+    @Testframework@CallerAddr$qqrv @254 ; __fastcall Testframework::CallerAddr()
+    @Testframework@ClearRegistry$qqrv @56  ; __fastcall Testframework::ClearRegistry()
+    @Testframework@EBreakingTestFailure@ @285 ; Testframework::EBreakingTestFailure::
+    @Testframework@EBreakingTestFailure@$bctr$qqr20System@UnicodeString @69  ; __fastcall Testframework::EBreakingTestFailure::EBreakingTestFailure(System::UnicodeString)
+    @Testframework@EBreakingTestFailure@$bctr$qqrv @70  ; __fastcall Testframework::EBreakingTestFailure::EBreakingTestFailure()
+    @Testframework@EDunitException@ @297 ; Testframework::EDunitException::
+    @Testframework@EPostTestFailure@ @291 ; Testframework::EPostTestFailure::
+    @Testframework@EStopTestsFailure@ @293 ; Testframework::EStopTestsFailure::
+    @Testframework@ETestError@     @295 ; Testframework::ETestError::
+    @Testframework@ETestFailure@   @299 ; Testframework::ETestFailure::
+    @Testframework@ETestFailure@$bctr$qqr20System@UnicodeString @71  ; __fastcall Testframework::ETestFailure::ETestFailure(System::UnicodeString)
+    @Testframework@ETestFailure@$bctr$qqrv @72  ; __fastcall Testframework::ETestFailure::ETestFailure()
+    @Testframework@Finalization$qqrv @54  ; __fastcall Testframework::Finalization()
+    @Testframework@FirstByteDiff$qqrpvt1uiruct4 @247 ; __fastcall Testframework::FirstByteDiff(void *, void *, unsigned int, unsigned char&, unsigned char&)
+    @Testframework@GetDUnitRegistryKey$qqrv @249 ; __fastcall Testframework::GetDUnitRegistryKey()
+    @Testframework@IsDecorator$qqr46System@%DelphiInterface$19Testframework@ITest% @250 ; Testframework::IsDecorator(System::DelphiInterface<{583}...
+    @Testframework@IsTestMethod$qqr46System@%DelphiInterface$19Testframework@ITest% @251 ; Testframework::IsTestMethod(System::DelphiInterface<{583}...
+    @Testframework@MemLeakMonitor$qqrv @256 ; __fastcall Testframework::MemLeakMonitor()
+    @Testframework@PointerToAddressInfo$qqrpv @252 ; __fastcall Testframework::PointerToAddressInfo(void *)
+    @Testframework@PointerToLocationInfo$qqrpv @253 ; __fastcall Testframework::PointerToLocationInfo(void *)
+    @Testframework@PtrToStr$qqrpv  @255 ; __fastcall Testframework::PtrToStr(void *)
+    @Testframework@RegisterTest$qqr20System@UnicodeString46System@%DelphiInterface$19Testframework@ITest% @63  ; Testframework::RegisterTest(System::UnicodeString, System::DelphiInterface<{583}...
+    @Testframework@RegisterTest$qqr46System@%DelphiInterface$19Testframework@ITest% @62  ; Testframework::RegisterTest(System::DelphiInterface<{583}...
+    @Testframework@RegisterTests$qqr20System@UnicodeStringpx46System@%DelphiInterface$19Testframework@ITest%xi @61  ; Testframework::RegisterTests(System::UnicodeString, const System::DelphiInterface<{583}...
+    @Testframework@RegisterTests$qqrpx46System@%DelphiInterface$19Testframework@ITest%xi @60  ; Testframework::RegisterTests(const System::DelphiInterface<{583}...
+    @Testframework@RegisteredTests$qqrv @59  ; __fastcall Testframework::RegisteredTests()
+    @Testframework@RunCountAttribute@ @305 ; Testframework::RunCountAttribute::
+    @Testframework@RunCountAttribute@$bctr$qqrj @55  ; __fastcall Testframework::RunCountAttribute::RunCountAttribute(__int64)
+    @Testframework@RunRegisteredTests$qqrpx54System@%DelphiInterface$27Testframework@ITestListener%xi @57  ; Testframework::RunRegisteredTests(const System::DelphiInterface<{583}...
+    @Testframework@RunTest$qqr46System@%DelphiInterface$19Testframework@ITest%px54System@%DelphiInterface$27Testframework@ITestListener%xi @58  ; Testframework::RunTest(System::DelphiInterface<{583}...
+    @Testframework@SetDUnitRegistryKey$qqrx20System@UnicodeString @248 ; __fastcall Testframework::SetDUnitRegistryKey(const System::UnicodeString)
+    @Testframework@TAbstractTest@  @273 ; Testframework::TAbstractTest::
+    @Testframework@TAbstractTest@$bctr$qqr20System@UnicodeString @215 ; __fastcall Testframework::TAbstractTest::TAbstractTest(System::UnicodeString)
+    @Testframework@TAbstractTest@$bdtr$qqrv @214 ; __fastcall Testframework::TAbstractTest::~TAbstractTest()
+    @Testframework@TAbstractTest@BoolToStr$qqro @135 ; __fastcall Testframework::TAbstractTest::BoolToStr(bool)
+    @Testframework@TAbstractTest@Check$qqro20System@UnicodeString @187 ; __fastcall Testframework::TAbstractTest::Check(bool, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEquals$qqr20System@UnicodeStringt1t1 @171 ; __fastcall Testframework::TAbstractTest::CheckEquals(System::UnicodeString, System::UnicodeString, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEquals$qqr23System@%DynamicArray$b%t120System@UnicodeString @129 ; Testframework::TAbstractTest::CheckEquals(System::DynamicArray<{583}...
+    @Testframework@TAbstractTest@CheckEquals$qqr31System@%AnsiStringT$us$i65535$%t120System@UnicodeString @168 ; __fastcall Testframework::TAbstractTest::CheckEquals(System::AnsiStringT<65535>, System::AnsiStringT<65535>, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEquals$qqrgg20System@UnicodeString @175 ; __fastcall Testframework::TAbstractTest::CheckEquals(long double, long double, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEquals$qqrggg20System@UnicodeString @176 ; __fastcall Testframework::TAbstractTest::CheckEquals(long double, long double, long double, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEquals$qqrii20System@UnicodeString @158 ; __fastcall Testframework::TAbstractTest::CheckEquals(int, int, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEquals$qqrjj20System@UnicodeString @156 ; __fastcall Testframework::TAbstractTest::CheckEquals(__int64, __int64, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEquals$qqroo20System@UnicodeString @150 ; __fastcall Testframework::TAbstractTest::CheckEquals(bool, bool, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEquals$qqrp17System@TMetaClasst120System@UnicodeString @130 ; __fastcall Testframework::TAbstractTest::CheckEquals(System::TMetaClass *, System::TMetaClass *, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEquals$qqrr29System@%SmallString$uc$i255$%t120System@UnicodeString @170 ; Testframework::TAbstractTest::CheckEquals(System::SmallString<{583}...
+    @Testframework@TAbstractTest@CheckEquals$qqruiui20System@UnicodeString @157 ; __fastcall Testframework::TAbstractTest::CheckEquals(unsigned int, unsigned int, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEquals$qqrujuj20System@UnicodeString @155 ; __fastcall Testframework::TAbstractTest::CheckEquals(unsigned __int64, unsigned __int64, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEqualsBin$qqruiui20System@UnicodeStringi @148 ; __fastcall Testframework::TAbstractTest::CheckEqualsBin(unsigned int, unsigned int, System::UnicodeString, int)
+    @Testframework@TAbstractTest@CheckEqualsHex$qqruiui20System@UnicodeStringi @146 ; __fastcall Testframework::TAbstractTest::CheckEqualsHex(unsigned int, unsigned int, System::UnicodeString, int)
+    @Testframework@TAbstractTest@CheckEqualsMem$qqrpvt1ui20System@UnicodeString @165 ; __fastcall Testframework::TAbstractTest::CheckEqualsMem(void *, void *, unsigned int, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEqualsString$qqr20System@UnicodeStringt1t1 @169 ; __fastcall Testframework::TAbstractTest::CheckEqualsString(System::UnicodeString, System::UnicodeString, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckEqualsWideString$qqr17System@WideStringt120System@UnicodeString @167 ; __fastcall Testframework::TAbstractTest::CheckEqualsWideString(System::WideString, System::WideString, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckException$qqrynpqqrv$vp17System@TMetaClass20System@UnicodeString @131 ; __fastcall Testframework::TAbstractTest::CheckException(void __fastcall __closure(*)(), System::TMetaClass *, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckFalse$qqro20System@UnicodeString @185 ; __fastcall Testframework::TAbstractTest::CheckFalse(bool, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckInherits$qqrp17System@TMetaClasst120System@UnicodeString @128 ; __fastcall Testframework::TAbstractTest::CheckInherits(System::TMetaClass *, System::TMetaClass *, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckIs$qqrp14System@TObjectp17System@TMetaClass20System@UnicodeString @127 ; __fastcall Testframework::TAbstractTest::CheckIs(System::TObject *, System::TMetaClass *, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckMethodIsNotEmpty$qqrpv @132 ; __fastcall Testframework::TAbstractTest::CheckMethodIsNotEmpty(void *)
+    @Testframework@TAbstractTest@CheckNotEquals$qqr20System@UnicodeStringt1t1 @164 ; __fastcall Testframework::TAbstractTest::CheckNotEquals(System::UnicodeString, System::UnicodeString, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckNotEquals$qqr23System@%DynamicArray$b%t120System@UnicodeString @104 ; Testframework::TAbstractTest::CheckNotEquals(System::DynamicArray<{583}...
+    @Testframework@TAbstractTest@CheckNotEquals$qqr31System@%AnsiStringT$us$i65535$%t120System@UnicodeString @161 ; __fastcall Testframework::TAbstractTest::CheckNotEquals(System::AnsiStringT<65535>, System::AnsiStringT<65535>, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckNotEquals$qqrggg20System@UnicodeString @151 ; __fastcall Testframework::TAbstractTest::CheckNotEquals(long double, long double, long double, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckNotEquals$qqrii20System@UnicodeString @154 ; __fastcall Testframework::TAbstractTest::CheckNotEquals(int, int, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckNotEquals$qqrjj20System@UnicodeString @152 ; __fastcall Testframework::TAbstractTest::CheckNotEquals(__int64, __int64, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckNotEquals$qqroo20System@UnicodeString @149 ; __fastcall Testframework::TAbstractTest::CheckNotEquals(bool, bool, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckNotEquals$qqrr29System@%SmallString$uc$i255$%t120System@UnicodeString @163 ; Testframework::TAbstractTest::CheckNotEquals(System::SmallString<{583}...
+    @Testframework@TAbstractTest@CheckNotEquals$qqruiui20System@UnicodeString @153 ; __fastcall Testframework::TAbstractTest::CheckNotEquals(unsigned int, unsigned int, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckNotEqualsBin$qqruiui20System@UnicodeStringi @147 ; __fastcall Testframework::TAbstractTest::CheckNotEqualsBin(unsigned int, unsigned int, System::UnicodeString, int)
+    @Testframework@TAbstractTest@CheckNotEqualsHex$qqruiui20System@UnicodeStringi @145 ; __fastcall Testframework::TAbstractTest::CheckNotEqualsHex(unsigned int, unsigned int, System::UnicodeString, int)
+    @Testframework@TAbstractTest@CheckNotEqualsMem$qqrpvt1ui20System@UnicodeString @159 ; __fastcall Testframework::TAbstractTest::CheckNotEqualsMem(void *, void *, unsigned int, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckNotEqualsString$qqr20System@UnicodeStringt1t1 @162 ; __fastcall Testframework::TAbstractTest::CheckNotEqualsString(System::UnicodeString, System::UnicodeString, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckNotEqualsWideString$qqrx17System@WideStringt120System@UnicodeString @160 ; __fastcall Testframework::TAbstractTest::CheckNotEqualsWideString(const System::WideString, const System::WideString, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckNotNull$qqr44System@%DelphiInterface$17System@IInterface%20System@UnicodeString @174 ; Testframework::TAbstractTest::CheckNotNull(System::DelphiInterface<{583}...
+    @Testframework@TAbstractTest@CheckNotNull$qqrp14System@TObject20System@UnicodeString @143 ; __fastcall Testframework::TAbstractTest::CheckNotNull(System::TObject *, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckNull$qqr44System@%DelphiInterface$17System@IInterface%20System@UnicodeString @173 ; Testframework::TAbstractTest::CheckNull(System::DelphiInterface<{583}...
+    @Testframework@TAbstractTest@CheckNull$qqrp14System@TObject20System@UnicodeString @142 ; __fastcall Testframework::TAbstractTest::CheckNull(System::TObject *, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckSame$qqr44System@%DelphiInterface$17System@IInterface%t120System@UnicodeString @172 ; Testframework::TAbstractTest::CheckSame(System::DelphiInterface<{583}...
+    @Testframework@TAbstractTest@CheckSame$qqrp14System@TObjectt120System@UnicodeString @144 ; __fastcall Testframework::TAbstractTest::CheckSame(System::TObject *, System::TObject *, System::UnicodeString)
+    @Testframework@TAbstractTest@CheckTrue$qqro20System@UnicodeString @186 ; __fastcall Testframework::TAbstractTest::CheckTrue(bool, System::UnicodeString)
+    @Testframework@TAbstractTest@CompareFloatRelative$qqrgg @126 ; __fastcall Testframework::TAbstractTest::CompareFloatRelative(long double, long double)
+    @Testframework@TAbstractTest@CompareFloatRelative$qqrggg @125 ; __fastcall Testframework::TAbstractTest::CompareFloatRelative(long double, long double, long double)
+    @Testframework@TAbstractTest@CountEnabledTestCases$qqrv @211 ; __fastcall Testframework::TAbstractTest::CountEnabledTestCases()
+    @Testframework@TAbstractTest@CountTestCases$qqrv @210 ; __fastcall Testframework::TAbstractTest::CountTestCases()
+    @Testframework@TAbstractTest@ElapsedTestTime$qqrv @192 ; __fastcall Testframework::TAbstractTest::ElapsedTestTime()
+    @Testframework@TAbstractTest@EqualsErrorMessage$qqr17System@WideStringt120System@UnicodeString @139 ; __fastcall Testframework::TAbstractTest::EqualsErrorMessage(System::WideString, System::WideString, System::UnicodeString)
+    @Testframework@TAbstractTest@EqualsErrorMessage$qqr20System@UnicodeStringt1t1 @138 ; __fastcall Testframework::TAbstractTest::EqualsErrorMessage(System::UnicodeString, System::UnicodeString, System::UnicodeString)
+    @Testframework@TAbstractTest@Fail$qqr20System@UnicodeStringpv @184 ; __fastcall Testframework::TAbstractTest::Fail(System::UnicodeString, void *)
+    @Testframework@TAbstractTest@FailEquals$qqr17System@WideStringt120System@UnicodeStringpv @180 ; __fastcall Testframework::TAbstractTest::FailEquals(System::WideString, System::WideString, System::UnicodeString, void *)
+    @Testframework@TAbstractTest@FailEquals$qqr20System@UnicodeStringt1t1pv @179 ; __fastcall Testframework::TAbstractTest::FailEquals(System::UnicodeString, System::UnicodeString, System::UnicodeString, void *)
+    @Testframework@TAbstractTest@FailNotEquals$qqr17System@WideStringt120System@UnicodeStringpv @182 ; __fastcall Testframework::TAbstractTest::FailNotEquals(System::WideString, System::WideString, System::UnicodeString, void *)
+    @Testframework@TAbstractTest@FailNotEquals$qqr20System@UnicodeStringt1t1pv @181 ; __fastcall Testframework::TAbstractTest::FailNotEquals(System::UnicodeString, System::UnicodeString, System::UnicodeString, void *)
+    @Testframework@TAbstractTest@FailNotSame$qqr17System@WideStringt120System@UnicodeStringpv @178 ; __fastcall Testframework::TAbstractTest::FailNotSame(System::WideString, System::WideString, System::UnicodeString, void *)
+    @Testframework@TAbstractTest@FailNotSame$qqr20System@UnicodeStringt1t1pv @177 ; __fastcall Testframework::TAbstractTest::FailNotSame(System::UnicodeString, System::UnicodeString, System::UnicodeString, void *)
+    @Testframework@TAbstractTest@GetAllowedLeak$qqrv @110 ; __fastcall Testframework::TAbstractTest::GetAllowedLeak()
+    @Testframework@TAbstractTest@GetAllowedLeaksIterator$qqrv @111 ; __fastcall Testframework::TAbstractTest::GetAllowedLeaksIterator()
+    @Testframework@TAbstractTest@GetAllowedMemoryLeakSize$qqrv @116 ; __fastcall Testframework::TAbstractTest::GetAllowedMemoryLeakSize()
+    @Testframework@TAbstractTest@GetEnabled$qqrv @209 ; __fastcall Testframework::TAbstractTest::GetEnabled()
+    @Testframework@TAbstractTest@GetFailsOnMemoryLeak$qqrv @120 ; __fastcall Testframework::TAbstractTest::GetFailsOnMemoryLeak()
+    @Testframework@TAbstractTest@GetFailsOnMemoryRecovery$qqrv @114 ; __fastcall Testframework::TAbstractTest::GetFailsOnMemoryRecovery()
+    @Testframework@TAbstractTest@GetFailsOnNoChecksExecuted$qqrv @122 ; __fastcall Testframework::TAbstractTest::GetFailsOnNoChecksExecuted()
+    @Testframework@TAbstractTest@GetGUIObject$qqrv @124 ; __fastcall Testframework::TAbstractTest::GetGUIObject()
+    @Testframework@TAbstractTest@GetIgnoreSetUpTearDownLeaks$qqrv @109 ; __fastcall Testframework::TAbstractTest::GetIgnoreSetUpTearDownLeaks()
+    @Testframework@TAbstractTest@GetMemDiffStr$qqrpvt1ui20System@UnicodeString @166 ; __fastcall Testframework::TAbstractTest::GetMemDiffStr(void *, void *, unsigned int, System::UnicodeString)
+    @Testframework@TAbstractTest@GetMemoryLeakIgnoredInSetupTearDown$qqrv @107 ; __fastcall Testframework::TAbstractTest::GetMemoryLeakIgnoredInSetupTearDown()
+    @Testframework@TAbstractTest@GetName$qqrv @208 ; __fastcall Testframework::TAbstractTest::GetName()
+    @Testframework@TAbstractTest@GetRunCount$qqrv @207 ; __fastcall Testframework::TAbstractTest::GetRunCount()
+    @Testframework@TAbstractTest@GetStartTime$qqrv @199 ; __fastcall Testframework::TAbstractTest::GetStartTime()
+    @Testframework@TAbstractTest@GetStatus$qqrv @190 ; __fastcall Testframework::TAbstractTest::GetStatus()
+    @Testframework@TAbstractTest@GetStopTime$qqrv @196 ; __fastcall Testframework::TAbstractTest::GetStopTime()
+    @Testframework@TAbstractTest@GetTestMethodInvoked$qqrv @118 ; __fastcall Testframework::TAbstractTest::GetTestMethodInvoked()
+    @Testframework@TAbstractTest@Invoke$qqrynpqqrv$v @213 ; __fastcall Testframework::TAbstractTest::Invoke(void __fastcall __closure(*)())
+    @Testframework@TAbstractTest@LoadConfiguration$qqrx20System@UnicodeStringxoxo @206 ; __fastcall Testframework::TAbstractTest::LoadConfiguration(const System::UnicodeString, const bool, const bool)
+    @Testframework@TAbstractTest@LoadConfiguration$qqrxp30System@Inifiles@TCustomIniFilex20System@UnicodeString @205 ; __fastcall Testframework::TAbstractTest::LoadConfiguration(System::Inifiles::TCustomIniFile * const, const System::UnicodeString)
+    @Testframework@TAbstractTest@NotEqualsErrorMessage$qqr17System@WideStringt120System@UnicodeString @141 ; __fastcall Testframework::TAbstractTest::NotEqualsErrorMessage(System::WideString, System::WideString, System::UnicodeString)
+    @Testframework@TAbstractTest@NotEqualsErrorMessage$qqr20System@UnicodeStringt1t1 @140 ; __fastcall Testframework::TAbstractTest::NotEqualsErrorMessage(System::UnicodeString, System::UnicodeString, System::UnicodeString)
+    @Testframework@TAbstractTest@NotSameErrorMessage$qqr17System@WideStringt120System@UnicodeString @137 ; __fastcall Testframework::TAbstractTest::NotSameErrorMessage(System::WideString, System::WideString, System::UnicodeString)
+    @Testframework@TAbstractTest@NotSameErrorMessage$qqr20System@UnicodeStringt1t1 @136 ; __fastcall Testframework::TAbstractTest::NotSameErrorMessage(System::UnicodeString, System::UnicodeString, System::UnicodeString)
+    @Testframework@TAbstractTest@Run$qqrp25Testframework@TTestResult @212 ; __fastcall Testframework::TAbstractTest::Run(Testframework::TTestResult *)
+    @Testframework@TAbstractTest@Run$qqrv @202 ; __fastcall Testframework::TAbstractTest::Run()
+    @Testframework@TAbstractTest@RunTest$qqrp25Testframework@TTestResult @193 ; __fastcall Testframework::TAbstractTest::RunTest(Testframework::TTestResult *)
+    @Testframework@TAbstractTest@RunWithFixture$qqrp25Testframework@TTestResult @188 ; __fastcall Testframework::TAbstractTest::RunWithFixture(Testframework::TTestResult *)
+    @Testframework@TAbstractTest@SaveConfiguration$qqrx20System@UnicodeStringxoxo @204 ; __fastcall Testframework::TAbstractTest::SaveConfiguration(const System::UnicodeString, const bool, const bool)
+    @Testframework@TAbstractTest@SaveConfiguration$qqrxp30System@Inifiles@TCustomIniFilex20System@UnicodeString @203 ; __fastcall Testframework::TAbstractTest::SaveConfiguration(System::Inifiles::TCustomIniFile * const, const System::UnicodeString)
+    @Testframework@TAbstractTest@SetAllowedLeakArray$qqrpixi @112 ; __fastcall Testframework::TAbstractTest::SetAllowedLeakArray(int *, const int)
+    @Testframework@TAbstractTest@SetAllowedMemoryLeakSize$qqrxi @115 ; __fastcall Testframework::TAbstractTest::SetAllowedMemoryLeakSize(const int)
+    @Testframework@TAbstractTest@SetEnabled$qqro @201 ; __fastcall Testframework::TAbstractTest::SetEnabled(bool)
+    @Testframework@TAbstractTest@SetFailsOnMemoryLeak$qqrxo @119 ; __fastcall Testframework::TAbstractTest::SetFailsOnMemoryLeak(const bool)
+    @Testframework@TAbstractTest@SetFailsOnMemoryRecovery$qqrxo @113 ; __fastcall Testframework::TAbstractTest::SetFailsOnMemoryRecovery(const bool)
+    @Testframework@TAbstractTest@SetFailsOnNoChecksExecuted$qqrxo @121 ; __fastcall Testframework::TAbstractTest::SetFailsOnNoChecksExecuted(const bool)
+    @Testframework@TAbstractTest@SetGUIObject$qqrxp14System@TObject @123 ; __fastcall Testframework::TAbstractTest::SetGUIObject(System::TObject * const)
+    @Testframework@TAbstractTest@SetIgnoreSetUpTearDownLeaks$qqrxo @108 ; __fastcall Testframework::TAbstractTest::SetIgnoreSetUpTearDownLeaks(const bool)
+    @Testframework@TAbstractTest@SetMemoryLeakIgnoredInSetupTearDown$qqrxo @106 ; __fastcall Testframework::TAbstractTest::SetMemoryLeakIgnoredInSetupTearDown(const bool)
+    @Testframework@TAbstractTest@SetRunCount$qqri @105 ; __fastcall Testframework::TAbstractTest::SetRunCount(int)
+    @Testframework@TAbstractTest@SetStartTime$qqrj @198 ; __fastcall Testframework::TAbstractTest::SetStartTime(__int64)
+    @Testframework@TAbstractTest@SetStatusListener$qqr56System@%DelphiInterface$29Testframework@IStatusListener% @191 ; Testframework::TAbstractTest::SetStatusListener(System::DelphiInterface<{583}...
+    @Testframework@TAbstractTest@SetStopTime$qqrj @197 ; __fastcall Testframework::TAbstractTest::SetStopTime(__int64)
+    @Testframework@TAbstractTest@SetTestMethodInvoked$qqrxo @117 ; __fastcall Testframework::TAbstractTest::SetTestMethodInvoked(const bool)
+    @Testframework@TAbstractTest@SetUp$qqrv @195 ; __fastcall Testframework::TAbstractTest::SetUp()
+    @Testframework@TAbstractTest@StartExpectingException$qqrp17System@TMetaClass @134 ; __fastcall Testframework::TAbstractTest::StartExpectingException(System::TMetaClass *)
+    @Testframework@TAbstractTest@Status$qqrx20System@UnicodeString @189 ; __fastcall Testframework::TAbstractTest::Status(const System::UnicodeString)
+    @Testframework@TAbstractTest@StopExpectingException$qqr20System@UnicodeString @133 ; __fastcall Testframework::TAbstractTest::StopExpectingException(System::UnicodeString)
+    @Testframework@TAbstractTest@StopTests$qqr20System@UnicodeString @183 ; __fastcall Testframework::TAbstractTest::StopTests(System::UnicodeString)
+    @Testframework@TAbstractTest@TearDown$qqrv @194 ; __fastcall Testframework::TAbstractTest::TearDown()
+    @Testframework@TAbstractTest@Tests$qqrv @200 ; __fastcall Testframework::TAbstractTest::Tests()
+    @Testframework@TGenericTestCase@ @268 ; Testframework::TGenericTestCase::
+    @Testframework@TMethodEnumerator@ @260 ; Testframework::TMethodEnumerator::
+    @Testframework@TMethodEnumerator@$bctr$qqrp17System@TMetaClass @68  ; __fastcall Testframework::TMethodEnumerator::TMethodEnumerator(System::TMetaClass *)
+    @Testframework@TMethodEnumerator@GetMethodCount$qqrv @67  ; __fastcall Testframework::TMethodEnumerator::GetMethodCount()
+    @Testframework@TMethodEnumerator@GetNameOfMethod$qqri @66  ; __fastcall Testframework::TMethodEnumerator::GetNameOfMethod(int)
+    @Testframework@TMethodEnumerator@GetRunCountOfMethod$qqri @65  ; __fastcall Testframework::TMethodEnumerator::GetRunCountOfMethod(int)
+    @Testframework@TStatusToResultAdapter@ @277 ; Testframework::TStatusToResultAdapter::
+    @Testframework@TStatusToResultAdapter@$bctr$qqrp25Testframework@TTestResult @217 ; __fastcall Testframework::TStatusToResultAdapter::TStatusToResultAdapter(Testframework::TTestResult *)
+    @Testframework@TStatusToResultAdapter@Status$qqr46System@%DelphiInterface$19Testframework@ITest%x20System@UnicodeString @216 ; Testframework::TStatusToResultAdapter::Status(System::DelphiInterface<{583}...
+    @Testframework@TTestCase@      @271 ; Testframework::TTestCase::
+    @Testframework@TTestCase@$bctr$qqr20System@UnicodeString @103 ; __fastcall Testframework::TTestCase::TTestCase(System::UnicodeString)
+    @Testframework@TTestCase@$bctr$qqr20System@UnicodeStringj @102 ; __fastcall Testframework::TTestCase::TTestCase(System::UnicodeString, __int64)
+    @Testframework@TTestCase@Invoke$qqrynpqqrv$v @101 ; __fastcall Testframework::TTestCase::Invoke(void __fastcall __closure(*)())
+    @Testframework@TTestCase@Run$qqrp25Testframework@TTestResult @98  ; __fastcall Testframework::TTestCase::Run(Testframework::TTestResult *)
+    @Testframework@TTestCase@RunTest$qqrp25Testframework@TTestResult @99  ; __fastcall Testframework::TTestCase::RunTest(Testframework::TTestResult *)
+    @Testframework@TTestCase@RunWithFixture$qqrp25Testframework@TTestResult @100 ; __fastcall Testframework::TTestCase::RunWithFixture(Testframework::TTestResult *)
+    @Testframework@TTestCase@Suite$qqrv @97  ; __fastcall Testframework::TTestCase::Suite()
+    @Testframework@TTestFailure@   @264 ; Testframework::TTestFailure::
+    @Testframework@TTestFailure@$bctr$qqr46System@%DelphiInterface$19Testframework@ITest%p25System@Sysutils@Exceptionpv20System@UnicodeString @96  ; Testframework::TTestFailure::TTestFailure(System::DelphiInterface<{583}...
+    @Testframework@TTestFailure@$bctr$qqr46System@%DelphiInterface$19Testframework@ITest%pv20System@UnicodeString @95  ; Testframework::TTestFailure::TTestFailure(System::DelphiInterface<{583}...
+    @Testframework@TTestFailure@AddressInfo$qqrv @88  ; __fastcall Testframework::TTestFailure::AddressInfo()
+    @Testframework@TTestFailure@CaptureStackTrace$qqrp25System@Sysutils@Exceptionpv @86  ; __fastcall Testframework::TTestFailure::CaptureStackTrace(System::Sysutils::Exception *, void *)
+    @Testframework@TTestFailure@FailedTest$qqrv @94  ; __fastcall Testframework::TTestFailure::FailedTest()
+    @Testframework@TTestFailure@LocationInfo$qqrv @89  ; __fastcall Testframework::TTestFailure::LocationInfo()
+    @Testframework@TTestFailure@StackTrace$qqrv @87  ; __fastcall Testframework::TTestFailure::StackTrace()
+    @Testframework@TTestFailure@ThrownExceptionAddress$qqrv @91  ; __fastcall Testframework::TTestFailure::ThrownExceptionAddress()
+    @Testframework@TTestFailure@ThrownExceptionClass$qqrv @90  ; __fastcall Testframework::TTestFailure::ThrownExceptionClass()
+    @Testframework@TTestFailure@ThrownExceptionMessage$qqrv @92  ; __fastcall Testframework::TTestFailure::ThrownExceptionMessage()
+    @Testframework@TTestFailure@ThrownExceptionName$qqrv @93  ; __fastcall Testframework::TTestFailure::ThrownExceptionName()
+    @Testframework@TTestResult@    @275 ; Testframework::TTestResult::
+    @Testframework@TTestResult@$bctr$qqrv @246 ; __fastcall Testframework::TTestResult::TTestResult()
+    @Testframework@TTestResult@$bdtr$qqrv @245 ; __fastcall Testframework::TTestResult::~TTestResult()
+    @Testframework@TTestResult@AddError$qqr46System@%DelphiInterface$19Testframework@ITest%p25System@Sysutils@Exceptionpv20System@UnicodeString @243 ; Testframework::TTestResult::AddError(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@AddFailure$qqr46System@%DelphiInterface$19Testframework@ITest%p25System@Sysutils@Exceptionpv @242 ; Testframework::TTestResult::AddFailure(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@AddFailure$qqr46System@%DelphiInterface$19Testframework@ITest%pv20System@UnicodeString @218 ; Testframework::TTestResult::AddFailure(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@AddListener$qqr54System@%DelphiInterface$27Testframework@ITestListener% @241 ; Testframework::TTestResult::AddListener(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@AddSuccess$qqr46System@%DelphiInterface$19Testframework@ITest% @244 ; Testframework::TTestResult::AddSuccess(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@EndSuite$qqr46System@%DelphiInterface$19Testframework@ITest% @220 ; Testframework::TTestResult::EndSuite(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@EndTest$qqr46System@%DelphiInterface$19Testframework@ITest% @240 ; Testframework::TTestResult::EndTest(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@ErrorCount$qqrv @228 ; __fastcall Testframework::TTestResult::ErrorCount()
+    @Testframework@TTestResult@FailureCount$qqrv @227 ; __fastcall Testframework::TTestResult::FailureCount()
+    @Testframework@TTestResult@GetError$qqri @238 ; __fastcall Testframework::TTestResult::GetError(int)
+    @Testframework@TTestResult@GetFailure$qqri @237 ; __fastcall Testframework::TTestResult::GetFailure(int)
+    @Testframework@TTestResult@Run$qqr46System@%DelphiInterface$19Testframework@ITest% @233 ; Testframework::TTestResult::Run(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@RunCount$qqrv @232 ; __fastcall Testframework::TTestResult::RunCount()
+    @Testframework@TTestResult@RunSuite$qqr46System@%DelphiInterface$19Testframework@ITest% @221 ; Testframework::TTestResult::RunSuite(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@RunTestRun$qqr46System@%DelphiInterface$19Testframework@ITest% @234 ; Testframework::TTestResult::RunTestRun(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@RunTestSetup$qqr46System@%DelphiInterface$19Testframework@ITest% @236 ; Testframework::TTestResult::RunTestSetup(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@RunTestTearDown$qqr46System@%DelphiInterface$19Testframework@ITest% @235 ; Testframework::TTestResult::RunTestTearDown(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@ShouldRunTest$qqr46System@%DelphiInterface$19Testframework@ITest% @223 ; Testframework::TTestResult::ShouldRunTest(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@ShouldStop$qqrv @231 ; __fastcall Testframework::TTestResult::ShouldStop()
+    @Testframework@TTestResult@StartSuite$qqr46System@%DelphiInterface$19Testframework@ITest% @219 ; Testframework::TTestResult::StartSuite(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@StartTest$qqr46System@%DelphiInterface$19Testframework@ITest% @230 ; Testframework::TTestResult::StartTest(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@Status$qqr46System@%DelphiInterface$19Testframework@ITest%x20System@UnicodeString @239 ; Testframework::TTestResult::Status(System::DelphiInterface<{583}...
+    @Testframework@TTestResult@Stop$qqrv @229 ; __fastcall Testframework::TTestResult::Stop()
+    @Testframework@TTestResult@TestingEnds$qqrv @224 ; __fastcall Testframework::TTestResult::TestingEnds()
+    @Testframework@TTestResult@TestingStarts$qqrv @225 ; __fastcall Testframework::TTestResult::TestingStarts()
+    @Testframework@TTestResult@WasStopped$qqrv @222 ; __fastcall Testframework::TTestResult::WasStopped()
+    @Testframework@TTestResult@WasSuccessful$qqrv @226 ; __fastcall Testframework::TTestResult::WasSuccessful()
+    @Testframework@TTestSuite@     @266 ; Testframework::TTestSuite::
+    @Testframework@TTestSuite@$bctr$qqr20System@UnicodeString @84  ; __fastcall Testframework::TTestSuite::TTestSuite(System::UnicodeString)
+    @Testframework@TTestSuite@$bctr$qqr20System@UnicodeStringpx46System@%DelphiInterface$19Testframework@ITest%xi @82  ; Testframework::TTestSuite::TTestSuite(System::UnicodeString, const System::DelphiInterface<{583}...
+    @Testframework@TTestSuite@$bctr$qqrp17System@TMetaClass @83  ; __fastcall Testframework::TTestSuite::TTestSuite(System::TMetaClass *)
+    @Testframework@TTestSuite@$bctr$qqrv @85  ; __fastcall Testframework::TTestSuite::TTestSuite()
+    @Testframework@TTestSuite@AddSuite$qqr51System@%DelphiInterface$24Testframework@ITestSuite% @80  ; Testframework::TTestSuite::AddSuite(System::DelphiInterface<{583}...
+    @Testframework@TTestSuite@AddTest$qqr46System@%DelphiInterface$19Testframework@ITest% @81  ; Testframework::TTestSuite::AddTest(System::DelphiInterface<{583}...
+    @Testframework@TTestSuite@AddTests$qqrp17System@TMetaClass @79  ; __fastcall Testframework::TTestSuite::AddTests(System::TMetaClass *)
+    @Testframework@TTestSuite@CountEnabledTestCases$qqrv @77  ; __fastcall Testframework::TTestSuite::CountEnabledTestCases()
+    @Testframework@TTestSuite@CountTestCases$qqrv @78  ; __fastcall Testframework::TTestSuite::CountTestCases()
+    @Testframework@TTestSuite@LoadConfiguration$qqrxp30System@Inifiles@TCustomIniFilex20System@UnicodeString @74  ; __fastcall Testframework::TTestSuite::LoadConfiguration(System::Inifiles::TCustomIniFile * const, const System::UnicodeString)
+    @Testframework@TTestSuite@RunTest$qqrp25Testframework@TTestResult @76  ; __fastcall Testframework::TTestSuite::RunTest(Testframework::TTestResult *)
+    @Testframework@TTestSuite@SaveConfiguration$qqrxp30System@Inifiles@TCustomIniFilex20System@UnicodeString @73  ; __fastcall Testframework::TTestSuite::SaveConfiguration(System::Inifiles::TCustomIniFile * const, const System::UnicodeString)
+    @Testframework@TTestSuite@Tests$qqrv @75  ; __fastcall Testframework::TTestSuite::Tests()
+    @Testframework@TestDataDir$qqrv @257 ; __fastcall Testframework::TestDataDir()
+    @Testframework@TestSuite$qqr20System@UnicodeStringpx46System@%DelphiInterface$19Testframework@ITest%xi @64  ; Testframework::TestSuite(System::UnicodeString, const System::DelphiInterface<{583}...
+    @Testframework@initialization$qqrv @53  ; __fastcall Testframework::initialization()
+    @Testframework@rcs_id          @307 ; Testframework::rcs_id
+    @Testframework@rcs_version     @306 ; Testframework::rcs_version
+    @Testmodules@Finalization$qqrv @449 ; __fastcall Testmodules::Finalization()
+    @Testmodules@LoadModuleTests$qqr20System@UnicodeString @452 ; __fastcall Testmodules::LoadModuleTests(System::UnicodeString)
+    @Testmodules@RegisterModuleTests$qqr20System@UnicodeString @451 ; __fastcall Testmodules::RegisterModuleTests(System::UnicodeString)
+    @Testmodules@UnloadTestModules$qqrv @450 ; __fastcall Testmodules::UnloadTestModules()
+    @Testmodules@__Modules         @453 ; Testmodules::__Modules
+    @Testmodules@initialization$qqrv @448 ; __fastcall Testmodules::initialization()
+    @Testmodules@rcs_id            @457 ; Testmodules::rcs_id
+    @Texttestrunner@Finalization$qqrv @555 ; __fastcall Texttestrunner::Finalization()
+    @Texttestrunner@RunRegisteredTests$qqr34Texttestrunner@TRunnerExitBehavior @561 ; __fastcall Texttestrunner::RunRegisteredTests(Texttestrunner::TRunnerExitBehavior)
+    @Texttestrunner@RunTest$qqr46System@%DelphiInterface$19Testframework@ITest%34Texttestrunner@TRunnerExitBehavior @562 ; Texttestrunner::RunTest(System::DelphiInterface<{583}...
+    @Texttestrunner@TTextTestListener@ @582 ; Texttestrunner::TTextTestListener::
+    @Texttestrunner@TTextTestListener@$bctr$qqrv @579 ; __fastcall Texttestrunner::TTextTestListener::TTextTestListener()
+    @Texttestrunner@TTextTestListener@AddError$qqrp26Testframework@TTestFailure @578 ; __fastcall Texttestrunner::TTextTestListener::AddError(Testframework::TTestFailure *)
+    @Texttestrunner@TTextTestListener@AddFailure$qqrp26Testframework@TTestFailure @577 ; __fastcall Texttestrunner::TTextTestListener::AddFailure(Testframework::TTestFailure *)
+    @Texttestrunner@TTextTestListener@AddSuccess$qqr46System@%DelphiInterface$19Testframework@ITest% @580 ; Texttestrunner::TTextTestListener::AddSuccess(System::DelphiInterface<{583}...
+    @Texttestrunner@TTextTestListener@EndSuite$qqr46System@%DelphiInterface$19Testframework@ITest% @557 ; Texttestrunner::TTextTestListener::EndSuite(System::DelphiInterface<{583}...
+    @Texttestrunner@TTextTestListener@EndTest$qqr46System@%DelphiInterface$19Testframework@ITest% @568 ; Texttestrunner::TTextTestListener::EndTest(System::DelphiInterface<{583}...
+    @Texttestrunner@TTextTestListener@PrefixChars$qqrv @573 ; __fastcall Texttestrunner::TTextTestListener::PrefixChars()
+    @Texttestrunner@TTextTestListener@PrintErrorItems$qqrp25Testframework@TTestResult @572 ; __fastcall Texttestrunner::TTextTestListener::PrintErrorItems(Testframework::TTestResult *)
+    @Texttestrunner@TTextTestListener@PrintErrors$qqrp25Testframework@TTestResult @575 ; __fastcall Texttestrunner::TTextTestListener::PrintErrors(Testframework::TTestResult *)
+    @Texttestrunner@TTextTestListener@PrintFailureItems$qqrp25Testframework@TTestResult @574 ; __fastcall Texttestrunner::TTextTestListener::PrintFailureItems(Testframework::TTestResult *)
+    @Texttestrunner@TTextTestListener@PrintFailures$qqrp25Testframework@TTestResult @571 ; __fastcall Texttestrunner::TTextTestListener::PrintFailures(Testframework::TTestResult *)
+    @Texttestrunner@TTextTestListener@PrintHeader$qqrp25Testframework@TTestResult @570 ; __fastcall Texttestrunner::TTextTestListener::PrintHeader(Testframework::TTestResult *)
+    @Texttestrunner@TTextTestListener@Report$qqrp25Testframework@TTestResult @576 ; __fastcall Texttestrunner::TTextTestListener::Report(Testframework::TTestResult *)
+    @Texttestrunner@TTextTestListener@RunRegisteredTests$qqr34Texttestrunner@TRunnerExitBehavior @563 ; __fastcall Texttestrunner::TTextTestListener::RunRegisteredTests(Texttestrunner::TRunnerExitBehavior)
+    @Texttestrunner@TTextTestListener@RunTest$qqr46System@%DelphiInterface$19Testframework@ITest%34Texttestrunner@TRunnerExitBehavior @564 ; Texttestrunner::TTextTestListener::RunTest(System::DelphiInterface<{583}...
+    @Texttestrunner@TTextTestListener@ShouldRunTest$qqr46System@%DelphiInterface$19Testframework@ITest% @558 ; Texttestrunner::TTextTestListener::ShouldRunTest(System::DelphiInterface<{583}...
+    @Texttestrunner@TTextTestListener@StartSuite$qqr46System@%DelphiInterface$19Testframework@ITest% @556 ; Texttestrunner::TTextTestListener::StartSuite(System::DelphiInterface<{583}...
+    @Texttestrunner@TTextTestListener@StartTest$qqr46System@%DelphiInterface$19Testframework@ITest% @569 ; Texttestrunner::TTextTestListener::StartTest(System::DelphiInterface<{583}...
+    @Texttestrunner@TTextTestListener@Status$qqr46System@%DelphiInterface$19Testframework@ITest%x20System@UnicodeString @560 ; Texttestrunner::TTextTestListener::Status(System::DelphiInterface<{583}...
+    @Texttestrunner@TTextTestListener@TestingEnds$qqrp25Testframework@TTestResult @565 ; __fastcall Texttestrunner::TTextTestListener::TestingEnds(Testframework::TTestResult *)
+    @Texttestrunner@TTextTestListener@TestingStarts$qqrv @566 ; __fastcall Texttestrunner::TTextTestListener::TestingStarts()
+    @Texttestrunner@TTextTestListener@TruncateString$qqr20System@UnicodeStringi @567 ; __fastcall Texttestrunner::TTextTestListener::TruncateString(System::UnicodeString, int)
+    @Texttestrunner@TTextTestListener@Warning$qqr46System@%DelphiInterface$19Testframework@ITest%x20System@UnicodeString @559 ; Texttestrunner::TTextTestListener::Warning(System::DelphiInterface<{583}...
+    @Texttestrunner@initialization$qqrv @554 ; __fastcall Texttestrunner::initialization()
+    @Texttestrunner@rcs_id         @584 ; Texttestrunner::rcs_id
+    @Xmltestrunner@Finalization$qqrv @586 ; __fastcall Xmltestrunner::Finalization()
+    @Xmltestrunner@RunRegisteredTests$qqr20System@UnicodeString @594 ; __fastcall Xmltestrunner::RunRegisteredTests(System::UnicodeString)
+    @Xmltestrunner@RunTest$qqr46System@%DelphiInterface$19Testframework@ITest%20System@UnicodeString @595 ; Xmltestrunner::RunTest(System::DelphiInterface<{583}...
+    @Xmltestrunner@TXMLTestListener@ @609 ; Xmltestrunner::TXMLTestListener::
+    @Xmltestrunner@TXMLTestListener@$bctr$qqr20System@UnicodeString @606 ; __fastcall Xmltestrunner::TXMLTestListener::TXMLTestListener(System::UnicodeString)
+    @Xmltestrunner@TXMLTestListener@$bctr$qqrv @607 ; __fastcall Xmltestrunner::TXMLTestListener::TXMLTestListener()
+    @Xmltestrunner@TXMLTestListener@AddError$qqrp26Testframework@TTestFailure @603 ; __fastcall Xmltestrunner::TXMLTestListener::AddError(Testframework::TTestFailure *)
+    @Xmltestrunner@TXMLTestListener@AddFailure$qqrp26Testframework@TTestFailure @602 ; __fastcall Xmltestrunner::TXMLTestListener::AddFailure(Testframework::TTestFailure *)
+    @Xmltestrunner@TXMLTestListener@AddSuccess$qqr46System@%DelphiInterface$19Testframework@ITest% @604 ; Xmltestrunner::TXMLTestListener::AddSuccess(System::DelphiInterface<{583}...
+    @Xmltestrunner@TXMLTestListener@EndSuite$qqr46System@%DelphiInterface$19Testframework@ITest% @590 ; Xmltestrunner::TXMLTestListener::EndSuite(System::DelphiInterface<{583}...
+    @Xmltestrunner@TXMLTestListener@EndTest$qqr46System@%DelphiInterface$19Testframework@ITest% @600 ; Xmltestrunner::TXMLTestListener::EndTest(System::DelphiInterface<{583}...
+    @Xmltestrunner@TXMLTestListener@RunRegisteredTests$qqr20System@UnicodeString @596 ; __fastcall Xmltestrunner::TXMLTestListener::RunRegisteredTests(System::UnicodeString)
+    @Xmltestrunner@TXMLTestListener@RunTest$qqr46System@%DelphiInterface$19Testframework@ITest%20System@UnicodeString @597 ; Xmltestrunner::TXMLTestListener::RunTest(System::DelphiInterface<{583}...
+    @Xmltestrunner@TXMLTestListener@ShouldRunTest$qqr46System@%DelphiInterface$19Testframework@ITest% @591 ; Xmltestrunner::TXMLTestListener::ShouldRunTest(System::DelphiInterface<{583}...
+    @Xmltestrunner@TXMLTestListener@StartSuite$qqr46System@%DelphiInterface$19Testframework@ITest% @589 ; Xmltestrunner::TXMLTestListener::StartSuite(System::DelphiInterface<{583}...
+    @Xmltestrunner@TXMLTestListener@StartTest$qqr46System@%DelphiInterface$19Testframework@ITest% @601 ; Xmltestrunner::TXMLTestListener::StartTest(System::DelphiInterface<{583}...
+    @Xmltestrunner@TXMLTestListener@Status$qqr46System@%DelphiInterface$19Testframework@ITest%x20System@UnicodeString @593 ; Xmltestrunner::TXMLTestListener::Status(System::DelphiInterface<{583}...
+    @Xmltestrunner@TXMLTestListener@StringReplaceAll$qqr20System@UnicodeStringt1t1 @588 ; __fastcall Xmltestrunner::TXMLTestListener::StringReplaceAll(System::UnicodeString, System::UnicodeString, System::UnicodeString)
+    @Xmltestrunner@TXMLTestListener@TestingEnds$qqrp25Testframework@TTestResult @598 ; __fastcall Xmltestrunner::TXMLTestListener::TestingEnds(Testframework::TTestResult *)
+    @Xmltestrunner@TXMLTestListener@TestingStarts$qqrv @599 ; __fastcall Xmltestrunner::TXMLTestListener::TestingStarts()
+    @Xmltestrunner@TXMLTestListener@Warning$qqr46System@%DelphiInterface$19Testframework@ITest%x20System@UnicodeString @592 ; Xmltestrunner::TXMLTestListener::Warning(System::DelphiInterface<{583}...
+    @Xmltestrunner@TXMLTestListener@text2sgml$qqr20System@UnicodeString @587 ; __fastcall Xmltestrunner::TXMLTestListener::text2sgml(System::UnicodeString)
+    @Xmltestrunner@TXMLTestListener@writeReport$qqr20System@UnicodeString @605 ; __fastcall Xmltestrunner::TXMLTestListener::writeReport(System::UnicodeString)
+    @Xmltestrunner@initialization$qqrv @585 ; __fastcall Xmltestrunner::initialization()
+    Finalize                       @621 ; Finalize
+    Initialize                     @622 ; Initialize

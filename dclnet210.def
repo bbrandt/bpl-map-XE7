@@ -1,0 +1,951 @@
+LIBRARY     DCLNET210.BPL
+
+DESCRIPTION 'mbarcadero Internet Components'
+
+EXPORTS
+    @$xp$12Bismtp@TMail            @702 ; __tpdsc__ Bismtp::TMail
+    @$xp$15Bismtp@TMailBox         @704 ; __tpdsc__ Bismtp::TMailBox
+    @$xp$16Bismtp@TMIMEMail        @691 ; __tpdsc__ Bismtp::TMIMEMail
+    @$xp$18Bismtp@TAttachment      @699 ; __tpdsc__ Bismtp::TAttachment
+    @$xp$18Bismtp@TSimpleMail      @682 ; __tpdsc__ Bismtp::TSimpleMail
+    @$xp$18Inetreg@Inetreg__1      @615 ; __tpdsc__ Inetreg::Inetreg__1
+    @$xp$19Bismtp@TAttachments     @697 ; __tpdsc__ Bismtp::TAttachments
+    @$xp$19Bismtp@TMailAddress     @708 ; __tpdsc__ Bismtp::TMailAddress
+    @$xp$20Inetwiz@TProjectType    @939 ; __tpdsc__ Inetwiz::TProjectType
+    @$xp$21Bismtp@TMailAddresses   @706 ; __tpdsc__ Bismtp::TMailAddresses
+    @$xp$21Bismtp@TProtocolState   @688 ; __tpdsc__ Bismtp::TProtocolState
+    @$xp$21Inetwiz@TProjectTypes   @938 ; __tpdsc__ Inetwiz::TProjectTypes
+    @$xp$21Inetwiz@TWizardOption   @937 ; __tpdsc__ Inetwiz::TWizardOption
+    @$xp$22Bismtp@TAttachmentType  @701 ; __tpdsc__ Bismtp::TAttachmentType
+    @$xp$22Bismtp@TInternetOutBox  @693 ; __tpdsc__ Bismtp::TInternetOutBox
+    @$xp$22Bismtp@TMIMEAttachment  @689 ; __tpdsc__ Bismtp::TMIMEAttachment
+    @$xp$22Inetwiz@TFrameWorkType  @933 ; __tpdsc__ Inetwiz::TFrameWorkType
+    @$xp$22Inetwiz@TWizardOptions  @936 ; __tpdsc__ Inetwiz::TWizardOptions
+    @$xp$22Xmlbindmgr@PCodeWriter  @419 ; __tpdsc__ Xmlbindmgr::PCodeWriter
+    @$xp$22Xmlbindmgr@TCodeWriter  @416 ; __tpdsc__ Xmlbindmgr::TCodeWriter
+    @$xp$23Bismtp@TInternetAddress @695 ; __tpdsc__ Bismtp::TInternetAddress
+    @$xp$23Bismtp@TOwnedCollection @710 ; __tpdsc__ Bismtp::TOwnedCollection
+    @$xp$24Bismtp@TCustomSimpleMail @684 ; __tpdsc__ Bismtp::TCustomSimpleMail
+    @$xp$25Xmlbindcppgen@PCodeWriter @263 ; __tpdsc__ Xmlbindcppgen::PCodeWriter
+    @$xp$25Xmlbindpasgen@PCodeWriter @156 ; __tpdsc__ Xmlbindpasgen::PCodeWriter
+    @$xp$26Inetreg@TPageProducerSprig @600 ; __tpdsc__ Inetreg::TPageProducerSprig
+    @$xp$26Xmlbindcppgen@TCppIntfDecl @254 ; __tpdsc__ Xmlbindcppgen::TCppIntfDecl
+    @$xp$26Xmlbindcppgen@TForwardDecl @264 ; __tpdsc__ Xmlbindcppgen::TForwardDecl
+    @$xp$26Xmlbindmgr@IXMLBindingInfo @443 ; __tpdsc__ Xmlbindmgr::IXMLBindingInfo
+    @$xp$26Xmlbindmgr@TBindingOptions @445 ; __tpdsc__ Xmlbindmgr::TBindingOptions
+    @$xp$26Xmlbindmgr@TXMLBindingInfo @432 ; __tpdsc__ Xmlbindmgr::TXMLBindingInfo
+    @$xp$26Xmlbindmgr@TXMLBindingType @448 ; __tpdsc__ Xmlbindmgr::TXMLBindingType
+    @$xp$26Xmlbindpasgen@TForwardDecl @157 ; __tpdsc__ Xmlbindpasgen::TForwardDecl
+    @$xp$26Xmlbindpasgen@TPasIntfDecl @147 ; __tpdsc__ Xmlbindpasgen::TPasIntfDecl
+    @$xp$27Xmlbindcppgen@TCppClassDecl @250 ; __tpdsc__ Xmlbindcppgen::TCppClassDecl
+    @$xp$27Xmlbindcppgen@TCppClassImpl @248 ; __tpdsc__ Xmlbindcppgen::TCppClassImpl
+    @$xp$27Xmlbindmgr@TBindingLanguage @449 ; __tpdsc__ Xmlbindmgr::TBindingLanguage
+    @$xp$27Xmlbindmgr@TCodeWriterArray @418 ; __tpdsc__ Xmlbindmgr::TCodeWriterArray
+    @$xp$27Xmlbindmgr@TCodeWriterClass @438 ; __tpdsc__ Xmlbindmgr::TCodeWriterClass
+    @$xp$27Xmlbindoptions@TOptionsForm @464 ; __tpdsc__ Xmlbindoptions::TOptionsForm
+    @$xp$27Xmlbindpasgen@TPasClassDecl @143 ; __tpdsc__ Xmlbindpasgen::TPasClassDecl
+    @$xp$27Xmlbindpasgen@TPasClassImpl @141 ; __tpdsc__ Xmlbindpasgen::TPasClassImpl
+    @$xp$28Bismtp@TProtocolRequestEvent @687 ; __tpdsc__ Bismtp::TProtocolRequestEvent
+    @$xp$28Inetreg@TDesignerFileManager @598 ; __tpdsc__ Inetreg::TDesignerFileManager
+    @$xp$28Inetreg@THTMLBgColorProperty @612 ; __tpdsc__ Inetreg::THTMLBgColorProperty
+    @$xp$28Xmlbindcppgen@TCppCodeWriter @266 ; __tpdsc__ Xmlbindcppgen::TCppCodeWriter
+    @$xp$28Xmlbindcppgen@TCppGlobalDecl @246 ; __tpdsc__ Xmlbindcppgen::TCppGlobalDecl
+    @$xp$28Xmlbindcppgen@TCppGlobalImpl @244 ; __tpdsc__ Xmlbindcppgen::TCppGlobalImpl
+    @$xp$28Xmlbindpasgen@TPasCodeWriter @159 ; __tpdsc__ Xmlbindpasgen::TPasCodeWriter
+    @$xp$28Xmlbindpasgen@TPasGlobalDecl @139 ; __tpdsc__ Xmlbindpasgen::TPasGlobalDecl
+    @$xp$28Xmlbindpasgen@TPasGlobalImpl @137 ; __tpdsc__ Xmlbindpasgen::TPasGlobalImpl
+    @$xp$29Bismtp@TProtocolResponseEvent @686 ; __tpdsc__ Bismtp::TProtocolResponseEvent
+    @$xp$29Inetreg@TProducerIntfProperty @594 ; __tpdsc__ Inetreg::TProducerIntfProperty
+    @$xp$29Xmlbindcppgen@TCppIntfForward @256 ; __tpdsc__ Xmlbindcppgen::TCppIntfForward
+    @$xp$29Xmlbindform@TXMLNewBindingDlg @520 ; __tpdsc__ Xmlbindform::TXMLNewBindingDlg
+    @$xp$29Xmlbindmgr@IXMLBindingAppInfo @444 ; __tpdsc__ Xmlbindmgr::IXMLBindingAppInfo
+    @$xp$29Xmlbindmgr@IXMLBindingManager @436 ; __tpdsc__ Xmlbindmgr::IXMLBindingManager
+    @$xp$29Xmlbindmgr@TOptionChangeEvent @447 ; __tpdsc__ Xmlbindmgr::TOptionChangeEvent
+    @$xp$29Xmlbindmgr@TXMLBindingAppInfo @434 ; __tpdsc__ Xmlbindmgr::TXMLBindingAppInfo
+    @$xp$29Xmlbindmgr@TXMLBindingManager @420 ; __tpdsc__ Xmlbindmgr::TXMLBindingManager
+    @$xp$29Xmlbindpasgen@TPasIntfForward @149 ; __tpdsc__ Xmlbindpasgen::TPasIntfForward
+    @$xp$30Xmlbindcppgen@TCodeWriterArray @262 ; __tpdsc__ Xmlbindcppgen::TCodeWriterArray
+    @$xp$30Xmlbindcppgen@TCppClassForward @252 ; __tpdsc__ Xmlbindcppgen::TCppClassForward
+    @$xp$30Xmlbindcppgen@TCppTargetNSDecl @242 ; __tpdsc__ Xmlbindcppgen::TCppTargetNSDecl
+    @$xp$30Xmlbindcppgen@Xmlbindcppgen__1 @278 ; __tpdsc__ Xmlbindcppgen::Xmlbindcppgen__1
+    @$xp$30Xmlbindcppgen@Xmlbindcppgen__2 @276 ; __tpdsc__ Xmlbindcppgen::Xmlbindcppgen__2
+    @$xp$30Xmlbindcppgen@Xmlbindcppgen__3 @274 ; __tpdsc__ Xmlbindcppgen::Xmlbindcppgen__3
+    @$xp$30Xmlbindmgr@IXMLDataTypeBinding @442 ; __tpdsc__ Xmlbindmgr::IXMLDataTypeBinding
+    @$xp$30Xmlbindmgr@IXMLPropertyBinding @439 ; __tpdsc__ Xmlbindmgr::IXMLPropertyBinding
+    @$xp$30Xmlbindmgr@TXMLDataTypeBinding @430 ; __tpdsc__ Xmlbindmgr::TXMLDataTypeBinding
+    @$xp$30Xmlbindmgr@TXMLPropertyBinding @422 ; __tpdsc__ Xmlbindmgr::TXMLPropertyBinding
+    @$xp$30Xmlbindpasgen@TCodeWriterArray @155 ; __tpdsc__ Xmlbindpasgen::TCodeWriterArray
+    @$xp$30Xmlbindpasgen@TPasClassForward @145 ; __tpdsc__ Xmlbindpasgen::TPasClassForward
+    @$xp$30Xmlbindpasgen@TPasTargetNSDecl @135 ; __tpdsc__ Xmlbindpasgen::TPasTargetNSDecl
+    @$xp$30Xmlbindpasgen@Xmlbindpasgen__1 @170 ; __tpdsc__ Xmlbindpasgen::Xmlbindpasgen__1
+    @$xp$30Xmlbindpasgen@Xmlbindpasgen__2 @168 ; __tpdsc__ Xmlbindpasgen::Xmlbindpasgen__2
+    @$xp$30Xmlbindpasgen@Xmlbindpasgen__3 @166 ; __tpdsc__ Xmlbindpasgen::Xmlbindpasgen__3
+    @$xp$31Inetreg@THTMLFilePropertyEditor @610 ; __tpdsc__ Inetreg::THTMLFilePropertyEditor
+    @$xp$31Inetwiz@TCreateWebProjectOption @935 ; __tpdsc__ Inetwiz::TCreateWebProjectOption
+    @$xp$32Inetapachewizardpage@TApacheInfo @841 ; __tpdsc__ Inetapachewizardpage::TApacheInfo
+    @$xp$32Inetwiz@TCreateWebProjectOptions @934 ; __tpdsc__ Inetwiz::TCreateWebProjectOptions
+    @$xp$32Xmlbindmgr@TIdentifierCheckEvent @437 ; __tpdsc__ Xmlbindmgr::TIdentifierCheckEvent
+    @$xp$32Xmlbindmgr@TXMLSimpleTypeBinding @428 ; __tpdsc__ Xmlbindmgr::TXMLSimpleTypeBinding
+    @$xp$33Xmlbindmgr@IXMLComplexTypeBinding @441 ; __tpdsc__ Xmlbindmgr::IXMLComplexTypeBinding
+    @$xp$33Xmlbindmgr@TXMLComplexTypeBinding @426 ; __tpdsc__ Xmlbindmgr::TXMLComplexTypeBinding
+    @$xp$34Inetexpertsui@TInetExpertsUIModule @908 ; __tpdsc__ Inetexpertsui::TInetExpertsUIModule
+    @$xp$34Xmlbindcppgen@TCppIntfSectionEntry @258 ; __tpdsc__ Xmlbindcppgen::TCppIntfSectionEntry
+    @$xp$34Xmlbindmgr@IXMLDataTypeListBinding @440 ; __tpdsc__ Xmlbindmgr::IXMLDataTypeListBinding
+    @$xp$34Xmlbindmgr@TXMLDataTypeListBinding @424 ; __tpdsc__ Xmlbindmgr::TXMLDataTypeListBinding
+    @$xp$34Xmlbindpasgen@TPasIntfSectionEntry @151 ; __tpdsc__ Xmlbindpasgen::TPasIntfSectionEntry
+    @$xp$35Inetreg@TInterfaceComponentProperty @596 ; __tpdsc__ Inetreg::TInterfaceComponentProperty
+    @$xp$35Inetreg@TWebActionItemEventProperty @606 ; __tpdsc__ Inetreg::TWebActionItemEventProperty
+    @$xp$35Xmlbindcppgen@TCppPropertyContainer @260 ; __tpdsc__ Xmlbindcppgen::TCppPropertyContainer
+    @$xp$35Xmlbindexpert@IXMLDataBindingWizard @563 ; __tpdsc__ Xmlbindexpert::IXMLDataBindingWizard
+    @$xp$35Xmlbindexpert@TXMLDataBindingWizard @561 ; __tpdsc__ Xmlbindexpert::TXMLDataBindingWizard
+    @$xp$35Xmlbindpasgen@TPasPropertyContainer @153 ; __tpdsc__ Xmlbindpasgen::TPasPropertyContainer
+    @$xp$38Inetdesignresstrs@Inetdesignresstrs__1 @717 ; __tpdsc__ Inetdesignresstrs::Inetdesignresstrs__1
+    @$xp$38Inetdesignresstrs@Inetdesignresstrs__2 @715 ; __tpdsc__ Inetdesignresstrs::Inetdesignresstrs__2
+    @$xp$38Inetreg@THTTPDispatcherComponentEditor @608 ; __tpdsc__ Inetreg::THTTPDispatcherComponentEditor
+    @$xp$40Webserverwizardpage@IWebServerWizardPage @796 ; __tpdsc__ Webserverwizardpage::IWebServerWizardPage
+    @$xp$40Webserverwizardpage@TWebServerWizardPage @794 ; __tpdsc__ Webserverwizardpage::TWebServerWizardPage
+    @$xp$41Webserverwizardpage@TWebServerWizardFrame @797 ; __tpdsc__ Webserverwizardpage::TWebServerWizardFrame
+    @$xp$42Inetapachewizardpage@TInetApacheFocusField @842 ; __tpdsc__ Inetapachewizardpage::TInetApacheFocusField
+    @$xp$42Inethttpportwizardpage@TInetPortFocusField @881 ; __tpdsc__ Inethttpportwizardpage::TInetPortFocusField
+    @$xp$42Xmlbindexpert@TXMLDataBindingModuleCreator @559 ; __tpdsc__ Xmlbindexpert::TXMLDataBindingModuleCreator
+    @$xp$43Inetapachewizardpage@TInetApacheWizardFrame @839 ; __tpdsc__ Inetapachewizardpage::TInetApacheWizardFrame
+    @$xp$45Inetcertfileswizardpage@TDSExpertCertFileInfo @821 ; __tpdsc__ Inetcertfileswizardpage::TDSExpertCertFileInfo
+    @$xp$45Inetreg@TWebFileExtensionItemMimeTypeProperty @604 ; __tpdsc__ Inetreg::TWebFileExtensionItemMimeTypeProperty
+    @$xp$46Inetcertfileswizardpage@TDSCertFilesFocusField @822 ; __tpdsc__ Inetcertfileswizardpage::TDSCertFilesFocusField
+    @$xp$46Inetexpertscreators@TInetExpertsCreatorsModule @927 ; __tpdsc__ Inetexpertscreators::TInetExpertsCreatorsModule
+    @$xp$47Inethttpportwizardpage@TInetHTTPPortWizardFrame @879 ; __tpdsc__ Inethttpportwizardpage::TInetHTTPPortWizardFrame
+    @$xp$47Inetreg@TWebFileExtensionItemExtensionsProperty @602 ; __tpdsc__ Inetreg::TWebFileExtensionItemExtensionsProperty
+    @$xp$48Inetframeworkwizardpage@TInetFrameWorkFocusField @858 ; __tpdsc__ Inetframeworkwizardpage::TInetFrameWorkFocusField
+    @$xp$49Inetcertfileswizardpage@TInetCertFilesWizardFrame @819 ; __tpdsc__ Inetcertfileswizardpage::TInetCertFilesWizardFrame
+    @$xp$49Inetframeworkwizardpage@TInetFrameWorkWizardFrame @856 ; __tpdsc__ Inetframeworkwizardpage::TInetFrameWorkWizardFrame
+    @Bismtp@Finalization$qqrv      @617 ; __fastcall Bismtp::Finalization()
+    @Bismtp@TAttachment@           @700 ; Bismtp::TAttachment::
+    @Bismtp@TAttachment@SetAttachmentType$qqr22Bismtp@TAttachmentType @673 ; __fastcall Bismtp::TAttachment::SetAttachmentType(Bismtp::TAttachmentType)
+    @Bismtp@TAttachments@          @698 ; Bismtp::TAttachments::
+    @Bismtp@TAttachments@Add$qqrv  @672 ; __fastcall Bismtp::TAttachments::Add()
+    @Bismtp@TAttachments@GetAttachment$qqri @671 ; __fastcall Bismtp::TAttachments::GetAttachment(int)
+    @Bismtp@TAttachments@SetAttachment$qqrip18Bismtp@TAttachment @670 ; __fastcall Bismtp::TAttachments::SetAttachment(int, Bismtp::TAttachment *)
+    @Bismtp@TCustomSimpleMail@     @685 ; Bismtp::TCustomSimpleMail::
+    @Bismtp@TCustomSimpleMail@$bctr$qqrp25System@Classes@TComponent @627 ; __fastcall Bismtp::TCustomSimpleMail::TCustomSimpleMail(System::Classes::TComponent *)
+    @Bismtp@TCustomSimpleMail@$bdtr$qqrv @626 ; __fastcall Bismtp::TCustomSimpleMail::~TCustomSimpleMail()
+    @Bismtp@TCustomSimpleMail@CheckResponse$qqrp36System@Win@Scktcomp@TCustomWinSocket @625 ; __fastcall Bismtp::TCustomSimpleMail::CheckResponse(System::Win::Scktcomp::TCustomWinSocket *)
+    @Bismtp@TCustomSimpleMail@DoActivate$qqro @624 ; __fastcall Bismtp::TCustomSimpleMail::DoActivate(bool)
+    @Bismtp@TCustomSimpleMail@Error$qqrp36System@Win@Scktcomp@TCustomWinSocket31System@Win@Scktcomp@TErrorEventri @622 ; __fastcall Bismtp::TCustomSimpleMail::Error(System::Win::Scktcomp::TCustomWinSocket *, System::Win::Scktcomp::TErrorEvent, int&)
+    @Bismtp@TCustomSimpleMail@Event$qqrp36System@Win@Scktcomp@TCustomWinSocket32System@Win@Scktcomp@TSocketEvent @623 ; __fastcall Bismtp::TCustomSimpleMail::Event(System::Win::Scktcomp::TCustomWinSocket *, System::Win::Scktcomp::TSocketEvent)
+    @Bismtp@TCustomSimpleMail@IsServiceStored$qqrv @621 ; __fastcall Bismtp::TCustomSimpleMail::IsServiceStored()
+    @Bismtp@TCustomSimpleMail@Send$qqrv @619 ; __fastcall Bismtp::TCustomSimpleMail::Send()
+    @Bismtp@TCustomSimpleMail@SendRequest$qqrp36System@Win@Scktcomp@TCustomWinSocketx20System@UnicodeString @618 ; __fastcall Bismtp::TCustomSimpleMail::SendRequest(System::Win::Scktcomp::TCustomWinSocket *, const System::UnicodeString)
+    @Bismtp@TCustomSimpleMail@SetOutBox$qqrp15Bismtp@TMailBox @620 ; __fastcall Bismtp::TCustomSimpleMail::SetOutBox(Bismtp::TMailBox *)
+    @Bismtp@TInternetAddress@      @696 ; Bismtp::TInternetAddress::
+    @Bismtp@TInternetAddress@AssignTo$qqrp26System@Classes@TPersistent @663 ; __fastcall Bismtp::TInternetAddress::AssignTo(System::Classes::TPersistent *)
+    @Bismtp@TInternetAddress@GetAddress$qqrv @662 ; __fastcall Bismtp::TInternetAddress::GetAddress()
+    @Bismtp@TInternetAddress@GetFormattedAddress$qqrv @661 ; __fastcall Bismtp::TInternetAddress::GetFormattedAddress()
+    @Bismtp@TInternetAddress@GetName$qqrv @659 ; __fastcall Bismtp::TInternetAddress::GetName()
+    @Bismtp@TInternetAddress@SetAddress$qqrx20System@UnicodeString @660 ; __fastcall Bismtp::TInternetAddress::SetAddress(const System::UnicodeString)
+    @Bismtp@TInternetAddress@SetName$qqrx20System@UnicodeString @658 ; __fastcall Bismtp::TInternetAddress::SetName(const System::UnicodeString)
+    @Bismtp@TInternetOutBox@       @694 ; Bismtp::TInternetOutBox::
+    @Bismtp@TInternetOutBox@$bctr$qqrp24Bismtp@TCustomSimpleMailp17System@TMetaClass @657 ; __fastcall Bismtp::TInternetOutBox::TInternetOutBox(Bismtp::TCustomSimpleMail *, System::TMetaClass *)
+    @Bismtp@TInternetOutBox@SetItemName$qqrp30System@Classes@TCollectionItem @656 ; __fastcall Bismtp::TInternetOutBox::SetItemName(System::Classes::TCollectionItem *)
+    @Bismtp@TMIMEAttachment@       @690 ; Bismtp::TMIMEAttachment::
+    @Bismtp@TMIMEAttachment@$bctr$qqrp26System@Classes@TCollection @636 ; __fastcall Bismtp::TMIMEAttachment::TMIMEAttachment(System::Classes::TCollection *)
+    @Bismtp@TMIMEAttachment@$bdtr$qqrv @635 ; __fastcall Bismtp::TMIMEAttachment::~TMIMEAttachment()
+    @Bismtp@TMIMEAttachment@AssignTo$qqrp26System@Classes@TPersistent @628 ; __fastcall Bismtp::TMIMEAttachment::AssignTo(System::Classes::TPersistent *)
+    @Bismtp@TMIMEAttachment@GetBody$qqrv @634 ; __fastcall Bismtp::TMIMEAttachment::GetBody()
+    @Bismtp@TMIMEAttachment@GetStream$qqrv @632 ; __fastcall Bismtp::TMIMEAttachment::GetStream()
+    @Bismtp@TMIMEAttachment@GetValue$qqrx20System@UnicodeString @631 ; __fastcall Bismtp::TMIMEAttachment::GetValue(const System::UnicodeString)
+    @Bismtp@TMIMEAttachment@SetBody$qqrp23System@Classes@TStrings @633 ; __fastcall Bismtp::TMIMEAttachment::SetBody(System::Classes::TStrings *)
+    @Bismtp@TMIMEAttachment@SetValue$qqrx20System@UnicodeStringt1 @630 ; __fastcall Bismtp::TMIMEAttachment::SetValue(const System::UnicodeString, const System::UnicodeString)
+    @Bismtp@TMIMEAttachment@SetValues$qqrp23System@Classes@TStrings @629 ; __fastcall Bismtp::TMIMEAttachment::SetValues(System::Classes::TStrings *)
+    @Bismtp@TMIMEMail@             @692 ; Bismtp::TMIMEMail::
+    @Bismtp@TMIMEMail@$bctr$qqrp26System@Classes@TCollection @655 ; __fastcall Bismtp::TMIMEMail::TMIMEMail(System::Classes::TCollection *)
+    @Bismtp@TMIMEMail@$bdtr$qqrv   @654 ; __fastcall Bismtp::TMIMEMail::~TMIMEMail()
+    @Bismtp@TMIMEMail@AssignTo$qqrp26System@Classes@TPersistent @643 ; __fastcall Bismtp::TMIMEMail::AssignTo(System::Classes::TPersistent *)
+    @Bismtp@TMIMEMail@GetAttachments$qqrv @650 ; __fastcall Bismtp::TMIMEMail::GetAttachments()
+    @Bismtp@TMIMEMail@GetBCCAddresses$qqrv @648 ; __fastcall Bismtp::TMIMEMail::GetBCCAddresses()
+    @Bismtp@TMIMEMail@GetBody$qqrv @651 ; __fastcall Bismtp::TMIMEMail::GetBody()
+    @Bismtp@TMIMEMail@GetCCAddresses$qqrv @647 ; __fastcall Bismtp::TMIMEMail::GetCCAddresses()
+    @Bismtp@TMIMEMail@GetFromAddresses$qqrv @649 ; __fastcall Bismtp::TMIMEMail::GetFromAddresses()
+    @Bismtp@TMIMEMail@GetHeader$qqrx20System@UnicodeString @653 ; __fastcall Bismtp::TMIMEMail::GetHeader(const System::UnicodeString)
+    @Bismtp@TMIMEMail@GetSubject$qqrv @646 ; __fastcall Bismtp::TMIMEMail::GetSubject()
+    @Bismtp@TMIMEMail@GetToAddresses$qqrv @645 ; __fastcall Bismtp::TMIMEMail::GetToAddresses()
+    @Bismtp@TMIMEMail@SetAttachments$qqrp19Bismtp@TAttachments @642 ; __fastcall Bismtp::TMIMEMail::SetAttachments(Bismtp::TAttachments *)
+    @Bismtp@TMIMEMail@SetBCCAddresses$qqrp21Bismtp@TMailAddresses @640 ; __fastcall Bismtp::TMIMEMail::SetBCCAddresses(Bismtp::TMailAddresses *)
+    @Bismtp@TMIMEMail@SetBody$qqrp23System@Classes@TStrings @644 ; __fastcall Bismtp::TMIMEMail::SetBody(System::Classes::TStrings *)
+    @Bismtp@TMIMEMail@SetCCAddresses$qqrp21Bismtp@TMailAddresses @639 ; __fastcall Bismtp::TMIMEMail::SetCCAddresses(Bismtp::TMailAddresses *)
+    @Bismtp@TMIMEMail@SetFromAddresses$qqrp21Bismtp@TMailAddresses @641 ; __fastcall Bismtp::TMIMEMail::SetFromAddresses(Bismtp::TMailAddresses *)
+    @Bismtp@TMIMEMail@SetHeader$qqrx20System@UnicodeStringt1 @652 ; __fastcall Bismtp::TMIMEMail::SetHeader(const System::UnicodeString, const System::UnicodeString)
+    @Bismtp@TMIMEMail@SetSubject$qqrx20System@UnicodeString @638 ; __fastcall Bismtp::TMIMEMail::SetSubject(const System::UnicodeString)
+    @Bismtp@TMIMEMail@SetToAddresses$qqrp21Bismtp@TMailAddresses @637 ; __fastcall Bismtp::TMIMEMail::SetToAddresses(Bismtp::TMailAddresses *)
+    @Bismtp@TMail@                 @703 ; Bismtp::TMail::
+    @Bismtp@TMailAddress@          @709 ; Bismtp::TMailAddress::
+    @Bismtp@TMailAddresses@        @707 ; Bismtp::TMailAddresses::
+    @Bismtp@TMailAddresses@Add$qqrv @669 ; __fastcall Bismtp::TMailAddresses::Add()
+    @Bismtp@TMailAddresses@GetAddress$qqri @665 ; __fastcall Bismtp::TMailAddresses::GetAddress(int)
+    @Bismtp@TMailAddresses@GetAttr$qqri @667 ; __fastcall Bismtp::TMailAddresses::GetAttr(int)
+    @Bismtp@TMailAddresses@GetAttrCount$qqrv @668 ; __fastcall Bismtp::TMailAddresses::GetAttrCount()
+    @Bismtp@TMailAddresses@GetItemAttr$qqrii @666 ; __fastcall Bismtp::TMailAddresses::GetItemAttr(int, int)
+    @Bismtp@TMailAddresses@SetAddress$qqrip19Bismtp@TMailAddress @664 ; __fastcall Bismtp::TMailAddresses::SetAddress(int, Bismtp::TMailAddress *)
+    @Bismtp@TMailBox@              @705 ; Bismtp::TMailBox::
+    @Bismtp@TMailBox@Add$qqrv      @679 ; __fastcall Bismtp::TMailBox::Add()
+    @Bismtp@TMailBox@GetAttr$qqri  @677 ; __fastcall Bismtp::TMailBox::GetAttr(int)
+    @Bismtp@TMailBox@GetAttrCount$qqrv @678 ; __fastcall Bismtp::TMailBox::GetAttrCount()
+    @Bismtp@TMailBox@GetItemAttr$qqrii @676 ; __fastcall Bismtp::TMailBox::GetItemAttr(int, int)
+    @Bismtp@TMailBox@GetMail$qqri  @675 ; __fastcall Bismtp::TMailBox::GetMail(int)
+    @Bismtp@TMailBox@SetMail$qqrip12Bismtp@TMail @674 ; __fastcall Bismtp::TMailBox::SetMail(int, Bismtp::TMail *)
+    @Bismtp@TOwnedCollection@      @711 ; Bismtp::TOwnedCollection::
+    @Bismtp@TOwnedCollection@$bctr$qqrp26System@Classes@TPersistentp17System@TMetaClass @681 ; __fastcall Bismtp::TOwnedCollection::TOwnedCollection(System::Classes::TPersistent *, System::TMetaClass *)
+    @Bismtp@TOwnedCollection@GetOwner$qqrv @680 ; __fastcall Bismtp::TOwnedCollection::GetOwner()
+    @Bismtp@TSimpleMail@           @683 ; Bismtp::TSimpleMail::
+    @Bismtp@initialization$qqrv    @616 ; __fastcall Bismtp::initialization()
+    @Dclnet@@GetPackageInfoTable$qqrv @943 ; Dclnet::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclnet@@PackageLoad$qqrv      @942 ; Dclnet::__linkproc__ __fastcall PackageLoad()
+    @Dclnet@@PackageUnload$qqrv    @941 ; Dclnet::__linkproc__ __fastcall PackageUnload()
+    @Dclnet@initialization$qqrv    @940 ; __fastcall Dclnet::initialization()
+    @GetPackageInfoTable           @946 ; GetPackageInfoTable
+    @Inetapachewizardpage@Finalization$qqrv @824 ; __fastcall Inetapachewizardpage::Finalization()
+    @Inetapachewizardpage@TInetApacheWizardFrame@ @840 ; Inetapachewizardpage::TInetApacheWizardFrame::
+    @Inetapachewizardpage@TInetApacheWizardFrame@ApplicationEvents1Idle$qqrp14System@TObjectro @838 ; __fastcall Inetapachewizardpage::TInetApacheWizardFrame::ApplicationEvents1Idle(System::TObject *, bool&)
+    @Inetapachewizardpage@TInetApacheWizardFrame@ExpertsFrameCreated$qqrp45Expertsuiwizard@TCustomExpertsFrameWizardPage @828 ; __fastcall Inetapachewizardpage::TInetApacheWizardFrame::ExpertsFrameCreated(Expertsuiwizard::TCustomExpertsFrameWizardPage *)
+    @Inetapachewizardpage@TInetApacheWizardFrame@ExpertsFrameEnterPage$qqrp45Expertsuiwizard@TCustomExpertsFrameWizardPage @827 ; __fastcall Inetapachewizardpage::TInetApacheWizardFrame::ExpertsFrameEnterPage(Expertsuiwizard::TCustomExpertsFrameWizardPage *)
+    @Inetapachewizardpage@TInetApacheWizardFrame@ExpertsFrameUpdateInfo$qqrp40Expertsuiwizard@TCustomExpertsWizardPagero @826 ; __fastcall Inetapachewizardpage::TInetApacheWizardFrame::ExpertsFrameUpdateInfo(Expertsuiwizard::TCustomExpertsWizardPage *, bool&)
+    @Inetapachewizardpage@TInetApacheWizardFrame@ExpertsFrameValidatePage$qqrp40Expertsuiwizard@TCustomExpertsWizardPagero @825 ; __fastcall Inetapachewizardpage::TInetApacheWizardFrame::ExpertsFrameValidatePage(Expertsuiwizard::TCustomExpertsWizardPage *, bool&)
+    @Inetapachewizardpage@TInetApacheWizardFrame@GetApacheInfo$qqrv @833 ; __fastcall Inetapachewizardpage::TInetApacheWizardFrame::GetApacheInfo()
+    @Inetapachewizardpage@TInetApacheWizardFrame@GetApacheModule$qqrv @834 ; __fastcall Inetapachewizardpage::TInetApacheWizardFrame::GetApacheModule()
+    @Inetapachewizardpage@TInetApacheWizardFrame@GetFocusField$qqrv @835 ; __fastcall Inetapachewizardpage::TInetApacheWizardFrame::GetFocusField()
+    @Inetapachewizardpage@TInetApacheWizardFrame@GetWizardInfo$qqrv @837 ; __fastcall Inetapachewizardpage::TInetApacheWizardFrame::GetWizardInfo()
+    @Inetapachewizardpage@TInetApacheWizardFrame@SetApacheInfo$qqrrx32Inetapachewizardpage@TApacheInfo @832 ; __fastcall Inetapachewizardpage::TInetApacheWizardFrame::SetApacheInfo(const Inetapachewizardpage::TApacheInfo&)
+    @Inetapachewizardpage@TInetApacheWizardFrame@ValidateFields$qqrv @830 ; __fastcall Inetapachewizardpage::TInetApacheWizardFrame::ValidateFields()
+    @Inetapachewizardpage@TInetApacheWizardFrame@ValidateModuleName$qqrx20System@UnicodeString @831 ; __fastcall Inetapachewizardpage::TInetApacheWizardFrame::ValidateModuleName(const System::UnicodeString)
+    @Inetapachewizardpage@TInetApacheWizardFrame@VersionChanged$qqrp14System@TObject @836 ; __fastcall Inetapachewizardpage::TInetApacheWizardFrame::VersionChanged(System::TObject *)
+    @Inetapachewizardpage@TInetApacheWizardFrame@edApacheModuleExit$qqrp14System@TObject @829 ; __fastcall Inetapachewizardpage::TInetApacheWizardFrame::edApacheModuleExit(System::TObject *)
+    @Inetapachewizardpage@initialization$qqrv @823 ; __fastcall Inetapachewizardpage::initialization()
+    @Inetcertfileswizardpage@Finalization$qqrv @800 ; __fastcall Inetcertfileswizardpage::Finalization()
+    @Inetcertfileswizardpage@TInetCertFilesWizardFrame@ @820 ; Inetcertfileswizardpage::TInetCertFilesWizardFrame::
+    @Inetcertfileswizardpage@TInetCertFilesWizardFrame@$bctr$qqrp25System@Classes@TComponent @805 ; __fastcall Inetcertfileswizardpage::TInetCertFilesWizardFrame::TInetCertFilesWizardFrame(System::Classes::TComponent *)
+    @Inetcertfileswizardpage@TInetCertFilesWizardFrame@ApplicationEvents1Idle$qqrp14System@TObjectro @812 ; __fastcall Inetcertfileswizardpage::TInetCertFilesWizardFrame::ApplicationEvents1Idle(System::TObject *, bool&)
+    @Inetcertfileswizardpage@TInetCertFilesWizardFrame@BrowseCertFileBtnClick$qqrp14System@TObject @811 ; __fastcall Inetcertfileswizardpage::TInetCertFilesWizardFrame::BrowseCertFileBtnClick(System::TObject *)
+    @Inetcertfileswizardpage@TInetCertFilesWizardFrame@BrowseKeyFileBtnClick$qqrp14System@TObject @809 ; __fastcall Inetcertfileswizardpage::TInetCertFilesWizardFrame::BrowseKeyFileBtnClick(System::TObject *)
+    @Inetcertfileswizardpage@TInetCertFilesWizardFrame@BrowseRootCertFileBtnClick$qqrp14System@TObject @808 ; __fastcall Inetcertfileswizardpage::TInetCertFilesWizardFrame::BrowseRootCertFileBtnClick(System::TObject *)
+    @Inetcertfileswizardpage@TInetCertFilesWizardFrame@ButtonTestClick$qqrp14System@TObject @807 ; __fastcall Inetcertfileswizardpage::TInetCertFilesWizardFrame::ButtonTestClick(System::TObject *)
+    @Inetcertfileswizardpage@TInetCertFilesWizardFrame@ExpertsFrameCreated$qqrp45Expertsuiwizard@TCustomExpertsFrameWizardPage @818 ; __fastcall Inetcertfileswizardpage::TInetCertFilesWizardFrame::ExpertsFrameCreated(Expertsuiwizard::TCustomExpertsFrameWizardPage *)
+    @Inetcertfileswizardpage@TInetCertFilesWizardFrame@ExpertsFrameEnterPage$qqrp45Expertsuiwizard@TCustomExpertsFrameWizardPage @817 ; __fastcall Inetcertfileswizardpage::TInetCertFilesWizardFrame::ExpertsFrameEnterPage(Expertsuiwizard::TCustomExpertsFrameWizardPage *)
+    @Inetcertfileswizardpage@TInetCertFilesWizardFrame@ExpertsFrameUpdateInfo$qqrp40Expertsuiwizard@TCustomExpertsWizardPagero @816 ; __fastcall Inetcertfileswizardpage::TInetCertFilesWizardFrame::ExpertsFrameUpdateInfo(Expertsuiwizard::TCustomExpertsWizardPage *, bool&)
+    @Inetcertfileswizardpage@TInetCertFilesWizardFrame@ExpertsFrameValidatePage$qqrp40Expertsuiwizard@TCustomExpertsWizardPagero @815 ; __fastcall Inetcertfileswizardpage::TInetCertFilesWizardFrame::ExpertsFrameValidatePage(Expertsuiwizard::TCustomExpertsWizardPage *, bool&)
+    @Inetcertfileswizardpage@TInetCertFilesWizardFrame@GetCertFileInfo$qqrv @814 ; __fastcall Inetcertfileswizardpage::TInetCertFilesWizardFrame::GetCertFileInfo()
+    @Inetcertfileswizardpage@TInetCertFilesWizardFrame@GetLeftMargin$qqrv @804 ; __fastcall Inetcertfileswizardpage::TInetCertFilesWizardFrame::GetLeftMargin()
+    @Inetcertfileswizardpage@TInetCertFilesWizardFrame@GetWizardInfo$qqrv @810 ; __fastcall Inetcertfileswizardpage::TInetCertFilesWizardFrame::GetWizardInfo()
+    @Inetcertfileswizardpage@TInetCertFilesWizardFrame@OpenFileDialog$qqrp18Vcl@Stdctrls@TEdito @813 ; __fastcall Inetcertfileswizardpage::TInetCertFilesWizardFrame::OpenFileDialog(Vcl::Stdctrls::TEdit *, bool)
+    @Inetcertfileswizardpage@TInetCertFilesWizardFrame@SetLeftMargin$qqrxi @803 ; __fastcall Inetcertfileswizardpage::TInetCertFilesWizardFrame::SetLeftMargin(const int)
+    @Inetcertfileswizardpage@TInetCertFilesWizardFrame@TestCertFiles$qqri @806 ; __fastcall Inetcertfileswizardpage::TInetCertFilesWizardFrame::TestCertFiles(int)
+    @Inetcertfileswizardpage@TInetCertFilesWizardFrame@ValidateFields$qqrv @801 ; __fastcall Inetcertfileswizardpage::TInetCertFilesWizardFrame::ValidateFields()
+    @Inetcertfileswizardpage@TInetCertFilesWizardFrame@ValidateFileExists$qqrp18Vcl@Stdctrls@TEdit @802 ; __fastcall Inetcertfileswizardpage::TInetCertFilesWizardFrame::ValidateFileExists(Vcl::Stdctrls::TEdit *)
+    @Inetcertfileswizardpage@initialization$qqrv @799 ; __fastcall Inetcertfileswizardpage::initialization()
+    @Inetdesignresstrs@Finalization$qqrv @713 ; __fastcall Inetdesignresstrs::Finalization()
+    @Inetdesignresstrs@_SPEMOpenFileTitle @751 ; Inetdesignresstrs::_SPEMOpenFileTitle
+    @Inetdesignresstrs@_sApacheInfo @733 ; Inetdesignresstrs::_sApacheInfo
+    @Inetdesignresstrs@_sApachePageDescription @731 ; Inetdesignresstrs::_sApachePageDescription
+    @Inetdesignresstrs@_sApachePageTitle @732 ; Inetdesignresstrs::_sApachePageTitle
+    @Inetdesignresstrs@_sApacheVersion20 @725 ; Inetdesignresstrs::_sApacheVersion20
+    @Inetdesignresstrs@_sApacheVersion22 @724 ; Inetdesignresstrs::_sApacheVersion22
+    @Inetdesignresstrs@_sApacheVersion24 @723 ; Inetdesignresstrs::_sApacheVersion24
+    @Inetdesignresstrs@_sCGIInfo   @740 ; Inetdesignresstrs::_sCGIInfo
+    @Inetdesignresstrs@_sCertFileInfo @747 ; Inetdesignresstrs::_sCertFileInfo
+    @Inetdesignresstrs@_sCertFilesPageDescription @748 ; Inetdesignresstrs::_sCertFilesPageDescription
+    @Inetdesignresstrs@_sCertFilesPageInfo @750 ; Inetdesignresstrs::_sCertFilesPageInfo
+    @Inetdesignresstrs@_sCertFilesPageTitle @749 ; Inetdesignresstrs::_sCertFilesPageTitle
+    @Inetdesignresstrs@_sCertFilesTestInfo @742 ; Inetdesignresstrs::_sCertFilesTestInfo
+    @Inetdesignresstrs@_sCoClassNameInfo @734 ; Inetdesignresstrs::_sCoClassNameInfo
+    @Inetdesignresstrs@_sFMInfo    @718 ; Inetdesignresstrs::_sFMInfo
+    @Inetdesignresstrs@_sFrameWorkInfo @722 ; Inetdesignresstrs::_sFrameWorkInfo
+    @Inetdesignresstrs@_sFrameWorkPageDescription @720 ; Inetdesignresstrs::_sFrameWorkPageDescription
+    @Inetdesignresstrs@_sFrameWorkPageTitle @721 ; Inetdesignresstrs::_sFrameWorkPageTitle
+    @Inetdesignresstrs@_sHTTPPortInfo @756 ; Inetdesignresstrs::_sHTTPPortInfo
+    @Inetdesignresstrs@_sHTTPSInfo @755 ; Inetdesignresstrs::_sHTTPSInfo
+    @Inetdesignresstrs@_sISAPIInfo @741 ; Inetdesignresstrs::_sISAPIInfo
+    @Inetdesignresstrs@_sIndyConsoleInfo @738 ; Inetdesignresstrs::_sIndyConsoleInfo
+    @Inetdesignresstrs@_sIndyFormInfo @739 ; Inetdesignresstrs::_sIndyFormInfo
+    @Inetdesignresstrs@_sInvalidModule @726 ; Inetdesignresstrs::_sInvalidModule
+    @Inetdesignresstrs@_sKeyFileInfo @745 ; Inetdesignresstrs::_sKeyFileInfo
+    @Inetdesignresstrs@_sKeyFilePasswordInfo @744 ; Inetdesignresstrs::_sKeyFilePasswordInfo
+    @Inetdesignresstrs@_sLibraryInfo @727 ; Inetdesignresstrs::_sLibraryInfo
+    @Inetdesignresstrs@_sModuleInfo @729 ; Inetdesignresstrs::_sModuleInfo
+    @Inetdesignresstrs@_sPEMFileFilter @754 ; Inetdesignresstrs::_sPEMFileFilter
+    @Inetdesignresstrs@_sPEMFileNotFound @752 ; Inetdesignresstrs::_sPEMFileNotFound
+    @Inetdesignresstrs@_sPEMKeyFileFilter @753 ; Inetdesignresstrs::_sPEMKeyFileFilter
+    @Inetdesignresstrs@_sPortsPageDescription @757 ; Inetdesignresstrs::_sPortsPageDescription
+    @Inetdesignresstrs@_sPortsPageInfo @759 ; Inetdesignresstrs::_sPortsPageInfo
+    @Inetdesignresstrs@_sPortsPageTitle @758 ; Inetdesignresstrs::_sPortsPageTitle
+    @Inetdesignresstrs@_sRootCertFileINfo @746 ; Inetdesignresstrs::_sRootCertFileINfo
+    @Inetdesignresstrs@_sTestCertFilesOK @743 ; Inetdesignresstrs::_sTestCertFilesOK
+    @Inetdesignresstrs@_sUnitInfo  @728 ; Inetdesignresstrs::_sUnitInfo
+    @Inetdesignresstrs@_sVCLInfo   @719 ; Inetdesignresstrs::_sVCLInfo
+    @Inetdesignresstrs@_sVersionInfo @730 ; Inetdesignresstrs::_sVersionInfo
+    @Inetdesignresstrs@_sWebAppDebugExeInfo @737 ; Inetdesignresstrs::_sWebAppDebugExeInfo
+    @Inetdesignresstrs@_sWebServerPageDescription @735 ; Inetdesignresstrs::_sWebServerPageDescription
+    @Inetdesignresstrs@_sWebServerPageTitle @736 ; Inetdesignresstrs::_sWebServerPageTitle
+    @Inetdesignresstrs@initialization$qqrv @712 ; __fastcall Inetdesignresstrs::initialization()
+    @Inetdesignresstrs@sApacheImpl @714 ; Inetdesignresstrs::sApacheImpl
+    @Inetdesignresstrs@sApacheVersion @716 ; Inetdesignresstrs::sApacheVersion
+    @Inetexpertscreators@Finalization$qqrv @913 ; __fastcall Inetexpertscreators::Finalization()
+    @Inetexpertscreators@InetExpertsCreatorsModule @926 ; Inetexpertscreators::InetExpertsCreatorsModule
+    @Inetexpertscreators@TInetExpertsCreatorsModule@ @928 ; Inetexpertscreators::TInetExpertsCreatorsModule::
+    @Inetexpertscreators@TInetExpertsCreatorsModule@$bctr$qqrp25System@Classes@TComponent @925 ; __fastcall Inetexpertscreators::TInetExpertsCreatorsModule::TInetExpertsCreatorsModule(System::Classes::TComponent *)
+    @Inetexpertscreators@TInetExpertsCreatorsModule@CreateConsoleModule$qqrx20System@UnicodeString @915 ; __fastcall Inetexpertscreators::TInetExpertsCreatorsModule::CreateConsoleModule(const System::UnicodeString)
+    @Inetexpertscreators@TInetExpertsCreatorsModule@CreateModules$qqrx20System@UnicodeString @917 ; __fastcall Inetexpertscreators::TInetExpertsCreatorsModule::CreateModules(const System::UnicodeString)
+    @Inetexpertscreators@TInetExpertsCreatorsModule@CreatePchModule$qqrx20System@UnicodeString @916 ; __fastcall Inetexpertscreators::TInetExpertsCreatorsModule::CreatePchModule(const System::UnicodeString)
+    @Inetexpertscreators@TInetExpertsCreatorsModule@CreateWebModule$qqrx20System@UnicodeString @914 ; __fastcall Inetexpertscreators::TInetExpertsCreatorsModule::CreateWebModule(const System::UnicodeString)
+    @Inetexpertscreators@TInetExpertsCreatorsModule@SetApacheInfo$qqrrx32Inetapachewizardpage@TApacheInfo @923 ; __fastcall Inetexpertscreators::TInetExpertsCreatorsModule::SetApacheInfo(const Inetapachewizardpage::TApacheInfo&)
+    @Inetexpertscreators@TInetExpertsCreatorsModule@SetCertFileInfo$qqrrx45Inetcertfileswizardpage@TDSExpertCertFileInfo @924 ; __fastcall Inetexpertscreators::TInetExpertsCreatorsModule::SetCertFileInfo(const Inetcertfileswizardpage::TDSExpertCertFileInfo&)
+    @Inetexpertscreators@TInetExpertsCreatorsModule@SetHTTPPort$qqrxi @922 ; __fastcall Inetexpertscreators::TInetExpertsCreatorsModule::SetHTTPPort(const int)
+    @Inetexpertscreators@TInetExpertsCreatorsModule@SetHTTPS$qqrxo @921 ; __fastcall Inetexpertscreators::TInetExpertsCreatorsModule::SetHTTPS(const bool)
+    @Inetexpertscreators@TInetExpertsCreatorsModule@SetProjectType$qqr20Inetwiz@TProjectType @920 ; __fastcall Inetexpertscreators::TInetExpertsCreatorsModule::SetProjectType(Inetwiz::TProjectType)
+    @Inetexpertscreators@TInetExpertsCreatorsModule@UpdateProperties$qqrv @919 ; __fastcall Inetexpertscreators::TInetExpertsCreatorsModule::UpdateProperties()
+    @Inetexpertscreators@TInetExpertsCreatorsModule@WebProjectCreateModules$qqrp36Expertsproject@TCustomExpertsProjectx20System@UnicodeString @918 ; __fastcall Inetexpertscreators::TInetExpertsCreatorsModule::WebProjectCreateModules(Expertsproject::TCustomExpertsProject *, const System::UnicodeString)
+    @Inetexpertscreators@initialization$qqrv @912 ; __fastcall Inetexpertscreators::initialization()
+    @Inetexpertstemplateproperties@Finalization$qqrv @911 ; __fastcall Inetexpertstemplateproperties::Finalization()
+    @Inetexpertstemplateproperties@initialization$qqrv @910 ; __fastcall Inetexpertstemplateproperties::initialization()
+    @Inetexpertsui@Finalization$qqrv @883 ; __fastcall Inetexpertsui::Finalization()
+    @Inetexpertsui@InetExpertsUIModule @907 ; Inetexpertsui::InetExpertsUIModule
+    @Inetexpertsui@TInetExpertsUIModule@ @909 ; Inetexpertsui::TInetExpertsUIModule::
+    @Inetexpertsui@TInetExpertsUIModule@ApacheWizardPageFrameCreate$qqrp45Expertsuiwizard@TCustomExpertsFrameWizardPagep25System@Classes@TComponentrp16Vcl@Forms@TFrame @906 ; __fastcall Inetexpertsui::TInetExpertsUIModule::ApacheWizardPageFrameCreate(Expertsuiwizard::TCustomExpertsFrameWizardPage *, System::Classes::TComponent *, Vcl::Forms::TFrame *&)
+    @Inetexpertsui@TInetExpertsUIModule@ApacheWizardPageFrameCreated$qqrp45Expertsuiwizard@TCustomExpertsFrameWizardPagep16Vcl@Forms@TFrame @904 ; __fastcall Inetexpertsui::TInetExpertsUIModule::ApacheWizardPageFrameCreated(Expertsuiwizard::TCustomExpertsFrameWizardPage *, Vcl::Forms::TFrame *)
+    @Inetexpertsui@TInetExpertsUIModule@ApplicationTypeWizardPage1CreateFrame$qqrp45Expertsuiwizard@TCustomExpertsFrameWizardPagep25System@Classes@TComponentrp16Vcl@Forms@TFrame @903 ; __fastcall Inetexpertsui::TInetExpertsUIModule::ApplicationTypeWizardPage1CreateFrame(Expertsuiwizard::TCustomExpertsFrameWizardPage *, System::Classes::TComponent *, Vcl::Forms::TFrame *&)
+    @Inetexpertsui@TInetExpertsUIModule@ApplicationTypeWizardPage1FrameCreated$qqrp45Expertsuiwizard@TCustomExpertsFrameWizardPagep16Vcl@Forms@TFrame @902 ; __fastcall Inetexpertsui::TInetExpertsUIModule::ApplicationTypeWizardPage1FrameCreated(Expertsuiwizard::TCustomExpertsFrameWizardPage *, Vcl::Forms::TFrame *)
+    @Inetexpertsui@TInetExpertsUIModule@ApplicationTypeWizardPage1FrameOptionChanged$qqrp45Expertsuiwizard@TCustomExpertsFrameWizardPage @901 ; __fastcall Inetexpertsui::TInetExpertsUIModule::ApplicationTypeWizardPage1FrameOptionChanged(Expertsuiwizard::TCustomExpertsFrameWizardPage *)
+    @Inetexpertsui@TInetExpertsUIModule@CertFilesWizardPageCreateFrame$qqrp45Expertsuiwizard@TCustomExpertsFrameWizardPagep25System@Classes@TComponentrp16Vcl@Forms@TFrame @887 ; __fastcall Inetexpertsui::TInetExpertsUIModule::CertFilesWizardPageCreateFrame(Expertsuiwizard::TCustomExpertsFrameWizardPage *, System::Classes::TComponent *, Vcl::Forms::TFrame *&)
+    @Inetexpertsui@TInetExpertsUIModule@CertFilesWizardPageFrameCreated$qqrp45Expertsuiwizard@TCustomExpertsFrameWizardPagep16Vcl@Forms@TFrame @886 ; __fastcall Inetexpertsui::TInetExpertsUIModule::CertFilesWizardPageFrameCreated(Expertsuiwizard::TCustomExpertsFrameWizardPage *, Vcl::Forms::TFrame *)
+    @Inetexpertsui@TInetExpertsUIModule@DataModuleCreate$qqrp14System@TObject @900 ; __fastcall Inetexpertsui::TInetExpertsUIModule::DataModuleCreate(System::TObject *)
+    @Inetexpertsui@TInetExpertsUIModule@EnablePages$qqrv @899 ; __fastcall Inetexpertsui::TInetExpertsUIModule::EnablePages()
+    @Inetexpertsui@TInetExpertsUIModule@FrameWorkWizardPageFrameCreate$qqrp45Expertsuiwizard@TCustomExpertsFrameWizardPagep25System@Classes@TComponentrp16Vcl@Forms@TFrame @898 ; __fastcall Inetexpertsui::TInetExpertsUIModule::FrameWorkWizardPageFrameCreate(Expertsuiwizard::TCustomExpertsFrameWizardPage *, System::Classes::TComponent *, Vcl::Forms::TFrame *&)
+    @Inetexpertsui@TInetExpertsUIModule@FrameWorkWizardPageFrameCreated$qqrp45Expertsuiwizard@TCustomExpertsFrameWizardPagep16Vcl@Forms@TFrame @897 ; __fastcall Inetexpertsui::TInetExpertsUIModule::FrameWorkWizardPageFrameCreated(Expertsuiwizard::TCustomExpertsFrameWizardPage *, Vcl::Forms::TFrame *)
+    @Inetexpertsui@TInetExpertsUIModule@GetApacheInfo$qqrv @894 ; __fastcall Inetexpertsui::TInetExpertsUIModule::GetApacheInfo()
+    @Inetexpertsui@TInetExpertsUIModule@GetCertFileInfo$qqrv @896 ; __fastcall Inetexpertsui::TInetExpertsUIModule::GetCertFileInfo()
+    @Inetexpertsui@TInetExpertsUIModule@GetFrameWorkType$qqrv @895 ; __fastcall Inetexpertsui::TInetExpertsUIModule::GetFrameWorkType()
+    @Inetexpertsui@TInetExpertsUIModule@GetHTTPPort$qqrv @893 ; __fastcall Inetexpertsui::TInetExpertsUIModule::GetHTTPPort()
+    @Inetexpertsui@TInetExpertsUIModule@OnCertFilesTest$qqrp14System@TObject @885 ; __fastcall Inetexpertsui::TInetExpertsUIModule::OnCertFilesTest(System::TObject *)
+    @Inetexpertsui@TInetExpertsUIModule@OnGoNextFrame$qqrp14System@TObject @884 ; __fastcall Inetexpertsui::TInetExpertsUIModule::OnGoNextFrame(System::TObject *)
+    @Inetexpertsui@TInetExpertsUIModule@OnVersionChanged$qqrp14System@TObject @905 ; __fastcall Inetexpertsui::TInetExpertsUIModule::OnVersionChanged(System::TObject *)
+    @Inetexpertsui@TInetExpertsUIModule@PortsWizardPageCreateFrame$qqrp45Expertsuiwizard@TCustomExpertsFrameWizardPagep25System@Classes@TComponentrp16Vcl@Forms@TFrame @892 ; __fastcall Inetexpertsui::TInetExpertsUIModule::PortsWizardPageCreateFrame(Expertsuiwizard::TCustomExpertsFrameWizardPage *, System::Classes::TComponent *, Vcl::Forms::TFrame *&)
+    @Inetexpertsui@TInetExpertsUIModule@PortsWizardPageEnterPage$qqrp40Expertsuiwizard@TCustomExpertsWizardPage44Expertsuiwizard@TExpertsWizardPageTransition @891 ; __fastcall Inetexpertsui::TInetExpertsUIModule::PortsWizardPageEnterPage(Expertsuiwizard::TCustomExpertsWizardPage *, Expertsuiwizard::TExpertsWizardPageTransition)
+    @Inetexpertsui@TInetExpertsUIModule@PortsWizardPageFrameCreated$qqrp45Expertsuiwizard@TCustomExpertsFrameWizardPagep16Vcl@Forms@TFrame @890 ; __fastcall Inetexpertsui::TInetExpertsUIModule::PortsWizardPageFrameCreated(Expertsuiwizard::TCustomExpertsFrameWizardPage *, Vcl::Forms::TFrame *)
+    @Inetexpertsui@TInetExpertsUIModule@PortsWizardPageFrameOptionChanged$qqrp45Expertsuiwizard@TCustomExpertsFrameWizardPage @889 ; __fastcall Inetexpertsui::TInetExpertsUIModule::PortsWizardPageFrameOptionChanged(Expertsuiwizard::TCustomExpertsFrameWizardPage *)
+    @Inetexpertsui@TInetExpertsUIModule@WebServerProjectWizardLoadImage$qqrp36Expertsuiwizard@TCustomExpertsWizardrp20Vcl@Graphics@TBitmap @888 ; __fastcall Inetexpertsui::TInetExpertsUIModule::WebServerProjectWizardLoadImage(Expertsuiwizard::TCustomExpertsWizard *, Vcl::Graphics::TBitmap *&)
+    @Inetexpertsui@initialization$qqrv @882 ; __fastcall Inetexpertsui::initialization()
+    @Inetframeworkwizardpage@Finalization$qqrv @844 ; __fastcall Inetframeworkwizardpage::Finalization()
+    @Inetframeworkwizardpage@TInetFrameWorkWizardFrame@ @857 ; Inetframeworkwizardpage::TInetFrameWorkWizardFrame::
+    @Inetframeworkwizardpage@TInetFrameWorkWizardFrame@ApplicationEvents1Idle$qqrp14System@TObjectro @855 ; __fastcall Inetframeworkwizardpage::TInetFrameWorkWizardFrame::ApplicationEvents1Idle(System::TObject *, bool&)
+    @Inetframeworkwizardpage@TInetFrameWorkWizardFrame@ExpertsFrameCreated$qqrp45Expertsuiwizard@TCustomExpertsFrameWizardPage @854 ; __fastcall Inetframeworkwizardpage::TInetFrameWorkWizardFrame::ExpertsFrameCreated(Expertsuiwizard::TCustomExpertsFrameWizardPage *)
+    @Inetframeworkwizardpage@TInetFrameWorkWizardFrame@ExpertsFrameEnterPage$qqrp45Expertsuiwizard@TCustomExpertsFrameWizardPage @853 ; __fastcall Inetframeworkwizardpage::TInetFrameWorkWizardFrame::ExpertsFrameEnterPage(Expertsuiwizard::TCustomExpertsFrameWizardPage *)
+    @Inetframeworkwizardpage@TInetFrameWorkWizardFrame@ExpertsFrameUpdateInfo$qqrp40Expertsuiwizard@TCustomExpertsWizardPagero @852 ; __fastcall Inetframeworkwizardpage::TInetFrameWorkWizardFrame::ExpertsFrameUpdateInfo(Expertsuiwizard::TCustomExpertsWizardPage *, bool&)
+    @Inetframeworkwizardpage@TInetFrameWorkWizardFrame@ExpertsFrameValidatePage$qqrp40Expertsuiwizard@TCustomExpertsWizardPagero @851 ; __fastcall Inetframeworkwizardpage::TInetFrameWorkWizardFrame::ExpertsFrameValidatePage(Expertsuiwizard::TCustomExpertsWizardPage *, bool&)
+    @Inetframeworkwizardpage@TInetFrameWorkWizardFrame@FrameWorkTypeClick$qqrp14System@TObject @850 ; __fastcall Inetframeworkwizardpage::TInetFrameWorkWizardFrame::FrameWorkTypeClick(System::TObject *)
+    @Inetframeworkwizardpage@TInetFrameWorkWizardFrame@GetDefaultFrameWorkType$qqrv @849 ; __fastcall Inetframeworkwizardpage::TInetFrameWorkWizardFrame::GetDefaultFrameWorkType()
+    @Inetframeworkwizardpage@TInetFrameWorkWizardFrame@GetFocusField$qqrv @848 ; __fastcall Inetframeworkwizardpage::TInetFrameWorkWizardFrame::GetFocusField()
+    @Inetframeworkwizardpage@TInetFrameWorkWizardFrame@GetFrameWorkType$qqrv @847 ; __fastcall Inetframeworkwizardpage::TInetFrameWorkWizardFrame::GetFrameWorkType()
+    @Inetframeworkwizardpage@TInetFrameWorkWizardFrame@GetWizardInfo$qqrv @845 ; __fastcall Inetframeworkwizardpage::TInetFrameWorkWizardFrame::GetWizardInfo()
+    @Inetframeworkwizardpage@TInetFrameWorkWizardFrame@SetFrameWorkType$qqrx22Inetwiz@TFrameWorkType @846 ; __fastcall Inetframeworkwizardpage::TInetFrameWorkWizardFrame::SetFrameWorkType(const Inetwiz::TFrameWorkType)
+    @Inetframeworkwizardpage@initialization$qqrv @843 ; __fastcall Inetframeworkwizardpage::initialization()
+    @Inethttpportwizardpage@Finalization$qqrv @860 ; __fastcall Inethttpportwizardpage::Finalization()
+    @Inethttpportwizardpage@TInetHTTPPortWizardFrame@ @880 ; Inethttpportwizardpage::TInetHTTPPortWizardFrame::
+    @Inethttpportwizardpage@TInetHTTPPortWizardFrame@ApplicationEvents1Idle$qqrp14System@TObjectro @878 ; __fastcall Inethttpportwizardpage::TInetHTTPPortWizardFrame::ApplicationEvents1Idle(System::TObject *, bool&)
+    @Inethttpportwizardpage@TInetHTTPPortWizardFrame@ButtonNextAvailableClick$qqrp14System@TObject @877 ; __fastcall Inethttpportwizardpage::TInetHTTPPortWizardFrame::ButtonNextAvailableClick(System::TObject *)
+    @Inethttpportwizardpage@TInetHTTPPortWizardFrame@ButtonTestClick$qqrp14System@TObject @876 ; __fastcall Inethttpportwizardpage::TInetHTTPPortWizardFrame::ButtonTestClick(System::TObject *)
+    @Inethttpportwizardpage@TInetHTTPPortWizardFrame@CheckBoxHTTPSClick$qqrp14System@TObject @861 ; __fastcall Inethttpportwizardpage::TInetHTTPPortWizardFrame::CheckBoxHTTPSClick(System::TObject *)
+    @Inethttpportwizardpage@TInetHTTPPortWizardFrame@ExpertsFrameCreated$qqrp45Expertsuiwizard@TCustomExpertsFrameWizardPage @865 ; __fastcall Inethttpportwizardpage::TInetHTTPPortWizardFrame::ExpertsFrameCreated(Expertsuiwizard::TCustomExpertsFrameWizardPage *)
+    @Inethttpportwizardpage@TInetHTTPPortWizardFrame@ExpertsFrameEnterPage$qqrp45Expertsuiwizard@TCustomExpertsFrameWizardPage @864 ; __fastcall Inethttpportwizardpage::TInetHTTPPortWizardFrame::ExpertsFrameEnterPage(Expertsuiwizard::TCustomExpertsFrameWizardPage *)
+    @Inethttpportwizardpage@TInetHTTPPortWizardFrame@ExpertsFrameUpdateInfo$qqrp40Expertsuiwizard@TCustomExpertsWizardPagero @863 ; __fastcall Inethttpportwizardpage::TInetHTTPPortWizardFrame::ExpertsFrameUpdateInfo(Expertsuiwizard::TCustomExpertsWizardPage *, bool&)
+    @Inethttpportwizardpage@TInetHTTPPortWizardFrame@ExpertsFrameValidatePage$qqrp40Expertsuiwizard@TCustomExpertsWizardPagero @862 ; __fastcall Inethttpportwizardpage::TInetHTTPPortWizardFrame::ExpertsFrameValidatePage(Expertsuiwizard::TCustomExpertsWizardPage *, bool&)
+    @Inethttpportwizardpage@TInetHTTPPortWizardFrame@GetAllowHTTPS$qqrv @873 ; __fastcall Inethttpportwizardpage::TInetHTTPPortWizardFrame::GetAllowHTTPS()
+    @Inethttpportwizardpage@TInetHTTPPortWizardFrame@GetFocusField$qqrv @872 ; __fastcall Inethttpportwizardpage::TInetHTTPPortWizardFrame::GetFocusField()
+    @Inethttpportwizardpage@TInetHTTPPortWizardFrame@GetHTTPS$qqrv @871 ; __fastcall Inethttpportwizardpage::TInetHTTPPortWizardFrame::GetHTTPS()
+    @Inethttpportwizardpage@TInetHTTPPortWizardFrame@GetPort$qqrv @870 ; __fastcall Inethttpportwizardpage::TInetHTTPPortWizardFrame::GetPort()
+    @Inethttpportwizardpage@TInetHTTPPortWizardFrame@GetWizardInfo$qqrv @875 ; __fastcall Inethttpportwizardpage::TInetHTTPPortWizardFrame::GetWizardInfo()
+    @Inethttpportwizardpage@TInetHTTPPortWizardFrame@OnExecute$qqr47System@%DelphiInterface$20Ippeerapi@IIPContext% @874 ; Inethttpportwizardpage::TInetHTTPPortWizardFrame::OnExecute(System::DelphiInterface<{583}...
+    @Inethttpportwizardpage@TInetHTTPPortWizardFrame@SetAllowHTTPS$qqrxo @869 ; __fastcall Inethttpportwizardpage::TInetHTTPPortWizardFrame::SetAllowHTTPS(const bool)
+    @Inethttpportwizardpage@TInetHTTPPortWizardFrame@SetHTTPS$qqrxo @868 ; __fastcall Inethttpportwizardpage::TInetHTTPPortWizardFrame::SetHTTPS(const bool)
+    @Inethttpportwizardpage@TInetHTTPPortWizardFrame@SetPort$qqrxi @867 ; __fastcall Inethttpportwizardpage::TInetHTTPPortWizardFrame::SetPort(const int)
+    @Inethttpportwizardpage@TInetHTTPPortWizardFrame@ValidateFields$qqrv @866 ; __fastcall Inethttpportwizardpage::TInetHTTPPortWizardFrame::ValidateFields()
+    @Inethttpportwizardpage@initialization$qqrv @859 ; __fastcall Inethttpportwizardpage::initialization()
+    @Inetreg@Finalization$qqrv     @565 ; __fastcall Inetreg::Finalization()
+    @Inetreg@HTMLColors            @614 ; Inetreg::HTMLColors
+    @Inetreg@Register$qqrv         @566 ; __fastcall Inetreg::Register()
+    @Inetreg@TDesignerFileManager@ @599 ; Inetreg::TDesignerFileManager::
+    @Inetreg@TDesignerFileManager@FindEditor$qqrx20System@UnicodeString @575 ; __fastcall Inetreg::TDesignerFileManager::FindEditor(const System::UnicodeString)
+    @Inetreg@TDesignerFileManager@GetStream$qqrx20System@UnicodeStringro @573 ; __fastcall Inetreg::TDesignerFileManager::GetStream(const System::UnicodeString, bool&)
+    @Inetreg@TDesignerFileManager@ProjectPath$qqrv @577 ; __fastcall Inetreg::TDesignerFileManager::ProjectPath()
+    @Inetreg@TDesignerFileManager@QualifyFileName$qqrx20System@UnicodeString @576 ; __fastcall Inetreg::TDesignerFileManager::QualifyFileName(const System::UnicodeString)
+    @Inetreg@TDesignerFileManager@ReadEditor$qqr52System@%DelphiInterface$25Toolsapi@IOTASourceEditor% @574 ; Inetreg::TDesignerFileManager::ReadEditor(System::DelphiInterface<{583}...
+    @Inetreg@THTMLBgColorProperty@ @613 ; Inetreg::THTMLBgColorProperty::
+    @Inetreg@THTMLBgColorProperty@Edit$qqrv @592 ; __fastcall Inetreg::THTMLBgColorProperty::Edit()
+    @Inetreg@THTMLBgColorProperty@GetAttributes$qqrv @591 ; __fastcall Inetreg::THTMLBgColorProperty::GetAttributes()
+    @Inetreg@THTMLBgColorProperty@GetValues$qqrynpqqrx20System@UnicodeString$v @590 ; __fastcall Inetreg::THTMLBgColorProperty::GetValues(void __fastcall __closure(*)(const System::UnicodeString))
+    @Inetreg@THTMLFilePropertyEditor@ @611 ; Inetreg::THTMLFilePropertyEditor::
+    @Inetreg@THTMLFilePropertyEditor@Edit$qqrv @588 ; __fastcall Inetreg::THTMLFilePropertyEditor::Edit()
+    @Inetreg@THTMLFilePropertyEditor@GetAttributes$qqrv @587 ; __fastcall Inetreg::THTMLFilePropertyEditor::GetAttributes()
+    @Inetreg@THTTPDispatcherComponentEditor@ @609 ; Inetreg::THTTPDispatcherComponentEditor::
+    @Inetreg@THTTPDispatcherComponentEditor@Edit$qqrv @586 ; __fastcall Inetreg::THTTPDispatcherComponentEditor::Edit()
+    @Inetreg@THTTPDispatcherComponentEditor@ExecuteVerb$qqri @585 ; __fastcall Inetreg::THTTPDispatcherComponentEditor::ExecuteVerb(int)
+    @Inetreg@THTTPDispatcherComponentEditor@GetVerb$qqri @584 ; __fastcall Inetreg::THTTPDispatcherComponentEditor::GetVerb(int)
+    @Inetreg@THTTPDispatcherComponentEditor@GetVerbCount$qqrv @583 ; __fastcall Inetreg::THTTPDispatcherComponentEditor::GetVerbCount()
+    @Inetreg@TInterfaceComponentProperty@ @597 ; Inetreg::TInterfaceComponentProperty::
+    @Inetreg@TInterfaceComponentProperty@GetValues$qqrynpqqrx20System@UnicodeString$v @570 ; __fastcall Inetreg::TInterfaceComponentProperty::GetValues(void __fastcall __closure(*)(const System::UnicodeString))
+    @Inetreg@TInterfaceComponentProperty@RcvComponentNames$qqrx20System@UnicodeString @572 ; __fastcall Inetreg::TInterfaceComponentProperty::RcvComponentNames(const System::UnicodeString)
+    @Inetreg@TInterfaceComponentProperty@SetValue$qqrx20System@UnicodeString @569 ; __fastcall Inetreg::TInterfaceComponentProperty::SetValue(const System::UnicodeString)
+    @Inetreg@TInterfaceComponentProperty@SupportsInterface$qqrp25System@Classes@TComponent @571 ; __fastcall Inetreg::TInterfaceComponentProperty::SupportsInterface(System::Classes::TComponent *)
+    @Inetreg@TMimeTypeLists@$bcctr$qqrv @593 ; Inetreg::TMimeTypeLists::operator ...
+    @Inetreg@TMimeTypeLists@$bcdtr$qqrv @567 ; Inetreg::TMimeTypeLists::operator ...
+    @Inetreg@TPageProducerSprig@   @601 ; Inetreg::TPageProducerSprig::
+    @Inetreg@TPageProducerSprig@AnyProblems$qqrv @578 ; __fastcall Inetreg::TPageProducerSprig::AnyProblems()
+    @Inetreg@TProducerIntfProperty@ @595 ; Inetreg::TProducerIntfProperty::
+    @Inetreg@TProducerIntfProperty@GetGuid$qqrv @568 ; __fastcall Inetreg::TProducerIntfProperty::GetGuid()
+    @Inetreg@TWebActionItemEventProperty@ @607 ; Inetreg::TWebActionItemEventProperty::
+    @Inetreg@TWebActionItemEventProperty@GetFormMethodName$qqrv @589 ; __fastcall Inetreg::TWebActionItemEventProperty::GetFormMethodName()
+    @Inetreg@TWebFileExtensionItemExtensionsProperty@ @603 ; Inetreg::TWebFileExtensionItemExtensionsProperty::
+    @Inetreg@TWebFileExtensionItemExtensionsProperty@GetAttributes$qqrv @580 ; __fastcall Inetreg::TWebFileExtensionItemExtensionsProperty::GetAttributes()
+    @Inetreg@TWebFileExtensionItemExtensionsProperty@GetValues$qqrynpqqrx20System@UnicodeString$v @579 ; __fastcall Inetreg::TWebFileExtensionItemExtensionsProperty::GetValues(void __fastcall __closure(*)(const System::UnicodeString))
+    @Inetreg@TWebFileExtensionItemMimeTypeProperty@ @605 ; Inetreg::TWebFileExtensionItemMimeTypeProperty::
+    @Inetreg@TWebFileExtensionItemMimeTypeProperty@GetAttributes$qqrv @582 ; __fastcall Inetreg::TWebFileExtensionItemMimeTypeProperty::GetAttributes()
+    @Inetreg@TWebFileExtensionItemMimeTypeProperty@GetValues$qqrynpqqrx20System@UnicodeString$v @581 ; __fastcall Inetreg::TWebFileExtensionItemMimeTypeProperty::GetValues(void __fastcall __closure(*)(const System::UnicodeString))
+    @Inetreg@initialization$qqrv   @564 ; __fastcall Inetreg::initialization()
+    @Inetwiz@Finalization$qqrv     @930 ; __fastcall Inetwiz::Finalization()
+    @Inetwiz@Register$qqrv         @931 ; __fastcall Inetwiz::Register()
+    @Inetwiz@RegisterWebProjectWizards$qqrv @932 ; __fastcall Inetwiz::RegisterWebProjectWizards()
+    @Inetwiz@initialization$qqrv   @929 ; __fastcall Inetwiz::initialization()
+    @Netconst@Finalization$qqrv    @2   ; __fastcall Netconst::Finalization()
+    @Netconst@_SApacheSoDll        @8   ; Netconst::_SApacheSoDll
+    @Netconst@_SOpenXMLTitle       @16  ; Netconst::_SOpenXMLTitle
+    @Netconst@_SSpace              @9   ; Netconst::_SSpace
+    @Netconst@_STab                @10  ; Netconst::_STab
+    @Netconst@_SWebComponentsEditor @17  ; Netconst::_SWebComponentsEditor
+    @Netconst@_SXMLFilter          @15  ; Netconst::_SXMLFilter
+    @Netconst@_sControlInWebModule @20  ; Netconst::_sControlInWebModule
+    @Netconst@_sDeleteColumnsQuestion @19  ; Netconst::_sDeleteColumnsQuestion
+    @Netconst@_sDeleteUser         @5   ; Netconst::_sDeleteUser
+    @Netconst@_sEditURLMap         @26  ; Netconst::_sEditURLMap
+    @Netconst@_sEditVerb           @27  ; Netconst::_sEditVerb
+    @Netconst@_sHTMLFileFilter     @25  ; Netconst::_sHTMLFileFilter
+    @Netconst@_sInternet           @3   ; Netconst::_sInternet
+    @Netconst@_sInvalidEntryInCategories @4   ; Netconst::_sInvalidEntryInCategories
+    @Netconst@_sInvalidIdent       @21  ; Netconst::_sInvalidIdent
+    @Netconst@_sNewPage            @22  ; Netconst::_sNewPage
+    @Netconst@_sNewWebModuleExpertComment @23  ; Netconst::_sNewWebModuleExpertComment
+    @Netconst@_sNewWebModuleExpertName @24  ; Netconst::_sNewWebModuleExpertName
+    @Netconst@_sNodeNotFound       @18  ; Netconst::_sNodeNotFound
+    @Netconst@_sPasswordsDontMatch @6   ; Netconst::_sPasswordsDontMatch
+    @Netconst@_sSaveAs             @7   ; Netconst::_sSaveAs
+    @Netconst@_sXMLBindingWizard   @14  ; Netconst::_sXMLBindingWizard
+    @Netconst@_sXMLEditDataFile    @13  ; Netconst::_sXMLEditDataFile
+    @Netconst@_sXMLOpenDataFile    @12  ; Netconst::_sXMLOpenDataFile
+    @Netconst@_sXMLSaveDataFile    @11  ; Netconst::_sXMLSaveDataFile
+    @Netconst@initialization$qqrv  @1   ; __fastcall Netconst::initialization()
+    @Webserverwizardpage@Finalization$qqrv @761 ; __fastcall Webserverwizardpage::Finalization()
+    @Webserverwizardpage@TWebServerWizardFrame@ @798 ; Webserverwizardpage::TWebServerWizardFrame::
+    @Webserverwizardpage@TWebServerWizardFrame@ApplicationEvents1Idle$qqrp14System@TObjectro @773 ; __fastcall Webserverwizardpage::TWebServerWizardFrame::ApplicationEvents1Idle(System::TObject *, bool&)
+    @Webserverwizardpage@TWebServerWizardFrame@CreateAppTypeClick$qqrp14System@TObject @772 ; __fastcall Webserverwizardpage::TWebServerWizardFrame::CreateAppTypeClick(System::TObject *)
+    @Webserverwizardpage@TWebServerWizardFrame@ExpertsFrameCreated$qqrp45Expertsuiwizard@TCustomExpertsFrameWizardPage @771 ; __fastcall Webserverwizardpage::TWebServerWizardFrame::ExpertsFrameCreated(Expertsuiwizard::TCustomExpertsFrameWizardPage *)
+    @Webserverwizardpage@TWebServerWizardFrame@ExpertsFrameEnterPage$qqrp45Expertsuiwizard@TCustomExpertsFrameWizardPage @770 ; __fastcall Webserverwizardpage::TWebServerWizardFrame::ExpertsFrameEnterPage(Expertsuiwizard::TCustomExpertsFrameWizardPage *)
+    @Webserverwizardpage@TWebServerWizardFrame@ExpertsFrameUpdateInfo$qqrp40Expertsuiwizard@TCustomExpertsWizardPagero @769 ; __fastcall Webserverwizardpage::TWebServerWizardFrame::ExpertsFrameUpdateInfo(Expertsuiwizard::TCustomExpertsWizardPage *, bool&)
+    @Webserverwizardpage@TWebServerWizardFrame@ExpertsFrameValidatePage$qqrp40Expertsuiwizard@TCustomExpertsWizardPagero @768 ; __fastcall Webserverwizardpage::TWebServerWizardFrame::ExpertsFrameValidatePage(Expertsuiwizard::TCustomExpertsWizardPage *, bool&)
+    @Webserverwizardpage@TWebServerWizardFrame@GetProjectType$qqrv @766 ; __fastcall Webserverwizardpage::TWebServerWizardFrame::GetProjectType()
+    @Webserverwizardpage@TWebServerWizardFrame@GetWizardInfo$qqrv @762 ; __fastcall Webserverwizardpage::TWebServerWizardFrame::GetWizardInfo()
+    @Webserverwizardpage@TWebServerWizardFrame@SetHiddenProjectTypes$qqrx47System@%Set$20Inetwiz@TProjectTypet1$i0$t1$i5$% @763 ; Webserverwizardpage::TWebServerWizardFrame::SetHiddenProjectTypes(const System::Set<{583}...
+    @Webserverwizardpage@TWebServerWizardFrame@SetLeftMargin$qqrxi @765 ; __fastcall Webserverwizardpage::TWebServerWizardFrame::SetLeftMargin(const int)
+    @Webserverwizardpage@TWebServerWizardFrame@SetProjectType$qqr20Inetwiz@TProjectType @764 ; __fastcall Webserverwizardpage::TWebServerWizardFrame::SetProjectType(Inetwiz::TProjectType)
+    @Webserverwizardpage@TWebServerWizardFrame@ValidateFields$qqrv @767 ; __fastcall Webserverwizardpage::TWebServerWizardFrame::ValidateFields()
+    @Webserverwizardpage@TWebServerWizardPage@ @795 ; Webserverwizardpage::TWebServerWizardPage::
+    @Webserverwizardpage@TWebServerWizardPage@$bctr$qqrv @785 ; __fastcall Webserverwizardpage::TWebServerWizardPage::TWebServerWizardPage()
+    @Webserverwizardpage@TWebServerWizardPage@$bdtr$qqrv @784 ; __fastcall Webserverwizardpage::TWebServerWizardPage::~TWebServerWizardPage()
+    @Webserverwizardpage@TWebServerWizardPage@Clear$qqrv @793 ; __fastcall Webserverwizardpage::TWebServerWizardPage::Clear()
+    @Webserverwizardpage@TWebServerWizardPage@Close$qqrv @786 ; __fastcall Webserverwizardpage::TWebServerWizardPage::Close()
+    @Webserverwizardpage@TWebServerWizardPage@GetFrame$qqrv @791 ; __fastcall Webserverwizardpage::TWebServerWizardPage::GetFrame()
+    @Webserverwizardpage@TWebServerWizardPage@GetHiddenProjectTypes$qqrv @790 ; __fastcall Webserverwizardpage::TWebServerWizardPage::GetHiddenProjectTypes()
+    @Webserverwizardpage@TWebServerWizardPage@GetOnProjectTypeChange$qqrv @789 ; __fastcall Webserverwizardpage::TWebServerWizardPage::GetOnProjectTypeChange()
+    @Webserverwizardpage@TWebServerWizardPage@GetProjectType$qqrv @788 ; __fastcall Webserverwizardpage::TWebServerWizardPage::GetProjectType()
+    @Webserverwizardpage@TWebServerWizardPage@GetWizardInfo$qqr20Inetwiz@TProjectType @787 ; __fastcall Webserverwizardpage::TWebServerWizardPage::GetWizardInfo(Inetwiz::TProjectType)
+    @Webserverwizardpage@TWebServerWizardPage@OnCoClassNameFocused$qqrp14System@TObject @778 ; __fastcall Webserverwizardpage::TWebServerWizardPage::OnCoClassNameFocused(System::TObject *)
+    @Webserverwizardpage@TWebServerWizardPage@OnEnterPage$qqr25Wizardapi@TPageTransition @782 ; __fastcall Webserverwizardpage::TWebServerWizardPage::OnEnterPage(Wizardapi::TPageTransition)
+    @Webserverwizardpage@TWebServerWizardPage@OnLeavePage$qqr25Wizardapi@TPageTransition @781 ; __fastcall Webserverwizardpage::TWebServerWizardPage::OnLeavePage(Wizardapi::TPageTransition)
+    @Webserverwizardpage@TWebServerWizardPage@OnLeavingPage$qqr25Wizardapi@TPageTransitionro @780 ; __fastcall Webserverwizardpage::TWebServerWizardPage::OnLeavingPage(Wizardapi::TPageTransition, bool&)
+    @Webserverwizardpage@TWebServerWizardPage@OnProjectTypeChange$qqrp14System@TObject @779 ; __fastcall Webserverwizardpage::TWebServerWizardPage::OnProjectTypeChange(System::TObject *)
+    @Webserverwizardpage@TWebServerWizardPage@Page$qqrv @783 ; __fastcall Webserverwizardpage::TWebServerWizardPage::Page()
+    @Webserverwizardpage@TWebServerWizardPage@PageID$qqrv @777 ; __fastcall Webserverwizardpage::TWebServerWizardPage::PageID()
+    @Webserverwizardpage@TWebServerWizardPage@SetHiddenProjectTypes$qqr47System@%Set$20Inetwiz@TProjectTypet1$i0$t1$i5$% @776 ; Webserverwizardpage::TWebServerWizardPage::SetHiddenProjectTypes(System::Set<{583}...
+    @Webserverwizardpage@TWebServerWizardPage@SetOnProjectTypeChange$qqrynpqqrp14System@TObject$v @775 ; __fastcall Webserverwizardpage::TWebServerWizardPage::SetOnProjectTypeChange(void __fastcall __closure(*)(System::TObject *))
+    @Webserverwizardpage@TWebServerWizardPage@SetProjectType$qqrx20Inetwiz@TProjectType @774 ; __fastcall Webserverwizardpage::TWebServerWizardPage::SetProjectType(const Inetwiz::TProjectType)
+    @Webserverwizardpage@TWebServerWizardPage@UpdateInfo$qqrv @792 ; __fastcall Webserverwizardpage::TWebServerWizardPage::UpdateInfo()
+    @Webserverwizardpage@initialization$qqrv @760 ; __fastcall Webserverwizardpage::initialization()
+    @Xmlbindconst@Finalization$qqrv @29  ; __fastcall Xmlbindconst::Finalization()
+    @Xmlbindconst@_SCLX_H          @33  ; Xmlbindconst::_SCLX_H
+    @Xmlbindconst@_SClassPrefix    @43  ; Xmlbindconst::_SClassPrefix
+    @Xmlbindconst@_SCode           @52  ; Xmlbindconst::_SCode
+    @Xmlbindconst@_SCodeElement    @53  ; Xmlbindconst::_SCodeElement
+    @Xmlbindconst@_SCollClassBase  @37  ; Xmlbindconst::_SCollClassBase
+    @Xmlbindconst@_SCollIntfBase   @38  ; Xmlbindconst::_SCollIntfBase
+    @Xmlbindconst@_SComplexTypes   @57  ; Xmlbindconst::_SComplexTypes
+    @Xmlbindconst@_SConfirmClose   @55  ; Xmlbindconst::_SConfirmClose
+    @Xmlbindconst@_SCppHeader      @30  ; Xmlbindconst::_SCppHeader
+    @Xmlbindconst@_SCppUnit        @31  ; Xmlbindconst::_SCppUnit
+    @Xmlbindconst@_SDefaultDataType @36  ; Xmlbindconst::_SDefaultDataType
+    @Xmlbindconst@_SFileOverwrite  @54  ; Xmlbindconst::_SFileOverwrite
+    @Xmlbindconst@_SInterfacePrefix @42  ; Xmlbindconst::_SInterfacePrefix
+    @Xmlbindconst@_SInvalidIdent   @59  ; Xmlbindconst::_SInvalidIdent
+    @Xmlbindconst@_SListTypeSuffix @41  ; Xmlbindconst::_SListTypeSuffix
+    @Xmlbindconst@_SMissingDocElement @61  ; Xmlbindconst::_SMissingDocElement
+    @Xmlbindconst@_SMissingIdent   @58  ; Xmlbindconst::_SMissingIdent
+    @Xmlbindconst@_SNativeType     @50  ; Xmlbindconst::_SNativeType
+    @Xmlbindconst@_SNoBindableTypes @62  ; Xmlbindconst::_SNoBindableTypes
+    @Xmlbindconst@_SNoBlankOption  @60  ; Xmlbindconst::_SNoBlankOption
+    @Xmlbindconst@_SNodeClassBase  @39  ; Xmlbindconst::_SNodeClassBase
+    @Xmlbindconst@_SNodeIntfBase   @40  ; Xmlbindconst::_SNodeIntfBase
+    @Xmlbindconst@_SPasUnit        @35  ; Xmlbindconst::_SPasUnit
+    @Xmlbindconst@_SPropGetPrefix  @45  ; Xmlbindconst::_SPropGetPrefix
+    @Xmlbindconst@_SPropSetPrefix  @44  ; Xmlbindconst::_SPropSetPrefix
+    @Xmlbindconst@_SSettingsFilter @63  ; Xmlbindconst::_SSettingsFilter
+    @Xmlbindconst@_SSimpleTypes    @56  ; Xmlbindconst::_SSimpleTypes
+    @Xmlbindconst@_SSourceFilter   @64  ; Xmlbindconst::_SSourceFilter
+    @Xmlbindconst@_SSystem_Hpp     @32  ; Xmlbindconst::_SSystem_Hpp
+    @Xmlbindconst@_SUnitCmntDate   @48  ; Xmlbindconst::_SUnitCmntDate
+    @Xmlbindconst@_SUnitCmntSet    @46  ; Xmlbindconst::_SUnitCmntSet
+    @Xmlbindconst@_SUnitCmntSig    @49  ; Xmlbindconst::_SUnitCmntSig
+    @Xmlbindconst@_SUnitCmntSrc    @47  ; Xmlbindconst::_SUnitCmntSrc
+    @Xmlbindconst@_SVCL_H          @34  ; Xmlbindconst::_SVCL_H
+    @Xmlbindconst@_SWizardPage     @65  ; Xmlbindconst::_SWizardPage
+    @Xmlbindconst@_SXMLDataBindingAuthor @69  ; Xmlbindconst::_SXMLDataBindingAuthor
+    @Xmlbindconst@_SXMLDataBindingComment @67  ; Xmlbindconst::_SXMLDataBindingComment
+    @Xmlbindconst@_SXMLDataBindingID @66  ; Xmlbindconst::_SXMLDataBindingID
+    @Xmlbindconst@_SXMLDataBindingName @68  ; Xmlbindconst::_SXMLDataBindingName
+    @Xmlbindconst@_SXMLType        @51  ; Xmlbindconst::_SXMLType
+    @Xmlbindconst@initialization$qqrv @28  ; __fastcall Xmlbindconst::initialization()
+    @Xmlbindcppgen@DefaultCppCode  @273 ; Xmlbindcppgen::DefaultCppCode
+    @Xmlbindcppgen@DefaultCppTypeMap @275 ; Xmlbindcppgen::DefaultCppTypeMap
+    @Xmlbindcppgen@Finalization$qqrv @172 ; __fastcall Xmlbindcppgen::Finalization()
+    @Xmlbindcppgen@GenerateCPPUnitComment$qqrx20System@UnicodeStringt1 @241 ; __fastcall Xmlbindcppgen::GenerateCPPUnitComment(const System::UnicodeString, const System::UnicodeString)
+    @Xmlbindcppgen@NativeCppTypes  @277 ; Xmlbindcppgen::NativeCppTypes
+    @Xmlbindcppgen@TCppClassDecl@  @251 ; Xmlbindcppgen::TCppClassDecl::
+    @Xmlbindcppgen@TCppClassDecl@WriteAncestorDelegators$qqrv @196 ; __fastcall Xmlbindcppgen::TCppClassDecl::WriteAncestorDelegators()
+    @Xmlbindcppgen@TCppClassDecl@WriteDecl$qqrv @198 ; __fastcall Xmlbindcppgen::TCppClassDecl::WriteDecl()
+    @Xmlbindcppgen@TCppClassDecl@WriteListBinding$qqrx57System@%DelphiInterface$30Xmlbindmgr@IXMLDataTypeBinding% @194 ; Xmlbindcppgen::TCppClassDecl::WriteListBinding(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppClassDecl@WriteProperties$qqrv @195 ; __fastcall Xmlbindcppgen::TCppClassDecl::WriteProperties()
+    @Xmlbindcppgen@TCppClassDecl@WriteProperty$qqrx57System@%DelphiInterface$30Xmlbindmgr@IXMLPropertyBinding%xo @197 ; Xmlbindcppgen::TCppClassDecl::WriteProperty(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppClassDecl@WriteTypeDef$qqrv @193 ; __fastcall Xmlbindcppgen::TCppClassDecl::WriteTypeDef()
+    @Xmlbindcppgen@TCppClassForward@ @253 ; Xmlbindcppgen::TCppClassForward::
+    @Xmlbindcppgen@TCppClassForward@Generate$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @199 ; Xmlbindcppgen::TCppClassForward::Generate(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppClassImpl@  @249 ; Xmlbindcppgen::TCppClassImpl::
+    @Xmlbindcppgen@TCppClassImpl@AfterConstruction$qqrv @192 ; __fastcall Xmlbindcppgen::TCppClassImpl::AfterConstruction()
+    @Xmlbindcppgen@TCppClassImpl@Generate$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @191 ; Xmlbindcppgen::TCppClassImpl::Generate(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppClassImpl@WriteAddItem$qqrx57System@%DelphiInterface$30Xmlbindmgr@IXMLDataTypeBinding%x20System@UnicodeString @190 ; Xmlbindcppgen::TCppClassImpl::WriteAddItem(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppClassImpl@WriteCollAdd$qqrp28Xmlbindcppgen@TCppCodeWriter57System@%DelphiInterface$30Xmlbindmgr@IXMLDataTypeBinding%x20System@UnicodeStringi @189 ; Xmlbindcppgen::TCppClassImpl::WriteCollAdd(Xmlbindcppgen::TCppCodeWriter *, System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppClassImpl@WriteCollInsert$qqrp28Xmlbindcppgen@TCppCodeWriter57System@%DelphiInterface$30Xmlbindmgr@IXMLDataTypeBinding%x20System@UnicodeStringi @188 ; Xmlbindcppgen::TCppClassImpl::WriteCollInsert(Xmlbindcppgen::TCppCodeWriter *, System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppClassImpl@WriteListBinding$qqrx57System@%DelphiInterface$30Xmlbindmgr@IXMLDataTypeBinding% @187 ; Xmlbindcppgen::TCppClassImpl::WriteListBinding(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppClassImpl@WriteProperty$qqrx57System@%DelphiInterface$30Xmlbindmgr@IXMLPropertyBinding%xo @186 ; Xmlbindcppgen::TCppClassImpl::WriteProperty(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppClassImpl@WriteRegistrationCode$qqrv @185 ; __fastcall Xmlbindcppgen::TCppClassImpl::WriteRegistrationCode()
+    @Xmlbindcppgen@TCppCodeWriter@ @267 ; Xmlbindcppgen::TCppCodeWriter::
+    @Xmlbindcppgen@TCppCodeWriter@WriteAfterConstruction$qqri @230 ; __fastcall Xmlbindcppgen::TCppCodeWriter::WriteAfterConstruction(int)
+    @Xmlbindcppgen@TCppCodeWriter@WriteClassDecl$qqrx20System@UnicodeStringt1t1 @229 ; __fastcall Xmlbindcppgen::TCppCodeWriter::WriteClassDecl(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Xmlbindcppgen@TCppCodeWriter@WriteCollCreate$qqrx20System@UnicodeStringt1t1t1t1 @227 ; __fastcall Xmlbindcppgen::TCppCodeWriter::WriteCollCreate(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Xmlbindcppgen@TCppCodeWriter@WriteCollGetItem$qqrx20System@UnicodeStringi @226 ; __fastcall Xmlbindcppgen::TCppCodeWriter::WriteCollGetItem(const System::UnicodeString, int)
+    @Xmlbindcppgen@TCppCodeWriter@WriteCollItemInit$qqrx20System@UnicodeStringt1 @225 ; __fastcall Xmlbindcppgen::TCppCodeWriter::WriteCollItemInit(const System::UnicodeString, const System::UnicodeString)
+    @Xmlbindcppgen@TCppCodeWriter@WriteCollItemProp$qqrx20System@UnicodeString @224 ; __fastcall Xmlbindcppgen::TCppCodeWriter::WriteCollItemProp(const System::UnicodeString)
+    @Xmlbindcppgen@TCppCodeWriter@WriteComment$qqrx17System@WideStringii @240 ; __fastcall Xmlbindcppgen::TCppCodeWriter::WriteComment(const System::WideString, int, int)
+    @Xmlbindcppgen@TCppCodeWriter@WriteDataMember$qqrx20System@UnicodeStringt1 @231 ; __fastcall Xmlbindcppgen::TCppCodeWriter::WriteDataMember(const System::UnicodeString, const System::UnicodeString)
+    @Xmlbindcppgen@TCppCodeWriter@WriteDataProperty$qqrx20System@UnicodeStringt1o @233 ; __fastcall Xmlbindcppgen::TCppCodeWriter::WriteDataProperty(const System::UnicodeString, const System::UnicodeString, bool)
+    @Xmlbindcppgen@TCppCodeWriter@WriteDeclComment$qqrx20System@UnicodeStringi @239 ; __fastcall Xmlbindcppgen::TCppCodeWriter::WriteDeclComment(const System::UnicodeString, int)
+    @Xmlbindcppgen@TCppCodeWriter@WriteFunction$qqrx20System@UnicodeStringt1i @237 ; __fastcall Xmlbindcppgen::TCppCodeWriter::WriteFunction(const System::UnicodeString, const System::UnicodeString, int)
+    @Xmlbindcppgen@TCppCodeWriter@WriteFunction$qqrx20System@UnicodeStringt1px20System@UnicodeStringxit3xii @236 ; __fastcall Xmlbindcppgen::TCppCodeWriter::WriteFunction(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString *, const int, const System::UnicodeString *, const int, int)
+    @Xmlbindcppgen@TCppCodeWriter@WriteGetMethod$qqrx20System@UnicodeStringt1oi @235 ; __fastcall Xmlbindcppgen::TCppCodeWriter::WriteGetMethod(const System::UnicodeString, const System::UnicodeString, bool, int)
+    @Xmlbindcppgen@TCppCodeWriter@WriteIntfDecl$qqrx20System@UnicodeStringt1t1 @228 ; __fastcall Xmlbindcppgen::TCppCodeWriter::WriteIntfDecl(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Xmlbindcppgen@TCppCodeWriter@WriteMethodBody$qqrx20System@UnicodeStringp14System@TVarRecxi @238 ; __fastcall Xmlbindcppgen::TCppCodeWriter::WriteMethodBody(const System::UnicodeString, System::TVarRec *, const int)
+    @Xmlbindcppgen@TCppCodeWriter@WriteProperty$qqrx20System@UnicodeStringt1oo @232 ; __fastcall Xmlbindcppgen::TCppCodeWriter::WriteProperty(const System::UnicodeString, const System::UnicodeString, bool, bool)
+    @Xmlbindcppgen@TCppCodeWriter@WriteRegisterChildNode$qqrx20System@UnicodeStringt1 @223 ; __fastcall Xmlbindcppgen::TCppCodeWriter::WriteRegisterChildNode(const System::UnicodeString, const System::UnicodeString)
+    @Xmlbindcppgen@TCppCodeWriter@WriteSetMethod$qqrx20System@UnicodeStringt1oi @234 ; __fastcall Xmlbindcppgen::TCppCodeWriter::WriteSetMethod(const System::UnicodeString, const System::UnicodeString, bool, int)
+    @Xmlbindcppgen@TCppGlobalDecl@ @247 ; Xmlbindcppgen::TCppGlobalDecl::
+    @Xmlbindcppgen@TCppGlobalDecl@AfterConstruction$qqrv @184 ; __fastcall Xmlbindcppgen::TCppGlobalDecl::AfterConstruction()
+    @Xmlbindcppgen@TCppGlobalDecl@Generate$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @183 ; Xmlbindcppgen::TCppGlobalDecl::Generate(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppGlobalDecl@GenerateGetBinding$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @182 ; Xmlbindcppgen::TCppGlobalDecl::GenerateGetBinding(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppGlobalDecl@GenerateGetBinding2$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @181 ; Xmlbindcppgen::TCppGlobalDecl::GenerateGetBinding2(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppGlobalDecl@GenerateLoadBinding$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @180 ; Xmlbindcppgen::TCppGlobalDecl::GenerateLoadBinding(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppGlobalDecl@GenerateNewBinding$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @179 ; Xmlbindcppgen::TCppGlobalDecl::GenerateNewBinding(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppGlobalImpl@ @245 ; Xmlbindcppgen::TCppGlobalImpl::
+    @Xmlbindcppgen@TCppGlobalImpl@AfterConstruction$qqrv @178 ; __fastcall Xmlbindcppgen::TCppGlobalImpl::AfterConstruction()
+    @Xmlbindcppgen@TCppGlobalImpl@GenerateGetBinding$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @177 ; Xmlbindcppgen::TCppGlobalImpl::GenerateGetBinding(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppGlobalImpl@GenerateGetBinding2$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @176 ; Xmlbindcppgen::TCppGlobalImpl::GenerateGetBinding2(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppGlobalImpl@GenerateLoadBinding$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @175 ; Xmlbindcppgen::TCppGlobalImpl::GenerateLoadBinding(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppGlobalImpl@GenerateNewBinding$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @174 ; Xmlbindcppgen::TCppGlobalImpl::GenerateNewBinding(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppIntfDecl@   @255 ; Xmlbindcppgen::TCppIntfDecl::
+    @Xmlbindcppgen@TCppIntfDecl@AfterConstruction$qqrv @203 ; __fastcall Xmlbindcppgen::TCppIntfDecl::AfterConstruction()
+    @Xmlbindcppgen@TCppIntfDecl@WriteDecl$qqrv @202 ; __fastcall Xmlbindcppgen::TCppIntfDecl::WriteDecl()
+    @Xmlbindcppgen@TCppIntfDecl@WriteListBinding$qqrx57System@%DelphiInterface$30Xmlbindmgr@IXMLDataTypeBinding% @200 ; Xmlbindcppgen::TCppIntfDecl::WriteListBinding(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppIntfDecl@WriteProperty$qqrx57System@%DelphiInterface$30Xmlbindmgr@IXMLPropertyBinding%xo @201 ; Xmlbindcppgen::TCppIntfDecl::WriteProperty(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppIntfForward@ @257 ; Xmlbindcppgen::TCppIntfForward::
+    @Xmlbindcppgen@TCppIntfForward@Generate$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @204 ; Xmlbindcppgen::TCppIntfForward::Generate(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppIntfSectionEntry@ @259 ; Xmlbindcppgen::TCppIntfSectionEntry::
+    @Xmlbindcppgen@TCppIntfSectionEntry@Generate$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @208 ; Xmlbindcppgen::TCppIntfSectionEntry::Generate(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppIntfSectionEntry@WriteDecl$qqrv @207 ; __fastcall Xmlbindcppgen::TCppIntfSectionEntry::WriteDecl()
+    @Xmlbindcppgen@TCppIntfSectionEntry@WriteEnd$qqrv @206 ; __fastcall Xmlbindcppgen::TCppIntfSectionEntry::WriteEnd()
+    @Xmlbindcppgen@TCppIntfSectionEntry@WriteTypeDef$qqrv @205 ; __fastcall Xmlbindcppgen::TCppIntfSectionEntry::WriteTypeDef()
+    @Xmlbindcppgen@TCppPropertyContainer@ @261 ; Xmlbindcppgen::TCppPropertyContainer::
+    @Xmlbindcppgen@TCppPropertyContainer@$bdtr$qqrv @220 ; __fastcall Xmlbindcppgen::TCppPropertyContainer::~TCppPropertyContainer()
+    @Xmlbindcppgen@TCppPropertyContainer@AfterConstruction$qqrv @221 ; __fastcall Xmlbindcppgen::TCppPropertyContainer::AfterConstruction()
+    @Xmlbindcppgen@TCppPropertyContainer@AppendCode$qqrpxp28Xmlbindcppgen@TCppCodeWriterxi @218 ; __fastcall Xmlbindcppgen::TCppPropertyContainer::AppendCode(Xmlbindcppgen::TCppCodeWriter * const *, const int)
+    @Xmlbindcppgen@TCppPropertyContainer@AppendCode$qqrv @217 ; __fastcall Xmlbindcppgen::TCppPropertyContainer::AppendCode()
+    @Xmlbindcppgen@TCppPropertyContainer@Generate$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @219 ; Xmlbindcppgen::TCppPropertyContainer::Generate(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppPropertyContainer@InitCodeWriters$qqrppp28Xmlbindcppgen@TCppCodeWriterxip20System@UnicodeStringxi @216 ; __fastcall Xmlbindcppgen::TCppPropertyContainer::InitCodeWriters(Xmlbindcppgen::TCppCodeWriter * * *, const int, System::UnicodeString *, const int)
+    @Xmlbindcppgen@TCppPropertyContainer@WriteCollAdd$qqrp28Xmlbindcppgen@TCppCodeWriter57System@%DelphiInterface$30Xmlbindmgr@IXMLDataTypeBinding%x20System@UnicodeStringi @212 ; Xmlbindcppgen::TCppPropertyContainer::WriteCollAdd(Xmlbindcppgen::TCppCodeWriter *, System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppPropertyContainer@WriteCollInsert$qqrp28Xmlbindcppgen@TCppCodeWriter57System@%DelphiInterface$30Xmlbindmgr@IXMLDataTypeBinding%x20System@UnicodeStringi @211 ; Xmlbindcppgen::TCppPropertyContainer::WriteCollInsert(Xmlbindcppgen::TCppCodeWriter *, System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppPropertyContainer@WriteCollectionMethods$qqrp28Xmlbindcppgen@TCppCodeWriter57System@%DelphiInterface$30Xmlbindmgr@IXMLDataTypeBinding%i @213 ; Xmlbindcppgen::TCppPropertyContainer::WriteCollectionMethods(Xmlbindcppgen::TCppCodeWriter *, System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppPropertyContainer@WriteListBinding$qqrx57System@%DelphiInterface$30Xmlbindmgr@IXMLDataTypeBinding% @214 ; Xmlbindcppgen::TCppPropertyContainer::WriteListBinding(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppPropertyContainer@WriteMethods$qqrv @215 ; __fastcall Xmlbindcppgen::TCppPropertyContainer::WriteMethods()
+    @Xmlbindcppgen@TCppPropertyContainer@WriteProperties$qqrv @210 ; __fastcall Xmlbindcppgen::TCppPropertyContainer::WriteProperties()
+    @Xmlbindcppgen@TCppPropertyContainer@WriteProperty$qqrx57System@%DelphiInterface$30Xmlbindmgr@IXMLPropertyBinding%xo @209 ; Xmlbindcppgen::TCppPropertyContainer::WriteProperty(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TCppTargetNSDecl@ @243 ; Xmlbindcppgen::TCppTargetNSDecl::
+    @Xmlbindcppgen@TCppTargetNSDecl@Generate$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @173 ; Xmlbindcppgen::TCppTargetNSDecl::Generate(const System::DelphiInterface<{583}...
+    @Xmlbindcppgen@TForwardDecl@   @265 ; Xmlbindcppgen::TForwardDecl::
+    @Xmlbindcppgen@TForwardDecl@AfterConstruction$qqrv @222 ; __fastcall Xmlbindcppgen::TForwardDecl::AfterConstruction()
+    @Xmlbindcppgen@_SDelegators    @268 ; Xmlbindcppgen::_SDelegators
+    @Xmlbindcppgen@_SForwardDecl   @270 ; Xmlbindcppgen::_SForwardDecl
+    @Xmlbindcppgen@_SGlobalFunctions @269 ; Xmlbindcppgen::_SGlobalFunctions
+    @Xmlbindcppgen@_SMethodsAndProps @271 ; Xmlbindcppgen::_SMethodsAndProps
+    @Xmlbindcppgen@_SPropertyAccessors @272 ; Xmlbindcppgen::_SPropertyAccessors
+    @Xmlbindcppgen@initialization$qqrv @171 ; __fastcall Xmlbindcppgen::initialization()
+    @Xmlbindexpert@Finalization$qqrv @523 ; __fastcall Xmlbindexpert::Finalization()
+    @Xmlbindexpert@Register$qqrv   @524 ; __fastcall Xmlbindexpert::Register()
+    @Xmlbindexpert@TXMLDataBindingModuleCreator@ @560 ; Xmlbindexpert::TXMLDataBindingModuleCreator::
+    @Xmlbindexpert@TXMLDataBindingModuleCreator@$bctr$qqrp29Xmlbindform@TXMLNewBindingDlg @542 ; __fastcall Xmlbindexpert::TXMLDataBindingModuleCreator::TXMLDataBindingModuleCreator(Xmlbindform::TXMLNewBindingDlg *)
+    @Xmlbindexpert@TXMLDataBindingModuleCreator@CheckCLXProject$qqrv @541 ; __fastcall Xmlbindexpert::TXMLDataBindingModuleCreator::CheckCLXProject()
+    @Xmlbindexpert@TXMLDataBindingModuleCreator@FormCreated$qqrx50System@%DelphiInterface$23Toolsapi@IOTAFormEditor% @540 ; Xmlbindexpert::TXMLDataBindingModuleCreator::FormCreated(const System::DelphiInterface<{583}...
+    @Xmlbindexpert@TXMLDataBindingModuleCreator@GetAncestorName$qqrv @539 ; __fastcall Xmlbindexpert::TXMLDataBindingModuleCreator::GetAncestorName()
+    @Xmlbindexpert@TXMLDataBindingModuleCreator@GetCreatorType$qqrv @538 ; __fastcall Xmlbindexpert::TXMLDataBindingModuleCreator::GetCreatorType()
+    @Xmlbindexpert@TXMLDataBindingModuleCreator@GetExisting$qqrv @537 ; __fastcall Xmlbindexpert::TXMLDataBindingModuleCreator::GetExisting()
+    @Xmlbindexpert@TXMLDataBindingModuleCreator@GetFileSystem$qqrv @536 ; __fastcall Xmlbindexpert::TXMLDataBindingModuleCreator::GetFileSystem()
+    @Xmlbindexpert@TXMLDataBindingModuleCreator@GetFormName$qqrv @535 ; __fastcall Xmlbindexpert::TXMLDataBindingModuleCreator::GetFormName()
+    @Xmlbindexpert@TXMLDataBindingModuleCreator@GetImplFileName$qqrv @534 ; __fastcall Xmlbindexpert::TXMLDataBindingModuleCreator::GetImplFileName()
+    @Xmlbindexpert@TXMLDataBindingModuleCreator@GetIntfFileName$qqrv @533 ; __fastcall Xmlbindexpert::TXMLDataBindingModuleCreator::GetIntfFileName()
+    @Xmlbindexpert@TXMLDataBindingModuleCreator@GetMainForm$qqrv @532 ; __fastcall Xmlbindexpert::TXMLDataBindingModuleCreator::GetMainForm()
+    @Xmlbindexpert@TXMLDataBindingModuleCreator@GetOwner$qqrv @531 ; __fastcall Xmlbindexpert::TXMLDataBindingModuleCreator::GetOwner()
+    @Xmlbindexpert@TXMLDataBindingModuleCreator@GetShowForm$qqrv @530 ; __fastcall Xmlbindexpert::TXMLDataBindingModuleCreator::GetShowForm()
+    @Xmlbindexpert@TXMLDataBindingModuleCreator@GetShowSource$qqrv @529 ; __fastcall Xmlbindexpert::TXMLDataBindingModuleCreator::GetShowSource()
+    @Xmlbindexpert@TXMLDataBindingModuleCreator@GetUnnamed$qqrv @528 ; __fastcall Xmlbindexpert::TXMLDataBindingModuleCreator::GetUnnamed()
+    @Xmlbindexpert@TXMLDataBindingModuleCreator@NewFormFile$qqrx20System@UnicodeStringt1 @527 ; __fastcall Xmlbindexpert::TXMLDataBindingModuleCreator::NewFormFile(const System::UnicodeString, const System::UnicodeString)
+    @Xmlbindexpert@TXMLDataBindingModuleCreator@NewImplSource$qqrx20System@UnicodeStringt1t1 @526 ; __fastcall Xmlbindexpert::TXMLDataBindingModuleCreator::NewImplSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Xmlbindexpert@TXMLDataBindingModuleCreator@NewIntfSource$qqrx20System@UnicodeStringt1t1 @525 ; __fastcall Xmlbindexpert::TXMLDataBindingModuleCreator::NewIntfSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Xmlbindexpert@TXMLDataBindingWizard@ @562 ; Xmlbindexpert::TXMLDataBindingWizard::
+    @Xmlbindexpert@TXMLDataBindingWizard@$bctr$qqrx20System@UnicodeString @557 ; __fastcall Xmlbindexpert::TXMLDataBindingWizard::TXMLDataBindingWizard(const System::UnicodeString)
+    @Xmlbindexpert@TXMLDataBindingWizard@CreateUnits$qqrx20System@UnicodeStringt1t1xoxoxo @556 ; __fastcall Xmlbindexpert::TXMLDataBindingWizard::CreateUnits(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const bool, const bool, const bool)
+    @Xmlbindexpert@TXMLDataBindingWizard@Execute$qqrv @555 ; __fastcall Xmlbindexpert::TXMLDataBindingWizard::Execute()
+    @Xmlbindexpert@TXMLDataBindingWizard@GetAuthor$qqrv @554 ; __fastcall Xmlbindexpert::TXMLDataBindingWizard::GetAuthor()
+    @Xmlbindexpert@TXMLDataBindingWizard@GetComment$qqrv @553 ; __fastcall Xmlbindexpert::TXMLDataBindingWizard::GetComment()
+    @Xmlbindexpert@TXMLDataBindingWizard@GetDesigner$qqrv @546 ; __fastcall Xmlbindexpert::TXMLDataBindingWizard::GetDesigner()
+    @Xmlbindexpert@TXMLDataBindingWizard@GetGalleryCategory$qqrv @545 ; __fastcall Xmlbindexpert::TXMLDataBindingWizard::GetGalleryCategory()
+    @Xmlbindexpert@TXMLDataBindingWizard@GetGlyph$qqrv @552 ; __fastcall Xmlbindexpert::TXMLDataBindingWizard::GetGlyph()
+    @Xmlbindexpert@TXMLDataBindingWizard@GetIDString$qqrv @551 ; __fastcall Xmlbindexpert::TXMLDataBindingWizard::GetIDString()
+    @Xmlbindexpert@TXMLDataBindingWizard@GetName$qqrv @550 ; __fastcall Xmlbindexpert::TXMLDataBindingWizard::GetName()
+    @Xmlbindexpert@TXMLDataBindingWizard@GetPage$qqrv @549 ; __fastcall Xmlbindexpert::TXMLDataBindingWizard::GetPage()
+    @Xmlbindexpert@TXMLDataBindingWizard@GetPersonality$qqrv @544 ; __fastcall Xmlbindexpert::TXMLDataBindingWizard::GetPersonality()
+    @Xmlbindexpert@TXMLDataBindingWizard@GetState$qqrv @548 ; __fastcall Xmlbindexpert::TXMLDataBindingWizard::GetState()
+    @Xmlbindexpert@TXMLDataBindingWizard@Invoke$qqrp25System@Classes@TComponentx17System@WideStringx20System@UnicodeString @547 ; __fastcall Xmlbindexpert::TXMLDataBindingWizard::Invoke(System::Classes::TComponent *, const System::WideString, const System::UnicodeString)
+    @Xmlbindexpert@TXMLDataBindingWizard@IsVisible$qqr47System@%DelphiInterface$20Toolsapi@IOTAProject% @543 ; Xmlbindexpert::TXMLDataBindingWizard::IsVisible(System::DelphiInterface<{583}...
+    @Xmlbindexpert@XMLDataBindingWizard @558 ; Xmlbindexpert::XMLDataBindingWizard
+    @Xmlbindexpert@initialization$qqrv @522 ; __fastcall Xmlbindexpert::initialization()
+    @Xmlbindform@Finalization$qqrv @467 ; __fastcall Xmlbindform::Finalization()
+    @Xmlbindform@InputFiles        @518 ; Xmlbindform::InputFiles
+    @Xmlbindform@TXMLNewBindingDlg@ @521 ; Xmlbindform::TXMLNewBindingDlg::
+    @Xmlbindform@TXMLNewBindingDlg@$bctr$qqrp25System@Classes@TComponent20System@UnicodeString @492 ; __fastcall Xmlbindform::TXMLNewBindingDlg::TXMLNewBindingDlg(System::Classes::TComponent *, System::UnicodeString)
+    @Xmlbindform@TXMLNewBindingDlg@CanBeDocElement$qqrx59System@%DelphiInterface$32Xml@Xmlschema@IXMLComplexTypeDef% @490 ; Xmlbindform::TXMLNewBindingDlg::CanBeDocElement(const System::DelphiInterface<{583}...
+    @Xmlbindform@TXMLNewBindingDlg@CancelButtonClick$qqrp14System@TObject @514 ; __fastcall Xmlbindform::TXMLNewBindingDlg::CancelButtonClick(System::TObject *)
+    @Xmlbindform@TXMLNewBindingDlg@CheckIdentifiers$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding%ri @510 ; Xmlbindform::TXMLNewBindingDlg::CheckIdentifiers(const System::DelphiInterface<{583}...
+    @Xmlbindform@TXMLNewBindingDlg@ClearSchemaRefs$qqrv @507 ; __fastcall Xmlbindform::TXMLNewBindingDlg::ClearSchemaRefs()
+    @Xmlbindform@TXMLNewBindingDlg@ComplexDataTypeDropDown$qqrp14System@TObject @493 ; __fastcall Xmlbindform::TXMLNewBindingDlg::ComplexDataTypeDropDown(System::TObject *)
+    @Xmlbindform@TXMLNewBindingDlg@DocElementTypeClick$qqrp14System@TObject @484 ; __fastcall Xmlbindform::TXMLNewBindingDlg::DocElementTypeClick(System::TObject *)
+    @Xmlbindform@TXMLNewBindingDlg@FlagInput$qqrp14System@TObject @483 ; __fastcall Xmlbindform::TXMLNewBindingDlg::FlagInput(System::TObject *)
+    @Xmlbindform@TXMLNewBindingDlg@FlagMouseInput$qqrp14System@TObject @486 ; __fastcall Xmlbindform::TXMLNewBindingDlg::FlagMouseInput(System::TObject *)
+    @Xmlbindform@TXMLNewBindingDlg@FormCloseQuery$qqrp14System@TObjectro @487 ; __fastcall Xmlbindform::TXMLNewBindingDlg::FormCloseQuery(System::TObject *, bool&)
+    @Xmlbindform@TXMLNewBindingDlg@FormCreate$qqrp14System@TObject @517 ; __fastcall Xmlbindform::TXMLNewBindingDlg::FormCreate(System::TObject *)
+    @Xmlbindform@TXMLNewBindingDlg@FormDestroy$qqrp14System@TObject @516 ; __fastcall Xmlbindform::TXMLNewBindingDlg::FormDestroy(System::TObject *)
+    @Xmlbindform@TXMLNewBindingDlg@GenerateHeaderSource$qqrv @468 ; __fastcall Xmlbindform::TXMLNewBindingDlg::GenerateHeaderSource()
+    @Xmlbindform@TXMLNewBindingDlg@GeneratePageInit$qqrv @489 ; __fastcall Xmlbindform::TXMLNewBindingDlg::GeneratePageInit()
+    @Xmlbindform@TXMLNewBindingDlg@GenerateUnitSource$qqrv @469 ; __fastcall Xmlbindform::TXMLNewBindingDlg::GenerateUnitSource()
+    @Xmlbindform@TXMLNewBindingDlg@GetDocElementName$qqrx59System@%DelphiInterface$32Xml@Xmlschema@IXMLComplexTypeDef% @485 ; Xmlbindform::TXMLNewBindingDlg::GetDocElementName(const System::DelphiInterface<{583}...
+    @Xmlbindform@TXMLNewBindingDlg@HelpDisplayExecute$qqrp14System@TObject @477 ; __fastcall Xmlbindform::TXMLNewBindingDlg::HelpDisplayExecute(System::TObject *)
+    @Xmlbindform@TXMLNewBindingDlg@InitSourceOptions$qqrv @475 ; __fastcall Xmlbindform::TXMLNewBindingDlg::InitSourceOptions()
+    @Xmlbindform@TXMLNewBindingDlg@InitWizardOptions$qqrv @515 ; __fastcall Xmlbindform::TXMLNewBindingDlg::InitWizardOptions()
+    @Xmlbindform@TXMLNewBindingDlg@ItemTreeAdd$qqrp22Vcl@Comctrls@TTreeNode20System@UnicodeString55System@%DelphiInterface$28Xml@Xmlschema@IXMLSchemaItem%o26Xmlbindmgr@TXMLBindingType @503 ; Xmlbindform::TXMLNewBindingDlg::ItemTreeAdd(Vcl::Comctrls::TTreeNode *, System::UnicodeString, System::DelphiInterface<{583}...
+    @Xmlbindform@TXMLNewBindingDlg@ItemTreeChange$qqrp14System@TObjectp22Vcl@Comctrls@TTreeNode @495 ; __fastcall Xmlbindform::TXMLNewBindingDlg::ItemTreeChange(System::TObject *, Vcl::Comctrls::TTreeNode *)
+    @Xmlbindform@TXMLNewBindingDlg@ItemTreeChanging$qqrp14System@TObjectp22Vcl@Comctrls@TTreeNodero @494 ; __fastcall Xmlbindform::TXMLNewBindingDlg::ItemTreeChanging(System::TObject *, Vcl::Comctrls::TTreeNode *, bool&)
+    @Xmlbindform@TXMLNewBindingDlg@ItemTreeExpanding$qqrp14System@TObjectp22Vcl@Comctrls@TTreeNodero @500 ; __fastcall Xmlbindform::TXMLNewBindingDlg::ItemTreeExpanding(System::TObject *, Vcl::Comctrls::TTreeNode *, bool&)
+    @Xmlbindform@TXMLNewBindingDlg@LoadInputFileHistory$qqrv @505 ; __fastcall Xmlbindform::TXMLNewBindingDlg::LoadInputFileHistory()
+    @Xmlbindform@TXMLNewBindingDlg@LoadSource$qqrv @506 ; __fastcall Xmlbindform::TXMLNewBindingDlg::LoadSource()
+    @Xmlbindform@TXMLNewBindingDlg@NextPageAfterTabChange$qqrp14System@TObject @512 ; __fastcall Xmlbindform::TXMLNewBindingDlg::NextPageAfterTabChange(System::TObject *)
+    @Xmlbindform@TXMLNewBindingDlg@NextPageBeforeTabChange$qqrp14System@TObject @511 ; __fastcall Xmlbindform::TXMLNewBindingDlg::NextPageBeforeTabChange(System::TObject *)
+    @Xmlbindform@TXMLNewBindingDlg@NextPageFinish$qqrp14System@TObject @488 ; __fastcall Xmlbindform::TXMLNewBindingDlg::NextPageFinish(System::TObject *)
+    @Xmlbindform@TXMLNewBindingDlg@NextPageValidatePage$qqrp23Vcl@Extactns@TTabActionp30Vcl@Comctrls@TCustomTabControlro @513 ; __fastcall Xmlbindform::TXMLNewBindingDlg::NextPageValidatePage(Vcl::Extactns::TTabAction *, Vcl::Comctrls::TCustomTabControl *, bool&)
+    @Xmlbindform@TXMLNewBindingDlg@OptionChanged$qqrx20System@UnicodeStringt1rx14System@Variant @473 ; __fastcall Xmlbindform::TXMLNewBindingDlg::OptionChanged(const System::UnicodeString, const System::UnicodeString, const System::Variant&)
+    @Xmlbindform@TXMLNewBindingDlg@OutputSummarySelectItem$qqrp14System@TObjectp22Vcl@Comctrls@TListItemo @478 ; __fastcall Xmlbindform::TXMLNewBindingDlg::OutputSummarySelectItem(System::TObject *, Vcl::Comctrls::TListItem *, bool)
+    @Xmlbindform@TXMLNewBindingDlg@ReadBindingInfo$qqrx53System@%DelphiInterface$26Xmlbindmgr@IXMLBindingInfo%26Xmlbindmgr@TXMLBindingType @497 ; Xmlbindform::TXMLNewBindingDlg::ReadBindingInfo(const System::DelphiInterface<{583}...
+    @Xmlbindform@TXMLNewBindingDlg@RefreshSelection$qqrv @482 ; __fastcall Xmlbindform::TXMLNewBindingDlg::RefreshSelection()
+    @Xmlbindform@TXMLNewBindingDlg@RepeatingClick$qqrp14System@TObject @481 ; __fastcall Xmlbindform::TXMLNewBindingDlg::RepeatingClick(System::TObject *)
+    @Xmlbindform@TXMLNewBindingDlg@SaveInputFileHistory$qqrv @504 ; __fastcall Xmlbindform::TXMLNewBindingDlg::SaveInputFileHistory()
+    @Xmlbindform@TXMLNewBindingDlg@SaveSettingFileButtonClick$qqrp14System@TObject @479 ; __fastcall Xmlbindform::TXMLNewBindingDlg::SaveSettingFileButtonClick(System::TObject *)
+    @Xmlbindform@TXMLNewBindingDlg@SchemaSourceChange$qqrp14System@TObject @474 ; __fastcall Xmlbindform::TXMLNewBindingDlg::SchemaSourceChange(System::TObject *)
+    @Xmlbindform@TXMLNewBindingDlg@SelectSchemaButtonClick$qqrp14System@TObject @508 ; __fastcall Xmlbindform::TXMLNewBindingDlg::SelectSchemaButtonClick(System::TObject *)
+    @Xmlbindform@TXMLNewBindingDlg@SelectionPageInit$qqrv @501 ; __fastcall Xmlbindform::TXMLNewBindingDlg::SelectionPageInit()
+    @Xmlbindform@TXMLNewBindingDlg@SetBindingType$qqr26Xmlbindmgr@TXMLBindingType @502 ; __fastcall Xmlbindform::TXMLNewBindingDlg::SetBindingType(Xmlbindmgr::TXMLBindingType)
+    @Xmlbindform@TXMLNewBindingDlg@SetBoundStateExecute$qqrp14System@TObject @499 ; __fastcall Xmlbindform::TXMLNewBindingDlg::SetBoundStateExecute(System::TObject *)
+    @Xmlbindform@TXMLNewBindingDlg@ShowOptionsExecute$qqrp14System@TObject @476 ; __fastcall Xmlbindform::TXMLNewBindingDlg::ShowOptionsExecute(System::TObject *)
+    @Xmlbindform@TXMLNewBindingDlg@SimpleDataTypeDropDown$qqrp14System@TObject @491 ; __fastcall Xmlbindform::TXMLNewBindingDlg::SimpleDataTypeDropDown(System::TObject *)
+    @Xmlbindform@TXMLNewBindingDlg@StoreButtonClick$qqrp14System@TObject @480 ; __fastcall Xmlbindform::TXMLNewBindingDlg::StoreButtonClick(System::TObject *)
+    @Xmlbindform@TXMLNewBindingDlg@UnitName$qqrv @470 ; __fastcall Xmlbindform::TXMLNewBindingDlg::UnitName()
+    @Xmlbindform@TXMLNewBindingDlg@UpdateListView$qqrp22Vcl@Comctrls@TTreeNode @498 ; __fastcall Xmlbindform::TXMLNewBindingDlg::UpdateListView(Vcl::Comctrls::TTreeNode *)
+    @Xmlbindform@TXMLNewBindingDlg@ValidateIdentKey$qqrp14System@TObjectrb @471 ; __fastcall Xmlbindform::TXMLNewBindingDlg::ValidateIdentKey(System::TObject *, wchar_t&)
+    @Xmlbindform@TXMLNewBindingDlg@ValidateIdentifier$qqrr20System@UnicodeString @472 ; __fastcall Xmlbindform::TXMLNewBindingDlg::ValidateIdentifier(System::UnicodeString&)
+    @Xmlbindform@TXMLNewBindingDlg@ValidateSelections$qqrv @509 ; __fastcall Xmlbindform::TXMLNewBindingDlg::ValidateSelections()
+    @Xmlbindform@TXMLNewBindingDlg@WriteBindingInfo$qqrp22Vcl@Comctrls@TTreeNode @496 ; __fastcall Xmlbindform::TXMLNewBindingDlg::WriteBindingInfo(Vcl::Comctrls::TTreeNode *)
+    @Xmlbindform@UIOptions         @519 ; Xmlbindform::UIOptions
+    @Xmlbindform@initialization$qqrv @466 ; __fastcall Xmlbindform::initialization()
+    @Xmlbindmgr@CreateGuidProc     @415 ; Xmlbindmgr::CreateGuidProc
+    @Xmlbindmgr@Finalization$qqrv  @280 ; __fastcall Xmlbindmgr::Finalization()
+    @Xmlbindmgr@GetNewModuleName   @413 ; Xmlbindmgr::GetNewModuleName
+    @Xmlbindmgr@GetValidIdent$qqrx20System@UnicodeString @412 ; __fastcall Xmlbindmgr::GetValidIdent(const System::UnicodeString)
+    @Xmlbindmgr@IsCLXProject       @414 ; Xmlbindmgr::IsCLXProject
+    @Xmlbindmgr@IsStringType$qqrx20System@UnicodeString @411 ; __fastcall Xmlbindmgr::IsStringType(const System::UnicodeString)
+    @Xmlbindmgr@MakeValidIdent$qqrr20System@UnicodeString @410 ; __fastcall Xmlbindmgr::MakeValidIdent(System::UnicodeString&)
+    @Xmlbindmgr@TBindingOptions@   @446 ; Xmlbindmgr::TBindingOptions::
+    @Xmlbindmgr@TBindingOptions@$bctr$qqrx20System@UnicodeStringynpqqrx20System@UnicodeStringt1rx14System@Variant$v @409 ; __fastcall Xmlbindmgr::TBindingOptions::TBindingOptions(const System::UnicodeString, void __fastcall __closure(*)(const System::UnicodeString, const System::UnicodeString, const System::Variant&))
+    @Xmlbindmgr@TBindingOptions@$bdtr$qqrv @408 ; __fastcall Xmlbindmgr::TBindingOptions::~TBindingOptions()
+    @Xmlbindmgr@TBindingOptions@Assign$qqrp26System@Classes@TPersistent @407 ; __fastcall Xmlbindmgr::TBindingOptions::Assign(System::Classes::TPersistent *)
+    @Xmlbindmgr@TBindingOptions@AssignTo$qqrp26System@Classes@TPersistent @406 ; __fastcall Xmlbindmgr::TBindingOptions::AssignTo(System::Classes::TPersistent *)
+    @Xmlbindmgr@TBindingOptions@Clear$qqrv @396 ; __fastcall Xmlbindmgr::TBindingOptions::Clear()
+    @Xmlbindmgr@TBindingOptions@DoOptionChange$qqrx20System@UnicodeStringrx14System@Variant @405 ; __fastcall Xmlbindmgr::TBindingOptions::DoOptionChange(const System::UnicodeString, const System::Variant&)
+    @Xmlbindmgr@TBindingOptions@EnsureOption$qqrx20System@UnicodeString @404 ; __fastcall Xmlbindmgr::TBindingOptions::EnsureOption(const System::UnicodeString)
+    @Xmlbindmgr@TBindingOptions@GetOption$qqrx20System@UnicodeStringrx14System@Variant @403 ; __fastcall Xmlbindmgr::TBindingOptions::GetOption(const System::UnicodeString, const System::Variant&)
+    @Xmlbindmgr@TBindingOptions@GetOptionData$qqrx20System@UnicodeString @400 ; __fastcall Xmlbindmgr::TBindingOptions::GetOptionData(const System::UnicodeString)
+    @Xmlbindmgr@TBindingOptions@GetOptionValue$qqrx20System@UnicodeString @402 ; __fastcall Xmlbindmgr::TBindingOptions::GetOptionValue(const System::UnicodeString)
+    @Xmlbindmgr@TBindingOptions@InitializeOptions$qqrpx20System@UnicodeStringxi @398 ; __fastcall Xmlbindmgr::TBindingOptions::InitializeOptions(const System::UnicodeString *, const int)
+    @Xmlbindmgr@TBindingOptions@InitializeOptions$qqrxp23System@Classes@TStrings @397 ; __fastcall Xmlbindmgr::TBindingOptions::InitializeOptions(System::Classes::TStrings * const)
+    @Xmlbindmgr@TBindingOptions@IsTrue$qqrx20System@UnicodeString @395 ; __fastcall Xmlbindmgr::TBindingOptions::IsTrue(const System::UnicodeString)
+    @Xmlbindmgr@TBindingOptions@SetOption$qqrx20System@UnicodeStringrx14System@Variant @401 ; __fastcall Xmlbindmgr::TBindingOptions::SetOption(const System::UnicodeString, const System::Variant&)
+    @Xmlbindmgr@TBindingOptions@SetOptionData$qqrx20System@UnicodeStringxp14System@TObject @399 ; __fastcall Xmlbindmgr::TBindingOptions::SetOptionData(const System::UnicodeString, System::TObject * const)
+    @Xmlbindmgr@TCodeWriter@       @417 ; Xmlbindmgr::TCodeWriter::
+    @Xmlbindmgr@TCodeWriter@$bctr$qqr56System@%DelphiInterface$29Xmlbindmgr@IXMLBindingManager% @288 ; Xmlbindmgr::TCodeWriter::TCodeWriter(System::DelphiInterface<{583}...
+    @Xmlbindmgr@TCodeWriter@Changed$qqrv @287 ; __fastcall Xmlbindmgr::TCodeWriter::Changed()
+    @Xmlbindmgr@TCodeWriter@Generate$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @284 ; Xmlbindmgr::TCodeWriter::Generate(const System::DelphiInterface<{583}...
+    @Xmlbindmgr@TCodeWriter@PropGetPrefix$qqrv @286 ; __fastcall Xmlbindmgr::TCodeWriter::PropGetPrefix()
+    @Xmlbindmgr@TCodeWriter@PropSetPrefix$qqrv @285 ; __fastcall Xmlbindmgr::TCodeWriter::PropSetPrefix()
+    @Xmlbindmgr@TCodeWriter@Write$qqrx20System@UnicodeStringi @281 ; __fastcall Xmlbindmgr::TCodeWriter::Write(const System::UnicodeString, int)
+    @Xmlbindmgr@TCodeWriter@Write$qqrx20System@UnicodeStringp14System@TVarRecxii @282 ; __fastcall Xmlbindmgr::TCodeWriter::Write(const System::UnicodeString, System::TVarRec *, const int, int)
+    @Xmlbindmgr@TCodeWriter@WriteLine$qqrv @283 ; __fastcall Xmlbindmgr::TCodeWriter::WriteLine()
+    @Xmlbindmgr@TXMLBindingAppInfo@ @435 ; Xmlbindmgr::TXMLBindingAppInfo::
+    @Xmlbindmgr@TXMLBindingAppInfo@GetBindingAppInfoURI$qqrv @388 ; __fastcall Xmlbindmgr::TXMLBindingAppInfo::GetBindingAppInfoURI()
+    @Xmlbindmgr@TXMLBindingAppInfo@GetBound$qqrv @386 ; __fastcall Xmlbindmgr::TXMLBindingAppInfo::GetBound()
+    @Xmlbindmgr@TXMLBindingAppInfo@GetDataType$qqrv @380 ; __fastcall Xmlbindmgr::TXMLBindingAppInfo::GetDataType()
+    @Xmlbindmgr@TXMLBindingAppInfo@GetDocElement$qqrv @382 ; __fastcall Xmlbindmgr::TXMLBindingAppInfo::GetDocElement()
+    @Xmlbindmgr@TXMLBindingAppInfo@GetIdentifierName$qqrv @384 ; __fastcall Xmlbindmgr::TXMLBindingAppInfo::GetIdentifierName()
+    @Xmlbindmgr@TXMLBindingAppInfo@GetPropReadOnly$qqrv @390 ; __fastcall Xmlbindmgr::TXMLBindingAppInfo::GetPropReadOnly()
+    @Xmlbindmgr@TXMLBindingAppInfo@GetRepeated$qqrv @378 ; __fastcall Xmlbindmgr::TXMLBindingAppInfo::GetRepeated()
+    @Xmlbindmgr@TXMLBindingAppInfo@GetValue$qqrx20System@UnicodeString @394 ; __fastcall Xmlbindmgr::TXMLBindingAppInfo::GetValue(const System::UnicodeString)
+    @Xmlbindmgr@TXMLBindingAppInfo@HasValueFor$qqrx20System@UnicodeString @392 ; __fastcall Xmlbindmgr::TXMLBindingAppInfo::HasValueFor(const System::UnicodeString)
+    @Xmlbindmgr@TXMLBindingAppInfo@RemoveValue$qqrx20System@UnicodeString @391 ; __fastcall Xmlbindmgr::TXMLBindingAppInfo::RemoveValue(const System::UnicodeString)
+    @Xmlbindmgr@TXMLBindingAppInfo@SetBindingAppInfoURI$qqrx20System@UnicodeString @387 ; __fastcall Xmlbindmgr::TXMLBindingAppInfo::SetBindingAppInfoURI(const System::UnicodeString)
+    @Xmlbindmgr@TXMLBindingAppInfo@SetBound$qqrrx14System@Variant @385 ; __fastcall Xmlbindmgr::TXMLBindingAppInfo::SetBound(const System::Variant&)
+    @Xmlbindmgr@TXMLBindingAppInfo@SetDataType$qqrrx14System@Variant @379 ; __fastcall Xmlbindmgr::TXMLBindingAppInfo::SetDataType(const System::Variant&)
+    @Xmlbindmgr@TXMLBindingAppInfo@SetDocElement$qqrrx14System@Variant @381 ; __fastcall Xmlbindmgr::TXMLBindingAppInfo::SetDocElement(const System::Variant&)
+    @Xmlbindmgr@TXMLBindingAppInfo@SetIdentifierName$qqrrx14System@Variant @383 ; __fastcall Xmlbindmgr::TXMLBindingAppInfo::SetIdentifierName(const System::Variant&)
+    @Xmlbindmgr@TXMLBindingAppInfo@SetPropReadOnly$qqrrx14System@Variant @389 ; __fastcall Xmlbindmgr::TXMLBindingAppInfo::SetPropReadOnly(const System::Variant&)
+    @Xmlbindmgr@TXMLBindingAppInfo@SetRepeated$qqrrx14System@Variant @377 ; __fastcall Xmlbindmgr::TXMLBindingAppInfo::SetRepeated(const System::Variant&)
+    @Xmlbindmgr@TXMLBindingAppInfo@SetValue$qqrx20System@UnicodeStringrx14System@Variant @393 ; __fastcall Xmlbindmgr::TXMLBindingAppInfo::SetValue(const System::UnicodeString, const System::Variant&)
+    @Xmlbindmgr@TXMLBindingInfo@   @433 ; Xmlbindmgr::TXMLBindingInfo::
+    @Xmlbindmgr@TXMLBindingInfo@$bctr$qqrx55System@%DelphiInterface$28Xml@Xmlschema@IXMLSchemaItem%x56System@%DelphiInterface$29Xmlbindmgr@IXMLBindingManager% @376 ; Xmlbindmgr::TXMLBindingInfo::TXMLBindingInfo(const System::DelphiInterface<{583}...
+    @Xmlbindmgr@TXMLBindingInfo@GetBindingAppInfo$qqrv @374 ; __fastcall Xmlbindmgr::TXMLBindingInfo::GetBindingAppInfo()
+    @Xmlbindmgr@TXMLBindingInfo@GetBound$qqrv @366 ; __fastcall Xmlbindmgr::TXMLBindingInfo::GetBound()
+    @Xmlbindmgr@TXMLBindingInfo@GetDocumentation$qqrv @371 ; __fastcall Xmlbindmgr::TXMLBindingInfo::GetDocumentation()
+    @Xmlbindmgr@TXMLBindingInfo@GetIdentifierName$qqrv @369 ; __fastcall Xmlbindmgr::TXMLBindingInfo::GetIdentifierName()
+    @Xmlbindmgr@TXMLBindingInfo@GetSourceName$qqrv @367 ; __fastcall Xmlbindmgr::TXMLBindingInfo::GetSourceName()
+    @Xmlbindmgr@TXMLBindingInfo@HasAppInfo$qqrx20System@UnicodeString @375 ; __fastcall Xmlbindmgr::TXMLBindingInfo::HasAppInfo(const System::UnicodeString)
+    @Xmlbindmgr@TXMLBindingInfo@MakeIdentifier$qqrv @372 ; __fastcall Xmlbindmgr::TXMLBindingInfo::MakeIdentifier()
+    @Xmlbindmgr@TXMLBindingInfo@RemoveAppInfo$qqrx20System@UnicodeString @373 ; __fastcall Xmlbindmgr::TXMLBindingInfo::RemoveAppInfo(const System::UnicodeString)
+    @Xmlbindmgr@TXMLBindingInfo@SetBindingType$qqrx26Xmlbindmgr@TXMLBindingType @363 ; __fastcall Xmlbindmgr::TXMLBindingInfo::SetBindingType(const Xmlbindmgr::TXMLBindingType)
+    @Xmlbindmgr@TXMLBindingInfo@SetBound$qqrxo @365 ; __fastcall Xmlbindmgr::TXMLBindingInfo::SetBound(const bool)
+    @Xmlbindmgr@TXMLBindingInfo@SetDataType$qqrx20System@UnicodeString @364 ; __fastcall Xmlbindmgr::TXMLBindingInfo::SetDataType(const System::UnicodeString)
+    @Xmlbindmgr@TXMLBindingInfo@SetDocumentation$qqrx20System@UnicodeString @370 ; __fastcall Xmlbindmgr::TXMLBindingInfo::SetDocumentation(const System::UnicodeString)
+    @Xmlbindmgr@TXMLBindingInfo@SetIdentifierName$qqrx20System@UnicodeString @368 ; __fastcall Xmlbindmgr::TXMLBindingInfo::SetIdentifierName(const System::UnicodeString)
+    @Xmlbindmgr@TXMLBindingManager@ @421 ; Xmlbindmgr::TXMLBindingManager::
+    @Xmlbindmgr@TXMLBindingManager@$bctr$qqr20System@UnicodeString @311 ; __fastcall Xmlbindmgr::TXMLBindingManager::TXMLBindingManager(System::UnicodeString)
+    @Xmlbindmgr@TXMLBindingManager@$bdtr$qqrv @310 ; __fastcall Xmlbindmgr::TXMLBindingManager::~TXMLBindingManager()
+    @Xmlbindmgr@TXMLBindingManager@AfterConstruction$qqrv @312 ; __fastcall Xmlbindmgr::TXMLBindingManager::AfterConstruction()
+    @Xmlbindmgr@TXMLBindingManager@DoIdentifierCheck$qqrr20System@UnicodeString @302 ; __fastcall Xmlbindmgr::TXMLBindingManager::DoIdentifierCheck(System::UnicodeString&)
+    @Xmlbindmgr@TXMLBindingManager@GenerateBinding$qqrx56System@%DelphiInterface$29System@Classes@IInterfaceList%pxp17System@TMetaClassxi @301 ; Xmlbindmgr::TXMLBindingManager::GenerateBinding(const System::DelphiInterface<{583}...
+    @Xmlbindmgr@TXMLBindingManager@GenerateBinding$qqrx59System@%DelphiInterface$32Xml@Xmlschema@IXMLComplexTypeDef%pxp17System@TMetaClassxi @300 ; Xmlbindmgr::TXMLBindingManager::GenerateBinding(const System::DelphiInterface<{583}...
+    @Xmlbindmgr@TXMLBindingManager@GetBindableItems$qqrx54System@%DelphiInterface$27Xml@Xmlschema@IXMLSchemaDef% @309 ; Xmlbindmgr::TXMLBindingManager::GetBindableItems(const System::DelphiInterface<{583}...
+    @Xmlbindmgr@TXMLBindingManager@GetBindingAppInfoURI$qqrv @299 ; __fastcall Xmlbindmgr::TXMLBindingManager::GetBindingAppInfoURI()
+    @Xmlbindmgr@TXMLBindingManager@GetBindingInfo$qqrx44System@%DelphiInterface$17System@IInterface% @308 ; Xmlbindmgr::TXMLBindingManager::GetBindingInfo(const System::DelphiInterface<{583}...
+    @Xmlbindmgr@TXMLBindingManager@GetBindingInfo$qqrx52System@%DelphiInterface$25Xml@Xmlschema@IXMLTypeDef% @307 ; Xmlbindmgr::TXMLBindingManager::GetBindingInfo(const System::DelphiInterface<{583}...
+    @Xmlbindmgr@TXMLBindingManager@GetBindingInfo$qqrx59System@%DelphiInterface$32Xml@Xmlschema@IXMLComplexTypeDef% @306 ; Xmlbindmgr::TXMLBindingManager::GetBindingInfo(const System::DelphiInterface<{583}...
+    @Xmlbindmgr@TXMLBindingManager@GetBindingInfo$qqrx60System@%DelphiInterface$33Xml@Xmlschema@IXMLTypedSchemaItem% @305 ; Xmlbindmgr::TXMLBindingManager::GetBindingInfo(const System::DelphiInterface<{583}...
+    @Xmlbindmgr@TXMLBindingManager@GetBindingLanguage$qqrv @290 ; __fastcall Xmlbindmgr::TXMLBindingManager::GetBindingLanguage()
+    @Xmlbindmgr@TXMLBindingManager@GetClassNameStr$qqrv @294 ; __fastcall Xmlbindmgr::TXMLBindingManager::GetClassNameStr()
+    @Xmlbindmgr@TXMLBindingManager@GetCodeGenOptions$qqrv @298 ; __fastcall Xmlbindmgr::TXMLBindingManager::GetCodeGenOptions()
+    @Xmlbindmgr@TXMLBindingManager@GetListBindingInfo$qqrx52System@%DelphiInterface$25Xml@Xmlschema@IXMLTypeDef% @304 ; Xmlbindmgr::TXMLBindingManager::GetListBindingInfo(const System::DelphiInterface<{583}...
+    @Xmlbindmgr@TXMLBindingManager@GetNativeTypeMap$qqrv @297 ; __fastcall Xmlbindmgr::TXMLBindingManager::GetNativeTypeMap()
+    @Xmlbindmgr@TXMLBindingManager@GetPersonality$qqrv @291 ; __fastcall Xmlbindmgr::TXMLBindingManager::GetPersonality()
+    @Xmlbindmgr@TXMLBindingManager@GetSourceExt$qqrv @289 ; __fastcall Xmlbindmgr::TXMLBindingManager::GetSourceExt()
+    @Xmlbindmgr@TXMLBindingManager@SchemaTypeToNativeType$qqrrx14System@Variant @303 ; __fastcall Xmlbindmgr::TXMLBindingManager::SchemaTypeToNativeType(const System::Variant&)
+    @Xmlbindmgr@TXMLBindingManager@SetBindingAppInfoURI$qqrx20System@UnicodeString @296 ; __fastcall Xmlbindmgr::TXMLBindingManager::SetBindingAppInfoURI(const System::UnicodeString)
+    @Xmlbindmgr@TXMLBindingManager@SetClassNameStr$qqrx20System@UnicodeString @293 ; __fastcall Xmlbindmgr::TXMLBindingManager::SetClassNameStr(const System::UnicodeString)
+    @Xmlbindmgr@TXMLBindingManager@SetOnIdentifierCheck$qqrxynpqqrr20System@UnicodeString$v @295 ; __fastcall Xmlbindmgr::TXMLBindingManager::SetOnIdentifierCheck(void __fastcall __closure(*)(System::UnicodeString&) const)
+    @Xmlbindmgr@TXMLBindingManager@SetPersonality$qqrx20System@UnicodeString @292 ; __fastcall Xmlbindmgr::TXMLBindingManager::SetPersonality(const System::UnicodeString)
+    @Xmlbindmgr@TXMLComplexTypeBinding@ @427 ; Xmlbindmgr::TXMLComplexTypeBinding::
+    @Xmlbindmgr@TXMLComplexTypeBinding@AfterConstruction$qqrv @351 ; __fastcall Xmlbindmgr::TXMLComplexTypeBinding::AfterConstruction()
+    @Xmlbindmgr@TXMLComplexTypeBinding@AncestorClass$qqrv @347 ; __fastcall Xmlbindmgr::TXMLComplexTypeBinding::AncestorClass()
+    @Xmlbindmgr@TXMLComplexTypeBinding@AncestorInterface$qqrv @346 ; __fastcall Xmlbindmgr::TXMLComplexTypeBinding::AncestorInterface()
+    @Xmlbindmgr@TXMLComplexTypeBinding@BaseBindingInfo$qqrv @349 ; __fastcall Xmlbindmgr::TXMLComplexTypeBinding::BaseBindingInfo()
+    @Xmlbindmgr@TXMLComplexTypeBinding@ClassIdent$qqrv @345 ; __fastcall Xmlbindmgr::TXMLComplexTypeBinding::ClassIdent()
+    @Xmlbindmgr@TXMLComplexTypeBinding@CollectionItem$qqrv @327 ; __fastcall Xmlbindmgr::TXMLComplexTypeBinding::CollectionItem()
+    @Xmlbindmgr@TXMLComplexTypeBinding@CollectionItemName$qqrv @336 ; __fastcall Xmlbindmgr::TXMLComplexTypeBinding::CollectionItemName()
+    @Xmlbindmgr@TXMLComplexTypeBinding@ComplexTypeDef$qqrv @344 ; __fastcall Xmlbindmgr::TXMLComplexTypeBinding::ComplexTypeDef()
+    @Xmlbindmgr@TXMLComplexTypeBinding@GetBindingType$qqrv @338 ; __fastcall Xmlbindmgr::TXMLComplexTypeBinding::GetBindingType()
+    @Xmlbindmgr@TXMLComplexTypeBinding@GetDataType$qqrv @343 ; __fastcall Xmlbindmgr::TXMLComplexTypeBinding::GetDataType()
+    @Xmlbindmgr@TXMLComplexTypeBinding@GetDocElementName$qqrv @342 ; __fastcall Xmlbindmgr::TXMLComplexTypeBinding::GetDocElementName()
+    @Xmlbindmgr@TXMLComplexTypeBinding@GetSourceType$qqrv @339 ; __fastcall Xmlbindmgr::TXMLComplexTypeBinding::GetSourceType()
+    @Xmlbindmgr@TXMLComplexTypeBinding@HasComplexBase$qqrv @348 ; __fastcall Xmlbindmgr::TXMLComplexTypeBinding::HasComplexBase()
+    @Xmlbindmgr@TXMLComplexTypeBinding@IsDocElement$qqrv @340 ; __fastcall Xmlbindmgr::TXMLComplexTypeBinding::IsDocElement()
+    @Xmlbindmgr@TXMLComplexTypeBinding@MakeIdentifier$qqrv @350 ; __fastcall Xmlbindmgr::TXMLComplexTypeBinding::MakeIdentifier()
+    @Xmlbindmgr@TXMLComplexTypeBinding@PureCollection$qqrv @337 ; __fastcall Xmlbindmgr::TXMLComplexTypeBinding::PureCollection()
+    @Xmlbindmgr@TXMLComplexTypeBinding@SetDocElementName$qqrx20System@UnicodeString @341 ; __fastcall Xmlbindmgr::TXMLComplexTypeBinding::SetDocElementName(const System::UnicodeString)
+    @Xmlbindmgr@TXMLDataTypeBinding@ @431 ; Xmlbindmgr::TXMLDataTypeBinding::
+    @Xmlbindmgr@TXMLDataTypeBinding@AfterConstruction$qqrv @362 ; __fastcall Xmlbindmgr::TXMLDataTypeBinding::AfterConstruction()
+    @Xmlbindmgr@TXMLDataTypeBinding@GetRepeated$qqrv @361 ; __fastcall Xmlbindmgr::TXMLDataTypeBinding::GetRepeated()
+    @Xmlbindmgr@TXMLDataTypeBinding@SetRepeated$qqrxo @360 ; __fastcall Xmlbindmgr::TXMLDataTypeBinding::SetRepeated(const bool)
+    @Xmlbindmgr@TXMLDataTypeBinding@TypeDef$qqrv @359 ; __fastcall Xmlbindmgr::TXMLDataTypeBinding::TypeDef()
+    @Xmlbindmgr@TXMLDataTypeListBinding@ @425 ; Xmlbindmgr::TXMLDataTypeListBinding::
+    @Xmlbindmgr@TXMLDataTypeListBinding@AfterConstruction$qqrv @335 ; __fastcall Xmlbindmgr::TXMLDataTypeListBinding::AfterConstruction()
+    @Xmlbindmgr@TXMLDataTypeListBinding@AncestorClass$qqrv @334 ; __fastcall Xmlbindmgr::TXMLDataTypeListBinding::AncestorClass()
+    @Xmlbindmgr@TXMLDataTypeListBinding@AncestorInterface$qqrv @333 ; __fastcall Xmlbindmgr::TXMLDataTypeListBinding::AncestorInterface()
+    @Xmlbindmgr@TXMLDataTypeListBinding@ClassIdent$qqrv @332 ; __fastcall Xmlbindmgr::TXMLDataTypeListBinding::ClassIdent()
+    @Xmlbindmgr@TXMLDataTypeListBinding@CollectionItemName$qqrv @331 ; __fastcall Xmlbindmgr::TXMLDataTypeListBinding::CollectionItemName()
+    @Xmlbindmgr@TXMLDataTypeListBinding@GetIdentifierName$qqrv @330 ; __fastcall Xmlbindmgr::TXMLDataTypeListBinding::GetIdentifierName()
+    @Xmlbindmgr@TXMLDataTypeListBinding@GetRepeated$qqrv @329 ; __fastcall Xmlbindmgr::TXMLDataTypeListBinding::GetRepeated()
+    @Xmlbindmgr@TXMLDataTypeListBinding@ItemBindInfo$qqrv @328 ; __fastcall Xmlbindmgr::TXMLDataTypeListBinding::ItemBindInfo()
+    @Xmlbindmgr@TXMLDataTypeListBinding@PureCollection$qqrv @326 ; __fastcall Xmlbindmgr::TXMLDataTypeListBinding::PureCollection()
+    @Xmlbindmgr@TXMLPropertyBinding@ @423 ; Xmlbindmgr::TXMLPropertyBinding::
+    @Xmlbindmgr@TXMLPropertyBinding@AfterConstruction$qqrv @325 ; __fastcall Xmlbindmgr::TXMLPropertyBinding::AfterConstruction()
+    @Xmlbindmgr@TXMLPropertyBinding@GetBindingType$qqrv @316 ; __fastcall Xmlbindmgr::TXMLPropertyBinding::GetBindingType()
+    @Xmlbindmgr@TXMLPropertyBinding@GetBound$qqrv @323 ; __fastcall Xmlbindmgr::TXMLPropertyBinding::GetBound()
+    @Xmlbindmgr@TXMLPropertyBinding@GetDataType$qqrv @321 ; __fastcall Xmlbindmgr::TXMLPropertyBinding::GetDataType()
+    @Xmlbindmgr@TXMLPropertyBinding@GetPropReadOnly$qqrv @319 ; __fastcall Xmlbindmgr::TXMLPropertyBinding::GetPropReadOnly()
+    @Xmlbindmgr@TXMLPropertyBinding@GetSchemaItem$qqrv @313 ; __fastcall Xmlbindmgr::TXMLPropertyBinding::GetSchemaItem()
+    @Xmlbindmgr@TXMLPropertyBinding@GetSourceType$qqrv @317 ; __fastcall Xmlbindmgr::TXMLPropertyBinding::GetSourceType()
+    @Xmlbindmgr@TXMLPropertyBinding@IsListProp$qqrv @314 ; __fastcall Xmlbindmgr::TXMLPropertyBinding::IsListProp()
+    @Xmlbindmgr@TXMLPropertyBinding@ReadDataType$qqrv @322 ; __fastcall Xmlbindmgr::TXMLPropertyBinding::ReadDataType()
+    @Xmlbindmgr@TXMLPropertyBinding@SetBindingType$qqrx26Xmlbindmgr@TXMLBindingType @315 ; __fastcall Xmlbindmgr::TXMLPropertyBinding::SetBindingType(const Xmlbindmgr::TXMLBindingType)
+    @Xmlbindmgr@TXMLPropertyBinding@SetDataType$qqrx20System@UnicodeString @320 ; __fastcall Xmlbindmgr::TXMLPropertyBinding::SetDataType(const System::UnicodeString)
+    @Xmlbindmgr@TXMLPropertyBinding@SetPropReadOnly$qqrxo @318 ; __fastcall Xmlbindmgr::TXMLPropertyBinding::SetPropReadOnly(const bool)
+    @Xmlbindmgr@TXMLPropertyBinding@TypeBindInfo$qqrv @324 ; __fastcall Xmlbindmgr::TXMLPropertyBinding::TypeBindInfo()
+    @Xmlbindmgr@TXMLSimpleTypeBinding@ @429 ; Xmlbindmgr::TXMLSimpleTypeBinding::
+    @Xmlbindmgr@TXMLSimpleTypeBinding@AfterConstruction$qqrv @358 ; __fastcall Xmlbindmgr::TXMLSimpleTypeBinding::AfterConstruction()
+    @Xmlbindmgr@TXMLSimpleTypeBinding@GetBindingType$qqrv @356 ; __fastcall Xmlbindmgr::TXMLSimpleTypeBinding::GetBindingType()
+    @Xmlbindmgr@TXMLSimpleTypeBinding@GetDataType$qqrv @355 ; __fastcall Xmlbindmgr::TXMLSimpleTypeBinding::GetDataType()
+    @Xmlbindmgr@TXMLSimpleTypeBinding@GetIdentifierName$qqrv @354 ; __fastcall Xmlbindmgr::TXMLSimpleTypeBinding::GetIdentifierName()
+    @Xmlbindmgr@TXMLSimpleTypeBinding@GetSourceType$qqrv @352 ; __fastcall Xmlbindmgr::TXMLSimpleTypeBinding::GetSourceType()
+    @Xmlbindmgr@TXMLSimpleTypeBinding@SetIdentifierName$qqrx20System@UnicodeString @353 ; __fastcall Xmlbindmgr::TXMLSimpleTypeBinding::SetIdentifierName(const System::UnicodeString)
+    @Xmlbindmgr@TXMLSimpleTypeBinding@SimpleTypeDef$qqrv @357 ; __fastcall Xmlbindmgr::TXMLSimpleTypeBinding::SimpleTypeDef()
+    @Xmlbindmgr@initialization$qqrv @279 ; __fastcall Xmlbindmgr::initialization()
+    @Xmlbindoptions@Finalization$qqrv @451 ; __fastcall Xmlbindoptions::Finalization()
+    @Xmlbindoptions@OptionsForm    @463 ; Xmlbindoptions::OptionsForm
+    @Xmlbindoptions@TOptionsForm@  @465 ; Xmlbindoptions::TOptionsForm::
+    @Xmlbindoptions@TOptionsForm@CategoryListClick$qqrp14System@TObject @458 ; __fastcall Xmlbindoptions::TOptionsForm::CategoryListClick(System::TObject *)
+    @Xmlbindoptions@TOptionsForm@CheckForChanges$qqrv @459 ; __fastcall Xmlbindoptions::TOptionsForm::CheckForChanges()
+    @Xmlbindoptions@TOptionsForm@FormCloseQuery$qqrp14System@TObjectro @456 ; __fastcall Xmlbindoptions::TOptionsForm::FormCloseQuery(System::TObject *, bool&)
+    @Xmlbindoptions@TOptionsForm@FormCreate$qqrp14System@TObject @461 ; __fastcall Xmlbindoptions::TOptionsForm::FormCreate(System::TObject *)
+    @Xmlbindoptions@TOptionsForm@FormShow$qqrp14System@TObject @460 ; __fastcall Xmlbindoptions::TOptionsForm::FormShow(System::TObject *)
+    @Xmlbindoptions@TOptionsForm@HelpBtnClick$qqrp14System@TObject @455 ; __fastcall Xmlbindoptions::TOptionsForm::HelpBtnClick(System::TObject *)
+    @Xmlbindoptions@TOptionsForm@ValueListEditorKeyPress$qqrp14System@TObjectrb @454 ; __fastcall Xmlbindoptions::TOptionsForm::ValueListEditorKeyPress(System::TObject *, wchar_t&)
+    @Xmlbindoptions@TOptionsForm@ValueListEditorSetEditText$qqrp14System@TObjectiix20System@UnicodeString @453 ; __fastcall Xmlbindoptions::TOptionsForm::ValueListEditorSetEditText(System::TObject *, int, int, const System::UnicodeString)
+    @Xmlbindoptions@TOptionsForm@ValueListEditorStringsChange$qqrp14System@TObject @457 ; __fastcall Xmlbindoptions::TOptionsForm::ValueListEditorStringsChange(System::TObject *)
+    @Xmlbindoptions@TOptionsForm@ValueListEditorValidate$qqrp14System@TObjectiix20System@UnicodeStringt4 @452 ; __fastcall Xmlbindoptions::TOptionsForm::ValueListEditorValidate(System::TObject *, int, int, const System::UnicodeString, const System::UnicodeString)
+    @Xmlbindoptions@ValidateIdentifierKey$qqrrb @462 ; __fastcall Xmlbindoptions::ValidateIdentifierKey(wchar_t&)
+    @Xmlbindoptions@initialization$qqrv @450 ; __fastcall Xmlbindoptions::initialization()
+    @Xmlbindpasgen@DefaultPasCode  @165 ; Xmlbindpasgen::DefaultPasCode
+    @Xmlbindpasgen@DefaultPasTypeMap @167 ; Xmlbindpasgen::DefaultPasTypeMap
+    @Xmlbindpasgen@Finalization$qqrv @71  ; __fastcall Xmlbindpasgen::Finalization()
+    @Xmlbindpasgen@GenerateUnitComment$qqrx20System@UnicodeStringt1 @87  ; __fastcall Xmlbindpasgen::GenerateUnitComment(const System::UnicodeString, const System::UnicodeString)
+    @Xmlbindpasgen@NativePasTypes  @169 ; Xmlbindpasgen::NativePasTypes
+    @Xmlbindpasgen@TForwardDecl@   @158 ; Xmlbindpasgen::TForwardDecl::
+    @Xmlbindpasgen@TForwardDecl@AfterConstruction$qqrv @112 ; __fastcall Xmlbindpasgen::TForwardDecl::AfterConstruction()
+    @Xmlbindpasgen@TPasClassDecl@  @144 ; Xmlbindpasgen::TPasClassDecl::
+    @Xmlbindpasgen@TPasClassDecl@WriteDecl$qqrv @91  ; __fastcall Xmlbindpasgen::TPasClassDecl::WriteDecl()
+    @Xmlbindpasgen@TPasClassDecl@WriteListBinding$qqrx57System@%DelphiInterface$30Xmlbindmgr@IXMLDataTypeBinding% @88  ; Xmlbindpasgen::TPasClassDecl::WriteListBinding(const System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasClassDecl@WriteProperties$qqrv @89  ; __fastcall Xmlbindpasgen::TPasClassDecl::WriteProperties()
+    @Xmlbindpasgen@TPasClassDecl@WriteProperty$qqrx57System@%DelphiInterface$30Xmlbindmgr@IXMLPropertyBinding%xo @90  ; Xmlbindpasgen::TPasClassDecl::WriteProperty(const System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasClassForward@ @146 ; Xmlbindpasgen::TPasClassForward::
+    @Xmlbindpasgen@TPasClassForward@Generate$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @92  ; Xmlbindpasgen::TPasClassForward::Generate(const System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasClassImpl@  @142 ; Xmlbindpasgen::TPasClassImpl::
+    @Xmlbindpasgen@TPasClassImpl@Generate$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @86  ; Xmlbindpasgen::TPasClassImpl::Generate(const System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasClassImpl@WriteAddItem$qqrx57System@%DelphiInterface$30Xmlbindmgr@IXMLDataTypeBinding%x20System@UnicodeString @85  ; Xmlbindpasgen::TPasClassImpl::WriteAddItem(const System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasClassImpl@WriteCollAdd$qqrp28Xmlbindpasgen@TPasCodeWriter57System@%DelphiInterface$30Xmlbindmgr@IXMLDataTypeBinding%i @84  ; Xmlbindpasgen::TPasClassImpl::WriteCollAdd(Xmlbindpasgen::TPasCodeWriter *, System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasClassImpl@WriteCollInsert$qqrp28Xmlbindpasgen@TPasCodeWriter57System@%DelphiInterface$30Xmlbindmgr@IXMLDataTypeBinding%i @83  ; Xmlbindpasgen::TPasClassImpl::WriteCollInsert(Xmlbindpasgen::TPasCodeWriter *, System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasClassImpl@WriteListBinding$qqrx57System@%DelphiInterface$30Xmlbindmgr@IXMLDataTypeBinding% @82  ; Xmlbindpasgen::TPasClassImpl::WriteListBinding(const System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasClassImpl@WriteProperty$qqrx57System@%DelphiInterface$30Xmlbindmgr@IXMLPropertyBinding%xo @81  ; Xmlbindpasgen::TPasClassImpl::WriteProperty(const System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasClassImpl@WriteRegistrationCode$qqrv @80  ; __fastcall Xmlbindpasgen::TPasClassImpl::WriteRegistrationCode()
+    @Xmlbindpasgen@TPasCodeWriter@ @160 ; Xmlbindpasgen::TPasCodeWriter::
+    @Xmlbindpasgen@TPasCodeWriter@WriteAfterConstruction$qqrx20System@UnicodeStringi @124 ; __fastcall Xmlbindpasgen::TPasCodeWriter::WriteAfterConstruction(const System::UnicodeString, int)
+    @Xmlbindpasgen@TPasCodeWriter@WriteClassDecl$qqrx20System@UnicodeStringt1t1 @120 ; __fastcall Xmlbindpasgen::TPasCodeWriter::WriteClassDecl(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Xmlbindpasgen@TPasCodeWriter@WriteCollCreate$qqrx20System@UnicodeStringt1t1t1t1 @117 ; __fastcall Xmlbindpasgen::TPasCodeWriter::WriteCollCreate(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Xmlbindpasgen@TPasCodeWriter@WriteCollGetItem$qqrx20System@UnicodeStringi @116 ; __fastcall Xmlbindpasgen::TPasCodeWriter::WriteCollGetItem(const System::UnicodeString, int)
+    @Xmlbindpasgen@TPasCodeWriter@WriteCollItemInit$qqrx20System@UnicodeStringt1 @115 ; __fastcall Xmlbindpasgen::TPasCodeWriter::WriteCollItemInit(const System::UnicodeString, const System::UnicodeString)
+    @Xmlbindpasgen@TPasCodeWriter@WriteCollItemProp$qqrx20System@UnicodeString @114 ; __fastcall Xmlbindpasgen::TPasCodeWriter::WriteCollItemProp(const System::UnicodeString)
+    @Xmlbindpasgen@TPasCodeWriter@WriteComment$qqrx17System@WideStringii @134 ; __fastcall Xmlbindpasgen::TPasCodeWriter::WriteComment(const System::WideString, int, int)
+    @Xmlbindpasgen@TPasCodeWriter@WriteDataMember$qqrx20System@UnicodeStringt1 @125 ; __fastcall Xmlbindpasgen::TPasCodeWriter::WriteDataMember(const System::UnicodeString, const System::UnicodeString)
+    @Xmlbindpasgen@TPasCodeWriter@WriteDataProperty$qqrx20System@UnicodeStringt1o @127 ; __fastcall Xmlbindpasgen::TPasCodeWriter::WriteDataProperty(const System::UnicodeString, const System::UnicodeString, bool)
+    @Xmlbindpasgen@TPasCodeWriter@WriteDeclComment$qqrx20System@UnicodeStringi @133 ; __fastcall Xmlbindpasgen::TPasCodeWriter::WriteDeclComment(const System::UnicodeString, int)
+    @Xmlbindpasgen@TPasCodeWriter@WriteFunction$qqrx20System@UnicodeStringt1i @131 ; __fastcall Xmlbindpasgen::TPasCodeWriter::WriteFunction(const System::UnicodeString, const System::UnicodeString, int)
+    @Xmlbindpasgen@TPasCodeWriter@WriteFunction$qqrx20System@UnicodeStringt1px20System@UnicodeStringxit3xii @130 ; __fastcall Xmlbindpasgen::TPasCodeWriter::WriteFunction(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString *, const int, const System::UnicodeString *, const int, int)
+    @Xmlbindpasgen@TPasCodeWriter@WriteGetBindFunc$qqrx20System@UnicodeStringt1 @123 ; __fastcall Xmlbindpasgen::TPasCodeWriter::WriteGetBindFunc(const System::UnicodeString, const System::UnicodeString)
+    @Xmlbindpasgen@TPasCodeWriter@WriteGetMethod$qqrx20System@UnicodeStringt1io @129 ; __fastcall Xmlbindpasgen::TPasCodeWriter::WriteGetMethod(const System::UnicodeString, const System::UnicodeString, int, bool)
+    @Xmlbindpasgen@TPasCodeWriter@WriteGuid$qqrv @118 ; __fastcall Xmlbindpasgen::TPasCodeWriter::WriteGuid()
+    @Xmlbindpasgen@TPasCodeWriter@WriteIntfDecl$qqrx20System@UnicodeStringt1 @119 ; __fastcall Xmlbindpasgen::TPasCodeWriter::WriteIntfDecl(const System::UnicodeString, const System::UnicodeString)
+    @Xmlbindpasgen@TPasCodeWriter@WriteLoadBindFunc$qqrx20System@UnicodeStringt1 @122 ; __fastcall Xmlbindpasgen::TPasCodeWriter::WriteLoadBindFunc(const System::UnicodeString, const System::UnicodeString)
+    @Xmlbindpasgen@TPasCodeWriter@WriteMethodBody$qqrx20System@UnicodeStringp14System@TVarRecxi @132 ; __fastcall Xmlbindpasgen::TPasCodeWriter::WriteMethodBody(const System::UnicodeString, System::TVarRec *, const int)
+    @Xmlbindpasgen@TPasCodeWriter@WriteNewBindFunc$qqrx20System@UnicodeStringt1 @121 ; __fastcall Xmlbindpasgen::TPasCodeWriter::WriteNewBindFunc(const System::UnicodeString, const System::UnicodeString)
+    @Xmlbindpasgen@TPasCodeWriter@WriteProperty$qqrx20System@UnicodeStringt1oo @126 ; __fastcall Xmlbindpasgen::TPasCodeWriter::WriteProperty(const System::UnicodeString, const System::UnicodeString, bool, bool)
+    @Xmlbindpasgen@TPasCodeWriter@WriteRegisterChildNode$qqrx20System@UnicodeStringt1 @113 ; __fastcall Xmlbindpasgen::TPasCodeWriter::WriteRegisterChildNode(const System::UnicodeString, const System::UnicodeString)
+    @Xmlbindpasgen@TPasCodeWriter@WriteSetMethod$qqrx20System@UnicodeStringt1io @128 ; __fastcall Xmlbindpasgen::TPasCodeWriter::WriteSetMethod(const System::UnicodeString, const System::UnicodeString, int, bool)
+    @Xmlbindpasgen@TPasGlobalDecl@ @140 ; Xmlbindpasgen::TPasGlobalDecl::
+    @Xmlbindpasgen@TPasGlobalDecl@Generate$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @79  ; Xmlbindpasgen::TPasGlobalDecl::Generate(const System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasGlobalDecl@GenerateGetBinding$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @78  ; Xmlbindpasgen::TPasGlobalDecl::GenerateGetBinding(const System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasGlobalDecl@GenerateLoadBinding$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @77  ; Xmlbindpasgen::TPasGlobalDecl::GenerateLoadBinding(const System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasGlobalDecl@GenerateNewBinding$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @76  ; Xmlbindpasgen::TPasGlobalDecl::GenerateNewBinding(const System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasGlobalImpl@ @138 ; Xmlbindpasgen::TPasGlobalImpl::
+    @Xmlbindpasgen@TPasGlobalImpl@GenerateGetBinding$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @75  ; Xmlbindpasgen::TPasGlobalImpl::GenerateGetBinding(const System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasGlobalImpl@GenerateLoadBinding$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @74  ; Xmlbindpasgen::TPasGlobalImpl::GenerateLoadBinding(const System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasGlobalImpl@GenerateNewBinding$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @73  ; Xmlbindpasgen::TPasGlobalImpl::GenerateNewBinding(const System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasIntfDecl@   @148 ; Xmlbindpasgen::TPasIntfDecl::
+    @Xmlbindpasgen@TPasIntfDecl@WriteDecl$qqrv @95  ; __fastcall Xmlbindpasgen::TPasIntfDecl::WriteDecl()
+    @Xmlbindpasgen@TPasIntfDecl@WriteListBinding$qqrx57System@%DelphiInterface$30Xmlbindmgr@IXMLDataTypeBinding% @93  ; Xmlbindpasgen::TPasIntfDecl::WriteListBinding(const System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasIntfDecl@WriteProperty$qqrx57System@%DelphiInterface$30Xmlbindmgr@IXMLPropertyBinding%xo @94  ; Xmlbindpasgen::TPasIntfDecl::WriteProperty(const System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasIntfForward@ @150 ; Xmlbindpasgen::TPasIntfForward::
+    @Xmlbindpasgen@TPasIntfForward@Generate$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @96  ; Xmlbindpasgen::TPasIntfForward::Generate(const System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasIntfSectionEntry@ @152 ; Xmlbindpasgen::TPasIntfSectionEntry::
+    @Xmlbindpasgen@TPasIntfSectionEntry@Generate$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @99  ; Xmlbindpasgen::TPasIntfSectionEntry::Generate(const System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasIntfSectionEntry@WriteDecl$qqrv @98  ; __fastcall Xmlbindpasgen::TPasIntfSectionEntry::WriteDecl()
+    @Xmlbindpasgen@TPasIntfSectionEntry@WriteEnd$qqrv @97  ; __fastcall Xmlbindpasgen::TPasIntfSectionEntry::WriteEnd()
+    @Xmlbindpasgen@TPasPropertyContainer@ @154 ; Xmlbindpasgen::TPasPropertyContainer::
+    @Xmlbindpasgen@TPasPropertyContainer@$bdtr$qqrv @111 ; __fastcall Xmlbindpasgen::TPasPropertyContainer::~TPasPropertyContainer()
+    @Xmlbindpasgen@TPasPropertyContainer@AppendCode$qqrpxp28Xmlbindpasgen@TPasCodeWriterxi @109 ; __fastcall Xmlbindpasgen::TPasPropertyContainer::AppendCode(Xmlbindpasgen::TPasCodeWriter * const *, const int)
+    @Xmlbindpasgen@TPasPropertyContainer@AppendCode$qqrv @108 ; __fastcall Xmlbindpasgen::TPasPropertyContainer::AppendCode()
+    @Xmlbindpasgen@TPasPropertyContainer@Generate$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @110 ; Xmlbindpasgen::TPasPropertyContainer::Generate(const System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasPropertyContainer@InitCodeWriters$qqrppp28Xmlbindpasgen@TPasCodeWriterxip20System@UnicodeStringxi @107 ; __fastcall Xmlbindpasgen::TPasPropertyContainer::InitCodeWriters(Xmlbindpasgen::TPasCodeWriter * * *, const int, System::UnicodeString *, const int)
+    @Xmlbindpasgen@TPasPropertyContainer@WriteCollAdd$qqrp28Xmlbindpasgen@TPasCodeWriter57System@%DelphiInterface$30Xmlbindmgr@IXMLDataTypeBinding%i @103 ; Xmlbindpasgen::TPasPropertyContainer::WriteCollAdd(Xmlbindpasgen::TPasCodeWriter *, System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasPropertyContainer@WriteCollInsert$qqrp28Xmlbindpasgen@TPasCodeWriter57System@%DelphiInterface$30Xmlbindmgr@IXMLDataTypeBinding%i @102 ; Xmlbindpasgen::TPasPropertyContainer::WriteCollInsert(Xmlbindpasgen::TPasCodeWriter *, System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasPropertyContainer@WriteCollectionMethods$qqrp28Xmlbindpasgen@TPasCodeWriter57System@%DelphiInterface$30Xmlbindmgr@IXMLDataTypeBinding%i @104 ; Xmlbindpasgen::TPasPropertyContainer::WriteCollectionMethods(Xmlbindpasgen::TPasCodeWriter *, System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasPropertyContainer@WriteListBinding$qqrx57System@%DelphiInterface$30Xmlbindmgr@IXMLDataTypeBinding% @105 ; Xmlbindpasgen::TPasPropertyContainer::WriteListBinding(const System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasPropertyContainer@WriteMethods$qqrv @106 ; __fastcall Xmlbindpasgen::TPasPropertyContainer::WriteMethods()
+    @Xmlbindpasgen@TPasPropertyContainer@WriteProperties$qqrv @101 ; __fastcall Xmlbindpasgen::TPasPropertyContainer::WriteProperties()
+    @Xmlbindpasgen@TPasPropertyContainer@WriteProperty$qqrx57System@%DelphiInterface$30Xmlbindmgr@IXMLPropertyBinding%xo @100 ; Xmlbindpasgen::TPasPropertyContainer::WriteProperty(const System::DelphiInterface<{583}...
+    @Xmlbindpasgen@TPasTargetNSDecl@ @136 ; Xmlbindpasgen::TPasTargetNSDecl::
+    @Xmlbindpasgen@TPasTargetNSDecl@Generate$qqrx60System@%DelphiInterface$33Xmlbindmgr@IXMLComplexTypeBinding% @72  ; Xmlbindpasgen::TPasTargetNSDecl::Generate(const System::DelphiInterface<{583}...
+    @Xmlbindpasgen@_SForwardDecl   @162 ; Xmlbindpasgen::_SForwardDecl
+    @Xmlbindpasgen@_SGlobalFunctions @161 ; Xmlbindpasgen::_SGlobalFunctions
+    @Xmlbindpasgen@_SMethodsAndProps @163 ; Xmlbindpasgen::_SMethodsAndProps
+    @Xmlbindpasgen@_SPropertyAccessors @164 ; Xmlbindpasgen::_SPropertyAccessors
+    @Xmlbindpasgen@initialization$qqrv @70  ; __fastcall Xmlbindpasgen::initialization()
+    Finalize                       @944 ; Finalize
+    Initialize                     @945 ; Initialize

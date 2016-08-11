@@ -1,0 +1,53 @@
+LIBRARY     VCLDSNAP210.BPL
+
+DESCRIPTION 'mbarcadero Vcl DataSnap Components'
+
+EXPORTS
+    @$xp$28Vcl@Recerror@Vcl_Recerror__1 @20  ; __tpdsc__ Vcl::Recerror::Vcl_Recerror__1
+    @$xp$28Vcl@Recerror@Vcl_Recerror__2 @18  ; __tpdsc__ Vcl::Recerror::Vcl_Recerror__2
+    @$xp$32Vcl@Recerror@TReconcileErrorForm @15  ; __tpdsc__ Vcl::Recerror::TReconcileErrorForm
+    @$xp$36Vcl@Dbclientactns@TClientDataSetUndo @34  ; __tpdsc__ Vcl::Dbclientactns::TClientDataSetUndo
+    @$xp$37Vcl@Dbclientactns@TClientDataSetApply @38  ; __tpdsc__ Vcl::Dbclientactns::TClientDataSetApply
+    @$xp$38Vcl@Dbclientactns@TClientDataSetRevert @36  ; __tpdsc__ Vcl::Dbclientactns::TClientDataSetRevert
+    @$xp$38Vcl@Dbclientactns@TReconcileActionLink @40  ; __tpdsc__ Vcl::Dbclientactns::TReconcileActionLink
+    @GetPackageInfoTable           @48  ; GetPackageInfoTable
+    @Vcl@Dbclientactns@Finalization$qqrv @22  ; __fastcall Vcl::Dbclientactns::Finalization()
+    @Vcl@Dbclientactns@TClientDataSetApply@ @39  ; Vcl::Dbclientactns::TClientDataSetApply::
+    @Vcl@Dbclientactns@TClientDataSetApply@$bctr$qqrp25System@Classes@TComponent @33  ; __fastcall Vcl::Dbclientactns::TClientDataSetApply::TClientDataSetApply(System::Classes::TComponent *)
+    @Vcl@Dbclientactns@TClientDataSetApply@$bdtr$qqrv @32  ; __fastcall Vcl::Dbclientactns::TClientDataSetApply::~TClientDataSetApply()
+    @Vcl@Dbclientactns@TClientDataSetApply@DoReconcileError$qqrrx32Datasnap@Dbclient@TReconcileInfo @31  ; __fastcall Vcl::Dbclientactns::TClientDataSetApply::DoReconcileError(const Datasnap::Dbclient::TReconcileInfo&)
+    @Vcl@Dbclientactns@TClientDataSetApply@ExecuteTarget$qqrp14System@TObject @30  ; __fastcall Vcl::Dbclientactns::TClientDataSetApply::ExecuteTarget(System::TObject *)
+    @Vcl@Dbclientactns@TClientDataSetApply@SetDisplayErrorDlg$qqrxo @29  ; __fastcall Vcl::Dbclientactns::TClientDataSetApply::SetDisplayErrorDlg(const bool)
+    @Vcl@Dbclientactns@TClientDataSetApply@UpdateTarget$qqrp14System@TObject @28  ; __fastcall Vcl::Dbclientactns::TClientDataSetApply::UpdateTarget(System::TObject *)
+    @Vcl@Dbclientactns@TClientDataSetRevert@ @37  ; Vcl::Dbclientactns::TClientDataSetRevert::
+    @Vcl@Dbclientactns@TClientDataSetRevert@ExecuteTarget$qqrp14System@TObject @27  ; __fastcall Vcl::Dbclientactns::TClientDataSetRevert::ExecuteTarget(System::TObject *)
+    @Vcl@Dbclientactns@TClientDataSetRevert@UpdateTarget$qqrp14System@TObject @26  ; __fastcall Vcl::Dbclientactns::TClientDataSetRevert::UpdateTarget(System::TObject *)
+    @Vcl@Dbclientactns@TClientDataSetUndo@ @35  ; Vcl::Dbclientactns::TClientDataSetUndo::
+    @Vcl@Dbclientactns@TClientDataSetUndo@ExecuteTarget$qqrp14System@TObject @25  ; __fastcall Vcl::Dbclientactns::TClientDataSetUndo::ExecuteTarget(System::TObject *)
+    @Vcl@Dbclientactns@TClientDataSetUndo@UpdateTarget$qqrp14System@TObject @24  ; __fastcall Vcl::Dbclientactns::TClientDataSetUndo::UpdateTarget(System::TObject *)
+    @Vcl@Dbclientactns@TReconcileActionLink@ @41  ; Vcl::Dbclientactns::TReconcileActionLink::
+    @Vcl@Dbclientactns@TReconcileActionLink@DataEvent$qqr18Data@Db@TDataEventi @23  ; __fastcall Vcl::Dbclientactns::TReconcileActionLink::DataEvent(Data::Db::TDataEvent, int)
+    @Vcl@Dbclientactns@initialization$qqrv @21  ; __fastcall Vcl::Dbclientactns::initialization()
+    @Vcl@Recerror@ActionStr        @19  ; Vcl::Recerror::ActionStr
+    @Vcl@Recerror@Finalization$qqrv @2   ; __fastcall Vcl::Recerror::Finalization()
+    @Vcl@Recerror@HandleReconcileError$qqrp16Data@Db@TDataSet19Data@Db@TUpdateKindp33Datasnap@Dbclient@EReconcileError @14  ; __fastcall Vcl::Recerror::HandleReconcileError(Data::Db::TDataSet *, Data::Db::TUpdateKind, Datasnap::Dbclient::EReconcileError *)
+    @Vcl@Recerror@TReconcileErrorForm@ @16  ; Vcl::Recerror::TReconcileErrorForm::
+    @Vcl@Recerror@TReconcileErrorForm@$bctr$qqrp16Data@Db@TDataSet19Data@Db@TUpdateKindp33Datasnap@Dbclient@EReconcileError @13  ; __fastcall Vcl::Recerror::TReconcileErrorForm::TReconcileErrorForm(Data::Db::TDataSet *, Data::Db::TUpdateKind, Datasnap::Dbclient::EReconcileError *)
+    @Vcl@Recerror@TReconcileErrorForm@AdjustColumnWidths$qqrv @7   ; __fastcall Vcl::Recerror::TReconcileErrorForm::AdjustColumnWidths()
+    @Vcl@Recerror@TReconcileErrorForm@DisplayFieldValues$qqrp14System@TObject @9   ; __fastcall Vcl::Recerror::TReconcileErrorForm::DisplayFieldValues(System::TObject *)
+    @Vcl@Recerror@TReconcileErrorForm@FormCreate$qqrp14System@TObject @6   ; __fastcall Vcl::Recerror::TReconcileErrorForm::FormCreate(System::TObject *)
+    @Vcl@Recerror@TReconcileErrorForm@FormDestroy$qqrp14System@TObject @5   ; __fastcall Vcl::Recerror::TReconcileErrorForm::FormDestroy(System::TObject *)
+    @Vcl@Recerror@TReconcileErrorForm@InitDataFields$qqrv @12  ; __fastcall Vcl::Recerror::TReconcileErrorForm::InitDataFields()
+    @Vcl@Recerror@TReconcileErrorForm@InitReconcileActions$qqrv @10  ; __fastcall Vcl::Recerror::TReconcileErrorForm::InitReconcileActions()
+    @Vcl@Recerror@TReconcileErrorForm@InitUpdateData$qqro @11  ; __fastcall Vcl::Recerror::TReconcileErrorForm::InitUpdateData(bool)
+    @Vcl@Recerror@TReconcileErrorForm@SetFieldValues$qqrp16Data@Db@TDataSet @8   ; __fastcall Vcl::Recerror::TReconcileErrorForm::SetFieldValues(Data::Db::TDataSet *)
+    @Vcl@Recerror@TReconcileErrorForm@UpdateDataSelectCell$qqrp14System@TObjectiiro @3   ; __fastcall Vcl::Recerror::TReconcileErrorForm::UpdateDataSelectCell(System::TObject *, int, int, bool&)
+    @Vcl@Recerror@TReconcileErrorForm@UpdateDataSetEditText$qqrp14System@TObjectiix20System@UnicodeString @4   ; __fastcall Vcl::Recerror::TReconcileErrorForm::UpdateDataSetEditText(System::TObject *, int, int, const System::UnicodeString)
+    @Vcl@Recerror@UpdateKindStr    @17  ; Vcl::Recerror::UpdateKindStr
+    @Vcl@Recerror@initialization$qqrv @1   ; __fastcall Vcl::Recerror::initialization()
+    @Vcldsnap@@GetPackageInfoTable$qqrv @45  ; Vcldsnap::__linkproc__ __fastcall GetPackageInfoTable()
+    @Vcldsnap@@PackageLoad$qqrv    @44  ; Vcldsnap::__linkproc__ __fastcall PackageLoad()
+    @Vcldsnap@@PackageUnload$qqrv  @43  ; Vcldsnap::__linkproc__ __fastcall PackageUnload()
+    @Vcldsnap@initialization$qqrv  @42  ; __fastcall Vcldsnap::initialization()
+    Finalize                       @46  ; Finalize
+    Initialize                     @47  ; Initialize

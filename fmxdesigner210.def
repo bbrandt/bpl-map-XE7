@@ -1,0 +1,553 @@
+LIBRARY     FMXDESIGNER210.BPL
+
+DESCRIPTION 'MX Form designer and property and component editors'
+
+EXPORTS
+    @$xp$102System@Generics@Collections@%TCollectionNotifyEvent__1$44System@%DelphiInterface$17System@IInterface%% @219 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<System::DelphiInterface<{583}...
+    @$xp$106System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TItem$% @223 ; __tpdsc__ System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @$xp$111System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TItemArray$% @222 ; __tpdsc__ System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @$xp$112System@%TArray__1$91System@Generics@Collections@%TPair__2$5_GUID44System@%DelphiInterface$17System@IInterface%%% @228 ; __tpdsc__ System::TArray__1<System::Generics::Collections::TPair__2<_GUID, System::DelphiInterface<{583}...
+    @$xp$115System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TKeyCollection$% @210 ; __tpdsc__ System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @$xp$115System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TKeyEnumerator$% @212 ; __tpdsc__ System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @$xp$116System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TPairEnumerator$% @199 ; __tpdsc__ System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @$xp$117System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TValueCollection$% @201 ; __tpdsc__ System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @$xp$117System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TValueEnumerator$% @203 ; __tpdsc__ System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @$xp$138System@Generics@Collections@%TEnumerable__1$91System@Generics@Collections@%TPair__2$5_GUID44System@%DelphiInterface$17System@IInterface%%% @224 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<_GUID, System::DelphiInterface<{583}...
+    @$xp$138System@Generics@Collections@%TEnumerator__1$91System@Generics@Collections@%TPair__2$5_GUID44System@%DelphiInterface$17System@IInterface%%% @226 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<System::Generics::Collections::TPair__2<_GUID, System::DelphiInterface<{583}...
+    @$xp$21Fmxmenus@TMenuWrapper   @62  ; __tpdsc__ Fmxmenus::TMenuWrapper
+    @$xp$21Fmxsprigs@TFrameSprig   @309 ; __tpdsc__ Fmxsprigs::TFrameSprig
+    @$xp$22Fmxsurface@IFmxSurface  @282 ; __tpdsc__ Fmxsurface::IFmxSurface
+    @$xp$23Fmxsprigs@TControlSprig @321 ; __tpdsc__ Fmxsprigs::TControlSprig
+    @$xp$25Fmxmenus@TMainMenuWrapper @60  ; __tpdsc__ Fmxmenus::TMainMenuWrapper
+    @$xp$25Fmxmenus@TMenuItemWrapper @64  ; __tpdsc__ Fmxmenus::TMenuItemWrapper
+    @$xp$25Fmxsprigs@TControl3DSprig @319 ; __tpdsc__ Fmxsprigs::TControl3DSprig
+    @$xp$25Fmxsprigs@TFmxObjectSprig @323 ; __tpdsc__ Fmxsprigs::TFmxObjectSprig
+    @$xp$25Fmxsurface@IBorderPainter @284 ; __tpdsc__ Fmxsurface::IBorderPainter
+    @$xp$25Fmxsurface@IFmxObjectItem @283 ; __tpdsc__ Fmxsurface::IFmxObjectItem
+    @$xp$25Fmxsurface@TFmxIDEActions @280 ; __tpdsc__ Fmxsurface::TFmxIDEActions
+    @$xp$25System@%TArray__1$5_GUID% @218 ; __tpdsc__ System::TArray__1<_GUID>
+    @$xp$26Fmxmenus@TMenuItemsWrapper @66  ; __tpdsc__ Fmxmenus::TMenuItemsWrapper
+    @$xp$26Fmxmenus@TPopupMenuWrapper @58  ; __tpdsc__ Fmxmenus::TPopupMenuWrapper
+    @$xp$26Fmxsurface@IScrollableForm @285 ; __tpdsc__ Fmxsurface::IScrollableForm
+    @$xp$27Fmxformcontainer@TFormShape @508 ; __tpdsc__ Fmxformcontainer::TFormShape
+    @$xp$28Fmxeditors@ICustomDesignForm @86  ; __tpdsc__ Fmxeditors::ICustomDesignForm
+    @$xp$28Fmxservices@Ios@TIOSPlatform @246 ; __tpdsc__ Fmxservices::Ios::TIOSPlatform
+    @$xp$28Fmxservices@Mac@TMacPlatform @527 ; __tpdsc__ Fmxservices::Mac::TMacPlatform
+    @$xp$28Fmxsurface@TVclInteropHelper @278 ; __tpdsc__ Fmxsurface::TVclInteropHelper
+    @$xp$29Fmxformcontainer@TAnchorPoint @507 ; __tpdsc__ Fmxformcontainer::TAnchorPoint
+    @$xp$29Fmxsprigs@TCustomLayer3DSprig @317 ; __tpdsc__ Fmxsprigs::TCustomLayer3DSprig
+    @$xp$30Fmxeditors@TForceOnClickEditor @83  ; __tpdsc__ Fmxeditors::TForceOnClickEditor
+    @$xp$30Fmxformcontainer@TControlSizer @510 ; __tpdsc__ Fmxformcontainer::TControlSizer
+    @$xp$30Fmxformcontainer@TFormBoundary @512 ; __tpdsc__ Fmxformcontainer::TFormBoundary
+    @$xp$30Fmxsprigs@TDataModuleRootSprig @311 ; __tpdsc__ Fmxsprigs::TDataModuleRootSprig
+    @$xp$30Fmxsprigs@TFmxControlRootSprig @315 ; __tpdsc__ Fmxsprigs::TFmxControlRootSprig
+    @$xp$31Fmxeditors@TForceOnSwitchEditor @81  ; __tpdsc__ Fmxeditors::TForceOnSwitchEditor
+    @$xp$31Fmxformcontainer@TSizeDimension @515 ; __tpdsc__ Fmxformcontainer::TSizeDimension
+    @$xp$32Fmxformcontainer@TSizeDimensions @514 ; __tpdsc__ Fmxformcontainer::TSizeDimensions
+    @$xp$32Fmxformcontainer@TVirtualDisplay @505 ; __tpdsc__ Fmxformcontainer::TVirtualDisplay
+    @$xp$32Fmxwidgetdesignform@TControlForm @110 ; __tpdsc__ Fmxwidgetdesignform::TControlForm
+    @$xp$33Fmxdesignwindows@TFmxDesignWindow @350 ; __tpdsc__ Fmxdesignwindows::TFmxDesignWindow
+    @$xp$35Fmxformcontainer@TFormContainerForm @503 ; __tpdsc__ Fmxformcontainer::TFormContainerForm
+    @$xp$35Fmxservices@TDesignPlatformServices @230 ; __tpdsc__ Fmxservices::TDesignPlatformServices
+    @$xp$36Fmxeditors@IEditHandlerDelegateTrait @85  ; __tpdsc__ Fmxeditors::IEditHandlerDelegateTrait
+    @$xp$36Fmxservices@Android@TAndroidPlatform @540 ; __tpdsc__ Fmxservices::Android::TAndroidPlatform
+    @$xp$36Fmxsprigs@TCommonCustomFormRootSprig @313 ; __tpdsc__ Fmxsprigs::TCommonCustomFormRootSprig
+    @$xp$38Fmxdevicedesignertypes@TDeviceFeatures @368 ; __tpdsc__ Fmxdevicedesignertypes::TDeviceFeatures
+    @$xp$38Fmxdevicedesignertypes@TDeviceSettings @371 ; __tpdsc__ Fmxdevicedesignertypes::TDeviceSettings
+    @$xp$40Fmxwidgetdesignform@TControlCustomModule @108 ; __tpdsc__ Fmxwidgetdesignform::TControlCustomModule
+    @$xp$41Fmxdevicedesignertypes@TDeviceNotifyEvent @365 ; __tpdsc__ Fmxdevicedesignertypes::TDeviceNotifyEvent
+    @$xp$41Fmxdevicedesignertypes@TOSVersionFeatures @366 ; __tpdsc__ Fmxdevicedesignertypes::TOSVersionFeatures
+    @$xp$41Fmxsurface@IFmxInternalComponentContainer @286 ; __tpdsc__ Fmxsurface::IFmxInternalComponentContainer
+    @$xp$42Fmxdevicedesignertypes@_TDeviceFeatures@_1 @370 ; __tpdsc__ Fmxdevicedesignertypes::_TDeviceFeatures::_1
+    @$xp$43Fmxformcontainer@TFmxCustomFormCustomModule @501 ; __tpdsc__ Fmxformcontainer::TFmxCustomFormCustomModule
+    @$xp$48Fmxdevicedesignertypes@Fmxdevicedesignertypes__1 @374 ; __tpdsc__ Fmxdevicedesignertypes::Fmxdevicedesignertypes__1
+    @$xp$51System@Generics@Collections@%TEnumerable__1$5_GUID% @214 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<_GUID>
+    @$xp$51System@Generics@Collections@%TEnumerator__1$5_GUID% @216 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<_GUID>
+    @$xp$54System@Generics@Defaults@%IEqualityComparer__1$5_GUID% @221 ; __tpdsc__ System::Generics::Defaults::IEqualityComparer__1<_GUID>
+    @$xp$62System@Generics@Collections@%TCollectionNotifyEvent__1$5_GUID% @220 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<_GUID>
+    @$xp$65System@%TArray__1$44System@%DelphiInterface$17System@IInterface%% @209 ; __tpdsc__ System::TArray__1<System::DelphiInterface<{583}...
+    @$xp$91System@Generics@Collections@%TEnumerable__1$44System@%DelphiInterface$17System@IInterface%% @205 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<System::DelphiInterface<{583}...
+    @$xp$91System@Generics@Collections@%TEnumerator__1$44System@%DelphiInterface$17System@IInterface%% @207 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<System::DelphiInterface<{583}...
+    @$xp$91System@Generics@Collections@%TPair__2$5_GUID44System@%DelphiInterface$17System@IInterface%% @229 ; __tpdsc__ System::Generics::Collections::TPair__2<_GUID, System::DelphiInterface<{583}...
+    @$xp$97System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%% @197 ; __tpdsc__ System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @Fmxdesigner@@GetPackageInfoTable$qqrv @545 ; Fmxdesigner::__linkproc__ __fastcall GetPackageInfoTable()
+    @Fmxdesigner@@PackageLoad$qqrv @544 ; Fmxdesigner::__linkproc__ __fastcall PackageLoad()
+    @Fmxdesigner@@PackageUnload$qqrv @543 ; Fmxdesigner::__linkproc__ __fastcall PackageUnload()
+    @Fmxdesigner@initialization$qqrv @542 ; __fastcall Fmxdesigner::initialization()
+    @Fmxdesignwindows@Finalization$qqrv @326 ; __fastcall Fmxdesignwindows::Finalization()
+    @Fmxdesignwindows@TFmxDesignWindow@ @351 ; Fmxdesignwindows::TFmxDesignWindow::
+    @Fmxdesignwindows@TFmxDesignWindow@$bctr$qqrp25System@Classes@TComponent @349 ; __fastcall Fmxdesignwindows::TFmxDesignWindow::TFmxDesignWindow(System::Classes::TComponent *)
+    @Fmxdesignwindows@TFmxDesignWindow@$bdtr$qqrv @348 ; __fastcall Fmxdesignwindows::TFmxDesignWindow::~TFmxDesignWindow()
+    @Fmxdesignwindows@TFmxDesignWindow@ActivateInspector$qqrb @346 ; __fastcall Fmxdesignwindows::TFmxDesignWindow::ActivateInspector(wchar_t)
+    @Fmxdesignwindows@TFmxDesignWindow@Activated$qqrv @347 ; __fastcall Fmxdesignwindows::TFmxDesignWindow::Activated()
+    @Fmxdesignwindows@TFmxDesignWindow@ClipboardComponents$qqrv @345 ; __fastcall Fmxdesignwindows::TFmxDesignWindow::ClipboardComponents()
+    @Fmxdesignwindows@TFmxDesignWindow@ComponentRead$qqrp25System@Classes@TComponent @338 ; __fastcall Fmxdesignwindows::TFmxDesignWindow::ComponentRead(System::Classes::TComponent *)
+    @Fmxdesignwindows@TFmxDesignWindow@CopyComponents$qqrp25System@Classes@TComponentx57System@%DelphiInterface$30Designintf@IDesignerSelections% @344 ; Fmxdesignwindows::TFmxDesignWindow::CopyComponents(System::Classes::TComponent *, const System::DelphiInterface<{583}...
+    @Fmxdesignwindows@TFmxDesignWindow@DesignerClosed$qqrx47System@%DelphiInterface$20Designintf@IDesigner%o @329 ; Fmxdesignwindows::TFmxDesignWindow::DesignerClosed(const System::DelphiInterface<{583}...
+    @Fmxdesignwindows@TFmxDesignWindow@DesignerOpened$qqrx47System@%DelphiInterface$20Designintf@IDesigner%o @328 ; Fmxdesignwindows::TFmxDesignWindow::DesignerOpened(const System::DelphiInterface<{583}...
+    @Fmxdesignwindows@TFmxDesignWindow@EditAction$qqr22Designintf@TEditAction @342 ; __fastcall Fmxdesignwindows::TFmxDesignWindow::EditAction(Designintf::TEditAction)
+    @Fmxdesignwindows@TFmxDesignWindow@ForceActive$qqrv @341 ; __fastcall Fmxdesignwindows::TFmxDesignWindow::ForceActive()
+    @Fmxdesignwindows@TFmxDesignWindow@GetEditState$qqrv @343 ; __fastcall Fmxdesignwindows::TFmxDesignWindow::GetEditState()
+    @Fmxdesignwindows@TFmxDesignWindow@ItemDeleted$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p26System@Classes@TPersistent @331 ; Fmxdesignwindows::TFmxDesignWindow::ItemDeleted(const System::DelphiInterface<{583}...
+    @Fmxdesignwindows@TFmxDesignWindow@ItemInserted$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p26System@Classes@TPersistent @330 ; Fmxdesignwindows::TFmxDesignWindow::ItemInserted(const System::DelphiInterface<{583}...
+    @Fmxdesignwindows@TFmxDesignWindow@ItemsModified$qqrx47System@%DelphiInterface$20Designintf@IDesigner% @327 ; Fmxdesignwindows::TFmxDesignWindow::ItemsModified(const System::DelphiInterface<{583}...
+    @Fmxdesignwindows@TFmxDesignWindow@PasteComponents$qqrp25System@Classes@TComponentt1x57System@%DelphiInterface$30Designintf@IDesignerSelections% @336 ; Fmxdesignwindows::TFmxDesignWindow::PasteComponents(System::Classes::TComponent *, System::Classes::TComponent *, const System::DelphiInterface<{583}...
+    @Fmxdesignwindows@TFmxDesignWindow@ReaderSetName$qqrp22System@Classes@TReaderp25System@Classes@TComponentr20System@UnicodeString @337 ; __fastcall Fmxdesignwindows::TFmxDesignWindow::ReaderSetName(System::Classes::TReader *, System::Classes::TComponent *, System::UnicodeString&)
+    @Fmxdesignwindows@TFmxDesignWindow@SelectionChanged$qqrx47System@%DelphiInterface$20Designintf@IDesigner%x57System@%DelphiInterface$30Designintf@IDesignerSelections% @335 ; Fmxdesignwindows::TFmxDesignWindow::SelectionChanged(const System::DelphiInterface<{583}...
+    @Fmxdesignwindows@TFmxDesignWindow@SetDesigner$qqrx47System@%DelphiInterface$20Designintf@IDesigner% @334 ; Fmxdesignwindows::TFmxDesignWindow::SetDesigner(const System::DelphiInterface<{583}...
+    @Fmxdesignwindows@TFmxDesignWindow@SetSelection$qqrx57System@%DelphiInterface$30Designintf@IDesignerSelections% @333 ; Fmxdesignwindows::TFmxDesignWindow::SetSelection(const System::DelphiInterface<{583}...
+    @Fmxdesignwindows@TFmxDesignWindow@UniqueName$qqrp25System@Classes@TComponent @332 ; __fastcall Fmxdesignwindows::TFmxDesignWindow::UniqueName(System::Classes::TComponent *)
+    @Fmxdesignwindows@TFmxDesignWindow@WindowHide$qqrv @340 ; __fastcall Fmxdesignwindows::TFmxDesignWindow::WindowHide()
+    @Fmxdesignwindows@TFmxDesignWindow@WindowShow$qqrv @339 ; __fastcall Fmxdesignwindows::TFmxDesignWindow::WindowShow()
+    @Fmxdesignwindows@initialization$qqrv @325 ; __fastcall Fmxdesignwindows::initialization()
+    @Fmxdevicedesignertypes@Finalization$qqrv @353 ; __fastcall Fmxdevicedesignertypes::Finalization()
+    @Fmxdevicedesignertypes@TDeviceFeatures@ @369 ; Fmxdevicedesignertypes::TDeviceFeatures::
+    @Fmxdevicedesignertypes@TDeviceFeatures@$bctr$qqrx20System@UnicodeString @364 ; __fastcall Fmxdevicedesignertypes::TDeviceFeatures::TDeviceFeatures(const System::UnicodeString)
+    @Fmxdevicedesignertypes@TDeviceFeatures@GetDeviceLayout$qqr33Platformapi@TOTADeviceOrientation @363 ; __fastcall Fmxdevicedesignertypes::TDeviceFeatures::GetDeviceLayout(Platformapi::TOTADeviceOrientation)
+    @Fmxdevicedesignertypes@TDeviceFeatures@SetDeviceLayout$qqr33Platformapi@TOTADeviceOrientationrx28Platformapi@TOTADeviceLayout @362 ; __fastcall Fmxdevicedesignertypes::TDeviceFeatures::SetDeviceLayout(Platformapi::TOTADeviceOrientation, const Platformapi::TOTADeviceLayout&)
+    @Fmxdevicedesignertypes@TDeviceFeatures@SetFormFactor$qqrx32Platformapi@TOTADeviceFormFactor @360 ; __fastcall Fmxdevicedesignertypes::TDeviceFeatures::SetFormFactor(const Platformapi::TOTADeviceFormFactor)
+    @Fmxdevicedesignertypes@TDeviceFeatures@SetListOrder$qqrxi @359 ; __fastcall Fmxdevicedesignertypes::TDeviceFeatures::SetListOrder(const int)
+    @Fmxdevicedesignertypes@TDeviceFeatures@SetModified$qqrxo @358 ; __fastcall Fmxdevicedesignertypes::TDeviceFeatures::SetModified(const bool)
+    @Fmxdevicedesignertypes@TDeviceFeatures@SetOSFamily$qqrx24Platformapi@TOTAOSFamily @361 ; __fastcall Fmxdevicedesignertypes::TDeviceFeatures::SetOSFamily(const Platformapi::TOTAOSFamily)
+    @Fmxdevicedesignertypes@TDeviceFeatures@SetOSVersion$qqrx20System@UnicodeString @357 ; __fastcall Fmxdevicedesignertypes::TDeviceFeatures::SetOSVersion(const System::UnicodeString)
+    @Fmxdevicedesignertypes@TDeviceFeatures@SetThumbnail$qqrx20System@UnicodeString @356 ; __fastcall Fmxdevicedesignertypes::TDeviceFeatures::SetThumbnail(const System::UnicodeString)
+    @Fmxdevicedesignertypes@TDeviceSettings@ @372 ; Fmxdevicedesignertypes::TDeviceSettings::
+    @Fmxdevicedesignertypes@TDeviceSettings@$bctr$qqrv @355 ; __fastcall Fmxdevicedesignertypes::TDeviceSettings::TDeviceSettings()
+    @Fmxdevicedesignertypes@TOSVersionFeatures@ @367 ; Fmxdevicedesignertypes::TOSVersionFeatures::
+    @Fmxdevicedesignertypes@TOSVersionFeatures@$bctr$qqrx20System@UnicodeString24Platformapi@TOTAOSFamily @354 ; __fastcall Fmxdevicedesignertypes::TOSVersionFeatures::TOSVersionFeatures(const System::UnicodeString, Platformapi::TOTAOSFamily)
+    @Fmxdevicedesignertypes@_sAndroidPlatformName @376 ; Fmxdevicedesignertypes::_sAndroidPlatformName
+    @Fmxdevicedesignertypes@_sDesktopFormFactor @383 ; Fmxdevicedesignertypes::_sDesktopFormFactor
+    @Fmxdevicedesignertypes@_sFullScreenFormFactor @382 ; Fmxdevicedesignertypes::_sFullScreenFormFactor
+    @Fmxdevicedesignertypes@_sLinuxPlatformName @375 ; Fmxdevicedesignertypes::_sLinuxPlatformName
+    @Fmxdevicedesignertypes@_sOSXPlatformName @378 ; Fmxdevicedesignertypes::_sOSXPlatformName
+    @Fmxdevicedesignertypes@_sPhoneFormFactor @381 ; Fmxdevicedesignertypes::_sPhoneFormFactor
+    @Fmxdevicedesignertypes@_sTabletFormFactor @380 ; Fmxdevicedesignertypes::_sTabletFormFactor
+    @Fmxdevicedesignertypes@_sWindowsPlatformName @379 ; Fmxdevicedesignertypes::_sWindowsPlatformName
+    @Fmxdevicedesignertypes@_siOSPlatformName @377 ; Fmxdevicedesignertypes::_siOSPlatformName
+    @Fmxdevicedesignertypes@initialization$qqrv @352 ; __fastcall Fmxdevicedesignertypes::initialization()
+    @Fmxdevicedesignertypes@sDeviceFormFactors @373 ; Fmxdevicedesignertypes::sDeviceFormFactors
+    @Fmxeditors@CF_COMPONENT       @79  ; Fmxeditors::CF_COMPONENT
+    @Fmxeditors@CF_COMPONENTS      @80  ; Fmxeditors::CF_COMPONENTS
+    @Fmxeditors@CopyStreamToClipboard$qqrp28System@Classes@TMemoryStream @75  ; __fastcall Fmxeditors::CopyStreamToClipboard(System::Classes::TMemoryStream *)
+    @Fmxeditors@DefaultPropertyDrawName$qqrp29Designeditors@TPropertyEditorp20Fmx@Graphics@TCanvasrx19System@Types@TRectF @78  ; __fastcall Fmxeditors::DefaultPropertyDrawName(Designeditors::TPropertyEditor *, Fmx::Graphics::TCanvas *, const System::Types::TRectF&)
+    @Fmxeditors@DefaultPropertyDrawValue$qqrp29Designeditors@TPropertyEditorp20Fmx@Graphics@TCanvasrx19System@Types@TRectF @77  ; __fastcall Fmxeditors::DefaultPropertyDrawValue(Designeditors::TPropertyEditor *, Fmx::Graphics::TCanvas *, const System::Types::TRectF&)
+    @Fmxeditors@DefaultPropertyListDrawValue$qqrx20System@UnicodeStringp20Fmx@Graphics@TCanvasrx19System@Types@TRectFo @76  ; __fastcall Fmxeditors::DefaultPropertyListDrawValue(const System::UnicodeString, Fmx::Graphics::TCanvas *, const System::Types::TRectF&, bool)
+    @Fmxeditors@Finalization$qqrv  @69  ; __fastcall Fmxeditors::Finalization()
+    @Fmxeditors@GetClipboardStream$qqrv @74  ; __fastcall Fmxeditors::GetClipboardStream()
+    @Fmxeditors@TForceOnClickEditor@ @84  ; Fmxeditors::TForceOnClickEditor::
+    @Fmxeditors@TForceOnClickEditor@CheckEdit$qqrx47System@%DelphiInterface$20Designintf@IProperty% @73  ; Fmxeditors::TForceOnClickEditor::CheckEdit(const System::DelphiInterface<{583}...
+    @Fmxeditors@TForceOnClickEditor@Edit$qqrv @72  ; __fastcall Fmxeditors::TForceOnClickEditor::Edit()
+    @Fmxeditors@TForceOnSwitchEditor@ @82  ; Fmxeditors::TForceOnSwitchEditor::
+    @Fmxeditors@TForceOnSwitchEditor@CheckEdit$qqrx47System@%DelphiInterface$20Designintf@IProperty% @71  ; Fmxeditors::TForceOnSwitchEditor::CheckEdit(const System::DelphiInterface<{583}...
+    @Fmxeditors@TForceOnSwitchEditor@Edit$qqrv @70  ; __fastcall Fmxeditors::TForceOnSwitchEditor::Edit()
+    @Fmxeditors@initialization$qqrv @68  ; __fastcall Fmxeditors::initialization()
+    @Fmxformcontainer@Finalization$qqrv @385 ; __fastcall Fmxformcontainer::Finalization()
+    @Fmxformcontainer@FmxControlCreateDesignerForm$qqrp27Designeditors@TCustomModulex47System@%DelphiInterface$20Designintf@IDesigner%p25System@Classes@TComponentr47System@%DelphiInterface$20Designintf@IHostForm%rp20Fmx@Types@TFmxObject @388 ; Fmxformcontainer::FmxControlCreateDesignerForm(Designeditors::TCustomModule *, const System::DelphiInterface<{583}...
+    @Fmxformcontainer@IDERegister$qqrv @500 ; __fastcall Fmxformcontainer::IDERegister()
+    @Fmxformcontainer@TControlSizer@ @511 ; Fmxformcontainer::TControlSizer::
+    @Fmxformcontainer@TControlSizer@$bctr$qqrp25System@Classes@TComponent @456 ; __fastcall Fmxformcontainer::TControlSizer::TControlSizer(System::Classes::TComponent *)
+    @Fmxformcontainer@TControlSizer@$bdtr$qqrv @455 ; __fastcall Fmxformcontainer::TControlSizer::~TControlSizer()
+    @Fmxformcontainer@TControlSizer@ApplyBorderStyle$qqrv @434 ; __fastcall Fmxformcontainer::TControlSizer::ApplyBorderStyle()
+    @Fmxformcontainer@TControlSizer@Changed$qqrv @453 ; __fastcall Fmxformcontainer::TControlSizer::Changed()
+    @Fmxformcontainer@TControlSizer@ControlWndProc$qqrr24Winapi@Messages@TMessage @452 ; __fastcall Fmxformcontainer::TControlSizer::ControlWndProc(Winapi::Messages::TMessage&)
+    @Fmxformcontainer@TControlSizer@GetDeviceName$qqrv @451 ; __fastcall Fmxformcontainer::TControlSizer::GetDeviceName()
+    @Fmxformcontainer@TControlSizer@GetHasFixedSize$qqrv @450 ; __fastcall Fmxformcontainer::TControlSizer::GetHasFixedSize()
+    @Fmxformcontainer@TControlSizer@GetIsView$qqrv @448 ; __fastcall Fmxformcontainer::TControlSizer::GetIsView()
+    @Fmxformcontainer@TControlSizer@GetMasterStyle$qqrv @447 ; __fastcall Fmxformcontainer::TControlSizer::GetMasterStyle()
+    @Fmxformcontainer@TControlSizer@GetOSFamily$qqrv @449 ; __fastcall Fmxformcontainer::TControlSizer::GetOSFamily()
+    @Fmxformcontainer@TControlSizer@GetSizeDimension$qqrff @446 ; __fastcall Fmxformcontainer::TControlSizer::GetSizeDimension(float, float)
+    @Fmxformcontainer@TControlSizer@LoadBackground$qqrv @424 ; __fastcall Fmxformcontainer::TControlSizer::LoadBackground()
+    @Fmxformcontainer@TControlSizer@LoadEncryptedImage$qqrp20Fmx@Graphics@TBitmap20System@UnicodeString @454 ; __fastcall Fmxformcontainer::TControlSizer::LoadEncryptedImage(Fmx::Graphics::TBitmap *, System::UnicodeString)
+    @Fmxformcontainer@TControlSizer@MouseDown$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ff @445 ; Fmxformcontainer::TControlSizer::MouseDown(System::Uitypes::TMouseButton, System::Set<{583}...
+    @Fmxformcontainer@TControlSizer@MouseMove$qqr60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ff @444 ; Fmxformcontainer::TControlSizer::MouseMove(System::Set<{583}...
+    @Fmxformcontainer@TControlSizer@MouseUp$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ff @443 ; Fmxformcontainer::TControlSizer::MouseUp(System::Uitypes::TMouseButton, System::Set<{583}...
+    @Fmxformcontainer@TControlSizer@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @442 ; __fastcall Fmxformcontainer::TControlSizer::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Fmxformcontainer@TControlSizer@Paint$qqrv @437 ; __fastcall Fmxformcontainer::TControlSizer::Paint()
+    @Fmxformcontainer@TControlSizer@PaintBlackFrame$qqrv @438 ; __fastcall Fmxformcontainer::TControlSizer::PaintBlackFrame()
+    @Fmxformcontainer@TControlSizer@PaintCustomDevice$qqrv @439 ; __fastcall Fmxformcontainer::TControlSizer::PaintCustomDevice()
+    @Fmxformcontainer@TControlSizer@PaintDevice$qqrv @441 ; __fastcall Fmxformcontainer::TControlSizer::PaintDevice()
+    @Fmxformcontainer@TControlSizer@PaintThinFrame$qqrv @440 ; __fastcall Fmxformcontainer::TControlSizer::PaintThinFrame()
+    @Fmxformcontainer@TControlSizer@Resize$qqrv @436 ; __fastcall Fmxformcontainer::TControlSizer::Resize()
+    @Fmxformcontainer@TControlSizer@ResizeContainer$qqrv @433 ; __fastcall Fmxformcontainer::TControlSizer::ResizeContainer()
+    @Fmxformcontainer@TControlSizer@ResizeControl$qqrv @432 ; __fastcall Fmxformcontainer::TControlSizer::ResizeControl()
+    @Fmxformcontainer@TControlSizer@ResizeDeviceStatusBar$qqrv @435 ; __fastcall Fmxformcontainer::TControlSizer::ResizeDeviceStatusBar()
+    @Fmxformcontainer@TControlSizer@Rotate$qqrv @431 ; __fastcall Fmxformcontainer::TControlSizer::Rotate()
+    @Fmxformcontainer@TControlSizer@SetControl$qqrp20Fmx@Types@TFmxObject @429 ; __fastcall Fmxformcontainer::TControlSizer::SetControl(Fmx::Types::TFmxObject *)
+    @Fmxformcontainer@TControlSizer@SetDeviceFeatures$qqrp38Fmxdevicedesignertypes@TDeviceFeatures @423 ; __fastcall Fmxformcontainer::TControlSizer::SetDeviceFeatures(Fmxdevicedesignertypes::TDeviceFeatures *)
+    @Fmxformcontainer@TControlSizer@SetDeviceSettings$qqrxp38Fmxdevicedesignertypes@TDeviceSettings @422 ; __fastcall Fmxformcontainer::TControlSizer::SetDeviceSettings(Fmxdevicedesignertypes::TDeviceSettings * const)
+    @Fmxformcontainer@TControlSizer@SetLocked$qqro @428 ; __fastcall Fmxformcontainer::TControlSizer::SetLocked(bool)
+    @Fmxformcontainer@TControlSizer@SetMasterStyle$qqr24Platformapi@TOTAOSFamily @430 ; __fastcall Fmxformcontainer::TControlSizer::SetMasterStyle(Platformapi::TOTAOSFamily)
+    @Fmxformcontainer@TControlSizer@SetOnSizerClick$qqrxynpqqrp14System@TObject$v @427 ; __fastcall Fmxformcontainer::TControlSizer::SetOnSizerClick(void __fastcall __closure(*)(System::TObject *) const)
+    @Fmxformcontainer@TControlSizer@SetShowSizer$qqro @426 ; __fastcall Fmxformcontainer::TControlSizer::SetShowSizer(bool)
+    @Fmxformcontainer@TControlSizer@ToggleBackground$qqrv @425 ; __fastcall Fmxformcontainer::TControlSizer::ToggleBackground()
+    @Fmxformcontainer@TFmxCustomFormCustomModule@ @502 ; Fmxformcontainer::TFmxCustomFormCustomModule::
+    @Fmxformcontainer@TFmxCustomFormCustomModule@CreateDesignerForm$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p25System@Classes@TComponentr47System@%DelphiInterface$20Designintf@IHostForm%rp20Fmx@Types@TFmxObject @387 ; Fmxformcontainer::TFmxCustomFormCustomModule::CreateDesignerForm(const System::DelphiInterface<{583}...
+    @Fmxformcontainer@TFmxCustomFormCustomModule@GetAttributes$qqrv @386 ; __fastcall Fmxformcontainer::TFmxCustomFormCustomModule::GetAttributes()
+    @Fmxformcontainer@TFormBoundary@ @513 ; Fmxformcontainer::TFormBoundary::
+    @Fmxformcontainer@TFormBoundary@$bctr$qqrp25System@Classes@TComponent @397 ; __fastcall Fmxformcontainer::TFormBoundary::TFormBoundary(System::Classes::TComponent *)
+    @Fmxformcontainer@TFormBoundary@$bdtr$qqrv @396 ; __fastcall Fmxformcontainer::TFormBoundary::~TFormBoundary()
+    @Fmxformcontainer@TFormBoundary@GetBackgroundColor$qqrv @395 ; __fastcall Fmxformcontainer::TFormBoundary::GetBackgroundColor()
+    @Fmxformcontainer@TFormBoundary@GetDeviceName$qqrv @394 ; __fastcall Fmxformcontainer::TFormBoundary::GetDeviceName()
+    @Fmxformcontainer@TFormBoundary@GetHasFixedSize$qqrv @393 ; __fastcall Fmxformcontainer::TFormBoundary::GetHasFixedSize()
+    @Fmxformcontainer@TFormBoundary@GetIsView$qqrv @391 ; __fastcall Fmxformcontainer::TFormBoundary::GetIsView()
+    @Fmxformcontainer@TFormBoundary@GetMasterStyle$qqrv @390 ; __fastcall Fmxformcontainer::TFormBoundary::GetMasterStyle()
+    @Fmxformcontainer@TFormBoundary@GetOSFamily$qqrv @392 ; __fastcall Fmxformcontainer::TFormBoundary::GetOSFamily()
+    @Fmxformcontainer@TFormBoundary@ResizeClientArea$qqrv @402 ; __fastcall Fmxformcontainer::TFormBoundary::ResizeClientArea()
+    @Fmxformcontainer@TFormBoundary@Rotate$qqrv @401 ; __fastcall Fmxformcontainer::TFormBoundary::Rotate()
+    @Fmxformcontainer@TFormBoundary@SetBackgroundColor$qqrui @399 ; __fastcall Fmxformcontainer::TFormBoundary::SetBackgroundColor(unsigned int)
+    @Fmxformcontainer@TFormBoundary@SetMasterStyle$qqr24Platformapi@TOTAOSFamily @400 ; __fastcall Fmxformcontainer::TFormBoundary::SetMasterStyle(Platformapi::TOTAOSFamily)
+    @Fmxformcontainer@TFormBoundary@ToggleBackground$qqrv @398 ; __fastcall Fmxformcontainer::TFormBoundary::ToggleBackground()
+    @Fmxformcontainer@TFormBoundary@UpdateBorder$qqrv @389 ; __fastcall Fmxformcontainer::TFormBoundary::UpdateBorder()
+    @Fmxformcontainer@TFormContainerForm@ @504 ; Fmxformcontainer::TFormContainerForm::
+    @Fmxformcontainer@TFormContainerForm@$bctr$qqrx47System@%DelphiInterface$20Designintf@IDesigner%xp27Designeditors@TCustomModule @493 ; Fmxformcontainer::TFormContainerForm::TFormContainerForm(const System::DelphiInterface<{583}...
+    @Fmxformcontainer@TFormContainerForm@$bdtr$qqrv @489 ; __fastcall Fmxformcontainer::TFormContainerForm::~TFormContainerForm()
+    @Fmxformcontainer@TFormContainerForm@Activate$qqrv @490 ; __fastcall Fmxformcontainer::TFormContainerForm::Activate()
+    @Fmxformcontainer@TFormContainerForm@AdjustClientRect$qqrr18System@Types@TRect @499 ; __fastcall Fmxformcontainer::TFormContainerForm::AdjustClientRect(System::Types::TRect&)
+    @Fmxformcontainer@TFormContainerForm@AfterConstruction$qqrv @498 ; __fastcall Fmxformcontainer::TFormContainerForm::AfterConstruction()
+    @Fmxformcontainer@TFormContainerForm@ApplyDeviceFeatures$qqrv @497 ; __fastcall Fmxformcontainer::TFormContainerForm::ApplyDeviceFeatures()
+    @Fmxformcontainer@TFormContainerForm@ApplyStyleLookup$qqrv @496 ; __fastcall Fmxformcontainer::TFormContainerForm::ApplyStyleLookup()
+    @Fmxformcontainer@TFormContainerForm@CMZombieCommand$qqrr28Idemessages@TCMZombieCommand @457 ; __fastcall Fmxformcontainer::TFormContainerForm::CMZombieCommand(Idemessages::TCMZombieCommand&)
+    @Fmxformcontainer@TFormContainerForm@DesignerClosed$qqrx47System@%DelphiInterface$20Designintf@IDesigner%o @488 ; Fmxformcontainer::TFormContainerForm::DesignerClosed(const System::DelphiInterface<{583}...
+    @Fmxformcontainer@TFormContainerForm@DesignerOpened$qqrx47System@%DelphiInterface$20Designintf@IDesigner%o @487 ; Fmxformcontainer::TFormContainerForm::DesignerOpened(const System::DelphiInterface<{583}...
+    @Fmxformcontainer@TFormContainerForm@DoScrollChanged$qqrp14System@TObject @484 ; __fastcall Fmxformcontainer::TFormContainerForm::DoScrollChanged(System::TObject *)
+    @Fmxformcontainer@TFormContainerForm@GetBackgroundColor$qqrv @483 ; __fastcall Fmxformcontainer::TFormContainerForm::GetBackgroundColor()
+    @Fmxformcontainer@TFormContainerForm@GetDeviceName$qqrv @482 ; __fastcall Fmxformcontainer::TFormContainerForm::GetDeviceName()
+    @Fmxformcontainer@TFormContainerForm@GetFormWrapper$qqrv @480 ; __fastcall Fmxformcontainer::TFormContainerForm::GetFormWrapper()
+    @Fmxformcontainer@TFormContainerForm@GetHWND$qqrv @478 ; __fastcall Fmxformcontainer::TFormContainerForm::GetHWND()
+    @Fmxformcontainer@TFormContainerForm@GetHasFixedSize$qqrv @479 ; __fastcall Fmxformcontainer::TFormContainerForm::GetHasFixedSize()
+    @Fmxformcontainer@TFormContainerForm@GetIsView$qqrv @472 ; __fastcall Fmxformcontainer::TFormContainerForm::GetIsView()
+    @Fmxformcontainer@TFormContainerForm@GetMasterStyle$qqrv @471 ; __fastcall Fmxformcontainer::TFormContainerForm::GetMasterStyle()
+    @Fmxformcontainer@TFormContainerForm@GetOSFamily$qqrv @481 ; __fastcall Fmxformcontainer::TFormContainerForm::GetOSFamily()
+    @Fmxformcontainer@TFormContainerForm@GetViewName$qqrv @470 ; __fastcall Fmxformcontainer::TFormContainerForm::GetViewName()
+    @Fmxformcontainer@TFormContainerForm@ItemDeleted$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p26System@Classes@TPersistent @463 ; Fmxformcontainer::TFormContainerForm::ItemDeleted(const System::DelphiInterface<{583}...
+    @Fmxformcontainer@TFormContainerForm@ItemInserted$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p26System@Classes@TPersistent @462 ; Fmxformcontainer::TFormContainerForm::ItemInserted(const System::DelphiInterface<{583}...
+    @Fmxformcontainer@TFormContainerForm@ItemsModified$qqrx47System@%DelphiInterface$20Designintf@IDesigner% @461 ; Fmxformcontainer::TFormContainerForm::ItemsModified(const System::DelphiInterface<{583}...
+    @Fmxformcontainer@TFormContainerForm@MatchHostSize$qqro @474 ; __fastcall Fmxformcontainer::TFormContainerForm::MatchHostSize(bool)
+    @Fmxformcontainer@TFormContainerForm@NeedStyleLookup$qqrv @491 ; __fastcall Fmxformcontainer::TFormContainerForm::NeedStyleLookup()
+    @Fmxformcontainer@TFormContainerForm@PopulateDevice$qqr57System@%DelphiInterface$30Platformapi@IOTADesignerDevice%p38Fmxdevicedesignertypes@TDeviceFeatures @495 ; Fmxformcontainer::TFormContainerForm::PopulateDevice(System::DelphiInterface<{583}...
+    @Fmxformcontainer@TFormContainerForm@ReadDeviceNameFromFmx$qqrv @477 ; __fastcall Fmxformcontainer::TFormContainerForm::ReadDeviceNameFromFmx()
+    @Fmxformcontainer@TFormContainerForm@ReadMasterStyleFromFmx$qqrv @476 ; __fastcall Fmxformcontainer::TFormContainerForm::ReadMasterStyleFromFmx()
+    @Fmxformcontainer@TFormContainerForm@RequestStyleChange$qqrv @459 ; __fastcall Fmxformcontainer::TFormContainerForm::RequestStyleChange()
+    @Fmxformcontainer@TFormContainerForm@ResizeClientArea$qqrv @475 ; __fastcall Fmxformcontainer::TFormContainerForm::ResizeClientArea()
+    @Fmxformcontainer@TFormContainerForm@Rotate$qqrv @473 ; __fastcall Fmxformcontainer::TFormContainerForm::Rotate()
+    @Fmxformcontainer@TFormContainerForm@SelectMasterStyle$qqrv @492 ; __fastcall Fmxformcontainer::TFormContainerForm::SelectMasterStyle()
+    @Fmxformcontainer@TFormContainerForm@SelectionChanged$qqrx47System@%DelphiInterface$20Designintf@IDesigner%x57System@%DelphiInterface$30Designintf@IDesignerSelections% @460 ; Fmxformcontainer::TFormContainerForm::SelectionChanged(const System::DelphiInterface<{583}...
+    @Fmxformcontainer@TFormContainerForm@SetBackgroundColor$qqrui @469 ; __fastcall Fmxformcontainer::TFormContainerForm::SetBackgroundColor(unsigned int)
+    @Fmxformcontainer@TFormContainerForm@SetDeviceSettings$qqrxp38Fmxdevicedesignertypes@TDeviceSettings @468 ; __fastcall Fmxformcontainer::TFormContainerForm::SetDeviceSettings(Fmxdevicedesignertypes::TDeviceSettings * const)
+    @Fmxformcontainer@TFormContainerForm@SetMasterStyle$qqr24Platformapi@TOTAOSFamily @458 ; __fastcall Fmxformcontainer::TFormContainerForm::SetMasterStyle(Platformapi::TOTAOSFamily)
+    @Fmxformcontainer@TFormContainerForm@SetVclHost$qqrp24Vcl@Controls@TWinControl @467 ; __fastcall Fmxformcontainer::TFormContainerForm::SetVclHost(Vcl::Controls::TWinControl *)
+    @Fmxformcontainer@TFormContainerForm@SizerClick$qqrp14System@TObject @494 ; __fastcall Fmxformcontainer::TFormContainerForm::SizerClick(System::TObject *)
+    @Fmxformcontainer@TFormContainerForm@StartWindowDrag$qqrv @466 ; __fastcall Fmxformcontainer::TFormContainerForm::StartWindowDrag()
+    @Fmxformcontainer@TFormContainerForm@ToggleBackground$qqrv @465 ; __fastcall Fmxformcontainer::TFormContainerForm::ToggleBackground()
+    @Fmxformcontainer@TFormContainerForm@UpdateBorder$qqrv @464 ; __fastcall Fmxformcontainer::TFormContainerForm::UpdateBorder()
+    @Fmxformcontainer@TFormContainerForm@VclHostResized$qqrp14System@TObject @486 ; __fastcall Fmxformcontainer::TFormContainerForm::VclHostResized(System::TObject *)
+    @Fmxformcontainer@TFormContainerForm@WriteMasterStyleToFmx$qqr24Platformapi@TOTAOSFamily @485 ; __fastcall Fmxformcontainer::TFormContainerForm::WriteMasterStyleToFmx(Platformapi::TOTAOSFamily)
+    @Fmxformcontainer@TFormShape@  @509 ; Fmxformcontainer::TFormShape::
+    @Fmxformcontainer@TFormShape@$bctr$qqrp25System@Classes@TComponent @406 ; __fastcall Fmxformcontainer::TFormShape::TFormShape(System::Classes::TComponent *)
+    @Fmxformcontainer@TFormShape@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @405 ; __fastcall Fmxformcontainer::TFormShape::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Fmxformcontainer@TFormShape@SetDesignedForm$qqro @404 ; __fastcall Fmxformcontainer::TFormShape::SetDesignedForm(bool)
+    @Fmxformcontainer@TFormShape@SetForm$qqrp27Fmx@Forms@TCommonCustomForm @403 ; __fastcall Fmxformcontainer::TFormShape::SetForm(Fmx::Forms::TCommonCustomForm *)
+    @Fmxformcontainer@TVirtualDisplay@ @506 ; Fmxformcontainer::TVirtualDisplay::
+    @Fmxformcontainer@TVirtualDisplay@$bctr$qqrp25System@Classes@TComponent @417 ; __fastcall Fmxformcontainer::TVirtualDisplay::TVirtualDisplay(System::Classes::TComponent *)
+    @Fmxformcontainer@TVirtualDisplay@AddForm$qqrp27Fmx@Forms@TCommonCustomFormo @421 ; __fastcall Fmxformcontainer::TVirtualDisplay::AddForm(Fmx::Forms::TCommonCustomForm *, bool)
+    @Fmxformcontainer@TVirtualDisplay@AdjustAnchorPosition$qqrff @420 ; __fastcall Fmxformcontainer::TVirtualDisplay::AdjustAnchorPosition(float, float)
+    @Fmxformcontainer@TVirtualDisplay@AdjustShape$qqrp27Fmx@Forms@TCommonCustomFormp27Fmxformcontainer@TFormShape @419 ; __fastcall Fmxformcontainer::TVirtualDisplay::AdjustShape(Fmx::Forms::TCommonCustomForm *, Fmxformcontainer::TFormShape *)
+    @Fmxformcontainer@TVirtualDisplay@HandleClick$qqrv @418 ; __fastcall Fmxformcontainer::TVirtualDisplay::HandleClick()
+    @Fmxformcontainer@TVirtualDisplay@HitTest$qqrii @407 ; __fastcall Fmxformcontainer::TVirtualDisplay::HitTest(int, int)
+    @Fmxformcontainer@TVirtualDisplay@Resize$qqrv @416 ; __fastcall Fmxformcontainer::TVirtualDisplay::Resize()
+    @Fmxformcontainer@TVirtualDisplay@SetAnchorPoint$qqr29Fmxformcontainer@TAnchorPoint @415 ; __fastcall Fmxformcontainer::TVirtualDisplay::SetAnchorPoint(Fmxformcontainer::TAnchorPoint)
+    @Fmxformcontainer@TVirtualDisplay@SetButtonMode$qqro @414 ; __fastcall Fmxformcontainer::TVirtualDisplay::SetButtonMode(bool)
+    @Fmxformcontainer@TVirtualDisplay@SetParent$qqrxp20Fmx@Types@TFmxObject @413 ; __fastcall Fmxformcontainer::TVirtualDisplay::SetParent(Fmx::Types::TFmxObject * const)
+    @Fmxformcontainer@TVirtualDisplay@ShapeMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ff @412 ; Fmxformcontainer::TVirtualDisplay::ShapeMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Fmxformcontainer@TVirtualDisplay@ShapeMouseMove$qqrp14System@TObject60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ff @411 ; Fmxformcontainer::TVirtualDisplay::ShapeMouseMove(System::TObject *, System::Set<{583}...
+    @Fmxformcontainer@TVirtualDisplay@ShapeMouseUp$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ff @410 ; Fmxformcontainer::TVirtualDisplay::ShapeMouseUp(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Fmxformcontainer@TVirtualDisplay@TimerEvent$qqrp14System@TObject @409 ; __fastcall Fmxformcontainer::TVirtualDisplay::TimerEvent(System::TObject *)
+    @Fmxformcontainer@TVirtualDisplay@UpdateShapes$qqrv @408 ; __fastcall Fmxformcontainer::TVirtualDisplay::UpdateShapes()
+    @Fmxformcontainer@initialization$qqrv @384 ; __fastcall Fmxformcontainer::initialization()
+    @Fmxformdesigner@Designer$qqrv @519 ; __fastcall Fmxformdesigner::Designer()
+    @Fmxformdesigner@Finalization$qqrv @517 ; __fastcall Fmxformdesigner::Finalization()
+    @Fmxformdesigner@InitializeDesigner$qqrx63System@%DelphiInterface$36Componentdesigner@IDesignEnvironment% @520 ; Fmxformdesigner::InitializeDesigner(const System::DelphiInterface<{583}...
+    @Fmxformdesigner@RegisterDesigner$qqrv @518 ; __fastcall Fmxformdesigner::RegisterDesigner()
+    @Fmxformdesigner@_sNoHelpFile  @522 ; Fmxformdesigner::_sNoHelpFile
+    @Fmxformdesigner@_sRedirectLinks @521 ; Fmxformdesigner::_sRedirectLinks
+    @Fmxformdesigner@initialization$qqrv @516 ; __fastcall Fmxformdesigner::initialization()
+    @Fmxmenus@Finalization$qqrv    @2   ; __fastcall Fmxmenus::Finalization()
+    @Fmxmenus@IMainMenuFor$qqrp19Vcl@Menus@TMainMenu @57  ; __fastcall Fmxmenus::IMainMenuFor(Vcl::Menus::TMainMenu *)
+    @Fmxmenus@IMenuItemFor$qqrp19Vcl@Menus@TMenuItem @55  ; __fastcall Fmxmenus::IMenuItemFor(Vcl::Menus::TMenuItem *)
+    @Fmxmenus@IMenuItemsFor$qqrp19Vcl@Menus@TMenuItem @54  ; __fastcall Fmxmenus::IMenuItemsFor(Vcl::Menus::TMenuItem *)
+    @Fmxmenus@IPopupMenuFor$qqrp20Vcl@Menus@TPopupMenu @56  ; __fastcall Fmxmenus::IPopupMenuFor(Vcl::Menus::TPopupMenu *)
+    @Fmxmenus@TMainMenuWrapper@    @61  ; Fmxmenus::TMainMenuWrapper::
+    @Fmxmenus@TMainMenuWrapper@$bctr$qqrp19Vcl@Menus@TMainMenu @6   ; __fastcall Fmxmenus::TMainMenuWrapper::TMainMenuWrapper(Vcl::Menus::TMainMenu *)
+    @Fmxmenus@TMenuItemWrapper@    @65  ; Fmxmenus::TMenuItemWrapper::
+    @Fmxmenus@TMenuItemWrapper@Click$qqrv @35  ; __fastcall Fmxmenus::TMenuItemWrapper::Click()
+    @Fmxmenus@TMenuItemWrapper@GetCaption$qqrv @34  ; __fastcall Fmxmenus::TMenuItemWrapper::GetCaption()
+    @Fmxmenus@TMenuItemWrapper@GetChecked$qqrv @33  ; __fastcall Fmxmenus::TMenuItemWrapper::GetChecked()
+    @Fmxmenus@TMenuItemWrapper@GetEnabled$qqrv @32  ; __fastcall Fmxmenus::TMenuItemWrapper::GetEnabled()
+    @Fmxmenus@TMenuItemWrapper@GetGroupIndex$qqrv @31  ; __fastcall Fmxmenus::TMenuItemWrapper::GetGroupIndex()
+    @Fmxmenus@TMenuItemWrapper@GetHelpContext$qqrv @30  ; __fastcall Fmxmenus::TMenuItemWrapper::GetHelpContext()
+    @Fmxmenus@TMenuItemWrapper@GetHint$qqrv @29  ; __fastcall Fmxmenus::TMenuItemWrapper::GetHint()
+    @Fmxmenus@TMenuItemWrapper@GetRadioItem$qqrv @28  ; __fastcall Fmxmenus::TMenuItemWrapper::GetRadioItem()
+    @Fmxmenus@TMenuItemWrapper@GetShortCut$qqrv @27  ; __fastcall Fmxmenus::TMenuItemWrapper::GetShortCut()
+    @Fmxmenus@TMenuItemWrapper@GetTag$qqrv @26  ; __fastcall Fmxmenus::TMenuItemWrapper::GetTag()
+    @Fmxmenus@TMenuItemWrapper@GetVisible$qqrv @25  ; __fastcall Fmxmenus::TMenuItemWrapper::GetVisible()
+    @Fmxmenus@TMenuItemWrapper@HasParent$qqrv @24  ; __fastcall Fmxmenus::TMenuItemWrapper::HasParent()
+    @Fmxmenus@TMenuItemWrapper@IsLine$qqrv @23  ; __fastcall Fmxmenus::TMenuItemWrapper::IsLine()
+    @Fmxmenus@TMenuItemWrapper@MenuIndex$qqrv @22  ; __fastcall Fmxmenus::TMenuItemWrapper::MenuIndex()
+    @Fmxmenus@TMenuItemWrapper@Name$qqrv @21  ; __fastcall Fmxmenus::TMenuItemWrapper::Name()
+    @Fmxmenus@TMenuItemWrapper@Parent$qqrv @20  ; __fastcall Fmxmenus::TMenuItemWrapper::Parent()
+    @Fmxmenus@TMenuItemWrapper@SetCaption$qqrx17System@WideString @19  ; __fastcall Fmxmenus::TMenuItemWrapper::SetCaption(const System::WideString)
+    @Fmxmenus@TMenuItemWrapper@SetChecked$qqro @18  ; __fastcall Fmxmenus::TMenuItemWrapper::SetChecked(bool)
+    @Fmxmenus@TMenuItemWrapper@SetEnabled$qqro @17  ; __fastcall Fmxmenus::TMenuItemWrapper::SetEnabled(bool)
+    @Fmxmenus@TMenuItemWrapper@SetGroupIndex$qqruc @16  ; __fastcall Fmxmenus::TMenuItemWrapper::SetGroupIndex(unsigned char)
+    @Fmxmenus@TMenuItemWrapper@SetHelpContext$qqri @15  ; __fastcall Fmxmenus::TMenuItemWrapper::SetHelpContext(int)
+    @Fmxmenus@TMenuItemWrapper@SetHint$qqrx20System@UnicodeString @14  ; __fastcall Fmxmenus::TMenuItemWrapper::SetHint(const System::UnicodeString)
+    @Fmxmenus@TMenuItemWrapper@SetRadioItem$qqro @13  ; __fastcall Fmxmenus::TMenuItemWrapper::SetRadioItem(bool)
+    @Fmxmenus@TMenuItemWrapper@SetShortCut$qqrus @12  ; __fastcall Fmxmenus::TMenuItemWrapper::SetShortCut(unsigned short)
+    @Fmxmenus@TMenuItemWrapper@SetTag$qqri @11  ; __fastcall Fmxmenus::TMenuItemWrapper::SetTag(int)
+    @Fmxmenus@TMenuItemWrapper@SetVisible$qqro @10  ; __fastcall Fmxmenus::TMenuItemWrapper::SetVisible(bool)
+    @Fmxmenus@TMenuItemsWrapper@   @67  ; Fmxmenus::TMenuItemsWrapper::
+    @Fmxmenus@TMenuItemsWrapper@$bctr$qqrp19Vcl@Menus@TMenuItem @48  ; __fastcall Fmxmenus::TMenuItemsWrapper::TMenuItemsWrapper(Vcl::Menus::TMenuItem *)
+    @Fmxmenus@TMenuItemsWrapper@AddItem$qqrp27System@Classes@TBasicActionx20System@UnicodeString @53  ; __fastcall Fmxmenus::TMenuItemsWrapper::AddItem(System::Classes::TBasicAction *, const System::UnicodeString)
+    @Fmxmenus@TMenuItemsWrapper@AddItem$qqrx17System@WideStringusooynpqqrp14System@TObject$vix20System@UnicodeString @52  ; __fastcall Fmxmenus::TMenuItemsWrapper::AddItem(const System::WideString, unsigned short, bool, bool, void __fastcall __closure(*)(System::TObject *), int, const System::UnicodeString)
+    @Fmxmenus@TMenuItemsWrapper@AddLine$qqrx20System@UnicodeString @51  ; __fastcall Fmxmenus::TMenuItemsWrapper::AddLine(const System::UnicodeString)
+    @Fmxmenus@TMenuItemsWrapper@Clear$qqrv @50  ; __fastcall Fmxmenus::TMenuItemsWrapper::Clear()
+    @Fmxmenus@TMenuItemsWrapper@Count$qqrv @49  ; __fastcall Fmxmenus::TMenuItemsWrapper::Count()
+    @Fmxmenus@TMenuItemsWrapper@Find$qqrx17System@WideString @47  ; __fastcall Fmxmenus::TMenuItemsWrapper::Find(const System::WideString)
+    @Fmxmenus@TMenuItemsWrapper@FindByName$qqrx20System@UnicodeString @46  ; __fastcall Fmxmenus::TMenuItemsWrapper::FindByName(const System::UnicodeString)
+    @Fmxmenus@TMenuItemsWrapper@GetComponent$qqrv @45  ; __fastcall Fmxmenus::TMenuItemsWrapper::GetComponent()
+    @Fmxmenus@TMenuItemsWrapper@GetItem$qqri @44  ; __fastcall Fmxmenus::TMenuItemsWrapper::GetItem(int)
+    @Fmxmenus@TMenuItemsWrapper@InsertItem$qqrip19Vcl@Menus@TMenuItem @39  ; __fastcall Fmxmenus::TMenuItemsWrapper::InsertItem(int, Vcl::Menus::TMenuItem *)
+    @Fmxmenus@TMenuItemsWrapper@InsertItem$qqrip27System@Classes@TBasicActionx20System@UnicodeString @42  ; __fastcall Fmxmenus::TMenuItemsWrapper::InsertItem(int, System::Classes::TBasicAction *, const System::UnicodeString)
+    @Fmxmenus@TMenuItemsWrapper@InsertItem$qqrix17System@WideStringusooynpqqrp14System@TObject$vix20System@UnicodeString @40  ; __fastcall Fmxmenus::TMenuItemsWrapper::InsertItem(int, const System::WideString, unsigned short, bool, bool, void __fastcall __closure(*)(System::TObject *), int, const System::UnicodeString)
+    @Fmxmenus@TMenuItemsWrapper@InsertItem$qqrp27System@Classes@TBasicActionx20System@UnicodeString @43  ; __fastcall Fmxmenus::TMenuItemsWrapper::InsertItem(System::Classes::TBasicAction *, const System::UnicodeString)
+    @Fmxmenus@TMenuItemsWrapper@InsertItem$qqrx17System@WideStringusooynpqqrp14System@TObject$vix20System@UnicodeString @41  ; __fastcall Fmxmenus::TMenuItemsWrapper::InsertItem(const System::WideString, unsigned short, bool, bool, void __fastcall __closure(*)(System::TObject *), int, const System::UnicodeString)
+    @Fmxmenus@TMenuItemsWrapper@InsertLine$qqrix20System@UnicodeString @37  ; __fastcall Fmxmenus::TMenuItemsWrapper::InsertLine(int, const System::UnicodeString)
+    @Fmxmenus@TMenuItemsWrapper@InsertLine$qqrx20System@UnicodeString @38  ; __fastcall Fmxmenus::TMenuItemsWrapper::InsertLine(const System::UnicodeString)
+    @Fmxmenus@TMenuItemsWrapper@SameAs$qqrx44System@%DelphiInterface$17System@IInterface% @36  ; Fmxmenus::TMenuItemsWrapper::SameAs(const System::DelphiInterface<{583}...
+    @Fmxmenus@TMenuWrapper@        @63  ; Fmxmenus::TMenuWrapper::
+    @Fmxmenus@TMenuWrapper@$bctr$qqrp15Vcl@Menus@TMenu @9   ; __fastcall Fmxmenus::TMenuWrapper::TMenuWrapper(Vcl::Menus::TMenu *)
+    @Fmxmenus@TMenuWrapper@GetComponent$qqrv @8   ; __fastcall Fmxmenus::TMenuWrapper::GetComponent()
+    @Fmxmenus@TMenuWrapper@Items$qqrv @7   ; __fastcall Fmxmenus::TMenuWrapper::Items()
+    @Fmxmenus@TPopupMenuWrapper@   @59  ; Fmxmenus::TPopupMenuWrapper::
+    @Fmxmenus@TPopupMenuWrapper@$bctr$qqrp20Vcl@Menus@TPopupMenu @5   ; __fastcall Fmxmenus::TPopupMenuWrapper::TPopupMenuWrapper(Vcl::Menus::TPopupMenu *)
+    @Fmxmenus@TPopupMenuWrapper@Popup$qqrii @4   ; __fastcall Fmxmenus::TPopupMenuWrapper::Popup(int, int)
+    @Fmxmenus@TPopupMenuWrapper@PopupComponent$qqrv @3   ; __fastcall Fmxmenus::TPopupMenuWrapper::PopupComponent()
+    @Fmxmenus@initialization$qqrv  @1   ; __fastcall Fmxmenus::initialization()
+    @Fmxservices@Android@AndroidPlatform @539 ; Fmxservices::Android::AndroidPlatform
+    @Fmxservices@Android@Finalization$qqrv @530 ; __fastcall Fmxservices::Android::Finalization()
+    @Fmxservices@Android@TAndroidPlatform@ @541 ; Fmxservices::Android::TAndroidPlatform::
+    @Fmxservices@Android@TAndroidPlatform@GetCaretWidth$qqrv @537 ; __fastcall Fmxservices::Android::TAndroidPlatform::GetCaretWidth()
+    @Fmxservices@Android@TAndroidPlatform@GetDefaultPropertyValue$qqrx20System@UnicodeStringt1 @535 ; __fastcall Fmxservices::Android::TAndroidPlatform::GetDefaultPropertyValue(const System::UnicodeString, const System::UnicodeString)
+    @Fmxservices@Android@TAndroidPlatform@GetDefaultSize$qqrx27Fmx@Platform@TComponentKind @533 ; __fastcall Fmxservices::Android::TAndroidPlatform::GetDefaultSize(const Fmx::Platform::TComponentKind)
+    @Fmxservices@Android@TAndroidPlatform@GetMenuShowDelay$qqrv @536 ; __fastcall Fmxservices::Android::TAndroidPlatform::GetMenuShowDelay()
+    @Fmxservices@Android@TAndroidPlatform@GetMinScrollThumbSize$qqrv @531 ; __fastcall Fmxservices::Android::TAndroidPlatform::GetMinScrollThumbSize()
+    @Fmxservices@Android@TAndroidPlatform@GetScrollingBehaviour$qqrv @532 ; __fastcall Fmxservices::Android::TAndroidPlatform::GetScrollingBehaviour()
+    @Fmxservices@Android@TAndroidPlatform@GetSystemStyle$qqrxp20Fmx@Types@TFmxObject @538 ; __fastcall Fmxservices::Android::TAndroidPlatform::GetSystemStyle(Fmx::Types::TFmxObject * const)
+    @Fmxservices@Android@TAndroidPlatform@SupportsDefaultSize$qqrx27Fmx@Platform@TComponentKind @534 ; __fastcall Fmxservices::Android::TAndroidPlatform::SupportsDefaultSize(const Fmx::Platform::TComponentKind)
+    @Fmxservices@Android@initialization$qqrv @529 ; __fastcall Fmxservices::Android::initialization()
+    @Fmxservices@Finalization$qqrv @187 ; __fastcall Fmxservices::Finalization()
+    @Fmxservices@Ios@Finalization$qqrv @236 ; __fastcall Fmxservices::Ios::Finalization()
+    @Fmxservices@Ios@IOSPlatform   @245 ; Fmxservices::Ios::IOSPlatform
+    @Fmxservices@Ios@TIOSPlatform@ @247 ; Fmxservices::Ios::TIOSPlatform::
+    @Fmxservices@Ios@TIOSPlatform@GetCaretWidth$qqrv @243 ; __fastcall Fmxservices::Ios::TIOSPlatform::GetCaretWidth()
+    @Fmxservices@Ios@TIOSPlatform@GetDefaultPropertyValue$qqrx20System@UnicodeStringt1 @241 ; __fastcall Fmxservices::Ios::TIOSPlatform::GetDefaultPropertyValue(const System::UnicodeString, const System::UnicodeString)
+    @Fmxservices@Ios@TIOSPlatform@GetDefaultSize$qqrx27Fmx@Platform@TComponentKind @239 ; __fastcall Fmxservices::Ios::TIOSPlatform::GetDefaultSize(const Fmx::Platform::TComponentKind)
+    @Fmxservices@Ios@TIOSPlatform@GetMenuShowDelay$qqrv @242 ; __fastcall Fmxservices::Ios::TIOSPlatform::GetMenuShowDelay()
+    @Fmxservices@Ios@TIOSPlatform@GetMinScrollThumbSize$qqrv @237 ; __fastcall Fmxservices::Ios::TIOSPlatform::GetMinScrollThumbSize()
+    @Fmxservices@Ios@TIOSPlatform@GetScrollingBehaviour$qqrv @238 ; __fastcall Fmxservices::Ios::TIOSPlatform::GetScrollingBehaviour()
+    @Fmxservices@Ios@TIOSPlatform@GetSystemStyle$qqrxp20Fmx@Types@TFmxObject @244 ; __fastcall Fmxservices::Ios::TIOSPlatform::GetSystemStyle(Fmx::Types::TFmxObject * const)
+    @Fmxservices@Ios@TIOSPlatform@SupportsDefaultSize$qqrx27Fmx@Platform@TComponentKind @240 ; __fastcall Fmxservices::Ios::TIOSPlatform::SupportsDefaultSize(const Fmx::Platform::TComponentKind)
+    @Fmxservices@Ios@initialization$qqrv @235 ; __fastcall Fmxservices::Ios::initialization()
+    @Fmxservices@Mac@Finalization$qqrv @524 ; __fastcall Fmxservices::Mac::Finalization()
+    @Fmxservices@Mac@IOSPlatform   @526 ; Fmxservices::Mac::IOSPlatform
+    @Fmxservices@Mac@TMacPlatform@ @528 ; Fmxservices::Mac::TMacPlatform::
+    @Fmxservices@Mac@TMacPlatform@GetSystemStyle$qqrxp20Fmx@Types@TFmxObject @525 ; __fastcall Fmxservices::Mac::TMacPlatform::GetSystemStyle(Fmx::Types::TFmxObject * const)
+    @Fmxservices@Mac@initialization$qqrv @523 ; __fastcall Fmxservices::Mac::initialization()
+    @Fmxservices@TDesignPlatformServices@ @231 ; Fmxservices::TDesignPlatformServices::
+    @Fmxservices@TDesignPlatformServices@$bctr$qqrv @193 ; __fastcall Fmxservices::TDesignPlatformServices::TDesignPlatformServices()
+    @Fmxservices@TDesignPlatformServices@$bdtr$qqrv @192 ; __fastcall Fmxservices::TDesignPlatformServices::~TDesignPlatformServices()
+    @Fmxservices@TDesignPlatformServices@AddPlatformService$qqrrx5_GUIDx44System@%DelphiInterface$17System@IInterface% @195 ; Fmxservices::TDesignPlatformServices::AddPlatformService(const _GUID&, const System::DelphiInterface<{583}...
+    @Fmxservices@TDesignPlatformServices@FAndroidPlatform @232 ; Fmxservices::TDesignPlatformServices::FAndroidPlatform
+    @Fmxservices@TDesignPlatformServices@FMacPlatform @233 ; Fmxservices::TDesignPlatformServices::FMacPlatform
+    @Fmxservices@TDesignPlatformServices@FiOSPlatform @234 ; Fmxservices::TDesignPlatformServices::FiOSPlatform
+    @Fmxservices@TDesignPlatformServices@GetAndroid$qqrv @190 ; __fastcall Fmxservices::TDesignPlatformServices::GetAndroid()
+    @Fmxservices@TDesignPlatformServices@GetMac$qqrv @191 ; __fastcall Fmxservices::TDesignPlatformServices::GetMac()
+    @Fmxservices@TDesignPlatformServices@GetiOS$qqrv @189 ; __fastcall Fmxservices::TDesignPlatformServices::GetiOS()
+    @Fmxservices@TDesignPlatformServices@RemovePlatformService$qqrrx5_GUID @194 ; __fastcall Fmxservices::TDesignPlatformServices::RemovePlatformService(const _GUID&)
+    @Fmxservices@TDesignPlatformServices@SupportsPlatformService$qqrrx5_GUIDr44System@%DelphiInterface$17System@IInterface% @188 ; Fmxservices::TDesignPlatformServices::SupportsPlatformService(const _GUID&, System::DelphiInterface<{583}...
+    @Fmxservices@TDesignPlatformServices@UnInitialize$qqrv @196 ; __fastcall Fmxservices::TDesignPlatformServices::UnInitialize()
+    @Fmxservices@initialization$qqrv @186 ; __fastcall Fmxservices::initialization()
+    @Fmxsprigs@Finalization$qqrv   @288 ; __fastcall Fmxsprigs::Finalization()
+    @Fmxsprigs@TCommonCustomFormRootSprig@ @314 ; Fmxsprigs::TCommonCustomFormRootSprig::
+    @Fmxsprigs@TCommonCustomFormRootSprig@$bctr$qqrp26System@Classes@TPersistent @296 ; __fastcall Fmxsprigs::TCommonCustomFormRootSprig::TCommonCustomFormRootSprig(System::Classes::TPersistent *)
+    @Fmxsprigs@TControl3DSprig@    @320 ; Fmxsprigs::TControl3DSprig::
+    @Fmxsprigs@TControl3DSprig@$bctr$qqrp26System@Classes@TPersistent @301 ; __fastcall Fmxsprigs::TControl3DSprig::TControl3DSprig(System::Classes::TPersistent *)
+    @Fmxsprigs@TControlSprig@      @322 ; Fmxsprigs::TControlSprig::
+    @Fmxsprigs@TControlSprig@$bctr$qqrp26System@Classes@TPersistent @303 ; __fastcall Fmxsprigs::TControlSprig::TControlSprig(System::Classes::TPersistent *)
+    @Fmxsprigs@TControlSprig@DragDrop$qqrp15Treeintf@TSprig @302 ; __fastcall Fmxsprigs::TControlSprig::DragDrop(Treeintf::TSprig *)
+    @Fmxsprigs@TCustomLayer3DSprig@ @318 ; Fmxsprigs::TCustomLayer3DSprig::
+    @Fmxsprigs@TCustomLayer3DSprig@DragDrop$qqrp15Treeintf@TSprig @300 ; __fastcall Fmxsprigs::TCustomLayer3DSprig::DragDrop(Treeintf::TSprig *)
+    @Fmxsprigs@TDataModuleRootSprig@ @312 ; Fmxsprigs::TDataModuleRootSprig::
+    @Fmxsprigs@TDataModuleRootSprig@$bctr$qqrp26System@Classes@TPersistent @294 ; __fastcall Fmxsprigs::TDataModuleRootSprig::TDataModuleRootSprig(System::Classes::TPersistent *)
+    @Fmxsprigs@TDataModuleRootSprig@AcceptsClass$qqrp17System@TMetaClass @295 ; __fastcall Fmxsprigs::TDataModuleRootSprig::AcceptsClass(System::TMetaClass *)
+    @Fmxsprigs@TDataModuleRootSprig@DragOver$qqrp15Treeintf@TSprig @293 ; __fastcall Fmxsprigs::TDataModuleRootSprig::DragOver(Treeintf::TSprig *)
+    @Fmxsprigs@TDataModuleRootSprig@PaletteOver$qqrp17System@TMetaClasst1 @292 ; __fastcall Fmxsprigs::TDataModuleRootSprig::PaletteOver(System::TMetaClass *, System::TMetaClass *)
+    @Fmxsprigs@TFmxControlRootSprig@ @316 ; Fmxsprigs::TFmxControlRootSprig::
+    @Fmxsprigs@TFmxControlRootSprig@$bctr$qqrp26System@Classes@TPersistent @299 ; __fastcall Fmxsprigs::TFmxControlRootSprig::TFmxControlRootSprig(System::Classes::TPersistent *)
+    @Fmxsprigs@TFmxControlRootSprig@DragDrop$qqrp15Treeintf@TSprig @298 ; __fastcall Fmxsprigs::TFmxControlRootSprig::DragDrop(Treeintf::TSprig *)
+    @Fmxsprigs@TFmxControlRootSprig@DragOver$qqrp15Treeintf@TSprig @297 ; __fastcall Fmxsprigs::TFmxControlRootSprig::DragOver(Treeintf::TSprig *)
+    @Fmxsprigs@TFmxObjectSprig@    @324 ; Fmxsprigs::TFmxObjectSprig::
+    @Fmxsprigs@TFmxObjectSprig@$bctr$qqrp26System@Classes@TPersistent @308 ; __fastcall Fmxsprigs::TFmxObjectSprig::TFmxObjectSprig(System::Classes::TPersistent *)
+    @Fmxsprigs@TFmxObjectSprig@DragDrop$qqrp15Treeintf@TSprig @307 ; __fastcall Fmxsprigs::TFmxObjectSprig::DragDrop(Treeintf::TSprig *)
+    @Fmxsprigs@TFmxObjectSprig@DragOver$qqrp15Treeintf@TSprig @305 ; __fastcall Fmxsprigs::TFmxObjectSprig::DragOver(Treeintf::TSprig *)
+    @Fmxsprigs@TFmxObjectSprig@DragOverTo$qqrp15Treeintf@TSprig @306 ; __fastcall Fmxsprigs::TFmxObjectSprig::DragOverTo(Treeintf::TSprig *)
+    @Fmxsprigs@TFmxObjectSprig@HaveDirectDependence$qqrp15Treeintf@TSprigt1 @304 ; __fastcall Fmxsprigs::TFmxObjectSprig::HaveDirectDependence(Treeintf::TSprig *, Treeintf::TSprig *)
+    @Fmxsprigs@TFrameSprig@        @310 ; Fmxsprigs::TFrameSprig::
+    @Fmxsprigs@TFrameSprig@$bctr$qqrp26System@Classes@TPersistent @291 ; __fastcall Fmxsprigs::TFrameSprig::TFrameSprig(System::Classes::TPersistent *)
+    @Fmxsprigs@TFrameSprig@DragOver$qqrp15Treeintf@TSprig @290 ; __fastcall Fmxsprigs::TFrameSprig::DragOver(Treeintf::TSprig *)
+    @Fmxsprigs@TFrameSprig@FigureChildren$qqrv @289 ; __fastcall Fmxsprigs::TFrameSprig::FigureChildren()
+    @Fmxsprigs@initialization$qqrv @287 ; __fastcall Fmxsprigs::initialization()
+    @Fmxsurface@AltKey             @277 ; Fmxsurface::AltKey
+    @Fmxsurface@FMXIsContainer$qqrp26System@Classes@TPersistent @250 ; __fastcall Fmxsurface::FMXIsContainer(System::Classes::TPersistent *)
+    @Fmxsurface@Finalization$qqrv  @249 ; __fastcall Fmxsurface::Finalization()
+    @Fmxsurface@GetFmxDesignSurface$qqrx47System@%DelphiInterface$20Designintf@IHostForm%p20Fmx@Types@TFmxObjectxp25System@Classes@TComponentx57System@%DelphiInterface$30Componentdesigner@ISurfaceHost%x50System@%DelphiInterface$23DesigLmMeSKz+ecOL/FIjNSfZtQ @268 ; Fmxsurface::GetFmxDesignSurface(const System::DelphiInterface<{583}...
+    @Fmxsurface@TFmxIDEActions@    @281 ; Fmxsurface::TFmxIDEActions::
+    @Fmxsurface@TFmxIDEActions@AssignAction$qqrp27System@Classes@TBasicActiont1 @276 ; __fastcall Fmxsurface::TFmxIDEActions::AssignAction(System::Classes::TBasicAction *, System::Classes::TBasicAction *)
+    @Fmxsurface@TFmxIDEActions@BaseActionClass$qqrv @275 ; __fastcall Fmxsurface::TFmxIDEActions::BaseActionClass()
+    @Fmxsurface@TFmxIDEActions@BaseActionListClass$qqrv @274 ; __fastcall Fmxsurface::TFmxIDEActions::BaseActionListClass()
+    @Fmxsurface@TFmxIDEActions@CopyImageIfAvailable$qqrxp31System@Actions@TContainedActionxp35System@Actions@TContainedActionList @269 ; __fastcall Fmxsurface::TFmxIDEActions::CopyImageIfAvailable(System::Actions::TContainedAction * const, System::Actions::TContainedActionList * const)
+    @Fmxsurface@TFmxIDEActions@CreateImageList$qqrp35System@Actions@TContainedActionList @270 ; __fastcall Fmxsurface::TFmxIDEActions::CreateImageList(System::Actions::TContainedActionList *)
+    @Fmxsurface@TFmxIDEActions@DefaultActionClass$qqrv @273 ; __fastcall Fmxsurface::TFmxIDEActions::DefaultActionClass()
+    @Fmxsurface@TFmxIDEActions@RegisterImageLink$qqrxp35System@Actions@TContainedActionListxp23Vcl@Imglist@TChangeLink @272 ; __fastcall Fmxsurface::TFmxIDEActions::RegisterImageLink(System::Actions::TContainedActionList * const, Vcl::Imglist::TChangeLink * const)
+    @Fmxsurface@TFmxIDEActions@UnregisterImageLink$qqrxp35System@Actions@TContainedActionListxp23Vcl@Imglist@TChangeLink @271 ; __fastcall Fmxsurface::TFmxIDEActions::UnregisterImageLink(System::Actions::TContainedActionList * const, Vcl::Imglist::TChangeLink * const)
+    @Fmxsurface@TVclInteropHelper@ @279 ; Fmxsurface::TVclInteropHelper::
+    @Fmxsurface@TVclInteropHelper@CanInsertComponent$qqrp25System@Classes@TComponent @257 ; __fastcall Fmxsurface::TVclInteropHelper::CanInsertComponent(System::Classes::TComponent *)
+    @Fmxsurface@TVclInteropHelper@DesignerModified$qqro @260 ; __fastcall Fmxsurface::TVclInteropHelper::DesignerModified(bool)
+    @Fmxsurface@TVclInteropHelper@DrawSelectionMarks$qqrp20Fmx@Types@TFmxObject @267 ; __fastcall Fmxsurface::TVclInteropHelper::DrawSelectionMarks(Fmx::Types::TFmxObject *)
+    @Fmxsurface@TVclInteropHelper@FormFamilyChanged$qqrx20System@UnicodeStringt1t1 @264 ; __fastcall Fmxsurface::TVclInteropHelper::FormFamilyChanged(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Fmxsurface@TVclInteropHelper@GetHasFixedSize$qqrv @266 ; __fastcall Fmxsurface::TVclInteropHelper::GetHasFixedSize()
+    @Fmxsurface@TVclInteropHelper@GetRoot$qqrv @265 ; __fastcall Fmxsurface::TVclInteropHelper::GetRoot()
+    @Fmxsurface@TVclInteropHelper@IsDesignMsg$qqrp20Fmx@Types@TFmxObjectr24Winapi@Messages@TMessage @263 ; __fastcall Fmxsurface::TVclInteropHelper::IsDesignMsg(Fmx::Types::TFmxObject *, Winapi::Messages::TMessage&)
+    @Fmxsurface@TVclInteropHelper@IsSelected$qqrp26System@Classes@TPersistent @261 ; __fastcall Fmxsurface::TVclInteropHelper::IsSelected(System::Classes::TPersistent *)
+    @Fmxsurface@TVclInteropHelper@IsView$qqrv @262 ; __fastcall Fmxsurface::TVclInteropHelper::IsView()
+    @Fmxsurface@TVclInteropHelper@Modified$qqrv @259 ; __fastcall Fmxsurface::TVclInteropHelper::Modified()
+    @Fmxsurface@TVclInteropHelper@Notification$qqrp26System@Classes@TPersistent25System@Classes@TOperation @258 ; __fastcall Fmxsurface::TVclInteropHelper::Notification(System::Classes::TPersistent *, System::Classes::TOperation)
+    @Fmxsurface@TVclInteropHelper@PaintGrid$qqrv @254 ; __fastcall Fmxsurface::TVclInteropHelper::PaintGrid()
+    @Fmxsurface@TVclInteropHelper@SelectComponent$qqrp26System@Classes@TPersistent @256 ; __fastcall Fmxsurface::TVclInteropHelper::SelectComponent(System::Classes::TPersistent *)
+    @Fmxsurface@TVclInteropHelper@SupportsPlatformService$qqrrx5_GUIDr44System@%DelphiInterface$17System@IInterface% @255 ; Fmxsurface::TVclInteropHelper::SupportsPlatformService(const _GUID&, System::DelphiInterface<{583}...
+    @Fmxsurface@TVclInteropHelper@UniqueName$qqrx20System@UnicodeString @253 ; __fastcall Fmxsurface::TVclInteropHelper::UniqueName(const System::UnicodeString)
+    @Fmxsurface@TVclInteropHelper@UpdateBorder$qqrv @252 ; __fastcall Fmxsurface::TVclInteropHelper::UpdateBorder()
+    @Fmxsurface@TVclInteropHelper@ValidateRename$qqrp25System@Classes@TComponentx20System@UnicodeStringt2 @251 ; __fastcall Fmxsurface::TVclInteropHelper::ValidateRename(System::Classes::TComponent *, const System::UnicodeString, const System::UnicodeString)
+    @Fmxsurface@initialization$qqrv @248 ; __fastcall Fmxsurface::initialization()
+    @Fmxwidgetdesignform@CreateDesignerFormProc @107 ; Fmxwidgetdesignform::CreateDesignerFormProc
+    @Fmxwidgetdesignform@Finalization$qqrv @88  ; __fastcall Fmxwidgetdesignform::Finalization()
+    @Fmxwidgetdesignform@TControlCustomModule@ @109 ; Fmxwidgetdesignform::TControlCustomModule::
+    @Fmxwidgetdesignform@TControlCustomModule@CreateDesignerForm$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p25System@Classes@TComponentr47System@%DelphiInterface$20Designintf@IHostForm%rp20Fmx@Types@TFmxObject @89  ; Fmxwidgetdesignform::TControlCustomModule::CreateDesignerForm(const System::DelphiInterface<{583}...
+    @Fmxwidgetdesignform@TControlForm@ @111 ; Fmxwidgetdesignform::TControlForm::
+    @Fmxwidgetdesignform@TControlForm@$bctr$qqrx47System@%DelphiInterface$20Designintf@IDesigner%o @106 ; Fmxwidgetdesignform::TControlForm::TControlForm(const System::DelphiInterface<{583}...
+    @Fmxwidgetdesignform@TControlForm@$bdtr$qqrv @105 ; __fastcall Fmxwidgetdesignform::TControlForm::~TControlForm()
+    @Fmxwidgetdesignform@TControlForm@AfterConstruction$qqrv @104 ; __fastcall Fmxwidgetdesignform::TControlForm::AfterConstruction()
+    @Fmxwidgetdesignform@TControlForm@DesignerClosed$qqrx47System@%DelphiInterface$20Designintf@IDesigner%o @95  ; Fmxwidgetdesignform::TControlForm::DesignerClosed(const System::DelphiInterface<{583}...
+    @Fmxwidgetdesignform@TControlForm@DesignerOpened$qqrx47System@%DelphiInterface$20Designintf@IDesigner%o @94  ; Fmxwidgetdesignform::TControlForm::DesignerOpened(const System::DelphiInterface<{583}...
+    @Fmxwidgetdesignform@TControlForm@DragEnd$qqrv @99  ; __fastcall Fmxwidgetdesignform::TControlForm::DragEnd()
+    @Fmxwidgetdesignform@TControlForm@FormResize$qqrp14System@TObject @101 ; __fastcall Fmxwidgetdesignform::TControlForm::FormResize(System::TObject *)
+    @Fmxwidgetdesignform@TControlForm@Initialize$qqrp21Fmx@Controls@TControlo @103 ; __fastcall Fmxwidgetdesignform::TControlForm::Initialize(Fmx::Controls::TControl *, bool)
+    @Fmxwidgetdesignform@TControlForm@ItemDeleted$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p26System@Classes@TPersistent @93  ; Fmxwidgetdesignform::TControlForm::ItemDeleted(const System::DelphiInterface<{583}...
+    @Fmxwidgetdesignform@TControlForm@ItemInserted$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p26System@Classes@TPersistent @92  ; Fmxwidgetdesignform::TControlForm::ItemInserted(const System::DelphiInterface<{583}...
+    @Fmxwidgetdesignform@TControlForm@ItemsModified$qqrx47System@%DelphiInterface$20Designintf@IDesigner% @91  ; Fmxwidgetdesignform::TControlForm::ItemsModified(const System::DelphiInterface<{583}...
+    @Fmxwidgetdesignform@TControlForm@Modified$qqrv @102 ; __fastcall Fmxwidgetdesignform::TControlForm::Modified()
+    @Fmxwidgetdesignform@TControlForm@SelectionChanged$qqrx47System@%DelphiInterface$20Designintf@IDesigner%x57System@%DelphiInterface$30Designintf@IDesignerSelections% @90  ; Fmxwidgetdesignform::TControlForm::SelectionChanged(const System::DelphiInterface<{583}...
+    @Fmxwidgetdesignform@TControlForm@SizerMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ff @98  ; Fmxwidgetdesignform::TControlForm::SizerMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Fmxwidgetdesignform@TControlForm@SizerMouseMove$qqrp14System@TObject60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ff @97  ; Fmxwidgetdesignform::TControlForm::SizerMouseMove(System::TObject *, System::Set<{583}...
+    @Fmxwidgetdesignform@TControlForm@SizerMouseUp$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ff @96  ; Fmxwidgetdesignform::TControlForm::SizerMouseUp(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Fmxwidgetdesignform@TControlForm@UpdateSizers$qqrv @100 ; __fastcall Fmxwidgetdesignform::TControlForm::UpdateSizers()
+    @Fmxwidgetdesignform@initialization$qqrv @87  ; __fastcall Fmxwidgetdesignform::initialization()
+    @GetPackageInfoTable           @548 ; GetPackageInfoTable
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@ @198 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@$bctr$qqri @165 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@$bctr$qqrix81System@%DelphiInterface$54System@Generics@Defaults@%IEqualityComparer__1$5_GUID%% @163 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@$bctr$qqrx81System@%DelphiInterface$54System@Generics@Defaults@%IEqualityComparer__1$5_GUID%% @164 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@$bctr$qqrxp138System@Generics@Collections@%TEnumerable__1$91System@Generics@Collections@%TPair__2$5_GUID44System@%DelphiInterface$179UGLtqWQawKuEv5C/xZTvA @161 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@$bctr$qqrxp138System@Generics@Collections@%TEnumerable__1$91System@Generics@Collections@%TPair__2$5_GUID44System@%DelphiInterface$17System@IInterface%%% @162 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@$bdtr$qqrv @160 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TKeyCollection$%@ @211 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TKeyCollection$%@$bctr$qqrxp97System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%% @139 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TKeyCollection$%@DoGetEnumerator$qqrv @140 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TKeyCollection$%@GetCount$qqrv @141 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TKeyCollection$%@GetEnumerator$qqrv @138 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TKeyCollection$%@ToArray$qqrv @137 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TKeyEnumerator$%@ @213 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TKeyEnumerator$%@$bctr$qqrxp97System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%% @133 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TKeyEnumerator$%@DoGetCurrent$qqrv @135 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TKeyEnumerator$%@DoMoveNext$qqrv @134 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TKeyEnumerator$%@GetCurrent$qqrv @136 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TKeyEnumerator$%@MoveNext$qqrv @132 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TPairEnumerator$%@ @200 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TPairEnumerator$%@$bctr$qqrxp97System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%% @113 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TPairEnumerator$%@DoGetCurrent$qqrv @115 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TPairEnumerator$%@DoMoveNext$qqrv @114 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TPairEnumerator$%@GetCurrent$qqrv @116 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TPairEnumerator$%@MoveNext$qqrv @112 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TValueCollection$%@ @202 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TValueCollection$%@$bctr$qqrxp97System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%% @124 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TValueCollection$%@DoGetEnumerator$qqrv @125 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TValueCollection$%@GetCount$qqrv @126 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TValueCollection$%@GetEnumerator$qqrv @123 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TValueCollection$%@ToArray$qqrv @122 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TValueEnumerator$%@ @204 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TValueEnumerator$%@$bctr$qqrxp97System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%% @118 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TValueEnumerator$%@DoGetCurrent$qqrv @120 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TValueEnumerator$%@DoMoveNext$qqrv @119 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TValueEnumerator$%@GetCurrent$qqrv @121 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@%TValueEnumerator$%@MoveNext$qqrv @117 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@Add$qqrrx5_GUIDx44System@%DelphiInterface$17System@IInterface% @159 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@AddOrSetValue$qqrrx5_GUIDx44System@%DelphiInterface$17System@IInterface% @153 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@Clear$qqrv @156 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@ContainsKey$qqrrx5_GUID @152 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@ContainsValue$qqrx44System@%DelphiInterface$17System@IInterface% @151 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@DoAdd$qqriirx5_GUIDx44System@%DelphiInterface$17System@IInterface% @171 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@DoGetEnumerator$qqrv @168 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@DoRemove$qqrrx5_GUIDi51System@Generics@Collections@TCollectionNotification @169 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@DoSetValue$qqrix44System@%DelphiInterface$17System@IInterface% @170 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@ExtractPair$qqrrx5_GUID @157 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@GetBucketIndex$qqrrx5_GUIDi @176 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@GetEnumerator$qqrv @147 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@GetItem$qqrrx5_GUID @174 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@GetKeys$qqrv @149 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@GetValues$qqrv @148 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@Grow$qqrv @177 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@Hash$qqrrx5_GUID @175 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@KeyNotify$qqrrx5_GUID51System@Generics@Collections@TCollectionNotification @167 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@Rehash$qqri @178 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@RehashAdd$qqrirx5_GUIDx44System@%DelphiInterface$17System@IInterface% @172 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@Remove$qqrrx5_GUID @158 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@SetCapacity$qqri @179 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@SetItem$qqrrx5_GUIDx44System@%DelphiInterface$17System@IInterface% @173 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@ToArray$qqrv @150 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@TrimExcess$qqrv @155 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@TryGetValue$qqrrx5_GUIDr44System@%DelphiInterface$17System@IInterface% @154 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@ValueNotify$qqrx44System@%DelphiInterface$17System@IInterface%51System@Generics@Collections@TCollectionNotification @166 ; System::Generics::Collections::TDictionary__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$44System@%DelphiInterface$17System@IInterface%%@ @206 ; System::Generics::Collections::TEnumerable__1<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$44System@%DelphiInterface$17System@IInterface%%@$bdtr$qqrv @130 ; System::Generics::Collections::TEnumerable__1<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$44System@%DelphiInterface$17System@IInterface%%@GetEnumerator$qqrv @129 ; System::Generics::Collections::TEnumerable__1<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$44System@%DelphiInterface$17System@IInterface%%@ToArray$qqrv @128 ; System::Generics::Collections::TEnumerable__1<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$44System@%DelphiInterface$17System@IInterface%%@ToArrayImpl$qqri @131 ; System::Generics::Collections::TEnumerable__1<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$5_GUID%@ @215 ; System::Generics::Collections::TEnumerable__1<_GUID>::
+    @System@Generics@Collections@%TEnumerable__1$5_GUID%@$bdtr$qqrv @145 ; __fastcall System::Generics::Collections::TEnumerable__1<_GUID>::~TEnumerable__1<_GUID>()
+    @System@Generics@Collections@%TEnumerable__1$5_GUID%@GetEnumerator$qqrv @144 ; __fastcall System::Generics::Collections::TEnumerable__1<_GUID>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$5_GUID%@ToArray$qqrv @143 ; __fastcall System::Generics::Collections::TEnumerable__1<_GUID>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$5_GUID%@ToArrayImpl$qqri @146 ; __fastcall System::Generics::Collections::TEnumerable__1<_GUID>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerable__1$91System@Generics@Collections@%TPair__2$5_GUID44System@%DelphiInterface$17System@IInterface%%%@ @225 ; System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$91System@Generics@Collections@%TPair__2$5_GUID44System@%DelphiInterface$17System@IInterface%%%@$bdtr$qqrv @183 ; System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$91System@Generics@Collections@%TPair__2$5_GUID44System@%DelphiInterface$17System@IInterface%%%@GetEnumerator$qqrv @182 ; System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$91System@Generics@Collections@%TPair__2$5_GUID44System@%DelphiInterface$17System@IInterface%%%@ToArray$qqrv @181 ; System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$91System@Generics@Collections@%TPair__2$5_GUID44System@%DelphiInterface$17System@IInterface%%%@ToArrayImpl$qqri @184 ; System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerator__1$44System@%DelphiInterface$17System@IInterface%%@ @208 ; System::Generics::Collections::TEnumerator__1<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerator__1$44System@%DelphiInterface$17System@IInterface%%@MoveNext$qqrv @127 ; System::Generics::Collections::TEnumerator__1<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerator__1$5_GUID%@ @217 ; System::Generics::Collections::TEnumerator__1<_GUID>::
+    @System@Generics@Collections@%TEnumerator__1$5_GUID%@MoveNext$qqrv @142 ; __fastcall System::Generics::Collections::TEnumerator__1<_GUID>::MoveNext()
+    @System@Generics@Collections@%TEnumerator__1$91System@Generics@Collections@%TPair__2$5_GUID44System@%DelphiInterface$17System@IInterface%%%@ @227 ; System::Generics::Collections::TEnumerator__1<System::Generics::Collections::TPair__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerator__1$91System@Generics@Collections@%TPair__2$5_GUID44System@%DelphiInterface$17System@IInterface%%%@MoveNext$qqrv @180 ; System::Generics::Collections::TEnumerator__1<System::Generics::Collections::TPair__2<_GUID, System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TPair__2$5_GUID44System@%DelphiInterface$17System@IInterface%%@$bctr$qqrrx5_GUIDx44System@%DelphiInterface$17System@IInterface% @185 ; System::Generics::Collections::TPair__2<_GUID, System::DelphiInterface<{583}...
+    Finalize                       @546 ; Finalize
+    Initialize                     @547 ; Initialize

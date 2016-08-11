@@ -1,0 +1,184 @@
+LIBRARY     DBXSQLITEDRIVER210.BPL
+
+DESCRIPTION 'mbarcadero Sqlite Client'
+
+EXPORTS
+    @$xp$21System@%TArray__1$uc%   @154 ; __tpdsc__ System::TArray__1<unsigned char>
+    @$xp$28Data@Dbxsqlite@TDBXSqliteRow @161 ; __tpdsc__ Data::Dbxsqlite::TDBXSqliteRow
+    @$xp$31Data@Dbxsqlite@TDBXSqliteDriver @167 ; __tpdsc__ Data::Dbxsqlite::TDBXSqliteDriver
+    @$xp$31Data@Dbxsqlite@TDBXSqliteReader @157 ; __tpdsc__ Data::Dbxsqlite::TDBXSqliteReader
+    @$xp$32Data@Dbxsqlite@TDBXSqliteCommand @163 ; __tpdsc__ Data::Dbxsqlite::TDBXSqliteCommand
+    @$xp$35Data@Dbxsqlite@TDBXSqliteByteReader @159 ; __tpdsc__ Data::Dbxsqlite::TDBXSqliteByteReader
+    @$xp$35Data@Dbxsqlite@TDBXSqliteConnection @165 ; __tpdsc__ Data::Dbxsqlite::TDBXSqliteConnection
+    @$xp$35Data@Dbxsqlite@TDBXSqliteProperties @171 ; __tpdsc__ Data::Dbxsqlite::TDBXSqliteProperties
+    @$xp$36Data@Dbxsqlite@TDBXSqliteTransaction @155 ; __tpdsc__ Data::Dbxsqlite::TDBXSqliteTransaction
+    @$xp$37Data@Dbxsqlite@TDBXSqliteDriverLoader @169 ; __tpdsc__ Data::Dbxsqlite::TDBXSqliteDriverLoader
+    @$xp$53Data@Dbxsqlitemetadatareader@TDBXSqliteMetaDataReader @34  ; __tpdsc__ Data::Dbxsqlitemetadatareader::TDBXSqliteMetaDataReader
+    @$xp$53Data@Dbxsqlitemetadatawriter@TDBXSqliteMetaDataWriter @50  ; __tpdsc__ Data::Dbxsqlitemetadatawriter::TDBXSqliteMetaDataWriter
+    @$xp$57Data@Dbxsqlitemetadatareader@TDBXSqliteColumnsTableCursor @32  ; __tpdsc__ Data::Dbxsqlitemetadatareader::TDBXSqliteColumnsTableCursor
+    @$xp$59Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader @36  ; __tpdsc__ Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader
+    @$xp$59Data@Dbxsqlitemetadatawriter@TDBXSqliteCustomMetaDataWriter @52  ; __tpdsc__ Data::Dbxsqlitemetadatawriter::TDBXSqliteCustomMetaDataWriter
+    @$xp$63Data@Dbxsqlitereadonlymetadata@TDBXSqliteMetaDataCommandFactory @59  ; __tpdsc__ Data::Dbxsqlitereadonlymetadata::TDBXSqliteMetaDataCommandFactory
+    @Data@Dbxsqlite@CheckError$qqripvp26Data@Dbxcommon@TDBXContext @153 ; __fastcall Data::Dbxsqlite::CheckError(int, void *, Data::Dbxcommon::TDBXContext *)
+    @Data@Dbxsqlite@Finalization$qqrv @62  ; __fastcall Data::Dbxsqlite::Finalization()
+    @Data@Dbxsqlite@TDBXSqliteByteReader@ @160 ; Data::Dbxsqlite::TDBXSqliteByteReader::
+    @Data@Dbxsqlite@TDBXSqliteByteReader@$bctr$qqrp26Data@Dbxcommon@TDBXContextp35Data@Dbxsqlite@TDBXSqliteConnectionpv @84  ; __fastcall Data::Dbxsqlite::TDBXSqliteByteReader::TDBXSqliteByteReader(Data::Dbxcommon::TDBXContext *, Data::Dbxsqlite::TDBXSqliteConnection *, void *)
+    @Data@Dbxsqlite@TDBXSqliteByteReader@GetAnsiString$qqrix24System@%DynamicArray$uc%iri @83  ; Data::Dbxsqlite::TDBXSqliteByteReader::GetAnsiString(int, const System::DynamicArray<{583}...
+    @Data@Dbxsqlite@TDBXSqliteByteReader@GetBcd$qqrix24System@%DynamicArray$uc%iri @82  ; Data::Dbxsqlite::TDBXSqliteByteReader::GetBcd(int, const System::DynamicArray<{583}...
+    @Data@Dbxsqlite@TDBXSqliteByteReader@GetByteLength$qqrirjri @81  ; __fastcall Data::Dbxsqlite::TDBXSqliteByteReader::GetByteLength(int, __int64&, int&)
+    @Data@Dbxsqlite@TDBXSqliteByteReader@GetBytes$qqrijx24System@%DynamicArray$uc%jjri @80  ; Data::Dbxsqlite::TDBXSqliteByteReader::GetBytes(int, __int64, const System::DynamicArray<{583}...
+    @Data@Dbxsqlite@TDBXSqliteByteReader@GetDate$qqrix24System@%DynamicArray$uc%iri @79  ; Data::Dbxsqlite::TDBXSqliteByteReader::GetDate(int, const System::DynamicArray<{583}...
+    @Data@Dbxsqlite@TDBXSqliteByteReader@GetDouble$qqrix24System@%DynamicArray$uc%iri @78  ; Data::Dbxsqlite::TDBXSqliteByteReader::GetDouble(int, const System::DynamicArray<{583}...
+    @Data@Dbxsqlite@TDBXSqliteByteReader@GetInt16$qqrix24System@%DynamicArray$uc%iri @76  ; Data::Dbxsqlite::TDBXSqliteByteReader::GetInt16(int, const System::DynamicArray<{583}...
+    @Data@Dbxsqlite@TDBXSqliteByteReader@GetInt32$qqrix24System@%DynamicArray$uc%iri @75  ; Data::Dbxsqlite::TDBXSqliteByteReader::GetInt32(int, const System::DynamicArray<{583}...
+    @Data@Dbxsqlite@TDBXSqliteByteReader@GetInt64$qqrix24System@%DynamicArray$uc%iri @74  ; Data::Dbxsqlite::TDBXSqliteByteReader::GetInt64(int, const System::DynamicArray<{583}...
+    @Data@Dbxsqlite@TDBXSqliteByteReader@GetInt8$qqrix24System@%DynamicArray$uc%iri @77  ; Data::Dbxsqlite::TDBXSqliteByteReader::GetInt8(int, const System::DynamicArray<{583}...
+    @Data@Dbxsqlite@TDBXSqliteByteReader@GetSingle$qqrix24System@%DynamicArray$uc%iri @73  ; Data::Dbxsqlite::TDBXSqliteByteReader::GetSingle(int, const System::DynamicArray<{583}...
+    @Data@Dbxsqlite@TDBXSqliteByteReader@GetTime$qqrix24System@%DynamicArray$uc%iri @72  ; Data::Dbxsqlite::TDBXSqliteByteReader::GetTime(int, const System::DynamicArray<{583}...
+    @Data@Dbxsqlite@TDBXSqliteByteReader@GetTimeStamp$qqrix24System@%DynamicArray$uc%iri @71  ; Data::Dbxsqlite::TDBXSqliteByteReader::GetTimeStamp(int, const System::DynamicArray<{583}...
+    @Data@Dbxsqlite@TDBXSqliteByteReader@GetTimeStampOffset$qqrix24System@%DynamicArray$uc%iri @70  ; Data::Dbxsqlite::TDBXSqliteByteReader::GetTimeStampOffset(int, const System::DynamicArray<{583}...
+    @Data@Dbxsqlite@TDBXSqliteByteReader@GetUInt16$qqrix24System@%DynamicArray$uc%iri @68  ; Data::Dbxsqlite::TDBXSqliteByteReader::GetUInt16(int, const System::DynamicArray<{583}...
+    @Data@Dbxsqlite@TDBXSqliteByteReader@GetUInt8$qqrix24System@%DynamicArray$uc%iri @69  ; Data::Dbxsqlite::TDBXSqliteByteReader::GetUInt8(int, const System::DynamicArray<{583}...
+    @Data@Dbxsqlite@TDBXSqliteByteReader@GetWideString$qqrix24System@%DynamicArray$uc%iri @67  ; Data::Dbxsqlite::TDBXSqliteByteReader::GetWideString(int, const System::DynamicArray<{583}...
+    @Data@Dbxsqlite@TDBXSqliteCommand@ @164 ; Data::Dbxsqlite::TDBXSqliteCommand::
+    @Data@Dbxsqlite@TDBXSqliteCommand@$bctr$qqrp26Data@Dbxcommon@TDBXContextp35Data@Dbxsqlite@TDBXSqliteConnection @120 ; __fastcall Data::Dbxsqlite::TDBXSqliteCommand::TDBXSqliteCommand(Data::Dbxcommon::TDBXContext *, Data::Dbxsqlite::TDBXSqliteConnection *)
+    @Data@Dbxsqlite@TDBXSqliteCommand@$bdtr$qqrv @119 ; __fastcall Data::Dbxsqlite::TDBXSqliteCommand::~TDBXSqliteCommand()
+    @Data@Dbxsqlite@TDBXSqliteCommand@CreateParameterRow$qqrv @131 ; __fastcall Data::Dbxsqlite::TDBXSqliteCommand::CreateParameterRow()
+    @Data@Dbxsqlite@TDBXSqliteCommand@DerivedClose$qqrv @130 ; __fastcall Data::Dbxsqlite::TDBXSqliteCommand::DerivedClose()
+    @Data@Dbxsqlite@TDBXSqliteCommand@DerivedExecuteQuery$qqrv @129 ; __fastcall Data::Dbxsqlite::TDBXSqliteCommand::DerivedExecuteQuery()
+    @Data@Dbxsqlite@TDBXSqliteCommand@DerivedExecuteUpdate$qqrv @128 ; __fastcall Data::Dbxsqlite::TDBXSqliteCommand::DerivedExecuteUpdate()
+    @Data@Dbxsqlite@TDBXSqliteCommand@DerivedGetNextReader$qqrv @127 ; __fastcall Data::Dbxsqlite::TDBXSqliteCommand::DerivedGetNextReader()
+    @Data@Dbxsqlite@TDBXSqliteCommand@DerivedOpen$qqrv @126 ; __fastcall Data::Dbxsqlite::TDBXSqliteCommand::DerivedOpen()
+    @Data@Dbxsqlite@TDBXSqliteCommand@DerivedPrepare$qqrv @125 ; __fastcall Data::Dbxsqlite::TDBXSqliteCommand::DerivedPrepare()
+    @Data@Dbxsqlite@TDBXSqliteCommand@GetRowsAffected$qqrv @124 ; __fastcall Data::Dbxsqlite::TDBXSqliteCommand::GetRowsAffected()
+    @Data@Dbxsqlite@TDBXSqliteCommand@SetMaxBlobSize$qqrxj @123 ; __fastcall Data::Dbxsqlite::TDBXSqliteCommand::SetMaxBlobSize(const __int64)
+    @Data@Dbxsqlite@TDBXSqliteCommand@SetRowSetSize$qqrxj @122 ; __fastcall Data::Dbxsqlite::TDBXSqliteCommand::SetRowSetSize(const __int64)
+    @Data@Dbxsqlite@TDBXSqliteCommand@SetText$qqrx20System@UnicodeString @121 ; __fastcall Data::Dbxsqlite::TDBXSqliteCommand::SetText(const System::UnicodeString)
+    @Data@Dbxsqlite@TDBXSqliteConnection@ @166 ; Data::Dbxsqlite::TDBXSqliteConnection::
+    @Data@Dbxsqlite@TDBXSqliteConnection@$bctr$qqrp36Data@Dbxcommon@TDBXConnectionBuilder @134 ; __fastcall Data::Dbxsqlite::TDBXSqliteConnection::TDBXSqliteConnection(Data::Dbxcommon::TDBXConnectionBuilder *)
+    @Data@Dbxsqlite@TDBXSqliteConnection@$bdtr$qqrv @133 ; __fastcall Data::Dbxsqlite::TDBXSqliteConnection::~TDBXSqliteConnection()
+    @Data@Dbxsqlite@TDBXSqliteConnection@Commit$qqrxp30Data@Dbxcommon@TDBXTransaction @143 ; __fastcall Data::Dbxsqlite::TDBXSqliteConnection::Commit(Data::Dbxcommon::TDBXTransaction * const)
+    @Data@Dbxsqlite@TDBXSqliteConnection@CreateAndBeginTransaction$qqrxi @142 ; __fastcall Data::Dbxsqlite::TDBXSqliteConnection::CreateAndBeginTransaction(const int)
+    @Data@Dbxsqlite@TDBXSqliteConnection@DerivedClose$qqrv @141 ; __fastcall Data::Dbxsqlite::TDBXSqliteConnection::DerivedClose()
+    @Data@Dbxsqlite@TDBXSqliteConnection@DerivedGetCommandTypes$qqrxp23System@Classes@TStrings @139 ; __fastcall Data::Dbxsqlite::TDBXSqliteConnection::DerivedGetCommandTypes(System::Classes::TStrings * const)
+    @Data@Dbxsqlite@TDBXSqliteConnection@DerivedGetCommands$qqrx20System@UnicodeStringxp23System@Classes@TStrings @140 ; __fastcall Data::Dbxsqlite::TDBXSqliteConnection::DerivedGetCommands(const System::UnicodeString, System::Classes::TStrings * const)
+    @Data@Dbxsqlite@TDBXSqliteConnection@DerivedOpen$qqrv @138 ; __fastcall Data::Dbxsqlite::TDBXSqliteConnection::DerivedOpen()
+    @Data@Dbxsqlite@TDBXSqliteConnection@GetProductName$qqrv @137 ; __fastcall Data::Dbxsqlite::TDBXSqliteConnection::GetProductName()
+    @Data@Dbxsqlite@TDBXSqliteConnection@GetProductVersion$qqrv @136 ; __fastcall Data::Dbxsqlite::TDBXSqliteConnection::GetProductVersion()
+    @Data@Dbxsqlite@TDBXSqliteConnection@GetVendorProperty$qqrx20System@UnicodeString @132 ; __fastcall Data::Dbxsqlite::TDBXSqliteConnection::GetVendorProperty(const System::UnicodeString)
+    @Data@Dbxsqlite@TDBXSqliteConnection@Rollback$qqrxp30Data@Dbxcommon@TDBXTransaction @135 ; __fastcall Data::Dbxsqlite::TDBXSqliteConnection::Rollback(Data::Dbxcommon::TDBXTransaction * const)
+    @Data@Dbxsqlite@TDBXSqliteDriver@ @168 ; Data::Dbxsqlite::TDBXSqliteDriver::
+    @Data@Dbxsqlite@TDBXSqliteDriver@$bctr$qqrrx28Data@Dbxcommon@TDBXDriverDef @146 ; __fastcall Data::Dbxsqlite::TDBXSqliteDriver::TDBXSqliteDriver(const Data::Dbxcommon::TDBXDriverDef&)
+    @Data@Dbxsqlite@TDBXSqliteDriver@Close$qqrv @148 ; __fastcall Data::Dbxsqlite::TDBXSqliteDriver::Close()
+    @Data@Dbxsqlite@TDBXSqliteDriver@CreateConnection$qqrp36Data@Dbxcommon@TDBXConnectionBuilder @147 ; __fastcall Data::Dbxsqlite::TDBXSqliteDriver::CreateConnection(Data::Dbxcommon::TDBXConnectionBuilder *)
+    @Data@Dbxsqlite@TDBXSqliteDriver@CreateSqliteCommand$qqrp26Data@Dbxcommon@TDBXContextp29Data@Dbxcommon@TDBXConnectionp26Data@Dbxcommon@TDBXCommand @149 ; __fastcall Data::Dbxsqlite::TDBXSqliteDriver::CreateSqliteCommand(Data::Dbxcommon::TDBXContext *, Data::Dbxcommon::TDBXConnection *, Data::Dbxcommon::TDBXCommand *)
+    @Data@Dbxsqlite@TDBXSqliteDriver@GetDriverPropertyNames$qqrp23System@Classes@TStrings @145 ; __fastcall Data::Dbxsqlite::TDBXSqliteDriver::GetDriverPropertyNames(System::Classes::TStrings *)
+    @Data@Dbxsqlite@TDBXSqliteDriver@GetDriverVersion$qqrv @144 ; __fastcall Data::Dbxsqlite::TDBXSqliteDriver::GetDriverVersion()
+    @Data@Dbxsqlite@TDBXSqliteDriverLoader@ @170 ; Data::Dbxsqlite::TDBXSqliteDriverLoader::
+    @Data@Dbxsqlite@TDBXSqliteDriverLoader@$bctr$qqrv @151 ; __fastcall Data::Dbxsqlite::TDBXSqliteDriverLoader::TDBXSqliteDriverLoader()
+    @Data@Dbxsqlite@TDBXSqliteDriverLoader@Load$qqrrx28Data@Dbxcommon@TDBXDriverDef @150 ; __fastcall Data::Dbxsqlite::TDBXSqliteDriverLoader::Load(const Data::Dbxcommon::TDBXDriverDef&)
+    @Data@Dbxsqlite@TDBXSqliteProperties@ @172 ; Data::Dbxsqlite::TDBXSqliteProperties::
+    @Data@Dbxsqlite@TDBXSqliteProperties@$bctr$qqrp26Data@Dbxcommon@TDBXContext @152 ; __fastcall Data::Dbxsqlite::TDBXSqliteProperties::TDBXSqliteProperties(Data::Dbxcommon::TDBXContext *)
+    @Data@Dbxsqlite@TDBXSqliteReader@ @158 ; Data::Dbxsqlite::TDBXSqliteReader::
+    @Data@Dbxsqlite@TDBXSqliteReader@$bctr$qqrp26Data@Dbxcommon@TDBXContextp35Data@Dbxsqlite@TDBXSqliteConnectionpvp35Data@Dbxsqlite@TDBXSqliteByteReaderi @66  ; __fastcall Data::Dbxsqlite::TDBXSqliteReader::TDBXSqliteReader(Data::Dbxcommon::TDBXContext *, Data::Dbxsqlite::TDBXSqliteConnection *, void *, Data::Dbxsqlite::TDBXSqliteByteReader *, int)
+    @Data@Dbxsqlite@TDBXSqliteReader@DerivedClose$qqrv @65  ; __fastcall Data::Dbxsqlite::TDBXSqliteReader::DerivedClose()
+    @Data@Dbxsqlite@TDBXSqliteReader@DerivedNext$qqrv @64  ; __fastcall Data::Dbxsqlite::TDBXSqliteReader::DerivedNext()
+    @Data@Dbxsqlite@TDBXSqliteRow@ @162 ; Data::Dbxsqlite::TDBXSqliteRow::
+    @Data@Dbxsqlite@TDBXSqliteRow@$bctr$qqrp26Data@Dbxcommon@TDBXContextp35Data@Dbxsqlite@TDBXSqliteConnectionpv @85  ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::TDBXSqliteRow(Data::Dbxcommon::TDBXContext *, Data::Dbxsqlite::TDBXSqliteConnection *, void *)
+    @Data@Dbxsqlite@TDBXSqliteRow@GetAnsiString$qqrp34Data@Dbxcommon@TDBXAnsiStringValuerpcri @118 ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::GetAnsiString(Data::Dbxcommon::TDBXAnsiStringValue *, char *&, int&)
+    @Data@Dbxsqlite@TDBXSqliteRow@GetBcd$qqrp27Data@Dbxcommon@TDBXBcdValuer16Data@Fmtbcd@TBcdri @117 ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::GetBcd(Data::Dbxcommon::TDBXBcdValue *, Data::Fmtbcd::TBcd&, int&)
+    @Data@Dbxsqlite@TDBXSqliteRow@GetBoolean$qqrp31Data@Dbxcommon@TDBXBooleanValuerit2 @116 ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::GetBoolean(Data::Dbxcommon::TDBXBooleanValue *, int&, int&)
+    @Data@Dbxsqlite@TDBXSqliteRow@GetByteLength$qqrp33Data@Dbxcommon@TDBXByteArrayValuerjri @115 ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::GetByteLength(Data::Dbxcommon::TDBXByteArrayValue *, __int64&, int&)
+    @Data@Dbxsqlite@TDBXSqliteRow@GetBytes$qqrp33Data@Dbxcommon@TDBXByteArrayValuejx24System@%DynamicArray$uc%jjrjri @114 ; Data::Dbxsqlite::TDBXSqliteRow::GetBytes(Data::Dbxcommon::TDBXByteArrayValue *, __int64, const System::DynamicArray<{583}...
+    @Data@Dbxsqlite@TDBXSqliteRow@GetDate$qqrp28Data@Dbxcommon@TDBXDateValuerit2 @113 ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::GetDate(Data::Dbxcommon::TDBXDateValue *, int&, int&)
+    @Data@Dbxsqlite@TDBXSqliteRow@GetDouble$qqrp30Data@Dbxcommon@TDBXDoubleValuerdri @112 ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::GetDouble(Data::Dbxcommon::TDBXDoubleValue *, double&, int&)
+    @Data@Dbxsqlite@TDBXSqliteRow@GetInt16$qqrp29Data@Dbxcommon@TDBXInt16Valuersri @110 ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::GetInt16(Data::Dbxcommon::TDBXInt16Value *, short&, int&)
+    @Data@Dbxsqlite@TDBXSqliteRow@GetInt32$qqrp29Data@Dbxcommon@TDBXInt32Valuerit2 @109 ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::GetInt32(Data::Dbxcommon::TDBXInt32Value *, int&, int&)
+    @Data@Dbxsqlite@TDBXSqliteRow@GetInt64$qqrp29Data@Dbxcommon@TDBXInt64Valuerjri @108 ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::GetInt64(Data::Dbxcommon::TDBXInt64Value *, __int64&, int&)
+    @Data@Dbxsqlite@TDBXSqliteRow@GetInt8$qqrp28Data@Dbxcommon@TDBXInt8Valuerzcri @111 ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::GetInt8(Data::Dbxcommon::TDBXInt8Value *, signed char&, int&)
+    @Data@Dbxsqlite@TDBXSqliteRow@GetSingle$qqrp30Data@Dbxcommon@TDBXSingleValuerfri @107 ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::GetSingle(Data::Dbxcommon::TDBXSingleValue *, float&, int&)
+    @Data@Dbxsqlite@TDBXSqliteRow@GetTime$qqrp28Data@Dbxcommon@TDBXTimeValuerit2 @106 ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::GetTime(Data::Dbxcommon::TDBXTimeValue *, int&, int&)
+    @Data@Dbxsqlite@TDBXSqliteRow@GetTimeStamp$qqrp33Data@Dbxcommon@TDBXTimeStampValuer27Data@Sqltimst@TSQLTimeStampri @105 ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::GetTimeStamp(Data::Dbxcommon::TDBXTimeStampValue *, Data::Sqltimst::TSQLTimeStamp&, int&)
+    @Data@Dbxsqlite@TDBXSqliteRow@GetTimeStampOffset$qqrp39Data@Dbxcommon@TDBXTimeStampOffsetValuer33Data@Sqltimst@TSQLTimeStampOffsetri @104 ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::GetTimeStampOffset(Data::Dbxcommon::TDBXTimeStampOffsetValue *, Data::Sqltimst::TSQLTimeStampOffset&, int&)
+    @Data@Dbxsqlite@TDBXSqliteRow@GetUInt16$qqrp30Data@Dbxcommon@TDBXUInt16Valuerusri @102 ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::GetUInt16(Data::Dbxcommon::TDBXUInt16Value *, unsigned short&, int&)
+    @Data@Dbxsqlite@TDBXSqliteRow@GetUInt8$qqrp29Data@Dbxcommon@TDBXUInt8Valuerucri @103 ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::GetUInt8(Data::Dbxcommon::TDBXUInt8Value *, unsigned char&, int&)
+    @Data@Dbxsqlite@TDBXSqliteRow@GetWideString$qqrp34Data@Dbxcommon@TDBXWideStringValuerpbri @101 ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::GetWideString(Data::Dbxcommon::TDBXWideStringValue *, wchar_t *&, int&)
+    @Data@Dbxsqlite@TDBXSqliteRow@SetAnsiString$qqrp34Data@Dbxcommon@TDBXAnsiStringValuex27System@%AnsiStringT$us$i0$% @100 ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::SetAnsiString(Data::Dbxcommon::TDBXAnsiStringValue *, const System::AnsiStringT<0>)
+    @Data@Dbxsqlite@TDBXSqliteRow@SetBoolean$qqrp31Data@Dbxcommon@TDBXBooleanValueo @99  ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::SetBoolean(Data::Dbxcommon::TDBXBooleanValue *, bool)
+    @Data@Dbxsqlite@TDBXSqliteRow@SetDouble$qqrp30Data@Dbxcommon@TDBXDoubleValued @98  ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::SetDouble(Data::Dbxcommon::TDBXDoubleValue *, double)
+    @Data@Dbxsqlite@TDBXSqliteRow@SetDynamicBytes$qqrp24Data@Dbxcommon@TDBXValuejx24System@%DynamicArray$uc%jj @97  ; Data::Dbxsqlite::TDBXSqliteRow::SetDynamicBytes(Data::Dbxcommon::TDBXValue *, __int64, const System::DynamicArray<{583}...
+    @Data@Dbxsqlite@TDBXSqliteRow@SetInt16$qqrp29Data@Dbxcommon@TDBXInt16Values @95  ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::SetInt16(Data::Dbxcommon::TDBXInt16Value *, short)
+    @Data@Dbxsqlite@TDBXSqliteRow@SetInt32$qqrp29Data@Dbxcommon@TDBXInt32Valuei @94  ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::SetInt32(Data::Dbxcommon::TDBXInt32Value *, int)
+    @Data@Dbxsqlite@TDBXSqliteRow@SetInt64$qqrp29Data@Dbxcommon@TDBXInt64Valuej @93  ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::SetInt64(Data::Dbxcommon::TDBXInt64Value *, __int64)
+    @Data@Dbxsqlite@TDBXSqliteRow@SetInt8$qqrp28Data@Dbxcommon@TDBXInt8Valuezc @96  ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::SetInt8(Data::Dbxcommon::TDBXInt8Value *, signed char)
+    @Data@Dbxsqlite@TDBXSqliteRow@SetNull$qqrp24Data@Dbxcommon@TDBXValue @92  ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::SetNull(Data::Dbxcommon::TDBXValue *)
+    @Data@Dbxsqlite@TDBXSqliteRow@SetSingle$qqrp30Data@Dbxcommon@TDBXSingleValuef @91  ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::SetSingle(Data::Dbxcommon::TDBXSingleValue *, float)
+    @Data@Dbxsqlite@TDBXSqliteRow@SetString$qqrp34Data@Dbxcommon@TDBXAnsiStringValuex27System@%AnsiStringT$us$i0$% @90  ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::SetString(Data::Dbxcommon::TDBXAnsiStringValue *, const System::AnsiStringT<0>)
+    @Data@Dbxsqlite@TDBXSqliteRow@SetUInt16$qqrp30Data@Dbxcommon@TDBXUInt16Valueus @88  ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::SetUInt16(Data::Dbxcommon::TDBXUInt16Value *, unsigned short)
+    @Data@Dbxsqlite@TDBXSqliteRow@SetUInt8$qqrp29Data@Dbxcommon@TDBXUInt8Valueuc @89  ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::SetUInt8(Data::Dbxcommon::TDBXUInt8Value *, unsigned char)
+    @Data@Dbxsqlite@TDBXSqliteRow@SetValueType$qqrp28Data@Dbxcommon@TDBXValueType @87  ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::SetValueType(Data::Dbxcommon::TDBXValueType *)
+    @Data@Dbxsqlite@TDBXSqliteRow@SetWideString$qqrp34Data@Dbxcommon@TDBXWideStringValuex20System@UnicodeString @86  ; __fastcall Data::Dbxsqlite::TDBXSqliteRow::SetWideString(Data::Dbxcommon::TDBXWideStringValue *, const System::UnicodeString)
+    @Data@Dbxsqlite@TDBXSqliteTransaction@ @156 ; Data::Dbxsqlite::TDBXSqliteTransaction::
+    @Data@Dbxsqlite@TDBXSqliteTransaction@$bctr$qqrp29Data@Dbxcommon@TDBXConnectioni @63  ; __fastcall Data::Dbxsqlite::TDBXSqliteTransaction::TDBXSqliteTransaction(Data::Dbxcommon::TDBXConnection *, int)
+    @Data@Dbxsqlite@initialization$qqrv @61  ; __fastcall Data::Dbxsqlite::initialization()
+    @Data@Dbxsqlitemetadata@Finalization$qqrv @55  ; __fastcall Data::Dbxsqlitemetadata::Finalization()
+    @Data@Dbxsqlitemetadata@initialization$qqrv @54  ; __fastcall Data::Dbxsqlitemetadata::initialization()
+    @Data@Dbxsqlitemetadatareader@Finalization$qqrv @2   ; __fastcall Data::Dbxsqlitemetadatareader::Finalization()
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteColumnsTableCursor@ @33  ; Data::Dbxsqlitemetadatareader::TDBXSqliteColumnsTableCursor::
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteColumnsTableCursor@$bctr$qqrxp45Data@Dbxmetadatareader@TDBXBaseMetaDataReaderxoxp29Data@Dbxcommontable@TDBXTable @5   ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteColumnsTableCursor::TDBXSqliteColumnsTableCursor(Data::Dbxmetadatareader::TDBXBaseMetaDataReader * const, const bool, Data::Dbxcommontable::TDBXTable * const)
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteColumnsTableCursor@$bdtr$qqrv @4   ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteColumnsTableCursor::~TDBXSqliteColumnsTableCursor()
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteColumnsTableCursor@GetWritableValue$qqrxi @6   ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteColumnsTableCursor::GetWritableValue(const int)
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteColumnsTableCursor@Next$qqrv @3   ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteColumnsTableCursor::Next()
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@ @37  ; Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@FetchCatalogs$qqrv @23  ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::FetchCatalogs()
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@FetchColumnConstraints$qqrx20System@UnicodeStringt1t1 @22  ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::FetchColumnConstraints(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@FetchColumns$qqrx20System@UnicodeStringt1t1 @21  ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::FetchColumns(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@FetchForeignKeyColumns$qqrx20System@UnicodeStringt1t1t1t1t1t1t1 @20  ; Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::FetchForeignKeyColumns(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::Unicode
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@FetchForeignKeys$qqrx20System@UnicodeStringt1t1 @19  ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::FetchForeignKeys(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@FetchIndexColumns$qqrx20System@UnicodeStringt1t1t1 @18  ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::FetchIndexColumns(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@FetchPackageProcedureParameters$qqrx20System@UnicodeStringt1t1t1t1 @17  ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::FetchPackageProcedureParameters(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@FetchPackageProcedures$qqrx20System@UnicodeStringt1t1t1t1 @16  ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::FetchPackageProcedures(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@FetchPackageSources$qqrx20System@UnicodeStringt1t1 @14  ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::FetchPackageSources(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@FetchPackages$qqrx20System@UnicodeStringt1t1 @15  ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::FetchPackages(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@FetchProcedureParameters$qqrx20System@UnicodeStringt1t1t1 @13  ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::FetchProcedureParameters(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@FetchProcedureSources$qqrx20System@UnicodeStringt1t1 @11  ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::FetchProcedureSources(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@FetchProcedures$qqrx20System@UnicodeStringt1t1t1 @12  ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::FetchProcedures(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@FetchRoles$qqrv @10  ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::FetchRoles()
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@FetchSchemas$qqrx20System@UnicodeString @9   ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::FetchSchemas(const System::UnicodeString)
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@FetchSynonyms$qqrx20System@UnicodeStringt1t1 @8   ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::FetchSynonyms(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@FetchUsers$qqrv @7   ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::FetchUsers()
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@GetDataTypeDescriptions$qqrv @31  ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::GetDataTypeDescriptions()
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@GetProductName$qqrv @30  ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::GetProductName()
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@GetReservedWords$qqrv @29  ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::GetReservedWords()
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@GetSqlForIndexes$qqrv @28  ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::GetSqlForIndexes()
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@GetSqlForTables$qqrv @27  ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::GetSqlForTables()
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@GetSqlForViews$qqrv @26  ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::GetSqlForViews()
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@IsLowerCaseIdentifiersSupported$qqrv @25  ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::IsLowerCaseIdentifiersSupported()
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteCustomMetaDataReader@IsNestedTransactionsSupported$qqrv @24  ; __fastcall Data::Dbxsqlitemetadatareader::TDBXSqliteCustomMetaDataReader::IsNestedTransactionsSupported()
+    @Data@Dbxsqlitemetadatareader@TDBXSqliteMetaDataReader@ @35  ; Data::Dbxsqlitemetadatareader::TDBXSqliteMetaDataReader::
+    @Data@Dbxsqlitemetadatareader@initialization$qqrv @1   ; __fastcall Data::Dbxsqlitemetadatareader::initialization()
+    @Data@Dbxsqlitemetadatawriter@Finalization$qqrv @45  ; __fastcall Data::Dbxsqlitemetadatawriter::Finalization()
+    @Data@Dbxsqlitemetadatawriter@TDBXSqliteCustomMetaDataWriter@ @53  ; Data::Dbxsqlitemetadatawriter::TDBXSqliteCustomMetaDataWriter::
+    @Data@Dbxsqlitemetadatawriter@TDBXSqliteCustomMetaDataWriter@IsSchemasSupported$qqrv @49  ; __fastcall Data::Dbxsqlitemetadatawriter::TDBXSqliteCustomMetaDataWriter::IsSchemasSupported()
+    @Data@Dbxsqlitemetadatawriter@TDBXSqliteCustomMetaDataWriter@MakeSqlCreateKey$qqrxp30System@Sysutils@TStringBuilderxp32Data@Dbxcommontable@TDBXTableRowxp29Data@Dbxcommontable@TDBXTable @48  ; __fastcall Data::Dbxsqlitemetadatawriter::TDBXSqliteCustomMetaDataWriter::MakeSqlCreateKey(System::Sysutils::TStringBuilder * const, Data::Dbxcommontable::TDBXTableRow * const, Data::Dbxcommontable::TDBXTable * const)
+    @Data@Dbxsqlitemetadatawriter@TDBXSqliteMetaDataWriter@ @51  ; Data::Dbxsqlitemetadatawriter::TDBXSqliteMetaDataWriter::
+    @Data@Dbxsqlitemetadatawriter@TDBXSqliteMetaDataWriter@$bctr$qqrv @47  ; __fastcall Data::Dbxsqlitemetadatawriter::TDBXSqliteMetaDataWriter::TDBXSqliteMetaDataWriter()
+    @Data@Dbxsqlitemetadatawriter@TDBXSqliteMetaDataWriter@Open$qqrv @46  ; __fastcall Data::Dbxsqlitemetadatawriter::TDBXSqliteMetaDataWriter::Open()
+    @Data@Dbxsqlitemetadatawriter@initialization$qqrv @44  ; __fastcall Data::Dbxsqlitemetadatawriter::initialization()
+    @Data@Dbxsqlitereadonlymetadata@Finalization$qqrv @57  ; __fastcall Data::Dbxsqlitereadonlymetadata::Finalization()
+    @Data@Dbxsqlitereadonlymetadata@TDBXSqliteMetaDataCommandFactory@ @60  ; Data::Dbxsqlitereadonlymetadata::TDBXSqliteMetaDataCommandFactory::
+    @Data@Dbxsqlitereadonlymetadata@TDBXSqliteMetaDataCommandFactory@CreateMetaDataReader$qqrv @58  ; __fastcall Data::Dbxsqlitereadonlymetadata::TDBXSqliteMetaDataCommandFactory::CreateMetaDataReader()
+    @Data@Dbxsqlitereadonlymetadata@initialization$qqrv @56  ; __fastcall Data::Dbxsqlitereadonlymetadata::initialization()
+    @Data@Dbxsqliteresstrs@Finalization$qqrv @39  ; __fastcall Data::Dbxsqliteresstrs::Finalization()
+    @Data@Dbxsqliteresstrs@_SColumnMetaDataNotSupported @41  ; Data::Dbxsqliteresstrs::_SColumnMetaDataNotSupported
+    @Data@Dbxsqliteresstrs@_SLibraryNotFound @43  ; Data::Dbxsqliteresstrs::_SLibraryNotFound
+    @Data@Dbxsqliteresstrs@_SNotSupported @42  ; Data::Dbxsqliteresstrs::_SNotSupported
+    @Data@Dbxsqliteresstrs@_SSetColumnMetaDataSupportedProperty @40  ; Data::Dbxsqliteresstrs::_SSetColumnMetaDataSupportedProperty
+    @Data@Dbxsqliteresstrs@initialization$qqrv @38  ; __fastcall Data::Dbxsqliteresstrs::initialization()
+    @Dbxsqlitedriver@@GetPackageInfoTable$qqrv @176 ; Dbxsqlitedriver::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dbxsqlitedriver@@PackageLoad$qqrv @175 ; Dbxsqlitedriver::__linkproc__ __fastcall PackageLoad()
+    @Dbxsqlitedriver@@PackageUnload$qqrv @174 ; Dbxsqlitedriver::__linkproc__ __fastcall PackageUnload()
+    @Dbxsqlitedriver@initialization$qqrv @173 ; __fastcall Dbxsqlitedriver::initialization()
+    @GetPackageInfoTable           @179 ; GetPackageInfoTable
+    Finalize                       @177 ; Finalize
+    Initialize                     @178 ; Initialize

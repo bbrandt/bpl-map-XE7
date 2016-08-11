@@ -1,0 +1,287 @@
+LIBRARY     DCLCOMMON210.BPL
+
+DESCRIPTION 'mbarcadero Common Design Resources'
+
+EXPORTS
+    @$xp$16Newstdac@TRegAct        @109 ; __tpdsc__ Newstdac::TRegAct
+    @$xp$18Maskprop@TMaskForm      @260 ; __tpdsc__ Maskprop::TMaskForm
+    @$xp$18Newstdac@TTreeNode      @112 ; __tpdsc__ Newstdac::TTreeNode
+    @$xp$21Newstdac@TTreeViewCat   @110 ; __tpdsc__ Newstdac::TTreeViewCat
+    @$xp$22Filtedit@TFilterEditor  @240 ; __tpdsc__ Filtedit::TFilterEditor
+    @$xp$22Maskprop@TMaskProperty  @262 ; __tpdsc__ Maskprop::TMaskProperty
+    @$xp$22Masktext@TMaskTextForm  @272 ; __tpdsc__ Masktext::TMaskTextForm
+    @$xp$22Newstdac@TCategoryKind  @114 ; __tpdsc__ Newstdac::TCategoryKind
+    @$xp$24Filtedit@TFilterProperty @238 ; __tpdsc__ Filtedit::TFilterProperty
+    @$xp$25Newstdac@TNewStdActionDlg @107 ; __tpdsc__ Newstdac::TNewStdActionDlg
+    @$xp$26Actndrag@TActionDragObject @3   ; __tpdsc__ Actndrag::TActionDragObject
+    @$xp$26Masktext@TMaskTextProperty @274 ; __tpdsc__ Masktext::TMaskTextProperty
+    @$xp$28Actnedit@TActionListDesigner @226 ; __tpdsc__ Actnedit::TActionListDesigner
+    @$xp$33Actnedit@TActionImageListListener @228 ; __tpdsc__ Actnedit::TActionImageListListener
+    @$xp$33Actnedit@TActionListDesignerClass @225 ; __tpdsc__ Actnedit::TActionListDesignerClass
+    @$xp$37System@%TArray__1$16Newstdac@TRegAct% @106 ; __tpdsc__ System::TArray__1<Newstdac::TRegAct>
+    @$xp$42System@%IEnumerable__1$16Newstdac@TRegAct% @95  ; __tpdsc__ System::IEnumerable__1<Newstdac::TRegAct>
+    @$xp$42System@%IEnumerator__1$16Newstdac@TRegAct% @96  ; __tpdsc__ System::IEnumerator__1<Newstdac::TRegAct>
+    @$xp$57System@Generics@Collections@%TList__1$16Newstdac@TRegAct% @90  ; __tpdsc__ System::Generics::Collections::TList__1<Newstdac::TRegAct>
+    @$xp$58System@Generics@Defaults@%IComparer__1$16Newstdac@TRegAct% @100 ; __tpdsc__ System::Generics::Defaults::IComparer__1<Newstdac::TRegAct>
+    @$xp$63System@Generics@Collections@%TEnumerable__1$16Newstdac@TRegAct% @102 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<Newstdac::TRegAct>
+    @$xp$63System@Generics@Collections@%TEnumerator__1$16Newstdac@TRegAct% @104 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<Newstdac::TRegAct>
+    @$xp$65System@Generics@Collections@%TArrayManager__1$16Newstdac@TRegAct% @97  ; __tpdsc__ System::Generics::Collections::TArrayManager__1<Newstdac::TRegAct>
+    @$xp$69System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@%arrayofT$% @101 ; __tpdsc__ System::Generics::Collections::TList__1<Newstdac::TRegAct>::arrayofT<>
+    @$xp$71System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@%TEmptyFunc$% @94  ; __tpdsc__ System::Generics::Collections::TList__1<Newstdac::TRegAct>::TEmptyFunc<>
+    @$xp$72System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@%TEnumerator$% @92  ; __tpdsc__ System::Generics::Collections::TList__1<Newstdac::TRegAct>::TEnumerator<>
+    @$xp$74System@Generics@Collections@%TCollectionNotifyEvent__1$16Newstdac@TRegAct% @99  ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<Newstdac::TRegAct>
+    @Actndrag@Finalization$qqrv    @2   ; __fastcall Actndrag::Finalization()
+    @Actndrag@TActionDragObject@   @4   ; Actndrag::TActionDragObject::
+    @Actndrag@initialization$qqrv  @1   ; __fastcall Actndrag::initialization()
+    @Actnedit@CategoryKinds        @224 ; Actnedit::CategoryKinds
+    @Actnedit@Finalization$qqrv    @120 ; __fastcall Actnedit::Finalization()
+    @Actnedit@ShowActionListDesigner$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p35System@Actions@TContainedActionList @222 ; Actnedit::ShowActionListDesigner(const System::DelphiInterface<{583}...
+    @Actnedit@ShowActionListDesignerClass$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p17System@TMetaClassp35System@Actions@TContainedActionList @223 ; Actnedit::ShowActionListDesignerClass(const System::DelphiInterface<{583}...
+    @Actnedit@TActionImageListListener@ @229 ; Actnedit::TActionImageListListener::
+    @Actnedit@TActionImageListListener@$bctr$qqrp28Actnedit@TActionListDesigner @122 ; __fastcall Actnedit::TActionImageListListener::TActionImageListListener(Actnedit::TActionListDesigner *)
+    @Actnedit@TActionImageListListener@$bdtr$qqrv @121 ; __fastcall Actnedit::TActionImageListListener::~TActionImageListListener()
+    @Actnedit@TActionImageListListener@ImageListChanged$qqrp14System@TObject @123 ; __fastcall Actnedit::TActionImageListListener::ImageListChanged(System::TObject *)
+    @Actnedit@TActionListDesigner@ @227 ; Actnedit::TActionListDesigner::
+    @Actnedit@TActionListDesigner@$bctr$qqrp25System@Classes@TComponent @221 ; __fastcall Actnedit::TActionListDesigner::TActionListDesigner(System::Classes::TComponent *)
+    @Actnedit@TActionListDesigner@$bdtr$qqrv @220 ; __fastcall Actnedit::TActionListDesigner::~TActionListDesigner()
+    @Actnedit@TActionListDesigner@AMDeferUpdate$qqrpv @171 ; __fastcall Actnedit::TActionListDesigner::AMDeferUpdate(void *)
+    @Actnedit@TActionListDesigner@ActionVisible$qqrp31System@Actions@TContainedAction @197 ; __fastcall Actnedit::TActionListDesigner::ActionVisible(System::Actions::TContainedAction *)
+    @Actnedit@TActionListDesigner@Activated$qqrv @216 ; __fastcall Actnedit::TActionListDesigner::Activated()
+    @Actnedit@TActionListDesigner@AddAction$qqrx20System@UnicodeStringp17System@TMetaClasspv @196 ; __fastcall Actnedit::TActionListDesigner::AddAction(const System::UnicodeString, System::TMetaClass *, void *)
+    @Actnedit@TActionListDesigner@AllActionsUpdate$qqrp14System@TObject @201 ; __fastcall Actnedit::TActionListDesigner::AllActionsUpdate(System::TObject *)
+    @Actnedit@TActionListDesigner@BeginUpdate$qqrv @143 ; __fastcall Actnedit::TActionListDesigner::BeginUpdate()
+    @Actnedit@TActionListDesigner@BuildNewActions$qqrv @142 ; __fastcall Actnedit::TActionListDesigner::BuildNewActions()
+    @Actnedit@TActionListDesigner@Clear$qqrv @189 ; __fastcall Actnedit::TActionListDesigner::Clear()
+    @Actnedit@TActionListDesigner@ComponentRead$qqrp25System@Classes@TComponent @149 ; __fastcall Actnedit::TActionListDesigner::ComponentRead(System::Classes::TComponent *)
+    @Actnedit@TActionListDesigner@Copy$qqrv @162 ; __fastcall Actnedit::TActionListDesigner::Copy()
+    @Actnedit@TActionListDesigner@CopyItemClick$qqrp14System@TObject @157 ; __fastcall Actnedit::TActionListDesigner::CopyItemClick(System::TObject *)
+    @Actnedit@TActionListDesigner@Cut$qqrv @163 ; __fastcall Actnedit::TActionListDesigner::Cut()
+    @Actnedit@TActionListDesigner@CutItemClick$qqrp14System@TObject @156 ; __fastcall Actnedit::TActionListDesigner::CutItemClick(System::TObject *)
+    @Actnedit@TActionListDesigner@DeleteClick$qqrp14System@TObject @184 ; __fastcall Actnedit::TActionListDesigner::DeleteClick(System::TObject *)
+    @Actnedit@TActionListDesigner@DescriptionsActionExecute$qqrp14System@TObject @134 ; __fastcall Actnedit::TActionListDesigner::DescriptionsActionExecute(System::TObject *)
+    @Actnedit@TActionListDesigner@DescriptionsActionUpdate$qqrp14System@TObject @133 ; __fastcall Actnedit::TActionListDesigner::DescriptionsActionUpdate(System::TObject *)
+    @Actnedit@TActionListDesigner@DesignerClosed$qqrx47System@%DelphiInterface$20Designintf@IDesigner%o @214 ; Actnedit::TActionListDesigner::DesignerClosed(const System::DelphiInterface<{583}...
+    @Actnedit@TActionListDesigner@DisableAllExecute$qqrp14System@TObject @202 ; __fastcall Actnedit::TActionListDesigner::DisableAllExecute(System::TObject *)
+    @Actnedit@TActionListDesigner@DoNewAction$qqrx20System@UnicodeStringp31System@Actions@TContainedAction @188 ; __fastcall Actnedit::TActionListDesigner::DoNewAction(const System::UnicodeString, System::Actions::TContainedAction *)
+    @Actnedit@TActionListDesigner@DoShow$qqrv @187 ; __fastcall Actnedit::TActionListDesigner::DoShow()
+    @Actnedit@TActionListDesigner@EditAction$qqr22Designintf@TEditAction @167 ; __fastcall Actnedit::TActionListDesigner::EditAction(Designintf::TEditAction)
+    @Actnedit@TActionListDesigner@EnableAllExecute$qqrp14System@TObject @203 ; __fastcall Actnedit::TActionListDesigner::EnableAllExecute(System::TObject *)
+    @Actnedit@TActionListDesigner@EndUpdate$qqrv @141 ; __fastcall Actnedit::TActionListDesigner::EndUpdate()
+    @Actnedit@TActionListDesigner@EnumActionsProc$qqrx20System@UnicodeStringp17System@TMetaClasspv @154 ; __fastcall Actnedit::TActionListDesigner::EnumActionsProc(const System::UnicodeString, System::TMetaClass *, void *)
+    @Actnedit@TActionListDesigner@EnumCat$qqr60System@%DelphiInterface$33System@Actions@TEnumActionListRef% @208 ; Actnedit::TActionListDesigner::EnumCat(System::DelphiInterface<{583}...
+    @Actnedit@TActionListDesigner@FindComponentClassProc$qqrp22System@Classes@TReaderx20System@UnicodeStringrp17System@TMetaClass @153 ; __fastcall Actnedit::TActionListDesigner::FindComponentClassProc(System::Classes::TReader *, const System::UnicodeString, System::TMetaClass *&)
+    @Actnedit@TActionListDesigner@FocusAction$qqrp31System@Actions@TContainedAction @213 ; __fastcall Actnedit::TActionListDesigner::FocusAction(System::Actions::TContainedAction *)
+    @Actnedit@TActionListDesigner@FormClose$qqrp14System@TObjectr27System@Uitypes@TCloseAction @181 ; __fastcall Actnedit::TActionListDesigner::FormClose(System::TObject *, System::Uitypes::TCloseAction&)
+    @Actnedit@TActionListDesigner@FormCreate$qqrp14System@TObject @175 ; __fastcall Actnedit::TActionListDesigner::FormCreate(System::TObject *)
+    @Actnedit@TActionListDesigner@FormDestroy$qqrp14System@TObject @174 ; __fastcall Actnedit::TActionListDesigner::FormDestroy(System::TObject *)
+    @Actnedit@TActionListDesigner@FormKeyDown$qqrp14System@TObjectrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @182 ; Actnedit::TActionListDesigner::FormKeyDown(System::TObject *, unsigned short&, System::Set<{583}...
+    @Actnedit@TActionListDesigner@FormKeyPress$qqrp14System@TObjectrb @183 ; __fastcall Actnedit::TActionListDesigner::FormKeyPress(System::TObject *, wchar_t&)
+    @Actnedit@TActionListDesigner@FormResize$qqrp14System@TObject @173 ; __fastcall Actnedit::TActionListDesigner::FormResize(System::TObject *)
+    @Actnedit@TActionListDesigner@GetActionIndex$qqri @180 ; __fastcall Actnedit::TActionListDesigner::GetActionIndex(int)
+    @Actnedit@TActionListDesigner@GetDescriptionsVisible$qqrv @137 ; __fastcall Actnedit::TActionListDesigner::GetDescriptionsVisible()
+    @Actnedit@TActionListDesigner@GetEditState$qqrv @168 ; __fastcall Actnedit::TActionListDesigner::GetEditState()
+    @Actnedit@TActionListDesigner@GetRegKey$qqrv @211 ; __fastcall Actnedit::TActionListDesigner::GetRegKey()
+    @Actnedit@TActionListDesigner@GetSelection$qqrv @209 ; __fastcall Actnedit::TActionListDesigner::GetSelection()
+    @Actnedit@TActionListDesigner@HideAllExecute$qqrp14System@TObject @205 ; __fastcall Actnedit::TActionListDesigner::HideAllExecute(System::TObject *)
+    @Actnedit@TActionListDesigner@IndexOfAction$qqrp31System@Actions@TContainedAction @210 ; __fastcall Actnedit::TActionListDesigner::IndexOfAction(System::Actions::TContainedAction *)
+    @Actnedit@TActionListDesigner@ItemDeleted$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p26System@Classes@TPersistent @215 ; Actnedit::TActionListDesigner::ItemDeleted(const System::DelphiInterface<{583}...
+    @Actnedit@TActionListDesigner@ItemsModified$qqrx47System@%DelphiInterface$20Designintf@IDesigner% @212 ; Actnedit::TActionListDesigner::ItemsModified(const System::DelphiInterface<{583}...
+    @Actnedit@TActionListDesigner@ListView1Change$qqrp14System@TObjectp22Vcl@Comctrls@TListItem24Vcl@Comctrls@TItemChange @172 ; __fastcall Actnedit::TActionListDesigner::ListView1Change(System::TObject *, Vcl::Comctrls::TListItem *, Vcl::Comctrls::TItemChange)
+    @Actnedit@TActionListDesigner@ListView1DblClick$qqrp14System@TObject @129 ; __fastcall Actnedit::TActionListDesigner::ListView1DblClick(System::TObject *)
+    @Actnedit@TActionListDesigner@ListView1DragDrop$qqrp14System@TObjectt1ii @176 ; __fastcall Actnedit::TActionListDesigner::ListView1DragDrop(System::TObject *, System::TObject *, int, int)
+    @Actnedit@TActionListDesigner@ListView1DragOver$qqrp14System@TObjectt1ii25System@Uitypes@TDragStatero @177 ; __fastcall Actnedit::TActionListDesigner::ListView1DragOver(System::TObject *, System::TObject *, int, int, System::Uitypes::TDragState, bool&)
+    @Actnedit@TActionListDesigner@ListView1EndDrag$qqrp14System@TObjectt1ii @131 ; __fastcall Actnedit::TActionListDesigner::ListView1EndDrag(System::TObject *, System::TObject *, int, int)
+    @Actnedit@TActionListDesigner@ListView1KeyDown$qqrp14System@TObjectrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @139 ; Actnedit::TActionListDesigner::ListView1KeyDown(System::TObject *, unsigned short&, System::Set<{583}...
+    @Actnedit@TActionListDesigner@ListView1KeyPress$qqrp14System@TObjectrb @140 ; __fastcall Actnedit::TActionListDesigner::ListView1KeyPress(System::TObject *, wchar_t&)
+    @Actnedit@TActionListDesigner@ListView1Resize$qqrp14System@TObject @124 ; __fastcall Actnedit::TActionListDesigner::ListView1Resize(System::TObject *)
+    @Actnedit@TActionListDesigner@ListView1StartDrag$qqrp14System@TObjectrp24Vcl@Controls@TDragObject @132 ; __fastcall Actnedit::TActionListDesigner::ListView1StartDrag(System::TObject *, Vcl::Controls::TDragObject *&)
+    @Actnedit@TActionListDesigner@LoadFromClipboard$qqrp25System@Classes@TComponentt1p20System@Classes@TList @155 ; __fastcall Actnedit::TActionListDesigner::LoadFromClipboard(System::Classes::TComponent *, System::Classes::TComponent *, System::Classes::TList *)
+    @Actnedit@TActionListDesigner@LoadFromReg$qqrv @195 ; __fastcall Actnedit::TActionListDesigner::LoadFromReg()
+    @Actnedit@TActionListDesigner@LockState$qqrv @200 ; __fastcall Actnedit::TActionListDesigner::LockState()
+    @Actnedit@TActionListDesigner@MoveDownClick$qqrp14System@TObject @178 ; __fastcall Actnedit::TActionListDesigner::MoveDownClick(System::TObject *)
+    @Actnedit@TActionListDesigner@MoveDownUpdate$qqrp14System@TObject @125 ; __fastcall Actnedit::TActionListDesigner::MoveDownUpdate(System::TObject *)
+    @Actnedit@TActionListDesigner@MoveUpClick$qqrp14System@TObject @179 ; __fastcall Actnedit::TActionListDesigner::MoveUpClick(System::TObject *)
+    @Actnedit@TActionListDesigner@MoveUpUpdate$qqrp14System@TObject @126 ; __fastcall Actnedit::TActionListDesigner::MoveUpUpdate(System::TObject *)
+    @Actnedit@TActionListDesigner@NewActionExecute$qqrp14System@TObject @186 ; __fastcall Actnedit::TActionListDesigner::NewActionExecute(System::TObject *)
+    @Actnedit@TActionListDesigner@NewActionUpdate$qqrp14System@TObject @185 ; __fastcall Actnedit::TActionListDesigner::NewActionUpdate(System::TObject *)
+    @Actnedit@TActionListDesigner@NewActionsPopupPopup$qqrp14System@TObject @138 ; __fastcall Actnedit::TActionListDesigner::NewActionsPopupPopup(System::TObject *)
+    @Actnedit@TActionListDesigner@NewCommonActionExecute$qqrp14System@TObject @128 ; __fastcall Actnedit::TActionListDesigner::NewCommonActionExecute(System::TObject *)
+    @Actnedit@TActionListDesigner@NewCommonActionUpdate$qqrp14System@TObject @127 ; __fastcall Actnedit::TActionListDesigner::NewCommonActionUpdate(System::TObject *)
+    @Actnedit@TActionListDesigner@NewStdActionExecute$qqrp14System@TObject @144 ; __fastcall Actnedit::TActionListDesigner::NewStdActionExecute(System::TObject *)
+    @Actnedit@TActionListDesigner@NotifyActionListChange$qqrv @217 ; __fastcall Actnedit::TActionListDesigner::NotifyActionListChange()
+    @Actnedit@TActionListDesigner@Paste$qqrv @161 ; __fastcall Actnedit::TActionListDesigner::Paste()
+    @Actnedit@TActionListDesigner@PasteItemClick$qqrp14System@TObject @159 ; __fastcall Actnedit::TActionListDesigner::PasteItemClick(System::TObject *)
+    @Actnedit@TActionListDesigner@PopupMenu1Popup$qqrp14System@TObject @158 ; __fastcall Actnedit::TActionListDesigner::PopupMenu1Popup(System::TObject *)
+    @Actnedit@TActionListDesigner@ReadStream$qqrp22System@Classes@TStreamp25System@Classes@TComponentt2p20System@Classes@TList @152 ; __fastcall Actnedit::TActionListDesigner::ReadStream(System::Classes::TStream *, System::Classes::TComponent *, System::Classes::TComponent *, System::Classes::TList *)
+    @Actnedit@TActionListDesigner@ReaderSetName$qqrp22System@Classes@TReaderp25System@Classes@TComponentr20System@UnicodeString @151 ; __fastcall Actnedit::TActionListDesigner::ReaderSetName(System::Classes::TReader *, System::Classes::TComponent *, System::UnicodeString&)
+    @Actnedit@TActionListDesigner@ReaderSetName2$qqrp22System@Classes@TReaderp25System@Classes@TComponentr20System@UnicodeString @150 ; __fastcall Actnedit::TActionListDesigner::ReaderSetName2(System::Classes::TReader *, System::Classes::TComponent *, System::UnicodeString&)
+    @Actnedit@TActionListDesigner@Remove$qqrv @164 ; __fastcall Actnedit::TActionListDesigner::Remove()
+    @Actnedit@TActionListDesigner@SaveToReg$qqrv @194 ; __fastcall Actnedit::TActionListDesigner::SaveToReg()
+    @Actnedit@TActionListDesigner@SelectAll$qqro @166 ; __fastcall Actnedit::TActionListDesigner::SelectAll(bool)
+    @Actnedit@TActionListDesigner@SelectAllActionUpdate$qqrp14System@TObject @147 ; __fastcall Actnedit::TActionListDesigner::SelectAllActionUpdate(System::TObject *)
+    @Actnedit@TActionListDesigner@SelectAllItemClick$qqrp14System@TObject @170 ; __fastcall Actnedit::TActionListDesigner::SelectAllItemClick(System::TObject *)
+    @Actnedit@TActionListDesigner@SelectNone$qqro @165 ; __fastcall Actnedit::TActionListDesigner::SelectNone(bool)
+    @Actnedit@TActionListDesigner@SelectedUpdate$qqrp14System@TObject @148 ; __fastcall Actnedit::TActionListDesigner::SelectedUpdate(System::TObject *)
+    @Actnedit@TActionListDesigner@SetActions$qqrxp35System@Actions@TContainedActionList @218 ; __fastcall Actnedit::TActionListDesigner::SetActions(System::Actions::TContainedActionList * const)
+    @Actnedit@TActionListDesigner@SetCommonActionClass$qqrp17System@TMetaClass @130 ; __fastcall Actnedit::TActionListDesigner::SetCommonActionClass(System::TMetaClass *)
+    @Actnedit@TActionListDesigner@SetDescriptionsVisible$qqro @136 ; __fastcall Actnedit::TActionListDesigner::SetDescriptionsVisible(bool)
+    @Actnedit@TActionListDesigner@SetSelection$qqrv @199 ; __fastcall Actnedit::TActionListDesigner::SetSelection()
+    @Actnedit@TActionListDesigner@ShowAllExecute$qqrp14System@TObject @204 ; __fastcall Actnedit::TActionListDesigner::ShowAllExecute(System::TObject *)
+    @Actnedit@TActionListDesigner@TreeViewCatClick$qqrp14System@TObjectp22Vcl@Comctrls@TTreeNode @146 ; __fastcall Actnedit::TActionListDesigner::TreeViewCatClick(System::TObject *, Vcl::Comctrls::TTreeNode *)
+    @Actnedit@TActionListDesigner@TreeViewCatMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @145 ; Actnedit::TActionListDesigner::TreeViewCatMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Actnedit@TActionListDesigner@UniqueName$qqrp25System@Classes@TComponent @169 ; __fastcall Actnedit::TActionListDesigner::UniqueName(System::Classes::TComponent *)
+    @Actnedit@TActionListDesigner@UnlockState$qqrv @198 ; __fastcall Actnedit::TActionListDesigner::UnlockState()
+    @Actnedit@TActionListDesigner@UpdateActionCat$qqrp20Vcl@Actnlist@TAction20System@UnicodeString60System@%DelphiInterface$33System@Actions@TEnumActionListRef% @207 ; Actnedit::TActionListDesigner::UpdateActionCat(Vcl::Actnlist::TAction *, System::UnicodeString, System::DelphiInterface<{583}...
+    @Actnedit@TActionListDesigner@UpdateActionList$qqrv @191 ; __fastcall Actnedit::TActionListDesigner::UpdateActionList()
+    @Actnedit@TActionListDesigner@UpdateActionsCat$qqrv @206 ; __fastcall Actnedit::TActionListDesigner::UpdateActionsCat()
+    @Actnedit@TActionListDesigner@UpdateCaption$qqrv @160 ; __fastcall Actnedit::TActionListDesigner::UpdateCaption()
+    @Actnedit@TActionListDesigner@UpdateDescription$qqro @135 ; __fastcall Actnedit::TActionListDesigner::UpdateDescription(bool)
+    @Actnedit@TActionListDesigner@UpdateFramework$qqrv @219 ; __fastcall Actnedit::TActionListDesigner::UpdateFramework()
+    @Actnedit@TActionListDesigner@UpdateImageList$qqrv @193 ; __fastcall Actnedit::TActionListDesigner::UpdateImageList()
+    @Actnedit@TActionListDesigner@UpdateTreeView$qqrv @192 ; __fastcall Actnedit::TActionListDesigner::UpdateTreeView()
+    @Actnedit@TActionListDesigner@UpdateView$qqro @190 ; __fastcall Actnedit::TActionListDesigner::UpdateView(bool)
+    @Actnedit@initialization$qqrv  @119 ; __fastcall Actnedit::initialization()
+    @Dclcommon@@GetPackageInfoTable$qqrv @279 ; Dclcommon::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclcommon@@PackageLoad$qqrv   @278 ; Dclcommon::__linkproc__ __fastcall PackageLoad()
+    @Dclcommon@@PackageUnload$qqrv @277 ; Dclcommon::__linkproc__ __fastcall PackageUnload()
+    @Dclcommon@initialization$qqrv @276 ; __fastcall Dclcommon::initialization()
+    @Filtedit@Finalization$qqrv    @231 ; __fastcall Filtedit::Finalization()
+    @Filtedit@TFilterEditor@       @241 ; Filtedit::TFilterEditor::
+    @Filtedit@TFilterEditor@FormCreate$qqrp14System@TObject @237 ; __fastcall Filtedit::TFilterEditor::FormCreate(System::TObject *)
+    @Filtedit@TFilterEditor@GetFilter$qqrv @236 ; __fastcall Filtedit::TFilterEditor::GetFilter()
+    @Filtedit@TFilterEditor@HelpBtnClick$qqrp14System@TObject @232 ; __fastcall Filtedit::TFilterEditor::HelpBtnClick(System::TObject *)
+    @Filtedit@TFilterEditor@SetFilter$qqr20System@UnicodeString @235 ; __fastcall Filtedit::TFilterEditor::SetFilter(System::UnicodeString)
+    @Filtedit@TFilterProperty@     @239 ; Filtedit::TFilterProperty::
+    @Filtedit@TFilterProperty@Edit$qqrv @234 ; __fastcall Filtedit::TFilterProperty::Edit()
+    @Filtedit@TFilterProperty@GetAttributes$qqrv @233 ; __fastcall Filtedit::TFilterProperty::GetAttributes()
+    @Filtedit@initialization$qqrv  @230 ; __fastcall Filtedit::initialization()
+    @GetPackageInfoTable           @282 ; GetPackageInfoTable
+    @Maskprop@EditInputMask$qqrr20System@UnicodeStringx20System@UnicodeString @258 ; __fastcall Maskprop::EditInputMask(System::UnicodeString&, const System::UnicodeString)
+    @Maskprop@Finalization$qqrv    @243 ; __fastcall Maskprop::Finalization()
+    @Maskprop@MaskForm             @259 ; Maskprop::MaskForm
+    @Maskprop@TMaskForm@           @261 ; Maskprop::TMaskForm::
+    @Maskprop@TMaskForm@AddBlanks$qqr20System@UnicodeString @254 ; __fastcall Maskprop::TMaskForm::AddBlanks(System::UnicodeString)
+    @Maskprop@TMaskForm@BlanksChange$qqrp14System@TObject @255 ; __fastcall Maskprop::TMaskForm::BlanksChange(System::TObject *)
+    @Maskprop@TMaskForm@FormCreate$qqrp14System@TObject @248 ; __fastcall Maskprop::TMaskForm::FormCreate(System::TObject *)
+    @Maskprop@TMaskForm@GetListMaskValue$qqri @250 ; __fastcall Maskprop::TMaskForm::GetListMaskValue(int)
+    @Maskprop@TMaskForm@GetMaskValue$qqrx20System@UnicodeString @249 ; __fastcall Maskprop::TMaskForm::GetMaskValue(const System::UnicodeString)
+    @Maskprop@TMaskForm@HelpButtonClick$qqrp14System@TObject @244 ; __fastcall Maskprop::TMaskForm::HelpButtonClick(System::TObject *)
+    @Maskprop@TMaskForm@InputMaskChange$qqrp14System@TObject @253 ; __fastcall Maskprop::TMaskForm::InputMaskChange(System::TObject *)
+    @Maskprop@TMaskForm@ListBoxSelect$qqrp14System@TObject @251 ; __fastcall Maskprop::TMaskForm::ListBoxSelect(System::TObject *)
+    @Maskprop@TMaskForm@ListDrawItem$qqrp24Vcl@Controls@TWinControlirx18System@Types@TRect60System@%Set$32Winapi@Windows@Winapi_Windows__1t1$i0$t1$i12$% @252 ; Maskprop::TMaskForm::ListDrawItem(Vcl::Controls::TWinControl *, int, const System::Types::TRect&, System::Set<{583}...
+    @Maskprop@TMaskForm@LoadMaskList$qqrx20System@UnicodeString @245 ; __fastcall Maskprop::TMaskForm::LoadMaskList(const System::UnicodeString)
+    @Maskprop@TMaskForm@Loaded$qqrv @246 ; __fastcall Maskprop::TMaskForm::Loaded()
+    @Maskprop@TMaskForm@MasksClick$qqrp14System@TObject @247 ; __fastcall Maskprop::TMaskForm::MasksClick(System::TObject *)
+    @Maskprop@TMaskProperty@       @263 ; Maskprop::TMaskProperty::
+    @Maskprop@TMaskProperty@Edit$qqrv @256 ; __fastcall Maskprop::TMaskProperty::Edit()
+    @Maskprop@TMaskProperty@GetAttributes$qqrv @257 ; __fastcall Maskprop::TMaskProperty::GetAttributes()
+    @Maskprop@initialization$qqrv  @242 ; __fastcall Maskprop::initialization()
+    @Masktext@EditMaskText$qqrx20System@UnicodeStringr20System@UnicodeString @270 ; __fastcall Masktext::EditMaskText(const System::UnicodeString, System::UnicodeString&)
+    @Masktext@Finalization$qqrv    @265 ; __fastcall Masktext::Finalization()
+    @Masktext@MaskTextForm         @271 ; Masktext::MaskTextForm
+    @Masktext@TMaskTextForm@       @273 ; Masktext::TMaskTextForm::
+    @Masktext@TMaskTextForm@FormCreate$qqrp14System@TObject @269 ; __fastcall Masktext::TMaskTextForm::FormCreate(System::TObject *)
+    @Masktext@TMaskTextForm@HelpButtonClick$qqrp14System@TObject @268 ; __fastcall Masktext::TMaskTextForm::HelpButtonClick(System::TObject *)
+    @Masktext@TMaskTextProperty@   @275 ; Masktext::TMaskTextProperty::
+    @Masktext@TMaskTextProperty@Edit$qqrv @266 ; __fastcall Masktext::TMaskTextProperty::Edit()
+    @Masktext@TMaskTextProperty@GetAttributes$qqrv @267 ; __fastcall Masktext::TMaskTextProperty::GetAttributes()
+    @Masktext@initialization$qqrv  @264 ; __fastcall Masktext::initialization()
+    @Newstdac@Finalization$qqrv    @67  ; __fastcall Newstdac::Finalization()
+    @Newstdac@TNewStdActionDlg@    @108 ; Newstdac::TNewStdActionDlg::
+    @Newstdac@TNewStdActionDlg@$bctr$qqrp25System@Classes@TComponent @81  ; __fastcall Newstdac::TNewStdActionDlg::TNewStdActionDlg(System::Classes::TComponent *)
+    @Newstdac@TNewStdActionDlg@$bdtr$qqrv @80  ; __fastcall Newstdac::TNewStdActionDlg::~TNewStdActionDlg()
+    @Newstdac@TNewStdActionDlg@AcceptActionUpdate$qqrp14System@TObject @68  ; __fastcall Newstdac::TNewStdActionDlg::AcceptActionUpdate(System::TObject *)
+    @Newstdac@TNewStdActionDlg@ActionListCompare$qqrp14System@TObjectp22Vcl@Comctrls@TListItemt2iri @70  ; __fastcall Newstdac::TNewStdActionDlg::ActionListCompare(System::TObject *, Vcl::Comctrls::TListItem *, Vcl::Comctrls::TListItem *, int, int&)
+    @Newstdac@TNewStdActionDlg@ActionListDblClick$qqrp14System@TObject @69  ; __fastcall Newstdac::TNewStdActionDlg::ActionListDblClick(System::TObject *)
+    @Newstdac@TNewStdActionDlg@AddAction$qqrx20System@UnicodeStringp17System@TMetaClasspv @78  ; __fastcall Newstdac::TNewStdActionDlg::AddAction(const System::UnicodeString, System::TMetaClass *, void *)
+    @Newstdac@TNewStdActionDlg@FormClose$qqrp14System@TObjectr27System@Uitypes@TCloseAction @71  ; __fastcall Newstdac::TNewStdActionDlg::FormClose(System::TObject *, System::Uitypes::TCloseAction&)
+    @Newstdac@TNewStdActionDlg@FormShow$qqrp14System@TObject @72  ; __fastcall Newstdac::TNewStdActionDlg::FormShow(System::TObject *)
+    @Newstdac@TNewStdActionDlg@HelpBtnClick$qqrp14System@TObject @79  ; __fastcall Newstdac::TNewStdActionDlg::HelpBtnClick(System::TObject *)
+    @Newstdac@TNewStdActionDlg@ReadSettings$qqrv @77  ; __fastcall Newstdac::TNewStdActionDlg::ReadSettings()
+    @Newstdac@TNewStdActionDlg@SetFrameworkType$qqrx20System@UnicodeString @75  ; __fastcall Newstdac::TNewStdActionDlg::SetFrameworkType(const System::UnicodeString)
+    @Newstdac@TNewStdActionDlg@UpdateActionTree$qqrv @73  ; __fastcall Newstdac::TNewStdActionDlg::UpdateActionTree()
+    @Newstdac@TNewStdActionDlg@UpdateTreePos$qqrv @74  ; __fastcall Newstdac::TNewStdActionDlg::UpdateTreePos()
+    @Newstdac@TNewStdActionDlg@WriteSettings$qqrv @76  ; __fastcall Newstdac::TNewStdActionDlg::WriteSettings()
+    @Newstdac@TTreeNode@           @113 ; Newstdac::TTreeNode::
+    @Newstdac@TTreeNode@GetCategory$qqrv @89  ; __fastcall Newstdac::TTreeNode::GetCategory()
+    @Newstdac@TTreeViewCat@        @111 ; Newstdac::TTreeViewCat::
+    @Newstdac@TTreeViewCat@AddNode$qqrp22Vcl@Comctrls@TTreeNode20System@UnicodeString22Newstdac@TCategoryKind @88  ; __fastcall Newstdac::TTreeViewCat::AddNode(Vcl::Comctrls::TTreeNode *, System::UnicodeString, Newstdac::TCategoryKind)
+    @Newstdac@TTreeViewCat@Assign$qqrp26System@Classes@TPersistent @83  ; __fastcall Newstdac::TTreeViewCat::Assign(System::Classes::TPersistent *)
+    @Newstdac@TTreeViewCat@CreateNode$qqrv @82  ; __fastcall Newstdac::TTreeViewCat::CreateNode()
+    @Newstdac@TTreeViewCat@GetExpandedList$qqrp26System@Classes@TStringList @85  ; __fastcall Newstdac::TTreeViewCat::GetExpandedList(System::Classes::TStringList *)
+    @Newstdac@TTreeViewCat@InsertNode$qqrp22Vcl@Comctrls@TTreeNodei20System@UnicodeString22Newstdac@TCategoryKind @87  ; __fastcall Newstdac::TTreeViewCat::InsertNode(Vcl::Comctrls::TTreeNode *, int, System::UnicodeString, Newstdac::TCategoryKind)
+    @Newstdac@TTreeViewCat@NodeOf$qqr20System@UnicodeString22Newstdac@TCategoryKind @86  ; __fastcall Newstdac::TTreeViewCat::NodeOf(System::UnicodeString, Newstdac::TCategoryKind)
+    @Newstdac@TTreeViewCat@SetExpandedList$qqrp26System@Classes@TStringList @84  ; __fastcall Newstdac::TTreeViewCat::SetExpandedList(System::Classes::TStringList *)
+    @Newstdac@initialization$qqrv  @66  ; __fastcall Newstdac::initialization()
+    @Stdconst@Finalization$qqrv    @116 ; __fastcall Stdconst::Finalization()
+    @Stdconst@_SCantAddToAncestor  @117 ; Stdconst::_SCantAddToAncestor
+    @Stdconst@_SCantDeleteAncestor @118 ; Stdconst::_SCantDeleteAncestor
+    @Stdconst@initialization$qqrv  @115 ; __fastcall Stdconst::initialization()
+    @System@Generics@Collections@%TArrayManager__1$16Newstdac@TRegAct%@ @98  ; System::Generics::Collections::TArrayManager__1<Newstdac::TRegAct>::
+    @System@Generics@Collections@%TEnumerable__1$16Newstdac@TRegAct%@ @103 ; System::Generics::Collections::TEnumerable__1<Newstdac::TRegAct>::
+    @System@Generics@Collections@%TEnumerable__1$16Newstdac@TRegAct%@$bdtr$qqrv @64  ; __fastcall System::Generics::Collections::TEnumerable__1<Newstdac::TRegAct>::~TEnumerable__1<Newstdac::TRegAct>()
+    @System@Generics@Collections@%TEnumerable__1$16Newstdac@TRegAct%@GetEnumerator$qqrv @63  ; __fastcall System::Generics::Collections::TEnumerable__1<Newstdac::TRegAct>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$16Newstdac@TRegAct%@ToArray$qqrv @62  ; __fastcall System::Generics::Collections::TEnumerable__1<Newstdac::TRegAct>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$16Newstdac@TRegAct%@ToArrayImpl$qqri @65  ; __fastcall System::Generics::Collections::TEnumerable__1<Newstdac::TRegAct>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerator__1$16Newstdac@TRegAct%@ @105 ; System::Generics::Collections::TEnumerator__1<Newstdac::TRegAct>::
+    @System@Generics@Collections@%TEnumerator__1$16Newstdac@TRegAct%@MoveNext$qqrv @61  ; __fastcall System::Generics::Collections::TEnumerator__1<Newstdac::TRegAct>::MoveNext()
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@ @91  ; System::Generics::Collections::TList__1<Newstdac::TRegAct>::
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@$bctr$qqrv @49  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::TList__1<Newstdac::TRegAct>()
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@$bctr$qqrx85System@%DelphiInterface$58System@Generics@Defaults@%IComparer__1$16Newstdac@TRegAct%% @48  ; System::Generics::Collections::TList__1<Newstdac::TRegAct>::TList__1<Newstdac::TRegAct>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@$bctr$qqrxp63System@Generics@Collections@%TEnumerable__1$16Newstdac@TRegAct% @47  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::TList__1<Newstdac::TRegAct>(System::Generics::Collections::TEnumerable__1<Newstdac::TRegAct> * const)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@$bdtr$qqrv @46  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::~TList__1<Newstdac::TRegAct>()
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@%TEnumerator$%@ @93  ; System::Generics::Collections::TList__1<Newstdac::TRegAct>::TEnumerator<>::
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@%TEnumerator$%@$bctr$qqrxp57System@Generics@Collections@%TList__1$16Newstdac@TRegAct% @6   ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::TEnumerator<>::TEnumerator<>(System::Generics::Collections::TList__1<Newstdac::TRegAct> * const)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@%TEnumerator$%@DoGetCurrent$qqrv @8   ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::TEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@%TEnumerator$%@DoMoveNext$qqrv @7   ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::TEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@%TEnumerator$%@GetCurrent$qqrv @9   ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::TEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@%TEnumerator$%@MoveNext$qqrv @5   ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::TEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@Add$qqrrx16Newstdac@TRegAct @43  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::Add(const Newstdac::TRegAct&)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@AddRange$qqrpx16Newstdac@TRegActxi @42  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::AddRange(const Newstdac::TRegAct *, const int)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@AddRange$qqrx69System@%DelphiInterface$42System@%IEnumerable__1$16Newstdac@TRegAct%% @41  ; System::Generics::Collections::TList__1<Newstdac::TRegAct>::AddRange(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@AddRange$qqrxp63System@Generics@Collections@%TEnumerable__1$16Newstdac@TRegAct% @40  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::AddRange(System::Generics::Collections::TEnumerable__1<Newstdac::TRegAct> * const)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@BinarySearch$qqrrx16Newstdac@TRegActri @14  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::BinarySearch(const Newstdac::TRegAct&, int&)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@BinarySearch$qqrrx16Newstdac@TRegActrix85System@%DelphiInterface$58System@Generics@Defaults@%IComparer__1$16Newstdac@TRegAct%% @13  ; System::Generics::Collections::TList__1<Newstdac::TRegAct>::BinarySearch(const Newstdac::TRegAct&, int&, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@Clear$qqrv @23  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::Clear()
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@Contains$qqrrx16Newstdac@TRegAct @21  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::Contains(const Newstdac::TRegAct&)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@Delete$qqri @31  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::Delete(int)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@DeleteRange$qqrii @30  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::DeleteRange(int, int)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@DoDelete$qqri51System@Generics@Collections@TCollectionNotification @53  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::DoDelete(int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@DoGetEnumerator$qqrv @51  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::DoGetEnumerator()
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@Error$qqrp20System@TResStringReci @44  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::Error(System::TResStringRec *, int)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@Error$qqrx20System@UnicodeStringi @45  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::Error(const System::UnicodeString, int)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@Exchange$qqrii @27  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::Exchange(int, int)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@Expand$qqrv @22  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::Expand()
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@Extract$qqrrx16Newstdac@TRegAct @29  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::Extract(const Newstdac::TRegAct&)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@ExtractItem$qqrrx16Newstdac@TRegAct23System@Types@TDirection @28  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::ExtractItem(const Newstdac::TRegAct&, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@First$qqrv @25  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::First()
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@GetCapacity$qqrv @60  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::GetCapacity()
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@GetEnumerator$qqrv @10  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::GetEnumerator()
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@GetItem$qqri @57  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::GetItem(int)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@Grow$qqri @55  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::Grow(int)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@GrowCheck$qqri @54  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::GrowCheck(int)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@IndexOf$qqrrx16Newstdac@TRegAct @20  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::IndexOf(const Newstdac::TRegAct&)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@IndexOfItem$qqrrx16Newstdac@TRegAct23System@Types@TDirection @19  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::IndexOfItem(const Newstdac::TRegAct&, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@Insert$qqrirx16Newstdac@TRegAct @39  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::Insert(int, const Newstdac::TRegAct&)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@InsertRange$qqripx16Newstdac@TRegActxi @38  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::InsertRange(int, const Newstdac::TRegAct *, const int)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@InsertRange$qqrix69System@%DelphiInterface$42System@%IEnumerable__1$16Newstdac@TRegAct%% @37  ; System::Generics::Collections::TList__1<Newstdac::TRegAct>::InsertRange(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@InsertRange$qqrixp63System@Generics@Collections@%TEnumerable__1$16Newstdac@TRegAct% @36  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::InsertRange(int, System::Generics::Collections::TEnumerable__1<Newstdac::TRegAct> * const)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@ItemValue$qqrrx16Newstdac@TRegAct @52  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::ItemValue(const Newstdac::TRegAct&)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@Last$qqrv @24  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::Last()
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@LastIndexOf$qqrrx16Newstdac@TRegAct @18  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::LastIndexOf(const Newstdac::TRegAct&)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@Move$qqrii @26  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::Move(int, int)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@Notify$qqrrx16Newstdac@TRegAct51System@Generics@Collections@TCollectionNotification @50  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::Notify(const Newstdac::TRegAct&, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@Pack$qqrv @35  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::Pack()
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@Pack$qqrx98System@%DelphiInterface$71System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@%TEmptyFunc$%% @34  ; System::Generics::Collections::TList__1<Newstdac::TRegAct>::Pack(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@Remove$qqrrx16Newstdac@TRegAct @33  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::Remove(const Newstdac::TRegAct&)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@RemoveItem$qqrrx16Newstdac@TRegAct23System@Types@TDirection @32  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::RemoveItem(const Newstdac::TRegAct&, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@Reverse$qqrv @17  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::Reverse()
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@SetCapacity$qqri @59  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::SetCapacity(int)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@SetCount$qqri @58  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::SetCount(int)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@SetItem$qqrirx16Newstdac@TRegAct @56  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::SetItem(int, const Newstdac::TRegAct&)
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@Sort$qqrv @16  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::Sort()
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@Sort$qqrx85System@%DelphiInterface$58System@Generics@Defaults@%IComparer__1$16Newstdac@TRegAct%% @15  ; System::Generics::Collections::TList__1<Newstdac::TRegAct>::Sort(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@ToArray$qqrv @11  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::ToArray()
+    @System@Generics@Collections@%TList__1$16Newstdac@TRegAct%@TrimExcess$qqrv @12  ; __fastcall System::Generics::Collections::TList__1<Newstdac::TRegAct>::TrimExcess()
+    Finalize                       @280 ; Finalize
+    Initialize                     @281 ; Initialize

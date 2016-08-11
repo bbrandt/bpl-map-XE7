@@ -1,0 +1,275 @@
+LIBRARY     VCLMENUDESIGNER210.BPL
+
+DESCRIPTION 'mbarcadero VCL Menu Designer'
+
+EXPORTS
+    @$xp$16Mtdedlg@TMtDeDlg        @73  ; __tpdsc__ Mtdedlg::TMtDeDlg
+    @$xp$16Mtindlg@TMtInDlg        @81  ; __tpdsc__ Mtindlg::TMtInDlg
+    @$xp$16Mtsvdlg@TMtSvDlg        @89  ; __tpdsc__ Mtsvdlg::TMtSvDlg
+    @$xp$36Borland@Vcl@Design@Mnubuild@TMenuWin @254 ; __tpdsc__ Borland::Vcl::Design::Mnubuild::TMenuWin
+    @$xp$38Borland@Vcl@Design@Mnubuild@THomeValue @258 ; __tpdsc__ Borland::Vcl::Design::Mnubuild::THomeValue
+    @$xp$38Borland@Vcl@Design@Mnubuild@TStateFlag @263 ; __tpdsc__ Borland::Vcl::Design::Mnubuild::TStateFlag
+    @$xp$39Borland@Vcl@Design@Mnubuild@TMenuEditor @247 ; __tpdsc__ Borland::Vcl::Design::Mnubuild::TMenuEditor
+    @$xp$39Borland@Vcl@Design@Mnubuild@TStateFlags @262 ; __tpdsc__ Borland::Vcl::Design::Mnubuild::TStateFlags
+    @$xp$40Borland@Vcl@Design@Mnubuild@EMenuBuilder @243 ; __tpdsc__ Borland::Vcl::Design::Mnubuild::EMenuBuilder
+    @$xp$40Borland@Vcl@Design@Mnubuild@TMenuBuilder @251 ; __tpdsc__ Borland::Vcl::Design::Mnubuild::TMenuBuilder
+    @$xp$40Borland@Vcl@Design@Mnubuild@TMenuItemWin @256 ; __tpdsc__ Borland::Vcl::Design::Mnubuild::TMenuItemWin
+    @$xp$41Borland@Vcl@Design@Menutmpl@TMenuTemplate @55  ; __tpdsc__ Borland::Vcl::Design::Menutmpl::TMenuTemplate
+    @$xp$44Borland@Vcl@Design@Mnubuild@_TMenuBuilder@_1 @253 ; __tpdsc__ Borland::Vcl::Design::Mnubuild::_TMenuBuilder::_1
+    @$xp$45Borland@Vcl@Design@Mnubuild@TMenuItemProperty @249 ; __tpdsc__ Borland::Vcl::Design::Mnubuild::TMenuItemProperty
+    @$xp$45Borland@Vcl@Design@Mnubuild@TScrollVisibility @260 ; __tpdsc__ Borland::Vcl::Design::Mnubuild::TScrollVisibility
+    @$xp$45Borland@Vcl@Design@Mnuselct@TMenuSelectDialog @66  ; __tpdsc__ Borland::Vcl::Design::Mnuselct::TMenuSelectDialog
+    @$xp$47Borland@Vcl@Design@Mnubuild@TMenuDesignNotifier @245 ; __tpdsc__ Borland::Vcl::Design::Mnubuild::TMenuDesignNotifier
+    @$xp$48Borland@Vcl@Design@Menutmpl@TMenuTemplateManager @53  ; __tpdsc__ Borland::Vcl::Design::Menutmpl::TMenuTemplateManager
+    @$xp$58Borland@Vcl@Design@Mnubuild@Borland_Vcl_Design_Mnubuild__1 @261 ; __tpdsc__ Borland::Vcl::Design::Mnubuild::Borland_Vcl_Design_Mnubuild__1
+    @$xp$58Borland@Vcl@Design@Mnubuild@Borland_Vcl_Design_Mnubuild__2 @259 ; __tpdsc__ Borland::Vcl::Design::Mnubuild::Borland_Vcl_Design_Mnubuild__2
+    @Borland@Vcl@Design@Menutmpl@Finalization$qqrv @32  ; __fastcall Borland::Vcl::Design::Menutmpl::Finalization()
+    @Borland@Vcl@Design@Menutmpl@LoadMenuTemplateManagerFromDisk$qqrp48Borland@Vcl@Design@Menutmpl@TMenuTemplateManager @33  ; __fastcall Borland::Vcl::Design::Menutmpl::LoadMenuTemplateManagerFromDisk(Borland::Vcl::Design::Menutmpl::TMenuTemplateManager *)
+    @Borland@Vcl@Design@Menutmpl@TMenuTemplate@ @56  ; Borland::Vcl::Design::Menutmpl::TMenuTemplate::
+    @Borland@Vcl@Design@Menutmpl@TMenuTemplate@$bctr$qqrp25System@Classes@TComponent @52  ; __fastcall Borland::Vcl::Design::Menutmpl::TMenuTemplate::TMenuTemplate(System::Classes::TComponent *)
+    @Borland@Vcl@Design@Menutmpl@TMenuTemplate@ComponentRead$qqrp25System@Classes@TComponent @47  ; __fastcall Borland::Vcl::Design::Menutmpl::TMenuTemplate::ComponentRead(System::Classes::TComponent *)
+    @Borland@Vcl@Design@Menutmpl@TMenuTemplate@GetChildOwner$qqrv @44  ; __fastcall Borland::Vcl::Design::Menutmpl::TMenuTemplate::GetChildOwner()
+    @Borland@Vcl@Design@Menutmpl@TMenuTemplate@GetChildren$qqrynpqqrp25System@Classes@TComponent$vp25System@Classes@TComponent @45  ; __fastcall Borland::Vcl::Design::Menutmpl::TMenuTemplate::GetChildren(void __fastcall __closure(*)(System::Classes::TComponent *), System::Classes::TComponent *)
+    @Borland@Vcl@Design@Menutmpl@TMenuTemplate@LoadFromClipboard$qqrp25System@Classes@TComponent @50  ; __fastcall Borland::Vcl::Design::Menutmpl::TMenuTemplate::LoadFromClipboard(System::Classes::TComponent *)
+    @Borland@Vcl@Design@Menutmpl@TMenuTemplate@ReadState$qqrp22System@Classes@TReader @46  ; __fastcall Borland::Vcl::Design::Menutmpl::TMenuTemplate::ReadState(System::Classes::TReader *)
+    @Borland@Vcl@Design@Menutmpl@TMenuTemplate@ReadStream$qqrp22System@Classes@TStreamp25System@Classes@TComponentt2 @49  ; __fastcall Borland::Vcl::Design::Menutmpl::TMenuTemplate::ReadStream(System::Classes::TStream *, System::Classes::TComponent *, System::Classes::TComponent *)
+    @Borland@Vcl@Design@Menutmpl@TMenuTemplate@ReaderSetName$qqrp22System@Classes@TReaderp25System@Classes@TComponentr20System@UnicodeString @48  ; __fastcall Borland::Vcl::Design::Menutmpl::TMenuTemplate::ReaderSetName(System::Classes::TReader *, System::Classes::TComponent *, System::UnicodeString&)
+    @Borland@Vcl@Design@Menutmpl@TMenuTemplate@SetItem$qqrp19Vcl@Menus@TMenuItem @51  ; __fastcall Borland::Vcl::Design::Menutmpl::TMenuTemplate::SetItem(Vcl::Menus::TMenuItem *)
+    @Borland@Vcl@Design@Menutmpl@TMenuTemplateManager@ @54  ; Borland::Vcl::Design::Menutmpl::TMenuTemplateManager::
+    @Borland@Vcl@Design@Menutmpl@TMenuTemplateManager@$bctr$qqrp25System@Classes@TComponent @43  ; __fastcall Borland::Vcl::Design::Menutmpl::TMenuTemplateManager::TMenuTemplateManager(System::Classes::TComponent *)
+    @Borland@Vcl@Design@Menutmpl@TMenuTemplateManager@$bdtr$qqrv @42  ; __fastcall Borland::Vcl::Design::Menutmpl::TMenuTemplateManager::~TMenuTemplateManager()
+    @Borland@Vcl@Design@Menutmpl@TMenuTemplateManager@DoesTemplateExist$qqr20System@UnicodeString @34  ; __fastcall Borland::Vcl::Design::Menutmpl::TMenuTemplateManager::DoesTemplateExist(System::UnicodeString)
+    @Borland@Vcl@Design@Menutmpl@TMenuTemplateManager@GetChildren$qqrynpqqrp25System@Classes@TComponent$vp25System@Classes@TComponent @41  ; __fastcall Borland::Vcl::Design::Menutmpl::TMenuTemplateManager::GetChildren(void __fastcall __closure(*)(System::Classes::TComponent *), System::Classes::TComponent *)
+    @Borland@Vcl@Design@Menutmpl@TMenuTemplateManager@GetTemplate$qqri @40  ; __fastcall Borland::Vcl::Design::Menutmpl::TMenuTemplateManager::GetTemplate(int)
+    @Borland@Vcl@Design@Menutmpl@TMenuTemplateManager@GetTemplatesSize$qqrv @39  ; __fastcall Borland::Vcl::Design::Menutmpl::TMenuTemplateManager::GetTemplatesSize()
+    @Borland@Vcl@Design@Menutmpl@TMenuTemplateManager@IsSpaceAvailable$qqrv @38  ; __fastcall Borland::Vcl::Design::Menutmpl::TMenuTemplateManager::IsSpaceAvailable()
+    @Borland@Vcl@Design@Menutmpl@TMenuTemplateManager@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @36  ; __fastcall Borland::Vcl::Design::Menutmpl::TMenuTemplateManager::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Borland@Vcl@Design@Menutmpl@TMenuTemplateManager@StreamTemplatesOut$qqrv @35  ; __fastcall Borland::Vcl::Design::Menutmpl::TMenuTemplateManager::StreamTemplatesOut()
+    @Borland@Vcl@Design@Menutmpl@TMenuTemplateManager@TemplateSaveAs$qqrp41Borland@Vcl@Design@Menutmpl@TMenuTemplate @37  ; __fastcall Borland::Vcl::Design::Menutmpl::TMenuTemplateManager::TemplateSaveAs(Borland::Vcl::Design::Menutmpl::TMenuTemplate *)
+    @Borland@Vcl@Design@Menutmpl@initialization$qqrv @31  ; __fastcall Borland::Vcl::Design::Menutmpl::initialization()
+    @Borland@Vcl@Design@Mnubuild@EMenuBuilder@ @244 ; Borland::Vcl::Design::Mnubuild::EMenuBuilder::
+    @Borland@Vcl@Design@Mnubuild@Finalization$qqrv @98  ; __fastcall Borland::Vcl::Design::Mnubuild::Finalization()
+    @Borland@Vcl@Design@Mnubuild@IDERegister$qqrv @99  ; __fastcall Borland::Vcl::Design::Mnubuild::IDERegister()
+    @Borland@Vcl@Design@Mnubuild@MenuEditor @242 ; Borland::Vcl::Design::Mnubuild::MenuEditor
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@ @252 ; Borland::Vcl::Design::Mnubuild::TMenuBuilder::
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@ActiveChanged$qqrv @237 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::ActiveChanged()
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@AdjustScrollBars$qqrv @236 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::AdjustScrollBars()
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@BuildCaptionFromPieces$qqrv @235 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::BuildCaptionFromPieces()
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@ChangeWorkMenu$qqrp19Vcl@Menus@TMenuItemoo @214 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::ChangeWorkMenu(Vcl::Menus::TMenuItem *, bool, bool)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@CheckDragAcceptance$qqrp36Borland@Vcl@Design@Mnubuild@TMenuWinp40Borland@Vcl@Design@Mnubuild@TMenuItemWin @234 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::CheckDragAcceptance(Borland::Vcl::Design::Mnubuild::TMenuWin *, Borland::Vcl::Design::Mnubuild::TMenuItemWin *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@ClearDragState$qqrv @233 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::ClearDragState()
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@ClearWorkMenu$qqrp19Vcl@Menus@TMenuItem @232 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::ClearWorkMenu(Vcl::Menus::TMenuItem *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@Copy$qqrv @210 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::Copy()
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@CreateSubmenu1Click$qqrp14System@TObject @114 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::CreateSubmenu1Click(System::TObject *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@Cut$qqrv @211 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::Cut()
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@Delete$qqrv @208 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::Delete()
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@DeleteItemClick$qqrp14System@TObject @115 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::DeleteItemClick(System::TObject *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@DesignerClosed$qqrx47System@%DelphiInterface$20Designintf@IDesigner%o @205 ; Borland::Vcl::Design::Mnubuild::TMenuBuilder::DesignerClosed(const System::DelphiInterface<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@DesignerOpened$qqrx47System@%DelphiInterface$20Designintf@IDesigner%o @204 ; Borland::Vcl::Design::Mnubuild::TMenuBuilder::DesignerOpened(const System::DelphiInterface<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@DoActivate$qqrv @128 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::DoActivate()
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@EditAction$qqr22Designintf@TEditAction @207 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::EditAction(Designintf::TEditAction)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@FormActivate$qqrp14System@TObject @240 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::FormActivate(System::TObject *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@FormClose$qqrp14System@TObjectr27System@Uitypes@TCloseAction @134 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::FormClose(System::TObject *, System::Uitypes::TCloseAction&)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@FormCreate$qqrp14System@TObject @136 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::FormCreate(System::TObject *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@FormDeactivate$qqrp14System@TObject @239 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::FormDeactivate(System::TObject *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@FormDesignerRedraw$qqr47System@%DelphiInterface$20Designintf@IDesigner% @108 ; Borland::Vcl::Design::Mnubuild::TMenuBuilder::FormDesignerRedraw(System::DelphiInterface<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@FormDesignerRedraw$qqrv @109 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::FormDesignerRedraw()
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@FormDestroy$qqrp14System@TObject @135 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::FormDestroy(System::TObject *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@FormMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @238 ; Borland::Vcl::Design::Mnubuild::TMenuBuilder::FormMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@FormMouseUp$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @106 ; Borland::Vcl::Design::Mnubuild::TMenuBuilder::FormMouseUp(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@FormResize$qqrp14System@TObject @241 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::FormResize(System::TObject *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@GetANewMenu$qqro @230 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::GetANewMenu(bool)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@GetActiveItem$qqrp36Borland@Vcl@Design@Mnubuild@TMenuWin @231 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::GetActiveItem(Borland::Vcl::Design::Mnubuild::TMenuWin *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@GetEditState$qqrv @212 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::GetEditState()
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@GetScrollVisibility$qqrv @228 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::GetScrollVisibility()
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@GetSubWinForItem$qqrp40Borland@Vcl@Design@Mnubuild@TMenuItemWin @229 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::GetSubWinForItem(Borland::Vcl::Design::Mnubuild::TMenuItemWin *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@GetWindowForItem$qqrp19Vcl@Menus@TMenuItemrp36Borland@Vcl@Design@Mnubuild@TMenuWinrp40Borland@Vcl@Design@Mnubuild@TMenuItemWin @206 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::GetWindowForItem(Vcl::Menus::TMenuItem *, Borland::Vcl::Design::Mnubuild::TMenuWin *&, Borland::Vcl::Design::Mnubuild::TMenuItemWin *&)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@HandleAltF10$qqr60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%rus @227 ; Borland::Vcl::Design::Mnubuild::TMenuBuilder::HandleAltF10(System::Set<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@InsertItemClick$qqrp14System@TObject @116 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::InsertItemClick(System::TObject *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@InsertResourceItemClick$qqrp14System@TObject @113 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::InsertResourceItemClick(System::TObject *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@InsertSeparatorItemClick$qqrp14System@TObject @112 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::InsertSeparatorItemClick(System::TObject *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@IsFirstWindowHome$qqrv @225 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::IsFirstWindowHome()
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@IsInDDList$qqrp36Borland@Vcl@Design@Mnubuild@TMenuWin @226 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::IsInDDList(Borland::Vcl::Design::Mnubuild::TMenuWin *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@ItemDeleted$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p26System@Classes@TPersistent @203 ; Borland::Vcl::Design::Mnubuild::TMenuBuilder::ItemDeleted(const System::DelphiInterface<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@ItemGotFocus$qqrp36Borland@Vcl@Design@Mnubuild@TMenuWinp40Borland@Vcl@Design@Mnubuild@TMenuItemWin @224 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::ItemGotFocus(Borland::Vcl::Design::Mnubuild::TMenuWin *, Borland::Vcl::Design::Mnubuild::TMenuItemWin *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@ItemInserted$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p26System@Classes@TPersistent @202 ; Borland::Vcl::Design::Mnubuild::TMenuBuilder::ItemInserted(const System::DelphiInterface<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@ItemsModified$qqrx47System@%DelphiInterface$20Designintf@IDesigner% @201 ; Borland::Vcl::Design::Mnubuild::TMenuBuilder::ItemsModified(const System::DelphiInterface<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@MnuBuildPopupPopup$qqrp14System@TObject @129 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::MnuBuildPopupPopup(System::TObject *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@NewPopup$qqrp36Borland@Vcl@Design@Mnubuild@TMenuWinp40Borland@Vcl@Design@Mnubuild@TMenuItemWin @223 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::NewPopup(Borland::Vcl::Design::Mnubuild::TMenuWin *, Borland::Vcl::Design::Mnubuild::TMenuItemWin *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @216 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@Paste$qqrv @209 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::Paste()
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@PerformUpdate$qqrv @213 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::PerformUpdate()
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@PopupMenu1DeleteTemplatesClick$qqrp14System@TObject @130 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::PopupMenu1DeleteTemplatesClick(System::TObject *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@PopupMenu1InsertFromTemplateClick$qqrp14System@TObject @132 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::PopupMenu1InsertFromTemplateClick(System::TObject *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@PopupMenu1SaveAsTemplateClick$qqrp14System@TObject @131 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::PopupMenu1SaveAsTemplateClick(System::TObject *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@PopupMenu1SelectMenuClick$qqrp14System@TObject @133 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::PopupMenu1SelectMenuClick(System::TObject *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@ReConstructDDList$qqrv @222 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::ReConstructDDList()
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@ResetAllSelections$qqrp36Borland@Vcl@Design@Mnubuild@TMenuWin @219 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::ResetAllSelections(Borland::Vcl::Design::Mnubuild::TMenuWin *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@SelectionChanged$qqrx47System@%DelphiInterface$20Designintf@IDesigner%x57System@%DelphiInterface$30Designintf@IDesignerSelections% @111 ; Borland::Vcl::Design::Mnubuild::TMenuBuilder::SelectionChanged(const System::DelphiInterface<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@SetDragState$qqrp36Borland@Vcl@Design@Mnubuild@TMenuWinp40Borland@Vcl@Design@Mnubuild@TMenuItemWin @218 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::SetDragState(Borland::Vcl::Design::Mnubuild::TMenuWin *, Borland::Vcl::Design::Mnubuild::TMenuItemWin *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@SetMenu$qqrp19Vcl@Menus@TMenuItemx47System@%DelphiInterface$20Designintf@IDesigner%p20System@Classes@TList @217 ; Borland::Vcl::Design::Mnubuild::TMenuBuilder::SetMenu(Vcl::Menus::TMenuItem *, const System::DelphiInterface<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@SetWorkMenu$qqrp19Vcl@Menus@TMenuItem @215 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::SetWorkMenu(Vcl::Menus::TMenuItem *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@StayonTopItemClick$qqrp14System@TObject @107 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::StayonTopItemClick(System::TObject *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@SyncSelection$qqrp20System@Classes@TList @220 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::SyncSelection(System::Classes::TList *)
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@UpdatePropertyInspector$qqrx57System@%DelphiInterface$30Designintf@IDesignerSelections% @110 ; Borland::Vcl::Design::Mnubuild::TMenuBuilder::UpdatePropertyInspector(const System::DelphiInterface<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuBuilder@WMWinIniChange$qqrr24Winapi@Messages@TMessage @127 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuBuilder::WMWinIniChange(Winapi::Messages::TMessage&)
+    @Borland@Vcl@Design@Mnubuild@TMenuDesignNotifier@ @246 ; Borland::Vcl::Design::Mnubuild::TMenuDesignNotifier::
+    @Borland@Vcl@Design@Mnubuild@TMenuDesignNotifier@DesignerClosed$qqrx47System@%DelphiInterface$20Designintf@IDesigner%o @100 ; Borland::Vcl::Design::Mnubuild::TMenuDesignNotifier::DesignerClosed(const System::DelphiInterface<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuDesignNotifier@DesignerOpened$qqrx47System@%DelphiInterface$20Designintf@IDesigner%o @101 ; Borland::Vcl::Design::Mnubuild::TMenuDesignNotifier::DesignerOpened(const System::DelphiInterface<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuDesignNotifier@ItemDeleted$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p26System@Classes@TPersistent @105 ; Borland::Vcl::Design::Mnubuild::TMenuDesignNotifier::ItemDeleted(const System::DelphiInterface<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuDesignNotifier@ItemInserted$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p26System@Classes@TPersistent @104 ; Borland::Vcl::Design::Mnubuild::TMenuDesignNotifier::ItemInserted(const System::DelphiInterface<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuDesignNotifier@ItemsModified$qqrx47System@%DelphiInterface$20Designintf@IDesigner% @103 ; Borland::Vcl::Design::Mnubuild::TMenuDesignNotifier::ItemsModified(const System::DelphiInterface<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuDesignNotifier@SelectionChanged$qqrx47System@%DelphiInterface$20Designintf@IDesigner%x57System@%DelphiInterface$30Designintf@IDesignerSelections% @102 ; Borland::Vcl::Design::Mnubuild::TMenuDesignNotifier::SelectionChanged(const System::DelphiInterface<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuEditor@ @248 ; Borland::Vcl::Design::Mnubuild::TMenuEditor::
+    @Borland@Vcl@Design@Mnubuild@TMenuEditor@$bctr$qqrp25System@Classes@TComponent47System@%DelphiInterface$20Designintf@IDesigner% @123 ; Borland::Vcl::Design::Mnubuild::TMenuEditor::TMenuEditor(System::Classes::TComponent *, System::DelphiInterface<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuEditor@$bdtr$qqrv @121 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuEditor::~TMenuEditor()
+    @Borland@Vcl@Design@Mnubuild@TMenuEditor@Edit$qqrv @120 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuEditor::Edit()
+    @Borland@Vcl@Design@Mnubuild@TMenuEditor@ExecuteVerb$qqri @119 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuEditor::ExecuteVerb(int)
+    @Borland@Vcl@Design@Mnubuild@TMenuEditor@GetVerb$qqri @118 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuEditor::GetVerb(int)
+    @Borland@Vcl@Design@Mnubuild@TMenuEditor@GetVerbCount$qqrv @117 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuEditor::GetVerbCount()
+    @Borland@Vcl@Design@Mnubuild@TMenuEditor@OnDesignerDeactivate$qqrp14System@TObject @122 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuEditor::OnDesignerDeactivate(System::TObject *)
+    @Borland@Vcl@Design@Mnubuild@TMenuItemProperty@ @250 ; Borland::Vcl::Design::Mnubuild::TMenuItemProperty::
+    @Borland@Vcl@Design@Mnubuild@TMenuItemProperty@Edit$qqrv @124 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuItemProperty::Edit()
+    @Borland@Vcl@Design@Mnubuild@TMenuItemProperty@GetAttributes$qqrv @125 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuItemProperty::GetAttributes()
+    @Borland@Vcl@Design@Mnubuild@TMenuItemProperty@GetValue$qqrv @126 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuItemProperty::GetValue()
+    @Borland@Vcl@Design@Mnubuild@TMenuItemWin@ @257 ; Borland::Vcl::Design::Mnubuild::TMenuItemWin::
+    @Borland@Vcl@Design@Mnubuild@TMenuItemWin@$bctr$qqrp25System@Classes@TComponent @153 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuItemWin::TMenuItemWin(System::Classes::TComponent *)
+    @Borland@Vcl@Design@Mnubuild@TMenuItemWin@$bdtr$qqrv @152 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuItemWin::~TMenuItemWin()
+    @Borland@Vcl@Design@Mnubuild@TMenuItemWin@DoSetColor$qqro @151 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuItemWin::DoSetColor(bool)
+    @Borland@Vcl@Design@Mnubuild@TMenuItemWin@GetCaptionExtent$qqrv @150 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuItemWin::GetCaptionExtent()
+    @Borland@Vcl@Design@Mnubuild@TMenuItemWin@GetMenuItem$qqrv @149 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuItemWin::GetMenuItem()
+    @Borland@Vcl@Design@Mnubuild@TMenuItemWin@MenuOwner$qqrv @148 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuItemWin::MenuOwner()
+    @Borland@Vcl@Design@Mnubuild@TMenuItemWin@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @147 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuItemWin::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Borland@Vcl@Design@Mnubuild@TMenuItemWin@Paint$qqrv @146 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuItemWin::Paint()
+    @Borland@Vcl@Design@Mnubuild@TMenuItemWin@PaintItemFocusRect$qqrv @145 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuItemWin::PaintItemFocusRect()
+    @Borland@Vcl@Design@Mnubuild@TMenuItemWin@PaintItemGlyph$qqroi @144 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuItemWin::PaintItemGlyph(bool, int)
+    @Borland@Vcl@Design@Mnubuild@TMenuItemWin@PaintItemShortcut$qqrus @143 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuItemWin::PaintItemShortcut(unsigned short)
+    @Borland@Vcl@Design@Mnubuild@TMenuItemWin@PaintItemText$qqrus @142 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuItemWin::PaintItemText(unsigned short)
+    @Borland@Vcl@Design@Mnubuild@TMenuItemWin@PaintSeparator$qqrv @141 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuItemWin::PaintSeparator()
+    @Borland@Vcl@Design@Mnubuild@TMenuItemWin@SetExtentValues$qqrv @140 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuItemWin::SetExtentValues()
+    @Borland@Vcl@Design@Mnubuild@TMenuItemWin@SetMenuItem$qqrp19Vcl@Menus@TMenuItem @139 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuItemWin::SetMenuItem(Vcl::Menus::TMenuItem *)
+    @Borland@Vcl@Design@Mnubuild@TMenuItemWin@SetSelected$qqro @138 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuItemWin::SetSelected(bool)
+    @Borland@Vcl@Design@Mnubuild@TMenuItemWin@WMGetDlgCode$qqrr27Winapi@Messages@TWMNoParams @137 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuItemWin::WMGetDlgCode(Winapi::Messages::TWMNoParams&)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@ @255 ; Borland::Vcl::Design::Mnubuild::TMenuWin::
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@$bctr$qqrp25System@Classes@TComponent @200 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::TMenuWin(System::Classes::TComponent *)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@AdjustAfterParentSize$qqrv @160 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::AdjustAfterParentSize()
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@CMFocusChanged$qqrr28Vcl@Controls@TCMFocusChanged @198 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::CMFocusChanged(Vcl::Controls::TCMFocusChanged&)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@CreateAndPositionNewItem$qqrv @196 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::CreateAndPositionNewItem()
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@CreateParams$qqrr26Vcl@Controls@TCreateParams @199 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::CreateParams(Vcl::Controls::TCreateParams&)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@FindControlIndex$qqrp40Borland@Vcl@Design@Mnubuild@TMenuItemWin @195 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::FindControlIndex(Borland::Vcl::Design::Mnubuild::TMenuItemWin *)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@GetActiveItem$qqrp36Borland@Vcl@Design@Mnubuild@TMenuWin @194 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::GetActiveItem(Borland::Vcl::Design::Mnubuild::TMenuWin *)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@GetItemsSelected$qqrv @193 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::GetItemsSelected()
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@GetLongestCaption$qqrv @192 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::GetLongestCaption()
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@GetLongestShortCut$qqrv @191 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::GetLongestShortCut()
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@GetWindowForItem$qqrp19Vcl@Menus@TMenuItem @188 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::GetWindowForItem(Vcl::Menus::TMenuItem *)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@HideNextLevels$qqrv @190 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::HideNextLevels()
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@InitDragDrop$qqrv @189 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::InitDragDrop()
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@InsertMenuTemplate$qqrp40Borland@Vcl@Design@Mnubuild@TMenuItemWinrp41Borland@Vcl@Design@Menutmpl@TMenuTemplateo @187 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::InsertMenuTemplate(Borland::Vcl::Design::Mnubuild::TMenuItemWin *, Borland::Vcl::Design::Menutmpl::TMenuTemplate *&, bool)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@IsAncestorLevel$qqrp36Borland@Vcl@Design@Mnubuild@TMenuWin @186 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::IsAncestorLevel(Borland::Vcl::Design::Mnubuild::TMenuWin *)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@IsLastItemEmpty$qqrv @185 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::IsLastItemEmpty()
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@IsParentLevel$qqrp36Borland@Vcl@Design@Mnubuild@TMenuWinp40Borland@Vcl@Design@Mnubuild@TMenuItemWin @184 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::IsParentLevel(Borland::Vcl::Design::Mnubuild::TMenuWin *, Borland::Vcl::Design::Mnubuild::TMenuItemWin *)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@ItemDblClick$qqrp14System@TObject @183 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::ItemDblClick(System::TObject *)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@ItemGotFocus$qqrp24Vcl@Controls@TWinControl @182 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::ItemGotFocus(Vcl::Controls::TWinControl *)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@ItemKeyDown$qqrp14System@TObjectrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @181 ; Borland::Vcl::Design::Mnubuild::TMenuWin::ItemKeyDown(System::TObject *, unsigned short&, System::Set<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@ItemKeyPress$qqrp14System@TObjectrb @180 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::ItemKeyPress(System::TObject *, wchar_t&)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@ItemOnMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @179 ; Borland::Vcl::Design::Mnubuild::TMenuWin::ItemOnMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@MenuDragDrop$qqrp14System@TObjectt1ii @157 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::MenuDragDrop(System::TObject *, System::TObject *, int, int)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@MenuDragOver$qqrp14System@TObjectt1ii25System@Uitypes@TDragStatero @156 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::MenuDragOver(System::TObject *, System::TObject *, int, int, System::Uitypes::TDragState, bool&)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@MenuEndDrag$qqrp14System@TObjectt1ii @155 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::MenuEndDrag(System::TObject *, System::TObject *, int, int)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@MenuInvalidNotification$qqrv @178 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::MenuInvalidNotification()
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@NavItemIncrement$qqrp40Borland@Vcl@Design@Mnubuild@TMenuItemWino60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @177 ; Borland::Vcl::Design::Mnubuild::TMenuWin::NavItemIncrement(Borland::Vcl::Design::Mnubuild::TMenuItemWin *, bool, System::Set<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@NavItemLR$qqrp40Borland@Vcl@Design@Mnubuild@TMenuItemWinus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @176 ; Borland::Vcl::Design::Mnubuild::TMenuWin::NavItemLR(Borland::Vcl::Design::Mnubuild::TMenuItemWin *, unsigned short, System::Set<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@NavItemUD$qqrp40Borland@Vcl@Design@Mnubuild@TMenuItemWinus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @175 ; Borland::Vcl::Design::Mnubuild::TMenuWin::NavItemUD(Borland::Vcl::Design::Mnubuild::TMenuItemWin *, unsigned short, System::Set<{583}...
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@NewMenuItem$qqrp40Borland@Vcl@Design@Mnubuild@TMenuItemWin @173 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::NewMenuItem(Borland::Vcl::Design::Mnubuild::TMenuItemWin *)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@NewSubMenu$qqrp40Borland@Vcl@Design@Mnubuild@TMenuItemWin @174 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::NewSubMenu(Borland::Vcl::Design::Mnubuild::TMenuItemWin *)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @154 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@Paint$qqrv @197 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::Paint()
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@PositionAfterParentSize$qqrp36Borland@Vcl@Design@Mnubuild@TMenuWin @159 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::PositionAfterParentSize(Borland::Vcl::Design::Mnubuild::TMenuWin *)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@RemoveMenuItem$qqrp40Borland@Vcl@Design@Mnubuild@TMenuItemWinoo @172 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::RemoveMenuItem(Borland::Vcl::Design::Mnubuild::TMenuItemWin *, bool, bool)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@ResetAllSelections$qqrv @171 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::ResetAllSelections()
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@SetItemProperties$qqrp40Borland@Vcl@Design@Mnubuild@TMenuItemWin @170 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::SetItemProperties(Borland::Vcl::Design::Mnubuild::TMenuItemWin *)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@SetPosition$qqro @169 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::SetPosition(bool)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@SetWorkMenu$qqrp19Vcl@Menus@TMenuItem @168 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::SetWorkMenu(Vcl::Menus::TMenuItem *)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@SizeItemWindows$qqrv @167 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::SizeItemWindows()
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@StreamSelections$qqrp28System@Classes@TMemoryStreamp25System@Classes@TComponent @166 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::StreamSelections(System::Classes::TMemoryStream *, System::Classes::TComponent *)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@SyncSelection$qqrp20System@Classes@TList @221 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::SyncSelection(System::Classes::TList *)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@TreatAsMenuBar$qqrv @165 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::TreatAsMenuBar()
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@UpdateMenuAssignments$qqrv @164 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::UpdateMenuAssignments()
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@UpdateNotification$qqrv @158 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::UpdateNotification()
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@UpdatePropertyInspector$qqrv @163 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::UpdatePropertyInspector()
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@VerifyWindowsMatchMenu$qqrp19Vcl@Menus@TMenuItem @162 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::VerifyWindowsMatchMenu(Vcl::Menus::TMenuItem *)
+    @Borland@Vcl@Design@Mnubuild@TMenuWin@WidenItems$qqri @161 ; __fastcall Borland::Vcl::Design::Mnubuild::TMenuWin::WidenItems(int)
+    @Borland@Vcl@Design@Mnubuild@initialization$qqrv @97  ; __fastcall Borland::Vcl::Design::Mnubuild::initialization()
+    @Borland@Vcl@Design@Mnuconst@Finalization$qqrv @2   ; __fastcall Borland::Vcl::Design::Mnuconst::Finalization()
+    @Borland@Vcl@Design@Mnuconst@_SCantDeleteAncestor @29  ; Borland::Vcl::Design::Mnuconst::_SCantDeleteAncestor
+    @Borland@Vcl@Design@Mnuconst@_SCharExpected @16  ; Borland::Vcl::Design::Mnuconst::_SCharExpected
+    @Borland@Vcl@Design@Mnuconst@_SExpectingBegin @7   ; Borland::Vcl::Design::Mnuconst::_SExpectingBegin
+    @Borland@Vcl@Design@Mnuconst@_SExpectingCaption @6   ; Borland::Vcl::Design::Mnuconst::_SExpectingCaption
+    @Borland@Vcl@Design@Mnuconst@_SExpectingPopup @5   ; Borland::Vcl::Design::Mnuconst::_SExpectingPopup
+    @Borland@Vcl@Design@Mnuconst@_SIdentifierExpected @19  ; Borland::Vcl::Design::Mnuconst::_SIdentifierExpected
+    @Borland@Vcl@Design@Mnuconst@_SInFile @3   ; Borland::Vcl::Design::Mnuconst::_SInFile
+    @Borland@Vcl@Design@Mnuconst@_SInvalidMenu @30  ; Borland::Vcl::Design::Mnuconst::_SInvalidMenu
+    @Borland@Vcl@Design@Mnuconst@_SInvalidNumber @14  ; Borland::Vcl::Design::Mnuconst::_SInvalidNumber
+    @Borland@Vcl@Design@Mnuconst@_SInvalidString @13  ; Borland::Vcl::Design::Mnuconst::_SInvalidString
+    @Borland@Vcl@Design@Mnuconst@_SLineTooLong @21  ; Borland::Vcl::Design::Mnuconst::_SLineTooLong
+    @Borland@Vcl@Design@Mnuconst@_SMenuDesigner @22  ; Borland::Vcl::Design::Mnuconst::_SMenuDesigner
+    @Borland@Vcl@Design@Mnuconst@_SMenuItemCaption @26  ; Borland::Vcl::Design::Mnuconst::_SMenuItemCaption
+    @Borland@Vcl@Design@Mnuconst@_SMenuPasteError @28  ; Borland::Vcl::Design::Mnuconst::_SMenuPasteError
+    @Borland@Vcl@Design@Mnuconst@_SMenuTemplateExists @27  ; Borland::Vcl::Design::Mnuconst::_SMenuTemplateExists
+    @Borland@Vcl@Design@Mnuconst@_SNumberExpected @17  ; Borland::Vcl::Design::Mnuconst::_SNumberExpected
+    @Borland@Vcl@Design@Mnuconst@_SParseError @20  ; Borland::Vcl::Design::Mnuconst::_SParseError
+    @Borland@Vcl@Design@Mnuconst@_SPictureMenu @23  ; Borland::Vcl::Design::Mnuconst::_SPictureMenu
+    @Borland@Vcl@Design@Mnuconst@_SPictureNone @24  ; Borland::Vcl::Design::Mnuconst::_SPictureNone
+    @Borland@Vcl@Design@Mnuconst@_SStringExpected @18  ; Borland::Vcl::Design::Mnuconst::_SStringExpected
+    @Borland@Vcl@Design@Mnuconst@_SSymbolExpected @15  ; Borland::Vcl::Design::Mnuconst::_SSymbolExpected
+    @Borland@Vcl@Design@Mnuconst@_SUnexpectedEOF @12  ; Borland::Vcl::Design::Mnuconst::_SUnexpectedEOF
+    @Borland@Vcl@Design@Mnuconst@_SUnexpectedEOF1 @11  ; Borland::Vcl::Design::Mnuconst::_SUnexpectedEOF1
+    @Borland@Vcl@Design@Mnuconst@_SUnexpectedFloat @8   ; Borland::Vcl::Design::Mnuconst::_SUnexpectedFloat
+    @Borland@Vcl@Design@Mnuconst@_SUnexpectedInteger @9   ; Borland::Vcl::Design::Mnuconst::_SUnexpectedInteger
+    @Borland@Vcl@Design@Mnuconst@_SUnexpectedString @10  ; Borland::Vcl::Design::Mnuconst::_SUnexpectedString
+    @Borland@Vcl@Design@Mnuconst@_SUnknownToken @4   ; Borland::Vcl::Design::Mnuconst::_SUnknownToken
+    @Borland@Vcl@Design@Mnuconst@_SWindowCaption @25  ; Borland::Vcl::Design::Mnuconst::_SWindowCaption
+    @Borland@Vcl@Design@Mnuconst@initialization$qqrv @1   ; __fastcall Borland::Vcl::Design::Mnuconst::initialization()
+    @Borland@Vcl@Design@Mnufile@Finalization$qqrv @58  ; __fastcall Borland::Vcl::Design::Mnufile::Finalization()
+    @Borland@Vcl@Design@Mnufile@LoadMenuFromResource$qqrx20System@UnicodeStringp25System@Classes@TComponent @59  ; __fastcall Borland::Vcl::Design::Mnufile::LoadMenuFromResource(const System::UnicodeString, System::Classes::TComponent *)
+    @Borland@Vcl@Design@Mnufile@initialization$qqrv @57  ; __fastcall Borland::Vcl::Design::Mnufile::initialization()
+    @Borland@Vcl@Design@Mnuselct@Finalization$qqrv @61  ; __fastcall Borland::Vcl::Design::Mnuselct::Finalization()
+    @Borland@Vcl@Design@Mnuselct@TMenuSelectDialog@ @67  ; Borland::Vcl::Design::Mnuselct::TMenuSelectDialog::
+    @Borland@Vcl@Design@Mnuselct@TMenuSelectDialog@GetData$qqrrp25System@Classes@TComponent @64  ; __fastcall Borland::Vcl::Design::Mnuselct::TMenuSelectDialog::GetData(System::Classes::TComponent *&)
+    @Borland@Vcl@Design@Mnuselct@TMenuSelectDialog@HelpButtonClick$qqrp14System@TObject @65  ; __fastcall Borland::Vcl::Design::Mnuselct::TMenuSelectDialog::HelpButtonClick(System::TObject *)
+    @Borland@Vcl@Design@Mnuselct@TMenuSelectDialog@SelectionBoxDblClick$qqrp14System@TObject @62  ; __fastcall Borland::Vcl::Design::Mnuselct::TMenuSelectDialog::SelectionBoxDblClick(System::TObject *)
+    @Borland@Vcl@Design@Mnuselct@TMenuSelectDialog@SetData$qqrp25System@Classes@TComponent @63  ; __fastcall Borland::Vcl::Design::Mnuselct::TMenuSelectDialog::SetData(System::Classes::TComponent *)
+    @Borland@Vcl@Design@Mnuselct@initialization$qqrv @60  ; __fastcall Borland::Vcl::Design::Mnuselct::initialization()
+    @GetPackageInfoTable           @270 ; GetPackageInfoTable
+    @Mtdedlg@Finalization$qqrv     @69  ; __fastcall Mtdedlg::Finalization()
+    @Mtdedlg@TMtDeDlg@             @74  ; Mtdedlg::TMtDeDlg::
+    @Mtdedlg@TMtDeDlg@HelpButtonClick$qqrp14System@TObject @71  ; __fastcall Mtdedlg::TMtDeDlg::HelpButtonClick(System::TObject *)
+    @Mtdedlg@TMtDeDlg@OkButtonClick$qqrp14System@TObject @72  ; __fastcall Mtdedlg::TMtDeDlg::OkButtonClick(System::TObject *)
+    @Mtdedlg@TMtDeDlg@SetData$qqrp48Borland@Vcl@Design@Menutmpl@TMenuTemplateManager @70  ; __fastcall Mtdedlg::TMtDeDlg::SetData(Borland::Vcl::Design::Menutmpl::TMenuTemplateManager *)
+    @Mtdedlg@initialization$qqrv   @68  ; __fastcall Mtdedlg::initialization()
+    @Mtindlg@Finalization$qqrv     @76  ; __fastcall Mtindlg::Finalization()
+    @Mtindlg@TMtInDlg@             @82  ; Mtindlg::TMtInDlg::
+    @Mtindlg@TMtInDlg@GetData$qqrrp41Borland@Vcl@Design@Menutmpl@TMenuTemplate @78  ; __fastcall Mtindlg::TMtInDlg::GetData(Borland::Vcl::Design::Menutmpl::TMenuTemplate *&)
+    @Mtindlg@TMtInDlg@HelpButtonClick$qqrp14System@TObject @79  ; __fastcall Mtindlg::TMtInDlg::HelpButtonClick(System::TObject *)
+    @Mtindlg@TMtInDlg@OkButtonClick$qqrp14System@TObject @80  ; __fastcall Mtindlg::TMtInDlg::OkButtonClick(System::TObject *)
+    @Mtindlg@TMtInDlg@SetData$qqrp48Borland@Vcl@Design@Menutmpl@TMenuTemplateManager @77  ; __fastcall Mtindlg::TMtInDlg::SetData(Borland::Vcl::Design::Menutmpl::TMenuTemplateManager *)
+    @Mtindlg@initialization$qqrv   @75  ; __fastcall Mtindlg::initialization()
+    @Mtmisc@Finalization$qqrv      @92  ; __fastcall Mtmisc::Finalization()
+    @Mtmisc@MenuClone$qqrp19Vcl@Menus@TMenuItemp25System@Classes@TComponent @96  ; __fastcall Mtmisc::MenuClone(Vcl::Menus::TMenuItem *, System::Classes::TComponent *)
+    @Mtmisc@MenuTemplateDelete$qqrp25System@Classes@TComponentp48Borland@Vcl@Design@Menutmpl@TMenuTemplateManager @95  ; __fastcall Mtmisc::MenuTemplateDelete(System::Classes::TComponent *, Borland::Vcl::Design::Menutmpl::TMenuTemplateManager *)
+    @Mtmisc@MenuTemplateInsert$qqrp25System@Classes@TComponentp48Borland@Vcl@Design@Menutmpl@TMenuTemplateManager @94  ; __fastcall Mtmisc::MenuTemplateInsert(System::Classes::TComponent *, Borland::Vcl::Design::Menutmpl::TMenuTemplateManager *)
+    @Mtmisc@MenuTemplateSave$qqrp25System@Classes@TComponentp48Borland@Vcl@Design@Menutmpl@TMenuTemplateManagerp19Vcl@Menus@TMenuItem @93  ; __fastcall Mtmisc::MenuTemplateSave(System::Classes::TComponent *, Borland::Vcl::Design::Menutmpl::TMenuTemplateManager *, Vcl::Menus::TMenuItem *)
+    @Mtmisc@initialization$qqrv    @91  ; __fastcall Mtmisc::initialization()
+    @Mtsvdlg@Finalization$qqrv     @84  ; __fastcall Mtsvdlg::Finalization()
+    @Mtsvdlg@TMtSvDlg@             @90  ; Mtsvdlg::TMtSvDlg::
+    @Mtsvdlg@TMtSvDlg@GetData$qqrr20System@UnicodeString @87  ; __fastcall Mtsvdlg::TMtSvDlg::GetData(System::UnicodeString&)
+    @Mtsvdlg@TMtSvDlg@HelpButtonClick$qqrp14System@TObject @85  ; __fastcall Mtsvdlg::TMtSvDlg::HelpButtonClick(System::TObject *)
+    @Mtsvdlg@TMtSvDlg@SelectionBoxClick$qqrp14System@TObject @88  ; __fastcall Mtsvdlg::TMtSvDlg::SelectionBoxClick(System::TObject *)
+    @Mtsvdlg@TMtSvDlg@SetData$qqrp48Borland@Vcl@Design@Menutmpl@TMenuTemplateManager20System@UnicodeString @86  ; __fastcall Mtsvdlg::TMtSvDlg::SetData(Borland::Vcl::Design::Menutmpl::TMenuTemplateManager *, System::UnicodeString)
+    @Mtsvdlg@initialization$qqrv   @83  ; __fastcall Mtsvdlg::initialization()
+    @Vclmenudesigner@@GetPackageInfoTable$qqrv @267 ; Vclmenudesigner::__linkproc__ __fastcall GetPackageInfoTable()
+    @Vclmenudesigner@@PackageLoad$qqrv @266 ; Vclmenudesigner::__linkproc__ __fastcall PackageLoad()
+    @Vclmenudesigner@@PackageUnload$qqrv @265 ; Vclmenudesigner::__linkproc__ __fastcall PackageUnload()
+    @Vclmenudesigner@initialization$qqrv @264 ; __fastcall Vclmenudesigner::initialization()
+    Finalize                       @268 ; Finalize
+    Initialize                     @269 ; Initialize

@@ -1,0 +1,25 @@
+LIBRARY     DCLFMXTEE9210.BPL
+
+DESCRIPTION 'eeChart Lite FMX Components'
+
+EXPORTS
+    @$xp$23Fmxtee@About@TFormAbout @9   ; __tpdsc__ Fmxtee::About::TFormAbout
+    @Dclfmxtee@@GetPackageInfoTable$qqrv @17  ; Dclfmxtee::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclfmxtee@@PackageLoad$qqrv   @16  ; Dclfmxtee::__linkproc__ __fastcall PackageLoad()
+    @Dclfmxtee@@PackageUnload$qqrv @15  ; Dclfmxtee::__linkproc__ __fastcall PackageUnload()
+    @Dclfmxtee@initialization$qqrv @14  ; __fastcall Dclfmxtee::initialization()
+    @Fmxtee@About@Finalization$qqrv @2   ; __fastcall Fmxtee::About::Finalization()
+    @Fmxtee@About@TFormAbout@      @10  ; Fmxtee::About::TFormAbout::
+    @Fmxtee@About@TFormAbout@About$qqrxp25System@Classes@TComponent @7   ; __fastcall Fmxtee::About::TFormAbout::About(System::Classes::TComponent * const)
+    @Fmxtee@About@TFormAbout@Form3DActivate$qqrp14System@TObject @6   ; __fastcall Fmxtee::About::TFormAbout::Form3DActivate(System::TObject *)
+    @Fmxtee@About@TFormAbout@Form3DCreate$qqrp14System@TObject @5   ; __fastcall Fmxtee::About::TFormAbout::Form3DCreate(System::TObject *)
+    @Fmxtee@About@TFormAbout@Form3DKeyUp$qqrp14System@TObjectrusrb60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @4   ; Fmxtee::About::TFormAbout::Form3DKeyUp(System::TObject *, unsigned short&, wchar_t&, System::Set<{583}...
+    @Fmxtee@About@TFormAbout@Text3D3Click$qqrp14System@TObject @3   ; __fastcall Fmxtee::About::TFormAbout::Text3D3Click(System::TObject *)
+    @Fmxtee@About@TeeIsTrial       @8   ; Fmxtee::About::TeeIsTrial
+    @Fmxtee@About@initialization$qqrv @1   ; __fastcall Fmxtee::About::initialization()
+    @Fmxteechartreg@Finalization$qqrv @12  ; __fastcall Fmxteechartreg::Finalization()
+    @Fmxteechartreg@Register$qqrv  @13  ; __fastcall Fmxteechartreg::Register()
+    @Fmxteechartreg@initialization$qqrv @11  ; __fastcall Fmxteechartreg::initialization()
+    @GetPackageInfoTable           @20  ; GetPackageInfoTable
+    Finalize                       @18  ; Finalize
+    Initialize                     @19  ; Initialize

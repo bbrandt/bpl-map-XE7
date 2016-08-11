@@ -1,0 +1,76 @@
+LIBRARY     DCLNETDB210.BPL
+
+DESCRIPTION 'mbarcadero Internet DB Components'
+
+EXPORTS
+    @$xp$25Htcoledt@THTMLTableEditor @32  ; __tpdsc__ Htcoledt::THTMLTableEditor
+    @$xp$31Inetdbreg@TDSTableProducerSprig @55  ; __tpdsc__ Inetdbreg::TDSTableProducerSprig
+    @$xp$33Inetdbreg@THTMLTableColumnsEditor @63  ; __tpdsc__ Inetdbreg::THTMLTableColumnsEditor
+    @$xp$35Htcoledt@THTMLDSTableProducerEditor @30  ; __tpdsc__ Htcoledt::THTMLDSTableProducerEditor
+    @$xp$35Inetdbreg@TDataSetPageProducerSprig @57  ; __tpdsc__ Inetdbreg::TDataSetPageProducerSprig
+    @$xp$36Inetdbreg@TDataSetTableProducerSprig @53  ; __tpdsc__ Inetdbreg::TDataSetTableProducerSprig
+    @$xp$36Inetdbreg@THTMLDSTableProducerEditor @61  ; __tpdsc__ Inetdbreg::THTMLDSTableProducerEditor
+    @$xp$39Inetdbreg@THTMLDSTableColumnFieldEditor @59  ; __tpdsc__ Inetdbreg::THTMLDSTableColumnFieldEditor
+    @Dclnetdb@@GetPackageInfoTable$qqrv @68  ; Dclnetdb::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclnetdb@@PackageLoad$qqrv    @67  ; Dclnetdb::__linkproc__ __fastcall PackageLoad()
+    @Dclnetdb@@PackageUnload$qqrv  @66  ; Dclnetdb::__linkproc__ __fastcall PackageUnload()
+    @Dclnetdb@initialization$qqrv  @65  ; __fastcall Dclnetdb::initialization()
+    @GetPackageInfoTable           @71  ; GetPackageInfoTable
+    @Htcoledt@Finalization$qqrv    @2   ; __fastcall Htcoledt::Finalization()
+    @Htcoledt@ShowHTMLTableEditor$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p26Web@Dbweb@TDSTableProducerx20System@UnicodeString @29  ; Htcoledt::ShowHTMLTableEditor(const System::DelphiInterface<{583}...
+    @Htcoledt@THTMLDSTableProducerEditor@ @31  ; Htcoledt::THTMLDSTableProducerEditor::
+    @Htcoledt@THTMLDSTableProducerEditor@$bctr$qqrp25Htcoledt@THTMLTableEditorp26Web@Dbweb@TDSTableProducer @28  ; __fastcall Htcoledt::THTMLDSTableProducerEditor::THTMLDSTableProducerEditor(Htcoledt::THTMLTableEditor *, Web::Dbweb::TDSTableProducer *)
+    @Htcoledt@THTMLDSTableProducerEditor@$bdtr$qqrv @27  ; __fastcall Htcoledt::THTMLDSTableProducerEditor::~THTMLDSTableProducerEditor()
+    @Htcoledt@THTMLDSTableProducerEditor@Changed$qqrv @26  ; __fastcall Htcoledt::THTMLDSTableProducerEditor::Changed()
+    @Htcoledt@THTMLDSTableProducerEditor@PostChange$qqrv @25  ; __fastcall Htcoledt::THTMLDSTableProducerEditor::PostChange()
+    @Htcoledt@THTMLTableEditor@    @33  ; Htcoledt::THTMLTableEditor::
+    @Htcoledt@THTMLTableEditor@ActionCheckCompleteUpdate$qqrp14System@TObject @3   ; __fastcall Htcoledt::THTMLTableEditor::ActionCheckCompleteUpdate(System::TObject *)
+    @Htcoledt@THTMLTableEditor@AddAllFieldsClick$qqrp14System@TObject @24  ; __fastcall Htcoledt::THTMLTableEditor::AddAllFieldsClick(System::TObject *)
+    @Htcoledt@THTMLTableEditor@AddAllFieldsCmdUpdate$qqrp14System@TObject @7   ; __fastcall Htcoledt::THTMLTableEditor::AddAllFieldsCmdUpdate(System::TObject *)
+    @Htcoledt@THTMLTableEditor@CMPostChange$qqrr24Winapi@Messages@TMessage @23  ; __fastcall Htcoledt::THTMLTableEditor::CMPostChange(Winapi::Messages::TMessage&)
+    @Htcoledt@THTMLTableEditor@FormCreate$qqrp14System@TObject @19  ; __fastcall Htcoledt::THTMLTableEditor::FormCreate(System::TObject *)
+    @Htcoledt@THTMLTableEditor@FormDestroy$qqrp14System@TObject @18  ; __fastcall Htcoledt::THTMLTableEditor::FormDestroy(System::TObject *)
+    @Htcoledt@THTMLTableEditor@FormShow$qqrp14System@TObject @9   ; __fastcall Htcoledt::THTMLTableEditor::FormShow(System::TObject *)
+    @Htcoledt@THTMLTableEditor@GetDataSet$qqrv @17  ; __fastcall Htcoledt::THTMLTableEditor::GetDataSet()
+    @Htcoledt@THTMLTableEditor@HTMLDocument2$qqrv @5   ; __fastcall Htcoledt::THTMLTableEditor::HTMLDocument2()
+    @Htcoledt@THTMLTableEditor@ItemsModified$qqrx47System@%DelphiInterface$20Designintf@IDesigner% @22  ; Htcoledt::THTMLTableEditor::ItemsModified(const System::DelphiInterface<{583}...
+    @Htcoledt@THTMLTableEditor@PostChange$qqrv @16  ; __fastcall Htcoledt::THTMLTableEditor::PostChange()
+    @Htcoledt@THTMLTableEditor@RestoreDefaultsClick$qqrp14System@TObject @8   ; __fastcall Htcoledt::THTMLTableEditor::RestoreDefaultsClick(System::TObject *)
+    @Htcoledt@THTMLTableEditor@RestoreDefaultsCmdUpdate$qqrp14System@TObject @6   ; __fastcall Htcoledt::THTMLTableEditor::RestoreDefaultsCmdUpdate(System::TObject *)
+    @Htcoledt@THTMLTableEditor@SelectionUpdate$qqrp14System@TObject @4   ; __fastcall Htcoledt::THTMLTableEditor::SelectionUpdate(System::TObject *)
+    @Htcoledt@THTMLTableEditor@SetHTMLContent$qqrx20System@UnicodeString @21  ; __fastcall Htcoledt::THTMLTableEditor::SetHTMLContent(const System::UnicodeString)
+    @Htcoledt@THTMLTableEditor@TableDataChanged$qqrp14System@TObject @15  ; __fastcall Htcoledt::THTMLTableEditor::TableDataChanged(System::TObject *)
+    @Htcoledt@THTMLTableEditor@TableDataClicked$qqrp14System@TObject @14  ; __fastcall Htcoledt::THTMLTableEditor::TableDataClicked(System::TObject *)
+    @Htcoledt@THTMLTableEditor@TableDataExit$qqrp14System@TObject @12  ; __fastcall Htcoledt::THTMLTableEditor::TableDataExit(System::TObject *)
+    @Htcoledt@THTMLTableEditor@TableDataKeyPress$qqrp14System@TObjectrb @13  ; __fastcall Htcoledt::THTMLTableEditor::TableDataKeyPress(System::TObject *, wchar_t&)
+    @Htcoledt@THTMLTableEditor@UpdateHTMLView$qqrv @20  ; __fastcall Htcoledt::THTMLTableEditor::UpdateHTMLView()
+    @Htcoledt@THTMLTableEditor@UpdateTableAttributes$qqrv @11  ; __fastcall Htcoledt::THTMLTableEditor::UpdateTableAttributes()
+    @Htcoledt@THTMLTableEditor@UpdateTableComponent$qqrv @10  ; __fastcall Htcoledt::THTMLTableEditor::UpdateTableComponent()
+    @Htcoledt@initialization$qqrv  @1   ; __fastcall Htcoledt::initialization()
+    @Inetdbreg@Finalization$qqrv   @39  ; __fastcall Inetdbreg::Finalization()
+    @Inetdbreg@Register$qqrv       @40  ; __fastcall Inetdbreg::Register()
+    @Inetdbreg@TDSTableProducerSprig@ @56  ; Inetdbreg::TDSTableProducerSprig::
+    @Inetdbreg@TDSTableProducerSprig@AnyProblems$qqrv @42  ; __fastcall Inetdbreg::TDSTableProducerSprig::AnyProblems()
+    @Inetdbreg@TDataSetPageProducerSprig@ @58  ; Inetdbreg::TDataSetPageProducerSprig::
+    @Inetdbreg@TDataSetPageProducerSprig@AnyProblems$qqrv @44  ; __fastcall Inetdbreg::TDataSetPageProducerSprig::AnyProblems()
+    @Inetdbreg@TDataSetPageProducerSprig@ParentProperty$qqrv @43  ; __fastcall Inetdbreg::TDataSetPageProducerSprig::ParentProperty()
+    @Inetdbreg@TDataSetTableProducerSprig@ @54  ; Inetdbreg::TDataSetTableProducerSprig::
+    @Inetdbreg@TDataSetTableProducerSprig@ParentProperty$qqrv @41  ; __fastcall Inetdbreg::TDataSetTableProducerSprig::ParentProperty()
+    @Inetdbreg@THTMLDSTableColumnFieldEditor@ @60  ; Inetdbreg::THTMLDSTableColumnFieldEditor::
+    @Inetdbreg@THTMLDSTableColumnFieldEditor@GetAttributes$qqrv @46  ; __fastcall Inetdbreg::THTMLDSTableColumnFieldEditor::GetAttributes()
+    @Inetdbreg@THTMLDSTableColumnFieldEditor@GetValues$qqrynpqqrx20System@UnicodeString$v @45  ; __fastcall Inetdbreg::THTMLDSTableColumnFieldEditor::GetValues(void __fastcall __closure(*)(const System::UnicodeString))
+    @Inetdbreg@THTMLDSTableProducerEditor@ @62  ; Inetdbreg::THTMLDSTableProducerEditor::
+    @Inetdbreg@THTMLDSTableProducerEditor@Edit$qqrv @50  ; __fastcall Inetdbreg::THTMLDSTableProducerEditor::Edit()
+    @Inetdbreg@THTMLDSTableProducerEditor@ExecuteVerb$qqri @49  ; __fastcall Inetdbreg::THTMLDSTableProducerEditor::ExecuteVerb(int)
+    @Inetdbreg@THTMLDSTableProducerEditor@GetVerb$qqri @48  ; __fastcall Inetdbreg::THTMLDSTableProducerEditor::GetVerb(int)
+    @Inetdbreg@THTMLDSTableProducerEditor@GetVerbCount$qqrv @47  ; __fastcall Inetdbreg::THTMLDSTableProducerEditor::GetVerbCount()
+    @Inetdbreg@THTMLTableColumnsEditor@ @64  ; Inetdbreg::THTMLTableColumnsEditor::
+    @Inetdbreg@THTMLTableColumnsEditor@Edit$qqrv @52  ; __fastcall Inetdbreg::THTMLTableColumnsEditor::Edit()
+    @Inetdbreg@THTMLTableColumnsEditor@GetAttributes$qqrv @51  ; __fastcall Inetdbreg::THTMLTableColumnsEditor::GetAttributes()
+    @Inetdbreg@initialization$qqrv @38  ; __fastcall Inetdbreg::initialization()
+    @Netdbconst@Finalization$qqrv  @35  ; __fastcall Netdbconst::Finalization()
+    @Netdbconst@_sEditHTMLResult   @37  ; Netdbconst::_sEditHTMLResult
+    @Netdbconst@_sInternet         @36  ; Netdbconst::_sInternet
+    @Netdbconst@initialization$qqrv @34  ; __fastcall Netdbconst::initialization()
+    Finalize                       @69  ; Finalize
+    Initialize                     @70  ; Initialize

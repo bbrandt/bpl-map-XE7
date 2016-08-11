@@ -1,0 +1,140 @@
+LIBRARY     REFACTORIDE210.BPL
+
+DESCRIPTION 'mbarcadero Refactor IDE Package'
+
+EXPORTS
+    @$xp$28Baserefactoringfrm@PNodeData @84  ; __tpdsc__ Baserefactoringfrm::PNodeData
+    @$xp$28Baserefactoringfrm@TNodeData @83  ; __tpdsc__ Baserefactoringfrm::TNodeData
+    @$xp$30Refactorcmds@TRefactorCommands @46  ; __tpdsc__ Refactorcmds::TRefactorCommands
+    @$xp$31Refactoringfrm@TRefactoringForm @124 ; __tpdsc__ Refactoringfrm::TRefactoringForm
+    @$xp$33Baserefactoringfrm@TFileEntryLine @85  ; __tpdsc__ Baserefactoringfrm::TFileEntryLine
+    @$xp$35Baserefactoringfrm@TRefactoringTree @89  ; __tpdsc__ Baserefactoringfrm::TRefactoringTree
+    @$xp$36Refactorcmds@TDelphiRefactorMenuItem @48  ; __tpdsc__ Refactorcmds::TDelphiRefactorMenuItem
+    @$xp$37Findreferencesfrm@TFindReferencesForm @103 ; __tpdsc__ Findreferencesfrm::TFindReferencesForm
+    @$xp$39Baserefactoringfrm@TBaseRefactoringForm @87  ; __tpdsc__ Baserefactoringfrm::TBaseRefactoringForm
+    @Baserefactoringfrm@Finalization$qqrv @51  ; __fastcall Baserefactoringfrm::Finalization()
+    @Baserefactoringfrm@TBaseRefactoringForm@ @88  ; Baserefactoringfrm::TBaseRefactoringForm::
+    @Baserefactoringfrm@TBaseRefactoringForm@AddChild$qqsx71System@%DelphiInterface$44Borland_studio_toolsapi_tlb@IRefactoringNode%t1 @80  ; Baserefactoringfrm::TBaseRefactoringForm::AddChild(const System::DelphiInterface<{583}...
+    @Baserefactoringfrm@TBaseRefactoringForm@AddRootReferenceNode$qqsx71System@%DelphiInterface$44Borland_studio_toolsapi_tlb@IRefactoringNode% @58  ; Baserefactoringfrm::TBaseRefactoringForm::AddRootReferenceNode(const System::DelphiInterface<{583}...
+    @Baserefactoringfrm@TBaseRefactoringForm@BeginUpdate$qqsv @77  ; __stdcall Baserefactoringfrm::TBaseRefactoringForm::BeginUpdate()
+    @Baserefactoringfrm@TBaseRefactoringForm@ClearChildren$qqsx71System@%DelphiInterface$44Borland_studio_toolsapi_tlb@IRefactoringNode% @76  ; Baserefactoringfrm::TBaseRefactoringForm::ClearChildren(const System::DelphiInterface<{583}...
+    @Baserefactoringfrm@TBaseRefactoringForm@EndUpdate$qqsv @75  ; __stdcall Baserefactoringfrm::TBaseRefactoringForm::EndUpdate()
+    @Baserefactoringfrm@TBaseRefactoringForm@ExpandNode$qqsx71System@%DelphiInterface$44Borland_studio_toolsapi_tlb@IRefactoringNode% @55  ; Baserefactoringfrm::TBaseRefactoringForm::ExpandNode(const System::DelphiInterface<{583}...
+    @Baserefactoringfrm@TBaseRefactoringForm@FormCreate$qqrp14System@TObject @82  ; __fastcall Baserefactoringfrm::TBaseRefactoringForm::FormCreate(System::TObject *)
+    @Baserefactoringfrm@TBaseRefactoringForm@GetEditState$qqrv @81  ; __fastcall Baserefactoringfrm::TBaseRefactoringForm::GetEditState()
+    @Baserefactoringfrm@TBaseRefactoringForm@InsertChild$qqsx71System@%DelphiInterface$44Borland_studio_toolsapi_tlb@IRefactoringNode%t1ui @78  ; Baserefactoringfrm::TBaseRefactoringForm::InsertChild(const System::DelphiInterface<{583}...
+    @Baserefactoringfrm@TBaseRefactoringForm@RemoveChild$qqsx71System@%DelphiInterface$44Borland_studio_toolsapi_tlb@IRefactoringNode% @79  ; Baserefactoringfrm::TBaseRefactoringForm::RemoveChild(const System::DelphiInterface<{583}...
+    @Baserefactoringfrm@TBaseRefactoringForm@StatusMessage$qqsx17System@WideString @74  ; __stdcall Baserefactoringfrm::TBaseRefactoringForm::StatusMessage(const System::WideString)
+    @Baserefactoringfrm@TBaseRefactoringForm@refactoringTreeDblClick$qqrp14System@TObject @59  ; __fastcall Baserefactoringfrm::TBaseRefactoringForm::refactoringTreeDblClick(System::TObject *)
+    @Baserefactoringfrm@TBaseRefactoringForm@refactoringTreeFreeNode$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNode @73  ; __fastcall Baserefactoringfrm::TBaseRefactoringForm::refactoringTreeFreeNode(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *)
+    @Baserefactoringfrm@TBaseRefactoringForm@refactoringTreeGetHint$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodei28Idevirtualtrees@TVSTTextTyper17System@WideString @70  ; __fastcall Baserefactoringfrm::TBaseRefactoringForm::refactoringTreeGetHint(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, int, Idevirtualtrees::TVSTTextType, System::WideString&)
+    @Baserefactoringfrm@TBaseRefactoringForm@refactoringTreeGetImageIndex$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNode28Idevirtualtrees@TVTImageKindirori @71  ; __fastcall Baserefactoringfrm::TBaseRefactoringForm::refactoringTreeGetImageIndex(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, Idevirtualtrees::TVTImageKind, int, bool&, int&)
+    @Baserefactoringfrm@TBaseRefactoringForm@refactoringTreeGetText$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodei28Idevirtualtrees@TVSTTextTyper17System@WideString @72  ; __fastcall Baserefactoringfrm::TBaseRefactoringForm::refactoringTreeGetText(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, int, Idevirtualtrees::TVSTTextType, System::WideString&)
+    @Baserefactoringfrm@TBaseRefactoringForm@refactoringTreeKeyPress$qqrp14System@TObjectrb @56  ; __fastcall Baserefactoringfrm::TBaseRefactoringForm::refactoringTreeKeyPress(System::TObject *, wchar_t&)
+    @Baserefactoringfrm@TBaseRefactoringForm@refactoringTreePaintNormalText$qqrp32Idevirtualtrees@TBaseVirtualTreep20Vcl@Graphics@TCanvasp28Idevirtualtrees@TVirtualNode17System@WideStringrx18System@Types@TRectro @54  ; __fastcall Baserefactoringfrm::TBaseRefactoringForm::refactoringTreePaintNormalText(Idevirtualtrees::TBaseVirtualTree *, Vcl::Graphics::TCanvas *, Idevirtualtrees::TVirtualNode *, System::WideString, const System::Types::TRect&, bool&)
+    @Baserefactoringfrm@TFileEntryLine@ @86  ; Baserefactoringfrm::TFileEntryLine::
+    @Baserefactoringfrm@TFileEntryLine@$bctr$qqrx75System@%DelphiInterface$48Borland_studio_toolsapi_tlb@IRefactoringFileNode% @67  ; Baserefactoringfrm::TFileEntryLine::TFileEntryLine(const System::DelphiInterface<{583}...
+    @Baserefactoringfrm@TFileEntryLine@$bdtr$qqrv @61  ; __fastcall Baserefactoringfrm::TFileEntryLine::~TFileEntryLine()
+    @Baserefactoringfrm@TFileEntryLine@GetColumn$qqrv @66  ; __fastcall Baserefactoringfrm::TFileEntryLine::GetColumn()
+    @Baserefactoringfrm@TFileEntryLine@GetFileEntry$qqrv @65  ; __fastcall Baserefactoringfrm::TFileEntryLine::GetFileEntry()
+    @Baserefactoringfrm@TFileEntryLine@GetIdentifier$qqrv @57  ; __fastcall Baserefactoringfrm::TFileEntryLine::GetIdentifier()
+    @Baserefactoringfrm@TFileEntryLine@GetLine$qqrv @64  ; __fastcall Baserefactoringfrm::TFileEntryLine::GetLine()
+    @Baserefactoringfrm@TFileEntryLine@QueryInterface$qqsrx5_GUIDpv @63  ; __stdcall Baserefactoringfrm::TFileEntryLine::QueryInterface(const _GUID&, void *)
+    @Baserefactoringfrm@TFileEntryLine@SetFileEntry$qqrxp19Msglines@TFileEntry @62  ; __fastcall Baserefactoringfrm::TFileEntryLine::SetFileEntry(Msglines::TFileEntry * const)
+    @Baserefactoringfrm@TFileEntryLine@ShowLine$qqrv @60  ; __fastcall Baserefactoringfrm::TFileEntryLine::ShowLine()
+    @Baserefactoringfrm@TFileEntryLine@_AddRef$qqsv @69  ; __stdcall Baserefactoringfrm::TFileEntryLine::_AddRef()
+    @Baserefactoringfrm@TFileEntryLine@_Release$qqsv @68  ; __stdcall Baserefactoringfrm::TFileEntryLine::_Release()
+    @Baserefactoringfrm@TRefactoringTree@ @90  ; Baserefactoringfrm::TRefactoringTree::
+    @Baserefactoringfrm@TRefactoringTree@DoTextDrawing$qqrr28Idevirtualtrees@TVTPaintInfo17System@WideStringrx18System@Types@TRectui @53  ; __fastcall Baserefactoringfrm::TRefactoringTree::DoTextDrawing(Idevirtualtrees::TVTPaintInfo&, System::WideString, const System::Types::TRect&, unsigned int)
+    @Baserefactoringfrm@TRefactoringTree@DoTextMeasuring$qqrp20Vcl@Graphics@TCanvasp28Idevirtualtrees@TVirtualNodei17System@WideString @52  ; __fastcall Baserefactoringfrm::TRefactoringTree::DoTextMeasuring(Vcl::Graphics::TCanvas *, Idevirtualtrees::TVirtualNode *, int, System::WideString)
+    @Baserefactoringfrm@initialization$qqrv @50  ; __fastcall Baserefactoringfrm::initialization()
+    @Findreferencesfrm@CreateFindReferencesForm$qqrv @102 ; __fastcall Findreferencesfrm::CreateFindReferencesForm()
+    @Findreferencesfrm@Finalization$qqrv @92  ; __fastcall Findreferencesfrm::Finalization()
+    @Findreferencesfrm@TFindReferencesForm@ @104 ; Findreferencesfrm::TFindReferencesForm::
+    @Findreferencesfrm@TFindReferencesForm@$bctr$qqrp25System@Classes@TComponent @101 ; __fastcall Findreferencesfrm::TFindReferencesForm::TFindReferencesForm(System::Classes::TComponent *)
+    @Findreferencesfrm@TFindReferencesForm@FormCreate$qqrp14System@TObject @100 ; __fastcall Findreferencesfrm::TFindReferencesForm::FormCreate(System::TObject *)
+    @Findreferencesfrm@TFindReferencesForm@FormDestroy$qqrp14System@TObject @99  ; __fastcall Findreferencesfrm::TFindReferencesForm::FormDestroy(System::TObject *)
+    @Findreferencesfrm@TFindReferencesForm@acntRemoveAllExecute$qqrp14System@TObject @94  ; __fastcall Findreferencesfrm::TFindReferencesForm::acntRemoveAllExecute(System::TObject *)
+    @Findreferencesfrm@TFindReferencesForm@acntRemoveAllUpdate$qqrp14System@TObject @95  ; __fastcall Findreferencesfrm::TFindReferencesForm::acntRemoveAllUpdate(System::TObject *)
+    @Findreferencesfrm@TFindReferencesForm@actnDeleteExecute$qqrp14System@TObject @96  ; __fastcall Findreferencesfrm::TFindReferencesForm::actnDeleteExecute(System::TObject *)
+    @Findreferencesfrm@TFindReferencesForm@actnDeleteUpdate$qqrp14System@TObject @97  ; __fastcall Findreferencesfrm::TFindReferencesForm::actnDeleteUpdate(System::TObject *)
+    @Findreferencesfrm@TFindReferencesForm@actnViewFindReferencesExecute$qqrp14System@TObject @98  ; __fastcall Findreferencesfrm::TFindReferencesForm::actnViewFindReferencesExecute(System::TObject *)
+    @Findreferencesfrm@TFindReferencesForm@refactoringTreeKeyDown$qqrp14System@TObjectrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @93  ; Findreferencesfrm::TFindReferencesForm::refactoringTreeKeyDown(System::TObject *, unsigned short&, System::Set<{583}...
+    @Findreferencesfrm@initialization$qqrv @91  ; __fastcall Findreferencesfrm::initialization()
+    @GetPackageInfoTable           @135 ; GetPackageInfoTable
+    @Refactorcmds@Finalization$qqrv @2   ; __fastcall Refactorcmds::Finalization()
+    @Refactorcmds@TDelphiRefactorMenuItem@ @49  ; Refactorcmds::TDelphiRefactorMenuItem::
+    @Refactorcmds@TDelphiRefactorMenuItem@$bctr$qqr71System@%DelphiInterface$44Borland_studio_toolsapi_tlb@IRefactoringItem% @3   ; Refactorcmds::TDelphiRefactorMenuItem::TDelphiRefactorMenuItem(System::DelphiInterface<{583}...
+    @Refactorcmds@TDelphiRefactorMenuItem@Execute$qqrp14System@TObject @4   ; __fastcall Refactorcmds::TDelphiRefactorMenuItem::Execute(System::TObject *)
+    @Refactorcmds@TDelphiRefactorMenuItem@Update$qqrp14System@TObject @5   ; __fastcall Refactorcmds::TDelphiRefactorMenuItem::Update(System::TObject *)
+    @Refactorcmds@TRefactorCommands@ @47  ; Refactorcmds::TRefactorCommands::
+    @Refactorcmds@TRefactorCommands@AddShortcuts$qqrp19Vcl@Menus@TMenuItem @30  ; __fastcall Refactorcmds::TRefactorCommands::AddShortcuts(Vcl::Menus::TMenuItem *)
+    @Refactorcmds@TRefactorCommands@DataModuleCreate$qqrp14System@TObject @45  ; __fastcall Refactorcmds::TRefactorCommands::DataModuleCreate(System::TObject *)
+    @Refactorcmds@TRefactorCommands@DataModuleDestroy$qqrp14System@TObject @29  ; __fastcall Refactorcmds::TRefactorCommands::DataModuleDestroy(System::TObject *)
+    @Refactorcmds@TRefactorCommands@ExecuteShortcut$qqrx50System@%DelphiInterface$23Toolsapi@IOTAKeyContext%usr26Toolsapi@TKeyBindingResult @27  ; Refactorcmds::TRefactorCommands::ExecuteShortcut(const System::DelphiInterface<{583}...
+    @Refactorcmds@TRefactorCommands@IsFindKind$qqrxp36Refactorcmds@TDelphiRefactorMenuItem @42  ; __fastcall Refactorcmds::TRefactorCommands::IsFindKind(Refactorcmds::TDelphiRefactorMenuItem * const)
+    @Refactorcmds@TRefactorCommands@RegisterShortcuts$qqrv @31  ; __fastcall Refactorcmds::TRefactorCommands::RegisterShortcuts()
+    @Refactorcmds@TRefactorCommands@UnRegisterShortcuts$qqrv @28  ; __fastcall Refactorcmds::TRefactorCommands::UnRegisterShortcuts()
+    @Refactorcmds@TRefactorCommands@UpdateFindRefsShortcut$qqrv @38  ; __fastcall Refactorcmds::TRefactorCommands::UpdateFindRefsShortcut()
+    @Refactorcmds@TRefactorCommands@actnCreateResStringExecute$qqrp14System@TObject @18  ; __fastcall Refactorcmds::TRefactorCommands::actnCreateResStringExecute(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnDeclareFieldExecute$qqrp14System@TObject @23  ; __fastcall Refactorcmds::TRefactorCommands::actnDeclareFieldExecute(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnDeclareVariableExecute$qqrp14System@TObject @24  ; __fastcall Refactorcmds::TRefactorCommands::actnDeclareVariableExecute(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnExtractMethodExecute$qqrp14System@TObject @21  ; __fastcall Refactorcmds::TRefactorCommands::actnExtractMethodExecute(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnFindExecute$qqrp14System@TObject @43  ; __fastcall Refactorcmds::TRefactorCommands::actnFindExecute(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnFindLocalRefsExecute$qqrp14System@TObject @37  ; __fastcall Refactorcmds::TRefactorCommands::actnFindLocalRefsExecute(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnFindLocalRefsUpdate$qqrp14System@TObject @11  ; __fastcall Refactorcmds::TRefactorCommands::actnFindLocalRefsUpdate(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnFindRefsExecute$qqrp14System@TObject @36  ; __fastcall Refactorcmds::TRefactorCommands::actnFindRefsExecute(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnFindRefsUpdate$qqrp14System@TObject @40  ; __fastcall Refactorcmds::TRefactorCommands::actnFindRefsUpdate(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnFindUpdate$qqrp14System@TObject @39  ; __fastcall Refactorcmds::TRefactorCommands::actnFindUpdate(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnGotoSymbolExecute$qqrp14System@TObject @35  ; __fastcall Refactorcmds::TRefactorCommands::actnGotoSymbolExecute(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnGotoSymbolUpdate$qqrp14System@TObject @10  ; __fastcall Refactorcmds::TRefactorCommands::actnGotoSymbolUpdate(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnImportNamespaceExecute$qqrp14System@TObject @14  ; __fastcall Refactorcmds::TRefactorCommands::actnImportNamespaceExecute(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnMMChangeParamsExecute$qqrp14System@TObject @9   ; __fastcall Refactorcmds::TRefactorCommands::actnMMChangeParamsExecute(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnMMChangeParamsUpdate$qqrp14System@TObject @8   ; __fastcall Refactorcmds::TRefactorCommands::actnMMChangeParamsUpdate(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnMMCreateResourceStrUpdate$qqrp14System@TObject @17  ; __fastcall Refactorcmds::TRefactorCommands::actnMMCreateResourceStrUpdate(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnMMDeclareFieldUpdate$qqrp14System@TObject @13  ; __fastcall Refactorcmds::TRefactorCommands::actnMMDeclareFieldUpdate(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnMMDeclareVariableUpdate$qqrp14System@TObject @22  ; __fastcall Refactorcmds::TRefactorCommands::actnMMDeclareVariableUpdate(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnMMExtractMethodUpdate$qqrp14System@TObject @20  ; __fastcall Refactorcmds::TRefactorCommands::actnMMExtractMethodUpdate(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnMMFindClassExecute$qqrp14System@TObject @7   ; __fastcall Refactorcmds::TRefactorCommands::actnMMFindClassExecute(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnMMFindClassUpdate$qqrp14System@TObject @6   ; __fastcall Refactorcmds::TRefactorCommands::actnMMFindClassUpdate(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnMMFindLocalRefsUpdate$qqrp14System@TObject @34  ; __fastcall Refactorcmds::TRefactorCommands::actnMMFindLocalRefsUpdate(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnMMFindRefsUpdate$qqrp14System@TObject @32  ; __fastcall Refactorcmds::TRefactorCommands::actnMMFindRefsUpdate(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnMMGotoSymbolUpdate$qqrp14System@TObject @33  ; __fastcall Refactorcmds::TRefactorCommands::actnMMGotoSymbolUpdate(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnMMImportNamespaceExecute$qqrp14System@TObject @16  ; __fastcall Refactorcmds::TRefactorCommands::actnMMImportNamespaceExecute(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnMMImportNamespaceUpdate$qqrp14System@TObject @15  ; __fastcall Refactorcmds::TRefactorCommands::actnMMImportNamespaceUpdate(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnMMRenameExecute$qqrp14System@TObject @25  ; __fastcall Refactorcmds::TRefactorCommands::actnMMRenameExecute(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnMMRenameUpdate$qqrp14System@TObject @26  ; __fastcall Refactorcmds::TRefactorCommands::actnMMRenameUpdate(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnNoRefactoringsUpdate$qqrp14System@TObject @19  ; __fastcall Refactorcmds::TRefactorCommands::actnNoRefactoringsUpdate(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnRefactorExecute$qqrp14System@TObject @44  ; __fastcall Refactorcmds::TRefactorCommands::actnRefactorExecute(System::TObject *)
+    @Refactorcmds@TRefactorCommands@actnRefactorMenuPopulate$qqrp14System@TObjectp19Vcl@Menus@TMenuItem @41  ; __fastcall Refactorcmds::TRefactorCommands::actnRefactorMenuPopulate(System::TObject *, Vcl::Menus::TMenuItem *)
+    @Refactorcmds@TRefactorCommands@actnRefactorMenuUpdate$qqrp14System@TObject @12  ; __fastcall Refactorcmds::TRefactorCommands::actnRefactorMenuUpdate(System::TObject *)
+    @Refactorcmds@initialization$qqrv @1   ; __fastcall Refactorcmds::initialization()
+    @Refactoride@@GetPackageInfoTable$qqrv @132 ; Refactoride::__linkproc__ __fastcall GetPackageInfoTable()
+    @Refactoride@@PackageLoad$qqrv @131 ; Refactoride::__linkproc__ __fastcall PackageLoad()
+    @Refactoride@@PackageUnload$qqrv @130 ; Refactoride::__linkproc__ __fastcall PackageUnload()
+    @Refactoride@initialization$qqrv @129 ; __fastcall Refactoride::initialization()
+    @Refactoringfrm@CreateRefactoringForm$qqrv @123 ; __fastcall Refactoringfrm::CreateRefactoringForm()
+    @Refactoringfrm@Finalization$qqrv @106 ; __fastcall Refactoringfrm::Finalization()
+    @Refactoringfrm@TRefactoringForm@ @125 ; Refactoringfrm::TRefactoringForm::
+    @Refactoringfrm@TRefactoringForm@$bctr$qqrp25System@Classes@TComponent @122 ; __fastcall Refactoringfrm::TRefactoringForm::TRefactoringForm(System::Classes::TComponent *)
+    @Refactoringfrm@TRefactoringForm@AddRootRefactoringNode$qqsx71System@%DelphiInterface$44Borland_studio_toolsapi_tlb@IRefactoringNode%x67System@%DelphiInterface$40Borland_studio_toolsapi_tlb@IRefactoring% @109 ; Refactoringfrm::TRefactoringForm::AddRootRefactoringNode(const System::DelphiInterface<{583}...
+    @Refactoringfrm@TRefactoringForm@CurrentRefactoring$qqrv @117 ; __fastcall Refactoringfrm::TRefactoringForm::CurrentRefactoring()
+    @Refactoringfrm@TRefactoringForm@FindRefactoringNode$qqrv @114 ; __fastcall Refactoringfrm::TRefactoringForm::FindRefactoringNode()
+    @Refactoringfrm@TRefactoringForm@FormCreate$qqrp14System@TObject @121 ; __fastcall Refactoringfrm::TRefactoringForm::FormCreate(System::TObject *)
+    @Refactoringfrm@TRefactoringForm@FormDestroy$qqrp14System@TObject @111 ; __fastcall Refactoringfrm::TRefactoringForm::FormDestroy(System::TObject *)
+    @Refactoringfrm@TRefactoringForm@actnDeleteAllExecute$qqrp14System@TObject @107 ; __fastcall Refactoringfrm::TRefactoringForm::actnDeleteAllExecute(System::TObject *)
+    @Refactoringfrm@TRefactoringForm@actnDeleteAllUpdate$qqrp14System@TObject @108 ; __fastcall Refactoringfrm::TRefactoringForm::actnDeleteAllUpdate(System::TObject *)
+    @Refactoringfrm@TRefactoringForm@actnDeleteExecute$qqrp14System@TObject @115 ; __fastcall Refactoringfrm::TRefactoringForm::actnDeleteExecute(System::TObject *)
+    @Refactoringfrm@TRefactoringForm@actnDeleteUpdate$qqrp14System@TObject @112 ; __fastcall Refactoringfrm::TRefactoringForm::actnDeleteUpdate(System::TObject *)
+    @Refactoringfrm@TRefactoringForm@actnRefactorExecute$qqrp14System@TObject @118 ; __fastcall Refactoringfrm::TRefactoringForm::actnRefactorExecute(System::TObject *)
+    @Refactoringfrm@TRefactoringForm@actnRefactorUpdate$qqrp14System@TObject @119 ; __fastcall Refactoringfrm::TRefactoringForm::actnRefactorUpdate(System::TObject *)
+    @Refactoringfrm@TRefactoringForm@actnUndoExecute$qqrp14System@TObject @116 ; __fastcall Refactoringfrm::TRefactoringForm::actnUndoExecute(System::TObject *)
+    @Refactoringfrm@TRefactoringForm@actnUndoUpdate$qqrp14System@TObject @113 ; __fastcall Refactoringfrm::TRefactoringForm::actnUndoUpdate(System::TObject *)
+    @Refactoringfrm@TRefactoringForm@actnViewRefactoringsExecute$qqrp14System@TObject @120 ; __fastcall Refactoringfrm::TRefactoringForm::actnViewRefactoringsExecute(System::TObject *)
+    @Refactoringfrm@TRefactoringForm@refactoringTreeKeyDown$qqrp14System@TObjectrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @110 ; Refactoringfrm::TRefactoringForm::refactoringTreeKeyDown(System::TObject *, unsigned short&, System::Set<{583}...
+    @Refactoringfrm@initialization$qqrv @105 ; __fastcall Refactoringfrm::initialization()
+    @Refactorreg@Finalization$qqrv @127 ; __fastcall Refactorreg::Finalization()
+    @Refactorreg@IDERegister$qqrv  @128 ; __fastcall Refactorreg::IDERegister()
+    @Refactorreg@initialization$qqrv @126 ; __fastcall Refactorreg::initialization()
+    Finalize                       @133 ; Finalize
+    Initialize                     @134 ; Initialize

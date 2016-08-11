@@ -1,0 +1,18 @@
+LIBRARY     BORLNDMM.DLL
+
+EXPORTS
+    @Borlndmm@HeapAddRef$qqrv      @15  ; __fastcall Borlndmm::HeapAddRef()
+    @Borlndmm@HeapRelease$qqrv     @14  ; __fastcall Borlndmm::HeapRelease()
+    @Borlndmm@SysAllocMem$qqri     @10  ; __fastcall Borlndmm::SysAllocMem(int)
+    @Borlndmm@SysFreeMem$qqrpv     @12  ; __fastcall Borlndmm::SysFreeMem(void *)
+    @Borlndmm@SysGetMem$qqri       @13  ; __fastcall Borlndmm::SysGetMem(int)
+    @Borlndmm@SysReallocMem$qqrpvi @11  ; __fastcall Borlndmm::SysReallocMem(void *, int)
+    @Borlndmm@SysRegisterExpectedMemoryLeak$qqrpi @9   ; __fastcall Borlndmm::SysRegisterExpectedMemoryLeak(int *)
+    @Borlndmm@SysUnregisterExpectedMemoryLeak$qqrpi @8   ; __fastcall Borlndmm::SysUnregisterExpectedMemoryLeak(int *)
+    DumpBlocks                     @4   ; DumpBlocks
+    FreeMemory                     @6   ; FreeMemory
+    GetAllocMemCount               @2   ; GetAllocMemCount
+    GetAllocMemSize                @1   ; GetAllocMemSize
+    GetHeapStatus                  @3   ; GetHeapStatus
+    GetMemory                      @7   ; GetMemory
+    ReallocMemory                  @5   ; ReallocMemory

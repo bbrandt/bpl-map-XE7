@@ -1,0 +1,28 @@
+LIBRARY     BCCBROW.DLL
+
+EXPORTS
+    BrowseFile                     @5   ; BrowseFile
+    CheckFile                      @19  ; CheckFile
+    CurrentBrowserCompiler         @3   ; CurrentBrowserCompiler
+    FileNameFromIndex              @10  ; FileNameFromIndex
+    GetBrowserMemoryStats          @12  ; GetBrowserMemoryStats
+    GetCLANGCompilerInfo           @18  ; GetCLANGCompilerInfo
+    GetCheckerOption               @21  ; GetCheckerOption
+    GetCompilerInfo                @4   ; GetCompilerInfo
+    GetIDECallbacks                @16  ; GetIDECallbacks
+    GetParsedFileEntry             @11  ; GetParsedFileEntry
+    GetRawIDECallbacks             @15  ; GetRawIDECallbacks
+    InitBrowserCompiler            @2   ; InitBrowserCompiler
+    InitCLANGCompiler              @17  ; InitCLANGCompiler
+    Initialize                     @1   ; Initialize
+    PruneDeleted                   @8   ; PruneDeleted
+    ResetCache                     @9   ; ResetCache
+    SaveGlobalDeclCache            @14  ; SaveGlobalDeclCache
+    SaveGlobalFileIndex            @13  ; SaveGlobalFileIndex
+    SetCheckerOption               @20  ; SetCheckerOption
+    VisitCheckedBugs               @23  ; VisitCheckedBugs
+    VisitCheckedFiles              @22  ; VisitCheckedFiles
+    VisitCheckerInfo               @24  ; VisitCheckerInfo
+    VisitFiles                     @7   ; VisitFiles
+    VisitSymbols                   @6   ; VisitSymbols
+    ___CPPdebugHook                @25  ; ___CPPdebugHook

@@ -1,0 +1,136 @@
+LIBRARY     INETDB210.BPL
+
+DESCRIPTION 'mbarcadero Internet/World Wide Web database components'
+
+EXPORTS
+    @$xp$23Web@Dbweb@THTTPDataLink @110 ; __tpdsc__ Web::Dbweb::THTTPDataLink
+    @$xp$26Web@Dbweb@TDSTableProducer @97  ; __tpdsc__ Web::Dbweb::TDSTableProducer
+    @$xp$26Web@Dbweb@THTMLColumnState @106 ; __tpdsc__ Web::Dbweb::THTMLColumnState
+    @$xp$26Web@Dbweb@THTMLTableColumn @108 ; __tpdsc__ Web::Dbweb::THTMLTableColumn
+    @$xp$27Web@Dbweb@THTMLDataSetEmpty @99  ; __tpdsc__ Web::Dbweb::THTMLDataSetEmpty
+    @$xp$27Web@Dbweb@THTMLTableColumns @104 ; __tpdsc__ Web::Dbweb::THTMLTableColumns
+    @$xp$29Web@Dbweb@TCreateContentEvent @102 ; __tpdsc__ Web::Dbweb::TCreateContentEvent
+    @$xp$30Web@Dbweb@THTMLFormatCellEvent @100 ; __tpdsc__ Web::Dbweb::THTMLFormatCellEvent
+    @$xp$31Web@Dbweb@TDataSetTableProducer @95  ; __tpdsc__ Web::Dbweb::TDataSetTableProducer
+    @$xp$31Web@Dbweb@THTMLCaptionAlignment @103 ; __tpdsc__ Web::Dbweb::THTMLCaptionAlignment
+    @$xp$31Web@Dbweb@THTMLTableColumnClass @107 ; __tpdsc__ Web::Dbweb::THTMLTableColumnClass
+    @$xp$31Web@Dsprod@TDataSetPageProducer @121 ; __tpdsc__ Web::Dsprod::TDataSetPageProducer
+    @$xp$32Web@Dbweb@TDSTableProducerEditor @112 ; __tpdsc__ Web::Dbweb::TDSTableProducerEditor
+    @$xp$35Web@Dbweb@THTMLGetTableCaptionEvent @101 ; __tpdsc__ Web::Dbweb::THTMLGetTableCaptionEvent
+    @$xp$37Web@Dsprod@TCustomDataSetPageProducer @123 ; __tpdsc__ Web::Dsprod::TCustomDataSetPageProducer
+    @GetPackageInfoTable           @131 ; GetPackageInfoTable
+    @Inetdb@@GetPackageInfoTable$qqrv @128 ; Inetdb::__linkproc__ __fastcall GetPackageInfoTable()
+    @Inetdb@@PackageLoad$qqrv      @127 ; Inetdb::__linkproc__ __fastcall PackageLoad()
+    @Inetdb@@PackageUnload$qqrv    @126 ; Inetdb::__linkproc__ __fastcall PackageUnload()
+    @Inetdb@initialization$qqrv    @125 ; __fastcall Inetdb::initialization()
+    @Web@Dbweb@Finalization$qqrv   @2   ; __fastcall Web::Dbweb::Finalization()
+    @Web@Dbweb@HtmlTable$qqrp16Data@Db@TDataSetp26Web@Dbweb@TDSTableProduceri @3   ; __fastcall Web::Dbweb::HtmlTable(Data::Db::TDataSet *, Web::Dbweb::TDSTableProducer *, int)
+    @Web@Dbweb@TDSTableProducer@   @98  ; Web::Dbweb::TDSTableProducer::
+    @Web@Dbweb@TDSTableProducer@$bctr$qqrp25System@Classes@TComponent @40  ; __fastcall Web::Dbweb::TDSTableProducer::TDSTableProducer(System::Classes::TComponent *)
+    @Web@Dbweb@TDSTableProducer@$bdtr$qqrv @39  ; __fastcall Web::Dbweb::TDSTableProducer::~TDSTableProducer()
+    @Web@Dbweb@TDSTableProducer@AcquireLayoutLock$qqrv @38  ; __fastcall Web::Dbweb::TDSTableProducer::AcquireLayoutLock()
+    @Web@Dbweb@TDSTableProducer@AttributeChanged$qqrp14System@TObject @37  ; __fastcall Web::Dbweb::TDSTableProducer::AttributeChanged(System::TObject *)
+    @Web@Dbweb@TDSTableProducer@BeginLayout$qqrv @36  ; __fastcall Web::Dbweb::TDSTableProducer::BeginLayout()
+    @Web@Dbweb@TDSTableProducer@BeginUpdate$qqrv @35  ; __fastcall Web::Dbweb::TDSTableProducer::BeginUpdate()
+    @Web@Dbweb@TDSTableProducer@Changed$qqrv @34  ; __fastcall Web::Dbweb::TDSTableProducer::Changed()
+    @Web@Dbweb@TDSTableProducer@ColumnHeader$qqrv @8   ; __fastcall Web::Dbweb::TDSTableProducer::ColumnHeader()
+    @Web@Dbweb@TDSTableProducer@DefineFieldMap$qqrv @33  ; __fastcall Web::Dbweb::TDSTableProducer::DefineFieldMap()
+    @Web@Dbweb@TDSTableProducer@DoCreateContent$qqrv @32  ; __fastcall Web::Dbweb::TDSTableProducer::DoCreateContent()
+    @Web@Dbweb@TDSTableProducer@DoFormatCell$qqriir20System@UnicodeStringr23Web@Httpprod@THTMLAlignr24Web@Httpprod@THTMLVAlignt3t3 @31  ; __fastcall Web::Dbweb::TDSTableProducer::DoFormatCell(int, int, System::UnicodeString&, Web::Httpprod::THTMLAlign&, Web::Httpprod::THTMLVAlign&, System::UnicodeString&, System::UnicodeString&)
+    @Web@Dbweb@TDSTableProducer@DoGetCaption$qqrr20System@UnicodeStringr31Web@Dbweb@THTMLCaptionAlignment @30  ; __fastcall Web::Dbweb::TDSTableProducer::DoGetCaption(System::UnicodeString&, Web::Dbweb::THTMLCaptionAlignment&)
+    @Web@Dbweb@TDSTableProducer@EndLayout$qqrv @29  ; __fastcall Web::Dbweb::TDSTableProducer::EndLayout()
+    @Web@Dbweb@TDSTableProducer@EndUpdate$qqrv @28  ; __fastcall Web::Dbweb::TDSTableProducer::EndUpdate()
+    @Web@Dbweb@TDSTableProducer@FormatCell$qqrii20System@UnicodeStringx20System@UnicodeStringt423Web@Httpprod@THTMLAlign24Web@Httpprod@THTMLVAlignt4 @12  ; __fastcall Web::Dbweb::TDSTableProducer::FormatCell(int, int, System::UnicodeString, const System::UnicodeString, const System::UnicodeString, Web::Httpprod::THTMLAlign, Web::Httpprod::THTMLVAlign, const System::UnicodeString)
+    @Web@Dbweb@TDSTableProducer@GetDataSource$qqrv @27  ; __fastcall Web::Dbweb::TDSTableProducer::GetDataSource()
+    @Web@Dbweb@TDSTableProducer@InternalLayout$qqrv @26  ; __fastcall Web::Dbweb::TDSTableProducer::InternalLayout()
+    @Web@Dbweb@TDSTableProducer@LayoutChanged$qqrv @25  ; __fastcall Web::Dbweb::TDSTableProducer::LayoutChanged()
+    @Web@Dbweb@TDSTableProducer@LinkActive$qqro @24  ; __fastcall Web::Dbweb::TDSTableProducer::LinkActive(bool)
+    @Web@Dbweb@TDSTableProducer@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @23  ; __fastcall Web::Dbweb::TDSTableProducer::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Web@Dbweb@TDSTableProducer@RowHeader$qqrv @11  ; __fastcall Web::Dbweb::TDSTableProducer::RowHeader()
+    @Web@Dbweb@TDSTableProducer@SetCaption$qqrx20System@UnicodeString @22  ; __fastcall Web::Dbweb::TDSTableProducer::SetCaption(const System::UnicodeString)
+    @Web@Dbweb@TDSTableProducer@SetCaptionAlignment$qqr31Web@Dbweb@THTMLCaptionAlignment @21  ; __fastcall Web::Dbweb::TDSTableProducer::SetCaptionAlignment(Web::Dbweb::THTMLCaptionAlignment)
+    @Web@Dbweb@TDSTableProducer@SetColumns$qqrp27Web@Dbweb@THTMLTableColumns @20  ; __fastcall Web::Dbweb::TDSTableProducer::SetColumns(Web::Dbweb::THTMLTableColumns *)
+    @Web@Dbweb@TDSTableProducer@SetDataSource$qqrp19Data@Db@TDataSource @19  ; __fastcall Web::Dbweb::TDSTableProducer::SetDataSource(Data::Db::TDataSource *)
+    @Web@Dbweb@TDSTableProducer@SetFooter$qqrp23System@Classes@TStrings @18  ; __fastcall Web::Dbweb::TDSTableProducer::SetFooter(System::Classes::TStrings *)
+    @Web@Dbweb@TDSTableProducer@SetHeader$qqrp23System@Classes@TStrings @17  ; __fastcall Web::Dbweb::TDSTableProducer::SetHeader(System::Classes::TStrings *)
+    @Web@Dbweb@TDSTableProducer@SetMaxRows$qqri @16  ; __fastcall Web::Dbweb::TDSTableProducer::SetMaxRows(int)
+    @Web@Dbweb@TDSTableProducer@SetRowAttributes$qqrp36Web@Httpprod@THTMLTableRowAttributes @15  ; __fastcall Web::Dbweb::TDSTableProducer::SetRowAttributes(Web::Httpprod::THTMLTableRowAttributes *)
+    @Web@Dbweb@TDSTableProducer@SetTableAttributes$qqrp33Web@Httpprod@THTMLTableAttributes @14  ; __fastcall Web::Dbweb::TDSTableProducer::SetTableAttributes(Web::Httpprod::THTMLTableAttributes *)
+    @Web@Dbweb@TDSTableProducer@StoreColumns$qqrv @13  ; __fastcall Web::Dbweb::TDSTableProducer::StoreColumns()
+    @Web@Dbweb@TDSTableProducer@TableCaption$qqrv @10  ; __fastcall Web::Dbweb::TDSTableProducer::TableCaption()
+    @Web@Dbweb@TDSTableProducer@TableHeader$qqrv @9   ; __fastcall Web::Dbweb::TDSTableProducer::TableHeader()
+    @Web@Dbweb@TDSTableProducerEditor@ @113 ; Web::Dbweb::TDSTableProducerEditor::
+    @Web@Dbweb@TDSTableProducerEditor@$bctr$qqrp26Web@Dbweb@TDSTableProducer @94  ; __fastcall Web::Dbweb::TDSTableProducerEditor::TDSTableProducerEditor(Web::Dbweb::TDSTableProducer *)
+    @Web@Dbweb@TDSTableProducerEditor@$bdtr$qqrv @93  ; __fastcall Web::Dbweb::TDSTableProducerEditor::~TDSTableProducerEditor()
+    @Web@Dbweb@TDSTableProducerEditor@Changed$qqrv @92  ; __fastcall Web::Dbweb::TDSTableProducerEditor::Changed()
+    @Web@Dbweb@TDSTableProducerEditor@GetDataSource$qqrv @90  ; __fastcall Web::Dbweb::TDSTableProducerEditor::GetDataSource()
+    @Web@Dbweb@TDSTableProducerEditor@PostChange$qqrv @91  ; __fastcall Web::Dbweb::TDSTableProducerEditor::PostChange()
+    @Web@Dbweb@TDSTableProducerEditor@SetDataSource$qqrp19Data@Db@TDataSource @89  ; __fastcall Web::Dbweb::TDSTableProducerEditor::SetDataSource(Data::Db::TDataSource *)
+    @Web@Dbweb@TDataSetTableProducer@ @96  ; Web::Dbweb::TDataSetTableProducer::
+    @Web@Dbweb@TDataSetTableProducer@Content$qqrv @7   ; __fastcall Web::Dbweb::TDataSetTableProducer::Content()
+    @Web@Dbweb@TDataSetTableProducer@GetDataSet$qqrv @6   ; __fastcall Web::Dbweb::TDataSetTableProducer::GetDataSet()
+    @Web@Dbweb@TDataSetTableProducer@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @5   ; __fastcall Web::Dbweb::TDataSetTableProducer::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Web@Dbweb@TDataSetTableProducer@SetDataSet$qqrp16Data@Db@TDataSet @4   ; __fastcall Web::Dbweb::TDataSetTableProducer::SetDataSet(Data::Db::TDataSet *)
+    @Web@Dbweb@THTMLTableColumn@   @109 ; Web::Dbweb::THTMLTableColumn::
+    @Web@Dbweb@THTMLTableColumn@$bctr$qqrp26System@Classes@TCollection @88  ; __fastcall Web::Dbweb::THTMLTableColumn::THTMLTableColumn(System::Classes::TCollection *)
+    @Web@Dbweb@THTMLTableColumn@$bdtr$qqrv @87  ; __fastcall Web::Dbweb::THTMLTableColumn::~THTMLTableColumn()
+    @Web@Dbweb@THTMLTableColumn@AssignTo$qqrp26System@Classes@TPersistent @86  ; __fastcall Web::Dbweb::THTMLTableColumn::AssignTo(System::Classes::TPersistent *)
+    @Web@Dbweb@THTMLTableColumn@GeTDSTableProducer$qqrv @83  ; __fastcall Web::Dbweb::THTMLTableColumn::GeTDSTableProducer()
+    @Web@Dbweb@THTMLTableColumn@GetDisplayName$qqrv @82  ; __fastcall Web::Dbweb::THTMLTableColumn::GetDisplayName()
+    @Web@Dbweb@THTMLTableColumn@GetField$qqrv @85  ; __fastcall Web::Dbweb::THTMLTableColumn::GetField()
+    @Web@Dbweb@THTMLTableColumn@GetTableProducer$qqrv @84  ; __fastcall Web::Dbweb::THTMLTableColumn::GetTableProducer()
+    @Web@Dbweb@THTMLTableColumn@IsStored$qqrv @81  ; __fastcall Web::Dbweb::THTMLTableColumn::IsStored()
+    @Web@Dbweb@THTMLTableColumn@RestoreDefaults$qqrv @80  ; __fastcall Web::Dbweb::THTMLTableColumn::RestoreDefaults()
+    @Web@Dbweb@THTMLTableColumn@SetAlign$qqr23Web@Httpprod@THTMLAlign @79  ; __fastcall Web::Dbweb::THTMLTableColumn::SetAlign(Web::Httpprod::THTMLAlign)
+    @Web@Dbweb@THTMLTableColumn@SetBgColor$qqrx20System@UnicodeString @78  ; __fastcall Web::Dbweb::THTMLTableColumn::SetBgColor(const System::UnicodeString)
+    @Web@Dbweb@THTMLTableColumn@SetCustom$qqrx20System@UnicodeString @77  ; __fastcall Web::Dbweb::THTMLTableColumn::SetCustom(const System::UnicodeString)
+    @Web@Dbweb@THTMLTableColumn@SetField$qqrp14Data@Db@TField @76  ; __fastcall Web::Dbweb::THTMLTableColumn::SetField(Data::Db::TField *)
+    @Web@Dbweb@THTMLTableColumn@SetFieldName$qqrx20System@UnicodeString @75  ; __fastcall Web::Dbweb::THTMLTableColumn::SetFieldName(const System::UnicodeString)
+    @Web@Dbweb@THTMLTableColumn@SetTitle$qqrp39Web@Httpprod@THTMLTableHeaderAttributes @74  ; __fastcall Web::Dbweb::THTMLTableColumn::SetTitle(Web::Httpprod::THTMLTableHeaderAttributes *)
+    @Web@Dbweb@THTMLTableColumn@SetVAlign$qqr24Web@Httpprod@THTMLVAlign @73  ; __fastcall Web::Dbweb::THTMLTableColumn::SetVAlign(Web::Httpprod::THTMLVAlign)
+    @Web@Dbweb@THTMLTableColumn@TitleChanged$qqrp14System@TObject @72  ; __fastcall Web::Dbweb::THTMLTableColumn::TitleChanged(System::TObject *)
+    @Web@Dbweb@THTMLTableColumn@Update$qqrv @71  ; __fastcall Web::Dbweb::THTMLTableColumn::Update()
+    @Web@Dbweb@THTMLTableColumns@  @105 ; Web::Dbweb::THTMLTableColumns::
+    @Web@Dbweb@THTMLTableColumns@$bctr$qqrp26Web@Dbweb@TDSTableProducerp17System@TMetaClass @70  ; __fastcall Web::Dbweb::THTMLTableColumns::THTMLTableColumns(Web::Dbweb::TDSTableProducer *, System::TMetaClass *)
+    @Web@Dbweb@THTMLTableColumns@Add$qqrv @69  ; __fastcall Web::Dbweb::THTMLTableColumns::Add()
+    @Web@Dbweb@THTMLTableColumns@GetAttr$qqri @61  ; __fastcall Web::Dbweb::THTMLTableColumns::GetAttr(int)
+    @Web@Dbweb@THTMLTableColumns@GetAttrCount$qqrv @62  ; __fastcall Web::Dbweb::THTMLTableColumns::GetAttrCount()
+    @Web@Dbweb@THTMLTableColumns@GetColumn$qqri @68  ; __fastcall Web::Dbweb::THTMLTableColumns::GetColumn(int)
+    @Web@Dbweb@THTMLTableColumns@GetItemAttr$qqrii @60  ; __fastcall Web::Dbweb::THTMLTableColumns::GetItemAttr(int, int)
+    @Web@Dbweb@THTMLTableColumns@GetOwner$qqrv @59  ; __fastcall Web::Dbweb::THTMLTableColumns::GetOwner()
+    @Web@Dbweb@THTMLTableColumns@GetState$qqrv @67  ; __fastcall Web::Dbweb::THTMLTableColumns::GetState()
+    @Web@Dbweb@THTMLTableColumns@RebuildColumns$qqrv @65  ; __fastcall Web::Dbweb::THTMLTableColumns::RebuildColumns()
+    @Web@Dbweb@THTMLTableColumns@RestoreDefaults$qqrv @66  ; __fastcall Web::Dbweb::THTMLTableColumns::RestoreDefaults()
+    @Web@Dbweb@THTMLTableColumns@SetColumn$qqrip26Web@Dbweb@THTMLTableColumn @64  ; __fastcall Web::Dbweb::THTMLTableColumns::SetColumn(int, Web::Dbweb::THTMLTableColumn *)
+    @Web@Dbweb@THTMLTableColumns@SetState$qqr26Web@Dbweb@THTMLColumnState @63  ; __fastcall Web::Dbweb::THTMLTableColumns::SetState(Web::Dbweb::THTMLColumnState)
+    @Web@Dbweb@THTMLTableColumns@Update$qqrp30System@Classes@TCollectionItem @58  ; __fastcall Web::Dbweb::THTMLTableColumns::Update(System::Classes::TCollectionItem *)
+    @Web@Dbweb@THTTPDataLink@      @111 ; Web::Dbweb::THTTPDataLink::
+    @Web@Dbweb@THTTPDataLink@$bctr$qqrp26Web@Dbweb@TDSTableProducer @57  ; __fastcall Web::Dbweb::THTTPDataLink::THTTPDataLink(Web::Dbweb::TDSTableProducer *)
+    @Web@Dbweb@THTTPDataLink@$bdtr$qqrv @56  ; __fastcall Web::Dbweb::THTTPDataLink::~THTTPDataLink()
+    @Web@Dbweb@THTTPDataLink@ActiveChanged$qqrv @52  ; __fastcall Web::Dbweb::THTTPDataLink::ActiveChanged()
+    @Web@Dbweb@THTTPDataLink@AddMapping$qqrx20System@UnicodeString @53  ; __fastcall Web::Dbweb::THTTPDataLink::AddMapping(const System::UnicodeString)
+    @Web@Dbweb@THTTPDataLink@ClearMapping$qqrv @51  ; __fastcall Web::Dbweb::THTTPDataLink::ClearMapping()
+    @Web@Dbweb@THTTPDataLink@DataSetChanged$qqrv @49  ; __fastcall Web::Dbweb::THTTPDataLink::DataSetChanged()
+    @Web@Dbweb@THTTPDataLink@DataSetScrolled$qqri @48  ; __fastcall Web::Dbweb::THTTPDataLink::DataSetScrolled(int)
+    @Web@Dbweb@THTTPDataLink@EditingChanged$qqrv @45  ; __fastcall Web::Dbweb::THTTPDataLink::EditingChanged()
+    @Web@Dbweb@THTTPDataLink@FocusControl$qqrpp14Data@Db@TField @46  ; __fastcall Web::Dbweb::THTTPDataLink::FocusControl(Data::Db::TField * *)
+    @Web@Dbweb@THTTPDataLink@GetDefaultFields$qqrv @55  ; __fastcall Web::Dbweb::THTTPDataLink::GetDefaultFields()
+    @Web@Dbweb@THTTPDataLink@GetFields$qqri @54  ; __fastcall Web::Dbweb::THTTPDataLink::GetFields(int)
+    @Web@Dbweb@THTTPDataLink@GetMappedIndex$qqri @42  ; __fastcall Web::Dbweb::THTTPDataLink::GetMappedIndex(int)
+    @Web@Dbweb@THTTPDataLink@LayoutChanged$qqrv @47  ; __fastcall Web::Dbweb::THTTPDataLink::LayoutChanged()
+    @Web@Dbweb@THTTPDataLink@Modified$qqrv @50  ; __fastcall Web::Dbweb::THTTPDataLink::Modified()
+    @Web@Dbweb@THTTPDataLink@RecordChanged$qqrp14Data@Db@TField @44  ; __fastcall Web::Dbweb::THTTPDataLink::RecordChanged(Data::Db::TField *)
+    @Web@Dbweb@THTTPDataLink@Reset$qqrv @41  ; __fastcall Web::Dbweb::THTTPDataLink::Reset()
+    @Web@Dbweb@THTTPDataLink@UpdateData$qqrv @43  ; __fastcall Web::Dbweb::THTTPDataLink::UpdateData()
+    @Web@Dbweb@initialization$qqrv @1   ; __fastcall Web::Dbweb::initialization()
+    @Web@Dsprod@Finalization$qqrv  @115 ; __fastcall Web::Dsprod::Finalization()
+    @Web@Dsprod@TCustomDataSetPageProducer@ @124 ; Web::Dsprod::TCustomDataSetPageProducer::
+    @Web@Dsprod@TCustomDataSetPageProducer@Content$qqrv @116 ; __fastcall Web::Dsprod::TCustomDataSetPageProducer::Content()
+    @Web@Dsprod@TCustomDataSetPageProducer@DoTagEvent$qqr17Web@Httpprod@TTagx20System@UnicodeStringp23System@Classes@TStringsr20System@UnicodeString @117 ; __fastcall Web::Dsprod::TCustomDataSetPageProducer::DoTagEvent(Web::Httpprod::TTag, const System::UnicodeString, System::Classes::TStrings *, System::UnicodeString&)
+    @Web@Dsprod@TCustomDataSetPageProducer@GetDataSet$qqrv @120 ; __fastcall Web::Dsprod::TCustomDataSetPageProducer::GetDataSet()
+    @Web@Dsprod@TCustomDataSetPageProducer@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @118 ; __fastcall Web::Dsprod::TCustomDataSetPageProducer::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Web@Dsprod@TCustomDataSetPageProducer@SetDataSet$qqrp16Data@Db@TDataSet @119 ; __fastcall Web::Dsprod::TCustomDataSetPageProducer::SetDataSet(Data::Db::TDataSet *)
+    @Web@Dsprod@TDataSetPageProducer@ @122 ; Web::Dsprod::TDataSetPageProducer::
+    @Web@Dsprod@initialization$qqrv @114 ; __fastcall Web::Dsprod::initialization()
+    Finalize                       @129 ; Finalize
+    Initialize                     @130 ; Initialize

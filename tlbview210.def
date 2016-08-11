@@ -1,0 +1,973 @@
+LIBRARY     TLBVIEW210.BPL
+
+DESCRIPTION 'mbarcadero Type Library Plug'
+
+EXPORTS
+    @$xp$17Typelibrary@THelp       @503 ; __tpdsc__ Typelibrary::THelp
+    @$xp$17Typelibrary@TType       @477 ; __tpdsc__ Typelibrary::TType
+    @$xp$18Typelibrary@TAlias      @435 ; __tpdsc__ Typelibrary::TAlias
+    @$xp$18Typelibrary@TField      @463 ; __tpdsc__ Typelibrary::TField
+    @$xp$18Typelibrary@TUnion      @431 ; __tpdsc__ Typelibrary::TUnion
+    @$xp$19Comutils@TConstKind     @21  ; __tpdsc__ Comutils::TConstKind
+    @$xp$19Typelibrary@TMethod     @471 ; __tpdsc__ Typelibrary::TMethod
+    @$xp$19Typelibrary@TModule     @427 ; __tpdsc__ Typelibrary::TModule
+    @$xp$19Typelibrary@TRecord     @439 ; __tpdsc__ Typelibrary::TRecord
+    @$xp$20Comutils@TMethodKind    @24  ; __tpdsc__ Comutils::TMethodKind
+    @$xp$20Typelibrary@TCoClass    @491 ; __tpdsc__ Typelibrary::TCoClass
+    @$xp$20Typelibrary@TVersion    @505 ; __tpdsc__ Typelibrary::TVersion
+    @$xp$21Typelibrary@TConstant   @451 ; __tpdsc__ Typelibrary::TConstant
+    @$xp$21Typelibrary@TGuidList   @417 ; __tpdsc__ Typelibrary::TGuidList
+    @$xp$21Typelibrary@TProperty   @459 ; __tpdsc__ Typelibrary::TProperty
+    @$xp$21Typelibrary@TTypeBase   @499 ; __tpdsc__ Typelibrary::TTypeBase
+    @$xp$22Comutils@TPropertyKind  @22  ; __tpdsc__ Comutils::TPropertyKind
+    @$xp$22Typelibplug@TAliasNode  @927 ; __tpdsc__ Typelibplug::TAliasNode
+    @$xp$22Typelibplug@TFieldNode  @929 ; __tpdsc__ Typelibplug::TFieldNode
+    @$xp$22Typelibplug@TUnionNode  @921 ; __tpdsc__ Typelibplug::TUnionNode
+    @$xp$22Typelibrary@TAliasList  @433 ; __tpdsc__ Typelibrary::TAliasList
+    @$xp$22Typelibrary@TFieldList  @461 ; __tpdsc__ Typelibrary::TFieldList
+    @$xp$22Typelibrary@TGuidTable  @419 ; __tpdsc__ Typelibrary::TGuidTable
+    @$xp$22Typelibrary@TInterface  @487 ; __tpdsc__ Typelibrary::TInterface
+    @$xp$22Typelibrary@TParameter  @475 ; __tpdsc__ Typelibrary::TParameter
+    @$xp$22Typelibrary@TUnionList  @429 ; __tpdsc__ Typelibrary::TUnionList
+    @$xp$22Typelibrary@TVarObject  @493 ; __tpdsc__ Typelibrary::TVarObject
+    @$xp$23Typelibplug@TMethodNode @941 ; __tpdsc__ Typelibplug::TMethodNode
+    @$xp$23Typelibplug@TModuleNode @925 ; __tpdsc__ Typelibplug::TModuleNode
+    @$xp$23Typelibplug@TRecordNode @923 ; __tpdsc__ Typelibplug::TRecordNode
+    @$xp$23Typelibrary@TCustomType @479 ; __tpdsc__ Typelibrary::TCustomType
+    @$xp$23Typelibrary@TMethodList @469 ; __tpdsc__ Typelibrary::TMethodList
+    @$xp$23Typelibrary@TModuleList @425 ; __tpdsc__ Typelibrary::TModuleList
+    @$xp$23Typelibrary@TRecordList @437 ; __tpdsc__ Typelibrary::TRecordList
+    @$xp$23Typelibrary@TTypeObject @497 ; __tpdsc__ Typelibrary::TTypeObject
+    @$xp$24Tlbcontainer@TTlbCreator @960 ; __tpdsc__ Tlbcontainer::TTlbCreator
+    @$xp$24Typelibplug@TCoClassNode @947 ; __tpdsc__ Typelibplug::TCoClassNode
+    @$xp$24Typelibplug@TTypeLibTree @917 ; __tpdsc__ Typelibplug::TTypeLibTree
+    @$xp$24Typelibrary@TCoClassList @489 ; __tpdsc__ Typelibrary::TCoClassList
+    @$xp$24Typelibrary@TEnumeration @443 ; __tpdsc__ Typelibrary::TEnumeration
+    @$xp$24Typelibrary@TTypeLibrary @415 ; __tpdsc__ Typelibrary::TTypeLibrary
+    @$xp$25Typelibflags@TMethodFlags @46  ; __tpdsc__ Typelibflags::TMethodFlags
+    @$xp$25Typelibplug@TConstantNode @933 ; __tpdsc__ Typelibplug::TConstantNode
+    @$xp$25Typelibplug@TPropertyNode @935 ; __tpdsc__ Typelibplug::TPropertyNode
+    @$xp$25Typelibrary@TConstantList @449 ; __tpdsc__ Typelibrary::TConstantList
+    @$xp$25Typelibrary@TModuleMethod @467 ; __tpdsc__ Typelibrary::TModuleMethod
+    @$xp$25Typelibrary@TPropertyList @457 ; __tpdsc__ Typelibrary::TPropertyList
+    @$xp$26Paramspageplug@TParamsForm @596 ; __tpdsc__ Paramspageplug::TParamsForm
+    @$xp$26Typelibflags@TTypeLibFlags @40  ; __tpdsc__ Typelibflags::TTypeLibFlags
+    @$xp$26Typelibplug@TInterfaceNode @945 ; __tpdsc__ Typelibplug::TInterfaceNode
+    @$xp$26Typelibrary@TDispInterface @483 ; __tpdsc__ Typelibrary::TDispInterface
+    @$xp$26Typelibrary@TInterfaceList @485 ; __tpdsc__ Typelibrary::TInterfaceList
+    @$xp$26Typelibrary@TParameterList @473 ; __tpdsc__ Typelibrary::TParameterList
+    @$xp$27Comutils@TCallingConvention @23  ; __tpdsc__ Comutils::TCallingConvention
+    @$xp$27Typelibplug@TTypeLibFactory @915 ; __tpdsc__ Typelibplug::TTypeLibFactory
+    @$xp$27Typelibrary@TClearListEvent @507 ; __tpdsc__ Typelibrary::TClearListEvent
+    @$xp$27Typelibrary@TCustomDataItem @423 ; __tpdsc__ Typelibrary::TCustomDataItem
+    @$xp$27Typelibrary@TCustomDataList @421 ; __tpdsc__ Typelibrary::TCustomDataList
+    @$xp$27Typelibrary@TMethodProperty @455 ; __tpdsc__ Typelibrary::TMethodProperty
+    @$xp$27Typelibrary@TModuleConstant @447 ; __tpdsc__ Typelibrary::TModuleConstant
+    @$xp$27Typelibrary@TTypeObjectList @495 ; __tpdsc__ Typelibrary::TTypeObjectList
+    @$xp$28Compluspageplug@TComPlusForm @625 ; __tpdsc__ Compluspageplug::TComPlusForm
+    @$xp$28Typelibflags@TParameterFlags @44  ; __tpdsc__ Typelibflags::TParameterFlags
+    @$xp$28Typelibplug@TEnumerationNode @919 ; __tpdsc__ Typelibplug::TEnumerationNode
+    @$xp$28Typelibrary@TEnumerationList @441 ; __tpdsc__ Typelibrary::TEnumerationList
+    @$xp$28Typelibrary@TTypeLibraryHelp @501 ; __tpdsc__ Typelibrary::TTypeLibraryHelp
+    @$xp$28Typelibrary@TTypeLibraryList @413 ; __tpdsc__ Typelibrary::TTypeLibraryList
+    @$xp$28Typelibrary@TUpdateListEvent @508 ; __tpdsc__ Typelibrary::TUpdateListEvent
+    @$xp$29Typelibflags@TMethodFlagsType @47  ; __tpdsc__ Typelibflags::TMethodFlagsType
+    @$xp$29Typelibflags@TTypeObjectFlags @42  ; __tpdsc__ Typelibflags::TTypeObjectFlags
+    @$xp$29Typelibplug@TModuleMethodNode @939 ; __tpdsc__ Typelibplug::TModuleMethodNode
+    @$xp$29Typelibrary@TModuleMethodList @465 ; __tpdsc__ Typelibrary::TModuleMethodList
+    @$xp$30Paramspageplug@IParamsPagePlug @595 ; __tpdsc__ Paramspageplug::IParamsPagePlug
+    @$xp$30Paramspageplug@TParamsPagePlug @591 ; __tpdsc__ Paramspageplug::TParamsPagePlug
+    @$xp$30Typelibflags@TTypeLibFlagsType @41  ; __tpdsc__ Typelibflags::TTypeLibFlagsType
+    @$xp$30Typelibplug@TDispInterfaceNode @943 ; __tpdsc__ Typelibplug::TDispInterfaceNode
+    @$xp$30Typelibplug@TPluggableNodeType @950 ; __tpdsc__ Typelibplug::TPluggableNodeType
+    @$xp$30Typelibrary@TDispInterfaceList @481 ; __tpdsc__ Typelibrary::TDispInterfaceList
+    @$xp$31Typelibplug@TMethodPropertyNode @937 ; __tpdsc__ Typelibplug::TMethodPropertyNode
+    @$xp$31Typelibplug@TModuleConstantNode @931 ; __tpdsc__ Typelibplug::TModuleConstantNode
+    @$xp$31Typelibrary@TMethodPropertyList @453 ; __tpdsc__ Typelibrary::TMethodPropertyList
+    @$xp$31Typelibrary@TModuleConstantList @445 ; __tpdsc__ Typelibrary::TModuleConstantList
+    @$xp$32Compluspageplug@IComPlusPagePlug @624 ; __tpdsc__ Compluspageplug::IComPlusPagePlug
+    @$xp$32Compluspageplug@TComPlusPagePlug @620 ; __tpdsc__ Compluspageplug::TComPlusPagePlug
+    @$xp$32Typelibflags@TParameterFlagsType @45  ; __tpdsc__ Typelibflags::TParameterFlagsType
+    @$xp$33Paramspageplug@TParamsPageFactory @593 ; __tpdsc__ Paramspageplug::TParamsPageFactory
+    @$xp$33Typelibflags@TTypeObjectFlagsType @43  ; __tpdsc__ Typelibflags::TTypeObjectFlagsType
+    @$xp$34Typeliberror@EInvalidNameException @50  ; __tpdsc__ Typeliberror::EInvalidNameException
+    @$xp$34Typelibplug@TPluggableNodeRootType @949 ; __tpdsc__ Typelibplug::TPluggableNodeRootType
+    @$xp$35Compluspageplug@TComPlusPageFactory @622 ; __tpdsc__ Compluspageplug::TComPlusPageFactory
+    @$xp$40Typelibraryimages@TTypeLibraryDataModule @631 ; __tpdsc__ Typelibraryimages::TTypeLibraryDataModule
+    @Compluspageplug@Finalization$qqrv @600 ; __fastcall Compluspageplug::Finalization()
+    @Compluspageplug@GUID_ComPlusPagePlugID @627 ; Compluspageplug::GUID_ComPlusPagePlugID
+    @Compluspageplug@TComPlusForm@ @626 ; Compluspageplug::TComPlusForm::
+    @Compluspageplug@TComPlusPageFactory@ @623 ; Compluspageplug::TComPlusPageFactory::
+    @Compluspageplug@TComPlusPageFactory@CreateInstance$qqrx20System@UnicodeString @619 ; __fastcall Compluspageplug::TComPlusPageFactory::CreateInstance(const System::UnicodeString)
+    @Compluspageplug@TComPlusPageFactory@GetID$qqrv @618 ; __fastcall Compluspageplug::TComPlusPageFactory::GetID()
+    @Compluspageplug@TComPlusPagePlug@ @621 ; Compluspageplug::TComPlusPagePlug::
+    @Compluspageplug@TComPlusPagePlug@$bctr$qqrv @617 ; __fastcall Compluspageplug::TComPlusPagePlug::TComPlusPagePlug()
+    @Compluspageplug@TComPlusPagePlug@$bdtr$qqrv @616 ; __fastcall Compluspageplug::TComPlusPagePlug::~TComPlusPagePlug()
+    @Compluspageplug@TComPlusPagePlug@Clear$qqrv @615 ; __fastcall Compluspageplug::TComPlusPagePlug::Clear()
+    @Compluspageplug@TComPlusPagePlug@GetCaption$qqrv @614 ; __fastcall Compluspageplug::TComPlusPagePlug::GetCaption()
+    @Compluspageplug@TComPlusPagePlug@GetID$qqrv @607 ; __fastcall Compluspageplug::TComPlusPagePlug::GetID()
+    @Compluspageplug@TComPlusPagePlug@GetPage$qqrv @606 ; __fastcall Compluspageplug::TComPlusPagePlug::GetPage()
+    @Compluspageplug@TComPlusPagePlug@GetPageManager$qqrv @605 ; __fastcall Compluspageplug::TComPlusPagePlug::GetPageManager()
+    @Compluspageplug@TComPlusPagePlug@GetReadOnly$qqrv @602 ; __fastcall Compluspageplug::TComPlusPagePlug::GetReadOnly()
+    @Compluspageplug@TComPlusPagePlug@GetVisible$qqrv @609 ; __fastcall Compluspageplug::TComPlusPagePlug::GetVisible()
+    @Compluspageplug@TComPlusPagePlug@Modified$qqrv @603 ; __fastcall Compluspageplug::TComPlusPagePlug::Modified()
+    @Compluspageplug@TComPlusPagePlug@OnBegin$qqrv @611 ; __fastcall Compluspageplug::TComPlusPagePlug::OnBegin()
+    @Compluspageplug@TComPlusPagePlug@OnEnd$qqrv @610 ; __fastcall Compluspageplug::TComPlusPagePlug::OnEnd()
+    @Compluspageplug@TComPlusPagePlug@OnSelect$qqrv @612 ; __fastcall Compluspageplug::TComPlusPagePlug::OnSelect()
+    @Compluspageplug@TComPlusPagePlug@SetCaption$qqrx20System@UnicodeString @613 ; __fastcall Compluspageplug::TComPlusPagePlug::SetCaption(const System::UnicodeString)
+    @Compluspageplug@TComPlusPagePlug@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @604 ; Compluspageplug::TComPlusPagePlug::SetPageManager(const System::DelphiInterface<{583}...
+    @Compluspageplug@TComPlusPagePlug@SetReadOnly$qqro @601 ; __fastcall Compluspageplug::TComPlusPagePlug::SetReadOnly(bool)
+    @Compluspageplug@TComPlusPagePlug@SetVisible$qqrxo @608 ; __fastcall Compluspageplug::TComPlusPagePlug::SetVisible(const bool)
+    @Compluspageplug@initialization$qqrv @599 ; __fastcall Compluspageplug::initialization()
+    @Comutils@CustomTypeToString$qqr35System@%DelphiInterface$9ITypeInfo%ui @10  ; Comutils::CustomTypeToString(System::DelphiInterface<{583}...
+    @Comutils@Finalization$qqrv    @2   ; __fastcall Comutils::Finalization()
+    @Comutils@GetLCIDName$qqrui    @16  ; __fastcall Comutils::GetLCIDName(unsigned int)
+    @Comutils@GetTLBStringData$qqrx17System@WideString @17  ; __fastcall Comutils::GetTLBStringData(const System::WideString)
+    @Comutils@GetVTString$qqrus    @13  ; __fastcall Comutils::GetVTString(unsigned short)
+    @Comutils@IndirectionCount$qqrp11tagTYPEDESC @8   ; __fastcall Comutils::IndirectionCount(tagTYPEDESC *)
+    @Comutils@IndirectionType$qqrp11tagTYPEDESC @7   ; __fastcall Comutils::IndirectionType(tagTYPEDESC *)
+    @Comutils@IndirectionTypeDesc$qqrp11tagTYPEDESC @6   ; __fastcall Comutils::IndirectionTypeDesc(tagTYPEDESC *)
+    @Comutils@IsCOMPlusEnabled$qqrv @14  ; __fastcall Comutils::IsCOMPlusEnabled()
+    @Comutils@IsDispInterfaceMethod$qqrii @3   ; __fastcall Comutils::IsDispInterfaceMethod(int, int)
+    @Comutils@IsSupressedTypeLib$qqrx20System@UnicodeString @5   ; __fastcall Comutils::IsSupressedTypeLib(const System::UnicodeString)
+    @Comutils@IsValidDispID$qqri   @4   ; __fastcall Comutils::IsValidDispID(int)
+    @Comutils@LoadTypeLibrary$qqrx20System@UnicodeString @18  ; __fastcall Comutils::LoadTypeLibrary(const System::UnicodeString)
+    @Comutils@MethodInvokeKindToString$qqr26Comutils@TMethodInvokeKind @20  ; __fastcall Comutils::MethodInvokeKindToString(Comutils::TMethodInvokeKind)
+    @Comutils@StringToMethodInvokeKind$qqrx20System@UnicodeString @19  ; __fastcall Comutils::StringToMethodInvokeKind(const System::UnicodeString)
+    @Comutils@TextToVersionNumbers$qqrx20System@UnicodeStringrit2 @15  ; __fastcall Comutils::TextToVersionNumbers(const System::UnicodeString, int&, int&)
+    @Comutils@TypeDescToString$qqrp11tagTYPEDESC35System@%DelphiInterface$9ITypeInfo% @9   ; Comutils::TypeDescToString(tagTYPEDESC *, System::DelphiInterface<{583}...
+    @Comutils@TypeNameToVT$qqrx20System@UnicodeString @11  ; __fastcall Comutils::TypeNameToVT(const System::UnicodeString)
+    @Comutils@VTToTypeName$qqrus   @12  ; __fastcall Comutils::VTToTypeName(unsigned short)
+    @Comutils@initialization$qqrv  @1   ; __fastcall Comutils::initialization()
+    @GetPackageInfoTable           @968 ; GetPackageInfoTable
+    @Paramspageplug@Finalization$qqrv @555 ; __fastcall Paramspageplug::Finalization()
+    @Paramspageplug@GUID_ParamsPagePlugID @598 ; Paramspageplug::GUID_ParamsPagePlugID
+    @Paramspageplug@ParamsForm     @590 ; Paramspageplug::ParamsForm
+    @Paramspageplug@TParamsForm@   @597 ; Paramspageplug::TParamsForm::
+    @Paramspageplug@TParamsForm@FormMouseUp$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @561 ; Paramspageplug::TParamsForm::FormMouseUp(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Paramspageplug@TParamsForm@ListBox1Click$qqrp14System@TObject @557 ; __fastcall Paramspageplug::TParamsForm::ListBox1Click(System::TObject *)
+    @Paramspageplug@TParamsForm@SetPageManager$qqr63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @563 ; Paramspageplug::TParamsForm::SetPageManager(System::DelphiInterface<{583}...
+    @Paramspageplug@TParamsForm@Show$qqrv @564 ; __fastcall Paramspageplug::TParamsForm::Show()
+    @Paramspageplug@TParamsForm@TypePanelMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @560 ; Paramspageplug::TParamsForm::TypePanelMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Paramspageplug@TParamsForm@TypePanelMouseMove$qqrp14System@TObject60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @562 ; Paramspageplug::TParamsForm::TypePanelMouseMove(System::TObject *, System::Set<{583}...
+    @Paramspageplug@TParamsForm@TypePanelMouseUp$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @559 ; Paramspageplug::TParamsForm::TypePanelMouseUp(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Paramspageplug@TParamsForm@stringGrid1GetEditText$qqrp14System@TObjectiir20System@UnicodeString @558 ; __fastcall Paramspageplug::TParamsForm::stringGrid1GetEditText(System::TObject *, int, int, System::UnicodeString&)
+    @Paramspageplug@TParamsForm@stringGrid1MouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @556 ; Paramspageplug::TParamsForm::stringGrid1MouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Paramspageplug@TParamsPageFactory@ @594 ; Paramspageplug::TParamsPageFactory::
+    @Paramspageplug@TParamsPageFactory@CreateInstance$qqrx20System@UnicodeString @589 ; __fastcall Paramspageplug::TParamsPageFactory::CreateInstance(const System::UnicodeString)
+    @Paramspageplug@TParamsPageFactory@GetID$qqrv @588 ; __fastcall Paramspageplug::TParamsPageFactory::GetID()
+    @Paramspageplug@TParamsPagePlug@ @592 ; Paramspageplug::TParamsPagePlug::
+    @Paramspageplug@TParamsPagePlug@$bctr$qqrv @587 ; __fastcall Paramspageplug::TParamsPagePlug::TParamsPagePlug()
+    @Paramspageplug@TParamsPagePlug@$bdtr$qqrv @586 ; __fastcall Paramspageplug::TParamsPagePlug::~TParamsPagePlug()
+    @Paramspageplug@TParamsPagePlug@AddParameter$qqrx20System@UnicodeStringt159System@%Set$32Typelibflags@TParameterFlagsTypet1$i0$t1$i6$%ot1 @572 ; Paramspageplug::TParamsPagePlug::AddParameter(const System::UnicodeString, const System::UnicodeString, System::Set<{583}...
+    @Paramspageplug@TParamsPagePlug@AddParameter$qqrx20System@UnicodeStringt1ot1 @571 ; __fastcall Paramspageplug::TParamsPagePlug::AddParameter(const System::UnicodeString, const System::UnicodeString, bool, const System::UnicodeString)
+    @Paramspageplug@TParamsPagePlug@AddType$qqrx20System@UnicodeString @565 ; __fastcall Paramspageplug::TParamsPagePlug::AddType(const System::UnicodeString)
+    @Paramspageplug@TParamsPagePlug@Clear$qqrv @585 ; __fastcall Paramspageplug::TParamsPagePlug::Clear()
+    @Paramspageplug@TParamsPagePlug@GetCaption$qqrv @584 ; __fastcall Paramspageplug::TParamsPagePlug::GetCaption()
+    @Paramspageplug@TParamsPagePlug@GetID$qqrv @577 ; __fastcall Paramspageplug::TParamsPagePlug::GetID()
+    @Paramspageplug@TParamsPagePlug@GetPage$qqrv @576 ; __fastcall Paramspageplug::TParamsPagePlug::GetPage()
+    @Paramspageplug@TParamsPagePlug@GetPageManager$qqrv @575 ; __fastcall Paramspageplug::TParamsPagePlug::GetPageManager()
+    @Paramspageplug@TParamsPagePlug@GetParameterDefaultValue$qqrx20System@UnicodeString @568 ; __fastcall Paramspageplug::TParamsPagePlug::GetParameterDefaultValue(const System::UnicodeString)
+    @Paramspageplug@TParamsPagePlug@GetParameterModifier$qqrx20System@UnicodeString @569 ; __fastcall Paramspageplug::TParamsPagePlug::GetParameterModifier(const System::UnicodeString)
+    @Paramspageplug@TParamsPagePlug@GetParameterType$qqrx20System@UnicodeString @570 ; __fastcall Paramspageplug::TParamsPagePlug::GetParameterType(const System::UnicodeString)
+    @Paramspageplug@TParamsPagePlug@GetReadOnly$qqrv @567 ; __fastcall Paramspageplug::TParamsPagePlug::GetReadOnly()
+    @Paramspageplug@TParamsPagePlug@GetVisible$qqrv @579 ; __fastcall Paramspageplug::TParamsPagePlug::GetVisible()
+    @Paramspageplug@TParamsPagePlug@Modified$qqrv @573 ; __fastcall Paramspageplug::TParamsPagePlug::Modified()
+    @Paramspageplug@TParamsPagePlug@OnBegin$qqrv @581 ; __fastcall Paramspageplug::TParamsPagePlug::OnBegin()
+    @Paramspageplug@TParamsPagePlug@OnEnd$qqrv @580 ; __fastcall Paramspageplug::TParamsPagePlug::OnEnd()
+    @Paramspageplug@TParamsPagePlug@OnSelect$qqrv @582 ; __fastcall Paramspageplug::TParamsPagePlug::OnSelect()
+    @Paramspageplug@TParamsPagePlug@SetCaption$qqrx20System@UnicodeString @583 ; __fastcall Paramspageplug::TParamsPagePlug::SetCaption(const System::UnicodeString)
+    @Paramspageplug@TParamsPagePlug@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @574 ; Paramspageplug::TParamsPagePlug::SetPageManager(const System::DelphiInterface<{583}...
+    @Paramspageplug@TParamsPagePlug@SetReadOnly$qqro @566 ; __fastcall Paramspageplug::TParamsPagePlug::SetReadOnly(bool)
+    @Paramspageplug@TParamsPagePlug@SetVisible$qqrxo @578 ; __fastcall Paramspageplug::TParamsPagePlug::SetVisible(const bool)
+    @Paramspageplug@initialization$qqrv @554 ; __fastcall Paramspageplug::initialization()
+    @Tlbcontainer@Finalization$qqrv @955 ; __fastcall Tlbcontainer::Finalization()
+    @Tlbcontainer@TTlbCreator@     @961 ; Tlbcontainer::TTlbCreator::
+    @Tlbcontainer@TTlbCreator@CanHandle$qqrx20System@UnicodeString @958 ; __fastcall Tlbcontainer::TTlbCreator::CanHandle(const System::UnicodeString)
+    @Tlbcontainer@TTlbCreator@CreateContainer$qqrx20System@UnicodeStringt1x58System@%DelphiInterface$31Projectintf@IProjectItemCreator%x50System@%DelphiInterface$23Idemodel@IGraphLocation%ro @959 ; Tlbcontainer::TTlbCreator::CreateContainer(const System::UnicodeString, const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Tlbcontainer@TTlbCreator@DefaultFor$qqrp26System@Classes@TStringList @956 ; __fastcall Tlbcontainer::TTlbCreator::DefaultFor(System::Classes::TStringList *)
+    @Tlbcontainer@TTlbCreator@GetContainerId$qqrv @957 ; __fastcall Tlbcontainer::TTlbCreator::GetContainerId()
+    @Tlbcontainer@initialization$qqrv @954 ; __fastcall Tlbcontainer::initialization()
+    @Tlbview@@GetPackageInfoTable$qqrv @965 ; Tlbview::__linkproc__ __fastcall GetPackageInfoTable()
+    @Tlbview@@PackageLoad$qqrv     @964 ; Tlbview::__linkproc__ __fastcall PackageLoad()
+    @Tlbview@@PackageUnload$qqrv   @963 ; Tlbview::__linkproc__ __fastcall PackageUnload()
+    @Tlbview@initialization$qqrv   @962 ; __fastcall Tlbview::initialization()
+    @Typeliberror@EInvalidNameException@ @51  ; Typeliberror::EInvalidNameException::
+    @Typeliberror@Finalization$qqrv @49  ; __fastcall Typeliberror::Finalization()
+    @Typeliberror@initialization$qqrv @48  ; __fastcall Typeliberror::initialization()
+    @Typelibflags@Finalization$qqrv @26  ; __fastcall Typelibflags::Finalization()
+    @Typelibflags@MethodFlagsToString$qqr29Typelibflags@TMethodFlagsType @37  ; __fastcall Typelibflags::MethodFlagsToString(Typelibflags::TMethodFlagsType)
+    @Typelibflags@MethodFlagsToWord$qqr57System@%Set$29Typelibflags@TMethodFlagsTypet1$i0$t1$i12$% @39  ; Typelibflags::MethodFlagsToWord(System::Set<{583}...
+    @Typelibflags@ParameterFlagsToString$qqr59System@%Set$32Typelibflags@TParameterFlagsTypet1$i0$t1$i6$% @36  ; Typelibflags::ParameterFlagsToString(System::Set<{583}...
+    @Typelibflags@ParameterFlagsToWord$qqr59System@%Set$32Typelibflags@TParameterFlagsTypet1$i0$t1$i6$% @34  ; Typelibflags::ParameterFlagsToWord(System::Set<{583}...
+    @Typelibflags@StringToParameterFlags$qqrx20System@UnicodeString @35  ; __fastcall Typelibflags::StringToParameterFlags(const System::UnicodeString)
+    @Typelibflags@TypeLibFlagsToWord$qqr57System@%Set$30Typelibflags@TTypeLibFlagsTypet1$i0$t1$i3$% @29  ; Typelibflags::TypeLibFlagsToWord(System::Set<{583}...
+    @Typelibflags@TypeLibFlagsTypeToString$qqr30Typelibflags@TTypeLibFlagsType @27  ; __fastcall Typelibflags::TypeLibFlagsTypeToString(Typelibflags::TTypeLibFlagsType)
+    @Typelibflags@TypeObjectFlagsToString$qqr33Typelibflags@TTypeObjectFlagsType @30  ; __fastcall Typelibflags::TypeObjectFlagsToString(Typelibflags::TTypeObjectFlagsType)
+    @Typelibflags@TypeObjectFlagsToWord$qqr61System@%Set$33Typelibflags@TTypeObjectFlagsTypet1$i0$t1$i13$% @32  ; Typelibflags::TypeObjectFlagsToWord(System::Set<{583}...
+    @Typelibflags@WordToMethodFlags$qqrus @38  ; __fastcall Typelibflags::WordToMethodFlags(unsigned short)
+    @Typelibflags@WordToParameterFlags$qqrus @33  ; __fastcall Typelibflags::WordToParameterFlags(unsigned short)
+    @Typelibflags@WordToTypeLibFlags$qqrus @28  ; __fastcall Typelibflags::WordToTypeLibFlags(unsigned short)
+    @Typelibflags@WordToTypeObjectFlags$qqrus @31  ; __fastcall Typelibflags::WordToTypeObjectFlags(unsigned short)
+    @Typelibflags@initialization$qqrv @25  ; __fastcall Typelibflags::initialization()
+    @Typelibplug@Finalization$qqrv @634 ; __fastcall Typelibplug::Finalization()
+    @Typelibplug@GUID_TypeLibPlugID @951 ; Typelibplug::GUID_TypeLibPlugID
+    @Typelibplug@TAliasNode@       @928 ; Typelibplug::TAliasNode::
+    @Typelibplug@TAliasNode@$bctr$qqrxp18Typelibrary@TAlias @829 ; __fastcall Typelibplug::TAliasNode::TAliasNode(Typelibrary::TAlias * const)
+    @Typelibplug@TAliasNode@GetCaption$qqrv @828 ; __fastcall Typelibplug::TAliasNode::GetCaption()
+    @Typelibplug@TAliasNode@GetHash$qqrv @815 ; __fastcall Typelibplug::TAliasNode::GetHash()
+    @Typelibplug@TAliasNode@GetHelpID$qqrv @811 ; __fastcall Typelibplug::TAliasNode::GetHelpID()
+    @Typelibplug@TAliasNode@GetImageIndex$qqrv @818 ; __fastcall Typelibplug::TAliasNode::GetImageIndex()
+    @Typelibplug@TAliasNode@GetNodeType$qqrv @816 ; __fastcall Typelibplug::TAliasNode::GetNodeType()
+    @Typelibplug@TAliasNode@GetPageManager$qqrv @823 ; __fastcall Typelibplug::TAliasNode::GetPageManager()
+    @Typelibplug@TAliasNode@GetParent$qqrv @813 ; __fastcall Typelibplug::TAliasNode::GetParent()
+    @Typelibplug@TAliasNode@GetSelectedIndex$qqrv @817 ; __fastcall Typelibplug::TAliasNode::GetSelectedIndex()
+    @Typelibplug@TAliasNode@GetTree$qqrv @821 ; __fastcall Typelibplug::TAliasNode::GetTree()
+    @Typelibplug@TAliasNode@IsValidName$qqrx20System@UnicodeString @824 ; __fastcall Typelibplug::TAliasNode::IsValidName(const System::UnicodeString)
+    @Typelibplug@TAliasNode@OnChange$qqrrx5_GUID @819 ; __fastcall Typelibplug::TAliasNode::OnChange(const _GUID&)
+    @Typelibplug@TAliasNode@OnExpanding$qqrv @825 ; __fastcall Typelibplug::TAliasNode::OnExpanding()
+    @Typelibplug@TAliasNode@OnSelect$qqrv @826 ; __fastcall Typelibplug::TAliasNode::OnSelect()
+    @Typelibplug@TAliasNode@SetCaption$qqrx20System@UnicodeString @827 ; __fastcall Typelibplug::TAliasNode::SetCaption(const System::UnicodeString)
+    @Typelibplug@TAliasNode@SetHash$qqri @814 ; __fastcall Typelibplug::TAliasNode::SetHash(int)
+    @Typelibplug@TAliasNode@SetHelpID$qqri @810 ; __fastcall Typelibplug::TAliasNode::SetHelpID(int)
+    @Typelibplug@TAliasNode@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @822 ; Typelibplug::TAliasNode::SetPageManager(const System::DelphiInterface<{583}...
+    @Typelibplug@TAliasNode@SetParent$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @812 ; Typelibplug::TAliasNode::SetParent(const System::DelphiInterface<{583}...
+    @Typelibplug@TAliasNode@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @820 ; Typelibplug::TAliasNode::SetTree(const System::DelphiInterface<{583}...
+    @Typelibplug@TCoClassNode@     @948 ; Typelibplug::TCoClassNode::
+    @Typelibplug@TCoClassNode@$bctr$qqrp20Typelibrary@TCoClass @914 ; __fastcall Typelibplug::TCoClassNode::TCoClassNode(Typelibrary::TCoClass *)
+    @Typelibplug@TCoClassNode@GetCaption$qqrv @913 ; __fastcall Typelibplug::TCoClassNode::GetCaption()
+    @Typelibplug@TCoClassNode@GetHash$qqrv @900 ; __fastcall Typelibplug::TCoClassNode::GetHash()
+    @Typelibplug@TCoClassNode@GetHelpID$qqrv @896 ; __fastcall Typelibplug::TCoClassNode::GetHelpID()
+    @Typelibplug@TCoClassNode@GetImageIndex$qqrv @903 ; __fastcall Typelibplug::TCoClassNode::GetImageIndex()
+    @Typelibplug@TCoClassNode@GetNodeType$qqrv @901 ; __fastcall Typelibplug::TCoClassNode::GetNodeType()
+    @Typelibplug@TCoClassNode@GetPageManager$qqrv @908 ; __fastcall Typelibplug::TCoClassNode::GetPageManager()
+    @Typelibplug@TCoClassNode@GetParent$qqrv @898 ; __fastcall Typelibplug::TCoClassNode::GetParent()
+    @Typelibplug@TCoClassNode@GetSelectedIndex$qqrv @902 ; __fastcall Typelibplug::TCoClassNode::GetSelectedIndex()
+    @Typelibplug@TCoClassNode@GetTree$qqrv @906 ; __fastcall Typelibplug::TCoClassNode::GetTree()
+    @Typelibplug@TCoClassNode@IsValidName$qqrx20System@UnicodeString @909 ; __fastcall Typelibplug::TCoClassNode::IsValidName(const System::UnicodeString)
+    @Typelibplug@TCoClassNode@OnChange$qqrrx5_GUID @904 ; __fastcall Typelibplug::TCoClassNode::OnChange(const _GUID&)
+    @Typelibplug@TCoClassNode@OnExpanding$qqrv @910 ; __fastcall Typelibplug::TCoClassNode::OnExpanding()
+    @Typelibplug@TCoClassNode@OnSelect$qqrv @911 ; __fastcall Typelibplug::TCoClassNode::OnSelect()
+    @Typelibplug@TCoClassNode@SetCaption$qqrx20System@UnicodeString @912 ; __fastcall Typelibplug::TCoClassNode::SetCaption(const System::UnicodeString)
+    @Typelibplug@TCoClassNode@SetHash$qqri @899 ; __fastcall Typelibplug::TCoClassNode::SetHash(int)
+    @Typelibplug@TCoClassNode@SetHelpID$qqri @895 ; __fastcall Typelibplug::TCoClassNode::SetHelpID(int)
+    @Typelibplug@TCoClassNode@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @907 ; Typelibplug::TCoClassNode::SetPageManager(const System::DelphiInterface<{583}...
+    @Typelibplug@TCoClassNode@SetParent$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @897 ; Typelibplug::TCoClassNode::SetParent(const System::DelphiInterface<{583}...
+    @Typelibplug@TCoClassNode@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @905 ; Typelibplug::TCoClassNode::SetTree(const System::DelphiInterface<{583}...
+    @Typelibplug@TConstantNode@    @934 ; Typelibplug::TConstantNode::
+    @Typelibplug@TConstantNode@$bctr$qqrxp21Typelibrary@TConstant @870 ; __fastcall Typelibplug::TConstantNode::TConstantNode(Typelibrary::TConstant * const)
+    @Typelibplug@TConstantNode@GetCaption$qqrv @869 ; __fastcall Typelibplug::TConstantNode::GetCaption()
+    @Typelibplug@TConstantNode@GetHash$qqrv @856 ; __fastcall Typelibplug::TConstantNode::GetHash()
+    @Typelibplug@TConstantNode@GetHelpID$qqrv @852 ; __fastcall Typelibplug::TConstantNode::GetHelpID()
+    @Typelibplug@TConstantNode@GetImageIndex$qqrv @859 ; __fastcall Typelibplug::TConstantNode::GetImageIndex()
+    @Typelibplug@TConstantNode@GetNodeType$qqrv @857 ; __fastcall Typelibplug::TConstantNode::GetNodeType()
+    @Typelibplug@TConstantNode@GetPageManager$qqrv @864 ; __fastcall Typelibplug::TConstantNode::GetPageManager()
+    @Typelibplug@TConstantNode@GetParent$qqrv @854 ; __fastcall Typelibplug::TConstantNode::GetParent()
+    @Typelibplug@TConstantNode@GetSelectedIndex$qqrv @858 ; __fastcall Typelibplug::TConstantNode::GetSelectedIndex()
+    @Typelibplug@TConstantNode@GetTree$qqrv @862 ; __fastcall Typelibplug::TConstantNode::GetTree()
+    @Typelibplug@TConstantNode@IsValidName$qqrx20System@UnicodeString @865 ; __fastcall Typelibplug::TConstantNode::IsValidName(const System::UnicodeString)
+    @Typelibplug@TConstantNode@OnChange$qqrrx5_GUID @860 ; __fastcall Typelibplug::TConstantNode::OnChange(const _GUID&)
+    @Typelibplug@TConstantNode@OnExpanding$qqrv @866 ; __fastcall Typelibplug::TConstantNode::OnExpanding()
+    @Typelibplug@TConstantNode@OnSelect$qqrv @867 ; __fastcall Typelibplug::TConstantNode::OnSelect()
+    @Typelibplug@TConstantNode@SetCaption$qqrx20System@UnicodeString @868 ; __fastcall Typelibplug::TConstantNode::SetCaption(const System::UnicodeString)
+    @Typelibplug@TConstantNode@SetHash$qqri @855 ; __fastcall Typelibplug::TConstantNode::SetHash(int)
+    @Typelibplug@TConstantNode@SetHelpID$qqri @851 ; __fastcall Typelibplug::TConstantNode::SetHelpID(int)
+    @Typelibplug@TConstantNode@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @863 ; Typelibplug::TConstantNode::SetPageManager(const System::DelphiInterface<{583}...
+    @Typelibplug@TConstantNode@SetParent$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @853 ; Typelibplug::TConstantNode::SetParent(const System::DelphiInterface<{583}...
+    @Typelibplug@TConstantNode@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @861 ; Typelibplug::TConstantNode::SetTree(const System::DelphiInterface<{583}...
+    @Typelibplug@TDispInterfaceNode@ @944 ; Typelibplug::TDispInterfaceNode::
+    @Typelibplug@TDispInterfaceNode@GetImageIndex$qqrv @873 ; __fastcall Typelibplug::TDispInterfaceNode::GetImageIndex()
+    @Typelibplug@TDispInterfaceNode@GetNodeType$qqrv @871 ; __fastcall Typelibplug::TDispInterfaceNode::GetNodeType()
+    @Typelibplug@TDispInterfaceNode@GetSelectedIndex$qqrv @872 ; __fastcall Typelibplug::TDispInterfaceNode::GetSelectedIndex()
+    @Typelibplug@TDispInterfaceNode@OnChange$qqrrx5_GUID @874 ; __fastcall Typelibplug::TDispInterfaceNode::OnChange(const _GUID&)
+    @Typelibplug@TEnumerationNode@ @920 ; Typelibplug::TEnumerationNode::
+    @Typelibplug@TEnumerationNode@$bctr$qqrxp24Typelibrary@TEnumeration @749 ; __fastcall Typelibplug::TEnumerationNode::TEnumerationNode(Typelibrary::TEnumeration * const)
+    @Typelibplug@TEnumerationNode@GetCaption$qqrv @748 ; __fastcall Typelibplug::TEnumerationNode::GetCaption()
+    @Typelibplug@TEnumerationNode@GetHash$qqrv @735 ; __fastcall Typelibplug::TEnumerationNode::GetHash()
+    @Typelibplug@TEnumerationNode@GetHelpID$qqrv @731 ; __fastcall Typelibplug::TEnumerationNode::GetHelpID()
+    @Typelibplug@TEnumerationNode@GetImageIndex$qqrv @738 ; __fastcall Typelibplug::TEnumerationNode::GetImageIndex()
+    @Typelibplug@TEnumerationNode@GetNodeType$qqrv @736 ; __fastcall Typelibplug::TEnumerationNode::GetNodeType()
+    @Typelibplug@TEnumerationNode@GetPageManager$qqrv @743 ; __fastcall Typelibplug::TEnumerationNode::GetPageManager()
+    @Typelibplug@TEnumerationNode@GetParent$qqrv @733 ; __fastcall Typelibplug::TEnumerationNode::GetParent()
+    @Typelibplug@TEnumerationNode@GetSelectedIndex$qqrv @737 ; __fastcall Typelibplug::TEnumerationNode::GetSelectedIndex()
+    @Typelibplug@TEnumerationNode@GetTree$qqrv @741 ; __fastcall Typelibplug::TEnumerationNode::GetTree()
+    @Typelibplug@TEnumerationNode@IsValidName$qqrx20System@UnicodeString @744 ; __fastcall Typelibplug::TEnumerationNode::IsValidName(const System::UnicodeString)
+    @Typelibplug@TEnumerationNode@OnChange$qqrrx5_GUID @739 ; __fastcall Typelibplug::TEnumerationNode::OnChange(const _GUID&)
+    @Typelibplug@TEnumerationNode@OnExpanding$qqrv @745 ; __fastcall Typelibplug::TEnumerationNode::OnExpanding()
+    @Typelibplug@TEnumerationNode@OnSelect$qqrv @746 ; __fastcall Typelibplug::TEnumerationNode::OnSelect()
+    @Typelibplug@TEnumerationNode@SetCaption$qqrx20System@UnicodeString @747 ; __fastcall Typelibplug::TEnumerationNode::SetCaption(const System::UnicodeString)
+    @Typelibplug@TEnumerationNode@SetHash$qqri @734 ; __fastcall Typelibplug::TEnumerationNode::SetHash(int)
+    @Typelibplug@TEnumerationNode@SetHelpID$qqri @730 ; __fastcall Typelibplug::TEnumerationNode::SetHelpID(int)
+    @Typelibplug@TEnumerationNode@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @742 ; Typelibplug::TEnumerationNode::SetPageManager(const System::DelphiInterface<{583}...
+    @Typelibplug@TEnumerationNode@SetParent$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @732 ; Typelibplug::TEnumerationNode::SetParent(const System::DelphiInterface<{583}...
+    @Typelibplug@TEnumerationNode@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @740 ; Typelibplug::TEnumerationNode::SetTree(const System::DelphiInterface<{583}...
+    @Typelibplug@TFieldNode@       @930 ; Typelibplug::TFieldNode::
+    @Typelibplug@TFieldNode@$bctr$qqrxp18Typelibrary@TField @849 ; __fastcall Typelibplug::TFieldNode::TFieldNode(Typelibrary::TField * const)
+    @Typelibplug@TFieldNode@GetCaption$qqrv @848 ; __fastcall Typelibplug::TFieldNode::GetCaption()
+    @Typelibplug@TFieldNode@GetHash$qqrv @835 ; __fastcall Typelibplug::TFieldNode::GetHash()
+    @Typelibplug@TFieldNode@GetHelpID$qqrv @831 ; __fastcall Typelibplug::TFieldNode::GetHelpID()
+    @Typelibplug@TFieldNode@GetImageIndex$qqrv @838 ; __fastcall Typelibplug::TFieldNode::GetImageIndex()
+    @Typelibplug@TFieldNode@GetNodeType$qqrv @836 ; __fastcall Typelibplug::TFieldNode::GetNodeType()
+    @Typelibplug@TFieldNode@GetPageManager$qqrv @843 ; __fastcall Typelibplug::TFieldNode::GetPageManager()
+    @Typelibplug@TFieldNode@GetParent$qqrv @833 ; __fastcall Typelibplug::TFieldNode::GetParent()
+    @Typelibplug@TFieldNode@GetSelectedIndex$qqrv @837 ; __fastcall Typelibplug::TFieldNode::GetSelectedIndex()
+    @Typelibplug@TFieldNode@GetTree$qqrv @841 ; __fastcall Typelibplug::TFieldNode::GetTree()
+    @Typelibplug@TFieldNode@IsValidName$qqrx20System@UnicodeString @844 ; __fastcall Typelibplug::TFieldNode::IsValidName(const System::UnicodeString)
+    @Typelibplug@TFieldNode@OnChange$qqrrx5_GUID @839 ; __fastcall Typelibplug::TFieldNode::OnChange(const _GUID&)
+    @Typelibplug@TFieldNode@OnExpanding$qqrv @845 ; __fastcall Typelibplug::TFieldNode::OnExpanding()
+    @Typelibplug@TFieldNode@OnSelect$qqrv @846 ; __fastcall Typelibplug::TFieldNode::OnSelect()
+    @Typelibplug@TFieldNode@SetCaption$qqrx20System@UnicodeString @847 ; __fastcall Typelibplug::TFieldNode::SetCaption(const System::UnicodeString)
+    @Typelibplug@TFieldNode@SetHash$qqri @834 ; __fastcall Typelibplug::TFieldNode::SetHash(int)
+    @Typelibplug@TFieldNode@SetHelpID$qqri @830 ; __fastcall Typelibplug::TFieldNode::SetHelpID(int)
+    @Typelibplug@TFieldNode@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @842 ; Typelibplug::TFieldNode::SetPageManager(const System::DelphiInterface<{583}...
+    @Typelibplug@TFieldNode@SetParent$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @832 ; Typelibplug::TFieldNode::SetParent(const System::DelphiInterface<{583}...
+    @Typelibplug@TFieldNode@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @840 ; Typelibplug::TFieldNode::SetTree(const System::DelphiInterface<{583}...
+    @Typelibplug@TInterfaceNode@   @946 ; Typelibplug::TInterfaceNode::
+    @Typelibplug@TInterfaceNode@$bctr$qqrxp22Typelibrary@TInterface @894 ; __fastcall Typelibplug::TInterfaceNode::TInterfaceNode(Typelibrary::TInterface * const)
+    @Typelibplug@TInterfaceNode@GetCaption$qqrv @893 ; __fastcall Typelibplug::TInterfaceNode::GetCaption()
+    @Typelibplug@TInterfaceNode@GetHash$qqrv @880 ; __fastcall Typelibplug::TInterfaceNode::GetHash()
+    @Typelibplug@TInterfaceNode@GetHelpID$qqrv @876 ; __fastcall Typelibplug::TInterfaceNode::GetHelpID()
+    @Typelibplug@TInterfaceNode@GetImageIndex$qqrv @883 ; __fastcall Typelibplug::TInterfaceNode::GetImageIndex()
+    @Typelibplug@TInterfaceNode@GetNodeType$qqrv @881 ; __fastcall Typelibplug::TInterfaceNode::GetNodeType()
+    @Typelibplug@TInterfaceNode@GetPageManager$qqrv @888 ; __fastcall Typelibplug::TInterfaceNode::GetPageManager()
+    @Typelibplug@TInterfaceNode@GetParent$qqrv @878 ; __fastcall Typelibplug::TInterfaceNode::GetParent()
+    @Typelibplug@TInterfaceNode@GetSelectedIndex$qqrv @882 ; __fastcall Typelibplug::TInterfaceNode::GetSelectedIndex()
+    @Typelibplug@TInterfaceNode@GetTree$qqrv @886 ; __fastcall Typelibplug::TInterfaceNode::GetTree()
+    @Typelibplug@TInterfaceNode@IsValidName$qqrx20System@UnicodeString @889 ; __fastcall Typelibplug::TInterfaceNode::IsValidName(const System::UnicodeString)
+    @Typelibplug@TInterfaceNode@OnChange$qqrrx5_GUID @884 ; __fastcall Typelibplug::TInterfaceNode::OnChange(const _GUID&)
+    @Typelibplug@TInterfaceNode@OnExpanding$qqrv @890 ; __fastcall Typelibplug::TInterfaceNode::OnExpanding()
+    @Typelibplug@TInterfaceNode@OnSelect$qqrv @891 ; __fastcall Typelibplug::TInterfaceNode::OnSelect()
+    @Typelibplug@TInterfaceNode@SetCaption$qqrx20System@UnicodeString @892 ; __fastcall Typelibplug::TInterfaceNode::SetCaption(const System::UnicodeString)
+    @Typelibplug@TInterfaceNode@SetHash$qqri @879 ; __fastcall Typelibplug::TInterfaceNode::SetHash(int)
+    @Typelibplug@TInterfaceNode@SetHelpID$qqri @875 ; __fastcall Typelibplug::TInterfaceNode::SetHelpID(int)
+    @Typelibplug@TInterfaceNode@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @887 ; Typelibplug::TInterfaceNode::SetPageManager(const System::DelphiInterface<{583}...
+    @Typelibplug@TInterfaceNode@SetParent$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @877 ; Typelibplug::TInterfaceNode::SetParent(const System::DelphiInterface<{583}...
+    @Typelibplug@TInterfaceNode@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @885 ; Typelibplug::TInterfaceNode::SetTree(const System::DelphiInterface<{583}...
+    @Typelibplug@TMethodNode@      @942 ; Typelibplug::TMethodNode::
+    @Typelibplug@TMethodNode@$bctr$qqrxp19Typelibrary@TMethod @729 ; __fastcall Typelibplug::TMethodNode::TMethodNode(Typelibrary::TMethod * const)
+    @Typelibplug@TMethodNode@GetCaption$qqrv @728 ; __fastcall Typelibplug::TMethodNode::GetCaption()
+    @Typelibplug@TMethodNode@GetHash$qqrv @715 ; __fastcall Typelibplug::TMethodNode::GetHash()
+    @Typelibplug@TMethodNode@GetHelpID$qqrv @711 ; __fastcall Typelibplug::TMethodNode::GetHelpID()
+    @Typelibplug@TMethodNode@GetImageIndex$qqrv @718 ; __fastcall Typelibplug::TMethodNode::GetImageIndex()
+    @Typelibplug@TMethodNode@GetNodeType$qqrv @716 ; __fastcall Typelibplug::TMethodNode::GetNodeType()
+    @Typelibplug@TMethodNode@GetPageManager$qqrv @723 ; __fastcall Typelibplug::TMethodNode::GetPageManager()
+    @Typelibplug@TMethodNode@GetParent$qqrv @713 ; __fastcall Typelibplug::TMethodNode::GetParent()
+    @Typelibplug@TMethodNode@GetSelectedIndex$qqrv @717 ; __fastcall Typelibplug::TMethodNode::GetSelectedIndex()
+    @Typelibplug@TMethodNode@GetTree$qqrv @721 ; __fastcall Typelibplug::TMethodNode::GetTree()
+    @Typelibplug@TMethodNode@IsValidName$qqrx20System@UnicodeString @724 ; __fastcall Typelibplug::TMethodNode::IsValidName(const System::UnicodeString)
+    @Typelibplug@TMethodNode@OnChange$qqrrx5_GUID @719 ; __fastcall Typelibplug::TMethodNode::OnChange(const _GUID&)
+    @Typelibplug@TMethodNode@OnExpanding$qqrv @725 ; __fastcall Typelibplug::TMethodNode::OnExpanding()
+    @Typelibplug@TMethodNode@OnSelect$qqrv @726 ; __fastcall Typelibplug::TMethodNode::OnSelect()
+    @Typelibplug@TMethodNode@SetCaption$qqrx20System@UnicodeString @727 ; __fastcall Typelibplug::TMethodNode::SetCaption(const System::UnicodeString)
+    @Typelibplug@TMethodNode@SetHash$qqri @714 ; __fastcall Typelibplug::TMethodNode::SetHash(int)
+    @Typelibplug@TMethodNode@SetHelpID$qqri @710 ; __fastcall Typelibplug::TMethodNode::SetHelpID(int)
+    @Typelibplug@TMethodNode@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @722 ; Typelibplug::TMethodNode::SetPageManager(const System::DelphiInterface<{583}...
+    @Typelibplug@TMethodNode@SetParent$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @712 ; Typelibplug::TMethodNode::SetParent(const System::DelphiInterface<{583}...
+    @Typelibplug@TMethodNode@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @720 ; Typelibplug::TMethodNode::SetTree(const System::DelphiInterface<{583}...
+    @Typelibplug@TMethodPropertyNode@ @938 ; Typelibplug::TMethodPropertyNode::
+    @Typelibplug@TMethodPropertyNode@$bctr$qqrxp19Typelibrary@TMethod @708 ; __fastcall Typelibplug::TMethodPropertyNode::TMethodPropertyNode(Typelibrary::TMethod * const)
+    @Typelibplug@TMethodPropertyNode@GetCaption$qqrv @707 ; __fastcall Typelibplug::TMethodPropertyNode::GetCaption()
+    @Typelibplug@TMethodPropertyNode@GetHash$qqrv @694 ; __fastcall Typelibplug::TMethodPropertyNode::GetHash()
+    @Typelibplug@TMethodPropertyNode@GetHelpID$qqrv @690 ; __fastcall Typelibplug::TMethodPropertyNode::GetHelpID()
+    @Typelibplug@TMethodPropertyNode@GetImageIndex$qqrv @697 ; __fastcall Typelibplug::TMethodPropertyNode::GetImageIndex()
+    @Typelibplug@TMethodPropertyNode@GetNodeType$qqrv @695 ; __fastcall Typelibplug::TMethodPropertyNode::GetNodeType()
+    @Typelibplug@TMethodPropertyNode@GetPageManager$qqrv @702 ; __fastcall Typelibplug::TMethodPropertyNode::GetPageManager()
+    @Typelibplug@TMethodPropertyNode@GetParent$qqrv @692 ; __fastcall Typelibplug::TMethodPropertyNode::GetParent()
+    @Typelibplug@TMethodPropertyNode@GetSelectedIndex$qqrv @696 ; __fastcall Typelibplug::TMethodPropertyNode::GetSelectedIndex()
+    @Typelibplug@TMethodPropertyNode@GetTree$qqrv @700 ; __fastcall Typelibplug::TMethodPropertyNode::GetTree()
+    @Typelibplug@TMethodPropertyNode@IsValidName$qqrx20System@UnicodeString @703 ; __fastcall Typelibplug::TMethodPropertyNode::IsValidName(const System::UnicodeString)
+    @Typelibplug@TMethodPropertyNode@OnChange$qqrrx5_GUID @698 ; __fastcall Typelibplug::TMethodPropertyNode::OnChange(const _GUID&)
+    @Typelibplug@TMethodPropertyNode@OnExpanding$qqrv @704 ; __fastcall Typelibplug::TMethodPropertyNode::OnExpanding()
+    @Typelibplug@TMethodPropertyNode@OnSelect$qqrv @705 ; __fastcall Typelibplug::TMethodPropertyNode::OnSelect()
+    @Typelibplug@TMethodPropertyNode@SetCaption$qqrx20System@UnicodeString @706 ; __fastcall Typelibplug::TMethodPropertyNode::SetCaption(const System::UnicodeString)
+    @Typelibplug@TMethodPropertyNode@SetHash$qqri @693 ; __fastcall Typelibplug::TMethodPropertyNode::SetHash(int)
+    @Typelibplug@TMethodPropertyNode@SetHelpID$qqri @689 ; __fastcall Typelibplug::TMethodPropertyNode::SetHelpID(int)
+    @Typelibplug@TMethodPropertyNode@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @701 ; Typelibplug::TMethodPropertyNode::SetPageManager(const System::DelphiInterface<{583}...
+    @Typelibplug@TMethodPropertyNode@SetParent$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @691 ; Typelibplug::TMethodPropertyNode::SetParent(const System::DelphiInterface<{583}...
+    @Typelibplug@TMethodPropertyNode@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @699 ; Typelibplug::TMethodPropertyNode::SetTree(const System::DelphiInterface<{583}...
+    @Typelibplug@TModuleConstantNode@ @932 ; Typelibplug::TModuleConstantNode::
+    @Typelibplug@TModuleConstantNode@OnSelect$qqrv @850 ; __fastcall Typelibplug::TModuleConstantNode::OnSelect()
+    @Typelibplug@TModuleMethodNode@ @940 ; Typelibplug::TModuleMethodNode::
+    @Typelibplug@TModuleMethodNode@OnSelect$qqrv @709 ; __fastcall Typelibplug::TModuleMethodNode::OnSelect()
+    @Typelibplug@TModuleNode@      @926 ; Typelibplug::TModuleNode::
+    @Typelibplug@TModuleNode@$bctr$qqrxp19Typelibrary@TModule @809 ; __fastcall Typelibplug::TModuleNode::TModuleNode(Typelibrary::TModule * const)
+    @Typelibplug@TModuleNode@GetCaption$qqrv @808 ; __fastcall Typelibplug::TModuleNode::GetCaption()
+    @Typelibplug@TModuleNode@GetHash$qqrv @795 ; __fastcall Typelibplug::TModuleNode::GetHash()
+    @Typelibplug@TModuleNode@GetHelpID$qqrv @791 ; __fastcall Typelibplug::TModuleNode::GetHelpID()
+    @Typelibplug@TModuleNode@GetImageIndex$qqrv @798 ; __fastcall Typelibplug::TModuleNode::GetImageIndex()
+    @Typelibplug@TModuleNode@GetNodeType$qqrv @796 ; __fastcall Typelibplug::TModuleNode::GetNodeType()
+    @Typelibplug@TModuleNode@GetPageManager$qqrv @803 ; __fastcall Typelibplug::TModuleNode::GetPageManager()
+    @Typelibplug@TModuleNode@GetParent$qqrv @793 ; __fastcall Typelibplug::TModuleNode::GetParent()
+    @Typelibplug@TModuleNode@GetSelectedIndex$qqrv @797 ; __fastcall Typelibplug::TModuleNode::GetSelectedIndex()
+    @Typelibplug@TModuleNode@GetTree$qqrv @801 ; __fastcall Typelibplug::TModuleNode::GetTree()
+    @Typelibplug@TModuleNode@IsValidName$qqrx20System@UnicodeString @804 ; __fastcall Typelibplug::TModuleNode::IsValidName(const System::UnicodeString)
+    @Typelibplug@TModuleNode@OnChange$qqrrx5_GUID @799 ; __fastcall Typelibplug::TModuleNode::OnChange(const _GUID&)
+    @Typelibplug@TModuleNode@OnExpanding$qqrv @805 ; __fastcall Typelibplug::TModuleNode::OnExpanding()
+    @Typelibplug@TModuleNode@OnSelect$qqrv @806 ; __fastcall Typelibplug::TModuleNode::OnSelect()
+    @Typelibplug@TModuleNode@SetCaption$qqrx20System@UnicodeString @807 ; __fastcall Typelibplug::TModuleNode::SetCaption(const System::UnicodeString)
+    @Typelibplug@TModuleNode@SetHash$qqri @794 ; __fastcall Typelibplug::TModuleNode::SetHash(int)
+    @Typelibplug@TModuleNode@SetHelpID$qqri @790 ; __fastcall Typelibplug::TModuleNode::SetHelpID(int)
+    @Typelibplug@TModuleNode@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @802 ; Typelibplug::TModuleNode::SetPageManager(const System::DelphiInterface<{583}...
+    @Typelibplug@TModuleNode@SetParent$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @792 ; Typelibplug::TModuleNode::SetParent(const System::DelphiInterface<{583}...
+    @Typelibplug@TModuleNode@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @800 ; Typelibplug::TModuleNode::SetTree(const System::DelphiInterface<{583}...
+    @Typelibplug@TPropertyNode@    @936 ; Typelibplug::TPropertyNode::
+    @Typelibplug@TPropertyNode@$bctr$qqrxp21Typelibrary@TProperty @688 ; __fastcall Typelibplug::TPropertyNode::TPropertyNode(Typelibrary::TProperty * const)
+    @Typelibplug@TPropertyNode@GetCaption$qqrv @687 ; __fastcall Typelibplug::TPropertyNode::GetCaption()
+    @Typelibplug@TPropertyNode@GetHash$qqrv @674 ; __fastcall Typelibplug::TPropertyNode::GetHash()
+    @Typelibplug@TPropertyNode@GetHelpID$qqrv @670 ; __fastcall Typelibplug::TPropertyNode::GetHelpID()
+    @Typelibplug@TPropertyNode@GetImageIndex$qqrv @677 ; __fastcall Typelibplug::TPropertyNode::GetImageIndex()
+    @Typelibplug@TPropertyNode@GetNodeType$qqrv @675 ; __fastcall Typelibplug::TPropertyNode::GetNodeType()
+    @Typelibplug@TPropertyNode@GetPageManager$qqrv @682 ; __fastcall Typelibplug::TPropertyNode::GetPageManager()
+    @Typelibplug@TPropertyNode@GetParent$qqrv @672 ; __fastcall Typelibplug::TPropertyNode::GetParent()
+    @Typelibplug@TPropertyNode@GetSelectedIndex$qqrv @676 ; __fastcall Typelibplug::TPropertyNode::GetSelectedIndex()
+    @Typelibplug@TPropertyNode@GetTree$qqrv @680 ; __fastcall Typelibplug::TPropertyNode::GetTree()
+    @Typelibplug@TPropertyNode@IsValidName$qqrx20System@UnicodeString @683 ; __fastcall Typelibplug::TPropertyNode::IsValidName(const System::UnicodeString)
+    @Typelibplug@TPropertyNode@OnChange$qqrrx5_GUID @678 ; __fastcall Typelibplug::TPropertyNode::OnChange(const _GUID&)
+    @Typelibplug@TPropertyNode@OnExpanding$qqrv @684 ; __fastcall Typelibplug::TPropertyNode::OnExpanding()
+    @Typelibplug@TPropertyNode@OnSelect$qqrv @685 ; __fastcall Typelibplug::TPropertyNode::OnSelect()
+    @Typelibplug@TPropertyNode@SetCaption$qqrx20System@UnicodeString @686 ; __fastcall Typelibplug::TPropertyNode::SetCaption(const System::UnicodeString)
+    @Typelibplug@TPropertyNode@SetHash$qqri @673 ; __fastcall Typelibplug::TPropertyNode::SetHash(int)
+    @Typelibplug@TPropertyNode@SetHelpID$qqri @669 ; __fastcall Typelibplug::TPropertyNode::SetHelpID(int)
+    @Typelibplug@TPropertyNode@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @681 ; Typelibplug::TPropertyNode::SetPageManager(const System::DelphiInterface<{583}...
+    @Typelibplug@TPropertyNode@SetParent$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @671 ; Typelibplug::TPropertyNode::SetParent(const System::DelphiInterface<{583}...
+    @Typelibplug@TPropertyNode@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @679 ; Typelibplug::TPropertyNode::SetTree(const System::DelphiInterface<{583}...
+    @Typelibplug@TRecordNode@      @924 ; Typelibplug::TRecordNode::
+    @Typelibplug@TRecordNode@$bctr$qqrxp19Typelibrary@TRecord @789 ; __fastcall Typelibplug::TRecordNode::TRecordNode(Typelibrary::TRecord * const)
+    @Typelibplug@TRecordNode@GetCaption$qqrv @788 ; __fastcall Typelibplug::TRecordNode::GetCaption()
+    @Typelibplug@TRecordNode@GetHash$qqrv @775 ; __fastcall Typelibplug::TRecordNode::GetHash()
+    @Typelibplug@TRecordNode@GetHelpID$qqrv @771 ; __fastcall Typelibplug::TRecordNode::GetHelpID()
+    @Typelibplug@TRecordNode@GetImageIndex$qqrv @778 ; __fastcall Typelibplug::TRecordNode::GetImageIndex()
+    @Typelibplug@TRecordNode@GetNodeType$qqrv @776 ; __fastcall Typelibplug::TRecordNode::GetNodeType()
+    @Typelibplug@TRecordNode@GetPageManager$qqrv @783 ; __fastcall Typelibplug::TRecordNode::GetPageManager()
+    @Typelibplug@TRecordNode@GetParent$qqrv @773 ; __fastcall Typelibplug::TRecordNode::GetParent()
+    @Typelibplug@TRecordNode@GetSelectedIndex$qqrv @777 ; __fastcall Typelibplug::TRecordNode::GetSelectedIndex()
+    @Typelibplug@TRecordNode@GetTree$qqrv @781 ; __fastcall Typelibplug::TRecordNode::GetTree()
+    @Typelibplug@TRecordNode@IsValidName$qqrx20System@UnicodeString @784 ; __fastcall Typelibplug::TRecordNode::IsValidName(const System::UnicodeString)
+    @Typelibplug@TRecordNode@OnChange$qqrrx5_GUID @779 ; __fastcall Typelibplug::TRecordNode::OnChange(const _GUID&)
+    @Typelibplug@TRecordNode@OnExpanding$qqrv @785 ; __fastcall Typelibplug::TRecordNode::OnExpanding()
+    @Typelibplug@TRecordNode@OnSelect$qqrv @786 ; __fastcall Typelibplug::TRecordNode::OnSelect()
+    @Typelibplug@TRecordNode@SetCaption$qqrx20System@UnicodeString @787 ; __fastcall Typelibplug::TRecordNode::SetCaption(const System::UnicodeString)
+    @Typelibplug@TRecordNode@SetHash$qqri @774 ; __fastcall Typelibplug::TRecordNode::SetHash(int)
+    @Typelibplug@TRecordNode@SetHelpID$qqri @770 ; __fastcall Typelibplug::TRecordNode::SetHelpID(int)
+    @Typelibplug@TRecordNode@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @782 ; Typelibplug::TRecordNode::SetPageManager(const System::DelphiInterface<{583}...
+    @Typelibplug@TRecordNode@SetParent$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @772 ; Typelibplug::TRecordNode::SetParent(const System::DelphiInterface<{583}...
+    @Typelibplug@TRecordNode@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @780 ; Typelibplug::TRecordNode::SetTree(const System::DelphiInterface<{583}...
+    @Typelibplug@TTypeLibFactory@  @916 ; Typelibplug::TTypeLibFactory::
+    @Typelibplug@TTypeLibFactory@CreateInstance$qqrv @640 ; __fastcall Typelibplug::TTypeLibFactory::CreateInstance()
+    @Typelibplug@TTypeLibFactory@Description$qqrv @635 ; __fastcall Typelibplug::TTypeLibFactory::Description()
+    @Typelibplug@TTypeLibFactory@Extensions$qqrv @637 ; __fastcall Typelibplug::TTypeLibFactory::Extensions()
+    @Typelibplug@TTypeLibFactory@Filter$qqrv @638 ; __fastcall Typelibplug::TTypeLibFactory::Filter()
+    @Typelibplug@TTypeLibFactory@GetID$qqrv @639 ; __fastcall Typelibplug::TTypeLibFactory::GetID()
+    @Typelibplug@TTypeLibFactory@IsType$qqrx20System@UnicodeString @636 ; __fastcall Typelibplug::TTypeLibFactory::IsType(const System::UnicodeString)
+    @Typelibplug@TTypeLibTree@     @918 ; Typelibplug::TTypeLibTree::
+    @Typelibplug@TTypeLibTree@$bctr$qqrv @668 ; __fastcall Typelibplug::TTypeLibTree::TTypeLibTree()
+    @Typelibplug@TTypeLibTree@$bdtr$qqrv @667 ; __fastcall Typelibplug::TTypeLibTree::~TTypeLibTree()
+    @Typelibplug@TTypeLibTree@Close$qqrv @662 ; __fastcall Typelibplug::TTypeLibTree::Close()
+    @Typelibplug@TTypeLibTree@GetCaption$qqrv @661 ; __fastcall Typelibplug::TTypeLibTree::GetCaption()
+    @Typelibplug@TTypeLibTree@GetHash$qqrv @646 ; __fastcall Typelibplug::TTypeLibTree::GetHash()
+    @Typelibplug@TTypeLibTree@GetHelpID$qqrv @642 ; __fastcall Typelibplug::TTypeLibTree::GetHelpID()
+    @Typelibplug@TTypeLibTree@GetIcons$qqrv @654 ; __fastcall Typelibplug::TTypeLibTree::GetIcons()
+    @Typelibplug@TTypeLibTree@GetImageIndex$qqrv @649 ; __fastcall Typelibplug::TTypeLibTree::GetImageIndex()
+    @Typelibplug@TTypeLibTree@GetNodeType$qqrv @647 ; __fastcall Typelibplug::TTypeLibTree::GetNodeType()
+    @Typelibplug@TTypeLibTree@GetPageManager$qqrv @656 ; __fastcall Typelibplug::TTypeLibTree::GetPageManager()
+    @Typelibplug@TTypeLibTree@GetParent$qqrv @644 ; __fastcall Typelibplug::TTypeLibTree::GetParent()
+    @Typelibplug@TTypeLibTree@GetSelectedIndex$qqrv @648 ; __fastcall Typelibplug::TTypeLibTree::GetSelectedIndex()
+    @Typelibplug@TTypeLibTree@GetSourceName$qqrv @664 ; __fastcall Typelibplug::TTypeLibTree::GetSourceName()
+    @Typelibplug@TTypeLibTree@GetTree$qqrv @653 ; __fastcall Typelibplug::TTypeLibTree::GetTree()
+    @Typelibplug@TTypeLibTree@IsValidName$qqrx20System@UnicodeString @657 ; __fastcall Typelibplug::TTypeLibTree::IsValidName(const System::UnicodeString)
+    @Typelibplug@TTypeLibTree@LoadFromSource$qqrx20System@UnicodeString @666 ; __fastcall Typelibplug::TTypeLibTree::LoadFromSource(const System::UnicodeString)
+    @Typelibplug@TTypeLibTree@OnChange$qqrrx5_GUID @651 ; __fastcall Typelibplug::TTypeLibTree::OnChange(const _GUID&)
+    @Typelibplug@TTypeLibTree@OnClose$qqrp14System@TObject @650 ; __fastcall Typelibplug::TTypeLibTree::OnClose(System::TObject *)
+    @Typelibplug@TTypeLibTree@OnExpanding$qqrv @658 ; __fastcall Typelibplug::TTypeLibTree::OnExpanding()
+    @Typelibplug@TTypeLibTree@OnSelect$qqrv @659 ; __fastcall Typelibplug::TTypeLibTree::OnSelect()
+    @Typelibplug@TTypeLibTree@SaveToSource$qqrx20System@UnicodeString @665 ; __fastcall Typelibplug::TTypeLibTree::SaveToSource(const System::UnicodeString)
+    @Typelibplug@TTypeLibTree@SetCaption$qqrx20System@UnicodeString @660 ; __fastcall Typelibplug::TTypeLibTree::SetCaption(const System::UnicodeString)
+    @Typelibplug@TTypeLibTree@SetHash$qqri @645 ; __fastcall Typelibplug::TTypeLibTree::SetHash(int)
+    @Typelibplug@TTypeLibTree@SetHelpID$qqri @641 ; __fastcall Typelibplug::TTypeLibTree::SetHelpID(int)
+    @Typelibplug@TTypeLibTree@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @655 ; Typelibplug::TTypeLibTree::SetPageManager(const System::DelphiInterface<{583}...
+    @Typelibplug@TTypeLibTree@SetParent$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @643 ; Typelibplug::TTypeLibTree::SetParent(const System::DelphiInterface<{583}...
+    @Typelibplug@TTypeLibTree@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @652 ; Typelibplug::TTypeLibTree::SetTree(const System::DelphiInterface<{583}...
+    @Typelibplug@TTypeLibTree@Show$qqrv @663 ; __fastcall Typelibplug::TTypeLibTree::Show()
+    @Typelibplug@TUnionNode@       @922 ; Typelibplug::TUnionNode::
+    @Typelibplug@TUnionNode@$bctr$qqrxp18Typelibrary@TUnion @769 ; __fastcall Typelibplug::TUnionNode::TUnionNode(Typelibrary::TUnion * const)
+    @Typelibplug@TUnionNode@GetCaption$qqrv @768 ; __fastcall Typelibplug::TUnionNode::GetCaption()
+    @Typelibplug@TUnionNode@GetHash$qqrv @755 ; __fastcall Typelibplug::TUnionNode::GetHash()
+    @Typelibplug@TUnionNode@GetHelpID$qqrv @751 ; __fastcall Typelibplug::TUnionNode::GetHelpID()
+    @Typelibplug@TUnionNode@GetImageIndex$qqrv @758 ; __fastcall Typelibplug::TUnionNode::GetImageIndex()
+    @Typelibplug@TUnionNode@GetNodeType$qqrv @756 ; __fastcall Typelibplug::TUnionNode::GetNodeType()
+    @Typelibplug@TUnionNode@GetPageManager$qqrv @763 ; __fastcall Typelibplug::TUnionNode::GetPageManager()
+    @Typelibplug@TUnionNode@GetParent$qqrv @753 ; __fastcall Typelibplug::TUnionNode::GetParent()
+    @Typelibplug@TUnionNode@GetSelectedIndex$qqrv @757 ; __fastcall Typelibplug::TUnionNode::GetSelectedIndex()
+    @Typelibplug@TUnionNode@GetTree$qqrv @761 ; __fastcall Typelibplug::TUnionNode::GetTree()
+    @Typelibplug@TUnionNode@IsValidName$qqrx20System@UnicodeString @764 ; __fastcall Typelibplug::TUnionNode::IsValidName(const System::UnicodeString)
+    @Typelibplug@TUnionNode@OnChange$qqrrx5_GUID @759 ; __fastcall Typelibplug::TUnionNode::OnChange(const _GUID&)
+    @Typelibplug@TUnionNode@OnExpanding$qqrv @765 ; __fastcall Typelibplug::TUnionNode::OnExpanding()
+    @Typelibplug@TUnionNode@OnSelect$qqrv @766 ; __fastcall Typelibplug::TUnionNode::OnSelect()
+    @Typelibplug@TUnionNode@SetCaption$qqrx20System@UnicodeString @767 ; __fastcall Typelibplug::TUnionNode::SetCaption(const System::UnicodeString)
+    @Typelibplug@TUnionNode@SetHash$qqri @754 ; __fastcall Typelibplug::TUnionNode::SetHash(int)
+    @Typelibplug@TUnionNode@SetHelpID$qqri @750 ; __fastcall Typelibplug::TUnionNode::SetHelpID(int)
+    @Typelibplug@TUnionNode@SetPageManager$qqrx63System@%DelphiInterface$36Pluggableviewer@IPropertyPageManager% @762 ; Typelibplug::TUnionNode::SetPageManager(const System::DelphiInterface<{583}...
+    @Typelibplug@TUnionNode@SetParent$qqrx61System@%DelphiInterface$34Pluggableviewer@IPluggableTreeNode% @752 ; Typelibplug::TUnionNode::SetParent(const System::DelphiInterface<{583}...
+    @Typelibplug@TUnionNode@SetTree$qqrx64System@%DelphiInterface$37Pluggableviewer@IPluggableTreeManager% @760 ; Typelibplug::TUnionNode::SetTree(const System::DelphiInterface<{583}...
+    @Typelibplug@initialization$qqrv @633 ; __fastcall Typelibplug::initialization()
+    @Typelibrary@Finalization$qqrv @53  ; __fastcall Typelibrary::Finalization()
+    @Typelibrary@TAlias@           @436 ; Typelibrary::TAlias::
+    @Typelibrary@TAlias@$bctr$qqrp24Typelibrary@TTypeLibraryx35System@%DelphiInterface$9ITypeInfo%p11tagTYPEATTRui @147 ; Typelibrary::TAlias::TAlias(Typelibrary::TTypeLibrary *, const System::DelphiInterface<{583}...
+    @Typelibrary@TAlias@$bctr$qqrv @148 ; __fastcall Typelibrary::TAlias::TAlias()
+    @Typelibrary@TAlias@$bdtr$qqrv @146 ; __fastcall Typelibrary::TAlias::~TAlias()
+    @Typelibrary@TAlias@GetModified$qqrv @145 ; __fastcall Typelibrary::TAlias::GetModified()
+    @Typelibrary@TAliasList@       @434 ; Typelibrary::TAliasList::
+    @Typelibrary@TAliasList@$bctr$qqrv @144 ; __fastcall Typelibrary::TAliasList::TAliasList()
+    @Typelibrary@TAliasList@$bctr$qqrynpqqrp23Typelibrary@TTypeObject$vt1ynpqqrv$v @143 ; __fastcall Typelibrary::TAliasList::TAliasList(void __fastcall __closure(*)(Typelibrary::TTypeObject *), void __fastcall __closure(*)(Typelibrary::TTypeObject *), void __fastcall __closure(*)())
+    @Typelibrary@TAliasList@$bdtr$qqrv @142 ; __fastcall Typelibrary::TAliasList::~TAliasList()
+    @Typelibrary@TAliasList@Add$qqrp18Typelibrary@TAlias @138 ; __fastcall Typelibrary::TAliasList::Add(Typelibrary::TAlias *)
+    @Typelibrary@TAliasList@Clear$qqrv @137 ; __fastcall Typelibrary::TAliasList::Clear()
+    @Typelibrary@TAliasList@Delete$qqri @136 ; __fastcall Typelibrary::TAliasList::Delete(int)
+    @Typelibrary@TAliasList@GetCount$qqrv @141 ; __fastcall Typelibrary::TAliasList::GetCount()
+    @Typelibrary@TAliasList@GetItem$qqri @140 ; __fastcall Typelibrary::TAliasList::GetItem(int)
+    @Typelibrary@TAliasList@GetModified$qqrv @139 ; __fastcall Typelibrary::TAliasList::GetModified()
+    @Typelibrary@TCoClass@         @492 ; Typelibrary::TCoClass::
+    @Typelibrary@TCoClass@$bctr$qqrp24Typelibrary@TTypeLibraryx35System@%DelphiInterface$9ITypeInfo%p11tagTYPEATTRui @361 ; Typelibrary::TCoClass::TCoClass(Typelibrary::TTypeLibrary *, const System::DelphiInterface<{583}...
+    @Typelibrary@TCoClass@$bctr$qqrv @362 ; __fastcall Typelibrary::TCoClass::TCoClass()
+    @Typelibrary@TCoClass@$bdtr$qqrv @360 ; __fastcall Typelibrary::TCoClass::~TCoClass()
+    @Typelibrary@TCoClass@Clean$qqrv @356 ; __fastcall Typelibrary::TCoClass::Clean()
+    @Typelibrary@TCoClass@GetDispInterfaces$qqrv @357 ; __fastcall Typelibrary::TCoClass::GetDispInterfaces()
+    @Typelibrary@TCoClass@GetInterfaces$qqrv @358 ; __fastcall Typelibrary::TCoClass::GetInterfaces()
+    @Typelibrary@TCoClass@GetModified$qqrv @355 ; __fastcall Typelibrary::TCoClass::GetModified()
+    @Typelibrary@TCoClass@SetFlags$qqr61System@%Set$33Typelibflags@TTypeObjectFlagsTypet1$i0$t1$i13$% @359 ; Typelibrary::TCoClass::SetFlags(System::Set<{583}...
+    @Typelibrary@TCoClassList@     @490 ; Typelibrary::TCoClassList::
+    @Typelibrary@TCoClassList@$bctr$qqrv @354 ; __fastcall Typelibrary::TCoClassList::TCoClassList()
+    @Typelibrary@TCoClassList@$bctr$qqrynpqqrp23Typelibrary@TTypeObject$vt1ynpqqrv$v @353 ; __fastcall Typelibrary::TCoClassList::TCoClassList(void __fastcall __closure(*)(Typelibrary::TTypeObject *), void __fastcall __closure(*)(Typelibrary::TTypeObject *), void __fastcall __closure(*)())
+    @Typelibrary@TCoClassList@$bdtr$qqrv @352 ; __fastcall Typelibrary::TCoClassList::~TCoClassList()
+    @Typelibrary@TCoClassList@Add$qqrp20Typelibrary@TCoClass @348 ; __fastcall Typelibrary::TCoClassList::Add(Typelibrary::TCoClass *)
+    @Typelibrary@TCoClassList@Clear$qqrv @347 ; __fastcall Typelibrary::TCoClassList::Clear()
+    @Typelibrary@TCoClassList@Delete$qqri @346 ; __fastcall Typelibrary::TCoClassList::Delete(int)
+    @Typelibrary@TCoClassList@GetCount$qqrv @351 ; __fastcall Typelibrary::TCoClassList::GetCount()
+    @Typelibrary@TCoClassList@GetItem$qqri @350 ; __fastcall Typelibrary::TCoClassList::GetItem(int)
+    @Typelibrary@TCoClassList@GetModified$qqrv @349 ; __fastcall Typelibrary::TCoClassList::GetModified()
+    @Typelibrary@TConstant@        @452 ; Typelibrary::TConstant::
+    @Typelibrary@TConstant@$bctr$qqrv @197 ; __fastcall Typelibrary::TConstant::TConstant()
+    @Typelibrary@TConstant@$bctr$qqrxp23Typelibrary@TTypeObjectx35System@%DelphiInterface$9ITypeInfo%xp10tagVARDESC @196 ; Typelibrary::TConstant::TConstant(Typelibrary::TTypeObject * const, const System::DelphiInterface<{583}...
+    @Typelibrary@TConstant@$bdtr$qqrv @195 ; __fastcall Typelibrary::TConstant::~TConstant()
+    @Typelibrary@TConstant@SetValue$qqrrx14System@Variant @194 ; __fastcall Typelibrary::TConstant::SetValue(const System::Variant&)
+    @Typelibrary@TConstantList@    @450 ; Typelibrary::TConstantList::
+    @Typelibrary@TConstantList@$bctr$qqrv @193 ; __fastcall Typelibrary::TConstantList::TConstantList()
+    @Typelibrary@TConstantList@$bdtr$qqrv @192 ; __fastcall Typelibrary::TConstantList::~TConstantList()
+    @Typelibrary@TConstantList@Add$qqrp21Typelibrary@TConstant @188 ; __fastcall Typelibrary::TConstantList::Add(Typelibrary::TConstant *)
+    @Typelibrary@TConstantList@Clear$qqrv @187 ; __fastcall Typelibrary::TConstantList::Clear()
+    @Typelibrary@TConstantList@Delete$qqri @186 ; __fastcall Typelibrary::TConstantList::Delete(int)
+    @Typelibrary@TConstantList@GetCount$qqrv @191 ; __fastcall Typelibrary::TConstantList::GetCount()
+    @Typelibrary@TConstantList@GetItem$qqri @190 ; __fastcall Typelibrary::TConstantList::GetItem(int)
+    @Typelibrary@TConstantList@GetModified$qqrv @189 ; __fastcall Typelibrary::TConstantList::GetModified()
+    @Typelibrary@TCustomDataItem@  @424 ; Typelibrary::TCustomDataItem::
+    @Typelibrary@TCustomDataItem@$bctr$qqrrx15tagCUSTDATAITEM @107 ; __fastcall Typelibrary::TCustomDataItem::TCustomDataItem(const tagCUSTDATAITEM&)
+    @Typelibrary@TCustomDataItem@$bctr$qqrv @108 ; __fastcall Typelibrary::TCustomDataItem::TCustomDataItem()
+    @Typelibrary@TCustomDataItem@SetGuid$qqrrx5_GUID @106 ; __fastcall Typelibrary::TCustomDataItem::SetGuid(const _GUID&)
+    @Typelibrary@TCustomDataItem@SetValue$qqrrx14System@Variant @105 ; __fastcall Typelibrary::TCustomDataItem::SetValue(const System::Variant&)
+    @Typelibrary@TCustomDataList@  @422 ; Typelibrary::TCustomDataList::
+    @Typelibrary@TCustomDataList@$bctr$qqrrx11tagCUSTDATA @103 ; __fastcall Typelibrary::TCustomDataList::TCustomDataList(const tagCUSTDATA&)
+    @Typelibrary@TCustomDataList@$bctr$qqrv @104 ; __fastcall Typelibrary::TCustomDataList::TCustomDataList()
+    @Typelibrary@TCustomDataList@$bdtr$qqrv @102 ; __fastcall Typelibrary::TCustomDataList::~TCustomDataList()
+    @Typelibrary@TCustomDataList@Add$qqrp27Typelibrary@TCustomDataItem @98  ; __fastcall Typelibrary::TCustomDataList::Add(Typelibrary::TCustomDataItem *)
+    @Typelibrary@TCustomDataList@Clear$qqrv @97  ; __fastcall Typelibrary::TCustomDataList::Clear()
+    @Typelibrary@TCustomDataList@Delete$qqri @96  ; __fastcall Typelibrary::TCustomDataList::Delete(int)
+    @Typelibrary@TCustomDataList@GetCount$qqrv @101 ; __fastcall Typelibrary::TCustomDataList::GetCount()
+    @Typelibrary@TCustomDataList@GetItem$qqri @100 ; __fastcall Typelibrary::TCustomDataList::GetItem(int)
+    @Typelibrary@TCustomDataList@GetModified$qqrv @99  ; __fastcall Typelibrary::TCustomDataList::GetModified()
+    @Typelibrary@TCustomType@      @480 ; Typelibrary::TCustomType::
+    @Typelibrary@TCustomType@$bctr$qqrp24Typelibrary@TTypeLibrary35System@%DelphiInterface$9ITypeInfo%ui @314 ; Typelibrary::TCustomType::TCustomType(Typelibrary::TTypeLibrary *, System::DelphiInterface<{583}...
+    @Typelibrary@TCustomType@$bctr$qqrv @315 ; __fastcall Typelibrary::TCustomType::TCustomType()
+    @Typelibrary@TCustomType@GetModified$qqrv @311 ; __fastcall Typelibrary::TCustomType::GetModified()
+    @Typelibrary@TCustomType@GetTypeObject$qqrv @313 ; __fastcall Typelibrary::TCustomType::GetTypeObject()
+    @Typelibrary@TCustomType@SetGuid$qqrrx5_GUID @312 ; __fastcall Typelibrary::TCustomType::SetGuid(const _GUID&)
+    @Typelibrary@TDispInterface@   @484 ; Typelibrary::TDispInterface::
+    @Typelibrary@TDispInterface@$bctr$qqrp24Typelibrary@TTypeLibraryx35System@%DelphiInterface$9ITypeInfo%p11tagTYPEATTRui @326 ; Typelibrary::TDispInterface::TDispInterface(Typelibrary::TTypeLibrary *, const System::DelphiInterface<{583}...
+    @Typelibrary@TDispInterface@$bctr$qqrv @327 ; __fastcall Typelibrary::TDispInterface::TDispInterface()
+    @Typelibrary@TDispInterface@$bdtr$qqrv @325 ; __fastcall Typelibrary::TDispInterface::~TDispInterface()
+    @Typelibrary@TDispInterfaceList@ @482 ; Typelibrary::TDispInterfaceList::
+    @Typelibrary@TDispInterfaceList@$bctr$qqrv @324 ; __fastcall Typelibrary::TDispInterfaceList::TDispInterfaceList()
+    @Typelibrary@TDispInterfaceList@$bctr$qqrynpqqrp23Typelibrary@TTypeObject$vt1ynpqqrv$v @323 ; __fastcall Typelibrary::TDispInterfaceList::TDispInterfaceList(void __fastcall __closure(*)(Typelibrary::TTypeObject *), void __fastcall __closure(*)(Typelibrary::TTypeObject *), void __fastcall __closure(*)())
+    @Typelibrary@TDispInterfaceList@$bdtr$qqrv @322 ; __fastcall Typelibrary::TDispInterfaceList::~TDispInterfaceList()
+    @Typelibrary@TDispInterfaceList@Add$qqrp26Typelibrary@TDispInterface @318 ; __fastcall Typelibrary::TDispInterfaceList::Add(Typelibrary::TDispInterface *)
+    @Typelibrary@TDispInterfaceList@Clear$qqrv @317 ; __fastcall Typelibrary::TDispInterfaceList::Clear()
+    @Typelibrary@TDispInterfaceList@Delete$qqri @316 ; __fastcall Typelibrary::TDispInterfaceList::Delete(int)
+    @Typelibrary@TDispInterfaceList@GetCount$qqrv @321 ; __fastcall Typelibrary::TDispInterfaceList::GetCount()
+    @Typelibrary@TDispInterfaceList@GetItem$qqri @320 ; __fastcall Typelibrary::TDispInterfaceList::GetItem(int)
+    @Typelibrary@TDispInterfaceList@GetModified$qqrv @319 ; __fastcall Typelibrary::TDispInterfaceList::GetModified()
+    @Typelibrary@TEnumeration@     @444 ; Typelibrary::TEnumeration::
+    @Typelibrary@TEnumeration@$bctr$qqrp24Typelibrary@TTypeLibraryx35System@%DelphiInterface$9ITypeInfo%p11tagTYPEATTRui @173 ; Typelibrary::TEnumeration::TEnumeration(Typelibrary::TTypeLibrary *, const System::DelphiInterface<{583}...
+    @Typelibrary@TEnumeration@$bctr$qqrv @174 ; __fastcall Typelibrary::TEnumeration::TEnumeration()
+    @Typelibrary@TEnumeration@$bdtr$qqrv @172 ; __fastcall Typelibrary::TEnumeration::~TEnumeration()
+    @Typelibrary@TEnumeration@GetModified$qqrv @171 ; __fastcall Typelibrary::TEnumeration::GetModified()
+    @Typelibrary@TEnumerationList@ @442 ; Typelibrary::TEnumerationList::
+    @Typelibrary@TEnumerationList@$bctr$qqrv @170 ; __fastcall Typelibrary::TEnumerationList::TEnumerationList()
+    @Typelibrary@TEnumerationList@$bctr$qqrynpqqrp23Typelibrary@TTypeObject$vt1ynpqqrv$v @169 ; __fastcall Typelibrary::TEnumerationList::TEnumerationList(void __fastcall __closure(*)(Typelibrary::TTypeObject *), void __fastcall __closure(*)(Typelibrary::TTypeObject *), void __fastcall __closure(*)())
+    @Typelibrary@TEnumerationList@$bdtr$qqrv @168 ; __fastcall Typelibrary::TEnumerationList::~TEnumerationList()
+    @Typelibrary@TEnumerationList@Add$qqrp24Typelibrary@TEnumeration @164 ; __fastcall Typelibrary::TEnumerationList::Add(Typelibrary::TEnumeration *)
+    @Typelibrary@TEnumerationList@Clear$qqrv @163 ; __fastcall Typelibrary::TEnumerationList::Clear()
+    @Typelibrary@TEnumerationList@Delete$qqri @162 ; __fastcall Typelibrary::TEnumerationList::Delete(int)
+    @Typelibrary@TEnumerationList@GetCount$qqrv @167 ; __fastcall Typelibrary::TEnumerationList::GetCount()
+    @Typelibrary@TEnumerationList@GetItem$qqri @166 ; __fastcall Typelibrary::TEnumerationList::GetItem(int)
+    @Typelibrary@TEnumerationList@GetModified$qqrv @165 ; __fastcall Typelibrary::TEnumerationList::GetModified()
+    @Typelibrary@TField@           @464 ; Typelibrary::TField::
+    @Typelibrary@TField@$bctr$qqrv @237 ; __fastcall Typelibrary::TField::TField()
+    @Typelibrary@TField@$bctr$qqrxp23Typelibrary@TTypeObjectx35System@%DelphiInterface$9ITypeInfo%xp10tagVARDESC @236 ; Typelibrary::TField::TField(Typelibrary::TTypeObject * const, const System::DelphiInterface<{583}...
+    @Typelibrary@TField@$bdtr$qqrv @235 ; __fastcall Typelibrary::TField::~TField()
+    @Typelibrary@TField@GetModified$qqrv @234 ; __fastcall Typelibrary::TField::GetModified()
+    @Typelibrary@TFieldList@       @462 ; Typelibrary::TFieldList::
+    @Typelibrary@TFieldList@$bctr$qqrv @231 ; __fastcall Typelibrary::TFieldList::TFieldList()
+    @Typelibrary@TFieldList@$bdtr$qqrv @229 ; __fastcall Typelibrary::TFieldList::~TFieldList()
+    @Typelibrary@TFieldList@Add$qqrp18Typelibrary@TField @233 ; __fastcall Typelibrary::TFieldList::Add(Typelibrary::TField *)
+    @Typelibrary@TFieldList@Clear$qqrv @232 ; __fastcall Typelibrary::TFieldList::Clear()
+    @Typelibrary@TFieldList@Delete$qqri @230 ; __fastcall Typelibrary::TFieldList::Delete(int)
+    @Typelibrary@TFieldList@GetCount$qqrv @228 ; __fastcall Typelibrary::TFieldList::GetCount()
+    @Typelibrary@TFieldList@GetItem$qqri @227 ; __fastcall Typelibrary::TFieldList::GetItem(int)
+    @Typelibrary@TFieldList@GetModified$qqrv @226 ; __fastcall Typelibrary::TFieldList::GetModified()
+    @Typelibrary@TGuidList@        @418 ; Typelibrary::TGuidList::
+    @Typelibrary@TGuidList@$bctr$qqrv @88  ; __fastcall Typelibrary::TGuidList::TGuidList()
+    @Typelibrary@TGuidList@$bdtr$qqrv @87  ; __fastcall Typelibrary::TGuidList::~TGuidList()
+    @Typelibrary@TGuidList@Add$qqrp23Typelibrary@TTypeObject @82  ; __fastcall Typelibrary::TGuidList::Add(Typelibrary::TTypeObject *)
+    @Typelibrary@TGuidList@Add$qqrrx5_GUID @83  ; __fastcall Typelibrary::TGuidList::Add(const _GUID&)
+    @Typelibrary@TGuidList@Clear$qqrv @81  ; __fastcall Typelibrary::TGuidList::Clear()
+    @Typelibrary@TGuidList@Delete$qqri @80  ; __fastcall Typelibrary::TGuidList::Delete(int)
+    @Typelibrary@TGuidList@GetCount$qqrv @86  ; __fastcall Typelibrary::TGuidList::GetCount()
+    @Typelibrary@TGuidList@GetItem$qqri @85  ; __fastcall Typelibrary::TGuidList::GetItem(int)
+    @Typelibrary@TGuidList@GetModified$qqrv @84  ; __fastcall Typelibrary::TGuidList::GetModified()
+    @Typelibrary@TGuidTable@       @420 ; Typelibrary::TGuidTable::
+    @Typelibrary@TGuidTable@$bctr$qqrv @95  ; __fastcall Typelibrary::TGuidTable::TGuidTable()
+    @Typelibrary@TGuidTable@$bdtr$qqrv @94  ; __fastcall Typelibrary::TGuidTable::~TGuidTable()
+    @Typelibrary@TGuidTable@Add$qqrp23Typelibrary@TTypeObject @92  ; __fastcall Typelibrary::TGuidTable::Add(Typelibrary::TTypeObject *)
+    @Typelibrary@TGuidTable@Clear$qqrv @93  ; __fastcall Typelibrary::TGuidTable::Clear()
+    @Typelibrary@TGuidTable@Delete$qqrp23Typelibrary@TTypeObject @90  ; __fastcall Typelibrary::TGuidTable::Delete(Typelibrary::TTypeObject *)
+    @Typelibrary@TGuidTable@Delete$qqrrx5_GUID @91  ; __fastcall Typelibrary::TGuidTable::Delete(const _GUID&)
+    @Typelibrary@TGuidTable@Find$qqrrx5_GUID @89  ; __fastcall Typelibrary::TGuidTable::Find(const _GUID&)
+    @Typelibrary@THelp@            @504 ; Typelibrary::THelp::
+    @Typelibrary@THelp@$bctr$qqr35System@%DelphiInterface$9ITypeInfo% @404 ; Typelibrary::THelp::THelp(System::DelphiInterface<{583}...
+    @Typelibrary@THelp@$bctr$qqrv  @405 ; __fastcall Typelibrary::THelp::THelp()
+    @Typelibrary@THelp@SetHelpContext$qqri @402 ; __fastcall Typelibrary::THelp::SetHelpContext(int)
+    @Typelibrary@THelp@SetHelpString$qqrx20System@UnicodeString @403 ; __fastcall Typelibrary::THelp::SetHelpString(const System::UnicodeString)
+    @Typelibrary@THelp@SetHelpStringContext$qqri @401 ; __fastcall Typelibrary::THelp::SetHelpStringContext(int)
+    @Typelibrary@TInterface@       @488 ; Typelibrary::TInterface::
+    @Typelibrary@TInterface@$bctr$qqrp24Typelibrary@TTypeLibraryx35System@%DelphiInterface$9ITypeInfo%p11tagTYPEATTRui @344 ; Typelibrary::TInterface::TInterface(Typelibrary::TTypeLibrary *, const System::DelphiInterface<{583}...
+    @Typelibrary@TInterface@$bctr$qqrv @345 ; __fastcall Typelibrary::TInterface::TInterface()
+    @Typelibrary@TInterface@$bdtr$qqrv @343 ; __fastcall Typelibrary::TInterface::~TInterface()
+    @Typelibrary@TInterface@Clean$qqrv @339 ; __fastcall Typelibrary::TInterface::Clean()
+    @Typelibrary@TInterface@GetDispInterfaces$qqrv @338 ; __fastcall Typelibrary::TInterface::GetDispInterfaces()
+    @Typelibrary@TInterface@GetInterfaces$qqrv @337 ; __fastcall Typelibrary::TInterface::GetInterfaces()
+    @Typelibrary@TInterface@GetModified$qqrv @341 ; __fastcall Typelibrary::TInterface::GetModified()
+    @Typelibrary@TInterface@SetFlags$qqr61System@%Set$33Typelibflags@TTypeObjectFlagsTypet1$i0$t1$i13$% @342 ; Typelibrary::TInterface::SetFlags(System::Set<{583}...
+    @Typelibrary@TInterface@SetModified$qqro @340 ; __fastcall Typelibrary::TInterface::SetModified(bool)
+    @Typelibrary@TInterfaceList@   @486 ; Typelibrary::TInterfaceList::
+    @Typelibrary@TInterfaceList@$bctr$qqrv @336 ; __fastcall Typelibrary::TInterfaceList::TInterfaceList()
+    @Typelibrary@TInterfaceList@$bctr$qqrynpqqrp23Typelibrary@TTypeObject$vt1ynpqqrv$v @335 ; __fastcall Typelibrary::TInterfaceList::TInterfaceList(void __fastcall __closure(*)(Typelibrary::TTypeObject *), void __fastcall __closure(*)(Typelibrary::TTypeObject *), void __fastcall __closure(*)())
+    @Typelibrary@TInterfaceList@$bdtr$qqrv @334 ; __fastcall Typelibrary::TInterfaceList::~TInterfaceList()
+    @Typelibrary@TInterfaceList@Add$qqrp22Typelibrary@TInterface @330 ; __fastcall Typelibrary::TInterfaceList::Add(Typelibrary::TInterface *)
+    @Typelibrary@TInterfaceList@Clear$qqrv @329 ; __fastcall Typelibrary::TInterfaceList::Clear()
+    @Typelibrary@TInterfaceList@Delete$qqri @328 ; __fastcall Typelibrary::TInterfaceList::Delete(int)
+    @Typelibrary@TInterfaceList@GetCount$qqrv @333 ; __fastcall Typelibrary::TInterfaceList::GetCount()
+    @Typelibrary@TInterfaceList@GetItem$qqri @332 ; __fastcall Typelibrary::TInterfaceList::GetItem(int)
+    @Typelibrary@TInterfaceList@GetModified$qqrv @331 ; __fastcall Typelibrary::TInterfaceList::GetModified()
+    @Typelibrary@TMethod@          @472 ; Typelibrary::TMethod::
+    @Typelibrary@TMethod@$bctr$qqrv @268 ; __fastcall Typelibrary::TMethod::TMethod()
+    @Typelibrary@TMethod@$bctr$qqrxp23Typelibrary@TTypeObjectx35System@%DelphiInterface$9ITypeInfo%xp11tagFUNCDESC @267 ; Typelibrary::TMethod::TMethod(Typelibrary::TTypeObject * const, const System::DelphiInterface<{583}...
+    @Typelibrary@TMethod@$bdtr$qqrv @266 ; __fastcall Typelibrary::TMethod::~TMethod()
+    @Typelibrary@TMethod@GetModified$qqrv @265 ; __fastcall Typelibrary::TMethod::GetModified()
+    @Typelibrary@TMethod@SetCallingConvention$qqr27Comutils@TCallingConvention @261 ; __fastcall Typelibrary::TMethod::SetCallingConvention(Comutils::TCallingConvention)
+    @Typelibrary@TMethod@SetDispID$qqri @260 ; __fastcall Typelibrary::TMethod::SetDispID(int)
+    @Typelibrary@TMethod@SetFlags$qqr57System@%Set$29Typelibflags@TMethodFlagsTypet1$i0$t1$i12$% @259 ; Typelibrary::TMethod::SetFlags(System::Set<{583}...
+    @Typelibrary@TMethod@SetInvokeKind$qqr26Comutils@TMethodInvokeKind @262 ; __fastcall Typelibrary::TMethod::SetInvokeKind(Comutils::TMethodInvokeKind)
+    @Typelibrary@TMethod@SetMethodKind$qqr20Comutils@TMethodKind @264 ; __fastcall Typelibrary::TMethod::SetMethodKind(Comutils::TMethodKind)
+    @Typelibrary@TMethod@SetParent$qqrp23Typelibrary@TTypeObject @263 ; __fastcall Typelibrary::TMethod::SetParent(Typelibrary::TTypeObject *)
+    @Typelibrary@TMethod@SetReturnType$qqrp17Typelibrary@TType @258 ; __fastcall Typelibrary::TMethod::SetReturnType(Typelibrary::TType *)
+    @Typelibrary@TMethodList@      @470 ; Typelibrary::TMethodList::
+    @Typelibrary@TMethodList@$bctr$qqrv @257 ; __fastcall Typelibrary::TMethodList::TMethodList()
+    @Typelibrary@TMethodList@$bdtr$qqrv @256 ; __fastcall Typelibrary::TMethodList::~TMethodList()
+    @Typelibrary@TMethodList@Add$qqrp19Typelibrary@TMethod @252 ; __fastcall Typelibrary::TMethodList::Add(Typelibrary::TMethod *)
+    @Typelibrary@TMethodList@Clear$qqrv @251 ; __fastcall Typelibrary::TMethodList::Clear()
+    @Typelibrary@TMethodList@Delete$qqri @250 ; __fastcall Typelibrary::TMethodList::Delete(int)
+    @Typelibrary@TMethodList@GetCount$qqrv @255 ; __fastcall Typelibrary::TMethodList::GetCount()
+    @Typelibrary@TMethodList@GetItem$qqri @254 ; __fastcall Typelibrary::TMethodList::GetItem(int)
+    @Typelibrary@TMethodList@GetModified$qqrv @253 ; __fastcall Typelibrary::TMethodList::GetModified()
+    @Typelibrary@TMethodProperty@  @456 ; Typelibrary::TMethodProperty::
+    @Typelibrary@TMethodProperty@$bctr$qqrp19Typelibrary@TMethodt1t1 @214 ; __fastcall Typelibrary::TMethodProperty::TMethodProperty(Typelibrary::TMethod *, Typelibrary::TMethod *, Typelibrary::TMethod *)
+    @Typelibrary@TMethodProperty@GetModified$qqrv @213 ; __fastcall Typelibrary::TMethodProperty::GetModified()
+    @Typelibrary@TMethodProperty@SetFlags$qqr57System@%Set$29Typelibflags@TMethodFlagsTypet1$i0$t1$i12$% @211 ; Typelibrary::TMethodProperty::SetFlags(System::Set<{583}...
+    @Typelibrary@TMethodProperty@SetGetter$qqrp19Typelibrary@TMethod @210 ; __fastcall Typelibrary::TMethodProperty::SetGetter(Typelibrary::TMethod *)
+    @Typelibrary@TMethodProperty@SetName$qqrx20System@UnicodeString @212 ; __fastcall Typelibrary::TMethodProperty::SetName(const System::UnicodeString)
+    @Typelibrary@TMethodProperty@SetParent$qqrp22Typelibrary@TInterface @206 ; __fastcall Typelibrary::TMethodProperty::SetParent(Typelibrary::TInterface *)
+    @Typelibrary@TMethodProperty@SetPropertyKind$qqr49System@%Set$22Comutils@TPropertyTypet1$i0$t1$i8$% @207 ; Typelibrary::TMethodProperty::SetPropertyKind(System::Set<{583}...
+    @Typelibrary@TMethodProperty@SetSetByRef$qqrp19Typelibrary@TMethod @208 ; __fastcall Typelibrary::TMethodProperty::SetSetByRef(Typelibrary::TMethod *)
+    @Typelibrary@TMethodProperty@SetSetter$qqrp19Typelibrary@TMethod @209 ; __fastcall Typelibrary::TMethodProperty::SetSetter(Typelibrary::TMethod *)
+    @Typelibrary@TMethodPropertyList@ @454 ; Typelibrary::TMethodPropertyList::
+    @Typelibrary@TMethodPropertyList@$bctr$qqrv @205 ; __fastcall Typelibrary::TMethodPropertyList::TMethodPropertyList()
+    @Typelibrary@TMethodPropertyList@$bdtr$qqrv @204 ; __fastcall Typelibrary::TMethodPropertyList::~TMethodPropertyList()
+    @Typelibrary@TMethodPropertyList@Add$qqrp27Typelibrary@TMethodProperty @200 ; __fastcall Typelibrary::TMethodPropertyList::Add(Typelibrary::TMethodProperty *)
+    @Typelibrary@TMethodPropertyList@Clear$qqrv @199 ; __fastcall Typelibrary::TMethodPropertyList::Clear()
+    @Typelibrary@TMethodPropertyList@Delete$qqri @198 ; __fastcall Typelibrary::TMethodPropertyList::Delete(int)
+    @Typelibrary@TMethodPropertyList@GetCount$qqrv @203 ; __fastcall Typelibrary::TMethodPropertyList::GetCount()
+    @Typelibrary@TMethodPropertyList@GetItem$qqri @202 ; __fastcall Typelibrary::TMethodPropertyList::GetItem(int)
+    @Typelibrary@TMethodPropertyList@GetModified$qqrv @201 ; __fastcall Typelibrary::TMethodPropertyList::GetModified()
+    @Typelibrary@TModule@          @428 ; Typelibrary::TModule::
+    @Typelibrary@TModule@$bctr$qqrp24Typelibrary@TTypeLibraryx35System@%DelphiInterface$9ITypeInfo%p11tagTYPEATTRui @121 ; Typelibrary::TModule::TModule(Typelibrary::TTypeLibrary *, const System::DelphiInterface<{583}...
+    @Typelibrary@TModule@$bctr$qqrv @122 ; __fastcall Typelibrary::TModule::TModule()
+    @Typelibrary@TModule@$bdtr$qqrv @120 ; __fastcall Typelibrary::TModule::~TModule()
+    @Typelibrary@TModule@GetModified$qqrv @119 ; __fastcall Typelibrary::TModule::GetModified()
+    @Typelibrary@TModule@SetDLLName$qqrx20System@UnicodeString @118 ; __fastcall Typelibrary::TModule::SetDLLName(const System::UnicodeString)
+    @Typelibrary@TModuleConstant@  @448 ; Typelibrary::TModuleConstant::
+    @Typelibrary@TModuleConstant@$bctr$qqrv @185 ; __fastcall Typelibrary::TModuleConstant::TModuleConstant()
+    @Typelibrary@TModuleConstant@$bctr$qqrxp23Typelibrary@TTypeObjectx35System@%DelphiInterface$9ITypeInfo%xp10tagVARDESC @184 ; Typelibrary::TModuleConstant::TModuleConstant(Typelibrary::TTypeObject * const, const System::DelphiInterface<{583}...
+    @Typelibrary@TModuleConstant@GetModified$qqrv @183 ; __fastcall Typelibrary::TModuleConstant::GetModified()
+    @Typelibrary@TModuleConstantList@ @446 ; Typelibrary::TModuleConstantList::
+    @Typelibrary@TModuleConstantList@$bctr$qqrv @182 ; __fastcall Typelibrary::TModuleConstantList::TModuleConstantList()
+    @Typelibrary@TModuleConstantList@$bdtr$qqrv @181 ; __fastcall Typelibrary::TModuleConstantList::~TModuleConstantList()
+    @Typelibrary@TModuleConstantList@Add$qqrp27Typelibrary@TModuleConstant @177 ; __fastcall Typelibrary::TModuleConstantList::Add(Typelibrary::TModuleConstant *)
+    @Typelibrary@TModuleConstantList@Clear$qqrv @176 ; __fastcall Typelibrary::TModuleConstantList::Clear()
+    @Typelibrary@TModuleConstantList@Delete$qqri @175 ; __fastcall Typelibrary::TModuleConstantList::Delete(int)
+    @Typelibrary@TModuleConstantList@GetCount$qqrv @180 ; __fastcall Typelibrary::TModuleConstantList::GetCount()
+    @Typelibrary@TModuleConstantList@GetItem$qqri @179 ; __fastcall Typelibrary::TModuleConstantList::GetItem(int)
+    @Typelibrary@TModuleConstantList@GetModified$qqrv @178 ; __fastcall Typelibrary::TModuleConstantList::GetModified()
+    @Typelibrary@TModuleList@      @426 ; Typelibrary::TModuleList::
+    @Typelibrary@TModuleList@$bctr$qqrv @117 ; __fastcall Typelibrary::TModuleList::TModuleList()
+    @Typelibrary@TModuleList@$bctr$qqrynpqqrp23Typelibrary@TTypeObject$vt1ynpqqrv$v @116 ; __fastcall Typelibrary::TModuleList::TModuleList(void __fastcall __closure(*)(Typelibrary::TTypeObject *), void __fastcall __closure(*)(Typelibrary::TTypeObject *), void __fastcall __closure(*)())
+    @Typelibrary@TModuleList@$bdtr$qqrv @115 ; __fastcall Typelibrary::TModuleList::~TModuleList()
+    @Typelibrary@TModuleList@Add$qqrp19Typelibrary@TModule @111 ; __fastcall Typelibrary::TModuleList::Add(Typelibrary::TModule *)
+    @Typelibrary@TModuleList@Clear$qqrv @110 ; __fastcall Typelibrary::TModuleList::Clear()
+    @Typelibrary@TModuleList@Delete$qqri @109 ; __fastcall Typelibrary::TModuleList::Delete(int)
+    @Typelibrary@TModuleList@GetCount$qqrv @114 ; __fastcall Typelibrary::TModuleList::GetCount()
+    @Typelibrary@TModuleList@GetItem$qqri @113 ; __fastcall Typelibrary::TModuleList::GetItem(int)
+    @Typelibrary@TModuleList@GetModified$qqrv @112 ; __fastcall Typelibrary::TModuleList::GetModified()
+    @Typelibrary@TModuleMethod@    @468 ; Typelibrary::TModuleMethod::
+    @Typelibrary@TModuleMethod@$bctr$qqrv @249 ; __fastcall Typelibrary::TModuleMethod::TModuleMethod()
+    @Typelibrary@TModuleMethod@$bctr$qqrxp23Typelibrary@TTypeObjectx35System@%DelphiInterface$9ITypeInfo%xp11tagFUNCDESC @248 ; Typelibrary::TModuleMethod::TModuleMethod(Typelibrary::TTypeObject * const, const System::DelphiInterface<{583}...
+    @Typelibrary@TModuleMethod@SetDLLEntry$qqrx20System@UnicodeString @247 ; __fastcall Typelibrary::TModuleMethod::SetDLLEntry(const System::UnicodeString)
+    @Typelibrary@TModuleMethod@SetMethodKind$qqr20Comutils@TMethodKind @246 ; __fastcall Typelibrary::TModuleMethod::SetMethodKind(Comutils::TMethodKind)
+    @Typelibrary@TModuleMethodList@ @466 ; Typelibrary::TModuleMethodList::
+    @Typelibrary@TModuleMethodList@$bctr$qqrv @245 ; __fastcall Typelibrary::TModuleMethodList::TModuleMethodList()
+    @Typelibrary@TModuleMethodList@$bdtr$qqrv @244 ; __fastcall Typelibrary::TModuleMethodList::~TModuleMethodList()
+    @Typelibrary@TModuleMethodList@Add$qqrp25Typelibrary@TModuleMethod @240 ; __fastcall Typelibrary::TModuleMethodList::Add(Typelibrary::TModuleMethod *)
+    @Typelibrary@TModuleMethodList@Clear$qqrv @239 ; __fastcall Typelibrary::TModuleMethodList::Clear()
+    @Typelibrary@TModuleMethodList@Delete$qqri @238 ; __fastcall Typelibrary::TModuleMethodList::Delete(int)
+    @Typelibrary@TModuleMethodList@GetCount$qqrv @243 ; __fastcall Typelibrary::TModuleMethodList::GetCount()
+    @Typelibrary@TModuleMethodList@GetItem$qqri @242 ; __fastcall Typelibrary::TModuleMethodList::GetItem(int)
+    @Typelibrary@TModuleMethodList@GetModified$qqrv @241 ; __fastcall Typelibrary::TModuleMethodList::GetModified()
+    @Typelibrary@TParameter@       @476 ; Typelibrary::TParameter::
+    @Typelibrary@TParameter@$bctr$qqrv @285 ; __fastcall Typelibrary::TParameter::TParameter()
+    @Typelibrary@TParameter@$bctr$qqrxp19Typelibrary@TMethodx20System@UnicodeStringxp11tagELEMDESC35System@%DelphiInterface$9ITypeInfo% @284 ; Typelibrary::TParameter::TParameter(Typelibrary::TMethod * const, const System::UnicodeString, tagELEMDESC * const, System::DelphiInterface<{583}...
+    @Typelibrary@TParameter@$bdtr$qqrv @283 ; __fastcall Typelibrary::TParameter::~TParameter()
+    @Typelibrary@TParameter@Assign$qqrp22Typelibrary@TParameter @282 ; __fastcall Typelibrary::TParameter::Assign(Typelibrary::TParameter *)
+    @Typelibrary@TParameter@GetModified$qqrv @277 ; __fastcall Typelibrary::TParameter::GetModified()
+    @Typelibrary@TParameter@SetDefaultValue$qqrrx14System@Variant @281 ; __fastcall Typelibrary::TParameter::SetDefaultValue(const System::Variant&)
+    @Typelibrary@TParameter@SetFlags$qqr59System@%Set$32Typelibflags@TParameterFlagsTypet1$i0$t1$i6$% @278 ; Typelibrary::TParameter::SetFlags(System::Set<{583}...
+    @Typelibrary@TParameter@SetName$qqrx20System@UnicodeString @280 ; __fastcall Typelibrary::TParameter::SetName(const System::UnicodeString)
+    @Typelibrary@TParameter@SetParent$qqrp19Typelibrary@TMethod @279 ; __fastcall Typelibrary::TParameter::SetParent(Typelibrary::TMethod *)
+    @Typelibrary@TParameterList@   @474 ; Typelibrary::TParameterList::
+    @Typelibrary@TParameterList@$bctr$qqrv @276 ; __fastcall Typelibrary::TParameterList::TParameterList()
+    @Typelibrary@TParameterList@$bdtr$qqrv @275 ; __fastcall Typelibrary::TParameterList::~TParameterList()
+    @Typelibrary@TParameterList@Add$qqrp22Typelibrary@TParameter @271 ; __fastcall Typelibrary::TParameterList::Add(Typelibrary::TParameter *)
+    @Typelibrary@TParameterList@Clear$qqrv @270 ; __fastcall Typelibrary::TParameterList::Clear()
+    @Typelibrary@TParameterList@Delete$qqri @269 ; __fastcall Typelibrary::TParameterList::Delete(int)
+    @Typelibrary@TParameterList@GetCount$qqrv @274 ; __fastcall Typelibrary::TParameterList::GetCount()
+    @Typelibrary@TParameterList@GetItem$qqri @273 ; __fastcall Typelibrary::TParameterList::GetItem(int)
+    @Typelibrary@TParameterList@GetModified$qqrv @272 ; __fastcall Typelibrary::TParameterList::GetModified()
+    @Typelibrary@TProperty@        @460 ; Typelibrary::TProperty::
+    @Typelibrary@TProperty@$bctr$qqrv @225 ; __fastcall Typelibrary::TProperty::TProperty()
+    @Typelibrary@TProperty@$bctr$qqrxp23Typelibrary@TTypeObjectx35System@%DelphiInterface$9ITypeInfo%xp10tagVARDESC @224 ; Typelibrary::TProperty::TProperty(Typelibrary::TTypeObject * const, const System::DelphiInterface<{583}...
+    @Typelibrary@TProperty@$bdtr$qqrv @223 ; __fastcall Typelibrary::TProperty::~TProperty()
+    @Typelibrary@TPropertyList@    @458 ; Typelibrary::TPropertyList::
+    @Typelibrary@TPropertyList@$bctr$qqrv @222 ; __fastcall Typelibrary::TPropertyList::TPropertyList()
+    @Typelibrary@TPropertyList@$bdtr$qqrv @221 ; __fastcall Typelibrary::TPropertyList::~TPropertyList()
+    @Typelibrary@TPropertyList@Add$qqrp21Typelibrary@TProperty @217 ; __fastcall Typelibrary::TPropertyList::Add(Typelibrary::TProperty *)
+    @Typelibrary@TPropertyList@Clear$qqrv @216 ; __fastcall Typelibrary::TPropertyList::Clear()
+    @Typelibrary@TPropertyList@Delete$qqri @215 ; __fastcall Typelibrary::TPropertyList::Delete(int)
+    @Typelibrary@TPropertyList@GetCount$qqrv @220 ; __fastcall Typelibrary::TPropertyList::GetCount()
+    @Typelibrary@TPropertyList@GetItem$qqri @219 ; __fastcall Typelibrary::TPropertyList::GetItem(int)
+    @Typelibrary@TPropertyList@GetModified$qqrv @218 ; __fastcall Typelibrary::TPropertyList::GetModified()
+    @Typelibrary@TRecord@          @440 ; Typelibrary::TRecord::
+    @Typelibrary@TRecord@$bctr$qqrp24Typelibrary@TTypeLibraryx35System@%DelphiInterface$9ITypeInfo%p11tagTYPEATTRui @160 ; Typelibrary::TRecord::TRecord(Typelibrary::TTypeLibrary *, const System::DelphiInterface<{583}...
+    @Typelibrary@TRecord@$bctr$qqrv @161 ; __fastcall Typelibrary::TRecord::TRecord()
+    @Typelibrary@TRecord@$bdtr$qqrv @159 ; __fastcall Typelibrary::TRecord::~TRecord()
+    @Typelibrary@TRecord@GetModified$qqrv @158 ; __fastcall Typelibrary::TRecord::GetModified()
+    @Typelibrary@TRecordList@      @438 ; Typelibrary::TRecordList::
+    @Typelibrary@TRecordList@$bctr$qqrv @157 ; __fastcall Typelibrary::TRecordList::TRecordList()
+    @Typelibrary@TRecordList@$bctr$qqrynpqqrp23Typelibrary@TTypeObject$vt1ynpqqrv$v @156 ; __fastcall Typelibrary::TRecordList::TRecordList(void __fastcall __closure(*)(Typelibrary::TTypeObject *), void __fastcall __closure(*)(Typelibrary::TTypeObject *), void __fastcall __closure(*)())
+    @Typelibrary@TRecordList@$bdtr$qqrv @155 ; __fastcall Typelibrary::TRecordList::~TRecordList()
+    @Typelibrary@TRecordList@Add$qqrp19Typelibrary@TRecord @151 ; __fastcall Typelibrary::TRecordList::Add(Typelibrary::TRecord *)
+    @Typelibrary@TRecordList@Clear$qqrv @150 ; __fastcall Typelibrary::TRecordList::Clear()
+    @Typelibrary@TRecordList@Delete$qqri @149 ; __fastcall Typelibrary::TRecordList::Delete(int)
+    @Typelibrary@TRecordList@GetCount$qqrv @154 ; __fastcall Typelibrary::TRecordList::GetCount()
+    @Typelibrary@TRecordList@GetItem$qqri @153 ; __fastcall Typelibrary::TRecordList::GetItem(int)
+    @Typelibrary@TRecordList@GetModified$qqrv @152 ; __fastcall Typelibrary::TRecordList::GetModified()
+    @Typelibrary@TType@            @478 ; Typelibrary::TType::
+    @Typelibrary@TType@$bctr$qqrp18Typelibrary@TAliasxp11tagTYPEDESC35System@%DelphiInterface$9ITypeInfo% @303 ; Typelibrary::TType::TType(Typelibrary::TAlias *, tagTYPEDESC * const, System::DelphiInterface<{583}...
+    @Typelibrary@TType@$bctr$qqrp18Typelibrary@TFieldxp11tagTYPEDESC35System@%DelphiInterface$9ITypeInfo% @304 ; Typelibrary::TType::TType(Typelibrary::TField *, tagTYPEDESC * const, System::DelphiInterface<{583}...
+    @Typelibrary@TType@$bctr$qqrp19Typelibrary@TMethodxp11tagTYPEDESC35System@%DelphiInterface$9ITypeInfo% @308 ; Typelibrary::TType::TType(Typelibrary::TMethod *, tagTYPEDESC * const, System::DelphiInterface<{583}...
+    @Typelibrary@TType@$bctr$qqrp21Typelibrary@TConstantxp11tagTYPEDESC35System@%DelphiInterface$9ITypeInfo% @302 ; Typelibrary::TType::TType(Typelibrary::TConstant *, tagTYPEDESC * const, System::DelphiInterface<{583}...
+    @Typelibrary@TType@$bctr$qqrp22Typelibrary@TInterfacexp11tagTYPEDESC35System@%DelphiInterface$9ITypeInfo% @307 ; Typelibrary::TType::TType(Typelibrary::TInterface *, tagTYPEDESC * const, System::DelphiInterface<{583}...
+    @Typelibrary@TType@$bctr$qqrp22Typelibrary@TParameterxp11tagTYPEDESC35System@%DelphiInterface$9ITypeInfo% @309 ; Typelibrary::TType::TType(Typelibrary::TParameter *, tagTYPEDESC * const, System::DelphiInterface<{583}...
+    @Typelibrary@TType@$bctr$qqrp26Typelibrary@TDispInterfacexp11tagTYPEDESC35System@%DelphiInterface$9ITypeInfo% @306 ; Typelibrary::TType::TType(Typelibrary::TDispInterface *, tagTYPEDESC * const, System::DelphiInterface<{583}...
+    @Typelibrary@TType@$bctr$qqrp27Typelibrary@TModuleConstantxp11tagTYPEDESC35System@%DelphiInterface$9ITypeInfo% @305 ; Typelibrary::TType::TType(Typelibrary::TModuleConstant *, tagTYPEDESC * const, System::DelphiInterface<{583}...
+    @Typelibrary@TType@$bctr$qqrv  @310 ; __fastcall Typelibrary::TType::TType()
+    @Typelibrary@TType@$bdtr$qqrv  @301 ; __fastcall Typelibrary::TType::~TType()
+    @Typelibrary@TType@Assign$qqrp17Typelibrary@TType @299 ; __fastcall Typelibrary::TType::Assign(Typelibrary::TType *)
+    @Typelibrary@TType@AssignTypeLibrary$qqrp18Typelibrary@TAlias @292 ; __fastcall Typelibrary::TType::AssignTypeLibrary(Typelibrary::TAlias *)
+    @Typelibrary@TType@AssignTypeLibrary$qqrp18Typelibrary@TField @293 ; __fastcall Typelibrary::TType::AssignTypeLibrary(Typelibrary::TField *)
+    @Typelibrary@TType@AssignTypeLibrary$qqrp19Typelibrary@TMethod @297 ; __fastcall Typelibrary::TType::AssignTypeLibrary(Typelibrary::TMethod *)
+    @Typelibrary@TType@AssignTypeLibrary$qqrp21Typelibrary@TConstant @291 ; __fastcall Typelibrary::TType::AssignTypeLibrary(Typelibrary::TConstant *)
+    @Typelibrary@TType@AssignTypeLibrary$qqrp22Typelibrary@TInterface @296 ; __fastcall Typelibrary::TType::AssignTypeLibrary(Typelibrary::TInterface *)
+    @Typelibrary@TType@AssignTypeLibrary$qqrp22Typelibrary@TParameter @298 ; __fastcall Typelibrary::TType::AssignTypeLibrary(Typelibrary::TParameter *)
+    @Typelibrary@TType@AssignTypeLibrary$qqrp26Typelibrary@TDispInterface @295 ; __fastcall Typelibrary::TType::AssignTypeLibrary(Typelibrary::TDispInterface *)
+    @Typelibrary@TType@AssignTypeLibrary$qqrp27Typelibrary@TModuleConstant @294 ; __fastcall Typelibrary::TType::AssignTypeLibrary(Typelibrary::TModuleConstant *)
+    @Typelibrary@TType@GetModified$qqrv @286 ; __fastcall Typelibrary::TType::GetModified()
+    @Typelibrary@TType@Initialize$qqrxp11tagTYPEDESC35System@%DelphiInterface$9ITypeInfo% @300 ; Typelibrary::TType::Initialize(tagTYPEDESC * const, System::DelphiInterface<{583}...
+    @Typelibrary@TType@SetArrayKind$qqr19Comutils@TArrayKind @288 ; __fastcall Typelibrary::TType::SetArrayKind(Comutils::TArrayKind)
+    @Typelibrary@TType@SetIndirectionCount$qqri @289 ; __fastcall Typelibrary::TType::SetIndirectionCount(int)
+    @Typelibrary@TType@SetTypeLibrary$qqrp24Typelibrary@TTypeLibrary @290 ; __fastcall Typelibrary::TType::SetTypeLibrary(Typelibrary::TTypeLibrary *)
+    @Typelibrary@TType@SetVType$qqrus @287 ; __fastcall Typelibrary::TType::SetVType(unsigned short)
+    @Typelibrary@TTypeBase@        @500 ; Typelibrary::TTypeBase::
+    @Typelibrary@TTypeBase@$bctr$qqrv @398 ; __fastcall Typelibrary::TTypeBase::TTypeBase()
+    @Typelibrary@TTypeBase@$bctr$qqrx35System@%DelphiInterface$9ITypeInfo%i @397 ; Typelibrary::TTypeBase::TTypeBase(const System::DelphiInterface<{583}...
+    @Typelibrary@TTypeBase@$bdtr$qqrv @396 ; __fastcall Typelibrary::TTypeBase::~TTypeBase()
+    @Typelibrary@TTypeBase@GetModified$qqrv @394 ; __fastcall Typelibrary::TTypeBase::GetModified()
+    @Typelibrary@TTypeBase@IsValidName$qqrx20System@UnicodeString @395 ; __fastcall Typelibrary::TTypeBase::IsValidName(const System::UnicodeString)
+    @Typelibrary@TTypeBase@SetModified$qqro @393 ; __fastcall Typelibrary::TTypeBase::SetModified(bool)
+    @Typelibrary@TTypeBase@SetName$qqrx20System@UnicodeString @392 ; __fastcall Typelibrary::TTypeBase::SetName(const System::UnicodeString)
+    @Typelibrary@TTypeLibrary@     @416 ; Typelibrary::TTypeLibrary::
+    @Typelibrary@TTypeLibrary@$bctr$qqrv @79  ; __fastcall Typelibrary::TTypeLibrary::TTypeLibrary()
+    @Typelibrary@TTypeLibrary@$bdtr$qqrv @78  ; __fastcall Typelibrary::TTypeLibrary::~TTypeLibrary()
+    @Typelibrary@TTypeLibrary@Clear$qqrv @71  ; __fastcall Typelibrary::TTypeLibrary::Clear()
+    @Typelibrary@TTypeLibrary@Close$qqrv @72  ; __fastcall Typelibrary::TTypeLibrary::Close()
+    @Typelibrary@TTypeLibrary@GetModified$qqrv @70  ; __fastcall Typelibrary::TTypeLibrary::GetModified()
+    @Typelibrary@TTypeLibrary@IsValidName$qqrx20System@UnicodeString @74  ; __fastcall Typelibrary::TTypeLibrary::IsValidName(const System::UnicodeString)
+    @Typelibrary@TTypeLibrary@LoadFromFile$qqrx20System@UnicodeString @77  ; __fastcall Typelibrary::TTypeLibrary::LoadFromFile(const System::UnicodeString)
+    @Typelibrary@TTypeLibrary@LoadFromGuid$qqrrx5_GUID @76  ; __fastcall Typelibrary::TTypeLibrary::LoadFromGuid(const _GUID&)
+    @Typelibrary@TTypeLibrary@Open$qqr34System@%DelphiInterface$8ITypeLib% @73  ; Typelibrary::TTypeLibrary::Open(System::DelphiInterface<{583}...
+    @Typelibrary@TTypeLibrary@SaveToFile$qqrx20System@UnicodeString @75  ; __fastcall Typelibrary::TTypeLibrary::SaveToFile(const System::UnicodeString)
+    @Typelibrary@TTypeLibrary@SetFlags$qqr57System@%Set$30Typelibflags@TTypeLibFlagsTypet1$i0$t1$i3$% @65  ; Typelibrary::TTypeLibrary::SetFlags(System::Set<{583}...
+    @Typelibrary@TTypeLibrary@SetGuid$qqrrx5_GUID @68  ; __fastcall Typelibrary::TTypeLibrary::SetGuid(const _GUID&)
+    @Typelibrary@TTypeLibrary@SetLCID$qqrui @66  ; __fastcall Typelibrary::TTypeLibrary::SetLCID(unsigned int)
+    @Typelibrary@TTypeLibrary@SetModified$qqro @69  ; __fastcall Typelibrary::TTypeLibrary::SetModified(bool)
+    @Typelibrary@TTypeLibrary@SetName$qqrx20System@UnicodeString @67  ; __fastcall Typelibrary::TTypeLibrary::SetName(const System::UnicodeString)
+    @Typelibrary@TTypeLibrary@SetPlatform$qqri @64  ; __fastcall Typelibrary::TTypeLibrary::SetPlatform(int)
+    @Typelibrary@TTypeLibraryHelp@ @502 ; Typelibrary::TTypeLibraryHelp::
+    @Typelibrary@TTypeLibraryHelp@SetHelpFile$qqrx20System@UnicodeString @399 ; __fastcall Typelibrary::TTypeLibraryHelp::SetHelpFile(const System::UnicodeString)
+    @Typelibrary@TTypeLibraryHelp@SetHelpStringDLL$qqrx20System@UnicodeString @400 ; __fastcall Typelibrary::TTypeLibraryHelp::SetHelpStringDLL(const System::UnicodeString)
+    @Typelibrary@TTypeLibraryList@ @414 ; Typelibrary::TTypeLibraryList::
+    @Typelibrary@TTypeLibraryList@$bctr$qqrv @63  ; __fastcall Typelibrary::TTypeLibraryList::TTypeLibraryList()
+    @Typelibrary@TTypeLibraryList@$bdtr$qqrv @62  ; __fastcall Typelibrary::TTypeLibraryList::~TTypeLibraryList()
+    @Typelibrary@TTypeLibraryList@Add$qqrx20System@UnicodeStringrx5_GUID @57  ; __fastcall Typelibrary::TTypeLibraryList::Add(const System::UnicodeString, const _GUID&)
+    @Typelibrary@TTypeLibraryList@Clear$qqrv @56  ; __fastcall Typelibrary::TTypeLibraryList::Clear()
+    @Typelibrary@TTypeLibraryList@Delete$qqri @55  ; __fastcall Typelibrary::TTypeLibraryList::Delete(int)
+    @Typelibrary@TTypeLibraryList@Find$qqrrx5_GUID @54  ; __fastcall Typelibrary::TTypeLibraryList::Find(const _GUID&)
+    @Typelibrary@TTypeLibraryList@GetCount$qqrv @61  ; __fastcall Typelibrary::TTypeLibraryList::GetCount()
+    @Typelibrary@TTypeLibraryList@GetGuid$qqri @58  ; __fastcall Typelibrary::TTypeLibraryList::GetGuid(int)
+    @Typelibrary@TTypeLibraryList@GetItem$qqri @60  ; __fastcall Typelibrary::TTypeLibraryList::GetItem(int)
+    @Typelibrary@TTypeLibraryList@GetName$qqri @59  ; __fastcall Typelibrary::TTypeLibraryList::GetName(int)
+    @Typelibrary@TTypeObject@      @498 ; Typelibrary::TTypeObject::
+    @Typelibrary@TTypeObject@$bctr$qqrp24Typelibrary@TTypeLibraryx35System@%DelphiInterface$9ITypeInfo%p11tagTYPEATTRui @390 ; Typelibrary::TTypeObject::TTypeObject(Typelibrary::TTypeLibrary *, const System::DelphiInterface<{583}...
+    @Typelibrary@TTypeObject@$bctr$qqrv @391 ; __fastcall Typelibrary::TTypeObject::TTypeObject()
+    @Typelibrary@TTypeObject@$bdtr$qqrv @389 ; __fastcall Typelibrary::TTypeObject::~TTypeObject()
+    @Typelibrary@TTypeObject@GetModified$qqrv @384 ; __fastcall Typelibrary::TTypeObject::GetModified()
+    @Typelibrary@TTypeObject@IsValidName$qqrx20System@UnicodeString @385 ; __fastcall Typelibrary::TTypeObject::IsValidName(const System::UnicodeString)
+    @Typelibrary@TTypeObject@SetAlignment$qqri @386 ; __fastcall Typelibrary::TTypeObject::SetAlignment(int)
+    @Typelibrary@TTypeObject@SetGuid$qqrrx5_GUID @387 ; __fastcall Typelibrary::TTypeObject::SetGuid(const _GUID&)
+    @Typelibrary@TTypeObject@SetModified$qqro @383 ; __fastcall Typelibrary::TTypeObject::SetModified(bool)
+    @Typelibrary@TTypeObject@SetParent$qqrp24Typelibrary@TTypeLibrary @388 ; __fastcall Typelibrary::TTypeObject::SetParent(Typelibrary::TTypeLibrary *)
+    @Typelibrary@TTypeObjectList@  @496 ; Typelibrary::TTypeObjectList::
+    @Typelibrary@TTypeObjectList@$bctr$qqrv @382 ; __fastcall Typelibrary::TTypeObjectList::TTypeObjectList()
+    @Typelibrary@TTypeObjectList@$bctr$qqrynpqqrp23Typelibrary@TTypeObject$vt1ynpqqrv$v @381 ; __fastcall Typelibrary::TTypeObjectList::TTypeObjectList(void __fastcall __closure(*)(Typelibrary::TTypeObject *), void __fastcall __closure(*)(Typelibrary::TTypeObject *), void __fastcall __closure(*)())
+    @Typelibrary@TTypeObjectList@$bdtr$qqrv @380 ; __fastcall Typelibrary::TTypeObjectList::~TTypeObjectList()
+    @Typelibrary@TTypeObjectList@Add$qqrp23Typelibrary@TTypeObject @376 ; __fastcall Typelibrary::TTypeObjectList::Add(Typelibrary::TTypeObject *)
+    @Typelibrary@TTypeObjectList@Clear$qqrv @375 ; __fastcall Typelibrary::TTypeObjectList::Clear()
+    @Typelibrary@TTypeObjectList@Delete$qqri @374 ; __fastcall Typelibrary::TTypeObjectList::Delete(int)
+    @Typelibrary@TTypeObjectList@Delete$qqrp23Typelibrary@TTypeObject @373 ; __fastcall Typelibrary::TTypeObjectList::Delete(Typelibrary::TTypeObject *)
+    @Typelibrary@TTypeObjectList@GetCount$qqrv @379 ; __fastcall Typelibrary::TTypeObjectList::GetCount()
+    @Typelibrary@TTypeObjectList@GetItem$qqri @378 ; __fastcall Typelibrary::TTypeObjectList::GetItem(int)
+    @Typelibrary@TTypeObjectList@GetModified$qqrv @377 ; __fastcall Typelibrary::TTypeObjectList::GetModified()
+    @Typelibrary@TUnion@           @432 ; Typelibrary::TUnion::
+    @Typelibrary@TUnion@$bctr$qqrp24Typelibrary@TTypeLibraryx35System@%DelphiInterface$9ITypeInfo%p11tagTYPEATTRui @134 ; Typelibrary::TUnion::TUnion(Typelibrary::TTypeLibrary *, const System::DelphiInterface<{583}...
+    @Typelibrary@TUnion@$bctr$qqrv @135 ; __fastcall Typelibrary::TUnion::TUnion()
+    @Typelibrary@TUnion@$bdtr$qqrv @133 ; __fastcall Typelibrary::TUnion::~TUnion()
+    @Typelibrary@TUnion@GetModified$qqrv @132 ; __fastcall Typelibrary::TUnion::GetModified()
+    @Typelibrary@TUnionList@       @430 ; Typelibrary::TUnionList::
+    @Typelibrary@TUnionList@$bctr$qqrv @131 ; __fastcall Typelibrary::TUnionList::TUnionList()
+    @Typelibrary@TUnionList@$bctr$qqrynpqqrp23Typelibrary@TTypeObject$vt1ynpqqrv$v @130 ; __fastcall Typelibrary::TUnionList::TUnionList(void __fastcall __closure(*)(Typelibrary::TTypeObject *), void __fastcall __closure(*)(Typelibrary::TTypeObject *), void __fastcall __closure(*)())
+    @Typelibrary@TUnionList@$bdtr$qqrv @129 ; __fastcall Typelibrary::TUnionList::~TUnionList()
+    @Typelibrary@TUnionList@Add$qqrp18Typelibrary@TUnion @125 ; __fastcall Typelibrary::TUnionList::Add(Typelibrary::TUnion *)
+    @Typelibrary@TUnionList@Clear$qqrv @124 ; __fastcall Typelibrary::TUnionList::Clear()
+    @Typelibrary@TUnionList@Delete$qqri @123 ; __fastcall Typelibrary::TUnionList::Delete(int)
+    @Typelibrary@TUnionList@GetCount$qqrv @128 ; __fastcall Typelibrary::TUnionList::GetCount()
+    @Typelibrary@TUnionList@GetItem$qqri @127 ; __fastcall Typelibrary::TUnionList::GetItem(int)
+    @Typelibrary@TUnionList@GetModified$qqrv @126 ; __fastcall Typelibrary::TUnionList::GetModified()
+    @Typelibrary@TVarObject@       @494 ; Typelibrary::TVarObject::
+    @Typelibrary@TVarObject@$bctr$qqrv @372 ; __fastcall Typelibrary::TVarObject::TVarObject()
+    @Typelibrary@TVarObject@$bctr$qqrxp23Typelibrary@TTypeObjectx35System@%DelphiInterface$9ITypeInfo%xp10tagVARDESC @371 ; Typelibrary::TVarObject::TVarObject(Typelibrary::TTypeObject * const, const System::DelphiInterface<{583}...
+    @Typelibrary@TVarObject@$bdtr$qqrv @370 ; __fastcall Typelibrary::TVarObject::~TVarObject()
+    @Typelibrary@TVarObject@GetModified$qqrv @364 ; __fastcall Typelibrary::TVarObject::GetModified()
+    @Typelibrary@TVarObject@SetFlags$qqr57System@%Set$29Typelibflags@TMethodFlagsTypet1$i0$t1$i12$% @367 ; Typelibrary::TVarObject::SetFlags(System::Set<{583}...
+    @Typelibrary@TVarObject@SetKind$qqr19Comutils@TConstKind @365 ; __fastcall Typelibrary::TVarObject::SetKind(Comutils::TConstKind)
+    @Typelibrary@TVarObject@SetModified$qqro @363 ; __fastcall Typelibrary::TVarObject::SetModified(bool)
+    @Typelibrary@TVarObject@SetName$qqrx20System@UnicodeString @369 ; __fastcall Typelibrary::TVarObject::SetName(const System::UnicodeString)
+    @Typelibrary@TVarObject@SetOffset$qqri @366 ; __fastcall Typelibrary::TVarObject::SetOffset(int)
+    @Typelibrary@TVarObject@SetParent$qqrp23Typelibrary@TTypeObject @368 ; __fastcall Typelibrary::TVarObject::SetParent(Typelibrary::TTypeObject *)
+    @Typelibrary@TVersion@         @506 ; Typelibrary::TVersion::
+    @Typelibrary@TVersion@$bctr$qqrp11tagTLIBATTR @410 ; __fastcall Typelibrary::TVersion::TVersion(tagTLIBATTR *)
+    @Typelibrary@TVersion@$bctr$qqrp11tagTYPEATTR @411 ; __fastcall Typelibrary::TVersion::TVersion(tagTYPEATTR *)
+    @Typelibrary@TVersion@$bctr$qqrv @412 ; __fastcall Typelibrary::TVersion::TVersion()
+    @Typelibrary@TVersion@FromString$qqrx20System@UnicodeString @408 ; __fastcall Typelibrary::TVersion::FromString(const System::UnicodeString)
+    @Typelibrary@TVersion@SetMajorVersion$qqrus @407 ; __fastcall Typelibrary::TVersion::SetMajorVersion(unsigned short)
+    @Typelibrary@TVersion@SetMinorVersion$qqrus @406 ; __fastcall Typelibrary::TVersion::SetMinorVersion(unsigned short)
+    @Typelibrary@TVersion@ToString$qqrv @409 ; __fastcall Typelibrary::TVersion::ToString()
+    @Typelibrary@initialization$qqrv @52  ; __fastcall Typelibrary::initialization()
+    @Typelibraryimages@Finalization$qqrv @629 ; __fastcall Typelibraryimages::Finalization()
+    @Typelibraryimages@TTypeLibraryDataModule@ @632 ; Typelibraryimages::TTypeLibraryDataModule::
+    @Typelibraryimages@TypeLibraryDataModule @630 ; Typelibraryimages::TypeLibraryDataModule
+    @Typelibraryimages@initialization$qqrv @628 ; __fastcall Typelibraryimages::initialization()
+    @Typelibraryviewreg@Finalization$qqrv @953 ; __fastcall Typelibraryviewreg::Finalization()
+    @Typelibraryviewreg@initialization$qqrv @952 ; __fastcall Typelibraryviewreg::initialization()
+    @Typelibutils@Compare$qqrp17Typelibrary@THelpt1p23System@Classes@TStrings @535 ; __fastcall Typelibutils::Compare(Typelibrary::THelp *, Typelibrary::THelp *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp17Typelibrary@TTypet1p23System@Classes@TStrings @547 ; __fastcall Typelibutils::Compare(Typelibrary::TType *, Typelibrary::TType *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp18Typelibrary@TAliast1p23System@Classes@TStrings @532 ; __fastcall Typelibutils::Compare(Typelibrary::TAlias *, Typelibrary::TAlias *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp18Typelibrary@TFieldt1p23System@Classes@TStrings @522 ; __fastcall Typelibutils::Compare(Typelibrary::TField *, Typelibrary::TField *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp18Typelibrary@TUniont1p23System@Classes@TStrings @530 ; __fastcall Typelibutils::Compare(Typelibrary::TUnion *, Typelibrary::TUnion *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp19Typelibrary@TMethodt1p23System@Classes@TStrings @542 ; __fastcall Typelibutils::Compare(Typelibrary::TMethod *, Typelibrary::TMethod *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp19Typelibrary@TModulet1p23System@Classes@TStrings @516 ; __fastcall Typelibutils::Compare(Typelibrary::TModule *, Typelibrary::TModule *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp19Typelibrary@TRecordt1p23System@Classes@TStrings @534 ; __fastcall Typelibutils::Compare(Typelibrary::TRecord *, Typelibrary::TRecord *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp20Typelibrary@TCoClasst1p23System@Classes@TStrings @514 ; __fastcall Typelibutils::Compare(Typelibrary::TCoClass *, Typelibrary::TCoClass *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp20Typelibrary@TVersiont1p23System@Classes@TStrings @536 ; __fastcall Typelibutils::Compare(Typelibrary::TVersion *, Typelibrary::TVersion *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp21Typelibrary@TConstantt1p23System@Classes@TStrings @526 ; __fastcall Typelibutils::Compare(Typelibrary::TConstant *, Typelibrary::TConstant *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp21Typelibrary@TPropertyt1p23System@Classes@TStrings @540 ; __fastcall Typelibutils::Compare(Typelibrary::TProperty *, Typelibrary::TProperty *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp22Typelibrary@TAliasListt1p23System@Classes@TStrings @531 ; __fastcall Typelibutils::Compare(Typelibrary::TAliasList *, Typelibrary::TAliasList *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp22Typelibrary@TFieldListt1p23System@Classes@TStrings @521 ; __fastcall Typelibutils::Compare(Typelibrary::TFieldList *, Typelibrary::TFieldList *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp22Typelibrary@TInterfacet1p23System@Classes@TStrings @518 ; __fastcall Typelibutils::Compare(Typelibrary::TInterface *, Typelibrary::TInterface *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp22Typelibrary@TParametert1p23System@Classes@TStrings @544 ; __fastcall Typelibutils::Compare(Typelibrary::TParameter *, Typelibrary::TParameter *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp22Typelibrary@TUnionListt1p23System@Classes@TStrings @529 ; __fastcall Typelibutils::Compare(Typelibrary::TUnionList *, Typelibrary::TUnionList *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp23Typelibrary@TCustomTypet1p23System@Classes@TStrings @548 ; __fastcall Typelibutils::Compare(Typelibrary::TCustomType *, Typelibrary::TCustomType *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp23Typelibrary@TMethodListt1p23System@Classes@TStrings @541 ; __fastcall Typelibutils::Compare(Typelibrary::TMethodList *, Typelibrary::TMethodList *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp23Typelibrary@TModuleListt1p23System@Classes@TStrings @515 ; __fastcall Typelibutils::Compare(Typelibrary::TModuleList *, Typelibrary::TModuleList *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp23Typelibrary@TRecordListt1p23System@Classes@TStrings @533 ; __fastcall Typelibutils::Compare(Typelibrary::TRecordList *, Typelibrary::TRecordList *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp24Typelibrary@TCoClassListt1p23System@Classes@TStrings @513 ; __fastcall Typelibutils::Compare(Typelibrary::TCoClassList *, Typelibrary::TCoClassList *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp24Typelibrary@TEnumerationt1p23System@Classes@TStrings @528 ; __fastcall Typelibutils::Compare(Typelibrary::TEnumeration *, Typelibrary::TEnumeration *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp24Typelibrary@TTypeLibraryt1p23System@Classes@TStrings @511 ; __fastcall Typelibutils::Compare(Typelibrary::TTypeLibrary *, Typelibrary::TTypeLibrary *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp25Typelibrary@TConstantListt1p23System@Classes@TStrings @525 ; __fastcall Typelibutils::Compare(Typelibrary::TConstantList *, Typelibrary::TConstantList *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp25Typelibrary@TModuleMethodt1p23System@Classes@TStrings @538 ; __fastcall Typelibutils::Compare(Typelibrary::TModuleMethod *, Typelibrary::TModuleMethod *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp25Typelibrary@TPropertyListt1p23System@Classes@TStrings @539 ; __fastcall Typelibutils::Compare(Typelibrary::TPropertyList *, Typelibrary::TPropertyList *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp26Typelibrary@TDispInterfacet1p23System@Classes@TStrings @520 ; __fastcall Typelibutils::Compare(Typelibrary::TDispInterface *, Typelibrary::TDispInterface *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp26Typelibrary@TInterfaceListt1p23System@Classes@TStrings @517 ; __fastcall Typelibutils::Compare(Typelibrary::TInterfaceList *, Typelibrary::TInterfaceList *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp26Typelibrary@TParameterListt1p23System@Classes@TStrings @543 ; __fastcall Typelibutils::Compare(Typelibrary::TParameterList *, Typelibrary::TParameterList *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp27Typelibrary@TCustomDataItemt1p23System@Classes@TStrings @546 ; __fastcall Typelibutils::Compare(Typelibrary::TCustomDataItem *, Typelibrary::TCustomDataItem *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp27Typelibrary@TCustomDataListt1p23System@Classes@TStrings @545 ; __fastcall Typelibutils::Compare(Typelibrary::TCustomDataList *, Typelibrary::TCustomDataList *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp27Typelibrary@TModuleConstantt1p23System@Classes@TStrings @524 ; __fastcall Typelibutils::Compare(Typelibrary::TModuleConstant *, Typelibrary::TModuleConstant *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp28Typelibrary@TEnumerationListt1p23System@Classes@TStrings @527 ; __fastcall Typelibutils::Compare(Typelibrary::TEnumerationList *, Typelibrary::TEnumerationList *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp28Typelibrary@TTypeLibraryListt1p23System@Classes@TStrings @512 ; __fastcall Typelibutils::Compare(Typelibrary::TTypeLibraryList *, Typelibrary::TTypeLibraryList *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp29Typelibrary@TModuleMethodListt1p23System@Classes@TStrings @537 ; __fastcall Typelibutils::Compare(Typelibrary::TModuleMethodList *, Typelibrary::TModuleMethodList *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp30Typelibrary@TDispInterfaceListt1p23System@Classes@TStrings @519 ; __fastcall Typelibutils::Compare(Typelibrary::TDispInterfaceList *, Typelibrary::TDispInterfaceList *, System::Classes::TStrings *)
+    @Typelibutils@Compare$qqrp31Typelibrary@TModuleConstantListt1p23System@Classes@TStrings @523 ; __fastcall Typelibutils::Compare(Typelibrary::TModuleConstantList *, Typelibrary::TModuleConstantList *, System::Classes::TStrings *)
+    @Typelibutils@Finalization$qqrv @510 ; __fastcall Typelibutils::Finalization()
+    @Typelibutils@IDLToParameter$qqr20System@UnicodeString @551 ; __fastcall Typelibutils::IDLToParameter(System::UnicodeString)
+    @Typelibutils@IDLToType$qqr20System@UnicodeString @549 ; __fastcall Typelibutils::IDLToType(System::UnicodeString)
+    @Typelibutils@IsTypeLib$qqrx20System@UnicodeString @553 ; __fastcall Typelibutils::IsTypeLib(const System::UnicodeString)
+    @Typelibutils@ParameterToIDL$qqrp22Typelibrary@TParameter @552 ; __fastcall Typelibutils::ParameterToIDL(Typelibrary::TParameter *)
+    @Typelibutils@TypeToIDL$qqrp17Typelibrary@TType @550 ; __fastcall Typelibutils::TypeToIDL(Typelibrary::TType *)
+    @Typelibutils@initialization$qqrv @509 ; __fastcall Typelibutils::initialization()
+    Finalize                       @966 ; Finalize
+    Initialize                     @967 ; Initialize

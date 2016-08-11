@@ -1,0 +1,19 @@
+LIBRARY     INETDBBDE210.BPL
+
+EXPORTS
+    @$xp$32Bde@Dbbdeweb@TQueryTableProducer @8   ; __tpdsc__ Bde::Dbbdeweb::TQueryTableProducer
+    @Bde@Dbbdeweb@Finalization$qqrv @2   ; __fastcall Bde::Dbbdeweb::Finalization()
+    @Bde@Dbbdeweb@TQueryTableProducer@ @9   ; Bde::Dbbdeweb::TQueryTableProducer::
+    @Bde@Dbbdeweb@TQueryTableProducer@Content$qqrv @7   ; __fastcall Bde::Dbbdeweb::TQueryTableProducer::Content()
+    @Bde@Dbbdeweb@TQueryTableProducer@GetDataSet$qqrv @6   ; __fastcall Bde::Dbbdeweb::TQueryTableProducer::GetDataSet()
+    @Bde@Dbbdeweb@TQueryTableProducer@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @5   ; __fastcall Bde::Dbbdeweb::TQueryTableProducer::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Bde@Dbbdeweb@TQueryTableProducer@SetDataSet$qqrp16Data@Db@TDataSet @4   ; __fastcall Bde::Dbbdeweb::TQueryTableProducer::SetDataSet(Data::Db::TDataSet *)
+    @Bde@Dbbdeweb@TQueryTableProducer@SetQuery$qqrp19Bde@Dbtables@TQuery @3   ; __fastcall Bde::Dbbdeweb::TQueryTableProducer::SetQuery(Bde::Dbtables::TQuery *)
+    @Bde@Dbbdeweb@initialization$qqrv @1   ; __fastcall Bde::Dbbdeweb::initialization()
+    @GetPackageInfoTable           @16  ; GetPackageInfoTable
+    @Inetdbbde@@GetPackageInfoTable$qqrv @13  ; Inetdbbde::__linkproc__ __fastcall GetPackageInfoTable()
+    @Inetdbbde@@PackageLoad$qqrv   @12  ; Inetdbbde::__linkproc__ __fastcall PackageLoad()
+    @Inetdbbde@@PackageUnload$qqrv @11  ; Inetdbbde::__linkproc__ __fastcall PackageUnload()
+    @Inetdbbde@initialization$qqrv @10  ; __fastcall Inetdbbde::initialization()
+    Finalize                       @14  ; Finalize
+    Initialize                     @15  ; Initialize

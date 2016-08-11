@@ -1,0 +1,314 @@
+LIBRARY     TGIDE210.BPL
+
+EXPORTS
+    @$xp$23Modelviewfrm@TModelView @62  ; __tpdsc__ Modelviewfrm::TModelView
+    @$xp$24Togetherdockable@TQAView @155 ; __tpdsc__ Togetherdockable::TQAView
+    @$xp$26Togetheractn@TModelActions @173 ; __tpdsc__ Togetheractn::TModelActions
+    @$xp$28Togetherdockable@TUsagesView @151 ; __tpdsc__ Togetherdockable::TUsagesView
+    @$xp$29Classbrowserfrm@TClassBrowser @87  ; __tpdsc__ Classbrowserfrm::TClassBrowser
+    @$xp$29Togetherdockable@TMetricsView @157 ; __tpdsc__ Togetherdockable::TMetricsView
+    @$xp$30Togethercmds@TTogetherCommands @126 ; __tpdsc__ Togethercmds::TTogetherCommands
+    @$xp$32Designproject@TDesignApplication @110 ; __tpdsc__ Designproject::TDesignApplication
+    @$xp$34Designproject@TDesignApplication15 @108 ; __tpdsc__ Designproject::TDesignApplication15
+    @$xp$34Designproject@TDesignApplication20 @106 ; __tpdsc__ Designproject::TDesignApplication20
+    @$xp$34Togetherdockable@TRefactoringsView @153 ; __tpdsc__ Togetherdockable::TRefactoringsView
+    @$xp$35Designproject@TDesignApplicationMDL @104 ; __tpdsc__ Designproject::TDesignApplicationMDL
+    @$xp$35Designproject@TDesignApplicationMDX @102 ; __tpdsc__ Designproject::TDesignApplicationMDX
+    @$xp$36Togetherdocmodule@TTogetherDocModule @300 ; __tpdsc__ Togetherdocmodule::TTogetherDocModule
+    @$xp$36Togetheroptionspage@TTogetherOptions @181 ; __tpdsc__ Togetheroptionspage::TTogetherOptions
+    @$xp$37Togethereditorframe@TTogetherEditView @258 ; __tpdsc__ Togethereditorframe::TTogetherEditView
+    @$xp$37Togetheroptions@TTogetherAddInOptions @201 ; __tpdsc__ Togetheroptions::TTogetherAddInOptions
+    @$xp$38Togethereditorframe@ITogetherDocModule @262 ; __tpdsc__ Togethereditorframe::ITogetherDocModule
+    @$xp$38Togethereditorframe@TTogetherEditFrame @260 ; __tpdsc__ Togethereditorframe::TTogetherEditFrame
+    @$xp$40Togetheroptionsmain@TTogetherOptionsMain @188 ; __tpdsc__ Togetheroptionsmain::TTogetherOptionsMain
+    @$xp$41Togetherdocmodule@TCodeITogetherDocModule @298 ; __tpdsc__ Togetherdocmodule::TCodeITogetherDocModule
+    @$xp$41Togetherdocmodule@TTogetherDocOpenHandler @296 ; __tpdsc__ Togetherdocmodule::TTogetherDocOpenHandler
+    @$xp$46Embarcadero_studio_modeling_tlb@ITogetherHost2 @37  ; __tpdsc__ Embarcadero_studio_modeling_tlb::ITogetherHost2
+    @$xp$47Embarcadero_modeling_internalapi_tlb@IFormatter @6   ; __tpdsc__ Embarcadero_modeling_internalapi_tlb::IFormatter
+    @$xp$49Embarcadero_studio_modeling_tlb@ITogetherInterop2 @35  ; __tpdsc__ Embarcadero_studio_modeling_tlb::ITogetherInterop2
+    @$xp$50Embarcadero_studio_modeling_tlb@CoTogetherInterop2 @30  ; __tpdsc__ Embarcadero_studio_modeling_tlb::CoTogetherInterop2
+    @$xp$50Embarcadero_studio_modeling_tlb@ITogetherHost2Disp @36  ; __tpdsc__ Embarcadero_studio_modeling_tlb::ITogetherHost2Disp
+    @$xp$50Togetheroptionsformatter@TTogetherOptionsFormatter @194 ; __tpdsc__ Togetheroptionsformatter::TTogetherOptionsFormatter
+    @$xp$51Embarcadero_modeling_internalapi_tlb@IFormatterDisp @5   ; __tpdsc__ Embarcadero_modeling_internalapi_tlb::IFormatterDisp
+    @$xp$51Embarcadero_studio_modeling_tlb@IBDSDiagramDocument @39  ; __tpdsc__ Embarcadero_studio_modeling_tlb::IBDSDiagramDocument
+    @$xp$53Embarcadero_studio_modeling_tlb@ITogetherInterop2Disp @34  ; __tpdsc__ Embarcadero_studio_modeling_tlb::ITogetherInterop2Disp
+    @$xp$54Embarcadero_modeling_internalapi_tlb@IComEditorService @12  ; __tpdsc__ Embarcadero_modeling_internalapi_tlb::IComEditorService
+    @$xp$54Embarcadero_modeling_internalapi_tlb@IFormatterService @8   ; __tpdsc__ Embarcadero_modeling_internalapi_tlb::IFormatterService
+    @$xp$54Embarcadero_modeling_internalapi_tlb@IModelViewService @4   ; __tpdsc__ Embarcadero_modeling_internalapi_tlb::IModelViewService
+    @$xp$54Embarcadero_modeling_internalapi_tlb@ITlbDeclaredNames @10  ; __tpdsc__ Embarcadero_modeling_internalapi_tlb::ITlbDeclaredNames
+    @$xp$54Embarcadero_studio_modeling_tlb@ITogetherOptionInterop @33  ; __tpdsc__ Embarcadero_studio_modeling_tlb::ITogetherOptionInterop
+    @$xp$55Embarcadero_studio_modeling_tlb@CoTogetherOptionInterop @28  ; __tpdsc__ Embarcadero_studio_modeling_tlb::CoTogetherOptionInterop
+    @$xp$55Embarcadero_studio_modeling_tlb@IBDSDiagramDocumentDisp @38  ; __tpdsc__ Embarcadero_studio_modeling_tlb::IBDSDiagramDocumentDisp
+    @$xp$57Embarcadero_modeling_internalapi_tlb@IClassBrowserService @14  ; __tpdsc__ Embarcadero_modeling_internalapi_tlb::IClassBrowserService
+    @$xp$58Embarcadero_modeling_internalapi_tlb@IComEditorServiceDisp @11  ; __tpdsc__ Embarcadero_modeling_internalapi_tlb::IComEditorServiceDisp
+    @$xp$58Embarcadero_modeling_internalapi_tlb@IFormatterServiceDisp @7   ; __tpdsc__ Embarcadero_modeling_internalapi_tlb::IFormatterServiceDisp
+    @$xp$58Embarcadero_modeling_internalapi_tlb@IModelViewServiceDisp @3   ; __tpdsc__ Embarcadero_modeling_internalapi_tlb::IModelViewServiceDisp
+    @$xp$58Embarcadero_modeling_internalapi_tlb@ITlbDeclaredNamesDisp @9   ; __tpdsc__ Embarcadero_modeling_internalapi_tlb::ITlbDeclaredNamesDisp
+    @$xp$58Embarcadero_studio_modeling_tlb@ITogetherOptionInteropDisp @32  ; __tpdsc__ Embarcadero_studio_modeling_tlb::ITogetherOptionInteropDisp
+    @$xp$61Embarcadero_modeling_internalapi_tlb@IClassBrowserServiceDisp @13  ; __tpdsc__ Embarcadero_modeling_internalapi_tlb::IClassBrowserServiceDisp
+    @Classbrowserfrm@ClassBrowser  @86  ; Classbrowserfrm::ClassBrowser
+    @Classbrowserfrm@Finalization$qqrv @65  ; __fastcall Classbrowserfrm::Finalization()
+    @Classbrowserfrm@IsClassBrowserVisibleG$qqrv @85  ; __fastcall Classbrowserfrm::IsClassBrowserVisibleG()
+    @Classbrowserfrm@RegisterTogetherClassBrowser$qqrv @67  ; __fastcall Classbrowserfrm::RegisterTogetherClassBrowser()
+    @Classbrowserfrm@ShowClassBrowser$qqrv @84  ; __fastcall Classbrowserfrm::ShowClassBrowser()
+    @Classbrowserfrm@TClassBrowser@ @88  ; Classbrowserfrm::TClassBrowser::
+    @Classbrowserfrm@TClassBrowser@FillProjectButton$qqrv @76  ; __fastcall Classbrowserfrm::TClassBrowser::FillProjectButton()
+    @Classbrowserfrm@TClassBrowser@FillViewButton$qqrv @77  ; __fastcall Classbrowserfrm::TClassBrowser::FillViewButton()
+    @Classbrowserfrm@TClassBrowser@FormActivate$qqrp14System@TObject @70  ; __fastcall Classbrowserfrm::TClassBrowser::FormActivate(System::TObject *)
+    @Classbrowserfrm@TClassBrowser@FormClose$qqrp14System@TObjectr27System@Uitypes@TCloseAction @73  ; __fastcall Classbrowserfrm::TClassBrowser::FormClose(System::TObject *, System::Uitypes::TCloseAction&)
+    @Classbrowserfrm@TClassBrowser@FormCreate$qqrp14System@TObject @82  ; __fastcall Classbrowserfrm::TClassBrowser::FormCreate(System::TObject *)
+    @Classbrowserfrm@TClassBrowser@FormDeactivate$qqrp14System@TObject @69  ; __fastcall Classbrowserfrm::TClassBrowser::FormDeactivate(System::TObject *)
+    @Classbrowserfrm@TClassBrowser@FormEndDock$qqrp14System@TObjectt1ii @72  ; __fastcall Classbrowserfrm::TClassBrowser::FormEndDock(System::TObject *, System::TObject *, int, int)
+    @Classbrowserfrm@TClassBrowser@FormHide$qqrp14System@TObject @74  ; __fastcall Classbrowserfrm::TClassBrowser::FormHide(System::TObject *)
+    @Classbrowserfrm@TClassBrowser@FormShow$qqrp14System@TObject @75  ; __fastcall Classbrowserfrm::TClassBrowser::FormShow(System::TObject *)
+    @Classbrowserfrm@TClassBrowser@FormUnDock$qqrp14System@TObjectp21Vcl@Controls@TControlp24Vcl@Controls@TWinControlro @71  ; __fastcall Classbrowserfrm::TClassBrowser::FormUnDock(System::TObject *, Vcl::Controls::TControl *, Vcl::Controls::TWinControl *, bool&)
+    @Classbrowserfrm@TClassBrowser@InitImageList$qqrv @81  ; __fastcall Classbrowserfrm::TClassBrowser::InitImageList()
+    @Classbrowserfrm@TClassBrowser@IsActive$qqrv @68  ; __fastcall Classbrowserfrm::TClassBrowser::IsActive()
+    @Classbrowserfrm@TClassBrowser@ProjectClick$qqrp14System@TObject @79  ; __fastcall Classbrowserfrm::TClassBrowser::ProjectClick(System::TObject *)
+    @Classbrowserfrm@TClassBrowser@UpdateProjects$qqrv @78  ; __fastcall Classbrowserfrm::TClassBrowser::UpdateProjects()
+    @Classbrowserfrm@TClassBrowser@ViewTypeClick$qqrp14System@TObject @80  ; __fastcall Classbrowserfrm::TClassBrowser::ViewTypeClick(System::TObject *)
+    @Classbrowserfrm@UnregisterTogetherClassBrowser$qqrv @66  ; __fastcall Classbrowserfrm::UnregisterTogetherClassBrowser()
+    @Classbrowserfrm@UpdateClassBrowser$qqrv @83  ; __fastcall Classbrowserfrm::UpdateClassBrowser()
+    @Classbrowserfrm@initialization$qqrv @64  ; __fastcall Classbrowserfrm::initialization()
+    @Designproject@Finalization$qqrv @90  ; __fastcall Designproject::Finalization()
+    @Designproject@InitDesignPersonality$qqrv @101 ; __fastcall Designproject::InitDesignPersonality()
+    @Designproject@RegisterDesignProjectSupport$qqrv @92  ; __fastcall Designproject::RegisterDesignProjectSupport()
+    @Designproject@TDesignApplication15@ @109 ; Designproject::TDesignApplication15::
+    @Designproject@TDesignApplication15@GetProjectCreator$qqrv @96  ; __fastcall Designproject::TDesignApplication15::GetProjectCreator()
+    @Designproject@TDesignApplication20@ @107 ; Designproject::TDesignApplication20::
+    @Designproject@TDesignApplication20@GetProjectCreator$qqrv @95  ; __fastcall Designproject::TDesignApplication20::GetProjectCreator()
+    @Designproject@TDesignApplication@ @111 ; Designproject::TDesignApplication::
+    @Designproject@TDesignApplication@$bctr$qqrv @97  ; __fastcall Designproject::TDesignApplication::TDesignApplication()
+    @Designproject@TDesignApplication@GetPersonality$qqrv @100 ; __fastcall Designproject::TDesignApplication::GetPersonality()
+    @Designproject@TDesignApplication@GetProjectFileName$qqrv @99  ; __fastcall Designproject::TDesignApplication::GetProjectFileName()
+    @Designproject@TDesignApplication@Selected$qqr26Gallerytypes@TBrowseOption @98  ; __fastcall Designproject::TDesignApplication::Selected(Gallerytypes::TBrowseOption)
+    @Designproject@TDesignApplicationMDL@ @105 ; Designproject::TDesignApplicationMDL::
+    @Designproject@TDesignApplicationMDL@GetProjectCreator$qqrv @94  ; __fastcall Designproject::TDesignApplicationMDL::GetProjectCreator()
+    @Designproject@TDesignApplicationMDX@ @103 ; Designproject::TDesignApplicationMDX::
+    @Designproject@TDesignApplicationMDX@GetProjectCreator$qqrv @93  ; __fastcall Designproject::TDesignApplicationMDX::GetProjectCreator()
+    @Designproject@UnregisterDesignProjectSupport$qqrv @91  ; __fastcall Designproject::UnregisterDesignProjectSupport()
+    @Designproject@initialization$qqrv @89  ; __fastcall Designproject::initialization()
+    @Embarcadero_modeling_classbrowser_tlb@Finalization$qqrv @303 ; __fastcall Embarcadero_modeling_classbrowser_tlb::Finalization()
+    @Embarcadero_modeling_classbrowser_tlb@LIBID_Embarcadero_Modeling_ClassBrowser @304 ; Embarcadero_modeling_classbrowser_tlb::LIBID_Embarcadero_Modeling_ClassBrowser
+    @Embarcadero_modeling_classbrowser_tlb@initialization$qqrv @302 ; __fastcall Embarcadero_modeling_classbrowser_tlb::initialization()
+    @Embarcadero_modeling_internalapi_tlb@Finalization$qqrv @2   ; __fastcall Embarcadero_modeling_internalapi_tlb::Finalization()
+    @Embarcadero_modeling_internalapi_tlb@IID_IClassBrowserService @20  ; Embarcadero_modeling_internalapi_tlb::IID_IClassBrowserService
+    @Embarcadero_modeling_internalapi_tlb@IID_IComEditorService @19  ; Embarcadero_modeling_internalapi_tlb::IID_IComEditorService
+    @Embarcadero_modeling_internalapi_tlb@IID_IFormatter @16  ; Embarcadero_modeling_internalapi_tlb::IID_IFormatter
+    @Embarcadero_modeling_internalapi_tlb@IID_IFormatterService @17  ; Embarcadero_modeling_internalapi_tlb::IID_IFormatterService
+    @Embarcadero_modeling_internalapi_tlb@IID_IModelViewService @15  ; Embarcadero_modeling_internalapi_tlb::IID_IModelViewService
+    @Embarcadero_modeling_internalapi_tlb@IID_ITlbDeclaredNames @18  ; Embarcadero_modeling_internalapi_tlb::IID_ITlbDeclaredNames
+    @Embarcadero_modeling_internalapi_tlb@LIBID_Embarcadero_Modeling_InternalAPI @21  ; Embarcadero_modeling_internalapi_tlb::LIBID_Embarcadero_Modeling_InternalAPI
+    @Embarcadero_modeling_internalapi_tlb@initialization$qqrv @1   ; __fastcall Embarcadero_modeling_internalapi_tlb::initialization()
+    @Embarcadero_studio_modeling_tlb@CLASS_TogetherInterop2 @41  ; Embarcadero_studio_modeling_tlb::CLASS_TogetherInterop2
+    @Embarcadero_studio_modeling_tlb@CLASS_TogetherOptionInterop @40  ; Embarcadero_studio_modeling_tlb::CLASS_TogetherOptionInterop
+    @Embarcadero_studio_modeling_tlb@CoTogetherInterop2@ @31  ; Embarcadero_studio_modeling_tlb::CoTogetherInterop2::
+    @Embarcadero_studio_modeling_tlb@CoTogetherInterop2@Create$qqrv @27  ; __fastcall Embarcadero_studio_modeling_tlb::CoTogetherInterop2::Create()
+    @Embarcadero_studio_modeling_tlb@CoTogetherInterop2@CreateRemote$qqrx20System@UnicodeString @26  ; __fastcall Embarcadero_studio_modeling_tlb::CoTogetherInterop2::CreateRemote(const System::UnicodeString)
+    @Embarcadero_studio_modeling_tlb@CoTogetherOptionInterop@ @29  ; Embarcadero_studio_modeling_tlb::CoTogetherOptionInterop::
+    @Embarcadero_studio_modeling_tlb@CoTogetherOptionInterop@Create$qqrv @25  ; __fastcall Embarcadero_studio_modeling_tlb::CoTogetherOptionInterop::Create()
+    @Embarcadero_studio_modeling_tlb@CoTogetherOptionInterop@CreateRemote$qqrx20System@UnicodeString @24  ; __fastcall Embarcadero_studio_modeling_tlb::CoTogetherOptionInterop::CreateRemote(const System::UnicodeString)
+    @Embarcadero_studio_modeling_tlb@Finalization$qqrv @23  ; __fastcall Embarcadero_studio_modeling_tlb::Finalization()
+    @Embarcadero_studio_modeling_tlb@IID_IBDSDiagramDocument @45  ; Embarcadero_studio_modeling_tlb::IID_IBDSDiagramDocument
+    @Embarcadero_studio_modeling_tlb@IID_ITogetherHost2 @44  ; Embarcadero_studio_modeling_tlb::IID_ITogetherHost2
+    @Embarcadero_studio_modeling_tlb@IID_ITogetherInterop2 @43  ; Embarcadero_studio_modeling_tlb::IID_ITogetherInterop2
+    @Embarcadero_studio_modeling_tlb@IID_ITogetherOptionInterop @42  ; Embarcadero_studio_modeling_tlb::IID_ITogetherOptionInterop
+    @Embarcadero_studio_modeling_tlb@LIBID_Embarcadero_Studio_Modeling @46  ; Embarcadero_studio_modeling_tlb::LIBID_Embarcadero_Studio_Modeling
+    @Embarcadero_studio_modeling_tlb@initialization$qqrv @22  ; __fastcall Embarcadero_studio_modeling_tlb::initialization()
+    @GetPackageInfoTable           @311 ; GetPackageInfoTable
+    @Modelviewfrm@Finalization$qqrv @48  ; __fastcall Modelviewfrm::Finalization()
+    @Modelviewfrm@ModelView        @61  ; Modelviewfrm::ModelView
+    @Modelviewfrm@ModelViewShowing$qqrv @60  ; __fastcall Modelviewfrm::ModelViewShowing()
+    @Modelviewfrm@RegisterModelView$qqrv @50  ; __fastcall Modelviewfrm::RegisterModelView()
+    @Modelviewfrm@ShowModelView$qqrv @56  ; __fastcall Modelviewfrm::ShowModelView()
+    @Modelviewfrm@TModelView@      @63  ; Modelviewfrm::TModelView::
+    @Modelviewfrm@TModelView@EditAction$qqr22Designintf@TEditAction @59  ; __fastcall Modelviewfrm::TModelView::EditAction(Designintf::TEditAction)
+    @Modelviewfrm@TModelView@FormActivate$qqrp14System@TObject @55  ; __fastcall Modelviewfrm::TModelView::FormActivate(System::TObject *)
+    @Modelviewfrm@TModelView@FormCreate$qqrp14System@TObject @57  ; __fastcall Modelviewfrm::TModelView::FormCreate(System::TObject *)
+    @Modelviewfrm@TModelView@FormDeactivate$qqrp14System@TObject @52  ; __fastcall Modelviewfrm::TModelView::FormDeactivate(System::TObject *)
+    @Modelviewfrm@TModelView@FormShow$qqrp14System@TObject @54  ; __fastcall Modelviewfrm::TModelView::FormShow(System::TObject *)
+    @Modelviewfrm@TModelView@GetEditState$qqrv @58  ; __fastcall Modelviewfrm::TModelView::GetEditState()
+    @Modelviewfrm@TModelView@IsActive$qqrv @51  ; __fastcall Modelviewfrm::TModelView::IsActive()
+    @Modelviewfrm@TModelView@PopupMenu1Popup$qqrp14System@TObject @53  ; __fastcall Modelviewfrm::TModelView::PopupMenu1Popup(System::TObject *)
+    @Modelviewfrm@UnregisterModelView$qqrv @49  ; __fastcall Modelviewfrm::UnregisterModelView()
+    @Modelviewfrm@initialization$qqrv @47  ; __fastcall Modelviewfrm::initialization()
+    @Tgide@@GetPackageInfoTable$qqrv @308 ; Tgide::__linkproc__ __fastcall GetPackageInfoTable()
+    @Tgide@@PackageLoad$qqrv       @307 ; Tgide::__linkproc__ __fastcall PackageLoad()
+    @Tgide@@PackageUnload$qqrv     @306 ; Tgide::__linkproc__ __fastcall PackageUnload()
+    @Tgide@initialization$qqrv     @305 ; __fastcall Tgide::initialization()
+    @Together@DiagramsShowing      @220 ; Together::DiagramsShowing
+    @Together@Finalization$qqrv    @213 ; __fastcall Together::Finalization()
+    @Together@RegisterTogetherHostInterop$qqrx20System@UnicodeString @215 ; __fastcall Together::RegisterTogetherHostInterop(const System::UnicodeString)
+    @Together@RemoveAnyDesignerState$qqrv @216 ; __fastcall Together::RemoveAnyDesignerState()
+    @Together@SetDesignerPaletteState$qqrxo @217 ; __fastcall Together::SetDesignerPaletteState(const bool)
+    @Together@TgInterop$qqrv       @219 ; __fastcall Together::TgInterop()
+    @Together@TgOptionInterop$qqrv @218 ; __fastcall Together::TgOptionInterop()
+    @Together@UnregisterTogetherHostInterop$qqrv @214 ; __fastcall Together::UnregisterTogetherHostInterop()
+    @Together@initialization$qqrv  @212 ; __fastcall Together::initialization()
+    @Together@sDiagramDesignerStateName @221 ; Together::sDiagramDesignerStateName
+    @Togetheractn@Finalization$qqrv @160 ; __fastcall Togetheractn::Finalization()
+    @Togetheractn@RegisterAboutBoxItems$qqrv @172 ; __fastcall Togetheractn::RegisterAboutBoxItems()
+    @Togetheractn@TModelActions@   @174 ; Togetheractn::TModelActions::
+    @Togetheractn@TModelActions@DataModuleCreate$qqrp14System@TObject @170 ; __fastcall Togetheractn::TModelActions::DataModuleCreate(System::TObject *)
+    @Togetheractn@TModelActions@actAuditResultExecute$qqrp14System@TObject @164 ; __fastcall Togetheractn::TModelActions::actAuditResultExecute(System::TObject *)
+    @Togetheractn@TModelActions@actAuditResultUpdate$qqrp14System@TObject @163 ; __fastcall Togetheractn::TModelActions::actAuditResultUpdate(System::TObject *)
+    @Togetheractn@TModelActions@actFormatSourceExecute$qqrp14System@TObject @167 ; __fastcall Togetheractn::TModelActions::actFormatSourceExecute(System::TObject *)
+    @Togetheractn@TModelActions@actFormatSourceUpdate$qqrp14System@TObject @166 ; __fastcall Togetheractn::TModelActions::actFormatSourceUpdate(System::TObject *)
+    @Togetheractn@TModelActions@actMetricResultExecute$qqrp14System@TObject @162 ; __fastcall Togetheractn::TModelActions::actMetricResultExecute(System::TObject *)
+    @Togetheractn@TModelActions@actMetricResultUpdate$qqrp14System@TObject @161 ; __fastcall Togetheractn::TModelActions::actMetricResultUpdate(System::TObject *)
+    @Togetheractn@TModelActions@actViewClassBrowserExecute$qqrp14System@TObject @165 ; __fastcall Togetheractn::TModelActions::actViewClassBrowserExecute(System::TObject *)
+    @Togetheractn@TModelActions@actViewClassBrowserUpdate$qqrp14System@TObject @169 ; __fastcall Togetheractn::TModelActions::actViewClassBrowserUpdate(System::TObject *)
+    @Togetheractn@TModelActions@actViewModelViewExecute$qqrp14System@TObject @168 ; __fastcall Togetheractn::TModelActions::actViewModelViewExecute(System::TObject *)
+    @Togetheractn@UnregisterAboutBoxItems$qqrv @171 ; __fastcall Togetheractn::UnregisterAboutBoxItems()
+    @Togetheractn@initialization$qqrv @159 ; __fastcall Togetheractn::initialization()
+    @Togethercmds@Finalization$qqrv @113 ; __fastcall Togethercmds::Finalization()
+    @Togethercmds@TTogetherCommands@ @127 ; Togethercmds::TTogetherCommands::
+    @Togethercmds@TTogetherCommands@DataModuleCreate$qqrp14System@TObject @125 ; __fastcall Togethercmds::TTogetherCommands::DataModuleCreate(System::TObject *)
+    @Togethercmds@TTogetherCommands@DataModuleDestroy$qqrp14System@TObject @124 ; __fastcall Togethercmds::TTogetherCommands::DataModuleDestroy(System::TObject *)
+    @Togethercmds@TTogetherCommands@actnExploreClassExecute$qqrp14System@TObject @118 ; __fastcall Togethercmds::TTogetherCommands::actnExploreClassExecute(System::TObject *)
+    @Togethercmds@TTogetherCommands@actnExploreClassUpdate$qqrp14System@TObject @117 ; __fastcall Togethercmds::TTogetherCommands::actnExploreClassUpdate(System::TObject *)
+    @Togethercmds@TTogetherCommands@actnFormatSourceExecute$qqrp14System@TObject @116 ; __fastcall Togethercmds::TTogetherCommands::actnFormatSourceExecute(System::TObject *)
+    @Togethercmds@TTogetherCommands@actnFormatSourceUpdate$qqrp14System@TObject @115 ; __fastcall Togethercmds::TTogetherCommands::actnFormatSourceUpdate(System::TObject *)
+    @Togethercmds@TTogetherCommands@actnRefactoringExecute$qqrp14System@TObject @121 ; __fastcall Togethercmds::TTogetherCommands::actnRefactoringExecute(System::TObject *)
+    @Togethercmds@TTogetherCommands@actnSynchModelViewExecute$qqrp14System@TObject @123 ; __fastcall Togethercmds::TTogetherCommands::actnSynchModelViewExecute(System::TObject *)
+    @Togethercmds@TTogetherCommands@actnSynchModelViewUpdate$qqrp14System@TObject @122 ; __fastcall Togethercmds::TTogetherCommands::actnSynchModelViewUpdate(System::TObject *)
+    @Togethercmds@TTogetherCommands@actnTgActionExecute$qqrp14System@TObject @120 ; __fastcall Togethercmds::TTogetherCommands::actnTgActionExecute(System::TObject *)
+    @Togethercmds@TTogetherCommands@actnTgActionUpdate$qqrp14System@TObject @119 ; __fastcall Togethercmds::TTogetherCommands::actnTgActionUpdate(System::TObject *)
+    @Togethercmds@TTogetherCommands@getNameByActn$qqrp20Vcl@Actnlist@TAction @114 ; __fastcall Togethercmds::TTogetherCommands::getNameByActn(Vcl::Actnlist::TAction *)
+    @Togethercmds@initialization$qqrv @112 ; __fastcall Togethercmds::initialization()
+    @Togetherdockable@ActivateTogetherDockable$qqrx17System@WideString @133 ; __fastcall Togetherdockable::ActivateTogetherDockable(const System::WideString)
+    @Togetherdockable@CloseTogetherDockable$qqrx17System@WideString @132 ; __fastcall Togetherdockable::CloseTogetherDockable(const System::WideString)
+    @Togetherdockable@Finalization$qqrv @129 ; __fastcall Togetherdockable::Finalization()
+    @Togetherdockable@MetricsView  @146 ; Togetherdockable::MetricsView
+    @Togetherdockable@QAView       @145 ; Togetherdockable::QAView
+    @Togetherdockable@RefactoringsView @144 ; Togetherdockable::RefactoringsView
+    @Togetherdockable@RegisterTogetherDesktopViews$qqrv @131 ; __fastcall Togetherdockable::RegisterTogetherDesktopViews()
+    @Togetherdockable@ShowTogetherDockable$qqrx68System@%DelphiInterface$41Borland_studio_interop_tlb@IInteropWindow%x17System@WideStringt2 @134 ; Togetherdockable::ShowTogetherDockable(const System::DelphiInterface<{583}...
+    @Togetherdockable@TMetricsView@ @158 ; Togetherdockable::TMetricsView::
+    @Togetherdockable@TMetricsView@$bctr$qqrp25System@Classes@TComponent @141 ; __fastcall Togetherdockable::TMetricsView::TMetricsView(System::Classes::TComponent *)
+    @Togetherdockable@TMetricsView@FormCreate$qqrp14System@TObject @142 ; __fastcall Togetherdockable::TMetricsView::FormCreate(System::TObject *)
+    @Togetherdockable@TQAView@     @156 ; Togetherdockable::TQAView::
+    @Togetherdockable@TQAView@$bctr$qqrp25System@Classes@TComponent @139 ; __fastcall Togetherdockable::TQAView::TQAView(System::Classes::TComponent *)
+    @Togetherdockable@TQAView@FormCreate$qqrp14System@TObject @140 ; __fastcall Togetherdockable::TQAView::FormCreate(System::TObject *)
+    @Togetherdockable@TRefactoringsView@ @154 ; Togetherdockable::TRefactoringsView::
+    @Togetherdockable@TRefactoringsView@$bctr$qqrp25System@Classes@TComponent @137 ; __fastcall Togetherdockable::TRefactoringsView::TRefactoringsView(System::Classes::TComponent *)
+    @Togetherdockable@TRefactoringsView@FormCreate$qqrp14System@TObject @138 ; __fastcall Togetherdockable::TRefactoringsView::FormCreate(System::TObject *)
+    @Togetherdockable@TUsagesView@ @152 ; Togetherdockable::TUsagesView::
+    @Togetherdockable@TUsagesView@$bctr$qqrp25System@Classes@TComponent @135 ; __fastcall Togetherdockable::TUsagesView::TUsagesView(System::Classes::TComponent *)
+    @Togetherdockable@TUsagesView@FormCreate$qqrp14System@TObject @136 ; __fastcall Togetherdockable::TUsagesView::FormCreate(System::TObject *)
+    @Togetherdockable@UnregisterTogetherDesktopViews$qqrv @130 ; __fastcall Togetherdockable::UnregisterTogetherDesktopViews()
+    @Togetherdockable@UsagesView   @143 ; Togetherdockable::UsagesView
+    @Togetherdockable@_sAudits     @149 ; Togetherdockable::_sAudits
+    @Togetherdockable@_sMetrics    @150 ; Togetherdockable::_sMetrics
+    @Togetherdockable@_sRefactoring @148 ; Togetherdockable::_sRefactoring
+    @Togetherdockable@_sSFU        @147 ; Togetherdockable::_sSFU
+    @Togetherdockable@initialization$qqrv @128 ; __fastcall Togetherdockable::initialization()
+    @Togetherdocmodule@CreateNewTogetherDocModule$qqrx53System@%DelphiInterface$26Idecreators@ISourceCreator% @274 ; Togetherdocmodule::CreateNewTogetherDocModule(const System::DelphiInterface<{583}...
+    @Togetherdocmodule@Finalization$qqrv @264 ; __fastcall Togetherdocmodule::Finalization()
+    @Togetherdocmodule@OpenExistingTogetherDocModule$qqrx20System@UnicodeStringt1p22Editorform@TEditWindow @275 ; __fastcall Togetherdocmodule::OpenExistingTogetherDocModule(const System::UnicodeString, const System::UnicodeString, Editorform::TEditWindow *)
+    @Togetherdocmodule@RegisterTogetherDocModuleSupport$qqrv @266 ; __fastcall Togetherdocmodule::RegisterTogetherDocModuleSupport()
+    @Togetherdocmodule@TCodeITogetherDocModule@ @299 ; Togetherdocmodule::TCodeITogetherDocModule::
+    @Togetherdocmodule@TCodeITogetherDocModule@AddToProject$qqrx49System@%DelphiInterface$22Codemgr@ICustomProject% @273 ; Togetherdocmodule::TCodeITogetherDocModule::AddToProject(const System::DelphiInterface<{583}...
+    @Togetherdocmodule@TCodeITogetherDocModule@EditAction$qqr22Designintf@TEditAction @270 ; __fastcall Togetherdocmodule::TCodeITogetherDocModule::EditAction(Designintf::TEditAction)
+    @Togetherdocmodule@TCodeITogetherDocModule@GetDiagramDocument$qqrv @271 ; __fastcall Togetherdocmodule::TCodeITogetherDocModule::GetDiagramDocument()
+    @Togetherdocmodule@TCodeITogetherDocModule@GetEditState$qqrv @269 ; __fastcall Togetherdocmodule::TCodeITogetherDocModule::GetEditState()
+    @Togetherdocmodule@TCodeITogetherDocModule@GetName$qqrv @268 ; __fastcall Togetherdocmodule::TCodeITogetherDocModule::GetName()
+    @Togetherdocmodule@TCodeITogetherDocModule@GetProjectDir$qqrv @272 ; __fastcall Togetherdocmodule::TCodeITogetherDocModule::GetProjectDir()
+    @Togetherdocmodule@TTogetherDocModule@ @301 ; Togetherdocmodule::TTogetherDocModule::
+    @Togetherdocmodule@TTogetherDocModule@$bctr$qqrx20System@UnicodeStringt1o @294 ; __fastcall Togetherdocmodule::TTogetherDocModule::TTogetherDocModule(const System::UnicodeString, const System::UnicodeString, bool)
+    @Togetherdocmodule@TTogetherDocModule@$bctr$qqrx53System@%DelphiInterface$26Idecreators@ISourceCreator%p19Docmodul@TDocModule @293 ; Togetherdocmodule::TTogetherDocModule::TTogetherDocModule(const System::DelphiInterface<{583}...
+    @Togetherdocmodule@TTogetherDocModule@$bdtr$qqrv @292 ; __fastcall Togetherdocmodule::TTogetherDocModule::~TTogetherDocModule()
+    @Togetherdocmodule@TTogetherDocModule@CheckFileDate$qqrv @295 ; __fastcall Togetherdocmodule::TTogetherDocModule::CheckFileDate()
+    @Togetherdocmodule@TTogetherDocModule@GetEditView$qqrp22Editorform@TEditWindow @291 ; __fastcall Togetherdocmodule::TTogetherDocModule::GetEditView(Editorform::TEditWindow *)
+    @Togetherdocmodule@TTogetherDocModule@GetFileName$qqrv @285 ; __fastcall Togetherdocmodule::TTogetherDocModule::GetFileName()
+    @Togetherdocmodule@TTogetherDocModule@GetFileSystem$qqrv @284 ; __fastcall Togetherdocmodule::TTogetherDocModule::GetFileSystem()
+    @Togetherdocmodule@TTogetherDocModule@GetModified$qqrv @267 ; __fastcall Togetherdocmodule::TTogetherDocModule::GetModified()
+    @Togetherdocmodule@TTogetherDocModule@GetModuleIntf$qqrv @290 ; __fastcall Togetherdocmodule::TTogetherDocModule::GetModuleIntf()
+    @Togetherdocmodule@TTogetherDocModule@GetView$qqrv @289 ; __fastcall Togetherdocmodule::TTogetherDocModule::GetView()
+    @Togetherdocmodule@TTogetherDocModule@HasEditView$qqrv @288 ; __fastcall Togetherdocmodule::TTogetherDocModule::HasEditView()
+    @Togetherdocmodule@TTogetherDocModule@ReloadFile$qqrv @283 ; __fastcall Togetherdocmodule::TTogetherDocModule::ReloadFile()
+    @Togetherdocmodule@TTogetherDocModule@Rename$qqrx20System@UnicodeString @282 ; __fastcall Togetherdocmodule::TTogetherDocModule::Rename(const System::UnicodeString)
+    @Togetherdocmodule@TTogetherDocModule@RenameFile$qqrx20System@UnicodeStringt1 @281 ; __fastcall Togetherdocmodule::TTogetherDocModule::RenameFile(const System::UnicodeString, const System::UnicodeString)
+    @Togetherdocmodule@TTogetherDocModule@SaveFile$qqrv @287 ; __fastcall Togetherdocmodule::TTogetherDocModule::SaveFile()
+    @Togetherdocmodule@TTogetherDocModule@ShowEditor$qqro @286 ; __fastcall Togetherdocmodule::TTogetherDocModule::ShowEditor(bool)
+    @Togetherdocmodule@TTogetherDocOpenHandler@ @297 ; Togetherdocmodule::TTogetherDocOpenHandler::
+    @Togetherdocmodule@TTogetherDocOpenHandler@CanOpen$qqrix20System@UnicodeString @280 ; __fastcall Togetherdocmodule::TTogetherDocOpenHandler::CanOpen(int, const System::UnicodeString)
+    @Togetherdocmodule@TTogetherDocOpenHandler@FileOpen$qqrix20System@UnicodeStringop19Docmodul@TDocModule @279 ; __fastcall Togetherdocmodule::TTogetherDocOpenHandler::FileOpen(int, const System::UnicodeString, bool, Docmodul::TDocModule *)
+    @Togetherdocmodule@TTogetherDocOpenHandler@FileOpen$qqrx20System@UnicodeStringo @278 ; __fastcall Togetherdocmodule::TTogetherDocOpenHandler::FileOpen(const System::UnicodeString, bool)
+    @Togetherdocmodule@TTogetherDocOpenHandler@GetFilters$qqrp20Docmodul@TFilterListo @277 ; __fastcall Togetherdocmodule::TTogetherDocOpenHandler::GetFilters(Docmodul::TFilterList *, bool)
+    @Togetherdocmodule@TTogetherDocOpenHandler@IsPrefilter$qqrv @276 ; __fastcall Togetherdocmodule::TTogetherDocOpenHandler::IsPrefilter()
+    @Togetherdocmodule@UnregisterTogetherDocModuleSupport$qqrv @265 ; __fastcall Togetherdocmodule::UnregisterTogetherDocModuleSupport()
+    @Togetherdocmodule@initialization$qqrv @263 ; __fastcall Togetherdocmodule::initialization()
+    @Togethereditorframe@Finalization$qqrv @223 ; __fastcall Togethereditorframe::Finalization()
+    @Togethereditorframe@TTogetherEditFrame@ @261 ; Togethereditorframe::TTogetherEditFrame::
+    @Togethereditorframe@TTogetherEditFrame@$bctr$qqrp25System@Classes@TComponent @233 ; __fastcall Togethereditorframe::TTogetherEditFrame::TTogetherEditFrame(System::Classes::TComponent *)
+    @Togethereditorframe@TTogetherEditFrame@$bdtr$qqrv @232 ; __fastcall Togethereditorframe::TTogetherEditFrame::~TTogetherEditFrame()
+    @Togethereditorframe@TTogetherEditFrame@AddTogetherEditView$qqrp37Togethereditorframe@TTogetherEditView @228 ; __fastcall Togethereditorframe::TTogetherEditFrame::AddTogetherEditView(Togethereditorframe::TTogetherEditView *)
+    @Togethereditorframe@TTogetherEditFrame@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @229 ; __fastcall Togethereditorframe::TTogetherEditFrame::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Togethereditorframe@TTogetherEditFrame@Reload$qqrv @230 ; __fastcall Togethereditorframe::TTogetherEditFrame::Reload()
+    @Togethereditorframe@TTogetherEditFrame@RemoveTogetherEditView$qqrp37Togethereditorframe@TTogetherEditView @227 ; __fastcall Togethereditorframe::TTogetherEditFrame::RemoveTogetherEditView(Togethereditorframe::TTogetherEditView *)
+    @Togethereditorframe@TTogetherEditFrame@SetCurTogetherEditView$qqrp37Togethereditorframe@TTogetherEditView @231 ; __fastcall Togethereditorframe::TTogetherEditFrame::SetCurTogetherEditView(Togethereditorframe::TTogetherEditView *)
+    @Togethereditorframe@TTogetherEditView@ @259 ; Togethereditorframe::TTogetherEditView::
+    @Togethereditorframe@TTogetherEditView@$bctr$qqrp22Editorform@TEditWindowx65System@%DelphiInterface$38Togethereditorframe@ITogetherDocModule%p26Editorform@TCustomEditViewt3 @253 ; Togethereditorframe::TTogetherEditView::TTogetherEditView(Editorform::TEditWindow *, const System::DelphiInterface<{583}...
+    @Togethereditorframe@TTogetherEditView@$bdtr$qqrv @252 ; __fastcall Togethereditorframe::TTogetherEditView::~TTogetherEditView()
+    @Togethereditorframe@TTogetherEditView@CloneEditView$qqrp22Editorform@TEditWindow @256 ; __fastcall Togethereditorframe::TTogetherEditView::CloneEditView(Editorform::TEditWindow *)
+    @Togethereditorframe@TTogetherEditView@Close$qqrv @255 ; __fastcall Togethereditorframe::TTogetherEditView::Close()
+    @Togethereditorframe@TTogetherEditView@CloseAllCalled$qqrro @237 ; __fastcall Togethereditorframe::TTogetherEditView::CloseAllCalled(bool&)
+    @Togethereditorframe@TTogetherEditView@ConfigurePanel$qqrp23Vcl@Comctrls@TStatusBarp25Vcl@Comctrls@TStatusPanel @254 ; __fastcall Togethereditorframe::TTogetherEditView::ConfigurePanel(Vcl::Comctrls::TStatusBar *, Vcl::Comctrls::TStatusPanel *)
+    @Togethereditorframe@TTogetherEditView@DeselectView$qqrv @251 ; __fastcall Togethereditorframe::TTogetherEditView::DeselectView()
+    @Togethereditorframe@TTogetherEditView@DiagramEnter$qqrp14System@TObject @224 ; __fastcall Togethereditorframe::TTogetherEditView::DiagramEnter(System::TObject *)
+    @Togethereditorframe@TTogetherEditView@EditAction$qqr22Designintf@TEditAction @250 ; __fastcall Togethereditorframe::TTogetherEditView::EditAction(Designintf::TEditAction)
+    @Togethereditorframe@TTogetherEditView@GetCanCloneView$qqrv @257 ; __fastcall Togethereditorframe::TTogetherEditView::GetCanCloneView()
+    @Togethereditorframe@TTogetherEditView@GetCaption$qqrv @249 ; __fastcall Togethereditorframe::TTogetherEditView::GetCaption()
+    @Togethereditorframe@TTogetherEditView@GetDefaultEditViewName$qqrv @234 ; __fastcall Togethereditorframe::TTogetherEditView::GetDefaultEditViewName()
+    @Togethereditorframe@TTogetherEditView@GetEditState$qqrv @248 ; __fastcall Togethereditorframe::TTogetherEditView::GetEditState()
+    @Togethereditorframe@TTogetherEditView@GetImageIndex$qqrv @236 ; __fastcall Togethereditorframe::TTogetherEditView::GetImageIndex()
+    @Togethereditorframe@TTogetherEditView@GetModified$qqrv @226 ; __fastcall Togethereditorframe::TTogetherEditView::GetModified()
+    @Togethereditorframe@TTogetherEditView@GetOverlayImageIndex$qqrv @235 ; __fastcall Togethereditorframe::TTogetherEditView::GetOverlayImageIndex()
+    @Togethereditorframe@TTogetherEditView@GetSavedChildIndex$qqrv @247 ; __fastcall Togethereditorframe::TTogetherEditView::GetSavedChildIndex()
+    @Togethereditorframe@TTogetherEditView@GetStatusPanelCount$qqrv @246 ; __fastcall Togethereditorframe::TTogetherEditView::GetStatusPanelCount()
+    @Togethereditorframe@TTogetherEditView@GetTabText$qqrv @245 ; __fastcall Togethereditorframe::TTogetherEditView::GetTabText()
+    @Togethereditorframe@TTogetherEditView@GetTogetherEditFrame$qqrv @243 ; __fastcall Togethereditorframe::TTogetherEditView::GetTogetherEditFrame()
+    @Togethereditorframe@TTogetherEditView@GetViewTabNames$qqrp23System@Classes@TStrings @244 ; __fastcall Togethereditorframe::TTogetherEditView::GetViewTabNames(System::Classes::TStrings *)
+    @Togethereditorframe@TTogetherEditView@LoadViewState$qqrxp30System@Inifiles@TCustomIniFilex20System@UnicodeStringxp22Editorform@TEditWindow @242 ; __fastcall Togethereditorframe::TTogetherEditView::LoadViewState(System::Inifiles::TCustomIniFile * const, const System::UnicodeString, Editorform::TEditWindow * const)
+    @Togethereditorframe@TTogetherEditView@SaveChildIndex$qqri @241 ; __fastcall Togethereditorframe::TTogetherEditView::SaveChildIndex(int)
+    @Togethereditorframe@TTogetherEditView@SaveViewState$qqrxp30System@Inifiles@TCustomIniFilexox20System@UnicodeStringxp22Editorform@TEditWindow @240 ; __fastcall Togethereditorframe::TTogetherEditView::SaveViewState(System::Inifiles::TCustomIniFile * const, const bool, const System::UnicodeString, Editorform::TEditWindow * const)
+    @Togethereditorframe@TTogetherEditView@SelectView$qqri @239 ; __fastcall Togethereditorframe::TTogetherEditView::SelectView(int)
+    @Togethereditorframe@TTogetherEditView@SetOwner$qqrp22Editorform@TEditWindow @238 ; __fastcall Togethereditorframe::TTogetherEditView::SetOwner(Editorform::TEditWindow *)
+    @Togethereditorframe@TTogetherEditView@TryCloseView$qqrv @225 ; __fastcall Togethereditorframe::TTogetherEditView::TryCloseView()
+    @Togethereditorframe@initialization$qqrv @222 ; __fastcall Togethereditorframe::initialization()
+    @Togetherideinsight@Finalization$qqrv @204 ; __fastcall Togetherideinsight::Finalization()
+    @Togetherideinsight@RegisterTogetherIDEInsightActions$qqrv @206 ; __fastcall Togetherideinsight::RegisterTogetherIDEInsightActions()
+    @Togetherideinsight@UnregisterTogetherIDEInsightActions$qqrv @205 ; __fastcall Togetherideinsight::UnregisterTogetherIDEInsightActions()
+    @Togetherideinsight@initialization$qqrv @203 ; __fastcall Togetherideinsight::initialization()
+    @Togetheroptions@Finalization$qqrv @197 ; __fastcall Togetheroptions::Finalization()
+    @Togetheroptions@TTogetherAddInOptions@ @202 ; Togetheroptions::TTogetherAddInOptions::
+    @Togetheroptions@TTogetherAddInOptions@CustomizeDialog$qqrp28Idepropsheet@TPropertySheetsp40Baseenvirondialog@TBaseEnvironmentDialog @199 ; __fastcall Togetheroptions::TTogetherAddInOptions::CustomizeDialog(Idepropsheet::TPropertySheets *, Baseenvirondialog::TBaseEnvironmentDialog *)
+    @Togetheroptions@TTogetherAddInOptions@DataModuleDestroy$qqrp14System@TObject @198 ; __fastcall Togetheroptions::TTogetherAddInOptions::DataModuleDestroy(System::TObject *)
+    @Togetheroptions@TogetherAddInOptions @200 ; Togetheroptions::TogetherAddInOptions
+    @Togetheroptions@initialization$qqrv @196 ; __fastcall Togetheroptions::initialization()
+    @Togetheroptionsformatter@Finalization$qqrv @191 ; __fastcall Togetheroptionsformatter::Finalization()
+    @Togetheroptionsformatter@GlobalFormatterPageIndex @193 ; Togetheroptionsformatter::GlobalFormatterPageIndex
+    @Togetheroptionsformatter@TTogetherOptionsFormatter@ @195 ; Togetheroptionsformatter::TTogetherOptionsFormatter::
+    @Togetheroptionsformatter@TTogetherOptionsFormatter@PropertySheetCreate$qqrp14System@TObject @192 ; __fastcall Togetheroptionsformatter::TTogetherOptionsFormatter::PropertySheetCreate(System::TObject *)
+    @Togetheroptionsformatter@initialization$qqrv @190 ; __fastcall Togetheroptionsformatter::initialization()
+    @Togetheroptionsmain@Finalization$qqrv @185 ; __fastcall Togetheroptionsmain::Finalization()
+    @Togetheroptionsmain@GlobalMainPageIndex @187 ; Togetheroptionsmain::GlobalMainPageIndex
+    @Togetheroptionsmain@TTogetherOptionsMain@ @189 ; Togetheroptionsmain::TTogetherOptionsMain::
+    @Togetheroptionsmain@TTogetherOptionsMain@PropertySheetCreate$qqrp14System@TObject @186 ; __fastcall Togetheroptionsmain::TTogetherOptionsMain::PropertySheetCreate(System::TObject *)
+    @Togetheroptionsmain@initialization$qqrv @184 ; __fastcall Togetheroptionsmain::initialization()
+    @Togetheroptionspage@Finalization$qqrv @176 ; __fastcall Togetheroptionspage::Finalization()
+    @Togetheroptionspage@GlobalPageIndex @183 ; Togetheroptionspage::GlobalPageIndex
+    @Togetheroptionspage@TTogetherOptions@ @182 ; Togetheroptionspage::TTogetherOptions::
+    @Togetheroptionspage@TTogetherOptions@InitializeOptionControl$qqrv @180 ; __fastcall Togetheroptionspage::TTogetherOptions::InitializeOptionControl()
+    @Togetheroptionspage@TTogetherOptions@PropertySheetBroadcast$qqrp14System@TObjectr24Winapi@Messages@TMessage @177 ; __fastcall Togetheroptionspage::TTogetherOptions::PropertySheetBroadcast(System::TObject *, Winapi::Messages::TMessage&)
+    @Togetheroptionspage@TTogetherOptions@PropertySheetCreate$qqrp14System@TObject @179 ; __fastcall Togetheroptionspage::TTogetherOptions::PropertySheetCreate(System::TObject *)
+    @Togetheroptionspage@TTogetherOptions@PropertySheetShow$qqrp14System@TObject @178 ; __fastcall Togetheroptionspage::TTogetherOptions::PropertySheetShow(System::TObject *)
+    @Togetheroptionspage@initialization$qqrv @175 ; __fastcall Togetheroptionspage::initialization()
+    @Togetherreg@Finalization$qqrv @208 ; __fastcall Togetherreg::Finalization()
+    @Togetherreg@IDERegister$qqrv  @209 ; __fastcall Togetherreg::IDERegister()
+    @Togetherreg@TogetherContainerCreator @210 ; Togetherreg::TogetherContainerCreator
+    @Togetherreg@TogetherDocOpenHandler @211 ; Togetherreg::TogetherDocOpenHandler
+    @Togetherreg@initialization$qqrv @207 ; __fastcall Togetherreg::initialization()
+    Finalize                       @309 ; Finalize
+    Initialize                     @310 ; Initialize

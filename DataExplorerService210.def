@@ -1,0 +1,210 @@
+LIBRARY     DATAEXPLORERSERVICE210.BPL
+
+DESCRIPTION 'ata Explorer Reusable Services'
+
+EXPORTS
+    @$xp$29Structureviewservices@IScopes @198 ; __tpdsc__ Structureviewservices::IScopes
+    @$xp$29Structureviewservices@TScopes @196 ; __tpdsc__ Structureviewservices::TScopes
+    @$xp$30Structureviewservices@IDEItems @184 ; __tpdsc__ Structureviewservices::IDEItems
+    @$xp$31Structureviewservices@IExprItem @181 ; __tpdsc__ Structureviewservices::IExprItem
+    @$xp$31Structureviewservices@TExprItem @179 ; __tpdsc__ Structureviewservices::TExprItem
+    @$xp$32Structureviewservices@TExprItems @182 ; __tpdsc__ Structureviewservices::TExprItems
+    @$xp$33Structureviewservices@IDECommands @195 ; __tpdsc__ Structureviewservices::IDECommands
+    @$xp$33Structureviewservices@TDECommands @193 ; __tpdsc__ Structureviewservices::TDECommands
+    @$xp$34Structureviewservices@IExprCommand @172 ; __tpdsc__ Structureviewservices::IExprCommand
+    @$xp$35Structureviewservices@TExprRootItem @173 ; __tpdsc__ Structureviewservices::TExprRootItem
+    @$xp$40Structureviewservices@TDEComponentStream @191 ; __tpdsc__ Structureviewservices::TDEComponentStream
+    @$xp$40Structureviewservices@TExpressionCommand @170 ; __tpdsc__ Structureviewservices::TExpressionCommand
+    @$xp$41Structureviewservices@IDEComponentStreams @187 ; __tpdsc__ Structureviewservices::IDEComponentStreams
+    @$xp$41Structureviewservices@TDEComponentStreams @185 ; __tpdsc__ Structureviewservices::TDEComponentStreams
+    @$xp$41Structureviewservices@TExprStaticNodeItem @175 ; __tpdsc__ Structureviewservices::TExprStaticNodeItem
+    @$xp$43System@%TArray__1$22Dataexplorerapi@TScope% @167 ; __tpdsc__ System::TArray__1<Dataexplorerapi::TScope>
+    @$xp$45Structureviewservices@TExprNodeCollectionItem @177 ; __tpdsc__ Structureviewservices::TExprNodeCollectionItem
+    @$xp$48System@%IEnumerable__1$22Dataexplorerapi@TScope% @156 ; __tpdsc__ System::IEnumerable__1<Dataexplorerapi::TScope>
+    @$xp$48System@%IEnumerator__1$22Dataexplorerapi@TScope% @157 ; __tpdsc__ System::IEnumerator__1<Dataexplorerapi::TScope>
+    @$xp$49Structureviewservices@TDEComponentStreamForObject @188 ; __tpdsc__ Structureviewservices::TDEComponentStreamForObject
+    @$xp$51Structureviewservices@TExprComponentStreamForObject @168 ; __tpdsc__ Structureviewservices::TExprComponentStreamForObject
+    @$xp$62Structureviewservices@IOTADataExplorerComponentStreamForObject @190 ; __tpdsc__ Structureviewservices::IOTADataExplorerComponentStreamForObject
+    @$xp$63System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope% @151 ; __tpdsc__ System::Generics::Collections::TList__1<Dataexplorerapi::TScope>
+    @$xp$64System@Generics@Defaults@%IComparer__1$22Dataexplorerapi@TScope% @161 ; __tpdsc__ System::Generics::Defaults::IComparer__1<Dataexplorerapi::TScope>
+    @$xp$69System@Generics@Collections@%TEnumerable__1$22Dataexplorerapi@TScope% @163 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<Dataexplorerapi::TScope>
+    @$xp$69System@Generics@Collections@%TEnumerator__1$22Dataexplorerapi@TScope% @165 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<Dataexplorerapi::TScope>
+    @$xp$71System@Generics@Collections@%TArrayManager__1$22Dataexplorerapi@TScope% @158 ; __tpdsc__ System::Generics::Collections::TArrayManager__1<Dataexplorerapi::TScope>
+    @$xp$75System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@%arrayofT$% @162 ; __tpdsc__ System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::arrayofT<>
+    @$xp$77System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@%TEmptyFunc$% @155 ; __tpdsc__ System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::TEmptyFunc<>
+    @$xp$78System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@%TEnumerator$% @153 ; __tpdsc__ System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::TEnumerator<>
+    @$xp$80System@Generics@Collections@%TCollectionNotifyEvent__1$22Dataexplorerapi@TScope% @160 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<Dataexplorerapi::TScope>
+    @$xp$95System@%TArray__1$74System@%DelphiInterface$47Dataexplorerapi@IOTADataExplorerComponentStream%% @150 ; __tpdsc__ System::TArray__1<System::DelphiInterface<{583}...
+    @Dataexplorerservice@@GetPackageInfoTable$qqrv @202 ; Dataexplorerservice::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dataexplorerservice@@PackageLoad$qqrv @201 ; Dataexplorerservice::__linkproc__ __fastcall PackageLoad()
+    @Dataexplorerservice@@PackageUnload$qqrv @200 ; Dataexplorerservice::__linkproc__ __fastcall PackageUnload()
+    @Dataexplorerservice@initialization$qqrv @199 ; __fastcall Dataexplorerservice::initialization()
+    @GetPackageInfoTable           @205 ; GetPackageInfoTable
+    @Structureviewservices@CF_COMPONENTS @149 ; Structureviewservices::CF_COMPONENTS
+    @Structureviewservices@Finalization$qqrv @63  ; __fastcall Structureviewservices::Finalization()
+    @Structureviewservices@TDECommands@ @194 ; Structureviewservices::TDECommands::
+    @Structureviewservices@TDECommands@$bctr$qqrv @78  ; __fastcall Structureviewservices::TDECommands::TDECommands()
+    @Structureviewservices@TDECommands@Add$qqr66System@%DelphiInterface$39Dataexplorerapi@IOTADataExplorerCommand% @79  ; Structureviewservices::TDECommands::Add(System::DelphiInterface<{583}...
+    @Structureviewservices@TDECommands@GetCount$qqrv @77  ; __fastcall Structureviewservices::TDECommands::GetCount()
+    @Structureviewservices@TDECommands@GetItem$qqri @76  ; __fastcall Structureviewservices::TDECommands::GetItem(int)
+    @Structureviewservices@TDECommands@ToArray$qqrv @75  ; __fastcall Structureviewservices::TDECommands::ToArray()
+    @Structureviewservices@TDEComponentStream@ @192 ; Structureviewservices::TDEComponentStream::
+    @Structureviewservices@TDEComponentStream@GetCaption$qqrv @68  ; __fastcall Structureviewservices::TDEComponentStream::GetCaption()
+    @Structureviewservices@TDEComponentStream@GetEnabled$qqrv @67  ; __fastcall Structureviewservices::TDEComponentStream::GetEnabled()
+    @Structureviewservices@TDEComponentStream@GetFormat$qqrv @66  ; __fastcall Structureviewservices::TDEComponentStream::GetFormat()
+    @Structureviewservices@TDEComponentStream@GetVisible$qqrv @65  ; __fastcall Structureviewservices::TDEComponentStream::GetVisible()
+    @Structureviewservices@TDEComponentStream@Update$qqr63System@%DelphiInterface$36Dataexplorerapi@IOTADataExplorerItem%46System@%DynamicArray$22Dataexplorerapi@TScope% @64  ; Structureviewservices::TDEComponentStream::Update(System::DelphiInterface<{583}...
+    @Structureviewservices@TDEComponentStreamForObject@ @189 ; Structureviewservices::TDEComponentStreamForObject::
+    @Structureviewservices@TDEComponentStreamForObject@GetStreamForObject$qqrp14System@TObjectp22System@Classes@TStream @69  ; __fastcall Structureviewservices::TDEComponentStreamForObject::GetStreamForObject(System::TObject *, System::Classes::TStream *)
+    @Structureviewservices@TDEComponentStreams@ @186 ; Structureviewservices::TDEComponentStreams::
+    @Structureviewservices@TDEComponentStreams@$bctr$qqrv @72  ; __fastcall Structureviewservices::TDEComponentStreams::TDEComponentStreams()
+    @Structureviewservices@TDEComponentStreams@Add$qqr74System@%DelphiInterface$47Dataexplorerapi@IOTADataExplorerComponentStream% @74  ; Structureviewservices::TDEComponentStreams::Add(System::DelphiInterface<{583}...
+    @Structureviewservices@TDEComponentStreams@GetCount$qqrv @71  ; __fastcall Structureviewservices::TDEComponentStreams::GetCount()
+    @Structureviewservices@TDEComponentStreams@GetItem$qqri @70  ; __fastcall Structureviewservices::TDEComponentStreams::GetItem(int)
+    @Structureviewservices@TDEComponentStreams@ToArray$qqrv @73  ; __fastcall Structureviewservices::TDEComponentStreams::ToArray()
+    @Structureviewservices@TExprComponentStreamForObject@ @169 ; Structureviewservices::TExprComponentStreamForObject::
+    @Structureviewservices@TExprComponentStreamForObject@GetStream$qqr63System@%DelphiInterface$36Dataexplorerapi@IOTADataExplorerItem%46System@%DynamicArray$22Dataexplorerapi@TScope%p22System@Classes@TStream @134 ; Structureviewservices::TExprComponentStreamForObject::GetStream(System::DelphiInterface<{583}...
+    @Structureviewservices@TExprItem@ @180 ; Structureviewservices::TExprItem::
+    @Structureviewservices@TExprItem@$bctr$qqrv @120 ; __fastcall Structureviewservices::TExprItem::TExprItem()
+    @Structureviewservices@TExprItem@AddCollectionItem$qqrx20System@UnicodeStringt1 @103 ; __fastcall Structureviewservices::TExprItem::AddCollectionItem(const System::UnicodeString, const System::UnicodeString)
+    @Structureviewservices@TExprItem@AddCommand$qqrx20System@UnicodeStringt1 @106 ; __fastcall Structureviewservices::TExprItem::AddCommand(const System::UnicodeString, const System::UnicodeString)
+    @Structureviewservices@TExprItem@AddCommand$qqrx20System@UnicodeStringt1t1t1 @105 ; __fastcall Structureviewservices::TExprItem::AddCommand(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Structureviewservices@TExprItem@AddStaticItem$qqrx20System@UnicodeStringt1t1 @104 ; __fastcall Structureviewservices::TExprItem::AddStaticItem(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Structureviewservices@TExprItem@EvaluateValueRec$qqrrx27Dataexplorerapi@TDEValueRec46System@%DynamicArray$22Dataexplorerapi@TScope% @119 ; Structureviewservices::TExprItem::EvaluateValueRec(const Dataexplorerapi::TDEValueRec&, System::DynamicArray<{583}...
+    @Structureviewservices@TExprItem@GetCommands$qqrv @107 ; __fastcall Structureviewservices::TExprItem::GetCommands()
+    @Structureviewservices@TExprItem@GetCommandsArray$qqrv @118 ; __fastcall Structureviewservices::TExprItem::GetCommandsArray()
+    @Structureviewservices@TExprItem@GetEnabled$qqr46System@%DynamicArray$22Dataexplorerapi@TScope% @117 ; Structureviewservices::TExprItem::GetEnabled(System::DynamicArray<{583}...
+    @Structureviewservices@TExprItem@GetEnabledValue$qqrv @116 ; __fastcall Structureviewservices::TExprItem::GetEnabledValue()
+    @Structureviewservices@TExprItem@GetIdentityValue$qqrv @100 ; __fastcall Structureviewservices::TExprItem::GetIdentityValue()
+    @Structureviewservices@TExprItem@GetItemCount$qqrv @109 ; __fastcall Structureviewservices::TExprItem::GetItemCount()
+    @Structureviewservices@TExprItem@GetItems$qqrv @108 ; __fastcall Structureviewservices::TExprItem::GetItems()
+    @Structureviewservices@TExprItem@GetItemsArray$qqrv @114 ; __fastcall Structureviewservices::TExprItem::GetItemsArray()
+    @Structureviewservices@TExprItem@GetNameValue$qqrv @102 ; __fastcall Structureviewservices::TExprItem::GetNameValue()
+    @Structureviewservices@TExprItem@GetParent$qqrv @111 ; __fastcall Structureviewservices::TExprItem::GetParent()
+    @Structureviewservices@TExprItem@GetScopes$qqrv @110 ; __fastcall Structureviewservices::TExprItem::GetScopes()
+    @Structureviewservices@TExprItem@GetScopesArray$qqrv @115 ; __fastcall Structureviewservices::TExprItem::GetScopesArray()
+    @Structureviewservices@TExprItem@IsRoot$qqrv @113 ; __fastcall Structureviewservices::TExprItem::IsRoot()
+    @Structureviewservices@TExprItem@SetEnabledValue$qqrrx27Dataexplorerapi@TDEValueRec @99  ; __fastcall Structureviewservices::TExprItem::SetEnabledValue(const Dataexplorerapi::TDEValueRec&)
+    @Structureviewservices@TExprItem@SetIdentityValue$qqrrx27Dataexplorerapi@TDEValueRec @98  ; __fastcall Structureviewservices::TExprItem::SetIdentityValue(const Dataexplorerapi::TDEValueRec&)
+    @Structureviewservices@TExprItem@SetNameValue$qqrrx27Dataexplorerapi@TDEValueRec @101 ; __fastcall Structureviewservices::TExprItem::SetNameValue(const Dataexplorerapi::TDEValueRec&)
+    @Structureviewservices@TExprItem@SetParent$qqrxp31Structureviewservices@TExprItem @112 ; __fastcall Structureviewservices::TExprItem::SetParent(Structureviewservices::TExprItem * const)
+    @Structureviewservices@TExprItems@ @183 ; Structureviewservices::TExprItems::
+    @Structureviewservices@TExprItems@$bctr$qqrp31Structureviewservices@TExprItem @84  ; __fastcall Structureviewservices::TExprItems::TExprItems(Structureviewservices::TExprItem *)
+    @Structureviewservices@TExprItems@Add$qqr63System@%DelphiInterface$36Dataexplorerapi@IOTADataExplorerItem% @83  ; Structureviewservices::TExprItems::Add(System::DelphiInterface<{583}...
+    @Structureviewservices@TExprItems@GetCount$qqrv @82  ; __fastcall Structureviewservices::TExprItems::GetCount()
+    @Structureviewservices@TExprItems@GetItem$qqri @81  ; __fastcall Structureviewservices::TExprItems::GetItem(int)
+    @Structureviewservices@TExprItems@ToArray$qqrv @80  ; __fastcall Structureviewservices::TExprItems::ToArray()
+    @Structureviewservices@TExprNodeCollectionItem@ @178 ; Structureviewservices::TExprNodeCollectionItem::
+    @Structureviewservices@TExprNodeCollectionItem@$bctr$qqrv @91  ; __fastcall Structureviewservices::TExprNodeCollectionItem::TExprNodeCollectionItem()
+    @Structureviewservices@TExprNodeCollectionItem@GetEnumeratorScopeName$qqrv @97  ; __fastcall Structureviewservices::TExprNodeCollectionItem::GetEnumeratorScopeName()
+    @Structureviewservices@TExprNodeCollectionItem@GetEnumeratorValue$qqrv @96  ; __fastcall Structureviewservices::TExprNodeCollectionItem::GetEnumeratorValue()
+    @Structureviewservices@TExprNodeCollectionItem@GetRefreshValue$qqrv @95  ; __fastcall Structureviewservices::TExprNodeCollectionItem::GetRefreshValue()
+    @Structureviewservices@TExprNodeCollectionItem@SetEnumeratorScopeName$qqrx20System@UnicodeString @94  ; __fastcall Structureviewservices::TExprNodeCollectionItem::SetEnumeratorScopeName(const System::UnicodeString)
+    @Structureviewservices@TExprNodeCollectionItem@SetEnumeratorValue$qqrrx27Dataexplorerapi@TDEValueRec @93  ; __fastcall Structureviewservices::TExprNodeCollectionItem::SetEnumeratorValue(const Dataexplorerapi::TDEValueRec&)
+    @Structureviewservices@TExprNodeCollectionItem@SetRefreshValue$qqrrx27Dataexplorerapi@TDEValueRec @92  ; __fastcall Structureviewservices::TExprNodeCollectionItem::SetRefreshValue(const Dataexplorerapi::TDEValueRec&)
+    @Structureviewservices@TExprRootItem@ @174 ; Structureviewservices::TExprRootItem::
+    @Structureviewservices@TExprRootItem@$bctr$qqrx20System@UnicodeStringt1t1px22Dataexplorerapi@TScopexi @133 ; __fastcall Structureviewservices::TExprRootItem::TExprRootItem(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const Dataexplorerapi::TScope *, const int)
+    @Structureviewservices@TExprStaticNodeItem@ @176 ; Structureviewservices::TExprStaticNodeItem::
+    @Structureviewservices@TExprStaticNodeItem@$bctr$qqrv @132 ; __fastcall Structureviewservices::TExprStaticNodeItem::TExprStaticNodeItem()
+    @Structureviewservices@TExprStaticNodeItem@GetComponentStreams$qqrv @131 ; __fastcall Structureviewservices::TExprStaticNodeItem::GetComponentStreams()
+    @Structureviewservices@TExprStaticNodeItem@GetComponentStreamsArray$qqrv @130 ; __fastcall Structureviewservices::TExprStaticNodeItem::GetComponentStreamsArray()
+    @Structureviewservices@TExprStaticNodeItem@GetDisplayNameValue$qqrv @129 ; __fastcall Structureviewservices::TExprStaticNodeItem::GetDisplayNameValue()
+    @Structureviewservices@TExprStaticNodeItem@GetEnabled$qqr46System@%DynamicArray$22Dataexplorerapi@TScope% @128 ; Structureviewservices::TExprStaticNodeItem::GetEnabled(System::DynamicArray<{583}...
+    @Structureviewservices@TExprStaticNodeItem@GetImageIndex$qqrv @127 ; __fastcall Structureviewservices::TExprStaticNodeItem::GetImageIndex()
+    @Structureviewservices@TExprStaticNodeItem@GetImageIndexValue$qqrv @126 ; __fastcall Structureviewservices::TExprStaticNodeItem::GetImageIndexValue()
+    @Structureviewservices@TExprStaticNodeItem@GetObjectValue$qqrv @125 ; __fastcall Structureviewservices::TExprStaticNodeItem::GetObjectValue()
+    @Structureviewservices@TExprStaticNodeItem@SetDisplayNameValue$qqrrx27Dataexplorerapi@TDEValueRec @124 ; __fastcall Structureviewservices::TExprStaticNodeItem::SetDisplayNameValue(const Dataexplorerapi::TDEValueRec&)
+    @Structureviewservices@TExprStaticNodeItem@SetImageIndex$qqrxi @123 ; __fastcall Structureviewservices::TExprStaticNodeItem::SetImageIndex(const int)
+    @Structureviewservices@TExprStaticNodeItem@SetImageIndexValue$qqrrx27Dataexplorerapi@TDEValueRec @122 ; __fastcall Structureviewservices::TExprStaticNodeItem::SetImageIndexValue(const Dataexplorerapi::TDEValueRec&)
+    @Structureviewservices@TExprStaticNodeItem@SetObjectValue$qqrrx27Dataexplorerapi@TDEValueRec @121 ; __fastcall Structureviewservices::TExprStaticNodeItem::SetObjectValue(const Dataexplorerapi::TDEValueRec&)
+    @Structureviewservices@TExpressionCommand@ @171 ; Structureviewservices::TExpressionCommand::
+    @Structureviewservices@TExpressionCommand@$bctr$qqrv @148 ; __fastcall Structureviewservices::TExpressionCommand::TExpressionCommand()
+    @Structureviewservices@TExpressionCommand@Execute$qqr63System@%DelphiInterface$36Dataexplorerapi@IOTADataExplorerItem%46System@%DynamicArray$22Dataexplorerapi@TScope% @147 ; Structureviewservices::TExpressionCommand::Execute(System::DelphiInterface<{583}...
+    @Structureviewservices@TExpressionCommand@GetCaption$qqrv @146 ; __fastcall Structureviewservices::TExpressionCommand::GetCaption()
+    @Structureviewservices@TExpressionCommand@GetCaptionExpression$qqrv @145 ; __fastcall Structureviewservices::TExpressionCommand::GetCaptionExpression()
+    @Structureviewservices@TExpressionCommand@GetEnabled$qqrv @144 ; __fastcall Structureviewservices::TExpressionCommand::GetEnabled()
+    @Structureviewservices@TExpressionCommand@GetEnabledExpression$qqrv @143 ; __fastcall Structureviewservices::TExpressionCommand::GetEnabledExpression()
+    @Structureviewservices@TExpressionCommand@GetExecuteExpression$qqrv @142 ; __fastcall Structureviewservices::TExpressionCommand::GetExecuteExpression()
+    @Structureviewservices@TExpressionCommand@GetVisible$qqrv @141 ; __fastcall Structureviewservices::TExpressionCommand::GetVisible()
+    @Structureviewservices@TExpressionCommand@GetVisibleExpression$qqrv @140 ; __fastcall Structureviewservices::TExpressionCommand::GetVisibleExpression()
+    @Structureviewservices@TExpressionCommand@SetCaptionExpression$qqrx20System@UnicodeString @139 ; __fastcall Structureviewservices::TExpressionCommand::SetCaptionExpression(const System::UnicodeString)
+    @Structureviewservices@TExpressionCommand@SetEnabledExpression$qqrx20System@UnicodeString @138 ; __fastcall Structureviewservices::TExpressionCommand::SetEnabledExpression(const System::UnicodeString)
+    @Structureviewservices@TExpressionCommand@SetExecuteExpression$qqrx20System@UnicodeString @137 ; __fastcall Structureviewservices::TExpressionCommand::SetExecuteExpression(const System::UnicodeString)
+    @Structureviewservices@TExpressionCommand@SetVisibleExpression$qqrx20System@UnicodeString @136 ; __fastcall Structureviewservices::TExpressionCommand::SetVisibleExpression(const System::UnicodeString)
+    @Structureviewservices@TExpressionCommand@Update$qqr63System@%DelphiInterface$36Dataexplorerapi@IOTADataExplorerItem%46System@%DynamicArray$22Dataexplorerapi@TScope% @135 ; Structureviewservices::TExpressionCommand::Update(System::DelphiInterface<{583}...
+    @Structureviewservices@TScopes@ @197 ; Structureviewservices::TScopes::
+    @Structureviewservices@TScopes@$bctr$qqrv @88  ; __fastcall Structureviewservices::TScopes::TScopes()
+    @Structureviewservices@TScopes@$bdtr$qqrv @87  ; __fastcall Structureviewservices::TScopes::~TScopes()
+    @Structureviewservices@TScopes@Add$qqrrx22Dataexplorerapi@TScope @90  ; __fastcall Structureviewservices::TScopes::Add(const Dataexplorerapi::TScope&)
+    @Structureviewservices@TScopes@GetCount$qqrv @86  ; __fastcall Structureviewservices::TScopes::GetCount()
+    @Structureviewservices@TScopes@GetItem$qqri @85  ; __fastcall Structureviewservices::TScopes::GetItem(int)
+    @Structureviewservices@TScopes@ToArray$qqrv @89  ; __fastcall Structureviewservices::TScopes::ToArray()
+    @Structureviewservices@initialization$qqrv @62  ; __fastcall Structureviewservices::initialization()
+    @System@Generics@Collections@%TArrayManager__1$22Dataexplorerapi@TScope%@ @159 ; System::Generics::Collections::TArrayManager__1<Dataexplorerapi::TScope>::
+    @System@Generics@Collections@%TEnumerable__1$22Dataexplorerapi@TScope%@ @164 ; System::Generics::Collections::TEnumerable__1<Dataexplorerapi::TScope>::
+    @System@Generics@Collections@%TEnumerable__1$22Dataexplorerapi@TScope%@$bdtr$qqrv @60  ; __fastcall System::Generics::Collections::TEnumerable__1<Dataexplorerapi::TScope>::~TEnumerable__1<Dataexplorerapi::TScope>()
+    @System@Generics@Collections@%TEnumerable__1$22Dataexplorerapi@TScope%@GetEnumerator$qqrv @59  ; __fastcall System::Generics::Collections::TEnumerable__1<Dataexplorerapi::TScope>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$22Dataexplorerapi@TScope%@ToArray$qqrv @58  ; __fastcall System::Generics::Collections::TEnumerable__1<Dataexplorerapi::TScope>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$22Dataexplorerapi@TScope%@ToArrayImpl$qqri @61  ; __fastcall System::Generics::Collections::TEnumerable__1<Dataexplorerapi::TScope>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerator__1$22Dataexplorerapi@TScope%@ @166 ; System::Generics::Collections::TEnumerator__1<Dataexplorerapi::TScope>::
+    @System@Generics@Collections@%TEnumerator__1$22Dataexplorerapi@TScope%@MoveNext$qqrv @57  ; __fastcall System::Generics::Collections::TEnumerator__1<Dataexplorerapi::TScope>::MoveNext()
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@ @152 ; System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@$bctr$qqrv @45  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::TList__1<Dataexplorerapi::TScope>()
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@$bctr$qqrx91System@%DelphiInterface$64System@Generics@Defaults@%IComparer__1$22Dataexplorerapi@TScope%% @44  ; System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::TList__1<Dataexplorerapi::TScope>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@$bctr$qqrxp69System@Generics@Collections@%TEnumerable__1$22Dataexplorerapi@TScope% @43  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::TList__1<Dataexplorerapi::TScope>(System::Generics::Collections::TEnumerable__1<Dataexplorerapi::TScope> * const)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@$bdtr$qqrv @42  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::~TList__1<Dataexplorerapi::TScope>()
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@%TEnumerator$%@ @154 ; System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::TEnumerator<>::
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@%TEnumerator$%@$bctr$qqrxp63System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope% @2   ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::TEnumerator<>::TEnumerator<>(System::Generics::Collections::TList__1<Dataexplorerapi::TScope> * const)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@%TEnumerator$%@DoGetCurrent$qqrv @4   ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::TEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@%TEnumerator$%@DoMoveNext$qqrv @3   ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::TEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@%TEnumerator$%@GetCurrent$qqrv @5   ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::TEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@%TEnumerator$%@MoveNext$qqrv @1   ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::TEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@Add$qqrrx22Dataexplorerapi@TScope @39  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::Add(const Dataexplorerapi::TScope&)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@AddRange$qqrpx22Dataexplorerapi@TScopexi @38  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::AddRange(const Dataexplorerapi::TScope *, const int)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@AddRange$qqrx75System@%DelphiInterface$48System@%IEnumerable__1$22Dataexplorerapi@TScope%% @37  ; System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::AddRange(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@AddRange$qqrxp69System@Generics@Collections@%TEnumerable__1$22Dataexplorerapi@TScope% @36  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::AddRange(System::Generics::Collections::TEnumerable__1<Dataexplorerapi::TScope> * const)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@BinarySearch$qqrrx22Dataexplorerapi@TScoperi @10  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::BinarySearch(const Dataexplorerapi::TScope&, int&)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@BinarySearch$qqrrx22Dataexplorerapi@TScoperix91System@%DelphiInterface$64System@Generics@Defaults@%IComparer__1$22Dataexplorerapi@TScope%% @9   ; System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::BinarySearch(const Dataexplorerapi::TScope&, int&, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@Clear$qqrv @19  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::Clear()
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@Contains$qqrrx22Dataexplorerapi@TScope @17  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::Contains(const Dataexplorerapi::TScope&)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@Delete$qqri @27  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::Delete(int)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@DeleteRange$qqrii @26  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::DeleteRange(int, int)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@DoDelete$qqri51System@Generics@Collections@TCollectionNotification @49  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::DoDelete(int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@DoGetEnumerator$qqrv @47  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::DoGetEnumerator()
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@Error$qqrp20System@TResStringReci @40  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::Error(System::TResStringRec *, int)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@Error$qqrx20System@UnicodeStringi @41  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::Error(const System::UnicodeString, int)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@Exchange$qqrii @23  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::Exchange(int, int)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@Expand$qqrv @18  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::Expand()
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@Extract$qqrrx22Dataexplorerapi@TScope @25  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::Extract(const Dataexplorerapi::TScope&)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@ExtractItem$qqrrx22Dataexplorerapi@TScope23System@Types@TDirection @24  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::ExtractItem(const Dataexplorerapi::TScope&, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@First$qqrv @21  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::First()
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@GetCapacity$qqrv @56  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::GetCapacity()
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@GetEnumerator$qqrv @6   ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::GetEnumerator()
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@GetItem$qqri @53  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::GetItem(int)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@Grow$qqri @51  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::Grow(int)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@GrowCheck$qqri @50  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::GrowCheck(int)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@IndexOf$qqrrx22Dataexplorerapi@TScope @16  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::IndexOf(const Dataexplorerapi::TScope&)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@IndexOfItem$qqrrx22Dataexplorerapi@TScope23System@Types@TDirection @15  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::IndexOfItem(const Dataexplorerapi::TScope&, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@Insert$qqrirx22Dataexplorerapi@TScope @35  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::Insert(int, const Dataexplorerapi::TScope&)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@InsertRange$qqripx22Dataexplorerapi@TScopexi @34  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::InsertRange(int, const Dataexplorerapi::TScope *, const int)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@InsertRange$qqrix75System@%DelphiInterface$48System@%IEnumerable__1$22Dataexplorerapi@TScope%% @33  ; System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::InsertRange(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@InsertRange$qqrixp69System@Generics@Collections@%TEnumerable__1$22Dataexplorerapi@TScope% @32  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::InsertRange(int, System::Generics::Collections::TEnumerable__1<Dataexplorerapi::TScope> * const)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@ItemValue$qqrrx22Dataexplorerapi@TScope @48  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::ItemValue(const Dataexplorerapi::TScope&)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@Last$qqrv @20  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::Last()
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@LastIndexOf$qqrrx22Dataexplorerapi@TScope @14  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::LastIndexOf(const Dataexplorerapi::TScope&)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@Move$qqrii @22  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::Move(int, int)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@Notify$qqrrx22Dataexplorerapi@TScope51System@Generics@Collections@TCollectionNotification @46  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::Notify(const Dataexplorerapi::TScope&, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@Pack$qqrv @31  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::Pack()
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@Pack$qqrx104System@%DelphiInterface$77System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@%TEmptyFunc$%% @30  ; System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::Pack(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@Remove$qqrrx22Dataexplorerapi@TScope @29  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::Remove(const Dataexplorerapi::TScope&)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@RemoveItem$qqrrx22Dataexplorerapi@TScope23System@Types@TDirection @28  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::RemoveItem(const Dataexplorerapi::TScope&, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@Reverse$qqrv @13  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::Reverse()
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@SetCapacity$qqri @55  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::SetCapacity(int)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@SetCount$qqri @54  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::SetCount(int)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@SetItem$qqrirx22Dataexplorerapi@TScope @52  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::SetItem(int, const Dataexplorerapi::TScope&)
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@Sort$qqrv @12  ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::Sort()
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@Sort$qqrx91System@%DelphiInterface$64System@Generics@Defaults@%IComparer__1$22Dataexplorerapi@TScope%% @11  ; System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::Sort(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@ToArray$qqrv @7   ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::ToArray()
+    @System@Generics@Collections@%TList__1$22Dataexplorerapi@TScope%@TrimExcess$qqrv @8   ; __fastcall System::Generics::Collections::TList__1<Dataexplorerapi::TScope>::TrimExcess()
+    Finalize                       @203 ; Finalize
+    Initialize                     @204 ; Initialize

@@ -1,0 +1,647 @@
+LIBRARY     FIREDACODBCDRIVER210.BPL
+
+DESCRIPTION 'mbarcadero FireDAC ODBC Driver Components'
+
+EXPORTS
+    @$xp$27Firedac@Phys@Odbccli@PUWord @140 ; __tpdsc__ Firedac::Phys::Odbccli::PUWord
+    @$xp$28Firedac@Phys@Odbccli@PSQLLen @120 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLLen
+    @$xp$29Firedac@Phys@Odbccli@PSQLByte @123 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLByte
+    @$xp$29Firedac@Phys@Odbccli@PSQLChar @138 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLChar
+    @$xp$29Firedac@Phys@Odbccli@PSQLDate @134 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLDate
+    @$xp$29Firedac@Phys@Odbccli@PSQLGUID @101 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLGUID
+    @$xp$29Firedac@Phys@Odbccli@PSQLReal @129 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLReal
+    @$xp$29Firedac@Phys@Odbccli@PSQLTime @133 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLTime
+    @$xp$29Firedac@Phys@Odbccli@PSQLULen @117 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLULen
+    @$xp$29Firedac@Phys@Odbccli@TSQLGUID @100 ; __tpdsc__ Firedac::Phys::Odbccli::TSQLGUID
+    @$xp$30Firedac@Phys@Odbccli@PSQLFloat @130 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLFloat
+    @$xp$30Firedac@Phys@Odbccli@PSQLWChar @136 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLWChar
+    @$xp$30Firedac@Phys@Odbccli@TSQLError @78  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLError
+    @$xp$30Firedac@Phys@Odbccli@TSQLFetch @75  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLFetch
+    @$xp$30Firedac@Phys@Odbccli@TSQLState @33  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLState
+    @$xp$31Firedac@Phys@Odbccli@PSQLBigInt @122 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLBigInt
+    @$xp$31Firedac@Phys@Odbccli@PSQLDouble @131 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLDouble
+    @$xp$31Firedac@Phys@Odbccli@TSQLCancel @91  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLCancel
+    @$xp$31Firedac@Phys@Odbccli@TSQLSetPos @17  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLSetPos
+    @$xp$31Firedac@Phys@Odbccli@TSQLTables @35  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLTables
+    @$xp$32Firedac@Phys@Odbccli@PSQLDecimal @127 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLDecimal
+    @$xp$32Firedac@Phys@Odbccli@PSQLInteger @124 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLInteger
+    @$xp$32Firedac@Phys@Odbccli@PSQLNumeric @128 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLNumeric
+    @$xp$32Firedac@Phys@Odbccli@PSQLPointer @135 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLPointer
+    @$xp$32Firedac@Phys@Odbccli@PSQLTransID @116 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLTransID
+    @$xp$32Firedac@Phys@Odbccli@PSQLUBigInt @121 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLUBigInt
+    @$xp$32Firedac@Phys@Odbccli@PSQLVarchar @137 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLVarchar
+    @$xp$32Firedac@Phys@Odbccli@TSQLBindCol @93  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLBindCol
+    @$xp$32Firedac@Phys@Odbccli@TSQLColumns @85  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLColumns
+    @$xp$32Firedac@Phys@Odbccli@TSQLConnect @84  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLConnect
+    @$xp$32Firedac@Phys@Odbccli@TSQLDrivers @15  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLDrivers
+    @$xp$32Firedac@Phys@Odbccli@TSQLEndTran @79  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLEndTran
+    @$xp$32Firedac@Phys@Odbccli@TSQLExecute @76  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLExecute
+    @$xp$32Firedac@Phys@Odbccli@TSQLFreeEnv @72  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLFreeEnv
+    @$xp$32Firedac@Phys@Odbccli@TSQLGetData @66  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLGetData
+    @$xp$32Firedac@Phys@Odbccli@TSQLGetInfo @59  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLGetInfo
+    @$xp$32Firedac@Phys@Odbccli@TSQLPrepare @49  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLPrepare
+    @$xp$32Firedac@Phys@Odbccli@TSQLPutData @48  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLPutData
+    @$xp$33Firedac@Phys@Odbccli@PSQLInterval @103 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLInterval
+    @$xp$33Firedac@Phys@Odbccli@PSQLRowCount @118 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLRowCount
+    @$xp$33Firedac@Phys@Odbccli@PSQLSmallint @126 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLSmallint
+    @$xp$33Firedac@Phys@Odbccli@PSQLUInteger @139 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLUInteger
+    @$xp$33Firedac@Phys@Odbccli@TSQLAllocEnv @96  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLAllocEnv
+    @$xp$33Firedac@Phys@Odbccli@TSQLCopyDesc @83  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLCopyDesc
+    @$xp$33Firedac@Phys@Odbccli@TSQLFreeStmt @70  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLFreeStmt
+    @$xp$33Firedac@Phys@Odbccli@TSQLInterval @102 ; __tpdsc__ Firedac::Phys::Odbccli::TSQLInterval
+    @$xp$33Firedac@Phys@Odbccli@TSQLRowCount @47  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLRowCount
+    @$xp$33Firedac@Phys@Odbccli@TSQLSetParam @40  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLSetParam
+    @$xp$33Firedac@Phys@Odbccli@TSQLTransact @34  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLTransact
+    @$xp$33Firedac@Phys@Odbcwrapper@TODBCLib @429 ; __tpdsc__ Firedac::Phys::Odbcwrapper::TODBCLib
+    @$xp$34Firedac@Phys@Odbccli@PSQLDaySecond @105 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLDaySecond
+    @$xp$34Firedac@Phys@Odbccli@PSQLRowOffset @119 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLRowOffset
+    @$xp$34Firedac@Phys@Odbccli@PSQLTimeStamp @132 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLTimeStamp
+    @$xp$34Firedac@Phys@Odbccli@PSQLUSmallint @125 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLUSmallint
+    @$xp$34Firedac@Phys@Odbccli@PSQLYearMonth @107 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLYearMonth
+    @$xp$34Firedac@Phys@Odbccli@TSQLAllocStmt @94  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLAllocStmt
+    @$xp$34Firedac@Phys@Odbccli@TSQLBindParam @92  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLBindParam
+    @$xp$34Firedac@Phys@Odbccli@TSQLDaySecond @104 ; __tpdsc__ Firedac::Phys::Odbccli::TSQLDaySecond
+    @$xp$34Firedac@Phys@Odbccli@TSQLNativeSQL @23  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLNativeSQL
+    @$xp$34Firedac@Phys@Odbccli@TSQLNumParams @22  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLNumParams
+    @$xp$34Firedac@Phys@Odbccli@TSQLParamData @50  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLParamData
+    @$xp$34Firedac@Phys@Odbccli@TSQLYearMonth @106 ; __tpdsc__ Firedac::Phys::Odbccli::TSQLYearMonth
+    @$xp$35Firedac@Phys@Odbccli@PODBCTimeStamp @109 ; __tpdsc__ Firedac::Phys::Odbccli::PODBCTimeStamp
+    @$xp$35Firedac@Phys@Odbccli@PSQLDateStruct @113 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLDateStruct
+    @$xp$35Firedac@Phys@Odbccli@PSQLNumericRec @99  ; __tpdsc__ Firedac::Phys::Odbccli::PSQLNumericRec
+    @$xp$35Firedac@Phys@Odbccli@PSQLRowsetSize @114 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLRowsetSize
+    @$xp$35Firedac@Phys@Odbccli@PSQLSetPosiRow @115 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLSetPosiRow
+    @$xp$35Firedac@Phys@Odbccli@PSQLTimeStruct @111 ; __tpdsc__ Firedac::Phys::Odbccli::PSQLTimeStruct
+    @$xp$35Firedac@Phys@Odbccli@TODBCTimeStamp @108 ; __tpdsc__ Firedac::Phys::Odbccli::TODBCTimeStamp
+    @$xp$35Firedac@Phys@Odbccli@TSQLDateStruct @112 ; __tpdsc__ Firedac::Phys::Odbccli::TSQLDateStruct
+    @$xp$35Firedac@Phys@Odbccli@TSQLDisconnect @80  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLDisconnect
+    @$xp$35Firedac@Phys@Odbccli@TSQLExecDirect @77  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLExecDirect
+    @$xp$35Firedac@Phys@Odbccli@TSQLFreeHandle @71  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLFreeHandle
+    @$xp$35Firedac@Phys@Odbccli@TSQLGetDescRec @64  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLGetDescRec
+    @$xp$35Firedac@Phys@Odbccli@TSQLGetDiagRec @62  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLGetDiagRec
+    @$xp$35Firedac@Phys@Odbccli@TSQLGetEnvAttr @61  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLGetEnvAttr
+    @$xp$35Firedac@Phys@Odbccli@TSQLGetInfoInt @56  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLGetInfoInt
+    @$xp$35Firedac@Phys@Odbccli@TSQLNumericRec @98  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLNumericRec
+    @$xp$35Firedac@Phys@Odbccli@TSQLProcedures @18  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLProcedures
+    @$xp$35Firedac@Phys@Odbccli@TSQLSetDescRec @42  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLSetDescRec
+    @$xp$35Firedac@Phys@Odbccli@TSQLSetEnvAttr @41  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLSetEnvAttr
+    @$xp$35Firedac@Phys@Odbccli@TSQLStatistics @36  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLStatistics
+    @$xp$35Firedac@Phys@Odbccli@TSQLTimeStruct @110 ; __tpdsc__ Firedac::Phys::Odbccli::TSQLTimeStruct
+    @$xp$36Firedac@Phys@Odbccli@TSQLAllocHandle @95  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLAllocHandle
+    @$xp$36Firedac@Phys@Odbccli@TSQLCloseCursor @89  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLCloseCursor
+    @$xp$36Firedac@Phys@Odbccli@TSQLDataSources @82  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLDataSources
+    @$xp$36Firedac@Phys@Odbccli@TSQLDescribeCol @81  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLDescribeCol
+    @$xp$36Firedac@Phys@Odbccli@TSQLFetchScroll @74  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLFetchScroll
+    @$xp$36Firedac@Phys@Odbccli@TSQLForeignKeys @25  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLForeignKeys
+    @$xp$36Firedac@Phys@Odbccli@TSQLFreeConnect @73  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLFreeConnect
+    @$xp$36Firedac@Phys@Odbccli@TSQLGetStmtAttr @54  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLGetStmtAttr
+    @$xp$36Firedac@Phys@Odbccli@TSQLGetTypeInfo @52  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLGetTypeInfo
+    @$xp$36Firedac@Phys@Odbccli@TSQLMoreResults @24  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLMoreResults
+    @$xp$36Firedac@Phys@Odbccli@TSQLPrimaryKeys @20  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLPrimaryKeys
+    @$xp$36Firedac@Phys@Odbccli@TSQLSetStmtAttr @39  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLSetStmtAttr
+    @$xp$36Firedac@Phys@Odbcwrapper@TODBCColumn @412 ; __tpdsc__ Firedac::Phys::Odbcwrapper::TODBCColumn
+    @$xp$36Firedac@Phys@Odbcwrapper@TODBCHandle @427 ; __tpdsc__ Firedac::Phys::Odbcwrapper::TODBCHandle
+    @$xp$36Firedac@Phys@Odbcwrapper@TODBCTracer @431 ; __tpdsc__ Firedac::Phys::Odbcwrapper::TODBCTracer
+    @$xp$37Firedac@Phys@Odbccli@TSQLAllocConnect @97  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLAllocConnect
+    @$xp$37Firedac@Phys@Odbccli@TSQLCancelHandle @90  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLCancelHandle
+    @$xp$37Firedac@Phys@Odbccli@TSQLColAttribute @88  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLColAttribute
+    @$xp$37Firedac@Phys@Odbccli@TSQLGetDescField @65  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLGetDescField
+    @$xp$37Firedac@Phys@Odbccli@TSQLGetDiagField @63  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLGetDiagField
+    @$xp$37Firedac@Phys@Odbccli@TSQLGetFunctions @60  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLGetFunctions
+    @$xp$37Firedac@Phys@Odbccli@TSQLParamOptions @21  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLParamOptions
+    @$xp$37Firedac@Phys@Odbccli@TSQLSetDescField @43  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLSetDescField
+    @$xp$38Firedac@Phys@Odbccli@PSQLSSTime2Struct @9   ; __tpdsc__ Firedac::Phys::Odbccli::PSQLSSTime2Struct
+    @$xp$38Firedac@Phys@Odbccli@TASA_SQL_CALLBACK @5   ; __tpdsc__ Firedac::Phys::Odbccli::TASA_SQL_CALLBACK
+    @$xp$38Firedac@Phys@Odbccli@TSQLBindParameter @14  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLBindParameter
+    @$xp$38Firedac@Phys@Odbccli@TSQLBrowseConnect @31  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLBrowseConnect
+    @$xp$38Firedac@Phys@Odbccli@TSQLColAttributes @29  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLColAttributes
+    @$xp$38Firedac@Phys@Odbccli@TSQLDescribeParam @27  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLDescribeParam
+    @$xp$38Firedac@Phys@Odbccli@TSQLDriverConnect @32  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLDriverConnect
+    @$xp$38Firedac@Phys@Odbccli@TSQLExtendedFetch @26  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLExtendedFetch
+    @$xp$38Firedac@Phys@Odbccli@TSQLGetCursorName @67  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLGetCursorName
+    @$xp$38Firedac@Phys@Odbccli@TSQLGetInfoSQLLen @55  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLGetInfoSQLLen
+    @$xp$38Firedac@Phys@Odbccli@TSQLGetInfoString @58  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLGetInfoString
+    @$xp$38Firedac@Phys@Odbccli@TSQLGetStmtOption @53  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLGetStmtOption
+    @$xp$38Firedac@Phys@Odbccli@TSQLNumResultCols @51  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLNumResultCols
+    @$xp$38Firedac@Phys@Odbccli@TSQLSSTime2Struct @8   ; __tpdsc__ Firedac::Phys::Odbccli::TSQLSSTime2Struct
+    @$xp$38Firedac@Phys@Odbccli@TSQLSetCursorName @44  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLSetCursorName
+    @$xp$38Firedac@Phys@Odbccli@TSQLSetStmtOption @38  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLSetStmtOption
+    @$xp$38Firedac@Phys@Odbcwrapper@TODBCLibClass @439 ; __tpdsc__ Firedac::Phys::Odbcwrapper::TODBCLibClass
+    @$xp$38Firedac@Phys@Odbcwrapper@TODBCVariable @418 ; __tpdsc__ Firedac::Phys::Odbcwrapper::TODBCVariable
+    @$xp$39Firedac@Phys@Odbc@TFDPhysODBCDriverLink @634 ; __tpdsc__ Firedac::Phys::Odbc::TFDPhysODBCDriverLink
+    @$xp$39Firedac@Phys@Odbcbase@IFDPhysODBCDriver @557 ; __tpdsc__ Firedac::Phys::Odbcbase::IFDPhysODBCDriver
+    @$xp$39Firedac@Phys@Odbcbase@PFDODBCColInfoRec @548 ; __tpdsc__ Firedac::Phys::Odbcbase::PFDODBCColInfoRec
+    @$xp$39Firedac@Phys@Odbcbase@PFDODBCParInfoRec @547 ; __tpdsc__ Firedac::Phys::Odbcbase::PFDODBCParInfoRec
+    @$xp$39Firedac@Phys@Odbcbase@TFDODBCVarInfoRec @545 ; __tpdsc__ Firedac::Phys::Odbcbase::TFDODBCVarInfoRec
+    @$xp$39Firedac@Phys@Odbccli@TSQLAllocHandleStd @13  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLAllocHandleStd
+    @$xp$39Firedac@Phys@Odbccli@TSQLBulkOperations @30  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLBulkOperations
+    @$xp$39Firedac@Phys@Odbccli@TSQLGetConnectAttr @69  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLGetConnectAttr
+    @$xp$39Firedac@Phys@Odbccli@TSQLInstallerError @10  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLInstallerError
+    @$xp$39Firedac@Phys@Odbccli@TSQLSetConnectAttr @46  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLSetConnectAttr
+    @$xp$39Firedac@Phys@Odbccli@TSQLSpecialColumns @37  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLSpecialColumns
+    @$xp$39Firedac@Phys@Odbcwrapper@TODBCParameter @416 ; __tpdsc__ Firedac::Phys::Odbcwrapper::TODBCParameter
+    @$xp$40Firedac@Phys@Odbcbase@TFDPhysODBCCommand @539 ; __tpdsc__ Firedac::Phys::Odbcbase::TFDPhysODBCCommand
+    @$xp$40Firedac@Phys@Odbccli@TSQLColAttributeInt @86  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLColAttributeInt
+    @$xp$40Firedac@Phys@Odbccli@TSQLGetInfoSmallint @57  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLGetInfoSmallint
+    @$xp$40Firedac@Phys@Odbccli@TSQLTablePrivileges @16  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLTablePrivileges
+    @$xp$40Firedac@Phys@Odbcwrapper@TODBCConnection @422 ; __tpdsc__ Firedac::Phys::Odbcwrapper::TODBCConnection
+    @$xp$40Firedac@Phys@Odbcwrapper@TODBCDriverKind @424 ; __tpdsc__ Firedac::Phys::Odbcwrapper::TODBCDriverKind
+    @$xp$40Firedac@Phys@Odbcwrapper@TODBCPageBuffer @406 ; __tpdsc__ Firedac::Phys::Odbcwrapper::TODBCPageBuffer
+    @$xp$40Firedac@Phys@Odbcwrapper@TODBCSelectItem @420 ; __tpdsc__ Firedac::Phys::Odbcwrapper::TODBCSelectItem
+    @$xp$41Firedac@Phys@Odbccli@TSQLColumnPrivileges @28  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLColumnPrivileges
+    @$xp$41Firedac@Phys@Odbccli@TSQLConfigDataSource @11  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLConfigDataSource
+    @$xp$41Firedac@Phys@Odbccli@TSQLGetConnectOption @68  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLGetConnectOption
+    @$xp$41Firedac@Phys@Odbccli@TSQLProcedureColumns @19  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLProcedureColumns
+    @$xp$41Firedac@Phys@Odbccli@TSQLSetConnectOption @45  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLSetConnectOption
+    @$xp$41Firedac@Phys@Odbccli@TSQLSetScrollOptions @12  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLSetScrollOptions
+    @$xp$41Firedac@Phys@Odbcdef@TFDODBCNumericFormat @630 ; __tpdsc__ Firedac::Phys::Odbcdef::TFDODBCNumericFormat
+    @$xp$41Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata @600 ; __tpdsc__ Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata
+    @$xp$41Firedac@Phys@Odbcwrapper@TODBCEnvironment @425 ; __tpdsc__ Firedac::Phys::Odbcwrapper::TODBCEnvironment
+    @$xp$42Firedac@Phys@Odbccli@PSQLSSTimeStampOffset @7   ; __tpdsc__ Firedac::Phys::Odbccli::PSQLSSTimeStampOffset
+    @$xp$42Firedac@Phys@Odbccli@TSQLSSTimeStampOffset @6   ; __tpdsc__ Firedac::Phys::Odbccli::TSQLSSTimeStampOffset
+    @$xp$42Firedac@Phys@Odbcwrapper@TODBCVariableList @410 ; __tpdsc__ Firedac::Phys::Odbcwrapper::TODBCVariableList
+    @$xp$43Firedac@Phys@Odbcbase@PFDPhysODBCCliHandles @558 ; __tpdsc__ Firedac::Phys::Odbcbase::PFDPhysODBCCliHandles
+    @$xp$43Firedac@Phys@Odbcbase@TFDPhysODBCCliHandles @559 ; __tpdsc__ Firedac::Phys::Odbcbase::TFDPhysODBCCliHandles
+    @$xp$43Firedac@Phys@Odbcbase@TFDPhysODBCDriverBase @555 ; __tpdsc__ Firedac::Phys::Odbcbase::TFDPhysODBCDriverBase
+    @$xp$43Firedac@Phys@Odbcbase@_TFDODBCVarInfoRec@_1 @546 ; __tpdsc__ Firedac::Phys::Odbcbase::_TFDODBCVarInfoRec::_1
+    @$xp$43Firedac@Phys@Odbccli@TSQLColAttributeString @87  ; __tpdsc__ Firedac::Phys::Odbccli::TSQLColAttributeString
+    @$xp$43Firedac@Phys@Odbcwrapper@TFDODBCNativeError @435 ; __tpdsc__ Firedac::Phys::Odbcwrapper::TFDODBCNativeError
+    @$xp$43Firedac@Phys@Odbcwrapper@TODBCStatementBase @404 ; __tpdsc__ Firedac::Phys::Odbcwrapper::TODBCStatementBase
+    @$xp$44Firedac@Phys@Odbcbase@TFDPhysODBCBaseService @560 ; __tpdsc__ Firedac::Phys::Odbcbase::TFDPhysODBCBaseService
+    @$xp$44Firedac@Phys@Odbcbase@TFDPhysODBCTransaction @549 ; __tpdsc__ Firedac::Phys::Odbcbase::TFDPhysODBCTransaction
+    @$xp$44Firedac@Phys@Odbcbase@_TFDPhysODBCCommand@_1 @542 ; __tpdsc__ Firedac::Phys::Odbcbase::_TFDPhysODBCCommand::_1
+    @$xp$44Firedac@Phys@Odbcbase@_TFDPhysODBCCommand@_2 @541 ; __tpdsc__ Firedac::Phys::Odbcbase::_TFDPhysODBCCommand::_2
+    @$xp$44Firedac@Phys@Odbcwrapper@TODBCLongDataStream @414 ; __tpdsc__ Firedac::Phys::Odbcwrapper::TODBCLongDataStream
+    @$xp$44Firedac@Phys@Odbcwrapper@_TODBCPageBuffer@_1 @409 ; __tpdsc__ Firedac::Phys::Odbcwrapper::_TODBCPageBuffer::_1
+    @$xp$44Firedac@Phys@Odbcwrapper@_TODBCPageBuffer@_2 @408 ; __tpdsc__ Firedac::Phys::Odbcwrapper::_TODBCPageBuffer::_2
+    @$xp$45Firedac@Phys@Odbcwrapper@EODBCNativeException @433 ; __tpdsc__ Firedac::Phys::Odbcwrapper::EODBCNativeException
+    @$xp$45Firedac@Phys@Odbcwrapper@TODBCParseErrorEvent @438 ; __tpdsc__ Firedac::Phys::Odbcwrapper::TODBCParseErrorEvent
+    @$xp$46Firedac@Phys@Odbcbase@Firedac_Phys_Odbcbase__4 @554 ; __tpdsc__ Firedac::Phys::Odbcbase::Firedac_Phys_Odbcbase__4
+    @$xp$46Firedac@Phys@Odbcbase@TFDPhysODBCStatementProp @544 ; __tpdsc__ Firedac::Phys::Odbcbase::TFDPhysODBCStatementProp
+    @$xp$46Firedac@Phys@Odbcwrapper@TODBCCommandStatement @402 ; __tpdsc__ Firedac::Phys::Odbcwrapper::TODBCCommandStatement
+    @$xp$46Firedac@Phys@Odbcwrapper@TODBCGetMaxSizesEvent @437 ; __tpdsc__ Firedac::Phys::Odbcwrapper::TODBCGetMaxSizesEvent
+    @$xp$47Firedac@Phys@Odbcbase@TFDPhysODBCBaseDriverLink @562 ; __tpdsc__ Firedac::Phys::Odbcbase::TFDPhysODBCBaseDriverLink
+    @$xp$47Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase @551 ; __tpdsc__ Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase
+    @$xp$47Firedac@Phys@Odbcbase@TFDPhysODBCStatementProps @543 ; __tpdsc__ Firedac::Phys::Odbcbase::TFDPhysODBCStatementProps
+    @$xp$47Firedac@Phys@Odbcwrapper@TODBCMetaInfoStatement @400 ; __tpdsc__ Firedac::Phys::Odbcwrapper::TODBCMetaInfoStatement
+    @$xp$49Firedac@Phys@Odbcbase@TFDPhysODBCSupportedOptions @553 ; __tpdsc__ Firedac::Phys::Odbcbase::TFDPhysODBCSupportedOptions
+    @$xp$49Firedac@Phys@Odbcmeta@__TADPhysConnectionMetadata @602 ; __tpdsc__ Firedac::Phys::Odbcmeta::__TADPhysConnectionMetadata
+    @$xp$50Firedac@Phys@Odbcwrapper@EODBCNativeExceptionClass @440 ; __tpdsc__ Firedac::Phys::Odbcwrapper::EODBCNativeExceptionClass
+    @$xp$51Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams @628 ; __tpdsc__ Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams
+    @Firedac@Phys@Odbc@Finalization$qqrv @632 ; __fastcall Firedac::Phys::Odbc::Finalization()
+    @Firedac@Phys@Odbc@TFDPhysODBCDriverLink@ @635 ; Firedac::Phys::Odbc::TFDPhysODBCDriverLink::
+    @Firedac@Phys@Odbc@TFDPhysODBCDriverLink@GetBaseDriverID$qqrv @633 ; __fastcall Firedac::Phys::Odbc::TFDPhysODBCDriverLink::GetBaseDriverID()
+    @Firedac@Phys@Odbc@initialization$qqrv @631 ; __fastcall Firedac::Phys::Odbc::initialization()
+    @Firedac@Phys@Odbcbase@Finalization$qqrv @442 ; __fastcall Firedac::Phys::Odbcbase::Finalization()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCBaseDriverLink@ @563 ; Firedac::Phys::Odbcbase::TFDPhysODBCBaseDriverLink::
+    @Firedac@Phys@Odbcbase@TFDPhysODBCBaseDriverLink@ApplyTo$qqrx62System@%DelphiInterface$35Firedac@Stan@Intf@IFDStanDefinition% @537 ; Firedac::Phys::Odbcbase::TFDPhysODBCBaseDriverLink::ApplyTo(const System::DelphiInterface<{583}...
+    @Firedac@Phys@Odbcbase@TFDPhysODBCBaseDriverLink@GetDSNs$qqrp23System@Classes@TStringso @535 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCBaseDriverLink::GetDSNs(System::Classes::TStrings *, bool)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCBaseDriverLink@GetDrivers$qqrp23System@Classes@TStrings @536 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCBaseDriverLink::GetDrivers(System::Classes::TStrings *)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCBaseDriverLink@IsConfigured$qqrv @538 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCBaseDriverLink::IsConfigured()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCBaseService@ @561 ; Firedac::Phys::Odbcbase::TFDPhysODBCBaseService::
+    @Firedac@Phys@Odbcbase@TFDPhysODBCBaseService@ExecuteBase$qqrus20System@UnicodeStringt2 @532 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCBaseService::ExecuteBase(unsigned short, System::UnicodeString, System::UnicodeString)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCBaseService@GetEnv$qqrv @534 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCBaseService::GetEnv()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCBaseService@GetLib$qqrv @533 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCBaseService::GetLib()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@ @540 ; Firedac::Phys::Odbcbase::TFDPhysODBCCommand::
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@CheckFetchColumn$qqr29Firedac@Stan@Intf@TFDDataType62System@%Set$34Firedac@Stan@Intf@TFDDataAttributet1$i0$t1$i15$%s @479 ; Firedac::Phys::Odbcbase::TFDPhysODBCCommand::CheckFetchColumn(Firedac::Stan::Intf::TFDDataType, System::Set<{583}...
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@CloseStatement$qqriooo @448 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::CloseStatement(int, bool, bool, bool)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@CreateDescribeInfos$qqrv @478 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::CreateDescribeInfos()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@CreateParamColumnInfos$qqrp39Firedac@Phys@Odbcbase@TFDODBCVarInfoRecp27Firedac@Stan@Param@TFDParam @475 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::CreateParamColumnInfos(Firedac::Phys::Odbcbase::TFDODBCVarInfoRec *, Firedac::Stan::Param::TFDParam *)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@CreateParamColumns$qqrp27Firedac@Stan@Param@TFDParam @476 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::CreateParamColumns(Firedac::Stan::Param::TFDParam *)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@CreateParamInfos$qqrv @474 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::CreateParamInfos()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@DestroyDescribeInfos$qqrv @477 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::DestroyDescribeInfos()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@DestroyParamInfos$qqrv @473 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::DestroyParamInfos()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@FD2CDataType$qqr29Firedac@Stan@Intf@TFDDataTypeo @482 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::FD2CDataType(Firedac::Stan::Intf::TFDDataType, bool)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@FD2SQLDataType$qqr29Firedac@Stan@Intf@TFDDataTypeorit3 @483 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::FD2SQLDataType(Firedac::Stan::Intf::TFDDataType, bool, int&, int&)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@FD2SQLParamType$qqr18Data@Db@TParamType @480 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::FD2SQLParamType(Data::Db::TParamType)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@FetchMetaRow$qqrp25Firedac@Dats@TFDDatSTablep23Firedac@Dats@TFDDatSRowii @443 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::FetchMetaRow(Firedac::Dats::TFDDatSTable *, Firedac::Dats::TFDDatSRow *, int, int)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@FetchRow$qqrp25Firedac@Dats@TFDDatSTablep23Firedac@Dats@TFDDatSRowi @447 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::FetchRow(Firedac::Dats::TFDDatSTable *, Firedac::Dats::TFDDatSRow *, int)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@GetCliObj$qqrv @484 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::GetCliObj()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@GetConnection$qqrv @485 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::GetConnection()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@GetCursor$qqrri @451 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::GetCursor(int&)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@GetCustomParamValue$qqr29Firedac@Stan@Intf@TFDDataTypep38Firedac@Phys@Odbcwrapper@TODBCVariablep27Firedac@Stan@Param@TFDParamii @456 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::GetCustomParamValue(Firedac::Stan::Intf::TFDDataType, Firedac::Phys::Odbcwrapper::TODBCVariable *, Firedac::Stan::Param::TFDParam *, int, int)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@GetIsCustomParam$qqr29Firedac@Stan@Intf@TFDDataType @459 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::GetIsCustomParam(Firedac::Stan::Intf::TFDDataType)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@GetParamValues$qqriii @455 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::GetParamValues(int, int, int)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@GetParamsetSize$qqri @468 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::GetParamsetSize(int)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@GetRowsetSize$qqri @469 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::GetRowsetSize(int)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@InternalAbort$qqrv @452 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::InternalAbort()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@InternalClose$qqrv @449 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::InternalClose()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@InternalCloseStreams$qqrv @453 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::InternalCloseStreams()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@InternalColInfoGet$qqrr34Firedac@Phys@TFDPhysDataColumnInfo @460 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::InternalColInfoGet(Firedac::Phys::TFDPhysDataColumnInfo&)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@InternalColInfoStart$qqrr33Firedac@Phys@TFDPhysDataTableInfo @461 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::InternalColInfoStart(Firedac::Phys::TFDPhysDataTableInfo&)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@InternalExecute$qqriiri @454 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::InternalExecute(int, int, int&)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@InternalFetchRowSet$qqrp25Firedac@Dats@TFDDatSTablep23Firedac@Dats@TFDDatSRowui @446 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::InternalFetchRowSet(Firedac::Dats::TFDDatSTable *, Firedac::Dats::TFDDatSRow *, unsigned int)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@InternalNextRecordSet$qqrv @445 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::InternalNextRecordSet()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@InternalOpen$qqrv @450 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::InternalOpen()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@InternalPrepare$qqrv @463 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::InternalPrepare()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@InternalUnprepare$qqrv @462 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::InternalUnprepare()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@MatchParamsetSize$qqrii @467 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::MatchParamsetSize(int, int)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@OpenMetaInfo$qqrv @444 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::OpenMetaInfo()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@SQL2FDColInfo$qqrsox20System@UnicodeStringriir29Firedac@Stan@Intf@TFDDataTyper62System@%Set$34Firedac@Stan@Intf@TFDDataAttributet1$i0$t1$i15$%ruit4t4 @481 ; Firedac::Phys::Odbcbase::TFDPhysODBCCommand::SQL2FDColInfo(short, bool, const System::UnicodeString, int&, int, Firedac::Stan::Intf::TFDDataType&, System::Set<{583}...
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@SetCustomParamValue$qqr29Firedac@Stan@Intf@TFDDataTypep38Firedac@Phys@Odbcwrapper@TODBCVariablep27Firedac@Stan@Param@TFDParamii @458 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::SetCustomParamValue(Firedac::Stan::Intf::TFDDataType, Firedac::Phys::Odbcwrapper::TODBCVariable *, Firedac::Stan::Param::TFDParam *, int, int)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@SetParamValues$qqriii @457 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::SetParamValues(int, int, int)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@SetupStatementAfterDescribe$qqrp43Firedac@Phys@Odbcwrapper@TODBCStatementBase @471 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::SetupStatementAfterDescribe(Firedac::Phys::Odbcwrapper::TODBCStatementBase *)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@SetupStatementBeforeExecute$qqrp43Firedac@Phys@Odbcwrapper@TODBCStatementBase @470 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::SetupStatementBeforeExecute(Firedac::Phys::Odbcwrapper::TODBCStatementBase *)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@SetupStatementBeforePrepare$qqrp43Firedac@Phys@Odbcwrapper@TODBCStatementBase @472 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::SetupStatementBeforePrepare(Firedac::Phys::Odbcwrapper::TODBCStatementBase *)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@UseExecDirect$qqrv @466 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::UseExecDirect()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@UseInformationSchema$qqrv @465 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::UseInformationSchema()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCCommand@UseStatement$qqrv @464 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCCommand::UseStatement()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@ @552 ; Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@$bctr$qqrp26Firedac@Phys@TFDPhysDriverp34Firedac@Phys@TFDPhysConnectionHost @519 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::TFDPhysODBCConnectionBase(Firedac::Phys::TFDPhysDriver *, Firedac::Phys::TFDPhysConnectionHost *)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@$bdtr$qqrv @518 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::~TFDPhysODBCConnectionBase()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@GetCliObj$qqrv @500 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::GetCliObj()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@GetExceptionClass$qqrv @513 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::GetExceptionClass()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@GetItem$qqrir20System@UnicodeStringr14System@Variantr40Firedac@Stan@Intf@TFDMoniAdapterItemKind @502 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::GetItem(int, System::UnicodeString&, System::Variant&, Firedac::Stan::Intf::TFDMoniAdapterItemKind&)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@GetItemCount$qqrv @503 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::GetItemCount()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@GetKeywords$qqrv @498 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::GetKeywords()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@GetMessages$qqrv @501 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::GetMessages()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@GetNumType$qqrv @507 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::GetNumType()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@GetStrsMaxSizes$qqrsorit3 @509 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::GetStrsMaxSizes(short, bool, int&, int&)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@GetStrsType$qqrv @508 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::GetStrsType()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@GetVersions$qqrrjt1 @497 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::GetVersions(__int64&, __int64&)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@InternalConnect$qqrv @511 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::InternalConnect()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@InternalCreateCommand$qqrv @517 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::InternalCreateCommand()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@InternalCreateTransaction$qqrv @516 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::InternalCreateTransaction()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@InternalDisconnect$qqrv @504 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::InternalDisconnect()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@InternalExecuteDirect$qqrx20System@UnicodeStringp31Firedac@Phys@TFDPhysTransaction @514 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::InternalExecuteDirect(const System::UnicodeString, Firedac::Phys::TFDPhysTransaction *)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@InternalGetCliHandle$qqrv @499 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::InternalGetCliHandle()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@InternalGetCurrentCatalog$qqrv @496 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::InternalGetCurrentCatalog()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@InternalGetCurrentSchema$qqrv @495 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::InternalGetCurrentSchema()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@InternalSetMeta$qqrv @510 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::InternalSetMeta()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@InternalTracingChanged$qqrv @515 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::InternalTracingChanged()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@MapTxIsolations$qqrv @506 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::MapTxIsolations()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@SetupConnection$qqrv @512 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::SetupConnection()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCConnectionBase@UpdateDecimalSep$qqrv @505 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCConnectionBase::UpdateDecimalSep()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCDriverBase@ @556 ; Firedac::Phys::Odbcbase::TFDPhysODBCDriverBase::
+    @Firedac@Phys@Odbcbase@TFDPhysODBCDriverBase@$bctr$qqrp27Firedac@Phys@TFDPhysManagerx62System@%DelphiInterface$35Firedac@Stan@Intf@IFDStanDefinition% @531 ; Firedac::Phys::Odbcbase::TFDPhysODBCDriverBase::TFDPhysODBCDriverBase(Firedac::Phys::TFDPhysManager *, const System::DelphiInterface<{583}...
+    @Firedac@Phys@Odbcbase@TFDPhysODBCDriverBase@$bdtr$qqrv @530 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCDriverBase::~TFDPhysODBCDriverBase()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCDriverBase@BuildODBCConnectString$qqrx65System@%DelphiInterface$38Firedac@Stan@Intf@IFDStanConnectionDef% @524 ; Firedac::Phys::Odbcbase::TFDPhysODBCDriverBase::BuildODBCConnectString(const System::DelphiInterface<{583}...
+    @Firedac@Phys@Odbcbase@TFDPhysODBCDriverBase@FindBestDriver$qqrpx20System@UnicodeStringxix20System@UnicodeString @520 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCDriverBase::FindBestDriver(const System::UnicodeString *, const int, const System::UnicodeString)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCDriverBase@GetCliObj$qqrv @527 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCDriverBase::GetCliObj()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCDriverBase@GetConnParams$qqrp23System@Classes@TStringsp25Firedac@Dats@TFDDatSTable @526 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCDriverBase::GetConnParams(System::Classes::TStrings *, Firedac::Dats::TFDDatSTable *)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCDriverBase@GetODBCAdvanced$qqrv @521 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCDriverBase::GetODBCAdvanced()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCDriverBase@GetODBCConnectStringKeywords$qqrp23System@Classes@TStrings @525 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCDriverBase::GetODBCConnectStringKeywords(System::Classes::TStrings *)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCDriverBase@GetODBCDriver$qqrv @522 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCDriverBase::GetODBCDriver()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCDriverBase@InternalLoad$qqrv @529 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCDriverBase::InternalLoad()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCDriverBase@InternalUnload$qqrv @528 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCDriverBase::InternalUnload()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCDriverBase@RunConnectionWizard$qqrx65System@%DelphiInterface$38Firedac@Stan@Intf@IFDStanConnectionDef%ui @523 ; Firedac::Phys::Odbcbase::TFDPhysODBCDriverBase::RunConnectionWizard(const System::DelphiInterface<{583}...
+    @Firedac@Phys@Odbcbase@TFDPhysODBCTransaction@ @550 ; Firedac::Phys::Odbcbase::TFDPhysODBCTransaction::
+    @Firedac@Phys@Odbcbase@TFDPhysODBCTransaction@DisconnectCommandsBeforeCommit$qqrv @491 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCTransaction::DisconnectCommandsBeforeCommit()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCTransaction@DisconnectCommandsBeforeRollback$qqrv @490 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCTransaction::DisconnectCommandsBeforeRollback()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCTransaction@GetODBCConnection$qqrv @494 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCTransaction::GetODBCConnection()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCTransaction@InternalChanged$qqrv @493 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCTransaction::InternalChanged()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCTransaction@InternalCommit$qqrui @489 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCTransaction::InternalCommit(unsigned int)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCTransaction@InternalNotify$qqr34Firedac@Phys@TFDPhysTxNotificationp27Firedac@Phys@TFDPhysCommand @486 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCTransaction::InternalNotify(Firedac::Phys::TFDPhysTxNotification, Firedac::Phys::TFDPhysCommand *)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCTransaction@InternalReleaseHandle$qqrv @487 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCTransaction::InternalReleaseHandle()
+    @Firedac@Phys@Odbcbase@TFDPhysODBCTransaction@InternalRollback$qqrui @488 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCTransaction::InternalRollback(unsigned int)
+    @Firedac@Phys@Odbcbase@TFDPhysODBCTransaction@InternalStartTransaction$qqrui @492 ; __fastcall Firedac::Phys::Odbcbase::TFDPhysODBCTransaction::InternalStartTransaction(unsigned int)
+    @Firedac@Phys@Odbcbase@initialization$qqrv @441 ; __fastcall Firedac::Phys::Odbcbase::initialization()
+    @Firedac@Phys@Odbccli@C_ODBC   @142 ; Firedac::Phys::Odbccli::C_ODBC
+    @Firedac@Phys@Odbccli@C_ODBCCP @141 ; Firedac::Phys::Odbccli::C_ODBCCP
+    @Firedac@Phys@Odbccli@Finalization$qqrv @2   ; __fastcall Firedac::Phys::Odbccli::Finalization()
+    @Firedac@Phys@Odbccli@SQL_LEN_BINARY_ATTR$qqri @4   ; __fastcall Firedac::Phys::Odbccli::SQL_LEN_BINARY_ATTR(int)
+    @Firedac@Phys@Odbccli@SQL_LEN_DATA_AT_EXEC$qqri @3   ; __fastcall Firedac::Phys::Odbccli::SQL_LEN_DATA_AT_EXEC(int)
+    @Firedac@Phys@Odbccli@initialization$qqrv @1   ; __fastcall Firedac::Phys::Odbccli::initialization()
+    @Firedac@Phys@Odbcdef@Finalization$qqrv @605 ; __fastcall Firedac::Phys::Odbcdef::Finalization()
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@ @629 ; Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@GetDataSource$qqrv @619 ; __fastcall Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::GetDataSource()
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@GetDriverID$qqrv @627 ; __fastcall Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::GetDriverID()
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@GetLoginTimeout$qqrv @623 ; __fastcall Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::GetLoginTimeout()
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@GetMetaCurCatalog$qqrv @611 ; __fastcall Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::GetMetaCurCatalog()
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@GetMetaCurSchema$qqrv @609 ; __fastcall Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::GetMetaCurSchema()
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@GetMetaDefCatalog$qqrv @615 ; __fastcall Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::GetMetaDefCatalog()
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@GetMetaDefSchema$qqrv @613 ; __fastcall Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::GetMetaDefSchema()
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@GetNumericFormat$qqrv @617 ; __fastcall Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::GetNumericFormat()
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@GetODBCAdvanced$qqrv @625 ; __fastcall Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::GetODBCAdvanced()
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@GetODBCDriver$qqrv @621 ; __fastcall Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::GetODBCDriver()
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@GetRDBMS$qqrv @607 ; __fastcall Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::GetRDBMS()
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@SetDataSource$qqrx20System@UnicodeString @618 ; __fastcall Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::SetDataSource(const System::UnicodeString)
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@SetDriverID$qqrx20System@UnicodeString @626 ; __fastcall Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::SetDriverID(const System::UnicodeString)
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@SetLoginTimeout$qqrxi @622 ; __fastcall Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::SetLoginTimeout(const int)
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@SetMetaCurCatalog$qqrx20System@UnicodeString @610 ; __fastcall Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::SetMetaCurCatalog(const System::UnicodeString)
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@SetMetaCurSchema$qqrx20System@UnicodeString @608 ; __fastcall Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::SetMetaCurSchema(const System::UnicodeString)
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@SetMetaDefCatalog$qqrx20System@UnicodeString @614 ; __fastcall Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::SetMetaDefCatalog(const System::UnicodeString)
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@SetMetaDefSchema$qqrx20System@UnicodeString @612 ; __fastcall Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::SetMetaDefSchema(const System::UnicodeString)
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@SetNumericFormat$qqrx41Firedac@Phys@Odbcdef@TFDODBCNumericFormat @616 ; __fastcall Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::SetNumericFormat(const Firedac::Phys::Odbcdef::TFDODBCNumericFormat)
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@SetODBCAdvanced$qqrx20System@UnicodeString @624 ; __fastcall Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::SetODBCAdvanced(const System::UnicodeString)
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@SetODBCDriver$qqrx20System@UnicodeString @620 ; __fastcall Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::SetODBCDriver(const System::UnicodeString)
+    @Firedac@Phys@Odbcdef@TFDPhysODBCConnectionDefParams@SetRDBMS$qqrx30Firedac@Stan@Intf@TFDRDBMSKind @606 ; __fastcall Firedac::Phys::Odbcdef::TFDPhysODBCConnectionDefParams::SetRDBMS(const Firedac::Stan::Intf::TFDRDBMSKind)
+    @Firedac@Phys@Odbcdef@initialization$qqrv @604 ; __fastcall Firedac::Phys::Odbcdef::initialization()
+    @Firedac@Phys@Odbcmeta@Finalization$qqrv @565 ; __fastcall Firedac::Phys::Odbcmeta::Finalization()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@ @601 ; Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@$bctr$qqrxp30Firedac@Phys@TFDPhysConnectionjjp43Firedac@Phys@Meta@TFDPhysConnectionMetadata @599 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::TFDPhysODBCMetadata(Firedac::Phys::TFDPhysConnection * const, __int64, __int64, Firedac::Phys::Meta::TFDPhysConnectionMetadata *)
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@$bdtr$qqrv @598 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::~TFDPhysODBCMetadata()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetAsyncAbortSupported$qqrv @597 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetAsyncAbortSupported()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetCatalogSeparator$qqrv @586 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetCatalogSeparator()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetColumnOriginProvided$qqrv @574 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetColumnOriginProvided()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetCommandSeparator$qqrv @596 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetCommandSeparator()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetDefValuesSupported$qqrv @595 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetDefValuesSupported()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetIdentityInsertSupported$qqrv @594 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetIdentityInsertSupported()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetInlineRefresh$qqrv @593 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetInlineRefresh()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetKind$qqrv @592 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetKind()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetLimitOptions$qqrv @576 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetLimitOptions()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetLockNoWait$qqrv @591 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetLockNoWait()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetNameCaseSensParts$qqrv @590 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetNameCaseSensParts()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetNameDefLowCaseParts$qqrv @589 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetNameDefLowCaseParts()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetNameParts$qqrv @588 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetNameParts()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetNameQuoteChar$qqr39Firedac@Phys@Intf@TFDPhysNameQuoteLevel38Firedac@Phys@Intf@TFDPhysNameQuoteSide @587 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetNameQuoteChar(Firedac::Phys::Intf::TFDPhysNameQuoteLevel, Firedac::Phys::Intf::TFDPhysNameQuoteSide)
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetNameQuotedCaseSensParts$qqrv @584 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetNameQuotedCaseSensParts()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetNameQuotedSupportedParts$qqrv @585 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetNameQuotedSupportedParts()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetNullLocations$qqrv @575 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetNullLocations()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetParamNameMaxLength$qqrv @583 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetParamNameMaxLength()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetSelectOptions$qqrv @582 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetSelectOptions()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetTruncateSupported$qqrv @581 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetTruncateSupported()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetTxAutoCommit$qqrv @580 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetTxAutoCommit()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetTxNested$qqrv @579 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetTxNested()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetTxSavepoints$qqrv @578 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetTxSavepoints()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@GetTxSupported$qqrv @577 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::GetTxSupported()
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@InternalDecodeObjName$qqrx20System@UnicodeStringr35Firedac@Phys@Intf@TFDPhysParsedNamex59System@%DelphiInterface$32Firedac@Phys@Intf@IFDPhysCommand%o @573 ; Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::InternalDecodeObjName(const System::UnicodeString, Firedac::Phys::Intf::TFDPhysParsedName&, const System::DelphiInterface<{583}...
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@InternalEncodeObjName$qqrrx35Firedac@Phys@Intf@TFDPhysParsedNamex59System@%DelphiInterface$32Firedac@Phys@Intf@IFDPhysCommand% @572 ; Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::InternalEncodeObjName(const Firedac::Phys::Intf::TFDPhysParsedName&, const System::DelphiInterface<{583}...
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@InternalEscapeDate$qqrx20System@UnicodeString @570 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::InternalEscapeDate(const System::UnicodeString)
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@InternalEscapeDateTime$qqrx20System@UnicodeString @569 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::InternalEscapeDateTime(const System::UnicodeString)
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@InternalEscapeFunction$qqrrx35Firedac@Phys@Intf@TFDPhysEscapeData @567 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::InternalEscapeFunction(const Firedac::Phys::Intf::TFDPhysEscapeData&)
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@InternalEscapeTime$qqrx20System@UnicodeString @568 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::InternalEscapeTime(const System::UnicodeString)
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@InternalGetSQLCommandKind$qqrxp23System@Classes@TStrings @571 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::InternalGetSQLCommandKind(System::Classes::TStrings * const)
+    @Firedac@Phys@Odbcmeta@TFDPhysODBCMetadata@TranslateEscapeSequence$qqrr35Firedac@Phys@Intf@TFDPhysEscapeData @566 ; __fastcall Firedac::Phys::Odbcmeta::TFDPhysODBCMetadata::TranslateEscapeSequence(Firedac::Phys::Intf::TFDPhysEscapeData&)
+    @Firedac@Phys@Odbcmeta@__TADPhysConnectionMetadata@ @603 ; Firedac::Phys::Odbcmeta::__TADPhysConnectionMetadata::
+    @Firedac@Phys@Odbcmeta@initialization$qqrv @564 ; __fastcall Firedac::Phys::Odbcmeta::initialization()
+    @Firedac@Phys@Odbcwrapper@EODBCNativeException@ @434 ; Firedac::Phys::Odbcwrapper::EODBCNativeException::
+    @Firedac@Phys@Odbcwrapper@EODBCNativeException@$bctr$qqrsp36Firedac@Phys@Odbcwrapper@TODBCHandle @396 ; __fastcall Firedac::Phys::Odbcwrapper::EODBCNativeException::EODBCNativeException(short, Firedac::Phys::Odbcwrapper::TODBCHandle *)
+    @Firedac@Phys@Odbcwrapper@EODBCNativeException@AppendError$qqrp36Firedac@Phys@Odbcwrapper@TODBCHandlesx20System@UnicodeStringit3t3t3t342Firedac@Stan@Error@TFDCommandExceptionKindii @395 ; Firedac::Phys::Odbcwrapper::EODBCNativeException::AppendError(Firedac::Phys::Odbcwrapper::TODBCHandle *, short, const System::UnicodeString, int, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::Unico
+    @Firedac@Phys@Odbcwrapper@EODBCNativeException@GetErrorClass$qqrv @394 ; __fastcall Firedac::Phys::Odbcwrapper::EODBCNativeException::GetErrorClass()
+    @Firedac@Phys@Odbcwrapper@EODBCNativeException@GetErrors$qqri @393 ; __fastcall Firedac::Phys::Odbcwrapper::EODBCNativeException::GetErrors(int)
+    @Firedac@Phys@Odbcwrapper@Finalization$qqrv @144 ; __fastcall Firedac::Phys::Odbcwrapper::Finalization()
+    @Firedac@Phys@Odbcwrapper@ODBCBcd2Numeric$qqrrx16Data@Fmtbcd@TBcdr35Firedac@Phys@Odbccli@TSQLNumericRec @284 ; __fastcall Firedac::Phys::Odbcwrapper::ODBCBcd2Numeric(const Data::Fmtbcd::TBcd&, Firedac::Phys::Odbccli::TSQLNumericRec&)
+    @Firedac@Phys@Odbcwrapper@ODBCCurrency2Numeric$qqr15System@Currencyr35Firedac@Phys@Odbccli@TSQLNumericRec @282 ; __fastcall Firedac::Phys::Odbcwrapper::ODBCCurrency2Numeric(System::Currency, Firedac::Phys::Odbccli::TSQLNumericRec&)
+    @Firedac@Phys@Odbcwrapper@ODBCNumeric2BCD$qqrrx35Firedac@Phys@Odbccli@TSQLNumericRecr16Data@Fmtbcd@TBcd @285 ; __fastcall Firedac::Phys::Odbcwrapper::ODBCNumeric2BCD(const Firedac::Phys::Odbccli::TSQLNumericRec&, Data::Fmtbcd::TBcd&)
+    @Firedac@Phys@Odbcwrapper@ODBCNumeric2Currency$qqrrx35Firedac@Phys@Odbccli@TSQLNumericRecr15System@Currency @283 ; __fastcall Firedac::Phys::Odbcwrapper::ODBCNumeric2Currency(const Firedac::Phys::Odbccli::TSQLNumericRec&, System::Currency&)
+    @Firedac@Phys@Odbcwrapper@TFDODBCNativeError@ @436 ; Firedac::Phys::Odbcwrapper::TFDODBCNativeError::
+    @Firedac@Phys@Odbcwrapper@TFDODBCNativeError@Assign$qqrp29Firedac@Stan@Error@TFDDBError @399 ; __fastcall Firedac::Phys::Odbcwrapper::TFDODBCNativeError::Assign(Firedac::Stan::Error::TFDDBError *)
+    @Firedac@Phys@Odbcwrapper@TFDODBCNativeError@LoadFromStorage$qqrx59System@%DelphiInterface$32Firedac@Stan@Intf@IFDStanStorage% @398 ; Firedac::Phys::Odbcwrapper::TFDODBCNativeError::LoadFromStorage(const System::DelphiInterface<{583}...
+    @Firedac@Phys@Odbcwrapper@TFDODBCNativeError@SaveToStorage$qqrx59System@%DelphiInterface$32Firedac@Stan@Intf@IFDStanStorage% @397 ; Firedac::Phys::Odbcwrapper::TFDODBCNativeError::SaveToStorage(const System::DelphiInterface<{583}...
+    @Firedac@Phys@Odbcwrapper@TODBCColumn@ @413 ; Firedac::Phys::Odbcwrapper::TODBCColumn::
+    @Firedac@Phys@Odbcwrapper@TODBCColumn@$bctr$qqrv @245 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCColumn::TODBCColumn()
+    @Firedac@Phys@Odbcwrapper@TODBCColumn@GetDecimalSeparator$qqrv @243 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCColumn::GetDecimalSeparator()
+    @Firedac@Phys@Odbcwrapper@TODBCColumn@GetDescriptorType$qqrv @242 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCColumn::GetDescriptorType()
+    @Firedac@Phys@Odbcwrapper@TODBCColumn@InternalBind$qqrv @244 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCColumn::InternalBind()
+    @Firedac@Phys@Odbcwrapper@TODBCCommandStatement@ @403 ; Firedac::Phys::Odbcwrapper::TODBCCommandStatement::
+    @Firedac@Phys@Odbcwrapper@TODBCCommandStatement@$bctr$qqrp40Firedac@Phys@Odbcwrapper@TODBCConnectionp14System@TObject @183 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCCommandStatement::TODBCCommandStatement(Firedac::Phys::Odbcwrapper::TODBCConnection *, System::TObject *)
+    @Firedac@Phys@Odbcwrapper@TODBCCommandStatement@$bdtr$qqrv @182 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCCommandStatement::~TODBCCommandStatement()
+    @Firedac@Phys@Odbcwrapper@TODBCCommandStatement@BindParameters$qqrio @179 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCCommandStatement::BindParameters(int, bool)
+    @Firedac@Phys@Odbcwrapper@TODBCCommandStatement@DumpParameters$qqroii @164 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCCommandStatement::DumpParameters(bool, int, int)
+    @Firedac@Phys@Odbcwrapper@TODBCCommandStatement@Execute$qqriiriox20System@UnicodeString @169 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCCommandStatement::Execute(int, int, int&, bool, const System::UnicodeString)
+    @Firedac@Phys@Odbcwrapper@TODBCCommandStatement@FlushLongData$qqrv @171 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCCommandStatement::FlushLongData()
+    @Firedac@Phys@Odbcwrapper@TODBCCommandStatement@GetLongParams$qqrv @172 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCCommandStatement::GetLongParams()
+    @Firedac@Phys@Odbcwrapper@TODBCCommandStatement@GetPARAMSET_SIZE$qqrv @181 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCCommandStatement::GetPARAMSET_SIZE()
+    @Firedac@Phys@Odbcwrapper@TODBCCommandStatement@GetStreamParam$qqrp39Firedac@Phys@Odbcwrapper@TODBCParameteri @173 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCCommandStatement::GetStreamParam(Firedac::Phys::Odbcwrapper::TODBCParameter *, int)
+    @Firedac@Phys@Odbcwrapper@TODBCCommandStatement@NumParams$qqrv @167 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCCommandStatement::NumParams()
+    @Firedac@Phys@Odbcwrapper@TODBCCommandStatement@Open$qqrix20System@UnicodeString @168 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCCommandStatement::Open(int, const System::UnicodeString)
+    @Firedac@Phys@Odbcwrapper@TODBCCommandStatement@Prepare$qqrx20System@UnicodeString @166 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCCommandStatement::Prepare(const System::UnicodeString)
+    @Firedac@Phys@Odbcwrapper@TODBCCommandStatement@PutBlobParam$qqrp39Firedac@Phys@Odbcwrapper@TODBCParameteri @177 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCCommandStatement::PutBlobParam(Firedac::Phys::Odbcwrapper::TODBCParameter *, int)
+    @Firedac@Phys@Odbcwrapper@TODBCCommandStatement@PutLongParams$qqrv @174 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCCommandStatement::PutLongParams()
+    @Firedac@Phys@Odbcwrapper@TODBCCommandStatement@PutStreamParam$qqrp39Firedac@Phys@Odbcwrapper@TODBCParameteri @175 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCCommandStatement::PutStreamParam(Firedac::Phys::Odbcwrapper::TODBCParameter *, int)
+    @Firedac@Phys@Odbcwrapper@TODBCCommandStatement@PutTableParam$qqrp39Firedac@Phys@Odbcwrapper@TODBCParameterio @176 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCCommandStatement::PutTableParam(Firedac::Phys::Odbcwrapper::TODBCParameter *, int, bool)
+    @Firedac@Phys@Odbcwrapper@TODBCCommandStatement@SetPARAMSET_SIZE$qqrxi @180 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCCommandStatement::SetPARAMSET_SIZE(const int)
+    @Firedac@Phys@Odbcwrapper@TODBCCommandStatement@UnbindParameters$qqrv @178 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCCommandStatement::UnbindParameters()
+    @Firedac@Phys@Odbcwrapper@TODBCCommandStatement@Unprepare$qqrv @165 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCCommandStatement::Unprepare()
+    @Firedac@Phys@Odbcwrapper@TODBCCommandStatement@UpdateRowsAffected$qqrri @170 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCCommandStatement::UpdateRowsAffected(int&)
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@ @423 ; Firedac::Phys::Odbcwrapper::TODBCConnection::
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@$bctr$qqrp41Firedac@Phys@Odbcwrapper@TODBCEnvironmentp14System@TObject @323 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::TODBCConnection(Firedac::Phys::Odbcwrapper::TODBCEnvironment *, System::TObject *)
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@$bctr$qqrp41Firedac@Phys@Odbcwrapper@TODBCEnvironmentpvp14System@TObject @322 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::TODBCConnection(Firedac::Phys::Odbcwrapper::TODBCEnvironment *, void *, System::TObject *)
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@$bdtr$qqrv @321 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::~TODBCConnection()
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@AfterConnect$qqrv @319 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::AfterConnect()
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@ClearInfo$qqrv @320 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::ClearInfo()
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@Commit$qqrv @298 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::Commit()
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@Connect$qqrx20System@UnicodeString @318 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::Connect(const System::UnicodeString)
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@Disconnect$qqrv @316 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::Disconnect()
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@DriverConnect$qqrx20System@UnicodeStringusui @317 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::DriverConnect(const System::UnicodeString, unsigned short, unsigned int)
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@EncodeName$qqrx20System@UnicodeStringt1t1 @300 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::EncodeName(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@EndTran$qqrs @299 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::EndTran(short)
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@GetFunctions$qqrus @314 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::GetFunctions(unsigned short)
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@GetInfo$qqrusr20System@UnicodeString @313 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::GetInfo(unsigned short, System::UnicodeString&)
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@GetInfo$qqrusri @311 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::GetInfo(unsigned short, int&)
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@GetInfo$qqrusrus @310 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::GetInfo(unsigned short, unsigned short&)
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@GetInfoBase$qqrusr20System@UnicodeString @312 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::GetInfoBase(unsigned short, System::UnicodeString&)
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@GetInfoOptionSQLLen$qqri @307 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::GetInfoOptionSQLLen(int)
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@GetInfoOptionSmInt$qqri @309 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::GetInfoOptionSmInt(int)
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@GetInfoOptionStr$qqri @306 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::GetInfoOptionStr(int)
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@GetInfoOptionUInt$qqri @308 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::GetInfoOptionUInt(int)
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@GetIsolation$qqrv @295 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::GetIsolation()
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@GetKeywords$qqrv @305 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::GetKeywords()
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@GetNonStrAttribute$qqripv @304 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::GetNonStrAttribute(int, void *)
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@GetStrAttribute$qqrir20System@UnicodeString @303 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::GetStrAttribute(int, System::UnicodeString&)
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@GetTracing$qqrv @301 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::GetTracing()
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@ListServers$qqrx20System@UnicodeStringp23System@Classes@TStrings @315 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::ListServers(const System::UnicodeString, System::Classes::TStrings *)
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@Rollback$qqrv @297 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::Rollback()
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@SetAttribute$qqripvi @302 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::SetAttribute(int, void *, int)
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@SetIsolation$qqrxi @294 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::SetIsolation(const int)
+    @Firedac@Phys@Odbcwrapper@TODBCConnection@StartTransaction$qqrv @296 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCConnection::StartTransaction()
+    @Firedac@Phys@Odbcwrapper@TODBCEnvironment@ @426 ; Firedac::Phys::Odbcwrapper::TODBCEnvironment::
+    @Firedac@Phys@Odbcwrapper@TODBCEnvironment@$bctr$qqrp33Firedac@Phys@Odbcwrapper@TODBCLibp14System@TObject @338 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCEnvironment::TODBCEnvironment(Firedac::Phys::Odbcwrapper::TODBCLib *, System::TObject *)
+    @Firedac@Phys@Odbcwrapper@TODBCEnvironment@$bctr$qqrp33Firedac@Phys@Odbcwrapper@TODBCLibpvp14System@TObject @337 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCEnvironment::TODBCEnvironment(Firedac::Phys::Odbcwrapper::TODBCLib *, void *, System::TObject *)
+    @Firedac@Phys@Odbcwrapper@TODBCEnvironment@$bdtr$qqrv @336 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCEnvironment::~TODBCEnvironment()
+    @Firedac@Phys@Odbcwrapper@TODBCEnvironment@AllocHandle$qqrv @335 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCEnvironment::AllocHandle()
+    @Firedac@Phys@Odbcwrapper@TODBCEnvironment@DSNFirst$qqrr20System@UnicodeStringt1 @327 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCEnvironment::DSNFirst(System::UnicodeString&, System::UnicodeString&)
+    @Firedac@Phys@Odbcwrapper@TODBCEnvironment@DSNNext$qqrr20System@UnicodeStringt1 @326 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCEnvironment::DSNNext(System::UnicodeString&, System::UnicodeString&)
+    @Firedac@Phys@Odbcwrapper@TODBCEnvironment@DoDSNs$qqrusr20System@UnicodeStringt2 @328 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCEnvironment::DoDSNs(unsigned short, System::UnicodeString&, System::UnicodeString&)
+    @Firedac@Phys@Odbcwrapper@TODBCEnvironment@DoDrivers$qqrusr20System@UnicodeStringt2 @331 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCEnvironment::DoDrivers(unsigned short, System::UnicodeString&, System::UnicodeString&)
+    @Firedac@Phys@Odbcwrapper@TODBCEnvironment@DriverFirst$qqrr20System@UnicodeStringt1 @330 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCEnvironment::DriverFirst(System::UnicodeString&, System::UnicodeString&)
+    @Firedac@Phys@Odbcwrapper@TODBCEnvironment@DriverNext$qqrr20System@UnicodeStringt1 @329 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCEnvironment::DriverNext(System::UnicodeString&, System::UnicodeString&)
+    @Firedac@Phys@Odbcwrapper@TODBCEnvironment@GetDSNs$qqrp23System@Classes@TStringsoo @324 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCEnvironment::GetDSNs(System::Classes::TStrings *, bool, bool)
+    @Firedac@Phys@Odbcwrapper@TODBCEnvironment@GetDrivers$qqrp23System@Classes@TStringso @325 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCEnvironment::GetDrivers(System::Classes::TStrings *, bool)
+    @Firedac@Phys@Odbcwrapper@TODBCEnvironment@GetNonStrAttribute$qqripv @334 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCEnvironment::GetNonStrAttribute(int, void *)
+    @Firedac@Phys@Odbcwrapper@TODBCEnvironment@GetStrAttribute$qqrir20System@UnicodeString @333 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCEnvironment::GetStrAttribute(int, System::UnicodeString&)
+    @Firedac@Phys@Odbcwrapper@TODBCEnvironment@SetAttribute$qqripvi @332 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCEnvironment::SetAttribute(int, void *, int)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@ @428 ; Firedac::Phys::Odbcwrapper::TODBCHandle::
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@$bctr$qqrpv @372 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::TODBCHandle(void *)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@$bctr$qqrv @373 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::TODBCHandle()
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@$bdtr$qqrv @371 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::~TODBCHandle()
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@AllocHandle$qqrv @369 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::AllocHandle()
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@Check$qqrs @366 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::Check(short)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@FilterServerOuput$qqrp40Firedac@Phys@Odbcwrapper@TODBCConnectionp45Firedac@Phys@Odbcwrapper@EODBCNativeException @368 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::FilterServerOuput(Firedac::Phys::Odbcwrapper::TODBCConnection *, Firedac::Phys::Odbcwrapper::EODBCNativeException *)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@FreeHandle$qqrv @365 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::FreeHandle()
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@GetCharAttribute$qqri @364 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::GetCharAttribute(int)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@GetConnection$qqrv @370 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::GetConnection()
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@GetIntAttribute$qqri @363 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::GetIntAttribute(int)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@GetNonStrAttribute$qqripv @354 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::GetNonStrAttribute(int, void *)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@GetPSQLPAttribute$qqri @362 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::GetPSQLPAttribute(int)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@GetPSQLULenAttribute$qqri @355 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::GetPSQLULenAttribute(int)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@GetPUIntAttribute$qqri @361 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::GetPUIntAttribute(int)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@GetPUSmIntAttribute$qqri @360 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::GetPUSmIntAttribute(int)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@GetPtrAttribute$qqri @352 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::GetPtrAttribute(int)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@GetSQLLenAttribute$qqri @357 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::GetSQLLenAttribute(int)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@GetSQLULenAttribute$qqri @356 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::GetSQLULenAttribute(int)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@GetStrAttribute$qqrir20System@UnicodeString @353 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::GetStrAttribute(int, System::UnicodeString&)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@GetTracing$qqrv @339 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::GetTracing()
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@GetUIntAttribute$qqri @359 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::GetUIntAttribute(int)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@GetUSmIntAttribute$qqri @358 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::GetUSmIntAttribute(int)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@ProcessError$qqrs @367 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::ProcessError(short)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@SetAttribute$qqripvi @341 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::SetAttribute(int, void *, int)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@SetCharAttribute$qqrix20System@UnicodeString @351 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::SetCharAttribute(int, const System::UnicodeString)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@SetIntAttribute$qqrii @350 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::SetIntAttribute(int, int)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@SetPSQLULenAttribute$qqripi @343 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::SetPSQLULenAttribute(int, int *)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@SetPUIntAttribute$qqripi @349 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::SetPUIntAttribute(int, int *)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@SetPUSmIntAttribute$qqripus @348 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::SetPUSmIntAttribute(int, unsigned short *)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@SetPtrAttribute$qqripv @342 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::SetPtrAttribute(int, void *)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@SetSQLLenAttribute$qqrii @345 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::SetSQLLenAttribute(int, int)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@SetSQLULenAttribute$qqrii @344 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::SetSQLULenAttribute(int, int)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@SetUIntAttribute$qqrii @347 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::SetUIntAttribute(int, int)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@SetUSmIntAttribute$qqrius @346 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::SetUSmIntAttribute(int, unsigned short)
+    @Firedac@Phys@Odbcwrapper@TODBCHandle@Trace$qqr34Firedac@Stan@Intf@TFDMoniEventKind34Firedac@Stan@Intf@TFDMoniEventStepx20System@UnicodeStringpx14System@TVarRecxi @340 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCHandle::Trace(Firedac::Stan::Intf::TFDMoniEventKind, Firedac::Stan::Intf::TFDMoniEventStep, const System::UnicodeString, const System::TVarRec *, const int)
+    @Firedac@Phys@Odbcwrapper@TODBCLib@ @430 ; Firedac::Phys::Odbcwrapper::TODBCLib::
+    @Firedac@Phys@Odbcwrapper@TODBCLib@$bctr$qqrp14System@TObject @389 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCLib::TODBCLib(System::TObject *)
+    @Firedac@Phys@Odbcwrapper@TODBCLib@$bdtr$qqrv @388 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCLib::~TODBCLib()
+    @Firedac@Phys@Odbcwrapper@TODBCLib@ActivateTracing$qqrx58System@%DelphiInterface$31Firedac@Stan@Intf@IFDMoniClient%p14System@TObject @376 ; Firedac::Phys::Odbcwrapper::TODBCLib::ActivateTracing(const System::DelphiInterface<{583}...
+    @Firedac@Phys@Odbcwrapper@TODBCLib@Allocate$qqrx20System@UnicodeStringt1p14System@TObject @385 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCLib::Allocate(const System::UnicodeString, const System::UnicodeString, System::TObject *)
+    @Firedac@Phys@Odbcwrapper@TODBCLib@DeactivateTracing$qqrp14System@TObject @375 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCLib::DeactivateTracing(System::TObject *)
+    @Firedac@Phys@Odbcwrapper@TODBCLib@DecorateKeyValue$qqrx20System@UnicodeString @374 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCLib::DecorateKeyValue(const System::UnicodeString)
+    @Firedac@Phys@Odbcwrapper@TODBCLib@GetODBCTextProcAddress$qqrx20System@UnicodeStringo @383 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCLib::GetODBCTextProcAddress(const System::UnicodeString, bool)
+    @Firedac@Phys@Odbcwrapper@TODBCLib@GetTRACE$qqrv @382 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCLib::GetTRACE()
+    @Firedac@Phys@Odbcwrapper@TODBCLib@GetTRACEFILE$qqrv @381 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCLib::GetTRACEFILE()
+    @Firedac@Phys@Odbcwrapper@TODBCLib@Load$qqrx20System@UnicodeStringt1 @387 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCLib::Load(const System::UnicodeString, const System::UnicodeString)
+    @Firedac@Phys@Odbcwrapper@TODBCLib@LoadEntries$qqrv @379 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCLib::LoadEntries()
+    @Firedac@Phys@Odbcwrapper@TODBCLib@LoadLibrary$qqrpx20System@UnicodeStringxio @380 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCLib::LoadLibrary(const System::UnicodeString *, const int, bool)
+    @Firedac@Phys@Odbcwrapper@TODBCLib@Release$qqrp33Firedac@Phys@Odbcwrapper@TODBCLib @384 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCLib::Release(Firedac::Phys::Odbcwrapper::TODBCLib *)
+    @Firedac@Phys@Odbcwrapper@TODBCLib@SetTRACE$qqro @378 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCLib::SetTRACE(bool)
+    @Firedac@Phys@Odbcwrapper@TODBCLib@SetTRACEFILE$qqrx20System@UnicodeString @377 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCLib::SetTRACEFILE(const System::UnicodeString)
+    @Firedac@Phys@Odbcwrapper@TODBCLib@Unload$qqrv @386 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCLib::Unload()
+    @Firedac@Phys@Odbcwrapper@TODBCLongDataStream@ @415 ; Firedac::Phys::Odbcwrapper::TODBCLongDataStream::
+    @Firedac@Phys@Odbcwrapper@TODBCLongDataStream@$bctr$qqrp39Firedac@Phys@Odbcwrapper@TODBCParameter31Firedac@Stan@Intf@TFDStreamMode @163 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCLongDataStream::TODBCLongDataStream(Firedac::Phys::Odbcwrapper::TODBCParameter *, Firedac::Stan::Intf::TFDStreamMode)
+    @Firedac@Phys@Odbcwrapper@TODBCLongDataStream@CheckMode$qqr31Firedac@Stan@Intf@TFDStreamModex20System@UnicodeString @161 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCLongDataStream::CheckMode(Firedac::Stan::Intf::TFDStreamMode, const System::UnicodeString)
+    @Firedac@Phys@Odbcwrapper@TODBCLongDataStream@GetSize$qqrv @157 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCLongDataStream::GetSize()
+    @Firedac@Phys@Odbcwrapper@TODBCLongDataStream@GetStmt$qqrv @162 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCLongDataStream::GetStmt()
+    @Firedac@Phys@Odbcwrapper@TODBCLongDataStream@Read$qqrpvi @160 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCLongDataStream::Read(void *, int)
+    @Firedac@Phys@Odbcwrapper@TODBCLongDataStream@Seek$qqrxj26System@Classes@TSeekOrigin @158 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCLongDataStream::Seek(const __int64, System::Classes::TSeekOrigin)
+    @Firedac@Phys@Odbcwrapper@TODBCLongDataStream@Write$qqrpxvi @159 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCLongDataStream::Write(const void *, int)
+    @Firedac@Phys@Odbcwrapper@TODBCMetaInfoStatement@ @401 ; Firedac::Phys::Odbcwrapper::TODBCMetaInfoStatement::
+    @Firedac@Phys@Odbcwrapper@TODBCMetaInfoStatement@Catalogs$qqrv @147 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCMetaInfoStatement::Catalogs()
+    @Firedac@Phys@Odbcwrapper@TODBCMetaInfoStatement@Columns$qqrx20System@UnicodeStringt1t1t1 @156 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCMetaInfoStatement::Columns(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Firedac@Phys@Odbcwrapper@TODBCMetaInfoStatement@Execute$qqrv @145 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCMetaInfoStatement::Execute()
+    @Firedac@Phys@Odbcwrapper@TODBCMetaInfoStatement@ForeignKeys$qqrx20System@UnicodeStringt1t1t1t1t1 @154 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCMetaInfoStatement::ForeignKeys(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Firedac@Phys@Odbcwrapper@TODBCMetaInfoStatement@PrimaryKeys$qqrx20System@UnicodeStringt1t1 @153 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCMetaInfoStatement::PrimaryKeys(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Firedac@Phys@Odbcwrapper@TODBCMetaInfoStatement@ProcedureColumns$qqrx20System@UnicodeStringt1t1t1 @151 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCMetaInfoStatement::ProcedureColumns(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Firedac@Phys@Odbcwrapper@TODBCMetaInfoStatement@Procedures$qqrx20System@UnicodeStringt1t1 @152 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCMetaInfoStatement::Procedures(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Firedac@Phys@Odbcwrapper@TODBCMetaInfoStatement@Schemas$qqrv @146 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCMetaInfoStatement::Schemas()
+    @Firedac@Phys@Odbcwrapper@TODBCMetaInfoStatement@SpecialColumns$qqrx20System@UnicodeStringt1t1us @150 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCMetaInfoStatement::SpecialColumns(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, unsigned short)
+    @Firedac@Phys@Odbcwrapper@TODBCMetaInfoStatement@Statistics$qqrx20System@UnicodeStringt1t1us @149 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCMetaInfoStatement::Statistics(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, unsigned short)
+    @Firedac@Phys@Odbcwrapper@TODBCMetaInfoStatement@Tables$qqrx20System@UnicodeStringt1t1t1 @148 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCMetaInfoStatement::Tables(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Firedac@Phys@Odbcwrapper@TODBCMetaInfoStatement@TypeColumns$qqrx20System@UnicodeStringt1t1t1 @155 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCMetaInfoStatement::TypeColumns(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Firedac@Phys@Odbcwrapper@TODBCPageBuffer@ @407 ; Firedac::Phys::Odbcwrapper::TODBCPageBuffer::
+    @Firedac@Phys@Odbcwrapper@TODBCPageBuffer@$bctr$qqrp42Firedac@Phys@Odbcwrapper@TODBCVariableList @230 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCPageBuffer::TODBCPageBuffer(Firedac::Phys::Odbcwrapper::TODBCVariableList *)
+    @Firedac@Phys@Odbcwrapper@TODBCPageBuffer@$bdtr$qqrv @229 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCPageBuffer::~TODBCPageBuffer()
+    @Firedac@Phys@Odbcwrapper@TODBCPageBuffer@AllocBuffers$qqrv @228 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCPageBuffer::AllocBuffers()
+    @Firedac@Phys@Odbcwrapper@TODBCPageBuffer@FreeBuffers$qqrv @227 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCPageBuffer::FreeBuffers()
+    @Firedac@Phys@Odbcwrapper@TODBCPageBuffer@GetDataPtr$qqrp38Firedac@Phys@Odbcwrapper@TODBCVariableirpvrpi @221 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCPageBuffer::GetDataPtr(Firedac::Phys::Odbcwrapper::TODBCVariable *, int, void *&, int *&)
+    @Firedac@Phys@Odbcwrapper@TODBCPageBuffer@GetPageSize$qqrv @226 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCPageBuffer::GetPageSize()
+    @Firedac@Phys@Odbcwrapper@TODBCPageBuffer@GetRowOperationArr$qqri @223 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCPageBuffer::GetRowOperationArr(int)
+    @Firedac@Phys@Odbcwrapper@TODBCPageBuffer@GetRowSize$qqrv @225 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCPageBuffer::GetRowSize()
+    @Firedac@Phys@Odbcwrapper@TODBCPageBuffer@GetRowStatusArr$qqri @224 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCPageBuffer::GetRowStatusArr(int)
+    @Firedac@Phys@Odbcwrapper@TODBCPageBuffer@SetOperationRange$qqrii @218 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCPageBuffer::SetOperationRange(int, int)
+    @Firedac@Phys@Odbcwrapper@TODBCPageBuffer@SetStmtAttributes$qqrv @222 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCPageBuffer::SetStmtAttributes()
+    @Firedac@Phys@Odbcwrapper@TODBCPageBuffer@ShiftBuffersPtr$qqri @220 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCPageBuffer::ShiftBuffersPtr(int)
+    @Firedac@Phys@Odbcwrapper@TODBCPageBuffer@UnShift$qqrv @219 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCPageBuffer::UnShift()
+    @Firedac@Phys@Odbcwrapper@TODBCParameter@ @417 ; Firedac::Phys::Odbcwrapper::TODBCParameter::
+    @Firedac@Phys@Odbcwrapper@TODBCParameter@$bctr$qqrv @252 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCParameter::TODBCParameter()
+    @Firedac@Phys@Odbcwrapper@TODBCParameter@$bdtr$qqrv @251 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCParameter::~TODBCParameter()
+    @Firedac@Phys@Odbcwrapper@TODBCParameter@GetColumnList$qqrv @250 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCParameter::GetColumnList()
+    @Firedac@Phys@Odbcwrapper@TODBCParameter@GetDecimalSeparator$qqrv @248 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCParameter::GetDecimalSeparator()
+    @Firedac@Phys@Odbcwrapper@TODBCParameter@GetDescriptorType$qqrv @247 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCParameter::GetDescriptorType()
+    @Firedac@Phys@Odbcwrapper@TODBCParameter@InternalBind$qqrv @249 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCParameter::InternalBind()
+    @Firedac@Phys@Odbcwrapper@TODBCParameter@SetParamType$qqrxs @246 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCParameter::SetParamType(const short)
+    @Firedac@Phys@Odbcwrapper@TODBCSelectItem@ @421 ; Firedac::Phys::Odbcwrapper::TODBCSelectItem::
+    @Firedac@Phys@Odbcwrapper@TODBCSelectItem@$bctr$qqrp43Firedac@Phys@Odbcwrapper@TODBCStatementBases @293 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCSelectItem::TODBCSelectItem(Firedac::Phys::Odbcwrapper::TODBCStatementBase *, short)
+    @Firedac@Phys@Odbcwrapper@TODBCSelectItem@GetIntAttr$qqri @291 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCSelectItem::GetIntAttr(int)
+    @Firedac@Phys@Odbcwrapper@TODBCSelectItem@GetIntAttrSilent$qqri @290 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCSelectItem::GetIntAttrSilent(int)
+    @Firedac@Phys@Odbcwrapper@TODBCSelectItem@GetIsFixedLen$qqrv @287 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCSelectItem::GetIsFixedLen()
+    @Firedac@Phys@Odbcwrapper@TODBCSelectItem@GetROWVER$qqrv @286 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCSelectItem::GetROWVER()
+    @Firedac@Phys@Odbcwrapper@TODBCSelectItem@GetSmallintAttr$qqri @289 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCSelectItem::GetSmallintAttr(int)
+    @Firedac@Phys@Odbcwrapper@TODBCSelectItem@GetSmallintAttrSilent$qqri @288 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCSelectItem::GetSmallintAttrSilent(int)
+    @Firedac@Phys@Odbcwrapper@TODBCSelectItem@GetStrAttr$qqri @292 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCSelectItem::GetStrAttr(int)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@ @405 ; Firedac::Phys::Odbcwrapper::TODBCStatementBase::
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@$bctr$qqrp40Firedac@Phys@Odbcwrapper@TODBCConnectionp14System@TObject @217 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::TODBCStatementBase(Firedac::Phys::Odbcwrapper::TODBCConnection *, System::TObject *)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@$bdtr$qqrv @216 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::~TODBCStatementBase()
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@AddCol$qqrsssi @195 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::AddCol(short, short, short, int)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@BindColumns$qqri @197 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::BindColumns(int)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@Cancel$qqrv @187 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::Cancel()
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@Close$qqrv @186 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::Close()
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@ColAttributeInt$qqrususri @215 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::ColAttributeInt(unsigned short, unsigned short, int&)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@ColAttributeIntSilent$qqrususri @214 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::ColAttributeIntSilent(unsigned short, unsigned short, int&)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@ColAttributeSmallint$qqrususrs @213 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::ColAttributeSmallint(unsigned short, unsigned short, short&)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@ColAttributeSmallintSilent$qqrususrs @212 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::ColAttributeSmallintSilent(unsigned short, unsigned short, short&)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@ColAttributeString$qqrususr20System@UnicodeString @211 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::ColAttributeString(unsigned short, unsigned short, System::UnicodeString&)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@DumpColumns$qqrio @184 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::DumpColumns(int, bool)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@Fetch$qqri @189 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::Fetch(int)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@FetchLateBindedColumns$qqri @190 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::FetchLateBindedColumns(int)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@GetCursorName$qqrv @203 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::GetCursorName()
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@GetIntDiag$qqrii @206 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::GetIntDiag(int, int)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@GetLongVar$qqrp38Firedac@Phys@Odbcwrapper@TODBCVariablei @191 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::GetLongVar(Firedac::Phys::Odbcwrapper::TODBCVariable *, int)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@GetLongVarFinished$qqrisi @192 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::GetLongVarFinished(int, short, int)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@GetLongVarPiece$qqrp38Firedac@Phys@Odbcwrapper@TODBCVariableii @193 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::GetLongVarPiece(Firedac::Phys::Odbcwrapper::TODBCVariable *, int, int)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@GetLongVarPiece$qqrp38Firedac@Phys@Odbcwrapper@TODBCVariablepvipi @194 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::GetLongVarPiece(Firedac::Phys::Odbcwrapper::TODBCVariable *, void *, int, int *)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@GetNonStrAttribute$qqripv @210 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::GetNonStrAttribute(int, void *)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@GetQueryTimeout$qqrv @201 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::GetQueryTimeout()
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@GetSQLLenDiag$qqrii @207 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::GetSQLLenDiag(int, int)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@GetStrAttribute$qqrir20System@UnicodeString @209 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::GetStrAttribute(int, System::UnicodeString&)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@GetStrDiag$qqrii @205 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::GetStrDiag(int, int)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@GetUSmallIntDiag$qqrii @204 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::GetUSmallIntDiag(int, int)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@MoreResults$qqrv @188 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::MoreResults()
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@NumResultCols$qqrv @199 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::NumResultCols()
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@ResultColsExists$qqrv @198 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::ResultColsExists()
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@SetAttribute$qqripvi @208 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::SetAttribute(int, void *, int)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@SetCursorName$qqrx20System@UnicodeString @202 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::SetCursorName(const System::UnicodeString)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@SetQueryTimeout$qqrxi @200 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::SetQueryTimeout(const int)
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@UnbindColumns$qqrv @196 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::UnbindColumns()
+    @Firedac@Phys@Odbcwrapper@TODBCStatementBase@Unprepare$qqrv @185 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCStatementBase::Unprepare()
+    @Firedac@Phys@Odbcwrapper@TODBCTracer@ @432 ; Firedac::Phys::Odbcwrapper::TODBCTracer::
+    @Firedac@Phys@Odbcwrapper@TODBCTracer@$bctr$qqrx58System@%DelphiInterface$31Firedac@Stan@Intf@IFDMoniClient%p33Firedac@Phys@Odbcwrapper@TODBCLib @392 ; Firedac::Phys::Odbcwrapper::TODBCTracer::TODBCTracer(const System::DelphiInterface<{583}...
+    @Firedac@Phys@Odbcwrapper@TODBCTracer@$bdtr$qqrv @391 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCTracer::~TODBCTracer()
+    @Firedac@Phys@Odbcwrapper@TODBCTracer@Execute$qqrv @390 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCTracer::Execute()
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@ @419 ; Firedac::Phys::Odbcwrapper::TODBCVariable::
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@$bctr$qqrv @281 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::TODBCVariable()
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@$bdtr$qqrv @280 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::~TODBCVariable()
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@AllocLongData$qqrii @262 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::AllocLongData(int, int)
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@Bind$qqrv @269 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::Bind()
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@CalcDataSize$qqri @260 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::CalcDataSize(int)
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@DumpCDataType$qqrv @254 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::DumpCDataType()
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@DumpParamType$qqrv @253 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::DumpParamType()
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@DumpValue$qqri @255 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::DumpValue(int)
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@DumpValue$qqriri @256 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::DumpValue(int, int&)
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@FreeLongData$qqri @261 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::FreeLongData(int)
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@GetAsStrings$qqri @265 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::GetAsStrings(int)
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@GetConnection$qqrv @279 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::GetConnection()
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@GetData$qqrirpvrio @266 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::GetData(int, void *&, int&, bool)
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@GetDataInd$qqrirpvrpi @271 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::GetDataInd(int, void *&, int *&)
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@GetDataPtr$qqrirpvrirpi @270 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::GetDataPtr(int, void *&, int&, int *&)
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@GetDumpLabel$qqrv @257 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::GetDumpLabel()
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@GetStatement$qqrv @278 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::GetStatement()
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@ResetFlagsUpdated$qqrv @258 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::ResetFlagsUpdated()
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@SetBindAttributes$qqri @268 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::SetBindAttributes(int)
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@SetCDataType$qqrxs @277 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::SetCDataType(const short)
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@SetColumnSize$qqrxi @275 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::SetColumnSize(const int)
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@SetData$qqripvi @264 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::SetData(int, void *, int)
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@SetDataReader$qqripv @263 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::SetDataReader(int, void *)
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@SetDataSize$qqrxi @276 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::SetDataSize(const int)
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@SetForceLateBinding$qqrxo @272 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::SetForceLateBinding(const bool)
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@SetForceLongData$qqrxo @273 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::SetForceLongData(const bool)
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@SetSQLDataType$qqrxs @274 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::SetSQLDataType(const short)
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@UpdateFlags$qqrv @259 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::UpdateFlags()
+    @Firedac@Phys@Odbcwrapper@TODBCVariable@VarTypeUnsup$qqrs @267 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariable::VarTypeUnsup(short)
+    @Firedac@Phys@Odbcwrapper@TODBCVariableList@ @411 ; Firedac::Phys::Odbcwrapper::TODBCVariableList::
+    @Firedac@Phys@Odbcwrapper@TODBCVariableList@$bctr$qqrp43Firedac@Phys@Odbcwrapper@TODBCStatementBaseoo @241 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariableList::TODBCVariableList(Firedac::Phys::Odbcwrapper::TODBCStatementBase *, bool, bool)
+    @Firedac@Phys@Odbcwrapper@TODBCVariableList@$bdtr$qqrv @240 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariableList::~TODBCVariableList()
+    @Firedac@Phys@Odbcwrapper@TODBCVariableList@Add$qqrp38Firedac@Phys@Odbcwrapper@TODBCVariable @237 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariableList::Add(Firedac::Phys::Odbcwrapper::TODBCVariable *)
+    @Firedac@Phys@Odbcwrapper@TODBCVariableList@Bind$qqrio @239 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariableList::Bind(int, bool)
+    @Firedac@Phys@Odbcwrapper@TODBCVariableList@Clear$qqrv @236 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariableList::Clear()
+    @Firedac@Phys@Odbcwrapper@TODBCVariableList@FindByToken$qqrpv @232 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariableList::FindByToken(void *)
+    @Firedac@Phys@Odbcwrapper@TODBCVariableList@GetCount$qqrv @235 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariableList::GetCount()
+    @Firedac@Phys@Odbcwrapper@TODBCVariableList@GetItems$qqri @234 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariableList::GetItems(int)
+    @Firedac@Phys@Odbcwrapper@TODBCVariableList@Rebind$qqro @238 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariableList::Rebind(bool)
+    @Firedac@Phys@Odbcwrapper@TODBCVariableList@ResetDataReaders$qqrv @231 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariableList::ResetDataReaders()
+    @Firedac@Phys@Odbcwrapper@TODBCVariableList@UpdateHasLateBindedVars$qqrv @233 ; __fastcall Firedac::Phys::Odbcwrapper::TODBCVariableList::UpdateHasLateBindedVars()
+    @Firedac@Phys@Odbcwrapper@initialization$qqrv @143 ; __fastcall Firedac::Phys::Odbcwrapper::initialization()
+    @Firedacodbcdriver@@GetPackageInfoTable$qqrv @639 ; Firedacodbcdriver::__linkproc__ __fastcall GetPackageInfoTable()
+    @Firedacodbcdriver@@PackageLoad$qqrv @638 ; Firedacodbcdriver::__linkproc__ __fastcall PackageLoad()
+    @Firedacodbcdriver@@PackageUnload$qqrv @637 ; Firedacodbcdriver::__linkproc__ __fastcall PackageUnload()
+    @Firedacodbcdriver@initialization$qqrv @636 ; __fastcall Firedacodbcdriver::initialization()
+    @GetPackageInfoTable           @642 ; GetPackageInfoTable
+    Finalize                       @640 ; Finalize
+    Initialize                     @641 ; Initialize

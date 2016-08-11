@@ -1,0 +1,39 @@
+LIBRARY     DATASNAPNATIVECLIENT210.BPL
+
+DESCRIPTION 'mbarcadero DataSnap Native Client Components'
+
+EXPORTS
+    @$xp$49Datasnap@Dsproxydelphinative@TDSDelphiProxyWriter @22  ; __tpdsc__ Datasnap::Dsproxydelphinative::TDSDelphiProxyWriter
+    @$xp$55Datasnap@Dsproxydelphinative@TDSClientProxyWriterDelphi @26  ; __tpdsc__ Datasnap::Dsproxydelphinative::TDSClientProxyWriterDelphi
+    @$xp$55Datasnap@Dsproxydelphinative@TDSCustomDelphiProxyWriter @24  ; __tpdsc__ Datasnap::Dsproxydelphinative::TDSCustomDelphiProxyWriter
+    @Datasnap@Dsproxydelphinative@Finalization$qqrv @2   ; __fastcall Datasnap::Dsproxydelphinative::Finalization()
+    @Datasnap@Dsproxydelphinative@TDSClientProxyWriterDelphi@ @27  ; Datasnap::Dsproxydelphinative::TDSClientProxyWriterDelphi::
+    @Datasnap@Dsproxydelphinative@TDSClientProxyWriterDelphi@CreateProxyWriter$qqrv @21  ; __fastcall Datasnap::Dsproxydelphinative::TDSClientProxyWriterDelphi::CreateProxyWriter()
+    @Datasnap@Dsproxydelphinative@TDSClientProxyWriterDelphi@FileDescriptions$qqrv @19  ; __fastcall Datasnap::Dsproxydelphinative::TDSClientProxyWriterDelphi::FileDescriptions()
+    @Datasnap@Dsproxydelphinative@TDSClientProxyWriterDelphi@Properties$qqrv @20  ; __fastcall Datasnap::Dsproxydelphinative::TDSClientProxyWriterDelphi::Properties()
+    @Datasnap@Dsproxydelphinative@TDSCustomDelphiProxyWriter@ @25  ; Datasnap::Dsproxydelphinative::TDSCustomDelphiProxyWriter::
+    @Datasnap@Dsproxydelphinative@TDSCustomDelphiProxyWriter@$bctr$qqrv @18  ; __fastcall Datasnap::Dsproxydelphinative::TDSCustomDelphiProxyWriter::TDSCustomDelphiProxyWriter()
+    @Datasnap@Dsproxydelphinative@TDSCustomDelphiProxyWriter@GetAssignmentString$qqrv @8   ; __fastcall Datasnap::Dsproxydelphinative::TDSCustomDelphiProxyWriter::GetAssignmentString()
+    @Datasnap@Dsproxydelphinative@TDSCustomDelphiProxyWriter@GetCreateDataSetReader$qqrxp40Datasnap@Dscommonproxy@TDSProxyParameter @7   ; __fastcall Datasnap::Dsproxydelphinative::TDSCustomDelphiProxyWriter::GetCreateDataSetReader(Datasnap::Dscommonproxy::TDSProxyParameter * const)
+    @Datasnap@Dsproxydelphinative@TDSCustomDelphiProxyWriter@GetCreateParamsReader$qqrxp40Datasnap@Dscommonproxy@TDSProxyParameter @6   ; __fastcall Datasnap::Dsproxydelphinative::TDSCustomDelphiProxyWriter::GetCreateParamsReader(Datasnap::Dscommonproxy::TDSProxyParameter * const)
+    @Datasnap@Dsproxydelphinative@TDSCustomDelphiProxyWriter@WriteClassImplementation$qqrxp36Datasnap@Dscommonproxy@TDSProxyClass @10  ; __fastcall Datasnap::Dsproxydelphinative::TDSCustomDelphiProxyWriter::WriteClassImplementation(Datasnap::Dscommonproxy::TDSProxyClass * const)
+    @Datasnap@Dsproxydelphinative@TDSCustomDelphiProxyWriter@WriteClassInterface$qqrxp36Datasnap@Dscommonproxy@TDSProxyClass @14  ; __fastcall Datasnap::Dsproxydelphinative::TDSCustomDelphiProxyWriter::WriteClassInterface(Datasnap::Dscommonproxy::TDSProxyClass * const)
+    @Datasnap@Dsproxydelphinative@TDSCustomDelphiProxyWriter@WriteImplementation$qqrv @9   ; __fastcall Datasnap::Dsproxydelphinative::TDSCustomDelphiProxyWriter::WriteImplementation()
+    @Datasnap@Dsproxydelphinative@TDSCustomDelphiProxyWriter@WriteInterface$qqrv @13  ; __fastcall Datasnap::Dsproxydelphinative::TDSCustomDelphiProxyWriter::WriteInterface()
+    @Datasnap@Dsproxydelphinative@TDSCustomDelphiProxyWriter@WriteInterfaceUses$qqrv @16  ; __fastcall Datasnap::Dsproxydelphinative::TDSCustomDelphiProxyWriter::WriteInterfaceUses()
+    @Datasnap@Dsproxydelphinative@TDSCustomDelphiProxyWriter@WriteMethodImplementation$qqrxp36Datasnap@Dscommonproxy@TDSProxyClassxp37Datasnap@Dscommonproxy@TDSProxyMethod @12  ; __fastcall Datasnap::Dsproxydelphinative::TDSCustomDelphiProxyWriter::WriteMethodImplementation(Datasnap::Dscommonproxy::TDSProxyClass * const, Datasnap::Dscommonproxy::TDSProxyMethod * const)
+    @Datasnap@Dsproxydelphinative@TDSCustomDelphiProxyWriter@WriteMethodSignature$qqrxp36Datasnap@Dscommonproxy@TDSProxyClassxp37Datasnap@Dscommonproxy@TDSProxyMethodxo @15  ; __fastcall Datasnap::Dsproxydelphinative::TDSCustomDelphiProxyWriter::WriteMethodSignature(Datasnap::Dscommonproxy::TDSProxyClass * const, Datasnap::Dscommonproxy::TDSProxyMethod * const, const bool)
+    @Datasnap@Dsproxydelphinative@TDSCustomDelphiProxyWriter@WriteOutgoingParameter$qqrx20System@UnicodeStringt1xp40Datasnap@Dscommonproxy@TDSProxyParametert1t1 @11  ; Datasnap::Dsproxydelphinative::TDSCustomDelphiProxyWriter::WriteOutgoingParameter(const System::UnicodeString, const System::UnicodeString, Datasnap::Dscommonproxy::TDSProxyParameter * const, const System::UnicodeString, const System::UnicodeString)__fast
+    @Datasnap@Dsproxydelphinative@TDSCustomDelphiProxyWriter@WriteProxy$qqrv @17  ; __fastcall Datasnap::Dsproxydelphinative::TDSCustomDelphiProxyWriter::WriteProxy()
+    @Datasnap@Dsproxydelphinative@TDSDelphiProxyWriter@ @23  ; Datasnap::Dsproxydelphinative::TDSDelphiProxyWriter::
+    @Datasnap@Dsproxydelphinative@TDSDelphiProxyWriter@$bdtr$qqrv @3   ; __fastcall Datasnap::Dsproxydelphinative::TDSDelphiProxyWriter::~TDSDelphiProxyWriter()
+    @Datasnap@Dsproxydelphinative@TDSDelphiProxyWriter@DerivedWrite$qqrx20System@UnicodeString @5   ; __fastcall Datasnap::Dsproxydelphinative::TDSDelphiProxyWriter::DerivedWrite(const System::UnicodeString)
+    @Datasnap@Dsproxydelphinative@TDSDelphiProxyWriter@DerivedWriteLine$qqrv @4   ; __fastcall Datasnap::Dsproxydelphinative::TDSDelphiProxyWriter::DerivedWriteLine()
+    @Datasnap@Dsproxydelphinative@initialization$qqrv @1   ; __fastcall Datasnap::Dsproxydelphinative::initialization()
+    @Datasnapnativeclient@@GetPackageInfoTable$qqrv @31  ; Datasnapnativeclient::__linkproc__ __fastcall GetPackageInfoTable()
+    @Datasnapnativeclient@@PackageLoad$qqrv @30  ; Datasnapnativeclient::__linkproc__ __fastcall PackageLoad()
+    @Datasnapnativeclient@@PackageUnload$qqrv @29  ; Datasnapnativeclient::__linkproc__ __fastcall PackageUnload()
+    @Datasnapnativeclient@initialization$qqrv @28  ; __fastcall Datasnapnativeclient::initialization()
+    @GetPackageInfoTable           @34  ; GetPackageInfoTable
+    Finalize                       @32  ; Finalize
+    Initialize                     @33  ; Initialize

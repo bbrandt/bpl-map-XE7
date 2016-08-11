@@ -1,0 +1,61 @@
+LIBRARY     DBXCDS210.BPL
+
+DESCRIPTION 'mbarcadero SimpleDataSet Component (DBX)'
+
+EXPORTS
+    @$xp$23Simpleds@TSimpleDataSet @14  ; __tpdsc__ Simpleds::TSimpleDataSet
+    @$xp$28Simpleds@TInternalSQLDataSet @16  ; __tpdsc__ Simpleds::TInternalSQLDataSet
+    @$xp$37Data@Dbxcdsreaders@TDBXCDSOriginalRow @48  ; __tpdsc__ Data::Dbxcdsreaders::TDBXCDSOriginalRow
+    @$xp$41Data@Dbxcdsreaders@TDBXClientDataSetTable @46  ; __tpdsc__ Data::Dbxcdsreaders::TDBXClientDataSetTable
+    @$xp$42Data@Dbxcdsreaders@TDBXClientDataSetReader @44  ; __tpdsc__ Data::Dbxcdsreaders::TDBXClientDataSetReader
+    @Data@Dbxcdsreaders@Finalization$qqrv @19  ; __fastcall Data::Dbxcdsreaders::Finalization()
+    @Data@Dbxcdsreaders@TDBXCDSOriginalRow@ @49  ; Data::Dbxcdsreaders::TDBXCDSOriginalRow::
+    @Data@Dbxcdsreaders@TDBXCDSOriginalRow@$bctr$qqrp41Data@Dbxcdsreaders@TDBXClientDataSetTable @40  ; __fastcall Data::Dbxcdsreaders::TDBXCDSOriginalRow::TDBXCDSOriginalRow(Data::Dbxcdsreaders::TDBXClientDataSetTable *)
+    @Data@Dbxcdsreaders@TDBXCDSOriginalRow@First$qqrv @39  ; __fastcall Data::Dbxcdsreaders::TDBXCDSOriginalRow::First()
+    @Data@Dbxcdsreaders@TDBXCDSOriginalRow@GetColumns$qqrv @38  ; __fastcall Data::Dbxcdsreaders::TDBXCDSOriginalRow::GetColumns()
+    @Data@Dbxcdsreaders@TDBXCDSOriginalRow@GetOrdinal$qqrx20System@UnicodeString @37  ; __fastcall Data::Dbxcdsreaders::TDBXCDSOriginalRow::GetOrdinal(const System::UnicodeString)
+    @Data@Dbxcdsreaders@TDBXCDSOriginalRow@GetWritableValue$qqrxi @36  ; __fastcall Data::Dbxcdsreaders::TDBXCDSOriginalRow::GetWritableValue(const int)
+    @Data@Dbxcdsreaders@TDBXCDSOriginalRow@InBounds$qqrv @35  ; __fastcall Data::Dbxcdsreaders::TDBXCDSOriginalRow::InBounds()
+    @Data@Dbxcdsreaders@TDBXCDSOriginalRow@Next$qqrv @34  ; __fastcall Data::Dbxcdsreaders::TDBXCDSOriginalRow::Next()
+    @Data@Dbxcdsreaders@TDBXClientDataSetReader@ @45  ; Data::Dbxcdsreaders::TDBXClientDataSetReader::
+    @Data@Dbxcdsreaders@TDBXClientDataSetReader@$bctr$qqrp16Data@Db@TDataSeto @43  ; __fastcall Data::Dbxcdsreaders::TDBXClientDataSetReader::TDBXClientDataSetReader(Data::Db::TDataSet *, bool)
+    @Data@Dbxcdsreaders@TDBXClientDataSetReader@CopyReaderToClientDataSet$qqrp25Data@Dbxcommon@TDBXReaderp32Datasnap@Dbclient@TClientDataSet @41  ; __fastcall Data::Dbxcdsreaders::TDBXClientDataSetReader::CopyReaderToClientDataSet(Data::Dbxcommon::TDBXReader *, Datasnap::Dbclient::TClientDataSet *)
+    @Data@Dbxcdsreaders@TDBXClientDataSetReader@ToClientDataSet$qqrp25System@Classes@TComponentp25Data@Dbxcommon@TDBXReadero @42  ; __fastcall Data::Dbxcdsreaders::TDBXClientDataSetReader::ToClientDataSet(System::Classes::TComponent *, Data::Dbxcommon::TDBXReader *, bool)
+    @Data@Dbxcdsreaders@TDBXClientDataSetTable@ @47  ; Data::Dbxcdsreaders::TDBXClientDataSetTable::
+    @Data@Dbxcdsreaders@TDBXClientDataSetTable@$bctr$qqrp32Datasnap@Dbclient@TClientDataSeto @32  ; __fastcall Data::Dbxcdsreaders::TDBXClientDataSetTable::TDBXClientDataSetTable(Datasnap::Dbclient::TClientDataSet *, bool)
+    @Data@Dbxcdsreaders@TDBXClientDataSetTable@$bctr$qqrv @33  ; __fastcall Data::Dbxcdsreaders::TDBXClientDataSetTable::TDBXClientDataSetTable()
+    @Data@Dbxcdsreaders@TDBXClientDataSetTable@$bctr$qqrx20System@UnicodeString53System@%DynamicArray$p28Data@Dbxcommon@TDBXValueType%p32Datasnap@Dbclient@TClientDataSeto @26  ; Data::Dbxcdsreaders::TDBXClientDataSetTable::TDBXClientDataSetTable(const System::UnicodeString, System::DynamicArray<{583}...
+    @Data@Dbxcdsreaders@TDBXClientDataSetTable@$bdtr$qqrv @28  ; __fastcall Data::Dbxcdsreaders::TDBXClientDataSetTable::~TDBXClientDataSetTable()
+    @Data@Dbxcdsreaders@TDBXClientDataSetTable@AcceptChanges$qqrv @31  ; __fastcall Data::Dbxcdsreaders::TDBXClientDataSetTable::AcceptChanges()
+    @Data@Dbxcdsreaders@TDBXClientDataSetTable@Clear$qqrv @30  ; __fastcall Data::Dbxcdsreaders::TDBXClientDataSetTable::Clear()
+    @Data@Dbxcdsreaders@TDBXClientDataSetTable@CreateTableView$qqrx20System@UnicodeString @29  ; __fastcall Data::Dbxcdsreaders::TDBXClientDataSetTable::CreateTableView(const System::UnicodeString)
+    @Data@Dbxcdsreaders@TDBXClientDataSetTable@FindStringKey$qqrxix20System@UnicodeString @27  ; __fastcall Data::Dbxcdsreaders::TDBXClientDataSetTable::FindStringKey(const int, const System::UnicodeString)
+    @Data@Dbxcdsreaders@TDBXClientDataSetTable@GetDeletedRows$qqrv @23  ; __fastcall Data::Dbxcdsreaders::TDBXClientDataSetTable::GetDeletedRows()
+    @Data@Dbxcdsreaders@TDBXClientDataSetTable@GetInsertedRows$qqrv @22  ; __fastcall Data::Dbxcdsreaders::TDBXClientDataSetTable::GetInsertedRows()
+    @Data@Dbxcdsreaders@TDBXClientDataSetTable@GetOriginalRow$qqrv @20  ; __fastcall Data::Dbxcdsreaders::TDBXClientDataSetTable::GetOriginalRow()
+    @Data@Dbxcdsreaders@TDBXClientDataSetTable@GetUpdatedRows$qqrv @21  ; __fastcall Data::Dbxcdsreaders::TDBXClientDataSetTable::GetUpdatedRows()
+    @Data@Dbxcdsreaders@TDBXClientDataSetTable@SetColumns$qqrx53System@%DynamicArray$p28Data@Dbxcommon@TDBXValueType% @24  ; Data::Dbxcdsreaders::TDBXClientDataSetTable::SetColumns(const System::DynamicArray<{583}...
+    @Data@Dbxcdsreaders@TDBXClientDataSetTable@SkipOriginalRow$qqrv @25  ; __fastcall Data::Dbxcdsreaders::TDBXClientDataSetTable::SkipOriginalRow()
+    @Data@Dbxcdsreaders@initialization$qqrv @18  ; __fastcall Data::Dbxcdsreaders::initialization()
+    @Dbxcds@@GetPackageInfoTable$qqrv @53  ; Dbxcds::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dbxcds@@PackageLoad$qqrv      @52  ; Dbxcds::__linkproc__ __fastcall PackageLoad()
+    @Dbxcds@@PackageUnload$qqrv    @51  ; Dbxcds::__linkproc__ __fastcall PackageUnload()
+    @Dbxcds@initialization$qqrv    @50  ; __fastcall Dbxcds::initialization()
+    @GetPackageInfoTable           @56  ; GetPackageInfoTable
+    @Simpleds@Finalization$qqrv    @2   ; __fastcall Simpleds::Finalization()
+    @Simpleds@TInternalSQLDataSet@ @17  ; Simpleds::TInternalSQLDataSet::
+    @Simpleds@TSimpleDataSet@      @15  ; Simpleds::TSimpleDataSet::
+    @Simpleds@TSimpleDataSet@$bctr$qqrp25System@Classes@TComponent @13  ; __fastcall Simpleds::TSimpleDataSet::TSimpleDataSet(System::Classes::TComponent *)
+    @Simpleds@TSimpleDataSet@$bdtr$qqrv @12  ; __fastcall Simpleds::TSimpleDataSet::~TSimpleDataSet()
+    @Simpleds@TSimpleDataSet@AllocConnection$qqrv @9   ; __fastcall Simpleds::TSimpleDataSet::AllocConnection()
+    @Simpleds@TSimpleDataSet@AllocDataSet$qqrv @8   ; __fastcall Simpleds::TSimpleDataSet::AllocDataSet()
+    @Simpleds@TSimpleDataSet@AllocProvider$qqrv @7   ; __fastcall Simpleds::TSimpleDataSet::AllocProvider()
+    @Simpleds@TSimpleDataSet@FetchParams$qqrv @11  ; __fastcall Simpleds::TSimpleDataSet::FetchParams()
+    @Simpleds@TSimpleDataSet@Loaded$qqrv @10  ; __fastcall Simpleds::TSimpleDataSet::Loaded()
+    @Simpleds@TSimpleDataSet@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @6   ; __fastcall Simpleds::TSimpleDataSet::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Simpleds@TSimpleDataSet@OpenCursor$qqro @5   ; __fastcall Simpleds::TSimpleDataSet::OpenCursor(bool)
+    @Simpleds@TSimpleDataSet@PSGetCommandText$qqrv @3   ; __fastcall Simpleds::TSimpleDataSet::PSGetCommandText()
+    @Simpleds@TSimpleDataSet@SetConnection$qqrp27Data@Sqlexpr@TSQLConnection @4   ; __fastcall Simpleds::TSimpleDataSet::SetConnection(Data::Sqlexpr::TSQLConnection *)
+    @Simpleds@initialization$qqrv  @1   ; __fastcall Simpleds::initialization()
+    Finalize                       @54  ; Finalize
+    Initialize                     @55  ; Initialize

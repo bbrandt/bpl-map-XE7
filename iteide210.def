@@ -1,0 +1,588 @@
+LIBRARY     ITEIDE210.BPL
+
+DESCRIPTION 'mbarcadero Integrated Translation Environment'
+
+EXPORTS
+    @$xp$111System@Generics@Collections@%TEnumerator__1$64System@%DelphiInterface$37Configurationintf@IBuildConfiguration%% @130 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<System::DelphiInterface<{583}...
+    @$xp$19Iteopts@TITEOptions     @51  ; __tpdsc__ Iteopts::TITEOptions
+    @$xp$23Iteopts@TITEOptionsList @49  ; __tpdsc__ Iteopts::TITEOptionsList
+    @$xp$26Iteidecmds@TITEIDECommands @289 ; __tpdsc__ Iteidecmds::TITEIDECommands
+    @$xp$28Iteaddlang@TITEAddLangExpert @256 ; __tpdsc__ Iteaddlang::TITEAddLangExpert
+    @$xp$30Iteideregister@TITEIDERegister @575 ; __tpdsc__ Iteideregister::TITEIDERegister
+    @$xp$31Itelangcontainer@TLangContainer @466 ; __tpdsc__ Itelangcontainer::TLangContainer
+    @$xp$31Iteprojcontainer@TProjContainer @481 ; __tpdsc__ Iteprojcontainer::TProjContainer
+    @$xp$32Iteidemainframe@TITEIDEFrameMain @146 ; __tpdsc__ Iteidemainframe::TITEIDEFrameMain
+    @$xp$34Iteremovelang@TITERemoveLangExpert @262 ; __tpdsc__ Iteremovelang::TITERemoveLangExpert
+    @$xp$34Iterepositoryform@TTRepositoryForm @250 ; __tpdsc__ Iterepositoryform::TTRepositoryForm
+    @$xp$36Iteoptionfontpage@TITEFontOptionPage @549 ; __tpdsc__ Iteoptionfontpage::TITEFontOptionPage
+    @$xp$36Iteoptionmainpage@TITEMainOptionPage @488 ; __tpdsc__ Iteoptionmainpage::TITEMainOptionPage
+    @$xp$38Itelocalizedprojectwizardform@TWizPage @430 ; __tpdsc__ Itelocalizedprojectwizardform::TWizPage
+    @$xp$38Iteoptioncolorpage@TITEColorOptionPage @527 ; __tpdsc__ Iteoptioncolorpage::TITEColorOptionPage
+    @$xp$39Itefiletypecontainer@TFileTypeContainer @457 ; __tpdsc__ Itefiletypecontainer::TFileTypeContainer
+    @$xp$39Itelocalizedprojectwizardform@TWizPages @429 ; __tpdsc__ Itelocalizedprojectwizardform::TWizPages
+    @$xp$40Iteoptionfontmodule@TITEAddInFontOptions @557 ; __tpdsc__ Iteoptionfontmodule::TITEAddInFontOptions
+    @$xp$40Iteoptionmainmodule@TITEAddInMainOptions @496 ; __tpdsc__ Iteoptionmainmodule::TITEAddInMainOptions
+    @$xp$40Itesetactivelang@TITESetActiveLangExpert @268 ; __tpdsc__ Itesetactivelang::TITESetActiveLangExpert
+    @$xp$41Iteetmproject@TITEETMProjectCreationTrait @239 ; __tpdsc__ Iteetmproject::TITEETMProjectCreationTrait
+    @$xp$41Itelocalizedprojectwizardform@TResDLLMode @428 ; __tpdsc__ Itelocalizedprojectwizardform::TResDLLMode
+    @$xp$41System@%TArray__1$20System@UnicodeString% @132 ; __tpdsc__ System::TArray__1<System::UnicodeString>
+    @$xp$42Itebaseresdllproject@TITEBaseResDLLProject @233 ; __tpdsc__ Itebaseresdllproject::TITEBaseResDLLProject
+    @$xp$42Itelocalizedprojectwizardform@TProjectType @431 ; __tpdsc__ Itelocalizedprojectwizardform::TProjectType
+    @$xp$42Iteoptioncolormodule@TITEAddInColorOptions @535 ; __tpdsc__ Iteoptioncolormodule::TITEAddInColorOptions
+    @$xp$43Itelocalizedprojectwizardform@IITEMenuEvent @413 ; __tpdsc__ Itelocalizedprojectwizardform::IITEMenuEvent
+    @$xp$43Itelocalizedprojectwizardform@TNotifierInfo @422 ; __tpdsc__ Itelocalizedprojectwizardform::TNotifierInfo
+    @$xp$43Itesetrootdirectorydlg@TfrmSetRootDirectory @472 ; __tpdsc__ Itesetrootdirectorydlg::TfrmSetRootDirectory
+    @$xp$44Itelocalizedprojectwizardform@TMoveDirection @427 ; __tpdsc__ Itelocalizedprojectwizardform::TMoveDirection
+    @$xp$45Itebaseresdllproject@IITEResDLLProjectCreator @225 ; __tpdsc__ Itebaseresdllproject::IITEResDLLProjectCreator
+    @$xp$45Itebaseresdllproject@IITEResDLLProjectHandler @226 ; __tpdsc__ Itebaseresdllproject::IITEResDLLProjectHandler
+    @$xp$46Itebaseresdllprojectoptions@IITEOptionsStringW @136 ; __tpdsc__ Itebaseresdllprojectoptions::IITEOptionsStringW
+    @$xp$46Itelocalizedprojectwizardform@TITEComboBoxType @426 ; __tpdsc__ Itelocalizedprojectwizardform::TITEComboBoxType
+    @$xp$47Itebaseresdllproject@TITEBaseResDLLCodeIProject @231 ; __tpdsc__ Itebaseresdllproject::TITEBaseResDLLCodeIProject
+    @$xp$47Itebaseresdllproject@TITEResDLLProjectContainer @229 ; __tpdsc__ Itebaseresdllproject::TITEResDLLProjectContainer
+    @$xp$47Itelocalizedprojectwizardform@TNotifierInfoList @420 ; __tpdsc__ Itelocalizedprojectwizardform::TNotifierInfoList
+    @$xp$47Itetranslationeditorform@TTranslationEditorView @168 ; __tpdsc__ Itetranslationeditorform::TTranslationEditorView
+    @$xp$48Itelocalizedprojectwizardform@TIOTAIDENotifier50 @416 ; __tpdsc__ Itelocalizedprojectwizardform::TIOTAIDENotifier50
+    @$xp$48Iteoptionrepositorypage@TITERepositoryOptionPage @502 ; __tpdsc__ Iteoptionrepositorypage::TITERepositoryOptionPage
+    @$xp$48Itetranslationeditorform@TTranslationEditorFrame @170 ; __tpdsc__ Itetranslationeditorform::TTranslationEditorFrame
+    @$xp$49Itebaseresdllproject@TITEBaseResDLLProjectCreator @227 ; __tpdsc__ Itebaseresdllproject::TITEBaseResDLLProjectCreator
+    @$xp$49Itebaseresdllprojectoptions@TITEBaseResDLLOptions @137 ; __tpdsc__ Itebaseresdllprojectoptions::TITEBaseResDLLOptions
+    @$xp$49Itelocalizedprojectwizardform@TIOTAModuleNotifier @418 ; __tpdsc__ Itelocalizedprojectwizardform::TIOTAModuleNotifier
+    @$xp$49Itetranslationeditorform@PTranslationEditorLayout @172 ; __tpdsc__ Itetranslationeditorform::PTranslationEditorLayout
+    @$xp$49Itetranslationeditorform@TTranslationEditorLayout @173 ; __tpdsc__ Itetranslationeditorform::TTranslationEditorLayout
+    @$xp$52Itelocalizedprojectwizardform@IITEUpdateResDLLExpert @412 ; __tpdsc__ Itelocalizedprojectwizardform::IITEUpdateResDLLExpert
+    @$xp$52Itelocalizedprojectwizardform@TITEUpdateResDLLExpert @410 ; __tpdsc__ Itelocalizedprojectwizardform::TITEUpdateResDLLExpert
+    @$xp$52Iteoptionformdesignerpage@TITEFormDesignerOptionPage @562 ; __tpdsc__ Iteoptionformdesignerpage::TITEFormDesignerOptionPage
+    @$xp$52Iteoptionrepositorymodule@TITEAddInRepositoryOptions @510 ; __tpdsc__ Iteoptionrepositorymodule::TITEAddInRepositoryOptions
+    @$xp$54Itebaseresdllprojectoptions@IITEBaseResDLLLocalOptions @135 ; __tpdsc__ Itebaseresdllprojectoptions::IITEBaseResDLLLocalOptions
+    @$xp$56Itelocalizedprojectwizardform@TITELocalizedProjectWizard @414 ; __tpdsc__ Itelocalizedprojectwizardform::TITELocalizedProjectWizard
+    @$xp$56Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard @424 ; __tpdsc__ Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard
+    @$xp$56Iteoptionformdesignermodule@TITEAddInFormDesignerOptions @570 ; __tpdsc__ Iteoptionformdesignermodule::TITEAddInFormDesignerOptions
+    @$xp$58Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface @133 ; __tpdsc__ Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface
+    @GetPackageInfoTable           @583 ; GetPackageInfoTable
+    @Iteaddlang@Finalization$qqrv  @253 ; __fastcall Iteaddlang::Finalization()
+    @Iteaddlang@TITEAddLangExpert@ @257 ; Iteaddlang::TITEAddLangExpert::
+    @Iteaddlang@TITEAddLangExpert@DoAction$qqrp14System@TObject @255 ; __fastcall Iteaddlang::TITEAddLangExpert::DoAction(System::TObject *)
+    @Iteaddlang@TITEAddLangExpert@Execute$qqrv @254 ; __fastcall Iteaddlang::TITEAddLangExpert::Execute()
+    @Iteaddlang@initialization$qqrv @252 ; __fastcall Iteaddlang::initialization()
+    @Itebaseresdllproject@Finalization$qqrv @175 ; __fastcall Itebaseresdllproject::Finalization()
+    @Itebaseresdllproject@TITEBaseResDLLCodeIProject@ @232 ; Itebaseresdllproject::TITEBaseResDLLCodeIProject::
+    @Itebaseresdllproject@TITEBaseResDLLCodeIProject@$bctr$qqrp42Itebaseresdllproject@TITEBaseResDLLProject @198 ; __fastcall Itebaseresdllproject::TITEBaseResDLLCodeIProject::TITEBaseResDLLCodeIProject(Itebaseresdllproject::TITEBaseResDLLProject *)
+    @Itebaseresdllproject@TITEBaseResDLLCodeIProject@GetAdditionalCheckinFiles$qqrx20System@UnicodeString @186 ; __fastcall Itebaseresdllproject::TITEBaseResDLLCodeIProject::GetAdditionalCheckinFiles(const System::UnicodeString)
+    @Itebaseresdllproject@TITEBaseResDLLCodeIProject@GetCheckinList$qqrv @187 ; __fastcall Itebaseresdllproject::TITEBaseResDLLCodeIProject::GetCheckinList()
+    @Itebaseresdllproject@TITEBaseResDLLCodeIProject@GetFileEntry$qqri @197 ; __fastcall Itebaseresdllproject::TITEBaseResDLLCodeIProject::GetFileEntry(int)
+    @Itebaseresdllproject@TITEBaseResDLLCodeIProject@GetFileName$qqri @196 ; __fastcall Itebaseresdllproject::TITEBaseResDLLCodeIProject::GetFileName(int)
+    @Itebaseresdllproject@TITEBaseResDLLCodeIProject@GetModuleCount$qqrv @195 ; __fastcall Itebaseresdllproject::TITEBaseResDLLCodeIProject::GetModuleCount()
+    @Itebaseresdllproject@TITEBaseResDLLCodeIProject@GetModuleName$qqri @194 ; __fastcall Itebaseresdllproject::TITEBaseResDLLCodeIProject::GetModuleName(int)
+    @Itebaseresdllproject@TITEBaseResDLLCodeIProject@GetTargetName$qqrv @193 ; __fastcall Itebaseresdllproject::TITEBaseResDLLCodeIProject::GetTargetName()
+    @Itebaseresdllproject@TITEBaseResDLLCodeIProject@HasOptionSource$qqrv @192 ; __fastcall Itebaseresdllproject::TITEBaseResDLLCodeIProject::HasOptionSource()
+    @Itebaseresdllproject@TITEBaseResDLLCodeIProject@HasSource$qqrv @191 ; __fastcall Itebaseresdllproject::TITEBaseResDLLCodeIProject::HasSource()
+    @Itebaseresdllproject@TITEBaseResDLLCodeIProject@RemoveItemFromProject$qqrx44System@%DelphiInterface$17System@IInterface%o @190 ; Itebaseresdllproject::TITEBaseResDLLCodeIProject::RemoveItemFromProject(const System::DelphiInterface<{583}...
+    @Itebaseresdllproject@TITEBaseResDLLCodeIProject@ViewOptionSource$qqrv @189 ; __fastcall Itebaseresdllproject::TITEBaseResDLLCodeIProject::ViewOptionSource()
+    @Itebaseresdllproject@TITEBaseResDLLCodeIProject@ViewSource$qqrv @188 ; __fastcall Itebaseresdllproject::TITEBaseResDLLCodeIProject::ViewSource()
+    @Itebaseresdllproject@TITEBaseResDLLProject@ @234 ; Itebaseresdllproject::TITEBaseResDLLProject::
+    @Itebaseresdllproject@TITEBaseResDLLProject@$bctr$qqrp28Projectmodule@TCustomProjectx20System@UnicodeStringt2t2x51System@%DelphiInterface$24Xml@Xmlintf@IXMLDocument% @223 ; Itebaseresdllproject::TITEBaseResDLLProject::TITEBaseResDLLProject(Projectmodule::TCustomProject *, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Itebaseresdllproject@TITEBaseResDLLProject@$bctr$qqrp28Projectmodule@TCustomProjectx51System@%DelphiInterface$24Creators@IProjectCreator% @222 ; Itebaseresdllproject::TITEBaseResDLLProject::TITEBaseResDLLProject(Projectmodule::TCustomProject *, const System::DelphiInterface<{583}...
+    @Itebaseresdllproject@TITEBaseResDLLProject@$bdtr$qqrv @221 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProject::~TITEBaseResDLLProject()
+    @Itebaseresdllproject@TITEBaseResDLLProject@AddFiles$qqrxp23System@Classes@TStrings @220 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProject::AddFiles(System::Classes::TStrings * const)
+    @Itebaseresdllproject@TITEBaseResDLLProject@AddModule$qqrx20System@UnicodeStringt1t1 @219 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProject::AddModule(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Itebaseresdllproject@TITEBaseResDLLProject@AddProjectModule$qqrv @218 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProject::AddProjectModule()
+    @Itebaseresdllproject@TITEBaseResDLLProject@CanAddRemoveModule$qqrrot1 @217 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProject::CanAddRemoveModule(bool&, bool&)
+    @Itebaseresdllproject@TITEBaseResDLLProject@CheckFileDate$qqrv @216 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProject::CheckFileDate()
+    @Itebaseresdllproject@TITEBaseResDLLProject@ContainsFileEntry$qqrxp24Codemgr@TCustomFileEntry @215 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProject::ContainsFileEntry(Codemgr::TCustomFileEntry * const)
+    @Itebaseresdllproject@TITEBaseResDLLProject@FileInProject$qqrx20System@UnicodeString @213 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProject::FileInProject(const System::UnicodeString)
+    @Itebaseresdllproject@TITEBaseResDLLProject@FindFileEntry$qqrx20System@UnicodeString @214 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProject::FindFileEntry(const System::UnicodeString)
+    @Itebaseresdllproject@TITEBaseResDLLProject@GetContents$qqrp20System@Classes@TList @212 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProject::GetContents(System::Classes::TList *)
+    @Itebaseresdllproject@TITEBaseResDLLProject@GetFileSystem$qqrv @211 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProject::GetFileSystem()
+    @Itebaseresdllproject@TITEBaseResDLLProject@GetIsDefaultProject$qqrv @210 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProject::GetIsDefaultProject()
+    @Itebaseresdllproject@TITEBaseResDLLProject@GetProjectContainer$qqrx54System@%DelphiInterface$27Projectintf@IModelContainer% @209 ; Itebaseresdllproject::TITEBaseResDLLProject::GetProjectContainer(const System::DelphiInterface<{583}...
+    @Itebaseresdllproject@TITEBaseResDLLProject@GetProjectFileEntries$qqrp23System@Classes@TStrings @208 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProject::GetProjectFileEntries(System::Classes::TStrings *)
+    @Itebaseresdllproject@TITEBaseResDLLProject@GetProjectFileList$qqrp23System@Classes@TStrings @207 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProject::GetProjectFileList(System::Classes::TStrings *)
+    @Itebaseresdllproject@TITEBaseResDLLProject@GetRequiresDebuggingHost$qqrv @206 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProject::GetRequiresDebuggingHost()
+    @Itebaseresdllproject@TITEBaseResDLLProject@LoadFileList$qqrv @205 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProject::LoadFileList()
+    @Itebaseresdllproject@TITEBaseResDLLProject@OpenModule$qqrx20System@UnicodeStringo @204 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProject::OpenModule(const System::UnicodeString, bool)
+    @Itebaseresdllproject@TITEBaseResDLLProject@RemoveModule$qqrx20System@UnicodeString @203 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProject::RemoveModule(const System::UnicodeString)
+    @Itebaseresdllproject@TITEBaseResDLLProject@RemoveProjectModule$qqrv @202 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProject::RemoveProjectModule()
+    @Itebaseresdllproject@TITEBaseResDLLProject@RenameModule$qqrx20System@UnicodeStringt1t1 @201 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProject::RenameModule(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Itebaseresdllproject@TITEBaseResDLLProject@SaveFile$qqrv @200 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProject::SaveFile()
+    @Itebaseresdllproject@TITEBaseResDLLProject@UpdateFileList$qqrv @199 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProject::UpdateFileList()
+    @Itebaseresdllproject@TITEBaseResDLLProjectCreator@ @228 ; Itebaseresdllproject::TITEBaseResDLLProjectCreator::
+    @Itebaseresdllproject@TITEBaseResDLLProjectCreator@$bctr$qqr44System@%DelphiInterface$17Idecreators@IFile% @181 ; Itebaseresdllproject::TITEBaseResDLLProjectCreator::TITEBaseResDLLProjectCreator(System::DelphiInterface<{583}...
+    @Itebaseresdllproject@TITEBaseResDLLProjectCreator@GetFrameworkType$qqrv @180 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProjectCreator::GetFrameworkType()
+    @Itebaseresdllproject@TITEBaseResDLLProjectCreator@GetSource$qqrv @176 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProjectCreator::GetSource()
+    @Itebaseresdllproject@TITEBaseResDLLProjectCreator@GetSupportedPlatforms$qqrv @178 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProjectCreator::GetSupportedPlatforms()
+    @Itebaseresdllproject@TITEBaseResDLLProjectCreator@PreferredPlatform$qqrv @177 ; __fastcall Itebaseresdllproject::TITEBaseResDLLProjectCreator::PreferredPlatform()
+    @Itebaseresdllproject@TITEBaseResDLLProjectCreator@SetInitialOptions$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject% @179 ; Itebaseresdllproject::TITEBaseResDLLProjectCreator::SetInitialOptions(const System::DelphiInterface<{583}...
+    @Itebaseresdllproject@TITEResDLLProjectContainer@ @230 ; Itebaseresdllproject::TITEResDLLProjectContainer::
+    @Itebaseresdllproject@TITEResDLLProjectContainer@$bctr$qqrx54System@%DelphiInterface$27Projectintf@IModelContainer%x20System@UnicodeString61System@%DelphiInterface$34Codemgr@ICustomProjectGroupProject% @185 ; Itebaseresdllproject::TITEResDLLProjectContainer::TITEResDLLProjectContainer(const System::DelphiInterface<{583}...
+    @Itebaseresdllproject@TITEResDLLProjectContainer@CreateChildNode$qqrp24Codemgr@TCustomFileEntryro @184 ; __fastcall Itebaseresdllproject::TITEResDLLProjectContainer::CreateChildNode(Codemgr::TCustomFileEntry *, bool&)
+    @Itebaseresdllproject@TITEResDLLProjectContainer@GetChildren$qqrv @183 ; __fastcall Itebaseresdllproject::TITEResDLLProjectContainer::GetChildren()
+    @Itebaseresdllproject@TITEResDLLProjectContainer@HasChildren$qqrv @182 ; __fastcall Itebaseresdllproject::TITEResDLLProjectContainer::HasChildren()
+    @Itebaseresdllproject@_sResDLLFileFilter @224 ; Itebaseresdllproject::_sResDLLFileFilter
+    @Itebaseresdllproject@initialization$qqrv @174 ; __fastcall Itebaseresdllproject::initialization()
+    @Itebaseresdllprojectoptions@Finalization$qqrv @55  ; __fastcall Itebaseresdllprojectoptions::Finalization()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptions@ @138 ; Itebaseresdllprojectoptions::TITEBaseResDLLOptions::
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptions@$bctr$qqrv @129 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptions::TITEBaseResDLLOptions()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptions@$bdtr$qqrv @128 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptions::~TITEBaseResDLLOptions()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptions@ReadOptions$qqrp30System@Inifiles@TCustomIniFile @127 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptions::ReadOptions(System::Inifiles::TCustomIniFile *)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptions@WriteOptions$qqrp30System@Inifiles@TCustomIniFile @126 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptions::WriteOptions(System::Inifiles::TCustomIniFile *)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@ @134 ; Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@$bctr$qqr49System@%DelphiInterface$22Codemgr@ICustomProject% @125 ; Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::TITEBaseResDLLOptionsInterface(System::DelphiInterface<{583}...
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@$bdtr$qqrv @124 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::~TITEBaseResDLLOptionsInterface()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@AddConfiguration$qqr20System@UnicodeStringx64System@%DelphiInterface$37Configurationintf@IBuildConfiguration% @96  ; Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::AddConfiguration(System::UnicodeString, const System::DelphiInterface<{583}...
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@AddNotifier$qqr67System@%DelphiInterface$40Configurationintf@IConfigurationNotifier% @95  ; Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::AddNotifier(System::DelphiInterface<{583}...
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@ClearActiveMobileDevice$qqrx20System@UnicodeString @62  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::ClearActiveMobileDevice(const System::UnicodeString)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@EditOptions$qqrv @102 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::EditOptions()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetActiveConfiguration$qqrv @94  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetActiveConfiguration()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetActiveMobileDevice$qqr20System@UnicodeString @93  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetActiveMobileDevice(System::UnicodeString)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetActivePlatform$qqrv @92  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetActivePlatform()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetBaseConfiguration$qqrv @91  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetBaseConfiguration()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetCompilerOpts$qqrv @122 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetCompilerOpts()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetConfiguration$qqrx20System@UnicodeStringt1 @90  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetConfiguration(const System::UnicodeString, const System::UnicodeString)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetDebugEnvBlock$qqrrp23System@Classes@TStrings @121 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetDebugEnvBlock(System::Classes::TStrings *&)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetEnabledPlatforms$qqrv @89  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetEnabledPlatforms()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetEnumerator$qqrv @88  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetEnumerator()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetGlobalConfigurations$qqrv @87  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetGlobalConfigurations()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetIsModified$qqrv @86  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetIsModified()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetLoadingDesktop$qqrv @120 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetLoadingDesktop()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetLocalConfiguration$qqrx20System@UnicodeStringt1 @85  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetLocalConfiguration(const System::UnicodeString, const System::UnicodeString)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetLocalConfigurations$qqrx20System@UnicodeString @84  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetLocalConfigurations(const System::UnicodeString)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetLocalOption$qqrx20System@UnicodeStringt1 @119 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetLocalOption(const System::UnicodeString, const System::UnicodeString)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetLocalOptionObject$qqrx20System@UnicodeString @118 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetLocalOptionObject(const System::UnicodeString)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetModified$qqrv @117 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetModified()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetModifiedState$qqrv @97  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetModifiedState()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetNames$qqrv @83  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetNames()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetOption$qqrx20System@UnicodeString @116 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetOption(const System::UnicodeString)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetOptionNames$qqrv @99  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetOptionNames()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetOptionValue$qqrx20System@UnicodeString @101 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetOptionValue(const System::UnicodeString)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetOptionsString$qqrv @115 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetOptionsString()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetPlatformAvailable$qqrx20System@UnicodeString @81  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetPlatformAvailable(const System::UnicodeString)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetPlatformEnabled$qqrx20System@UnicodeString @80  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetPlatformEnabled(const System::UnicodeString)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetPlatformProfile$qqrx20System@UnicodeString @79  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetPlatformProfile(const System::UnicodeString)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetPlatformSDK$qqrx20System@UnicodeString @78  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetPlatformSDK(const System::UnicodeString)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetPlatformSupported$qqrx20System@UnicodeString @77  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetPlatformSupported(const System::UnicodeString)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetProject$qqrv @82  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetProject()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetPropertyInfo$qqrrp24System@Typinfo@TPropInforp14System@TObjectx20System@UnicodeStringt3 @114 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetPropertyInfo(System::Typinfo::TPropInfo *&, System::TObject *&, const System::UnicodeString, const System::UnicodeString)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetSupportedPlatforms$qqrv @76  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetSupportedPlatforms()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@GetTargetName$qqrv @113 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::GetTargetName()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@Initialize$qqrv @112 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::Initialize()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@Load$qqr47System@%DelphiInterface$20Xml@Xmlintf@IXMLNode% @74  ; Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::Load(System::DelphiInterface<{583}...
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@Load$qqr49System@%DelphiInterface$22Codemgr@IMSProjectFile% @75  ; Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::Load(System::DelphiInterface<{583}...
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@MarkModifiedForRebuild$qqrv @72  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::MarkModifiedForRebuild()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@MarkProjectModified$qqrv @71  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::MarkProjectModified()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@Modified$qqrv @73  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::Modified()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@OpenProjectOptions$qqrx20System@UnicodeStringt1 @123 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::OpenProjectOptions(const System::UnicodeString, const System::UnicodeString)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@ProjectBuildConfigurationsSave$qqr49System@%DelphiInterface$22Codemgr@IMSProjectFile%o @67  ; Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::ProjectBuildConfigurationsSave(System::DelphiInterface<{583}...
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@ReflectIDEOptions$qqrv @111 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::ReflectIDEOptions()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@ReloadIDEOptions$qqrv @110 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::ReloadIDEOptions()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@Remove$qqr64System@%DelphiInterface$37Configurationintf@IBuildConfiguration%o @70  ; Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::Remove(System::DelphiInterface<{583}...
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@RemoveLocalOverrides$qqrx20System@UnicodeString @69  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::RemoveLocalOverrides(const System::UnicodeString)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@RemoveNotifier$qqri @68  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::RemoveNotifier(int)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@Save$qqrv @109 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::Save()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@SaveAsDefaults$qqr47System@%DelphiInterface$20Xml@Xmlintf@IXMLNode% @66  ; Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::SaveAsDefaults(System::DelphiInterface<{583}...
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@SaveConfigurationItems$qqrv @65  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::SaveConfigurationItems()
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@SetActiveConfiguration$qqrx20System@UnicodeString @64  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::SetActiveConfiguration(const System::UnicodeString)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@SetActiveMobileDevice$qqrx20System@UnicodeStringt1 @63  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::SetActiveMobileDevice(const System::UnicodeString, const System::UnicodeString)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@SetActivePlatform$qqrx20System@UnicodeString @61  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::SetActivePlatform(const System::UnicodeString)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@SetDebugEnvBlock$qqrxp23System@Classes@TStringst1 @108 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::SetDebugEnvBlock(System::Classes::TStrings * const, System::Classes::TStrings * const)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@SetLoadingDesktop$qqro @107 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::SetLoadingDesktop(bool)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@SetLocalOption$qqrx20System@UnicodeStringt1rx14System@Variant @106 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::SetLocalOption(const System::UnicodeString, const System::UnicodeString, const System::Variant&)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@SetModified$qqro @105 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::SetModified(bool)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@SetModifiedState$qqro @98  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::SetModifiedState(bool)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@SetOption$qqrx20System@UnicodeStringrx14System@Variant @104 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::SetOption(const System::UnicodeString, const System::Variant&)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@SetOptionValue$qqrx20System@UnicodeStringrx14System@Variant @100 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::SetOptionValue(const System::UnicodeString, const System::Variant&)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@SetPlatformEnabled$qqrx20System@UnicodeStringxo @60  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::SetPlatformEnabled(const System::UnicodeString, const bool)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@SetPlatformProfile$qqrx20System@UnicodeStringt1 @59  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::SetPlatformProfile(const System::UnicodeString, const System::UnicodeString)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@SetPlatformSDK$qqrx20System@UnicodeStringt1 @58  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::SetPlatformSDK(const System::UnicodeString, const System::UnicodeString)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@SetPlatformSupported$qqrx20System@UnicodeStringo @57  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::SetPlatformSupported(const System::UnicodeString, bool)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@UpdateLibraries$qqrxp23System@Classes@TStrings @103 ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::UpdateLibraries(System::Classes::TStrings * const)
+    @Itebaseresdllprojectoptions@TITEBaseResDLLOptionsInterface@UsingDefaultProfile$qqrx20System@UnicodeString @56  ; __fastcall Itebaseresdllprojectoptions::TITEBaseResDLLOptionsInterface::UsingDefaultProfile(const System::UnicodeString)
+    @Itebaseresdllprojectoptions@initialization$qqrv @54  ; __fastcall Itebaseresdllprojectoptions::initialization()
+    @Iteetmproject@Finalization$qqrv @236 ; __fastcall Iteetmproject::Finalization()
+    @Iteetmproject@TITEETMProjectCreationTrait@ @240 ; Iteetmproject::TITEETMProjectCreationTrait::
+    @Iteetmproject@TITEETMProjectCreationTrait@CreateProject$qqrx44System@%DelphiInterface$17System@IInterface%x20System@UnicodeStringx51System@%DelphiInterface$24Xml@Xmlintf@IXMLDocument% @238 ; Iteetmproject::TITEETMProjectCreationTrait::CreateProject(const System::DelphiInterface<{583}...
+    @Iteetmproject@TITEETMProjectCreationTrait@OpenProject$qqrx20System@UnicodeStringt1t1x51System@%DelphiInterface$24Xml@Xmlintf@IXMLDocument% @237 ; Iteetmproject::TITEETMProjectCreationTrait::OpenProject(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Iteetmproject@initialization$qqrv @235 ; __fastcall Iteetmproject::initialization()
+    @Itefiletypecontainer@Finalization$qqrv @452 ; __fastcall Itefiletypecontainer::Finalization()
+    @Itefiletypecontainer@TFileTypeContainer@ @458 ; Itefiletypecontainer::TFileTypeContainer::
+    @Itefiletypecontainer@TFileTypeContainer@$bctr$qqrx46System@%DelphiInterface$19Iteota@IITEFileType%x20System@UnicodeString @456 ; Itefiletypecontainer::TFileTypeContainer::TFileTypeContainer(const System::DelphiInterface<{583}...
+    @Itefiletypecontainer@TFileTypeContainer@$bdtr$qqrv @455 ; __fastcall Itefiletypecontainer::TFileTypeContainer::~TFileTypeContainer()
+    @Itefiletypecontainer@TFileTypeContainer@GetCount$qqrv @454 ; __fastcall Itefiletypecontainer::TFileTypeContainer::GetCount()
+    @Itefiletypecontainer@TFileTypeContainer@GetFile$qqri @453 ; __fastcall Itefiletypecontainer::TFileTypeContainer::GetFile(int)
+    @Itefiletypecontainer@initialization$qqrv @451 ; __fastcall Itefiletypecontainer::initialization()
+    @Iteide@@GetPackageInfoTable$qqrv @580 ; Iteide::__linkproc__ __fastcall GetPackageInfoTable()
+    @Iteide@@PackageLoad$qqrv      @579 ; Iteide::__linkproc__ __fastcall PackageLoad()
+    @Iteide@@PackageUnload$qqrv    @578 ; Iteide::__linkproc__ __fastcall PackageUnload()
+    @Iteide@initialization$qqrv    @577 ; __fastcall Iteide::initialization()
+    @Iteidecmds@Finalization$qqrv  @271 ; __fastcall Iteidecmds::Finalization()
+    @Iteidecmds@ITEIDECommands     @288 ; Iteidecmds::ITEIDECommands
+    @Iteidecmds@TITEIDECommands@   @290 ; Iteidecmds::TITEIDECommands::
+    @Iteidecmds@TITEIDECommands@ITEAddLanguageActionExecute$qqrp14System@TObject @281 ; __fastcall Iteidecmds::TITEIDECommands::ITEAddLanguageActionExecute(System::TObject *)
+    @Iteidecmds@TITEIDECommands@ITEAddLanguageActionUpdate$qqrp14System@TObject @280 ; __fastcall Iteidecmds::TITEIDECommands::ITEAddLanguageActionUpdate(System::TObject *)
+    @Iteidecmds@TITEIDECommands@ITELanguageMenuUpdate$qqrp14System@TObject @273 ; __fastcall Iteidecmds::TITEIDECommands::ITELanguageMenuUpdate(System::TObject *)
+    @Iteidecmds@TITEIDECommands@ITERemoveLanguageActionExecute$qqrp14System@TObject @279 ; __fastcall Iteidecmds::TITEIDECommands::ITERemoveLanguageActionExecute(System::TObject *)
+    @Iteidecmds@TITEIDECommands@ITERemoveLanguageActionUpdate$qqrp14System@TObject @278 ; __fastcall Iteidecmds::TITEIDECommands::ITERemoveLanguageActionUpdate(System::TObject *)
+    @Iteidecmds@TITEIDECommands@ITESetActiveLanguageActionExecute$qqrp14System@TObject @277 ; __fastcall Iteidecmds::TITEIDECommands::ITESetActiveLanguageActionExecute(System::TObject *)
+    @Iteidecmds@TITEIDECommands@ITESetActiveLanguageActionUpdate$qqrp14System@TObject @276 ; __fastcall Iteidecmds::TITEIDECommands::ITESetActiveLanguageActionUpdate(System::TObject *)
+    @Iteidecmds@TITEIDECommands@ITETMActionUpdate$qqrp14System@TObject @282 ; __fastcall Iteidecmds::TITEIDECommands::ITETMActionUpdate(System::TObject *)
+    @Iteidecmds@TITEIDECommands@ITETranslationEditorActionExecute$qqrp14System@TObject @287 ; __fastcall Iteidecmds::TITEIDECommands::ITETranslationEditorActionExecute(System::TObject *)
+    @Iteidecmds@TITEIDECommands@ITETranslationManagerActionExecute$qqrp14System@TObject @284 ; __fastcall Iteidecmds::TITEIDECommands::ITETranslationManagerActionExecute(System::TObject *)
+    @Iteidecmds@TITEIDECommands@ITETranslationManagerActionUpdate$qqrp14System@TObject @285 ; __fastcall Iteidecmds::TITEIDECommands::ITETranslationManagerActionUpdate(System::TObject *)
+    @Iteidecmds@TITEIDECommands@ITETranslationRepositoryActionExecute$qqrp14System@TObject @286 ; __fastcall Iteidecmds::TITEIDECommands::ITETranslationRepositoryActionExecute(System::TObject *)
+    @Iteidecmds@TITEIDECommands@ITEUpdateLocalizedProjectsExecute$qqrp14System@TObject @275 ; __fastcall Iteidecmds::TITEIDECommands::ITEUpdateLocalizedProjectsExecute(System::TObject *)
+    @Iteidecmds@TITEIDECommands@ITEUpdateLocalizedProjectsUpdate$qqrp14System@TObject @274 ; __fastcall Iteidecmds::TITEIDECommands::ITEUpdateLocalizedProjectsUpdate(System::TObject *)
+    @Iteidecmds@TITEIDECommands@IsValidPersonality$qqrv @283 ; __fastcall Iteidecmds::TITEIDECommands::IsValidPersonality()
+    @Iteidecmds@TITEIDECommands@Setup$qqrv @272 ; __fastcall Iteidecmds::TITEIDECommands::Setup()
+    @Iteidecmds@initialization$qqrv @270 ; __fastcall Iteidecmds::initialization()
+    @Iteidemainframe@Finalization$qqrv @140 ; __fastcall Iteidemainframe::Finalization()
+    @Iteidemainframe@TITEIDEFrameMain@ @147 ; Iteidemainframe::TITEIDEFrameMain::
+    @Iteidemainframe@TITEIDEFrameMain@$bctr$qqrp25System@Classes@TComponent @145 ; __fastcall Iteidemainframe::TITEIDEFrameMain::TITEIDEFrameMain(System::Classes::TComponent *)
+    @Iteidemainframe@TITEIDEFrameMain@FileOpenExecute$qqrp14System@TObject @143 ; __fastcall Iteidemainframe::TITEIDEFrameMain::FileOpenExecute(System::TObject *)
+    @Iteidemainframe@TITEIDEFrameMain@FileOpenUpdate$qqrp14System@TObject @144 ; __fastcall Iteidemainframe::TITEIDEFrameMain::FileOpenUpdate(System::TObject *)
+    @Iteidemainframe@TITEIDEFrameMain@OpenFile$qqrx20System@UnicodeString @142 ; __fastcall Iteidemainframe::TITEIDEFrameMain::OpenFile(const System::UnicodeString)
+    @Iteidemainframe@TITEIDEFrameMain@pnlWorkspaceResize$qqrp14System@TObject @141 ; __fastcall Iteidemainframe::TITEIDEFrameMain::pnlWorkspaceResize(System::TObject *)
+    @Iteidemainframe@initialization$qqrv @139 ; __fastcall Iteidemainframe::initialization()
+    @Iteideregister@DataModule1    @574 ; Iteideregister::DataModule1
+    @Iteideregister@Finalization$qqrv @573 ; __fastcall Iteideregister::Finalization()
+    @Iteideregister@TITEIDERegister@ @576 ; Iteideregister::TITEIDERegister::
+    @Iteideregister@initialization$qqrv @572 ; __fastcall Iteideregister::initialization()
+    @Itelangcontainer@Finalization$qqrv @460 ; __fastcall Itelangcontainer::Finalization()
+    @Itelangcontainer@TLangContainer@ @467 ; Itelangcontainer::TLangContainer::
+    @Itelangcontainer@TLangContainer@$bctr$qqrx20System@UnicodeStringt1 @465 ; __fastcall Itelangcontainer::TLangContainer::TLangContainer(const System::UnicodeString, const System::UnicodeString)
+    @Itelangcontainer@TLangContainer@$bdtr$qqrv @464 ; __fastcall Itelangcontainer::TLangContainer::~TLangContainer()
+    @Itelangcontainer@TLangContainer@GetCount$qqrv @463 ; __fastcall Itelangcontainer::TLangContainer::GetCount()
+    @Itelangcontainer@TLangContainer@GetFileType$qqri @462 ; __fastcall Itelangcontainer::TLangContainer::GetFileType(int)
+    @Itelangcontainer@TLangContainer@IndexOf$qqr46System@%DelphiInterface$19Iteota@IITEFileType% @461 ; Itelangcontainer::TLangContainer::IndexOf(System::DelphiInterface<{583}...
+    @Itelangcontainer@initialization$qqrv @459 ; __fastcall Itelangcontainer::initialization()
+    @Itelocalizedprojectwizardform@ActiveProjectIsResourceDLL$qqrv @401 ; __fastcall Itelocalizedprojectwizardform::ActiveProjectIsResourceDLL()
+    @Itelocalizedprojectwizardform@Finalization$qqrv @292 ; __fastcall Itelocalizedprojectwizardform::Finalization()
+    @Itelocalizedprojectwizardform@ForceDRCGeneration @407 ; Itelocalizedprojectwizardform::ForceDRCGeneration
+    @Itelocalizedprojectwizardform@ForceProjectReload @406 ; Itelocalizedprojectwizardform::ForceProjectReload
+    @Itelocalizedprojectwizardform@GetProjectType$qqrx20System@UnicodeString @405 ; __fastcall Itelocalizedprojectwizardform::GetProjectType(const System::UnicodeString)
+    @Itelocalizedprojectwizardform@ITEUpdateResDLLExpert$qqrv @297 ; __fastcall Itelocalizedprojectwizardform::ITEUpdateResDLLExpert()
+    @Itelocalizedprojectwizardform@ProjContainer$qqrv @404 ; __fastcall Itelocalizedprojectwizardform::ProjContainer()
+    @Itelocalizedprojectwizardform@RefreshProjContainer$qqrv @403 ; __fastcall Itelocalizedprojectwizardform::RefreshProjContainer()
+    @Itelocalizedprojectwizardform@RegisterResDLLProjectCreator$qqr72System@%DelphiInterface$45Itebaseresdllproject@IITEResDLLProjectCreator% @294 ; Itelocalizedprojectwizardform::RegisterResDLLProjectCreator(System::DelphiInterface<{583}...
+    @Itelocalizedprojectwizardform@RegisterResDLLProjectHandler$qqr72System@%DelphiInterface$45Itebaseresdllproject@IITEResDLLProjectHandler% @296 ; Itelocalizedprojectwizardform::RegisterResDLLProjectHandler(System::DelphiInterface<{583}...
+    @Itelocalizedprojectwizardform@ResDLLWizardExec$qqr62System@%DynamicArray$38Itelocalizedprojectwizardform@TWizPage%20System@UnicodeString41Itelocalizedprojectwizardform@TResDLLModeynpqqrp14System@TObject$v @402 ; Itelocalizedprojectwizardform::ResDLLWizardExec(System::DynamicArray<{583}...
+    @Itelocalizedprojectwizardform@TIOTAIDENotifier50@ @417 ; Itelocalizedprojectwizardform::TIOTAIDENotifier50::
+    @Itelocalizedprojectwizardform@TIOTAIDENotifier50@AfterCompile$qqro @313 ; __fastcall Itelocalizedprojectwizardform::TIOTAIDENotifier50::AfterCompile(bool)
+    @Itelocalizedprojectwizardform@TIOTAIDENotifier50@AfterCompile$qqroo @312 ; __fastcall Itelocalizedprojectwizardform::TIOTAIDENotifier50::AfterCompile(bool, bool)
+    @Itelocalizedprojectwizardform@TIOTAIDENotifier50@AfterSave$qqrv @311 ; __fastcall Itelocalizedprojectwizardform::TIOTAIDENotifier50::AfterSave()
+    @Itelocalizedprojectwizardform@TIOTAIDENotifier50@BeforeCompile$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject%oro @309 ; Itelocalizedprojectwizardform::TIOTAIDENotifier50::BeforeCompile(const System::DelphiInterface<{583}...
+    @Itelocalizedprojectwizardform@TIOTAIDENotifier50@BeforeCompile$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject%ro @310 ; Itelocalizedprojectwizardform::TIOTAIDENotifier50::BeforeCompile(const System::DelphiInterface<{583}...
+    @Itelocalizedprojectwizardform@TIOTAIDENotifier50@BeforeSave$qqrv @308 ; __fastcall Itelocalizedprojectwizardform::TIOTAIDENotifier50::BeforeSave()
+    @Itelocalizedprojectwizardform@TIOTAIDENotifier50@Destroyed$qqrv @307 ; __fastcall Itelocalizedprojectwizardform::TIOTAIDENotifier50::Destroyed()
+    @Itelocalizedprojectwizardform@TIOTAIDENotifier50@FileNotification$qqr29Toolsapi@TOTAFileNotificationx20System@UnicodeStringro @306 ; __fastcall Itelocalizedprojectwizardform::TIOTAIDENotifier50::FileNotification(Toolsapi::TOTAFileNotification, const System::UnicodeString, bool&)
+    @Itelocalizedprojectwizardform@TIOTAIDENotifier50@Modified$qqrv @305 ; __fastcall Itelocalizedprojectwizardform::TIOTAIDENotifier50::Modified()
+    @Itelocalizedprojectwizardform@TIOTAModuleNotifier@ @419 ; Itelocalizedprojectwizardform::TIOTAModuleNotifier::
+    @Itelocalizedprojectwizardform@TIOTAModuleNotifier@$bctr$qqrx20System@UnicodeString @317 ; __fastcall Itelocalizedprojectwizardform::TIOTAModuleNotifier::TIOTAModuleNotifier(const System::UnicodeString)
+    @Itelocalizedprojectwizardform@TIOTAModuleNotifier@AfterSave$qqrv @320 ; __fastcall Itelocalizedprojectwizardform::TIOTAModuleNotifier::AfterSave()
+    @Itelocalizedprojectwizardform@TIOTAModuleNotifier@BeforeSave$qqrv @319 ; __fastcall Itelocalizedprojectwizardform::TIOTAModuleNotifier::BeforeSave()
+    @Itelocalizedprojectwizardform@TIOTAModuleNotifier@CheckOverwrite$qqrv @318 ; __fastcall Itelocalizedprojectwizardform::TIOTAModuleNotifier::CheckOverwrite()
+    @Itelocalizedprojectwizardform@TIOTAModuleNotifier@Destroyed$qqrv @316 ; __fastcall Itelocalizedprojectwizardform::TIOTAModuleNotifier::Destroyed()
+    @Itelocalizedprojectwizardform@TIOTAModuleNotifier@Modified$qqrv @315 ; __fastcall Itelocalizedprojectwizardform::TIOTAModuleNotifier::Modified()
+    @Itelocalizedprojectwizardform@TIOTAModuleNotifier@ModuleRenamed$qqrx20System@UnicodeString @314 ; __fastcall Itelocalizedprojectwizardform::TIOTAModuleNotifier::ModuleRenamed(const System::UnicodeString)
+    @Itelocalizedprojectwizardform@TITELocalizedProjectWizard@ @415 ; Itelocalizedprojectwizardform::TITELocalizedProjectWizard::
+    @Itelocalizedprojectwizardform@TITELocalizedProjectWizard@$bctr$qqrv @323 ; __fastcall Itelocalizedprojectwizardform::TITELocalizedProjectWizard::TITELocalizedProjectWizard()
+    @Itelocalizedprojectwizardform@TITELocalizedProjectWizard@$bdtr$qqrv @322 ; __fastcall Itelocalizedprojectwizardform::TITELocalizedProjectWizard::~TITELocalizedProjectWizard()
+    @Itelocalizedprojectwizardform@TITELocalizedProjectWizard@DoAction$qqrp14System@TObject @328 ; __fastcall Itelocalizedprojectwizardform::TITELocalizedProjectWizard::DoAction(System::TObject *)
+    @Itelocalizedprojectwizardform@TITELocalizedProjectWizard@GetAuthor$qqrv @331 ; __fastcall Itelocalizedprojectwizardform::TITELocalizedProjectWizard::GetAuthor()
+    @Itelocalizedprojectwizardform@TITELocalizedProjectWizard@GetDesigner$qqrv @327 ; __fastcall Itelocalizedprojectwizardform::TITELocalizedProjectWizard::GetDesigner()
+    @Itelocalizedprojectwizardform@TITELocalizedProjectWizard@GetGlyph$qqrv @329 ; __fastcall Itelocalizedprojectwizardform::TITELocalizedProjectWizard::GetGlyph()
+    @Itelocalizedprojectwizardform@TITELocalizedProjectWizard@GetPage$qqrv @330 ; __fastcall Itelocalizedprojectwizardform::TITELocalizedProjectWizard::GetPage()
+    @Itelocalizedprojectwizardform@TITELocalizedProjectWizard@GetState$qqrv @332 ; __fastcall Itelocalizedprojectwizardform::TITELocalizedProjectWizard::GetState()
+    @Itelocalizedprojectwizardform@TITELocalizedProjectWizard@IsValidProject$qqrx42Itelocalizedprojectwizardform@TProjectType @325 ; __fastcall Itelocalizedprojectwizardform::TITELocalizedProjectWizard::IsValidProject(const Itelocalizedprojectwizardform::TProjectType)
+    @Itelocalizedprojectwizardform@TITELocalizedProjectWizard@ProjectExists$qqrv @324 ; __fastcall Itelocalizedprojectwizardform::TITELocalizedProjectWizard::ProjectExists()
+    @Itelocalizedprojectwizardform@TITELocalizedProjectWizard@ProjectType$qqrx20System@UnicodeString @326 ; __fastcall Itelocalizedprojectwizardform::TITELocalizedProjectWizard::ProjectType(const System::UnicodeString)
+    @Itelocalizedprojectwizardform@TITELocalizedProjectWizard@QueryInterface$qqsrx5_GUIDpv @333 ; __stdcall Itelocalizedprojectwizardform::TITELocalizedProjectWizard::QueryInterface(const _GUID&, void *)
+    @Itelocalizedprojectwizardform@TITELocalizedProjectWizard@RemoveNotifier$qqrv @321 ; __fastcall Itelocalizedprojectwizardform::TITELocalizedProjectWizard::RemoveNotifier()
+    @Itelocalizedprojectwizardform@TITEUpdateResDLLExpert@ @411 ; Itelocalizedprojectwizardform::TITEUpdateResDLLExpert::
+    @Itelocalizedprojectwizardform@TITEUpdateResDLLExpert@$bctr$qqrv @340 ; __fastcall Itelocalizedprojectwizardform::TITEUpdateResDLLExpert::TITEUpdateResDLLExpert()
+    @Itelocalizedprojectwizardform@TITEUpdateResDLLExpert@$bdtr$qqrv @339 ; __fastcall Itelocalizedprojectwizardform::TITEUpdateResDLLExpert::~TITEUpdateResDLLExpert()
+    @Itelocalizedprojectwizardform@TITEUpdateResDLLExpert@DoAction$qqrp14System@TObject @337 ; __fastcall Itelocalizedprojectwizardform::TITEUpdateResDLLExpert::DoAction(System::TObject *)
+    @Itelocalizedprojectwizardform@TITEUpdateResDLLExpert@Execute$qqrv @335 ; __fastcall Itelocalizedprojectwizardform::TITEUpdateResDLLExpert::Execute()
+    @Itelocalizedprojectwizardform@TITEUpdateResDLLExpert@GetProjContainer$qqrv @336 ; __fastcall Itelocalizedprojectwizardform::TITEUpdateResDLLExpert::GetProjContainer()
+    @Itelocalizedprojectwizardform@TITEUpdateResDLLExpert@OnActiveProjectChanged$qqrp14System@TObject @334 ; __fastcall Itelocalizedprojectwizardform::TITEUpdateResDLLExpert::OnActiveProjectChanged(System::TObject *)
+    @Itelocalizedprojectwizardform@TITEUpdateResDLLExpert@UpdateMenus$qqrv @338 ; __fastcall Itelocalizedprojectwizardform::TITEUpdateResDLLExpert::UpdateMenus()
+    @Itelocalizedprojectwizardform@TNotifierInfo@ @423 ; Itelocalizedprojectwizardform::TNotifierInfo::
+    @Itelocalizedprojectwizardform@TNotifierInfo@$bctr$qqrix20System@UnicodeString @298 ; __fastcall Itelocalizedprojectwizardform::TNotifierInfo::TNotifierInfo(int, const System::UnicodeString)
+    @Itelocalizedprojectwizardform@TNotifierInfoList@ @421 ; Itelocalizedprojectwizardform::TNotifierInfoList::
+    @Itelocalizedprojectwizardform@TNotifierInfoList@$bdtr$qqrv @303 ; __fastcall Itelocalizedprojectwizardform::TNotifierInfoList::~TNotifierInfoList()
+    @Itelocalizedprojectwizardform@TNotifierInfoList@Add$qqrix20System@UnicodeString @304 ; __fastcall Itelocalizedprojectwizardform::TNotifierInfoList::Add(int, const System::UnicodeString)
+    @Itelocalizedprojectwizardform@TNotifierInfoList@GetNotifierInfo$qqri @301 ; __fastcall Itelocalizedprojectwizardform::TNotifierInfoList::GetNotifierInfo(int)
+    @Itelocalizedprojectwizardform@TNotifierInfoList@IndexOf$qqri @300 ; __fastcall Itelocalizedprojectwizardform::TNotifierInfoList::IndexOf(int)
+    @Itelocalizedprojectwizardform@TNotifierInfoList@IndexOf$qqrx20System@UnicodeString @299 ; __fastcall Itelocalizedprojectwizardform::TNotifierInfoList::IndexOf(const System::UnicodeString)
+    @Itelocalizedprojectwizardform@TNotifierInfoList@ModuleRenamed$qqrx20System@UnicodeStringt1 @302 ; __fastcall Itelocalizedprojectwizardform::TNotifierInfoList::ModuleRenamed(const System::UnicodeString, const System::UnicodeString)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@ @425 ; Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@AddToProjList$qqrx20System@UnicodeStringt1uioo @394 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::AddToProjList(const System::UnicodeString, const System::UnicodeString, unsigned int, bool, bool)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@ApplicationEvents1Idle$qqrp14System@TObjectro @341 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::ApplicationEvents1Idle(System::TObject *, bool&)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@CancelBtnClick$qqrp14System@TObject @387 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::CancelBtnClick(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@ComboBoxExit$qqrp14System@TObject @383 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::ComboBoxExit(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@DoColClick$qqriip24Itecontrols@TITEListView27Vcl@Stdctrls@TComboBoxStylep24Itecontrols@TITEComboBoxp20Vcl@Stdctrls@TButtoni46Itelocalizedprojectwizardform@TITEComboBoxType @381 ; Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::DoColClick(int, int, Itecontrols::TITEListView *, Vcl::Stdctrls::TComboBoxStyle, Itecontrols::TITEComboBox *, Vcl::Stdctrls::TButton *, int, Itelocalizedprojectwizardform::TITEComboBoxType)__fastc
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@FirstPage$qqrv @393 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::FirstPage()
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@FormCloseQuery$qqrp14System@TObjectro @352 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::FormCloseQuery(System::TObject *, bool&)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@FormCreate$qqrp14System@TObject @400 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::FormCreate(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@FormDestroy$qqrp14System@TObject @399 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::FormDestroy(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@FormHide$qqrp14System@TObject @343 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::FormHide(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@FormKeyDown$qqrp14System@TObjectrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @342 ; Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::FormKeyDown(System::TObject *, unsigned short&, System::Set<{583}...
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@FormShow$qqrp14System@TObject @398 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::FormShow(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@GetCaption$qqrp15Itecommon@TLangiio @373 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::GetCaption(Itecommon::TLang *, int, int, bool)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@GetCurrProj$qqrv @357 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::GetCurrProj()
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@GetDataFromUI$qqrii @362 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::GetDataFromUI(int, int)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@GetLangsForProject$qqrp15Itecommon@TProj @350 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::GetLangsForProject(Itecommon::TProj *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@GetProj$qqri @356 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::GetProj(int)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@GetProjEnabled$qqri @366 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::GetProjEnabled(int)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@GetProjLang$qqri @370 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::GetProjLang(int)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@GetProjName$qqri @368 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::GetProjName(int)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@HintListBoxToProj$qqri @364 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::HintListBoxToProj(int)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@LastPage$qqrv @392 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::LastPage()
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@LoadLanguages$qqrx20System@UnicodeString @397 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::LoadLanguages(const System::UnicodeString)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@NextPage$qqr44Itelocalizedprojectwizardform@TMoveDirection @391 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::NextPage(Itelocalizedprojectwizardform::TMoveDirection)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@NextPrevClick$qqrp14System@TObject @389 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::NextPrevClick(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@OkToChange$qqr44Itelocalizedprojectwizardform@TMoveDirection @388 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::OkToChange(Itelocalizedprojectwizardform::TMoveDirection)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@ProcessRequest$qqroo @371 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::ProcessRequest(bool, bool)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@ProjListLoc$qqrx20System@UnicodeString @395 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::ProjListLoc(const System::UnicodeString)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@RefreshButtons$qqrv @390 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::RefreshButtons()
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@RunUpdaters$qqrrp15Itecommon@TProjoo @372 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::RunUpdaters(Itecommon::TProj *&, bool, bool)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@SetDataToUI$qqri @361 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::SetDataToUI(int)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@SetProjEnabled$qqrixo @365 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::SetProjEnabled(int, const bool)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@SetProjLang$qqrixui @369 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::SetProjLang(int, const unsigned int)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@SetProjName$qqrix20System@UnicodeString @367 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::SetProjName(int, const System::UnicodeString)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@SortLangList$qqrp26System@Contnrs@TObjectList @363 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::SortLangList(System::Contnrs::TObjectList *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@SplitterMoved$qqrp14System@TObject @358 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::SplitterMoved(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@Timer1Timer$qqrp14System@TObject @396 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::Timer1Timer(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@UpdateProjNameHintText$qqrp14System@TObject @359 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::UpdateProjNameHintText(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@UpdateProjectFile$qqrp15Itecommon@TProj @351 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::UpdateProjectFile(Itecommon::TProj *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@btnAddFileClick$qqrp14System@TObject @347 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::btnAddFileClick(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@btnDeselectAllClick$qqrp14System@TObject @354 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::btnDeselectAllClick(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@btnEditRootDirClick$qqrp14System@TObject @353 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::btnEditRootDirClick(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@btnPathsPathClick$qqrp14System@TObject @376 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::btnPathsPathClick(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@btnRemoveFileClick$qqrp14System@TObject @346 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::btnRemoveFileClick(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@btnRootDirClick$qqrp14System@TObject @375 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::btnRootDirClick(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@btnSelectAllClick$qqrp14System@TObject @355 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::btnSelectAllClick(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@cbBaseLangCloseUp$qqrp14System@TObject @386 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::cbBaseLangCloseUp(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@cbBaseLangDrawItem$qqrp24Vcl@Controls@TWinControlirx18System@Types@TRect60System@%Set$32Winapi@Windows@Winapi_Windows__1t1$i0$t1$i12$% @345 ; Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::cbBaseLangDrawItem(Vcl::Controls::TWinControl *, int, const System::Types::TRect&, System::Set<{583}...
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@cbBaseLangDropDown$qqrp14System@TObject @344 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::cbBaseLangDropDown(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@cbBaseLangKeyPress$qqrp14System@TObjectrb @348 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::cbBaseLangKeyPress(System::TObject *, wchar_t&)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@cbFileTypeCloseUp$qqrp14System@TObject @385 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::cbFileTypeCloseUp(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@cbUpdateModeCloseUp$qqrp14System@TObject @384 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::cbUpdateModeCloseUp(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@lvLanguagesClick$qqrp14System@TObject @360 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::lvLanguagesClick(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@lvLanguagesMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @379 ; Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::lvLanguagesMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@lvMiscFilesMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @377 ; Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::lvMiscFilesMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@lvPathMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @378 ; Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::lvPathMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@lvProjectsGetHint$qqrp14System@TObjectp22Vcl@Comctrls@TListItemir20System@UnicodeString @382 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::lvProjectsGetHint(System::TObject *, Vcl::Comctrls::TListItem *, int, System::UnicodeString&)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@lvProjectsMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @380 ; Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::lvProjectsMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@lvProjectsVScroll$qqrp14System@TObject @349 ; __fastcall Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::lvProjectsVScroll(System::TObject *)
+    @Itelocalizedprojectwizardform@TfrmLocalizedProjectWizard@lvUpdateModeMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @374 ; Itelocalizedprojectwizardform::TfrmLocalizedProjectWizard::lvUpdateModeMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Itelocalizedprojectwizardform@UnregisterResDLLProjectCreator$qqr72System@%DelphiInterface$45Itebaseresdllproject@IITEResDLLProjectCreator% @293 ; Itelocalizedprojectwizardform::UnregisterResDLLProjectCreator(System::DelphiInterface<{583}...
+    @Itelocalizedprojectwizardform@UnregisterResDLLProjectHandler$qqr72System@%DelphiInterface$45Itebaseresdllproject@IITEResDLLProjectHandler% @295 ; Itelocalizedprojectwizardform::UnregisterResDLLProjectHandler(System::DelphiInterface<{583}...
+    @Itelocalizedprojectwizardform@WizardExecuted @408 ; Itelocalizedprojectwizardform::WizardExecuted
+    @Itelocalizedprojectwizardform@frmLocalizedProjectWizard @409 ; Itelocalizedprojectwizardform::frmLocalizedProjectWizard
+    @Itelocalizedprojectwizardform@initialization$qqrv @291 ; __fastcall Itelocalizedprojectwizardform::initialization()
+    @Iteoptioncolormodule@Finalization$qqrv @530 ; __fastcall Iteoptioncolormodule::Finalization()
+    @Iteoptioncolormodule@ITEAddInColorOptions @534 ; Iteoptioncolormodule::ITEAddInColorOptions
+    @Iteoptioncolormodule@TITEAddInColorOptions@ @536 ; Iteoptioncolormodule::TITEAddInColorOptions::
+    @Iteoptioncolormodule@TITEAddInColorOptions@CustomizeDialog$qqrp28Idepropsheet@TPropertySheetsp40Baseenvirondialog@TBaseEnvironmentDialog @532 ; __fastcall Iteoptioncolormodule::TITEAddInColorOptions::CustomizeDialog(Idepropsheet::TPropertySheets *, Baseenvirondialog::TBaseEnvironmentDialog *)
+    @Iteoptioncolormodule@TITEAddInColorOptions@DataModuleDestroy$qqrp14System@TObject @533 ; __fastcall Iteoptioncolormodule::TITEAddInColorOptions::DataModuleDestroy(System::TObject *)
+    @Iteoptioncolormodule@TITEAddInColorOptions@SaveOptions$qqrv @531 ; __fastcall Iteoptioncolormodule::TITEAddInColorOptions::SaveOptions()
+    @Iteoptioncolormodule@initialization$qqrv @529 ; __fastcall Iteoptioncolormodule::initialization()
+    @Iteoptioncolorpage@Finalization$qqrv @513 ; __fastcall Iteoptioncolorpage::Finalization()
+    @Iteoptioncolorpage@TITEColorOptionPage@ @528 ; Iteoptioncolorpage::TITEColorOptionPage::
+    @Iteoptioncolorpage@TITEColorOptionPage@ColorRemoveActionExecute$qqrp14System@TObject @520 ; __fastcall Iteoptioncolorpage::TITEColorOptionPage::ColorRemoveActionExecute(System::TObject *)
+    @Iteoptioncolorpage@TITEColorOptionPage@ColorRemoveActionUpdate$qqrp14System@TObject @519 ; __fastcall Iteoptioncolorpage::TITEColorOptionPage::ColorRemoveActionUpdate(System::TObject *)
+    @Iteoptioncolorpage@TITEColorOptionPage@ColorSaveActionExecute$qqrp14System@TObject @521 ; __fastcall Iteoptioncolorpage::TITEColorOptionPage::ColorSaveActionExecute(System::TObject *)
+    @Iteoptioncolorpage@TITEColorOptionPage@ColorSchemeComboBoxChange$qqrp14System@TObject @525 ; __fastcall Iteoptioncolorpage::TITEColorOptionPage::ColorSchemeComboBoxChange(System::TObject *)
+    @Iteoptioncolorpage@TITEColorOptionPage@ElementListClick$qqrp14System@TObject @523 ; __fastcall Iteoptioncolorpage::TITEColorOptionPage::ElementListClick(System::TObject *)
+    @Iteoptioncolorpage@TITEColorOptionPage@ElementListDrawItem$qqrp24Vcl@Controls@TWinControlirx18System@Types@TRect60System@%Set$32Winapi@Windows@Winapi_Windows__1t1$i0$t1$i12$% @522 ; Iteoptioncolorpage::TITEColorOptionPage::ElementListDrawItem(Vcl::Controls::TWinControl *, int, const System::Types::TRect&, System::Set<{583}...
+    @Iteoptioncolorpage@TITEColorOptionPage@LoadColors$qqrv @517 ; __fastcall Iteoptioncolorpage::TITEColorOptionPage::LoadColors()
+    @Iteoptioncolorpage@TITEColorOptionPage@PanelClick$qqrp14System@TObject @518 ; __fastcall Iteoptioncolorpage::TITEColorOptionPage::PanelClick(System::TObject *)
+    @Iteoptioncolorpage@TITEColorOptionPage@PropertySheetBroadcast$qqrp14System@TObjectr24Winapi@Messages@TMessage @514 ; __fastcall Iteoptioncolorpage::TITEColorOptionPage::PropertySheetBroadcast(System::TObject *, Winapi::Messages::TMessage&)
+    @Iteoptioncolorpage@TITEColorOptionPage@PropertySheetCreate$qqrp14System@TObject @526 ; __fastcall Iteoptioncolorpage::TITEColorOptionPage::PropertySheetCreate(System::TObject *)
+    @Iteoptioncolorpage@TITEColorOptionPage@PropertySheetShow$qqrp14System@TObject @516 ; __fastcall Iteoptioncolorpage::TITEColorOptionPage::PropertySheetShow(System::TObject *)
+    @Iteoptioncolorpage@TITEColorOptionPage@SamplePaintBoxPaint$qqrp14System@TObject @524 ; __fastcall Iteoptioncolorpage::TITEColorOptionPage::SamplePaintBoxPaint(System::TObject *)
+    @Iteoptioncolorpage@TITEColorOptionPage@UpdateOption$qqrv @515 ; __fastcall Iteoptioncolorpage::TITEColorOptionPage::UpdateOption()
+    @Iteoptioncolorpage@initialization$qqrv @512 ; __fastcall Iteoptioncolorpage::initialization()
+    @Iteoptionfontmodule@Finalization$qqrv @552 ; __fastcall Iteoptionfontmodule::Finalization()
+    @Iteoptionfontmodule@ITEAddInFontOptions @556 ; Iteoptionfontmodule::ITEAddInFontOptions
+    @Iteoptionfontmodule@TITEAddInFontOptions@ @558 ; Iteoptionfontmodule::TITEAddInFontOptions::
+    @Iteoptionfontmodule@TITEAddInFontOptions@CustomizeDialog$qqrp28Idepropsheet@TPropertySheetsp40Baseenvirondialog@TBaseEnvironmentDialog @554 ; __fastcall Iteoptionfontmodule::TITEAddInFontOptions::CustomizeDialog(Idepropsheet::TPropertySheets *, Baseenvirondialog::TBaseEnvironmentDialog *)
+    @Iteoptionfontmodule@TITEAddInFontOptions@DataModuleDestroy$qqrp14System@TObject @555 ; __fastcall Iteoptionfontmodule::TITEAddInFontOptions::DataModuleDestroy(System::TObject *)
+    @Iteoptionfontmodule@TITEAddInFontOptions@SaveOptions$qqrv @553 ; __fastcall Iteoptionfontmodule::TITEAddInFontOptions::SaveOptions()
+    @Iteoptionfontmodule@initialization$qqrv @551 ; __fastcall Iteoptionfontmodule::initialization()
+    @Iteoptionfontpage@Finalization$qqrv @538 ; __fastcall Iteoptionfontpage::Finalization()
+    @Iteoptionfontpage@TITEFontOptionPage@ @550 ; Iteoptionfontpage::TITEFontOptionPage::
+    @Iteoptionfontpage@TITEFontOptionPage@FontButtonClick$qqrp14System@TObject @544 ; __fastcall Iteoptionfontpage::TITEFontOptionPage::FontButtonClick(System::TObject *)
+    @Iteoptionfontpage@TITEFontOptionPage@FontDialog1Show$qqrp14System@TObject @541 ; __fastcall Iteoptionfontpage::TITEFontOptionPage::FontDialog1Show(System::TObject *)
+    @Iteoptionfontpage@TITEFontOptionPage@GridFontsGridDrawCell$qqrp14System@TObjectiirx18System@Types@TRect49System@%Set$22Vcl@Grids@Vcl_Grids__3t1$i0$t1$i5$% @543 ; Iteoptionfontpage::TITEFontOptionPage::GridFontsGridDrawCell(System::TObject *, int, int, const System::Types::TRect&, System::Set<{583}...
+    @Iteoptionfontpage@TITEFontOptionPage@GridFontsGridSelectCell$qqrp14System@TObjectiiro @542 ; __fastcall Iteoptionfontpage::TITEFontOptionPage::GridFontsGridSelectCell(System::TObject *, int, int, bool&)
+    @Iteoptionfontpage@TITEFontOptionPage@PropertySheetBroadcast$qqrp14System@TObjectr24Winapi@Messages@TMessage @539 ; __fastcall Iteoptionfontpage::TITEFontOptionPage::PropertySheetBroadcast(System::TObject *, Winapi::Messages::TMessage&)
+    @Iteoptionfontpage@TITEFontOptionPage@PropertySheetCreate$qqrp14System@TObject @548 ; __fastcall Iteoptionfontpage::TITEFontOptionPage::PropertySheetCreate(System::TObject *)
+    @Iteoptionfontpage@TITEFontOptionPage@PropertySheetDestroy$qqrp14System@TObject @547 ; __fastcall Iteoptionfontpage::TITEFontOptionPage::PropertySheetDestroy(System::TObject *)
+    @Iteoptionfontpage@TITEFontOptionPage@RowToLangIndex$qqri @545 ; __fastcall Iteoptionfontpage::TITEFontOptionPage::RowToLangIndex(int)
+    @Iteoptionfontpage@TITEFontOptionPage@UpdateOption$qqrv @540 ; __fastcall Iteoptionfontpage::TITEFontOptionPage::UpdateOption()
+    @Iteoptionfontpage@TITEFontOptionPage@UpdateSample$qqri @546 ; __fastcall Iteoptionfontpage::TITEFontOptionPage::UpdateSample(int)
+    @Iteoptionfontpage@initialization$qqrv @537 ; __fastcall Iteoptionfontpage::initialization()
+    @Iteoptionformdesignermodule@Finalization$qqrv @565 ; __fastcall Iteoptionformdesignermodule::Finalization()
+    @Iteoptionformdesignermodule@ITEAddInFormDesignerOptions @569 ; Iteoptionformdesignermodule::ITEAddInFormDesignerOptions
+    @Iteoptionformdesignermodule@TITEAddInFormDesignerOptions@ @571 ; Iteoptionformdesignermodule::TITEAddInFormDesignerOptions::
+    @Iteoptionformdesignermodule@TITEAddInFormDesignerOptions@CustomizeDialog$qqrp28Idepropsheet@TPropertySheetsp40Baseenvirondialog@TBaseEnvironmentDialog @567 ; __fastcall Iteoptionformdesignermodule::TITEAddInFormDesignerOptions::CustomizeDialog(Idepropsheet::TPropertySheets *, Baseenvirondialog::TBaseEnvironmentDialog *)
+    @Iteoptionformdesignermodule@TITEAddInFormDesignerOptions@DataModuleDestroy$qqrp14System@TObject @568 ; __fastcall Iteoptionformdesignermodule::TITEAddInFormDesignerOptions::DataModuleDestroy(System::TObject *)
+    @Iteoptionformdesignermodule@TITEAddInFormDesignerOptions@SaveOptions$qqrv @566 ; __fastcall Iteoptionformdesignermodule::TITEAddInFormDesignerOptions::SaveOptions()
+    @Iteoptionformdesignermodule@initialization$qqrv @564 ; __fastcall Iteoptionformdesignermodule::initialization()
+    @Iteoptionformdesignerpage@Finalization$qqrv @560 ; __fastcall Iteoptionformdesignerpage::Finalization()
+    @Iteoptionformdesignerpage@TITEFormDesignerOptionPage@ @563 ; Iteoptionformdesignerpage::TITEFormDesignerOptionPage::
+    @Iteoptionformdesignerpage@TITEFormDesignerOptionPage@PropertySheetCreate$qqrp14System@TObject @561 ; __fastcall Iteoptionformdesignerpage::TITEFormDesignerOptionPage::PropertySheetCreate(System::TObject *)
+    @Iteoptionformdesignerpage@initialization$qqrv @559 ; __fastcall Iteoptionformdesignerpage::initialization()
+    @Iteoptionmainmodule@Finalization$qqrv @491 ; __fastcall Iteoptionmainmodule::Finalization()
+    @Iteoptionmainmodule@ITEAddInMainOptions @495 ; Iteoptionmainmodule::ITEAddInMainOptions
+    @Iteoptionmainmodule@TITEAddInMainOptions@ @497 ; Iteoptionmainmodule::TITEAddInMainOptions::
+    @Iteoptionmainmodule@TITEAddInMainOptions@CustomizeDialog$qqrp28Idepropsheet@TPropertySheetsp40Baseenvirondialog@TBaseEnvironmentDialog @493 ; __fastcall Iteoptionmainmodule::TITEAddInMainOptions::CustomizeDialog(Idepropsheet::TPropertySheets *, Baseenvirondialog::TBaseEnvironmentDialog *)
+    @Iteoptionmainmodule@TITEAddInMainOptions@DataModuleDestroy$qqrp14System@TObject @494 ; __fastcall Iteoptionmainmodule::TITEAddInMainOptions::DataModuleDestroy(System::TObject *)
+    @Iteoptionmainmodule@TITEAddInMainOptions@SaveOptions$qqrv @492 ; __fastcall Iteoptionmainmodule::TITEAddInMainOptions::SaveOptions()
+    @Iteoptionmainmodule@initialization$qqrv @490 ; __fastcall Iteoptionmainmodule::initialization()
+    @Iteoptionmainpage@Finalization$qqrv @484 ; __fastcall Iteoptionmainpage::Finalization()
+    @Iteoptionmainpage@TITEMainOptionPage@ @489 ; Iteoptionmainpage::TITEMainOptionPage::
+    @Iteoptionmainpage@TITEMainOptionPage@PropertySheetBroadcast$qqrp14System@TObjectr24Winapi@Messages@TMessage @486 ; __fastcall Iteoptionmainpage::TITEMainOptionPage::PropertySheetBroadcast(System::TObject *, Winapi::Messages::TMessage&)
+    @Iteoptionmainpage@TITEMainOptionPage@PropertySheetCreate$qqrp14System@TObject @487 ; __fastcall Iteoptionmainpage::TITEMainOptionPage::PropertySheetCreate(System::TObject *)
+    @Iteoptionmainpage@TITEMainOptionPage@btnEditorClick$qqrp14System@TObject @485 ; __fastcall Iteoptionmainpage::TITEMainOptionPage::btnEditorClick(System::TObject *)
+    @Iteoptionmainpage@initialization$qqrv @483 ; __fastcall Iteoptionmainpage::initialization()
+    @Iteoptionrepositorymodule@Finalization$qqrv @505 ; __fastcall Iteoptionrepositorymodule::Finalization()
+    @Iteoptionrepositorymodule@ITEAddInRepositoryOptions @509 ; Iteoptionrepositorymodule::ITEAddInRepositoryOptions
+    @Iteoptionrepositorymodule@TITEAddInRepositoryOptions@ @511 ; Iteoptionrepositorymodule::TITEAddInRepositoryOptions::
+    @Iteoptionrepositorymodule@TITEAddInRepositoryOptions@CustomizeDialog$qqrp28Idepropsheet@TPropertySheetsp40Baseenvirondialog@TBaseEnvironmentDialog @507 ; __fastcall Iteoptionrepositorymodule::TITEAddInRepositoryOptions::CustomizeDialog(Idepropsheet::TPropertySheets *, Baseenvirondialog::TBaseEnvironmentDialog *)
+    @Iteoptionrepositorymodule@TITEAddInRepositoryOptions@DataModuleDestroy$qqrp14System@TObject @508 ; __fastcall Iteoptionrepositorymodule::TITEAddInRepositoryOptions::DataModuleDestroy(System::TObject *)
+    @Iteoptionrepositorymodule@TITEAddInRepositoryOptions@SaveOptions$qqrv @506 ; __fastcall Iteoptionrepositorymodule::TITEAddInRepositoryOptions::SaveOptions()
+    @Iteoptionrepositorymodule@initialization$qqrv @504 ; __fastcall Iteoptionrepositorymodule::initialization()
+    @Iteoptionrepositorypage@Finalization$qqrv @499 ; __fastcall Iteoptionrepositorypage::Finalization()
+    @Iteoptionrepositorypage@TITERepositoryOptionPage@ @503 ; Iteoptionrepositorypage::TITERepositoryOptionPage::
+    @Iteoptionrepositorypage@TITERepositoryOptionPage@PropertySheetCreate$qqrp14System@TObject @501 ; __fastcall Iteoptionrepositorypage::TITERepositoryOptionPage::PropertySheetCreate(System::TObject *)
+    @Iteoptionrepositorypage@TITERepositoryOptionPage@RepositoryBrowseClick$qqrp14System@TObject @500 ; __fastcall Iteoptionrepositorypage::TITERepositoryOptionPage::RepositoryBrowseClick(System::TObject *)
+    @Iteoptionrepositorypage@initialization$qqrv @498 ; __fastcall Iteoptionrepositorypage::initialization()
+    @Iteopts@AFileListSep          @47  ; Iteopts::AFileListSep
+    @Iteopts@Finalization$qqrv     @2   ; __fastcall Iteopts::Finalization()
+    @Iteopts@ITEOptionsList        @48  ; Iteopts::ITEOptionsList
+    @Iteopts@TITEOptions@          @52  ; Iteopts::TITEOptions::
+    @Iteopts@TITEOptions@$bctr$qqrx20System@UnicodeString @46  ; __fastcall Iteopts::TITEOptions::TITEOptions(const System::UnicodeString)
+    @Iteopts@TITEOptions@$bdtr$qqrv @45  ; __fastcall Iteopts::TITEOptions::~TITEOptions()
+    @Iteopts@TITEOptions@AddLang$qqrp15Itecommon@TLang @42  ; __fastcall Iteopts::TITEOptions::AddLang(Itecommon::TLang *)
+    @Iteopts@TITEOptions@AddMiscFile$qqrp19Itecommon@TMiscFile @38  ; __fastcall Iteopts::TITEOptions::AddMiscFile(Itecommon::TMiscFile *)
+    @Iteopts@TITEOptions@AddSourceFile$qqr20System@UnicodeString @30  ; __fastcall Iteopts::TITEOptions::AddSourceFile(System::UnicodeString)
+    @Iteopts@TITEOptions@Assign$qqrp19Iteopts@TITEOptions @24  ; __fastcall Iteopts::TITEOptions::Assign(Iteopts::TITEOptions *)
+    @Iteopts@TITEOptions@DeleteAllLangs$qqro @32  ; __fastcall Iteopts::TITEOptions::DeleteAllLangs(bool)
+    @Iteopts@TITEOptions@DeleteAllMiscFiles$qqrv @31  ; __fastcall Iteopts::TITEOptions::DeleteAllMiscFiles()
+    @Iteopts@TITEOptions@DeleteAllSourceFiles$qqrv @28  ; __fastcall Iteopts::TITEOptions::DeleteAllSourceFiles()
+    @Iteopts@TITEOptions@DeleteLang$qqrp15Itecommon@TLang @43  ; __fastcall Iteopts::TITEOptions::DeleteLang(Itecommon::TLang *)
+    @Iteopts@TITEOptions@DeleteMiscFile$qqrp19Itecommon@TMiscFile @37  ; __fastcall Iteopts::TITEOptions::DeleteMiscFile(Itecommon::TMiscFile *)
+    @Iteopts@TITEOptions@DeleteSourceFile$qqr20System@UnicodeString @29  ; __fastcall Iteopts::TITEOptions::DeleteSourceFile(System::UnicodeString)
+    @Iteopts@TITEOptions@GetActiveLangName$qqrv @23  ; __fastcall Iteopts::TITEOptions::GetActiveLangName()
+    @Iteopts@TITEOptions@GetBaseDir$qqrv @19  ; __fastcall Iteopts::TITEOptions::GetBaseDir()
+    @Iteopts@TITEOptions@GetExeName$qqrv @21  ; __fastcall Iteopts::TITEOptions::GetExeName()
+    @Iteopts@TITEOptions@GetLang$qqri @40  ; __fastcall Iteopts::TITEOptions::GetLang(int)
+    @Iteopts@TITEOptions@GetLangCount$qqrv @44  ; __fastcall Iteopts::TITEOptions::GetLangCount()
+    @Iteopts@TITEOptions@GetMiscFile$qqri @36  ; __fastcall Iteopts::TITEOptions::GetMiscFile(int)
+    @Iteopts@TITEOptions@GetMiscFileCount$qqrv @35  ; __fastcall Iteopts::TITEOptions::GetMiscFileCount()
+    @Iteopts@TITEOptions@GetNeedsToCompile$qqrv @20  ; __fastcall Iteopts::TITEOptions::GetNeedsToCompile()
+    @Iteopts@TITEOptions@IndexOfLang$qqrp15Itecommon@TLang @41  ; __fastcall Iteopts::TITEOptions::IndexOfLang(Itecommon::TLang *)
+    @Iteopts@TITEOptions@IndexOfMiscFile$qqrp19Itecommon@TMiscFile @34  ; __fastcall Iteopts::TITEOptions::IndexOfMiscFile(Itecommon::TMiscFile *)
+    @Iteopts@TITEOptions@LoadFromIni$qqrp30System@Inifiles@TCustomIniFile @26  ; __fastcall Iteopts::TITEOptions::LoadFromIni(System::Inifiles::TCustomIniFile *)
+    @Iteopts@TITEOptions@MakeDirty$qqrv @27  ; __fastcall Iteopts::TITEOptions::MakeDirty()
+    @Iteopts@TITEOptions@SaveToIni$qqrp30System@Inifiles@TCustomIniFile @25  ; __fastcall Iteopts::TITEOptions::SaveToIni(System::Inifiles::TCustomIniFile *)
+    @Iteopts@TITEOptions@SetActiveLang$qqrx20System@UnicodeString @22  ; __fastcall Iteopts::TITEOptions::SetActiveLang(const System::UnicodeString)
+    @Iteopts@TITEOptions@SetBaseDir$qqrx20System@UnicodeString @18  ; __fastcall Iteopts::TITEOptions::SetBaseDir(const System::UnicodeString)
+    @Iteopts@TITEOptions@SetLang$qqrirx20Itetypes@TITELangRec @39  ; __fastcall Iteopts::TITEOptions::SetLang(int, const Itetypes::TITELangRec&)
+    @Iteopts@TITEOptions@SetMiscFile$qqrirx21Itetypes@TMiscFileRec @33  ; __fastcall Iteopts::TITEOptions::SetMiscFile(int, const Itetypes::TMiscFileRec&)
+    @Iteopts@TITEOptions@SetProjName$qqrx20System@UnicodeString @17  ; __fastcall Iteopts::TITEOptions::SetProjName(const System::UnicodeString)
+    @Iteopts@TITEOptionsList@      @50  ; Iteopts::TITEOptionsList::
+    @Iteopts@TITEOptionsList@$bctr$qqrv @15  ; __fastcall Iteopts::TITEOptionsList::TITEOptionsList()
+    @Iteopts@TITEOptionsList@$bdtr$qqrv @12  ; __fastcall Iteopts::TITEOptionsList::~TITEOptionsList()
+    @Iteopts@TITEOptionsList@Add$qqrp19Iteopts@TITEOptionsri @16  ; __fastcall Iteopts::TITEOptionsList::Add(Iteopts::TITEOptions *, int&)
+    @Iteopts@TITEOptionsList@Delete$qqrp19Iteopts@TITEOptions @14  ; __fastcall Iteopts::TITEOptionsList::Delete(Iteopts::TITEOptions *)
+    @Iteopts@TITEOptionsList@Delete$qqrx20System@UnicodeString @13  ; __fastcall Iteopts::TITEOptionsList::Delete(const System::UnicodeString)
+    @Iteopts@TITEOptionsList@GetITEOptions$qqrx20System@UnicodeString @9   ; __fastcall Iteopts::TITEOptionsList::GetITEOptions(const System::UnicodeString)
+    @Iteopts@TITEOptionsList@GetITEOptionsFromIndex$qqri @11  ; __fastcall Iteopts::TITEOptionsList::GetITEOptionsFromIndex(int)
+    @Iteopts@TITEOptionsList@IndexOf$qqrp19Iteopts@TITEOptions @8   ; __fastcall Iteopts::TITEOptionsList::IndexOf(Iteopts::TITEOptions *)
+    @Iteopts@TITEOptionsList@IndexOf$qqrx20System@UnicodeString @7   ; __fastcall Iteopts::TITEOptionsList::IndexOf(const System::UnicodeString)
+    @Iteopts@TITEOptionsList@ModuleRenamed$qqrx20System@UnicodeStringt1 @6   ; __fastcall Iteopts::TITEOptionsList::ModuleRenamed(const System::UnicodeString, const System::UnicodeString)
+    @Iteopts@TITEOptionsList@OnProjectOptionLoad$qqrp14System@TObjectp30System@Inifiles@TCustomIniFile43System@%DelphiInterface$16Codemgr@IProject% @5   ; Iteopts::TITEOptionsList::OnProjectOptionLoad(System::TObject *, System::Inifiles::TCustomIniFile *, System::DelphiInterface<{583}...
+    @Iteopts@TITEOptionsList@OnProjectOptionSave$qqrp14System@TObjectp30System@Inifiles@TCustomIniFile43System@%DelphiInterface$16Codemgr@IProject% @4   ; Iteopts::TITEOptionsList::OnProjectOptionSave(System::TObject *, System::Inifiles::TCustomIniFile *, System::DelphiInterface<{583}...
+    @Iteopts@TITEOptionsList@SetITEOptions$qqrx20System@UnicodeStringxp19Iteopts@TITEOptions @3   ; __fastcall Iteopts::TITEOptionsList::SetITEOptions(const System::UnicodeString, Iteopts::TITEOptions * const)
+    @Iteopts@TITEOptionsList@SetITEOptionsFromIndex$qqrixp19Iteopts@TITEOptions @10  ; __fastcall Iteopts::TITEOptionsList::SetITEOptionsFromIndex(int, Iteopts::TITEOptions * const)
+    @Iteopts@initialization$qqrv   @1   ; __fastcall Iteopts::initialization()
+    @Iteprojcontainer@Finalization$qqrv @475 ; __fastcall Iteprojcontainer::Finalization()
+    @Iteprojcontainer@TProjContainer@ @482 ; Iteprojcontainer::TProjContainer::
+    @Iteprojcontainer@TProjContainer@$bctr$qqrx20System@UnicodeString @480 ; __fastcall Iteprojcontainer::TProjContainer::TProjContainer(const System::UnicodeString)
+    @Iteprojcontainer@TProjContainer@$bdtr$qqrv @479 ; __fastcall Iteprojcontainer::TProjContainer::~TProjContainer()
+    @Iteprojcontainer@TProjContainer@GetCount$qqrv @478 ; __fastcall Iteprojcontainer::TProjContainer::GetCount()
+    @Iteprojcontainer@TProjContainer@GetLang$qqri @477 ; __fastcall Iteprojcontainer::TProjContainer::GetLang(int)
+    @Iteprojcontainer@TProjContainer@IndexOf$qqrx20System@UnicodeString @476 ; __fastcall Iteprojcontainer::TProjContainer::IndexOf(const System::UnicodeString)
+    @Iteprojcontainer@initialization$qqrv @474 ; __fastcall Iteprojcontainer::initialization()
+    @Iteproject@ActivateProject$qqrx20System@UnicodeString @450 ; __fastcall Iteproject::ActivateProject(const System::UnicodeString)
+    @Iteproject@ActiveProjectName$qqrv @449 ; __fastcall Iteproject::ActiveProjectName()
+    @Iteproject@CloseAll$qqrv      @448 ; __fastcall Iteproject::CloseAll()
+    @Iteproject@CompileProject$qqrx20System@UnicodeStringo @447 ; __fastcall Iteproject::CompileProject(const System::UnicodeString, bool)
+    @Iteproject@Finalization$qqrv  @433 ; __fastcall Iteproject::Finalization()
+    @Iteproject@GetOTAProject$qqrx20System@UnicodeStringr47System@%DelphiInterface$20Toolsapi@IOTAProject% @446 ; Iteproject::GetOTAProject(const System::UnicodeString, System::DelphiInterface<{583}...
+    @Iteproject@GetOTAProjectGroup$qqrr52System@%DelphiInterface$25Toolsapi@IOTAProjectGroup% @445 ; Iteproject::GetOTAProjectGroup(System::DelphiInterface<{583}...
+    @Iteproject@GetSourceBuffer$qqrx20System@UnicodeString @444 ; __fastcall Iteproject::GetSourceBuffer(const System::UnicodeString)
+    @Iteproject@ITEFindModule$qqrx20System@UnicodeString @442 ; __fastcall Iteproject::ITEFindModule(const System::UnicodeString)
+    @Iteproject@ITESaveModifiedModules$qqrv @441 ; __fastcall Iteproject::ITESaveModifiedModules()
+    @Iteproject@IsSaveAllEnabled$qqrv @443 ; __fastcall Iteproject::IsSaveAllEnabled()
+    @Iteproject@ProjectExistsInProjectGroup$qqrx20System@UnicodeString @440 ; __fastcall Iteproject::ProjectExistsInProjectGroup(const System::UnicodeString)
+    @Iteproject@ProjectFromName$qqrx20System@UnicodeString @439 ; __fastcall Iteproject::ProjectFromName(const System::UnicodeString)
+    @Iteproject@ReloadFile$qqrx20System@UnicodeString @438 ; __fastcall Iteproject::ReloadFile(const System::UnicodeString)
+    @Iteproject@ReloadIDEFiles$qqrv @437 ; __fastcall Iteproject::ReloadIDEFiles()
+    @Iteproject@RemoveProjFromPM$qqrx20System@UnicodeString @436 ; __fastcall Iteproject::RemoveProjFromPM(const System::UnicodeString)
+    @Iteproject@RestoreActiveProject$qqrv @435 ; __fastcall Iteproject::RestoreActiveProject()
+    @Iteproject@SaveActiveProject$qqrv @434 ; __fastcall Iteproject::SaveActiveProject()
+    @Iteproject@initialization$qqrv @432 ; __fastcall Iteproject::initialization()
+    @Iteremovelang@Finalization$qqrv @259 ; __fastcall Iteremovelang::Finalization()
+    @Iteremovelang@TITERemoveLangExpert@ @263 ; Iteremovelang::TITERemoveLangExpert::
+    @Iteremovelang@TITERemoveLangExpert@DoAction$qqrp14System@TObject @261 ; __fastcall Iteremovelang::TITERemoveLangExpert::DoAction(System::TObject *)
+    @Iteremovelang@TITERemoveLangExpert@Execute$qqrv @260 ; __fastcall Iteremovelang::TITERemoveLangExpert::Execute()
+    @Iteremovelang@initialization$qqrv @258 ; __fastcall Iteremovelang::initialization()
+    @Iterepositoryform@CreateRepositoryForm$qqrv @244 ; __fastcall Iterepositoryform::CreateRepositoryForm()
+    @Iterepositoryform@Finalization$qqrv @242 ; __fastcall Iterepositoryform::Finalization()
+    @Iterepositoryform@TTRepositoryForm@ @251 ; Iterepositoryform::TTRepositoryForm::
+    @Iterepositoryform@TTRepositoryForm@FormCreate$qqrp14System@TObject @249 ; __fastcall Iterepositoryform::TTRepositoryForm::FormCreate(System::TObject *)
+    @Iterepositoryform@TTRepositoryForm@FormDestroy$qqrp14System@TObject @248 ; __fastcall Iterepositoryform::TTRepositoryForm::FormDestroy(System::TObject *)
+    @Iterepositoryform@TTRepositoryForm@FormHide$qqrp14System@TObject @245 ; __fastcall Iterepositoryform::TTRepositoryForm::FormHide(System::TObject *)
+    @Iterepositoryform@TTRepositoryForm@FormResize$qqrp14System@TObject @247 ; __fastcall Iterepositoryform::TTRepositoryForm::FormResize(System::TObject *)
+    @Iterepositoryform@TTRepositoryForm@FormShow$qqrp14System@TObject @246 ; __fastcall Iterepositoryform::TTRepositoryForm::FormShow(System::TObject *)
+    @Iterepositoryform@actnOpenTRepository$qqrv @243 ; __fastcall Iterepositoryform::actnOpenTRepository()
+    @Iterepositoryform@initialization$qqrv @241 ; __fastcall Iterepositoryform::initialization()
+    @Itesetactivelang@Finalization$qqrv @265 ; __fastcall Itesetactivelang::Finalization()
+    @Itesetactivelang@TITESetActiveLangExpert@ @269 ; Itesetactivelang::TITESetActiveLangExpert::
+    @Itesetactivelang@TITESetActiveLangExpert@DoAction$qqrp14System@TObject @267 ; __fastcall Itesetactivelang::TITESetActiveLangExpert::DoAction(System::TObject *)
+    @Itesetactivelang@TITESetActiveLangExpert@Execute$qqrv @266 ; __fastcall Itesetactivelang::TITESetActiveLangExpert::Execute()
+    @Itesetactivelang@initialization$qqrv @264 ; __fastcall Itesetactivelang::initialization()
+    @Itesetrootdirectorydlg@Finalization$qqrv @469 ; __fastcall Itesetrootdirectorydlg::Finalization()
+    @Itesetrootdirectorydlg@TfrmSetRootDirectory@ @473 ; Itesetrootdirectorydlg::TfrmSetRootDirectory::
+    @Itesetrootdirectorydlg@TfrmSetRootDirectory@Button1Click$qqrp14System@TObject @470 ; __fastcall Itesetrootdirectorydlg::TfrmSetRootDirectory::Button1Click(System::TObject *)
+    @Itesetrootdirectorydlg@frmSetRootDirectory @471 ; Itesetrootdirectorydlg::frmSetRootDirectory
+    @Itesetrootdirectorydlg@initialization$qqrv @468 ; __fastcall Itesetrootdirectorydlg::initialization()
+    @Itetranslationeditorform@Finalization$qqrv @153 ; __fastcall Itetranslationeditorform::Finalization()
+    @Itetranslationeditorform@OpenFile$qqrx20System@UnicodeString @155 ; __fastcall Itetranslationeditorform::OpenFile(const System::UnicodeString)
+    @Itetranslationeditorform@ShowTranslationEditorView$qqrv @156 ; __fastcall Itetranslationeditorform::ShowTranslationEditorView()
+    @Itetranslationeditorform@TTranslationEditorFrame@ @171 ; Itetranslationeditorform::TTranslationEditorFrame::
+    @Itetranslationeditorform@TTranslationEditorFrame@ApplicationEvents1Idle$qqrp14System@TObjectro @154 ; __fastcall Itetranslationeditorform::TTranslationEditorFrame::ApplicationEvents1Idle(System::TObject *, bool&)
+    @Itetranslationeditorform@TTranslationEditorFrame@SetLayout$qqr49Itetranslationeditorform@TTranslationEditorLayout @167 ; __fastcall Itetranslationeditorform::TTranslationEditorFrame::SetLayout(Itetranslationeditorform::TTranslationEditorLayout)
+    @Itetranslationeditorform@TTranslationEditorView@ @169 ; Itetranslationeditorform::TTranslationEditorView::
+    @Itetranslationeditorform@TTranslationEditorView@$bctr$qqrp22Editorform@TEditWindowp49Itetranslationeditorform@TTranslationEditorLayoutp26Editorform@TCustomEditViewt3 @166 ; __fastcall Itetranslationeditorform::TTranslationEditorView::TTranslationEditorView(Editorform::TEditWindow *, Itetranslationeditorform::TTranslationEditorLayout *, Editorform::TCustomEditView *, Editorform::TCustomEditView *)
+    @Itetranslationeditorform@TTranslationEditorView@$bdtr$qqrv @165 ; __fastcall Itetranslationeditorform::TTranslationEditorView::~TTranslationEditorView()
+    @Itetranslationeditorform@TTranslationEditorView@CloneEditView$qqrp22Editorform@TEditWindow @161 ; __fastcall Itetranslationeditorform::TTranslationEditorView::CloneEditView(Editorform::TEditWindow *)
+    @Itetranslationeditorform@TTranslationEditorView@GetCanCloneView$qqrv @164 ; __fastcall Itetranslationeditorform::TTranslationEditorView::GetCanCloneView()
+    @Itetranslationeditorform@TTranslationEditorView@GetCaption$qqrv @163 ; __fastcall Itetranslationeditorform::TTranslationEditorView::GetCaption()
+    @Itetranslationeditorform@TTranslationEditorView@GetSavedChildIndex$qqrv @160 ; __fastcall Itetranslationeditorform::TTranslationEditorView::GetSavedChildIndex()
+    @Itetranslationeditorform@TTranslationEditorView@GetTabText$qqrv @162 ; __fastcall Itetranslationeditorform::TTranslationEditorView::GetTabText()
+    @Itetranslationeditorform@TTranslationEditorView@GetViewTabNames$qqrp23System@Classes@TStrings @159 ; __fastcall Itetranslationeditorform::TTranslationEditorView::GetViewTabNames(System::Classes::TStrings *)
+    @Itetranslationeditorform@TTranslationEditorView@OpenFile$qqrx20System@UnicodeString @157 ; __fastcall Itetranslationeditorform::TTranslationEditorView::OpenFile(const System::UnicodeString)
+    @Itetranslationeditorform@TTranslationEditorView@SelectView$qqri @158 ; __fastcall Itetranslationeditorform::TTranslationEditorView::SelectView(int)
+    @Itetranslationeditorform@initialization$qqrv @152 ; __fastcall Itetranslationeditorform::initialization()
+    @Itetranslatormanager@AddTranslator$qqrx20System@UnicodeString @151 ; __fastcall Itetranslatormanager::AddTranslator(const System::UnicodeString)
+    @Itetranslatormanager@Finalization$qqrv @149 ; __fastcall Itetranslatormanager::Finalization()
+    @Itetranslatormanager@LoadTranslators$qqrv @150 ; __fastcall Itetranslatormanager::LoadTranslators()
+    @Itetranslatormanager@initialization$qqrv @148 ; __fastcall Itetranslatormanager::initialization()
+    @System@Generics@Collections@%TEnumerator__1$64System@%DelphiInterface$37Configurationintf@IBuildConfiguration%%@ @131 ; System::Generics::Collections::TEnumerator__1<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerator__1$64System@%DelphiInterface$37Configurationintf@IBuildConfiguration%%@MoveNext$qqrv @53  ; System::Generics::Collections::TEnumerator__1<System::DelphiInterface<{583}...
+    Finalize                       @581 ; Finalize
+    Initialize                     @582 ; Initialize

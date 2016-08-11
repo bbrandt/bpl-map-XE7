@@ -1,0 +1,7 @@
+LIBRARY     LNKDFM210.DLL
+
+EXPORTS
+    InitializeTranslator           @4   ; InitializeTranslator
+    ReadTextResource               @3   ; ReadTextResource
+    ReadTextResourceIStream        @2   ; ReadTextResourceIStream
+    TMethodImplementationIntercept @1   ; TMethodImplementationIntercept

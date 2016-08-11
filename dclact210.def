@@ -1,0 +1,151 @@
+LIBRARY     DCLACT210.BPL
+
+DESCRIPTION 'mbarcadero ActionBar Components'
+
+EXPORTS
+    @$xp$27Custactnedit@TCustomizeFrm2 @25  ; __tpdsc__ Custactnedit::TCustomizeFrm2
+    @$xp$37Customizeactnedit@TImageListListeners @133 ; __tpdsc__ Customizeactnedit::TImageListListeners
+    @$xp$42Customizeactnedit@TActionImageListListener @135 ; __tpdsc__ Customizeactnedit::TActionImageListListener
+    @$xp$44Customizeactnedit@TCustomizeActnEditDesigner @131 ; __tpdsc__ Customizeactnedit::TCustomizeActnEditDesigner
+    @$xp$45Customizeactnedit@TActionManagerDesignerClass @130 ; __tpdsc__ Customizeactnedit::TActionManagerDesignerClass
+    @Actnbreg@Finalization$qqrv    @138 ; __fastcall Actnbreg::Finalization()
+    @Actnbreg@Register$qqrv        @139 ; __fastcall Actnbreg::Register()
+    @Actnbreg@initialization$qqrv  @137 ; __fastcall Actnbreg::initialization()
+    @Custactnedit@Finalization$qqrv @2   ; __fastcall Custactnedit::Finalization()
+    @Custactnedit@TCustomizeFrm2@  @26  ; Custactnedit::TCustomizeFrm2::
+    @Custactnedit@TCustomizeFrm2@$bctr$qqrp25System@Classes@TComponent @24  ; __fastcall Custactnedit::TCustomizeFrm2::TCustomizeFrm2(System::Classes::TComponent *)
+    @Custactnedit@TCustomizeFrm2@$bdtr$qqrv @23  ; __fastcall Custactnedit::TCustomizeFrm2::~TCustomizeFrm2()
+    @Custactnedit@TCustomizeFrm2@ActivateInspector$qqrb @20  ; __fastcall Custactnedit::TCustomizeFrm2::ActivateInspector(wchar_t)
+    @Custactnedit@TCustomizeFrm2@Activated$qqrv @22  ; __fastcall Custactnedit::TCustomizeFrm2::Activated()
+    @Custactnedit@TCustomizeFrm2@ClipboardComponents$qqrv @19  ; __fastcall Custactnedit::TCustomizeFrm2::ClipboardComponents()
+    @Custactnedit@TCustomizeFrm2@ComponentRead$qqrp25System@Classes@TComponent @13  ; __fastcall Custactnedit::TCustomizeFrm2::ComponentRead(System::Classes::TComponent *)
+    @Custactnedit@TCustomizeFrm2@CopyComponents$qqrp25System@Classes@TComponentx57System@%DelphiInterface$30Designintf@IDesignerSelections% @18  ; Custactnedit::TCustomizeFrm2::CopyComponents(System::Classes::TComponent *, const System::DelphiInterface<{583}...
+    @Custactnedit@TCustomizeFrm2@DesignerClosed$qqrx47System@%DelphiInterface$20Designintf@IDesigner%o @6   ; Custactnedit::TCustomizeFrm2::DesignerClosed(const System::DelphiInterface<{583}...
+    @Custactnedit@TCustomizeFrm2@DesignerOpened$qqrx47System@%DelphiInterface$20Designintf@IDesigner%o @7   ; Custactnedit::TCustomizeFrm2::DesignerOpened(const System::DelphiInterface<{583}...
+    @Custactnedit@TCustomizeFrm2@EditAction$qqr22Designintf@TEditAction @16  ; __fastcall Custactnedit::TCustomizeFrm2::EditAction(Designintf::TEditAction)
+    @Custactnedit@TCustomizeFrm2@GetEditState$qqrv @17  ; __fastcall Custactnedit::TCustomizeFrm2::GetEditState()
+    @Custactnedit@TCustomizeFrm2@ItemDeleted$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p26System@Classes@TPersistent @5   ; Custactnedit::TCustomizeFrm2::ItemDeleted(const System::DelphiInterface<{583}...
+    @Custactnedit@TCustomizeFrm2@ItemInserted$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p26System@Classes@TPersistent @8   ; Custactnedit::TCustomizeFrm2::ItemInserted(const System::DelphiInterface<{583}...
+    @Custactnedit@TCustomizeFrm2@ItemsModified$qqrx47System@%DelphiInterface$20Designintf@IDesigner% @4   ; Custactnedit::TCustomizeFrm2::ItemsModified(const System::DelphiInterface<{583}...
+    @Custactnedit@TCustomizeFrm2@PasteComponents$qqrp25System@Classes@TComponentt1x57System@%DelphiInterface$30Designintf@IDesignerSelections% @11  ; Custactnedit::TCustomizeFrm2::PasteComponents(System::Classes::TComponent *, System::Classes::TComponent *, const System::DelphiInterface<{583}...
+    @Custactnedit@TCustomizeFrm2@ReaderSetName$qqrp22System@Classes@TReaderp25System@Classes@TComponentr20System@UnicodeString @12  ; __fastcall Custactnedit::TCustomizeFrm2::ReaderSetName(System::Classes::TReader *, System::Classes::TComponent *, System::UnicodeString&)
+    @Custactnedit@TCustomizeFrm2@SelectionChanged$qqrx47System@%DelphiInterface$20Designintf@IDesigner%x57System@%DelphiInterface$30Designintf@IDesignerSelections% @10  ; Custactnedit::TCustomizeFrm2::SelectionChanged(const System::DelphiInterface<{583}...
+    @Custactnedit@TCustomizeFrm2@SetSelection$qqrx57System@%DelphiInterface$30Designintf@IDesignerSelections% @9   ; Custactnedit::TCustomizeFrm2::SetSelection(const System::DelphiInterface<{583}...
+    @Custactnedit@TCustomizeFrm2@UniqueName$qqrp25System@Classes@TComponent @3   ; __fastcall Custactnedit::TCustomizeFrm2::UniqueName(System::Classes::TComponent *)
+    @Custactnedit@TCustomizeFrm2@WMActivate$qqrr27Winapi@Messages@TWMActivate @21  ; __fastcall Custactnedit::TCustomizeFrm2::WMActivate(Winapi::Messages::TWMActivate&)
+    @Custactnedit@TCustomizeFrm2@WindowHide$qqrv @15  ; __fastcall Custactnedit::TCustomizeFrm2::WindowHide()
+    @Custactnedit@TCustomizeFrm2@WindowShow$qqrv @14  ; __fastcall Custactnedit::TCustomizeFrm2::WindowShow()
+    @Custactnedit@initialization$qqrv @1   ; __fastcall Custactnedit::initialization()
+    @Customizeactnedit@Finalization$qqrv @28  ; __fastcall Customizeactnedit::Finalization()
+    @Customizeactnedit@ShowActionManagerDesigner$qqr47System@%DelphiInterface$20Designintf@IDesigner%p30Vcl@Actnlist@TCustomActionList @129 ; Customizeactnedit::ShowActionManagerDesigner(System::DelphiInterface<{583}...
+    @Customizeactnedit@TActionImageListListener@ @136 ; Customizeactnedit::TActionImageListListener::
+    @Customizeactnedit@TActionImageListListener@$bctr$qqrp44Customizeactnedit@TCustomizeActnEditDesigner @128 ; __fastcall Customizeactnedit::TActionImageListListener::TActionImageListListener(Customizeactnedit::TCustomizeActnEditDesigner *)
+    @Customizeactnedit@TActionImageListListener@$bdtr$qqrv @127 ; __fastcall Customizeactnedit::TActionImageListListener::~TActionImageListListener()
+    @Customizeactnedit@TActionImageListListener@ImageListChanged$qqrp14System@TObject @126 ; __fastcall Customizeactnedit::TActionImageListListener::ImageListChanged(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ @132 ; Customizeactnedit::TCustomizeActnEditDesigner::
+    @Customizeactnedit@TCustomizeActnEditDesigner@$bctr$qqrp25System@Classes@TComponent @92  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::TCustomizeActnEditDesigner(System::Classes::TComponent *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@AMDeferUpdate$qqrpv @117 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::AMDeferUpdate(void *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ActionBarListClick$qqrp14System@TObject @38  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ActionBarListClick(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ActionBarListClickCheck$qqrp14System@TObject @36  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ActionBarListClickCheck(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ActionVisible$qqrp31System@Actions@TContainedAction @111 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ActionVisible(System::Actions::TContainedAction *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ActionsListClick$qqrp14System@TObject @58  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ActionsListClick(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ActionsListDblClick$qqrp14System@TObject @51  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ActionsListDblClick(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ActionsListDrawItem$qqrp24Vcl@Controls@TWinControlirx18System@Types@TRect60System@%Set$32Winapi@Windows@Winapi_Windows__1t1$i0$t1$i12$% @41  ; Customizeactnedit::TCustomizeActnEditDesigner::ActionsListDrawItem(Vcl::Controls::TWinControl *, int, const System::Types::TRect&, System::Set<{583}...
+    @Customizeactnedit@TCustomizeActnEditDesigner@ActionsListMeasureItem$qqrp24Vcl@Controls@TWinControliri @40  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ActionsListMeasureItem(Vcl::Controls::TWinControl *, int, int&)
+    @Customizeactnedit@TCustomizeActnEditDesigner@Activated$qqrv @125 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::Activated()
+    @Customizeactnedit@TCustomizeActnEditDesigner@AssignActnExecute$qqrp14System@TObject @47  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::AssignActnExecute(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@AssignActnUpdate$qqrp14System@TObject @49  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::AssignActnUpdate(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@BeginUpdate$qqrv @63  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::BeginUpdate()
+    @Customizeactnedit@TCustomizeActnEditDesigner@CatListClick$qqrp14System@TObject @65  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::CatListClick(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@CatListDragDrop$qqrp14System@TObjectt1ii @52  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::CatListDragDrop(System::TObject *, System::TObject *, int, int)
+    @Customizeactnedit@TCustomizeActnEditDesigner@CatListDragOver$qqrp14System@TObjectt1ii25System@Uitypes@TDragStatero @53  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::CatListDragOver(System::TObject *, System::TObject *, int, int, System::Uitypes::TDragState, bool&)
+    @Customizeactnedit@TCustomizeActnEditDesigner@Clear$qqrv @109 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::Clear()
+    @Customizeactnedit@TCustomizeActnEditDesigner@ClearCatList$qqrv @50  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ClearCatList()
+    @Customizeactnedit@TCustomizeActnEditDesigner@ComponentRead$qqrp25System@Classes@TComponent @68  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ComponentRead(System::Classes::TComponent *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@Copy$qqrv @97  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::Copy()
+    @Customizeactnedit@TCustomizeActnEditDesigner@CopyItemClick$qqrp14System@TObject @93  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::CopyItemClick(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@Cut$qqrv @98  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::Cut()
+    @Customizeactnedit@TCustomizeActnEditDesigner@CutItemClick$qqrp14System@TObject @91  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::CutItemClick(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@DeleteActnExecute$qqrp14System@TObject @55  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::DeleteActnExecute(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@DeleteActnUpdate$qqrp14System@TObject @29  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::DeleteActnUpdate(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@DeleteClick$qqrp14System@TObject @106 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::DeleteClick(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@DesignerClosed$qqrx47System@%DelphiInterface$20Designintf@IDesigner%o @123 ; Customizeactnedit::TCustomizeActnEditDesigner::DesignerClosed(const System::DelphiInterface<{583}...
+    @Customizeactnedit@TCustomizeActnEditDesigner@DoNewAction$qqrx20System@UnicodeStringp31System@Actions@TContainedAction @108 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::DoNewAction(const System::UnicodeString, System::Actions::TContainedAction *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@EditAction$qqr22Designintf@TEditAction @102 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::EditAction(Designintf::TEditAction)
+    @Customizeactnedit@TCustomizeActnEditDesigner@EndUpdate$qqrv @62  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::EndUpdate()
+    @Customizeactnedit@TCustomizeActnEditDesigner@FillShortCutList$qqrv @43  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::FillShortCutList()
+    @Customizeactnedit@TCustomizeActnEditDesigner@FocusAction$qqrp31System@Actions@TContainedAction @122 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::FocusAction(System::Actions::TContainedAction *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@FormActivate$qqrp14System@TObject @37  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::FormActivate(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@FormClose$qqrp14System@TObjectr27System@Uitypes@TCloseAction @84  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::FormClose(System::TObject *, System::Uitypes::TCloseAction&)
+    @Customizeactnedit@TCustomizeActnEditDesigner@FormCreate$qqrp14System@TObject @85  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::FormCreate(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@FormDestroy$qqrp14System@TObject @83  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::FormDestroy(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@FormKeyPress$qqrp14System@TObjectrb @105 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::FormKeyPress(System::TObject *, wchar_t&)
+    @Customizeactnedit@TCustomizeActnEditDesigner@FormResize$qqrp14System@TObject @44  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::FormResize(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@FormShow$qqrp14System@TObject @57  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::FormShow(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@GetActionIndex$qqri @116 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::GetActionIndex(int)
+    @Customizeactnedit@TCustomizeActnEditDesigner@GetEditState$qqrv @103 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::GetEditState()
+    @Customizeactnedit@TCustomizeActnEditDesigner@GetItemName$qqrii @120 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::GetItemName(int, int)
+    @Customizeactnedit@TCustomizeActnEditDesigner@GetRegKey$qqrv @119 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::GetRegKey()
+    @Customizeactnedit@TCustomizeActnEditDesigner@GetSelection$qqrv @115 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::GetSelection()
+    @Customizeactnedit@TCustomizeActnEditDesigner@IndexOfAction$qqrp31System@Actions@TContainedAction @118 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::IndexOfAction(System::Actions::TContainedAction *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ItemDeleted$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p26System@Classes@TPersistent @124 ; Customizeactnedit::TCustomizeActnEditDesigner::ItemDeleted(const System::DelphiInterface<{583}...
+    @Customizeactnedit@TCustomizeActnEditDesigner@ItemsModified$qqrx47System@%DelphiInterface$20Designintf@IDesigner% @121 ; Customizeactnedit::TCustomizeActnEditDesigner::ItemsModified(const System::DelphiInterface<{583}...
+    @Customizeactnedit@TCustomizeActnEditDesigner@LargeIconsActnExecute$qqrp14System@TObject @32  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::LargeIconsActnExecute(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ListView1Change$qqrp14System@TObjectp22Vcl@Comctrls@TListItem24Vcl@Comctrls@TItemChange @82  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ListView1Change(System::TObject *, Vcl::Comctrls::TListItem *, Vcl::Comctrls::TItemChange)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ListView1Click$qqrp14System@TObject @81  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ListView1Click(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ListView1DblClick$qqrp14System@TObject @80  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ListView1DblClick(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ListView1DragDrop$qqrp14System@TObjectt1ii @79  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ListView1DragDrop(System::TObject *, System::TObject *, int, int)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ListView1DragOver$qqrp14System@TObjectt1ii25System@Uitypes@TDragStatero @78  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ListView1DragOver(System::TObject *, System::TObject *, int, int, System::Uitypes::TDragState, bool&)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ListView1EndDrag$qqrp14System@TObjectt1ii @77  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ListView1EndDrag(System::TObject *, System::TObject *, int, int)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ListView1KeyPress$qqrp14System@TObjectrb @76  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ListView1KeyPress(System::TObject *, wchar_t&)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ListView1Resize$qqrp14System@TObject @75  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ListView1Resize(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ListView1StartDrag$qqrp14System@TObjectrp24Vcl@Controls@TDragObject @74  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ListView1StartDrag(System::TObject *, Vcl::Controls::TDragObject *&)
+    @Customizeactnedit@TCustomizeActnEditDesigner@LoadFromClipboard$qqrp25System@Classes@TComponentt1p20System@Classes@TList @90  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::LoadFromClipboard(System::Classes::TComponent *, System::Classes::TComponent *, System::Classes::TList *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@LockState$qqrv @114 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::LockState()
+    @Customizeactnedit@TCustomizeActnEditDesigner@MenuAnimationStylesChange$qqrp14System@TObject @33  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::MenuAnimationStylesChange(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@MoveDownClick$qqrp14System@TObject @73  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::MoveDownClick(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@MoveDownUpdate$qqrp14System@TObject @72  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::MoveDownUpdate(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@MoveUpClick$qqrp14System@TObject @71  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::MoveUpClick(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@MoveUpUpdate$qqrp14System@TObject @70  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::MoveUpUpdate(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@NewActionExecute$qqrp14System@TObject @107 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::NewActionExecute(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@NewActionsPopupPopup$qqrp14System@TObject @61  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::NewActionsPopupPopup(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@NewActnExecute$qqrp14System@TObject @54  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::NewActnExecute(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@NewCommonActionExecute$qqrp14System@TObject @69  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::NewCommonActionExecute(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@NewStdActionExecute$qqrp14System@TObject @64  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::NewStdActionExecute(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@Paste$qqrv @96  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::Paste()
+    @Customizeactnedit@TCustomizeActnEditDesigner@PasteItemClick$qqrp14System@TObject @94  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::PasteItemClick(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ReadStream$qqrp22System@Classes@TStreamp25System@Classes@TComponentt2p20System@Classes@TList @89  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ReadStream(System::Classes::TStream *, System::Classes::TComponent *, System::Classes::TComponent *, System::Classes::TList *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ReaderSetName$qqrp22System@Classes@TReaderp25System@Classes@TComponentr20System@UnicodeString @88  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ReaderSetName(System::Classes::TReader *, System::Classes::TComponent *, System::UnicodeString&)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ReaderSetName2$qqrp22System@Classes@TReaderp25System@Classes@TComponentr20System@UnicodeString @87  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ReaderSetName2(System::Classes::TReader *, System::Classes::TComponent *, System::UnicodeString&)
+    @Customizeactnedit@TCustomizeActnEditDesigner@RecentlyUsedActnExecute$qqrp14System@TObject @31  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::RecentlyUsedActnExecute(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@Remove$qqrv @99  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::Remove()
+    @Customizeactnedit@TCustomizeActnEditDesigner@RemoveActnExecute$qqrp14System@TObject @46  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::RemoveActnExecute(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@RemoveActnUpdate$qqrp14System@TObject @45  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::RemoveActnUpdate(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ResetUsageDataActnExecute$qqrp14System@TObject @30  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ResetUsageDataActnExecute(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@SelectAll$qqro @101 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::SelectAll(bool)
+    @Customizeactnedit@TCustomizeActnEditDesigner@SelectAllActionUpdate$qqrp14System@TObject @66  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::SelectAllActionUpdate(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@SelectAllItemClick$qqrp14System@TObject @60  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::SelectAllItemClick(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@SelectComponent$qqrp25System@Classes@TComponent @56  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::SelectComponent(System::Classes::TComponent *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@SelectNone$qqro @100 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::SelectNone(bool)
+    @Customizeactnedit@TCustomizeActnEditDesigner@SelectedUpdate$qqrp14System@TObject @67  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::SelectedUpdate(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@SetCommonActionClass$qqrp17System@TMetaClass @86  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::SetCommonActionClass(System::TMetaClass *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@SetSelection$qqrv @113 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::SetSelection()
+    @Customizeactnedit@TCustomizeActnEditDesigner@ShortcutEditChange$qqrp14System@TObject @48  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ShortcutEditChange(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ShowHintsActnExecute$qqrp14System@TObject @35  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ShowHintsActnExecute(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@ShowShortCutsInTipsActnExecute$qqrp14System@TObject @34  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::ShowShortCutsInTipsActnExecute(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@TabShow$qqrp14System@TObject @42  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::TabShow(System::TObject *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@UniqueName$qqrp25System@Classes@TComponent @104 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::UniqueName(System::Classes::TComponent *)
+    @Customizeactnedit@TCustomizeActnEditDesigner@UnlockState$qqrv @112 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::UnlockState()
+    @Customizeactnedit@TCustomizeActnEditDesigner@UpdateCaption$qqrv @95  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::UpdateCaption()
+    @Customizeactnedit@TCustomizeActnEditDesigner@UpdateDialog$qqrv @59  ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::UpdateDialog()
+    @Customizeactnedit@TCustomizeActnEditDesigner@UpdateView$qqrv @110 ; __fastcall Customizeactnedit::TCustomizeActnEditDesigner::UpdateView()
+    @Customizeactnedit@TImageListListeners@ @134 ; Customizeactnedit::TImageListListeners::
+    @Customizeactnedit@TImageListListeners@GetListener$qqrxi @39  ; __fastcall Customizeactnedit::TImageListListeners::GetListener(const int)
+    @Customizeactnedit@initialization$qqrv @27  ; __fastcall Customizeactnedit::initialization()
+    @Dclact@@GetPackageInfoTable$qqrv @143 ; Dclact::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclact@@PackageLoad$qqrv      @142 ; Dclact::__linkproc__ __fastcall PackageLoad()
+    @Dclact@@PackageUnload$qqrv    @141 ; Dclact::__linkproc__ __fastcall PackageUnload()
+    @Dclact@initialization$qqrv    @140 ; __fastcall Dclact::initialization()
+    @GetPackageInfoTable           @146 ; GetPackageInfoTable
+    Finalize                       @144 ; Finalize
+    Initialize                     @145 ; Initialize

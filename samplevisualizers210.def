@@ -1,0 +1,44 @@
+LIBRARY     SAMPLEVISUALIZERS210.BPL
+
+DESCRIPTION 'mbarcadero Sample Debugger Visualizers'
+
+EXPORTS
+    @$xp$36Stringlistvisualizer@TAvailableState @32  ; __tpdsc__ Stringlistvisualizer::TAvailableState
+    @$xp$43Stringlistvisualizer@TStringListViewerFrame @30  ; __tpdsc__ Stringlistvisualizer::TStringListViewerFrame
+    @Datetimevisualizer@Finalization$qqrv @2   ; __fastcall Datetimevisualizer::Finalization()
+    @Datetimevisualizer@Register$qqrv @3   ; __fastcall Datetimevisualizer::Register()
+    @Datetimevisualizer@initialization$qqrv @1   ; __fastcall Datetimevisualizer::initialization()
+    @GetPackageInfoTable           @39  ; GetPackageInfoTable
+    @Samplevisualizers@@GetPackageInfoTable$qqrv @36  ; Samplevisualizers::__linkproc__ __fastcall GetPackageInfoTable()
+    @Samplevisualizers@@PackageLoad$qqrv @35  ; Samplevisualizers::__linkproc__ __fastcall PackageLoad()
+    @Samplevisualizers@@PackageUnload$qqrv @34  ; Samplevisualizers::__linkproc__ __fastcall PackageUnload()
+    @Samplevisualizers@initialization$qqrv @33  ; __fastcall Samplevisualizers::initialization()
+    @Stdstringvisualizer@Finalization$qqrv @5   ; __fastcall Stdstringvisualizer::Finalization()
+    @Stdstringvisualizer@Register$qqrv @6   ; __fastcall Stdstringvisualizer::Register()
+    @Stdstringvisualizer@initialization$qqrv @4   ; __fastcall Stdstringvisualizer::initialization()
+    @Stringlistvisualizer@Finalization$qqrv @8   ; __fastcall Stringlistvisualizer::Finalization()
+    @Stringlistvisualizer@Register$qqrv @9   ; __fastcall Stringlistvisualizer::Register()
+    @Stringlistvisualizer@TStringListViewerFrame@ @31  ; Stringlistvisualizer::TStringListViewerFrame::
+    @Stringlistvisualizer@TStringListViewerFrame@AddStringListItems$qqrx20System@UnicodeStringt1t1 @29  ; __fastcall Stringlistvisualizer::TStringListViewerFrame::AddStringListItems(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Stringlistvisualizer@TStringListViewerFrame@AfterSave$qqrv @28  ; __fastcall Stringlistvisualizer::TStringListViewerFrame::AfterSave()
+    @Stringlistvisualizer@TStringListViewerFrame@BeforeSave$qqrv @27  ; __fastcall Stringlistvisualizer::TStringListViewerFrame::BeforeSave()
+    @Stringlistvisualizer@TStringListViewerFrame@CloseVisualizer$qqrv @26  ; __fastcall Stringlistvisualizer::TStringListViewerFrame::CloseVisualizer()
+    @Stringlistvisualizer@TStringListViewerFrame@Destroyed$qqrv @25  ; __fastcall Stringlistvisualizer::TStringListViewerFrame::Destroyed()
+    @Stringlistvisualizer@TStringListViewerFrame@Evaluate$qqr20System@UnicodeString @24  ; __fastcall Stringlistvisualizer::TStringListViewerFrame::Evaluate(System::UnicodeString)
+    @Stringlistvisualizer@TStringListViewerFrame@EvaluateComplete$qqrx20System@UnicodeStringt1oujuii @22  ; __fastcall Stringlistvisualizer::TStringListViewerFrame::EvaluateComplete(const System::UnicodeString, const System::UnicodeString, bool, unsigned __int64, unsigned int, int)
+    @Stringlistvisualizer@TStringListViewerFrame@EvaluteComplete$qqrx20System@UnicodeStringt1ouiuii @23  ; __fastcall Stringlistvisualizer::TStringListViewerFrame::EvaluteComplete(const System::UnicodeString, const System::UnicodeString, bool, unsigned int, unsigned int, int)
+    @Stringlistvisualizer@TStringListViewerFrame@GetDelimitedText$qqrv @19  ; __fastcall Stringlistvisualizer::TStringListViewerFrame::GetDelimitedText()
+    @Stringlistvisualizer@TStringListViewerFrame@GetDelimiter$qqrv @21  ; __fastcall Stringlistvisualizer::TStringListViewerFrame::GetDelimiter()
+    @Stringlistvisualizer@TStringListViewerFrame@GetStrictDelimiter$qqrv @20  ; __fastcall Stringlistvisualizer::TStringListViewerFrame::GetStrictDelimiter()
+    @Stringlistvisualizer@TStringListViewerFrame@MarkUnavailable$qqr40Toolsapi@TOTAVisualizerUnavailableReason @18  ; __fastcall Stringlistvisualizer::TStringListViewerFrame::MarkUnavailable(Toolsapi::TOTAVisualizerUnavailableReason)
+    @Stringlistvisualizer@TStringListViewerFrame@Modified$qqrv @17  ; __fastcall Stringlistvisualizer::TStringListViewerFrame::Modified()
+    @Stringlistvisualizer@TStringListViewerFrame@ModifyComplete$qqrx20System@UnicodeStringt1i @16  ; __fastcall Stringlistvisualizer::TStringListViewerFrame::ModifyComplete(const System::UnicodeString, const System::UnicodeString, int)
+    @Stringlistvisualizer@TStringListViewerFrame@RefreshVisualizer$qqrx20System@UnicodeStringt1t1 @15  ; __fastcall Stringlistvisualizer::TStringListViewerFrame::RefreshVisualizer(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Stringlistvisualizer@TStringListViewerFrame@SetClosedCallback$qqrynpqqrv$v @14  ; __fastcall Stringlistvisualizer::TStringListViewerFrame::SetClosedCallback(void __fastcall __closure(*)())
+    @Stringlistvisualizer@TStringListViewerFrame@SetForm$qqrp21Vcl@Forms@TCustomForm @13  ; __fastcall Stringlistvisualizer::TStringListViewerFrame::SetForm(Vcl::Forms::TCustomForm *)
+    @Stringlistvisualizer@TStringListViewerFrame@SetParent$qqrp24Vcl@Controls@TWinControl @12  ; __fastcall Stringlistvisualizer::TStringListViewerFrame::SetParent(Vcl::Controls::TWinControl *)
+    @Stringlistvisualizer@TStringListViewerFrame@StringListViewData$qqrp14System@TObjectp22Vcl@Comctrls@TListItem @11  ; __fastcall Stringlistvisualizer::TStringListViewerFrame::StringListViewData(System::TObject *, Vcl::Comctrls::TListItem *)
+    @Stringlistvisualizer@TStringListViewerFrame@ThreadNotify$qqr25Toolsapi@TOTANotifyReason @10  ; __fastcall Stringlistvisualizer::TStringListViewerFrame::ThreadNotify(Toolsapi::TOTANotifyReason)
+    @Stringlistvisualizer@initialization$qqrv @7   ; __fastcall Stringlistvisualizer::initialization()
+    Finalize                       @37  ; Finalize
+    Initialize                     @38  ; Initialize

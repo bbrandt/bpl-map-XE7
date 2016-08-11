@@ -1,0 +1,65 @@
+LIBRARY     IDEFILEFILTERS210.BPL
+
+DESCRIPTION 'mbarcadero Filter Examples'
+
+EXPORTS
+    @$xp$20Hexfilter@THexFilter    @7   ; __tpdsc__ Hexfilter::THexFilter
+    @$xp$27Ucstoutf8filter@TANSIFilter @30  ; __tpdsc__ Ucstoutf8filter::TANSIFilter
+    @$xp$27Ucstoutf8filter@TBaseFilter @42  ; __tpdsc__ Ucstoutf8filter::TBaseFilter
+    @$xp$27Ucstoutf8filter@TUTF8Filter @32  ; __tpdsc__ Ucstoutf8filter::TUTF8Filter
+    @$xp$33Ucstoutf8filter@TUCS2BEUTF8Filter @40  ; __tpdsc__ Ucstoutf8filter::TUCS2BEUTF8Filter
+    @$xp$33Ucstoutf8filter@TUCS2LEUTF8Filter @38  ; __tpdsc__ Ucstoutf8filter::TUCS2LEUTF8Filter
+    @$xp$33Ucstoutf8filter@TUCS4BEUTF8Filter @36  ; __tpdsc__ Ucstoutf8filter::TUCS4BEUTF8Filter
+    @$xp$33Ucstoutf8filter@TUCS4LEUTF8Filter @34  ; __tpdsc__ Ucstoutf8filter::TUCS4LEUTF8Filter
+    @Filterreg@Finalization$qqrv   @52  ; __fastcall Filterreg::Finalization()
+    @Filterreg@IDERegister$qqrv    @53  ; __fastcall Filterreg::IDERegister()
+    @Filterreg@initialization$qqrv @51  ; __fastcall Filterreg::initialization()
+    @GetPackageInfoTable           @60  ; GetPackageInfoTable
+    @Hexfilter@Finalization$qqrv   @2   ; __fastcall Hexfilter::Finalization()
+    @Hexfilter@THexFilter@         @8   ; Hexfilter::THexFilter::
+    @Hexfilter@THexFilter@GetDisplayName$qqrv @4   ; __fastcall Hexfilter::THexFilter::GetDisplayName()
+    @Hexfilter@THexFilter@GetIDString$qqrv @6   ; __fastcall Hexfilter::THexFilter::GetIDString()
+    @Hexfilter@THexFilter@GetStream$qqrx20System@UnicodeStringx33System@%DelphiInterface$7IStream% @5   ; Hexfilter::THexFilter::GetStream(const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Hexfilter@THexFilter@HandlesStream$qqrx20System@UnicodeStringx33System@%DelphiInterface$7IStream% @3   ; Hexfilter::THexFilter::HandlesStream(const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Hexfilter@initialization$qqrv @1   ; __fastcall Hexfilter::initialization()
+    @Idefilefilters@@GetPackageInfoTable$qqrv @57  ; Idefilefilters::__linkproc__ __fastcall GetPackageInfoTable()
+    @Idefilefilters@@PackageLoad$qqrv @56  ; Idefilefilters::__linkproc__ __fastcall PackageLoad()
+    @Idefilefilters@@PackageUnload$qqrv @55  ; Idefilefilters::__linkproc__ __fastcall PackageUnload()
+    @Idefilefilters@initialization$qqrv @54  ; __fastcall Idefilefilters::initialization()
+    @Ucstoutf8filter@Finalization$qqrv @10  ; __fastcall Ucstoutf8filter::Finalization()
+    @Ucstoutf8filter@TANSIFilter@  @31  ; Ucstoutf8filter::TANSIFilter::
+    @Ucstoutf8filter@TANSIFilter@GetIgnoreException$qqrv @14  ; __fastcall Ucstoutf8filter::TANSIFilter::GetIgnoreException()
+    @Ucstoutf8filter@TANSIFilter@GetInvalidCharacterException$qqrv @16  ; __fastcall Ucstoutf8filter::TANSIFilter::GetInvalidCharacterException()
+    @Ucstoutf8filter@TANSIFilter@GetStream$qqrx20System@UnicodeStringx33System@%DelphiInterface$7IStream% @12  ; Ucstoutf8filter::TANSIFilter::GetStream(const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Ucstoutf8filter@TANSIFilter@HandlesStream$qqrx20System@UnicodeStringx33System@%DelphiInterface$7IStream% @11  ; Ucstoutf8filter::TANSIFilter::HandlesStream(const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Ucstoutf8filter@TANSIFilter@SetIgnoreException$qqrxo @13  ; __fastcall Ucstoutf8filter::TANSIFilter::SetIgnoreException(const bool)
+    @Ucstoutf8filter@TANSIFilter@SetInvalidCharacterException$qqrxo @15  ; __fastcall Ucstoutf8filter::TANSIFilter::SetInvalidCharacterException(const bool)
+    @Ucstoutf8filter@TBaseFilter@  @43  ; Ucstoutf8filter::TBaseFilter::
+    @Ucstoutf8filter@TBaseFilter@$bctr$qqrx20System@UnicodeStringt1 @21  ; __fastcall Ucstoutf8filter::TBaseFilter::TBaseFilter(const System::UnicodeString, const System::UnicodeString)
+    @Ucstoutf8filter@TBaseFilter@GetDisplayName$qqrv @20  ; __fastcall Ucstoutf8filter::TBaseFilter::GetDisplayName()
+    @Ucstoutf8filter@TBaseFilter@GetIDString$qqrv @19  ; __fastcall Ucstoutf8filter::TBaseFilter::GetIDString()
+    @Ucstoutf8filter@TUCS2BEUTF8Filter@ @41  ; Ucstoutf8filter::TUCS2BEUTF8Filter::
+    @Ucstoutf8filter@TUCS2BEUTF8Filter@GetStream$qqrx20System@UnicodeStringx33System@%DelphiInterface$7IStream% @23  ; Ucstoutf8filter::TUCS2BEUTF8Filter::GetStream(const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Ucstoutf8filter@TUCS2BEUTF8Filter@HandlesStream$qqrx20System@UnicodeStringx33System@%DelphiInterface$7IStream% @22  ; Ucstoutf8filter::TUCS2BEUTF8Filter::HandlesStream(const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Ucstoutf8filter@TUCS2LEUTF8Filter@ @39  ; Ucstoutf8filter::TUCS2LEUTF8Filter::
+    @Ucstoutf8filter@TUCS2LEUTF8Filter@GetStream$qqrx20System@UnicodeStringx33System@%DelphiInterface$7IStream% @29  ; Ucstoutf8filter::TUCS2LEUTF8Filter::GetStream(const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Ucstoutf8filter@TUCS2LEUTF8Filter@HandlesStream$qqrx20System@UnicodeStringx33System@%DelphiInterface$7IStream% @28  ; Ucstoutf8filter::TUCS2LEUTF8Filter::HandlesStream(const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Ucstoutf8filter@TUCS4BEUTF8Filter@ @37  ; Ucstoutf8filter::TUCS4BEUTF8Filter::
+    @Ucstoutf8filter@TUCS4BEUTF8Filter@GetStream$qqrx20System@UnicodeStringx33System@%DelphiInterface$7IStream% @27  ; Ucstoutf8filter::TUCS4BEUTF8Filter::GetStream(const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Ucstoutf8filter@TUCS4BEUTF8Filter@HandlesStream$qqrx20System@UnicodeStringx33System@%DelphiInterface$7IStream% @26  ; Ucstoutf8filter::TUCS4BEUTF8Filter::HandlesStream(const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Ucstoutf8filter@TUCS4LEUTF8Filter@ @35  ; Ucstoutf8filter::TUCS4LEUTF8Filter::
+    @Ucstoutf8filter@TUCS4LEUTF8Filter@GetStream$qqrx20System@UnicodeStringx33System@%DelphiInterface$7IStream% @25  ; Ucstoutf8filter::TUCS4LEUTF8Filter::GetStream(const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Ucstoutf8filter@TUCS4LEUTF8Filter@HandlesStream$qqrx20System@UnicodeStringx33System@%DelphiInterface$7IStream% @24  ; Ucstoutf8filter::TUCS4LEUTF8Filter::HandlesStream(const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Ucstoutf8filter@TUTF8Filter@  @33  ; Ucstoutf8filter::TUTF8Filter::
+    @Ucstoutf8filter@TUTF8Filter@GetStream$qqrx20System@UnicodeStringx33System@%DelphiInterface$7IStream% @18  ; Ucstoutf8filter::TUTF8Filter::GetStream(const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Ucstoutf8filter@TUTF8Filter@HandlesStream$qqrx20System@UnicodeStringx33System@%DelphiInterface$7IStream% @17  ; Ucstoutf8filter::TUTF8Filter::HandlesStream(const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Ucstoutf8filter@_sANSIToUTF8DisplayName @45  ; Ucstoutf8filter::_sANSIToUTF8DisplayName
+    @Ucstoutf8filter@_sFilterErrors @44  ; Ucstoutf8filter::_sFilterErrors
+    @Ucstoutf8filter@_sUCS2BEUTF8DisplayName @49  ; Ucstoutf8filter::_sUCS2BEUTF8DisplayName
+    @Ucstoutf8filter@_sUCS2LEUTF8DisplayName @48  ; Ucstoutf8filter::_sUCS2LEUTF8DisplayName
+    @Ucstoutf8filter@_sUCS4BEUTF8DisplayName @47  ; Ucstoutf8filter::_sUCS4BEUTF8DisplayName
+    @Ucstoutf8filter@_sUCS4LEUTF8DisplayName @46  ; Ucstoutf8filter::_sUCS4LEUTF8DisplayName
+    @Ucstoutf8filter@_sUTF8UTF8DisplayName @50  ; Ucstoutf8filter::_sUTF8UTF8DisplayName
+    @Ucstoutf8filter@initialization$qqrv @9   ; __fastcall Ucstoutf8filter::initialization()
+    Finalize                       @58  ; Finalize
+    Initialize                     @59  ; Initialize

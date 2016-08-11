@@ -1,0 +1,5 @@
+LIBRARY     TYPELIBIMPORT.DLL
+
+EXPORTS
+    ImportTypeLibrary              @1   ; ImportTypeLibrary
+    ___CPPdebugHook                @2   ; ___CPPdebugHook

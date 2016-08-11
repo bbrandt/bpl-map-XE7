@@ -1,0 +1,361 @@
+LIBRARY     FIREDACMYSQLDRIVER210.BPL
+
+DESCRIPTION 'mbarcadero FireDAC MySQL Driver Components'
+
+EXPORTS
+    @$xp$28Firedac@Phys@Mysqlcli@PPByte @221 ; __tpdsc__ Firedac::Phys::Mysqlcli::PPByte
+    @$xp$29Firedac@Phys@Mysqlcli@NET0320 @202 ; __tpdsc__ Firedac::Phys::Mysqlcli::NET0320
+    @$xp$29Firedac@Phys@Mysqlcli@NET0323 @204 ; __tpdsc__ Firedac::Phys::Mysqlcli::NET0323
+    @$xp$29Firedac@Phys@Mysqlcli@NET0400 @206 ; __tpdsc__ Firedac::Phys::Mysqlcli::NET0400
+    @$xp$29Firedac@Phys@Mysqlcli@NET0410 @208 ; __tpdsc__ Firedac::Phys::Mysqlcli::NET0410
+    @$xp$29Firedac@Phys@Mysqlcli@NET0500 @210 ; __tpdsc__ Firedac::Phys::Mysqlcli::NET0500
+    @$xp$29Firedac@Phys@Mysqlcli@NET0506 @212 ; __tpdsc__ Firedac::Phys::Mysqlcli::NET0506
+    @$xp$29Firedac@Phys@Mysqlcli@NET0510 @214 ; __tpdsc__ Firedac::Phys::Mysqlcli::NET0510
+    @$xp$30Firedac@Phys@Mysqlcli@PNET0320 @203 ; __tpdsc__ Firedac::Phys::Mysqlcli::PNET0320
+    @$xp$30Firedac@Phys@Mysqlcli@PNET0323 @205 ; __tpdsc__ Firedac::Phys::Mysqlcli::PNET0323
+    @$xp$30Firedac@Phys@Mysqlcli@PNET0400 @207 ; __tpdsc__ Firedac::Phys::Mysqlcli::PNET0400
+    @$xp$30Firedac@Phys@Mysqlcli@PNET0410 @209 ; __tpdsc__ Firedac::Phys::Mysqlcli::PNET0410
+    @$xp$30Firedac@Phys@Mysqlcli@PNET0500 @211 ; __tpdsc__ Firedac::Phys::Mysqlcli::PNET0500
+    @$xp$30Firedac@Phys@Mysqlcli@PNET0506 @213 ; __tpdsc__ Firedac::Phys::Mysqlcli::PNET0506
+    @$xp$30Firedac@Phys@Mysqlcli@PNET0510 @215 ; __tpdsc__ Firedac::Phys::Mysqlcli::PNET0510
+    @$xp$30Firedac@Phys@Mysqlcli@Pmy_bool @222 ; __tpdsc__ Firedac::Phys::Mysqlcli::Pmy_bool
+    @$xp$30Firedac@Phys@Mysqlcli@Pmy_long @218 ; __tpdsc__ Firedac::Phys::Mysqlcli::Pmy_long
+    @$xp$30Firedac@Phys@Mysqlcli@USED_MEM @200 ; __tpdsc__ Firedac::Phys::Mysqlcli::USED_MEM
+    @$xp$31Firedac@Phys@Mysqlcli@MYSQL0320 @133 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL0320
+    @$xp$31Firedac@Phys@Mysqlcli@MYSQL0323 @135 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL0323
+    @$xp$31Firedac@Phys@Mysqlcli@MYSQL0400 @137 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL0400
+    @$xp$31Firedac@Phys@Mysqlcli@MYSQL0410 @139 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL0410
+    @$xp$31Firedac@Phys@Mysqlcli@MYSQL0500 @141 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL0500
+    @$xp$31Firedac@Phys@Mysqlcli@MYSQL0506 @143 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL0506
+    @$xp$31Firedac@Phys@Mysqlcli@MYSQL0510 @145 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL0510
+    @$xp$31Firedac@Phys@Mysqlcli@PUSED_MEM @201 ; __tpdsc__ Firedac::Phys::Mysqlcli::PUSED_MEM
+    @$xp$31Firedac@Phys@Mysqlcli@PVoidProc @198 ; __tpdsc__ Firedac::Phys::Mysqlcli::PVoidProc
+    @$xp$31Firedac@Phys@Mysqlcli@Pmy_ulong @219 ; __tpdsc__ Firedac::Phys::Mysqlcli::Pmy_ulong
+    @$xp$31Firedac@Phys@Mysqlcli@TVoidProc @199 ; __tpdsc__ Firedac::Phys::Mysqlcli::TVoidProc
+    @$xp$31Firedac@Phys@Mysqlcli@my_ppchar @220 ; __tpdsc__ Firedac::Phys::Mysqlcli::my_ppchar
+    @$xp$32Firedac@Phys@Mysqlcli@MYSQL_LIST @149 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_LIST
+    @$xp$32Firedac@Phys@Mysqlcli@PMYSQL0320 @134 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL0320
+    @$xp$32Firedac@Phys@Mysqlcli@PMYSQL0323 @136 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL0323
+    @$xp$32Firedac@Phys@Mysqlcli@PMYSQL0400 @138 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL0400
+    @$xp$32Firedac@Phys@Mysqlcli@PMYSQL0410 @140 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL0410
+    @$xp$32Firedac@Phys@Mysqlcli@PMYSQL0500 @142 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL0500
+    @$xp$32Firedac@Phys@Mysqlcli@PMYSQL0506 @144 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL0506
+    @$xp$32Firedac@Phys@Mysqlcli@PMYSQL0510 @146 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL0510
+    @$xp$32Firedac@Phys@Mysqlcli@Pmy_size_t @217 ; __tpdsc__ Firedac::Phys::Mysqlcli::Pmy_size_t
+    @$xp$33Firedac@Phys@Mysqlcli@PMYSQL_LIST @150 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_LIST
+    @$xp$34Firedac@Phys@Mysqlcli@MEM_ROOT0320 @192 ; __tpdsc__ Firedac::Phys::Mysqlcli::MEM_ROOT0320
+    @$xp$34Firedac@Phys@Mysqlcli@MEM_ROOT0323 @194 ; __tpdsc__ Firedac::Phys::Mysqlcli::MEM_ROOT0323
+    @$xp$34Firedac@Phys@Mysqlcli@MEM_ROOT0410 @196 ; __tpdsc__ Firedac::Phys::Mysqlcli::MEM_ROOT0410
+    @$xp$34Firedac@Phys@Mysqlcli@PPMYSQL_ROWS @216 ; __tpdsc__ Firedac::Phys::Mysqlcli::PPMYSQL_ROWS
+    @$xp$35Firedac@Phys@Mysqlcli@MYSQL_RES0320 @125 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_RES0320
+    @$xp$35Firedac@Phys@Mysqlcli@MYSQL_RES0323 @127 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_RES0323
+    @$xp$35Firedac@Phys@Mysqlcli@MYSQL_RES0410 @129 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_RES0410
+    @$xp$35Firedac@Phys@Mysqlcli@MYSQL_RES0510 @131 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_RES0510
+    @$xp$35Firedac@Phys@Mysqlcli@PMEM_ROOT0320 @193 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMEM_ROOT0320
+    @$xp$35Firedac@Phys@Mysqlcli@PMEM_ROOT0323 @195 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMEM_ROOT0323
+    @$xp$35Firedac@Phys@Mysqlcli@PMEM_ROOT0410 @197 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMEM_ROOT0410
+    @$xp$35Firedac@Phys@Mysqlcli@TPrcmysql_eof @98  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_eof
+    @$xp$35Firedac@Phys@Mysqlwrapper@TMySQLLib @294 ; __tpdsc__ Firedac::Phys::Mysqlwrapper::TMySQLLib
+    @$xp$36Firedac@Phys@Mysqlcli@MYSQL_BIND0410 @110 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_BIND0410
+    @$xp$36Firedac@Phys@Mysqlcli@MYSQL_BIND0411 @112 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_BIND0411
+    @$xp$36Firedac@Phys@Mysqlcli@MYSQL_BIND0506 @114 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_BIND0506
+    @$xp$36Firedac@Phys@Mysqlcli@MYSQL_BIND0510 @116 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_BIND0510
+    @$xp$36Firedac@Phys@Mysqlcli@MYSQL_DATA0320 @167 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_DATA0320
+    @$xp$36Firedac@Phys@Mysqlcli@MYSQL_DATA0323 @169 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_DATA0323
+    @$xp$36Firedac@Phys@Mysqlcli@MYSQL_DATA0410 @171 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_DATA0410
+    @$xp$36Firedac@Phys@Mysqlcli@MYSQL_DATA0506 @173 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_DATA0506
+    @$xp$36Firedac@Phys@Mysqlcli@MYSQL_DATA0510 @175 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_DATA0510
+    @$xp$36Firedac@Phys@Mysqlcli@MYSQL_ROWS0320 @177 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_ROWS0320
+    @$xp$36Firedac@Phys@Mysqlcli@MYSQL_ROWS0410 @179 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_ROWS0410
+    @$xp$36Firedac@Phys@Mysqlcli@MYSQL_STMT0410 @101 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_STMT0410
+    @$xp$36Firedac@Phys@Mysqlcli@MYSQL_STMT0411 @103 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_STMT0411
+    @$xp$36Firedac@Phys@Mysqlcli@MYSQL_STMT0506 @105 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_STMT0506
+    @$xp$36Firedac@Phys@Mysqlcli@MYSQL_STMT0510 @107 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_STMT0510
+    @$xp$36Firedac@Phys@Mysqlcli@MYSQL_TIME0410 @121 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_TIME0410
+    @$xp$36Firedac@Phys@Mysqlcli@MYSQL_TIME0506 @123 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_TIME0506
+    @$xp$36Firedac@Phys@Mysqlcli@PMYSQL_RES0320 @126 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_RES0320
+    @$xp$36Firedac@Phys@Mysqlcli@PMYSQL_RES0323 @128 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_RES0323
+    @$xp$36Firedac@Phys@Mysqlcli@PMYSQL_RES0410 @130 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_RES0410
+    @$xp$36Firedac@Phys@Mysqlcli@PMYSQL_RES0510 @132 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_RES0510
+    @$xp$36Firedac@Phys@Mysqlcli@TPrcmysql_info @87  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_info
+    @$xp$36Firedac@Phys@Mysqlcli@TPrcmysql_init @81  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_init
+    @$xp$36Firedac@Phys@Mysqlcli@TPrcmysql_kill @67  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_kill
+    @$xp$36Firedac@Phys@Mysqlcli@TPrcmysql_ping @66  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_ping
+    @$xp$36Firedac@Phys@Mysqlcli@TPrcmysql_stat @65  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stat
+    @$xp$37Firedac@Phys@Mysqlcli@MYSQL_FIELD0320 @182 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_FIELD0320
+    @$xp$37Firedac@Phys@Mysqlcli@MYSQL_FIELD0400 @184 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_FIELD0400
+    @$xp$37Firedac@Phys@Mysqlcli@MYSQL_FIELD0401 @186 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_FIELD0401
+    @$xp$37Firedac@Phys@Mysqlcli@MYSQL_FIELD0410 @188 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_FIELD0410
+    @$xp$37Firedac@Phys@Mysqlcli@MYSQL_FIELD0510 @190 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_FIELD0510
+    @$xp$37Firedac@Phys@Mysqlcli@MY_CHARSET_INFO @147 ; __tpdsc__ Firedac::Phys::Mysqlcli::MY_CHARSET_INFO
+    @$xp$37Firedac@Phys@Mysqlcli@PMYSQL_BIND0410 @111 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_BIND0410
+    @$xp$37Firedac@Phys@Mysqlcli@PMYSQL_BIND0411 @113 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_BIND0411
+    @$xp$37Firedac@Phys@Mysqlcli@PMYSQL_BIND0506 @115 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_BIND0506
+    @$xp$37Firedac@Phys@Mysqlcli@PMYSQL_BIND0510 @117 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_BIND0510
+    @$xp$37Firedac@Phys@Mysqlcli@PMYSQL_DATA0320 @168 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_DATA0320
+    @$xp$37Firedac@Phys@Mysqlcli@PMYSQL_DATA0323 @170 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_DATA0323
+    @$xp$37Firedac@Phys@Mysqlcli@PMYSQL_DATA0410 @172 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_DATA0410
+    @$xp$37Firedac@Phys@Mysqlcli@PMYSQL_DATA0506 @174 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_DATA0506
+    @$xp$37Firedac@Phys@Mysqlcli@PMYSQL_DATA0510 @176 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_DATA0510
+    @$xp$37Firedac@Phys@Mysqlcli@PMYSQL_ROWS0320 @178 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_ROWS0320
+    @$xp$37Firedac@Phys@Mysqlcli@PMYSQL_ROWS0410 @180 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_ROWS0410
+    @$xp$37Firedac@Phys@Mysqlcli@PMYSQL_STMT0410 @102 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_STMT0410
+    @$xp$37Firedac@Phys@Mysqlcli@PMYSQL_STMT0411 @104 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_STMT0411
+    @$xp$37Firedac@Phys@Mysqlcli@PMYSQL_STMT0506 @106 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_STMT0506
+    @$xp$37Firedac@Phys@Mysqlcli@PMYSQL_STMT0510 @108 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_STMT0510
+    @$xp$37Firedac@Phys@Mysqlcli@PMYSQL_TIME0410 @122 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_TIME0410
+    @$xp$37Firedac@Phys@Mysqlcli@PMYSQL_TIME0506 @124 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_TIME0506
+    @$xp$37Firedac@Phys@Mysqlcli@TPrcmysql_close @76  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_close
+    @$xp$37Firedac@Phys@Mysqlcli@TPrcmysql_debug @43  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_debug
+    @$xp$37Firedac@Phys@Mysqlcli@TPrcmysql_errno @90  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_errno
+    @$xp$37Firedac@Phys@Mysqlcli@TPrcmysql_error @89  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_error
+    @$xp$37Firedac@Phys@Mysqlcli@TPrcmysql_query @74  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_query
+    @$xp$37Firedac@Phys@Mysqlwrapper@TMySQLField @284 ; __tpdsc__ Firedac::Phys::Mysqlwrapper::TMySQLField
+    @$xp$38Firedac@Phys@Mysqlcli@PMYSQL_FIELD0320 @183 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_FIELD0320
+    @$xp$38Firedac@Phys@Mysqlcli@PMYSQL_FIELD0400 @185 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_FIELD0400
+    @$xp$38Firedac@Phys@Mysqlcli@PMYSQL_FIELD0401 @187 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_FIELD0401
+    @$xp$38Firedac@Phys@Mysqlcli@PMYSQL_FIELD0410 @189 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_FIELD0410
+    @$xp$38Firedac@Phys@Mysqlcli@PMYSQL_FIELD0510 @191 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_FIELD0510
+    @$xp$38Firedac@Phys@Mysqlcli@PMY_CHARSET_INFO @148 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMY_CHARSET_INFO
+    @$xp$38Firedac@Phys@Mysqlcli@TPrcmysql_commit @36  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_commit
+    @$xp$38Firedac@Phys@Mysqlwrapper@TMySQLResult @286 ; __tpdsc__ Firedac::Phys::Mysqlwrapper::TMySQLResult
+    @$xp$39Firedac@Phys@Mysqlcli@MYSQL_METHODS0410 @151 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_METHODS0410
+    @$xp$39Firedac@Phys@Mysqlcli@MYSQL_METHODS0506 @153 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_METHODS0506
+    @$xp$39Firedac@Phys@Mysqlcli@MYSQL_METHODS0510 @155 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_METHODS0510
+    @$xp$39Firedac@Phys@Mysqlcli@MYSQL_OPTIONS0320 @157 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_OPTIONS0320
+    @$xp$39Firedac@Phys@Mysqlcli@MYSQL_OPTIONS0400 @159 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_OPTIONS0400
+    @$xp$39Firedac@Phys@Mysqlcli@MYSQL_OPTIONS0410 @161 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_OPTIONS0410
+    @$xp$39Firedac@Phys@Mysqlcli@MYSQL_OPTIONS0506 @163 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_OPTIONS0506
+    @$xp$39Firedac@Phys@Mysqlcli@MYSQL_OPTIONS0510 @165 ; __tpdsc__ Firedac::Phys::Mysqlcli::MYSQL_OPTIONS0510
+    @$xp$39Firedac@Phys@Mysqlcli@TPrcmysql_connect @40  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_connect
+    @$xp$39Firedac@Phys@Mysqlcli@TPrcmysql_drop_db @38  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_drop_db
+    @$xp$39Firedac@Phys@Mysqlcli@TPrcmysql_options @54  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_options
+    @$xp$39Firedac@Phys@Mysqlcli@TPrcmysql_refresh @68  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_refresh
+    @$xp$39Firedac@Phys@Mysqlcli@TPrcmysql_ssl_set @80  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_ssl_set
+    @$xp$39Firedac@Phys@Mysqlwrapper@TFDMySQLError @292 ; __tpdsc__ Firedac::Phys::Mysqlwrapper::TFDMySQLError
+    @$xp$39Firedac@Phys@Mysqlwrapper@TMySQLSession @288 ; __tpdsc__ Firedac::Phys::Mysqlwrapper::TMySQLSession
+    @$xp$40Firedac@Phys@Mysqlcli@PMYSQL_METHODS0410 @152 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_METHODS0410
+    @$xp$40Firedac@Phys@Mysqlcli@PMYSQL_METHODS0506 @154 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_METHODS0506
+    @$xp$40Firedac@Phys@Mysqlcli@PMYSQL_METHODS0510 @156 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_METHODS0510
+    @$xp$40Firedac@Phys@Mysqlcli@PMYSQL_OPTIONS0320 @158 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_OPTIONS0320
+    @$xp$40Firedac@Phys@Mysqlcli@PMYSQL_OPTIONS0400 @160 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_OPTIONS0400
+    @$xp$40Firedac@Phys@Mysqlcli@PMYSQL_OPTIONS0410 @162 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_OPTIONS0410
+    @$xp$40Firedac@Phys@Mysqlcli@PMYSQL_OPTIONS0506 @164 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_OPTIONS0506
+    @$xp$40Firedac@Phys@Mysqlcli@PMYSQL_OPTIONS0510 @166 ; __tpdsc__ Firedac::Phys::Mysqlcli::PMYSQL_OPTIONS0510
+    @$xp$40Firedac@Phys@Mysqlcli@TPrcmysql_list_dbs @60  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_list_dbs
+    @$xp$40Firedac@Phys@Mysqlcli@TPrcmysql_num_rows @100 ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_num_rows
+    @$xp$40Firedac@Phys@Mysqlcli@TPrcmysql_rollback @35  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_rollback
+    @$xp$40Firedac@Phys@Mysqlcli@TPrcmysql_row_seek @50  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_row_seek
+    @$xp$40Firedac@Phys@Mysqlcli@TPrcmysql_row_tell @95  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_row_tell
+    @$xp$40Firedac@Phys@Mysqlcli@TPrcmysql_shutdown @70  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_shutdown
+    @$xp$40Firedac@Phys@Mysqlcli@TPrcmysql_sqlstate @88  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_sqlstate
+    @$xp$40Firedac@Phys@Mysqldef@TFDMySQLResultMode @338 ; __tpdsc__ Firedac::Phys::Mysqldef::TFDMySQLResultMode
+    @$xp$41Firedac@Phys@Mysql@TFDPhysMySQLDriverLink @348 ; __tpdsc__ Firedac::Phys::Mysql::TFDPhysMySQLDriverLink
+    @$xp$41Firedac@Phys@Mysqlcli@TPrcmysql_create_db @39  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_create_db
+    @$xp$41Firedac@Phys@Mysqlcli@TPrcmysql_fetch_row @48  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_fetch_row
+    @$xp$41Firedac@Phys@Mysqlcli@TPrcmysql_insert_id @91  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_insert_id
+    @$xp$41Firedac@Phys@Mysqlcli@TPrcmysql_select_db @75  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_select_db
+    @$xp$41Firedac@Phys@Mysqlcli@TPrcmysql_stmt_init @32  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_init
+    @$xp$41Firedac@Phys@Mysqlcli@TPrcmysql_thread_id @86  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_thread_id
+    @$xp$42Firedac@Phys@Mysqlcli@TPrcmysql_autocommit @37  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_autocommit
+    @$xp$42Firedac@Phys@Mysqlcli@TPrcmysql_field_seek @49  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_field_seek
+    @$xp$42Firedac@Phys@Mysqlcli@TPrcmysql_field_tell @94  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_field_tell
+    @$xp$42Firedac@Phys@Mysqlcli@TPrcmysql_num_fields @99  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_num_fields
+    @$xp$42Firedac@Phys@Mysqlcli@TPrcmysql_real_query @71  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_real_query
+    @$xp$42Firedac@Phys@Mysqlcli@TPrcmysql_send_query @73  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_send_query
+    @$xp$42Firedac@Phys@Mysqlcli@TPrcmysql_server_end @5   ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_server_end
+    @$xp$42Firedac@Phys@Mysqlcli@TPrcmysql_stmt_close @21  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_close
+    @$xp$42Firedac@Phys@Mysqlcli@TPrcmysql_stmt_errno @16  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_errno
+    @$xp$42Firedac@Phys@Mysqlcli@TPrcmysql_stmt_error @15  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_error
+    @$xp$42Firedac@Phys@Mysqlcli@TPrcmysql_stmt_fetch @29  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_fetch
+    @$xp$42Firedac@Phys@Mysqlcli@TPrcmysql_stmt_reset @20  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_reset
+    @$xp$42Firedac@Phys@Mysqlcli@TPrcmysql_thread_end @3   ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_thread_end
+    @$xp$42Firedac@Phys@Mysqlcli@TPrcmysql_use_result @55  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_use_result
+    @$xp$42Firedac@Phys@Mysqldef@TFDMySQLCharacterSet @337 ; __tpdsc__ Firedac::Phys::Mysqldef::TFDMySQLCharacterSet
+    @$xp$43Firedac@Phys@Mysqlcli@TPrcmysql_change_user @78  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_change_user
+    @$xp$43Firedac@Phys@Mysqlcli@TPrcmysql_fetch_field @46  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_fetch_field
+    @$xp$43Firedac@Phys@Mysqlcli@TPrcmysql_field_count @93  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_field_count
+    @$xp$43Firedac@Phys@Mysqlcli@TPrcmysql_free_result @53  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_free_result
+    @$xp$43Firedac@Phys@Mysqlcli@TPrcmysql_list_fields @58  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_list_fields
+    @$xp$43Firedac@Phys@Mysqlcli@TPrcmysql_list_tables @59  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_list_tables
+    @$xp$43Firedac@Phys@Mysqlcli@TPrcmysql_next_result @33  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_next_result
+    @$xp$43Firedac@Phys@Mysqlcli@TPrcmysql_server_init @6   ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_server_init
+    @$xp$43Firedac@Phys@Mysqlcli@TPrcmysql_thread_init @4   ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_thread_init
+    @$xp$43Firedac@Phys@Mysqlcli@TPrcmysql_thread_safe @41  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_thread_safe
+    @$xp$43Firedac@Phys@Mysqldef@TFDMySQLTinyIntFormat @336 ; __tpdsc__ Firedac::Phys::Mysqldef::TFDMySQLTinyIntFormat
+    @$xp$44Firedac@Phys@Mysqlcli@TPrcmysql_fetch_fields @96  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_fetch_fields
+    @$xp$44Firedac@Phys@Mysqlcli@TPrcmysql_more_results @34  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_more_results
+    @$xp$44Firedac@Phys@Mysqlcli@TPrcmysql_real_connect @77  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_real_connect
+    @$xp$44Firedac@Phys@Mysqlcli@TPrcmysql_stmt_execute @30  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_execute
+    @$xp$44Firedac@Phys@Mysqlcli@TPrcmysql_stmt_prepare @31  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_prepare
+    @$xp$44Firedac@Phys@Mysqlcli@TPrcmysql_store_result @56  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_store_result
+    @$xp$45Firedac@Phys@Mysqlcli@TMYSQL_BIND_skip_result @118 ; __tpdsc__ Firedac::Phys::Mysqlcli::TMYSQL_BIND_skip_result
+    @$xp$45Firedac@Phys@Mysqlcli@TPrcmysql_affected_rows @92  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_affected_rows
+    @$xp$45Firedac@Phys@Mysqlcli@TPrcmysql_data_seek0320 @52  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_data_seek0320
+    @$xp$45Firedac@Phys@Mysqlcli@TPrcmysql_data_seek0323 @51  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_data_seek0323
+    @$xp$45Firedac@Phys@Mysqlcli@TPrcmysql_escape_string @45  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_escape_string
+    @$xp$45Firedac@Phys@Mysqlcli@TPrcmysql_fetch_lengths @47  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_fetch_lengths
+    @$xp$45Firedac@Phys@Mysqlcli@TPrcmysql_get_host_info @62  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_get_host_info
+    @$xp$45Firedac@Phys@Mysqlcli@TPrcmysql_stmt_attr_get @24  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_attr_get
+    @$xp$45Firedac@Phys@Mysqlcli@TPrcmysql_stmt_attr_set @25  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_attr_set
+    @$xp$45Firedac@Phys@Mysqlcli@TPrcmysql_stmt_num_rows @10  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_num_rows
+    @$xp$45Firedac@Phys@Mysqlcli@TPrcmysql_stmt_row_seek @13  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_row_seek
+    @$xp$45Firedac@Phys@Mysqlcli@TPrcmysql_stmt_row_tell @12  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_row_tell
+    @$xp$45Firedac@Phys@Mysqlcli@TPrcmysql_stmt_sqlstate @14  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_sqlstate
+    @$xp$45Firedac@Phys@Mysqlcli@TPrcmysql_warning_count @82  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_warning_count
+    @$xp$46Firedac@Phys@Mysqlcli@TMYSQL_BIND_fetch_result @119 ; __tpdsc__ Firedac::Phys::Mysqlcli::TMYSQL_BIND_fetch_result
+    @$xp$46Firedac@Phys@Mysqlcli@TPrcmyodbc_remove_escape @42  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmyodbc_remove_escape
+    @$xp$46Firedac@Phys@Mysqlcli@TPrcmysql_get_proto_info @61  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_get_proto_info
+    @$xp$46Firedac@Phys@Mysqlcli@TPrcmysql_get_ssl_cipher @79  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_get_ssl_cipher
+    @$xp$46Firedac@Phys@Mysqlcli@TPrcmysql_list_processes @57  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_list_processes
+    @$xp$46Firedac@Phys@Mysqlcli@TPrcmysql_stmt_data_seek @11  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_data_seek
+    @$xp$46Firedac@Phys@Mysqlcli@TPrcmysql_stmt_insert_id @8   ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_insert_id
+    @$xp$47Firedac@Phys@Mysqlcli@TMYSQL_STMT_read_row_func @109 ; __tpdsc__ Firedac::Phys::Mysqlcli::TMYSQL_STMT_read_row_func
+    @$xp$47Firedac@Phys@Mysqlcli@TPrcmysql_dump_debug_info @69  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_dump_debug_info
+    @$xp$47Firedac@Phys@Mysqlcli@TPrcmysql_get_client_info @63  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_get_client_info
+    @$xp$47Firedac@Phys@Mysqlcli@TPrcmysql_get_server_info @64  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_get_server_info
+    @$xp$47Firedac@Phys@Mysqlcli@TPrcmysql_stmt_bind_param @23  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_bind_param
+    @$xp$47Firedac@Phys@Mysqlwrapper@EMySQLNativeException @290 ; __tpdsc__ Firedac::Phys::Mysqlwrapper::EMySQLNativeException
+    @$xp$48Firedac@Phys@Mysqlcli@TPrcmysql_stmt_bind_result @22  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_bind_result
+    @$xp$48Firedac@Phys@Mysqlcli@TPrcmysql_stmt_field_count @7   ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_field_count
+    @$xp$48Firedac@Phys@Mysqlcli@TPrcmysql_stmt_free_result @19  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_free_result
+    @$xp$48Firedac@Phys@Mysqlcli@TPrcmysql_stmt_param_count @26  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_param_count
+    @$xp$49Firedac@Phys@Mysqlcli@TPrcmysql_read_query_result @72  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_read_query_result
+    @$xp$49Firedac@Phys@Mysqlcli@TPrcmysql_set_character_set @83  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_set_character_set
+    @$xp$49Firedac@Phys@Mysqlcli@TPrcmysql_stmt_fetch_column @28  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_fetch_column
+    @$xp$49Firedac@Phys@Mysqlcli@TPrcmysql_stmt_store_result @27  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_store_result
+    @$xp$50Firedac@Phys@Mysqlcli@TMYSQL_BIND_store_param_func @120 ; __tpdsc__ Firedac::Phys::Mysqlcli::TMYSQL_BIND_store_param_func
+    @$xp$50Firedac@Phys@Mysqlcli@TPrcmysql_character_set_name @85  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_character_set_name
+    @$xp$50Firedac@Phys@Mysqlcli@TPrcmysql_fetch_field_direct @97  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_fetch_field_direct
+    @$xp$50Firedac@Phys@Mysqlcli@TPrcmysql_real_escape_string @44  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_real_escape_string
+    @$xp$50Firedac@Phys@Mysqlcli@TPrcmysql_stmt_affected_rows @9   ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_affected_rows
+    @$xp$51Firedac@Phys@Mysqlcli@TPrcmysql_stmt_send_long_data @18  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_send_long_data
+    @$xp$52Firedac@Phys@Mysqlcli@TPrcmysql_stmt_result_metadata @17  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_stmt_result_metadata
+    @$xp$53Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams @334 ; __tpdsc__ Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams
+    @$xp$54Firedac@Phys@Mysqlcli@TPrcmysql_get_character_set_info @84  ; __tpdsc__ Firedac::Phys::Mysqlcli::TPrcmysql_get_character_set_info
+    @Firedac@Phys@Mysql@Finalization$qqrv @340 ; __fastcall Firedac::Phys::Mysql::Finalization()
+    @Firedac@Phys@Mysql@TFDPhysMySQLDriverLink@ @349 ; Firedac::Phys::Mysql::TFDPhysMySQLDriverLink::
+    @Firedac@Phys@Mysql@TFDPhysMySQLDriverLink@$bctr$qqrp25System@Classes@TComponent @347 ; __fastcall Firedac::Phys::Mysql::TFDPhysMySQLDriverLink::TFDPhysMySQLDriverLink(System::Classes::TComponent *)
+    @Firedac@Phys@Mysql@TFDPhysMySQLDriverLink@$bdtr$qqrv @346 ; __fastcall Firedac::Phys::Mysql::TFDPhysMySQLDriverLink::~TFDPhysMySQLDriverLink()
+    @Firedac@Phys@Mysql@TFDPhysMySQLDriverLink@ApplyTo$qqrx62System@%DelphiInterface$35Firedac@Stan@Intf@IFDStanDefinition% @344 ; Firedac::Phys::Mysql::TFDPhysMySQLDriverLink::ApplyTo(const System::DelphiInterface<{583}...
+    @Firedac@Phys@Mysql@TFDPhysMySQLDriverLink@GetBaseDriverID$qqrv @345 ; __fastcall Firedac::Phys::Mysql::TFDPhysMySQLDriverLink::GetBaseDriverID()
+    @Firedac@Phys@Mysql@TFDPhysMySQLDriverLink@IsConfigured$qqrv @343 ; __fastcall Firedac::Phys::Mysql::TFDPhysMySQLDriverLink::IsConfigured()
+    @Firedac@Phys@Mysql@TFDPhysMySQLDriverLink@SetEmbeddedArgs$qqrxp23System@Classes@TStrings @342 ; __fastcall Firedac::Phys::Mysql::TFDPhysMySQLDriverLink::SetEmbeddedArgs(System::Classes::TStrings * const)
+    @Firedac@Phys@Mysql@TFDPhysMySQLDriverLink@SetEmbeddedGroups$qqrxp23System@Classes@TStrings @341 ; __fastcall Firedac::Phys::Mysql::TFDPhysMySQLDriverLink::SetEmbeddedGroups(System::Classes::TStrings * const)
+    @Firedac@Phys@Mysql@initialization$qqrv @339 ; __fastcall Firedac::Phys::Mysql::initialization()
+    @Firedac@Phys@Mysqlcli@Finalization$qqrv @2   ; __fastcall Firedac::Phys::Mysqlcli::Finalization()
+    @Firedac@Phys@Mysqlcli@MYSQL_COUNT_ERROR @181 ; Firedac::Phys::Mysqlcli::MYSQL_COUNT_ERROR
+    @Firedac@Phys@Mysqlcli@initialization$qqrv @1   ; __fastcall Firedac::Phys::Mysqlcli::initialization()
+    @Firedac@Phys@Mysqldef@Finalization$qqrv @297 ; __fastcall Firedac::Phys::Mysqldef::Finalization()
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@ @335 ; Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@GetCharacterSet$qqrv @315 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::GetCharacterSet()
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@GetCompress$qqrv @327 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::GetCompress()
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@GetDriverID$qqrv @333 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::GetDriverID()
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@GetLoginTimeout$qqrv @323 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::GetLoginTimeout()
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@GetMetaCurCatalog$qqrv @309 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::GetMetaCurCatalog()
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@GetMetaDefCatalog$qqrv @311 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::GetMetaDefCatalog()
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@GetPort$qqrv @329 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::GetPort()
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@GetReadTimeout$qqrv @321 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::GetReadTimeout()
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@GetResultMode$qqrv @317 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::GetResultMode()
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@GetSSL_ca$qqrv @303 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::GetSSL_ca()
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@GetSSL_capath$qqrv @301 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::GetSSL_capath()
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@GetSSL_cert$qqrv @305 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::GetSSL_cert()
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@GetSSL_cipher$qqrv @299 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::GetSSL_cipher()
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@GetSSL_key$qqrv @307 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::GetSSL_key()
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@GetServer$qqrv @331 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::GetServer()
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@GetTinyIntFormat$qqrv @313 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::GetTinyIntFormat()
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@GetUseSSL$qqrv @325 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::GetUseSSL()
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@GetWriteTimeout$qqrv @319 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::GetWriteTimeout()
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@SetCharacterSet$qqrx42Firedac@Phys@Mysqldef@TFDMySQLCharacterSet @314 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::SetCharacterSet(const Firedac::Phys::Mysqldef::TFDMySQLCharacterSet)
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@SetCompress$qqrxo @326 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::SetCompress(const bool)
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@SetDriverID$qqrx20System@UnicodeString @332 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::SetDriverID(const System::UnicodeString)
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@SetLoginTimeout$qqrxi @322 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::SetLoginTimeout(const int)
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@SetMetaCurCatalog$qqrx20System@UnicodeString @308 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::SetMetaCurCatalog(const System::UnicodeString)
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@SetMetaDefCatalog$qqrx20System@UnicodeString @310 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::SetMetaDefCatalog(const System::UnicodeString)
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@SetPort$qqrxi @328 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::SetPort(const int)
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@SetReadTimeout$qqrxi @320 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::SetReadTimeout(const int)
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@SetResultMode$qqrx40Firedac@Phys@Mysqldef@TFDMySQLResultMode @316 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::SetResultMode(const Firedac::Phys::Mysqldef::TFDMySQLResultMode)
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@SetSSL_ca$qqrx20System@UnicodeString @302 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::SetSSL_ca(const System::UnicodeString)
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@SetSSL_capath$qqrx20System@UnicodeString @300 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::SetSSL_capath(const System::UnicodeString)
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@SetSSL_cert$qqrx20System@UnicodeString @304 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::SetSSL_cert(const System::UnicodeString)
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@SetSSL_cipher$qqrx20System@UnicodeString @298 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::SetSSL_cipher(const System::UnicodeString)
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@SetSSL_key$qqrx20System@UnicodeString @306 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::SetSSL_key(const System::UnicodeString)
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@SetServer$qqrx20System@UnicodeString @330 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::SetServer(const System::UnicodeString)
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@SetTinyIntFormat$qqrx43Firedac@Phys@Mysqldef@TFDMySQLTinyIntFormat @312 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::SetTinyIntFormat(const Firedac::Phys::Mysqldef::TFDMySQLTinyIntFormat)
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@SetUseSSL$qqrxo @324 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::SetUseSSL(const bool)
+    @Firedac@Phys@Mysqldef@TFDPhysMySQLConnectionDefParams@SetWriteTimeout$qqrxi @318 ; __fastcall Firedac::Phys::Mysqldef::TFDPhysMySQLConnectionDefParams::SetWriteTimeout(const int)
+    @Firedac@Phys@Mysqldef@initialization$qqrv @296 ; __fastcall Firedac::Phys::Mysqldef::initialization()
+    @Firedac@Phys@Mysqlwrapper@EMySQLNativeException@ @291 ; Firedac::Phys::Mysqlwrapper::EMySQLNativeException::
+    @Firedac@Phys@Mysqlwrapper@EMySQLNativeException@GetErrorClass$qqrv @273 ; __fastcall Firedac::Phys::Mysqlwrapper::EMySQLNativeException::GetErrorClass()
+    @Firedac@Phys@Mysqlwrapper@Finalization$qqrv @224 ; __fastcall Firedac::Phys::Mysqlwrapper::Finalization()
+    @Firedac@Phys@Mysqlwrapper@TFDMySQLError@ @293 ; Firedac::Phys::Mysqlwrapper::TFDMySQLError::
+    @Firedac@Phys@Mysqlwrapper@TFDMySQLError@Assign$qqrp29Firedac@Stan@Error@TFDDBError @276 ; __fastcall Firedac::Phys::Mysqlwrapper::TFDMySQLError::Assign(Firedac::Stan::Error::TFDDBError *)
+    @Firedac@Phys@Mysqlwrapper@TFDMySQLError@LoadFromStorage$qqrx59System@%DelphiInterface$32Firedac@Stan@Intf@IFDStanStorage% @275 ; Firedac::Phys::Mysqlwrapper::TFDMySQLError::LoadFromStorage(const System::DelphiInterface<{583}...
+    @Firedac@Phys@Mysqlwrapper@TFDMySQLError@SaveToStorage$qqrx59System@%DelphiInterface$32Firedac@Stan@Intf@IFDStanStorage% @274 ; Firedac::Phys::Mysqlwrapper::TFDMySQLError::SaveToStorage(const System::DelphiInterface<{583}...
+    @Firedac@Phys@Mysqlwrapper@TMySQLField@ @285 ; Firedac::Phys::Mysqlwrapper::TMySQLField::
+    @Firedac@Phys@Mysqlwrapper@TMySQLField@$bctr$qqrp38Firedac@Phys@Mysqlwrapper@TMySQLResult @226 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLField::TMySQLField(Firedac::Phys::Mysqlwrapper::TMySQLResult *)
+    @Firedac@Phys@Mysqlwrapper@TMySQLField@GetInfo$qqrrpct1t1t1rucruit6t6t6 @225 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLField::GetInfo(char *&, char *&, char *&, char *&, unsigned char&, unsigned int&, unsigned int&, unsigned int&, unsigned int&)
+    @Firedac@Phys@Mysqlwrapper@TMySQLLib@ @295 ; Firedac::Phys::Mysqlwrapper::TMySQLLib::
+    @Firedac@Phys@Mysqlwrapper@TMySQLLib@$bctr$qqrp14System@TObject @283 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLLib::TMySQLLib(System::TObject *)
+    @Firedac@Phys@Mysqlwrapper@TMySQLLib@EndEmbedded$qqrv @277 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLLib::EndEmbedded()
+    @Firedac@Phys@Mysqlwrapper@TMySQLLib@GetLibraryInfo$qqrv @280 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLLib::GetLibraryInfo()
+    @Firedac@Phys@Mysqlwrapper@TMySQLLib@InitEmbedded$qqrx20System@UnicodeStringt1 @278 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLLib::InitEmbedded(const System::UnicodeString, const System::UnicodeString)
+    @Firedac@Phys@Mysqlwrapper@TMySQLLib@Load$qqrx20System@UnicodeStringt1t1t1 @282 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLLib::Load(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Firedac@Phys@Mysqlwrapper@TMySQLLib@LoadEntries$qqrv @279 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLLib::LoadEntries()
+    @Firedac@Phys@Mysqlwrapper@TMySQLLib@Unload$qqrv @281 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLLib::Unload()
+    @Firedac@Phys@Mysqlwrapper@TMySQLResult@ @287 ; Firedac::Phys::Mysqlwrapper::TMySQLResult::
+    @Firedac@Phys@Mysqlwrapper@TMySQLResult@$bctr$qqrp39Firedac@Phys@Mysqlwrapper@TMySQLSessionpv @233 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLResult::TMySQLResult(Firedac::Phys::Mysqlwrapper::TMySQLSession *, void *)
+    @Firedac@Phys@Mysqlwrapper@TMySQLResult@$bdtr$qqrv @232 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLResult::~TMySQLResult()
+    @Firedac@Phys@Mysqlwrapper@TMySQLResult@DumpColumns$qqri @227 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLResult::DumpColumns(int)
+    @Firedac@Phys@Mysqlwrapper@TMySQLResult@Fetch$qqri @229 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLResult::Fetch(int)
+    @Firedac@Phys@Mysqlwrapper@TMySQLResult@GetData$qqrirpvrui @228 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLResult::GetData(int, void *&, unsigned int&)
+    @Firedac@Phys@Mysqlwrapper@TMySQLResult@GetFieldCount$qqrv @231 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLResult::GetFieldCount()
+    @Firedac@Phys@Mysqlwrapper@TMySQLResult@GetFields$qqri @230 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLResult::GetFields(int)
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@ @289 ; Firedac::Phys::Mysqlwrapper::TMySQLSession::
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@$bctr$qqrp35Firedac@Phys@Mysqlwrapper@TMySQLLibp14System@TObject @272 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::TMySQLSession(Firedac::Phys::Mysqlwrapper::TMySQLLib *, System::TObject *)
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@$bctr$qqrp35Firedac@Phys@Mysqlwrapper@TMySQLLibpvp14System@TObject @271 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::TMySQLSession(Firedac::Phys::Mysqlwrapper::TMySQLLib *, void *, System::TObject *)
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@$bdtr$qqrv @270 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::~TMySQLSession()
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@Check$qqrip14System@TObject @264 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::Check(int, System::TObject *)
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@ClearInfo$qqrv @266 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::ClearInfo()
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@Connect$qqrx20System@UnicodeStringt1t1t1uiui @260 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::Connect(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, unsigned int, unsigned int)
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@Disconnect$qqrv @259 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::Disconnect()
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@EscapeString$qqrpcpxcui @256 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::EscapeString(char *, const char *, unsigned int)
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@GetAffectedRows$qqrv @255 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::GetAffectedRows()
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@GetCharacterSetInfo$qqrr37Firedac@Phys@Mysqlcli@MY_CHARSET_INFO @237 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::GetCharacterSetInfo(Firedac::Phys::Mysqlcli::MY_CHARSET_INFO&)
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@GetCharacterSetName$qqrv @236 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::GetCharacterSetName()
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@GetClientInfo$qqrv @253 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::GetClientInfo()
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@GetClientVersion$qqrv @252 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::GetClientVersion()
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@GetDB$qqrv @241 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::GetDB()
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@GetHasMoreResults$qqrv @234 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::GetHasMoreResults()
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@GetHostInfo$qqrv @239 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::GetHostInfo()
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@GetInsert_ID$qqrv @238 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::GetInsert_ID()
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@GetSSLCipher$qqrv @261 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::GetSSLCipher()
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@GetServerInfo$qqrv @251 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::GetServerInfo()
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@GetServerOutput$qqrv @248 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::GetServerOutput()
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@GetServerVersion$qqrv @250 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::GetServerVersion()
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@GetWarningCount$qqrv @254 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::GetWarningCount()
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@Init$qqrv @263 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::Init()
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@KillQuery$qqrv @258 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::KillQuery()
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@MoreResults$qqrv @243 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::MoreResults()
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@NextResult$qqrv @242 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::NextResult()
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@Ping$qqrv @257 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::Ping()
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@ProcessError$qqruip14System@TObject @267 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::ProcessError(unsigned int, System::TObject *)
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@Query$qqrx20System@UnicodeStringp14System@TObject @246 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::Query(const System::UnicodeString, System::TObject *)
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@QuerySB$qqrx31System@%AnsiStringT$us$i65535$%p14System@TObject @247 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::QuerySB(const System::AnsiStringT<65535>, System::TObject *)
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@SSLInit$qqrx20System@UnicodeStringt1t1t1t1 @262 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::SSLInit(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@SetCharacterSetName$qqrx20System@UnicodeString @235 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::SetCharacterSetName(const System::UnicodeString)
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@SetDB$qqrx20System@UnicodeString @240 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::SetDB(const System::UnicodeString)
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@SetInfo$qqrpct1i @265 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::SetInfo(char *, char *, int)
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@SetOptions$qqripxuc @249 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::SetOptions(int, const unsigned char *)
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@StoreResult$qqrv @245 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::StoreResult()
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@Trace$qqr34Firedac@Stan@Intf@TFDMoniEventKind34Firedac@Stan@Intf@TFDMoniEventStepx20System@UnicodeStringpx14System@TVarRecxi @268 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::Trace(Firedac::Stan::Intf::TFDMoniEventKind, Firedac::Stan::Intf::TFDMoniEventStep, const System::UnicodeString, const System::TVarRec *, const int)
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@Trace$qqrx20System@UnicodeStringpx14System@TVarRecxi @269 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::Trace(const System::UnicodeString, const System::TVarRec *, const int)
+    @Firedac@Phys@Mysqlwrapper@TMySQLSession@UseResult$qqrv @244 ; __fastcall Firedac::Phys::Mysqlwrapper::TMySQLSession::UseResult()
+    @Firedac@Phys@Mysqlwrapper@initialization$qqrv @223 ; __fastcall Firedac::Phys::Mysqlwrapper::initialization()
+    @Firedacmysqldriver@@GetPackageInfoTable$qqrv @353 ; Firedacmysqldriver::__linkproc__ __fastcall GetPackageInfoTable()
+    @Firedacmysqldriver@@PackageLoad$qqrv @352 ; Firedacmysqldriver::__linkproc__ __fastcall PackageLoad()
+    @Firedacmysqldriver@@PackageUnload$qqrv @351 ; Firedacmysqldriver::__linkproc__ __fastcall PackageUnload()
+    @Firedacmysqldriver@initialization$qqrv @350 ; __fastcall Firedacmysqldriver::initialization()
+    @GetPackageInfoTable           @356 ; GetPackageInfoTable
+    Finalize                       @354 ; Finalize
+    Initialize                     @355 ; Initialize

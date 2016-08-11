@@ -1,0 +1,143 @@
+LIBRARY     VCLSMP210.BPL
+
+DESCRIPTION 'mbarcadero Sample Components'
+
+EXPORTS
+    @$xp$25Vcl@Samples@Gauges@TGauge @129 ; __tpdsc__ Vcl::Samples::Gauges::TGauge
+    @$xp$26Vcl@Samples@Spin@TSpinEdit @105 ; __tpdsc__ Vcl::Samples::Spin::TSpinEdit
+    @$xp$28Vcl@Samples@Spin@TSpinButton @107 ; __tpdsc__ Vcl::Samples::Spin::TSpinButton
+    @$xp$29Vcl@Samples@Gauges@TGaugeKind @131 ; __tpdsc__ Vcl::Samples::Gauges::TGaugeKind
+    @$xp$30Vcl@Samples@Calendar@TCalendar @25  ; __tpdsc__ Vcl::Samples::Calendar::TCalendar
+    @$xp$30Vcl@Samples@Diroutln@TTextCase @50  ; __tpdsc__ Vcl::Samples::Diroutln::TTextCase
+    @$xp$30Vcl@Samples@Spin@TTimeBtnState @103 ; __tpdsc__ Vcl::Samples::Spin::TTimeBtnState
+    @$xp$31Vcl@Samples@Calendar@TDayOfWeek @27  ; __tpdsc__ Vcl::Samples::Calendar::TDayOfWeek
+    @$xp$34Vcl@Samples@Diroutln@TCaseFunction @49  ; __tpdsc__ Vcl::Samples::Diroutln::TCaseFunction
+    @$xp$34Vcl@Samples@Spin@TTimerSpeedButton @101 ; __tpdsc__ Vcl::Samples::Spin::TTimerSpeedButton
+    @$xp$36Vcl@Samples@Spin@Vcl_Samples_Spin__3 @104 ; __tpdsc__ Vcl::Samples::Spin::Vcl_Samples_Spin__3
+    @$xp$38Vcl@Samples@Diroutln@TDirectoryOutline @47  ; __tpdsc__ Vcl::Samples::Diroutln::TDirectoryOutline
+    @GetPackageInfoTable           @138 ; GetPackageInfoTable
+    @Vcl@Samples@Calendar@Finalization$qqrv @2   ; __fastcall Vcl::Samples::Calendar::Finalization()
+    @Vcl@Samples@Calendar@TCalendar@ @26  ; Vcl::Samples::Calendar::TCalendar::
+    @Vcl@Samples@Calendar@TCalendar@$bctr$qqrp25System@Classes@TComponent @24  ; __fastcall Vcl::Samples::Calendar::TCalendar::TCalendar(System::Classes::TComponent *)
+    @Vcl@Samples@Calendar@TCalendar@Change$qqrv @23  ; __fastcall Vcl::Samples::Calendar::TCalendar::Change()
+    @Vcl@Samples@Calendar@TCalendar@ChangeMonth$qqri @9   ; __fastcall Vcl::Samples::Calendar::TCalendar::ChangeMonth(int)
+    @Vcl@Samples@Calendar@TCalendar@Click$qqrv @22  ; __fastcall Vcl::Samples::Calendar::TCalendar::Click()
+    @Vcl@Samples@Calendar@TCalendar@DaysPerMonth$qqrii @20  ; __fastcall Vcl::Samples::Calendar::TCalendar::DaysPerMonth(int, int)
+    @Vcl@Samples@Calendar@TCalendar@DaysThisMonth$qqrv @19  ; __fastcall Vcl::Samples::Calendar::TCalendar::DaysThisMonth()
+    @Vcl@Samples@Calendar@TCalendar@DrawCell$qqriirx18System@Types@TRect49System@%Set$22Vcl@Grids@Vcl_Grids__3t1$i0$t1$i5$% @18  ; Vcl::Samples::Calendar::TCalendar::DrawCell(int, int, const System::Types::TRect&, System::Set<{583}...
+    @Vcl@Samples@Calendar@TCalendar@GetCellText$qqrii @17  ; __fastcall Vcl::Samples::Calendar::TCalendar::GetCellText(int, int)
+    @Vcl@Samples@Calendar@TCalendar@GetDateElement$qqri @13  ; __fastcall Vcl::Samples::Calendar::TCalendar::GetDateElement(int)
+    @Vcl@Samples@Calendar@TCalendar@IsLeapYear$qqri @21  ; __fastcall Vcl::Samples::Calendar::TCalendar::IsLeapYear(int)
+    @Vcl@Samples@Calendar@TCalendar@NextMonth$qqrv @7   ; __fastcall Vcl::Samples::Calendar::TCalendar::NextMonth()
+    @Vcl@Samples@Calendar@TCalendar@NextYear$qqrv @6   ; __fastcall Vcl::Samples::Calendar::TCalendar::NextYear()
+    @Vcl@Samples@Calendar@TCalendar@PrevMonth$qqrv @8   ; __fastcall Vcl::Samples::Calendar::TCalendar::PrevMonth()
+    @Vcl@Samples@Calendar@TCalendar@PrevYear$qqrv @5   ; __fastcall Vcl::Samples::Calendar::TCalendar::PrevYear()
+    @Vcl@Samples@Calendar@TCalendar@SelectCell$qqrii @16  ; __fastcall Vcl::Samples::Calendar::TCalendar::SelectCell(int, int)
+    @Vcl@Samples@Calendar@TCalendar@SetCalendarDate$qqr16System@TDateTime @15  ; __fastcall Vcl::Samples::Calendar::TCalendar::SetCalendarDate(System::TDateTime)
+    @Vcl@Samples@Calendar@TCalendar@SetDateElement$qqrii @12  ; __fastcall Vcl::Samples::Calendar::TCalendar::SetDateElement(int, int)
+    @Vcl@Samples@Calendar@TCalendar@SetStartOfWeek$qqrzc @11  ; __fastcall Vcl::Samples::Calendar::TCalendar::SetStartOfWeek(signed char)
+    @Vcl@Samples@Calendar@TCalendar@SetUseCurrentDate$qqro @10  ; __fastcall Vcl::Samples::Calendar::TCalendar::SetUseCurrentDate(bool)
+    @Vcl@Samples@Calendar@TCalendar@StoreCalendarDate$qqrv @14  ; __fastcall Vcl::Samples::Calendar::TCalendar::StoreCalendarDate()
+    @Vcl@Samples@Calendar@TCalendar@UpdateCalendar$qqrv @4   ; __fastcall Vcl::Samples::Calendar::TCalendar::UpdateCalendar()
+    @Vcl@Samples@Calendar@TCalendar@WMSize$qqrr23Winapi@Messages@TWMSize @3   ; __fastcall Vcl::Samples::Calendar::TCalendar::WMSize(Winapi::Messages::TWMSize&)
+    @Vcl@Samples@Calendar@initialization$qqrv @1   ; __fastcall Vcl::Samples::Calendar::initialization()
+    @Vcl@Samples@Diroutln@Finalization$qqrv @29  ; __fastcall Vcl::Samples::Diroutln::Finalization()
+    @Vcl@Samples@Diroutln@SameLetter$qqrbb @30  ; __fastcall Vcl::Samples::Diroutln::SameLetter(wchar_t, wchar_t)
+    @Vcl@Samples@Diroutln@TDirectoryOutline@ @48  ; Vcl::Samples::Diroutln::TDirectoryOutline::
+    @Vcl@Samples@Diroutln@TDirectoryOutline@$bctr$qqrp25System@Classes@TComponent @46  ; __fastcall Vcl::Samples::Diroutln::TDirectoryOutline::TDirectoryOutline(System::Classes::TComponent *)
+    @Vcl@Samples@Diroutln@TDirectoryOutline@AssignCaseProc$qqrv @45  ; __fastcall Vcl::Samples::Diroutln::TDirectoryOutline::AssignCaseProc()
+    @Vcl@Samples@Diroutln@TDirectoryOutline@BuildOneLevel$qqri @43  ; __fastcall Vcl::Samples::Diroutln::TDirectoryOutline::BuildOneLevel(int)
+    @Vcl@Samples@Diroutln@TDirectoryOutline@BuildSubTree$qqri @41  ; __fastcall Vcl::Samples::Diroutln::TDirectoryOutline::BuildSubTree(int)
+    @Vcl@Samples@Diroutln@TDirectoryOutline@BuildTree$qqrv @42  ; __fastcall Vcl::Samples::Diroutln::TDirectoryOutline::BuildTree()
+    @Vcl@Samples@Diroutln@TDirectoryOutline@Change$qqrv @40  ; __fastcall Vcl::Samples::Diroutln::TDirectoryOutline::Change()
+    @Vcl@Samples@Diroutln@TDirectoryOutline@Click$qqrv @39  ; __fastcall Vcl::Samples::Diroutln::TDirectoryOutline::Click()
+    @Vcl@Samples@Diroutln@TDirectoryOutline@CreateWnd$qqrv @38  ; __fastcall Vcl::Samples::Diroutln::TDirectoryOutline::CreateWnd()
+    @Vcl@Samples@Diroutln@TDirectoryOutline@Expand$qqri @37  ; __fastcall Vcl::Samples::Diroutln::TDirectoryOutline::Expand(int)
+    @Vcl@Samples@Diroutln@TDirectoryOutline@FindIndex$qqrp24Vcl@Outline@TOutlineNode20System@UnicodeString @44  ; __fastcall Vcl::Samples::Diroutln::TDirectoryOutline::FindIndex(Vcl::Outline::TOutlineNode *, System::UnicodeString)
+    @Vcl@Samples@Diroutln@TDirectoryOutline@ForceCase$qqrx20System@UnicodeString @36  ; __fastcall Vcl::Samples::Diroutln::TDirectoryOutline::ForceCase(const System::UnicodeString)
+    @Vcl@Samples@Diroutln@TDirectoryOutline@Loaded$qqrv @35  ; __fastcall Vcl::Samples::Diroutln::TDirectoryOutline::Loaded()
+    @Vcl@Samples@Diroutln@TDirectoryOutline@SetDirectory$qqrx20System@UnicodeString @34  ; __fastcall Vcl::Samples::Diroutln::TDirectoryOutline::SetDirectory(const System::UnicodeString)
+    @Vcl@Samples@Diroutln@TDirectoryOutline@SetDrive$qqrb @33  ; __fastcall Vcl::Samples::Diroutln::TDirectoryOutline::SetDrive(wchar_t)
+    @Vcl@Samples@Diroutln@TDirectoryOutline@SetTextCase$qqr30Vcl@Samples@Diroutln@TTextCase @32  ; __fastcall Vcl::Samples::Diroutln::TDirectoryOutline::SetTextCase(Vcl::Samples::Diroutln::TTextCase)
+    @Vcl@Samples@Diroutln@TDirectoryOutline@WalkTree$qqrx20System@UnicodeString @31  ; __fastcall Vcl::Samples::Diroutln::TDirectoryOutline::WalkTree(const System::UnicodeString)
+    @Vcl@Samples@Diroutln@initialization$qqrv @28  ; __fastcall Vcl::Samples::Diroutln::initialization()
+    @Vcl@Samples@Gauges@Finalization$qqrv @110 ; __fastcall Vcl::Samples::Gauges::Finalization()
+    @Vcl@Samples@Gauges@TGauge@    @130 ; Vcl::Samples::Gauges::TGauge::
+    @Vcl@Samples@Gauges@TGauge@$bctr$qqrp25System@Classes@TComponent @128 ; __fastcall Vcl::Samples::Gauges::TGauge::TGauge(System::Classes::TComponent *)
+    @Vcl@Samples@Gauges@TGauge@AddProgress$qqri @111 ; __fastcall Vcl::Samples::Gauges::TGauge::AddProgress(int)
+    @Vcl@Samples@Gauges@TGauge@GetPercentDone$qqrv @127 ; __fastcall Vcl::Samples::Gauges::TGauge::GetPercentDone()
+    @Vcl@Samples@Gauges@TGauge@Paint$qqrv @126 ; __fastcall Vcl::Samples::Gauges::TGauge::Paint()
+    @Vcl@Samples@Gauges@TGauge@PaintAsBar$qqrp20Vcl@Graphics@TBitmaprx18System@Types@TRect @122 ; __fastcall Vcl::Samples::Gauges::TGauge::PaintAsBar(Vcl::Graphics::TBitmap *, const System::Types::TRect&)
+    @Vcl@Samples@Gauges@TGauge@PaintAsNeedle$qqrp20Vcl@Graphics@TBitmaprx18System@Types@TRect @120 ; __fastcall Vcl::Samples::Gauges::TGauge::PaintAsNeedle(Vcl::Graphics::TBitmap *, const System::Types::TRect&)
+    @Vcl@Samples@Gauges@TGauge@PaintAsNothing$qqrp20Vcl@Graphics@TBitmaprx18System@Types@TRect @123 ; __fastcall Vcl::Samples::Gauges::TGauge::PaintAsNothing(Vcl::Graphics::TBitmap *, const System::Types::TRect&)
+    @Vcl@Samples@Gauges@TGauge@PaintAsPie$qqrp20Vcl@Graphics@TBitmaprx18System@Types@TRect @121 ; __fastcall Vcl::Samples::Gauges::TGauge::PaintAsPie(Vcl::Graphics::TBitmap *, const System::Types::TRect&)
+    @Vcl@Samples@Gauges@TGauge@PaintAsText$qqrp20Vcl@Graphics@TBitmaprx18System@Types@TRect @124 ; __fastcall Vcl::Samples::Gauges::TGauge::PaintAsText(Vcl::Graphics::TBitmap *, const System::Types::TRect&)
+    @Vcl@Samples@Gauges@TGauge@PaintBackground$qqrp20Vcl@Graphics@TBitmap @125 ; __fastcall Vcl::Samples::Gauges::TGauge::PaintBackground(Vcl::Graphics::TBitmap *)
+    @Vcl@Samples@Gauges@TGauge@SetBackColor$qqr21System@Uitypes@TColor @115 ; __fastcall Vcl::Samples::Gauges::TGauge::SetBackColor(System::Uitypes::TColor)
+    @Vcl@Samples@Gauges@TGauge@SetBorderStyle$qqr26Vcl@Forms@TFormBorderStyle @117 ; __fastcall Vcl::Samples::Gauges::TGauge::SetBorderStyle(Vcl::Forms::TFormBorderStyle)
+    @Vcl@Samples@Gauges@TGauge@SetForeColor$qqr21System@Uitypes@TColor @116 ; __fastcall Vcl::Samples::Gauges::TGauge::SetForeColor(System::Uitypes::TColor)
+    @Vcl@Samples@Gauges@TGauge@SetGaugeKind$qqr29Vcl@Samples@Gauges@TGaugeKind @119 ; __fastcall Vcl::Samples::Gauges::TGauge::SetGaugeKind(Vcl::Samples::Gauges::TGaugeKind)
+    @Vcl@Samples@Gauges@TGauge@SetMaxValue$qqri @113 ; __fastcall Vcl::Samples::Gauges::TGauge::SetMaxValue(int)
+    @Vcl@Samples@Gauges@TGauge@SetMinValue$qqri @114 ; __fastcall Vcl::Samples::Gauges::TGauge::SetMinValue(int)
+    @Vcl@Samples@Gauges@TGauge@SetProgress$qqri @112 ; __fastcall Vcl::Samples::Gauges::TGauge::SetProgress(int)
+    @Vcl@Samples@Gauges@TGauge@SetShowText$qqro @118 ; __fastcall Vcl::Samples::Gauges::TGauge::SetShowText(bool)
+    @Vcl@Samples@Gauges@initialization$qqrv @109 ; __fastcall Vcl::Samples::Gauges::initialization()
+    @Vcl@Samples@Spin@Finalization$qqrv @52  ; __fastcall Vcl::Samples::Spin::Finalization()
+    @Vcl@Samples@Spin@TSpinButton@ @108 ; Vcl::Samples::Spin::TSpinButton::
+    @Vcl@Samples@Spin@TSpinButton@$bctr$qqrp25System@Classes@TComponent @100 ; __fastcall Vcl::Samples::Spin::TSpinButton::TSpinButton(System::Classes::TComponent *)
+    @Vcl@Samples@Spin@TSpinButton@AdjustSize$qqrrit1 @97  ; __fastcall Vcl::Samples::Spin::TSpinButton::AdjustSize(int&, int&)
+    @Vcl@Samples@Spin@TSpinButton@BtnClick$qqrp14System@TObject @90  ; __fastcall Vcl::Samples::Spin::TSpinButton::BtnClick(System::TObject *)
+    @Vcl@Samples@Spin@TSpinButton@BtnMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @91  ; Vcl::Samples::Spin::TSpinButton::BtnMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Vcl@Samples@Spin@TSpinButton@CreateButton$qqrv @99  ; __fastcall Vcl::Samples::Spin::TSpinButton::CreateButton()
+    @Vcl@Samples@Spin@TSpinButton@GetDownGlyph$qqrv @82  ; __fastcall Vcl::Samples::Spin::TSpinButton::GetDownGlyph()
+    @Vcl@Samples@Spin@TSpinButton@GetDownNumGlyphs$qqrv @80  ; __fastcall Vcl::Samples::Spin::TSpinButton::GetDownNumGlyphs()
+    @Vcl@Samples@Spin@TSpinButton@GetUpGlyph$qqrv @86  ; __fastcall Vcl::Samples::Spin::TSpinButton::GetUpGlyph()
+    @Vcl@Samples@Spin@TSpinButton@GetUpNumGlyphs$qqrv @84  ; __fastcall Vcl::Samples::Spin::TSpinButton::GetUpNumGlyphs()
+    @Vcl@Samples@Spin@TSpinButton@KeyDown$qqrrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @92  ; Vcl::Samples::Spin::TSpinButton::KeyDown(unsigned short&, System::Set<{583}...
+    @Vcl@Samples@Spin@TSpinButton@Loaded$qqrv @87  ; __fastcall Vcl::Samples::Spin::TSpinButton::Loaded()
+    @Vcl@Samples@Spin@TSpinButton@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @98  ; __fastcall Vcl::Samples::Spin::TSpinButton::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Vcl@Samples@Spin@TSpinButton@SetBounds$qqriiii @96  ; __fastcall Vcl::Samples::Spin::TSpinButton::SetBounds(int, int, int, int)
+    @Vcl@Samples@Spin@TSpinButton@SetDownGlyph$qqrp20Vcl@Graphics@TBitmap @81  ; __fastcall Vcl::Samples::Spin::TSpinButton::SetDownGlyph(Vcl::Graphics::TBitmap *)
+    @Vcl@Samples@Spin@TSpinButton@SetDownNumGlyphs$qqrzc @79  ; __fastcall Vcl::Samples::Spin::TSpinButton::SetDownNumGlyphs(signed char)
+    @Vcl@Samples@Spin@TSpinButton@SetFocusBtn$qqrp34Vcl@Samples@Spin@TTimerSpeedButton @89  ; __fastcall Vcl::Samples::Spin::TSpinButton::SetFocusBtn(Vcl::Samples::Spin::TTimerSpeedButton *)
+    @Vcl@Samples@Spin@TSpinButton@SetUpGlyph$qqrp20Vcl@Graphics@TBitmap @85  ; __fastcall Vcl::Samples::Spin::TSpinButton::SetUpGlyph(Vcl::Graphics::TBitmap *)
+    @Vcl@Samples@Spin@TSpinButton@SetUpNumGlyphs$qqrzc @83  ; __fastcall Vcl::Samples::Spin::TSpinButton::SetUpNumGlyphs(signed char)
+    @Vcl@Samples@Spin@TSpinButton@WMGetDlgCode$qqrr27Winapi@Messages@TWMNoParams @88  ; __fastcall Vcl::Samples::Spin::TSpinButton::WMGetDlgCode(Winapi::Messages::TWMNoParams&)
+    @Vcl@Samples@Spin@TSpinButton@WMKillFocus$qqrr28Winapi@Messages@TWMKillFocus @93  ; __fastcall Vcl::Samples::Spin::TSpinButton::WMKillFocus(Winapi::Messages::TWMKillFocus&)
+    @Vcl@Samples@Spin@TSpinButton@WMSetFocus$qqrr27Winapi@Messages@TWMSetFocus @94  ; __fastcall Vcl::Samples::Spin::TSpinButton::WMSetFocus(Winapi::Messages::TWMSetFocus&)
+    @Vcl@Samples@Spin@TSpinButton@WMSize$qqrr23Winapi@Messages@TWMSize @95  ; __fastcall Vcl::Samples::Spin::TSpinButton::WMSize(Winapi::Messages::TWMSize&)
+    @Vcl@Samples@Spin@TSpinEdit@   @106 ; Vcl::Samples::Spin::TSpinEdit::
+    @Vcl@Samples@Spin@TSpinEdit@$bctr$qqrp25System@Classes@TComponent @78  ; __fastcall Vcl::Samples::Spin::TSpinEdit::TSpinEdit(System::Classes::TComponent *)
+    @Vcl@Samples@Spin@TSpinEdit@$bdtr$qqrv @77  ; __fastcall Vcl::Samples::Spin::TSpinEdit::~TSpinEdit()
+    @Vcl@Samples@Spin@TSpinEdit@CMEnter$qqrr27Winapi@Messages@TWMNoParams @58  ; __fastcall Vcl::Samples::Spin::TSpinEdit::CMEnter(Winapi::Messages::TWMNoParams&)
+    @Vcl@Samples@Spin@TSpinEdit@CMExit$qqrr27Winapi@Messages@TWMNoParams @62  ; __fastcall Vcl::Samples::Spin::TSpinEdit::CMExit(Winapi::Messages::TWMNoParams&)
+    @Vcl@Samples@Spin@TSpinEdit@CheckValue$qqri @59  ; __fastcall Vcl::Samples::Spin::TSpinEdit::CheckValue(int)
+    @Vcl@Samples@Spin@TSpinEdit@CreateParams$qqrr26Vcl@Controls@TCreateParams @72  ; __fastcall Vcl::Samples::Spin::TSpinEdit::CreateParams(Vcl::Controls::TCreateParams&)
+    @Vcl@Samples@Spin@TSpinEdit@CreateWnd$qqrv @71  ; __fastcall Vcl::Samples::Spin::TSpinEdit::CreateWnd()
+    @Vcl@Samples@Spin@TSpinEdit@DownClick$qqrp14System@TObject @66  ; __fastcall Vcl::Samples::Spin::TSpinEdit::DownClick(System::TObject *)
+    @Vcl@Samples@Spin@TSpinEdit@GetChildren$qqrynpqqrp25System@Classes@TComponent$vp25System@Classes@TComponent @76  ; __fastcall Vcl::Samples::Spin::TSpinEdit::GetChildren(void __fastcall __closure(*)(System::Classes::TComponent *), System::Classes::TComponent *)
+    @Vcl@Samples@Spin@TSpinEdit@GetMinHeight$qqrv @68  ; __fastcall Vcl::Samples::Spin::TSpinEdit::GetMinHeight()
+    @Vcl@Samples@Spin@TSpinEdit@GetValue$qqrv @61  ; __fastcall Vcl::Samples::Spin::TSpinEdit::GetValue()
+    @Vcl@Samples@Spin@TSpinEdit@IsValidChar$qqrb @73  ; __fastcall Vcl::Samples::Spin::TSpinEdit::IsValidChar(wchar_t)
+    @Vcl@Samples@Spin@TSpinEdit@KeyDown$qqrrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @75  ; Vcl::Samples::Spin::TSpinEdit::KeyDown(unsigned short&, System::Set<{583}...
+    @Vcl@Samples@Spin@TSpinEdit@KeyPress$qqrrb @74  ; __fastcall Vcl::Samples::Spin::TSpinEdit::KeyPress(wchar_t&)
+    @Vcl@Samples@Spin@TSpinEdit@SetEditRect$qqrv @70  ; __fastcall Vcl::Samples::Spin::TSpinEdit::SetEditRect()
+    @Vcl@Samples@Spin@TSpinEdit@SetValue$qqri @60  ; __fastcall Vcl::Samples::Spin::TSpinEdit::SetValue(int)
+    @Vcl@Samples@Spin@TSpinEdit@UpClick$qqrp14System@TObject @67  ; __fastcall Vcl::Samples::Spin::TSpinEdit::UpClick(System::TObject *)
+    @Vcl@Samples@Spin@TSpinEdit@WMCut$qqrr27Winapi@Messages@TWMNoParams @64  ; __fastcall Vcl::Samples::Spin::TSpinEdit::WMCut(Winapi::Messages::TWMNoParams&)
+    @Vcl@Samples@Spin@TSpinEdit@WMGetDlgCode$qqrr27Winapi@Messages@TWMNoParams @63  ; __fastcall Vcl::Samples::Spin::TSpinEdit::WMGetDlgCode(Winapi::Messages::TWMNoParams&)
+    @Vcl@Samples@Spin@TSpinEdit@WMPaste$qqrr27Winapi@Messages@TWMNoParams @65  ; __fastcall Vcl::Samples::Spin::TSpinEdit::WMPaste(Winapi::Messages::TWMNoParams&)
+    @Vcl@Samples@Spin@TSpinEdit@WMSize$qqrr23Winapi@Messages@TWMSize @69  ; __fastcall Vcl::Samples::Spin::TSpinEdit::WMSize(Winapi::Messages::TWMSize&)
+    @Vcl@Samples@Spin@TTimerSpeedButton@ @102 ; Vcl::Samples::Spin::TTimerSpeedButton::
+    @Vcl@Samples@Spin@TTimerSpeedButton@$bdtr$qqrv @57  ; __fastcall Vcl::Samples::Spin::TTimerSpeedButton::~TTimerSpeedButton()
+    @Vcl@Samples@Spin@TTimerSpeedButton@MouseDown$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @56  ; Vcl::Samples::Spin::TTimerSpeedButton::MouseDown(System::Uitypes::TMouseButton, System::Set<{583}...
+    @Vcl@Samples@Spin@TTimerSpeedButton@MouseUp$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @55  ; Vcl::Samples::Spin::TTimerSpeedButton::MouseUp(System::Uitypes::TMouseButton, System::Set<{583}...
+    @Vcl@Samples@Spin@TTimerSpeedButton@Paint$qqrv @53  ; __fastcall Vcl::Samples::Spin::TTimerSpeedButton::Paint()
+    @Vcl@Samples@Spin@TTimerSpeedButton@TimerExpired$qqrp14System@TObject @54  ; __fastcall Vcl::Samples::Spin::TTimerSpeedButton::TimerExpired(System::TObject *)
+    @Vcl@Samples@Spin@initialization$qqrv @51  ; __fastcall Vcl::Samples::Spin::initialization()
+    @Vclsmp@@GetPackageInfoTable$qqrv @135 ; Vclsmp::__linkproc__ __fastcall GetPackageInfoTable()
+    @Vclsmp@@PackageLoad$qqrv      @134 ; Vclsmp::__linkproc__ __fastcall PackageLoad()
+    @Vclsmp@@PackageUnload$qqrv    @133 ; Vclsmp::__linkproc__ __fastcall PackageUnload()
+    @Vclsmp@initialization$qqrv    @132 ; __fastcall Vclsmp::initialization()
+    Finalize                       @136 ; Finalize
+    Initialize                     @137 ; Initialize

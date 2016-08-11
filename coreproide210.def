@@ -1,0 +1,425 @@
+LIBRARY     COREPROIDE210.BPL
+
+DESCRIPTION 'mbarcadero Professional Core IDE Package'
+
+EXPORTS
+    @$xp$20Dbglog@TDebugLogView    @28  ; __tpdsc__ Dbglog::TDebugLogView
+    @$xp$22Thrdstat@TThreadStatus  @61  ; __tpdsc__ Thrdstat::TThreadStatus
+    @$xp$25Modviewadd@TAddModuleForm @129 ; __tpdsc__ Modviewadd::TAddModuleForm
+    @$xp$26Localvars@TLocalVarsWindow @113 ; __tpdsc__ Localvars::TLocalVarsWindow
+    @$xp$27Coreprocmd@TCoreProCommands @379 ; __tpdsc__ Coreprocmd::TCoreProCommands
+    @$xp$28Basemodulesview@TModulesView @199 ; __tpdsc__ Basemodulesview::TModulesView
+    @$xp$28Classexplorermodel@TInfoNode @349 ; __tpdsc__ Classexplorermodel::TInfoNode
+    @$xp$30Basemodulesview@PModViewLayout @202 ; __tpdsc__ Basemodulesview::PModViewLayout
+    @$xp$30Basemodulesview@TModViewLayout @203 ; __tpdsc__ Basemodulesview::TModViewLayout
+    @$xp$31Basemodulesview@TModuleInfoType @201 ; __tpdsc__ Basemodulesview::TModuleInfoType
+    @$xp$31Modexplorerform@TPasModExpFrame @254 ; __tpdsc__ Modexplorerform::TPasModExpFrame
+    @$xp$33Classexplorermodel@TInfoNodeArray @347 ; __tpdsc__ Classexplorermodel::TInfoNodeArray
+    @$xp$34Basemodulesview@_TModViewLayout@_1 @205 ; __tpdsc__ Basemodulesview::_TModViewLayout::_1
+    @$xp$34Basemodulesview@_TModViewLayout@_2 @204 ; __tpdsc__ Basemodulesview::_TModViewLayout::_2
+    @$xp$34Classexplorermodel@TClassModelNode @344 ; __tpdsc__ Classexplorermodel::TClassModelNode
+    @$xp$36Debuglogoptdlg@TDebuggerLogOptDialog @4   ; __tpdsc__ Debuglogoptdlg::TDebuggerLogOptDialog
+    @$xp$36Modulesvieweditview@TModulesEditView @227 ; __tpdsc__ Modulesvieweditview::TModulesEditView
+    @$xp$37Classexplorermodel@TClassExplorerData @354 ; __tpdsc__ Classexplorermodel::TClassExplorerData
+    @$xp$39Classexplorermodel@TClassModelNodeArray @346 ; __tpdsc__ Classexplorermodel::TClassModelNodeArray
+    @$xp$42Debuggerlogoptions@TDebuggerLogOptionsPage @393 ; __tpdsc__ Debuggerlogoptions::TDebuggerLogOptionsPage
+    @$xp$44Classexplorermodel@IClassExplorerEditorHooks @353 ; __tpdsc__ Classexplorermodel::IClassExplorerEditorHooks
+    @$xp$44Classexplorermodel@IProjectClassModelManager @348 ; __tpdsc__ Classexplorermodel::IProjectClassModelManager
+    @$xp$44Classexplorermodel@TClassExplorerEditorHooks @351 ; __tpdsc__ Classexplorermodel::TClassExplorerEditorHooks
+    @$xp$45Debuggerremoteoptions@TDebuggerRemotePageHide @403 ; __tpdsc__ Debuggerremoteoptions::TDebuggerRemotePageHide
+    @$xp$57Debuggerloadprocremotepage@TDebuggerLoadProcessRemotePage @412 ; __tpdsc__ Debuggerloadprocremotepage::TDebuggerLoadProcessRemotePage
+    @Basemodulesview@Finalization$qqrv @132 ; __fastcall Basemodulesview::Finalization()
+    @Basemodulesview@TModulesView@ @200 ; Basemodulesview::TModulesView::
+    @Basemodulesview@TModulesView@$bctr$qqrp25System@Classes@TComponent @198 ; __fastcall Basemodulesview::TModulesView::TModulesView(System::Classes::TComponent *)
+    @Basemodulesview@TModulesView@$bdtr$qqrv @197 ; __fastcall Basemodulesview::TModulesView::~TModulesView()
+    @Basemodulesview@TModulesView@AddModuleItemClick$qqrp14System@TObject @167 ; __fastcall Basemodulesview::TModulesView::AddModuleItemClick(System::TObject *)
+    @Basemodulesview@TModulesView@BreakonLoadItemClick$qqrp14System@TObject @168 ; __fastcall Basemodulesview::TModulesView::BreakonLoadItemClick(System::TObject *)
+    @Basemodulesview@TModulesView@BreakpointAdded$qqrp14System@TObjectx50System@%DelphiInterface$23Toolsapi@IOTABreakpoint% @189 ; Basemodulesview::TModulesView::BreakpointAdded(System::TObject *, const System::DelphiInterface<{583}...
+    @Basemodulesview@TModulesView@BreakpointChanged$qqrp14System@TObjectx50System@%DelphiInterface$23Toolsapi@IOTABreakpoint% @188 ; Basemodulesview::TModulesView::BreakpointChanged(System::TObject *, const System::DelphiInterface<{583}...
+    @Basemodulesview@TModulesView@BreakpointDeleted$qqrp14System@TObjectx50System@%DelphiInterface$23Toolsapi@IOTABreakpoint% @187 ; Basemodulesview::TModulesView::BreakpointDeleted(System::TObject *, const System::DelphiInterface<{583}...
+    @Basemodulesview@TModulesView@BrowseClassItemClick$qqrp14System@TObject @145 ; __fastcall Basemodulesview::TModulesView::BrowseClassItemClick(System::TObject *)
+    @Basemodulesview@TModulesView@Cleanup$qqrv @179 ; __fastcall Basemodulesview::TModulesView::Cleanup()
+    @Basemodulesview@TModulesView@CloseWindowItemClick$qqrp14System@TObject @164 ; __fastcall Basemodulesview::TModulesView::CloseWindowItemClick(System::TObject *)
+    @Basemodulesview@TModulesView@CurrentDebuggerChanged$qqrp14System@TObject @193 ; __fastcall Basemodulesview::TModulesView::CurrentDebuggerChanged(System::TObject *)
+    @Basemodulesview@TModulesView@CurrentProcessChanged$qqrp14System@TObjectx47System@%DelphiInterface$20Toolsapi@IOTAProcess% @194 ; Basemodulesview::TModulesView::CurrentProcessChanged(System::TObject *, const System::DelphiInterface<{583}...
+    @Basemodulesview@TModulesView@DeleteUnloadedModuleNode$qqrx53System@%DelphiInterface$26Toolsapi@IOTAProcessModule% @172 ; Basemodulesview::TModulesView::DeleteUnloadedModuleNode(const System::DelphiInterface<{583}...
+    @Basemodulesview@TModulesView@DownPaneItemClick$qqrp14System@TObject @161 ; __fastcall Basemodulesview::TModulesView::DownPaneItemClick(System::TObject *)
+    @Basemodulesview@TModulesView@EditAction$qqr22Designintf@TEditAction @163 ; __fastcall Basemodulesview::TModulesView::EditAction(Designintf::TEditAction)
+    @Basemodulesview@TModulesView@EditSourceItemClick$qqrp14System@TObject @170 ; __fastcall Basemodulesview::TModulesView::EditSourceItemClick(System::TObject *)
+    @Basemodulesview@TModulesView@EditViewSource$qqro @183 ; __fastcall Basemodulesview::TModulesView::EditViewSource(bool)
+    @Basemodulesview@TModulesView@EntryPointPopupMenuPopup$qqrp14System@TObject @140 ; __fastcall Basemodulesview::TModulesView::EntryPointPopupMenuPopup(System::TObject *)
+    @Basemodulesview@TModulesView@GenericIncrementalSearch$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodex17System@WideStringri @133 ; __fastcall Basemodulesview::TModulesView::GenericIncrementalSearch(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, const System::WideString, int&)
+    @Basemodulesview@TModulesView@GetEditState$qqrv @162 ; __fastcall Basemodulesview::TModulesView::GetEditState()
+    @Basemodulesview@TModulesView@GetLayout$qqrv @155 ; __fastcall Basemodulesview::TModulesView::GetLayout()
+    @Basemodulesview@TModulesView@GetModLoadBreakpointList$qqrrp26System@Classes@TStringListo @181 ; __fastcall Basemodulesview::TModulesView::GetModLoadBreakpointList(System::Classes::TStringList *&, bool)
+    @Basemodulesview@TModulesView@GetOwningClass$qqrp28Idevirtualtrees@TVirtualNode @177 ; __fastcall Basemodulesview::TModulesView::GetOwningClass(Idevirtualtrees::TVirtualNode *)
+    @Basemodulesview@TModulesView@GetOwningProcess$qqrp28Idevirtualtrees@TVirtualNode @178 ; __fastcall Basemodulesview::TModulesView::GetOwningProcess(Idevirtualtrees::TVirtualNode *)
+    @Basemodulesview@TModulesView@GetSelectedFocusedNode$qqrv @176 ; __fastcall Basemodulesview::TModulesView::GetSelectedFocusedNode()
+    @Basemodulesview@TModulesView@GetValidProcessCount$qqrv @173 ; __fastcall Basemodulesview::TModulesView::GetValidProcessCount()
+    @Basemodulesview@TModulesView@GotoEntryPointItemClick$qqrp14System@TObject @139 ; __fastcall Basemodulesview::TModulesView::GotoEntryPointItemClick(System::TObject *)
+    @Basemodulesview@TModulesView@LeftPaneItemClick$qqrp14System@TObject @159 ; __fastcall Basemodulesview::TModulesView::LeftPaneItemClick(System::TObject *)
+    @Basemodulesview@TModulesView@LocalMenuItemClick$qqrp14System@TObject @165 ; __fastcall Basemodulesview::TModulesView::LocalMenuItemClick(System::TObject *)
+    @Basemodulesview@TModulesView@MakeOwningProcessActive$qqrv @174 ; __fastcall Basemodulesview::TModulesView::MakeOwningProcessActive()
+    @Basemodulesview@TModulesView@ModViewPopupMenuPopup$qqrp14System@TObject @166 ; __fastcall Basemodulesview::TModulesView::ModViewPopupMenuPopup(System::TObject *)
+    @Basemodulesview@TModulesView@ModuleInfoTreeDblClick$qqrp14System@TObject @134 ; __fastcall Basemodulesview::TModulesView::ModuleInfoTreeDblClick(System::TObject *)
+    @Basemodulesview@TModulesView@ModuleInfoTreeFreeNode$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNode @137 ; __fastcall Basemodulesview::TModulesView::ModuleInfoTreeFreeNode(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *)
+    @Basemodulesview@TModulesView@ModuleInfoTreeGetImageIndex$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNode28Idevirtualtrees@TVTImageKindirori @136 ; __fastcall Basemodulesview::TModulesView::ModuleInfoTreeGetImageIndex(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, Idevirtualtrees::TVTImageKind, int, bool&, int&)
+    @Basemodulesview@TModulesView@ModuleInfoTreeGetText$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodei28Idevirtualtrees@TVSTTextTyper17System@WideString @142 ; __fastcall Basemodulesview::TModulesView::ModuleInfoTreeGetText(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, int, Idevirtualtrees::TVSTTextType, System::WideString&)
+    @Basemodulesview@TModulesView@ModuleInfoTreeHeaderClick$qqrp25Idevirtualtrees@TVTHeaderi27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @141 ; Basemodulesview::TModulesView::ModuleInfoTreeHeaderClick(Idevirtualtrees::TVTHeader *, int, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Basemodulesview@TModulesView@ModuleInfoTreeInitChildren$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNoderui @135 ; __fastcall Basemodulesview::TModulesView::ModuleInfoTreeInitChildren(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, unsigned int&)
+    @Basemodulesview@TModulesView@ModuleInfoTreeInitNode$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodet2r64System@%Set$37Idevirtualtrees@TVirtualNodeInitStatet1$i0$t1$i4$% @138 ; Basemodulesview::TModulesView::ModuleInfoTreeInitNode(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, Idevirtualtrees::TVirtualNode *, System::Set<{583}...
+    @Basemodulesview@TModulesView@ModulesTreeCompareNodes$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodet2iri @147 ; __fastcall Basemodulesview::TModulesView::ModulesTreeCompareNodes(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, Idevirtualtrees::TVirtualNode *, int, int&)
+    @Basemodulesview@TModulesView@ModulesTreeFocusChanged$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodei @149 ; __fastcall Basemodulesview::TModulesView::ModulesTreeFocusChanged(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, int)
+    @Basemodulesview@TModulesView@ModulesTreeFreeNode$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNode @151 ; __fastcall Basemodulesview::TModulesView::ModulesTreeFreeNode(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *)
+    @Basemodulesview@TModulesView@ModulesTreeGetImageIndex$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNode28Idevirtualtrees@TVTImageKindirori @150 ; __fastcall Basemodulesview::TModulesView::ModulesTreeGetImageIndex(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, Idevirtualtrees::TVTImageKind, int, bool&, int&)
+    @Basemodulesview@TModulesView@ModulesTreeGetText$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodei28Idevirtualtrees@TVSTTextTyper17System@WideString @153 ; __fastcall Basemodulesview::TModulesView::ModulesTreeGetText(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, int, Idevirtualtrees::TVSTTextType, System::WideString&)
+    @Basemodulesview@TModulesView@ModulesTreeHeaderClick$qqrp25Idevirtualtrees@TVTHeaderi27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @146 ; Basemodulesview::TModulesView::ModulesTreeHeaderClick(Idevirtualtrees::TVTHeader *, int, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Basemodulesview@TModulesView@ModulesTreeInitChildren$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNoderui @152 ; __fastcall Basemodulesview::TModulesView::ModulesTreeInitChildren(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, unsigned int&)
+    @Basemodulesview@TModulesView@ModulesTreeInitNode$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodet2r64System@%Set$37Idevirtualtrees@TVirtualNodeInitStatet1$i0$t1$i4$% @154 ; Basemodulesview::TModulesView::ModulesTreeInitNode(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, Idevirtualtrees::TVirtualNode *, System::Set<{583}...
+    @Basemodulesview@TModulesView@ModulesTreeMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @148 ; Basemodulesview::TModulesView::ModulesTreeMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Basemodulesview@TModulesView@ProcessCreated$qqrp14System@TObjectx47System@%DelphiInterface$20Toolsapi@IOTAProcess% @196 ; Basemodulesview::TModulesView::ProcessCreated(System::TObject *, const System::DelphiInterface<{583}...
+    @Basemodulesview@TModulesView@ProcessModuleCreated$qqrp14System@TObjectx53System@%DelphiInterface$26Toolsapi@IOTAProcessModule%x47System@%DelphiInterface$20Toolsapi@IOTAProcess% @192 ; Basemodulesview::TModulesView::ProcessModuleCreated(System::TObject *, const System::DelphiInterface<{583}...
+    @Basemodulesview@TModulesView@ProcessModuleDestroyed$qqrp14System@TObjectx53System@%DelphiInterface$26Toolsapi@IOTAProcessModule%x47System@%DelphiInterface$20Toolsapi@IOTAProcess% @191 ; Basemodulesview::TModulesView::ProcessModuleDestroyed(System::TObject *, const System::DelphiInterface<{583}...
+    @Basemodulesview@TModulesView@ProcessModuleListChanged$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProcess%o @184 ; Basemodulesview::TModulesView::ProcessModuleListChanged(const System::DelphiInterface<{583}...
+    @Basemodulesview@TModulesView@ProcessTerminated$qqrp14System@TObjectx47System@%DelphiInterface$20Toolsapi@IOTAProcess% @195 ; Basemodulesview::TModulesView::ProcessTerminated(System::TObject *, const System::DelphiInterface<{583}...
+    @Basemodulesview@TModulesView@ReloadSymbolsItemClick$qqrp14System@TObject @157 ; __fastcall Basemodulesview::TModulesView::ReloadSymbolsItemClick(System::TObject *)
+    @Basemodulesview@TModulesView@RightPaneItemClick$qqrp14System@TObject @158 ; __fastcall Basemodulesview::TModulesView::RightPaneItemClick(System::TObject *)
+    @Basemodulesview@TModulesView@RootScopeChanged$qqrp14System@TObjectx47System@%DelphiInterface$20Toolsapi@IOTAProcess% @190 ; Basemodulesview::TModulesView::RootScopeChanged(System::TObject *, const System::DelphiInterface<{583}...
+    @Basemodulesview@TModulesView@ScopeEditSourceItemClick$qqrp14System@TObject @144 ; __fastcall Basemodulesview::TModulesView::ScopeEditSourceItemClick(System::TObject *)
+    @Basemodulesview@TModulesView@ScopePopupMenuPopup$qqrp14System@TObject @143 ; __fastcall Basemodulesview::TModulesView::ScopePopupMenuPopup(System::TObject *)
+    @Basemodulesview@TModulesView@SetLayout$qqrrx30Basemodulesview@TModViewLayout @156 ; __fastcall Basemodulesview::TModulesView::SetLayout(const Basemodulesview::TModViewLayout&)
+    @Basemodulesview@TModulesView@SetModuleInfoType$qqr31Basemodulesview@TModuleInfoType @175 ; __fastcall Basemodulesview::TModulesView::SetModuleInfoType(Basemodulesview::TModuleInfoType)
+    @Basemodulesview@TModulesView@SetParent$qqrp24Vcl@Controls@TWinControl @186 ; __fastcall Basemodulesview::TModulesView::SetParent(Vcl::Controls::TWinControl *)
+    @Basemodulesview@TModulesView@SetRootNodeCount$qqrv @180 ; __fastcall Basemodulesview::TModulesView::SetRootNodeCount()
+    @Basemodulesview@TModulesView@SourcePopupMenuPopup$qqrp14System@TObject @169 ; __fastcall Basemodulesview::TModulesView::SourcePopupMenuPopup(System::TObject *)
+    @Basemodulesview@TModulesView@UnloadedModuleFindIterator$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodepvro @182 ; __fastcall Basemodulesview::TModulesView::UnloadedModuleFindIterator(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, void *, bool&)
+    @Basemodulesview@TModulesView@UpPaneItemClick$qqrp14System@TObject @160 ; __fastcall Basemodulesview::TModulesView::UpPaneItemClick(System::TObject *)
+    @Basemodulesview@TModulesView@UpdateProcessModuleInfo$qqrx53System@%DelphiInterface$26Toolsapi@IOTAProcessModule%x55System@%DelphiInterface$28Debugapi@IOTAInternalProcess% @185 ; Basemodulesview::TModulesView::UpdateProcessModuleInfo(const System::DelphiInterface<{583}...
+    @Basemodulesview@TModulesView@ViewSourceItemClick$qqrp14System@TObject @171 ; __fastcall Basemodulesview::TModulesView::ViewSourceItemClick(System::TObject *)
+    @Basemodulesview@initialization$qqrv @131 ; __fastcall Basemodulesview::initialization()
+    @Classexplorermodel@Finalization$qqrv @257 ; __fastcall Classexplorermodel::Finalization()
+    @Classexplorermodel@GDetailImageOffset @341 ; Classexplorermodel::GDetailImageOffset
+    @Classexplorermodel@GDetailStateImageOffset @340 ; Classexplorermodel::GDetailStateImageOffset
+    @Classexplorermodel@GNodeImageOffset @343 ; Classexplorermodel::GNodeImageOffset
+    @Classexplorermodel@GNodeStateImageOffset @342 ; Classexplorermodel::GNodeStateImageOffset
+    @Classexplorermodel@GToolButtonImageOffset @339 ; Classexplorermodel::GToolButtonImageOffset
+    @Classexplorermodel@InitializeProjectNotifier$qqrv @310 ; __fastcall Classexplorermodel::InitializeProjectNotifier()
+    @Classexplorermodel@TClassExplorerData@ @355 ; Classexplorermodel::TClassExplorerData::
+    @Classexplorermodel@TClassExplorerData@$bctr$qqrx20System@UnicodeString @338 ; __fastcall Classexplorermodel::TClassExplorerData::TClassExplorerData(const System::UnicodeString)
+    @Classexplorermodel@TClassExplorerEditorHooks@ @352 ; Classexplorermodel::TClassExplorerEditorHooks::
+    @Classexplorermodel@TClassExplorerEditorHooks@$bctr$qqrv @337 ; __fastcall Classexplorermodel::TClassExplorerEditorHooks::TClassExplorerEditorHooks()
+    @Classexplorermodel@TClassExplorerEditorHooks@$bdtr$qqrv @335 ; __fastcall Classexplorermodel::TClassExplorerEditorHooks::~TClassExplorerEditorHooks()
+    @Classexplorermodel@TClassExplorerEditorHooks@AfterCompile$qqro @334 ; __fastcall Classexplorermodel::TClassExplorerEditorHooks::AfterCompile(bool)
+    @Classexplorermodel@TClassExplorerEditorHooks@BeforeCompile$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject%ro @333 ; Classexplorermodel::TClassExplorerEditorHooks::BeforeCompile(const System::DelphiInterface<{583}...
+    @Classexplorermodel@TClassExplorerEditorHooks@DefaultDetailNodeAction$qqrx61System@%DelphiInterface$34Structureviewapi@IOTAStructureNode% @321 ; Classexplorermodel::TClassExplorerEditorHooks::DefaultDetailNodeAction(const System::DelphiInterface<{583}...
+    @Classexplorermodel@TClassExplorerEditorHooks@DefaultNodeAction$qqrx61System@%DelphiInterface$34Structureviewapi@IOTAStructureNode% @320 ; Classexplorermodel::TClassExplorerEditorHooks::DefaultNodeAction(const System::DelphiInterface<{583}...
+    @Classexplorermodel@TClassExplorerEditorHooks@DetailNodeEdited$qqrx61System@%DelphiInterface$34Structureviewapi@IOTAStructureNode% @325 ; Classexplorermodel::TClassExplorerEditorHooks::DetailNodeEdited(const System::DelphiInterface<{583}...
+    @Classexplorermodel@TClassExplorerEditorHooks@DetailNodeFocused$qqrx61System@%DelphiInterface$34Structureviewapi@IOTAStructureNode% @324 ; Classexplorermodel::TClassExplorerEditorHooks::DetailNodeFocused(const System::DelphiInterface<{583}...
+    @Classexplorermodel@TClassExplorerEditorHooks@DetailNodeSelected$qqrx61System@%DelphiInterface$34Structureviewapi@IOTAStructureNode% @319 ; Classexplorermodel::TClassExplorerEditorHooks::DetailNodeSelected(const System::DelphiInterface<{583}...
+    @Classexplorermodel@TClassExplorerEditorHooks@DoDockFormUpdates$qqrv @314 ; __fastcall Classexplorermodel::TClassExplorerEditorHooks::DoDockFormUpdates()
+    @Classexplorermodel@TClassExplorerEditorHooks@DockFormRefresh$qqrx50System@%DelphiInterface$23Toolsapi@INTAEditWindow%p22Dockform@TDockableForm @317 ; Classexplorermodel::TClassExplorerEditorHooks::DockFormRefresh(const System::DelphiInterface<{583}...
+    @Classexplorermodel@TClassExplorerEditorHooks@DockFormUpdated$qqrx50System@%DelphiInterface$23Toolsapi@INTAEditWindow%p22Dockform@TDockableForm @316 ; Classexplorermodel::TClassExplorerEditorHooks::DockFormUpdated(const System::DelphiInterface<{583}...
+    @Classexplorermodel@TClassExplorerEditorHooks@DockFormVisibleChanged$qqrx50System@%DelphiInterface$23Toolsapi@INTAEditWindow%p22Dockform@TDockableForm @315 ; Classexplorermodel::TClassExplorerEditorHooks::DockFormVisibleChanged(const System::DelphiInterface<{583}...
+    @Classexplorermodel@TClassExplorerEditorHooks@EditorViewActivated$qqrx50System@%DelphiInterface$23Toolsapi@INTAEditWindow%x48System@%DelphiInterface$21Toolsapi@IOTAEditView% @332 ; Classexplorermodel::TClassExplorerEditorHooks::EditorViewActivated(const System::DelphiInterface<{583}...
+    @Classexplorermodel@TClassExplorerEditorHooks@EditorViewModified$qqrx50System@%DelphiInterface$23Toolsapi@INTAEditWindow%x48System@%DelphiInterface$21Toolsapi@IOTAEditView% @318 ; Classexplorermodel::TClassExplorerEditorHooks::EditorViewModified(const System::DelphiInterface<{583}...
+    @Classexplorermodel@TClassExplorerEditorHooks@FileNotification$qqr29Toolsapi@TOTAFileNotificationx20System@UnicodeStringro @313 ; __fastcall Classexplorermodel::TClassExplorerEditorHooks::FileNotification(Toolsapi::TOTAFileNotification, const System::UnicodeString, bool&)
+    @Classexplorermodel@TClassExplorerEditorHooks@FindExplorerData$qqrx20System@UnicodeString @312 ; __fastcall Classexplorermodel::TClassExplorerEditorHooks::FindExplorerData(const System::UnicodeString)
+    @Classexplorermodel@TClassExplorerEditorHooks@NodeEdited$qqrx61System@%DelphiInterface$34Structureviewapi@IOTAStructureNode% @327 ; Classexplorermodel::TClassExplorerEditorHooks::NodeEdited(const System::DelphiInterface<{583}...
+    @Classexplorermodel@TClassExplorerEditorHooks@NodeFocused$qqrx61System@%DelphiInterface$34Structureviewapi@IOTAStructureNode% @326 ; Classexplorermodel::TClassExplorerEditorHooks::NodeFocused(const System::DelphiInterface<{583}...
+    @Classexplorermodel@TClassExplorerEditorHooks@NodeSelected$qqrx61System@%DelphiInterface$34Structureviewapi@IOTAStructureNode% @323 ; Classexplorermodel::TClassExplorerEditorHooks::NodeSelected(const System::DelphiInterface<{583}...
+    @Classexplorermodel@TClassExplorerEditorHooks@RemoveNotifiers$qqrv @336 ; __fastcall Classexplorermodel::TClassExplorerEditorHooks::RemoveNotifiers()
+    @Classexplorermodel@TClassExplorerEditorHooks@StructureChanged$qqrx64System@%DelphiInterface$37Structureviewapi@IOTAStructureContext% @322 ; Classexplorermodel::TClassExplorerEditorHooks::StructureChanged(const System::DelphiInterface<{583}...
+    @Classexplorermodel@TClassExplorerEditorHooks@VisibleChanged$qqrus @311 ; __fastcall Classexplorermodel::TClassExplorerEditorHooks::VisibleChanged(unsigned short)
+    @Classexplorermodel@TClassExplorerEditorHooks@WindowActivated$qqrx50System@%DelphiInterface$23Toolsapi@INTAEditWindow% @331 ; Classexplorermodel::TClassExplorerEditorHooks::WindowActivated(const System::DelphiInterface<{583}...
+    @Classexplorermodel@TClassExplorerEditorHooks@WindowCommand$qqrx50System@%DelphiInterface$23Toolsapi@INTAEditWindow%iiro @330 ; Classexplorermodel::TClassExplorerEditorHooks::WindowCommand(const System::DelphiInterface<{583}...
+    @Classexplorermodel@TClassExplorerEditorHooks@WindowNotification$qqrx50System@%DelphiInterface$23Toolsapi@INTAEditWindow%25System@Classes@TOperation @329 ; Classexplorermodel::TClassExplorerEditorHooks::WindowNotification(const System::DelphiInterface<{583}...
+    @Classexplorermodel@TClassExplorerEditorHooks@WindowShow$qqrx50System@%DelphiInterface$23Toolsapi@INTAEditWindow%oo @328 ; Classexplorermodel::TClassExplorerEditorHooks::WindowShow(const System::DelphiInterface<{583}...
+    @Classexplorermodel@TClassModelNode@ @345 ; Classexplorermodel::TClassModelNode::
+    @Classexplorermodel@TClassModelNode@$bctr$qqr71System@%DelphiInterface$44Classexplorermodel@IProjectClassModelManager%20System@UnicodeStringi @280 ; Classexplorermodel::TClassModelNode::TClassModelNode(System::DelphiInterface<{583}...
+    @Classexplorermodel@TClassModelNode@$bctr$qqr71System@%DelphiInterface$44Classexplorermodel@IProjectClassModelManager%20System@UnicodeStringiiii @281 ; Classexplorermodel::TClassModelNode::TClassModelNode(System::DelphiInterface<{583}...
+    @Classexplorermodel@TClassModelNode@$bctr$qqr71System@%DelphiInterface$44Classexplorermodel@IProjectClassModelManager%20System@UnicodeStringt2ii @279 ; Classexplorermodel::TClassModelNode::TClassModelNode(System::DelphiInterface<{583}...
+    @Classexplorermodel@TClassModelNode@AddBaseType$qqrp34Classexplorermodel@TClassModelNode @284 ; __fastcall Classexplorermodel::TClassModelNode::AddBaseType(Classexplorermodel::TClassModelNode *)
+    @Classexplorermodel@TClassModelNode@AddChild$qqrp34Classexplorermodel@TClassModelNode @283 ; __fastcall Classexplorermodel::TClassModelNode::AddChild(Classexplorermodel::TClassModelNode *)
+    @Classexplorermodel@TClassModelNode@AddDerivedType$qqrp34Classexplorermodel@TClassModelNode @282 ; __fastcall Classexplorermodel::TClassModelNode::AddDerivedType(Classexplorermodel::TClassModelNode *)
+    @Classexplorermodel@TClassModelNode@GetBaseTypes$qqrv @278 ; __fastcall Classexplorermodel::TClassModelNode::GetBaseTypes()
+    @Classexplorermodel@TClassModelNode@GetBaseTypesEnumerator$qqrv @277 ; __fastcall Classexplorermodel::TClassModelNode::GetBaseTypesEnumerator()
+    @Classexplorermodel@TClassModelNode@GetChildren$qqrv @276 ; __fastcall Classexplorermodel::TClassModelNode::GetChildren()
+    @Classexplorermodel@TClassModelNode@GetChildrenEnumerator$qqrv @275 ; __fastcall Classexplorermodel::TClassModelNode::GetChildrenEnumerator()
+    @Classexplorermodel@TClassModelNode@GetDerivedTypes$qqrv @274 ; __fastcall Classexplorermodel::TClassModelNode::GetDerivedTypes()
+    @Classexplorermodel@TClassModelNode@GetDerivedTypesEnumerator$qqrv @273 ; __fastcall Classexplorermodel::TClassModelNode::GetDerivedTypesEnumerator()
+    @Classexplorermodel@TClassModelNode@GetFlatInfoNode$qqrv @272 ; __fastcall Classexplorermodel::TClassModelNode::GetFlatInfoNode()
+    @Classexplorermodel@TClassModelNode@GetFlatName$qqrv @271 ; __fastcall Classexplorermodel::TClassModelNode::GetFlatName()
+    @Classexplorermodel@TClassModelNode@GetFlatNamespaceName$qqrv @270 ; __fastcall Classexplorermodel::TClassModelNode::GetFlatNamespaceName()
+    @Classexplorermodel@TClassModelNode@GetInfoNodeMembers$qqrv @269 ; __fastcall Classexplorermodel::TClassModelNode::GetInfoNodeMembers()
+    @Classexplorermodel@TClassModelNode@GetMembers$qqrv @268 ; __fastcall Classexplorermodel::TClassModelNode::GetMembers()
+    @Classexplorermodel@TClassModelNode@HasBaseTypes$qqrv @267 ; __fastcall Classexplorermodel::TClassModelNode::HasBaseTypes()
+    @Classexplorermodel@TClassModelNode@HasChildren$qqrv @266 ; __fastcall Classexplorermodel::TClassModelNode::HasChildren()
+    @Classexplorermodel@TClassModelNode@HasDerivedTypes$qqrv @265 ; __fastcall Classexplorermodel::TClassModelNode::HasDerivedTypes()
+    @Classexplorermodel@TClassModelNode@HasNamespace$qqrv @264 ; __fastcall Classexplorermodel::TClassModelNode::HasNamespace()
+    @Classexplorermodel@TClassModelNode@HasParent$qqrv @263 ; __fastcall Classexplorermodel::TClassModelNode::HasParent()
+    @Classexplorermodel@TClassModelNode@InfoNode$qqro @262 ; __fastcall Classexplorermodel::TClassModelNode::InfoNode(bool)
+    @Classexplorermodel@TClassModelNode@IsProjectFile$qqrv @261 ; __fastcall Classexplorermodel::TClassModelNode::IsProjectFile()
+    @Classexplorermodel@TClassModelNode@RemoveBaseType$qqrp34Classexplorermodel@TClassModelNode @260 ; __fastcall Classexplorermodel::TClassModelNode::RemoveBaseType(Classexplorermodel::TClassModelNode *)
+    @Classexplorermodel@TClassModelNode@RemoveID$qqri @259 ; __fastcall Classexplorermodel::TClassModelNode::RemoveID(int)
+    @Classexplorermodel@TClassModelNode@SetNamespace$qqrp34Classexplorermodel@TClassModelNode @258 ; __fastcall Classexplorermodel::TClassModelNode::SetNamespace(Classexplorermodel::TClassModelNode *)
+    @Classexplorermodel@TInfoNode@ @350 ; Classexplorermodel::TInfoNode::
+    @Classexplorermodel@TInfoNode@$bctr$qqr61System@%DelphiInterface$34Structureviewapi@IOTAStructureNode%17System@WideStringt2t2iipv @308 ; Classexplorermodel::TInfoNode::TInfoNode(System::DelphiInterface<{583}...
+    @Classexplorermodel@TInfoNode@$bctr$qqrv @307 ; __fastcall Classexplorermodel::TInfoNode::TInfoNode()
+    @Classexplorermodel@TInfoNode@$bdtr$qqrv @306 ; __fastcall Classexplorermodel::TInfoNode::~TInfoNode()
+    @Classexplorermodel@TInfoNode@AddChildNode$qqsx61System@%DelphiInterface$34Structureviewapi@IOTAStructureNode%iri @309 ; Classexplorermodel::TInfoNode::AddChildNode(const System::DelphiInterface<{583}...
+    @Classexplorermodel@TInfoNode@AddDetailNode$qqs61System@%DelphiInterface$34Structureviewapi@IOTAStructureNode%iri @287 ; Classexplorermodel::TInfoNode::AddDetailNode(System::DelphiInterface<{583}...
+    @Classexplorermodel@TInfoNode@GetDetailCount$qqsri @286 ; __stdcall Classexplorermodel::TInfoNode::GetDetailCount(int&)
+    @Classexplorermodel@TInfoNode@GetDetailNode$qqsir61System@%DelphiInterface$34Structureviewapi@IOTAStructureNode% @285 ; Classexplorermodel::TInfoNode::GetDetailNode(int, System::DelphiInterface<{583}...
+    @Classexplorermodel@TInfoNode@Get_Caption$qqsr17System@WideString @303 ; __stdcall Classexplorermodel::TInfoNode::Get_Caption(System::WideString&)
+    @Classexplorermodel@TInfoNode@Get_Child$qqsir61System@%DelphiInterface$34Structureviewapi@IOTAStructureNode% @305 ; Classexplorermodel::TInfoNode::Get_Child(int, System::DelphiInterface<{583}...
+    @Classexplorermodel@TInfoNode@Get_ChildCount$qqsri @302 ; __stdcall Classexplorermodel::TInfoNode::Get_ChildCount(int&)
+    @Classexplorermodel@TInfoNode@Get_Data$qqsri @301 ; __stdcall Classexplorermodel::TInfoNode::Get_Data(int&)
+    @Classexplorermodel@TInfoNode@Get_Expanded$qqsrus @300 ; __stdcall Classexplorermodel::TInfoNode::Get_Expanded(unsigned short&)
+    @Classexplorermodel@TInfoNode@Get_Focused$qqsrus @299 ; __stdcall Classexplorermodel::TInfoNode::Get_Focused(unsigned short&)
+    @Classexplorermodel@TInfoNode@Get_Hint$qqsr17System@WideString @298 ; __stdcall Classexplorermodel::TInfoNode::Get_Hint(System::WideString&)
+    @Classexplorermodel@TInfoNode@Get_ImageIndex$qqsri @297 ; __stdcall Classexplorermodel::TInfoNode::Get_ImageIndex(int&)
+    @Classexplorermodel@TInfoNode@Get_Name$qqsr17System@WideString @296 ; __stdcall Classexplorermodel::TInfoNode::Get_Name(System::WideString&)
+    @Classexplorermodel@TInfoNode@Get_Parent$qqsr61System@%DelphiInterface$34Structureviewapi@IOTAStructureNode% @304 ; Classexplorermodel::TInfoNode::Get_Parent(System::DelphiInterface<{583}...
+    @Classexplorermodel@TInfoNode@Get_Selected$qqsrus @295 ; __stdcall Classexplorermodel::TInfoNode::Get_Selected(unsigned short&)
+    @Classexplorermodel@TInfoNode@Get_StateIndex$qqsri @294 ; __stdcall Classexplorermodel::TInfoNode::Get_StateIndex(int&)
+    @Classexplorermodel@TInfoNode@IsSystemSym$qqrv @293 ; __fastcall Classexplorermodel::TInfoNode::IsSystemSym()
+    @Classexplorermodel@TInfoNode@RemoveChildNode$qqsi @292 ; __stdcall Classexplorermodel::TInfoNode::RemoveChildNode(int)
+    @Classexplorermodel@TInfoNode@Set_Data$qqsi @291 ; __stdcall Classexplorermodel::TInfoNode::Set_Data(int)
+    @Classexplorermodel@TInfoNode@Set_Expanded$qqsus @290 ; __stdcall Classexplorermodel::TInfoNode::Set_Expanded(unsigned short)
+    @Classexplorermodel@TInfoNode@Set_Focused$qqsus @289 ; __stdcall Classexplorermodel::TInfoNode::Set_Focused(unsigned short)
+    @Classexplorermodel@TInfoNode@Set_Selected$qqsus @288 ; __stdcall Classexplorermodel::TInfoNode::Set_Selected(unsigned short)
+    @Classexplorermodel@initialization$qqrv @256 ; __fastcall Classexplorermodel::initialization()
+    @Coreprocmd@Finalization$qqrv  @357 ; __fastcall Coreprocmd::Finalization()
+    @Coreprocmd@IDERegister$qqrv   @371 ; __fastcall Coreprocmd::IDERegister()
+    @Coreprocmd@TCoreProCommands@  @380 ; Coreprocmd::TCoreProCommands::
+    @Coreprocmd@TCoreProCommands@CallStackViewLocals$qqrp14System@TObjectio @374 ; __fastcall Coreprocmd::TCoreProCommands::CallStackViewLocals(System::TObject *, int, bool)
+    @Coreprocmd@TCoreProCommands@CanInspectQuery$qqrp14System@TObjectro @373 ; __fastcall Coreprocmd::TCoreProCommands::CanInspectQuery(System::TObject *, bool&)
+    @Coreprocmd@TCoreProCommands@DebugEventLogCommandExecute$qqrp14System@TObject @376 ; __fastcall Coreprocmd::TCoreProCommands::DebugEventLogCommandExecute(System::TObject *)
+    @Coreprocmd@TCoreProCommands@DebugInspectCommandExecute$qqrp14System@TObject @359 ; __fastcall Coreprocmd::TCoreProCommands::DebugInspectCommandExecute(System::TObject *)
+    @Coreprocmd@TCoreProCommands@DebugInspectCommandUpdate$qqrp14System@TObject @358 ; __fastcall Coreprocmd::TCoreProCommands::DebugInspectCommandUpdate(System::TObject *)
+    @Coreprocmd@TCoreProCommands@DebugLocalVariablesCommandExecute$qqrp14System@TObject @375 ; __fastcall Coreprocmd::TCoreProCommands::DebugLocalVariablesCommandExecute(System::TObject *)
+    @Coreprocmd@TCoreProCommands@DebugModulesCommandExecute$qqrp14System@TObject @363 ; __fastcall Coreprocmd::TCoreProCommands::DebugModulesCommandExecute(System::TObject *)
+    @Coreprocmd@TCoreProCommands@DebugProCommandsCreate$qqrp14System@TObject @378 ; __fastcall Coreprocmd::TCoreProCommands::DebugProCommandsCreate(System::TObject *)
+    @Coreprocmd@TCoreProCommands@DebugProCommandsDestroy$qqrp14System@TObject @377 ; __fastcall Coreprocmd::TCoreProCommands::DebugProCommandsDestroy(System::TObject *)
+    @Coreprocmd@TCoreProCommands@DebugThreadsCommandExecute$qqrp14System@TObject @366 ; __fastcall Coreprocmd::TCoreProCommands::DebugThreadsCommandExecute(System::TObject *)
+    @Coreprocmd@TCoreProCommands@LoadProcessCommandExecute$qqrp14System@TObject @369 ; __fastcall Coreprocmd::TCoreProCommands::LoadProcessCommandExecute(System::TObject *)
+    @Coreprocmd@TCoreProCommands@LoadProcessCommandUpdate$qqrp14System@TObject @370 ; __fastcall Coreprocmd::TCoreProCommands::LoadProcessCommandUpdate(System::TObject *)
+    @Coreprocmd@TCoreProCommands@ProductStartup$qqrp14System@TObject @372 ; __fastcall Coreprocmd::TCoreProCommands::ProductStartup(System::TObject *)
+    @Coreprocmd@TCoreProCommands@RunAddModuleLoadBreakpointCommandExecute$qqrp14System@TObject @362 ; __fastcall Coreprocmd::TCoreProCommands::RunAddModuleLoadBreakpointCommandExecute(System::TObject *)
+    @Coreprocmd@TCoreProCommands@RunAddModuleLoadBreakpointCommandUpdate$qqrp14System@TObject @361 ; __fastcall Coreprocmd::TCoreProCommands::RunAddModuleLoadBreakpointCommandUpdate(System::TObject *)
+    @Coreprocmd@TCoreProCommands@RunAttachCommandExecute$qqrp14System@TObject @368 ; __fastcall Coreprocmd::TCoreProCommands::RunAttachCommandExecute(System::TObject *)
+    @Coreprocmd@TCoreProCommands@RunAttachCommandUpdate$qqrp14System@TObject @367 ; __fastcall Coreprocmd::TCoreProCommands::RunAttachCommandUpdate(System::TObject *)
+    @Coreprocmd@TCoreProCommands@RunInspectCommandExecute$qqrp14System@TObject @360 ; __fastcall Coreprocmd::TCoreProCommands::RunInspectCommandExecute(System::TObject *)
+    @Coreprocmd@TCoreProCommands@RunUntilReturnCommandExecute$qqrp14System@TObject @365 ; __fastcall Coreprocmd::TCoreProCommands::RunUntilReturnCommandExecute(System::TObject *)
+    @Coreprocmd@TCoreProCommands@RunUntilReturnCommandUpdate$qqrp14System@TObject @364 ; __fastcall Coreprocmd::TCoreProCommands::RunUntilReturnCommandUpdate(System::TObject *)
+    @Coreprocmd@initialization$qqrv @356 ; __fastcall Coreprocmd::initialization()
+    @Coreproide@@GetPackageInfoTable$qqrv @417 ; Coreproide::__linkproc__ __fastcall GetPackageInfoTable()
+    @Coreproide@@PackageLoad$qqrv  @416 ; Coreproide::__linkproc__ __fastcall PackageLoad()
+    @Coreproide@@PackageUnload$qqrv @415 ; Coreproide::__linkproc__ __fastcall PackageUnload()
+    @Coreproide@initialization$qqrv @414 ; __fastcall Coreproide::initialization()
+    @Dbglog@Finalization$qqrv      @7   ; __fastcall Dbglog::Finalization()
+    @Dbglog@TDebugLogView@         @29  ; Dbglog::TDebugLogView::
+    @Dbglog@TDebugLogView@AddCommentItemClick$qqrp14System@TObject @15  ; __fastcall Dbglog::TDebugLogView::AddCommentItemClick(System::TObject *)
+    @Dbglog@TDebugLogView@ClearLogItemClick$qqrp14System@TObject @25  ; __fastcall Dbglog::TDebugLogView::ClearLogItemClick(System::TObject *)
+    @Dbglog@TDebugLogView@DebugOptionsChanged$qqrp14System@TObject @9   ; __fastcall Dbglog::TDebugLogView::DebugOptionsChanged(System::TObject *)
+    @Dbglog@TDebugLogView@EditAction$qqr22Designintf@TEditAction @13  ; __fastcall Dbglog::TDebugLogView::EditAction(Designintf::TEditAction)
+    @Dbglog@TDebugLogView@FormCreate$qqrp14System@TObject @27  ; __fastcall Dbglog::TDebugLogView::FormCreate(System::TObject *)
+    @Dbglog@TDebugLogView@FormDestroy$qqrp14System@TObject @8   ; __fastcall Dbglog::TDebugLogView::FormDestroy(System::TObject *)
+    @Dbglog@TDebugLogView@FormShow$qqrp14System@TObject @14  ; __fastcall Dbglog::TDebugLogView::FormShow(System::TObject *)
+    @Dbglog@TDebugLogView@GetColors$qqrior21System@Uitypes@TColort3 @22  ; __fastcall Dbglog::TDebugLogView::GetColors(int, bool, System::Uitypes::TColor&, System::Uitypes::TColor&)
+    @Dbglog@TDebugLogView@GetEditState$qqrv @12  ; __fastcall Dbglog::TDebugLogView::GetEditState()
+    @Dbglog@TDebugLogView@GetEvent$qqri @11  ; __fastcall Dbglog::TDebugLogView::GetEvent(int)
+    @Dbglog@TDebugLogView@GetEventCount$qqrv @10  ; __fastcall Dbglog::TDebugLogView::GetEventCount()
+    @Dbglog@TDebugLogView@LogListChanged$qqrp14System@TObject @26  ; __fastcall Dbglog::TDebugLogView::LogListChanged(System::TObject *)
+    @Dbglog@TDebugLogView@LogPopupMenuPopup$qqrp14System@TObject @23  ; __fastcall Dbglog::TDebugLogView::LogPopupMenuPopup(System::TObject *)
+    @Dbglog@TDebugLogView@LogTreeBeforeItemErase$qqrp32Idevirtualtrees@TBaseVirtualTreep20Vcl@Graphics@TCanvasp28Idevirtualtrees@TVirtualNoderx18System@Types@TRectr21System@Uitypes@TColorr32Idevirtualtrees@TItemEraseAction @21  ; __fastcall Dbglog::TDebugLogView::LogTreeBeforeItemErase(Idevirtualtrees::TBaseVirtualTree *, Vcl::Graphics::TCanvas *, Idevirtualtrees::TVirtualNode *, const System::Types::TRect&, System::Uitypes::TColor&, Idevirtualtrees::TItemEraseAction&)
+    @Dbglog@TDebugLogView@LogTreeFocusChanged$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodei @20  ; __fastcall Dbglog::TDebugLogView::LogTreeFocusChanged(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, int)
+    @Dbglog@TDebugLogView@LogTreeGetText$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodei28Idevirtualtrees@TVSTTextTyper17System@WideString @19  ; __fastcall Dbglog::TDebugLogView::LogTreeGetText(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, int, Idevirtualtrees::TVSTTextType, System::WideString&)
+    @Dbglog@TDebugLogView@LogTreeInitNode$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodet2r64System@%Set$37Idevirtualtrees@TVirtualNodeInitStatet1$i0$t1$i4$% @18  ; Dbglog::TDebugLogView::LogTreeInitNode(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, Idevirtualtrees::TVirtualNode *, System::Set<{583}...
+    @Dbglog@TDebugLogView@LogTreePaintText$qqrp32Idevirtualtrees@TBaseVirtualTreexp20Vcl@Graphics@TCanvasp28Idevirtualtrees@TVirtualNodei28Idevirtualtrees@TVSTTextType @17  ; __fastcall Dbglog::TDebugLogView::LogTreePaintText(Idevirtualtrees::TBaseVirtualTree *, Vcl::Graphics::TCanvas * const, Idevirtualtrees::TVirtualNode *, int, Idevirtualtrees::TVSTTextType)
+    @Dbglog@TDebugLogView@OptionsItemClick$qqrp14System@TObject @16  ; __fastcall Dbglog::TDebugLogView::OptionsItemClick(System::TObject *)
+    @Dbglog@TDebugLogView@SaveLogItemClick$qqrp14System@TObject @24  ; __fastcall Dbglog::TDebugLogView::SaveLogItemClick(System::TObject *)
+    @Dbglog@initialization$qqrv    @6   ; __fastcall Dbglog::initialization()
+    @Debuggerloadprocremotepage@Finalization$qqrv @406 ; __fastcall Debuggerloadprocremotepage::Finalization()
+    @Debuggerloadprocremotepage@TDebuggerLoadProcessRemotePage@ @413 ; Debuggerloadprocremotepage::TDebuggerLoadProcessRemotePage::
+    @Debuggerloadprocremotepage@TDebuggerLoadProcessRemotePage@EnableLoadButton$qqrv @408 ; __fastcall Debuggerloadprocremotepage::TDebuggerLoadProcessRemotePage::EnableLoadButton()
+    @Debuggerloadprocremotepage@TDebuggerLoadProcessRemotePage@PropertySheetBroadcast$qqrp14System@TObjectr24Winapi@Messages@TMessage @411 ; __fastcall Debuggerloadprocremotepage::TDebuggerLoadProcessRemotePage::PropertySheetBroadcast(System::TObject *, Winapi::Messages::TMessage&)
+    @Debuggerloadprocremotepage@TDebuggerLoadProcessRemotePage@PropertySheetShow$qqrp14System@TObject @407 ; __fastcall Debuggerloadprocremotepage::TDebuggerLoadProcessRemotePage::PropertySheetShow(System::TObject *)
+    @Debuggerloadprocremotepage@TDebuggerLoadProcessRemotePage@RemotePathChange$qqrp14System@TObject @410 ; __fastcall Debuggerloadprocremotepage::TDebuggerLoadProcessRemotePage::RemotePathChange(System::TObject *)
+    @Debuggerloadprocremotepage@TDebuggerLoadProcessRemotePage@SelectProfileButtonClick$qqrp14System@TObject @409 ; __fastcall Debuggerloadprocremotepage::TDebuggerLoadProcessRemotePage::SelectProfileButtonClick(System::TObject *)
+    @Debuggerloadprocremotepage@initialization$qqrv @405 ; __fastcall Debuggerloadprocremotepage::initialization()
+    @Debuggerlogoptions@Finalization$qqrv @382 ; __fastcall Debuggerlogoptions::Finalization()
+    @Debuggerlogoptions@TDebuggerLogOptionsPage@ @394 ; Debuggerlogoptions::TDebuggerLogOptionsPage::
+    @Debuggerlogoptions@TDebuggerLogOptionsPage@DebuggerLogOptionsPageBroadcast$qqrp14System@TObjectr24Winapi@Messages@TMessage @391 ; __fastcall Debuggerlogoptions::TDebuggerLogOptionsPage::DebuggerLogOptionsPageBroadcast(System::TObject *, Winapi::Messages::TMessage&)
+    @Debuggerlogoptions@TDebuggerLogOptionsPage@EnableDebugControls$qqro @392 ; __fastcall Debuggerlogoptions::TDebuggerLogOptionsPage::EnableDebugControls(bool)
+    @Debuggerlogoptions@TDebuggerLogOptionsPage@PropertySheetCreate$qqrp14System@TObject @388 ; __fastcall Debuggerlogoptions::TDebuggerLogOptionsPage::PropertySheetCreate(System::TObject *)
+    @Debuggerlogoptions@TDebuggerLogOptionsPage@PropertySheetDestroy$qqrp14System@TObject @387 ; __fastcall Debuggerlogoptions::TDebuggerLogOptionsPage::PropertySheetDestroy(System::TObject *)
+    @Debuggerlogoptions@TDebuggerLogOptionsPage@cbUnlimitedClick$qqrp14System@TObject @390 ; __fastcall Debuggerlogoptions::TDebuggerLogOptionsPage::cbUnlimitedClick(System::TObject *)
+    @Debuggerlogoptions@TDebuggerLogOptionsPage@chkbxUseLogColorsClick$qqrp14System@TObject @383 ; __fastcall Debuggerlogoptions::TDebuggerLogOptionsPage::chkbxUseLogColorsClick(System::TObject *)
+    @Debuggerlogoptions@TDebuggerLogOptionsPage@clrbxBackgroundColorSelect$qqrp14System@TObject @384 ; __fastcall Debuggerlogoptions::TDebuggerLogOptionsPage::clrbxBackgroundColorSelect(System::TObject *)
+    @Debuggerlogoptions@TDebuggerLogOptionsPage@clrbxForegroundColorSelect$qqrp14System@TObject @385 ; __fastcall Debuggerlogoptions::TDebuggerLogOptionsPage::clrbxForegroundColorSelect(System::TObject *)
+    @Debuggerlogoptions@TDebuggerLogOptionsPage@lstbxColorsClick$qqrp14System@TObject @386 ; __fastcall Debuggerlogoptions::TDebuggerLogOptionsPage::lstbxColorsClick(System::TObject *)
+    @Debuggerlogoptions@TDebuggerLogOptionsPage@lstbxColorsDrawItem$qqrp24Vcl@Controls@TWinControlirx18System@Types@TRect60System@%Set$32Winapi@Windows@Winapi_Windows__1t1$i0$t1$i12$% @389 ; Debuggerlogoptions::TDebuggerLogOptionsPage::lstbxColorsDrawItem(Vcl::Controls::TWinControl *, int, const System::Types::TRect&, System::Set<{583}...
+    @Debuggerlogoptions@initialization$qqrv @381 ; __fastcall Debuggerlogoptions::initialization()
+    @Debuggerremoteoptions@Finalization$qqrv @396 ; __fastcall Debuggerremoteoptions::Finalization()
+    @Debuggerremoteoptions@TDebuggerRemotePageHide@ @404 ; Debuggerremoteoptions::TDebuggerRemotePageHide::
+    @Debuggerremoteoptions@TDebuggerRemotePageHide@GetHint$qqrv @397 ; __fastcall Debuggerremoteoptions::TDebuggerRemotePageHide::GetHint()
+    @Debuggerremoteoptions@TDebuggerRemotePageHide@PropertySheetBroadcast$qqrp14System@TObjectr24Winapi@Messages@TMessage @402 ; __fastcall Debuggerremoteoptions::TDebuggerRemotePageHide::PropertySheetBroadcast(System::TObject *, Winapi::Messages::TMessage&)
+    @Debuggerremoteoptions@TDebuggerRemotePageHide@RemoteHostDropDown$qqrp14System@TObject @401 ; __fastcall Debuggerremoteoptions::TDebuggerRemotePageHide::RemoteHostDropDown(System::TObject *)
+    @Debuggerremoteoptions@TDebuggerRemotePageHide@RemoteHostEnter$qqrp14System@TObject @400 ; __fastcall Debuggerremoteoptions::TDebuggerRemotePageHide::RemoteHostEnter(System::TObject *)
+    @Debuggerremoteoptions@TDebuggerRemotePageHide@RemoteHostExit$qqrp14System@TObject @399 ; __fastcall Debuggerremoteoptions::TDebuggerRemotePageHide::RemoteHostExit(System::TObject *)
+    @Debuggerremoteoptions@TDebuggerRemotePageHide@SelectProfileButtonClick$qqrp14System@TObject @398 ; __fastcall Debuggerremoteoptions::TDebuggerRemotePageHide::SelectProfileButtonClick(System::TObject *)
+    @Debuggerremoteoptions@initialization$qqrv @395 ; __fastcall Debuggerremoteoptions::initialization()
+    @Debuglogoptdlg@Finalization$qqrv @2   ; __fastcall Debuglogoptdlg::Finalization()
+    @Debuglogoptdlg@TDebuggerLogOptDialog@ @5   ; Debuglogoptdlg::TDebuggerLogOptDialog::
+    @Debuglogoptdlg@TDebuggerLogOptDialog@FormShow$qqrp14System@TObject @3   ; __fastcall Debuglogoptdlg::TDebuggerLogOptDialog::FormShow(System::TObject *)
+    @Debuglogoptdlg@initialization$qqrv @1   ; __fastcall Debuglogoptdlg::initialization()
+    @GetPackageInfoTable           @420 ; GetPackageInfoTable
+    @Localvars@Finalization$qqrv   @64  ; __fastcall Localvars::Finalization()
+    @Localvars@TLocalVarsWindow@   @114 ; Localvars::TLocalVarsWindow::
+    @Localvars@TLocalVarsWindow@$bctr$qqrp25System@Classes@TComponent @112 ; __fastcall Localvars::TLocalVarsWindow::TLocalVarsWindow(System::Classes::TComponent *)
+    @Localvars@TLocalVarsWindow@$bdtr$qqrv @111 ; __fastcall Localvars::TLocalVarsWindow::~TLocalVarsWindow()
+    @Localvars@TLocalVarsWindow@AfterSave$qqrv @88  ; __fastcall Localvars::TLocalVarsWindow::AfterSave()
+    @Localvars@TLocalVarsWindow@BeforeSave$qqrv @87  ; __fastcall Localvars::TLocalVarsWindow::BeforeSave()
+    @Localvars@TLocalVarsWindow@CMReEvalaute$qqrr24Winapi@Messages@TMessage @109 ; __fastcall Localvars::TLocalVarsWindow::CMReEvalaute(Winapi::Messages::TMessage&)
+    @Localvars@TLocalVarsWindow@CanInspectNode$qqrp28Idevirtualtrees@TVirtualNode @92  ; __fastcall Localvars::TLocalVarsWindow::CanInspectNode(Idevirtualtrees::TVirtualNode *)
+    @Localvars@TLocalVarsWindow@CurrentDebuggerChanged$qqrp14System@TObject @98  ; __fastcall Localvars::TLocalVarsWindow::CurrentDebuggerChanged(System::TObject *)
+    @Localvars@TLocalVarsWindow@CurrentProcessChanged$qqrp14System@TObjectx47System@%DelphiInterface$20Toolsapi@IOTAProcess% @101 ; Localvars::TLocalVarsWindow::CurrentProcessChanged(System::TObject *, const System::DelphiInterface<{583}...
+    @Localvars@TLocalVarsWindow@CurrentThreadChanged$qqrp14System@TObjectx46System@%DelphiInterface$19Toolsapi@IOTAThread% @100 ; Localvars::TLocalVarsWindow::CurrentThreadChanged(System::TObject *, const System::DelphiInterface<{583}...
+    @Localvars@TLocalVarsWindow@DebugUpdate$qqrp14System@TObjectx47System@%DelphiInterface$20Toolsapi@IOTAProcess% @103 ; Localvars::TLocalVarsWindow::DebugUpdate(System::TObject *, const System::DelphiInterface<{583}...
+    @Localvars@TLocalVarsWindow@Destroyed$qqrv @86  ; __fastcall Localvars::TLocalVarsWindow::Destroyed()
+    @Localvars@TLocalVarsWindow@EditAction$qqr22Designintf@TEditAction @90  ; __fastcall Localvars::TLocalVarsWindow::EditAction(Designintf::TEditAction)
+    @Localvars@TLocalVarsWindow@FormHide$qqrp14System@TObject @95  ; __fastcall Localvars::TLocalVarsWindow::FormHide(System::TObject *)
+    @Localvars@TLocalVarsWindow@FormShow$qqrp14System@TObject @96  ; __fastcall Localvars::TLocalVarsWindow::FormShow(System::TObject *)
+    @Localvars@TLocalVarsWindow@FramePanelResize$qqrp14System@TObject @78  ; __fastcall Localvars::TLocalVarsWindow::FramePanelResize(System::TObject *)
+    @Localvars@TLocalVarsWindow@GetEditState$qqrv @89  ; __fastcall Localvars::TLocalVarsWindow::GetEditState()
+    @Localvars@TLocalVarsWindow@GetExternalVisualizerNodeData$qqrp28Idevirtualtrees@TVirtualNoder20System@UnicodeStringt2t2r59System@%DelphiInterface$32Debugapi@IOTAExpressionInspector%riro @74  ; Localvars::TLocalVarsWindow::GetExternalVisualizerNodeData(Idevirtualtrees::TVirtualNode *, System::UnicodeString&, System::UnicodeString&, System::UnicodeString&, System::DelphiInterface<{583}...
+    @Localvars@TLocalVarsWindow@GetFullExpression$qqrp28Idevirtualtrees@TVirtualNode @106 ; __fastcall Localvars::TLocalVarsWindow::GetFullExpression(Idevirtualtrees::TVirtualNode *)
+    @Localvars@TLocalVarsWindow@GetNodeExternalVisualizerCount$qqrp28Idevirtualtrees@TVirtualNode @73  ; __fastcall Localvars::TLocalVarsWindow::GetNodeExternalVisualizerCount(Idevirtualtrees::TVirtualNode *)
+    @Localvars@TLocalVarsWindow@InspectComplete$qqrx59System@%DelphiInterface$32Debugapi@IOTAExpressionInspector% @84  ; Localvars::TLocalVarsWindow::InspectComplete(const System::DelphiInterface<{583}...
+    @Localvars@TLocalVarsWindow@LocalsPopupMenuPopup$qqrp14System@TObject @91  ; __fastcall Localvars::TLocalVarsWindow::LocalsPopupMenuPopup(System::TObject *)
+    @Localvars@TLocalVarsWindow@LocalsTreeViewDragAllowed$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodeiro @68  ; __fastcall Localvars::TLocalVarsWindow::LocalsTreeViewDragAllowed(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, int, bool&)
+    @Localvars@TLocalVarsWindow@LocalsTreeViewFreeNode$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNode @67  ; __fastcall Localvars::TLocalVarsWindow::LocalsTreeViewFreeNode(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *)
+    @Localvars@TLocalVarsWindow@LocalsTreeViewGetImageIndex$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNode28Idevirtualtrees@TVTImageKindirori @72  ; __fastcall Localvars::TLocalVarsWindow::LocalsTreeViewGetImageIndex(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, Idevirtualtrees::TVTImageKind, int, bool&, int&)
+    @Localvars@TLocalVarsWindow@LocalsTreeViewGetNodeDataSize$qqrp32Idevirtualtrees@TBaseVirtualTreeri @71  ; __fastcall Localvars::TLocalVarsWindow::LocalsTreeViewGetNodeDataSize(Idevirtualtrees::TBaseVirtualTree *, int&)
+    @Localvars@TLocalVarsWindow@LocalsTreeViewGetText$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodei28Idevirtualtrees@TVSTTextTyper17System@WideString @77  ; __fastcall Localvars::TLocalVarsWindow::LocalsTreeViewGetText(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, int, Idevirtualtrees::TVSTTextType, System::WideString&)
+    @Localvars@TLocalVarsWindow@LocalsTreeViewInitChildren$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNoderui @70  ; __fastcall Localvars::TLocalVarsWindow::LocalsTreeViewInitChildren(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, unsigned int&)
+    @Localvars@TLocalVarsWindow@LocalsTreeViewInitNode$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodet2r64System@%Set$37Idevirtualtrees@TVirtualNodeInitStatet1$i0$t1$i4$% @76  ; Localvars::TLocalVarsWindow::LocalsTreeViewInitNode(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, Idevirtualtrees::TVirtualNode *, System::Set<{583}...
+    @Localvars@TLocalVarsWindow@LocalsTreeViewMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @75  ; Localvars::TLocalVarsWindow::LocalsTreeViewMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Localvars@TLocalVarsWindow@LocalsTreeViewPaintText$qqrp32Idevirtualtrees@TBaseVirtualTreexp20Vcl@Graphics@TCanvasp28Idevirtualtrees@TVirtualNodei28Idevirtualtrees@TVSTTextType @66  ; __fastcall Localvars::TLocalVarsWindow::LocalsTreeViewPaintText(Idevirtualtrees::TBaseVirtualTree *, Vcl::Graphics::TCanvas * const, Idevirtualtrees::TVirtualNode *, int, Idevirtualtrees::TVSTTextType)
+    @Localvars@TLocalVarsWindow@LocalsTreeViewStartDrag$qqrp14System@TObjectrp24Vcl@Controls@TDragObject @65  ; __fastcall Localvars::TLocalVarsWindow::LocalsTreeViewStartDrag(System::TObject *, Vcl::Controls::TDragObject *&)
+    @Localvars@TLocalVarsWindow@Modified$qqrv @85  ; __fastcall Localvars::TLocalVarsWindow::Modified()
+    @Localvars@TLocalVarsWindow@OnExpandedCollapsed$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNode @69  ; __fastcall Localvars::TLocalVarsWindow::OnExpandedCollapsed(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *)
+    @Localvars@TLocalVarsWindow@ProcessMemoryChanged$qqrp14System@TObjecto @102 ; __fastcall Localvars::TLocalVarsWindow::ProcessMemoryChanged(System::TObject *, bool)
+    @Localvars@TLocalVarsWindow@RefreshComplete$qqrx59System@%DelphiInterface$32Debugapi@IOTAExpressionInspector% @82  ; Localvars::TLocalVarsWindow::RefreshComplete(const System::DelphiInterface<{583}...
+    @Localvars@TLocalVarsWindow@SetFrameNum$qqri @79  ; __fastcall Localvars::TLocalVarsWindow::SetFrameNum(int)
+    @Localvars@TLocalVarsWindow@SubInspectComplete$qqrx59System@%DelphiInterface$32Debugapi@IOTAExpressionInspector% @83  ; Localvars::TLocalVarsWindow::SubInspectComplete(const System::DelphiInterface<{583}...
+    @Localvars@TLocalVarsWindow@ThreadDestroyed$qqrp14System@TObjectx46System@%DelphiInterface$19Toolsapi@IOTAThread% @99  ; Localvars::TLocalVarsWindow::ThreadDestroyed(System::TObject *, const System::DelphiInterface<{583}...
+    @Localvars@TLocalVarsWindow@UpdateCaption$qqrv @110 ; __fastcall Localvars::TLocalVarsWindow::UpdateCaption()
+    @Localvars@TLocalVarsWindow@UpdateInspector$qqroi @104 ; __fastcall Localvars::TLocalVarsWindow::UpdateInspector(bool, int)
+    @Localvars@TLocalVarsWindow@VisualizerListChanged$qqrp14System@TObject @97  ; __fastcall Localvars::TLocalVarsWindow::VisualizerListChanged(System::TObject *)
+    @Localvars@TLocalVarsWindow@cbContextChange$qqrp14System@TObject @80  ; __fastcall Localvars::TLocalVarsWindow::cbContextChange(System::TObject *)
+    @Localvars@TLocalVarsWindow@cbContextDropDown$qqrp14System@TObject @81  ; __fastcall Localvars::TLocalVarsWindow::cbContextDropDown(System::TObject *)
+    @Localvars@TLocalVarsWindow@lvCopyNameClick$qqrp14System@TObject @108 ; __fastcall Localvars::TLocalVarsWindow::lvCopyNameClick(System::TObject *)
+    @Localvars@TLocalVarsWindow@lvCopyValueClick$qqrp14System@TObject @107 ; __fastcall Localvars::TLocalVarsWindow::lvCopyValueClick(System::TObject *)
+    @Localvars@TLocalVarsWindow@lvEvaluateModifyClick$qqrp14System@TObject @105 ; __fastcall Localvars::TLocalVarsWindow::lvEvaluateModifyClick(System::TObject *)
+    @Localvars@TLocalVarsWindow@lvInspectClick$qqrp14System@TObject @94  ; __fastcall Localvars::TLocalVarsWindow::lvInspectClick(System::TObject *)
+    @Localvars@TLocalVarsWindow@lvWatchClick$qqrp14System@TObject @93  ; __fastcall Localvars::TLocalVarsWindow::lvWatchClick(System::TObject *)
+    @Localvars@initialization$qqrv @63  ; __fastcall Localvars::initialization()
+    @Modexplorerform@Finalization$qqrv @230 ; __fastcall Modexplorerform::Finalization()
+    @Modexplorerform@InitializeEditorWindowHooks$qqrv @231 ; __fastcall Modexplorerform::InitializeEditorWindowHooks()
+    @Modexplorerform@TPasModExpFrame@ @255 ; Modexplorerform::TPasModExpFrame::
+    @Modexplorerform@TPasModExpFrame@$bdtr$qqrv @253 ; __fastcall Modexplorerform::TPasModExpFrame::~TPasModExpFrame()
+    @Modexplorerform@TPasModExpFrame@AfterConstruction$qqrv @250 ; __fastcall Modexplorerform::TPasModExpFrame::AfterConstruction()
+    @Modexplorerform@TPasModExpFrame@BeforeCompile$qqrp14System@TObjectx49System@%DelphiInterface$22Codemgr@ICustomProject%21Compintf@TCompileTypero @232 ; Modexplorerform::TPasModExpFrame::BeforeCompile(System::TObject *, const System::DelphiInterface<{583}...
+    @Modexplorerform@TPasModExpFrame@Disable$qqrv @234 ; __fastcall Modexplorerform::TPasModExpFrame::Disable()
+    @Modexplorerform@TPasModExpFrame@Enable$qqrv @233 ; __fastcall Modexplorerform::TPasModExpFrame::Enable()
+    @Modexplorerform@TPasModExpFrame@ExplorerActionPerformed$qqr50System@%DelphiInterface$23Ideuievent@IActionEvent% @248 ; Modexplorerform::TPasModExpFrame::ExplorerActionPerformed(System::DelphiInterface<{583}...
+    @Modexplorerform@TPasModExpFrame@ExplorerExit$qqrp14System@TObject @246 ; __fastcall Modexplorerform::TPasModExpFrame::ExplorerExit(System::TObject *)
+    @Modexplorerform@TPasModExpFrame@ExplorerKeyPressed$qqr47System@%DelphiInterface$20Ideuievent@IKeyEvent% @247 ; Modexplorerform::TPasModExpFrame::ExplorerKeyPressed(System::DelphiInterface<{583}...
+    @Modexplorerform@TPasModExpFrame@ExplorerSubfocusChanged$qqr58System@%DelphiInterface$31Idesubfocus@IGraphSubfocusEvent% @249 ; Modexplorerform::TPasModExpFrame::ExplorerSubfocusChanged(System::DelphiInterface<{583}...
+    @Modexplorerform@TPasModExpFrame@FocusNode$qqrx50System@%DelphiInterface$23Idemodel@IGraphLocation% @252 ; Modexplorerform::TPasModExpFrame::FocusNode(const System::DelphiInterface<{583}...
+    @Modexplorerform@TPasModExpFrame@FormDestroy$qqrp14System@TObject @238 ; __fastcall Modexplorerform::TPasModExpFrame::FormDestroy(System::TObject *)
+    @Modexplorerform@TPasModExpFrame@GetFocusedLocation$qqrv @245 ; __fastcall Modexplorerform::TPasModExpFrame::GetFocusedLocation()
+    @Modexplorerform@TPasModExpFrame@GetModel$qqrv @244 ; __fastcall Modexplorerform::TPasModExpFrame::GetModel()
+    @Modexplorerform@TPasModExpFrame@LocalMenuItemClick$qqrp14System@TObject @236 ; __fastcall Modexplorerform::TPasModExpFrame::LocalMenuItemClick(System::TObject *)
+    @Modexplorerform@TPasModExpFrame@NewActionExecute$qqrp14System@TObject @243 ; __fastcall Modexplorerform::TPasModExpFrame::NewActionExecute(System::TObject *)
+    @Modexplorerform@TPasModExpFrame@NewActionUpdate$qqrp14System@TObject @241 ; __fastcall Modexplorerform::TPasModExpFrame::NewActionUpdate(System::TObject *)
+    @Modexplorerform@TPasModExpFrame@NewModel$qqrx20System@UnicodeStringx47System@%DelphiInterface$20Idemodel@IGraphModel% @251 ; Modexplorerform::TPasModExpFrame::NewModel(const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Modexplorerform@TPasModExpFrame@PropertiesActionExecute$qqrp14System@TObject @235 ; __fastcall Modexplorerform::TPasModExpFrame::PropertiesActionExecute(System::TObject *)
+    @Modexplorerform@TPasModExpFrame@RenameActionExecute$qqrp14System@TObject @242 ; __fastcall Modexplorerform::TPasModExpFrame::RenameActionExecute(System::TObject *)
+    @Modexplorerform@TPasModExpFrame@RenameActionUpdate$qqrp14System@TObject @240 ; __fastcall Modexplorerform::TPasModExpFrame::RenameActionUpdate(System::TObject *)
+    @Modexplorerform@TPasModExpFrame@SearchAgainItemClick$qqrp14System@TObject @237 ; __fastcall Modexplorerform::TPasModExpFrame::SearchAgainItemClick(System::TObject *)
+    @Modexplorerform@TPasModExpFrame@SetParent$qqrp24Vcl@Controls@TWinControl @239 ; __fastcall Modexplorerform::TPasModExpFrame::SetParent(Vcl::Controls::TWinControl *)
+    @Modexplorerform@initialization$qqrv @229 ; __fastcall Modexplorerform::initialization()
+    @Modulesvieweditview@Finalization$qqrv @207 ; __fastcall Modulesvieweditview::Finalization()
+    @Modulesvieweditview@ModulesViewImageIndex @226 ; Modulesvieweditview::ModulesViewImageIndex
+    @Modulesvieweditview@ShowModulesView$qqrv @225 ; __fastcall Modulesvieweditview::ShowModulesView()
+    @Modulesvieweditview@TModulesEditView@ @228 ; Modulesvieweditview::TModulesEditView::
+    @Modulesvieweditview@TModulesEditView@$bctr$qqrp22Editorform@TEditWindowp30Basemodulesview@TModViewLayout @224 ; __fastcall Modulesvieweditview::TModulesEditView::TModulesEditView(Editorform::TEditWindow *, Basemodulesview::TModViewLayout *)
+    @Modulesvieweditview@TModulesEditView@$bdtr$qqrv @223 ; __fastcall Modulesvieweditview::TModulesEditView::~TModulesEditView()
+    @Modulesvieweditview@TModulesEditView@CloneEditView$qqrp22Editorform@TEditWindow @222 ; __fastcall Modulesvieweditview::TModulesEditView::CloneEditView(Editorform::TEditWindow *)
+    @Modulesvieweditview@TModulesEditView@DeselectView$qqrv @211 ; __fastcall Modulesvieweditview::TModulesEditView::DeselectView()
+    @Modulesvieweditview@TModulesEditView@EditAction$qqr22Designintf@TEditAction @216 ; __fastcall Modulesvieweditview::TModulesEditView::EditAction(Designintf::TEditAction)
+    @Modulesvieweditview@TModulesEditView@GetCaption$qqrv @220 ; __fastcall Modulesvieweditview::TModulesEditView::GetCaption()
+    @Modulesvieweditview@TModulesEditView@GetEditState$qqrv @217 ; __fastcall Modulesvieweditview::TModulesEditView::GetEditState()
+    @Modulesvieweditview@TModulesEditView@GetImageIndex$qqrv @221 ; __fastcall Modulesvieweditview::TModulesEditView::GetImageIndex()
+    @Modulesvieweditview@TModulesEditView@GetSavedChildIndex$qqrv @219 ; __fastcall Modulesvieweditview::TModulesEditView::GetSavedChildIndex()
+    @Modulesvieweditview@TModulesEditView@GetStatusPanelCount$qqrv @215 ; __fastcall Modulesvieweditview::TModulesEditView::GetStatusPanelCount()
+    @Modulesvieweditview@TModulesEditView@GetTabText$qqrv @214 ; __fastcall Modulesvieweditview::TModulesEditView::GetTabText()
+    @Modulesvieweditview@TModulesEditView@GetViewTabNames$qqrp23System@Classes@TStrings @213 ; __fastcall Modulesvieweditview::TModulesEditView::GetViewTabNames(System::Classes::TStrings *)
+    @Modulesvieweditview@TModulesEditView@LoadViewState$qqrxp30System@Inifiles@TCustomIniFilex20System@UnicodeStringxp22Editorform@TEditWindow @210 ; __fastcall Modulesvieweditview::TModulesEditView::LoadViewState(System::Inifiles::TCustomIniFile * const, const System::UnicodeString, Editorform::TEditWindow * const)
+    @Modulesvieweditview@TModulesEditView@ProcessDestroyed$qqrp14System@TObjectx47System@%DelphiInterface$20Toolsapi@IOTAProcess% @209 ; Modulesvieweditview::TModulesEditView::ProcessDestroyed(System::TObject *, const System::DelphiInterface<{583}...
+    @Modulesvieweditview@TModulesEditView@SaveChildIndex$qqri @218 ; __fastcall Modulesvieweditview::TModulesEditView::SaveChildIndex(int)
+    @Modulesvieweditview@TModulesEditView@SaveViewState$qqrxp30System@Inifiles@TCustomIniFilexox20System@UnicodeStringxp22Editorform@TEditWindow @208 ; __fastcall Modulesvieweditview::TModulesEditView::SaveViewState(System::Inifiles::TCustomIniFile * const, const bool, const System::UnicodeString, Editorform::TEditWindow * const)
+    @Modulesvieweditview@TModulesEditView@SelectView$qqri @212 ; __fastcall Modulesvieweditview::TModulesEditView::SelectView(int)
+    @Modulesvieweditview@initialization$qqrv @206 ; __fastcall Modulesvieweditview::initialization()
+    @Modviewadd@Finalization$qqrv  @116 ; __fastcall Modviewadd::Finalization()
+    @Modviewadd@TAddModuleForm@    @130 ; Modviewadd::TAddModuleForm::
+    @Modviewadd@TAddModuleForm@$bctr$qqrp25System@Classes@TComponento @121 ; __fastcall Modviewadd::TAddModuleForm::TAddModuleForm(System::Classes::TComponent *, bool)
+    @Modviewadd@TAddModuleForm@AddModuleFormCloseQuery$qqrp14System@TObjectro @117 ; __fastcall Modviewadd::TAddModuleForm::AddModuleFormCloseQuery(System::TObject *, bool&)
+    @Modviewadd@TAddModuleForm@BrowseButtonClick$qqrp14System@TObject @120 ; __fastcall Modviewadd::TAddModuleForm::BrowseButtonClick(System::TObject *)
+    @Modviewadd@TAddModuleForm@HelpButtonClick$qqrp14System@TObject @119 ; __fastcall Modviewadd::TAddModuleForm::HelpButtonClick(System::TObject *)
+    @Modviewadd@TAddModuleForm@OKButtonClick$qqrp14System@TObject @118 ; __fastcall Modviewadd::TAddModuleForm::OKButtonClick(System::TObject *)
+    @Modviewadd@_sModuleAddModuleBPDlgCaption @125 ; Modviewadd::_sModuleAddModuleBPDlgCaption
+    @Modviewadd@_sModuleAddModuleDlgCaption @126 ; Modviewadd::_sModuleAddModuleDlgCaption
+    @Modviewadd@_sModuleAddModuleMenuCaption @128 ; Modviewadd::_sModuleAddModuleMenuCaption
+    @Modviewadd@_sModuleEditModuleDlgCaption @124 ; Modviewadd::_sModuleEditModuleDlgCaption
+    @Modviewadd@_sModuleEditModuleMenuCaption @127 ; Modviewadd::_sModuleEditModuleMenuCaption
+    @Modviewadd@_sModuleReloadDlgCaption @123 ; Modviewadd::_sModuleReloadDlgCaption
+    @Modviewadd@_sModuleReloadDlgPrompt @122 ; Modviewadd::_sModuleReloadDlgPrompt
+    @Modviewadd@initialization$qqrv @115 ; __fastcall Modviewadd::initialization()
+    @Thrdstat@Finalization$qqrv    @31  ; __fastcall Thrdstat::Finalization()
+    @Thrdstat@TThreadStatus@       @62  ; Thrdstat::TThreadStatus::
+    @Thrdstat@TThreadStatus@CurrentDebuggerChanged$qqrp14System@TObject @56  ; __fastcall Thrdstat::TThreadStatus::CurrentDebuggerChanged(System::TObject *)
+    @Thrdstat@TThreadStatus@DetachItemClick$qqrp14System@TObject @33  ; __fastcall Thrdstat::TThreadStatus::DetachItemClick(System::TObject *)
+    @Thrdstat@TThreadStatus@DoUpdate$qqrv @59  ; __fastcall Thrdstat::TThreadStatus::DoUpdate()
+    @Thrdstat@TThreadStatus@EditViewSource$qqro @51  ; __fastcall Thrdstat::TThreadStatus::EditViewSource(bool)
+    @Thrdstat@TThreadStatus@FormCreate$qqrp14System@TObject @54  ; __fastcall Thrdstat::TThreadStatus::FormCreate(System::TObject *)
+    @Thrdstat@TThreadStatus@FormDestroy$qqrp14System@TObject @34  ; __fastcall Thrdstat::TThreadStatus::FormDestroy(System::TObject *)
+    @Thrdstat@TThreadStatus@FormHide$qqrp14System@TObject @37  ; __fastcall Thrdstat::TThreadStatus::FormHide(System::TObject *)
+    @Thrdstat@TThreadStatus@FormShow$qqrp14System@TObject @43  ; __fastcall Thrdstat::TThreadStatus::FormShow(System::TObject *)
+    @Thrdstat@TThreadStatus@FreezeAllOtherThreadsItemClick$qqrp14System@TObject @41  ; __fastcall Thrdstat::TThreadStatus::FreezeAllOtherThreadsItemClick(System::TObject *)
+    @Thrdstat@TThreadStatus@FreezeItemClick$qqrp14System@TObject @40  ; __fastcall Thrdstat::TThreadStatus::FreezeItemClick(System::TObject *)
+    @Thrdstat@TThreadStatus@FreezeThawThread$qqro @42  ; __fastcall Thrdstat::TThreadStatus::FreezeThawThread(bool)
+    @Thrdstat@TThreadStatus@GetEditState$qqrv @50  ; __fastcall Thrdstat::TThreadStatus::GetEditState()
+    @Thrdstat@TThreadStatus@GotoSourceClick$qqrp14System@TObject @49  ; __fastcall Thrdstat::TThreadStatus::GotoSourceClick(System::TObject *)
+    @Thrdstat@TThreadStatus@ItemMenuPopup$qqrp14System@TObject @44  ; __fastcall Thrdstat::TThreadStatus::ItemMenuPopup(System::TObject *)
+    @Thrdstat@TThreadStatus@LoadWindowState$qqrp30System@Inifiles@TCustomIniFile @52  ; __fastcall Thrdstat::TThreadStatus::LoadWindowState(System::Inifiles::TCustomIniFile *)
+    @Thrdstat@TThreadStatus@LocalMenuItemClick$qqrp14System@TObject @45  ; __fastcall Thrdstat::TThreadStatus::LocalMenuItemClick(System::TObject *)
+    @Thrdstat@TThreadStatus@MakeCurrentClick$qqrp14System@TObject @48  ; __fastcall Thrdstat::TThreadStatus::MakeCurrentClick(System::TObject *)
+    @Thrdstat@TThreadStatus@NameThreadItemClick$qqrp14System@TObject @47  ; __fastcall Thrdstat::TThreadStatus::NameThreadItemClick(System::TObject *)
+    @Thrdstat@TThreadStatus@PauseItemClick$qqrp14System@TObject @32  ; __fastcall Thrdstat::TThreadStatus::PauseItemClick(System::TObject *)
+    @Thrdstat@TThreadStatus@ProcessDestroyed$qqrp14System@TObjectx47System@%DelphiInterface$20Toolsapi@IOTAProcess% @55  ; Thrdstat::TThreadStatus::ProcessDestroyed(System::TObject *, const System::DelphiInterface<{583}...
+    @Thrdstat@TThreadStatus@ProcessHandler$qqrp14System@TObjectx47System@%DelphiInterface$20Toolsapi@IOTAProcess% @58  ; Thrdstat::TThreadStatus::ProcessHandler(System::TObject *, const System::DelphiInterface<{583}...
+    @Thrdstat@TThreadStatus@ProcessPropertiesItemClick$qqrp14System@TObject @35  ; __fastcall Thrdstat::TThreadStatus::ProcessPropertiesItemClick(System::TObject *)
+    @Thrdstat@TThreadStatus@SaveWindowState$qqrp30System@Inifiles@TCustomIniFileo @53  ; __fastcall Thrdstat::TThreadStatus::SaveWindowState(System::Inifiles::TCustomIniFile *, bool)
+    @Thrdstat@TThreadStatus@TerminateItemClick$qqrp14System@TObject @36  ; __fastcall Thrdstat::TThreadStatus::TerminateItemClick(System::TObject *)
+    @Thrdstat@TThreadStatus@ThawAllThreadsItemClick$qqrp14System@TObject @39  ; __fastcall Thrdstat::TThreadStatus::ThawAllThreadsItemClick(System::TObject *)
+    @Thrdstat@TThreadStatus@ThawItemClick$qqrp14System@TObject @38  ; __fastcall Thrdstat::TThreadStatus::ThawItemClick(System::TObject *)
+    @Thrdstat@TThreadStatus@ThreadHandler$qqrp14System@TObjectx46System@%DelphiInterface$19Toolsapi@IOTAThread% @57  ; Thrdstat::TThreadStatus::ThreadHandler(System::TObject *, const System::DelphiInterface<{583}...
+    @Thrdstat@TThreadStatus@UpdateListItem$qqrp22Vcl@Comctrls@TListItem44System@%DelphiInterface$17System@IInterface%o @60  ; Thrdstat::TThreadStatus::UpdateListItem(Vcl::Comctrls::TListItem *, System::DelphiInterface<{583}...
+    @Thrdstat@TThreadStatus@ViewSourceClick$qqrp14System@TObject @46  ; __fastcall Thrdstat::TThreadStatus::ViewSourceClick(System::TObject *)
+    @Thrdstat@initialization$qqrv  @30  ; __fastcall Thrdstat::initialization()
+    Finalize                       @418 ; Finalize
+    Initialize                     @419 ; Initialize

@@ -1,0 +1,17 @@
+LIBRARY     ITEIDEBCB210.BPL
+
+DESCRIPTION 'mbarcadero Integrated Translation Environment for BCB'
+
+EXPORTS
+    @GetPackageInfoTable           @12  ; GetPackageInfoTable
+    @Itebcbregister@Finalization$qqrv @4   ; __fastcall Itebcbregister::Finalization()
+    @Itebcbregister@IDERegister$qqrv @5   ; __fastcall Itebcbregister::IDERegister()
+    @Itebcbregister@initialization$qqrv @3   ; __fastcall Itebcbregister::initialization()
+    @Itebcbresourcedllwizard@Finalization$qqrv @2   ; __fastcall Itebcbresourcedllwizard::Finalization()
+    @Itebcbresourcedllwizard@initialization$qqrv @1   ; __fastcall Itebcbresourcedllwizard::initialization()
+    @Iteidebcb@@GetPackageInfoTable$qqrv @9   ; Iteidebcb::__linkproc__ __fastcall GetPackageInfoTable()
+    @Iteidebcb@@PackageLoad$qqrv   @8   ; Iteidebcb::__linkproc__ __fastcall PackageLoad()
+    @Iteidebcb@@PackageUnload$qqrv @7   ; Iteidebcb::__linkproc__ __fastcall PackageUnload()
+    @Iteidebcb@initialization$qqrv @6   ; __fastcall Iteidebcb::initialization()
+    Finalize                       @10  ; Finalize
+    Initialize                     @11  ; Initialize

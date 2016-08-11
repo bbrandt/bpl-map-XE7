@@ -1,0 +1,256 @@
+LIBRARY     BCBSMP210.BPL
+
+DESCRIPTION 'mbarcadero C++ Sample Components'
+
+EXPORTS
+    @$xp$10TCCalendar              @28  ; __tpdsc__ TCCalendar
+    @$xp$10TCTrayIcon              @233 ; __tpdsc__ TCTrayIcon
+    @$xp$16Cspin@TCSpinEdit        @150 ; __tpdsc__ Cspin::TCSpinEdit
+    @$xp$17TPerformanceGraph       @185 ; __tpdsc__ TPerformanceGraph
+    @$xp$18Cspin@TCSpinButton      @153 ; __tpdsc__ Cspin::TCSpinButton
+    @$xp$21CColorgrd@TCColorGrid   @101 ; __tpdsc__ CColorgrd::TCColorGrid
+    @$xp$23Cspin@TTimerSpeedButton @152 ; __tpdsc__ Cspin::TTimerSpeedButton
+    @$xp$27Cdiroutl@TCDirectoryOutline @51  ; __tpdsc__ Cdiroutl::TCDirectoryOutline
+    @$xp$4TPie                     @201 ; __tpdsc__ TPie
+    @$xp$7TAngles                  @202 ; __tpdsc__ TAngles
+    @$xp$7TCGauge                  @72  ; __tpdsc__ TCGauge
+    @@Bcbsmp@Finalize              @4   ; __linkproc__ Bcbsmp::Finalize
+    @@Bcbsmp@Initialize            @3   ; __linkproc__ Bcbsmp::Initialize
+    @@Ccalendr@Finalize            @31  ; __linkproc__ Ccalendr::Finalize
+    @@Ccalendr@Initialize          @30  ; __linkproc__ Ccalendr::Initialize
+    @@Cdiroutl@Finalize            @53  ; __linkproc__ Cdiroutl::Finalize
+    @@Cdiroutl@Initialize          @52  ; __linkproc__ Cdiroutl::Initialize
+    @@Cgauges@Finalize             @74  ; __linkproc__ Cgauges::Finalize
+    @@Cgauges@Initialize           @73  ; __linkproc__ Cgauges::Initialize
+    @@Cgrid@Finalize               @104 ; __linkproc__ Cgrid::Finalize
+    @@Cgrid@Initialize             @103 ; __linkproc__ Cgrid::Initialize
+    @@Cspin@Finalize               @157 ; __linkproc__ Cspin::Finalize
+    @@Cspin@Initialize             @156 ; __linkproc__ Cspin::Initialize
+    @@Perfgrap@Finalize            @187 ; __linkproc__ Perfgrap::Finalize
+    @@Perfgrap@Initialize          @186 ; __linkproc__ Perfgrap::Initialize
+    @@Pies@Finalize                @204 ; __linkproc__ Pies::Finalize
+    @@Pies@Initialize              @203 ; __linkproc__ Pies::Initialize
+    @@Trayicon@Finalize            @235 ; __linkproc__ Trayicon::Finalize
+    @@Trayicon@Initialize          @234 ; __linkproc__ Trayicon::Initialize
+    @CColorgrd@TCColorGrid@        @243 ; CColorgrd::TCColorGrid::
+    @CColorgrd@TCColorGrid@$bctr$qqrp25System@Classes@TComponent @75  ; __fastcall CColorgrd::TCColorGrid::TCColorGrid(System::Classes::TComponent *)
+    @CColorgrd@TCColorGrid@$bctr$qqrp6HWND__ @76  ; __fastcall CColorgrd::TCColorGrid::TCColorGrid(HWND__ *)
+    @CColorgrd@TCColorGrid@CMCtl3DChanged$qqrr24Winapi@Messages@TMessage @89  ; __fastcall CColorgrd::TCColorGrid::CMCtl3DChanged(Winapi::Messages::TMessage&)
+    @CColorgrd@TCColorGrid@Change$qqrv @100 ; __fastcall CColorgrd::TCColorGrid::Change()
+    @CColorgrd@TCColorGrid@CreateWnd$qqrv @77  ; __fastcall CColorgrd::TCColorGrid::CreateWnd()
+    @CColorgrd@TCColorGrid@Dispatch$qqrpv @102 ; __fastcall CColorgrd::TCColorGrid::Dispatch(void *)
+    @CColorgrd@TCColorGrid@DrawFgBg$qqrv @79  ; __fastcall CColorgrd::TCColorGrid::DrawFgBg()
+    @CColorgrd@TCColorGrid@DrawSquare$qqrio @78  ; __fastcall CColorgrd::TCColorGrid::DrawSquare(int, bool)
+    @CColorgrd@TCColorGrid@EnableBackground$qqro @81  ; __fastcall CColorgrd::TCColorGrid::EnableBackground(bool)
+    @CColorgrd@TCColorGrid@EnableForeground$qqro @80  ; __fastcall CColorgrd::TCColorGrid::EnableForeground(bool)
+    @CColorgrd@TCColorGrid@GetBackgroundColor$qqrv @83  ; __fastcall CColorgrd::TCColorGrid::GetBackgroundColor()
+    @CColorgrd@TCColorGrid@GetForegroundColor$qqrv @82  ; __fastcall CColorgrd::TCColorGrid::GetForegroundColor()
+    @CColorgrd@TCColorGrid@KeyDown$qqrrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @86  ; CColorgrd::TCColorGrid::KeyDown(unsigned short&, System::Set<{583}...
+    @CColorgrd@TCColorGrid@MouseDown$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @90  ; CColorgrd::TCColorGrid::MouseDown(System::Uitypes::TMouseButton, System::Set<{583}...
+    @CColorgrd@TCColorGrid@MouseMove$qqr60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @91  ; CColorgrd::TCColorGrid::MouseMove(System::Set<{583}...
+    @CColorgrd@TCColorGrid@MouseUp$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @92  ; CColorgrd::TCColorGrid::MouseUp(System::Uitypes::TMouseButton, System::Set<{583}...
+    @CColorgrd@TCColorGrid@Paint$qqrv @93  ; __fastcall CColorgrd::TCColorGrid::Paint()
+    @CColorgrd@TCColorGrid@SetBackgroundIndex$qqri @94  ; __fastcall CColorgrd::TCColorGrid::SetBackgroundIndex(int)
+    @CColorgrd@TCColorGrid@SetForegroundIndex$qqri @95  ; __fastcall CColorgrd::TCColorGrid::SetForegroundIndex(int)
+    @CColorgrd@TCColorGrid@SetGridOrdering$qqr23CColorgrd@TGridOrdering @96  ; __fastcall CColorgrd::TCColorGrid::SetGridOrdering(CColorgrd::TGridOrdering)
+    @CColorgrd@TCColorGrid@SetSelection$qqri @97  ; __fastcall CColorgrd::TCColorGrid::SetSelection(int)
+    @CColorgrd@TCColorGrid@SquareFromPos$qqrii @98  ; __fastcall CColorgrd::TCColorGrid::SquareFromPos(int, int)
+    @CColorgrd@TCColorGrid@UpdateCellSizes$qqro @99  ; __fastcall CColorgrd::TCColorGrid::UpdateCellSizes(bool)
+    @CColorgrd@TCColorGrid@WMGetDlgCode$qqrr27Winapi@Messages@TWMNoParams @87  ; __fastcall CColorgrd::TCColorGrid::WMGetDlgCode(Winapi::Messages::TWMNoParams&)
+    @CColorgrd@TCColorGrid@WMKillFocus$qqrr28Winapi@Messages@TWMKillFocus @85  ; __fastcall CColorgrd::TCColorGrid::WMKillFocus(Winapi::Messages::TWMKillFocus&)
+    @CColorgrd@TCColorGrid@WMSetFocus$qqrr27Winapi@Messages@TWMSetFocus @84  ; __fastcall CColorgrd::TCColorGrid::WMSetFocus(Winapi::Messages::TWMSetFocus&)
+    @CColorgrd@TCColorGrid@WMSize$qqrr23Winapi@Messages@TWMSize @88  ; __fastcall CColorgrd::TCColorGrid::WMSize(Winapi::Messages::TWMSize&)
+    @Cdiroutl@TCDirectoryOutline@  @239 ; Cdiroutl::TCDirectoryOutline::
+    @Cdiroutl@TCDirectoryOutline@$bctr$qqrp25System@Classes@TComponent @32  ; __fastcall Cdiroutl::TCDirectoryOutline::TCDirectoryOutline(System::Classes::TComponent *)
+    @Cdiroutl@TCDirectoryOutline@$bctr$qqrp6HWND__ @33  ; __fastcall Cdiroutl::TCDirectoryOutline::TCDirectoryOutline(HWND__ *)
+    @Cdiroutl@TCDirectoryOutline@APointer @238 ; Cdiroutl::TCDirectoryOutline::APointer
+    @Cdiroutl@TCDirectoryOutline@AssignCaseProc$qqrv @34  ; __fastcall Cdiroutl::TCDirectoryOutline::AssignCaseProc()
+    @Cdiroutl@TCDirectoryOutline@BuildOneLevel$qqrl @35  ; __fastcall Cdiroutl::TCDirectoryOutline::BuildOneLevel(long)
+    @Cdiroutl@TCDirectoryOutline@BuildSubTree$qqrl @37  ; __fastcall Cdiroutl::TCDirectoryOutline::BuildSubTree(long)
+    @Cdiroutl@TCDirectoryOutline@BuildTree$qqrv @36  ; __fastcall Cdiroutl::TCDirectoryOutline::BuildTree()
+    @Cdiroutl@TCDirectoryOutline@Change$qqrv @38  ; __fastcall Cdiroutl::TCDirectoryOutline::Change()
+    @Cdiroutl@TCDirectoryOutline@Click$qqrv @39  ; __fastcall Cdiroutl::TCDirectoryOutline::Click()
+    @Cdiroutl@TCDirectoryOutline@CreateWnd$qqrv @40  ; __fastcall Cdiroutl::TCDirectoryOutline::CreateWnd()
+    @Cdiroutl@TCDirectoryOutline@CurDir$qv @48  ; Cdiroutl::TCDirectoryOutline::CurDir()
+    @Cdiroutl@TCDirectoryOutline@DriveToInt$qqrc @46  ; __fastcall Cdiroutl::TCDirectoryOutline::DriveToInt(char)
+    @Cdiroutl@TCDirectoryOutline@Expand$qqri @41  ; __fastcall Cdiroutl::TCDirectoryOutline::Expand(int)
+    @Cdiroutl@TCDirectoryOutline@ForceCase$qqrrx20System@UnicodeString @43  ; __fastcall Cdiroutl::TCDirectoryOutline::ForceCase(const System::UnicodeString&)
+    @Cdiroutl@TCDirectoryOutline@GetChildNamed$qqrrx20System@UnicodeStringl @49  ; __fastcall Cdiroutl::TCDirectoryOutline::GetChildNamed(const System::UnicodeString&, long)
+    @Cdiroutl@TCDirectoryOutline@InvalidIndex @240 ; Cdiroutl::TCDirectoryOutline::InvalidIndex
+    @Cdiroutl@TCDirectoryOutline@Loaded$qqrv @42  ; __fastcall Cdiroutl::TCDirectoryOutline::Loaded()
+    @Cdiroutl@TCDirectoryOutline@RootIndex @241 ; Cdiroutl::TCDirectoryOutline::RootIndex
+    @Cdiroutl@TCDirectoryOutline@SetDirectory$qqr20System@UnicodeString @44  ; __fastcall Cdiroutl::TCDirectoryOutline::SetDirectory(System::UnicodeString)
+    @Cdiroutl@TCDirectoryOutline@SetDrive$qqrc @45  ; __fastcall Cdiroutl::TCDirectoryOutline::SetDrive(char)
+    @Cdiroutl@TCDirectoryOutline@SetTextCase$qqr18Cdiroutl@TTextCase @47  ; __fastcall Cdiroutl::TCDirectoryOutline::SetTextCase(Cdiroutl::TTextCase)
+    @Cdiroutl@TCDirectoryOutline@WalkTree$qqrrx20System@UnicodeString @50  ; __fastcall Cdiroutl::TCDirectoryOutline::WalkTree(const System::UnicodeString&)
+    @Cspin@TCSpinButton@           @246 ; Cspin::TCSpinButton::
+    @Cspin@TCSpinButton@$bctr$qqrp25System@Classes@TComponent @105 ; __fastcall Cspin::TCSpinButton::TCSpinButton(System::Classes::TComponent *)
+    @Cspin@TCSpinButton@$bctr$qqrp6HWND__ @106 ; __fastcall Cspin::TCSpinButton::TCSpinButton(HWND__ *)
+    @Cspin@TCSpinButton@$bdtr$qqrv @155 ; __fastcall Cspin::TCSpinButton::~TCSpinButton()
+    @Cspin@TCSpinButton@AdjustSize$qqrrit1 @108 ; __fastcall Cspin::TCSpinButton::AdjustSize(int&, int&)
+    @Cspin@TCSpinButton@BtnClick$qqrp14System@TObject @115 ; __fastcall Cspin::TCSpinButton::BtnClick(System::TObject *)
+    @Cspin@TCSpinButton@BtnMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @114 ; Cspin::TCSpinButton::BtnMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Cspin@TCSpinButton@CreateButton$qqrv @107 ; __fastcall Cspin::TCSpinButton::CreateButton()
+    @Cspin@TCSpinButton@Dispatch$qqrpv @154 ; __fastcall Cspin::TCSpinButton::Dispatch(void *)
+    @Cspin@TCSpinButton@GetDownGlyph$qqrv @121 ; __fastcall Cspin::TCSpinButton::GetDownGlyph()
+    @Cspin@TCSpinButton@GetUpGlyph$qqrv @119 ; __fastcall Cspin::TCSpinButton::GetUpGlyph()
+    @Cspin@TCSpinButton@KeyDown$qqrrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @113 ; Cspin::TCSpinButton::KeyDown(unsigned short&, System::Set<{583}...
+    @Cspin@TCSpinButton@Loaded$qqrv @118 ; __fastcall Cspin::TCSpinButton::Loaded()
+    @Cspin@TCSpinButton@SetBounds$qqriiii @109 ; __fastcall Cspin::TCSpinButton::SetBounds(int, int, int, int)
+    @Cspin@TCSpinButton@SetDownGlyph$qqrp20Vcl@Graphics@TBitmap @122 ; __fastcall Cspin::TCSpinButton::SetDownGlyph(Vcl::Graphics::TBitmap *)
+    @Cspin@TCSpinButton@SetFocusBtn$qqrp23Cspin@TTimerSpeedButton @116 ; __fastcall Cspin::TCSpinButton::SetFocusBtn(Cspin::TTimerSpeedButton *)
+    @Cspin@TCSpinButton@SetUpGlyph$qqrp20Vcl@Graphics@TBitmap @120 ; __fastcall Cspin::TCSpinButton::SetUpGlyph(Vcl::Graphics::TBitmap *)
+    @Cspin@TCSpinButton@WMGetDlgCode$qqrr27Winapi@Messages@TWMNoParams @117 ; __fastcall Cspin::TCSpinButton::WMGetDlgCode(Winapi::Messages::TWMNoParams&)
+    @Cspin@TCSpinButton@WMKillFocus$qqrr28Winapi@Messages@TWMKillFocus @112 ; __fastcall Cspin::TCSpinButton::WMKillFocus(Winapi::Messages::TWMKillFocus&)
+    @Cspin@TCSpinButton@WMSetFocus$qqrr27Winapi@Messages@TWMSetFocus @111 ; __fastcall Cspin::TCSpinButton::WMSetFocus(Winapi::Messages::TWMSetFocus&)
+    @Cspin@TCSpinButton@WMSize$qqrr23Winapi@Messages@TWMSize @110 ; __fastcall Cspin::TCSpinButton::WMSize(Winapi::Messages::TWMSize&)
+    @Cspin@TCSpinEdit@             @244 ; Cspin::TCSpinEdit::
+    @Cspin@TCSpinEdit@$bctr$qqrp25System@Classes@TComponent @123 ; __fastcall Cspin::TCSpinEdit::TCSpinEdit(System::Classes::TComponent *)
+    @Cspin@TCSpinEdit@$bctr$qqrp6HWND__ @124 ; __fastcall Cspin::TCSpinEdit::TCSpinEdit(HWND__ *)
+    @Cspin@TCSpinEdit@$bdtr$qqrv   @125 ; __fastcall Cspin::TCSpinEdit::~TCSpinEdit()
+    @Cspin@TCSpinEdit@CMEnter$qqrr27Winapi@Messages@TWMNoParams @143 ; __fastcall Cspin::TCSpinEdit::CMEnter(Winapi::Messages::TWMNoParams&)
+    @Cspin@TCSpinEdit@CMExit$qqrr27Winapi@Messages@TWMNoParams @139 ; __fastcall Cspin::TCSpinEdit::CMExit(Winapi::Messages::TWMNoParams&)
+    @Cspin@TCSpinEdit@CheckValue$qqrl @142 ; __fastcall Cspin::TCSpinEdit::CheckValue(long)
+    @Cspin@TCSpinEdit@CreateParams$qqrr26Vcl@Controls@TCreateParams @130 ; __fastcall Cspin::TCSpinEdit::CreateParams(Vcl::Controls::TCreateParams&)
+    @Cspin@TCSpinEdit@CreateWnd$qqrv @131 ; __fastcall Cspin::TCSpinEdit::CreateWnd()
+    @Cspin@TCSpinEdit@Dispatch$qqrpv @151 ; __fastcall Cspin::TCSpinEdit::Dispatch(void *)
+    @Cspin@TCSpinEdit@DownClick$qqrp14System@TObject @136 ; __fastcall Cspin::TCSpinEdit::DownClick(System::TObject *)
+    @Cspin@TCSpinEdit@GetChildren$qqrynpqqrp25System@Classes@TComponent$vp25System@Classes@TComponent @126 ; __fastcall Cspin::TCSpinEdit::GetChildren(void __fastcall __closure(*)(System::Classes::TComponent *), System::Classes::TComponent *)
+    @Cspin@TCSpinEdit@GetMinHeight$qqrv @134 ; __fastcall Cspin::TCSpinEdit::GetMinHeight()
+    @Cspin@TCSpinEdit@GetValue$qqrv @140 ; __fastcall Cspin::TCSpinEdit::GetValue()
+    @Cspin@TCSpinEdit@IsValidChar$qqrb @129 ; __fastcall Cspin::TCSpinEdit::IsValidChar(wchar_t)
+    @Cspin@TCSpinEdit@KeyDown$qqrrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @127 ; Cspin::TCSpinEdit::KeyDown(unsigned short&, System::Set<{583}...
+    @Cspin@TCSpinEdit@KeyPress$qqrrb @128 ; __fastcall Cspin::TCSpinEdit::KeyPress(wchar_t&)
+    @Cspin@TCSpinEdit@SetEditRect$qqrv @132 ; __fastcall Cspin::TCSpinEdit::SetEditRect()
+    @Cspin@TCSpinEdit@SetValue$qqrl @141 ; __fastcall Cspin::TCSpinEdit::SetValue(long)
+    @Cspin@TCSpinEdit@UpClick$qqrp14System@TObject @135 ; __fastcall Cspin::TCSpinEdit::UpClick(System::TObject *)
+    @Cspin@TCSpinEdit@WMCut$qqrr27Winapi@Messages@TWMNoParams @138 ; __fastcall Cspin::TCSpinEdit::WMCut(Winapi::Messages::TWMNoParams&)
+    @Cspin@TCSpinEdit@WMPaste$qqrr27Winapi@Messages@TWMNoParams @137 ; __fastcall Cspin::TCSpinEdit::WMPaste(Winapi::Messages::TWMNoParams&)
+    @Cspin@TCSpinEdit@WMSize$qqrr23Winapi@Messages@TWMSize @133 ; __fastcall Cspin::TCSpinEdit::WMSize(Winapi::Messages::TWMSize&)
+    @Cspin@TTimerSpeedButton@      @245 ; Cspin::TTimerSpeedButton::
+    @Cspin@TTimerSpeedButton@$bctr$qqrp25System@Classes@TComponent @144 ; __fastcall Cspin::TTimerSpeedButton::TTimerSpeedButton(System::Classes::TComponent *)
+    @Cspin@TTimerSpeedButton@$bdtr$qqrv @145 ; __fastcall Cspin::TTimerSpeedButton::~TTimerSpeedButton()
+    @Cspin@TTimerSpeedButton@MouseDown$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @146 ; Cspin::TTimerSpeedButton::MouseDown(System::Uitypes::TMouseButton, System::Set<{583}...
+    @Cspin@TTimerSpeedButton@MouseUp$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @147 ; Cspin::TTimerSpeedButton::MouseUp(System::Uitypes::TMouseButton, System::Set<{583}...
+    @Cspin@TTimerSpeedButton@Paint$qqrv @149 ; __fastcall Cspin::TTimerSpeedButton::Paint()
+    @Cspin@TTimerSpeedButton@TimerExpired$qqrp14System@TObject @148 ; __fastcall Cspin::TTimerSpeedButton::TimerExpired(System::TObject *)
+    @TAngles@                      @249 ; TAngles::
+    @TAngles@$bctr$qqrv            @188 ; __fastcall TAngles::TAngles()
+    @TAngles@$bdtr$qqrv            @189 ; __fastcall TAngles::~TAngles()
+    @TAngles@Assign$qqrp26System@Classes@TPersistent @190 ; __fastcall TAngles::Assign(System::Classes::TPersistent *)
+    @TAngles@Changed$qqrv          @193 ; __fastcall TAngles::Changed()
+    @TAngles@SetEnd$qqri           @192 ; __fastcall TAngles::SetEnd(int)
+    @TAngles@SetStart$qqri         @191 ; __fastcall TAngles::SetStart(int)
+    @TCCalendar@                   @237 ; TCCalendar::
+    @TCCalendar@$bctr$qqrp25System@Classes@TComponent @5   ; __fastcall TCCalendar::TCCalendar(System::Classes::TComponent *)
+    @TCCalendar@$bctr$qqrp6HWND__  @6   ; __fastcall TCCalendar::TCCalendar(HWND__ *)
+    @TCCalendar@Change$qqrv        @7   ; __fastcall TCCalendar::Change()
+    @TCCalendar@ChangeMonth$qqri   @21  ; __fastcall TCCalendar::ChangeMonth(int)
+    @TCCalendar@Click$qqrv         @8   ; __fastcall TCCalendar::Click()
+    @TCCalendar@DaysPerMonth$qqrii @10  ; __fastcall TCCalendar::DaysPerMonth(int, int)
+    @TCCalendar@DaysThisMonth$qqrv @11  ; __fastcall TCCalendar::DaysThisMonth()
+    @TCCalendar@Dispatch$qqrpv     @29  ; __fastcall TCCalendar::Dispatch(void *)
+    @TCCalendar@DrawCell$qqriirx18System@Types@TRect49System@%Set$22Vcl@Grids@Vcl_Grids__3t1$i0$t1$i5$% @12  ; TCCalendar::DrawCell(int, int, const System::Types::TRect&, System::Set<{583}...
+    @TCCalendar@GetCellText$qqrii  @13  ; __fastcall TCCalendar::GetCellText(int, int)
+    @TCCalendar@GetDateElement$qqri @17  ; __fastcall TCCalendar::GetDateElement(int)
+    @TCCalendar@IsLeapYear$qqri    @9   ; __fastcall TCCalendar::IsLeapYear(int)
+    @TCCalendar@NextMonth$qqrv     @23  ; __fastcall TCCalendar::NextMonth()
+    @TCCalendar@NextYear$qqrv      @24  ; __fastcall TCCalendar::NextYear()
+    @TCCalendar@PrevMonth$qqrv     @22  ; __fastcall TCCalendar::PrevMonth()
+    @TCCalendar@PrevYear$qqrv      @25  ; __fastcall TCCalendar::PrevYear()
+    @TCCalendar@SeTCCalendarDate$qqr16System@TDateTime @15  ; __fastcall TCCalendar::SeTCCalendarDate(System::TDateTime)
+    @TCCalendar@SelectCell$qqrii   @14  ; __fastcall TCCalendar::SelectCell(int, int)
+    @TCCalendar@SetDateElement$qqrii @18  ; __fastcall TCCalendar::SetDateElement(int, int)
+    @TCCalendar@SetStartOfWeek$qqrs @19  ; __fastcall TCCalendar::SetStartOfWeek(short)
+    @TCCalendar@SetUseCurrentDate$qqro @20  ; __fastcall TCCalendar::SetUseCurrentDate(bool)
+    @TCCalendar@StoreCalendarDate$qqrv @16  ; __fastcall TCCalendar::StoreCalendarDate()
+    @TCCalendar@UpdateCalendar$qqrv @26  ; __fastcall TCCalendar::UpdateCalendar()
+    @TCCalendar@WMSize$qqrr23Winapi@Messages@TWMSize @27  ; __fastcall TCCalendar::WMSize(Winapi::Messages::TWMSize&)
+    @TCGauge@                      @242 ; TCGauge::
+    @TCGauge@$bctr$qqrp25System@Classes@TComponent @54  ; __fastcall TCGauge::TCGauge(System::Classes::TComponent *)
+    @TCGauge@AddProgress$qqrl      @71  ; __fastcall TCGauge::AddProgress(long)
+    @TCGauge@GetPercentDone$qqrv   @55  ; __fastcall TCGauge::GetPercentDone()
+    @TCGauge@Paint$qqrv            @56  ; __fastcall TCGauge::Paint()
+    @TCGauge@PaintAsBar$qqrp20Vcl@Graphics@TBitmaprx18System@Types@TRect @60  ; __fastcall TCGauge::PaintAsBar(Vcl::Graphics::TBitmap *, const System::Types::TRect&)
+    @TCGauge@PaintAsNeedle$qqrp20Vcl@Graphics@TBitmaprx18System@Types@TRect @62  ; __fastcall TCGauge::PaintAsNeedle(Vcl::Graphics::TBitmap *, const System::Types::TRect&)
+    @TCGauge@PaintAsNothing$qqrp20Vcl@Graphics@TBitmaprx18System@Types@TRect @59  ; __fastcall TCGauge::PaintAsNothing(Vcl::Graphics::TBitmap *, const System::Types::TRect&)
+    @TCGauge@PaintAsPie$qqrp20Vcl@Graphics@TBitmaprx18System@Types@TRect @61  ; __fastcall TCGauge::PaintAsPie(Vcl::Graphics::TBitmap *, const System::Types::TRect&)
+    @TCGauge@PaintAsText$qqrp20Vcl@Graphics@TBitmaprx18System@Types@TRect @58  ; __fastcall TCGauge::PaintAsText(Vcl::Graphics::TBitmap *, const System::Types::TRect&)
+    @TCGauge@PaintBackground$qqrp20Vcl@Graphics@TBitmap @57  ; __fastcall TCGauge::PaintBackground(Vcl::Graphics::TBitmap *)
+    @TCGauge@SeTCGaugeKind$qqr11TCGaugeKind @63  ; __fastcall TCGauge::SeTCGaugeKind(TCGaugeKind)
+    @TCGauge@SetBackColor$qqr21System@Uitypes@TColor @67  ; __fastcall TCGauge::SetBackColor(System::Uitypes::TColor)
+    @TCGauge@SetBorderStyle$qqr26Vcl@Forms@TFormBorderStyle @65  ; __fastcall TCGauge::SetBorderStyle(Vcl::Forms::TFormBorderStyle)
+    @TCGauge@SetForeColor$qqr21System@Uitypes@TColor @66  ; __fastcall TCGauge::SetForeColor(System::Uitypes::TColor)
+    @TCGauge@SetMaxValue$qqrl      @69  ; __fastcall TCGauge::SetMaxValue(long)
+    @TCGauge@SetMinValue$qqrl      @68  ; __fastcall TCGauge::SetMinValue(long)
+    @TCGauge@SetProgress$qqrl      @70  ; __fastcall TCGauge::SetProgress(long)
+    @TCGauge@SetShowText$qqro      @64  ; __fastcall TCGauge::SetShowText(bool)
+    @TCTrayIcon@                   @250 ; TCTrayIcon::
+    @TCTrayIcon@$bctr$qqrp25System@Classes@TComponent @205 ; __fastcall TCTrayIcon::TCTrayIcon(System::Classes::TComponent *)
+    @TCTrayIcon@$bdtr$qqrv         @206 ; __fastcall TCTrayIcon::~TCTrayIcon()
+    @TCTrayIcon@ApplicationHookProc$qqrr24Winapi@Messages@TMessage @230 ; __fastcall TCTrayIcon::ApplicationHookProc(Winapi::Messages::TMessage&)
+    @TCTrayIcon@DoClick$qqrv       @220 ; __fastcall TCTrayIcon::DoClick()
+    @TCTrayIcon@DoDblClick$qqrv    @221 ; __fastcall TCTrayIcon::DoDblClick()
+    @TCTrayIcon@DoMessage$qqrr24Winapi@Messages@TMessage @218 ; __fastcall TCTrayIcon::DoMessage(Winapi::Messages::TMessage&)
+    @TCTrayIcon@DoMouseDown$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @223 ; TCTrayIcon::DoMouseDown(System::Uitypes::TMouseButton, System::Set<{583}...
+    @TCTrayIcon@DoMouseMove$qqr60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @222 ; TCTrayIcon::DoMouseMove(System::Set<{583}...
+    @TCTrayIcon@DoMouseUp$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @224 ; TCTrayIcon::DoMouseUp(System::Uitypes::TMouseButton, System::Set<{583}...
+    @TCTrayIcon@DoOnAnimate$qqrp14System@TObject @225 ; __fastcall TCTrayIcon::DoOnAnimate(System::TObject *)
+    @TCTrayIcon@EndSession$qqrv    @216 ; __fastcall TCTrayIcon::EndSession()
+    @TCTrayIcon@GetAnimate$qqrv    @214 ; __fastcall TCTrayIcon::GetAnimate()
+    @TCTrayIcon@GetAnimateInterval$qqrv @212 ; __fastcall TCTrayIcon::GetAnimateInterval()
+    @TCTrayIcon@GetHandle$qqrv     @232 ; __fastcall TCTrayIcon::GetHandle()
+    @TCTrayIcon@Loaded$qqrv        @208 ; __fastcall TCTrayIcon::Loaded()
+    @TCTrayIcon@Minimize$qqrv      @226 ; __fastcall TCTrayIcon::Minimize()
+    @TCTrayIcon@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @207 ; __fastcall TCTrayIcon::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @TCTrayIcon@Restore$qqrv       @227 ; __fastcall TCTrayIcon::Restore()
+    @TCTrayIcon@SetAnimate$qqro    @215 ; __fastcall TCTrayIcon::SetAnimate(bool)
+    @TCTrayIcon@SetAnimateInterval$qqri @213 ; __fastcall TCTrayIcon::SetAnimateInterval(int)
+    @TCTrayIcon@SetDefaultIcon$qqrv @231 ; __fastcall TCTrayIcon::SetDefaultIcon()
+    @TCTrayIcon@SetHide$qqro       @211 ; __fastcall TCTrayIcon::SetHide(bool)
+    @TCTrayIcon@SetHint$qqr20System@UnicodeString @210 ; __fastcall TCTrayIcon::SetHint(System::UnicodeString)
+    @TCTrayIcon@SetIconIndex$qqri  @229 ; __fastcall TCTrayIcon::SetIconIndex(int)
+    @TCTrayIcon@SetVisible$qqro    @209 ; __fastcall TCTrayIcon::SetVisible(bool)
+    @TCTrayIcon@ShiftState$qv      @217 ; TCTrayIcon::ShiftState()
+    @TCTrayIcon@ShowMenu$qqrv      @219 ; __fastcall TCTrayIcon::ShowMenu()
+    @TCTrayIcon@Update$qqrv        @228 ; __fastcall TCTrayIcon::Update()
+    @TPerformanceGraph@            @247 ; TPerformanceGraph::
+    @TPerformanceGraph@$bctr$qqrp25System@Classes@TComponent @158 ; __fastcall TPerformanceGraph::TPerformanceGraph(System::Classes::TComponent *)
+    @TPerformanceGraph@$bdtr$qqrv  @160 ; __fastcall TPerformanceGraph::~TPerformanceGraph()
+    @TPerformanceGraph@DataPoint$qqr21System@Uitypes@TColorl @175 ; __fastcall TPerformanceGraph::DataPoint(System::Uitypes::TColor, long)
+    @TPerformanceGraph@DisplayPoints$qqrl @177 ; __fastcall TPerformanceGraph::DisplayPoints(long)
+    @TPerformanceGraph@FirstY$qqrv @180 ; __fastcall TPerformanceGraph::FirstY()
+    @TPerformanceGraph@GetBandCount$qqrv @159 ; __fastcall TPerformanceGraph::GetBandCount()
+    @TPerformanceGraph@Initialize$qqrl @161 ; __fastcall TPerformanceGraph::Initialize(long)
+    @TPerformanceGraph@LastY$qqri  @178 ; __fastcall TPerformanceGraph::LastY(int)
+    @TPerformanceGraph@NextY$qqri  @181 ; __fastcall TPerformanceGraph::NextY(int)
+    @TPerformanceGraph@Paint$qqrv  @162 ; __fastcall TPerformanceGraph::Paint()
+    @TPerformanceGraph@PaintBar$qqr21System@Uitypes@TColorll @173 ; __fastcall TPerformanceGraph::PaintBar(System::Uitypes::TColor, long, long)
+    @TPerformanceGraph@PaintLine$qqr21System@Uitypes@TColorll @174 ; __fastcall TPerformanceGraph::PaintLine(System::Uitypes::TColor, long, long)
+    @TPerformanceGraph@ReallocHistory$qqrv @179 ; __fastcall TPerformanceGraph::ReallocHistory()
+    @TPerformanceGraph@Replay$qqrv @184 ; __fastcall TPerformanceGraph::Replay()
+    @TPerformanceGraph@RoundUp$qqrll @169 ; __fastcall TPerformanceGraph::RoundUp(long, long)
+    @TPerformanceGraph@ScrollGraph$qqrv @176 ; __fastcall TPerformanceGraph::ScrollGraph()
+    @TPerformanceGraph@SetBackColor$qqr21System@Uitypes@TColor @165 ; __fastcall TPerformanceGraph::SetBackColor(System::Uitypes::TColor)
+    @TPerformanceGraph@SetForeColor$qqr21System@Uitypes@TColor @164 ; __fastcall TPerformanceGraph::SetForeColor(System::Uitypes::TColor)
+    @TPerformanceGraph@SetGradient$qqrl @170 ; __fastcall TPerformanceGraph::SetGradient(long)
+    @TPerformanceGraph@SetGraphKind$qqr10TGraphKind @163 ; __fastcall TPerformanceGraph::SetGraphKind(TGraphKind)
+    @TPerformanceGraph@SetGridSize$qqrl @166 ; __fastcall TPerformanceGraph::SetGridSize(long)
+    @TPerformanceGraph@SetGridlines$qqro @171 ; __fastcall TPerformanceGraph::SetGridlines(bool)
+    @TPerformanceGraph@SetPenWidth$qqrl @172 ; __fastcall TPerformanceGraph::SetPenWidth(long)
+    @TPerformanceGraph@SetScale$qqrl @168 ; __fastcall TPerformanceGraph::SetScale(long)
+    @TPerformanceGraph@SetStepSize$qqrl @167 ; __fastcall TPerformanceGraph::SetStepSize(long)
+    @TPerformanceGraph@ShiftY$qqrv @183 ; __fastcall TPerformanceGraph::ShiftY()
+    @TPerformanceGraph@Update$qqrv @182 ; __fastcall TPerformanceGraph::Update()
+    @TPie@                         @248 ; TPie::
+    @TPie@$bctr$qqrp25System@Classes@TComponent @194 ; __fastcall TPie::TPie(System::Classes::TComponent *)
+    @TPie@$bdtr$qqrv               @195 ; __fastcall TPie::~TPie()
+    @TPie@Paint$qqrv               @200 ; __fastcall TPie::Paint()
+    @TPie@SetAngles$qqrp7TAngles   @199 ; __fastcall TPie::SetAngles(TAngles *)
+    @TPie@SetBrush$qqrp19Vcl@Graphics@TBrush @197 ; __fastcall TPie::SetBrush(Vcl::Graphics::TBrush *)
+    @TPie@SetPen$qqrp17Vcl@Graphics@TPen @198 ; __fastcall TPie::SetPen(Vcl::Graphics::TPen *)
+    @TPie@StyleChanged$qqrp14System@TObject @196 ; __fastcall TPie::StyleChanged(System::TObject *)
+    Finalize                       @2   ; Finalize
+    Initialize                     @1   ; Initialize
+    ___CPPdebugHook                @236 ; ___CPPdebugHook
+    __stkchk                       @251 ; __stkchk

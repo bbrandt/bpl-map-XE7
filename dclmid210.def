@@ -1,0 +1,186 @@
+LIBRARY     DCLMID210.BPL
+
+DESCRIPTION 'mbarcadero MyBase DataAccess Components'
+
+EXPORTS
+    @$xp$100System@%TArray__1$79System@Generics@Collections@%TPair__2$i37Lmidreg@TClientDataSetEditor@TCommand%% @150 ; __tpdsc__ System::TArray__1<System::Generics::Collections::TPair__2<int, Lmidreg::TClientDataSetEditor::TCommand> >
+    @$xp$103System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TKeyCollection$% @132 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TKeyCollection<>
+    @$xp$103System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TKeyEnumerator$% @134 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TKeyEnumerator<>
+    @$xp$104System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TPairEnumerator$% @121 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TPairEnumerator<>
+    @$xp$105System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TValueCollection$% @123 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TValueCollection<>
+    @$xp$105System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TValueEnumerator$% @125 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TValueEnumerator<>
+    @$xp$126System@Generics@Collections@%TEnumerable__1$79System@Generics@Collections@%TPair__2$i37Lmidreg@TClientDataSetEditor@TCommand%% @146 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<int, Lmidreg::TClientDataSetEditor::TCommand> >
+    @$xp$126System@Generics@Collections@%TEnumerator__1$79System@Generics@Collections@%TPair__2$i37Lmidreg@TClientDataSetEditor@TCommand%% @148 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<System::Generics::Collections::TPair__2<int, Lmidreg::TClientDataSetEditor::TCommand> >
+    @$xp$18Lmidreg@TCDSAccess      @173 ; __tpdsc__ Lmidreg::TCDSAccess
+    @$xp$20System@%TArray__1$i%    @140 ; __tpdsc__ System::TArray__1<int>
+    @$xp$23Cdsedit@TClientDataForm @14  ; __tpdsc__ Cdsedit::TClientDataForm
+    @$xp$27Lmidreg@TClientDataSetSprig @157 ; __tpdsc__ Lmidreg::TClientDataSetSprig
+    @$xp$28Lmidreg@TClientDataSetEditor @154 ; __tpdsc__ Lmidreg::TClientDataSetEditor
+    @$xp$28Lmidreg@TCustomProviderSprig @161 ; __tpdsc__ Lmidreg::TCustomProviderSprig
+    @$xp$29Lmidreg@TCDSFieldLinkProperty @171 ; __tpdsc__ Lmidreg::TCDSFieldLinkProperty
+    @$xp$29Lmidreg@TDataSetProviderSprig @159 ; __tpdsc__ Lmidreg::TDataSetProviderSprig
+    @$xp$32Lmidreg@TCustomObjectBrokerSprig @169 ; __tpdsc__ Lmidreg::TCustomObjectBrokerSprig
+    @$xp$32Lmidreg@TCustomRemoteServerSprig @167 ; __tpdsc__ Lmidreg::TCustomRemoteServerSprig
+    @$xp$32Lmidreg@TDispatchConnectionSprig @165 ; __tpdsc__ Lmidreg::TDispatchConnectionSprig
+    @$xp$32Lmidreg@TStreamedConnectionSprig @163 ; __tpdsc__ Lmidreg::TStreamedConnectionSprig
+    @$xp$36Lmidreg@TClientDataSetPropertyFilter @152 ; __tpdsc__ Lmidreg::TClientDataSetPropertyFilter
+    @$xp$37Dbclientactnres@TClientDatasetActions @19  ; __tpdsc__ Dbclientactnres::TClientDatasetActions
+    @$xp$37Lmidreg@TClientDataSetEditor@TCommand @156 ; __tpdsc__ Lmidreg::TClientDataSetEditor::TCommand
+    @$xp$46System@Generics@Collections@%TEnumerable__1$i% @136 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<int>
+    @$xp$46System@Generics@Collections@%TEnumerator__1$i% @138 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<int>
+    @$xp$49System@Generics@Defaults@%IEqualityComparer__1$i% @143 ; __tpdsc__ System::Generics::Defaults::IEqualityComparer__1<int>
+    @$xp$57System@Generics@Collections@%TCollectionNotifyEvent__1$i% @142 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<int>
+    @$xp$58System@%TArray__1$37Lmidreg@TClientDataSetEditor@TCommand% @131 ; __tpdsc__ System::TArray__1<Lmidreg::TClientDataSetEditor::TCommand>
+    @$xp$79System@Generics@Collections@%TPair__2$i37Lmidreg@TClientDataSetEditor@TCommand% @151 ; __tpdsc__ System::Generics::Collections::TPair__2<int, Lmidreg::TClientDataSetEditor::TCommand>
+    @$xp$84System@Generics@Collections@%TEnumerable__1$37Lmidreg@TClientDataSetEditor@TCommand% @127 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<Lmidreg::TClientDataSetEditor::TCommand>
+    @$xp$84System@Generics@Collections@%TEnumerator__1$37Lmidreg@TClientDataSetEditor@TCommand% @129 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<Lmidreg::TClientDataSetEditor::TCommand>
+    @$xp$85System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand% @119 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>
+    @$xp$94System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TItem$% @145 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TItem<>
+    @$xp$95System@Generics@Collections@%TCollectionNotifyEvent__1$37Lmidreg@TClientDataSetEditor@TCommand% @141 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<Lmidreg::TClientDataSetEditor::TCommand>
+    @$xp$99System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TItemArray$% @144 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TItemArray<>
+    @Cdsedit@EditClientDataSet$qqrp38Datasnap@Dbclient@TCustomClientDataSet47System@%DelphiInterface$20Designintf@IDesigner% @13  ; Cdsedit::EditClientDataSet(Datasnap::Dbclient::TCustomClientDataSet *, System::DelphiInterface<{583}...
+    @Cdsedit@Finalization$qqrv     @2   ; __fastcall Cdsedit::Finalization()
+    @Cdsedit@GetLoadFromFileName$qqrv @12  ; __fastcall Cdsedit::GetLoadFromFileName()
+    @Cdsedit@LoadFromFile$qqrp38Datasnap@Dbclient@TCustomClientDataSet @11  ; __fastcall Cdsedit::LoadFromFile(Datasnap::Dbclient::TCustomClientDataSet *)
+    @Cdsedit@SaveToFile$qqrp38Datasnap@Dbclient@TCustomClientDataSet35Datasnap@Dbclient@TDataPacketFormat @10  ; __fastcall Cdsedit::SaveToFile(Datasnap::Dbclient::TCustomClientDataSet *, Datasnap::Dbclient::TDataPacketFormat)
+    @Cdsedit@TClientDataForm@      @15  ; Cdsedit::TClientDataForm::
+    @Cdsedit@TClientDataForm@CheckComponent$qqrx20System@UnicodeString @9   ; __fastcall Cdsedit::TClientDataForm::CheckComponent(const System::UnicodeString)
+    @Cdsedit@TClientDataForm@DataSetListDblClick$qqrp14System@TObject @4   ; __fastcall Cdsedit::TClientDataForm::DataSetListDblClick(System::TObject *)
+    @Cdsedit@TClientDataForm@DataSetListKeyPress$qqrp14System@TObjectrb @3   ; __fastcall Cdsedit::TClientDataForm::DataSetListKeyPress(System::TObject *, wchar_t&)
+    @Cdsedit@TClientDataForm@Edit$qqrv @8   ; __fastcall Cdsedit::TClientDataForm::Edit()
+    @Cdsedit@TClientDataForm@FormCreate$qqrp14System@TObject @6   ; __fastcall Cdsedit::TClientDataForm::FormCreate(System::TObject *)
+    @Cdsedit@TClientDataForm@HelpBtnClick$qqrp14System@TObject @5   ; __fastcall Cdsedit::TClientDataForm::HelpBtnClick(System::TObject *)
+    @Cdsedit@TClientDataForm@OkBtnClick$qqrp14System@TObject @7   ; __fastcall Cdsedit::TClientDataForm::OkBtnClick(System::TObject *)
+    @Cdsedit@initialization$qqrv   @1   ; __fastcall Cdsedit::initialization()
+    @Dbclientactnres@ClientDatasetActions @18  ; Dbclientactnres::ClientDatasetActions
+    @Dbclientactnres@Finalization$qqrv @17  ; __fastcall Dbclientactnres::Finalization()
+    @Dbclientactnres@TClientDatasetActions@ @20  ; Dbclientactnres::TClientDatasetActions::
+    @Dbclientactnres@initialization$qqrv @16  ; __fastcall Dbclientactnres::initialization()
+    @Dclmid@@GetPackageInfoTable$qqrv @178 ; Dclmid::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclmid@@PackageLoad$qqrv      @177 ; Dclmid::__linkproc__ __fastcall PackageLoad()
+    @Dclmid@@PackageUnload$qqrv    @176 ; Dclmid::__linkproc__ __fastcall PackageUnload()
+    @Dclmid@initialization$qqrv    @175 ; __fastcall Dclmid::initialization()
+    @GetPackageInfoTable           @181 ; GetPackageInfoTable
+    @Lmidreg@Finalization$qqrv     @96  ; __fastcall Lmidreg::Finalization()
+    @Lmidreg@Register$qqrv         @97  ; __fastcall Lmidreg::Register()
+    @Lmidreg@TCDSAccess@           @174 ; Lmidreg::TCDSAccess::
+    @Lmidreg@TCDSFieldLinkProperty@ @172 ; Lmidreg::TCDSFieldLinkProperty::
+    @Lmidreg@TCDSFieldLinkProperty@Edit$qqrv @111 ; __fastcall Lmidreg::TCDSFieldLinkProperty::Edit()
+    @Lmidreg@TCDSFieldLinkProperty@GetIndexFieldNames$qqrv @110 ; __fastcall Lmidreg::TCDSFieldLinkProperty::GetIndexFieldNames()
+    @Lmidreg@TCDSFieldLinkProperty@GetMasterFields$qqrv @109 ; __fastcall Lmidreg::TCDSFieldLinkProperty::GetMasterFields()
+    @Lmidreg@TCDSFieldLinkProperty@SetIndexFieldNames$qqrx20System@UnicodeString @108 ; __fastcall Lmidreg::TCDSFieldLinkProperty::SetIndexFieldNames(const System::UnicodeString)
+    @Lmidreg@TCDSFieldLinkProperty@SetMasterFields$qqrx20System@UnicodeString @107 ; __fastcall Lmidreg::TCDSFieldLinkProperty::SetMasterFields(const System::UnicodeString)
+    @Lmidreg@TClientDataSetEditor@ @155 ; Lmidreg::TClientDataSetEditor::
+    @Lmidreg@TClientDataSetEditor@$bdtr$qqrv @115 ; __fastcall Lmidreg::TClientDataSetEditor::~TClientDataSetEditor()
+    @Lmidreg@TClientDataSetEditor@ExecuteVerb$qqri @114 ; __fastcall Lmidreg::TClientDataSetEditor::ExecuteVerb(int)
+    @Lmidreg@TClientDataSetEditor@GetDSDesignerClass$qqrv @118 ; __fastcall Lmidreg::TClientDataSetEditor::GetDSDesignerClass()
+    @Lmidreg@TClientDataSetEditor@GetVerb$qqri @113 ; __fastcall Lmidreg::TClientDataSetEditor::GetVerb(int)
+    @Lmidreg@TClientDataSetEditor@GetVerbCount$qqrv @112 ; __fastcall Lmidreg::TClientDataSetEditor::GetVerbCount()
+    @Lmidreg@TClientDataSetEditor@LoadVerbLookup$qqrv @117 ; __fastcall Lmidreg::TClientDataSetEditor::LoadVerbLookup()
+    @Lmidreg@TClientDataSetEditor@SupportsCommand$qqr37Lmidreg@TClientDataSetEditor@TCommando @116 ; __fastcall Lmidreg::TClientDataSetEditor::SupportsCommand(Lmidreg::TClientDataSetEditor::TCommand, bool)
+    @Lmidreg@TClientDataSetPropertyFilter@ @153 ; Lmidreg::TClientDataSetPropertyFilter::
+    @Lmidreg@TClientDataSetPropertyFilter@FilterProperties$qqrx57System@%DelphiInterface$30Designintf@IDesignerSelections%x56System@%DelphiInterface$29System@Classes@IInterfaceList% @98  ; Lmidreg::TClientDataSetPropertyFilter::FilterProperties(const System::DelphiInterface<{583}...
+    @Lmidreg@TClientDataSetSprig@  @158 ; Lmidreg::TClientDataSetSprig::
+    @Lmidreg@TClientDataSetSprig@AnyProblems$qqrv @105 ; __fastcall Lmidreg::TClientDataSetSprig::AnyProblems()
+    @Lmidreg@TClientDataSetSprig@Caption$qqrv @104 ; __fastcall Lmidreg::TClientDataSetSprig::Caption()
+    @Lmidreg@TClientDataSetSprig@DragDropTo$qqrp15Treeintf@TSprig @103 ; __fastcall Lmidreg::TClientDataSetSprig::DragDropTo(Treeintf::TSprig *)
+    @Lmidreg@TClientDataSetSprig@DragOverTo$qqrp15Treeintf@TSprig @102 ; __fastcall Lmidreg::TClientDataSetSprig::DragOverTo(Treeintf::TSprig *)
+    @Lmidreg@TClientDataSetSprig@FigureParent$qqrv @101 ; __fastcall Lmidreg::TClientDataSetSprig::FigureParent()
+    @Lmidreg@TClientDataSetSprig@GetDSDesignerClass$qqrv @100 ; __fastcall Lmidreg::TClientDataSetSprig::GetDSDesignerClass()
+    @Lmidreg@TClientDataSetSprig@PaletteOverTo$qqrp15Treeintf@TSprigp17System@TMetaClass @99  ; __fastcall Lmidreg::TClientDataSetSprig::PaletteOverTo(Treeintf::TSprig *, System::TMetaClass *)
+    @Lmidreg@TCustomObjectBrokerSprig@ @170 ; Lmidreg::TCustomObjectBrokerSprig::
+    @Lmidreg@TCustomProviderSprig@ @162 ; Lmidreg::TCustomProviderSprig::
+    @Lmidreg@TCustomRemoteServerSprig@ @168 ; Lmidreg::TCustomRemoteServerSprig::
+    @Lmidreg@TDataSetProviderSprig@ @160 ; Lmidreg::TDataSetProviderSprig::
+    @Lmidreg@TDataSetProviderSprig@ParentProperty$qqrv @106 ; __fastcall Lmidreg::TDataSetProviderSprig::ParentProperty()
+    @Lmidreg@TDispatchConnectionSprig@ @166 ; Lmidreg::TDispatchConnectionSprig::
+    @Lmidreg@TStreamedConnectionSprig@ @164 ; Lmidreg::TStreamedConnectionSprig::
+    @Lmidreg@initialization$qqrv   @95  ; __fastcall Lmidreg::initialization()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@ @120 ; System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@$bctr$qqri @74  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>(int)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@$bctr$qqrix76System@%DelphiInterface$49System@Generics@Defaults@%IEqualityComparer__1$i%% @72  ; System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@$bctr$qqrx76System@%DelphiInterface$49System@Generics@Defaults@%IEqualityComparer__1$i%% @73  ; System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@$bctr$qqrxp126System@Generics@Collections@%TEnumerable__1$79System@Generics@Collections@%TPair__2$i37Lmidreg@TClientDataSetEditor@TCommand%% @71  ; System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>(System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<int, Lmidreg
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@$bctr$qqrxp126System@Generics@Collections@%TEnumerable__1$79System@Generics@Collections@%TPair__2$i37Lmidreg@TClientDataSetEditor@TCommand%%x76SHVSd/uhpodBTjoysaGPNtQ @70  ; System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>(System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<int, Lmidreg
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@$bdtr$qqrv @69  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::~TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TKeyCollection$%@ @133 ; System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TKeyCollection<>::
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TKeyCollection$%@$bctr$qqrxp85System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand% @48  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TKeyCollection<>::TKeyCollection<>(System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand> * const)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TKeyCollection$%@DoGetEnumerator$qqrv @49  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TKeyCollection<>::DoGetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TKeyCollection$%@GetCount$qqrv @50  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TKeyCollection<>::GetCount()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TKeyCollection$%@GetEnumerator$qqrv @47  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TKeyCollection<>::GetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TKeyCollection$%@ToArray$qqrv @46  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TKeyCollection<>::ToArray()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TKeyEnumerator$%@ @135 ; System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TKeyEnumerator<>::
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TKeyEnumerator$%@$bctr$qqrxp85System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand% @42  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TKeyEnumerator<>::TKeyEnumerator<>(System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand> * const)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TKeyEnumerator$%@DoGetCurrent$qqrv @44  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TKeyEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TKeyEnumerator$%@DoMoveNext$qqrv @43  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TKeyEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TKeyEnumerator$%@GetCurrent$qqrv @45  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TKeyEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TKeyEnumerator$%@MoveNext$qqrv @41  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TKeyEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TPairEnumerator$%@ @122 ; System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TPairEnumerator<>::
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TPairEnumerator$%@$bctr$qqrxp85System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand% @22  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TPairEnumerator<>::TPairEnumerator<>(System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand> * const)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TPairEnumerator$%@DoGetCurrent$qqrv @24  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TPairEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TPairEnumerator$%@DoMoveNext$qqrv @23  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TPairEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TPairEnumerator$%@GetCurrent$qqrv @25  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TPairEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TPairEnumerator$%@MoveNext$qqrv @21  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TPairEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TValueCollection$%@ @124 ; System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TValueCollection<>::
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TValueCollection$%@$bctr$qqrxp85System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand% @33  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TValueCollection<>::TValueCollection<>(System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand> * const)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TValueCollection$%@DoGetEnumerator$qqrv @34  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TValueCollection<>::DoGetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TValueCollection$%@GetCount$qqrv @35  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TValueCollection<>::GetCount()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TValueCollection$%@GetEnumerator$qqrv @32  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TValueCollection<>::GetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TValueCollection$%@ToArray$qqrv @31  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TValueCollection<>::ToArray()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TValueEnumerator$%@ @126 ; System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TValueEnumerator<>::
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TValueEnumerator$%@$bctr$qqrxp85System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand% @27  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TValueEnumerator<>::TValueEnumerator<>(System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand> * const)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TValueEnumerator$%@DoGetCurrent$qqrv @29  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TValueEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TValueEnumerator$%@DoMoveNext$qqrv @28  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TValueEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TValueEnumerator$%@GetCurrent$qqrv @30  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TValueEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@%TValueEnumerator$%@MoveNext$qqrv @26  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TValueEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@Add$qqrxix37Lmidreg@TClientDataSetEditor@TCommand @68  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::Add(const int, const Lmidreg::TClientDataSetEditor::TCommand)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@AddOrSetValue$qqrxix37Lmidreg@TClientDataSetEditor@TCommand @62  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::AddOrSetValue(const int, const Lmidreg::TClientDataSetEditor::TCommand)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@Clear$qqrv @65  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::Clear()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@ContainsKey$qqrxi @61  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::ContainsKey(const int)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@ContainsValue$qqrx37Lmidreg@TClientDataSetEditor@TCommand @60  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::ContainsValue(const Lmidreg::TClientDataSetEditor::TCommand)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@DoAdd$qqriixix37Lmidreg@TClientDataSetEditor@TCommand @80  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::DoAdd(int, int, const int, const Lmidreg::TClientDataSetEditor::TCommand)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@DoGetEnumerator$qqrv @77  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::DoGetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@DoRemove$qqrxii51System@Generics@Collections@TCollectionNotification @78  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::DoRemove(const int, int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@DoSetValue$qqrix37Lmidreg@TClientDataSetEditor@TCommand @79  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::DoSetValue(int, const Lmidreg::TClientDataSetEditor::TCommand)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@ExtractPair$qqrxi @66  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::ExtractPair(const int)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@GetBucketIndex$qqrxii @85  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::GetBucketIndex(const int, int)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@GetEnumerator$qqrv @56  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::GetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@GetItem$qqrxi @83  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::GetItem(const int)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@GetKeys$qqrv @58  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::GetKeys()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@GetValues$qqrv @57  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::GetValues()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@Grow$qqrv @86  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::Grow()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@Hash$qqrxi @84  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::Hash(const int)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@KeyNotify$qqrxi51System@Generics@Collections@TCollectionNotification @76  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::KeyNotify(const int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@Rehash$qqri @87  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::Rehash(int)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@RehashAdd$qqrixix37Lmidreg@TClientDataSetEditor@TCommand @81  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::RehashAdd(int, const int, const Lmidreg::TClientDataSetEditor::TCommand)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@Remove$qqrxi @67  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::Remove(const int)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@SetCapacity$qqri @88  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::SetCapacity(int)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@SetItem$qqrxix37Lmidreg@TClientDataSetEditor@TCommand @82  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::SetItem(const int, const Lmidreg::TClientDataSetEditor::TCommand)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@ToArray$qqrv @59  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::ToArray()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@TrimExcess$qqrv @64  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TrimExcess()
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@TryGetValue$qqrxir37Lmidreg@TClientDataSetEditor@TCommand @63  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TryGetValue(const int, Lmidreg::TClientDataSetEditor::TCommand&)
+    @System@Generics@Collections@%TDictionary__2$i37Lmidreg@TClientDataSetEditor@TCommand%@ValueNotify$qqrx37Lmidreg@TClientDataSetEditor@TCommand51System@Generics@Collections@TCollectionNotification @75  ; __fastcall System::Generics::Collections::TDictionary__2<int, Lmidreg::TClientDataSetEditor::TCommand>::ValueNotify(const Lmidreg::TClientDataSetEditor::TCommand, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TEnumerable__1$37Lmidreg@TClientDataSetEditor@TCommand%@ @128 ; System::Generics::Collections::TEnumerable__1<Lmidreg::TClientDataSetEditor::TCommand>::
+    @System@Generics@Collections@%TEnumerable__1$37Lmidreg@TClientDataSetEditor@TCommand%@$bdtr$qqrv @39  ; __fastcall System::Generics::Collections::TEnumerable__1<Lmidreg::TClientDataSetEditor::TCommand>::~TEnumerable__1<Lmidreg::TClientDataSetEditor::TCommand>()
+    @System@Generics@Collections@%TEnumerable__1$37Lmidreg@TClientDataSetEditor@TCommand%@GetEnumerator$qqrv @38  ; __fastcall System::Generics::Collections::TEnumerable__1<Lmidreg::TClientDataSetEditor::TCommand>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$37Lmidreg@TClientDataSetEditor@TCommand%@ToArray$qqrv @37  ; __fastcall System::Generics::Collections::TEnumerable__1<Lmidreg::TClientDataSetEditor::TCommand>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$37Lmidreg@TClientDataSetEditor@TCommand%@ToArrayImpl$qqri @40  ; __fastcall System::Generics::Collections::TEnumerable__1<Lmidreg::TClientDataSetEditor::TCommand>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerable__1$79System@Generics@Collections@%TPair__2$i37Lmidreg@TClientDataSetEditor@TCommand%%@ @147 ; System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<int, Lmidreg::TClientDataSetEditor::TCommand> >::
+    @System@Generics@Collections@%TEnumerable__1$79System@Generics@Collections@%TPair__2$i37Lmidreg@TClientDataSetEditor@TCommand%%@$bdtr$qqrv @92  ; __fastcall System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<int, Lmidreg::TClientDataSetEditor::TCommand> >::~TEnumerable__1<System::Generics::Collections::TPair__2<int, Lmidreg::TClientDataSetEditor::TCommand> >()
+    @System@Generics@Collections@%TEnumerable__1$79System@Generics@Collections@%TPair__2$i37Lmidreg@TClientDataSetEditor@TCommand%%@GetEnumerator$qqrv @91  ; __fastcall System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<int, Lmidreg::TClientDataSetEditor::TCommand> >::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$79System@Generics@Collections@%TPair__2$i37Lmidreg@TClientDataSetEditor@TCommand%%@ToArray$qqrv @90  ; __fastcall System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<int, Lmidreg::TClientDataSetEditor::TCommand> >::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$79System@Generics@Collections@%TPair__2$i37Lmidreg@TClientDataSetEditor@TCommand%%@ToArrayImpl$qqri @93  ; __fastcall System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<int, Lmidreg::TClientDataSetEditor::TCommand> >::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerable__1$i%@ @137 ; System::Generics::Collections::TEnumerable__1<int>::
+    @System@Generics@Collections@%TEnumerable__1$i%@$bdtr$qqrv @54  ; __fastcall System::Generics::Collections::TEnumerable__1<int>::~TEnumerable__1<int>()
+    @System@Generics@Collections@%TEnumerable__1$i%@GetEnumerator$qqrv @53  ; __fastcall System::Generics::Collections::TEnumerable__1<int>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$i%@ToArray$qqrv @52  ; __fastcall System::Generics::Collections::TEnumerable__1<int>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$i%@ToArrayImpl$qqri @55  ; __fastcall System::Generics::Collections::TEnumerable__1<int>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerator__1$37Lmidreg@TClientDataSetEditor@TCommand%@ @130 ; System::Generics::Collections::TEnumerator__1<Lmidreg::TClientDataSetEditor::TCommand>::
+    @System@Generics@Collections@%TEnumerator__1$37Lmidreg@TClientDataSetEditor@TCommand%@MoveNext$qqrv @36  ; __fastcall System::Generics::Collections::TEnumerator__1<Lmidreg::TClientDataSetEditor::TCommand>::MoveNext()
+    @System@Generics@Collections@%TEnumerator__1$79System@Generics@Collections@%TPair__2$i37Lmidreg@TClientDataSetEditor@TCommand%%@ @149 ; System::Generics::Collections::TEnumerator__1<System::Generics::Collections::TPair__2<int, Lmidreg::TClientDataSetEditor::TCommand> >::
+    @System@Generics@Collections@%TEnumerator__1$79System@Generics@Collections@%TPair__2$i37Lmidreg@TClientDataSetEditor@TCommand%%@MoveNext$qqrv @89  ; __fastcall System::Generics::Collections::TEnumerator__1<System::Generics::Collections::TPair__2<int, Lmidreg::TClientDataSetEditor::TCommand> >::MoveNext()
+    @System@Generics@Collections@%TEnumerator__1$i%@ @139 ; System::Generics::Collections::TEnumerator__1<int>::
+    @System@Generics@Collections@%TEnumerator__1$i%@MoveNext$qqrv @51  ; __fastcall System::Generics::Collections::TEnumerator__1<int>::MoveNext()
+    @System@Generics@Collections@%TPair__2$i37Lmidreg@TClientDataSetEditor@TCommand%@$bctr$qqrxix37Lmidreg@TClientDataSetEditor@TCommand @94  ; __fastcall System::Generics::Collections::TPair__2<int, Lmidreg::TClientDataSetEditor::TCommand>::TPair__2<int, Lmidreg::TClientDataSetEditor::TCommand>(const int, const Lmidreg::TClientDataSetEditor::TCommand)
+    Finalize                       @179 ; Finalize
+    Initialize                     @180 ; Initialize

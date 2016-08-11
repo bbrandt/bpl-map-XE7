@@ -1,0 +1,214 @@
+LIBRARY     RW32CORE.DLL
+
+EXPORTS
+    @RxCompileStatusImpl@AddAutodepend$qqspxcri @12  ; __stdcall RxCompileStatusImpl::AddAutodepend(const char *, int&)
+    @RxCompileStatusImpl@BatchUpdateBegin$qqsv @16  ; __stdcall RxCompileStatusImpl::BatchUpdateBegin()
+    @RxCompileStatusImpl@BatchUpdateEnd$qqsv @17  ; __stdcall RxCompileStatusImpl::BatchUpdateEnd()
+    @RxCompileStatusImpl@ErrorOrWarning$qqs11RWErrorTypepxcll5RCERRt2ri @11  ; __stdcall RxCompileStatusImpl::ErrorOrWarning(RWErrorType, const char *, long, long, RCERR, const char *, int&)
+    @RxCompileStatusImpl@SetCurrentSource$qqspxcri @13  ; __stdcall RxCompileStatusImpl::SetCurrentSource(const char *, int&)
+    @RxCompileStatusImpl@SetCurrentThing$qqspxct1ri @15  ; __stdcall RxCompileStatusImpl::SetCurrentThing(const char *, const char *, int&)
+    @RxCompileStatusImpl@SetLineNumbers$qqsllri @14  ; __stdcall RxCompileStatusImpl::SetLineNumbers(long, long, int&)
+    @RxCompileStatusImpl@TrackCurrentStatus$qqsi @18  ; __stdcall RxCompileStatusImpl::TrackCurrentStatus(int)
+    @RxCompileStatusImpl@TrackingCurrentStatus$qqsri @19  ; __stdcall RxCompileStatusImpl::TrackingCurrentStatus(int&)
+    @RxCookieBehavior@_CanChangeRef$qqs10FILEFORMATri @29  ; __stdcall RxCookieBehavior::_CanChangeRef(FILEFORMAT, int&)
+    @RxCookieBehavior@_CanMoveTo$qqsp10RWCOOKIE__i10RWMOVEENUMri @33  ; __stdcall RxCookieBehavior::_CanMoveTo(RWCOOKIE__ *, int, RWMOVEENUM, int&)
+    @RxCookieBehavior@_CanSaveAs$qqs10FILEFORMATri @28  ; __stdcall RxCookieBehavior::_CanSaveAs(FILEFORMAT, int&)
+    @RxCookieBehavior@_GetAttributes$qqsr12RWCOOKIEATTR @24  ; __stdcall RxCookieBehavior::_GetAttributes(RWCOOKIEATTR&)
+    @RxCookieBehavior@_GetIndex$qqsri @31  ; __stdcall RxCookieBehavior::_GetIndex(int&)
+    @RxCookieBehavior@_GetName$qqsp9IRxString @22  ; __stdcall RxCookieBehavior::_GetName(IRxString *)
+    @RxCookieBehavior@_GetNameSource$qqsp9IRxString @25  ; __stdcall RxCookieBehavior::_GetNameSource(IRxString *)
+    @RxCookieBehavior@_GetParent$qqsrp10RWCOOKIE__ @30  ; __stdcall RxCookieBehavior::_GetParent(RWCOOKIE__ *&)
+    @RxCookieBehavior@_GetString$qqsp9IRxString @21  ; __stdcall RxCookieBehavior::_GetString(IRxString *)
+    @RxCookieBehavior@_GetTypeName$qqsp9IRxString @23  ; __stdcall RxCookieBehavior::_GetTypeName(IRxString *)
+    @RxCookieBehavior@_GetTypeNameSource$qqsp9IRxString @26  ; __stdcall RxCookieBehavior::_GetTypeNameSource(IRxString *)
+    @RxCookieBehavior@_IsChildOf$qqsp10RWCOOKIE__r4bool @34  ; __stdcall RxCookieBehavior::_IsChildOf(RWCOOKIE__ *, bool&)
+    @RxCookieBehavior@_IsParentOf$qqsp10RWCOOKIE__r4bool @35  ; __stdcall RxCookieBehavior::_IsParentOf(RWCOOKIE__ *, bool&)
+    @RxCookieBehavior@_MoveTo$qqsp10RWCOOKIE__i10RWMOVEENUM @32  ; __stdcall RxCookieBehavior::_MoveTo(RWCOOKIE__ *, int, RWMOVEENUM)
+    @RxCookieBehavior@_SaveAs$qqspxc10FILEFORMATi @27  ; __stdcall RxCookieBehavior::_SaveAs(const char *, FILEFORMAT, int)
+    @RxCookieImpl@QueryInterface$qqsrx5_GUIDppv @20  ; __stdcall RxCookieImpl::QueryInterface(const _GUID&, void * *)
+    @RxCoreFactory@CreateInstance$qqsp8IUnknownrx5_GUIDppv @36  ; __stdcall RxCoreFactory::CreateInstance(IUnknown *, const _GUID&, void * *)
+    @RxCoreFactory@LockServer$qqsi @37  ; __stdcall RxCoreFactory::LockServer(int)
+    @RxFieldImpl@GetBin$qqsp7IRxBlob @42  ; __stdcall RxFieldImpl::GetBin(IRxBlob *)
+    @RxFieldImpl@GetSource$qqsp9IRxString @40  ; __stdcall RxFieldImpl::GetSource(IRxString *)
+    @RxFieldImpl@GetSourceLength$qqsrui @43  ; __stdcall RxFieldImpl::GetSourceLength(unsigned int&)
+    @RxFieldImpl@QueryInterface$qqsrx5_GUIDppv @38  ; __stdcall RxFieldImpl::QueryInterface(const _GUID&, void * *)
+    @RxFieldImpl@SetBin$qqspxvi    @41  ; __stdcall RxFieldImpl::SetBin(const void *, int)
+    @RxFieldImpl@SetSource$qqspxc  @39  ; __stdcall RxFieldImpl::SetSource(const char *)
+    @RxItemImpl@ChangeType$qqspxc  @58  ; __stdcall RxItemImpl::ChangeType(const char *)
+    @RxItemImpl@DeleteItem$qqsi    @49  ; __stdcall RxItemImpl::DeleteItem(int)
+    @RxItemImpl@FindField$qqspxcrp8IRxField @47  ; __stdcall RxItemImpl::FindField(const char *, IRxField *&)
+    @RxItemImpl@GetAppExpHandle$qqsrul @59  ; __stdcall RxItemImpl::GetAppExpHandle(unsigned long&)
+    @RxItemImpl@GetBin$qqsp7IRxBlob @53  ; __stdcall RxItemImpl::GetBin(IRxBlob *)
+    @RxItemImpl@GetCookieIndex$qqsp10RWCOOKIE__ri @55  ; __stdcall RxItemImpl::GetCookieIndex(RWCOOKIE__ *, int&)
+    @RxItemImpl@GetField$qqsirp8IRxField @46  ; __stdcall RxItemImpl::GetField(int, IRxField *&)
+    @RxItemImpl@GetItem$qqsirp7IRxItem @54  ; __stdcall RxItemImpl::GetItem(int, IRxItem *&)
+    @RxItemImpl@GetNumFields$qqsrui @45  ; __stdcall RxItemImpl::GetNumFields(unsigned int&)
+    @RxItemImpl@GetNumItems$qqsrui @56  ; __stdcall RxItemImpl::GetNumItems(unsigned int&)
+    @RxItemImpl@GetRTName$qqsp9IRxString @60  ; __stdcall RxItemImpl::GetRTName(IRxString *)
+    @RxItemImpl@GetSource$qqsp9IRxStringiii @50  ; __stdcall RxItemImpl::GetSource(IRxString *, int, int, int)
+    @RxItemImpl@InsertItem$qqsripxc @48  ; __stdcall RxItemImpl::InsertItem(int&, const char *)
+    @RxItemImpl@MoveItem$qqsii     @57  ; __stdcall RxItemImpl::MoveItem(int, int)
+    @RxItemImpl@OkToDelete$qqsr4bool @61  ; __stdcall RxItemImpl::OkToDelete(bool&)
+    @RxItemImpl@QueryInterface$qqsrx5_GUIDppv @44  ; __stdcall RxItemImpl::QueryInterface(const _GUID&, void * *)
+    @RxItemImpl@SetBin$qqspxvi     @52  ; __stdcall RxItemImpl::SetBin(const void *, int)
+    @RxItemImpl@SetSource$qqspxc   @51  ; __stdcall RxItemImpl::SetSource(const char *)
+    @RxProjectImpl@AddFileToProject$qqs10FILEFORMATpxc @67  ; __stdcall RxProjectImpl::AddFileToProject(FILEFORMAT, const char *)
+    @RxProjectImpl@CanCreateSymbol$qqspxc @124 ; __stdcall RxProjectImpl::CanCreateSymbol(const char *)
+    @RxProjectImpl@CanSaveAs$qqs10FILEFORMATri @86  ; __stdcall RxProjectImpl::CanSaveAs(FILEFORMAT, int&)
+    @RxProjectImpl@CanSetIncludePath$qqspxci @115 ; __stdcall RxProjectImpl::CanSetIncludePath(const char *, int)
+    @RxProjectImpl@DeleteCookie$qqsp10RWCOOKIE__i @98  ; __stdcall RxProjectImpl::DeleteCookie(RWCOOKIE__ *, int)
+    @RxProjectImpl@FindFile$qqspxcrp10RWCOOKIE__ @125 ; __stdcall RxProjectImpl::FindFile(const char *, RWCOOKIE__ *&)
+    @RxProjectImpl@FindResType$qqspxcrp10RWCOOKIE__ @120 ; __stdcall RxProjectImpl::FindResType(const char *, RWCOOKIE__ *&)
+    @RxProjectImpl@FindStrtableItem$qqsususrp7IRxItem @94  ; __stdcall RxProjectImpl::FindStrtableItem(unsigned short, unsigned short, IRxItem *&)
+    @RxProjectImpl@FindSymbol$qqspxcrp9IRxSymbol @93  ; __stdcall RxProjectImpl::FindSymbol(const char *, IRxSymbol *&)
+    @RxProjectImpl@GetAutoExeName$qqsp9IRxString @109 ; __stdcall RxProjectImpl::GetAutoExeName(IRxString *)
+    @RxProjectImpl@GetAutoIdMode$qqsri @105 ; __stdcall RxProjectImpl::GetAutoIdMode(int&)
+    @RxProjectImpl@GetAutoResName$qqsp9IRxString @111 ; __stdcall RxProjectImpl::GetAutoResName(IRxString *)
+    @RxProjectImpl@GetBackupMode$qqsri @107 ; __stdcall RxProjectImpl::GetBackupMode(int&)
+    @RxProjectImpl@GetBlobApi$qqsrp7IRxBlob @97  ; __stdcall RxProjectImpl::GetBlobApi(IRxBlob *&)
+    @RxProjectImpl@GetCookieApi$qqsp10RWCOOKIE__rp9IRxCookie @77  ; __stdcall RxProjectImpl::GetCookieApi(RWCOOKIE__ *, IRxCookie *&)
+    @RxProjectImpl@GetDefaultLanguage$qqsrus @118 ; __stdcall RxProjectImpl::GetDefaultLanguage(unsigned short&)
+    @RxProjectImpl@GetEditorName$qqsp9IRxString @116 ; __stdcall RxProjectImpl::GetEditorName(IRxString *)
+    @RxProjectImpl@GetFilter$qqsr8RXFILTER @73  ; __stdcall RxProjectImpl::GetFilter(RXFILTER&)
+    @RxProjectImpl@GetFirstChild$qqsp10RWCOOKIE__rp10RWCOOKIE__ @75  ; __stdcall RxProjectImpl::GetFirstChild(RWCOOKIE__ *, RWCOOKIE__ *&)
+    @RxProjectImpl@GetFirstItem$qqsrp10RWCOOKIE__ @74  ; __stdcall RxProjectImpl::GetFirstItem(RWCOOKIE__ *&)
+    @RxProjectImpl@GetHFile$qqsrp10RWCOOKIE__ @88  ; __stdcall RxProjectImpl::GetHFile(RWCOOKIE__ *&)
+    @RxProjectImpl@GetIDSortType$qqsr12RWIDSORTTYPE @70  ; __stdcall RxProjectImpl::GetIDSortType(RWIDSORTTYPE&)
+    @RxProjectImpl@GetIncludePath$qqsp9IRxString @113 ; __stdcall RxProjectImpl::GetIncludePath(IRxString *)
+    @RxProjectImpl@GetLastError$qqsr6RWSERR @79  ; __stdcall RxProjectImpl::GetLastError(RWSERR&)
+    @RxProjectImpl@GetLastErrorString$qqsp9IRxString @80  ; __stdcall RxProjectImpl::GetLastErrorString(IRxString *)
+    @RxProjectImpl@GetNextSibling$qqsp10RWCOOKIE__rp10RWCOOKIE__ @76  ; __stdcall RxProjectImpl::GetNextSibling(RWCOOKIE__ *, RWCOOKIE__ *&)
+    @RxProjectImpl@GetNotifyApi$qqsrp9IRxNotify @83  ; __stdcall RxProjectImpl::GetNotifyApi(IRxNotify *&)
+    @RxProjectImpl@GetRCFile$qqsrp10RWCOOKIE__ @87  ; __stdcall RxProjectImpl::GetRCFile(RWCOOKIE__ *&)
+    @RxProjectImpl@GetSlaveMode$qqsri @103 ; __stdcall RxProjectImpl::GetSlaveMode(int&)
+    @RxProjectImpl@GetSortType$qqsr10RWSORTTYPE @69  ; __stdcall RxProjectImpl::GetSortType(RWSORTTYPE&)
+    @RxProjectImpl@GetStringApi$qqsrp9IRxString @78  ; __stdcall RxProjectImpl::GetStringApi(IRxString *&)
+    @RxProjectImpl@InitRxProject$qqsxp12RXINITSTRUCT @62  ; __stdcall RxProjectImpl::InitRxProject(RXINITSTRUCT * const)
+    @RxProjectImpl@Is32Res$qqspxcri @102 ; __stdcall RxProjectImpl::Is32Res(const char *, int&)
+    @RxProjectImpl@IsAppExpertProject$qqsri @122 ; __stdcall RxProjectImpl::IsAppExpertProject(int&)
+    @RxProjectImpl@IsFileInProject$qqspxcri @121 ; __stdcall RxProjectImpl::IsFileInProject(const char *, int&)
+    @RxProjectImpl@IsPE$qqspxcri   @101 ; __stdcall RxProjectImpl::IsPE(const char *, int&)
+    @RxProjectImpl@New$qqsv        @65  ; __stdcall RxProjectImpl::New()
+    @RxProjectImpl@NewResType$qqspxcrp10IRxResType @95  ; __stdcall RxProjectImpl::NewResType(const char *, IRxResType *&)
+    @RxProjectImpl@NewSymbol$qqspxct1p10RWCOOKIE__rp9IRxSymbol @91  ; __stdcall RxProjectImpl::NewSymbol(const char *, const char *, RWCOOKIE__ *, IRxSymbol *&)
+    @RxProjectImpl@Open$qqsv       @66  ; __stdcall RxProjectImpl::Open()
+    @RxProjectImpl@OpenOptimize$qqspxci @63  ; __stdcall RxProjectImpl::OpenOptimize(const char *, int)
+    @RxProjectImpl@ParseString$qqspxcip7IRxBlob @123 ; __stdcall RxProjectImpl::ParseString(const char *, int, IRxBlob *)
+    @RxProjectImpl@PasteResData$qqspvp10RWCOOKIE__t2rp11IRxResource @99  ; __stdcall RxProjectImpl::PasteResData(void *, RWCOOKIE__ *, RWCOOKIE__ *, IRxResource *&)
+    @RxProjectImpl@Save$qqsv       @84  ; __stdcall RxProjectImpl::Save()
+    @RxProjectImpl@SaveAs$qqspxc10FILEFORMAT @85  ; __stdcall RxProjectImpl::SaveAs(const char *, FILEFORMAT)
+    @RxProjectImpl@SaveOptimize$qqspxc @64  ; __stdcall RxProjectImpl::SaveOptimize(const char *)
+    @RxProjectImpl@SetAutoExeName$qqspxc @110 ; __stdcall RxProjectImpl::SetAutoExeName(const char *)
+    @RxProjectImpl@SetAutoIdMode$qqsi @106 ; __stdcall RxProjectImpl::SetAutoIdMode(int)
+    @RxProjectImpl@SetAutoResName$qqspxc @112 ; __stdcall RxProjectImpl::SetAutoResName(const char *)
+    @RxProjectImpl@SetBackupMode$qqsi @108 ; __stdcall RxProjectImpl::SetBackupMode(int)
+    @RxProjectImpl@SetCompileStatusApi$qqsp16IRxCompileStatus @81  ; __stdcall RxProjectImpl::SetCompileStatusApi(IRxCompileStatus *)
+    @RxProjectImpl@SetDefaultLanguage$qqsus @119 ; __stdcall RxProjectImpl::SetDefaultLanguage(unsigned short)
+    @RxProjectImpl@SetEditorName$qqspxc @117 ; __stdcall RxProjectImpl::SetEditorName(const char *)
+    @RxProjectImpl@SetFilter$qqs8RXFILTER @72  ; __stdcall RxProjectImpl::SetFilter(RXFILTER)
+    @RxProjectImpl@SetHFile$qqsp10RWCOOKIE__ @90  ; __stdcall RxProjectImpl::SetHFile(RWCOOKIE__ *)
+    @RxProjectImpl@SetIDSortType$qqs12RWIDSORTTYPE @71  ; __stdcall RxProjectImpl::SetIDSortType(RWIDSORTTYPE)
+    @RxProjectImpl@SetIncludePath$qqspxc @114 ; __stdcall RxProjectImpl::SetIncludePath(const char *)
+    @RxProjectImpl@SetMBCSFlag$qqsi @127 ; __stdcall RxProjectImpl::SetMBCSFlag(int)
+    @RxProjectImpl@SetNotifyApi$qqsp9IRxNotify @82  ; __stdcall RxProjectImpl::SetNotifyApi(IRxNotify *)
+    @RxProjectImpl@SetRCFile$qqsp10RWCOOKIE__ @89  ; __stdcall RxProjectImpl::SetRCFile(RWCOOKIE__ *)
+    @RxProjectImpl@SetSlaveMode$qqsi @104 ; __stdcall RxProjectImpl::SetSlaveMode(int)
+    @RxProjectImpl@SetSortType$qqs10RWSORTTYPE @68  ; __stdcall RxProjectImpl::SetSortType(RWSORTTYPE)
+    @RxProjectImpl@SetSubstitutionString$qqspxc @96  ; __stdcall RxProjectImpl::SetSubstitutionString(const char *)
+    @RxProjectImpl@SetUICallbackApi$qqsp13IRxUICallback @126 ; __stdcall RxProjectImpl::SetUICallbackApi(IRxUICallback *)
+    @RxProjectImpl@SymbolExists$qqspxcri @92  ; __stdcall RxProjectImpl::SymbolExists(const char *, int&)
+    @RxProjectImpl@UndoDeleteRes$qqspvrp11IRxResource @100 ; __stdcall RxProjectImpl::UndoDeleteRes(void *, IRxResource *&)
+    @RxResTypeImpl@AddBinFileToProject$qqspxc @150 ; __stdcall RxResTypeImpl::AddBinFileToProject(const char *)
+    @RxResTypeImpl@FindResourceA$qqspxcusrp11IRxResource @149 ; __stdcall RxResTypeImpl::FindResourceA(const char *, unsigned short, IRxResource *&)
+    @RxResTypeImpl@NewBinRes$qqsrp11IRxResourcepxcpxvui @146 ; __stdcall RxResTypeImpl::NewBinRes(IRxResource *&, const char *, const void *, unsigned int)
+    @RxResTypeImpl@NewRes$qqsrp11IRxResourcepxc @145 ; __stdcall RxResTypeImpl::NewRes(IRxResource *&, const char *)
+    @RxResTypeImpl@QueryInterface$qqsrx5_GUIDppv @144 ; __stdcall RxResTypeImpl::QueryInterface(const _GUID&, void * *)
+    @RxResTypeImpl@UniqueResId$qqsrulus @148 ; __stdcall RxResTypeImpl::UniqueResId(unsigned long&, unsigned short)
+    @RxResTypeImpl@UniqueResName$qqsp9IRxStringus @147 ; __stdcall RxResTypeImpl::UniqueResName(IRxString *, unsigned short)
+    @RxResourceImpl@CanMakeSource$qqsr24IRxResource@RWSourceType @143 ; __stdcall RxResourceImpl::CanMakeSource(IRxResource::RWSourceType&)
+    @RxResourceImpl@CopyResData$qqsrpv @139 ; __stdcall RxResourceImpl::CopyResData(void *&)
+    @RxResourceImpl@GetCharacteristics$qqsrul @135 ; __stdcall RxResourceImpl::GetCharacteristics(unsigned long&)
+    @RxResourceImpl@GetLanguage$qqsrus @131 ; __stdcall RxResourceImpl::GetLanguage(unsigned short&)
+    @RxResourceImpl@GetMemFlags$qqsrus @129 ; __stdcall RxResourceImpl::GetMemFlags(unsigned short&)
+    @RxResourceImpl@GetOwner$qqsrp11IRxResource @137 ; __stdcall RxResourceImpl::GetOwner(IRxResource *&)
+    @RxResourceImpl@GetType$qqsrp10IRxResType @142 ; __stdcall RxResourceImpl::GetType(IRxResType *&)
+    @RxResourceImpl@GetVersion$qqsrul @133 ; __stdcall RxResourceImpl::GetVersion(unsigned long&)
+    @RxResourceImpl@MakeResDeleteUndo$qqsrpv @140 ; __stdcall RxResourceImpl::MakeResDeleteUndo(void *&)
+    @RxResourceImpl@QueryInterface$qqsrx5_GUIDppv @128 ; __stdcall RxResourceImpl::QueryInterface(const _GUID&, void * *)
+    @RxResourceImpl@SetCharacteristics$qqsul @136 ; __stdcall RxResourceImpl::SetCharacteristics(unsigned long)
+    @RxResourceImpl@SetLanguage$qqsus @132 ; __stdcall RxResourceImpl::SetLanguage(unsigned short)
+    @RxResourceImpl@SetMemFlags$qqsus @130 ; __stdcall RxResourceImpl::SetMemFlags(unsigned short)
+    @RxResourceImpl@SetName$qqspxc @141 ; __stdcall RxResourceImpl::SetName(const char *)
+    @RxResourceImpl@SetVersion$qqsul @134 ; __stdcall RxResourceImpl::SetVersion(unsigned long)
+    @RxResourceImpl@UniqueItemId$qqsri @138 ; __stdcall RxResourceImpl::UniqueItemId(int&)
+    @RxSymbolImpl@GetUsage$qqsirp9IRxCookie @156 ; __stdcall RxSymbolImpl::GetUsage(int, IRxCookie *&)
+    @RxSymbolImpl@GetUsageCount$qqsri @155 ; __stdcall RxSymbolImpl::GetUsageCount(int&)
+    @RxSymbolImpl@GetValue$qqsp9IRxString @154 ; __stdcall RxSymbolImpl::GetValue(IRxString *)
+    @RxSymbolImpl@QueryInterface$qqsrx5_GUIDppv @151 ; __stdcall RxSymbolImpl::QueryInterface(const _GUID&, void * *)
+    @RxSymbolImpl@SetName$qqspxc   @152 ; __stdcall RxSymbolImpl::SetName(const char *)
+    @RxSymbolImpl@SetValue$qqspxc  @153 ; __stdcall RxSymbolImpl::SetValue(const char *)
+    ACCELDECOMPHOOK                @225 ; ACCELDECOMPHOOK
+    ACCELKEYFROMBIN                @6   ; ACCELKEYFROMBIN
+    ACCELVERSIONHOOK               @229 ; ACCELVERSIONHOOK
+    BITMAP3COMPOUNDHOOK            @255 ; BITMAP3COMPOUNDHOOK
+    BITMAP3LOADHOOK                @362 ; BITMAP3LOADHOOK
+    BITMAP3SAVEHOOK                @247 ; BITMAP3SAVEHOOK
+    BITMAP3VERSIONHOOK             @243 ; BITMAP3VERSIONHOOK
+    BLOCKDECOMPHOOK                @280 ; BLOCKDECOMPHOOK
+    CURSOR3COMPOUNDHOOK            @245 ; CURSOR3COMPOUNDHOOK
+    CURSOR3CONVERTHOOK             @251 ; CURSOR3CONVERTHOOK
+    CURSOR3LOADHANDLER             @5   ; CURSOR3LOADHANDLER
+    CURSOR3SAVEHOOK                @249 ; CURSOR3SAVEHOOK
+    CURSOR3VERSIONHOOK             @244 ; CURSOR3VERSIONHOOK
+    DIALOG3COMPOUNDHOOK            @313 ; DIALOG3COMPOUNDHOOK
+    DIALOGDECOMPHOOK               @347 ; DIALOGDECOMPHOOK
+    DIALOGVERSION3HOOK             @256 ; DIALOGVERSION3HOOK
+    DLGINITSRCHOOK                 @312 ; DLGINITSRCHOOK
+    DllCanUnloadNow                @2   ; DllCanUnloadNow
+    DllGetClassObject              @1   ; DllGetClassObject
+    FONT3VERSIONHOOK               @241 ; FONT3VERSIONHOOK
+    FONTSPECDECOMPHOOK             @240 ; FONTSPECDECOMPHOOK
+    GENACCELKEY                    @226 ; GENACCELKEY
+    GENBUTTONSTYLE                 @217 ; GENBUTTONSTYLE
+    GENCOMBOSTYLE                  @222 ; GENCOMBOSTYLE
+    GENCONTROLSTYLE                @224 ; GENCONTROLSTYLE
+    GENDIALOGSTYLE                 @223 ; GENDIALOGSTYLE
+    GENEDITSTYLE                   @219 ; GENEDITSTYLE
+    GENEXSTYLE                     @296 ; GENEXSTYLE
+    GENFFFLAGS                     @282 ; GENFFFLAGS
+    GENFFMASK                      @281 ; GENFFMASK
+    GENFFOS                        @283 ; GENFFOS
+    GENFFSUBTYPE                   @285 ; GENFFSUBTYPE
+    GENFFTYPE                      @284 ; GENFFTYPE
+    GENHELPID                      @297 ; GENHELPID
+    GENLISTBOXSTYLE                @221 ; GENLISTBOXSTYLE
+    GENMENU3COMMAND                @232 ; GENMENU3COMMAND
+    GENMENU3OPTSFIELD              @235 ; GENMENU3OPTSFIELD
+    GENMENU3TEXTFIELD              @236 ; GENMENU3TEXTFIELD
+    GENMENU4COMMAND                @367 ; GENMENU4COMMAND
+    GENMENU4STATEFIELD             @365 ; GENMENU4STATEFIELD
+    GENMENU4TYPEFIELD              @366 ; GENMENU4TYPEFIELD
+    GENSCROLLBARSTYLE              @220 ; GENSCROLLBARSTYLE
+    GENSTATICSTYLE                 @218 ; GENSTATICSTYLE
+    GENVERSIONRES                  @278 ; GENVERSIONRES
+    GenResVHandle                  @3   ; GenResVHandle
+    GenResVHandleNOTNT             @4   ; GenResVHandleNOTNT
+    GetIOHooks                     @7   ; GetIOHooks
+    ICON3COMPOUNDHOOK              @246 ; ICON3COMPOUNDHOOK
+    ICON3CONVERTHOOK               @250 ; ICON3CONVERTHOOK
+    ICON3LOADHANDLER               @257 ; ICON3LOADHANDLER
+    ICON3SAVEHOOK                  @248 ; ICON3SAVEHOOK
+    ICON3VERSIONHOOK               @242 ; ICON3VERSIONHOOK
+    IDELIBMAIN                     @9   ; IDELIBMAIN
+    MENU3COMPOUNDHOOK              @314 ; MENU3COMPOUNDHOOK
+    MENU3DECOMPHOOK                @237 ; MENU3DECOMPHOOK
+    MENU3LOADHOOK                  @239 ; MENU3LOADHOOK
+    MENU3OPTSHOOK                  @230 ; MENU3OPTSHOOK
+    MENU3VERSIONHOOK               @234 ; MENU3VERSIONHOOK
+    MENU4HELPIDHOOK                @364 ; MENU4HELPIDHOOK
+    MENU4VERSIONHOOK               @363 ; MENU4VERSIONHOOK
+    MakeAControlName               @10  ; MakeAControlName
+    RC_CONTROLSTYLESRC             @344 ; RC_CONTROLSTYLESRC
+    RC_GENWINSTYLE                 @346 ; RC_GENWINSTYLE
+    SetIOHooks                     @8   ; SetIOHooks
+    VERSIONDECOMPHOOK              @279 ; VERSIONDECOMPHOOK

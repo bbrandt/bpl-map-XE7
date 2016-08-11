@@ -1,0 +1,82 @@
+LIBRARY     DCL31W210.BPL
+
+DESCRIPTION 'elphi 1.0 Compatibility Components'
+
+EXPORTS
+    @$xp$21Pageinfo@TPageInfoDlg   @9   ; __tpdsc__ Pageinfo::TPageInfoDlg
+    @$xp$24Notebreg@TNotebookEditor @46  ; __tpdsc__ Notebreg::TNotebookEditor
+    @$xp$25Pageedit@TNotebookEditDlg @32  ; __tpdsc__ Pageedit::TNotebookEditDlg
+    @$xp$26Notebreg@TPageListProperty @48  ; __tpdsc__ Notebreg::TPageListProperty
+    @$xp$26Notebreg@TPageNameProperty @50  ; __tpdsc__ Notebreg::TPageNameProperty
+    @$xp$29Win31reg@TTabPageListProperty @67  ; __tpdsc__ Win31reg::TTabPageListProperty
+    @$xp$29Win31reg@TTabPageNameProperty @69  ; __tpdsc__ Win31reg::TTabPageNameProperty
+    @$xp$30Win31reg@TTabbedNotebookEditor @65  ; __tpdsc__ Win31reg::TTabbedNotebookEditor
+    @Dcl31w@@GetPackageInfoTable$qqrv @74  ; Dcl31w::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dcl31w@@PackageLoad$qqrv      @73  ; Dcl31w::__linkproc__ __fastcall PackageLoad()
+    @Dcl31w@@PackageUnload$qqrv    @72  ; Dcl31w::__linkproc__ __fastcall PackageUnload()
+    @Dcl31w@initialization$qqrv    @71  ; __fastcall Dcl31w::initialization()
+    @GetPackageInfoTable           @77  ; GetPackageInfoTable
+    @Notebreg@Finalization$qqrv    @35  ; __fastcall Notebreg::Finalization()
+    @Notebreg@TNotebookEditor@     @47  ; Notebreg::TNotebookEditor::
+    @Notebreg@TNotebookEditor@ExecuteVerb$qqri @38  ; __fastcall Notebreg::TNotebookEditor::ExecuteVerb(int)
+    @Notebreg@TNotebookEditor@GetVerb$qqri @37  ; __fastcall Notebreg::TNotebookEditor::GetVerb(int)
+    @Notebreg@TNotebookEditor@GetVerbCount$qqrv @36  ; __fastcall Notebreg::TNotebookEditor::GetVerbCount()
+    @Notebreg@TPageListProperty@   @49  ; Notebreg::TPageListProperty::
+    @Notebreg@TPageListProperty@Edit$qqrv @39  ; __fastcall Notebreg::TPageListProperty::Edit()
+    @Notebreg@TPageListProperty@GetAttributes$qqrv @41  ; __fastcall Notebreg::TPageListProperty::GetAttributes()
+    @Notebreg@TPageListProperty@GetValue$qqrv @40  ; __fastcall Notebreg::TPageListProperty::GetValue()
+    @Notebreg@TPageNameProperty@   @51  ; Notebreg::TPageNameProperty::
+    @Notebreg@TPageNameProperty@GetAttributes$qqrv @45  ; __fastcall Notebreg::TPageNameProperty::GetAttributes()
+    @Notebreg@TPageNameProperty@GetValue$qqrv @43  ; __fastcall Notebreg::TPageNameProperty::GetValue()
+    @Notebreg@TPageNameProperty@GetValues$qqrynpqqrx20System@UnicodeString$v @44  ; __fastcall Notebreg::TPageNameProperty::GetValues(void __fastcall __closure(*)(const System::UnicodeString))
+    @Notebreg@TPageNameProperty@SetValue$qqrx20System@UnicodeString @42  ; __fastcall Notebreg::TPageNameProperty::SetValue(const System::UnicodeString)
+    @Notebreg@initialization$qqrv  @34  ; __fastcall Notebreg::initialization()
+    @Pageedit@Finalization$qqrv    @21  ; __fastcall Pageedit::Finalization()
+    @Pageedit@TNotebookEditDlg@    @33  ; Pageedit::TNotebookEditDlg::
+    @Pageedit@TNotebookEditDlg@AddClick$qqrp14System@TObject @25  ; __fastcall Pageedit::TNotebookEditDlg::AddClick(System::TObject *)
+    @Pageedit@TNotebookEditDlg@DeleteClick$qqrp14System@TObject @24  ; __fastcall Pageedit::TNotebookEditDlg::DeleteClick(System::TObject *)
+    @Pageedit@TNotebookEditDlg@EditClick$qqrp14System@TObject @26  ; __fastcall Pageedit::TNotebookEditDlg::EditClick(System::TObject *)
+    @Pageedit@TNotebookEditDlg@FormCreate$qqrp14System@TObject @29  ; __fastcall Pageedit::TNotebookEditDlg::FormCreate(System::TObject *)
+    @Pageedit@TNotebookEditDlg@FormShow$qqrp14System@TObject @28  ; __fastcall Pageedit::TNotebookEditDlg::FormShow(System::TObject *)
+    @Pageedit@TNotebookEditDlg@GridDrawCell$qqrp14System@TObjectiirx18System@Types@TRect49System@%Set$22Vcl@Grids@Vcl_Grids__3t1$i0$t1$i5$% @30  ; Pageedit::TNotebookEditDlg::GridDrawCell(System::TObject *, int, int, const System::Types::TRect&, System::Set<{583}...
+    @Pageedit@TNotebookEditDlg@HeaderSized$qqrp14System@TObjectii @23  ; __fastcall Pageedit::TNotebookEditDlg::HeaderSized(System::TObject *, int, int)
+    @Pageedit@TNotebookEditDlg@HelpBtnClick$qqrp14System@TObject @22  ; __fastcall Pageedit::TNotebookEditDlg::HelpBtnClick(System::TObject *)
+    @Pageedit@TNotebookEditDlg@MoveClick$qqrp14System@TObject @27  ; __fastcall Pageedit::TNotebookEditDlg::MoveClick(System::TObject *)
+    @Pageedit@TNotebookEditDlg@SetPageList$qqrp23System@Classes@TStrings @31  ; __fastcall Pageedit::TNotebookEditDlg::SetPageList(System::Classes::TStrings *)
+    @Pageedit@initialization$qqrv  @20  ; __fastcall Pageedit::initialization()
+    @Pageinfo@Finalization$qqrv    @2   ; __fastcall Pageinfo::Finalization()
+    @Pageinfo@TPageInfoDlg@        @10  ; Pageinfo::TPageInfoDlg::
+    @Pageinfo@TPageInfoDlg@BitBtn3Click$qqrp14System@TObject @3   ; __fastcall Pageinfo::TPageInfoDlg::BitBtn3Click(System::TObject *)
+    @Pageinfo@TPageInfoDlg@GetPageContext$qqrv @5   ; __fastcall Pageinfo::TPageInfoDlg::GetPageContext()
+    @Pageinfo@TPageInfoDlg@GetPageName$qqrv @7   ; __fastcall Pageinfo::TPageInfoDlg::GetPageName()
+    @Pageinfo@TPageInfoDlg@OKClick$qqrp14System@TObject @4   ; __fastcall Pageinfo::TPageInfoDlg::OKClick(System::TObject *)
+    @Pageinfo@TPageInfoDlg@SetPageContext$qqri @6   ; __fastcall Pageinfo::TPageInfoDlg::SetPageContext(int)
+    @Pageinfo@TPageInfoDlg@SetPageName$qqrx20System@UnicodeString @8   ; __fastcall Pageinfo::TPageInfoDlg::SetPageName(const System::UnicodeString)
+    @Pageinfo@initialization$qqrv  @1   ; __fastcall Pageinfo::initialization()
+    @Win31cst@Finalization$qqrv    @12  ; __fastcall Win31cst::Finalization()
+    @Win31cst@_SNextPage           @18  ; Win31cst::_SNextPage
+    @Win31cst@_SPrevPage           @17  ; Win31cst::_SPrevPage
+    @Win31cst@_sAddPage            @15  ; Win31cst::_sAddPage
+    @Win31cst@_sEditPage           @16  ; Win31cst::_sEditPage
+    @Win31cst@_sOnePage            @14  ; Win31cst::_sOnePage
+    @Win31cst@_sQDelete            @13  ; Win31cst::_sQDelete
+    @Win31cst@_srWin31             @19  ; Win31cst::_srWin31
+    @Win31cst@initialization$qqrv  @11  ; __fastcall Win31cst::initialization()
+    @Win31reg@Finalization$qqrv    @53  ; __fastcall Win31reg::Finalization()
+    @Win31reg@Register$qqrv        @54  ; __fastcall Win31reg::Register()
+    @Win31reg@TTabPageListProperty@ @68  ; Win31reg::TTabPageListProperty::
+    @Win31reg@TTabPageListProperty@Edit$qqrv @58  ; __fastcall Win31reg::TTabPageListProperty::Edit()
+    @Win31reg@TTabPageListProperty@GetAttributes$qqrv @60  ; __fastcall Win31reg::TTabPageListProperty::GetAttributes()
+    @Win31reg@TTabPageListProperty@GetValue$qqrv @59  ; __fastcall Win31reg::TTabPageListProperty::GetValue()
+    @Win31reg@TTabPageNameProperty@ @70  ; Win31reg::TTabPageNameProperty::
+    @Win31reg@TTabPageNameProperty@GetAttributes$qqrv @64  ; __fastcall Win31reg::TTabPageNameProperty::GetAttributes()
+    @Win31reg@TTabPageNameProperty@GetValue$qqrv @62  ; __fastcall Win31reg::TTabPageNameProperty::GetValue()
+    @Win31reg@TTabPageNameProperty@GetValues$qqrynpqqrx20System@UnicodeString$v @63  ; __fastcall Win31reg::TTabPageNameProperty::GetValues(void __fastcall __closure(*)(const System::UnicodeString))
+    @Win31reg@TTabPageNameProperty@SetValue$qqrx20System@UnicodeString @61  ; __fastcall Win31reg::TTabPageNameProperty::SetValue(const System::UnicodeString)
+    @Win31reg@TTabbedNotebookEditor@ @66  ; Win31reg::TTabbedNotebookEditor::
+    @Win31reg@TTabbedNotebookEditor@ExecuteVerb$qqri @57  ; __fastcall Win31reg::TTabbedNotebookEditor::ExecuteVerb(int)
+    @Win31reg@TTabbedNotebookEditor@GetVerb$qqri @56  ; __fastcall Win31reg::TTabbedNotebookEditor::GetVerb(int)
+    @Win31reg@TTabbedNotebookEditor@GetVerbCount$qqrv @55  ; __fastcall Win31reg::TTabbedNotebookEditor::GetVerbCount()
+    @Win31reg@initialization$qqrv  @52  ; __fastcall Win31reg::initialization()
+    Finalize                       @75  ; Finalize
+    Initialize                     @76  ; Initialize

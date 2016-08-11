@@ -1,0 +1,22 @@
+LIBRARY     IDEWIN64PLATFORM210.BPL
+
+EXPORTS
+    @$xp$28Win64platform@TWin64Platform @11  ; __tpdsc__ Win64platform::TWin64Platform
+    @GetPackageInfoTable           @19  ; GetPackageInfoTable
+    @Idewin64platform@@GetPackageInfoTable$qqrv @16  ; Idewin64platform::__linkproc__ __fastcall GetPackageInfoTable()
+    @Idewin64platform@@PackageLoad$qqrv @15  ; Idewin64platform::__linkproc__ __fastcall PackageLoad()
+    @Idewin64platform@@PackageUnload$qqrv @14  ; Idewin64platform::__linkproc__ __fastcall PackageUnload()
+    @Idewin64platform@initialization$qqrv @13  ; __fastcall Idewin64platform::initialization()
+    @Win64platform@Finalization$qqrv @2   ; __fastcall Win64platform::Finalization()
+    @Win64platform@Initialize$qqrv @3   ; __fastcall Win64platform::Initialize()
+    @Win64platform@TWin64Platform@ @12  ; Win64platform::TWin64Platform::
+    @Win64platform@TWin64Platform@$bctr$qqrv @10  ; __fastcall Win64platform::TWin64Platform::TWin64Platform()
+    @Win64platform@TWin64Platform@DefaultWin64Namespaces$qqrv @9   ; __fastcall Win64platform::TWin64Platform::DefaultWin64Namespaces()
+    @Win64platform@TWin64Platform@GetId$qqrv @8   ; __fastcall Win64platform::TWin64Platform::GetId()
+    @Win64platform@TWin64Platform@GetNamespaceSearchPaths$qqrv @7   ; __fastcall Win64platform::TWin64Platform::GetNamespaceSearchPaths()
+    @Win64platform@TWin64Platform@InitExtensionMaps$qqrv @6   ; __fastcall Win64platform::TWin64Platform::InitExtensionMaps()
+    @Win64platform@TWin64Platform@IsRemoteProfileRequiredToRun$qqrx20System@UnicodeString @4   ; __fastcall Win64platform::TWin64Platform::IsRemoteProfileRequiredToRun(const System::UnicodeString)
+    @Win64platform@TWin64Platform@PlatformSupports$qqr38Platformapi@TPlatformSupportsOperation @5   ; __fastcall Win64platform::TWin64Platform::PlatformSupports(Platformapi::TPlatformSupportsOperation)
+    @Win64platform@initialization$qqrv @1   ; __fastcall Win64platform::initialization()
+    Finalize                       @17  ; Finalize
+    Initialize                     @18  ; Initialize

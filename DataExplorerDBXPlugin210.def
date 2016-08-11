@@ -1,0 +1,15 @@
+LIBRARY     DATAEXPLORERDBXPLUGIN210.BPL
+
+DESCRIPTION 'BExpress Data Explorer Integration'
+
+EXPORTS
+    @Dataexplorerdbxplugin@@GetPackageInfoTable$qqrv @7   ; Dataexplorerdbxplugin::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dataexplorerdbxplugin@@PackageLoad$qqrv @6   ; Dataexplorerdbxplugin::__linkproc__ __fastcall PackageLoad()
+    @Dataexplorerdbxplugin@@PackageUnload$qqrv @5   ; Dataexplorerdbxplugin::__linkproc__ __fastcall PackageUnload()
+    @Dataexplorerdbxplugin@initialization$qqrv @4   ; __fastcall Dataexplorerdbxplugin::initialization()
+    @Dbexpressimpl@Finalization$qqrv @2   ; __fastcall Dbexpressimpl::Finalization()
+    @Dbexpressimpl@Register$qqrv   @3   ; __fastcall Dbexpressimpl::Register()
+    @Dbexpressimpl@initialization$qqrv @1   ; __fastcall Dbexpressimpl::initialization()
+    @GetPackageInfoTable           @10  ; GetPackageInfoTable
+    Finalize                       @8   ; Finalize
+    Initialize                     @9   ; Initialize

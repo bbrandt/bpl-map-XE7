@@ -1,0 +1,69 @@
+LIBRARY     DCLMETROPOLISUILIVETILE210.BPL
+
+DESCRIPTION 'mbarcadero Metropolis UI Live Tile Standard Components'
+
+EXPORTS
+    @$xp$39Metropolisui@Tileeditors@TAppIdProperty @47  ; __tpdsc__ Metropolisui::Tileeditors::TAppIdProperty
+    @$xp$46Metropolisui@Tileeditors@TTileTemplateProperty @43  ; __tpdsc__ Metropolisui::Tileeditors::TTileTemplateProperty
+    @$xp$47Metropolisui@Tileeditors@TTemplateItemsProperty @41  ; __tpdsc__ Metropolisui::Tileeditors::TTemplateItemsProperty
+    @$xp$48Metropolisui@Tileeditors@TMetropolisUITileEditor @49  ; __tpdsc__ Metropolisui::Tileeditors::TMetropolisUITileEditor
+    @$xp$51Metropolisui@Tileeditors@TMetropolisAppNameProperty @45  ; __tpdsc__ Metropolisui::Tileeditors::TMetropolisAppNameProperty
+    @$xp$54Metropolisui@Tileitemsdialog@TMetropolisUITileItemsDlg @20  ; __tpdsc__ Metropolisui::Tileitemsdialog::TMetropolisUITileItemsDlg
+    @$xp$64Metropolisui@Templatepickerdialog@TMetropolisUITemplatePickerDlg @7   ; __tpdsc__ Metropolisui::Templatepickerdialog::TMetropolisUITemplatePickerDlg
+    @Dclmetropolisuilivetile@@GetPackageInfoTable$qqrv @61  ; Dclmetropolisuilivetile::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclmetropolisuilivetile@@PackageLoad$qqrv @60  ; Dclmetropolisuilivetile::__linkproc__ __fastcall PackageLoad()
+    @Dclmetropolisuilivetile@@PackageUnload$qqrv @59  ; Dclmetropolisuilivetile::__linkproc__ __fastcall PackageUnload()
+    @Dclmetropolisuilivetile@initialization$qqrv @58  ; __fastcall Dclmetropolisuilivetile::initialization()
+    @GetPackageInfoTable           @64  ; GetPackageInfoTable
+    @Metropolisui@Templatepickerdialog@Finalization$qqrv @2   ; __fastcall Metropolisui::Templatepickerdialog::Finalization()
+    @Metropolisui@Templatepickerdialog@TMetropolisUITemplatePickerDlg@ @8   ; Metropolisui::Templatepickerdialog::TMetropolisUITemplatePickerDlg::
+    @Metropolisui@Templatepickerdialog@TMetropolisUITemplatePickerDlg@ImageClick$qqrp14System@TObject @6   ; __fastcall Metropolisui::Templatepickerdialog::TMetropolisUITemplatePickerDlg::ImageClick(System::TObject *)
+    @Metropolisui@Templatepickerdialog@TMetropolisUITemplatePickerDlg@ImageDlbClick$qqrp14System@TObject @5   ; __fastcall Metropolisui::Templatepickerdialog::TMetropolisUITemplatePickerDlg::ImageDlbClick(System::TObject *)
+    @Metropolisui@Templatepickerdialog@TMetropolisUITemplatePickerDlg@SetItems$qqrp23System@Classes@TStrings @4   ; __fastcall Metropolisui::Templatepickerdialog::TMetropolisUITemplatePickerDlg::SetItems(System::Classes::TStrings *)
+    @Metropolisui@Templatepickerdialog@TMetropolisUITemplatePickerDlg@SetSelectedTemplate$qqrx20System@UnicodeString @3   ; __fastcall Metropolisui::Templatepickerdialog::TMetropolisUITemplatePickerDlg::SetSelectedTemplate(const System::UnicodeString)
+    @Metropolisui@Templatepickerdialog@initialization$qqrv @1   ; __fastcall Metropolisui::Templatepickerdialog::initialization()
+    @Metropolisui@Tileeditors@DoUpdateAppManifest$qqrp27Metropolisui@Tile@TLiveTile @37  ; __fastcall Metropolisui::Tileeditors::DoUpdateAppManifest(Metropolisui::Tile::TLiveTile *)
+    @Metropolisui@Tileeditors@Finalization$qqrv @23  ; __fastcall Metropolisui::Tileeditors::Finalization()
+    @Metropolisui@Tileeditors@Register$qqrv @30  ; __fastcall Metropolisui::Tileeditors::Register()
+    @Metropolisui@Tileeditors@TAppIdProperty@ @48  ; Metropolisui::Tileeditors::TAppIdProperty::
+    @Metropolisui@Tileeditors@TAppIdProperty@GetAttributes$qqrv @29  ; __fastcall Metropolisui::Tileeditors::TAppIdProperty::GetAttributes()
+    @Metropolisui@Tileeditors@TMetropolisAppNameProperty@ @46  ; Metropolisui::Tileeditors::TMetropolisAppNameProperty::
+    @Metropolisui@Tileeditors@TMetropolisAppNameProperty@GetValue$qqrv @26  ; __fastcall Metropolisui::Tileeditors::TMetropolisAppNameProperty::GetValue()
+    @Metropolisui@Tileeditors@TMetropolisUITileEditor@ @50  ; Metropolisui::Tileeditors::TMetropolisUITileEditor::
+    @Metropolisui@Tileeditors@TMetropolisUITileEditor@DeployTile$qqrv @32  ; __fastcall Metropolisui::Tileeditors::TMetropolisUITileEditor::DeployTile()
+    @Metropolisui@Tileeditors@TMetropolisUITileEditor@ExecuteVerb$qqri @31  ; __fastcall Metropolisui::Tileeditors::TMetropolisUITileEditor::ExecuteVerb(int)
+    @Metropolisui@Tileeditors@TMetropolisUITileEditor@GetVerb$qqri @36  ; __fastcall Metropolisui::Tileeditors::TMetropolisUITileEditor::GetVerb(int)
+    @Metropolisui@Tileeditors@TMetropolisUITileEditor@GetVerbCount$qqrv @40  ; __fastcall Metropolisui::Tileeditors::TMetropolisUITileEditor::GetVerbCount()
+    @Metropolisui@Tileeditors@TMetropolisUITileEditor@InstrumentProject$qqrv @39  ; __fastcall Metropolisui::Tileeditors::TMetropolisUITileEditor::InstrumentProject()
+    @Metropolisui@Tileeditors@TMetropolisUITileEditor@MetropolisClearMsg$qqrv @34  ; __fastcall Metropolisui::Tileeditors::TMetropolisUITileEditor::MetropolisClearMsg()
+    @Metropolisui@Tileeditors@TMetropolisUITileEditor@MetropolisMessage$qqrx20System@UnicodeString @33  ; __fastcall Metropolisui::Tileeditors::TMetropolisUITileEditor::MetropolisMessage(const System::UnicodeString)
+    @Metropolisui@Tileeditors@TMetropolisUITileEditor@PrepareItem$qqrix48System@%DelphiInterface$21Designmenus@IMenuItem% @35  ; Metropolisui::Tileeditors::TMetropolisUITileEditor::PrepareItem(int, const System::DelphiInterface<{583}...
+    @Metropolisui@Tileeditors@TMetropolisUITileEditor@UpdateAppManifest$qqrv @38  ; __fastcall Metropolisui::Tileeditors::TMetropolisUITileEditor::UpdateAppManifest()
+    @Metropolisui@Tileeditors@TTemplateItemsProperty@ @42  ; Metropolisui::Tileeditors::TTemplateItemsProperty::
+    @Metropolisui@Tileeditors@TTemplateItemsProperty@Edit$qqrv @25  ; __fastcall Metropolisui::Tileeditors::TTemplateItemsProperty::Edit()
+    @Metropolisui@Tileeditors@TTemplateItemsProperty@GetAttributes$qqrv @24  ; __fastcall Metropolisui::Tileeditors::TTemplateItemsProperty::GetAttributes()
+    @Metropolisui@Tileeditors@TTileTemplateProperty@ @44  ; Metropolisui::Tileeditors::TTileTemplateProperty::
+    @Metropolisui@Tileeditors@TTileTemplateProperty@Edit$qqrv @28  ; __fastcall Metropolisui::Tileeditors::TTileTemplateProperty::Edit()
+    @Metropolisui@Tileeditors@TTileTemplateProperty@GetAttributes$qqrv @27  ; __fastcall Metropolisui::Tileeditors::TTileTemplateProperty::GetAttributes()
+    @Metropolisui@Tileeditors@_MessageGroupName @54  ; Metropolisui::Tileeditors::_MessageGroupName
+    @Metropolisui@Tileeditors@_StrComponentNotInProjError @53  ; Metropolisui::Tileeditors::_StrComponentNotInProjError
+    @Metropolisui@Tileeditors@_StrErrorParsingmanifest @52  ; Metropolisui::Tileeditors::_StrErrorParsingmanifest
+    @Metropolisui@Tileeditors@_StrManifestNotFound @51  ; Metropolisui::Tileeditors::_StrManifestNotFound
+    @Metropolisui@Tileeditors@_TileEditorVerbDeploy @55  ; Metropolisui::Tileeditors::_TileEditorVerbDeploy
+    @Metropolisui@Tileeditors@_TileEditorVerbInstrument @57  ; Metropolisui::Tileeditors::_TileEditorVerbInstrument
+    @Metropolisui@Tileeditors@_TileEditorVerbManifest @56  ; Metropolisui::Tileeditors::_TileEditorVerbManifest
+    @Metropolisui@Tileeditors@initialization$qqrv @22  ; __fastcall Metropolisui::Tileeditors::initialization()
+    @Metropolisui@Tileitemsdialog@Finalization$qqrv @10  ; __fastcall Metropolisui::Tileitemsdialog::Finalization()
+    @Metropolisui@Tileitemsdialog@TMetropolisUITileItemsDlg@ @21  ; Metropolisui::Tileitemsdialog::TMetropolisUITileItemsDlg::
+    @Metropolisui@Tileitemsdialog@TMetropolisUITileItemsDlg@$bctr$qqrp27Metropolisui@Tile@TTileInfo @16  ; __fastcall Metropolisui::Tileitemsdialog::TMetropolisUITileItemsDlg::TMetropolisUITileItemsDlg(Metropolisui::Tile::TTileInfo *)
+    @Metropolisui@Tileitemsdialog@TMetropolisUITileItemsDlg@FormDestroy$qqrp14System@TObject @15  ; __fastcall Metropolisui::Tileitemsdialog::TMetropolisUITileItemsDlg::FormDestroy(System::TObject *)
+    @Metropolisui@Tileitemsdialog@TMetropolisUITileItemsDlg@GetItems$qqrv @13  ; __fastcall Metropolisui::Tileitemsdialog::TMetropolisUITileItemsDlg::GetItems()
+    @Metropolisui@Tileitemsdialog@TMetropolisUITileItemsDlg@LoadResImage$qqrp19Vcl@Extctrls@TImagex20System@UnicodeString @18  ; __fastcall Metropolisui::Tileitemsdialog::TMetropolisUITileItemsDlg::LoadResImage(Vcl::Extctrls::TImage *, const System::UnicodeString)
+    @Metropolisui@Tileitemsdialog@TMetropolisUITileItemsDlg@ShowItems$qqrp23System@Classes@TStringst1 @12  ; __fastcall Metropolisui::Tileitemsdialog::TMetropolisUITileItemsDlg::ShowItems(System::Classes::TStrings *, System::Classes::TStrings *)
+    @Metropolisui@Tileitemsdialog@TMetropolisUITileItemsDlg@UpdateTemplate$qqrv @14  ; __fastcall Metropolisui::Tileitemsdialog::TMetropolisUITileItemsDlg::UpdateTemplate()
+    @Metropolisui@Tileitemsdialog@TMetropolisUITileItemsDlg@ValueListEditor1DrawCell$qqrp14System@TObjectiirx18System@Types@TRect49System@%Set$22Vcl@Grids@Vcl_Grids__3t1$i0$t1$i5$% @11  ; Metropolisui::Tileitemsdialog::TMetropolisUITileItemsDlg::ValueListEditor1DrawCell(System::TObject *, int, int, const System::Types::TRect&, System::Set<{583}...
+    @Metropolisui@Tileitemsdialog@TMetropolisUITileItemsDlg@btnPickTemplateClick$qqrp14System@TObject @17  ; __fastcall Metropolisui::Tileitemsdialog::TMetropolisUITileItemsDlg::btnPickTemplateClick(System::TObject *)
+    @Metropolisui@Tileitemsdialog@TMetropolisUITileItemsDlg@btnRemoveInvalidClick$qqrp14System@TObject @19  ; __fastcall Metropolisui::Tileitemsdialog::TMetropolisUITileItemsDlg::btnRemoveInvalidClick(System::TObject *)
+    @Metropolisui@Tileitemsdialog@initialization$qqrv @9   ; __fastcall Metropolisui::Tileitemsdialog::initialization()
+    Finalize                       @62  ; Finalize
+    Initialize                     @63  ; Initialize

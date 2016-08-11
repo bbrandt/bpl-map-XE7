@@ -1,0 +1,15 @@
+LIBRARY     DCLVCLFIREDAC210.BPL
+
+DESCRIPTION 'mbarcadero VCL FireDAC Components'
+
+EXPORTS
+    @Dclvclfiredac@@GetPackageInfoTable$qqrv @7   ; Dclvclfiredac::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclvclfiredac@@PackageLoad$qqrv @6   ; Dclvclfiredac::__linkproc__ __fastcall PackageLoad()
+    @Dclvclfiredac@@PackageUnload$qqrv @5   ; Dclvclfiredac::__linkproc__ __fastcall PackageUnload()
+    @Dclvclfiredac@initialization$qqrv @4   ; __fastcall Dclvclfiredac::initialization()
+    @Firedac@Vclui@Reg@Finalization$qqrv @2   ; __fastcall Firedac::Vclui::Reg::Finalization()
+    @Firedac@Vclui@Reg@Register$qqrv @3   ; __fastcall Firedac::Vclui::Reg::Register()
+    @Firedac@Vclui@Reg@initialization$qqrv @1   ; __fastcall Firedac::Vclui::Reg::initialization()
+    @GetPackageInfoTable           @10  ; GetPackageInfoTable
+    Finalize                       @8   ; Finalize
+    Initialize                     @9   ; Initialize

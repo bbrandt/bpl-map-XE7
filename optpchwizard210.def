@@ -1,0 +1,424 @@
+LIBRARY     OPTPCHWIZARD210.BPL
+
+DESCRIPTION 'mbarcadero Precompiled Header Wizard Package'
+
+EXPORTS
+    @$xp$110System@Generics@Collections@%TEnumerable__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%% @202 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString> >
+    @$xp$110System@Generics@Collections@%TEnumerator__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%% @204 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString> >
+    @$xp$18Pchverifier@PChunk      @357 ; __tpdsc__ Pchverifier::PChunk
+    @$xp$18Pchverifier@TChunk      @358 ; __tpdsc__ Pchverifier::TChunk
+    @$xp$20Pchwizard@IPchWizard    @401 ; __tpdsc__ Pchwizard::IPchWizard
+    @$xp$23Pchcachecreator@PHandle @212 ; __tpdsc__ Pchcachecreator::PHandle
+    @$xp$23Pchcachecreator@THandle @213 ; __tpdsc__ Pchcachecreator::THandle
+    @$xp$23Pchdatastorage@TTLINode @68  ; __tpdsc__ Pchdatastorage::TTLINode
+    @$xp$24Pchanalyzer@TPchAnalyzer @240 ; __tpdsc__ Pchanalyzer::TPchAnalyzer
+    @$xp$24Pchverifier@TPchVerifier @355 ; __tpdsc__ Pchverifier::TPchVerifier
+    @$xp$25Headerscan@THeaderScanner @82  ; __tpdsc__ Headerscan::THeaderScanner
+    @$xp$26Headerscan@ECpp32ScanError @88  ; __tpdsc__ Headerscan::ECpp32ScanError
+    @$xp$26Headerscan@TLineCountEvent @84  ; __tpdsc__ Headerscan::TLineCountEvent
+    @$xp$26Optpchcommands@TOptPchCmds @411 ; __tpdsc__ Optpchcommands::TOptPchCmds
+    @$xp$26Pchcachecreator@TFileStack @210 ; __tpdsc__ Pchcachecreator::TFileStack
+    @$xp$26Pchdatastorage@THeaderNode @58  ; __tpdsc__ Pchdatastorage::THeaderNode
+    @$xp$26Pchdatastorage@TSourceNode @62  ; __tpdsc__ Pchdatastorage::TSourceNode
+    @$xp$27Headerscan@TSourceNameEvent @87  ; __tpdsc__ Headerscan::TSourceNameEvent
+    @$xp$27Pchdatastorage@TPchRootNode @55  ; __tpdsc__ Pchdatastorage::TPchRootNode
+    @$xp$27Pchwizard@PPchWizardOptions @402 ; __tpdsc__ Pchwizard::PPchWizardOptions
+    @$xp$27Pchwizard@TPchWizardOptions @403 ; __tpdsc__ Pchwizard::TPchWizardOptions
+    @$xp$28Pchdatastorage@TPchCacheNode @70  ; __tpdsc__ Pchdatastorage::TPchCacheNode
+    @$xp$28Pchwizard@IProcessController @400 ; __tpdsc__ Pchwizard::IProcessController
+    @$xp$29Headerscan@TGuardedStateEvent @85  ; __tpdsc__ Headerscan::TGuardedStateEvent
+    @$xp$29Headerscan@TIncludeFoundEvent @86  ; __tpdsc__ Headerscan::TIncludeFoundEvent
+    @$xp$29Pchdatastorage@TProgressEvent @54  ; __tpdsc__ Pchdatastorage::TProgressEvent
+    @$xp$29Pchdatastorage@TReferenceNode @66  ; __tpdsc__ Pchdatastorage::TReferenceNode
+    @$xp$29Pchwizard@TEvCompilerFileOpen @396 ; __tpdsc__ Pchwizard::TEvCompilerFileOpen
+    @$xp$30Headerscan@TClangHeaderScanner @78  ; __tpdsc__ Headerscan::TClangHeaderScanner
+    @$xp$30Headerscan@TCpp32HeaderScanner @80  ; __tpdsc__ Headerscan::TCpp32HeaderScanner
+    @$xp$30Pchdatastorage@TIncludedByNode @64  ; __tpdsc__ Pchdatastorage::TIncludedByNode
+    @$xp$30Pchwizard@TEvCompilerFileClose @394 ; __tpdsc__ Pchwizard::TEvCompilerFileClose
+    @$xp$31Pchanalyzer@PPchAnalyzerOptions @242 ; __tpdsc__ Pchanalyzer::PPchAnalyzerOptions
+    @$xp$31Pchanalyzer@TPchAnalyzerOptions @243 ; __tpdsc__ Pchanalyzer::TPchAnalyzerOptions
+    @$xp$31Pchdatastorage@THeaderNodeArray @57  ; __tpdsc__ Pchdatastorage::THeaderNodeArray
+    @$xp$32Pchcachecreator@TPchCacheCreator @208 ; __tpdsc__ Pchcachecreator::TPchCacheCreator
+    @$xp$32Pchwizard@TCompilerFileOpenEvent @399 ; __tpdsc__ Pchwizard::TCompilerFileOpenEvent
+    @$xp$33Pchwizard@TCompilerFileCloseEvent @398 ; __tpdsc__ Pchwizard::TCompilerFileCloseEvent
+    @$xp$34Pchwizardintroframe@TPchIntroFrame @258 ; __tpdsc__ Pchwizardintroframe::TPchIntroFrame
+    @$xp$36Pchwizardfinishframe@TPchFinishFrame @323 ; __tpdsc__ Pchwizardfinishframe::TPchFinishFrame
+    @$xp$36Pchwizardresultframe@TPchResultFrame @310 ; __tpdsc__ Pchwizardresultframe::TPchResultFrame
+    @$xp$36Pchwizardverifyframe@TPchVerifyFrame @377 ; __tpdsc__ Pchwizardverifyframe::TPchVerifyFrame
+    @$xp$38Pchwizardcompileframe@TPchCompileFrame @272 ; __tpdsc__ Pchwizardcompileframe::TPchCompileFrame
+    @$xp$38Pchwizardincludeframe@TPchIncludeFrame @297 ; __tpdsc__ Pchwizardincludeframe::TPchIncludeFrame
+    @$xp$41System@%TArray__1$20System@UnicodeString% @197 ; __tpdsc__ System::TArray__1<System::UnicodeString>
+    @$xp$42Pchdatastorage@TInitializedDataWarningNode @60  ; __tpdsc__ Pchdatastorage::TInitializedDataWarningNode
+    @$xp$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1% @207 ; __tpdsc__ System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString>
+    @$xp$67System@Generics@Collections@%TEnumerable__1$20System@UnicodeString% @193 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<System::UnicodeString>
+    @$xp$67System@Generics@Collections@%TEnumerator__1$20System@UnicodeString% @195 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<System::UnicodeString>
+    @$xp$69System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1% @181 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>
+    @$xp$70System@Generics@Defaults@%IEqualityComparer__1$20System@UnicodeString% @199 ; __tpdsc__ System::Generics::Defaults::IEqualityComparer__1<System::UnicodeString>
+    @$xp$78System@Generics@Collections@%TCollectionNotifyEvent__1$20System@UnicodeString% @198 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<System::UnicodeString>
+    @$xp$78System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TItem$% @201 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TItem<>
+    @$xp$83System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TItemArray$% @200 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TItemArray<>
+    @$xp$84System@%TArray__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%% @206 ; __tpdsc__ System::TArray__1<System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString> >
+    @$xp$87System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyCollection$% @189 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyCollection<>
+    @$xp$87System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyEnumerator$% @191 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyEnumerator<>
+    @$xp$88System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TPairEnumerator$% @183 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TPairEnumerator<>
+    @$xp$89System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueCollection$% @185 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueCollection<>
+    @$xp$89System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueEnumerator$% @187 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueEnumerator<>
+    @GetPackageInfoTable           @419 ; GetPackageInfoTable
+    @Headerscan@ECpp32ScanError@   @89  ; Headerscan::ECpp32ScanError::
+    @Headerscan@Finalization$qqrv  @73  ; __fastcall Headerscan::Finalization()
+    @Headerscan@TClangHeaderScanner@ @79  ; Headerscan::TClangHeaderScanner::
+    @Headerscan@TClangHeaderScanner@Scan$qqrx20System@UnicodeStringt1 @74  ; __fastcall Headerscan::TClangHeaderScanner::Scan(const System::UnicodeString, const System::UnicodeString)
+    @Headerscan@TCpp32HeaderScanner@ @81  ; Headerscan::TCpp32HeaderScanner::
+    @Headerscan@TCpp32HeaderScanner@Scan$qqrx20System@UnicodeStringt1 @75  ; __fastcall Headerscan::TCpp32HeaderScanner::Scan(const System::UnicodeString, const System::UnicodeString)
+    @Headerscan@THeaderScanner@    @83  ; Headerscan::THeaderScanner::
+    @Headerscan@THeaderScanner@ParseOutput$qqr20System@UnicodeString @76  ; __fastcall Headerscan::THeaderScanner::ParseOutput(System::UnicodeString)
+    @Headerscan@THeaderScanner@ScanLevelAndFilename$qqrrir20System@UnicodeString @77  ; __fastcall Headerscan::THeaderScanner::ScanLevelAndFilename(int&, System::UnicodeString&)
+    @Headerscan@initialization$qqrv @72  ; __fastcall Headerscan::initialization()
+    @Optpchcommands@Finalization$qqrv @405 ; __fastcall Optpchcommands::Finalization()
+    @Optpchcommands@IDERegister$qqrv @406 ; __fastcall Optpchcommands::IDERegister()
+    @Optpchcommands@OptPchCmds     @410 ; Optpchcommands::OptPchCmds
+    @Optpchcommands@TOptPchCmds@   @412 ; Optpchcommands::TOptPchCmds::
+    @Optpchcommands@TOptPchCmds@OptPCHActionExecute$qqrp14System@TObject @409 ; __fastcall Optpchcommands::TOptPchCmds::OptPCHActionExecute(System::TObject *)
+    @Optpchcommands@TOptPchCmds@OptPCHActionUpdate$qqrp14System@TObject @408 ; __fastcall Optpchcommands::TOptPchCmds::OptPCHActionUpdate(System::TObject *)
+    @Optpchcommands@TOptPchCmds@ProductStartup$qqrp14System@TObject @407 ; __fastcall Optpchcommands::TOptPchCmds::ProductStartup(System::TObject *)
+    @Optpchcommands@initialization$qqrv @404 ; __fastcall Optpchcommands::initialization()
+    @Optpchwizard@@GetPackageInfoTable$qqrv @416 ; Optpchwizard::__linkproc__ __fastcall GetPackageInfoTable()
+    @Optpchwizard@@PackageLoad$qqrv @415 ; Optpchwizard::__linkproc__ __fastcall PackageLoad()
+    @Optpchwizard@@PackageUnload$qqrv @414 ; Optpchwizard::__linkproc__ __fastcall PackageUnload()
+    @Optpchwizard@initialization$qqrv @413 ; __fastcall Optpchwizard::initialization()
+    @Pchanalyzer@Finalization$qqrv @215 ; __fastcall Pchanalyzer::Finalization()
+    @Pchanalyzer@TPchAnalyzer@     @241 ; Pchanalyzer::TPchAnalyzer::
+    @Pchanalyzer@TPchAnalyzer@$bctr$qqr49System@%DelphiInterface$22Codemgr@ICustomProject% @236 ; Pchanalyzer::TPchAnalyzer::TPchAnalyzer(System::DelphiInterface<{583}...
+    @Pchanalyzer@TPchAnalyzer@$bdtr$qqrv @235 ; __fastcall Pchanalyzer::TPchAnalyzer::~TPchAnalyzer()
+    @Pchanalyzer@TPchAnalyzer@Analyze$qqrv @239 ; __fastcall Pchanalyzer::TPchAnalyzer::Analyze()
+    @Pchanalyzer@TPchAnalyzer@BuildIncludeLists$qqrv @238 ; __fastcall Pchanalyzer::TPchAnalyzer::BuildIncludeLists()
+    @Pchanalyzer@TPchAnalyzer@Compile$qqrynpqqrx20System@UnicodeStringsro$v @237 ; __fastcall Pchanalyzer::TPchAnalyzer::Compile(void __fastcall __closure(*)(const System::UnicodeString, short, bool&))
+    @Pchanalyzer@TPchAnalyzer@FileInProject$qqrx20System@UnicodeString @230 ; __fastcall Pchanalyzer::TPchAnalyzer::FileInProject(const System::UnicodeString)
+    @Pchanalyzer@TPchAnalyzer@Filter$qqrv @225 ; __fastcall Pchanalyzer::TPchAnalyzer::Filter()
+    @Pchanalyzer@TPchAnalyzer@FilterCount$qqrp26Pchdatastorage@THeaderNode @228 ; __fastcall Pchanalyzer::TPchAnalyzer::FilterCount(Pchdatastorage::THeaderNode *)
+    @Pchanalyzer@TPchAnalyzer@FilterFileSpec$qqrp26Pchdatastorage@THeaderNodeo @226 ; __fastcall Pchanalyzer::TPchAnalyzer::FilterFileSpec(Pchdatastorage::THeaderNode *, bool)
+    @Pchanalyzer@TPchAnalyzer@FilterGuarded$qqrp26Pchdatastorage@THeaderNode @227 ; __fastcall Pchanalyzer::TPchAnalyzer::FilterGuarded(Pchdatastorage::THeaderNode *)
+    @Pchanalyzer@TPchAnalyzer@FilterInProject$qqrp26Pchdatastorage@THeaderNode @229 ; __fastcall Pchanalyzer::TPchAnalyzer::FilterInProject(Pchdatastorage::THeaderNode *)
+    @Pchanalyzer@TPchAnalyzer@GetCacheFilename$qqrv @234 ; __fastcall Pchanalyzer::TPchAnalyzer::GetCacheFilename()
+    @Pchanalyzer@TPchAnalyzer@GetIncludeCountDefault$qqrv @233 ; __fastcall Pchanalyzer::TPchAnalyzer::GetIncludeCountDefault()
+    @Pchanalyzer@TPchAnalyzer@GetOptions$qqrv @222 ; __fastcall Pchanalyzer::TPchAnalyzer::GetOptions()
+    @Pchanalyzer@TPchAnalyzer@GetSourceCount$qqrv @221 ; __fastcall Pchanalyzer::TPchAnalyzer::GetSourceCount()
+    @Pchanalyzer@TPchAnalyzer@HasValidData$qqrv @220 ; __fastcall Pchanalyzer::TPchAnalyzer::HasValidData()
+    @Pchanalyzer@TPchAnalyzer@Load$qqrx20System@UnicodeString @232 ; __fastcall Pchanalyzer::TPchAnalyzer::Load(const System::UnicodeString)
+    @Pchanalyzer@TPchAnalyzer@LoadFromCache$qqrv @231 ; __fastcall Pchanalyzer::TPchAnalyzer::LoadFromCache()
+    @Pchanalyzer@TPchAnalyzer@Prune$qqrv @223 ; __fastcall Pchanalyzer::TPchAnalyzer::Prune()
+    @Pchanalyzer@TPchAnalyzer@ReadOptions$qqrp30System@Inifiles@TCustomIniFilex20System@UnicodeString @219 ; __fastcall Pchanalyzer::TPchAnalyzer::ReadOptions(System::Inifiles::TCustomIniFile *, const System::UnicodeString)
+    @Pchanalyzer@TPchAnalyzer@ResetDefaults$qqrv @218 ; __fastcall Pchanalyzer::TPchAnalyzer::ResetDefaults()
+    @Pchanalyzer@TPchAnalyzer@SaveToCache$qqrv @217 ; __fastcall Pchanalyzer::TPchAnalyzer::SaveToCache()
+    @Pchanalyzer@TPchAnalyzer@WhoIncludes$qqrx20System@UnicodeString @224 ; __fastcall Pchanalyzer::TPchAnalyzer::WhoIncludes(const System::UnicodeString)
+    @Pchanalyzer@TPchAnalyzer@WriteOptions$qqrp30System@Inifiles@TCustomIniFilex20System@UnicodeString @216 ; __fastcall Pchanalyzer::TPchAnalyzer::WriteOptions(System::Inifiles::TCustomIniFile *, const System::UnicodeString)
+    @Pchanalyzer@initialization$qqrv @214 ; __fastcall Pchanalyzer::initialization()
+    @Pchcachecreator@CopyAndSort$qqrp20System@Classes@TList @170 ; __fastcall Pchcachecreator::CopyAndSort(System::Classes::TList *)
+    @Pchcachecreator@Finalization$qqrv @160 ; __fastcall Pchcachecreator::Finalization()
+    @Pchcachecreator@TFileStack@   @211 ; Pchcachecreator::TFileStack::
+    @Pchcachecreator@TFileStack@First$qqrv @167 ; __fastcall Pchcachecreator::TFileStack::First()
+    @Pchcachecreator@TFileStack@Peek$qqrv @166 ; __fastcall Pchcachecreator::TFileStack::Peek()
+    @Pchcachecreator@TFileStack@PeekItem$qqrv @165 ; __fastcall Pchcachecreator::TFileStack::PeekItem()
+    @Pchcachecreator@TFileStack@PeekUp$qqri @164 ; __fastcall Pchcachecreator::TFileStack::PeekUp(int)
+    @Pchcachecreator@TFileStack@Pop$qqrv @163 ; __fastcall Pchcachecreator::TFileStack::Pop()
+    @Pchcachecreator@TFileStack@PopItem$qqrv @162 ; __fastcall Pchcachecreator::TFileStack::PopItem()
+    @Pchcachecreator@TFileStack@Push$qqrx20System@UnicodeStringp26Pchdatastorage@TSourceNode @161 ; __fastcall Pchcachecreator::TFileStack::Push(const System::UnicodeString, Pchdatastorage::TSourceNode *)
+    @Pchcachecreator@TPchCacheCreator@ @209 ; Pchcachecreator::TPchCacheCreator::
+    @Pchcachecreator@TPchCacheCreator@$bctr$qqr49System@%DelphiInterface$22Codemgr@ICustomProject% @177 ; Pchcachecreator::TPchCacheCreator::TPchCacheCreator(System::DelphiInterface<{583}...
+    @Pchcachecreator@TPchCacheCreator@$bdtr$qqrv @178 ; __fastcall Pchcachecreator::TPchCacheCreator::~TPchCacheCreator()
+    @Pchcachecreator@TPchCacheCreator@DoUpdateProgress$qqrx20System@UnicodeString @176 ; __fastcall Pchcachecreator::TPchCacheCreator::DoUpdateProgress(const System::UnicodeString)
+    @Pchcachecreator@TPchCacheCreator@GetOptionsString$qqrx20System@UnicodeString @174 ; __fastcall Pchcachecreator::TPchCacheCreator::GetOptionsString(const System::UnicodeString)
+    @Pchcachecreator@TPchCacheCreator@GuardedCallback$qqrx20System@UnicodeStringo @173 ; __fastcall Pchcachecreator::TPchCacheCreator::GuardedCallback(const System::UnicodeString, bool)
+    @Pchcachecreator@TPchCacheCreator@IncludeCallback$qqrx20System@UnicodeStringi @175 ; __fastcall Pchcachecreator::TPchCacheCreator::IncludeCallback(const System::UnicodeString, int)
+    @Pchcachecreator@TPchCacheCreator@Init$qqr49System@%DelphiInterface$22Codemgr@ICustomProject%p27Pchdatastorage@TPchRootNode @180 ; Pchcachecreator::TPchCacheCreator::Init(System::DelphiInterface<{583}...
+    @Pchcachecreator@TPchCacheCreator@LineCountCallback$qqrx20System@UnicodeStringii @172 ; __fastcall Pchcachecreator::TPchCacheCreator::LineCountCallback(const System::UnicodeString, int, int)
+    @Pchcachecreator@TPchCacheCreator@ProcessFile$qqrx20System@UnicodeString @179 ; __fastcall Pchcachecreator::TPchCacheCreator::ProcessFile(const System::UnicodeString)
+    @Pchcachecreator@TPchCacheCreator@Run$qqrrp27Pchdatastorage@TPchRootNode @169 ; __fastcall Pchcachecreator::TPchCacheCreator::Run(Pchdatastorage::TPchRootNode *&)
+    @Pchcachecreator@TPchCacheCreator@RunCpp$qqrp24Codemgr@TCustomFileEntry @168 ; __fastcall Pchcachecreator::TPchCacheCreator::RunCpp(Codemgr::TCustomFileEntry *)
+    @Pchcachecreator@TPchCacheCreator@SourceCallback$qqrx20System@UnicodeString @171 ; __fastcall Pchcachecreator::TPchCacheCreator::SourceCallback(const System::UnicodeString)
+    @Pchcachecreator@initialization$qqrv @159 ; __fastcall Pchcachecreator::initialization()
+    @Pchdatastorage@Finalization$qqrv @2   ; __fastcall Pchdatastorage::Finalization()
+    @Pchdatastorage@THeaderNode@   @59  ; Pchdatastorage::THeaderNode::
+    @Pchdatastorage@THeaderNode@$bctr$qqrx20System@UnicodeStringp10Node@TNode @40  ; __fastcall Pchdatastorage::THeaderNode::THeaderNode(const System::UnicodeString, Node::TNode *)
+    @Pchdatastorage@THeaderNode@$bdtr$qqrv @38  ; __fastcall Pchdatastorage::THeaderNode::~THeaderNode()
+    @Pchdatastorage@THeaderNode@AddIncludedBy$qqrx20System@UnicodeString @43  ; __fastcall Pchdatastorage::THeaderNode::AddIncludedBy(const System::UnicodeString)
+    @Pchdatastorage@THeaderNode@AddReference$qqrx20System@UnicodeString @42  ; __fastcall Pchdatastorage::THeaderNode::AddReference(const System::UnicodeString)
+    @Pchdatastorage@THeaderNode@CalcAgeAndSize$qqrv @37  ; __fastcall Pchdatastorage::THeaderNode::CalcAgeAndSize()
+    @Pchdatastorage@THeaderNode@ChildChange$qqr20Node@TNodeChangeTypep10Node@TNode @41  ; __fastcall Pchdatastorage::THeaderNode::ChildChange(Node::TNodeChangeType, Node::TNode *)
+    @Pchdatastorage@THeaderNode@CreateCopy$qqro @39  ; __fastcall Pchdatastorage::THeaderNode::CreateCopy(bool)
+    @Pchdatastorage@THeaderNode@GetGuarded$qqrv @36  ; __fastcall Pchdatastorage::THeaderNode::GetGuarded()
+    @Pchdatastorage@THeaderNode@GetHasIncludedBy$qqrx20System@UnicodeString @35  ; __fastcall Pchdatastorage::THeaderNode::GetHasIncludedBy(const System::UnicodeString)
+    @Pchdatastorage@THeaderNode@GetHasReference$qqrx20System@UnicodeString @34  ; __fastcall Pchdatastorage::THeaderNode::GetHasReference(const System::UnicodeString)
+    @Pchdatastorage@THeaderNode@GetIncludedBy$qqrv @33  ; __fastcall Pchdatastorage::THeaderNode::GetIncludedBy()
+    @Pchdatastorage@THeaderNode@GetLastModTime$qqrv @32  ; __fastcall Pchdatastorage::THeaderNode::GetLastModTime()
+    @Pchdatastorage@THeaderNode@GetLevel$qqrv @31  ; __fastcall Pchdatastorage::THeaderNode::GetLevel()
+    @Pchdatastorage@THeaderNode@GetRecommended$qqrv @30  ; __fastcall Pchdatastorage::THeaderNode::GetRecommended()
+    @Pchdatastorage@THeaderNode@GetRefCount$qqrv @29  ; __fastcall Pchdatastorage::THeaderNode::GetRefCount()
+    @Pchdatastorage@THeaderNode@GetReferences$qqrv @28  ; __fastcall Pchdatastorage::THeaderNode::GetReferences()
+    @Pchdatastorage@THeaderNode@GetSize$qqrv @27  ; __fastcall Pchdatastorage::THeaderNode::GetSize()
+    @Pchdatastorage@THeaderNode@GetTotalLines$qqrv @26  ; __fastcall Pchdatastorage::THeaderNode::GetTotalLines()
+    @Pchdatastorage@THeaderNode@GetWeight$qqrv @25  ; __fastcall Pchdatastorage::THeaderNode::GetWeight()
+    @Pchdatastorage@THeaderNode@NodeName$qqrv @24  ; __fastcall Pchdatastorage::THeaderNode::NodeName()
+    @Pchdatastorage@THeaderNode@SetGuarded$qqrxo @23  ; __fastcall Pchdatastorage::THeaderNode::SetGuarded(const bool)
+    @Pchdatastorage@THeaderNode@SetLevel$qqrxi @22  ; __fastcall Pchdatastorage::THeaderNode::SetLevel(const int)
+    @Pchdatastorage@THeaderNode@SetTotalLines$qqrxi @21  ; __fastcall Pchdatastorage::THeaderNode::SetTotalLines(const int)
+    @Pchdatastorage@TIncludedByNode@ @65  ; Pchdatastorage::TIncludedByNode::
+    @Pchdatastorage@TIncludedByNode@$bctr$qqrx20System@UnicodeStringp10Node@TNode @4   ; __fastcall Pchdatastorage::TIncludedByNode::TIncludedByNode(const System::UnicodeString, Node::TNode *)
+    @Pchdatastorage@TIncludedByNode@NodeName$qqrv @3   ; __fastcall Pchdatastorage::TIncludedByNode::NodeName()
+    @Pchdatastorage@TInitializedDataWarningNode@ @61  ; Pchdatastorage::TInitializedDataWarningNode::
+    @Pchdatastorage@TInitializedDataWarningNode@NodeName$qqrv @9   ; __fastcall Pchdatastorage::TInitializedDataWarningNode::NodeName()
+    @Pchdatastorage@TPchCacheNode@ @71  ; Pchdatastorage::TPchCacheNode::
+    @Pchdatastorage@TPchCacheNode@Namespace$qqrv @53  ; __fastcall Pchdatastorage::TPchCacheNode::Namespace()
+    @Pchdatastorage@TPchRootNode@  @56  ; Pchdatastorage::TPchRootNode::
+    @Pchdatastorage@TPchRootNode@$bctr$qqrx20System@UnicodeStringp10Node@TNode @19  ; __fastcall Pchdatastorage::TPchRootNode::TPchRootNode(const System::UnicodeString, Node::TNode *)
+    @Pchdatastorage@TPchRootNode@$bctr$qqrx20System@UnicodeStringrx5_GUID @18  ; __fastcall Pchdatastorage::TPchRootNode::TPchRootNode(const System::UnicodeString, const _GUID&)
+    @Pchdatastorage@TPchRootNode@$bdtr$qqrv @17  ; __fastcall Pchdatastorage::TPchRootNode::~TPchRootNode()
+    @Pchdatastorage@TPchRootNode@ChildChange$qqr20Node@TNodeChangeTypep10Node@TNode @20  ; __fastcall Pchdatastorage::TPchRootNode::ChildChange(Node::TNodeChangeType, Node::TNode *)
+    @Pchdatastorage@TPchRootNode@GetCreationTime$qqrv @16  ; __fastcall Pchdatastorage::TPchRootNode::GetCreationTime()
+    @Pchdatastorage@TPchRootNode@GetFile$qqrx20System@UnicodeString @15  ; __fastcall Pchdatastorage::TPchRootNode::GetFile(const System::UnicodeString)
+    @Pchdatastorage@TPchRootNode@GetGuid$qqrv @14  ; __fastcall Pchdatastorage::TPchRootNode::GetGuid()
+    @Pchdatastorage@TPchRootNode@GetProjectFilename$qqrv @13  ; __fastcall Pchdatastorage::TPchRootNode::GetProjectFilename()
+    @Pchdatastorage@TPchRootNode@NodeName$qqrv @12  ; __fastcall Pchdatastorage::TPchRootNode::NodeName()
+    @Pchdatastorage@TPchRootNode@SetCreationTime$qqrxi @11  ; __fastcall Pchdatastorage::TPchRootNode::SetCreationTime(const int)
+    @Pchdatastorage@TPchRootNode@SetGuid$qqrrx5_GUID @10  ; __fastcall Pchdatastorage::TPchRootNode::SetGuid(const _GUID&)
+    @Pchdatastorage@TReferenceNode@ @67  ; Pchdatastorage::TReferenceNode::
+    @Pchdatastorage@TReferenceNode@$bctr$qqrx20System@UnicodeStringp10Node@TNode @6   ; __fastcall Pchdatastorage::TReferenceNode::TReferenceNode(const System::UnicodeString, Node::TNode *)
+    @Pchdatastorage@TReferenceNode@NodeName$qqrv @5   ; __fastcall Pchdatastorage::TReferenceNode::NodeName()
+    @Pchdatastorage@TSourceNode@   @63  ; Pchdatastorage::TSourceNode::
+    @Pchdatastorage@TSourceNode@$bctr$qqrp10Node@TNodex20System@UnicodeString @50  ; __fastcall Pchdatastorage::TSourceNode::TSourceNode(Node::TNode *, const System::UnicodeString)
+    @Pchdatastorage@TSourceNode@$bctr$qqrx20System@UnicodeStringp10Node@TNode @49  ; __fastcall Pchdatastorage::TSourceNode::TSourceNode(const System::UnicodeString, Node::TNode *)
+    @Pchdatastorage@TSourceNode@$bdtr$qqrv @48  ; __fastcall Pchdatastorage::TSourceNode::~TSourceNode()
+    @Pchdatastorage@TSourceNode@AddTLI$qqrx20System@UnicodeString @52  ; __fastcall Pchdatastorage::TSourceNode::AddTLI(const System::UnicodeString)
+    @Pchdatastorage@TSourceNode@ChildChange$qqr20Node@TNodeChangeTypep10Node@TNode @51  ; __fastcall Pchdatastorage::TSourceNode::ChildChange(Node::TNodeChangeType, Node::TNode *)
+    @Pchdatastorage@TSourceNode@GetHasTLI$qqrx20System@UnicodeString @47  ; __fastcall Pchdatastorage::TSourceNode::GetHasTLI(const System::UnicodeString)
+    @Pchdatastorage@TSourceNode@GetPath$qqrv @46  ; __fastcall Pchdatastorage::TSourceNode::GetPath()
+    @Pchdatastorage@TSourceNode@GetTLIs$qqrv @45  ; __fastcall Pchdatastorage::TSourceNode::GetTLIs()
+    @Pchdatastorage@TSourceNode@NodeName$qqrv @44  ; __fastcall Pchdatastorage::TSourceNode::NodeName()
+    @Pchdatastorage@TTLINode@      @69  ; Pchdatastorage::TTLINode::
+    @Pchdatastorage@TTLINode@$bctr$qqrx20System@UnicodeStringp10Node@TNode @8   ; __fastcall Pchdatastorage::TTLINode::TTLINode(const System::UnicodeString, Node::TNode *)
+    @Pchdatastorage@TTLINode@NodeName$qqrv @7   ; __fastcall Pchdatastorage::TTLINode::NodeName()
+    @Pchdatastorage@initialization$qqrv @1   ; __fastcall Pchdatastorage::initialization()
+    @Pchverifier@Finalization$qqrv @326 ; __fastcall Pchverifier::Finalization()
+    @Pchverifier@TPchVerifier@     @356 ; Pchverifier::TPchVerifier::
+    @Pchverifier@TPchVerifier@$bctr$qqr47System@%DelphiInterface$20Pchwizard@IPchWizard% @338 ; Pchverifier::TPchVerifier::TPchVerifier(System::DelphiInterface<{583}...
+    @Pchverifier@TPchVerifier@$bdtr$qqrv @336 ; __fastcall Pchverifier::TPchVerifier::~TPchVerifier()
+    @Pchverifier@TPchVerifier@AddChunk$qqrp18Pchverifier@TChunk @353 ; __fastcall Pchverifier::TPchVerifier::AddChunk(Pchverifier::TChunk *)
+    @Pchverifier@TPchVerifier@Bisect$qqrv @348 ; __fastcall Pchverifier::TPchVerifier::Bisect()
+    @Pchverifier@TPchVerifier@BisectChunk$qqrp18Pchverifier@TChunk @354 ; __fastcall Pchverifier::TPchVerifier::BisectChunk(Pchverifier::TChunk *)
+    @Pchverifier@TPchVerifier@Cancelled$qqrv @342 ; __fastcall Pchverifier::TPchVerifier::Cancelled()
+    @Pchverifier@TPchVerifier@CheckCompile$qqrp18Pchverifier@TChunk @347 ; __fastcall Pchverifier::TPchVerifier::CheckCompile(Pchverifier::TChunk *)
+    @Pchverifier@TPchVerifier@CheckForInitializedData$qqrv @346 ; __fastcall Pchverifier::TPchVerifier::CheckForInitializedData()
+    @Pchverifier@TPchVerifier@CompileMessage$qqr17Compintf@TMsgKindipciiit3ro @341 ; __fastcall Pchverifier::TPchVerifier::CompileMessage(Compintf::TMsgKind, int, char *, int, int, int, char *, bool&)
+    @Pchverifier@TPchVerifier@Compiling$qqrv @340 ; __fastcall Pchverifier::TPchVerifier::Compiling()
+    @Pchverifier@TPchVerifier@Completed$qqrv @339 ; __fastcall Pchverifier::TPchVerifier::Completed()
+    @Pchverifier@TPchVerifier@DeleteTempFiles$qqrv @337 ; __fastcall Pchverifier::TPchVerifier::DeleteTempFiles()
+    @Pchverifier@TPchVerifier@DoCompilePch$qqrv @331 ; __fastcall Pchverifier::TPchVerifier::DoCompilePch()
+    @Pchverifier@TPchVerifier@DoCompileSource$qqrx20System@UnicodeString @329 ; __fastcall Pchverifier::TPchVerifier::DoCompileSource(const System::UnicodeString)
+    @Pchverifier@TPchVerifier@DoProgress$qqrx20System@UnicodeString @335 ; __fastcall Pchverifier::TPchVerifier::DoProgress(const System::UnicodeString)
+    @Pchverifier@TPchVerifier@FreeCachedHeaders$qqrv @334 ; __fastcall Pchverifier::TPchVerifier::FreeCachedHeaders()
+    @Pchverifier@TPchVerifier@ProgressUpdate$qqrp25Comprgrs@TProgressMonitorro @345 ; __fastcall Pchverifier::TPchVerifier::ProgressUpdate(Comprgrs::TProgressMonitor *, bool&)
+    @Pchverifier@TPchVerifier@RelativePath$qqrx20System@UnicodeString @344 ; __fastcall Pchverifier::TPchVerifier::RelativePath(const System::UnicodeString)
+    @Pchverifier@TPchVerifier@Start$qqrv @333 ; __fastcall Pchverifier::TPchVerifier::Start()
+    @Pchverifier@TPchVerifier@Stop$qqrv @332 ; __fastcall Pchverifier::TPchVerifier::Stop()
+    @Pchverifier@TPchVerifier@TempCppFile$qqrv @352 ; __fastcall Pchverifier::TPchVerifier::TempCppFile()
+    @Pchverifier@TPchVerifier@TempHFile$qqrv @351 ; __fastcall Pchverifier::TPchVerifier::TempHFile()
+    @Pchverifier@TPchVerifier@TempPCHFile$qqrv @350 ; __fastcall Pchverifier::TPchVerifier::TempPCHFile()
+    @Pchverifier@TPchVerifier@TestChunk$qqrp18Pchverifier@TChunk @349 ; __fastcall Pchverifier::TPchVerifier::TestChunk(Pchverifier::TChunk *)
+    @Pchverifier@TPchVerifier@TestCompilePch$qqrv @330 ; __fastcall Pchverifier::TPchVerifier::TestCompilePch()
+    @Pchverifier@TPchVerifier@TestCompileProject$qqrv @328 ; __fastcall Pchverifier::TPchVerifier::TestCompileProject()
+    @Pchverifier@TPchVerifier@UpdateAnalyzer$qqrv @327 ; __fastcall Pchverifier::TPchVerifier::UpdateAnalyzer()
+    @Pchverifier@TPchVerifier@WriteHeaderFile$qqrx20System@UnicodeString @343 ; __fastcall Pchverifier::TPchVerifier::WriteHeaderFile(const System::UnicodeString)
+    @Pchverifier@initialization$qqrv @325 ; __fastcall Pchverifier::initialization()
+    @Pchwizard@EvCompilerFileClose @391 ; Pchwizard::EvCompilerFileClose
+    @Pchwizard@EvCompilerFileOpen  @392 ; Pchwizard::EvCompilerFileOpen
+    @Pchwizard@ExecutePCHWizard$qqrv @390 ; __fastcall Pchwizard::ExecutePCHWizard()
+    @Pchwizard@Finalization$qqrv   @380 ; __fastcall Pchwizard::Finalization()
+    @Pchwizard@PchWizardDefaults   @393 ; Pchwizard::PchWizardDefaults
+    @Pchwizard@TEvCompilerFileClose@ @395 ; Pchwizard::TEvCompilerFileClose::
+    @Pchwizard@TEvCompilerFileClose@Add$qqrynpqqri$v @384 ; __fastcall Pchwizard::TEvCompilerFileClose::Add(void __fastcall __closure(*)(int))
+    @Pchwizard@TEvCompilerFileClose@IndexOf$qqrynpqqri$v @383 ; __fastcall Pchwizard::TEvCompilerFileClose::IndexOf(void __fastcall __closure(*)(int))
+    @Pchwizard@TEvCompilerFileClose@Remove$qqrynpqqri$v @382 ; __fastcall Pchwizard::TEvCompilerFileClose::Remove(void __fastcall __closure(*)(int))
+    @Pchwizard@TEvCompilerFileClose@Send$qqri @381 ; __fastcall Pchwizard::TEvCompilerFileClose::Send(int)
+    @Pchwizard@TEvCompilerFileOpen@ @397 ; Pchwizard::TEvCompilerFileOpen::
+    @Pchwizard@TEvCompilerFileOpen@Add$qqrynpqqrpci$v @388 ; __fastcall Pchwizard::TEvCompilerFileOpen::Add(void __fastcall __closure(*)(char *, int))
+    @Pchwizard@TEvCompilerFileOpen@IndexOf$qqrynpqqrpci$v @387 ; __fastcall Pchwizard::TEvCompilerFileOpen::IndexOf(void __fastcall __closure(*)(char *, int))
+    @Pchwizard@TEvCompilerFileOpen@Remove$qqrynpqqrpci$v @386 ; __fastcall Pchwizard::TEvCompilerFileOpen::Remove(void __fastcall __closure(*)(char *, int))
+    @Pchwizard@TEvCompilerFileOpen@Send$qqrpci @385 ; __fastcall Pchwizard::TEvCompilerFileOpen::Send(char *, int)
+    @Pchwizard@WriteLineToStream$qqrx20System@UnicodeStringp22System@Classes@TStream @389 ; __fastcall Pchwizard::WriteLineToStream(const System::UnicodeString, System::Classes::TStream *)
+    @Pchwizard@initialization$qqrv @379 ; __fastcall Pchwizard::initialization()
+    @Pchwizardcompileframe@Finalization$qqrv @261 ; __fastcall Pchwizardcompileframe::Finalization()
+    @Pchwizardcompileframe@TPchCompileFrame@ @273 ; Pchwizardcompileframe::TPchCompileFrame::
+    @Pchwizardcompileframe@TPchCompileFrame@$bctr$qqr51System@%DelphiInterface$24Simplewizardpage@IWizard% @271 ; Pchwizardcompileframe::TPchCompileFrame::TPchCompileFrame(System::DelphiInterface<{583}...
+    @Pchwizardcompileframe@TPchCompileFrame@CompileProgress$qqrx20System@UnicodeStringsro @265 ; __fastcall Pchwizardcompileframe::TPchCompileFrame::CompileProgress(const System::UnicodeString, short, bool&)
+    @Pchwizardcompileframe@TPchCompileFrame@GetDescription$qqrv @270 ; __fastcall Pchwizardcompileframe::TPchCompileFrame::GetDescription()
+    @Pchwizardcompileframe@TPchCompileFrame@GetTitle$qqrv @269 ; __fastcall Pchwizardcompileframe::TPchCompileFrame::GetTitle()
+    @Pchwizardcompileframe@TPchCompileFrame@Hide$qqro @268 ; __fastcall Pchwizardcompileframe::TPchCompileFrame::Hide(bool)
+    @Pchwizardcompileframe@TPchCompileFrame@Show$qqro @267 ; __fastcall Pchwizardcompileframe::TPchCompileFrame::Show(bool)
+    @Pchwizardcompileframe@TPchCompileFrame@StartCompiling$qqrv @266 ; __fastcall Pchwizardcompileframe::TPchCompileFrame::StartCompiling()
+    @Pchwizardcompileframe@TPchCompileFrame@StopCompiling$qqrv @264 ; __fastcall Pchwizardcompileframe::TPchCompileFrame::StopCompiling()
+    @Pchwizardcompileframe@TPchCompileFrame@UpdateButtons$qqrv @263 ; __fastcall Pchwizardcompileframe::TPchCompileFrame::UpdateButtons()
+    @Pchwizardcompileframe@TPchCompileFrame@WndProc$qqrr24Winapi@Messages@TMessage @262 ; __fastcall Pchwizardcompileframe::TPchCompileFrame::WndProc(Winapi::Messages::TMessage&)
+    @Pchwizardcompileframe@initialization$qqrv @260 ; __fastcall Pchwizardcompileframe::initialization()
+    @Pchwizardfinishframe@Finalization$qqrv @313 ; __fastcall Pchwizardfinishframe::Finalization()
+    @Pchwizardfinishframe@TPchFinishFrame@ @324 ; Pchwizardfinishframe::TPchFinishFrame::
+    @Pchwizardfinishframe@TPchFinishFrame@$bctr$qqr51System@%DelphiInterface$24Simplewizardpage@IWizard% @320 ; Pchwizardfinishframe::TPchFinishFrame::TPchFinishFrame(System::DelphiInterface<{583}...
+    @Pchwizardfinishframe@TPchFinishFrame@GetDescription$qqrv @319 ; __fastcall Pchwizardfinishframe::TPchFinishFrame::GetDescription()
+    @Pchwizardfinishframe@TPchFinishFrame@GetTitle$qqrv @318 ; __fastcall Pchwizardfinishframe::TPchFinishFrame::GetTitle()
+    @Pchwizardfinishframe@TPchFinishFrame@Hide$qqro @317 ; __fastcall Pchwizardfinishframe::TPchFinishFrame::Hide(bool)
+    @Pchwizardfinishframe@TPchFinishFrame@Show$qqro @314 ; __fastcall Pchwizardfinishframe::TPchFinishFrame::Show(bool)
+    @Pchwizardfinishframe@TPchFinishFrame@btnBrowseClick$qqrp14System@TObject @322 ; __fastcall Pchwizardfinishframe::TPchFinishFrame::btnBrowseClick(System::TObject *)
+    @Pchwizardfinishframe@TPchFinishFrame@cbOpenInEditorClick$qqrp14System@TObject @321 ; __fastcall Pchwizardfinishframe::TPchFinishFrame::cbOpenInEditorClick(System::TObject *)
+    @Pchwizardfinishframe@TPchFinishFrame@leFilenameChange$qqrp14System@TObject @316 ; __fastcall Pchwizardfinishframe::TPchFinishFrame::leFilenameChange(System::TObject *)
+    @Pchwizardfinishframe@TPchFinishFrame@rbAutoManageClick$qqrp14System@TObject @315 ; __fastcall Pchwizardfinishframe::TPchFinishFrame::rbAutoManageClick(System::TObject *)
+    @Pchwizardfinishframe@initialization$qqrv @312 ; __fastcall Pchwizardfinishframe::initialization()
+    @Pchwizardincludeframe@Finalization$qqrv @275 ; __fastcall Pchwizardincludeframe::Finalization()
+    @Pchwizardincludeframe@TPchIncludeFrame@ @298 ; Pchwizardincludeframe::TPchIncludeFrame::
+    @Pchwizardincludeframe@TPchIncludeFrame@$bctr$qqr51System@%DelphiInterface$24Simplewizardpage@IWizard% @284 ; Pchwizardincludeframe::TPchIncludeFrame::TPchIncludeFrame(System::DelphiInterface<{583}...
+    @Pchwizardincludeframe@TPchIncludeFrame@ActiveGroupId$qqrv @294 ; __fastcall Pchwizardincludeframe::TPchIncludeFrame::ActiveGroupId()
+    @Pchwizardincludeframe@TPchIncludeFrame@AddItemToGroup$qqri @287 ; __fastcall Pchwizardincludeframe::TPchIncludeFrame::AddItemToGroup(int)
+    @Pchwizardincludeframe@TPchIncludeFrame@EnableFilesGroup$qqro @283 ; __fastcall Pchwizardincludeframe::TPchIncludeFrame::EnableFilesGroup(bool)
+    @Pchwizardincludeframe@TPchIncludeFrame@EnsurePlaceholders$qqrv @282 ; __fastcall Pchwizardincludeframe::TPchIncludeFrame::EnsurePlaceholders()
+    @Pchwizardincludeframe@TPchIncludeFrame@GetDescription$qqrv @281 ; __fastcall Pchwizardincludeframe::TPchIncludeFrame::GetDescription()
+    @Pchwizardincludeframe@TPchIncludeFrame@GetTitle$qqrv @280 ; __fastcall Pchwizardincludeframe::TPchIncludeFrame::GetTitle()
+    @Pchwizardincludeframe@TPchIncludeFrame@Hide$qqro @296 ; __fastcall Pchwizardincludeframe::TPchIncludeFrame::Hide(bool)
+    @Pchwizardincludeframe@TPchIncludeFrame@LoadOptions$qqrv @276 ; __fastcall Pchwizardincludeframe::TPchIncludeFrame::LoadOptions()
+    @Pchwizardincludeframe@TPchIncludeFrame@SaveOptions$qqrv @279 ; __fastcall Pchwizardincludeframe::TPchIncludeFrame::SaveOptions()
+    @Pchwizardincludeframe@TPchIncludeFrame@Show$qqro @295 ; __fastcall Pchwizardincludeframe::TPchIncludeFrame::Show(bool)
+    @Pchwizardincludeframe@TPchIncludeFrame@actnAddDirExecute$qqrp14System@TObject @293 ; __fastcall Pchwizardincludeframe::TPchIncludeFrame::actnAddDirExecute(System::TObject *)
+    @Pchwizardincludeframe@TPchIncludeFrame@actnAddExecute$qqrp14System@TObject @292 ; __fastcall Pchwizardincludeframe::TPchIncludeFrame::actnAddExecute(System::TObject *)
+    @Pchwizardincludeframe@TPchIncludeFrame@actnAddFileExecute$qqrp14System@TObject @291 ; __fastcall Pchwizardincludeframe::TPchIncludeFrame::actnAddFileExecute(System::TObject *)
+    @Pchwizardincludeframe@TPchIncludeFrame@actnAddUpdate$qqrp14System@TObject @290 ; __fastcall Pchwizardincludeframe::TPchIncludeFrame::actnAddUpdate(System::TObject *)
+    @Pchwizardincludeframe@TPchIncludeFrame@actnDeleteExecute$qqrp14System@TObject @289 ; __fastcall Pchwizardincludeframe::TPchIncludeFrame::actnDeleteExecute(System::TObject *)
+    @Pchwizardincludeframe@TPchIncludeFrame@actnDeleteUpdate$qqrp14System@TObject @288 ; __fastcall Pchwizardincludeframe::TPchIncludeFrame::actnDeleteUpdate(System::TObject *)
+    @Pchwizardincludeframe@TPchIncludeFrame@btnResetClick$qqrp14System@TObject @286 ; __fastcall Pchwizardincludeframe::TPchIncludeFrame::btnResetClick(System::TObject *)
+    @Pchwizardincludeframe@TPchIncludeFrame@cbFilesClick$qqrp14System@TObject @285 ; __fastcall Pchwizardincludeframe::TPchIncludeFrame::cbFilesClick(System::TObject *)
+    @Pchwizardincludeframe@TPchIncludeFrame@lvFileSpecEdited$qqrp14System@TObjectp22Vcl@Comctrls@TListItemr20System@UnicodeString @278 ; __fastcall Pchwizardincludeframe::TPchIncludeFrame::lvFileSpecEdited(System::TObject *, Vcl::Comctrls::TListItem *, System::UnicodeString&)
+    @Pchwizardincludeframe@TPchIncludeFrame@lvFileSpecKeyDown$qqrp14System@TObjectrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @277 ; Pchwizardincludeframe::TPchIncludeFrame::lvFileSpecKeyDown(System::TObject *, unsigned short&, System::Set<{583}...
+    @Pchwizardincludeframe@initialization$qqrv @274 ; __fastcall Pchwizardincludeframe::initialization()
+    @Pchwizardintroframe@Finalization$qqrv @245 ; __fastcall Pchwizardintroframe::Finalization()
+    @Pchwizardintroframe@TPchIntroFrame@ @259 ; Pchwizardintroframe::TPchIntroFrame::
+    @Pchwizardintroframe@TPchIntroFrame@$bctr$qqr51System@%DelphiInterface$24Simplewizardpage@IWizard% @257 ; Pchwizardintroframe::TPchIntroFrame::TPchIntroFrame(System::DelphiInterface<{583}...
+    @Pchwizardintroframe@TPchIntroFrame@ForceSaveProject$qqrv @252 ; __fastcall Pchwizardintroframe::TPchIntroFrame::ForceSaveProject()
+    @Pchwizardintroframe@TPchIntroFrame@GetDescription$qqrv @254 ; __fastcall Pchwizardintroframe::TPchIntroFrame::GetDescription()
+    @Pchwizardintroframe@TPchIntroFrame@GetTitle$qqrv @253 ; __fastcall Pchwizardintroframe::TPchIntroFrame::GetTitle()
+    @Pchwizardintroframe@TPchIntroFrame@Hide$qqro @251 ; __fastcall Pchwizardintroframe::TPchIntroFrame::Hide(bool)
+    @Pchwizardintroframe@TPchIntroFrame@LoadOptions$qqrv @250 ; __fastcall Pchwizardintroframe::TPchIntroFrame::LoadOptions()
+    @Pchwizardintroframe@TPchIntroFrame@SaveOptions$qqrv @246 ; __fastcall Pchwizardintroframe::TPchIntroFrame::SaveOptions()
+    @Pchwizardintroframe@TPchIntroFrame@Show$qqro @256 ; __fastcall Pchwizardintroframe::TPchIntroFrame::Show(bool)
+    @Pchwizardintroframe@TPchIntroFrame@UpdateButtons$qqrv @255 ; __fastcall Pchwizardintroframe::TPchIntroFrame::UpdateButtons()
+    @Pchwizardintroframe@TPchIntroFrame@rbBuildClick$qqrp14System@TObject @249 ; __fastcall Pchwizardintroframe::TPchIntroFrame::rbBuildClick(System::TObject *)
+    @Pchwizardintroframe@TPchIntroFrame@rbCacheClick$qqrp14System@TObject @248 ; __fastcall Pchwizardintroframe::TPchIntroFrame::rbCacheClick(System::TObject *)
+    @Pchwizardintroframe@TPchIntroFrame@rbRemoveClick$qqrp14System@TObject @247 ; __fastcall Pchwizardintroframe::TPchIntroFrame::rbRemoveClick(System::TObject *)
+    @Pchwizardintroframe@initialization$qqrv @244 ; __fastcall Pchwizardintroframe::initialization()
+    @Pchwizardresultframe@Finalization$qqrv @300 ; __fastcall Pchwizardresultframe::Finalization()
+    @Pchwizardresultframe@TPchResultFrame@ @311 ; Pchwizardresultframe::TPchResultFrame::
+    @Pchwizardresultframe@TPchResultFrame@$bctr$qqr51System@%DelphiInterface$24Simplewizardpage@IWizard% @308 ; Pchwizardresultframe::TPchResultFrame::TPchResultFrame(System::DelphiInterface<{583}...
+    @Pchwizardresultframe@TPchResultFrame@GetDescription$qqrv @307 ; __fastcall Pchwizardresultframe::TPchResultFrame::GetDescription()
+    @Pchwizardresultframe@TPchResultFrame@GetTitle$qqrv @306 ; __fastcall Pchwizardresultframe::TPchResultFrame::GetTitle()
+    @Pchwizardresultframe@TPchResultFrame@PopulateList$qqrv @302 ; __fastcall Pchwizardresultframe::TPchResultFrame::PopulateList()
+    @Pchwizardresultframe@TPchResultFrame@Show$qqro @301 ; __fastcall Pchwizardresultframe::TPchResultFrame::Show(bool)
+    @Pchwizardresultframe@TPchResultFrame@cbVerifyBuildClick$qqrp14System@TObject @309 ; __fastcall Pchwizardresultframe::TPchResultFrame::cbVerifyBuildClick(System::TObject *)
+    @Pchwizardresultframe@TPchResultFrame@lvHeadersChange$qqrp14System@TObjectp22Vcl@Comctrls@TListItem24Vcl@Comctrls@TItemChange @305 ; __fastcall Pchwizardresultframe::TPchResultFrame::lvHeadersChange(System::TObject *, Vcl::Comctrls::TListItem *, Vcl::Comctrls::TItemChange)
+    @Pchwizardresultframe@TPchResultFrame@lvHeadersColumnClick$qqrp14System@TObjectp24Vcl@Comctrls@TListColumn @304 ; __fastcall Pchwizardresultframe::TPchResultFrame::lvHeadersColumnClick(System::TObject *, Vcl::Comctrls::TListColumn *)
+    @Pchwizardresultframe@TPchResultFrame@lvHeadersInfoTip$qqrp14System@TObjectp22Vcl@Comctrls@TListItemr20System@UnicodeString @303 ; __fastcall Pchwizardresultframe::TPchResultFrame::lvHeadersInfoTip(System::TObject *, Vcl::Comctrls::TListItem *, System::UnicodeString&)
+    @Pchwizardresultframe@initialization$qqrv @299 ; __fastcall Pchwizardresultframe::initialization()
+    @Pchwizardverifyframe@Finalization$qqrv @360 ; __fastcall Pchwizardverifyframe::Finalization()
+    @Pchwizardverifyframe@TPchVerifyFrame@ @378 ; Pchwizardverifyframe::TPchVerifyFrame::
+    @Pchwizardverifyframe@TPchVerifyFrame@$bctr$qqr51System@%DelphiInterface$24Simplewizardpage@IWizard% @374 ; Pchwizardverifyframe::TPchVerifyFrame::TPchVerifyFrame(System::DelphiInterface<{583}...
+    @Pchwizardverifyframe@TPchVerifyFrame@$bdtr$qqrv @373 ; __fastcall Pchwizardverifyframe::TPchVerifyFrame::~TPchVerifyFrame()
+    @Pchwizardverifyframe@TPchVerifyFrame@CompileMessage$qqr17Compintf@TMsgKindipciiit3ro @375 ; __fastcall Pchwizardverifyframe::TPchVerifyFrame::CompileMessage(Compintf::TMsgKind, int, char *, int, int, int, char *, bool&)
+    @Pchwizardverifyframe@TPchVerifyFrame@FrameResize$qqrp14System@TObject @372 ; __fastcall Pchwizardverifyframe::TPchVerifyFrame::FrameResize(System::TObject *)
+    @Pchwizardverifyframe@TPchVerifyFrame@GetDescription$qqrv @371 ; __fastcall Pchwizardverifyframe::TPchVerifyFrame::GetDescription()
+    @Pchwizardverifyframe@TPchVerifyFrame@GetTitle$qqrv @370 ; __fastcall Pchwizardverifyframe::TPchVerifyFrame::GetTitle()
+    @Pchwizardverifyframe@TPchVerifyFrame@Hide$qqro @369 ; __fastcall Pchwizardverifyframe::TPchVerifyFrame::Hide(bool)
+    @Pchwizardverifyframe@TPchVerifyFrame@Show$qqro @368 ; __fastcall Pchwizardverifyframe::TPchVerifyFrame::Show(bool)
+    @Pchwizardverifyframe@TPchVerifyFrame@StartCompiling$qqrv @367 ; __fastcall Pchwizardverifyframe::TPchVerifyFrame::StartCompiling()
+    @Pchwizardverifyframe@TPchVerifyFrame@StopCompiling$qqrx20System@UnicodeString @366 ; __fastcall Pchwizardverifyframe::TPchVerifyFrame::StopCompiling(const System::UnicodeString)
+    @Pchwizardverifyframe@TPchVerifyFrame@UpdateButtons$qqrv @365 ; __fastcall Pchwizardverifyframe::TPchVerifyFrame::UpdateButtons()
+    @Pchwizardverifyframe@TPchVerifyFrame@VerifyFinished$qqrp14System@TObject @364 ; __fastcall Pchwizardverifyframe::TPchVerifyFrame::VerifyFinished(System::TObject *)
+    @Pchwizardverifyframe@TPchVerifyFrame@VerifyProgress$qqrx20System@UnicodeStringsro @363 ; __fastcall Pchwizardverifyframe::TPchVerifyFrame::VerifyProgress(const System::UnicodeString, short, bool&)
+    @Pchwizardverifyframe@TPchVerifyFrame@VerifyStarted$qqrp14System@TObject @362 ; __fastcall Pchwizardverifyframe::TPchVerifyFrame::VerifyStarted(System::TObject *)
+    @Pchwizardverifyframe@TPchVerifyFrame@WndProc$qqrr24Winapi@Messages@TMessage @361 ; __fastcall Pchwizardverifyframe::TPchVerifyFrame::WndProc(Winapi::Messages::TMessage&)
+    @Pchwizardverifyframe@TPchVerifyFrame@btnStopClick$qqrp14System@TObject @376 ; __fastcall Pchwizardverifyframe::TPchVerifyFrame::btnStopClick(System::TObject *)
+    @Pchwizardverifyframe@initialization$qqrv @359 ; __fastcall Pchwizardverifyframe::initialization()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@ @182 ; System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@$bctr$qqri @138 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TDictionary__2<System::UnicodeString, System::UnicodeString>(int)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@$bctr$qqrix97System@%DelphiInterface$70System@Generics@Defaults@%IEqualityComparer__1$20System@UnicodeString%% @136 ; System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TDictionary__2<System::UnicodeString, System::UnicodeString>(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@$bctr$qqrx97System@%DelphiInterface$70System@Generics@Defaults@%IEqualityComparer__1$20System@UnicodeString%% @137 ; System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TDictionary__2<System::UnicodeString, System::UnicodeString>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@$bctr$qqrxp110System@Generics@Collections@%TEnumerable__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%% @135 ; System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TDictionary__2<System::UnicodeString, System::UnicodeString>(System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<System::Unic
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@$bctr$qqrxp110System@Generics@Collections@%TEnumerable__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%%x97System@%DelphiInterface$70System@A1GwiSeupRgINcnCyiJmgQ @134 ; System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TDictionary__2<System::UnicodeString, System::UnicodeString>(System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<System::Unic
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@$bdtr$qqrv @133 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::~TDictionary__2<System::UnicodeString, System::UnicodeString>()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyCollection$%@ @190 ; System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyCollection<>::
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyCollection$%@$bctr$qqrxp69System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1% @112 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyCollection<>::TKeyCollection<>(System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString> * const)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyCollection$%@DoGetEnumerator$qqrv @113 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyCollection<>::DoGetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyCollection$%@GetCount$qqrv @114 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyCollection<>::GetCount()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyCollection$%@GetEnumerator$qqrv @111 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyCollection<>::GetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyCollection$%@ToArray$qqrv @110 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyCollection<>::ToArray()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyEnumerator$%@ @192 ; System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyEnumerator<>::
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyEnumerator$%@$bctr$qqrxp69System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1% @106 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyEnumerator<>::TKeyEnumerator<>(System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString> * const)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyEnumerator$%@DoGetCurrent$qqrv @108 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyEnumerator$%@DoMoveNext$qqrv @107 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyEnumerator$%@GetCurrent$qqrv @109 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TKeyEnumerator$%@MoveNext$qqrv @105 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TKeyEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TPairEnumerator$%@ @184 ; System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TPairEnumerator<>::
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TPairEnumerator$%@$bctr$qqrxp69System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1% @91  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TPairEnumerator<>::TPairEnumerator<>(System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString> * const)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TPairEnumerator$%@DoGetCurrent$qqrv @93  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TPairEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TPairEnumerator$%@DoMoveNext$qqrv @92  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TPairEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TPairEnumerator$%@GetCurrent$qqrv @94  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TPairEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TPairEnumerator$%@MoveNext$qqrv @90  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TPairEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueCollection$%@ @186 ; System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueCollection<>::
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueCollection$%@$bctr$qqrxp69System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1% @102 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueCollection<>::TValueCollection<>(System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString> * const)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueCollection$%@DoGetEnumerator$qqrv @103 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueCollection<>::DoGetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueCollection$%@GetCount$qqrv @104 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueCollection<>::GetCount()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueCollection$%@GetEnumerator$qqrv @101 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueCollection<>::GetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueCollection$%@ToArray$qqrv @100 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueCollection<>::ToArray()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueEnumerator$%@ @188 ; System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueEnumerator<>::
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueEnumerator$%@$bctr$qqrxp69System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1% @96  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueEnumerator<>::TValueEnumerator<>(System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString> * const)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueEnumerator$%@DoGetCurrent$qqrv @98  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueEnumerator$%@DoMoveNext$qqrv @97  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueEnumerator$%@GetCurrent$qqrv @99  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@%TValueEnumerator$%@MoveNext$qqrv @95  ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TValueEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@Add$qqrx20System@UnicodeStringt1 @132 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::Add(const System::UnicodeString, const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@AddOrSetValue$qqrx20System@UnicodeStringt1 @126 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::AddOrSetValue(const System::UnicodeString, const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@Clear$qqrv @129 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::Clear()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@ContainsKey$qqrx20System@UnicodeString @125 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::ContainsKey(const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@ContainsValue$qqrx20System@UnicodeString @124 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::ContainsValue(const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@DoAdd$qqriix20System@UnicodeStringt3 @144 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::DoAdd(int, int, const System::UnicodeString, const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@DoGetEnumerator$qqrv @141 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::DoGetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@DoRemove$qqrx20System@UnicodeStringi51System@Generics@Collections@TCollectionNotification @142 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::DoRemove(const System::UnicodeString, int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@DoSetValue$qqrix20System@UnicodeString @143 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::DoSetValue(int, const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@ExtractPair$qqrx20System@UnicodeString @130 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::ExtractPair(const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@GetBucketIndex$qqrx20System@UnicodeStringi @149 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::GetBucketIndex(const System::UnicodeString, int)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@GetEnumerator$qqrv @120 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::GetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@GetItem$qqrx20System@UnicodeString @147 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::GetItem(const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@GetKeys$qqrv @122 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::GetKeys()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@GetValues$qqrv @121 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::GetValues()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@Grow$qqrv @150 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::Grow()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@Hash$qqrx20System@UnicodeString @148 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::Hash(const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@KeyNotify$qqrx20System@UnicodeString51System@Generics@Collections@TCollectionNotification @140 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::KeyNotify(const System::UnicodeString, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@Rehash$qqri @151 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::Rehash(int)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@RehashAdd$qqrix20System@UnicodeStringt2 @145 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::RehashAdd(int, const System::UnicodeString, const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@Remove$qqrx20System@UnicodeString @131 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::Remove(const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@SetCapacity$qqri @152 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::SetCapacity(int)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@SetItem$qqrx20System@UnicodeStringt1 @146 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::SetItem(const System::UnicodeString, const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@ToArray$qqrv @123 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::ToArray()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@TrimExcess$qqrv @128 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TrimExcess()
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@TryGetValue$qqrx20System@UnicodeStringr20System@UnicodeString @127 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::TryGetValue(const System::UnicodeString, System::UnicodeString&)
+    @System@Generics@Collections@%TDictionary__2$20System@UnicodeStringt1%@ValueNotify$qqrx20System@UnicodeString51System@Generics@Collections@TCollectionNotification @139 ; __fastcall System::Generics::Collections::TDictionary__2<System::UnicodeString, System::UnicodeString>::ValueNotify(const System::UnicodeString, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TEnumerable__1$20System@UnicodeString%@ @194 ; System::Generics::Collections::TEnumerable__1<System::UnicodeString>::
+    @System@Generics@Collections@%TEnumerable__1$20System@UnicodeString%@$bdtr$qqrv @118 ; __fastcall System::Generics::Collections::TEnumerable__1<System::UnicodeString>::~TEnumerable__1<System::UnicodeString>()
+    @System@Generics@Collections@%TEnumerable__1$20System@UnicodeString%@GetEnumerator$qqrv @117 ; __fastcall System::Generics::Collections::TEnumerable__1<System::UnicodeString>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$20System@UnicodeString%@ToArray$qqrv @116 ; __fastcall System::Generics::Collections::TEnumerable__1<System::UnicodeString>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$20System@UnicodeString%@ToArrayImpl$qqri @119 ; __fastcall System::Generics::Collections::TEnumerable__1<System::UnicodeString>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerable__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%%@ @203 ; System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString> >::
+    @System@Generics@Collections@%TEnumerable__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%%@$bdtr$qqrv @156 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString> >::~TEnumerable__1<System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString> >()
+    @System@Generics@Collections@%TEnumerable__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%%@GetEnumerator$qqrv @155 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString> >::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%%@ToArray$qqrv @154 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString> >::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%%@ToArrayImpl$qqri @157 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString> >::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerator__1$20System@UnicodeString%@ @196 ; System::Generics::Collections::TEnumerator__1<System::UnicodeString>::
+    @System@Generics@Collections@%TEnumerator__1$20System@UnicodeString%@MoveNext$qqrv @115 ; __fastcall System::Generics::Collections::TEnumerator__1<System::UnicodeString>::MoveNext()
+    @System@Generics@Collections@%TEnumerator__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%%@ @205 ; System::Generics::Collections::TEnumerator__1<System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString> >::
+    @System@Generics@Collections@%TEnumerator__1$63System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%%@MoveNext$qqrv @153 ; __fastcall System::Generics::Collections::TEnumerator__1<System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString> >::MoveNext()
+    @System@Generics@Collections@%TPair__2$20System@UnicodeStringt1%@$bctr$qqrx20System@UnicodeStringt1 @158 ; __fastcall System::Generics::Collections::TPair__2<System::UnicodeString, System::UnicodeString>::TPair__2<System::UnicodeString, System::UnicodeString>(const System::UnicodeString, const System::UnicodeString)
+    Finalize                       @417 ; Finalize
+    Initialize                     @418 ; Initialize

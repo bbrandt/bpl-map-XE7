@@ -1,0 +1,92 @@
+LIBRARY     FMXFIREDAC210.BPL
+
+DESCRIPTION 'mbarcadero FireDAC FMX Forms Components'
+
+EXPORTS
+    @$xp$38Firedac@Fmxui@Error@TfrmFDGUIxFMXError @45  ; __tpdsc__ Firedac::Fmxui::Error::TfrmFDGUIxFMXError
+    @$xp$38Firedac@Fmxui@Login@TfrmFDGUIxFMXLogin @62  ; __tpdsc__ Firedac::Fmxui::Login::TfrmFDGUIxFMXLogin
+    @$xp$41Firedac@Fmxui@Script@TfrmFDGUIxFMXfScript @77  ; __tpdsc__ Firedac::Fmxui::Script::TfrmFDGUIxFMXfScript
+    @$xp$44Firedac@Fmxui@Optsbase@TfrmFDGUIxFMXOptsBase @15  ; __tpdsc__ Firedac::Fmxui::Optsbase::TfrmFDGUIxFMXOptsBase
+    @$xp$45Firedac@Fmxui@Async@TfrmFDGUIxFMXAsyncExecute @27  ; __tpdsc__ Firedac::Fmxui::Async::TfrmFDGUIxFMXAsyncExecute
+    @$xp$45Firedac@Fmxui@Login@TFDGUIxFMXLoginDialogImpl @64  ; __tpdsc__ Firedac::Fmxui::Login::TFDGUIxFMXLoginDialogImpl
+    @Firedac@Fmxui@Async@Finalization$qqrv @18  ; __fastcall Firedac::Fmxui::Async::Finalization()
+    @Firedac@Fmxui@Async@TfrmFDGUIxFMXAsyncExecute@ @28  ; Firedac::Fmxui::Async::TfrmFDGUIxFMXAsyncExecute::
+    @Firedac@Fmxui@Async@TfrmFDGUIxFMXAsyncExecute@FormCreate$qqrp14System@TObject @26  ; __fastcall Firedac::Fmxui::Async::TfrmFDGUIxFMXAsyncExecute::FormCreate(System::TObject *)
+    @Firedac@Fmxui@Async@TfrmFDGUIxFMXAsyncExecute@FormDestroy$qqrp14System@TObject @25  ; __fastcall Firedac::Fmxui::Async::TfrmFDGUIxFMXAsyncExecute::FormDestroy(System::TObject *)
+    @Firedac@Fmxui@Async@TfrmFDGUIxFMXAsyncExecute@FormKeyDown$qqrp14System@TObjectrusrb60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @24  ; Firedac::Fmxui::Async::TfrmFDGUIxFMXAsyncExecute::FormKeyDown(System::TObject *, unsigned short&, wchar_t&, System::Set<{583}...
+    @Firedac@Fmxui@Async@TfrmFDGUIxFMXAsyncExecute@Hide$qqrv @20  ; __fastcall Firedac::Fmxui::Async::TfrmFDGUIxFMXAsyncExecute::Hide()
+    @Firedac@Fmxui@Async@TfrmFDGUIxFMXAsyncExecute@IsFormMouseMessage$qqrrx6tagMSG @19  ; __fastcall Firedac::Fmxui::Async::TfrmFDGUIxFMXAsyncExecute::IsFormMouseMessage(const tagMSG&)
+    @Firedac@Fmxui@Async@TfrmFDGUIxFMXAsyncExecute@Show$qqrx65System@%DelphiInterface$38Firedac@Stan@Intf@IFDStanAsyncExecutor% @21  ; Firedac::Fmxui::Async::TfrmFDGUIxFMXAsyncExecute::Show(const System::DelphiInterface<{583}...
+    @Firedac@Fmxui@Async@TfrmFDGUIxFMXAsyncExecute@btnCancelClick$qqrp14System@TObject @23  ; __fastcall Firedac::Fmxui::Async::TfrmFDGUIxFMXAsyncExecute::btnCancelClick(System::TObject *)
+    @Firedac@Fmxui@Async@TfrmFDGUIxFMXAsyncExecute@tmrDelayTimer$qqrp14System@TObject @22  ; __fastcall Firedac::Fmxui::Async::TfrmFDGUIxFMXAsyncExecute::tmrDelayTimer(System::TObject *)
+    @Firedac@Fmxui@Async@initialization$qqrv @17  ; __fastcall Firedac::Fmxui::Async::initialization()
+    @Firedac@Fmxui@Error@Finalization$qqrv @30  ; __fastcall Firedac::Fmxui::Error::Finalization()
+    @Firedac@Fmxui@Error@TfrmFDGUIxFMXError@ @46  ; Firedac::Fmxui::Error::TfrmFDGUIxFMXError::
+    @Firedac@Fmxui@Error@TfrmFDGUIxFMXError@BackClick$qqrp14System@TObject @35  ; __fastcall Firedac::Fmxui::Error::TfrmFDGUIxFMXError::BackClick(System::TObject *)
+    @Firedac@Fmxui@Error@TfrmFDGUIxFMXError@DetailsBtnClick$qqrp14System@TObject @33  ; __fastcall Firedac::Fmxui::Error::TfrmFDGUIxFMXError::DetailsBtnClick(System::TObject *)
+    @Firedac@Fmxui@Error@TfrmFDGUIxFMXError@Execute$qqrp39Firedac@Stan@Error@EFDDBEngineException @32  ; __fastcall Firedac::Fmxui::Error::TfrmFDGUIxFMXError::Execute(Firedac::Stan::Error::EFDDBEngineException *)
+    @Firedac@Fmxui@Error@TfrmFDGUIxFMXError@FormActivate$qqrp14System@TObject @36  ; __fastcall Firedac::Fmxui::Error::TfrmFDGUIxFMXError::FormActivate(System::TObject *)
+    @Firedac@Fmxui@Error@TfrmFDGUIxFMXError@FormCreate$qqrp14System@TObject @43  ; __fastcall Firedac::Fmxui::Error::TfrmFDGUIxFMXError::FormCreate(System::TObject *)
+    @Firedac@Fmxui@Error@TfrmFDGUIxFMXError@FormDestroy$qqrp14System@TObject @42  ; __fastcall Firedac::Fmxui::Error::TfrmFDGUIxFMXError::FormDestroy(System::TObject *)
+    @Firedac@Fmxui@Error@TfrmFDGUIxFMXError@FormKeyDown$qqrp14System@TObjectrusrb60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @41  ; Firedac::Fmxui::Error::TfrmFDGUIxFMXError::FormKeyDown(System::TObject *, unsigned short&, wchar_t&, System::Set<{583}...
+    @Firedac@Fmxui@Error@TfrmFDGUIxFMXError@FormResize$qqrp14System@TObject @31  ; __fastcall Firedac::Fmxui::Error::TfrmFDGUIxFMXError::FormResize(System::TObject *)
+    @Firedac@Fmxui@Error@TfrmFDGUIxFMXError@NextClick$qqrp14System@TObject @34  ; __fastcall Firedac::Fmxui::Error::TfrmFDGUIxFMXError::NextClick(System::TObject *)
+    @Firedac@Fmxui@Error@TfrmFDGUIxFMXError@ShowCommand$qqrv @37  ; __fastcall Firedac::Fmxui::Error::TfrmFDGUIxFMXError::ShowCommand()
+    @Firedac@Fmxui@Error@TfrmFDGUIxFMXError@ShowError$qqrv @38  ; __fastcall Firedac::Fmxui::Error::TfrmFDGUIxFMXError::ShowError()
+    @Firedac@Fmxui@Error@TfrmFDGUIxFMXError@UpdateLayout$qqro @39  ; __fastcall Firedac::Fmxui::Error::TfrmFDGUIxFMXError::UpdateLayout(bool)
+    @Firedac@Fmxui@Error@TfrmFDGUIxFMXError@btnCopyClick$qqrp14System@TObject @40  ; __fastcall Firedac::Fmxui::Error::TfrmFDGUIxFMXError::btnCopyClick(System::TObject *)
+    @Firedac@Fmxui@Error@frmFDGUIxFMXError @44  ; Firedac::Fmxui::Error::frmFDGUIxFMXError
+    @Firedac@Fmxui@Error@initialization$qqrv @29  ; __fastcall Firedac::Fmxui::Error::initialization()
+    @Firedac@Fmxui@Login@Finalization$qqrv @48  ; __fastcall Firedac::Fmxui::Login::Finalization()
+    @Firedac@Fmxui@Login@TFDGUIxFMXLoginDialogImpl@ @65  ; Firedac::Fmxui::Login::TFDGUIxFMXLoginDialogImpl::
+    @Firedac@Fmxui@Login@TFDGUIxFMXLoginDialogImpl@CreateDlg$qqrv @51  ; __fastcall Firedac::Fmxui::Login::TFDGUIxFMXLoginDialogImpl::CreateDlg()
+    @Firedac@Fmxui@Login@TFDGUIxFMXLoginDialogImpl@ExecuteChngPwd$qqrv @49  ; __fastcall Firedac::Fmxui::Login::TFDGUIxFMXLoginDialogImpl::ExecuteChngPwd()
+    @Firedac@Fmxui@Login@TFDGUIxFMXLoginDialogImpl@ExecuteLogin$qqrv @50  ; __fastcall Firedac::Fmxui::Login::TFDGUIxFMXLoginDialogImpl::ExecuteLogin()
+    @Firedac@Fmxui@Login@TfrmFDGUIxFMXLogin@ @63  ; Firedac::Fmxui::Login::TfrmFDGUIxFMXLogin::
+    @Firedac@Fmxui@Login@TfrmFDGUIxFMXLogin@ExecuteChngPwd$qqrv @58  ; __fastcall Firedac::Fmxui::Login::TfrmFDGUIxFMXLogin::ExecuteChngPwd()
+    @Firedac@Fmxui@Login@TfrmFDGUIxFMXLogin@ExecuteLogin$qqrv @59  ; __fastcall Firedac::Fmxui::Login::TfrmFDGUIxFMXLogin::ExecuteLogin()
+    @Firedac@Fmxui@Login@TfrmFDGUIxFMXLogin@FileEditClick$qqrp14System@TObject @52  ; __fastcall Firedac::Fmxui::Login::TfrmFDGUIxFMXLogin::FileEditClick(System::TObject *)
+    @Firedac@Fmxui@Login@TfrmFDGUIxFMXLogin@FormCreate$qqrp14System@TObject @57  ; __fastcall Firedac::Fmxui::Login::TfrmFDGUIxFMXLogin::FormCreate(System::TObject *)
+    @Firedac@Fmxui@Login@TfrmFDGUIxFMXLogin@PostprocessLoginDialog$qqro @60  ; __fastcall Firedac::Fmxui::Login::TfrmFDGUIxFMXLogin::PostprocessLoginDialog(bool)
+    @Firedac@Fmxui@Login@TfrmFDGUIxFMXLogin@cbxProfilesChange$qqrp14System@TObject @54  ; __fastcall Firedac::Fmxui::Login::TfrmFDGUIxFMXLogin::cbxProfilesChange(System::TObject *)
+    @Firedac@Fmxui@Login@TfrmFDGUIxFMXLogin@cbxProfilesClick$qqrp14System@TObject @55  ; __fastcall Firedac::Fmxui::Login::TfrmFDGUIxFMXLogin::cbxProfilesClick(System::TObject *)
+    @Firedac@Fmxui@Login@TfrmFDGUIxFMXLogin@edtNewPasswordChange$qqrp14System@TObject @53  ; __fastcall Firedac::Fmxui::Login::TfrmFDGUIxFMXLogin::edtNewPasswordChange(System::TObject *)
+    @Firedac@Fmxui@Login@TfrmFDGUIxFMXLogin@imgEnabledClick$qqrp14System@TObject @56  ; __fastcall Firedac::Fmxui::Login::TfrmFDGUIxFMXLogin::imgEnabledClick(System::TObject *)
+    @Firedac@Fmxui@Login@frmFDGUIxFormsLogin @61  ; Firedac::Fmxui::Login::frmFDGUIxFormsLogin
+    @Firedac@Fmxui@Login@initialization$qqrv @47  ; __fastcall Firedac::Fmxui::Login::initialization()
+    @Firedac@Fmxui@Optsbase@FDGUIxFMXBeginModal$qqrp21Fmx@Forms@TCustomFormo @13  ; __fastcall Firedac::Fmxui::Optsbase::FDGUIxFMXBeginModal(Fmx::Forms::TCustomForm *, bool)
+    @Firedac@Fmxui@Optsbase@FDGUIxFMXCancel$qqrv @14  ; __fastcall Firedac::Fmxui::Optsbase::FDGUIxFMXCancel()
+    @Firedac@Fmxui@Optsbase@FDGUIxFMXEndModal$qqrrpv @12  ; __fastcall Firedac::Fmxui::Optsbase::FDGUIxFMXEndModal(void *&)
+    @Firedac@Fmxui@Optsbase@FDGUIxFMXSetupEditor$qqrp21Fmx@Listbox@TComboBoxp14Fmx@Edit@TEditp20Fmx@Edit@TCustomEditp23Fmx@Dialogs@TOpenDialogx20System@UnicodeString @11  ; __fastcall Firedac::Fmxui::Optsbase::FDGUIxFMXSetupEditor(Fmx::Listbox::TComboBox *, Fmx::Edit::TEdit *, Fmx::Edit::TCustomEdit *, Fmx::Dialogs::TOpenDialog *, const System::UnicodeString)
+    @Firedac@Fmxui@Optsbase@Finalization$qqrv @2   ; __fastcall Firedac::Fmxui::Optsbase::Finalization()
+    @Firedac@Fmxui@Optsbase@TfrmFDGUIxFMXOptsBase@ @16  ; Firedac::Fmxui::Optsbase::TfrmFDGUIxFMXOptsBase::
+    @Firedac@Fmxui@Optsbase@TfrmFDGUIxFMXOptsBase@FormActivate$qqrp14System@TObject @10  ; __fastcall Firedac::Fmxui::Optsbase::TfrmFDGUIxFMXOptsBase::FormActivate(System::TObject *)
+    @Firedac@Fmxui@Optsbase@TfrmFDGUIxFMXOptsBase@FormClose$qqrp14System@TObjectr27System@Uitypes@TCloseAction @9   ; __fastcall Firedac::Fmxui::Optsbase::TfrmFDGUIxFMXOptsBase::FormClose(System::TObject *, System::Uitypes::TCloseAction&)
+    @Firedac@Fmxui@Optsbase@TfrmFDGUIxFMXOptsBase@FormCreate$qqrp14System@TObject @8   ; __fastcall Firedac::Fmxui::Optsbase::TfrmFDGUIxFMXOptsBase::FormCreate(System::TObject *)
+    @Firedac@Fmxui@Optsbase@TfrmFDGUIxFMXOptsBase@LoadFormState$qqrp30System@Inifiles@TCustomIniFile @7   ; __fastcall Firedac::Fmxui::Optsbase::TfrmFDGUIxFMXOptsBase::LoadFormState(System::Inifiles::TCustomIniFile *)
+    @Firedac@Fmxui@Optsbase@TfrmFDGUIxFMXOptsBase@LoadState$qqrv @5   ; __fastcall Firedac::Fmxui::Optsbase::TfrmFDGUIxFMXOptsBase::LoadState()
+    @Firedac@Fmxui@Optsbase@TfrmFDGUIxFMXOptsBase@SaveFormState$qqrp30System@Inifiles@TCustomIniFile @6   ; __fastcall Firedac::Fmxui::Optsbase::TfrmFDGUIxFMXOptsBase::SaveFormState(System::Inifiles::TCustomIniFile *)
+    @Firedac@Fmxui@Optsbase@TfrmFDGUIxFMXOptsBase@SaveState$qqrv @4   ; __fastcall Firedac::Fmxui::Optsbase::TfrmFDGUIxFMXOptsBase::SaveState()
+    @Firedac@Fmxui@Optsbase@TfrmFDGUIxFMXOptsBase@WaitModal$qqrv @3   ; __fastcall Firedac::Fmxui::Optsbase::TfrmFDGUIxFMXOptsBase::WaitModal()
+    @Firedac@Fmxui@Optsbase@initialization$qqrv @1   ; __fastcall Firedac::Fmxui::Optsbase::initialization()
+    @Firedac@Fmxui@Script@Finalization$qqrv @67  ; __fastcall Firedac::Fmxui::Script::Finalization()
+    @Firedac@Fmxui@Script@TfrmFDGUIxFMXfScript@ @78  ; Firedac::Fmxui::Script::TfrmFDGUIxFMXfScript::
+    @Firedac@Fmxui@Script@TfrmFDGUIxFMXfScript@Hide$qqrv @70  ; __fastcall Firedac::Fmxui::Script::TfrmFDGUIxFMXfScript::Hide()
+    @Firedac@Fmxui@Script@TfrmFDGUIxFMXfScript@Input$qqrx20System@UnicodeStringr20System@UnicodeString @74  ; __fastcall Firedac::Fmxui::Script::TfrmFDGUIxFMXfScript::Input(const System::UnicodeString, System::UnicodeString&)
+    @Firedac@Fmxui@Script@TfrmFDGUIxFMXfScript@InternalHide$qqro @71  ; __fastcall Firedac::Fmxui::Script::TfrmFDGUIxFMXfScript::InternalHide(bool)
+    @Firedac@Fmxui@Script@TfrmFDGUIxFMXfScript@Output$qqrx20System@UnicodeString @75  ; __fastcall Firedac::Fmxui::Script::TfrmFDGUIxFMXfScript::Output(const System::UnicodeString)
+    @Firedac@Fmxui@Script@TfrmFDGUIxFMXfScript@Pause$qqrx20System@UnicodeString @73  ; __fastcall Firedac::Fmxui::Script::TfrmFDGUIxFMXfScript::Pause(const System::UnicodeString)
+    @Firedac@Fmxui@Script@TfrmFDGUIxFMXfScript@Progress$qqrx74System@%DelphiInterface$47Firedac@Ui@Intf@IFDGUIxScriptDialogInfoProvider% @72  ; Firedac::Fmxui::Script::TfrmFDGUIxFMXfScript::Progress(const System::DelphiInterface<{583}...
+    @Firedac@Fmxui@Script@TfrmFDGUIxFMXfScript@Show$qqrv @76  ; __fastcall Firedac::Fmxui::Script::TfrmFDGUIxFMXfScript::Show()
+    @Firedac@Fmxui@Script@TfrmFDGUIxFMXfScript@Timer1Timer$qqrp14System@TObject @68  ; __fastcall Firedac::Fmxui::Script::TfrmFDGUIxFMXfScript::Timer1Timer(System::TObject *)
+    @Firedac@Fmxui@Script@TfrmFDGUIxFMXfScript@btnCancelClick$qqrp14System@TObject @69  ; __fastcall Firedac::Fmxui::Script::TfrmFDGUIxFMXfScript::btnCancelClick(System::TObject *)
+    @Firedac@Fmxui@Script@initialization$qqrv @66  ; __fastcall Firedac::Fmxui::Script::initialization()
+    @Firedac@Fmxui@Wait@Finalization$qqrv @80  ; __fastcall Firedac::Fmxui::Wait::Finalization()
+    @Firedac@Fmxui@Wait@initialization$qqrv @79  ; __fastcall Firedac::Fmxui::Wait::initialization()
+    @Fmxfiredac@@GetPackageInfoTable$qqrv @84  ; Fmxfiredac::__linkproc__ __fastcall GetPackageInfoTable()
+    @Fmxfiredac@@PackageLoad$qqrv  @83  ; Fmxfiredac::__linkproc__ __fastcall PackageLoad()
+    @Fmxfiredac@@PackageUnload$qqrv @82  ; Fmxfiredac::__linkproc__ __fastcall PackageUnload()
+    @Fmxfiredac@initialization$qqrv @81  ; __fastcall Fmxfiredac::initialization()
+    @GetPackageInfoTable           @87  ; GetPackageInfoTable
+    Finalize                       @85  ; Finalize
+    Initialize                     @86  ; Initialize

@@ -1,0 +1,15 @@
+LIBRARY     DCLEXPERTSUI210.BPL
+
+DESCRIPTION 'mbarcadero Experts UI Design Components'
+
+EXPORTS
+    @Dclexpertsui@@GetPackageInfoTable$qqrv @7   ; Dclexpertsui::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclexpertsui@@PackageLoad$qqrv @6   ; Dclexpertsui::__linkproc__ __fastcall PackageLoad()
+    @Dclexpertsui@@PackageUnload$qqrv @5   ; Dclexpertsui::__linkproc__ __fastcall PackageUnload()
+    @Dclexpertsui@initialization$qqrv @4   ; __fastcall Dclexpertsui::initialization()
+    @Expertsuireg@Finalization$qqrv @2   ; __fastcall Expertsuireg::Finalization()
+    @Expertsuireg@Register$qqrv    @3   ; __fastcall Expertsuireg::Register()
+    @Expertsuireg@initialization$qqrv @1   ; __fastcall Expertsuireg::initialization()
+    @GetPackageInfoTable           @10  ; GetPackageInfoTable
+    Finalize                       @8   ; Finalize
+    Initialize                     @9   ; Initialize

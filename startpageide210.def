@@ -1,0 +1,149 @@
+LIBRARY     STARTPAGEIDE210.BPL
+
+DESCRIPTION 'mbarcadero Start Page IDE Package'
+
+EXPORTS
+    @$xp$20Urlmodule@TURLModule    @32  ; __tpdsc__ Urlmodule::TURLModule
+    @$xp$25Urlmodule@TCodeIURLModule @30  ; __tpdsc__ Urlmodule::TCodeIURLModule
+    @$xp$25Urlmodule@TURLOpenHandler @28  ; __tpdsc__ Urlmodule::TURLOpenHandler
+    @$xp$29Startpagecmds@TURLComboAction @55  ; __tpdsc__ Startpagecmds::TURLComboAction
+    @$xp$34Idestartpageframe@TWelcomePageView @132 ; __tpdsc__ Idestartpageframe::TWelcomePageView
+    @$xp$34Startpagecmds@TWelcomePageCommands @53  ; __tpdsc__ Startpagecmds::TWelcomePageCommands
+    @$xp$35Idestartpageframe@TWelcomePageFrame @136 ; __tpdsc__ Idestartpageframe::TWelcomePageFrame
+    @$xp$42Idestartpageframe@TInternetSecurityManager @134 ; __tpdsc__ Idestartpageframe::TInternetSecurityManager
+    @GetPackageInfoTable           @144 ; GetPackageInfoTable
+    @Idestartpageframe@Finalization$qqrv @60  ; __fastcall Idestartpageframe::Finalization()
+    @Idestartpageframe@FindTopWelcomePageView$qqrp22Editorform@TEditWindow @96  ; __fastcall Idestartpageframe::FindTopWelcomePageView(Editorform::TEditWindow *)
+    @Idestartpageframe@TInternetSecurityManager@ @135 ; Idestartpageframe::TInternetSecurityManager::
+    @Idestartpageframe@TInternetSecurityManager@$bctr$qqrp25System@Classes@TComponent @71  ; __fastcall Idestartpageframe::TInternetSecurityManager::TInternetSecurityManager(System::Classes::TComponent *)
+    @Idestartpageframe@TInternetSecurityManager@GetSecurityId$qqspbpvruiui @70  ; __stdcall Idestartpageframe::TInternetSecurityManager::GetSecurityId(wchar_t *, void *, unsigned int&, unsigned int)
+    @Idestartpageframe@TInternetSecurityManager@GetSecuritySite$qqsr51System@%DelphiInterface$24IInternetSecurityMgrSite% @69  ; Idestartpageframe::TInternetSecurityManager::GetSecuritySite(System::DelphiInterface<{583}...
+    @Idestartpageframe@TInternetSecurityManager@GetZoneMappings$qqsuir38System@%DelphiInterface$11IEnumString%ui @68  ; Idestartpageframe::TInternetSecurityManager::GetZoneMappings(unsigned int, System::DelphiInterface<{583}...
+    @Idestartpageframe@TInternetSecurityManager@MapUrlToZone$qqspbruiui @67  ; __stdcall Idestartpageframe::TInternetSecurityManager::MapUrlToZone(wchar_t *, unsigned int&, unsigned int)
+    @Idestartpageframe@TInternetSecurityManager@ProcessUrlAction$qqspbuipvuit3uiuiui @66  ; __stdcall Idestartpageframe::TInternetSecurityManager::ProcessUrlAction(wchar_t *, unsigned int, void *, unsigned int, void *, unsigned int, unsigned int, unsigned int)
+    @Idestartpageframe@TInternetSecurityManager@ProcessUrlActionEx$qqspbuipvuit3uiuiuirui @65  ; __stdcall Idestartpageframe::TInternetSecurityManager::ProcessUrlActionEx(wchar_t *, unsigned int, void *, unsigned int, void *, unsigned int, unsigned int, unsigned int, unsigned int&)
+    @Idestartpageframe@TInternetSecurityManager@QueryCustomPolicy$qqspbrx5_GUIDrpvruipvuiui @64  ; __stdcall Idestartpageframe::TInternetSecurityManager::QueryCustomPolicy(wchar_t *, const _GUID&, void *&, unsigned int&, void *, unsigned int, unsigned int)
+    @Idestartpageframe@TInternetSecurityManager@SetSecuritySite$qqs51System@%DelphiInterface$24IInternetSecurityMgrSite% @63  ; Idestartpageframe::TInternetSecurityManager::SetSecuritySite(System::DelphiInterface<{583}...
+    @Idestartpageframe@TInternetSecurityManager@SetWebBrowser$qqrxp26Webbrowserex@TWebBrowserEx @62  ; __fastcall Idestartpageframe::TInternetSecurityManager::SetWebBrowser(Webbrowserex::TWebBrowserEx * const)
+    @Idestartpageframe@TInternetSecurityManager@SetZoneMapping$qqsuipbui @61  ; __stdcall Idestartpageframe::TInternetSecurityManager::SetZoneMapping(unsigned int, wchar_t *, unsigned int)
+    @Idestartpageframe@TWelcomePageFrame@ @137 ; Idestartpageframe::TWelcomePageFrame::
+    @Idestartpageframe@TWelcomePageFrame@$bctr$qqrp25System@Classes@TComponent @100 ; __fastcall Idestartpageframe::TWelcomePageFrame::TWelcomePageFrame(System::Classes::TComponent *)
+    @Idestartpageframe@TWelcomePageFrame@$bdtr$qqrv @99  ; __fastcall Idestartpageframe::TWelcomePageFrame::~TWelcomePageFrame()
+    @Idestartpageframe@TWelcomePageFrame@AddWelcomePageView$qqrp34Idestartpageframe@TWelcomePageView @79  ; __fastcall Idestartpageframe::TWelcomePageFrame::AddWelcomePageView(Idestartpageframe::TWelcomePageView *)
+    @Idestartpageframe@TWelcomePageFrame@BeginOpenFiles$qqrp14System@TObject @75  ; __fastcall Idestartpageframe::TWelcomePageFrame::BeginOpenFiles(System::TObject *)
+    @Idestartpageframe@TWelcomePageFrame@BrowserAttach$qqrp26Webbrowserex@TWebBrowserExo @103 ; __fastcall Idestartpageframe::TWelcomePageFrame::BrowserAttach(Webbrowserex::TWebBrowserEx *, bool)
+    @Idestartpageframe@TWelcomePageFrame@BrowserDetach$qqrp26Webbrowserex@TWebBrowserEx @101 ; __fastcall Idestartpageframe::TWelcomePageFrame::BrowserDetach(Webbrowserex::TWebBrowserEx *)
+    @Idestartpageframe@TWelcomePageFrame@CustomizeItemClick$qqrp14System@TObject @84  ; __fastcall Idestartpageframe::TWelcomePageFrame::CustomizeItemClick(System::TObject *)
+    @Idestartpageframe@TWelcomePageFrame@DoOpenFile$qqrp14System@TObjectx20System@UnicodeString @74  ; __fastcall Idestartpageframe::TWelcomePageFrame::DoOpenFile(System::TObject *, const System::UnicodeString)
+    @Idestartpageframe@TWelcomePageFrame@EndOpenFiles$qqrp14System@TObject @76  ; __fastcall Idestartpageframe::TWelcomePageFrame::EndOpenFiles(System::TObject *)
+    @Idestartpageframe@TWelcomePageFrame@InitializeToolbar$qqrv @90  ; __fastcall Idestartpageframe::TWelcomePageFrame::InitializeToolbar()
+    @Idestartpageframe@TWelcomePageFrame@LoadToolbar$qqrv @88  ; __fastcall Idestartpageframe::TWelcomePageFrame::LoadToolbar()
+    @Idestartpageframe@TWelcomePageFrame@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @80  ; __fastcall Idestartpageframe::TWelcomePageFrame::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Idestartpageframe@TWelcomePageFrame@RefreshBrowser$qqrv @102 ; __fastcall Idestartpageframe::TWelcomePageFrame::RefreshBrowser()
+    @Idestartpageframe@TWelcomePageFrame@RemoveWelcomePageView$qqrp34Idestartpageframe@TWelcomePageView @78  ; __fastcall Idestartpageframe::TWelcomePageFrame::RemoveWelcomePageView(Idestartpageframe::TWelcomePageView *)
+    @Idestartpageframe@TWelcomePageFrame@ResetToolbar$qqrv @86  ; __fastcall Idestartpageframe::TWelcomePageFrame::ResetToolbar()
+    @Idestartpageframe@TWelcomePageFrame@SaveToolbar$qqrv @87  ; __fastcall Idestartpageframe::TWelcomePageFrame::SaveToolbar()
+    @Idestartpageframe@TWelcomePageFrame@SetCurWelcomePageView$qqrp34Idestartpageframe@TWelcomePageView @98  ; __fastcall Idestartpageframe::TWelcomePageFrame::SetCurWelcomePageView(Idestartpageframe::TWelcomePageView *)
+    @Idestartpageframe@TWelcomePageFrame@StatusTextChange$qqrp14System@TObjectx20System@UnicodeString @92  ; __fastcall Idestartpageframe::TWelcomePageFrame::StatusTextChange(System::TObject *, const System::UnicodeString)
+    @Idestartpageframe@TWelcomePageFrame@UpdateHistoryList$qqrp14System@TObjecto @85  ; __fastcall Idestartpageframe::TWelcomePageFrame::UpdateHistoryList(System::TObject *, bool)
+    @Idestartpageframe@TWelcomePageFrame@ViewDocumentSource$qqrv @73  ; __fastcall Idestartpageframe::TWelcomePageFrame::ViewDocumentSource()
+    @Idestartpageframe@TWelcomePageFrame@WelcomePageBrowserBeforeNavigate2$qqrp14System@TObjectx35System@%DelphiInterface$9IDispatch%rx17System@OleVariantt3t3t3t3rus @95  ; Idestartpageframe::TWelcomePageFrame::WelcomePageBrowserBeforeNavigate2(System::TObject *, const System::DelphiInterface<{583}...
+    @Idestartpageframe@TWelcomePageFrame@WelcomePageBrowserDocumentComplete$qqrp14System@TObjectx35System@%DelphiInterface$9IDispatch%rx17System@OleVariant @94  ; Idestartpageframe::TWelcomePageFrame::WelcomePageBrowserDocumentComplete(System::TObject *, const System::DelphiInterface<{583}...
+    @Idestartpageframe@TWelcomePageFrame@WelcomePageBrowserGetExternalDispatch$qqrp14System@TObjectr35System@%DelphiInterface$9IDispatch% @97  ; Idestartpageframe::TWelcomePageFrame::WelcomePageBrowserGetExternalDispatch(System::TObject *, System::DelphiInterface<{583}...
+    @Idestartpageframe@TWelcomePageFrame@WelcomePageBrowserNavigateError$qqrp14System@TObjectx35System@%DelphiInterface$9IDispatch%rx17System@OleVariantt3t3rus @93  ; Idestartpageframe::TWelcomePageFrame::WelcomePageBrowserNavigateError(System::TObject *, const System::DelphiInterface<{583}...
+    @Idestartpageframe@TWelcomePageFrame@WelcomePageBrowserNewWindow2$qqrp14System@TObjectr35System@%DelphiInterface$9IDispatch%rus @83  ; Idestartpageframe::TWelcomePageFrame::WelcomePageBrowserNewWindow2(System::TObject *, System::DelphiInterface<{583}...
+    @Idestartpageframe@TWelcomePageFrame@WelcomePageBrowserTitleChange$qqrp14System@TObjectx17System@WideString @91  ; __fastcall Idestartpageframe::TWelcomePageFrame::WelcomePageBrowserTitleChange(System::TObject *, const System::WideString)
+    @Idestartpageframe@TWelcomePageFrame@WelcomePageGetDropTarget$qqrp14System@TObjectx38System@%DelphiInterface$11IDropTarget%r38System@%DelphiInterface$11IDropTarget% @77  ; Idestartpageframe::TWelcomePageFrame::WelcomePageGetDropTarget(System::TObject *, const System::DelphiInterface<{583}...
+    @Idestartpageframe@TWelcomePageFrame@WelcomePageInitMenuPopup$qqrp14System@TObjectp7HMENU__so @81  ; __fastcall Idestartpageframe::TWelcomePageFrame::WelcomePageInitMenuPopup(System::TObject *, HMENU__ *, short, bool)
+    @Idestartpageframe@TWelcomePageFrame@WelcomePageOpenNewWindow$qqrp14System@TObject @72  ; __fastcall Idestartpageframe::TWelcomePageFrame::WelcomePageOpenNewWindow(System::TObject *)
+    @Idestartpageframe@TWelcomePageFrame@WelcomePageShowContextMenu$qqrp14System@TObjectuip19System@Types@TPointx44System@%DelphiInterface$17System@IInterface%x35System@%DelphiInterface$9IDispatch%rl @82  ; Idestartpageframe::TWelcomePageFrame::WelcomePageShowContextMenu(System::TObject *, unsigned int, System::Types::TPoint *, const System::DelphiInterface<{583}...
+    @Idestartpageframe@TWelcomePageFrame@WelcomeToolbarResize$qqrp14System@TObject @89  ; __fastcall Idestartpageframe::TWelcomePageFrame::WelcomeToolbarResize(System::TObject *)
+    @Idestartpageframe@TWelcomePageView@ @133 ; Idestartpageframe::TWelcomePageView::
+    @Idestartpageframe@TWelcomePageView@$bctr$qqrp22Editorform@TEditWindowx45System@%DelphiInterface$18Uiutils@IURLModule%x20System@UnicodeStringp26Editorform@TCustomEditViewt4 @126 ; Idestartpageframe::TWelcomePageView::TWelcomePageView(Editorform::TEditWindow *, const System::DelphiInterface<{583}...
+    @Idestartpageframe@TWelcomePageView@$bdtr$qqrv @125 ; __fastcall Idestartpageframe::TWelcomePageView::~TWelcomePageView()
+    @Idestartpageframe@TWelcomePageView@ActivateModule$qqrii @131 ; __fastcall Idestartpageframe::TWelcomePageView::ActivateModule(int, int)
+    @Idestartpageframe@TWelcomePageView@ActivateSource$qqrv @130 ; __fastcall Idestartpageframe::TWelcomePageView::ActivateSource()
+    @Idestartpageframe@TWelcomePageView@CloneEditView$qqrp22Editorform@TEditWindow @129 ; __fastcall Idestartpageframe::TWelcomePageView::CloneEditView(Editorform::TEditWindow *)
+    @Idestartpageframe@TWelcomePageView@Close$qqrv @128 ; __fastcall Idestartpageframe::TWelcomePageView::Close()
+    @Idestartpageframe@TWelcomePageView@CloseAllCalled$qqrro @105 ; __fastcall Idestartpageframe::TWelcomePageView::CloseAllCalled(bool&)
+    @Idestartpageframe@TWelcomePageView@ConfigurePanel$qqrp23Vcl@Comctrls@TStatusBarp25Vcl@Comctrls@TStatusPanel @127 ; __fastcall Idestartpageframe::TWelcomePageView::ConfigurePanel(Vcl::Comctrls::TStatusBar *, Vcl::Comctrls::TStatusPanel *)
+    @Idestartpageframe@TWelcomePageView@DeselectView$qqrv @124 ; __fastcall Idestartpageframe::TWelcomePageView::DeselectView()
+    @Idestartpageframe@TWelcomePageView@EditAction$qqr22Designintf@TEditAction @123 ; __fastcall Idestartpageframe::TWelcomePageView::EditAction(Designintf::TEditAction)
+    @Idestartpageframe@TWelcomePageView@GetCaption$qqrv @122 ; __fastcall Idestartpageframe::TWelcomePageView::GetCaption()
+    @Idestartpageframe@TWelcomePageView@GetEditState$qqrv @121 ; __fastcall Idestartpageframe::TWelcomePageView::GetEditState()
+    @Idestartpageframe@TWelcomePageView@GetImageIndex$qqrv @104 ; __fastcall Idestartpageframe::TWelcomePageView::GetImageIndex()
+    @Idestartpageframe@TWelcomePageView@GetSavedChildIndex$qqrv @120 ; __fastcall Idestartpageframe::TWelcomePageView::GetSavedChildIndex()
+    @Idestartpageframe@TWelcomePageView@GetStatusPanelCount$qqrv @119 ; __fastcall Idestartpageframe::TWelcomePageView::GetStatusPanelCount()
+    @Idestartpageframe@TWelcomePageView@GetTabHintText$qqrv @118 ; __fastcall Idestartpageframe::TWelcomePageView::GetTabHintText()
+    @Idestartpageframe@TWelcomePageView@GetTabText$qqrv @117 ; __fastcall Idestartpageframe::TWelcomePageView::GetTabText()
+    @Idestartpageframe@TWelcomePageView@GetViewTabNames$qqrp23System@Classes@TStrings @116 ; __fastcall Idestartpageframe::TWelcomePageView::GetViewTabNames(System::Classes::TStrings *)
+    @Idestartpageframe@TWelcomePageView@GetWelcomeBrowser$qqrv @115 ; __fastcall Idestartpageframe::TWelcomePageView::GetWelcomeBrowser()
+    @Idestartpageframe@TWelcomePageView@GetWelcomePageFrame$qqrv @114 ; __fastcall Idestartpageframe::TWelcomePageView::GetWelcomePageFrame()
+    @Idestartpageframe@TWelcomePageView@LoadViewState$qqrxp30System@Inifiles@TCustomIniFilex20System@UnicodeStringxp22Editorform@TEditWindow @113 ; __fastcall Idestartpageframe::TWelcomePageView::LoadViewState(System::Inifiles::TCustomIniFile * const, const System::UnicodeString, Editorform::TEditWindow * const)
+    @Idestartpageframe@TWelcomePageView@RefreshBrowser$qqrp14System@TObject @112 ; __fastcall Idestartpageframe::TWelcomePageView::RefreshBrowser(System::TObject *)
+    @Idestartpageframe@TWelcomePageView@SaveChildIndex$qqri @111 ; __fastcall Idestartpageframe::TWelcomePageView::SaveChildIndex(int)
+    @Idestartpageframe@TWelcomePageView@SaveViewState$qqrxp30System@Inifiles@TCustomIniFilexox20System@UnicodeStringxp22Editorform@TEditWindow @110 ; __fastcall Idestartpageframe::TWelcomePageView::SaveViewState(System::Inifiles::TCustomIniFile * const, const bool, const System::UnicodeString, Editorform::TEditWindow * const)
+    @Idestartpageframe@TWelcomePageView@SelectView$qqri @109 ; __fastcall Idestartpageframe::TWelcomePageView::SelectView(int)
+    @Idestartpageframe@TWelcomePageView@SetOwner$qqrp22Editorform@TEditWindow @108 ; __fastcall Idestartpageframe::TWelcomePageView::SetOwner(Editorform::TEditWindow *)
+    @Idestartpageframe@TWelcomePageView@SetTitle$qqrx20System@UnicodeString @107 ; __fastcall Idestartpageframe::TWelcomePageView::SetTitle(const System::UnicodeString)
+    @Idestartpageframe@TWelcomePageView@SetURL$qqrx20System@UnicodeString @106 ; __fastcall Idestartpageframe::TWelcomePageView::SetURL(const System::UnicodeString)
+    @Idestartpageframe@initialization$qqrv @59  ; __fastcall Idestartpageframe::initialization()
+    @Startpagecmds@Finalization$qqrv @35  ; __fastcall Startpagecmds::Finalization()
+    @Startpagecmds@IDERegister$qqrv @51  ; __fastcall Startpagecmds::IDERegister()
+    @Startpagecmds@StartPageImageIndex @52  ; Startpagecmds::StartPageImageIndex
+    @Startpagecmds@TURLComboAction@ @56  ; Startpagecmds::TURLComboAction::
+    @Startpagecmds@TWelcomePageCommands@ @54  ; Startpagecmds::TWelcomePageCommands::
+    @Startpagecmds@TWelcomePageCommands@BrowseGoCommandExecute$qqrp14System@TObject @43  ; __fastcall Startpagecmds::TWelcomePageCommands::BrowseGoCommandExecute(System::TObject *)
+    @Startpagecmds@TWelcomePageCommands@BrowseRefreshCommandExecute$qqrp14System@TObject @45  ; __fastcall Startpagecmds::TWelcomePageCommands::BrowseRefreshCommandExecute(System::TObject *)
+    @Startpagecmds@TWelcomePageCommands@BrowseStopCommandExecute$qqrp14System@TObject @46  ; __fastcall Startpagecmds::TWelcomePageCommands::BrowseStopCommandExecute(System::TObject *)
+    @Startpagecmds@TWelcomePageCommands@BrowseStopCommandUpdate$qqrp14System@TObject @47  ; __fastcall Startpagecmds::TWelcomePageCommands::BrowseStopCommandUpdate(System::TObject *)
+    @Startpagecmds@TWelcomePageCommands@BrowseWelcomeCommandExecute$qqrp14System@TObject @44  ; __fastcall Startpagecmds::TWelcomePageCommands::BrowseWelcomeCommandExecute(System::TObject *)
+    @Startpagecmds@TWelcomePageCommands@DataModuleCreate$qqrp14System@TObject @42  ; __fastcall Startpagecmds::TWelcomePageCommands::DataModuleCreate(System::TObject *)
+    @Startpagecmds@TWelcomePageCommands@IDEAsyncProtocolOpenResource$qqrp14System@TObjectx20System@UnicodeStringrp22System@Classes@TStreamro @40  ; __fastcall Startpagecmds::TWelcomePageCommands::IDEAsyncProtocolOpenResource(System::TObject *, const System::UnicodeString, System::Classes::TStream *&, bool&)
+    @Startpagecmds@TWelcomePageCommands@OpenWebPage$qqrx20System@UnicodeString @38  ; __fastcall Startpagecmds::TWelcomePageCommands::OpenWebPage(const System::UnicodeString)
+    @Startpagecmds@TWelcomePageCommands@ShowWebPage$qqrx20System@UnicodeString @39  ; __fastcall Startpagecmds::TWelcomePageCommands::ShowWebPage(const System::UnicodeString)
+    @Startpagecmds@TWelcomePageCommands@ShowWelcomePageDocument$qqrv @49  ; __fastcall Startpagecmds::TWelcomePageCommands::ShowWelcomePageDocument()
+    @Startpagecmds@TWelcomePageCommands@URLEntryKeyDown$qqrp14System@TObjectrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @37  ; Startpagecmds::TWelcomePageCommands::URLEntryKeyDown(System::TObject *, unsigned short&, System::Set<{583}...
+    @Startpagecmds@TWelcomePageCommands@URLEntryKeyPress$qqrp14System@TObjectrb @36  ; __fastcall Startpagecmds::TWelcomePageCommands::URLEntryKeyPress(System::TObject *, wchar_t&)
+    @Startpagecmds@TWelcomePageCommands@URLToFileName$qqrx20System@UnicodeString @41  ; __fastcall Startpagecmds::TWelcomePageCommands::URLToFileName(const System::UnicodeString)
+    @Startpagecmds@TWelcomePageCommands@ViewWelcomePageCommandExecute$qqrp14System@TObject @48  ; __fastcall Startpagecmds::TWelcomePageCommands::ViewWelcomePageCommandExecute(System::TObject *)
+    @Startpagecmds@WelcomePageCommands$qqrv @50  ; __fastcall Startpagecmds::WelcomePageCommands()
+    @Startpagecmds@_sBrowseCategory @58  ; Startpagecmds::_sBrowseCategory
+    @Startpagecmds@_sHistoryCategory @57  ; Startpagecmds::_sHistoryCategory
+    @Startpagecmds@initialization$qqrv @34  ; __fastcall Startpagecmds::initialization()
+    @Startpageide@@GetPackageInfoTable$qqrv @141 ; Startpageide::__linkproc__ __fastcall GetPackageInfoTable()
+    @Startpageide@@PackageLoad$qqrv @140 ; Startpageide::__linkproc__ __fastcall PackageLoad()
+    @Startpageide@@PackageUnload$qqrv @139 ; Startpageide::__linkproc__ __fastcall PackageUnload()
+    @Startpageide@initialization$qqrv @138 ; __fastcall Startpageide::initialization()
+    @Urlmodule@Finalization$qqrv   @2   ; __fastcall Urlmodule::Finalization()
+    @Urlmodule@OpenNewURLModule$qqrx20System@UnicodeStringp22Editorform@TEditWindow @7   ; __fastcall Urlmodule::OpenNewURLModule(const System::UnicodeString, Editorform::TEditWindow *)
+    @Urlmodule@RegisterURLModuleFormHandler$qqrv @4   ; __fastcall Urlmodule::RegisterURLModuleFormHandler()
+    @Urlmodule@TCodeIURLModule@    @31  ; Urlmodule::TCodeIURLModule::
+    @Urlmodule@TCodeIURLModule@GetURL$qqrv @6   ; __fastcall Urlmodule::TCodeIURLModule::GetURL()
+    @Urlmodule@TCodeIURLModule@SetURL$qqrx20System@UnicodeString @5   ; __fastcall Urlmodule::TCodeIURLModule::SetURL(const System::UnicodeString)
+    @Urlmodule@TURLModule@         @33  ; Urlmodule::TURLModule::
+    @Urlmodule@TURLModule@$bctr$qqrx20System@UnicodeString @26  ; __fastcall Urlmodule::TURLModule::TURLModule(const System::UnicodeString)
+    @Urlmodule@TURLModule@$bdtr$qqrv @25  ; __fastcall Urlmodule::TURLModule::~TURLModule()
+    @Urlmodule@TURLModule@CheckFileDate$qqrv @27  ; __fastcall Urlmodule::TURLModule::CheckFileDate()
+    @Urlmodule@TURLModule@GetEditView$qqrp22Editorform@TEditWindow @24  ; __fastcall Urlmodule::TURLModule::GetEditView(Editorform::TEditWindow *)
+    @Urlmodule@TURLModule@GetFileName$qqrv @23  ; __fastcall Urlmodule::TURLModule::GetFileName()
+    @Urlmodule@TURLModule@GetIsFileModule$qqrv @22  ; __fastcall Urlmodule::TURLModule::GetIsFileModule()
+    @Urlmodule@TURLModule@GetModuleIntf$qqrv @21  ; __fastcall Urlmodule::TURLModule::GetModuleIntf()
+    @Urlmodule@TURLModule@GetSaveFileName$qqrv @20  ; __fastcall Urlmodule::TURLModule::GetSaveFileName()
+    @Urlmodule@TURLModule@GetTitle$qqrv @19  ; __fastcall Urlmodule::TURLModule::GetTitle()
+    @Urlmodule@TURLModule@GetURL$qqrv @18  ; __fastcall Urlmodule::TURLModule::GetURL()
+    @Urlmodule@TURLModule@GetView$qqrv @17  ; __fastcall Urlmodule::TURLModule::GetView()
+    @Urlmodule@TURLModule@HasEditView$qqrv @16  ; __fastcall Urlmodule::TURLModule::HasEditView()
+    @Urlmodule@TURLModule@SaveFile$qqrv @15  ; __fastcall Urlmodule::TURLModule::SaveFile()
+    @Urlmodule@TURLModule@SetURL$qqrx20System@UnicodeString @14  ; __fastcall Urlmodule::TURLModule::SetURL(const System::UnicodeString)
+    @Urlmodule@TURLModule@ShowEditor$qqro @13  ; __fastcall Urlmodule::TURLModule::ShowEditor(bool)
+    @Urlmodule@TURLModule@WindowClosing$qqrp14System@TObjectorus @12  ; __fastcall Urlmodule::TURLModule::WindowClosing(System::TObject *, bool, unsigned short&)
+    @Urlmodule@TURLOpenHandler@    @29  ; Urlmodule::TURLOpenHandler::
+    @Urlmodule@TURLOpenHandler@CanOpen$qqrix20System@UnicodeString @11  ; __fastcall Urlmodule::TURLOpenHandler::CanOpen(int, const System::UnicodeString)
+    @Urlmodule@TURLOpenHandler@FileOpen$qqrix20System@UnicodeStringop19Docmodul@TDocModule @10  ; __fastcall Urlmodule::TURLOpenHandler::FileOpen(int, const System::UnicodeString, bool, Docmodul::TDocModule *)
+    @Urlmodule@TURLOpenHandler@GetFilters$qqrp20Docmodul@TFilterListo @9   ; __fastcall Urlmodule::TURLOpenHandler::GetFilters(Docmodul::TFilterList *, bool)
+    @Urlmodule@TURLOpenHandler@IsPrefilter$qqrv @8   ; __fastcall Urlmodule::TURLOpenHandler::IsPrefilter()
+    @Urlmodule@UnregisterURLModuleFormHandler$qqrv @3   ; __fastcall Urlmodule::UnregisterURLModuleFormHandler()
+    @Urlmodule@initialization$qqrv @1   ; __fastcall Urlmodule::initialization()
+    Finalize                       @142 ; Finalize
+    Initialize                     @143 ; Initialize

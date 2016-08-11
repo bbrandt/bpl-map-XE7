@@ -1,0 +1,81 @@
+LIBRARY     METROPOLISUILIVETILE210.BPL
+
+DESCRIPTION 'mbarcadero Metropolis UI Live Tile Component Library'
+
+EXPORTS
+    @$xp$27Metropolisui@Tile@TLiveTile @58  ; __tpdsc__ Metropolisui::Tile::TLiveTile
+    @$xp$27Metropolisui@Tile@TTileInfo @60  ; __tpdsc__ Metropolisui::Tile::TTileInfo
+    @$xp$27Metropolisui@Tile@TTileRole @66  ; __tpdsc__ Metropolisui::Tile::TTileRole
+    @$xp$28Metropolisui@Tile@TTileError @65  ; __tpdsc__ Metropolisui::Tile::TTileError
+    @$xp$37Metropolisui@Formutils@TFindMainForms @7   ; __tpdsc__ Metropolisui::Formutils::TFindMainForms
+    @$xp$44Metropolisui@Tile@EMetropolisUITileException @63  ; __tpdsc__ Metropolisui::Tile::EMetropolisUITileException
+    @$xp$45Metropolisui@Tile@TMetropolisUITileErrorEvent @62  ; __tpdsc__ Metropolisui::Tile::TMetropolisUITileErrorEvent
+    @GetPackageInfoTable           @76  ; GetPackageInfoTable
+    @Metropolisui@Formutils@Finalization$qqrv @4   ; __fastcall Metropolisui::Formutils::Finalization()
+    @Metropolisui@Formutils@TFindMainForms@ @8   ; Metropolisui::Formutils::TFindMainForms::
+    @Metropolisui@Formutils@TFindMainForms@EnumWndProc$qqsuiui @6   ; __stdcall Metropolisui::Formutils::TFindMainForms::EnumWndProc(unsigned int, unsigned int)
+    @Metropolisui@Formutils@TFindMainForms@ExtractHandles$qqrv @5   ; __fastcall Metropolisui::Formutils::TFindMainForms::ExtractHandles()
+    @Metropolisui@Formutils@TFindMainForms@hwndMain @9   ; Metropolisui::Formutils::TFindMainForms::hwndMain
+    @Metropolisui@Formutils@initialization$qqrv @3   ; __fastcall Metropolisui::Formutils::initialization()
+    @Metropolisui@Tile@EMetropolisUITileException@ @64  ; Metropolisui::Tile::EMetropolisUITileException::
+    @Metropolisui@Tile@Finalization$qqrv @11  ; __fastcall Metropolisui::Tile::Finalization()
+    @Metropolisui@Tile@TLiveTile@  @59  ; Metropolisui::Tile::TLiveTile::
+    @Metropolisui@Tile@TLiveTile@$ClassInitFlag @67  ; Metropolisui::Tile::TLiveTile::{1017}...
+    @Metropolisui@Tile@TLiveTile@$bcctr$qqrv @44  ; Metropolisui::Tile::TLiveTile::operator ...
+    @Metropolisui@Tile@TLiveTile@$bcdtr$qqrv @42  ; Metropolisui::Tile::TLiveTile::operator ...
+    @Metropolisui@Tile@TLiveTile@$bctr$qqrp25System@Classes@TComponent @45  ; __fastcall Metropolisui::Tile::TLiveTile::TLiveTile(System::Classes::TComponent *)
+    @Metropolisui@Tile@TLiveTile@$bdtr$qqrv @43  ; __fastcall Metropolisui::Tile::TLiveTile::~TLiveTile()
+    @Metropolisui@Tile@TLiveTile@FNarrowTemplates @68  ; Metropolisui::Tile::TLiveTile::FNarrowTemplates
+    @Metropolisui@Tile@TLiveTile@FWideTemplates @69  ; Metropolisui::Tile::TLiveTile::FWideTemplates
+    @Metropolisui@Tile@TLiveTile@GetAppRegistryKey$qqrv @41  ; __fastcall Metropolisui::Tile::TLiveTile::GetAppRegistryKey()
+    @Metropolisui@Tile@TLiveTile@GetDesktopAppURL$qqrv @40  ; __fastcall Metropolisui::Tile::TLiveTile::GetDesktopAppURL()
+    @Metropolisui@Tile@TLiveTile@GetImageFolder$qqrv @39  ; __fastcall Metropolisui::Tile::TLiveTile::GetImageFolder()
+    @Metropolisui@Tile@TLiveTile@GetNarrowValue$qqr20System@UnicodeString @38  ; __fastcall Metropolisui::Tile::TLiveTile::GetNarrowValue(System::UnicodeString)
+    @Metropolisui@Tile@TLiveTile@GetServiceTileURL$qqrv @36  ; __fastcall Metropolisui::Tile::TLiveTile::GetServiceTileURL()
+    @Metropolisui@Tile@TLiveTile@GetUserProcessRegistryKey$qqrv @37  ; __fastcall Metropolisui::Tile::TLiveTile::GetUserProcessRegistryKey()
+    @Metropolisui@Tile@TLiveTile@GetWideValue$qqr20System@UnicodeString @35  ; __fastcall Metropolisui::Tile::TLiveTile::GetWideValue(System::UnicodeString)
+    @Metropolisui@Tile@TLiveTile@GetXMLInfo$qqrv @34  ; __fastcall Metropolisui::Tile::TLiveTile::GetXMLInfo()
+    @Metropolisui@Tile@TLiveTile@InternalNotifyTile$qqrv @12  ; __fastcall Metropolisui::Tile::TLiveTile::InternalNotifyTile()
+    @Metropolisui@Tile@TLiveTile@Loaded$qqrv @32  ; __fastcall Metropolisui::Tile::TLiveTile::Loaded()
+    @Metropolisui@Tile@TLiveTile@NotifyError$qqr28Metropolisui@Tile@TTileError @31  ; __fastcall Metropolisui::Tile::TLiveTile::NotifyError(Metropolisui::Tile::TTileError)
+    @Metropolisui@Tile@TLiveTile@PostActivation$qqrv @30  ; __fastcall Metropolisui::Tile::TLiveTile::PostActivation()
+    @Metropolisui@Tile@TLiveTile@PostDeactivation$qqrv @29  ; __fastcall Metropolisui::Tile::TLiveTile::PostDeactivation()
+    @Metropolisui@Tile@TLiveTile@ReadRegistryKeys$qqrv @15  ; __fastcall Metropolisui::Tile::TLiveTile::ReadRegistryKeys()
+    @Metropolisui@Tile@TLiveTile@SetAppID$qqrx20System@UnicodeString @28  ; __fastcall Metropolisui::Tile::TLiveTile::SetAppID(const System::UnicodeString)
+    @Metropolisui@Tile@TLiveTile@SetAutoUpdate$qqrxo @27  ; __fastcall Metropolisui::Tile::TLiveTile::SetAutoUpdate(const bool)
+    @Metropolisui@Tile@TLiveTile@SetBackgroundColor$qqrx21System@Uitypes@TColor @26  ; __fastcall Metropolisui::Tile::TLiveTile::SetBackgroundColor(const System::Uitypes::TColor)
+    @Metropolisui@Tile@TLiveTile@SetCertificateName$qqrx20System@UnicodeString @25  ; __fastcall Metropolisui::Tile::TLiveTile::SetCertificateName(const System::UnicodeString)
+    @Metropolisui@Tile@TLiveTile@SetIncludeWideTile$qqrxo @24  ; __fastcall Metropolisui::Tile::TLiveTile::SetIncludeWideTile(const bool)
+    @Metropolisui@Tile@TLiveTile@SetMetropolisAppName$qqrx20System@UnicodeString @23  ; __fastcall Metropolisui::Tile::TLiveTile::SetMetropolisAppName(const System::UnicodeString)
+    @Metropolisui@Tile@TLiveTile@SetNarrowTemplates$qqrxp26System@Classes@TStringList @22  ; __fastcall Metropolisui::Tile::TLiveTile::SetNarrowTemplates(System::Classes::TStringList * const)
+    @Metropolisui@Tile@TLiveTile@SetNarrowTile$qqrxp27Metropolisui@Tile@TTileInfo @21  ; __fastcall Metropolisui::Tile::TLiveTile::SetNarrowTile(Metropolisui::Tile::TTileInfo * const)
+    @Metropolisui@Tile@TLiveTile@SetNarrowValue$qqr20System@UnicodeStringx20System@UnicodeString @20  ; __fastcall Metropolisui::Tile::TLiveTile::SetNarrowValue(System::UnicodeString, const System::UnicodeString)
+    @Metropolisui@Tile@TLiveTile@SetPublisherName$qqrx20System@UnicodeString @19  ; __fastcall Metropolisui::Tile::TLiveTile::SetPublisherName(const System::UnicodeString)
+    @Metropolisui@Tile@TLiveTile@SetWideTemplates$qqrxp26System@Classes@TStringList @18  ; __fastcall Metropolisui::Tile::TLiveTile::SetWideTemplates(System::Classes::TStringList * const)
+    @Metropolisui@Tile@TLiveTile@SetWideTile$qqrxp27Metropolisui@Tile@TTileInfo @17  ; __fastcall Metropolisui::Tile::TLiveTile::SetWideTile(Metropolisui::Tile::TTileInfo * const)
+    @Metropolisui@Tile@TLiveTile@SetWideValue$qqr20System@UnicodeStringx20System@UnicodeString @16  ; __fastcall Metropolisui::Tile::TLiveTile::SetWideValue(System::UnicodeString, const System::UnicodeString)
+    @Metropolisui@Tile@TLiveTile@TileTimerProc$qqrr24Winapi@Messages@TMessage @33  ; __fastcall Metropolisui::Tile::TLiveTile::TileTimerProc(Winapi::Messages::TMessage&)
+    @Metropolisui@Tile@TLiveTile@UpdateTile$qqrv @14  ; __fastcall Metropolisui::Tile::TLiveTile::UpdateTile()
+    @Metropolisui@Tile@TLiveTile@UserName$qqrv @13  ; __fastcall Metropolisui::Tile::TLiveTile::UserName()
+    @Metropolisui@Tile@TTileInfo@  @61  ; Metropolisui::Tile::TTileInfo::
+    @Metropolisui@Tile@TTileInfo@$bctr$qqrp27Metropolisui@Tile@TLiveTile27Metropolisui@Tile@TTileRole @54  ; __fastcall Metropolisui::Tile::TTileInfo::TTileInfo(Metropolisui::Tile::TLiveTile *, Metropolisui::Tile::TTileRole)
+    @Metropolisui@Tile@TTileInfo@$bdtr$qqrv @53  ; __fastcall Metropolisui::Tile::TTileInfo::~TTileInfo()
+    @Metropolisui@Tile@TTileInfo@CheckNarrowTileExists$qqrx20System@UnicodeString @57  ; __fastcall Metropolisui::Tile::TTileInfo::CheckNarrowTileExists(const System::UnicodeString)
+    @Metropolisui@Tile@TTileInfo@CheckWideTileExists$qqrx20System@UnicodeString @56  ; __fastcall Metropolisui::Tile::TTileInfo::CheckWideTileExists(const System::UnicodeString)
+    @Metropolisui@Tile@TTileInfo@CleanNamesNotInTemplate$qqrv @55  ; __fastcall Metropolisui::Tile::TTileInfo::CleanNamesNotInTemplate()
+    @Metropolisui@Tile@TTileInfo@FillItemsNames$qqrp26System@Classes@TStringList @46  ; __fastcall Metropolisui::Tile::TTileInfo::FillItemsNames(System::Classes::TStringList *)
+    @Metropolisui@Tile@TTileInfo@GetCurrentTemplateXml$qqrv @50  ; __fastcall Metropolisui::Tile::TTileInfo::GetCurrentTemplateXml()
+    @Metropolisui@Tile@TTileInfo@GetXMLInfo$qqrv @52  ; __fastcall Metropolisui::Tile::TTileInfo::GetXMLInfo()
+    @Metropolisui@Tile@TTileInfo@ItemsChange$qqrp14System@TObject @51  ; __fastcall Metropolisui::Tile::TTileInfo::ItemsChange(System::TObject *)
+    @Metropolisui@Tile@TTileInfo@SetItems$qqrxp23System@Classes@TStrings @49  ; __fastcall Metropolisui::Tile::TTileInfo::SetItems(System::Classes::TStrings * const)
+    @Metropolisui@Tile@TTileInfo@SetTileTemplate$qqrx20System@UnicodeString @48  ; __fastcall Metropolisui::Tile::TTileInfo::SetTileTemplate(const System::UnicodeString)
+    @Metropolisui@Tile@TTileInfo@UpdateItemsNames$qqrv @47  ; __fastcall Metropolisui::Tile::TTileInfo::UpdateItemsNames()
+    @Metropolisui@Tile@initialization$qqrv @10  ; __fastcall Metropolisui::Tile::initialization()
+    @Metropolisui@Tileconsts@Finalization$qqrv @2   ; __fastcall Metropolisui::Tileconsts::Finalization()
+    @Metropolisui@Tileconsts@initialization$qqrv @1   ; __fastcall Metropolisui::Tileconsts::initialization()
+    @Metropolisuilivetile@@GetPackageInfoTable$qqrv @73  ; Metropolisuilivetile::__linkproc__ __fastcall GetPackageInfoTable()
+    @Metropolisuilivetile@@PackageLoad$qqrv @72  ; Metropolisuilivetile::__linkproc__ __fastcall PackageLoad()
+    @Metropolisuilivetile@@PackageUnload$qqrv @71  ; Metropolisuilivetile::__linkproc__ __fastcall PackageUnload()
+    @Metropolisuilivetile@initialization$qqrv @70  ; __fastcall Metropolisuilivetile::initialization()
+    Finalize                       @74  ; Finalize
+    Initialize                     @75  ; Initialize

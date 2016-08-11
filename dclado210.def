@@ -1,0 +1,129 @@
+LIBRARY     DCLADO210.BPL
+
+DESCRIPTION 'mbarcadero ADO DB Components'
+
+EXPORTS
+    @$xp$21Adoreg@TADOQuerySprig   @76  ; __tpdsc__ Adoreg::TADOQuerySprig
+    @$xp$21Adoreg@TADOTableSprig   @80  ; __tpdsc__ Adoreg::TADOTableSprig
+    @$xp$23Adoreg@TADOCommandSprig @86  ; __tpdsc__ Adoreg::TADOCommandSprig
+    @$xp$23Adoreg@TADODataSetSprig @82  ; __tpdsc__ Adoreg::TADODataSetSprig
+    @$xp$24Adoreg@TADOCommandEditor @96  ; __tpdsc__ Adoreg::TADOCommandEditor
+    @$xp$24Adoreg@TADODataSetEditor @94  ; __tpdsc__ Adoreg::TADODataSetEditor
+    @$xp$24Adoreg@TProviderProperty @116 ; __tpdsc__ Adoreg::TProviderProperty
+    @$xp$25Adoreg@TTableNameProperty @110 ; __tpdsc__ Adoreg::TTableNameProperty
+    @$xp$26Adoreg@TADOConnectionSprig @92  ; __tpdsc__ Adoreg::TADOConnectionSprig
+    @$xp$26Adoreg@TADOStoredProcSprig @78  ; __tpdsc__ Adoreg::TADOStoredProcSprig
+    @$xp$26Adoreg@TParametersProperty @106 ; __tpdsc__ Adoreg::TParametersProperty
+    @$xp$26Adoreg@TRDSConnectionSprig @88  ; __tpdsc__ Adoreg::TRDSConnectionSprig
+    @$xp$27Adoreg@TADOConnectionEditor @98  ; __tpdsc__ Adoreg::TADOConnectionEditor
+    @$xp$27Adoreg@TCommandTextProperty @112 ; __tpdsc__ Adoreg::TCommandTextProperty
+    @$xp$28Adoreg@TADOIndexNameProperty @100 ; __tpdsc__ Adoreg::TADOIndexNameProperty
+    @$xp$29Adoreg@TCustomADODataSetSprig @84  ; __tpdsc__ Adoreg::TCustomADODataSetSprig
+    @$xp$29Adoreg@TProcedureNameProperty @108 ; __tpdsc__ Adoreg::TProcedureNameProperty
+    @$xp$31Data@Win@Adoconed@TConnEditForm @10  ; __tpdsc__ Data::Win::Adoconed::TConnEditForm
+    @$xp$32Adoreg@TConnectionStringProperty @114 ; __tpdsc__ Adoreg::TConnectionStringProperty
+    @$xp$33Adoreg@TADOImpliedConnectionSprig @90  ; __tpdsc__ Adoreg::TADOImpliedConnectionSprig
+    @$xp$33Adoreg@TADOTableFieldLinkProperty @102 ; __tpdsc__ Adoreg::TADOTableFieldLinkProperty
+    @$xp$35Adoreg@TADODataSetFieldLinkProperty @104 ; __tpdsc__ Adoreg::TADODataSetFieldLinkProperty
+    @Adoreg@Finalization$qqrv      @13  ; __fastcall Adoreg::Finalization()
+    @Adoreg@Register$qqrv          @14  ; __fastcall Adoreg::Register()
+    @Adoreg@TADOCommandEditor@     @97  ; Adoreg::TADOCommandEditor::
+    @Adoreg@TADOCommandEditor@ExecuteVerb$qqri @48  ; __fastcall Adoreg::TADOCommandEditor::ExecuteVerb(int)
+    @Adoreg@TADOCommandEditor@GetVerb$qqri @47  ; __fastcall Adoreg::TADOCommandEditor::GetVerb(int)
+    @Adoreg@TADOCommandEditor@GetVerbCount$qqrv @46  ; __fastcall Adoreg::TADOCommandEditor::GetVerbCount()
+    @Adoreg@TADOCommandSprig@      @87  ; Adoreg::TADOCommandSprig::
+    @Adoreg@TADOCommandSprig@AnyProblems$qqrv @36  ; __fastcall Adoreg::TADOCommandSprig::AnyProblems()
+    @Adoreg@TADOCommandSprig@Caption$qqrv @35  ; __fastcall Adoreg::TADOCommandSprig::Caption()
+    @Adoreg@TADOCommandSprig@DragDropTo$qqrp15Treeintf@TSprig @34  ; __fastcall Adoreg::TADOCommandSprig::DragDropTo(Treeintf::TSprig *)
+    @Adoreg@TADOCommandSprig@DragOverTo$qqrp15Treeintf@TSprig @33  ; __fastcall Adoreg::TADOCommandSprig::DragOverTo(Treeintf::TSprig *)
+    @Adoreg@TADOCommandSprig@FigureParent$qqrv @32  ; __fastcall Adoreg::TADOCommandSprig::FigureParent()
+    @Adoreg@TADOCommandSprig@PaletteOverTo$qqrp15Treeintf@TSprigp17System@TMetaClass @31  ; __fastcall Adoreg::TADOCommandSprig::PaletteOverTo(Treeintf::TSprig *, System::TMetaClass *)
+    @Adoreg@TADOConnectionEditor@  @99  ; Adoreg::TADOConnectionEditor::
+    @Adoreg@TADOConnectionEditor@ExecuteVerb$qqri @51  ; __fastcall Adoreg::TADOConnectionEditor::ExecuteVerb(int)
+    @Adoreg@TADOConnectionEditor@GetVerb$qqri @50  ; __fastcall Adoreg::TADOConnectionEditor::GetVerb(int)
+    @Adoreg@TADOConnectionEditor@GetVerbCount$qqrv @49  ; __fastcall Adoreg::TADOConnectionEditor::GetVerbCount()
+    @Adoreg@TADOConnectionSprig@   @93  ; Adoreg::TADOConnectionSprig::
+    @Adoreg@TADOConnectionSprig@AnyProblems$qqrv @42  ; __fastcall Adoreg::TADOConnectionSprig::AnyProblems()
+    @Adoreg@TADOConnectionSprig@Caption$qqrv @41  ; __fastcall Adoreg::TADOConnectionSprig::Caption()
+    @Adoreg@TADODataSetEditor@     @95  ; Adoreg::TADODataSetEditor::
+    @Adoreg@TADODataSetEditor@ExecuteVerb$qqri @45  ; __fastcall Adoreg::TADODataSetEditor::ExecuteVerb(int)
+    @Adoreg@TADODataSetEditor@GetVerb$qqri @44  ; __fastcall Adoreg::TADODataSetEditor::GetVerb(int)
+    @Adoreg@TADODataSetEditor@GetVerbCount$qqrv @43  ; __fastcall Adoreg::TADODataSetEditor::GetVerbCount()
+    @Adoreg@TADODataSetFieldLinkProperty@ @105 ; Adoreg::TADODataSetFieldLinkProperty::
+    @Adoreg@TADODataSetFieldLinkProperty@Edit$qqrv @62  ; __fastcall Adoreg::TADODataSetFieldLinkProperty::Edit()
+    @Adoreg@TADODataSetFieldLinkProperty@GetIndexFieldNames$qqrv @61  ; __fastcall Adoreg::TADODataSetFieldLinkProperty::GetIndexFieldNames()
+    @Adoreg@TADODataSetFieldLinkProperty@GetMasterFields$qqrv @60  ; __fastcall Adoreg::TADODataSetFieldLinkProperty::GetMasterFields()
+    @Adoreg@TADODataSetFieldLinkProperty@SetIndexFieldNames$qqrx20System@UnicodeString @59  ; __fastcall Adoreg::TADODataSetFieldLinkProperty::SetIndexFieldNames(const System::UnicodeString)
+    @Adoreg@TADODataSetFieldLinkProperty@SetMasterFields$qqrx20System@UnicodeString @58  ; __fastcall Adoreg::TADODataSetFieldLinkProperty::SetMasterFields(const System::UnicodeString)
+    @Adoreg@TADODataSetSprig@      @83  ; Adoreg::TADODataSetSprig::
+    @Adoreg@TADODataSetSprig@AnyProblems$qqrv @25  ; __fastcall Adoreg::TADODataSetSprig::AnyProblems()
+    @Adoreg@TADODataSetSprig@Caption$qqrv @24  ; __fastcall Adoreg::TADODataSetSprig::Caption()
+    @Adoreg@TADODataSetSprig@DragDropTo$qqrp15Treeintf@TSprig @23  ; __fastcall Adoreg::TADODataSetSprig::DragDropTo(Treeintf::TSprig *)
+    @Adoreg@TADODataSetSprig@DragOverTo$qqrp15Treeintf@TSprig @22  ; __fastcall Adoreg::TADODataSetSprig::DragOverTo(Treeintf::TSprig *)
+    @Adoreg@TADODataSetSprig@FigureParent$qqrv @21  ; __fastcall Adoreg::TADODataSetSprig::FigureParent()
+    @Adoreg@TADODataSetSprig@PaletteOverTo$qqrp15Treeintf@TSprigp17System@TMetaClass @20  ; __fastcall Adoreg::TADODataSetSprig::PaletteOverTo(Treeintf::TSprig *, System::TMetaClass *)
+    @Adoreg@TADOImpliedConnectionSprig@ @91  ; Adoreg::TADOImpliedConnectionSprig::
+    @Adoreg@TADOImpliedConnectionSprig@AnyProblems$qqrv @40  ; __fastcall Adoreg::TADOImpliedConnectionSprig::AnyProblems()
+    @Adoreg@TADOImpliedConnectionSprig@Caption$qqrv @39  ; __fastcall Adoreg::TADOImpliedConnectionSprig::Caption()
+    @Adoreg@TADOImpliedConnectionSprig@ItemClass$qqrv @37  ; __fastcall Adoreg::TADOImpliedConnectionSprig::ItemClass()
+    @Adoreg@TADOImpliedConnectionSprig@UniqueName$qqrv @38  ; __fastcall Adoreg::TADOImpliedConnectionSprig::UniqueName()
+    @Adoreg@TADOIndexNameProperty@ @101 ; Adoreg::TADOIndexNameProperty::
+    @Adoreg@TADOIndexNameProperty@GetValueList$qqrp23System@Classes@TStrings @52  ; __fastcall Adoreg::TADOIndexNameProperty::GetValueList(System::Classes::TStrings *)
+    @Adoreg@TADOQuerySprig@        @77  ; Adoreg::TADOQuerySprig::
+    @Adoreg@TADOQuerySprig@AnyProblems$qqrv @15  ; __fastcall Adoreg::TADOQuerySprig::AnyProblems()
+    @Adoreg@TADOStoredProcSprig@   @79  ; Adoreg::TADOStoredProcSprig::
+    @Adoreg@TADOStoredProcSprig@AnyProblems$qqrv @17  ; __fastcall Adoreg::TADOStoredProcSprig::AnyProblems()
+    @Adoreg@TADOStoredProcSprig@Caption$qqrv @16  ; __fastcall Adoreg::TADOStoredProcSprig::Caption()
+    @Adoreg@TADOTableFieldLinkProperty@ @103 ; Adoreg::TADOTableFieldLinkProperty::
+    @Adoreg@TADOTableFieldLinkProperty@Edit$qqrv @57  ; __fastcall Adoreg::TADOTableFieldLinkProperty::Edit()
+    @Adoreg@TADOTableFieldLinkProperty@GetIndexFieldNames$qqrv @56  ; __fastcall Adoreg::TADOTableFieldLinkProperty::GetIndexFieldNames()
+    @Adoreg@TADOTableFieldLinkProperty@GetMasterFields$qqrv @55  ; __fastcall Adoreg::TADOTableFieldLinkProperty::GetMasterFields()
+    @Adoreg@TADOTableFieldLinkProperty@SetIndexFieldNames$qqrx20System@UnicodeString @54  ; __fastcall Adoreg::TADOTableFieldLinkProperty::SetIndexFieldNames(const System::UnicodeString)
+    @Adoreg@TADOTableFieldLinkProperty@SetMasterFields$qqrx20System@UnicodeString @53  ; __fastcall Adoreg::TADOTableFieldLinkProperty::SetMasterFields(const System::UnicodeString)
+    @Adoreg@TADOTableSprig@        @81  ; Adoreg::TADOTableSprig::
+    @Adoreg@TADOTableSprig@AnyProblems$qqrv @19  ; __fastcall Adoreg::TADOTableSprig::AnyProblems()
+    @Adoreg@TADOTableSprig@Caption$qqrv @18  ; __fastcall Adoreg::TADOTableSprig::Caption()
+    @Adoreg@TCommandTextProperty@  @113 ; Adoreg::TCommandTextProperty::
+    @Adoreg@TCommandTextProperty@Activate$qqrv @71  ; __fastcall Adoreg::TCommandTextProperty::Activate()
+    @Adoreg@TCommandTextProperty@AutoFill$qqrv @66  ; __fastcall Adoreg::TCommandTextProperty::AutoFill()
+    @Adoreg@TCommandTextProperty@Edit$qqrv @69  ; __fastcall Adoreg::TCommandTextProperty::Edit()
+    @Adoreg@TCommandTextProperty@EditSQLText$qqrv @70  ; __fastcall Adoreg::TCommandTextProperty::EditSQLText()
+    @Adoreg@TCommandTextProperty@GetAttributes$qqrv @72  ; __fastcall Adoreg::TCommandTextProperty::GetAttributes()
+    @Adoreg@TCommandTextProperty@GetConnection$qqro @68  ; __fastcall Adoreg::TCommandTextProperty::GetConnection(bool)
+    @Adoreg@TCommandTextProperty@GetValueList$qqrp23System@Classes@TStrings @67  ; __fastcall Adoreg::TCommandTextProperty::GetValueList(System::Classes::TStrings *)
+    @Adoreg@TConnectionStringProperty@ @115 ; Adoreg::TConnectionStringProperty::
+    @Adoreg@TConnectionStringProperty@Edit$qqrv @73  ; __fastcall Adoreg::TConnectionStringProperty::Edit()
+    @Adoreg@TConnectionStringProperty@GetAttributes$qqrv @74  ; __fastcall Adoreg::TConnectionStringProperty::GetAttributes()
+    @Adoreg@TCustomADODataSetSprig@ @85  ; Adoreg::TCustomADODataSetSprig::
+    @Adoreg@TCustomADODataSetSprig@AnyProblems$qqrv @30  ; __fastcall Adoreg::TCustomADODataSetSprig::AnyProblems()
+    @Adoreg@TCustomADODataSetSprig@DragDropTo$qqrp15Treeintf@TSprig @28  ; __fastcall Adoreg::TCustomADODataSetSprig::DragDropTo(Treeintf::TSprig *)
+    @Adoreg@TCustomADODataSetSprig@DragOverTo$qqrp15Treeintf@TSprig @27  ; __fastcall Adoreg::TCustomADODataSetSprig::DragOverTo(Treeintf::TSprig *)
+    @Adoreg@TCustomADODataSetSprig@FigureParent$qqrv @29  ; __fastcall Adoreg::TCustomADODataSetSprig::FigureParent()
+    @Adoreg@TCustomADODataSetSprig@PaletteOverTo$qqrp15Treeintf@TSprigp17System@TMetaClass @26  ; __fastcall Adoreg::TCustomADODataSetSprig::PaletteOverTo(Treeintf::TSprig *, System::TMetaClass *)
+    @Adoreg@TParametersProperty@   @107 ; Adoreg::TParametersProperty::
+    @Adoreg@TParametersProperty@Edit$qqrv @63  ; __fastcall Adoreg::TParametersProperty::Edit()
+    @Adoreg@TProcedureNameProperty@ @109 ; Adoreg::TProcedureNameProperty::
+    @Adoreg@TProcedureNameProperty@Activate$qqrv @64  ; __fastcall Adoreg::TProcedureNameProperty::Activate()
+    @Adoreg@TProviderProperty@     @117 ; Adoreg::TProviderProperty::
+    @Adoreg@TProviderProperty@GetValueList$qqrp23System@Classes@TStrings @75  ; __fastcall Adoreg::TProviderProperty::GetValueList(System::Classes::TStrings *)
+    @Adoreg@TRDSConnectionSprig@   @89  ; Adoreg::TRDSConnectionSprig::
+    @Adoreg@TTableNameProperty@    @111 ; Adoreg::TTableNameProperty::
+    @Adoreg@TTableNameProperty@Activate$qqrv @65  ; __fastcall Adoreg::TTableNameProperty::Activate()
+    @Adoreg@initialization$qqrv    @12  ; __fastcall Adoreg::initialization()
+    @Data@Win@Adoconed@EditConnectionString$qqrp25System@Classes@TComponent @9   ; __fastcall Data::Win::Adoconed::EditConnectionString(System::Classes::TComponent *)
+    @Data@Win@Adoconed@Finalization$qqrv @2   ; __fastcall Data::Win::Adoconed::Finalization()
+    @Data@Win@Adoconed@TConnEditForm@ @11  ; Data::Win::Adoconed::TConnEditForm::
+    @Data@Win@Adoconed@TConnEditForm@BrowseClick$qqrp14System@TObject @5   ; __fastcall Data::Win::Adoconed::TConnEditForm::BrowseClick(System::TObject *)
+    @Data@Win@Adoconed@TConnEditForm@BuildClick$qqrp14System@TObject @4   ; __fastcall Data::Win::Adoconed::TConnEditForm::BuildClick(System::TObject *)
+    @Data@Win@Adoconed@TConnEditForm@Edit$qqr17System@WideString @8   ; __fastcall Data::Win::Adoconed::TConnEditForm::Edit(System::WideString)
+    @Data@Win@Adoconed@TConnEditForm@FormCreate$qqrp14System@TObject @7   ; __fastcall Data::Win::Adoconed::TConnEditForm::FormCreate(System::TObject *)
+    @Data@Win@Adoconed@TConnEditForm@HelpButtonClick$qqrp14System@TObject @6   ; __fastcall Data::Win::Adoconed::TConnEditForm::HelpButtonClick(System::TObject *)
+    @Data@Win@Adoconed@TConnEditForm@SourceButtonClick$qqrp14System@TObject @3   ; __fastcall Data::Win::Adoconed::TConnEditForm::SourceButtonClick(System::TObject *)
+    @Data@Win@Adoconed@initialization$qqrv @1   ; __fastcall Data::Win::Adoconed::initialization()
+    @Dclado@@GetPackageInfoTable$qqrv @121 ; Dclado::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclado@@PackageLoad$qqrv      @120 ; Dclado::__linkproc__ __fastcall PackageLoad()
+    @Dclado@@PackageUnload$qqrv    @119 ; Dclado::__linkproc__ __fastcall PackageUnload()
+    @Dclado@initialization$qqrv    @118 ; __fastcall Dclado::initialization()
+    @GetPackageInfoTable           @124 ; GetPackageInfoTable
+    Finalize                       @122 ; Finalize
+    Initialize                     @123 ; Initialize

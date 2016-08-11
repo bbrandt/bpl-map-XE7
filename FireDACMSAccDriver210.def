@@ -1,0 +1,48 @@
+LIBRARY     FIREDACMSACCDRIVER210.BPL
+
+DESCRIPTION 'mbarcadero FireDAC MS Access Driver Components'
+
+EXPORTS
+    @$xp$36Firedac@Phys@Msacc@TFDMSAccessAction @31  ; __tpdsc__ Firedac::Phys::Msacc::TFDMSAccessAction
+    @$xp$37Firedac@Phys@Msacc@TFDMSAccessService @29  ; __tpdsc__ Firedac::Phys::Msacc::TFDMSAccessService
+    @$xp$39Firedac@Phys@Msacc@TFDMSAccessDBVersion @32  ; __tpdsc__ Firedac::Phys::Msacc::TFDMSAccessDBVersion
+    @$xp$42Firedac@Phys@Msaccdef@TFDMSAccStringFormat @17  ; __tpdsc__ Firedac::Phys::Msaccdef::TFDMSAccStringFormat
+    @$xp$43Firedac@Phys@Msacc@EMSAccessNativeException @35  ; __tpdsc__ Firedac::Phys::Msacc::EMSAccessNativeException
+    @$xp$44Firedac@Phys@Msacc@TFDPhysMSAccessDriverLink @33  ; __tpdsc__ Firedac::Phys::Msacc::TFDPhysMSAccessDriverLink
+    @$xp$53Firedac@Phys@Msaccdef@TFDPhysMSAccConnectionDefParams @15  ; __tpdsc__ Firedac::Phys::Msaccdef::TFDPhysMSAccConnectionDefParams
+    @Firedac@Phys@Msacc@EMSAccessNativeException@ @36  ; Firedac::Phys::Msacc::EMSAccessNativeException::
+    @Firedac@Phys@Msacc@EMSAccessNativeException@AppendError$qqrp36Firedac@Phys@Odbcwrapper@TODBCHandlesx20System@UnicodeStringit3t3t3t342Firedac@Stan@Error@TFDCommandExceptionKindii @28  ; Firedac::Phys::Msacc::EMSAccessNativeException::AppendError(Firedac::Phys::Odbcwrapper::TODBCHandle *, short, const System::UnicodeString, int, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::Unicode
+    @Firedac@Phys@Msacc@Finalization$qqrv @19  ; __fastcall Firedac::Phys::Msacc::Finalization()
+    @Firedac@Phys@Msacc@TFDMSAccessService@ @30  ; Firedac::Phys::Msacc::TFDMSAccessService::
+    @Firedac@Phys@Msacc@TFDMSAccessService@Compact$qqrv @22  ; __fastcall Firedac::Phys::Msacc::TFDMSAccessService::Compact()
+    @Firedac@Phys@Msacc@TFDMSAccessService@CreateDB$qqrv @24  ; __fastcall Firedac::Phys::Msacc::TFDMSAccessService::CreateDB()
+    @Firedac@Phys@Msacc@TFDMSAccessService@Drop$qqrv @23  ; __fastcall Firedac::Phys::Msacc::TFDMSAccessService::Drop()
+    @Firedac@Phys@Msacc@TFDMSAccessService@GetDriverLink$qqrv @26  ; __fastcall Firedac::Phys::Msacc::TFDMSAccessService::GetDriverLink()
+    @Firedac@Phys@Msacc@TFDMSAccessService@InternalExecute$qqrv @20  ; __fastcall Firedac::Phys::Msacc::TFDMSAccessService::InternalExecute()
+    @Firedac@Phys@Msacc@TFDMSAccessService@Repair$qqrv @21  ; __fastcall Firedac::Phys::Msacc::TFDMSAccessService::Repair()
+    @Firedac@Phys@Msacc@TFDMSAccessService@SetDriverLink$qqrxp44Firedac@Phys@Msacc@TFDPhysMSAccessDriverLink @25  ; __fastcall Firedac::Phys::Msacc::TFDMSAccessService::SetDriverLink(Firedac::Phys::Msacc::TFDPhysMSAccessDriverLink * const)
+    @Firedac@Phys@Msacc@TFDPhysMSAccessDriverLink@ @34  ; Firedac::Phys::Msacc::TFDPhysMSAccessDriverLink::
+    @Firedac@Phys@Msacc@TFDPhysMSAccessDriverLink@GetBaseDriverID$qqrv @27  ; __fastcall Firedac::Phys::Msacc::TFDPhysMSAccessDriverLink::GetBaseDriverID()
+    @Firedac@Phys@Msacc@initialization$qqrv @18  ; __fastcall Firedac::Phys::Msacc::initialization()
+    @Firedac@Phys@Msaccdef@Finalization$qqrv @2   ; __fastcall Firedac::Phys::Msaccdef::Finalization()
+    @Firedac@Phys@Msaccdef@TFDPhysMSAccConnectionDefParams@ @16  ; Firedac::Phys::Msaccdef::TFDPhysMSAccConnectionDefParams::
+    @Firedac@Phys@Msaccdef@TFDPhysMSAccConnectionDefParams@GetDriverID$qqrv @14  ; __fastcall Firedac::Phys::Msaccdef::TFDPhysMSAccConnectionDefParams::GetDriverID()
+    @Firedac@Phys@Msaccdef@TFDPhysMSAccConnectionDefParams@GetLoginTimeout$qqrv @10  ; __fastcall Firedac::Phys::Msaccdef::TFDPhysMSAccConnectionDefParams::GetLoginTimeout()
+    @Firedac@Phys@Msaccdef@TFDPhysMSAccConnectionDefParams@GetODBCAdvanced$qqrv @12  ; __fastcall Firedac::Phys::Msaccdef::TFDPhysMSAccConnectionDefParams::GetODBCAdvanced()
+    @Firedac@Phys@Msaccdef@TFDPhysMSAccConnectionDefParams@GetReadOnly$qqrv @6   ; __fastcall Firedac::Phys::Msaccdef::TFDPhysMSAccConnectionDefParams::GetReadOnly()
+    @Firedac@Phys@Msaccdef@TFDPhysMSAccConnectionDefParams@GetStringFormat$qqrv @4   ; __fastcall Firedac::Phys::Msaccdef::TFDPhysMSAccConnectionDefParams::GetStringFormat()
+    @Firedac@Phys@Msaccdef@TFDPhysMSAccConnectionDefParams@GetSystemDB$qqrv @8   ; __fastcall Firedac::Phys::Msaccdef::TFDPhysMSAccConnectionDefParams::GetSystemDB()
+    @Firedac@Phys@Msaccdef@TFDPhysMSAccConnectionDefParams@SetDriverID$qqrx20System@UnicodeString @13  ; __fastcall Firedac::Phys::Msaccdef::TFDPhysMSAccConnectionDefParams::SetDriverID(const System::UnicodeString)
+    @Firedac@Phys@Msaccdef@TFDPhysMSAccConnectionDefParams@SetLoginTimeout$qqrxi @9   ; __fastcall Firedac::Phys::Msaccdef::TFDPhysMSAccConnectionDefParams::SetLoginTimeout(const int)
+    @Firedac@Phys@Msaccdef@TFDPhysMSAccConnectionDefParams@SetODBCAdvanced$qqrx20System@UnicodeString @11  ; __fastcall Firedac::Phys::Msaccdef::TFDPhysMSAccConnectionDefParams::SetODBCAdvanced(const System::UnicodeString)
+    @Firedac@Phys@Msaccdef@TFDPhysMSAccConnectionDefParams@SetReadOnly$qqrxo @5   ; __fastcall Firedac::Phys::Msaccdef::TFDPhysMSAccConnectionDefParams::SetReadOnly(const bool)
+    @Firedac@Phys@Msaccdef@TFDPhysMSAccConnectionDefParams@SetStringFormat$qqrx42Firedac@Phys@Msaccdef@TFDMSAccStringFormat @3   ; __fastcall Firedac::Phys::Msaccdef::TFDPhysMSAccConnectionDefParams::SetStringFormat(const Firedac::Phys::Msaccdef::TFDMSAccStringFormat)
+    @Firedac@Phys@Msaccdef@TFDPhysMSAccConnectionDefParams@SetSystemDB$qqrx20System@UnicodeString @7   ; __fastcall Firedac::Phys::Msaccdef::TFDPhysMSAccConnectionDefParams::SetSystemDB(const System::UnicodeString)
+    @Firedac@Phys@Msaccdef@initialization$qqrv @1   ; __fastcall Firedac::Phys::Msaccdef::initialization()
+    @Firedacmsaccdriver@@GetPackageInfoTable$qqrv @40  ; Firedacmsaccdriver::__linkproc__ __fastcall GetPackageInfoTable()
+    @Firedacmsaccdriver@@PackageLoad$qqrv @39  ; Firedacmsaccdriver::__linkproc__ __fastcall PackageLoad()
+    @Firedacmsaccdriver@@PackageUnload$qqrv @38  ; Firedacmsaccdriver::__linkproc__ __fastcall PackageUnload()
+    @Firedacmsaccdriver@initialization$qqrv @37  ; __fastcall Firedacmsaccdriver::initialization()
+    @GetPackageInfoTable           @43  ; GetPackageInfoTable
+    Finalize                       @41  ; Finalize
+    Initialize                     @42  ; Initialize

@@ -1,0 +1,131 @@
+LIBRARY     VCLHIE210.BPL
+
+DESCRIPTION 'nternet Explorer Hosting Support Package'
+
+EXPORTS
+    @$xp$15Idocintf@PByte1         @74  ; __tpdsc__ Idocintf::PByte1
+    @$xp$15Idocintf@tagMSG         @60  ; __tpdsc__ Idocintf::tagMSG
+    @$xp$16Idocintf@IStream        @8   ; __tpdsc__ Idocintf::IStream
+    @$xp$16Idocintf@_POINTL        @25  ; __tpdsc__ Idocintf::_POINTL
+    @$xp$16Idocintf@tagRECT        @67  ; __tpdsc__ Idocintf::tagRECT
+    @$xp$17Idocintf@IBindCtx       @7   ; __tpdsc__ Idocintf::IBindCtx
+    @$xp$17Idocintf@IMoniker       @10  ; __tpdsc__ Idocintf::IMoniker
+    @$xp$17Idocintf@IPersist       @12  ; __tpdsc__ Idocintf::IPersist
+    @$xp$17Idocintf@tagPOINT       @71  ; __tpdsc__ Idocintf::tagPOINT
+    @$xp$17Idocintf@wireHWND       @91  ; __tpdsc__ Idocintf::wireHWND
+    @$xp$18Idocintf@_FILETIME      @32  ; __tpdsc__ Idocintf::_FILETIME
+    @$xp$18Idocintf@wireHMENU      @90  ; __tpdsc__ Idocintf::wireHMENU
+    @$xp$19Idocintf@IOleWindow     @22  ; __tpdsc__ Idocintf::IOleWindow
+    @$xp$19Idocintf@PSmallint1     @80  ; __tpdsc__ Idocintf::PSmallint1
+    @$xp$19Idocintf@PUserType1     @84  ; __tpdsc__ Idocintf::PUserType1
+    @$xp$19Idocintf@PUserType2     @83  ; __tpdsc__ Idocintf::PUserType2
+    @$xp$19Idocintf@PUserType3     @82  ; __tpdsc__ Idocintf::PUserType3
+    @$xp$19Idocintf@PUserType4     @81  ; __tpdsc__ Idocintf::PUserType4
+    @$xp$19Idocintf@PUserType5     @78  ; __tpdsc__ Idocintf::PUserType5
+    @$xp$19Idocintf@PUserType6     @73  ; __tpdsc__ Idocintf::PUserType6
+    @$xp$19Idocintf@PUserType7     @72  ; __tpdsc__ Idocintf::PUserType7
+    @$xp$19Idocintf@_BYTE_BLOB     @55  ; __tpdsc__ Idocintf::_BYTE_BLOB
+    @$xp$19Idocintf@_tagOLECMD     @66  ; __tpdsc__ Idocintf::_tagOLECMD
+    @$xp$19Idocintf@tagSTATSTG     @31  ; __tpdsc__ Idocintf::tagSTATSTG
+    @$xp$20Idocintf@IAdviseSink    @14  ; __tpdsc__ Idocintf::IAdviseSink
+    @$xp$20Idocintf@IDataObject    @16  ; __tpdsc__ Idocintf::IDataObject
+    @$xp$20Idocintf@IDropTarget    @17  ; __tpdsc__ Idocintf::IDropTarget
+    @$xp$20Idocintf@IEnumString    @4   ; __tpdsc__ Idocintf::IEnumString
+    @$xp$20Idocintf@PPUserType1    @77  ; __tpdsc__ Idocintf::PPUserType1
+    @$xp$20Idocintf@PPUserType2    @76  ; __tpdsc__ Idocintf::PPUserType2
+    @$xp$20Idocintf@PPUserType3    @75  ; __tpdsc__ Idocintf::PPUserType3
+    @$xp$20Idocintf@_COAUTHINFO    @29  ; __tpdsc__ Idocintf::_COAUTHINFO
+    @$xp$20Idocintf@_GDI_OBJECT    @40  ; __tpdsc__ Idocintf::_GDI_OBJECT
+    @$xp$20Idocintf@_userBITMAP    @46  ; __tpdsc__ Idocintf::_userBITMAP
+    @$xp$20Idocintf@tagSTATDATA    @26  ; __tpdsc__ Idocintf::tagSTATDATA
+    @$xp$20Idocintf@wireHGLOBAL    @89  ; __tpdsc__ Idocintf::wireHGLOBAL
+    @$xp$21Idocintf@IEnumMoniker   @5   ; __tpdsc__ Idocintf::IEnumMoniker
+    @$xp$21Idocintf@POleVariant1   @79  ; __tpdsc__ Idocintf::POleVariant1
+    @$xp$21Idocintf@_userHBITMAP   @43  ; __tpdsc__ Idocintf::_userHBITMAP
+    @$xp$21Idocintf@_userHGLOBAL   @61  ; __tpdsc__ Idocintf::_userHGLOBAL
+    @$xp$21Idocintf@tagFORMATETC   @56  ; __tpdsc__ Idocintf::tagFORMATETC
+    @$xp$22Idocintf@IAsyncManager  @13  ; __tpdsc__ Idocintf::IAsyncManager
+    @$xp$22Idocintf@IEnumSTATDATA  @3   ; __tpdsc__ Idocintf::IEnumSTATDATA
+    @$xp$22Idocintf@_COSERVERINFO  @28  ; __tpdsc__ Idocintf::_COSERVERINFO
+    @$xp$22Idocintf@_userHPALETTE  @47  ; __tpdsc__ Idocintf::_userHPALETTE
+    @$xp$22Idocintf@tagBIND_OPTS2  @27  ; __tpdsc__ Idocintf::tagBIND_OPTS2
+    @$xp$22Idocintf@wireSTGMEDIUM  @87  ; __tpdsc__ Idocintf::wireSTGMEDIUM
+    @$xp$23Idocintf@IDocHostShowUI @24  ; __tpdsc__ Idocintf::IDocHostShowUI
+    @$xp$23Idocintf@IEnumFORMATETC @15  ; __tpdsc__ Idocintf::IEnumFORMATETC
+    @$xp$23Idocintf@IPersistStream @11  ; __tpdsc__ Idocintf::IPersistStream
+    @$xp$23Idocintf@_DOCHOSTUIINFO @70  ; __tpdsc__ Idocintf::_DOCHOSTUIINFO
+    @$xp$23Idocintf@_LARGE_INTEGER @34  ; __tpdsc__ Idocintf::_LARGE_INTEGER
+    @$xp$23Idocintf@_tagOLECMDTEXT @65  ; __tpdsc__ Idocintf::_tagOLECMDTEXT
+    @$xp$23Idocintf@_userHMETAFILE @50  ; __tpdsc__ Idocintf::_userHMETAFILE
+    @$xp$23Idocintf@_userSTGMEDIUM @36  ; __tpdsc__ Idocintf::_userSTGMEDIUM
+    @$xp$23Idocintf@wireCLIPFORMAT @88  ; __tpdsc__ Idocintf::wireCLIPFORMAT
+    @$xp$24Idocintf@_COAUTHIDENTITY @30  ; __tpdsc__ Idocintf::_COAUTHIDENTITY
+    @$xp$24Idocintf@_ULARGE_INTEGER @33  ; __tpdsc__ Idocintf::_ULARGE_INTEGER
+    @$xp$24Idocintf@_userCLIPFORMAT @57  ; __tpdsc__ Idocintf::_userCLIPFORMAT
+    @$xp$24Idocintf@tagPALETTEENTRY @54  ; __tpdsc__ Idocintf::tagPALETTEENTRY
+    @$xp$25Idocintf@IOleInPlaceFrame @18  ; __tpdsc__ Idocintf::IOleInPlaceFrame
+    @$xp$25Idocintf@_RemotableHandle @68  ; __tpdsc__ Idocintf::_RemotableHandle
+    @$xp$25Idocintf@_STGMEDIUM_UNION @37  ; __tpdsc__ Idocintf::_STGMEDIUM_UNION
+    @$xp$25Idocintf@tagrpcLOGPALETTE @53  ; __tpdsc__ Idocintf::tagrpcLOGPALETTE
+    @$xp$26Idocintf@IDocHostUIHandler @23  ; __tpdsc__ Idocintf::IDocHostUIHandler
+    @$xp$26Idocintf@IOleCommandTarget @19  ; __tpdsc__ Idocintf::IOleCommandTarget
+    @$xp$26Idocintf@ISequentialStream @9   ; __tpdsc__ Idocintf::ISequentialStream
+    @$xp$26Idocintf@_userHENHMETAFILE @41  ; __tpdsc__ Idocintf::_userHENHMETAFILE
+    @$xp$26Idocintf@tagDVTARGETDEVICE @59  ; __tpdsc__ Idocintf::tagDVTARGETDEVICE
+    @$xp$27Idocintf@_FLAGGED_BYTE_BLOB @63  ; __tpdsc__ Idocintf::_FLAGGED_BYTE_BLOB
+    @$xp$27Idocintf@_userHMETAFILEPICT @39  ; __tpdsc__ Idocintf::_userHMETAFILEPICT
+    @$xp$27Idocintf@wireFLAG_STGMEDIUM @86  ; __tpdsc__ Idocintf::wireFLAG_STGMEDIUM
+    @$xp$28Idocintf@IOleInPlaceUIWindow @20  ; __tpdsc__ Idocintf::IOleInPlaceUIWindow
+    @$xp$28Idocintf@IRunningObjectTable @6   ; __tpdsc__ Idocintf::IRunningObjectTable
+    @$xp$28Idocintf@_remoteMETAFILEPICT @49  ; __tpdsc__ Idocintf::_remoteMETAFILEPICT
+    @$xp$28Idocintf@_userFLAG_STGMEDIUM @35  ; __tpdsc__ Idocintf::_userFLAG_STGMEDIUM
+    @$xp$28Idocintf@wireASYNC_STGMEDIUM @85  ; __tpdsc__ Idocintf::wireASYNC_STGMEDIUM
+    @$xp$30Idocintf@__MIDL_IWinTypes_0001 @58  ; __tpdsc__ Idocintf::__MIDL_IWinTypes_0001
+    @$xp$30Idocintf@__MIDL_IWinTypes_0003 @62  ; __tpdsc__ Idocintf::__MIDL_IWinTypes_0003
+    @$xp$30Idocintf@__MIDL_IWinTypes_0004 @51  ; __tpdsc__ Idocintf::__MIDL_IWinTypes_0004
+    @$xp$30Idocintf@__MIDL_IWinTypes_0005 @48  ; __tpdsc__ Idocintf::__MIDL_IWinTypes_0005
+    @$xp$30Idocintf@__MIDL_IWinTypes_0006 @45  ; __tpdsc__ Idocintf::__MIDL_IWinTypes_0006
+    @$xp$30Idocintf@__MIDL_IWinTypes_0007 @44  ; __tpdsc__ Idocintf::__MIDL_IWinTypes_0007
+    @$xp$30Idocintf@__MIDL_IWinTypes_0008 @52  ; __tpdsc__ Idocintf::__MIDL_IWinTypes_0008
+    @$xp$30Idocintf@__MIDL_IWinTypes_0009 @69  ; __tpdsc__ Idocintf::__MIDL_IWinTypes_0009
+    @$xp$30Idocintf@tagOleMenuGroupWidths @64  ; __tpdsc__ Idocintf::tagOleMenuGroupWidths
+    @$xp$32Idocintf@IOleInPlaceActiveObject @21  ; __tpdsc__ Idocintf::IOleInPlaceActiveObject
+    @$xp$32Idocintf@__MIDL_IAdviseSink_0002 @42  ; __tpdsc__ Idocintf::__MIDL_IAdviseSink_0002
+    @$xp$32Idocintf@__MIDL_IAdviseSink_0003 @38  ; __tpdsc__ Idocintf::__MIDL_IAdviseSink_0003
+    @GetPackageInfoTable           @126 ; GetPackageInfoTable
+    @Hostie@Finalization$qqrv      @117 ; __fastcall Hostie::Finalization()
+    @Hostie@SetWebBrowserUIHandler$qqrp19Shdocvw@TWebBrowser @119 ; __fastcall Hostie::SetWebBrowserUIHandler(Shdocvw::TWebBrowser *)
+    @Hostie@SubclassWebBrowserInputWindow$qqrp19Shdocvw@TWebBrowser @118 ; __fastcall Hostie::SubclassWebBrowserInputWindow(Shdocvw::TWebBrowser *)
+    @Hostie@initialization$qqrv    @116 ; __fastcall Hostie::initialization()
+    @Idocintf@CLASS_FakeCoClass    @92  ; Idocintf::CLASS_FakeCoClass
+    @Idocintf@Finalization$qqrv    @2   ; __fastcall Idocintf::Finalization()
+    @Idocintf@IID_IAdviseSink      @104 ; Idocintf::IID_IAdviseSink
+    @Idocintf@IID_IAsyncManager    @103 ; Idocintf::IID_IAsyncManager
+    @Idocintf@IID_IBindCtx         @97  ; Idocintf::IID_IBindCtx
+    @Idocintf@IID_IDataObject      @106 ; Idocintf::IID_IDataObject
+    @Idocintf@IID_IDocHostShowUI   @114 ; Idocintf::IID_IDocHostShowUI
+    @Idocintf@IID_IDocHostUIHandler @113 ; Idocintf::IID_IDocHostUIHandler
+    @Idocintf@IID_IDropTarget      @107 ; Idocintf::IID_IDropTarget
+    @Idocintf@IID_IEnumFORMATETC   @105 ; Idocintf::IID_IEnumFORMATETC
+    @Idocintf@IID_IEnumMoniker     @95  ; Idocintf::IID_IEnumMoniker
+    @Idocintf@IID_IEnumSTATDATA    @93  ; Idocintf::IID_IEnumSTATDATA
+    @Idocintf@IID_IEnumString      @94  ; Idocintf::IID_IEnumString
+    @Idocintf@IID_IMoniker         @100 ; Idocintf::IID_IMoniker
+    @Idocintf@IID_IOleCommandTarget @109 ; Idocintf::IID_IOleCommandTarget
+    @Idocintf@IID_IOleInPlaceActiveObject @111 ; Idocintf::IID_IOleInPlaceActiveObject
+    @Idocintf@IID_IOleInPlaceFrame @108 ; Idocintf::IID_IOleInPlaceFrame
+    @Idocintf@IID_IOleInPlaceUIWindow @110 ; Idocintf::IID_IOleInPlaceUIWindow
+    @Idocintf@IID_IOleWindow       @112 ; Idocintf::IID_IOleWindow
+    @Idocintf@IID_IPersist         @102 ; Idocintf::IID_IPersist
+    @Idocintf@IID_IPersistStream   @101 ; Idocintf::IID_IPersistStream
+    @Idocintf@IID_IRunningObjectTable @96  ; Idocintf::IID_IRunningObjectTable
+    @Idocintf@IID_ISequentialStream @99  ; Idocintf::IID_ISequentialStream
+    @Idocintf@IID_IStream          @98  ; Idocintf::IID_IStream
+    @Idocintf@LIBID_TESTIDLLib     @115 ; Idocintf::LIBID_TESTIDLLib
+    @Idocintf@initialization$qqrv  @1   ; __fastcall Idocintf::initialization()
+    @Vclhie@@GetPackageInfoTable$qqrv @123 ; Vclhie::__linkproc__ __fastcall GetPackageInfoTable()
+    @Vclhie@@PackageLoad$qqrv      @122 ; Vclhie::__linkproc__ __fastcall PackageLoad()
+    @Vclhie@@PackageUnload$qqrv    @121 ; Vclhie::__linkproc__ __fastcall PackageUnload()
+    @Vclhie@initialization$qqrv    @120 ; __fastcall Vclhie::initialization()
+    Finalize                       @124 ; Finalize
+    Initialize                     @125 ; Initialize

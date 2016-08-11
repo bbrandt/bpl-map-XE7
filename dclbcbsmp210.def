@@ -1,0 +1,44 @@
+LIBRARY     DCLBCBSMP210.BPL
+
+DESCRIPTION '++Builder Sample Components Package'
+
+EXPORTS
+    @$xp$10TPieEditor              @31  ; __tpdsc__ TPieEditor
+    @$xp$15TAngleEditorDlg         @29  ; __tpdsc__ TAngleEditorDlg
+    @$xp$15TAnglesProperty         @30  ; __tpdsc__ TAnglesProperty
+    @@Bcbsmpreg@Finalize           @7   ; __linkproc__ Bcbsmpreg::Finalize
+    @@Bcbsmpreg@Initialize         @6   ; __linkproc__ Bcbsmpreg::Initialize
+    @@Dclbcbsmp@Finalize           @4   ; __linkproc__ Dclbcbsmp::Finalize
+    @@Dclbcbsmp@Initialize         @3   ; __linkproc__ Dclbcbsmp::Initialize
+    @@Piereg@Finalize              @33  ; __linkproc__ Piereg::Finalize
+    @@Piereg@Initialize            @32  ; __linkproc__ Piereg::Initialize
+    @Bcbsmpreg@Register$qqrv       @5   ; __fastcall Bcbsmpreg::Register()
+    @Cdiroutl@TCDirectoryOutline@InvalidIndex @35  ; Cdiroutl::TCDirectoryOutline::InvalidIndex
+    @Cdiroutl@TCDirectoryOutline@RootIndex @36  ; Cdiroutl::TCDirectoryOutline::RootIndex
+    @Piereg@Register$qqrv          @8   ; __fastcall Piereg::Register()
+    @TAngleEditorDlg@              @37  ; TAngleEditorDlg::
+    @TAngleEditorDlg@$bctr$qqrp25System@Classes@TComponent @9   ; __fastcall TAngleEditorDlg::TAngleEditorDlg(System::Classes::TComponent *)
+    @TAngleEditorDlg@$bctr$qqrp25System@Classes@TComponenti @10  ; __fastcall TAngleEditorDlg::TAngleEditorDlg(System::Classes::TComponent *, int)
+    @TAngleEditorDlg@$bctr$qqrp6HWND__ @11  ; __fastcall TAngleEditorDlg::TAngleEditorDlg(HWND__ *)
+    @TAngleEditorDlg@$bdtr$qqrv    @12  ; __fastcall TAngleEditorDlg::~TAngleEditorDlg()
+    @TAngleEditorDlg@CancelClick$qqrp14System@TObject @18  ; __fastcall TAngleEditorDlg::CancelClick(System::TObject *)
+    @TAngleEditorDlg@ETrackBarChange$qqrp14System@TObject @14  ; __fastcall TAngleEditorDlg::ETrackBarChange(System::TObject *)
+    @TAngleEditorDlg@STrackBarChange$qqrp14System@TObject @13  ; __fastcall TAngleEditorDlg::STrackBarChange(System::TObject *)
+    @TAngleEditorDlg@SetAngles$qqrp7TAngles @17  ; __fastcall TAngleEditorDlg::SetAngles(TAngles *)
+    @TAngleEditorDlg@SetEndAngle$qqri @16  ; __fastcall TAngleEditorDlg::SetEndAngle(int)
+    @TAngleEditorDlg@SetStartAngle$qqri @15  ; __fastcall TAngleEditorDlg::SetStartAngle(int)
+    @TAnglesProperty@              @38  ; TAnglesProperty::
+    @TAnglesProperty@$bctr$qqrx47System@%DelphiInterface$20Designintf@IDesigner%i @19  ; TAnglesProperty::TAnglesProperty(const System::DelphiInterface<{583}...
+    @TAnglesProperty@$bdtr$qqrv    @20  ; __fastcall TAnglesProperty::~TAnglesProperty()
+    @TAnglesProperty@Edit$qqrv     @21  ; __fastcall TAnglesProperty::Edit()
+    @TAnglesProperty@GetAttributes$qqrv @22  ; __fastcall TAnglesProperty::GetAttributes()
+    @TPieEditor@                   @39  ; TPieEditor::
+    @TPieEditor@$bctr$qqrp25System@Classes@TComponent47System@%DelphiInterface$20Designintf@IDesigner% @23  ; TPieEditor::TPieEditor(System::Classes::TComponent *, System::DelphiInterface<{583}...
+    @TPieEditor@$bdtr$qqrv         @24  ; __fastcall TPieEditor::~TPieEditor()
+    @TPieEditor@EditProperty$qqrx47System@%DelphiInterface$20Designintf@IProperty%ro @25  ; TPieEditor::EditProperty(const System::DelphiInterface<{583}...
+    @TPieEditor@ExecuteVerb$qqri   @28  ; __fastcall TPieEditor::ExecuteVerb(int)
+    @TPieEditor@GetVerb$qqri       @27  ; __fastcall TPieEditor::GetVerb(int)
+    @TPieEditor@GetVerbCount$qqrv  @26  ; __fastcall TPieEditor::GetVerbCount()
+    Finalize                       @2   ; Finalize
+    Initialize                     @1   ; Initialize
+    ___CPPdebugHook                @34  ; ___CPPdebugHook

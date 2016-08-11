@@ -1,0 +1,291 @@
+LIBRARY     DCLDBX210.BPL
+
+DESCRIPTION 'mbarcadero dbExpress Components'
+
+EXPORTS
+    @$xp$20Sqlreg@TPropertyType    @272 ; __tpdsc__ Sqlreg::TPropertyType
+    @$xp$21Fldedit@TExecuteEvent   @25  ; __tpdsc__ Fldedit::TExecuteEvent
+    @$xp$21Sqlreg@TSQLQuerySprig   @214 ; __tpdsc__ Sqlreg::TSQLQuerySprig
+    @$xp$21Sqlreg@TSQLTableSprig   @218 ; __tpdsc__ Sqlreg::TSQLTableSprig
+    @$xp$22Fldedit@TFieldEditForm  @21  ; __tpdsc__ Fldedit::TFieldEditForm
+    @$xp$22Sqlreg@TParamsProperty  @240 ; __tpdsc__ Sqlreg::TParamsProperty
+    @$xp$22Sqlreg@TSqlQueryEditor  @226 ; __tpdsc__ Sqlreg::TSqlQueryEditor
+    @$xp$23Sqlreg@TSQLEditProperty @266 ; __tpdsc__ Sqlreg::TSQLEditProperty
+    @$xp$23Sqlreg@TSQLMonitorSprig @212 ; __tpdsc__ Sqlreg::TSQLMonitorSprig
+    @$xp$23Sqlreg@TSqlDataSetSprig @220 ; __tpdsc__ Sqlreg::TSqlDataSetSprig
+    @$xp$24Sqlreg@TSqlDataSetEditor @230 ; __tpdsc__ Sqlreg::TSqlDataSetEditor
+    @$xp$25Sqlreg@TSQLStringProperty @268 ; __tpdsc__ Sqlreg::TSQLStringProperty
+    @$xp$26Addconn@TNewConnectionForm @41  ; __tpdsc__ Addconn::TNewConnectionForm
+    @$xp$26Dbxsqledit@TDBXSqlEditForm @56  ; __tpdsc__ Dbxsqledit::TDBXSqlEditForm
+    @$xp$26Fldedit@TGetFieldNamesProc @24  ; __tpdsc__ Fldedit::TGetFieldNamesProc
+    @$xp$26Sqlreg@TSQLConnectionSprig @224 ; __tpdsc__ Sqlreg::TSQLConnectionSprig
+    @$xp$26Sqlreg@TSQLDriversProperty @258 ; __tpdsc__ Sqlreg::TSQLDriversProperty
+    @$xp$26Sqlreg@TSQLStoredProcSprig @216 ; __tpdsc__ Sqlreg::TSQLStoredProcSprig
+    @$xp$27Dbdrved@TDriverSettingsForm @33  ; __tpdsc__ Dbdrved::TDriverSettingsForm
+    @$xp$27Sqlreg@TIdxColNamesProperty @260 ; __tpdsc__ Sqlreg::TIdxColNamesProperty
+    @$xp$27Sqlreg@TSQLConnectionEditor @232 ; __tpdsc__ Sqlreg::TSQLConnectionEditor
+    @$xp$27Sqlreg@TSqlStoredProcEditor @228 ; __tpdsc__ Sqlreg::TSqlStoredProcEditor
+    @$xp$28Sqlreg@TDelegateNameProperty @234 ; __tpdsc__ Sqlreg::TDelegateNameProperty
+    @$xp$28Sqlreg@TSQLIndexNameProperty @262 ; __tpdsc__ Sqlreg::TSQLIndexNameProperty
+    @$xp$28Sqlreg@TSQLTableNameProperty @264 ; __tpdsc__ Sqlreg::TSQLTableNameProperty
+    @$xp$29Sqlreg@TSQLSchemaNameProperty @248 ; __tpdsc__ Sqlreg::TSQLSchemaNameProperty
+    @$xp$30Sqlreg@TConnectionDataProperty @238 ; __tpdsc__ Sqlreg::TConnectionDataProperty
+    @$xp$30Sqlreg@TDelegateDriverProperty @236 ; __tpdsc__ Sqlreg::TDelegateDriverProperty
+    @$xp$30Sqlreg@TSQLConnectionsProperty @256 ; __tpdsc__ Sqlreg::TSQLConnectionsProperty
+    @$xp$30Sqlreg@TSQLPackageNameProperty @252 ; __tpdsc__ Sqlreg::TSQLPackageNameProperty
+    @$xp$33Sqlreg@TSQLDbxCommandTypeProperty @250 ; __tpdsc__ Sqlreg::TSQLDbxCommandTypeProperty
+    @$xp$33Sqlreg@TSQLImpliedConnectionSprig @222 ; __tpdsc__ Sqlreg::TSQLImpliedConnectionSprig
+    @$xp$33Sqlreg@TSQLMonitorSelectionEditor @204 ; __tpdsc__ Sqlreg::TSQLMonitorSelectionEditor
+    @$xp$33Sqlreg@TSQLSortFieldsNameProperty @242 ; __tpdsc__ Sqlreg::TSQLSortFieldsNameProperty
+    @$xp$33Sqlreg@TSQLStoredProcNameProperty @254 ; __tpdsc__ Sqlreg::TSQLStoredProcNameProperty
+    @$xp$33Sqlreg@TSQLStringPropertyDelegate @270 ; __tpdsc__ Sqlreg::TSQLStringPropertyDelegate
+    @$xp$33Sqlreg@TSQLTableFieldLinkProperty @210 ; __tpdsc__ Sqlreg::TSQLTableFieldLinkProperty
+    @$xp$34Sqlreg@TSQLMonitorFileNameProperty @244 ; __tpdsc__ Sqlreg::TSQLMonitorFileNameProperty
+    @$xp$35Fldedit@TGetFieldNamesForSchemaProc @23  ; __tpdsc__ Fldedit::TGetFieldNamesForSchemaProc
+    @$xp$35Sqlproxydesigner@TGenerateProxyProc @78  ; __tpdsc__ Sqlproxydesigner::TGenerateProxyProc
+    @$xp$35Sqlreg@TSQLServerMethodNameProperty @246 ; __tpdsc__ Sqlreg::TSQLServerMethodNameProperty
+    @$xp$36Sqlreg@TSQLConnectionSelectionEditor @206 ; __tpdsc__ Sqlreg::TSQLConnectionSelectionEditor
+    @$xp$39Sqlreg@TCustomSQLDataSetSelectionEditor @208 ; __tpdsc__ Sqlreg::TCustomSQLDataSetSelectionEditor
+    @$xp$45Sqlproxydesigner@TDSPersonalityProxyGenerator @76  ; __tpdsc__ Sqlproxydesigner::TDSPersonalityProxyGenerator
+    @$xp$46Sqlopenthread@TThreadedOpenSQLConnectionDialog @278 ; __tpdsc__ Sqlopenthread::TThreadedOpenSQLConnectionDialog
+    @$xp$51Sqlproxydesigner@TDSStringPersonalityProxyGenerator @74  ; __tpdsc__ Sqlproxydesigner::TDSStringPersonalityProxyGenerator
+    @$xp$52System@Sysutils@%TFunc__1$p22System@Classes@TStream% @73  ; __tpdsc__ System::Sysutils::TFunc__1<System::Classes::TStream *>
+    @$xp$54System@Sysutils@%TProc__2$p22System@Classes@TStreamt1% @71  ; __tpdsc__ System::Sysutils::TProc__2<System::Classes::TStream *, System::Classes::TStream *>
+    @$xp$55System@Sysutils@%TFunc__1$p25System@Sysutils@TEncoding% @72  ; __tpdsc__ System::Sysutils::TFunc__1<System::Sysutils::TEncoding *>
+    @$xp$57System@Sysutils@%TProc__1$p27Data@Sqlexpr@TSQLConnection% @277 ; __tpdsc__ System::Sysutils::TProc__1<Data::Sqlexpr::TSQLConnection *>
+    @Addconn@Finalization$qqrv     @37  ; __fastcall Addconn::Finalization()
+    @Addconn@GetNewConnectionName$qqrp15Vcl@Forms@TFormp23System@Classes@TStringsr20System@UnicodeStringt3 @39  ; __fastcall Addconn::GetNewConnectionName(Vcl::Forms::TForm *, System::Classes::TStrings *, System::UnicodeString&, System::UnicodeString&)
+    @Addconn@NewConnectionForm     @40  ; Addconn::NewConnectionForm
+    @Addconn@TNewConnectionForm@   @42  ; Addconn::TNewConnectionForm::
+    @Addconn@TNewConnectionForm@HelpBtnClick$qqrp14System@TObject @38  ; __fastcall Addconn::TNewConnectionForm::HelpBtnClick(System::TObject *)
+    @Addconn@initialization$qqrv   @36  ; __fastcall Addconn::initialization()
+    @Dbdrved@DriverSettingsForm    @32  ; Dbdrved::DriverSettingsForm
+    @Dbdrved@EditDriverSettings$qqrp15Vcl@Forms@TForm @31  ; __fastcall Dbdrved::EditDriverSettings(Vcl::Forms::TForm *)
+    @Dbdrved@Finalization$qqrv     @27  ; __fastcall Dbdrved::Finalization()
+    @Dbdrved@TDriverSettingsForm@  @34  ; Dbdrved::TDriverSettingsForm::
+    @Dbdrved@TDriverSettingsForm@FormCreate$qqrp14System@TObject @30  ; __fastcall Dbdrved::TDriverSettingsForm::FormCreate(System::TObject *)
+    @Dbdrved@TDriverSettingsForm@FormDestroy$qqrp14System@TObject @29  ; __fastcall Dbdrved::TDriverSettingsForm::FormDestroy(System::TObject *)
+    @Dbdrved@TDriverSettingsForm@HelpBtnClick$qqrp14System@TObject @28  ; __fastcall Dbdrved::TDriverSettingsForm::HelpBtnClick(System::TObject *)
+    @Dbdrved@_SDriverFormCaption   @35  ; Dbdrved::_SDriverFormCaption
+    @Dbdrved@initialization$qqrv   @26  ; __fastcall Dbdrved::initialization()
+    @Dbxsqledit@DbxSqlEditForm     @55  ; Dbxsqledit::DbxSqlEditForm
+    @Dbxsqledit@EditSQL$qqr20System@UnicodeStringp20System@Classes@TListp30Data@Sqlexpr@TCustomSQLDataSet47System@%DelphiInterface$20Designintf@IDesigner% @54  ; Dbxsqledit::EditSQL(System::UnicodeString, System::Classes::TList *, Data::Sqlexpr::TCustomSQLDataSet *, System::DelphiInterface<{583}...
+    @Dbxsqledit@Finalization$qqrv  @44  ; __fastcall Dbxsqledit::Finalization()
+    @Dbxsqledit@GetSqlConnection$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p30Data@Sqlexpr@TCustomSQLDataSetp27Data@Sqlexpr@TSQLConnection @53  ; Dbxsqledit::GetSqlConnection(const System::DelphiInterface<{583}...
+    @Dbxsqledit@TDBXSqlEditForm@   @57  ; Dbxsqledit::TDBXSqlEditForm::
+    @Dbxsqledit@TDBXSqlEditForm@ConnectionComboBoxDropDown$qqrp14System@TObject @49  ; __fastcall Dbxsqledit::TDBXSqlEditForm::ConnectionComboBoxDropDown(System::TObject *)
+    @Dbxsqledit@TDBXSqlEditForm@ConnectionComboBoxSelect$qqrp14System@TObject @51  ; __fastcall Dbxsqledit::TDBXSqlEditForm::ConnectionComboBoxSelect(System::TObject *)
+    @Dbxsqledit@TDBXSqlEditForm@FormShow$qqrp14System@TObject @52  ; __fastcall Dbxsqledit::TDBXSqlEditForm::FormShow(System::TObject *)
+    @Dbxsqledit@TDBXSqlEditForm@FormUpdateActionUpdate$qqrp14System@TObject @47  ; __fastcall Dbxsqledit::TDBXSqlEditForm::FormUpdateActionUpdate(System::TObject *)
+    @Dbxsqledit@TDBXSqlEditForm@GetTableScopes$qqrv @45  ; __fastcall Dbxsqledit::TDBXSqlEditForm::GetTableScopes()
+    @Dbxsqledit@TDBXSqlEditForm@GetTablesButtonClick$qqrp14System@TObject @48  ; __fastcall Dbxsqledit::TDBXSqlEditForm::GetTablesButtonClick(System::TObject *)
+    @Dbxsqledit@TDBXSqlEditForm@SchemaNameComboBoxDropDown$qqrp14System@TObject @50  ; __fastcall Dbxsqledit::TDBXSqlEditForm::SchemaNameComboBoxDropDown(System::TObject *)
+    @Dbxsqledit@TDBXSqlEditForm@SyncTableScope$qqrp27Data@Sqlexpr@TSQLConnection @46  ; __fastcall Dbxsqledit::TDBXSqlEditForm::SyncTableScope(Data::Sqlexpr::TSQLConnection *)
+    @Dbxsqledit@initialization$qqrv @43  ; __fastcall Dbxsqledit::initialization()
+    @Dcldbx@@GetPackageInfoTable$qqrv @283 ; Dcldbx::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dcldbx@@PackageLoad$qqrv      @282 ; Dcldbx::__linkproc__ __fastcall PackageLoad()
+    @Dcldbx@@PackageUnload$qqrv    @281 ; Dcldbx::__linkproc__ __fastcall PackageUnload()
+    @Dcldbx@initialization$qqrv    @280 ; __fastcall Dcldbx::initialization()
+    @Fldedit@EditFields$qqrp23System@Classes@TStrings20System@UnicodeStringynpqqrx20System@UnicodeStringp23System@Classes@TStrings$vt2 @18  ; __fastcall Fldedit::EditFields(System::Classes::TStrings *, System::UnicodeString, void __fastcall __closure(*)(const System::UnicodeString, System::Classes::TStrings *), System::UnicodeString)
+    @Fldedit@EditFields$qqrr20System@UnicodeString20System@UnicodeStringynpqqrx20System@UnicodeString20System@UnicodeStringp23System@Classes@TStrings$vt2t2 @17  ; __fastcall Fldedit::EditFields(System::UnicodeString&, System::UnicodeString, void __fastcall __closure(*)(const System::UnicodeString, System::UnicodeString, System::Classes::TStrings *), System::UnicodeString, System::UnicodeString)
+    @Fldedit@EditFields$qqrr20System@UnicodeString20System@UnicodeStringynpqqrx20System@UnicodeStringp23System@Classes@TStrings$vt2 @19  ; __fastcall Fldedit::EditFields(System::UnicodeString&, System::UnicodeString, void __fastcall __closure(*)(const System::UnicodeString, System::Classes::TStrings *), System::UnicodeString)
+    @Fldedit@FieldEditForm         @20  ; Fldedit::FieldEditForm
+    @Fldedit@Finalization$qqrv     @2   ; __fastcall Fldedit::Finalization()
+    @Fldedit@TFieldEditForm@       @22  ; Fldedit::TFieldEditForm::
+    @Fldedit@TFieldEditForm@DownButtonClick$qqrp14System@TObject @5   ; __fastcall Fldedit::TFieldEditForm::DownButtonClick(System::TObject *)
+    @Fldedit@TFieldEditForm@ExcAllBtnClick$qqrp14System@TObject @11  ; __fastcall Fldedit::TFieldEditForm::ExcAllBtnClick(System::TObject *)
+    @Fldedit@TFieldEditForm@ExcludeBtnClick$qqrp14System@TObject @13  ; __fastcall Fldedit::TFieldEditForm::ExcludeBtnClick(System::TObject *)
+    @Fldedit@TFieldEditForm@GetFirstSelection$qqrp27Vcl@Stdctrls@TCustomListBox @8   ; __fastcall Fldedit::TFieldEditForm::GetFirstSelection(Vcl::Stdctrls::TCustomListBox *)
+    @Fldedit@TFieldEditForm@HelpBtnClick$qqrp14System@TObject @3   ; __fastcall Fldedit::TFieldEditForm::HelpBtnClick(System::TObject *)
+    @Fldedit@TFieldEditForm@IncAllBtnClick$qqrp14System@TObject @12  ; __fastcall Fldedit::TFieldEditForm::IncAllBtnClick(System::TObject *)
+    @Fldedit@TFieldEditForm@IncludeBtnClick$qqrp14System@TObject @16  ; __fastcall Fldedit::TFieldEditForm::IncludeBtnClick(System::TObject *)
+    @Fldedit@TFieldEditForm@MoveDstSelected$qqro @15  ; __fastcall Fldedit::TFieldEditForm::MoveDstSelected(bool)
+    @Fldedit@TFieldEditForm@MoveSelected$qqrp27Vcl@Stdctrls@TCustomListBoxp23System@Classes@TStrings @10  ; __fastcall Fldedit::TFieldEditForm::MoveSelected(Vcl::Stdctrls::TCustomListBox *, System::Classes::TStrings *)
+    @Fldedit@TFieldEditForm@PopulateFieldList$qqrv @14  ; __fastcall Fldedit::TFieldEditForm::PopulateFieldList()
+    @Fldedit@TFieldEditForm@SetButtons$qqrv @9   ; __fastcall Fldedit::TFieldEditForm::SetButtons()
+    @Fldedit@TFieldEditForm@SetItem$qqrp21Vcl@Stdctrls@TListBoxi @7   ; __fastcall Fldedit::TFieldEditForm::SetItem(Vcl::Stdctrls::TListBox *, int)
+    @Fldedit@TFieldEditForm@SrcListDblClick$qqrp14System@TObject @6   ; __fastcall Fldedit::TFieldEditForm::SrcListDblClick(System::TObject *)
+    @Fldedit@TFieldEditForm@UpButtonClick$qqrp14System@TObject @4   ; __fastcall Fldedit::TFieldEditForm::UpButtonClick(System::TObject *)
+    @Fldedit@initialization$qqrv   @1   ; __fastcall Fldedit::initialization()
+    @GetPackageInfoTable           @286 ; GetPackageInfoTable
+    @Sqlopenthread@Finalization$qqrv @275 ; __fastcall Sqlopenthread::Finalization()
+    @Sqlopenthread@TThreadedOpenSQLConnectionDialog@ @279 ; Sqlopenthread::TThreadedOpenSQLConnectionDialog::
+    @Sqlopenthread@TThreadedOpenSQLConnectionDialog@OpenConnection$qqrx20System@UnicodeStringp27Data@Sqlexpr@TSQLConnection84System@%DelphiInterface$57System@Sysutils@%TProc__1$p27Data@Sqlexpr@TSQLConnection%%r20System@UnicodeStringt4t4ui @276 ; Sqlopenthread::TThreadedOpenSQLConnectionDialog::OpenConnection(const System::UnicodeString, Data::Sqlexpr::TSQLConnection *, System::DelphiInterface<{583}...
+    @Sqlopenthread@initialization$qqrv @274 ; __fastcall Sqlopenthread::initialization()
+    @Sqlproxydesigner@CanGenerateProxy$qqrv @69  ; __fastcall Sqlproxydesigner::CanGenerateProxy()
+    @Sqlproxydesigner@Finalization$qqrv @59  ; __fastcall Sqlproxydesigner::Finalization()
+    @Sqlproxydesigner@GGenerateProxyProc @70  ; Sqlproxydesigner::GGenerateProxyProc
+    @Sqlproxydesigner@GenerateProxy$qqrp29Data@Dbxcommon@TDBXConnectionx20System@UnicodeStringt2r20System@UnicodeStringt4 @68  ; __fastcall Sqlproxydesigner::GenerateProxy(Data::Dbxcommon::TDBXConnection *, const System::UnicodeString, const System::UnicodeString, System::UnicodeString&, System::UnicodeString&)
+    @Sqlproxydesigner@TDSPersonalityProxyGenerator@ @77  ; Sqlproxydesigner::TDSPersonalityProxyGenerator::
+    @Sqlproxydesigner@TDSPersonalityProxyGenerator@$bctr$qqrx20System@UnicodeString @67  ; __fastcall Sqlproxydesigner::TDSPersonalityProxyGenerator::TDSPersonalityProxyGenerator(const System::UnicodeString)
+    @Sqlproxydesigner@TDSPersonalityProxyGenerator@GenerateProxy$qqrp29Data@Dbxcommon@TDBXConnection @66  ; __fastcall Sqlproxydesigner::TDSPersonalityProxyGenerator::GenerateProxy(Data::Dbxcommon::TDBXConnection *)
+    @Sqlproxydesigner@TDSPersonalityProxyGenerator@GenerateProxy$qqrv @64  ; __fastcall Sqlproxydesigner::TDSPersonalityProxyGenerator::GenerateProxy()
+    @Sqlproxydesigner@TDSPersonalityProxyGenerator@GenerationFinished$qqrp22System@Classes@TStreamt1 @65  ; __fastcall Sqlproxydesigner::TDSPersonalityProxyGenerator::GenerationFinished(System::Classes::TStream *, System::Classes::TStream *)
+    @Sqlproxydesigner@TDSStringPersonalityProxyGenerator@ @75  ; Sqlproxydesigner::TDSStringPersonalityProxyGenerator::
+    @Sqlproxydesigner@TDSStringPersonalityProxyGenerator@CreateHeaderOutputStream$qqrv @63  ; __fastcall Sqlproxydesigner::TDSStringPersonalityProxyGenerator::CreateHeaderOutputStream()
+    @Sqlproxydesigner@TDSStringPersonalityProxyGenerator@CreateOutputStream$qqrv @62  ; __fastcall Sqlproxydesigner::TDSStringPersonalityProxyGenerator::CreateOutputStream()
+    @Sqlproxydesigner@TDSStringPersonalityProxyGenerator@GenerationFinished$qqrp22System@Classes@TStreamt1 @60  ; __fastcall Sqlproxydesigner::TDSStringPersonalityProxyGenerator::GenerationFinished(System::Classes::TStream *, System::Classes::TStream *)
+    @Sqlproxydesigner@TDSStringPersonalityProxyGenerator@GetStreamEncoding$qqrv @61  ; __fastcall Sqlproxydesigner::TDSStringPersonalityProxyGenerator::GetStreamEncoding()
+    @Sqlproxydesigner@initialization$qqrv @58  ; __fastcall Sqlproxydesigner::initialization()
+    @Sqlreg@Finalization$qqrv      @80  ; __fastcall Sqlreg::Finalization()
+    @Sqlreg@MakeStorageNodeId$qqr47System@%DelphiInterface$20Toolsapi@IOTAProject%p27Data@Sqlexpr@TSQLConnection @156 ; Sqlreg::MakeStorageNodeId(System::DelphiInterface<{583}...
+    @Sqlreg@Register$qqrv          @88  ; __fastcall Sqlreg::Register()
+    @Sqlreg@TConnectionDataProperty@ @239 ; Sqlreg::TConnectionDataProperty::
+    @Sqlreg@TConnectionDataProperty@$bctr$qqrp29Designeditors@TPropertyEditorp28Data@Sqlexpr@TConnectionData @82  ; __fastcall Sqlreg::TConnectionDataProperty::TConnectionDataProperty(Designeditors::TPropertyEditor *, Data::Sqlexpr::TConnectionData *)
+    @Sqlreg@TCustomSQLDataSetSelectionEditor@ @209 ; Sqlreg::TCustomSQLDataSetSelectionEditor::
+    @Sqlreg@TCustomSQLDataSetSelectionEditor@RequiresUnits$qqrynpqqrx20System@UnicodeString$v @91  ; __fastcall Sqlreg::TCustomSQLDataSetSelectionEditor::RequiresUnits(void __fastcall __closure(*)(const System::UnicodeString))
+    @Sqlreg@TDelegateDriverProperty@ @237 ; Sqlreg::TDelegateDriverProperty::
+    @Sqlreg@TDelegateDriverProperty@GetAttributes$qqrv @122 ; __fastcall Sqlreg::TDelegateDriverProperty::GetAttributes()
+    @Sqlreg@TDelegateDriverProperty@GetName$qqrv @121 ; __fastcall Sqlreg::TDelegateDriverProperty::GetName()
+    @Sqlreg@TDelegateDriverProperty@GetProperties$qqrynpqqrx47System@%DelphiInterface$20Designintf@IProperty%$v @117 ; Sqlreg::TDelegateDriverProperty::GetProperties(__closure(*)(const System::DelphiInterface<{583}...
+    @Sqlreg@TDelegateDriverProperty@GetValue$qqrv @120 ; __fastcall Sqlreg::TDelegateDriverProperty::GetValue()
+    @Sqlreg@TDelegateDriverProperty@GetValues$qqrynpqqrx20System@UnicodeString$v @119 ; __fastcall Sqlreg::TDelegateDriverProperty::GetValues(void __fastcall __closure(*)(const System::UnicodeString))
+    @Sqlreg@TDelegateDriverProperty@SetValue$qqrx20System@UnicodeString @118 ; __fastcall Sqlreg::TDelegateDriverProperty::SetValue(const System::UnicodeString)
+    @Sqlreg@TDelegateNameProperty@ @235 ; Sqlreg::TDelegateNameProperty::
+    @Sqlreg@TDelegateNameProperty@GetAttributes$qqrv @87  ; __fastcall Sqlreg::TDelegateNameProperty::GetAttributes()
+    @Sqlreg@TDelegateNameProperty@GetName$qqrv @86  ; __fastcall Sqlreg::TDelegateNameProperty::GetName()
+    @Sqlreg@TDelegateNameProperty@GetValue$qqrv @85  ; __fastcall Sqlreg::TDelegateNameProperty::GetValue()
+    @Sqlreg@TDelegateNameProperty@GetValues$qqrynpqqrx20System@UnicodeString$v @84  ; __fastcall Sqlreg::TDelegateNameProperty::GetValues(void __fastcall __closure(*)(const System::UnicodeString))
+    @Sqlreg@TDelegateNameProperty@SetValue$qqrx20System@UnicodeString @83  ; __fastcall Sqlreg::TDelegateNameProperty::SetValue(const System::UnicodeString)
+    @Sqlreg@TIdxColNamesProperty@  @261 ; Sqlreg::TIdxColNamesProperty::
+    @Sqlreg@TIdxColNamesProperty@Activate$qqrv @168 ; __fastcall Sqlreg::TIdxColNamesProperty::Activate()
+    @Sqlreg@TParamsProperty@       @241 ; Sqlreg::TParamsProperty::
+    @Sqlreg@TParamsProperty@Edit$qqrv @135 ; __fastcall Sqlreg::TParamsProperty::Edit()
+    @Sqlreg@TSQLConnectionEditor@  @233 ; Sqlreg::TSQLConnectionEditor::
+    @Sqlreg@TSQLConnectionEditor@AddConnectionString$qqrp27Data@Sqlexpr@TSQLConnection @158 ; __fastcall Sqlreg::TSQLConnectionEditor::AddConnectionString(Data::Sqlexpr::TSQLConnection *)
+    @Sqlreg@TSQLConnectionEditor@CanGenerateProxy$qqrv @147 ; __fastcall Sqlreg::TSQLConnectionEditor::CanGenerateProxy()
+    @Sqlreg@TSQLConnectionEditor@ConnectionStringVerbCount$qqrp27Data@Sqlexpr@TSQLConnection @153 ; __fastcall Sqlreg::TSQLConnectionEditor::ConnectionStringVerbCount(Data::Sqlexpr::TSQLConnection *)
+    @Sqlreg@TSQLConnectionEditor@DeleteConnectionString$qqrp27Data@Sqlexpr@TSQLConnection @157 ; __fastcall Sqlreg::TSQLConnectionEditor::DeleteConnectionString(Data::Sqlexpr::TSQLConnection *)
+    @Sqlreg@TSQLConnectionEditor@Edit$qqrv @152 ; __fastcall Sqlreg::TSQLConnectionEditor::Edit()
+    @Sqlreg@TSQLConnectionEditor@ExecuteVerb$qqri @151 ; __fastcall Sqlreg::TSQLConnectionEditor::ExecuteVerb(int)
+    @Sqlreg@TSQLConnectionEditor@GenerateProxy$qqrv @155 ; __fastcall Sqlreg::TSQLConnectionEditor::GenerateProxy()
+    @Sqlreg@TSQLConnectionEditor@GetAddConnectionString$qqrp27Data@Sqlexpr@TSQLConnection @154 ; __fastcall Sqlreg::TSQLConnectionEditor::GetAddConnectionString(Data::Sqlexpr::TSQLConnection *)
+    @Sqlreg@TSQLConnectionEditor@GetVerb$qqri @150 ; __fastcall Sqlreg::TSQLConnectionEditor::GetVerb(int)
+    @Sqlreg@TSQLConnectionEditor@GetVerbCount$qqrv @149 ; __fastcall Sqlreg::TSQLConnectionEditor::GetVerbCount()
+    @Sqlreg@TSQLConnectionEditor@IsDataSnap$qqrv @148 ; __fastcall Sqlreg::TSQLConnectionEditor::IsDataSnap()
+    @Sqlreg@TSQLConnectionEditor@ReloadConnectionProperties$qqrv @146 ; __fastcall Sqlreg::TSQLConnectionEditor::ReloadConnectionProperties()
+    @Sqlreg@TSQLConnectionEditor@SaveConnectionProperties$qqrv @145 ; __fastcall Sqlreg::TSQLConnectionEditor::SaveConnectionProperties()
+    @Sqlreg@TSQLConnectionSelectionEditor@ @207 ; Sqlreg::TSQLConnectionSelectionEditor::
+    @Sqlreg@TSQLConnectionSelectionEditor@FilterProperties$qqrx57System@%DelphiInterface$30Designintf@IDesignerSelections%x56System@%DelphiInterface$29System@Classes@IInterfaceList% @89  ; Sqlreg::TSQLConnectionSelectionEditor::FilterProperties(const System::DelphiInterface<{583}...
+    @Sqlreg@TSQLConnectionSelectionEditor@RequiresUnits$qqrynpqqrx20System@UnicodeString$v @90  ; __fastcall Sqlreg::TSQLConnectionSelectionEditor::RequiresUnits(void __fastcall __closure(*)(const System::UnicodeString))
+    @Sqlreg@TSQLConnectionSprig@   @225 ; Sqlreg::TSQLConnectionSprig::
+    @Sqlreg@TSQLConnectionSprig@AnyProblems$qqrv @116 ; __fastcall Sqlreg::TSQLConnectionSprig::AnyProblems()
+    @Sqlreg@TSQLConnectionSprig@Caption$qqrv @114 ; __fastcall Sqlreg::TSQLConnectionSprig::Caption()
+    @Sqlreg@TSQLConnectionSprig@Name$qqrv @115 ; __fastcall Sqlreg::TSQLConnectionSprig::Name()
+    @Sqlreg@TSQLConnectionsProperty@ @257 ; Sqlreg::TSQLConnectionsProperty::
+    @Sqlreg@TSQLConnectionsProperty@Activate$qqrv @161 ; __fastcall Sqlreg::TSQLConnectionsProperty::Activate()
+    @Sqlreg@TSQLConnectionsProperty@GetName$qqrv @160 ; __fastcall Sqlreg::TSQLConnectionsProperty::GetName()
+    @Sqlreg@TSQLDbxCommandTypeProperty@ @251 ; Sqlreg::TSQLDbxCommandTypeProperty::
+    @Sqlreg@TSQLDbxCommandTypeProperty@Activate$qqrv @175 ; __fastcall Sqlreg::TSQLDbxCommandTypeProperty::Activate()
+    @Sqlreg@TSQLDbxCommandTypeProperty@AutoFill$qqrv @174 ; __fastcall Sqlreg::TSQLDbxCommandTypeProperty::AutoFill()
+    @Sqlreg@TSQLDriversProperty@   @259 ; Sqlreg::TSQLDriversProperty::
+    @Sqlreg@TSQLDriversProperty@Activate$qqrv @167 ; __fastcall Sqlreg::TSQLDriversProperty::Activate()
+    @Sqlreg@TSQLDriversProperty@GetAttributes$qqrv @166 ; __fastcall Sqlreg::TSQLDriversProperty::GetAttributes()
+    @Sqlreg@TSQLDriversProperty@GetName$qqrv @165 ; __fastcall Sqlreg::TSQLDriversProperty::GetName()
+    @Sqlreg@TSQLDriversProperty@GetProperties$qqrynpqqrx47System@%DelphiInterface$20Designintf@IProperty%$v @164 ; Sqlreg::TSQLDriversProperty::GetProperties(__closure(*)(const System::DelphiInterface<{583}...
+    @Sqlreg@TSQLDriversProperty@GetValue$qqrv @163 ; __fastcall Sqlreg::TSQLDriversProperty::GetValue()
+    @Sqlreg@TSQLDriversProperty@SetValue$qqrx20System@UnicodeString @162 ; __fastcall Sqlreg::TSQLDriversProperty::SetValue(const System::UnicodeString)
+    @Sqlreg@TSQLEditProperty@      @267 ; Sqlreg::TSQLEditProperty::
+    @Sqlreg@TSQLEditProperty@Activate$qqrv @185 ; __fastcall Sqlreg::TSQLEditProperty::Activate()
+    @Sqlreg@TSQLEditProperty@AutoFill$qqrv @182 ; __fastcall Sqlreg::TSQLEditProperty::AutoFill()
+    @Sqlreg@TSQLEditProperty@Edit$qqrv @183 ; __fastcall Sqlreg::TSQLEditProperty::Edit()
+    @Sqlreg@TSQLEditProperty@EditSQLText$qqrv @184 ; __fastcall Sqlreg::TSQLEditProperty::EditSQLText()
+    @Sqlreg@TSQLImpliedConnectionSprig@ @223 ; Sqlreg::TSQLImpliedConnectionSprig::
+    @Sqlreg@TSQLImpliedConnectionSprig@AnyProblems$qqrv @113 ; __fastcall Sqlreg::TSQLImpliedConnectionSprig::AnyProblems()
+    @Sqlreg@TSQLImpliedConnectionSprig@Caption$qqrv @112 ; __fastcall Sqlreg::TSQLImpliedConnectionSprig::Caption()
+    @Sqlreg@TSQLImpliedConnectionSprig@ItemClass$qqrv @110 ; __fastcall Sqlreg::TSQLImpliedConnectionSprig::ItemClass()
+    @Sqlreg@TSQLImpliedConnectionSprig@UniqueName$qqrv @111 ; __fastcall Sqlreg::TSQLImpliedConnectionSprig::UniqueName()
+    @Sqlreg@TSQLIndexNameProperty@ @263 ; Sqlreg::TSQLIndexNameProperty::
+    @Sqlreg@TSQLIndexNameProperty@Activate$qqrv @169 ; __fastcall Sqlreg::TSQLIndexNameProperty::Activate()
+    @Sqlreg@TSQLMonitorFileNameProperty@ @245 ; Sqlreg::TSQLMonitorFileNameProperty::
+    @Sqlreg@TSQLMonitorFileNameProperty@Edit$qqrv @134 ; __fastcall Sqlreg::TSQLMonitorFileNameProperty::Edit()
+    @Sqlreg@TSQLMonitorFileNameProperty@GetAttributes$qqrv @133 ; __fastcall Sqlreg::TSQLMonitorFileNameProperty::GetAttributes()
+    @Sqlreg@TSQLMonitorSelectionEditor@ @205 ; Sqlreg::TSQLMonitorSelectionEditor::
+    @Sqlreg@TSQLMonitorSelectionEditor@RequiresUnits$qqrynpqqrx20System@UnicodeString$v @81  ; __fastcall Sqlreg::TSQLMonitorSelectionEditor::RequiresUnits(void __fastcall __closure(*)(const System::UnicodeString))
+    @Sqlreg@TSQLMonitorSprig@      @213 ; Sqlreg::TSQLMonitorSprig::
+    @Sqlreg@TSQLMonitorSprig@AnyProblems$qqrv @108 ; __fastcall Sqlreg::TSQLMonitorSprig::AnyProblems()
+    @Sqlreg@TSQLMonitorSprig@Caption$qqrv @107 ; __fastcall Sqlreg::TSQLMonitorSprig::Caption()
+    @Sqlreg@TSQLMonitorSprig@DragDropTo$qqrp15Treeintf@TSprig @105 ; __fastcall Sqlreg::TSQLMonitorSprig::DragDropTo(Treeintf::TSprig *)
+    @Sqlreg@TSQLMonitorSprig@DragOverTo$qqrp15Treeintf@TSprig @104 ; __fastcall Sqlreg::TSQLMonitorSprig::DragOverTo(Treeintf::TSprig *)
+    @Sqlreg@TSQLMonitorSprig@FigureParent$qqrv @106 ; __fastcall Sqlreg::TSQLMonitorSprig::FigureParent()
+    @Sqlreg@TSQLMonitorSprig@Name$qqrv @109 ; __fastcall Sqlreg::TSQLMonitorSprig::Name()
+    @Sqlreg@TSQLMonitorSprig@PaletteOverTo$qqrp15Treeintf@TSprigp17System@TMetaClass @103 ; __fastcall Sqlreg::TSQLMonitorSprig::PaletteOverTo(Treeintf::TSprig *, System::TMetaClass *)
+    @Sqlreg@TSQLPackageNameProperty@ @253 ; Sqlreg::TSQLPackageNameProperty::
+    @Sqlreg@TSQLPackageNameProperty@Activate$qqrv @177 ; __fastcall Sqlreg::TSQLPackageNameProperty::Activate()
+    @Sqlreg@TSQLPackageNameProperty@AutoFill$qqrv @176 ; __fastcall Sqlreg::TSQLPackageNameProperty::AutoFill()
+    @Sqlreg@TSQLQuerySprig@        @215 ; Sqlreg::TSQLQuerySprig::
+    @Sqlreg@TSQLQuerySprig@AnyProblems$qqrv @92  ; __fastcall Sqlreg::TSQLQuerySprig::AnyProblems()
+    @Sqlreg@TSQLSchemaNameProperty@ @249 ; Sqlreg::TSQLSchemaNameProperty::
+    @Sqlreg@TSQLSchemaNameProperty@Activate$qqrv @173 ; __fastcall Sqlreg::TSQLSchemaNameProperty::Activate()
+    @Sqlreg@TSQLSchemaNameProperty@AutoFill$qqrv @172 ; __fastcall Sqlreg::TSQLSchemaNameProperty::AutoFill()
+    @Sqlreg@TSQLServerMethodNameProperty@ @247 ; Sqlreg::TSQLServerMethodNameProperty::
+    @Sqlreg@TSQLServerMethodNameProperty@Activate$qqrv @171 ; __fastcall Sqlreg::TSQLServerMethodNameProperty::Activate()
+    @Sqlreg@TSQLServerMethodNameProperty@AutoFill$qqrv @170 ; __fastcall Sqlreg::TSQLServerMethodNameProperty::AutoFill()
+    @Sqlreg@TSQLSortFieldsNameProperty@ @243 ; Sqlreg::TSQLSortFieldsNameProperty::
+    @Sqlreg@TSQLSortFieldsNameProperty@Activate$qqrv @159 ; __fastcall Sqlreg::TSQLSortFieldsNameProperty::Activate()
+    @Sqlreg@TSQLStoredProcNameProperty@ @255 ; Sqlreg::TSQLStoredProcNameProperty::
+    @Sqlreg@TSQLStoredProcNameProperty@Activate$qqrv @179 ; __fastcall Sqlreg::TSQLStoredProcNameProperty::Activate()
+    @Sqlreg@TSQLStoredProcNameProperty@AutoFill$qqrv @178 ; __fastcall Sqlreg::TSQLStoredProcNameProperty::AutoFill()
+    @Sqlreg@TSQLStoredProcSprig@   @217 ; Sqlreg::TSQLStoredProcSprig::
+    @Sqlreg@TSQLStoredProcSprig@AnyProblems$qqrv @94  ; __fastcall Sqlreg::TSQLStoredProcSprig::AnyProblems()
+    @Sqlreg@TSQLStoredProcSprig@Caption$qqrv @93  ; __fastcall Sqlreg::TSQLStoredProcSprig::Caption()
+    @Sqlreg@TSQLStringProperty@    @269 ; Sqlreg::TSQLStringProperty::
+    @Sqlreg@TSQLStringProperty@$bctr$qqrx47System@%DelphiInterface$20Designintf@IDesigner%i @202 ; Sqlreg::TSQLStringProperty::TSQLStringProperty(const System::DelphiInterface<{583}...
+    @Sqlreg@TSQLStringProperty@$bdtr$qqrv @200 ; __fastcall Sqlreg::TSQLStringProperty::~TSQLStringProperty()
+    @Sqlreg@TSQLStringProperty@Activate$qqrv @203 ; __fastcall Sqlreg::TSQLStringProperty::Activate()
+    @Sqlreg@TSQLStringProperty@CreateDelegate$qqrv @201 ; __fastcall Sqlreg::TSQLStringProperty::CreateDelegate()
+    @Sqlreg@TSQLStringProperty@GetAttributes$qqrv @199 ; __fastcall Sqlreg::TSQLStringProperty::GetAttributes()
+    @Sqlreg@TSQLStringProperty@GetCommandText$qqrp27Data@Sqlexpr@TSQLConnectionp30Data@Sqlexpr@TCustomSQLDataSet22Data@Db@TPSCommandTypep23System@Classes@TStrings @195 ; __fastcall Sqlreg::TSQLStringProperty::GetCommandText(Data::Sqlexpr::TSQLConnection *, Data::Sqlexpr::TCustomSQLDataSet *, Data::Db::TPSCommandType, System::Classes::TStrings *)
+    @Sqlreg@TSQLStringProperty@GetConnection$qqro @196 ; __fastcall Sqlreg::TSQLStringProperty::GetConnection(bool)
+    @Sqlreg@TSQLStringProperty@GetValueList$qqrp23System@Classes@TStrings @186 ; __fastcall Sqlreg::TSQLStringProperty::GetValueList(System::Classes::TStrings *)
+    @Sqlreg@TSQLStringPropertyDelegate@ @271 ; Sqlreg::TSQLStringPropertyDelegate::
+    @Sqlreg@TSQLStringPropertyDelegate@$bctr$qqrp25Sqlreg@TSQLStringProperty @198 ; __fastcall Sqlreg::TSQLStringPropertyDelegate::TSQLStringPropertyDelegate(Sqlreg::TSQLStringProperty *)
+    @Sqlreg@TSQLStringPropertyDelegate@FindConnection$qqro @197 ; __fastcall Sqlreg::TSQLStringPropertyDelegate::FindConnection(bool)
+    @Sqlreg@TSQLStringPropertyDelegate@GetCommandText$qqrp27Data@Sqlexpr@TSQLConnectionp23System@Classes@TStrings @189 ; __fastcall Sqlreg::TSQLStringPropertyDelegate::GetCommandText(Data::Sqlexpr::TSQLConnection *, System::Classes::TStrings *)
+    @Sqlreg@TSQLStringPropertyDelegate@GetCommandType$qqrv @188 ; __fastcall Sqlreg::TSQLStringPropertyDelegate::GetCommandType()
+    @Sqlreg@TSQLStringPropertyDelegate@GetComponent$qqri @187 ; __fastcall Sqlreg::TSQLStringPropertyDelegate::GetComponent(int)
+    @Sqlreg@TSQLStringPropertyDelegate@GetIndexNames$qqrp27Data@Sqlexpr@TSQLConnectionp23System@Classes@TStrings @194 ; __fastcall Sqlreg::TSQLStringPropertyDelegate::GetIndexNames(Data::Sqlexpr::TSQLConnection *, System::Classes::TStrings *)
+    @Sqlreg@TSQLStringPropertyDelegate@GetKeyNames$qqrp27Data@Sqlexpr@TSQLConnectionp23System@Classes@TStrings @193 ; __fastcall Sqlreg::TSQLStringPropertyDelegate::GetKeyNames(Data::Sqlexpr::TSQLConnection *, System::Classes::TStrings *)
+    @Sqlreg@TSQLStringPropertyDelegate@GetProcedureNames$qqrp27Data@Sqlexpr@TSQLConnectionp23System@Classes@TStrings @191 ; __fastcall Sqlreg::TSQLStringPropertyDelegate::GetProcedureNames(Data::Sqlexpr::TSQLConnection *, System::Classes::TStrings *)
+    @Sqlreg@TSQLStringPropertyDelegate@GetSQLDataSetComponent$qqrv @190 ; __fastcall Sqlreg::TSQLStringPropertyDelegate::GetSQLDataSetComponent()
+    @Sqlreg@TSQLStringPropertyDelegate@GetTableNames$qqrp27Data@Sqlexpr@TSQLConnectionp23System@Classes@TStrings @192 ; __fastcall Sqlreg::TSQLStringPropertyDelegate::GetTableNames(Data::Sqlexpr::TSQLConnection *, System::Classes::TStrings *)
+    @Sqlreg@TSQLTableFieldLinkProperty@ @211 ; Sqlreg::TSQLTableFieldLinkProperty::
+    @Sqlreg@TSQLTableFieldLinkProperty@Edit$qqrv @132 ; __fastcall Sqlreg::TSQLTableFieldLinkProperty::Edit()
+    @Sqlreg@TSQLTableFieldLinkProperty@GetFieldNamesForIndex$qqrp23System@Classes@TStrings @131 ; __fastcall Sqlreg::TSQLTableFieldLinkProperty::GetFieldNamesForIndex(System::Classes::TStrings *)
+    @Sqlreg@TSQLTableFieldLinkProperty@GetIndexBased$qqrv @130 ; __fastcall Sqlreg::TSQLTableFieldLinkProperty::GetIndexBased()
+    @Sqlreg@TSQLTableFieldLinkProperty@GetIndexDefs$qqrv @129 ; __fastcall Sqlreg::TSQLTableFieldLinkProperty::GetIndexDefs()
+    @Sqlreg@TSQLTableFieldLinkProperty@GetIndexFieldNames$qqrv @128 ; __fastcall Sqlreg::TSQLTableFieldLinkProperty::GetIndexFieldNames()
+    @Sqlreg@TSQLTableFieldLinkProperty@GetIndexName$qqrv @127 ; __fastcall Sqlreg::TSQLTableFieldLinkProperty::GetIndexName()
+    @Sqlreg@TSQLTableFieldLinkProperty@GetMasterFields$qqrv @126 ; __fastcall Sqlreg::TSQLTableFieldLinkProperty::GetMasterFields()
+    @Sqlreg@TSQLTableFieldLinkProperty@SetIndexFieldNames$qqrx20System@UnicodeString @125 ; __fastcall Sqlreg::TSQLTableFieldLinkProperty::SetIndexFieldNames(const System::UnicodeString)
+    @Sqlreg@TSQLTableFieldLinkProperty@SetIndexName$qqrx20System@UnicodeString @124 ; __fastcall Sqlreg::TSQLTableFieldLinkProperty::SetIndexName(const System::UnicodeString)
+    @Sqlreg@TSQLTableFieldLinkProperty@SetMasterFields$qqrx20System@UnicodeString @123 ; __fastcall Sqlreg::TSQLTableFieldLinkProperty::SetMasterFields(const System::UnicodeString)
+    @Sqlreg@TSQLTableNameProperty@ @265 ; Sqlreg::TSQLTableNameProperty::
+    @Sqlreg@TSQLTableNameProperty@Activate$qqrv @181 ; __fastcall Sqlreg::TSQLTableNameProperty::Activate()
+    @Sqlreg@TSQLTableNameProperty@AutoFill$qqrv @180 ; __fastcall Sqlreg::TSQLTableNameProperty::AutoFill()
+    @Sqlreg@TSQLTableSprig@        @219 ; Sqlreg::TSQLTableSprig::
+    @Sqlreg@TSQLTableSprig@AnyProblems$qqrv @96  ; __fastcall Sqlreg::TSQLTableSprig::AnyProblems()
+    @Sqlreg@TSQLTableSprig@Caption$qqrv @95  ; __fastcall Sqlreg::TSQLTableSprig::Caption()
+    @Sqlreg@TSqlDataSetEditor@     @231 ; Sqlreg::TSqlDataSetEditor::
+    @Sqlreg@TSqlDataSetEditor@ExecuteVerb$qqri @144 ; __fastcall Sqlreg::TSqlDataSetEditor::ExecuteVerb(int)
+    @Sqlreg@TSqlDataSetEditor@GetVerb$qqri @143 ; __fastcall Sqlreg::TSqlDataSetEditor::GetVerb(int)
+    @Sqlreg@TSqlDataSetEditor@GetVerbCount$qqrv @142 ; __fastcall Sqlreg::TSqlDataSetEditor::GetVerbCount()
+    @Sqlreg@TSqlDataSetSprig@      @221 ; Sqlreg::TSqlDataSetSprig::
+    @Sqlreg@TSqlDataSetSprig@AnyProblems$qqrv @102 ; __fastcall Sqlreg::TSqlDataSetSprig::AnyProblems()
+    @Sqlreg@TSqlDataSetSprig@Caption$qqrv @101 ; __fastcall Sqlreg::TSqlDataSetSprig::Caption()
+    @Sqlreg@TSqlDataSetSprig@DragDropTo$qqrp15Treeintf@TSprig @99  ; __fastcall Sqlreg::TSqlDataSetSprig::DragDropTo(Treeintf::TSprig *)
+    @Sqlreg@TSqlDataSetSprig@DragOverTo$qqrp15Treeintf@TSprig @98  ; __fastcall Sqlreg::TSqlDataSetSprig::DragOverTo(Treeintf::TSprig *)
+    @Sqlreg@TSqlDataSetSprig@FigureParent$qqrv @100 ; __fastcall Sqlreg::TSqlDataSetSprig::FigureParent()
+    @Sqlreg@TSqlDataSetSprig@PaletteOverTo$qqrp15Treeintf@TSprigp17System@TMetaClass @97  ; __fastcall Sqlreg::TSqlDataSetSprig::PaletteOverTo(Treeintf::TSprig *, System::TMetaClass *)
+    @Sqlreg@TSqlQueryEditor@       @227 ; Sqlreg::TSqlQueryEditor::
+    @Sqlreg@TSqlQueryEditor@ExecuteVerb$qqri @138 ; __fastcall Sqlreg::TSqlQueryEditor::ExecuteVerb(int)
+    @Sqlreg@TSqlQueryEditor@GetVerb$qqri @137 ; __fastcall Sqlreg::TSqlQueryEditor::GetVerb(int)
+    @Sqlreg@TSqlQueryEditor@GetVerbCount$qqrv @136 ; __fastcall Sqlreg::TSqlQueryEditor::GetVerbCount()
+    @Sqlreg@TSqlStoredProcEditor@  @229 ; Sqlreg::TSqlStoredProcEditor::
+    @Sqlreg@TSqlStoredProcEditor@ExecuteVerb$qqri @141 ; __fastcall Sqlreg::TSqlStoredProcEditor::ExecuteVerb(int)
+    @Sqlreg@TSqlStoredProcEditor@GetVerb$qqri @140 ; __fastcall Sqlreg::TSqlStoredProcEditor::GetVerb(int)
+    @Sqlreg@TSqlStoredProcEditor@GetVerbCount$qqrv @139 ; __fastcall Sqlreg::TSqlStoredProcEditor::GetVerbCount()
+    @Sqlreg@_cConnectionSprigPrefix @273 ; Sqlreg::_cConnectionSprigPrefix
+    @Sqlreg@initialization$qqrv    @79  ; __fastcall Sqlreg::initialization()
+    Finalize                       @284 ; Finalize
+    Initialize                     @285 ; Initialize

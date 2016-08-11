@@ -1,0 +1,18 @@
+LIBRARY     DCLSMP210.BPL
+
+DESCRIPTION 'mbarcadero Sample Components'
+
+EXPORTS
+    @Dclsmp@@GetPackageInfoTable$qqrv @10  ; Dclsmp::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclsmp@@PackageLoad$qqrv      @9   ; Dclsmp::__linkproc__ __fastcall PackageLoad()
+    @Dclsmp@@PackageUnload$qqrv    @8   ; Dclsmp::__linkproc__ __fastcall PackageUnload()
+    @Dclsmp@initialization$qqrv    @7   ; __fastcall Dclsmp::initialization()
+    @GetPackageInfoTable           @13  ; GetPackageInfoTable
+    @Sampreg@Finalization$qqrv     @5   ; __fastcall Sampreg::Finalization()
+    @Sampreg@Register$qqrv         @6   ; __fastcall Sampreg::Register()
+    @Sampreg@initialization$qqrv   @4   ; __fastcall Sampreg::initialization()
+    @Smpconst@Finalization$qqrv    @2   ; __fastcall Smpconst::Finalization()
+    @Smpconst@_srSamples           @3   ; Smpconst::_srSamples
+    @Smpconst@initialization$qqrv  @1   ; __fastcall Smpconst::initialization()
+    Finalize                       @11  ; Finalize
+    Initialize                     @12  ; Initialize

@@ -1,0 +1,16 @@
+LIBRARY     PROJECTTARGETS210.BPL
+
+DESCRIPTION 'mbarcadero MSBuild Targets File Add-In'
+
+EXPORTS
+    @$xp$26Targetsmodule@ITargetsFile @4   ; __tpdsc__ Targetsmodule::ITargetsFile
+    @GetPackageInfoTable           @11  ; GetPackageInfoTable
+    @Projecttargets@@GetPackageInfoTable$qqrv @8   ; Projecttargets::__linkproc__ __fastcall GetPackageInfoTable()
+    @Projecttargets@@PackageLoad$qqrv @7   ; Projecttargets::__linkproc__ __fastcall PackageLoad()
+    @Projecttargets@@PackageUnload$qqrv @6   ; Projecttargets::__linkproc__ __fastcall PackageUnload()
+    @Projecttargets@initialization$qqrv @5   ; __fastcall Projecttargets::initialization()
+    @Targetsmodule@Finalization$qqrv @2   ; __fastcall Targetsmodule::Finalization()
+    @Targetsmodule@IDERegister$qqrv @3   ; __fastcall Targetsmodule::IDERegister()
+    @Targetsmodule@initialization$qqrv @1   ; __fastcall Targetsmodule::initialization()
+    Finalize                       @9   ; Finalize
+    Initialize                     @10  ; Initialize

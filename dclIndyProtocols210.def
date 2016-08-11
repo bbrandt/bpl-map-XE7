@@ -1,0 +1,53 @@
+LIBRARY     DCLINDYPROTOCOLS210.BPL
+
+DESCRIPTION 'ndy 10 Protocols Design Time'
+
+EXPORTS
+    @$xp$27Iddsnregister@TIdPropEdSASL @37  ; __tpdsc__ Iddsnregister::TIdPropEdSASL
+    @$xp$48Iddsnsasllisteditorformvcl@TfrmSASLListEditorVCL @28  ; __tpdsc__ Iddsnsasllisteditorformvcl::TfrmSASLListEditorVCL
+    @Dclindyprotocols@@GetPackageInfoTable$qqrv @45  ; Dclindyprotocols::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclindyprotocols@@PackageLoad$qqrv @44  ; Dclindyprotocols::__linkproc__ __fastcall PackageLoad()
+    @Dclindyprotocols@@PackageUnload$qqrv @43  ; Dclindyprotocols::__linkproc__ __fastcall PackageUnload()
+    @Dclindyprotocols@initialization$qqrv @42  ; __fastcall Dclindyprotocols::initialization()
+    @GetPackageInfoTable           @48  ; GetPackageInfoTable
+    @Iddsnregister@Finalization$qqrv @31  ; __fastcall Iddsnregister::Finalization()
+    @Iddsnregister@Register$qqrv   @32  ; __fastcall Iddsnregister::Register()
+    @Iddsnregister@TIdPropEdSASL@  @38  ; Iddsnregister::TIdPropEdSASL::
+    @Iddsnregister@TIdPropEdSASL@Edit$qqrv @36  ; __fastcall Iddsnregister::TIdPropEdSASL::Edit()
+    @Iddsnregister@TIdPropEdSASL@GetAttributes$qqrv @35  ; __fastcall Iddsnregister::TIdPropEdSASL::GetAttributes()
+    @Iddsnregister@TIdPropEdSASL@GetValue$qqrv @34  ; __fastcall Iddsnregister::TIdPropEdSASL::GetValue()
+    @Iddsnregister@TIdPropEdSASL@SetValue$qqrx20System@UnicodeString @33  ; __fastcall Iddsnregister::TIdPropEdSASL::SetValue(const System::UnicodeString)
+    @Iddsnregister@initialization$qqrv @30  ; __fastcall Iddsnregister::initialization()
+    @Iddsnresourcestrings@Finalization$qqrv @2   ; __fastcall Iddsnresourcestrings::Finalization()
+    @Iddsnresourcestrings@_RSADlgSLAdd @8   ; Iddsnresourcestrings::_RSADlgSLAdd
+    @Iddsnresourcestrings@_RSADlgSLAssigned @4   ; Iddsnresourcestrings::_RSADlgSLAssigned
+    @Iddsnresourcestrings@_RSADlgSLAvailable @5   ; Iddsnresourcestrings::_RSADlgSLAvailable
+    @Iddsnresourcestrings@_RSADlgSLCaption @6   ; Iddsnresourcestrings::_RSADlgSLCaption
+    @Iddsnresourcestrings@_RSADlgSLEditList @3   ; Iddsnresourcestrings::_RSADlgSLEditList
+    @Iddsnresourcestrings@_RSADlgSLMoveDown @9   ; Iddsnresourcestrings::_RSADlgSLMoveDown
+    @Iddsnresourcestrings@_RSADlgSLMoveUp @10  ; Iddsnresourcestrings::_RSADlgSLMoveUp
+    @Iddsnresourcestrings@_RSADlgSLRemove @7   ; Iddsnresourcestrings::_RSADlgSLRemove
+    @Iddsnresourcestrings@initialization$qqrv @1   ; __fastcall Iddsnresourcestrings::initialization()
+    @Iddsnsasllisteditorformvcl@Finalization$qqrv @12  ; __fastcall Iddsnsasllisteditorformvcl::Finalization()
+    @Iddsnsasllisteditorformvcl@TfrmSASLListEditorVCL@ @29  ; Iddsnsasllisteditorformvcl::TfrmSASLListEditorVCL::
+    @Iddsnsasllisteditorformvcl@TfrmSASLListEditorVCL@$bctr$qqrp25System@Classes@TComponent @27  ; __fastcall Iddsnsasllisteditorformvcl::TfrmSASLListEditorVCL::TfrmSASLListEditorVCL(System::Classes::TComponent *)
+    @Iddsnsasllisteditorformvcl@TfrmSASLListEditorVCL@Execute$qqrv @13  ; __fastcall Iddsnsasllisteditorformvcl::TfrmSASLListEditorVCL::Execute()
+    @Iddsnsasllisteditorformvcl@TfrmSASLListEditorVCL@FormCreate$qqrv @22  ; __fastcall Iddsnsasllisteditorformvcl::TfrmSASLListEditorVCL::FormCreate()
+    @Iddsnsasllisteditorformvcl@TfrmSASLListEditorVCL@GetList$qqrxp31Idsaslcollection@TIdSASLEntries @26  ; __fastcall Iddsnsasllisteditorformvcl::TfrmSASLListEditorVCL::GetList(Idsaslcollection::TIdSASLEntries * const)
+    @Iddsnsasllisteditorformvcl@TfrmSASLListEditorVCL@SetComponentName$qqrx20System@UnicodeString @23  ; __fastcall Iddsnsasllisteditorformvcl::TfrmSASLListEditorVCL::SetComponentName(const System::UnicodeString)
+    @Iddsnsasllisteditorformvcl@TfrmSASLListEditorVCL@SetList$qqrxp31Idsaslcollection@TIdSASLEntries @25  ; __fastcall Iddsnsasllisteditorformvcl::TfrmSASLListEditorVCL::SetList(Idsaslcollection::TIdSASLEntries * const)
+    @Iddsnsasllisteditorformvcl@TfrmSASLListEditorVCL@UpdateList$qqrv @24  ; __fastcall Iddsnsasllisteditorformvcl::TfrmSASLListEditorVCL::UpdateList()
+    @Iddsnsasllisteditorformvcl@TfrmSASLListEditorVCL@actAddExecute$qqrp14System@TObject @21  ; __fastcall Iddsnsasllisteditorformvcl::TfrmSASLListEditorVCL::actAddExecute(System::TObject *)
+    @Iddsnsasllisteditorformvcl@TfrmSASLListEditorVCL@actAddUpdate$qqrp14System@TObject @20  ; __fastcall Iddsnsasllisteditorformvcl::TfrmSASLListEditorVCL::actAddUpdate(System::TObject *)
+    @Iddsnsasllisteditorformvcl@TfrmSASLListEditorVCL@actMoveDownExecute$qqrp14System@TObject @19  ; __fastcall Iddsnsasllisteditorformvcl::TfrmSASLListEditorVCL::actMoveDownExecute(System::TObject *)
+    @Iddsnsasllisteditorformvcl@TfrmSASLListEditorVCL@actMoveDownUpdate$qqrp14System@TObject @18  ; __fastcall Iddsnsasllisteditorformvcl::TfrmSASLListEditorVCL::actMoveDownUpdate(System::TObject *)
+    @Iddsnsasllisteditorformvcl@TfrmSASLListEditorVCL@actMoveUpExecute$qqrp14System@TObject @17  ; __fastcall Iddsnsasllisteditorformvcl::TfrmSASLListEditorVCL::actMoveUpExecute(System::TObject *)
+    @Iddsnsasllisteditorformvcl@TfrmSASLListEditorVCL@actMoveUpUpdate$qqrp14System@TObject @16  ; __fastcall Iddsnsasllisteditorformvcl::TfrmSASLListEditorVCL::actMoveUpUpdate(System::TObject *)
+    @Iddsnsasllisteditorformvcl@TfrmSASLListEditorVCL@actRemoveExecute$qqrp14System@TObject @15  ; __fastcall Iddsnsasllisteditorformvcl::TfrmSASLListEditorVCL::actRemoveExecute(System::TObject *)
+    @Iddsnsasllisteditorformvcl@TfrmSASLListEditorVCL@actRemoveUpdate$qqrp14System@TObject @14  ; __fastcall Iddsnsasllisteditorformvcl::TfrmSASLListEditorVCL::actRemoveUpdate(System::TObject *)
+    @Iddsnsasllisteditorformvcl@initialization$qqrv @11  ; __fastcall Iddsnsasllisteditorformvcl::initialization()
+    @Idregister@Finalization$qqrv  @40  ; __fastcall Idregister::Finalization()
+    @Idregister@Register$qqrv      @41  ; __fastcall Idregister::Register()
+    @Idregister@initialization$qqrv @39  ; __fastcall Idregister::initialization()
+    Finalize                       @46  ; Finalize
+    Initialize                     @47  ; Initialize

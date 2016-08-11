@@ -1,0 +1,557 @@
+LIBRARY     ADORTL210.BPL
+
+DESCRIPTION 'mbarcadero ADO Database Components'
+
+EXPORTS
+    @$xp$21System@%TArray__1$uc%   @456 ; __tpdsc__ System::TArray__1<unsigned char>
+    @$xp$24Data@Win@Adodb@EADOError @544 ; __tpdsc__ Data::Win::Adodb::EADOError
+    @$xp$24Data@Win@Adodb@TADOQuery @478 ; __tpdsc__ Data::Win::Adodb::TADOQuery
+    @$xp$24Data@Win@Adodb@TADOTable @480 ; __tpdsc__ Data::Win::Adodb::TADOTable
+    @$xp$24Data@Win@Adodb@TPropList @512 ; __tpdsc__ Data::Win::Adodb::TPropList
+    @$xp$25Data@Win@Adodb@TParameter @513 ; __tpdsc__ Data::Win::Adodb::TParameter
+    @$xp$26Data@Win@Adodb@TADOCommand @508 ; __tpdsc__ Data::Win::Adodb::TADOCommand
+    @$xp$26Data@Win@Adodb@TADODataSet @482 ; __tpdsc__ Data::Win::Adodb::TADODataSet
+    @$xp$26Data@Win@Adodb@TCursorType @540 ; __tpdsc__ Data::Win::Adodb::TCursorType
+    @$xp$26Data@Win@Adodb@TParameters @510 ; __tpdsc__ Data::Win::Adodb::TParameters
+    @$xp$26Data@Win@Adodb@TSchemaInfo @532 ; __tpdsc__ Data::Win::Adodb::TSchemaInfo
+    @$xp$26Data@Win@Adodb@TSeekOption @498 ; __tpdsc__ Data::Win::Adodb::TSeekOption
+    @$xp$27Data@Win@Adodb@PVariantList @497 ; __tpdsc__ Data::Win::Adodb::PVariantList
+    @$xp$27Data@Win@Adodb@TADOLockType @535 ; __tpdsc__ Data::Win::Adodb::TADOLockType
+    @$xp$27Data@Win@Adodb@TCommandType @528 ; __tpdsc__ Data::Win::Adodb::TCommandType
+    @$xp$27Data@Win@Adodb@TConnectMode @543 ; __tpdsc__ Data::Win::Adodb::TConnectMode
+    @$xp$27Data@Win@Adodb@TEventReason @505 ; __tpdsc__ Data::Win::Adodb::TEventReason
+    @$xp$27Data@Win@Adodb@TEventStatus @539 ; __tpdsc__ Data::Win::Adodb::TEventStatus
+    @$xp$27Data@Win@Adodb@TFilterGroup @504 ; __tpdsc__ Data::Win::Adodb::TFilterGroup
+    @$xp$27Data@Win@Adodb@TObjectState @534 ; __tpdsc__ Data::Win::Adodb::TObjectState
+    @$xp$27Data@Win@Adodb@TVariantList @496 ; __tpdsc__ Data::Win::Adodb::TVariantList
+    @$xp$28Data@Win@Adodb@TCursorOption @507 ; __tpdsc__ Data::Win::Adodb::TCursorOption
+    @$xp$28Data@Win@Adodb@TObjectStates @533 ; __tpdsc__ Data::Win::Adodb::TObjectStates
+    @$xp$28Data@Win@Adodb@TRecordStatus @502 ; __tpdsc__ Data::Win::Adodb::TRecordStatus
+    @$xp$29Data@Win@Adodb@TADOBlobStream @474 ; __tpdsc__ Data::Win::Adodb::TADOBlobStream
+    @$xp$29Data@Win@Adodb@TADOConnection @520 ; __tpdsc__ Data::Win::Adodb::TADOConnection
+    @$xp$29Data@Win@Adodb@TADOStoredProc @476 ; __tpdsc__ Data::Win::Adodb::TADOStoredProc
+    @$xp$29Data@Win@Adodb@TAffectRecords @500 ; __tpdsc__ Data::Win::Adodb::TAffectRecords
+    @$xp$29Data@Win@Adodb@TConnectOption @542 ; __tpdsc__ Data::Win::Adodb::TConnectOption
+    @$xp$29Data@Win@Adodb@TCursorOptions @506 ; __tpdsc__ Data::Win::Adodb::TCursorOptions
+    @$xp$29Data@Win@Adodb@TExecuteOption @538 ; __tpdsc__ Data::Win::Adodb::TExecuteOption
+    @$xp$29Data@Win@Adodb@TMarshalOption @503 ; __tpdsc__ Data::Win::Adodb::TMarshalOption
+    @$xp$29Data@Win@Adodb@TPersistFormat @499 ; __tpdsc__ Data::Win::Adodb::TPersistFormat
+    @$xp$29Data@Win@Adodb@TRDSConnection @518 ; __tpdsc__ Data::Win::Adodb::TRDSConnection
+    @$xp$29Data@Win@Adodb@TXactAttribute @531 ; __tpdsc__ Data::Win::Adodb::TXactAttribute
+    @$xp$30Data@Win@Adodb@TCursorLocation @541 ; __tpdsc__ Data::Win::Adodb::TCursorLocation
+    @$xp$30Data@Win@Adodb@TExecuteOptions @537 ; __tpdsc__ Data::Win::Adodb::TExecuteOptions
+    @$xp$30Data@Win@Adodb@TIsolationLevel @536 ; __tpdsc__ Data::Win::Adodb::TIsolationLevel
+    @$xp$30Data@Win@Adodb@TRecordsetEvent @487 ; __tpdsc__ Data::Win::Adodb::TRecordsetEvent
+    @$xp$30Data@Win@Adodb@TXactAttributes @530 ; __tpdsc__ Data::Win::Adodb::TXactAttributes
+    @$xp$31Data@Win@Adodb@TDisconnectEvent @526 ; __tpdsc__ Data::Win::Adodb::TDisconnectEvent
+    @$xp$31Data@Win@Adodb@TRecordStatusSet @501 ; __tpdsc__ Data::Win::Adodb::TRecordStatusSet
+    @$xp$31Data@Win@Adodb@TRecordsetCreate @486 ; __tpdsc__ Data::Win::Adodb::TRecordsetCreate
+    @$xp$32Data@Win@Adodb@TCustomADODataSet @484 ; __tpdsc__ Data::Win::Adodb::TCustomADODataSet
+    @$xp$32Data@Win@Adodb@TInfoMessageEvent @522 ; __tpdsc__ Data::Win::Adodb::TInfoMessageEvent
+    @$xp$32Data@Win@Adodb@TWillConnectEvent @524 ; __tpdsc__ Data::Win::Adodb::TWillConnectEvent
+    @$xp$32Data@Win@Adodb@TWillExecuteEvent @523 ; __tpdsc__ Data::Win::Adodb::TWillExecuteEvent
+    @$xp$33Data@Win@Adodb@TConnectErrorEvent @527 ; __tpdsc__ Data::Win::Adodb::TConnectErrorEvent
+    @$xp$34Data@Win@Adodb@TFetchProgressEvent @490 ; __tpdsc__ Data::Win::Adodb::TFetchProgressEvent
+    @$xp$34Data@Win@Adodb@TParameterAttribute @517 ; __tpdsc__ Data::Win::Adodb::TParameterAttribute
+    @$xp$34Data@Win@Adodb@TParameterDirection @515 ; __tpdsc__ Data::Win::Adodb::TParameterDirection
+    @$xp$35Data@Win@Adodb@TEndOfRecordsetEvent @491 ; __tpdsc__ Data::Win::Adodb::TEndOfRecordsetEvent
+    @$xp$35Data@Win@Adodb@TParameterAttributes @516 ; __tpdsc__ Data::Win::Adodb::TParameterAttributes
+    @$xp$35Data@Win@Adodb@TRecordsetErrorEvent @489 ; __tpdsc__ Data::Win::Adodb::TRecordsetErrorEvent
+    @$xp$36Data@Win@Adodb@TExecuteCompleteEvent @525 ; __tpdsc__ Data::Win::Adodb::TExecuteCompleteEvent
+    @$xp$36Data@Win@Adodb@TRecordsetReasonEvent @488 ; __tpdsc__ Data::Win::Adodb::TRecordsetReasonEvent
+    @$xp$36Data@Win@Adodb@TWillChangeFieldEvent @495 ; __tpdsc__ Data::Win::Adodb::TWillChangeFieldEvent
+    @$xp$36System@%TArray__1$p14Data@Db@TField% @473 ; __tpdsc__ System::TArray__1<Data::Db::TField *>
+    @$xp$37Data@Win@Adodb@TWillChangeRecordEvent @493 ; __tpdsc__ Data::Win::Adodb::TWillChangeRecordEvent
+    @$xp$39Data@Win@Adodb@TBeginTransCompleteEvent @529 ; __tpdsc__ Data::Win::Adodb::TBeginTransCompleteEvent
+    @$xp$40Data@Win@Adodb@TFieldChangeCompleteEvent @494 ; __tpdsc__ Data::Win::Adodb::TFieldChangeCompleteEvent
+    @$xp$41Data@Win@Adodb@TRecordChangeCompleteEvent @492 ; __tpdsc__ Data::Win::Adodb::TRecordChangeCompleteEvent
+    @$xp$41System@%IEnumerable__1$p14Data@Db@TField% @462 ; __tpdsc__ System::IEnumerable__1<Data::Db::TField *>
+    @$xp$41System@%IEnumerator__1$p14Data@Db@TField% @463 ; __tpdsc__ System::IEnumerator__1<Data::Db::TField *>
+    @$xp$56System@Generics@Collections@%TList__1$p14Data@Db@TField% @457 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Db::TField *>
+    @$xp$57System@Generics@Defaults@%IComparer__1$p14Data@Db@TField% @467 ; __tpdsc__ System::Generics::Defaults::IComparer__1<Data::Db::TField *>
+    @$xp$62System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField% @469 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<Data::Db::TField *>
+    @$xp$62System@Generics@Collections@%TEnumerator__1$p14Data@Db@TField% @471 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<Data::Db::TField *>
+    @$xp$64System@Generics@Collections@%TArrayManager__1$p14Data@Db@TField% @464 ; __tpdsc__ System::Generics::Collections::TArrayManager__1<Data::Db::TField *>
+    @$xp$68System@Generics@Collections@%TList__1$p14Data@Db@TField%@%arrayofT$% @468 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Db::TField *>::arrayofT<>
+    @$xp$70System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEmptyFunc$% @461 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Db::TField *>::TEmptyFunc<>
+    @$xp$71System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEnumerator$% @459 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Db::TField *>::TEnumerator<>
+    @$xp$73System@Generics@Collections@%TCollectionNotifyEvent__1$p14Data@Db@TField% @466 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<Data::Db::TField *>
+    @Adortl@@GetPackageInfoTable$qqrv @549 ; Adortl::__linkproc__ __fastcall GetPackageInfoTable()
+    @Adortl@@PackageLoad$qqrv      @548 ; Adortl::__linkproc__ __fastcall PackageLoad()
+    @Adortl@@PackageUnload$qqrv    @547 ; Adortl::__linkproc__ __fastcall PackageUnload()
+    @Adortl@initialization$qqrv    @546 ; __fastcall Adortl::initialization()
+    @Data@Win@Adoconst@Finalization$qqrv @2   ; __fastcall Data::Win::Adoconst::Finalization()
+    @Data@Win@Adoconst@_SADOCreateError @12  ; Data::Win::Adoconst::_SADOCreateError
+    @Data@Win@Adoconst@_SBookmarksRequired @15  ; Data::Win::Adoconst::_SBookmarksRequired
+    @Data@Win@Adoconst@_SCantRequery @7   ; Data::Win::Adoconst::_SCantRequery
+    @Data@Win@Adoconst@_SConnectionRequired @8   ; Data::Win::Adoconst::_SConnectionRequired
+    @Data@Win@Adoconst@_SEventsNotSupported @11  ; Data::Win::Adoconst::_SEventsNotSupported
+    @Data@Win@Adoconst@_SInvalidEnumValue @18  ; Data::Win::Adoconst::_SInvalidEnumValue
+    @Data@Win@Adoconst@_SMissingCommandText @14  ; Data::Win::Adoconst::_SMissingCommandText
+    @Data@Win@Adoconst@_SMissingConnection @17  ; Data::Win::Adoconst::_SMissingConnection
+    @Data@Win@Adoconst@_SNoDetailFilter @16  ; Data::Win::Adoconst::_SNoDetailFilter
+    @Data@Win@Adoconst@_SNoFilterOptions @6   ; Data::Win::Adoconst::_SNoFilterOptions
+    @Data@Win@Adoconst@_SNoMatchingADOType @9   ; Data::Win::Adoconst::_SNoMatchingADOType
+    @Data@Win@Adoconst@_SNoResultSet @13  ; Data::Win::Adoconst::_SNoResultSet
+    @Data@Win@Adoconst@_SRecordsetNotOpen @5   ; Data::Win::Adoconst::_SRecordsetNotOpen
+    @Data@Win@Adoconst@_SUsupportedFieldType @10  ; Data::Win::Adoconst::_SUsupportedFieldType
+    @Data@Win@Adoconst@_sNameAttr  @4   ; Data::Win::Adoconst::_sNameAttr
+    @Data@Win@Adoconst@_sValueAttr @3   ; Data::Win::Adoconst::_sValueAttr
+    @Data@Win@Adoconst@initialization$qqrv @1   ; __fastcall Data::Win::Adoconst::initialization()
+    @Data@Win@Adodb@CreateUDLFile$qqrx17System@WideStringt1t1 @455 ; __fastcall Data::Win::Adodb::CreateUDLFile(const System::WideString, const System::WideString, const System::WideString)
+    @Data@Win@Adodb@DataLinkDir$qqrv @451 ; __fastcall Data::Win::Adodb::DataLinkDir()
+    @Data@Win@Adodb@EADOError@     @545 ; Data::Win::Adodb::EADOError::
+    @Data@Win@Adodb@Finalization$qqrv @81  ; __fastcall Data::Win::Adodb::Finalization()
+    @Data@Win@Adodb@GetDataLinkFiles$qqrp23System@Classes@TStrings20System@UnicodeString @450 ; __fastcall Data::Win::Adodb::GetDataLinkFiles(System::Classes::TStrings *, System::UnicodeString)
+    @Data@Win@Adodb@GetProviderNames$qqrp23System@Classes@TStrings @454 ; __fastcall Data::Win::Adodb::GetProviderNames(System::Classes::TStrings *)
+    @Data@Win@Adodb@PromptDataLinkFile$qqrui17System@WideString @452 ; __fastcall Data::Win::Adodb::PromptDataLinkFile(unsigned int, System::WideString)
+    @Data@Win@Adodb@PromptDataSource$qqrui17System@WideString @453 ; __fastcall Data::Win::Adodb::PromptDataSource(unsigned int, System::WideString)
+    @Data@Win@Adodb@TADOBlobStream@ @475 ; Data::Win::Adodb::TADOBlobStream::
+    @Data@Win@Adodb@TADOBlobStream@$bctr$qqrp18Data@Db@TBlobField23Data@Db@TBlobStreamMode @87  ; __fastcall Data::Win::Adodb::TADOBlobStream::TADOBlobStream(Data::Db::TBlobField *, Data::Db::TBlobStreamMode)
+    @Data@Win@Adodb@TADOBlobStream@$bdtr$qqrv @86  ; __fastcall Data::Win::Adodb::TADOBlobStream::~TADOBlobStream()
+    @Data@Win@Adodb@TADOBlobStream@ReadBlobData$qqrv @85  ; __fastcall Data::Win::Adodb::TADOBlobStream::ReadBlobData()
+    @Data@Win@Adodb@TADOBlobStream@Realloc$qqrri @84  ; __fastcall Data::Win::Adodb::TADOBlobStream::Realloc(int&)
+    @Data@Win@Adodb@TADOBlobStream@Truncate$qqrv @82  ; __fastcall Data::Win::Adodb::TADOBlobStream::Truncate()
+    @Data@Win@Adodb@TADOBlobStream@Write$qqrpxvi @83  ; __fastcall Data::Win::Adodb::TADOBlobStream::Write(const void *, int)
+    @Data@Win@Adodb@TADOCommand@   @509 ; Data::Win::Adodb::TADOCommand::
+    @Data@Win@Adodb@TADOCommand@$bctr$qqrp25System@Classes@TComponent @326 ; __fastcall Data::Win::Adodb::TADOCommand::TADOCommand(System::Classes::TComponent *)
+    @Data@Win@Adodb@TADOCommand@$bdtr$qqrv @325 ; __fastcall Data::Win::Adodb::TADOCommand::~TADOCommand()
+    @Data@Win@Adodb@TADOCommand@Assign$qqrp26System@Classes@TPersistent @324 ; __fastcall Data::Win::Adodb::TADOCommand::Assign(System::Classes::TPersistent *)
+    @Data@Win@Adodb@TADOCommand@AssignCommandText$qqrx17System@WideStringo @313 ; __fastcall Data::Win::Adodb::TADOCommand::AssignCommandText(const System::WideString, bool)
+    @Data@Win@Adodb@TADOCommand@Cancel$qqrv @323 ; __fastcall Data::Win::Adodb::TADOCommand::Cancel()
+    @Data@Win@Adodb@TADOCommand@CheckCommandText$qqrv @322 ; __fastcall Data::Win::Adodb::TADOCommand::CheckCommandText()
+    @Data@Win@Adodb@TADOCommand@ClearActiveConnection$qqrv @307 ; __fastcall Data::Win::Adodb::TADOCommand::ClearActiveConnection()
+    @Data@Win@Adodb@TADOCommand@ComponentLoading$qqrv @319 ; __fastcall Data::Win::Adodb::TADOCommand::ComponentLoading()
+    @Data@Win@Adodb@TADOCommand@ConnectionStateChange$qqrp14System@TObjecto @306 ; __fastcall Data::Win::Adodb::TADOCommand::ConnectionStateChange(System::TObject *, bool)
+    @Data@Win@Adodb@TADOCommand@Execute$qqrrirx17System@OleVariant @316 ; __fastcall Data::Win::Adodb::TADOCommand::Execute(int&, const System::OleVariant&)
+    @Data@Win@Adodb@TADOCommand@Execute$qqrrx17System@OleVariant @317 ; __fastcall Data::Win::Adodb::TADOCommand::Execute(const System::OleVariant&)
+    @Data@Win@Adodb@TADOCommand@Execute$qqrv @318 ; __fastcall Data::Win::Adodb::TADOCommand::Execute()
+    @Data@Win@Adodb@TADOCommand@GetActiveConnection$qqrv @314 ; __fastcall Data::Win::Adodb::TADOCommand::GetActiveConnection()
+    @Data@Win@Adodb@TADOCommand@GetCommandTimeOut$qqrv @311 ; __fastcall Data::Win::Adodb::TADOCommand::GetCommandTimeOut()
+    @Data@Win@Adodb@TADOCommand@GetCommandType$qqrv @309 ; __fastcall Data::Win::Adodb::TADOCommand::GetCommandType()
+    @Data@Win@Adodb@TADOCommand@GetPrepared$qqrv @302 ; __fastcall Data::Win::Adodb::TADOCommand::GetPrepared()
+    @Data@Win@Adodb@TADOCommand@GetProperties$qqrv @299 ; __fastcall Data::Win::Adodb::TADOCommand::GetProperties()
+    @Data@Win@Adodb@TADOCommand@GetState$qqrv @300 ; __fastcall Data::Win::Adodb::TADOCommand::GetState()
+    @Data@Win@Adodb@TADOCommand@Initialize$qqro @315 ; __fastcall Data::Win::Adodb::TADOCommand::Initialize(bool)
+    @Data@Win@Adodb@TADOCommand@OpenConnection$qqrv @320 ; __fastcall Data::Win::Adodb::TADOCommand::OpenConnection()
+    @Data@Win@Adodb@TADOCommand@SetComandType$qqrx27Data@Win@Adodb@TCommandType @308 ; __fastcall Data::Win::Adodb::TADOCommand::SetComandType(const Data::Win::Adodb::TCommandType)
+    @Data@Win@Adodb@TADOCommand@SetCommandText$qqrx17System@WideString @312 ; __fastcall Data::Win::Adodb::TADOCommand::SetCommandText(const System::WideString)
+    @Data@Win@Adodb@TADOCommand@SetCommandTimeOut$qqrxi @310 ; __fastcall Data::Win::Adodb::TADOCommand::SetCommandTimeOut(const int)
+    @Data@Win@Adodb@TADOCommand@SetConnection$qqrxp29Data@Win@Adodb@TADOConnection @305 ; __fastcall Data::Win::Adodb::TADOCommand::SetConnection(Data::Win::Adodb::TADOConnection * const)
+    @Data@Win@Adodb@TADOCommand@SetConnectionFlag$qqrio @321 ; __fastcall Data::Win::Adodb::TADOCommand::SetConnectionFlag(int, bool)
+    @Data@Win@Adodb@TADOCommand@SetConnectionString$qqrx17System@WideString @304 ; __fastcall Data::Win::Adodb::TADOCommand::SetConnectionString(const System::WideString)
+    @Data@Win@Adodb@TADOCommand@SetParameters$qqrxp26Data@Win@Adodb@TParameters @303 ; __fastcall Data::Win::Adodb::TADOCommand::SetParameters(Data::Win::Adodb::TParameters * const)
+    @Data@Win@Adodb@TADOCommand@SetPrepared$qqrxus @301 ; __fastcall Data::Win::Adodb::TADOCommand::SetPrepared(const unsigned short)
+    @Data@Win@Adodb@TADOConnection@ @521 ; Data::Win::Adodb::TADOConnection::
+    @Data@Win@Adodb@TADOConnection@$bctr$qqrp25System@Classes@TComponent @449 ; __fastcall Data::Win::Adodb::TADOConnection::TADOConnection(System::Classes::TComponent *)
+    @Data@Win@Adodb@TADOConnection@$bdtr$qqrv @448 ; __fastcall Data::Win::Adodb::TADOConnection::~TADOConnection()
+    @Data@Win@Adodb@TADOConnection@BeginTrans$qqrv @443 ; __fastcall Data::Win::Adodb::TADOConnection::BeginTrans()
+    @Data@Win@Adodb@TADOConnection@BeginTransComplete$qqsix46System@%DelphiInterface$19Winapi@Adoint@Error%ruix52System@%DelphiInterface$25Winapi@Adoint@_Connection% @427 ; Data::Win::Adodb::TADOConnection::BeginTransComplete(int, const System::DelphiInterface<{583}...
+    @Data@Win@Adodb@TADOConnection@Cancel$qqrv @440 ; __fastcall Data::Win::Adodb::TADOConnection::Cancel()
+    @Data@Win@Adodb@TADOConnection@CheckActive$qqrv @446 ; __fastcall Data::Win::Adodb::TADOConnection::CheckActive()
+    @Data@Win@Adodb@TADOConnection@CheckDisconnect$qqrv @436 ; __fastcall Data::Win::Adodb::TADOConnection::CheckDisconnect()
+    @Data@Win@Adodb@TADOConnection@CheckInactive$qqrv @445 ; __fastcall Data::Win::Adodb::TADOConnection::CheckInactive()
+    @Data@Win@Adodb@TADOConnection@ClearRefs$qqrv @444 ; __fastcall Data::Win::Adodb::TADOConnection::ClearRefs()
+    @Data@Win@Adodb@TADOConnection@CommitTrans$qqrv @442 ; __fastcall Data::Win::Adodb::TADOConnection::CommitTrans()
+    @Data@Win@Adodb@TADOConnection@CommitTransComplete$qqsx46System@%DelphiInterface$19Winapi@Adoint@Error%ruix52System@%DelphiInterface$25Winapi@Adoint@_Connection% @426 ; Data::Win::Adodb::TADOConnection::CommitTransComplete(const System::DelphiInterface<{583}...
+    @Data@Win@Adodb@TADOConnection@ConnectComplete$qqsx46System@%DelphiInterface$19Winapi@Adoint@Error%ruix52System@%DelphiInterface$25Winapi@Adoint@_Connection% @425 ; Data::Win::Adodb::TADOConnection::ConnectComplete(const System::DelphiInterface<{583}...
+    @Data@Win@Adodb@TADOConnection@ConnectionPoint$qqrv @428 ; __fastcall Data::Win::Adodb::TADOConnection::ConnectionPoint()
+    @Data@Win@Adodb@TADOConnection@Disconnect$qqsruix52System@%DelphiInterface$25Winapi@Adoint@_Connection% @424 ; Data::Win::Adodb::TADOConnection::Disconnect(unsigned int&, const System::DelphiInterface<{583}...
+    @Data@Win@Adodb@TADOConnection@DoConnect$qqrv @438 ; __fastcall Data::Win::Adodb::TADOConnection::DoConnect()
+    @Data@Win@Adodb@TADOConnection@DoDisconnect$qqrv @437 ; __fastcall Data::Win::Adodb::TADOConnection::DoDisconnect()
+    @Data@Win@Adodb@TADOConnection@Execute$qqrx17System@WideStringrix56System@%Set$29Data@Win@Adodb@TExecuteOptiont1$i0$t1$i3$% @435 ; Data::Win::Adodb::TADOConnection::Execute(const System::WideString, int&, const System::Set<{583}...
+    @Data@Win@Adodb@TADOConnection@Execute$qqrx17System@WideStringx27Data@Win@Adodb@TCommandTypex56System@%Set$29Data@Win@Adodb@TExecuteOptiont1$i0$t1$i3$% @434 ; Data::Win::Adodb::TADOConnection::Execute(const System::WideString, const Data::Win::Adodb::TCommandType, const System::Set<{583}...
+    @Data@Win@Adodb@TADOConnection@ExecuteComplete$qqsix46System@%DelphiInterface$19Winapi@Adoint@Error%ruix49System@%DelphiInterface$22Winapi@Adoint@_Command%x51System@%DelphiInterface$24Winapi@Adoint@_Recordset%x52System@%DelphiInterd4WCU8P6V+YMk1XEx/lHrw @423 ; Data::Win::Adodb::TADOConnection::ExecuteComplete(int, const System::DelphiInterface<{583}...
+    @Data@Win@Adodb@TADOConnection@GetADODataSet$qqri @401 ; __fastcall Data::Win::Adodb::TADOConnection::GetADODataSet(int)
+    @Data@Win@Adodb@TADOConnection@GetAttributes$qqrv @418 ; __fastcall Data::Win::Adodb::TADOConnection::GetAttributes()
+    @Data@Win@Adodb@TADOConnection@GetCommand$qqri @403 ; __fastcall Data::Win::Adodb::TADOConnection::GetCommand(int)
+    @Data@Win@Adodb@TADOConnection@GetCommandCount$qqrv @402 ; __fastcall Data::Win::Adodb::TADOConnection::GetCommandCount()
+    @Data@Win@Adodb@TADOConnection@GetCommandTimeout$qqrv @416 ; __fastcall Data::Win::Adodb::TADOConnection::GetCommandTimeout()
+    @Data@Win@Adodb@TADOConnection@GetConnected$qqrv @414 ; __fastcall Data::Win::Adodb::TADOConnection::GetConnected()
+    @Data@Win@Adodb@TADOConnection@GetConnectionString$qqrv @412 ; __fastcall Data::Win::Adodb::TADOConnection::GetConnectionString()
+    @Data@Win@Adodb@TADOConnection@GetConnectionTimeout$qqrv @410 ; __fastcall Data::Win::Adodb::TADOConnection::GetConnectionTimeout()
+    @Data@Win@Adodb@TADOConnection@GetCursorLocation$qqrv @407 ; __fastcall Data::Win::Adodb::TADOConnection::GetCursorLocation()
+    @Data@Win@Adodb@TADOConnection@GetDefaultDatabase$qqrv @399 ; __fastcall Data::Win::Adodb::TADOConnection::GetDefaultDatabase()
+    @Data@Win@Adodb@TADOConnection@GetErrors$qqrv @397 ; __fastcall Data::Win::Adodb::TADOConnection::GetErrors()
+    @Data@Win@Adodb@TADOConnection@GetFieldNames$qqrx20System@UnicodeStringp23System@Classes@TStrings @430 ; __fastcall Data::Win::Adodb::TADOConnection::GetFieldNames(const System::UnicodeString, System::Classes::TStrings *)
+    @Data@Win@Adodb@TADOConnection@GetInTransaction$qqrv @396 ; __fastcall Data::Win::Adodb::TADOConnection::GetInTransaction()
+    @Data@Win@Adodb@TADOConnection@GetIsolationLevel$qqrv @395 ; __fastcall Data::Win::Adodb::TADOConnection::GetIsolationLevel()
+    @Data@Win@Adodb@TADOConnection@GetMode$qqrv @393 ; __fastcall Data::Win::Adodb::TADOConnection::GetMode()
+    @Data@Win@Adodb@TADOConnection@GetProcedureNames$qqrp23System@Classes@TStrings @431 ; __fastcall Data::Win::Adodb::TADOConnection::GetProcedureNames(System::Classes::TStrings *)
+    @Data@Win@Adodb@TADOConnection@GetProperties$qqrv @391 ; __fastcall Data::Win::Adodb::TADOConnection::GetProperties()
+    @Data@Win@Adodb@TADOConnection@GetProvider$qqrv @390 ; __fastcall Data::Win::Adodb::TADOConnection::GetProvider()
+    @Data@Win@Adodb@TADOConnection@GetState$qqrv @387 ; __fastcall Data::Win::Adodb::TADOConnection::GetState()
+    @Data@Win@Adodb@TADOConnection@GetTableNames$qqrp23System@Classes@TStringso @429 ; __fastcall Data::Win::Adodb::TADOConnection::GetTableNames(System::Classes::TStrings *, bool)
+    @Data@Win@Adodb@TADOConnection@GetVersion$qqrv @386 ; __fastcall Data::Win::Adodb::TADOConnection::GetVersion()
+    @Data@Win@Adodb@TADOConnection@InfoMessage$qqsx46System@%DelphiInterface$19Winapi@Adoint@Error%ruix52System@%DelphiInterface$25Winapi@Adoint@_Connection% @422 ; Data::Win::Adodb::TADOConnection::InfoMessage(const System::DelphiInterface<{583}...
+    @Data@Win@Adodb@TADOConnection@IsDefaultDatabaseStored$qqrv @400 ; __fastcall Data::Win::Adodb::TADOConnection::IsDefaultDatabaseStored()
+    @Data@Win@Adodb@TADOConnection@IsProviderStored$qqrv @388 ; __fastcall Data::Win::Adodb::TADOConnection::IsProviderStored()
+    @Data@Win@Adodb@TADOConnection@Loaded$qqrv @447 ; __fastcall Data::Win::Adodb::TADOConnection::Loaded()
+    @Data@Win@Adodb@TADOConnection@Open$qqrx17System@WideStringt1 @433 ; __fastcall Data::Win::Adodb::TADOConnection::Open(const System::WideString, const System::WideString)
+    @Data@Win@Adodb@TADOConnection@OpenSchema$qqrx26Data@Win@Adodb@TSchemaInforx17System@OleVariantt2p26Data@Win@Adodb@TADODataSet @432 ; __fastcall Data::Win::Adodb::TADOConnection::OpenSchema(const Data::Win::Adodb::TSchemaInfo, const System::OleVariant&, const System::OleVariant&, Data::Win::Adodb::TADODataSet *)
+    @Data@Win@Adodb@TADOConnection@RegisterClient$qqrp14System@TObjectynpqqrp14System@TObjecto$v @405 ; __fastcall Data::Win::Adodb::TADOConnection::RegisterClient(System::TObject *, void __fastcall __closure(*)(System::TObject *, bool))
+    @Data@Win@Adodb@TADOConnection@RollbackTrans$qqrv @441 ; __fastcall Data::Win::Adodb::TADOConnection::RollbackTrans()
+    @Data@Win@Adodb@TADOConnection@RollbackTransComplete$qqsx46System@%DelphiInterface$19Winapi@Adoint@Error%ruix52System@%DelphiInterface$25Winapi@Adoint@_Connection% @421 ; Data::Win::Adodb::TADOConnection::RollbackTransComplete(const System::DelphiInterface<{583}...
+    @Data@Win@Adodb@TADOConnection@SetAttributes$qqrx56System@%Set$29Data@Win@Adodb@TXactAttributet1$i0$t1$i1$% @417 ; Data::Win::Adodb::TADOConnection::SetAttributes(const System::Set<{583}...
+    @Data@Win@Adodb@TADOConnection@SetCommandTimeout$qqrxi @415 ; __fastcall Data::Win::Adodb::TADOConnection::SetCommandTimeout(const int)
+    @Data@Win@Adodb@TADOConnection@SetConnectOptions$qqrx29Data@Win@Adodb@TConnectOption @408 ; __fastcall Data::Win::Adodb::TADOConnection::SetConnectOptions(const Data::Win::Adodb::TConnectOption)
+    @Data@Win@Adodb@TADOConnection@SetConnectionObject$qqrx52System@%DelphiInterface$25Winapi@Adoint@_Connection% @413 ; Data::Win::Adodb::TADOConnection::SetConnectionObject(const System::DelphiInterface<{583}...
+    @Data@Win@Adodb@TADOConnection@SetConnectionString$qqrx17System@WideString @411 ; __fastcall Data::Win::Adodb::TADOConnection::SetConnectionString(const System::WideString)
+    @Data@Win@Adodb@TADOConnection@SetConnectionTimeout$qqrxi @409 ; __fastcall Data::Win::Adodb::TADOConnection::SetConnectionTimeout(const int)
+    @Data@Win@Adodb@TADOConnection@SetCursorLocation$qqrx30Data@Win@Adodb@TCursorLocation @406 ; __fastcall Data::Win::Adodb::TADOConnection::SetCursorLocation(const Data::Win::Adodb::TCursorLocation)
+    @Data@Win@Adodb@TADOConnection@SetDefaultDatabase$qqrx17System@WideString @398 ; __fastcall Data::Win::Adodb::TADOConnection::SetDefaultDatabase(const System::WideString)
+    @Data@Win@Adodb@TADOConnection@SetIsolationLevel$qqrx30Data@Win@Adodb@TIsolationLevel @394 ; __fastcall Data::Win::Adodb::TADOConnection::SetIsolationLevel(const Data::Win::Adodb::TIsolationLevel)
+    @Data@Win@Adodb@TADOConnection@SetKeepConnection$qqrxo @385 ; __fastcall Data::Win::Adodb::TADOConnection::SetKeepConnection(const bool)
+    @Data@Win@Adodb@TADOConnection@SetMode$qqrx27Data@Win@Adodb@TConnectMode @392 ; __fastcall Data::Win::Adodb::TADOConnection::SetMode(const Data::Win::Adodb::TConnectMode)
+    @Data@Win@Adodb@TADOConnection@SetProvider$qqrx17System@WideString @389 ; __fastcall Data::Win::Adodb::TADOConnection::SetProvider(const System::WideString)
+    @Data@Win@Adodb@TADOConnection@UnRegisterClient$qqrp14System@TObject @404 ; __fastcall Data::Win::Adodb::TADOConnection::UnRegisterClient(System::TObject *)
+    @Data@Win@Adodb@TADOConnection@WaitForConnectComplete$qqrv @439 ; __fastcall Data::Win::Adodb::TADOConnection::WaitForConnectComplete()
+    @Data@Win@Adodb@TADOConnection@WillConnect$qqsr17System@WideStringt1t1riruix52System@%DelphiInterface$25Winapi@Adoint@_Connection% @420 ; Data::Win::Adodb::TADOConnection::WillConnect(System::WideString&, System::WideString&, System::WideString&, int&, unsigned int&, const System::DelphiInterface<{583}...
+    @Data@Win@Adodb@TADOConnection@WillExecute$qqsr17System@WideStringruit2rit2x49System@%DelphiInterface$22Winapi@Adoint@_Command%x51System@%DelphiInterface$24Winapi@Adoint@_Recordset%x52System@%DelphiInterface$25Winapi@Adoint@_Connection% @419 ; Data::Win::Adodb::TADOConnection::WillExecute(System::WideString&, unsigned int&, unsigned int&, int&, unsigned int&, const System::DelphiInterface<{583}...
+    @Data@Win@Adodb@TADODataSet@   @483 ; Data::Win::Adodb::TADODataSet::
+    @Data@Win@Adodb@TADODataSet@CreateDataSet$qqrv @108 ; __fastcall Data::Win::Adodb::TADODataSet::CreateDataSet()
+    @Data@Win@Adodb@TADODataSet@DataEvent$qqr18Data@Db@TDataEventi @107 ; __fastcall Data::Win::Adodb::TADODataSet::DataEvent(Data::Db::TDataEvent, int)
+    @Data@Win@Adodb@TADODataSet@GetIndexNames$qqrp23System@Classes@TStrings @106 ; __fastcall Data::Win::Adodb::TADODataSet::GetIndexNames(System::Classes::TStrings *)
+    @Data@Win@Adodb@TADODataSet@OpenCursor$qqro @105 ; __fastcall Data::Win::Adodb::TADODataSet::OpenCursor(bool)
+    @Data@Win@Adodb@TADODataSet@SetConnection$qqrxp29Data@Win@Adodb@TADOConnection @104 ; __fastcall Data::Win::Adodb::TADODataSet::SetConnection(Data::Win::Adodb::TADOConnection * const)
+    @Data@Win@Adodb@TADODataSet@SetDataSetField$qqrxp21Data@Db@TDataSetField @102 ; __fastcall Data::Win::Adodb::TADODataSet::SetDataSetField(Data::Db::TDataSetField * const)
+    @Data@Win@Adodb@TADODataSet@SetRDSConnection$qqrp29Data@Win@Adodb@TRDSConnection @103 ; __fastcall Data::Win::Adodb::TADODataSet::SetRDSConnection(Data::Win::Adodb::TRDSConnection *)
+    @Data@Win@Adodb@TADOQuery@     @479 ; Data::Win::Adodb::TADOQuery::
+    @Data@Win@Adodb@TADOQuery@$bctr$qqrp25System@Classes@TComponent @95  ; __fastcall Data::Win::Adodb::TADOQuery::TADOQuery(System::Classes::TComponent *)
+    @Data@Win@Adodb@TADOQuery@$bdtr$qqrv @94  ; __fastcall Data::Win::Adodb::TADOQuery::~TADOQuery()
+    @Data@Win@Adodb@TADOQuery@ExecSQL$qqrv @93  ; __fastcall Data::Win::Adodb::TADOQuery::ExecSQL()
+    @Data@Win@Adodb@TADOQuery@GetSQL$qqrv @91  ; __fastcall Data::Win::Adodb::TADOQuery::GetSQL()
+    @Data@Win@Adodb@TADOQuery@QueryChanged$qqrp14System@TObject @92  ; __fastcall Data::Win::Adodb::TADOQuery::QueryChanged(System::TObject *)
+    @Data@Win@Adodb@TADOQuery@SetSQL$qqrxp23System@Classes@TStrings @90  ; __fastcall Data::Win::Adodb::TADOQuery::SetSQL(System::Classes::TStrings * const)
+    @Data@Win@Adodb@TADOStoredProc@ @477 ; Data::Win::Adodb::TADOStoredProc::
+    @Data@Win@Adodb@TADOStoredProc@$bctr$qqrp25System@Classes@TComponent @89  ; __fastcall Data::Win::Adodb::TADOStoredProc::TADOStoredProc(System::Classes::TComponent *)
+    @Data@Win@Adodb@TADOStoredProc@ExecProc$qqrv @88  ; __fastcall Data::Win::Adodb::TADOStoredProc::ExecProc()
+    @Data@Win@Adodb@TADOTable@     @481 ; Data::Win::Adodb::TADOTable::
+    @Data@Win@Adodb@TADOTable@$bctr$qqrp25System@Classes@TComponent @101 ; __fastcall Data::Win::Adodb::TADOTable::TADOTable(System::Classes::TComponent *)
+    @Data@Win@Adodb@TADOTable@GetIndexNames$qqrp23System@Classes@TStrings @96  ; __fastcall Data::Win::Adodb::TADOTable::GetIndexNames(System::Classes::TStrings *)
+    @Data@Win@Adodb@TADOTable@GetReadOnly$qqrv @100 ; __fastcall Data::Win::Adodb::TADOTable::GetReadOnly()
+    @Data@Win@Adodb@TADOTable@GetTableDirect$qqrv @98  ; __fastcall Data::Win::Adodb::TADOTable::GetTableDirect()
+    @Data@Win@Adodb@TADOTable@SetReadOnly$qqrxo @99  ; __fastcall Data::Win::Adodb::TADOTable::SetReadOnly(const bool)
+    @Data@Win@Adodb@TADOTable@SetTableDirect$qqrxo @97  ; __fastcall Data::Win::Adodb::TADOTable::SetTableDirect(const bool)
+    @Data@Win@Adodb@TCustomADODataSet@ @485 ; Data::Win::Adodb::TCustomADODataSet::
+    @Data@Win@Adodb@TCustomADODataSet@$bctr$qqrp25System@Classes@TComponent @298 ; __fastcall Data::Win::Adodb::TCustomADODataSet::TCustomADODataSet(System::Classes::TComponent *)
+    @Data@Win@Adodb@TCustomADODataSet@$bdtr$qqrv @297 ; __fastcall Data::Win::Adodb::TCustomADODataSet::~TCustomADODataSet()
+    @Data@Win@Adodb@TCustomADODataSet@ActivateTextFilter$qqrx20System@UnicodeString @216 ; __fastcall Data::Win::Adodb::TCustomADODataSet::ActivateTextFilter(const System::UnicodeString)
+    @Data@Win@Adodb@TCustomADODataSet@AllocRecordBuffer$qqrv @254 ; __fastcall Data::Win::Adodb::TCustomADODataSet::AllocRecordBuffer()
+    @Data@Win@Adodb@TCustomADODataSet@BookmarkValid$qqr24System@%DynamicArray$uc% @257 ; Data::Win::Adodb::TCustomADODataSet::BookmarkValid(System::DynamicArray<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@CancelBatch$qqr29Data@Win@Adodb@TAffectRecords @218 ; __fastcall Data::Win::Adodb::TCustomADODataSet::CancelBatch(Data::Win::Adodb::TAffectRecords)
+    @Data@Win@Adodb@TCustomADODataSet@CancelUpdates$qqrv @219 ; __fastcall Data::Win::Adodb::TCustomADODataSet::CancelUpdates()
+    @Data@Win@Adodb@TCustomADODataSet@CheckActive$qqrv @288 ; __fastcall Data::Win::Adodb::TCustomADODataSet::CheckActive()
+    @Data@Win@Adodb@TCustomADODataSet@CheckFieldCompatibility$qqrp14Data@Db@TFieldp17Data@Db@TFieldDef @287 ; __fastcall Data::Win::Adodb::TCustomADODataSet::CheckFieldCompatibility(Data::Db::TField *, Data::Db::TFieldDef *)
+    @Data@Win@Adodb@TCustomADODataSet@ClearCalcFields$qqrpuc @249 ; __fastcall Data::Win::Adodb::TCustomADODataSet::ClearCalcFields(unsigned char *)
+    @Data@Win@Adodb@TCustomADODataSet@Clone$qqrp32Data@Win@Adodb@TCustomADODataSet27Data@Win@Adodb@TADOLockType @278 ; __fastcall Data::Win::Adodb::TCustomADODataSet::Clone(Data::Win::Adodb::TCustomADODataSet *, Data::Win::Adodb::TADOLockType)
+    @Data@Win@Adodb@TCustomADODataSet@CompareBookmarks$qqr24System@%DynamicArray$uc%t1 @256 ; Data::Win::Adodb::TCustomADODataSet::CompareBookmarks(System::DynamicArray<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@ConnectionPoint$qqrv @200 ; __fastcall Data::Win::Adodb::TCustomADODataSet::ConnectionPoint()
+    @Data@Win@Adodb@TCustomADODataSet@CreateBlobStream$qqrp14Data@Db@TField23Data@Db@TBlobStreamMode @233 ; __fastcall Data::Win::Adodb::TCustomADODataSet::CreateBlobStream(Data::Db::TField *, Data::Db::TBlobStreamMode)
+    @Data@Win@Adodb@TCustomADODataSet@DataEvent$qqr18Data@Db@TDataEventi @276 ; __fastcall Data::Win::Adodb::TCustomADODataSet::DataEvent(Data::Db::TDataEvent, int)
+    @Data@Win@Adodb@TCustomADODataSet@DeactivateFilters$qqrv @215 ; __fastcall Data::Win::Adodb::TCustomADODataSet::DeactivateFilters()
+    @Data@Win@Adodb@TCustomADODataSet@DefChanged$qqrp14System@TObject @285 ; __fastcall Data::Win::Adodb::TCustomADODataSet::DefChanged(System::TObject *)
+    @Data@Win@Adodb@TCustomADODataSet@DefineProperties$qqrp21System@Classes@TFiler @275 ; __fastcall Data::Win::Adodb::TCustomADODataSet::DefineProperties(System::Classes::TFiler *)
+    @Data@Win@Adodb@TCustomADODataSet@DeleteRecords$qqr29Data@Win@Adodb@TAffectRecords @222 ; __fastcall Data::Win::Adodb::TCustomADODataSet::DeleteRecords(Data::Win::Adodb::TAffectRecords)
+    @Data@Win@Adodb@TCustomADODataSet@DestroyLookupCursor$qqrv @207 ; __fastcall Data::Win::Adodb::TCustomADODataSet::DestroyLookupCursor()
+    @Data@Win@Adodb@TCustomADODataSet@DoOnNewRecord$qqrv @267 ; __fastcall Data::Win::Adodb::TCustomADODataSet::DoOnNewRecord()
+    @Data@Win@Adodb@TCustomADODataSet@EnableEvents$qqrv @201 ; __fastcall Data::Win::Adodb::TCustomADODataSet::EnableEvents()
+    @Data@Win@Adodb@TCustomADODataSet@EndOfRecordset$qqsrusruix51System@%DelphiInterface$24Winapi@Adoint@_Recordset% @191 ; Data::Win::Adodb::TCustomADODataSet::EndOfRecordset(unsigned short&, unsigned int&, const System::DelphiInterface<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@FetchComplete$qqsx46System@%DelphiInterface$19Winapi@Adoint@Error%ruix51System@%DelphiInterface$24Winapi@Adoint@_Recordset% @190 ; Data::Win::Adodb::TCustomADODataSet::FetchComplete(const System::DelphiInterface<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@FetchProgress$qqsiiruix51System@%DelphiInterface$24Winapi@Adoint@_Recordset% @189 ; Data::Win::Adodb::TCustomADODataSet::FetchProgress(int, int, unsigned int&, const System::DelphiInterface<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@FieldChangeComplete$qqsix17System@OleVariantx46System@%DelphiInterface$19Winapi@Adoint@Error%ruix51System@%DelphiInterface$24Winapi@Adoint@_Recordset% @198 ; Data::Win::Adodb::TCustomADODataSet::FieldChangeComplete(int, const System::OleVariant, const System::DelphiInterface<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@FilterOnBookmarks$qqrp14System@TVarRecxi @209 ; __fastcall Data::Win::Adodb::TCustomADODataSet::FilterOnBookmarks(System::TVarRec *, const int)
+    @Data@Win@Adodb@TCustomADODataSet@FindRecord$qqroo @208 ; __fastcall Data::Win::Adodb::TCustomADODataSet::FindRecord(bool, bool)
+    @Data@Win@Adodb@TCustomADODataSet@FreeRecordBuffer$qqrrpuc @253 ; __fastcall Data::Win::Adodb::TCustomADODataSet::FreeRecordBuffer(unsigned char *&)
+    @Data@Win@Adodb@TCustomADODataSet@GetActiveRecBuf$qqrrpuc @248 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetActiveRecBuf(unsigned char *&)
+    @Data@Win@Adodb@TCustomADODataSet@GetBlobFieldData$qqrir24System@%DynamicArray$uc% @246 ; Data::Win::Adodb::TCustomADODataSet::GetBlobFieldData(int, System::DynamicArray<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@GetBookmarkData$qqrpuc24System@%DynamicArray$uc% @261 ; Data::Win::Adodb::TCustomADODataSet::GetBookmarkData(unsigned char *, System::DynamicArray<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@GetBookmarkData$qqrpucpv @260 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetBookmarkData(unsigned char *, void *)
+    @Data@Win@Adodb@TCustomADODataSet@GetBookmarkFlag$qqrpuc @263 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetBookmarkFlag(unsigned char *)
+    @Data@Win@Adodb@TCustomADODataSet@GetCacheSize$qqrv @182 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetCacheSize()
+    @Data@Win@Adodb@TCustomADODataSet@GetCanModify$qqrv @229 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetCanModify()
+    @Data@Win@Adodb@TCustomADODataSet@GetCommandText$qqrv @180 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetCommandText()
+    @Data@Win@Adodb@TCustomADODataSet@GetCommandTimeout$qqrv @178 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetCommandTimeout()
+    @Data@Win@Adodb@TCustomADODataSet@GetCommandType$qqrv @176 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetCommandType()
+    @Data@Win@Adodb@TCustomADODataSet@GetConnection$qqrv @174 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetConnection()
+    @Data@Win@Adodb@TCustomADODataSet@GetConnectionString$qqrv @172 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetConnectionString()
+    @Data@Win@Adodb@TCustomADODataSet@GetCursorLocation$qqrv @170 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetCursorLocation()
+    @Data@Win@Adodb@TCustomADODataSet@GetCursorType$qqrv @168 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetCursorType()
+    @Data@Win@Adodb@TCustomADODataSet@GetDataSource$qqrv @166 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetDataSource()
+    @Data@Win@Adodb@TCustomADODataSet@GetDetailLinkFields$qqrp20System@Classes@TListt1 @242 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetDetailLinkFields(System::Classes::TList *, System::Classes::TList *)
+    @Data@Win@Adodb@TCustomADODataSet@GetDetailLinkFields$qqrp56System@Generics@Collections@%TList__1$p14Data@Db@TField%t1 @109 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetDetailLinkFields(System::Generics::Collections::TList__1<Data::Db::TField *> *, System::Generics::Collections::TList__1<Data::Db::TField *> *)
+    @Data@Win@Adodb@TCustomADODataSet@GetExecuteOptions$qqrv @164 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetExecuteOptions()
+    @Data@Win@Adodb@TCustomADODataSet@GetFieldData$qqripv @239 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetFieldData(int, void *)
+    @Data@Win@Adodb@TCustomADODataSet@GetFieldData$qqrir24System@%DynamicArray$uc% @243 ; Data::Win::Adodb::TCustomADODataSet::GetFieldData(int, System::DynamicArray<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@GetFieldData$qqrp14Data@Db@TFieldpv @241 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetFieldData(Data::Db::TField *, void *)
+    @Data@Win@Adodb@TCustomADODataSet@GetFieldData$qqrp14Data@Db@TFieldpvo @240 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetFieldData(Data::Db::TField *, void *, bool)
+    @Data@Win@Adodb@TCustomADODataSet@GetFieldData$qqrp14Data@Db@TFieldr24System@%DynamicArray$uc% @245 ; Data::Win::Adodb::TCustomADODataSet::GetFieldData(Data::Db::TField *, System::DynamicArray<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@GetFieldData$qqrp14Data@Db@TFieldr24System@%DynamicArray$uc%o @244 ; Data::Win::Adodb::TCustomADODataSet::GetFieldData(Data::Db::TField *, System::DynamicArray<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@GetFilterGroup$qqrv @211 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetFilterGroup()
+    @Data@Win@Adodb@TCustomADODataSet@GetIndexField$qqri @139 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetIndexField(int)
+    @Data@Win@Adodb@TCustomADODataSet@GetIndexFieldCount$qqrv @137 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetIndexFieldCount()
+    @Data@Win@Adodb@TCustomADODataSet@GetIndexFieldNames$qqrv @141 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetIndexFieldNames()
+    @Data@Win@Adodb@TCustomADODataSet@GetIndexName$qqrv @135 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetIndexName()
+    @Data@Win@Adodb@TCustomADODataSet@GetLockType$qqrv @162 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetLockType()
+    @Data@Win@Adodb@TCustomADODataSet@GetMarshalOptions$qqrv @160 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetMarshalOptions()
+    @Data@Win@Adodb@TCustomADODataSet@GetMasterFields$qqrv @158 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetMasterFields()
+    @Data@Win@Adodb@TCustomADODataSet@GetMaxRecords$qqrv @156 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetMaxRecords()
+    @Data@Win@Adodb@TCustomADODataSet@GetParamCheck$qqrv @154 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetParamCheck()
+    @Data@Win@Adodb@TCustomADODataSet@GetParameters$qqrv @152 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetParameters()
+    @Data@Win@Adodb@TCustomADODataSet@GetPrepared$qqrv @150 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetPrepared()
+    @Data@Win@Adodb@TCustomADODataSet@GetProperties$qqrv @148 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetProperties()
+    @Data@Win@Adodb@TCustomADODataSet@GetRecNo$qqrv @187 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetRecNo()
+    @Data@Win@Adodb@TCustomADODataSet@GetRecord$qqrpuc16Data@Db@TGetModeo @251 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetRecord(unsigned char *, Data::Db::TGetMode, bool)
+    @Data@Win@Adodb@TCustomADODataSet@GetRecordCount$qqrv @188 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetRecordCount()
+    @Data@Win@Adodb@TCustomADODataSet@GetRecordSize$qqrv @255 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetRecordSize()
+    @Data@Win@Adodb@TCustomADODataSet@GetRecordStatus$qqrv @145 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetRecordStatus()
+    @Data@Win@Adodb@TCustomADODataSet@GetRecordsetState$qqrv @146 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetRecordsetState()
+    @Data@Win@Adodb@TCustomADODataSet@GetSort$qqrv @144 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetSort()
+    @Data@Win@Adodb@TCustomADODataSet@GetStateFieldValue$qqr21Data@Db@TDataSetStatep14Data@Db@TField @238 ; __fastcall Data::Win::Adodb::TCustomADODataSet::GetStateFieldValue(Data::Db::TDataSetState, Data::Db::TField *)
+    @Data@Win@Adodb@TCustomADODataSet@InitOleDBAccess$qqro @283 ; __fastcall Data::Win::Adodb::TCustomADODataSet::InitOleDBAccess(bool)
+    @Data@Win@Adodb@TCustomADODataSet@InternalAddRecord$qqrpuco @226 ; __fastcall Data::Win::Adodb::TCustomADODataSet::InternalAddRecord(unsigned char *, bool)
+    @Data@Win@Adodb@TCustomADODataSet@InternalAddRecord$qqrpvo @225 ; __fastcall Data::Win::Adodb::TCustomADODataSet::InternalAddRecord(void *, bool)
+    @Data@Win@Adodb@TCustomADODataSet@InternalCancel$qqrv @220 ; __fastcall Data::Win::Adodb::TCustomADODataSet::InternalCancel()
+    @Data@Win@Adodb@TCustomADODataSet@InternalClose$qqrv @292 ; __fastcall Data::Win::Adodb::TCustomADODataSet::InternalClose()
+    @Data@Win@Adodb@TCustomADODataSet@InternalDelete$qqrv @223 ; __fastcall Data::Win::Adodb::TCustomADODataSet::InternalDelete()
+    @Data@Win@Adodb@TCustomADODataSet@InternalEdit$qqrv @228 ; __fastcall Data::Win::Adodb::TCustomADODataSet::InternalEdit()
+    @Data@Win@Adodb@TCustomADODataSet@InternalFirst$qqrv @231 ; __fastcall Data::Win::Adodb::TCustomADODataSet::InternalFirst()
+    @Data@Win@Adodb@TCustomADODataSet@InternalGetRecord$qqrpuc16Data@Db@TGetModeo @252 ; __fastcall Data::Win::Adodb::TCustomADODataSet::InternalGetRecord(unsigned char *, Data::Db::TGetMode, bool)
+    @Data@Win@Adodb@TCustomADODataSet@InternalGotoBookmark$qqr24System@%DynamicArray$uc% @266 ; Data::Win::Adodb::TCustomADODataSet::InternalGotoBookmark(System::DynamicArray<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@InternalGotoBookmark$qqrpv @265 ; __fastcall Data::Win::Adodb::TCustomADODataSet::InternalGotoBookmark(void *)
+    @Data@Win@Adodb@TCustomADODataSet@InternalHandleException$qqrv @281 ; __fastcall Data::Win::Adodb::TCustomADODataSet::InternalHandleException()
+    @Data@Win@Adodb@TCustomADODataSet@InternalInitFieldDefs$qqrv @284 ; __fastcall Data::Win::Adodb::TCustomADODataSet::InternalInitFieldDefs()
+    @Data@Win@Adodb@TCustomADODataSet@InternalInitRecord$qqrpuc @250 ; __fastcall Data::Win::Adodb::TCustomADODataSet::InternalInitRecord(unsigned char *)
+    @Data@Win@Adodb@TCustomADODataSet@InternalInsert$qqrv @227 ; __fastcall Data::Win::Adodb::TCustomADODataSet::InternalInsert()
+    @Data@Win@Adodb@TCustomADODataSet@InternalLast$qqrv @230 ; __fastcall Data::Win::Adodb::TCustomADODataSet::InternalLast()
+    @Data@Win@Adodb@TCustomADODataSet@InternalOpen$qqrv @293 ; __fastcall Data::Win::Adodb::TCustomADODataSet::InternalOpen()
+    @Data@Win@Adodb@TCustomADODataSet@InternalPost$qqrv @224 ; __fastcall Data::Win::Adodb::TCustomADODataSet::InternalPost()
+    @Data@Win@Adodb@TCustomADODataSet@InternalRefresh$qqrv @291 ; __fastcall Data::Win::Adodb::TCustomADODataSet::InternalRefresh()
+    @Data@Win@Adodb@TCustomADODataSet@InternalRequery$qqr56System@%Set$29Data@Win@Adodb@TExecuteOptiont1$i0$t1$i3$% @290 ; Data::Win::Adodb::TCustomADODataSet::InternalRequery(System::Set<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@InternalSetSort$qqr17System@WideString @143 ; __fastcall Data::Win::Adodb::TCustomADODataSet::InternalSetSort(System::WideString)
+    @Data@Win@Adodb@TCustomADODataSet@InternalSetToRecord$qqrpuc @264 ; __fastcall Data::Win::Adodb::TCustomADODataSet::InternalSetToRecord(unsigned char *)
+    @Data@Win@Adodb@TCustomADODataSet@IsCursorOpen$qqrv @286 ; __fastcall Data::Win::Adodb::TCustomADODataSet::IsCursorOpen()
+    @Data@Win@Adodb@TCustomADODataSet@IsSequenced$qqrv @185 ; __fastcall Data::Win::Adodb::TCustomADODataSet::IsSequenced()
+    @Data@Win@Adodb@TCustomADODataSet@LoadFromFile$qqrx17System@WideString @280 ; __fastcall Data::Win::Adodb::TCustomADODataSet::LoadFromFile(const System::WideString)
+    @Data@Win@Adodb@TCustomADODataSet@Loaded$qqrv @296 ; __fastcall Data::Win::Adodb::TCustomADODataSet::Loaded()
+    @Data@Win@Adodb@TCustomADODataSet@Locate$qqrx20System@UnicodeStringrx14System@Variant48System@%Set$21Data@Db@TLocateOptiont1$i0$t1$i1$% @204 ; Data::Win::Adodb::TCustomADODataSet::Locate(const System::UnicodeString, const System::Variant&, System::Set<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@LocateRecord$qqrx20System@UnicodeStringrx17System@OleVariant48System@%Set$21Data@Db@TLocateOptiont1$i0$t1$i1$%o @206 ; Data::Win::Adodb::TCustomADODataSet::LocateRecord(const System::UnicodeString, const System::OleVariant&, System::Set<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@Lookup$qqrx20System@UnicodeStringrx14System@Variantt1 @205 ; __fastcall Data::Win::Adodb::TCustomADODataSet::Lookup(const System::UnicodeString, const System::Variant&, const System::UnicodeString)
+    @Data@Win@Adodb@TCustomADODataSet@MasterChanged$qqrp14System@TObject @272 ; __fastcall Data::Win::Adodb::TCustomADODataSet::MasterChanged(System::TObject *)
+    @Data@Win@Adodb@TCustomADODataSet@MasterDisabled$qqrp14System@TObject @271 ; __fastcall Data::Win::Adodb::TCustomADODataSet::MasterDisabled(System::TObject *)
+    @Data@Win@Adodb@TCustomADODataSet@MoveComplete$qqsuix46System@%DelphiInterface$19Winapi@Adoint@Error%ruix51System@%DelphiInterface$24Winapi@Adoint@_Recordset% @192 ; Data::Win::Adodb::TCustomADODataSet::MoveComplete(unsigned int, const System::DelphiInterface<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@NextRecordset$qqrri @277 ; __fastcall Data::Win::Adodb::TCustomADODataSet::NextRecordset(int&)
+    @Data@Win@Adodb@TCustomADODataSet@OpenCursor$qqro @294 ; __fastcall Data::Win::Adodb::TCustomADODataSet::OpenCursor(bool)
+    @Data@Win@Adodb@TCustomADODataSet@PSEndTransaction$qqro @121 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PSEndTransaction(bool)
+    @Data@Win@Adodb@TCustomADODataSet@PSExecute$qqrv @131 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PSExecute()
+    @Data@Win@Adodb@TCustomADODataSet@PSExecuteStatement$qqrx20System@UnicodeStringp15Data@Db@TParams @130 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PSExecuteStatement(const System::UnicodeString, Data::Db::TParams *)
+    @Data@Win@Adodb@TCustomADODataSet@PSExecuteStatement$qqrx20System@UnicodeStringp15Data@Db@TParamspv @128 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PSExecuteStatement(const System::UnicodeString, Data::Db::TParams *, void *)
+    @Data@Win@Adodb@TCustomADODataSet@PSExecuteStatement$qqrx20System@UnicodeStringp15Data@Db@TParamsrp16Data@Db@TDataSet @129 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PSExecuteStatement(const System::UnicodeString, Data::Db::TParams *, Data::Db::TDataSet *&)
+    @Data@Win@Adodb@TCustomADODataSet@PSGetAttributes$qqrp20System@Classes@TList @115 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PSGetAttributes(System::Classes::TList *)
+    @Data@Win@Adodb@TCustomADODataSet@PSGetCommandText$qqrv @111 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PSGetCommandText()
+    @Data@Win@Adodb@TCustomADODataSet@PSGetCommandType$qqrv @110 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PSGetCommandType()
+    @Data@Win@Adodb@TCustomADODataSet@PSGetDefaultOrder$qqrv @132 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PSGetDefaultOrder()
+    @Data@Win@Adodb@TCustomADODataSet@PSGetIndexDefs$qqr47System@%Set$20Data@Db@TIndexOptiont1$i0$t1$i5$% @116 ; Data::Win::Adodb::TCustomADODataSet::PSGetIndexDefs(System::Set<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@PSGetKeyFields$qqrv @127 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PSGetKeyFields()
+    @Data@Win@Adodb@TCustomADODataSet@PSGetParams$qqrv @126 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PSGetParams()
+    @Data@Win@Adodb@TCustomADODataSet@PSGetQuoteChar$qqrv @124 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PSGetQuoteChar()
+    @Data@Win@Adodb@TCustomADODataSet@PSGetTableName$qqrv @125 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PSGetTableName()
+    @Data@Win@Adodb@TCustomADODataSet@PSGetUpdateException$qqrp25System@Sysutils@Exceptionp20Data@Db@EUpdateError @114 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PSGetUpdateException(System::Sysutils::Exception *, Data::Db::EUpdateError *)
+    @Data@Win@Adodb@TCustomADODataSet@PSInTransaction$qqrv @123 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PSInTransaction()
+    @Data@Win@Adodb@TCustomADODataSet@PSIsSQLBased$qqrv @120 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PSIsSQLBased()
+    @Data@Win@Adodb@TCustomADODataSet@PSIsSQLSupported$qqrv @113 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PSIsSQLSupported()
+    @Data@Win@Adodb@TCustomADODataSet@PSReset$qqrv @119 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PSReset()
+    @Data@Win@Adodb@TCustomADODataSet@PSSetCommandText$qqrx20System@UnicodeString @118 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PSSetCommandText(const System::UnicodeString)
+    @Data@Win@Adodb@TCustomADODataSet@PSSetParams$qqrp15Data@Db@TParams @117 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PSSetParams(Data::Db::TParams *)
+    @Data@Win@Adodb@TCustomADODataSet@PSStartTransaction$qqrv @122 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PSStartTransaction()
+    @Data@Win@Adodb@TCustomADODataSet@PSUpdateRecord$qqr19Data@Db@TUpdateKindp16Data@Db@TDataSet @112 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PSUpdateRecord(Data::Db::TUpdateKind, Data::Db::TDataSet *)
+    @Data@Win@Adodb@TCustomADODataSet@PrepareCursor$qqrv @282 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PrepareCursor()
+    @Data@Win@Adodb@TCustomADODataSet@PropertyChanged$qqrv @183 ; __fastcall Data::Win::Adodb::TCustomADODataSet::PropertyChanged()
+    @Data@Win@Adodb@TCustomADODataSet@ReadDesignerData$qqrp22System@Classes@TReader @274 ; __fastcall Data::Win::Adodb::TCustomADODataSet::ReadDesignerData(System::Classes::TReader *)
+    @Data@Win@Adodb@TCustomADODataSet@RecordChangeComplete$qqsuiix46System@%DelphiInterface$19Winapi@Adoint@Error%ruix51System@%DelphiInterface$24Winapi@Adoint@_Recordset% @196 ; Data::Win::Adodb::TCustomADODataSet::RecordChangeComplete(unsigned int, int, const System::DelphiInterface<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@RecordsetChangeComplete$qqsuix46System@%DelphiInterface$19Winapi@Adoint@Error%ruix51System@%DelphiInterface$24Winapi@Adoint@_Recordset% @194 ; Data::Win::Adodb::TCustomADODataSet::RecordsetChangeComplete(unsigned int, const System::DelphiInterface<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@RefreshIndexFields$qqrv @136 ; __fastcall Data::Win::Adodb::TCustomADODataSet::RefreshIndexFields()
+    @Data@Win@Adodb@TCustomADODataSet@RefreshParams$qqrv @270 ; __fastcall Data::Win::Adodb::TCustomADODataSet::RefreshParams()
+    @Data@Win@Adodb@TCustomADODataSet@ReleaseLock$qqrv @221 ; __fastcall Data::Win::Adodb::TCustomADODataSet::ReleaseLock()
+    @Data@Win@Adodb@TCustomADODataSet@Requery$qqr56System@%Set$29Data@Win@Adodb@TExecuteOptiont1$i0$t1$i3$% @289 ; Data::Win::Adodb::TCustomADODataSet::Requery(System::Set<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@SaveToFile$qqrx17System@WideString29Data@Win@Adodb@TPersistFormat @279 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SaveToFile(const System::WideString, Data::Win::Adodb::TPersistFormat)
+    @Data@Win@Adodb@TCustomADODataSet@Seek$qqrrx14System@Variant26Data@Win@Adodb@TSeekOption @203 ; __fastcall Data::Win::Adodb::TCustomADODataSet::Seek(const System::Variant&, Data::Win::Adodb::TSeekOption)
+    @Data@Win@Adodb@TCustomADODataSet@SetBlockReadSize$qqri @232 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetBlockReadSize(int)
+    @Data@Win@Adodb@TCustomADODataSet@SetBookmarkData$qqrpuc24System@%DynamicArray$uc% @259 ; Data::Win::Adodb::TCustomADODataSet::SetBookmarkData(unsigned char *, System::DynamicArray<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@SetBookmarkData$qqrpucpv @258 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetBookmarkData(unsigned char *, void *)
+    @Data@Win@Adodb@TCustomADODataSet@SetBookmarkFlag$qqrpuc21Data@Db@TBookmarkFlag @262 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetBookmarkFlag(unsigned char *, Data::Db::TBookmarkFlag)
+    @Data@Win@Adodb@TCustomADODataSet@SetCacheSize$qqrxi @181 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetCacheSize(const int)
+    @Data@Win@Adodb@TCustomADODataSet@SetCommandText$qqrx17System@WideString @179 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetCommandText(const System::WideString)
+    @Data@Win@Adodb@TCustomADODataSet@SetCommandTimeout$qqrxi @177 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetCommandTimeout(const int)
+    @Data@Win@Adodb@TCustomADODataSet@SetCommandType$qqrx27Data@Win@Adodb@TCommandType @175 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetCommandType(const Data::Win::Adodb::TCommandType)
+    @Data@Win@Adodb@TCustomADODataSet@SetConnection$qqrxp29Data@Win@Adodb@TADOConnection @173 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetConnection(Data::Win::Adodb::TADOConnection * const)
+    @Data@Win@Adodb@TCustomADODataSet@SetConnectionFlag$qqrio @295 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetConnectionFlag(int, bool)
+    @Data@Win@Adodb@TCustomADODataSet@SetConnectionString$qqrx17System@WideString @171 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetConnectionString(const System::WideString)
+    @Data@Win@Adodb@TCustomADODataSet@SetCursorLocation$qqrx30Data@Win@Adodb@TCursorLocation @169 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetCursorLocation(const Data::Win::Adodb::TCursorLocation)
+    @Data@Win@Adodb@TCustomADODataSet@SetCursorType$qqrx26Data@Win@Adodb@TCursorType @167 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetCursorType(const Data::Win::Adodb::TCursorType)
+    @Data@Win@Adodb@TCustomADODataSet@SetDataSource$qqrxp19Data@Db@TDataSource @165 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetDataSource(Data::Db::TDataSource * const)
+    @Data@Win@Adodb@TCustomADODataSet@SetDetailFilter$qqrv @268 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetDetailFilter()
+    @Data@Win@Adodb@TCustomADODataSet@SetExecuteOptions$qqrx56System@%Set$29Data@Win@Adodb@TExecuteOptiont1$i0$t1$i3$% @163 ; Data::Win::Adodb::TCustomADODataSet::SetExecuteOptions(const System::Set<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@SetFieldData$qqrp14Data@Db@TField24System@%DynamicArray$uc% @237 ; Data::Win::Adodb::TCustomADODataSet::SetFieldData(Data::Db::TField *, System::DynamicArray<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@SetFieldData$qqrp14Data@Db@TField24System@%DynamicArray$uc%o @236 ; Data::Win::Adodb::TCustomADODataSet::SetFieldData(Data::Db::TField *, System::DynamicArray<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@SetFieldData$qqrp14Data@Db@TFieldpv @235 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetFieldData(Data::Db::TField *, void *)
+    @Data@Win@Adodb@TCustomADODataSet@SetFieldData$qqrp14Data@Db@TFieldpvo @234 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetFieldData(Data::Db::TField *, void *, bool)
+    @Data@Win@Adodb@TCustomADODataSet@SetFilterGroup$qqrx27Data@Win@Adodb@TFilterGroup @210 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetFilterGroup(const Data::Win::Adodb::TFilterGroup)
+    @Data@Win@Adodb@TCustomADODataSet@SetFilterOptions$qqr48System@%Set$21Data@Db@TFilterOptiont1$i0$t1$i1$% @214 ; Data::Win::Adodb::TCustomADODataSet::SetFilterOptions(System::Set<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@SetFilterText$qqrx20System@UnicodeString @213 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetFilterText(const System::UnicodeString)
+    @Data@Win@Adodb@TCustomADODataSet@SetFiltered$qqro @212 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetFiltered(bool)
+    @Data@Win@Adodb@TCustomADODataSet@SetIndexField$qqrixp14Data@Db@TField @138 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetIndexField(int, Data::Db::TField * const)
+    @Data@Win@Adodb@TCustomADODataSet@SetIndexFieldNames$qqrx20System@UnicodeString @140 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetIndexFieldNames(const System::UnicodeString)
+    @Data@Win@Adodb@TCustomADODataSet@SetIndexName$qqrx17System@WideString @134 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetIndexName(const System::WideString)
+    @Data@Win@Adodb@TCustomADODataSet@SetLockType$qqrx27Data@Win@Adodb@TADOLockType @161 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetLockType(const Data::Win::Adodb::TADOLockType)
+    @Data@Win@Adodb@TCustomADODataSet@SetMarshalOptions$qqrx29Data@Win@Adodb@TMarshalOption @159 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetMarshalOptions(const Data::Win::Adodb::TMarshalOption)
+    @Data@Win@Adodb@TCustomADODataSet@SetMasterFields$qqrx17System@WideString @157 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetMasterFields(const System::WideString)
+    @Data@Win@Adodb@TCustomADODataSet@SetMaxRecords$qqrxi @155 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetMaxRecords(const int)
+    @Data@Win@Adodb@TCustomADODataSet@SetParamCheck$qqrxo @153 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetParamCheck(const bool)
+    @Data@Win@Adodb@TCustomADODataSet@SetParameters$qqrxp26Data@Win@Adodb@TParameters @151 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetParameters(Data::Win::Adodb::TParameters * const)
+    @Data@Win@Adodb@TCustomADODataSet@SetParamsFromCursor$qqrv @269 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetParamsFromCursor()
+    @Data@Win@Adodb@TCustomADODataSet@SetPrepared$qqrxo @149 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetPrepared(const bool)
+    @Data@Win@Adodb@TCustomADODataSet@SetRecNo$qqri @186 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetRecNo(int)
+    @Data@Win@Adodb@TCustomADODataSet@SetRecordset$qqrx51System@%DelphiInterface$24Winapi@Adoint@_Recordset% @147 ; Data::Win::Adodb::TCustomADODataSet::SetRecordset(const System::DelphiInterface<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@SetSort$qqrx17System@WideString @142 ; __fastcall Data::Win::Adodb::TCustomADODataSet::SetSort(const System::WideString)
+    @Data@Win@Adodb@TCustomADODataSet@Supports$qqr56System@%Set$28Data@Win@Adodb@TCursorOptiont1$i0$t1$i12$% @184 ; Data::Win::Adodb::TCustomADODataSet::Supports(System::Set<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@UpdateBatch$qqr29Data@Win@Adodb@TAffectRecords @217 ; __fastcall Data::Win::Adodb::TCustomADODataSet::UpdateBatch(Data::Win::Adodb::TAffectRecords)
+    @Data@Win@Adodb@TCustomADODataSet@UpdateIndexDefs$qqrv @202 ; __fastcall Data::Win::Adodb::TCustomADODataSet::UpdateIndexDefs()
+    @Data@Win@Adodb@TCustomADODataSet@UpdateRecordSetPosition$qqrpuc @247 ; __fastcall Data::Win::Adodb::TCustomADODataSet::UpdateRecordSetPosition(unsigned char *)
+    @Data@Win@Adodb@TCustomADODataSet@UpdateStatus$qqrv @133 ; __fastcall Data::Win::Adodb::TCustomADODataSet::UpdateStatus()
+    @Data@Win@Adodb@TCustomADODataSet@WillChangeField$qqsix17System@OleVariantruix51System@%DelphiInterface$24Winapi@Adoint@_Recordset% @199 ; Data::Win::Adodb::TCustomADODataSet::WillChangeField(int, const System::OleVariant, unsigned int&, const System::DelphiInterface<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@WillChangeRecord$qqsuiiruix51System@%DelphiInterface$24Winapi@Adoint@_Recordset% @197 ; Data::Win::Adodb::TCustomADODataSet::WillChangeRecord(unsigned int, int, unsigned int&, const System::DelphiInterface<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@WillChangeRecordset$qqsuiruix51System@%DelphiInterface$24Winapi@Adoint@_Recordset% @195 ; Data::Win::Adodb::TCustomADODataSet::WillChangeRecordset(unsigned int, unsigned int&, const System::DelphiInterface<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@WillMove$qqsuiruix51System@%DelphiInterface$24Winapi@Adoint@_Recordset% @193 ; Data::Win::Adodb::TCustomADODataSet::WillMove(unsigned int, unsigned int&, const System::DelphiInterface<{583}...
+    @Data@Win@Adodb@TCustomADODataSet@WriteDesignerData$qqrp22System@Classes@TWriter @273 ; __fastcall Data::Win::Adodb::TCustomADODataSet::WriteDesignerData(System::Classes::TWriter *)
+    @Data@Win@Adodb@TParameter@    @514 ; Data::Win::Adodb::TParameter::
+    @Data@Win@Adodb@TParameter@AppendChunk$qqrrx17System@OleVariant @352 ; __fastcall Data::Win::Adodb::TParameter::AppendChunk(const System::OleVariant&)
+    @Data@Win@Adodb@TParameter@Assign$qqrp26System@Classes@TPersistent @351 ; __fastcall Data::Win::Adodb::TParameter::Assign(System::Classes::TPersistent *)
+    @Data@Win@Adodb@TParameter@AssignTo$qqrp26System@Classes@TPersistent @350 ; __fastcall Data::Win::Adodb::TParameter::AssignTo(System::Classes::TPersistent *)
+    @Data@Win@Adodb@TParameter@GetAttributes$qqrv @346 ; __fastcall Data::Win::Adodb::TParameter::GetAttributes()
+    @Data@Win@Adodb@TParameter@GetDataType$qqrv @344 ; __fastcall Data::Win::Adodb::TParameter::GetDataType()
+    @Data@Win@Adodb@TParameter@GetDisplayName$qqrv @342 ; __fastcall Data::Win::Adodb::TParameter::GetDisplayName()
+    @Data@Win@Adodb@TParameter@GetName$qqrv @341 ; __fastcall Data::Win::Adodb::TParameter::GetName()
+    @Data@Win@Adodb@TParameter@GetNumericScale$qqrv @339 ; __fastcall Data::Win::Adodb::TParameter::GetNumericScale()
+    @Data@Win@Adodb@TParameter@GetParameter$qqrv @337 ; __fastcall Data::Win::Adodb::TParameter::GetParameter()
+    @Data@Win@Adodb@TParameter@GetParameterDirection$qqrv @336 ; __fastcall Data::Win::Adodb::TParameter::GetParameterDirection()
+    @Data@Win@Adodb@TParameter@GetParameters$qqrv @334 ; __fastcall Data::Win::Adodb::TParameter::GetParameters()
+    @Data@Win@Adodb@TParameter@GetPrecision$qqrv @333 ; __fastcall Data::Win::Adodb::TParameter::GetPrecision()
+    @Data@Win@Adodb@TParameter@GetProperties$qqrv @331 ; __fastcall Data::Win::Adodb::TParameter::GetProperties()
+    @Data@Win@Adodb@TParameter@GetSize$qqrv @330 ; __fastcall Data::Win::Adodb::TParameter::GetSize()
+    @Data@Win@Adodb@TParameter@GetValue$qqrv @328 ; __fastcall Data::Win::Adodb::TParameter::GetValue()
+    @Data@Win@Adodb@TParameter@IsEqual$qqrp25Data@Win@Adodb@TParameter @347 ; __fastcall Data::Win::Adodb::TParameter::IsEqual(Data::Win::Adodb::TParameter *)
+    @Data@Win@Adodb@TParameter@LoadFromFile$qqrx20System@UnicodeString18Data@Db@TFieldType @349 ; __fastcall Data::Win::Adodb::TParameter::LoadFromFile(const System::UnicodeString, Data::Db::TFieldType)
+    @Data@Win@Adodb@TParameter@LoadFromStream$qqrp22System@Classes@TStream18Data@Db@TFieldType @348 ; __fastcall Data::Win::Adodb::TParameter::LoadFromStream(System::Classes::TStream *, Data::Db::TFieldType)
+    @Data@Win@Adodb@TParameter@SetAttributes$qqrx61System@%Set$34Data@Win@Adodb@TParameterAttributet1$i0$t1$i2$% @345 ; Data::Win::Adodb::TParameter::SetAttributes(const System::Set<{583}...
+    @Data@Win@Adodb@TParameter@SetDataType$qqrx18Data@Db@TFieldType @343 ; __fastcall Data::Win::Adodb::TParameter::SetDataType(const Data::Db::TFieldType)
+    @Data@Win@Adodb@TParameter@SetName$qqrx17System@WideString @340 ; __fastcall Data::Win::Adodb::TParameter::SetName(const System::WideString)
+    @Data@Win@Adodb@TParameter@SetNumericScale$qqrxuc @338 ; __fastcall Data::Win::Adodb::TParameter::SetNumericScale(const unsigned char)
+    @Data@Win@Adodb@TParameter@SetParameterDirection$qqrx34Data@Win@Adodb@TParameterDirection @335 ; __fastcall Data::Win::Adodb::TParameter::SetParameterDirection(const Data::Win::Adodb::TParameterDirection)
+    @Data@Win@Adodb@TParameter@SetPrecision$qqrxuc @332 ; __fastcall Data::Win::Adodb::TParameter::SetPrecision(const unsigned char)
+    @Data@Win@Adodb@TParameter@SetSize$qqrxi @329 ; __fastcall Data::Win::Adodb::TParameter::SetSize(const int)
+    @Data@Win@Adodb@TParameter@SetValue$qqrrx14System@Variant @327 ; __fastcall Data::Win::Adodb::TParameter::SetValue(const System::Variant&)
+    @Data@Win@Adodb@TParameters@   @511 ; Data::Win::Adodb::TParameters::
+    @Data@Win@Adodb@TParameters@AddParameter$qqrv @370 ; __fastcall Data::Win::Adodb::TParameters::AddParameter()
+    @Data@Win@Adodb@TParameters@AppendParameters$qqrv @369 ; __fastcall Data::Win::Adodb::TParameters::AppendParameters()
+    @Data@Win@Adodb@TParameters@AssignValues$qqrp26Data@Win@Adodb@TParameters @367 ; __fastcall Data::Win::Adodb::TParameters::AssignValues(Data::Win::Adodb::TParameters *)
+    @Data@Win@Adodb@TParameters@CreateParameter$qqrx17System@WideString18Data@Db@TFieldType34Data@Win@Adodb@TParameterDirectionirx17System@OleVariant @368 ; __fastcall Data::Win::Adodb::TParameters::CreateParameter(const System::WideString, Data::Db::TFieldType, Data::Win::Adodb::TParameterDirection, int, const System::OleVariant&)
+    @Data@Win@Adodb@TParameters@Create_Parameter$qqrx17System@WideString18Data@Db@TFieldType34Data@Win@Adodb@TParameterDirectioni @374 ; __fastcall Data::Win::Adodb::TParameters::Create_Parameter(const System::WideString, Data::Db::TFieldType, Data::Win::Adodb::TParameterDirection, int)
+    @Data@Win@Adodb@TParameters@FindParam$qqrx17System@WideString @365 ; __fastcall Data::Win::Adodb::TParameters::FindParam(const System::WideString)
+    @Data@Win@Adodb@TParameters@GetAttr$qqri @359 ; __fastcall Data::Win::Adodb::TParameters::GetAttr(int)
+    @Data@Win@Adodb@TParameters@GetAttrCount$qqrv @358 ; __fastcall Data::Win::Adodb::TParameters::GetAttrCount()
+    @Data@Win@Adodb@TParameters@GetCommand$qqrv @356 ; __fastcall Data::Win::Adodb::TParameters::GetCommand()
+    @Data@Win@Adodb@TParameters@GetItem$qqri @355 ; __fastcall Data::Win::Adodb::TParameters::GetItem(int)
+    @Data@Win@Adodb@TParameters@GetItemAttr$qqrii @357 ; __fastcall Data::Win::Adodb::TParameters::GetItemAttr(int, int)
+    @Data@Win@Adodb@TParameters@GetParamCollection$qqrv @353 ; __fastcall Data::Win::Adodb::TParameters::GetParamCollection()
+    @Data@Win@Adodb@TParameters@GetParamList$qqrp20System@Classes@TListx17System@WideString @363 ; __fastcall Data::Win::Adodb::TParameters::GetParamList(System::Classes::TList *, const System::WideString)
+    @Data@Win@Adodb@TParameters@GetParamValue$qqrx17System@WideString @362 ; __fastcall Data::Win::Adodb::TParameters::GetParamValue(const System::WideString)
+    @Data@Win@Adodb@TParameters@InternalRefresh$qqrv @372 ; __fastcall Data::Win::Adodb::TParameters::InternalRefresh()
+    @Data@Win@Adodb@TParameters@IsEqual$qqrp26Data@Win@Adodb@TParameters @366 ; __fastcall Data::Win::Adodb::TParameters::IsEqual(Data::Win::Adodb::TParameters *)
+    @Data@Win@Adodb@TParameters@ParamByName$qqrx17System@WideString @364 ; __fastcall Data::Win::Adodb::TParameters::ParamByName(const System::WideString)
+    @Data@Win@Adodb@TParameters@ParseSQL$qqrx17System@WideStringo @360 ; __fastcall Data::Win::Adodb::TParameters::ParseSQL(const System::WideString, bool)
+    @Data@Win@Adodb@TParameters@Refresh$qqrv @373 ; __fastcall Data::Win::Adodb::TParameters::Refresh()
+    @Data@Win@Adodb@TParameters@SetItem$qqrixp25Data@Win@Adodb@TParameter @354 ; __fastcall Data::Win::Adodb::TParameters::SetItem(int, Data::Win::Adodb::TParameter * const)
+    @Data@Win@Adodb@TParameters@SetParamValue$qqrx17System@WideStringrx14System@Variant @361 ; __fastcall Data::Win::Adodb::TParameters::SetParamValue(const System::WideString, const System::Variant&)
+    @Data@Win@Adodb@TParameters@Update$qqrp30System@Classes@TCollectionItem @371 ; __fastcall Data::Win::Adodb::TParameters::Update(System::Classes::TCollectionItem *)
+    @Data@Win@Adodb@TRDSConnection@ @519 ; Data::Win::Adodb::TRDSConnection::
+    @Data@Win@Adodb@TRDSConnection@$bctr$qqrp25System@Classes@TComponent @384 ; __fastcall Data::Win::Adodb::TRDSConnection::TRDSConnection(System::Classes::TComponent *)
+    @Data@Win@Adodb@TRDSConnection@$bdtr$qqrv @383 ; __fastcall Data::Win::Adodb::TRDSConnection::~TRDSConnection()
+    @Data@Win@Adodb@TRDSConnection@CheckInactive$qqrv @382 ; __fastcall Data::Win::Adodb::TRDSConnection::CheckInactive()
+    @Data@Win@Adodb@TRDSConnection@ClearRefs$qqrv @381 ; __fastcall Data::Win::Adodb::TRDSConnection::ClearRefs()
+    @Data@Win@Adodb@TRDSConnection@DoConnect$qqrv @380 ; __fastcall Data::Win::Adodb::TRDSConnection::DoConnect()
+    @Data@Win@Adodb@TRDSConnection@DoDisconnect$qqrv @379 ; __fastcall Data::Win::Adodb::TRDSConnection::DoDisconnect()
+    @Data@Win@Adodb@TRDSConnection@GetConnected$qqrv @378 ; __fastcall Data::Win::Adodb::TRDSConnection::GetConnected()
+    @Data@Win@Adodb@TRDSConnection@GetRecordset$qqrx17System@WideString17System@WideString @377 ; __fastcall Data::Win::Adodb::TRDSConnection::GetRecordset(const System::WideString, System::WideString)
+    @Data@Win@Adodb@TRDSConnection@SetComputerName$qqrx17System@WideString @376 ; __fastcall Data::Win::Adodb::TRDSConnection::SetComputerName(const System::WideString)
+    @Data@Win@Adodb@TRDSConnection@SetServerName$qqrx17System@WideString @375 ; __fastcall Data::Win::Adodb::TRDSConnection::SetServerName(const System::WideString)
+    @Data@Win@Adodb@initialization$qqrv @80  ; __fastcall Data::Win::Adodb::initialization()
+    @GetPackageInfoTable           @552 ; GetPackageInfoTable
+    @System@Generics@Collections@%TArrayManager__1$p14Data@Db@TField%@ @465 ; System::Generics::Collections::TArrayManager__1<Data::Db::TField *>::
+    @System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField%@ @470 ; System::Generics::Collections::TEnumerable__1<Data::Db::TField *>::
+    @System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField%@$bdtr$qqrv @78  ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Db::TField *>::~TEnumerable__1<Data::Db::TField *>()
+    @System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField%@GetEnumerator$qqrv @77  ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Db::TField *>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField%@ToArray$qqrv @76  ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Db::TField *>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField%@ToArrayImpl$qqri @79  ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Db::TField *>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerator__1$p14Data@Db@TField%@ @472 ; System::Generics::Collections::TEnumerator__1<Data::Db::TField *>::
+    @System@Generics@Collections@%TEnumerator__1$p14Data@Db@TField%@MoveNext$qqrv @75  ; __fastcall System::Generics::Collections::TEnumerator__1<Data::Db::TField *>::MoveNext()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@ @458 ; System::Generics::Collections::TList__1<Data::Db::TField *>::
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@$bctr$qqrv @63  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TList__1<Data::Db::TField *>()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@$bctr$qqrx84System@%DelphiInterface$57System@Generics@Defaults@%IComparer__1$p14Data@Db@TField%% @62  ; System::Generics::Collections::TList__1<Data::Db::TField *>::TList__1<Data::Db::TField *>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@$bctr$qqrxp62System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField% @61  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TList__1<Data::Db::TField *>(System::Generics::Collections::TEnumerable__1<Data::Db::TField *> * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@$bdtr$qqrv @60  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::~TList__1<Data::Db::TField *>()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEnumerator$%@ @460 ; System::Generics::Collections::TList__1<Data::Db::TField *>::TEnumerator<>::
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEnumerator$%@$bctr$qqrxp56System@Generics@Collections@%TList__1$p14Data@Db@TField% @20  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TEnumerator<>::TEnumerator<>(System::Generics::Collections::TList__1<Data::Db::TField *> * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEnumerator$%@DoGetCurrent$qqrv @22  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEnumerator$%@DoMoveNext$qqrv @21  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEnumerator$%@GetCurrent$qqrv @23  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEnumerator$%@MoveNext$qqrv @19  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Add$qqrxp14Data@Db@TField @57  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Add(Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@AddRange$qqrpxp14Data@Db@TFieldxi @56  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::AddRange(Data::Db::TField * const *, const int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@AddRange$qqrx68System@%DelphiInterface$41System@%IEnumerable__1$p14Data@Db@TField%% @55  ; System::Generics::Collections::TList__1<Data::Db::TField *>::AddRange(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@AddRange$qqrxp62System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField% @54  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::AddRange(System::Generics::Collections::TEnumerable__1<Data::Db::TField *> * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@BinarySearch$qqrxp14Data@Db@TFieldri @28  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::BinarySearch(Data::Db::TField * const, int&)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@BinarySearch$qqrxp14Data@Db@TFieldrix84System@%DelphiInterface$57System@Generics@Defaults@%IComparer__1$p14Data@Db@TField%% @27  ; System::Generics::Collections::TList__1<Data::Db::TField *>::BinarySearch(Data::Db::TField * const, int&, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Clear$qqrv @37  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Clear()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Contains$qqrxp14Data@Db@TField @35  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Contains(Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Delete$qqri @45  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Delete(int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@DeleteRange$qqrii @44  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::DeleteRange(int, int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@DoDelete$qqri51System@Generics@Collections@TCollectionNotification @67  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::DoDelete(int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@DoGetEnumerator$qqrv @65  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::DoGetEnumerator()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Error$qqrp20System@TResStringReci @58  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Error(System::TResStringRec *, int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Error$qqrx20System@UnicodeStringi @59  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Error(const System::UnicodeString, int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Exchange$qqrii @41  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Exchange(int, int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Expand$qqrv @36  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Expand()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Extract$qqrxp14Data@Db@TField @43  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Extract(Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@ExtractItem$qqrxp14Data@Db@TField23System@Types@TDirection @42  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::ExtractItem(Data::Db::TField * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@First$qqrv @39  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::First()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@GetCapacity$qqrv @74  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::GetCapacity()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@GetEnumerator$qqrv @24  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::GetEnumerator()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@GetItem$qqri @71  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::GetItem(int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Grow$qqri @69  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Grow(int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@GrowCheck$qqri @68  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::GrowCheck(int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@IndexOf$qqrxp14Data@Db@TField @34  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::IndexOf(Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@IndexOfItem$qqrxp14Data@Db@TField23System@Types@TDirection @33  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::IndexOfItem(Data::Db::TField * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Insert$qqrixp14Data@Db@TField @53  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Insert(int, Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@InsertRange$qqripxp14Data@Db@TFieldxi @52  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::InsertRange(int, Data::Db::TField * const *, const int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@InsertRange$qqrix68System@%DelphiInterface$41System@%IEnumerable__1$p14Data@Db@TField%% @51  ; System::Generics::Collections::TList__1<Data::Db::TField *>::InsertRange(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@InsertRange$qqrixp62System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField% @50  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::InsertRange(int, System::Generics::Collections::TEnumerable__1<Data::Db::TField *> * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@ItemValue$qqrxp14Data@Db@TField @66  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::ItemValue(Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Last$qqrv @38  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Last()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@LastIndexOf$qqrxp14Data@Db@TField @32  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::LastIndexOf(Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Move$qqrii @40  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Move(int, int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Notify$qqrxp14Data@Db@TField51System@Generics@Collections@TCollectionNotification @64  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Notify(Data::Db::TField * const, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Pack$qqrv @49  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Pack()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Pack$qqrx97System@%DelphiInterface$70System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEmptyFunc$%% @48  ; System::Generics::Collections::TList__1<Data::Db::TField *>::Pack(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Remove$qqrxp14Data@Db@TField @47  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Remove(Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@RemoveItem$qqrxp14Data@Db@TField23System@Types@TDirection @46  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::RemoveItem(Data::Db::TField * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Reverse$qqrv @31  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Reverse()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@SetCapacity$qqri @73  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::SetCapacity(int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@SetCount$qqri @72  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::SetCount(int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@SetItem$qqrixp14Data@Db@TField @70  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::SetItem(int, Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Sort$qqrv @30  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Sort()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Sort$qqrx84System@%DelphiInterface$57System@Generics@Defaults@%IComparer__1$p14Data@Db@TField%% @29  ; System::Generics::Collections::TList__1<Data::Db::TField *>::Sort(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@ToArray$qqrv @25  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::ToArray()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@TrimExcess$qqrv @26  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TrimExcess()
+    Finalize                       @550 ; Finalize
+    Initialize                     @551 ; Initialize

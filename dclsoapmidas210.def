@@ -1,0 +1,18 @@
+LIBRARY     DCLSOAPMIDAS210.BPL
+
+DESCRIPTION 'mbarcadero SOAP Midas Components'
+
+EXPORTS
+    @Dclsoapmidas@@GetPackageInfoTable$qqrv @10  ; Dclsoapmidas::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclsoapmidas@@PackageLoad$qqrv @9   ; Dclsoapmidas::__linkproc__ __fastcall PackageLoad()
+    @Dclsoapmidas@@PackageUnload$qqrv @8   ; Dclsoapmidas::__linkproc__ __fastcall PackageUnload()
+    @Dclsoapmidas@initialization$qqrv @7   ; __fastcall Dclsoapmidas::initialization()
+    @GetPackageInfoTable           @13  ; GetPackageInfoTable
+    @Soapdmx@Finalization$qqrv     @5   ; __fastcall Soapdmx::Finalization()
+    @Soapdmx@Register$qqrv         @6   ; __fastcall Soapdmx::Register()
+    @Soapdmx@initialization$qqrv   @4   ; __fastcall Soapdmx::initialization()
+    @Soapmidasreg@Finalization$qqrv @2   ; __fastcall Soapmidasreg::Finalization()
+    @Soapmidasreg@Register$qqrv    @3   ; __fastcall Soapmidasreg::Register()
+    @Soapmidasreg@initialization$qqrv @1   ; __fastcall Soapmidasreg::initialization()
+    Finalize                       @11  ; Finalize
+    Initialize                     @12  ; Initialize

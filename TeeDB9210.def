@@ -1,0 +1,414 @@
+LIBRARY     TEEDB9210.BPL
+
+DESCRIPTION 'eeChart Database Components'
+
+EXPORTS
+    @$xp$20System@%TArray__1$i%    @350 ; __tpdsc__ System::TArray__1<int>
+    @$xp$21System@%TArray__1$uc%   @333 ; __tpdsc__ System::TArray__1<unsigned char>
+    @$xp$23Vcltee@Dbchart@TDBChart @128 ; __tpdsc__ Vcltee::Dbchart::TDBChart
+    @$xp$23Vcltee@Teedata@PRecInfo @358 ; __tpdsc__ Vcltee::Teedata::PRecInfo
+    @$xp$23Vcltee@Teedata@TRecInfo @357 ; __tpdsc__ Vcltee::Teedata::TRecInfo
+    @$xp$25System@%IEnumerable__1$i% @339 ; __tpdsc__ System::IEnumerable__1<int>
+    @$xp$25System@%IEnumerator__1$i% @340 ; __tpdsc__ System::IEnumerator__1<int>
+    @$xp$26Vcltee@Dbchart@TTeeDBGroup @135 ; __tpdsc__ Vcltee::Dbchart::TTeeDBGroup
+    @$xp$26Vcltee@Teedata@TTeeDataSet @355 ; __tpdsc__ Vcltee::Teedata::TTeeDataSet
+    @$xp$27Vcltee@Teedata@PSeriesPoint @362 ; __tpdsc__ Vcltee::Teedata::PSeriesPoint
+    @$xp$27Vcltee@Teedata@TSeriesPoint @361 ; __tpdsc__ Vcltee::Teedata::TSeriesPoint
+    @$xp$28Vcltee@Teedata@PSeriesPoints @360 ; __tpdsc__ Vcltee::Teedata::PSeriesPoints
+    @$xp$28Vcltee@Teedata@TChartDataSet @351 ; __tpdsc__ Vcltee::Teedata::TChartDataSet
+    @$xp$28Vcltee@Teedata@TSeriesPoints @359 ; __tpdsc__ Vcltee::Teedata::TSeriesPoints
+    @$xp$29Vcltee@Dbchart@TCustomDBChart @130 ; __tpdsc__ Vcltee::Dbchart::TCustomDBChart
+    @$xp$29Vcltee@Teedata@TSeriesDataSet @353 ; __tpdsc__ Vcltee::Teedata::TSeriesDataSet
+    @$xp$30Vcltee@Dbeditch@TDBChartEditor @203 ; __tpdsc__ Vcltee::Dbeditch::TDBChartEditor
+    @$xp$31Vcltee@Dbchart@DBChartException @136 ; __tpdsc__ Vcltee::Dbchart::DBChartException
+    @$xp$33Vcltee@Dbchart@TCheckDataSetEvent @106 ; __tpdsc__ Vcltee::Dbchart::TCheckDataSetEvent
+    @$xp$33Vcltee@Dbchart@TDBChartDataSource @104 ; __tpdsc__ Vcltee::Dbchart::TDBChartDataSource
+    @$xp$33Vcltee@Dbchart@TListOfDataSources @133 ; __tpdsc__ Vcltee::Dbchart::TListOfDataSources
+    @$xp$33Vcltee@Dbchart@TTeeOnGetFieldType @127 ; __tpdsc__ Vcltee::Dbchart::TTeeOnGetFieldType
+    @$xp$33Vcltee@Dbchart@TTeeSeriesDBSource @102 ; __tpdsc__ Vcltee::Dbchart::TTeeSeriesDBSource
+    @$xp$34Vcltee@Dbchart@TProcessRecordEvent @132 ; __tpdsc__ Vcltee::Dbchart::TProcessRecordEvent
+    @$xp$34Vcltee@Teedbcrosstab@TGroupFormula @388 ; __tpdsc__ Vcltee::Teedbcrosstab::TGroupFormula
+    @$xp$35Vcltee@Teedbedit@TBaseDBChartEditor @147 ; __tpdsc__ Vcltee::Teedbedit::TBaseDBChartEditor
+    @$xp$36Vcltee@Dbeditch@TDataSetSeriesSource @201 ; __tpdsc__ Vcltee::Dbeditch::TDataSetSeriesSource
+    @$xp$36Vcltee@Teedbsumedit@TDBSummarySource @183 ; __tpdsc__ Vcltee::Teedbsumedit::TDBSummarySource
+    @$xp$37Vcltee@Teedbsumedit@TDBChartSumEditor @185 ; __tpdsc__ Vcltee::Teedbsumedit::TDBChartSumEditor
+    @$xp$38Vcltee@Teedbcrosstab@TDBCrossTabSource @386 ; __tpdsc__ Vcltee::Teedbcrosstab::TDBCrossTabSource
+    @$xp$40System@Generics@Collections@%TList__1$i% @334 ; __tpdsc__ System::Generics::Collections::TList__1<int>
+    @$xp$41System@%TArray__1$p19Data@Db@TDataSource% @126 ; __tpdsc__ System::TArray__1<Data::Db::TDataSource *>
+    @$xp$41System@Generics@Defaults@%IComparer__1$i% @344 ; __tpdsc__ System::Generics::Defaults::IComparer__1<int>
+    @$xp$45Vcltee@Teedbsourceeditor@TDBChartSourceEditor @164 ; __tpdsc__ Vcltee::Teedbsourceeditor::TDBChartSourceEditor
+    @$xp$46System@%IEnumerable__1$p19Data@Db@TDataSource% @115 ; __tpdsc__ System::IEnumerable__1<Data::Db::TDataSource *>
+    @$xp$46System@%IEnumerator__1$p19Data@Db@TDataSource% @116 ; __tpdsc__ System::IEnumerator__1<Data::Db::TDataSource *>
+    @$xp$46System@Generics@Collections@%TEnumerable__1$i% @346 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<int>
+    @$xp$46System@Generics@Collections@%TEnumerator__1$i% @348 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<int>
+    @$xp$48System@Generics@Collections@%TArrayManager__1$i% @341 ; __tpdsc__ System::Generics::Collections::TArrayManager__1<int>
+    @$xp$49Vcltee@Teedbcrosstabeditor@TDBChartCrossTabEditor @401 ; __tpdsc__ Vcltee::Teedbcrosstabeditor::TDBChartCrossTabEditor
+    @$xp$50Vcltee@Teedbsourceeditor@TSingleRecordSeriesSource @162 ; __tpdsc__ Vcltee::Teedbsourceeditor::TSingleRecordSeriesSource
+    @$xp$52System@Generics@Collections@%TList__1$i%@%arrayofT$% @345 ; __tpdsc__ System::Generics::Collections::TList__1<int>::arrayofT<>
+    @$xp$54System@Generics@Collections@%TList__1$i%@%TEmptyFunc$% @338 ; __tpdsc__ System::Generics::Collections::TList__1<int>::TEmptyFunc<>
+    @$xp$55System@Generics@Collections@%TList__1$i%@%TEnumerator$% @336 ; __tpdsc__ System::Generics::Collections::TList__1<int>::TEnumerator<>
+    @$xp$57System@Generics@Collections@%TCollectionNotifyEvent__1$i% @343 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<int>
+    @$xp$61System@Generics@Collections@%TList__1$p19Data@Db@TDataSource% @110 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Db::TDataSource *>
+    @$xp$62System@Generics@Defaults@%IComparer__1$p19Data@Db@TDataSource% @120 ; __tpdsc__ System::Generics::Defaults::IComparer__1<Data::Db::TDataSource *>
+    @$xp$67System@Generics@Collections@%TEnumerable__1$p19Data@Db@TDataSource% @122 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<Data::Db::TDataSource *>
+    @$xp$67System@Generics@Collections@%TEnumerator__1$p19Data@Db@TDataSource% @124 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<Data::Db::TDataSource *>
+    @$xp$67System@Generics@Collections@%TObjectList__1$p19Data@Db@TDataSource% @108 ; __tpdsc__ System::Generics::Collections::TObjectList__1<Data::Db::TDataSource *>
+    @$xp$69System@Generics@Collections@%TArrayManager__1$p19Data@Db@TDataSource% @117 ; __tpdsc__ System::Generics::Collections::TArrayManager__1<Data::Db::TDataSource *>
+    @$xp$73System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@%arrayofT$% @121 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Db::TDataSource *>::arrayofT<>
+    @$xp$75System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@%TEmptyFunc$% @114 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Db::TDataSource *>::TEmptyFunc<>
+    @$xp$76System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@%TEnumerator$% @112 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Db::TDataSource *>::TEnumerator<>
+    @$xp$78System@Generics@Collections@%TCollectionNotifyEvent__1$p19Data@Db@TDataSource% @119 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<Data::Db::TDataSource *>
+    @GetPackageInfoTable           @409 ; GetPackageInfoTable
+    @System@Generics@Collections@%TArrayManager__1$i%@ @342 ; System::Generics::Collections::TArrayManager__1<int>::
+    @System@Generics@Collections@%TArrayManager__1$p19Data@Db@TDataSource%@ @118 ; System::Generics::Collections::TArrayManager__1<Data::Db::TDataSource *>::
+    @System@Generics@Collections@%TEnumerable__1$i%@ @347 ; System::Generics::Collections::TEnumerable__1<int>::
+    @System@Generics@Collections@%TEnumerable__1$i%@$bdtr$qqrv @264 ; __fastcall System::Generics::Collections::TEnumerable__1<int>::~TEnumerable__1<int>()
+    @System@Generics@Collections@%TEnumerable__1$i%@GetEnumerator$qqrv @263 ; __fastcall System::Generics::Collections::TEnumerable__1<int>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$i%@ToArray$qqrv @262 ; __fastcall System::Generics::Collections::TEnumerable__1<int>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$i%@ToArrayImpl$qqri @265 ; __fastcall System::Generics::Collections::TEnumerable__1<int>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerable__1$p19Data@Db@TDataSource%@ @123 ; System::Generics::Collections::TEnumerable__1<Data::Db::TDataSource *>::
+    @System@Generics@Collections@%TEnumerable__1$p19Data@Db@TDataSource%@$bdtr$qqrv @64  ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Db::TDataSource *>::~TEnumerable__1<Data::Db::TDataSource *>()
+    @System@Generics@Collections@%TEnumerable__1$p19Data@Db@TDataSource%@GetEnumerator$qqrv @63  ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Db::TDataSource *>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$p19Data@Db@TDataSource%@ToArray$qqrv @62  ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Db::TDataSource *>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$p19Data@Db@TDataSource%@ToArrayImpl$qqri @65  ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Db::TDataSource *>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerator__1$i%@ @349 ; System::Generics::Collections::TEnumerator__1<int>::
+    @System@Generics@Collections@%TEnumerator__1$i%@MoveNext$qqrv @261 ; __fastcall System::Generics::Collections::TEnumerator__1<int>::MoveNext()
+    @System@Generics@Collections@%TEnumerator__1$p19Data@Db@TDataSource%@ @125 ; System::Generics::Collections::TEnumerator__1<Data::Db::TDataSource *>::
+    @System@Generics@Collections@%TEnumerator__1$p19Data@Db@TDataSource%@MoveNext$qqrv @61  ; __fastcall System::Generics::Collections::TEnumerator__1<Data::Db::TDataSource *>::MoveNext()
+    @System@Generics@Collections@%TList__1$i%@ @335 ; System::Generics::Collections::TList__1<int>::
+    @System@Generics@Collections@%TList__1$i%@$bctr$qqrv @249 ; __fastcall System::Generics::Collections::TList__1<int>::TList__1<int>()
+    @System@Generics@Collections@%TList__1$i%@$bctr$qqrx68System@%DelphiInterface$41System@Generics@Defaults@%IComparer__1$i%% @248 ; System::Generics::Collections::TList__1<int>::TList__1<int>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$i%@$bctr$qqrxp46System@Generics@Collections@%TEnumerable__1$i% @247 ; __fastcall System::Generics::Collections::TList__1<int>::TList__1<int>(System::Generics::Collections::TEnumerable__1<int> * const)
+    @System@Generics@Collections@%TList__1$i%@$bdtr$qqrv @246 ; __fastcall System::Generics::Collections::TList__1<int>::~TList__1<int>()
+    @System@Generics@Collections@%TList__1$i%@%TEnumerator$%@ @337 ; System::Generics::Collections::TList__1<int>::TEnumerator<>::
+    @System@Generics@Collections@%TList__1$i%@%TEnumerator$%@$bctr$qqrxp40System@Generics@Collections@%TList__1$i% @206 ; __fastcall System::Generics::Collections::TList__1<int>::TEnumerator<>::TEnumerator<>(System::Generics::Collections::TList__1<int> * const)
+    @System@Generics@Collections@%TList__1$i%@%TEnumerator$%@DoGetCurrent$qqrv @208 ; __fastcall System::Generics::Collections::TList__1<int>::TEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TList__1$i%@%TEnumerator$%@DoMoveNext$qqrv @207 ; __fastcall System::Generics::Collections::TList__1<int>::TEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TList__1$i%@%TEnumerator$%@GetCurrent$qqrv @209 ; __fastcall System::Generics::Collections::TList__1<int>::TEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TList__1$i%@%TEnumerator$%@MoveNext$qqrv @205 ; __fastcall System::Generics::Collections::TList__1<int>::TEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TList__1$i%@Add$qqrxi @243 ; __fastcall System::Generics::Collections::TList__1<int>::Add(const int)
+    @System@Generics@Collections@%TList__1$i%@AddRange$qqrpxixi @242 ; __fastcall System::Generics::Collections::TList__1<int>::AddRange(const int *, const int)
+    @System@Generics@Collections@%TList__1$i%@AddRange$qqrx52System@%DelphiInterface$25System@%IEnumerable__1$i%% @241 ; System::Generics::Collections::TList__1<int>::AddRange(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$i%@AddRange$qqrxp46System@Generics@Collections@%TEnumerable__1$i% @240 ; __fastcall System::Generics::Collections::TList__1<int>::AddRange(System::Generics::Collections::TEnumerable__1<int> * const)
+    @System@Generics@Collections@%TList__1$i%@BinarySearch$qqrxiri @214 ; __fastcall System::Generics::Collections::TList__1<int>::BinarySearch(const int, int&)
+    @System@Generics@Collections@%TList__1$i%@BinarySearch$qqrxirix68System@%DelphiInterface$41System@Generics@Defaults@%IComparer__1$i%% @213 ; System::Generics::Collections::TList__1<int>::BinarySearch(const int, int&, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$i%@Clear$qqrv @223 ; __fastcall System::Generics::Collections::TList__1<int>::Clear()
+    @System@Generics@Collections@%TList__1$i%@Contains$qqrxi @221 ; __fastcall System::Generics::Collections::TList__1<int>::Contains(const int)
+    @System@Generics@Collections@%TList__1$i%@Delete$qqri @231 ; __fastcall System::Generics::Collections::TList__1<int>::Delete(int)
+    @System@Generics@Collections@%TList__1$i%@DeleteRange$qqrii @230 ; __fastcall System::Generics::Collections::TList__1<int>::DeleteRange(int, int)
+    @System@Generics@Collections@%TList__1$i%@DoDelete$qqri51System@Generics@Collections@TCollectionNotification @253 ; __fastcall System::Generics::Collections::TList__1<int>::DoDelete(int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$i%@DoGetEnumerator$qqrv @251 ; __fastcall System::Generics::Collections::TList__1<int>::DoGetEnumerator()
+    @System@Generics@Collections@%TList__1$i%@Error$qqrp20System@TResStringReci @244 ; __fastcall System::Generics::Collections::TList__1<int>::Error(System::TResStringRec *, int)
+    @System@Generics@Collections@%TList__1$i%@Error$qqrx20System@UnicodeStringi @245 ; __fastcall System::Generics::Collections::TList__1<int>::Error(const System::UnicodeString, int)
+    @System@Generics@Collections@%TList__1$i%@Exchange$qqrii @227 ; __fastcall System::Generics::Collections::TList__1<int>::Exchange(int, int)
+    @System@Generics@Collections@%TList__1$i%@Expand$qqrv @222 ; __fastcall System::Generics::Collections::TList__1<int>::Expand()
+    @System@Generics@Collections@%TList__1$i%@Extract$qqrxi @229 ; __fastcall System::Generics::Collections::TList__1<int>::Extract(const int)
+    @System@Generics@Collections@%TList__1$i%@ExtractItem$qqrxi23System@Types@TDirection @228 ; __fastcall System::Generics::Collections::TList__1<int>::ExtractItem(const int, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$i%@First$qqrv @225 ; __fastcall System::Generics::Collections::TList__1<int>::First()
+    @System@Generics@Collections@%TList__1$i%@GetCapacity$qqrv @260 ; __fastcall System::Generics::Collections::TList__1<int>::GetCapacity()
+    @System@Generics@Collections@%TList__1$i%@GetEnumerator$qqrv @210 ; __fastcall System::Generics::Collections::TList__1<int>::GetEnumerator()
+    @System@Generics@Collections@%TList__1$i%@GetItem$qqri @257 ; __fastcall System::Generics::Collections::TList__1<int>::GetItem(int)
+    @System@Generics@Collections@%TList__1$i%@Grow$qqri @255 ; __fastcall System::Generics::Collections::TList__1<int>::Grow(int)
+    @System@Generics@Collections@%TList__1$i%@GrowCheck$qqri @254 ; __fastcall System::Generics::Collections::TList__1<int>::GrowCheck(int)
+    @System@Generics@Collections@%TList__1$i%@IndexOf$qqrxi @220 ; __fastcall System::Generics::Collections::TList__1<int>::IndexOf(const int)
+    @System@Generics@Collections@%TList__1$i%@IndexOfItem$qqrxi23System@Types@TDirection @219 ; __fastcall System::Generics::Collections::TList__1<int>::IndexOfItem(const int, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$i%@Insert$qqrixi @239 ; __fastcall System::Generics::Collections::TList__1<int>::Insert(int, const int)
+    @System@Generics@Collections@%TList__1$i%@InsertRange$qqripxixi @238 ; __fastcall System::Generics::Collections::TList__1<int>::InsertRange(int, const int *, const int)
+    @System@Generics@Collections@%TList__1$i%@InsertRange$qqrix52System@%DelphiInterface$25System@%IEnumerable__1$i%% @237 ; System::Generics::Collections::TList__1<int>::InsertRange(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$i%@InsertRange$qqrixp46System@Generics@Collections@%TEnumerable__1$i% @236 ; __fastcall System::Generics::Collections::TList__1<int>::InsertRange(int, System::Generics::Collections::TEnumerable__1<int> * const)
+    @System@Generics@Collections@%TList__1$i%@ItemValue$qqrxi @252 ; __fastcall System::Generics::Collections::TList__1<int>::ItemValue(const int)
+    @System@Generics@Collections@%TList__1$i%@Last$qqrv @224 ; __fastcall System::Generics::Collections::TList__1<int>::Last()
+    @System@Generics@Collections@%TList__1$i%@LastIndexOf$qqrxi @218 ; __fastcall System::Generics::Collections::TList__1<int>::LastIndexOf(const int)
+    @System@Generics@Collections@%TList__1$i%@Move$qqrii @226 ; __fastcall System::Generics::Collections::TList__1<int>::Move(int, int)
+    @System@Generics@Collections@%TList__1$i%@Notify$qqrxi51System@Generics@Collections@TCollectionNotification @250 ; __fastcall System::Generics::Collections::TList__1<int>::Notify(const int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$i%@Pack$qqrv @235 ; __fastcall System::Generics::Collections::TList__1<int>::Pack()
+    @System@Generics@Collections@%TList__1$i%@Pack$qqrx81System@%DelphiInterface$54System@Generics@Collections@%TList__1$i%@%TEmptyFunc$%% @234 ; System::Generics::Collections::TList__1<int>::Pack(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$i%@Remove$qqrxi @233 ; __fastcall System::Generics::Collections::TList__1<int>::Remove(const int)
+    @System@Generics@Collections@%TList__1$i%@RemoveItem$qqrxi23System@Types@TDirection @232 ; __fastcall System::Generics::Collections::TList__1<int>::RemoveItem(const int, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$i%@Reverse$qqrv @217 ; __fastcall System::Generics::Collections::TList__1<int>::Reverse()
+    @System@Generics@Collections@%TList__1$i%@SetCapacity$qqri @259 ; __fastcall System::Generics::Collections::TList__1<int>::SetCapacity(int)
+    @System@Generics@Collections@%TList__1$i%@SetCount$qqri @258 ; __fastcall System::Generics::Collections::TList__1<int>::SetCount(int)
+    @System@Generics@Collections@%TList__1$i%@SetItem$qqrixi @256 ; __fastcall System::Generics::Collections::TList__1<int>::SetItem(int, const int)
+    @System@Generics@Collections@%TList__1$i%@Sort$qqrv @216 ; __fastcall System::Generics::Collections::TList__1<int>::Sort()
+    @System@Generics@Collections@%TList__1$i%@Sort$qqrx68System@%DelphiInterface$41System@Generics@Defaults@%IComparer__1$i%% @215 ; System::Generics::Collections::TList__1<int>::Sort(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$i%@ToArray$qqrv @211 ; __fastcall System::Generics::Collections::TList__1<int>::ToArray()
+    @System@Generics@Collections@%TList__1$i%@TrimExcess$qqrv @212 ; __fastcall System::Generics::Collections::TList__1<int>::TrimExcess()
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@ @111 ; System::Generics::Collections::TList__1<Data::Db::TDataSource *>::
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@$bctr$qqrv @49  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::TList__1<Data::Db::TDataSource *>()
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@$bctr$qqrx89System@%DelphiInterface$62System@Generics@Defaults@%IComparer__1$p19Data@Db@TDataSource%% @48  ; System::Generics::Collections::TList__1<Data::Db::TDataSource *>::TList__1<Data::Db::TDataSource *>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@$bctr$qqrxp67System@Generics@Collections@%TEnumerable__1$p19Data@Db@TDataSource% @47  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::TList__1<Data::Db::TDataSource *>(System::Generics::Collections::TEnumerable__1<Data::Db::TDataSource *> * const)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@$bdtr$qqrv @46  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::~TList__1<Data::Db::TDataSource *>()
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@%TEnumerator$%@ @113 ; System::Generics::Collections::TList__1<Data::Db::TDataSource *>::TEnumerator<>::
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@%TEnumerator$%@$bctr$qqrxp61System@Generics@Collections@%TList__1$p19Data@Db@TDataSource% @6   ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::TEnumerator<>::TEnumerator<>(System::Generics::Collections::TList__1<Data::Db::TDataSource *> * const)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@%TEnumerator$%@DoGetCurrent$qqrv @8   ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::TEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@%TEnumerator$%@DoMoveNext$qqrv @7   ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::TEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@%TEnumerator$%@GetCurrent$qqrv @9   ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::TEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@%TEnumerator$%@MoveNext$qqrv @5   ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::TEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@Add$qqrxp19Data@Db@TDataSource @43  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::Add(Data::Db::TDataSource * const)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@AddRange$qqrpxp19Data@Db@TDataSourcexi @42  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::AddRange(Data::Db::TDataSource * const *, const int)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@AddRange$qqrx73System@%DelphiInterface$46System@%IEnumerable__1$p19Data@Db@TDataSource%% @41  ; System::Generics::Collections::TList__1<Data::Db::TDataSource *>::AddRange(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@AddRange$qqrxp67System@Generics@Collections@%TEnumerable__1$p19Data@Db@TDataSource% @40  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::AddRange(System::Generics::Collections::TEnumerable__1<Data::Db::TDataSource *> * const)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@BinarySearch$qqrxp19Data@Db@TDataSourceri @14  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::BinarySearch(Data::Db::TDataSource * const, int&)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@BinarySearch$qqrxp19Data@Db@TDataSourcerix89System@%DelphiInterface$62System@Generics@Defaults@%IComparer__1$p19Data@Db@TDataSource%% @13  ; System::Generics::Collections::TList__1<Data::Db::TDataSource *>::BinarySearch(Data::Db::TDataSource * const, int&, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@Clear$qqrv @23  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::Clear()
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@Contains$qqrxp19Data@Db@TDataSource @21  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::Contains(Data::Db::TDataSource * const)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@Delete$qqri @31  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::Delete(int)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@DeleteRange$qqrii @30  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::DeleteRange(int, int)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@DoDelete$qqri51System@Generics@Collections@TCollectionNotification @53  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::DoDelete(int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@DoGetEnumerator$qqrv @51  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::DoGetEnumerator()
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@Error$qqrp20System@TResStringReci @44  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::Error(System::TResStringRec *, int)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@Error$qqrx20System@UnicodeStringi @45  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::Error(const System::UnicodeString, int)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@Exchange$qqrii @27  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::Exchange(int, int)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@Expand$qqrv @22  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::Expand()
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@Extract$qqrxp19Data@Db@TDataSource @29  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::Extract(Data::Db::TDataSource * const)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@ExtractItem$qqrxp19Data@Db@TDataSource23System@Types@TDirection @28  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::ExtractItem(Data::Db::TDataSource * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@First$qqrv @25  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::First()
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@GetCapacity$qqrv @60  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::GetCapacity()
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@GetEnumerator$qqrv @10  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::GetEnumerator()
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@GetItem$qqri @57  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::GetItem(int)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@Grow$qqri @55  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::Grow(int)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@GrowCheck$qqri @54  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::GrowCheck(int)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@IndexOf$qqrxp19Data@Db@TDataSource @20  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::IndexOf(Data::Db::TDataSource * const)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@IndexOfItem$qqrxp19Data@Db@TDataSource23System@Types@TDirection @19  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::IndexOfItem(Data::Db::TDataSource * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@Insert$qqrixp19Data@Db@TDataSource @39  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::Insert(int, Data::Db::TDataSource * const)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@InsertRange$qqripxp19Data@Db@TDataSourcexi @38  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::InsertRange(int, Data::Db::TDataSource * const *, const int)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@InsertRange$qqrix73System@%DelphiInterface$46System@%IEnumerable__1$p19Data@Db@TDataSource%% @37  ; System::Generics::Collections::TList__1<Data::Db::TDataSource *>::InsertRange(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@InsertRange$qqrixp67System@Generics@Collections@%TEnumerable__1$p19Data@Db@TDataSource% @36  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::InsertRange(int, System::Generics::Collections::TEnumerable__1<Data::Db::TDataSource *> * const)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@ItemValue$qqrxp19Data@Db@TDataSource @52  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::ItemValue(Data::Db::TDataSource * const)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@Last$qqrv @24  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::Last()
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@LastIndexOf$qqrxp19Data@Db@TDataSource @18  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::LastIndexOf(Data::Db::TDataSource * const)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@Move$qqrii @26  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::Move(int, int)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@Notify$qqrxp19Data@Db@TDataSource51System@Generics@Collections@TCollectionNotification @50  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::Notify(Data::Db::TDataSource * const, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@Pack$qqrv @35  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::Pack()
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@Pack$qqrx102System@%DelphiInterface$75System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@%TEmptyFunc$%% @34  ; System::Generics::Collections::TList__1<Data::Db::TDataSource *>::Pack(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@Remove$qqrxp19Data@Db@TDataSource @33  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::Remove(Data::Db::TDataSource * const)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@RemoveItem$qqrxp19Data@Db@TDataSource23System@Types@TDirection @32  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::RemoveItem(Data::Db::TDataSource * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@Reverse$qqrv @17  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::Reverse()
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@SetCapacity$qqri @59  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::SetCapacity(int)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@SetCount$qqri @58  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::SetCount(int)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@SetItem$qqrixp19Data@Db@TDataSource @56  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::SetItem(int, Data::Db::TDataSource * const)
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@Sort$qqrv @16  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::Sort()
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@Sort$qqrx89System@%DelphiInterface$62System@Generics@Defaults@%IComparer__1$p19Data@Db@TDataSource%% @15  ; System::Generics::Collections::TList__1<Data::Db::TDataSource *>::Sort(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@ToArray$qqrv @11  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::ToArray()
+    @System@Generics@Collections@%TList__1$p19Data@Db@TDataSource%@TrimExcess$qqrv @12  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TDataSource *>::TrimExcess()
+    @System@Generics@Collections@%TObjectList__1$p19Data@Db@TDataSource%@ @109 ; System::Generics::Collections::TObjectList__1<Data::Db::TDataSource *>::
+    @System@Generics@Collections@%TObjectList__1$p19Data@Db@TDataSource%@$bctr$qqro @3   ; __fastcall System::Generics::Collections::TObjectList__1<Data::Db::TDataSource *>::TObjectList__1<Data::Db::TDataSource *>(bool)
+    @System@Generics@Collections@%TObjectList__1$p19Data@Db@TDataSource%@$bctr$qqrx89System@%DelphiInterface$62System@Generics@Defaults@%IComparer__1$p19Data@Db@TDataSource%%o @2   ; System::Generics::Collections::TObjectList__1<Data::Db::TDataSource *>::TObjectList__1<Data::Db::TDataSource *>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TObjectList__1$p19Data@Db@TDataSource%@$bctr$qqrxp67System@Generics@Collections@%TEnumerable__1$p19Data@Db@TDataSource%o @1   ; __fastcall System::Generics::Collections::TObjectList__1<Data::Db::TDataSource *>::TObjectList__1<Data::Db::TDataSource *>(System::Generics::Collections::TEnumerable__1<Data::Db::TDataSource *> * const, bool)
+    @System@Generics@Collections@%TObjectList__1$p19Data@Db@TDataSource%@Notify$qqrxp19Data@Db@TDataSource51System@Generics@Collections@TCollectionNotification @4   ; __fastcall System::Generics::Collections::TObjectList__1<Data::Db::TDataSource *>::Notify(Data::Db::TDataSource * const, System::Generics::Collections::TCollectionNotification)
+    @Teedb@@GetPackageInfoTable$qqrv @406 ; Teedb::__linkproc__ __fastcall GetPackageInfoTable()
+    @Teedb@@PackageLoad$qqrv       @405 ; Teedb::__linkproc__ __fastcall PackageLoad()
+    @Teedb@@PackageUnload$qqrv     @404 ; Teedb::__linkproc__ __fastcall PackageUnload()
+    @Teedb@initialization$qqrv     @403 ; __fastcall Teedb::initialization()
+    @Vcltee@Dbchart@DBChartException@ @137 ; Vcltee::Dbchart::DBChartException::
+    @Vcltee@Dbchart@DateToWeek$qqr16System@TDateTimerus @75  ; __fastcall Vcltee::Dbchart::DateToWeek(System::TDateTime, unsigned short&)
+    @Vcltee@Dbchart@DateToWeekOld$qqrx16System@TDateTimerus @74  ; __fastcall Vcltee::Dbchart::DateToWeekOld(const System::TDateTime, unsigned short&)
+    @Vcltee@Dbchart@FillDataSetFields$qqrxp16Data@Db@TDataSetxynpqqrx20System@UnicodeString$v @79  ; __fastcall Vcltee::Dbchart::FillDataSetFields(Data::Db::TDataSet * const, void __fastcall __closure(*)(const System::UnicodeString) const)
+    @Vcltee@Dbchart@Finalization$qqrv @67  ; __fastcall Vcltee::Dbchart::Finalization()
+    @Vcltee@Dbchart@StrToDBGroup$qqr20System@UnicodeString @71  ; __fastcall Vcltee::Dbchart::StrToDBGroup(System::UnicodeString)
+    @Vcltee@Dbchart@StrToDBOrder$qqr20System@UnicodeString @70  ; __fastcall Vcltee::Dbchart::StrToDBOrder(System::UnicodeString)
+    @Vcltee@Dbchart@TCustomDBChart@ @131 ; Vcltee::Dbchart::TCustomDBChart::
+    @Vcltee@Dbchart@TCustomDBChart@$bctr$qqrp25System@Classes@TComponent @94  ; __fastcall Vcltee::Dbchart::TCustomDBChart::TCustomDBChart(System::Classes::TComponent *)
+    @Vcltee@Dbchart@TCustomDBChart@$bdtr$qqrv @93  ; __fastcall Vcltee::Dbchart::TCustomDBChart::~TCustomDBChart()
+    @Vcltee@Dbchart@TCustomDBChart@Assign$qqrp26System@Classes@TPersistent @76  ; __fastcall Vcltee::Dbchart::TCustomDBChart::Assign(System::Classes::TPersistent *)
+    @Vcltee@Dbchart@TCustomDBChart@CheckDataSet$qqrxp16Data@Db@TDataSetxp28Vcltee@Teengine@TChartSeries @84  ; __fastcall Vcltee::Dbchart::TCustomDBChart::CheckDataSet(Data::Db::TDataSet * const, Vcltee::Teengine::TChartSeries * const)
+    @Vcltee@Dbchart@TCustomDBChart@CheckDatasource$qqrp28Vcltee@Teengine@TChartSeries @85  ; __fastcall Vcltee::Dbchart::TCustomDBChart::CheckDatasource(Vcltee::Teengine::TChartSeries *)
+    @Vcltee@Dbchart@TCustomDBChart@CheckNewDataSource$qqrxp16Data@Db@TDataSeto @86  ; __fastcall Vcltee::Dbchart::TCustomDBChart::CheckNewDataSource(Data::Db::TDataSet * const, bool)
+    @Vcltee@Dbchart@TCustomDBChart@CheckTimer$qqrv @91  ; __fastcall Vcltee::Dbchart::TCustomDBChart::CheckTimer()
+    @Vcltee@Dbchart@TCustomDBChart@CreateDataSource$qqrxp25System@Classes@TComponentxp16Data@Db@TDataSeto @87  ; __fastcall Vcltee::Dbchart::TCustomDBChart::CreateDataSource(System::Classes::TComponent * const, Data::Db::TDataSet * const, bool)
+    @Vcltee@Dbchart@TCustomDBChart@DataSourceCheckDataSet$qqrxp16Data@Db@TDataSet @83  ; __fastcall Vcltee::Dbchart::TCustomDBChart::DataSourceCheckDataSet(Data::Db::TDataSet * const)
+    @Vcltee@Dbchart@TCustomDBChart@DataSourceCloseDataSet$qqrxp16Data@Db@TDataSet @82  ; __fastcall Vcltee::Dbchart::TCustomDBChart::DataSourceCloseDataSet(Data::Db::TDataSet * const)
+    @Vcltee@Dbchart@TCustomDBChart@FillSeriesSourceItems$qqrp28Vcltee@Teengine@TChartSeriesynpqqrx20System@UnicodeString$v @78  ; __fastcall Vcltee::Dbchart::TCustomDBChart::FillSeriesSourceItems(Vcltee::Teengine::TChartSeries *, void __fastcall __closure(*)(const System::UnicodeString))
+    @Vcltee@Dbchart@TCustomDBChart@FillValueSourceItems$qqrp31Vcltee@Teengine@TChartValueListynpqqrx20System@UnicodeString$v @77  ; __fastcall Vcltee::Dbchart::TCustomDBChart::FillValueSourceItems(Vcltee::Teengine::TChartValueList *, void __fastcall __closure(*)(const System::UnicodeString))
+    @Vcltee@Dbchart@TCustomDBChart@IsValidDataSource$qqrp28Vcltee@Teengine@TChartSeriesp25System@Classes@TComponent @88  ; __fastcall Vcltee::Dbchart::TCustomDBChart::IsValidDataSource(Vcltee::Teengine::TChartSeries *, System::Classes::TComponent *)
+    @Vcltee@Dbchart@TCustomDBChart@OnRefreshTimer$qqrp14System@TObject @90  ; __fastcall Vcltee::Dbchart::TCustomDBChart::OnRefreshTimer(System::TObject *)
+    @Vcltee@Dbchart@TCustomDBChart@RefreshData$qqrv @80  ; __fastcall Vcltee::Dbchart::TCustomDBChart::RefreshData()
+    @Vcltee@Dbchart@TCustomDBChart@RefreshDataSet$qqrxp16Data@Db@TDataSetxp28Vcltee@Teengine@TChartSeries @81  ; __fastcall Vcltee::Dbchart::TCustomDBChart::RefreshDataSet(Data::Db::TDataSet * const, Vcltee::Teengine::TChartSeries * const)
+    @Vcltee@Dbchart@TCustomDBChart@RemovedDataSource$qqrp28Vcltee@Teengine@TChartSeriesp25System@Classes@TComponent @92  ; __fastcall Vcltee::Dbchart::TCustomDBChart::RemovedDataSource(Vcltee::Teengine::TChartSeries *, System::Classes::TComponent *)
+    @Vcltee@Dbchart@TCustomDBChart@SetRefreshInterval$qqri @89  ; __fastcall Vcltee::Dbchart::TCustomDBChart::SetRefreshInterval(int)
+    @Vcltee@Dbchart@TDBChart@      @129 ; Vcltee::Dbchart::TDBChart::
+    @Vcltee@Dbchart@TDBChartDataSource@ @105 ; Vcltee::Dbchart::TDBChartDataSource::
+    @Vcltee@Dbchart@TDBChartDataSource@DataSourceRowChange$qqrp14System@TObjectp14Data@Db@TField @100 ; __fastcall Vcltee::Dbchart::TDBChartDataSource::DataSourceRowChange(System::TObject *, Data::Db::TField *)
+    @Vcltee@Dbchart@TDBChartDataSource@DataSourceStateChange$qqrp14System@TObject @98  ; __fastcall Vcltee::Dbchart::TDBChartDataSource::DataSourceStateChange(System::TObject *)
+    @Vcltee@Dbchart@TDBChartDataSource@DataSourceUpdateData$qqrp14System@TObject @99  ; __fastcall Vcltee::Dbchart::TDBChartDataSource::DataSourceUpdateData(System::TObject *)
+    @Vcltee@Dbchart@TDBChartDataSource@SetDataSet$qqrxp16Data@Db@TDataSeto @101 ; __fastcall Vcltee::Dbchart::TDBChartDataSource::SetDataSet(Data::Db::TDataSet * const, bool)
+    @Vcltee@Dbchart@TListOfDataSources@ @134 ; Vcltee::Dbchart::TListOfDataSources::
+    @Vcltee@Dbchart@TListOfDataSources@Get$qqri @95  ; __fastcall Vcltee::Dbchart::TListOfDataSources::Get(int)
+    @Vcltee@Dbchart@TListOfDataSources@IndexOf$qqrxp16Data@Db@TDataSet @97  ; __fastcall Vcltee::Dbchart::TListOfDataSources::IndexOf(Data::Db::TDataSet * const)
+    @Vcltee@Dbchart@TListOfDataSources@Put$qqrixp19Data@Db@TDataSource @96  ; __fastcall Vcltee::Dbchart::TListOfDataSources::Put(int, Data::Db::TDataSource * const)
+    @Vcltee@Dbchart@TTeeSeriesDBSource@ @103 ; Vcltee::Dbchart::TTeeSeriesDBSource::
+    @Vcltee@Dbchart@TTeeSeriesDBSource@Available$qqrp32Vcltee@Teengine@TCustomAxisPanel @69  ; __fastcall Vcltee::Dbchart::TTeeSeriesDBSource::Available(Vcltee::Teengine::TCustomAxisPanel *)
+    @Vcltee@Dbchart@TTeeSeriesDBSource@HasNew$qqrv @68  ; __fastcall Vcltee::Dbchart::TTeeSeriesDBSource::HasNew()
+    @Vcltee@Dbchart@TeeFieldType$qqr18Data@Db@TFieldType @73  ; __fastcall Vcltee::Dbchart::TeeFieldType(Data::Db::TFieldType)
+    @Vcltee@Dbchart@TeeGetDBPart$qqri20System@UnicodeString @72  ; __fastcall Vcltee::Dbchart::TeeGetDBPart(int, System::UnicodeString)
+    @Vcltee@Dbchart@TeeOnGetFieldType @107 ; Vcltee::Dbchart::TeeOnGetFieldType
+    @Vcltee@Dbchart@initialization$qqrv @66  ; __fastcall Vcltee::Dbchart::initialization()
+    @Vcltee@Dbeditch@Finalization$qqrv @188 ; __fastcall Vcltee::Dbeditch::Finalization()
+    @Vcltee@Dbeditch@TDBChartEditor@ @204 ; Vcltee::Dbeditch::TDBChartEditor::
+    @Vcltee@Dbeditch@TDBChartEditor@BApplyClick$qqrp14System@TObject @194 ; __fastcall Vcltee::Dbeditch::TDBChartEditor::BApplyClick(System::TObject *)
+    @Vcltee@Dbeditch@TDBChartEditor@CBLabelsFieldChange$qqrp14System@TObject @199 ; __fastcall Vcltee::Dbeditch::TDBChartEditor::CBLabelsFieldChange(System::TObject *)
+    @Vcltee@Dbeditch@TDBChartEditor@CBSourcesChange$qqrp14System@TObject @193 ; __fastcall Vcltee::Dbeditch::TDBChartEditor::CBSourcesChange(System::TObject *)
+    @Vcltee@Dbeditch@TDBChartEditor@CBValuesChange$qqrp14System@TObject @198 ; __fastcall Vcltee::Dbeditch::TDBChartEditor::CBValuesChange(System::TObject *)
+    @Vcltee@Dbeditch@TDBChartEditor@FormShow$qqrp14System@TObject @196 ; __fastcall Vcltee::Dbeditch::TDBChartEditor::FormShow(System::TObject *)
+    @Vcltee@Dbeditch@TDBChartEditor@IsValid$qqrp25System@Classes@TComponent @200 ; __fastcall Vcltee::Dbeditch::TDBChartEditor::IsValid(System::Classes::TComponent *)
+    @Vcltee@Dbeditch@TDBChartEditor@SetFields$qqrv @195 ; __fastcall Vcltee::Dbeditch::TDBChartEditor::SetFields()
+    @Vcltee@Dbeditch@TDBChartEditor@SetTextItemIndex$qqrp26Vcltee@Tecanvas@TComboFlat @197 ; __fastcall Vcltee::Dbeditch::TDBChartEditor::SetTextItemIndex(Vcltee::Tecanvas::TComboFlat *)
+    @Vcltee@Dbeditch@TDBChartEditor@Translate$qqrv @189 ; __fastcall Vcltee::Dbeditch::TDBChartEditor::Translate()
+    @Vcltee@Dbeditch@TDataSetSeriesSource@ @202 ; Vcltee::Dbeditch::TDataSetSeriesSource::
+    @Vcltee@Dbeditch@TDataSetSeriesSource@Description$qqrv @192 ; __fastcall Vcltee::Dbeditch::TDataSetSeriesSource::Description()
+    @Vcltee@Dbeditch@TDataSetSeriesSource@Editor$qqrv @191 ; __fastcall Vcltee::Dbeditch::TDataSetSeriesSource::Editor()
+    @Vcltee@Dbeditch@TDataSetSeriesSource@HasSeries$qqrp28Vcltee@Teengine@TChartSeries @190 ; __fastcall Vcltee::Dbeditch::TDataSetSeriesSource::HasSeries(Vcltee::Teengine::TChartSeries *)
+    @Vcltee@Dbeditch@initialization$qqrv @187 ; __fastcall Vcltee::Dbeditch::initialization()
+    @Vcltee@Teedata@Finalization$qqrv @267 ; __fastcall Vcltee::Teedata::Finalization()
+    @Vcltee@Teedata@TChartDataSet@ @352 ; Vcltee::Teedata::TChartDataSet::
+    @Vcltee@Teedata@TChartDataSet@CalcFieldSeries$qqririt2 @274 ; __fastcall Vcltee::Teedata::TChartDataSet::CalcFieldSeries(int, int&, int&)
+    @Vcltee@Teedata@TChartDataSet@DoFillBuffer$qqrpuc @271 ; __fastcall Vcltee::Teedata::TChartDataSet::DoFillBuffer(unsigned char *)
+    @Vcltee@Teedata@TChartDataSet@GetFieldData$qqrp14Data@Db@TFieldr24System@%DynamicArray$uc% @270 ; Vcltee::Teedata::TChartDataSet::GetFieldData(Data::Db::TField *, System::DynamicArray<{583}...
+    @Vcltee@Teedata@TChartDataSet@GetRecordCount$qqrv @278 ; __fastcall Vcltee::Teedata::TChartDataSet::GetRecordCount()
+    @Vcltee@Teedata@TChartDataSet@GetRecordSize$qqrv @280 ; __fastcall Vcltee::Teedata::TChartDataSet::GetRecordSize()
+    @Vcltee@Teedata@TChartDataSet@InternalAddRecord$qqrpuco @268 ; __fastcall Vcltee::Teedata::TChartDataSet::InternalAddRecord(unsigned char *, bool)
+    @Vcltee@Teedata@TChartDataSet@InternalDelete$qqrv @279 ; __fastcall Vcltee::Teedata::TChartDataSet::InternalDelete()
+    @Vcltee@Teedata@TChartDataSet@InternalInitFieldDefs$qqrv @275 ; __fastcall Vcltee::Teedata::TChartDataSet::InternalInitFieldDefs()
+    @Vcltee@Teedata@TChartDataSet@InternalOpen$qqrv @276 ; __fastcall Vcltee::Teedata::TChartDataSet::InternalOpen()
+    @Vcltee@Teedata@TChartDataSet@InternalPost$qqrv @269 ; __fastcall Vcltee::Teedata::TChartDataSet::InternalPost()
+    @Vcltee@Teedata@TChartDataSet@IsCursorOpen$qqrv @277 ; __fastcall Vcltee::Teedata::TChartDataSet::IsCursorOpen()
+    @Vcltee@Teedata@TChartDataSet@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @283 ; __fastcall Vcltee::Teedata::TChartDataSet::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Vcltee@Teedata@TChartDataSet@RecInfoOfs$qqrv @272 ; __fastcall Vcltee::Teedata::TChartDataSet::RecInfoOfs()
+    @Vcltee@Teedata@TChartDataSet@SetChart$qqrp25Vcltee@Chart@TCustomChart @282 ; __fastcall Vcltee::Teedata::TChartDataSet::SetChart(Vcltee::Chart::TCustomChart *)
+    @Vcltee@Teedata@TChartDataSet@SetFieldData$qqrp14Data@Db@TField24System@%DynamicArray$uc% @273 ; Vcltee::Teedata::TChartDataSet::SetFieldData(Data::Db::TField *, System::DynamicArray<{583}...
+    @Vcltee@Teedata@TChartDataSet@TeeEvent$qqrp25Vcltee@Teeprocs@TTeeEvent @281 ; __fastcall Vcltee::Teedata::TChartDataSet::TeeEvent(Vcltee::Teeprocs::TTeeEvent *)
+    @Vcltee@Teedata@TSeriesDataSet@ @354 ; Vcltee::Teedata::TSeriesDataSet::
+    @Vcltee@Teedata@TSeriesDataSet@DoFillBuffer$qqrpuc @298 ; __fastcall Vcltee::Teedata::TSeriesDataSet::DoFillBuffer(unsigned char *)
+    @Vcltee@Teedata@TSeriesDataSet@GetFieldData$qqrp14Data@Db@TFieldr24System@%DynamicArray$uc% @290 ; Vcltee::Teedata::TSeriesDataSet::GetFieldData(Data::Db::TField *, System::DynamicArray<{583}...
+    @Vcltee@Teedata@TSeriesDataSet@GetRecordCount$qqrv @285 ; __fastcall Vcltee::Teedata::TSeriesDataSet::GetRecordCount()
+    @Vcltee@Teedata@TSeriesDataSet@GetRecordSize$qqrv @291 ; __fastcall Vcltee::Teedata::TSeriesDataSet::GetRecordSize()
+    @Vcltee@Teedata@TSeriesDataSet@InternalAddRecord$qqrpuco @287 ; __fastcall Vcltee::Teedata::TSeriesDataSet::InternalAddRecord(unsigned char *, bool)
+    @Vcltee@Teedata@TSeriesDataSet@InternalDelete$qqrv @286 ; __fastcall Vcltee::Teedata::TSeriesDataSet::InternalDelete()
+    @Vcltee@Teedata@TSeriesDataSet@InternalInitFieldDefs$qqrv @292 ; __fastcall Vcltee::Teedata::TSeriesDataSet::InternalInitFieldDefs()
+    @Vcltee@Teedata@TSeriesDataSet@InternalOpen$qqrv @294 ; __fastcall Vcltee::Teedata::TSeriesDataSet::InternalOpen()
+    @Vcltee@Teedata@TSeriesDataSet@InternalPost$qqrv @288 ; __fastcall Vcltee::Teedata::TSeriesDataSet::InternalPost()
+    @Vcltee@Teedata@TSeriesDataSet@IsCursorOpen$qqrv @293 ; __fastcall Vcltee::Teedata::TSeriesDataSet::IsCursorOpen()
+    @Vcltee@Teedata@TSeriesDataSet@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @296 ; __fastcall Vcltee::Teedata::TSeriesDataSet::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Vcltee@Teedata@TSeriesDataSet@RecInfoOfs$qqrv @295 ; __fastcall Vcltee::Teedata::TSeriesDataSet::RecInfoOfs()
+    @Vcltee@Teedata@TSeriesDataSet@SetFieldData$qqrp14Data@Db@TField24System@%DynamicArray$uc% @289 ; Vcltee::Teedata::TSeriesDataSet::SetFieldData(Data::Db::TField *, System::DynamicArray<{583}...
+    @Vcltee@Teedata@TSeriesDataSet@SetSeries$qqrp28Vcltee@Teengine@TChartSeries @297 ; __fastcall Vcltee::Teedata::TSeriesDataSet::SetSeries(Vcltee::Teengine::TChartSeries *)
+    @Vcltee@Teedata@TSeriesDataSet@TeeEvent$qqrp25Vcltee@Teeprocs@TTeeEvent @284 ; __fastcall Vcltee::Teedata::TSeriesDataSet::TeeEvent(Vcltee::Teeprocs::TTeeEvent *)
+    @Vcltee@Teedata@TTeeDataSet@   @356 ; Vcltee::Teedata::TTeeDataSet::
+    @Vcltee@Teedata@TTeeDataSet@AddSeriesFields$qqrp28Vcltee@Teengine@TChartSerieso @308 ; __fastcall Vcltee::Teedata::TTeeDataSet::AddSeriesFields(Vcltee::Teengine::TChartSeries *, bool)
+    @Vcltee@Teedata@TTeeDataSet@AllocRecordBuffer$qqrv @317 ; __fastcall Vcltee::Teedata::TTeeDataSet::AllocRecordBuffer()
+    @Vcltee@Teedata@TTeeDataSet@BufferRecord$qqrpxuc @324 ; __fastcall Vcltee::Teedata::TTeeDataSet::BufferRecord(const unsigned char *)
+    @Vcltee@Teedata@TTeeDataSet@DoAddSeriesPoint$qqrrx27Vcltee@Teedata@TSeriesPointp28Vcltee@Teengine@TChartSeries @301 ; __fastcall Vcltee::Teedata::TTeeDataSet::DoAddSeriesPoint(const Vcltee::Teedata::TSeriesPoint&, Vcltee::Teengine::TChartSeries *)
+    @Vcltee@Teedata@TTeeDataSet@DoCreateField$qqrx20System@UnicodeString18Data@Db@TFieldTypei @329 ; __fastcall Vcltee::Teedata::TTeeDataSet::DoCreateField(const System::UnicodeString, Data::Db::TFieldType, int)
+    @Vcltee@Teedata@TTeeDataSet@DoInternalGotoBookmark$qqri @326 ; __fastcall Vcltee::Teedata::TTeeDataSet::DoInternalGotoBookmark(int)
+    @Vcltee@Teedata@TTeeDataSet@FieldsAreAutomatic$qqrv @331 ; __fastcall Vcltee::Teedata::TTeeDataSet::FieldsAreAutomatic()
+    @Vcltee@Teedata@TTeeDataSet@FillSeriesBuffer$qqrr27Vcltee@Teedata@TSeriesPointp28Vcltee@Teengine@TChartSeries @303 ; __fastcall Vcltee::Teedata::TTeeDataSet::FillSeriesBuffer(Vcltee::Teedata::TSeriesPoint&, Vcltee::Teengine::TChartSeries *)
+    @Vcltee@Teedata@TTeeDataSet@FreeRecordBuffer$qqrrpuc @316 ; __fastcall Vcltee::Teedata::TTeeDataSet::FreeRecordBuffer(unsigned char *&)
+    @Vcltee@Teedata@TTeeDataSet@GetBookmarkData$qqrpuc24System@%DynamicArray$uc% @319 ; Vcltee::Teedata::TTeeDataSet::GetBookmarkData(unsigned char *, System::DynamicArray<{583}...
+    @Vcltee@Teedata@TTeeDataSet@GetBookmarkFlag$qqrpuc @321 ; __fastcall Vcltee::Teedata::TTeeDataSet::GetBookmarkFlag(unsigned char *)
+    @Vcltee@Teedata@TTeeDataSet@GetRecNo$qqrv @313 ; __fastcall Vcltee::Teedata::TTeeDataSet::GetRecNo()
+    @Vcltee@Teedata@TTeeDataSet@GetRecord$qqrpuc16Data@Db@TGetModeo @305 ; __fastcall Vcltee::Teedata::TTeeDataSet::GetRecord(unsigned char *, Data::Db::TGetMode, bool)
+    @Vcltee@Teedata@TTeeDataSet@GetSeriesBuffer$qqrir27Vcltee@Teedata@TSeriesPointr24System@%DynamicArray$uc%p28Vcltee@Teengine@TChartSeries @302 ; Vcltee::Teedata::TTeeDataSet::GetSeriesBuffer(int, Vcltee::Teedata::TSeriesPoint&, System::DynamicArray<{583}...
+    @Vcltee@Teedata@TTeeDataSet@InternalAddRecord$qqrpuco @322 ; __fastcall Vcltee::Teedata::TTeeDataSet::InternalAddRecord(unsigned char *, bool)
+    @Vcltee@Teedata@TTeeDataSet@InternalClose$qqrv @330 ; __fastcall Vcltee::Teedata::TTeeDataSet::InternalClose()
+    @Vcltee@Teedata@TTeeDataSet@InternalDelete$qqrv @327 ; __fastcall Vcltee::Teedata::TTeeDataSet::InternalDelete()
+    @Vcltee@Teedata@TTeeDataSet@InternalFirst$qqrv @314 ; __fastcall Vcltee::Teedata::TTeeDataSet::InternalFirst()
+    @Vcltee@Teedata@TTeeDataSet@InternalGotoBookmark$qqr24System@%DynamicArray$uc% @325 ; Vcltee::Teedata::TTeeDataSet::InternalGotoBookmark(System::DynamicArray<{583}...
+    @Vcltee@Teedata@TTeeDataSet@InternalHandleException$qqrv @328 ; __fastcall Vcltee::Teedata::TTeeDataSet::InternalHandleException()
+    @Vcltee@Teedata@TTeeDataSet@InternalInitRecord$qqrpuc @315 ; __fastcall Vcltee::Teedata::TTeeDataSet::InternalInitRecord(unsigned char *)
+    @Vcltee@Teedata@TTeeDataSet@InternalLast$qqrv @310 ; __fastcall Vcltee::Teedata::TTeeDataSet::InternalLast()
+    @Vcltee@Teedata@TTeeDataSet@InternalOpen$qqrv @311 ; __fastcall Vcltee::Teedata::TTeeDataSet::InternalOpen()
+    @Vcltee@Teedata@TTeeDataSet@InternalPost$qqrv @299 ; __fastcall Vcltee::Teedata::TTeeDataSet::InternalPost()
+    @Vcltee@Teedata@TTeeDataSet@InternalSetToRecord$qqrpuc @323 ; __fastcall Vcltee::Teedata::TTeeDataSet::InternalSetToRecord(unsigned char *)
+    @Vcltee@Teedata@TTeeDataSet@IsCursorOpen$qqrv @309 ; __fastcall Vcltee::Teedata::TTeeDataSet::IsCursorOpen()
+    @Vcltee@Teedata@TTeeDataSet@PostToSeries$qqrp28Vcltee@Teengine@TChartSeriesrx27Vcltee@Teedata@TSeriesPoint @300 ; __fastcall Vcltee::Teedata::TTeeDataSet::PostToSeries(Vcltee::Teengine::TChartSeries *, const Vcltee::Teedata::TSeriesPoint&)
+    @Vcltee@Teedata@TTeeDataSet@RecBufSize$qqrv @332 ; __fastcall Vcltee::Teedata::TTeeDataSet::RecBufSize()
+    @Vcltee@Teedata@TTeeDataSet@SetBookmarkData$qqrpuc24System@%DynamicArray$uc% @318 ; Vcltee::Teedata::TTeeDataSet::SetBookmarkData(unsigned char *, System::DynamicArray<{583}...
+    @Vcltee@Teedata@TTeeDataSet@SetBookmarkFlag$qqrpuc21Data@Db@TBookmarkFlag @320 ; __fastcall Vcltee::Teedata::TTeeDataSet::SetBookmarkFlag(unsigned char *, Data::Db::TBookmarkFlag)
+    @Vcltee@Teedata@TTeeDataSet@SetFieldData$qqrp14Data@Db@TField24System@%DynamicArray$uc% @306 ; Vcltee::Teedata::TTeeDataSet::SetFieldData(Data::Db::TField *, System::DynamicArray<{583}...
+    @Vcltee@Teedata@TTeeDataSet@SetRecNo$qqri @312 ; __fastcall Vcltee::Teedata::TTeeDataSet::SetRecNo(int)
+    @Vcltee@Teedata@TTeeDataSet@SetSeriesBuffer$qqrir27Vcltee@Teedata@TSeriesPointpvp28Vcltee@Teengine@TChartSeries @307 ; __fastcall Vcltee::Teedata::TTeeDataSet::SetSeriesBuffer(int, Vcltee::Teedata::TSeriesPoint&, void *, Vcltee::Teengine::TChartSeries *)
+    @Vcltee@Teedata@TTeeDataSet@ValidActiveBuffer$qqrv @304 ; __fastcall Vcltee::Teedata::TTeeDataSet::ValidActiveBuffer()
+    @Vcltee@Teedata@initialization$qqrv @266 ; __fastcall Vcltee::Teedata::initialization()
+    @Vcltee@Teedbcrosstab@FillDataSet$qqrxp16Data@Db@TDataSetxp28Vcltee@Teengine@TChartSeriesx20System@UnicodeStringt3t3x34Vcltee@Teedbcrosstab@TGroupFormula @385 ; __fastcall Vcltee::Teedbcrosstab::FillDataSet(Data::Db::TDataSet * const, Vcltee::Teengine::TChartSeries * const, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const Vcltee::Teedbcrosstab::TGroupFormula)
+    @Vcltee@Teedbcrosstab@Finalization$qqrv @364 ; __fastcall Vcltee::Teedbcrosstab::Finalization()
+    @Vcltee@Teedbcrosstab@TDBCrossTabSource@ @387 ; Vcltee::Teedbcrosstab::TDBCrossTabSource::
+    @Vcltee@Teedbcrosstab@TDBCrossTabSource@$bctr$qqrp25System@Classes@TComponent @383 ; __fastcall Vcltee::Teedbcrosstab::TDBCrossTabSource::TDBCrossTabSource(System::Classes::TComponent *)
+    @Vcltee@Teedbcrosstab@TDBCrossTabSource@$bdtr$qqrv @366 ; __fastcall Vcltee::Teedbcrosstab::TDBCrossTabSource::~TDBCrossTabSource()
+    @Vcltee@Teedbcrosstab@TDBCrossTabSource@Available$qqrp32Vcltee@Teengine@TCustomAxisPanel @371 ; __fastcall Vcltee::Teedbcrosstab::TDBCrossTabSource::Available(Vcltee::Teengine::TCustomAxisPanel *)
+    @Vcltee@Teedbcrosstab@TDBCrossTabSource@DataSourceCheckDataSet$qqrxp16Data@Db@TDataSet @372 ; __fastcall Vcltee::Teedbcrosstab::TDBCrossTabSource::DataSourceCheckDataSet(Data::Db::TDataSet * const)
+    @Vcltee@Teedbcrosstab@TDBCrossTabSource@DataSourceCloseDataSet$qqrxp16Data@Db@TDataSet @374 ; __fastcall Vcltee::Teedbcrosstab::TDBCrossTabSource::DataSourceCloseDataSet(Data::Db::TDataSet * const)
+    @Vcltee@Teedbcrosstab@TDBCrossTabSource@Description$qqrv @382 ; __fastcall Vcltee::Teedbcrosstab::TDBCrossTabSource::Description()
+    @Vcltee@Teedbcrosstab@TDBCrossTabSource@Editor$qqrv @381 ; __fastcall Vcltee::Teedbcrosstab::TDBCrossTabSource::Editor()
+    @Vcltee@Teedbcrosstab@TDBCrossTabSource@HasSeries$qqrp28Vcltee@Teengine@TChartSeries @380 ; __fastcall Vcltee::Teedbcrosstab::TDBCrossTabSource::HasSeries(Vcltee::Teengine::TChartSeries *)
+    @Vcltee@Teedbcrosstab@TDBCrossTabSource@Load$qqrv @379 ; __fastcall Vcltee::Teedbcrosstab::TDBCrossTabSource::Load()
+    @Vcltee@Teedbcrosstab@TDBCrossTabSource@LoadDataSet$qqrv @384 ; __fastcall Vcltee::Teedbcrosstab::TDBCrossTabSource::LoadDataSet()
+    @Vcltee@Teedbcrosstab@TDBCrossTabSource@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @377 ; __fastcall Vcltee::Teedbcrosstab::TDBCrossTabSource::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Vcltee@Teedbcrosstab@TDBCrossTabSource@RemoveSeries$qqrv @375 ; __fastcall Vcltee::Teedbcrosstab::TDBCrossTabSource::RemoveSeries()
+    @Vcltee@Teedbcrosstab@TDBCrossTabSource@SetActive$qqrxo @373 ; __fastcall Vcltee::Teedbcrosstab::TDBCrossTabSource::SetActive(const bool)
+    @Vcltee@Teedbcrosstab@TDBCrossTabSource@SetCase$qqrxo @365 ; __fastcall Vcltee::Teedbcrosstab::TDBCrossTabSource::SetCase(const bool)
+    @Vcltee@Teedbcrosstab@TDBCrossTabSource@SetDataSet$qqrxp16Data@Db@TDataSet @378 ; __fastcall Vcltee::Teedbcrosstab::TDBCrossTabSource::SetDataSet(Data::Db::TDataSet * const)
+    @Vcltee@Teedbcrosstab@TDBCrossTabSource@SetFormula$qqrx34Vcltee@Teedbcrosstab@TGroupFormula @370 ; __fastcall Vcltee::Teedbcrosstab::TDBCrossTabSource::SetFormula(const Vcltee::Teedbcrosstab::TGroupFormula)
+    @Vcltee@Teedbcrosstab@TDBCrossTabSource@SetGroup$qqrx20System@UnicodeString @369 ; __fastcall Vcltee::Teedbcrosstab::TDBCrossTabSource::SetGroup(const System::UnicodeString)
+    @Vcltee@Teedbcrosstab@TDBCrossTabSource@SetLabel$qqrx20System@UnicodeString @368 ; __fastcall Vcltee::Teedbcrosstab::TDBCrossTabSource::SetLabel(const System::UnicodeString)
+    @Vcltee@Teedbcrosstab@TDBCrossTabSource@SetValue$qqrx20System@UnicodeString @367 ; __fastcall Vcltee::Teedbcrosstab::TDBCrossTabSource::SetValue(const System::UnicodeString)
+    @Vcltee@Teedbcrosstab@TDBCrossTabSource@TeeEvent$qqrp25Vcltee@Teeprocs@TTeeEvent @376 ; __fastcall Vcltee::Teedbcrosstab::TDBCrossTabSource::TeeEvent(Vcltee::Teeprocs::TTeeEvent *)
+    @Vcltee@Teedbcrosstab@initialization$qqrv @363 ; __fastcall Vcltee::Teedbcrosstab::initialization()
+    @Vcltee@Teedbcrosstabeditor@Finalization$qqrv @390 ; __fastcall Vcltee::Teedbcrosstabeditor::Finalization()
+    @Vcltee@Teedbcrosstabeditor@TDBChartCrossTabEditor@ @402 ; Vcltee::Teedbcrosstabeditor::TDBChartCrossTabEditor::
+    @Vcltee@Teedbcrosstabeditor@TDBChartCrossTabEditor@BApplyClick$qqrp14System@TObject @397 ; __fastcall Vcltee::Teedbcrosstabeditor::TDBChartCrossTabEditor::BApplyClick(System::TObject *)
+    @Vcltee@Teedbcrosstabeditor@TDBChartCrossTabEditor@CBActiveClick$qqrp14System@TObject @394 ; __fastcall Vcltee::Teedbcrosstabeditor::TDBChartCrossTabEditor::CBActiveClick(System::TObject *)
+    @Vcltee@Teedbcrosstabeditor@TDBChartCrossTabEditor@CBAggChange$qqrp14System@TObject @396 ; __fastcall Vcltee::Teedbcrosstabeditor::TDBChartCrossTabEditor::CBAggChange(System::TObject *)
+    @Vcltee@Teedbcrosstabeditor@TDBChartCrossTabEditor@CBCaseClick$qqrp14System@TObject @393 ; __fastcall Vcltee::Teedbcrosstabeditor::TDBChartCrossTabEditor::CBCaseClick(System::TObject *)
+    @Vcltee@Teedbcrosstabeditor@TDBChartCrossTabEditor@CBHideClick$qqrp14System@TObject @392 ; __fastcall Vcltee::Teedbcrosstabeditor::TDBChartCrossTabEditor::CBHideClick(System::TObject *)
+    @Vcltee@Teedbcrosstabeditor@TDBChartCrossTabEditor@CBSourcesChange$qqrp14System@TObject @399 ; __fastcall Vcltee::Teedbcrosstabeditor::TDBChartCrossTabEditor::CBSourcesChange(System::TObject *)
+    @Vcltee@Teedbcrosstabeditor@TDBChartCrossTabEditor@EnableCombos$qqrv @400 ; __fastcall Vcltee::Teedbcrosstabeditor::TDBChartCrossTabEditor::EnableCombos()
+    @Vcltee@Teedbcrosstabeditor@TDBChartCrossTabEditor@FormDestroy$qqrp14System@TObject @395 ; __fastcall Vcltee::Teedbcrosstabeditor::TDBChartCrossTabEditor::FormDestroy(System::TObject *)
+    @Vcltee@Teedbcrosstabeditor@TDBChartCrossTabEditor@FormShow$qqrp14System@TObject @398 ; __fastcall Vcltee::Teedbcrosstabeditor::TDBChartCrossTabEditor::FormShow(System::TObject *)
+    @Vcltee@Teedbcrosstabeditor@TDBChartCrossTabEditor@Translate$qqrv @391 ; __fastcall Vcltee::Teedbcrosstabeditor::TDBChartCrossTabEditor::Translate()
+    @Vcltee@Teedbcrosstabeditor@initialization$qqrv @389 ; __fastcall Vcltee::Teedbcrosstabeditor::initialization()
+    @Vcltee@Teedbedit@Finalization$qqrv @139 ; __fastcall Vcltee::Teedbedit::Finalization()
+    @Vcltee@Teedbedit@OnGetDesignerNames @146 ; Vcltee::Teedbedit::OnGetDesignerNames
+    @Vcltee@Teedbedit@TBaseDBChartEditor@ @148 ; Vcltee::Teedbedit::TBaseDBChartEditor::
+    @Vcltee@Teedbedit@TBaseDBChartEditor@DataSet$qqrv @141 ; __fastcall Vcltee::Teedbedit::TBaseDBChartEditor::DataSet()
+    @Vcltee@Teedbedit@TBaseDBChartEditor@FillFields$qqrpxp22Vcl@Stdctrls@TComboBoxxi @140 ; __fastcall Vcltee::Teedbedit::TBaseDBChartEditor::FillFields(Vcl::Stdctrls::TComboBox * const *, const int)
+    @Vcltee@Teedbedit@TBaseDBChartEditor@FillSourceDatasets$qqrv @145 ; __fastcall Vcltee::Teedbedit::TBaseDBChartEditor::FillSourceDatasets()
+    @Vcltee@Teedbedit@TBaseDBChartEditor@FillSources$qqrv @143 ; __fastcall Vcltee::Teedbedit::TBaseDBChartEditor::FillSources()
+    @Vcltee@Teedbedit@TBaseDBChartEditor@FormShow$qqrp14System@TObject @142 ; __fastcall Vcltee::Teedbedit::TBaseDBChartEditor::FormShow(System::TObject *)
+    @Vcltee@Teedbedit@TBaseDBChartEditor@IsValid$qqrp25System@Classes@TComponent @144 ; __fastcall Vcltee::Teedbedit::TBaseDBChartEditor::IsValid(System::Classes::TComponent *)
+    @Vcltee@Teedbedit@initialization$qqrv @138 ; __fastcall Vcltee::Teedbedit::initialization()
+    @Vcltee@Teedbsourceeditor@Finalization$qqrv @150 ; __fastcall Vcltee::Teedbsourceeditor::Finalization()
+    @Vcltee@Teedbsourceeditor@TDBChartSourceEditor@ @165 ; Vcltee::Teedbsourceeditor::TDBChartSourceEditor::
+    @Vcltee@Teedbsourceeditor@TDBChartSourceEditor@BApplyClick$qqrp14System@TObject @160 ; __fastcall Vcltee::Teedbsourceeditor::TDBChartSourceEditor::BApplyClick(System::TObject *)
+    @Vcltee@Teedbsourceeditor@TDBChartSourceEditor@CBSourcesChange$qqrp14System@TObject @156 ; __fastcall Vcltee::Teedbsourceeditor::TDBChartSourceEditor::CBSourcesChange(System::TObject *)
+    @Vcltee@Teedbsourceeditor@TDBChartSourceEditor@DataSource$qqrv @159 ; __fastcall Vcltee::Teedbsourceeditor::TDBChartSourceEditor::DataSource()
+    @Vcltee@Teedbsourceeditor@TDBChartSourceEditor@FillFields$qqrv @155 ; __fastcall Vcltee::Teedbsourceeditor::TDBChartSourceEditor::FillFields()
+    @Vcltee@Teedbsourceeditor@TDBChartSourceEditor@FormDestroy$qqrp14System@TObject @154 ; __fastcall Vcltee::Teedbsourceeditor::TDBChartSourceEditor::FormDestroy(System::TObject *)
+    @Vcltee@Teedbsourceeditor@TDBChartSourceEditor@FormShow$qqrp14System@TObject @157 ; __fastcall Vcltee::Teedbsourceeditor::TDBChartSourceEditor::FormShow(System::TObject *)
+    @Vcltee@Teedbsourceeditor@TDBChartSourceEditor@IsValid$qqrp25System@Classes@TComponent @161 ; __fastcall Vcltee::Teedbsourceeditor::TDBChartSourceEditor::IsValid(System::Classes::TComponent *)
+    @Vcltee@Teedbsourceeditor@TDBChartSourceEditor@OnChangeSources$qqrp14System@TObject @158 ; __fastcall Vcltee::Teedbsourceeditor::TDBChartSourceEditor::OnChangeSources(System::TObject *)
+    @Vcltee@Teedbsourceeditor@TSingleRecordSeriesSource@ @163 ; Vcltee::Teedbsourceeditor::TSingleRecordSeriesSource::
+    @Vcltee@Teedbsourceeditor@TSingleRecordSeriesSource@Description$qqrv @153 ; __fastcall Vcltee::Teedbsourceeditor::TSingleRecordSeriesSource::Description()
+    @Vcltee@Teedbsourceeditor@TSingleRecordSeriesSource@Editor$qqrv @152 ; __fastcall Vcltee::Teedbsourceeditor::TSingleRecordSeriesSource::Editor()
+    @Vcltee@Teedbsourceeditor@TSingleRecordSeriesSource@HasSeries$qqrp28Vcltee@Teengine@TChartSeries @151 ; __fastcall Vcltee::Teedbsourceeditor::TSingleRecordSeriesSource::HasSeries(Vcltee::Teengine::TChartSeries *)
+    @Vcltee@Teedbsourceeditor@initialization$qqrv @149 ; __fastcall Vcltee::Teedbsourceeditor::initialization()
+    @Vcltee@Teedbsumedit@Finalization$qqrv @167 ; __fastcall Vcltee::Teedbsumedit::Finalization()
+    @Vcltee@Teedbsumedit@TDBChartSumEditor@ @186 ; Vcltee::Teedbsumedit::TDBChartSumEditor::
+    @Vcltee@Teedbsumedit@TDBChartSumEditor@BApplyClick$qqrp14System@TObject @178 ; __fastcall Vcltee::Teedbsumedit::TDBChartSumEditor::BApplyClick(System::TObject *)
+    @Vcltee@Teedbsumedit@TDBChartSumEditor@CBAggChange$qqrp14System@TObject @181 ; __fastcall Vcltee::Teedbsumedit::TDBChartSumEditor::CBAggChange(System::TObject *)
+    @Vcltee@Teedbsumedit@TDBChartSumEditor@CBGroupChange$qqrp14System@TObject @179 ; __fastcall Vcltee::Teedbsumedit::TDBChartSumEditor::CBGroupChange(System::TObject *)
+    @Vcltee@Teedbsumedit@TDBChartSumEditor@CBSortChange$qqrp14System@TObject @173 ; __fastcall Vcltee::Teedbsumedit::TDBChartSumEditor::CBSortChange(System::TObject *)
+    @Vcltee@Teedbsumedit@TDBChartSumEditor@CBSortTypeChange$qqrp14System@TObject @172 ; __fastcall Vcltee::Teedbsumedit::TDBChartSumEditor::CBSortTypeChange(System::TObject *)
+    @Vcltee@Teedbsumedit@TDBChartSumEditor@CBSourcesChange$qqrp14System@TObject @174 ; __fastcall Vcltee::Teedbsumedit::TDBChartSumEditor::CBSourcesChange(System::TObject *)
+    @Vcltee@Teedbsumedit@TDBChartSumEditor@CheckCount$qqrv @176 ; __fastcall Vcltee::Teedbsumedit::TDBChartSumEditor::CheckCount()
+    @Vcltee@Teedbsumedit@TDBChartSumEditor@EnableCombos$qqrv @175 ; __fastcall Vcltee::Teedbsumedit::TDBChartSumEditor::EnableCombos()
+    @Vcltee@Teedbsumedit@TDBChartSumEditor@EnableTimeStep$qqrv @180 ; __fastcall Vcltee::Teedbsumedit::TDBChartSumEditor::EnableTimeStep()
+    @Vcltee@Teedbsumedit@TDBChartSumEditor@FormCreate$qqrp14System@TObject @171 ; __fastcall Vcltee::Teedbsumedit::TDBChartSumEditor::FormCreate(System::TObject *)
+    @Vcltee@Teedbsumedit@TDBChartSumEditor@FormShow$qqrp14System@TObject @177 ; __fastcall Vcltee::Teedbsumedit::TDBChartSumEditor::FormShow(System::TObject *)
+    @Vcltee@Teedbsumedit@TDBSummarySource@ @184 ; Vcltee::Teedbsumedit::TDBSummarySource::
+    @Vcltee@Teedbsumedit@TDBSummarySource@Description$qqrv @170 ; __fastcall Vcltee::Teedbsumedit::TDBSummarySource::Description()
+    @Vcltee@Teedbsumedit@TDBSummarySource@Editor$qqrv @169 ; __fastcall Vcltee::Teedbsumedit::TDBSummarySource::Editor()
+    @Vcltee@Teedbsumedit@TDBSummarySource@HasSeries$qqrp28Vcltee@Teengine@TChartSeries @168 ; __fastcall Vcltee::Teedbsumedit::TDBSummarySource::HasSeries(Vcltee::Teengine::TChartSeries *)
+    @Vcltee@Teedbsumedit@TeeDBSummaryEditor$qqrp25System@Classes@TComponentp28Vcltee@Teengine@TChartSeries @182 ; __fastcall Vcltee::Teedbsumedit::TeeDBSummaryEditor(System::Classes::TComponent *, Vcltee::Teengine::TChartSeries *)
+    @Vcltee@Teedbsumedit@initialization$qqrv @166 ; __fastcall Vcltee::Teedbsumedit::initialization()
+    Finalize                       @407 ; Finalize
+    Initialize                     @408 ; Initialize

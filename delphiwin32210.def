@@ -1,0 +1,20 @@
+LIBRARY     DELPHIWIN32210.BPL
+
+EXPORTS
+    @$xp$42Liboptionswindows@TLibOptionsDelphiWindows @6   ; __tpdsc__ Liboptionswindows::TLibOptionsDelphiWindows
+    @Delphiwin32@@GetPackageInfoTable$qqrv @14  ; Delphiwin32::__linkproc__ __fastcall GetPackageInfoTable()
+    @Delphiwin32@@PackageLoad$qqrv @13  ; Delphiwin32::__linkproc__ __fastcall PackageLoad()
+    @Delphiwin32@@PackageUnload$qqrv @12  ; Delphiwin32::__linkproc__ __fastcall PackageUnload()
+    @Delphiwin32@initialization$qqrv @11  ; __fastcall Delphiwin32::initialization()
+    @Delphiwin32platform@Finalization$qqrv @9   ; __fastcall Delphiwin32platform::Finalization()
+    @Delphiwin32platform@IDERegister$qqrv @10  ; __fastcall Delphiwin32platform::IDERegister()
+    @Delphiwin32platform@initialization$qqrv @8   ; __fastcall Delphiwin32platform::initialization()
+    @GetPackageInfoTable           @17  ; GetPackageInfoTable
+    @Liboptionswindows@Finalization$qqrv @2   ; __fastcall Liboptionswindows::Finalization()
+    @Liboptionswindows@LibOptionsDelphiWindows @5   ; Liboptionswindows::LibOptionsDelphiWindows
+    @Liboptionswindows@TLibOptionsDelphiWindows@ @7   ; Liboptionswindows::TLibOptionsDelphiWindows::
+    @Liboptionswindows@TLibOptionsDelphiWindows@CustomizeDialog$qqrp28Idepropsheet@TPropertySheetsp40Baseenvirondialog@TBaseEnvironmentDialog @4   ; __fastcall Liboptionswindows::TLibOptionsDelphiWindows::CustomizeDialog(Idepropsheet::TPropertySheets *, Baseenvirondialog::TBaseEnvironmentDialog *)
+    @Liboptionswindows@TLibOptionsDelphiWindows@PlatformName$qqrv @3   ; __fastcall Liboptionswindows::TLibOptionsDelphiWindows::PlatformName()
+    @Liboptionswindows@initialization$qqrv @1   ; __fastcall Liboptionswindows::initialization()
+    Finalize                       @15  ; Finalize
+    Initialize                     @16  ; Initialize

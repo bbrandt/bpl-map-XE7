@@ -1,0 +1,142 @@
+LIBRARY     FIREDACASADRIVER210.BPL
+
+DESCRIPTION 'mbarcadero FireDAC ASA Driver Components'
+
+EXPORTS
+    @$xp$26Firedac@Phys@Asacli@P_name @30  ; __tpdsc__ Firedac::Phys::Asacli::P_name
+    @$xp$26Firedac@Phys@Asacli@a_name @29  ; __tpdsc__ Firedac::Phys::Asacli::a_name
+    @$xp$27Firedac@Phys@Asacli@Pa_char @31  ; __tpdsc__ Firedac::Phys::Asacli::Pa_char
+    @$xp$29Firedac@Phys@Asa@TFDASABackup @124 ; __tpdsc__ Firedac::Phys::Asa::TFDASABackup
+    @$xp$29Firedac@Phys@Asacli@TDBBackup @10  ; __tpdsc__ Firedac::Phys::Asacli::TDBBackup
+    @$xp$30Firedac@Phys@Asa@TFDASAService @126 ; __tpdsc__ Firedac::Phys::Asa::TFDASAService
+    @$xp$31Firedac@Phys@Asa@TFDASAValidate @122 ; __tpdsc__ Firedac::Phys::Asa::TFDASAValidate
+    @$xp$31Firedac@Phys@Asacli@TDBValidate @3   ; __tpdsc__ Firedac::Phys::Asacli::TDBValidate
+    @$xp$32Firedac@Phys@Asacli@MSG_CALLBACK @28  ; __tpdsc__ Firedac::Phys::Asacli::MSG_CALLBACK
+    @$xp$32Firedac@Phys@Asacli@TDBToolsFini @17  ; __tpdsc__ Firedac::Phys::Asacli::TDBToolsFini
+    @$xp$32Firedac@Phys@Asacli@TDBToolsInit @18  ; __tpdsc__ Firedac::Phys::Asacli::TDBToolsInit
+    @$xp$32Firedac@Phys@Asawrapper@TASATool @66  ; __tpdsc__ Firedac::Phys::Asawrapper::TASATool
+    @$xp$34Firedac@Phys@Asacli@P_dbtools_info @20  ; __tpdsc__ Firedac::Phys::Asacli::P_dbtools_info
+    @$xp$34Firedac@Phys@Asacli@USAGE_CALLBACK @22  ; __tpdsc__ Firedac::Phys::Asacli::USAGE_CALLBACK
+    @$xp$34Firedac@Phys@Asacli@a_backup_db_v9 @11  ; __tpdsc__ Firedac::Phys::Asacli::a_backup_db_v9
+    @$xp$34Firedac@Phys@Asacli@a_dbtools_info @19  ; __tpdsc__ Firedac::Phys::Asacli::a_dbtools_info
+    @$xp$34Firedac@Phys@Asawrapper@TASABackup @61  ; __tpdsc__ Firedac::Phys::Asawrapper::TASABackup
+    @$xp$35Firedac@Phys@Asacli@SPLASH_CALLBACK @21  ; __tpdsc__ Firedac::Phys::Asacli::SPLASH_CALLBACK
+    @$xp$35Firedac@Phys@Asacli@STATUS_CALLBACK @27  ; __tpdsc__ Firedac::Phys::Asacli::STATUS_CALLBACK
+    @$xp$35Firedac@Phys@Asacli@TDBToolsVersion @16  ; __tpdsc__ Firedac::Phys::Asacli::TDBToolsVersion
+    @$xp$35Firedac@Phys@Asacli@a_backup_db_v10 @12  ; __tpdsc__ Firedac::Phys::Asacli::a_backup_db_v10
+    @$xp$35Firedac@Phys@Asacli@a_backup_db_v11 @13  ; __tpdsc__ Firedac::Phys::Asacli::a_backup_db_v11
+    @$xp$35Firedac@Phys@Asacli@a_backup_db_v12 @14  ; __tpdsc__ Firedac::Phys::Asacli::a_backup_db_v12
+    @$xp$35Firedac@Phys@Asacli@a_validate_type @9   ; __tpdsc__ Firedac::Phys::Asacli::a_validate_type
+    @$xp$35Firedac@Phys@Asawrapper@TASAToolLib @70  ; __tpdsc__ Firedac::Phys::Asawrapper::TASAToolLib
+    @$xp$36Firedac@Phys@Asa@TFDASAProgressEvent @128 ; __tpdsc__ Firedac::Phys::Asa::TFDASAProgressEvent
+    @$xp$36Firedac@Phys@Asacli@a_chkpt_log_type @15  ; __tpdsc__ Firedac::Phys::Asacli::a_chkpt_log_type
+    @$xp$36Firedac@Phys@Asacli@a_validate_db_v5 @4   ; __tpdsc__ Firedac::Phys::Asacli::a_validate_db_v5
+    @$xp$36Firedac@Phys@Asacli@a_validate_db_v9 @5   ; __tpdsc__ Firedac::Phys::Asacli::a_validate_db_v9
+    @$xp$36Firedac@Phys@Asawrapper@TASAValidate @56  ; __tpdsc__ Firedac::Phys::Asawrapper::TASAValidate
+    @$xp$37Firedac@Phys@Asa@TFDPhysASADriverLink @129 ; __tpdsc__ Firedac::Phys::Asa::TFDPhysASADriverLink
+    @$xp$37Firedac@Phys@Asacli@a_validate_db_v10 @6   ; __tpdsc__ Firedac::Phys::Asacli::a_validate_db_v10
+    @$xp$37Firedac@Phys@Asacli@a_validate_db_v11 @7   ; __tpdsc__ Firedac::Phys::Asacli::a_validate_db_v11
+    @$xp$37Firedac@Phys@Asacli@a_validate_db_v12 @8   ; __tpdsc__ Firedac::Phys::Asacli::a_validate_db_v12
+    @$xp$38Firedac@Phys@Asacli@MSG_QUEUE_CALLBACK @26  ; __tpdsc__ Firedac::Phys::Asacli::MSG_QUEUE_CALLBACK
+    @$xp$39Firedac@Phys@Asawrapper@TASABackupFlags @63  ; __tpdsc__ Firedac::Phys::Asawrapper::TASABackupFlags
+    @$xp$40Firedac@Phys@Asawrapper@TASAValidateType @60  ; __tpdsc__ Firedac::Phys::Asawrapper::TASAValidateType
+    @$xp$41Firedac@Phys@Asacli@SET_PROGRESS_CALLBACK @23  ; __tpdsc__ Firedac::Phys::Asacli::SET_PROGRESS_CALLBACK
+    @$xp$41Firedac@Phys@Asawrapper@TASAValidateFlags @58  ; __tpdsc__ Firedac::Phys::Asawrapper::TASAValidateFlags
+    @$xp$43Firedac@Phys@Asawrapper@EASANativeException @72  ; __tpdsc__ Firedac::Phys::Asawrapper::EASANativeException
+    @$xp$43Firedac@Phys@Asawrapper@TASAToolMessageKind @69  ; __tpdsc__ Firedac::Phys::Asawrapper::TASAToolMessageKind
+    @$xp$44Firedac@Phys@Asawrapper@TASAToolMessageEvent @68  ; __tpdsc__ Firedac::Phys::Asawrapper::TASAToolMessageEvent
+    @$xp$45Firedac@Phys@Asacli@SET_TRAY_MESSAGE_CALLBACK @24  ; __tpdsc__ Firedac::Phys::Asacli::SET_TRAY_MESSAGE_CALLBACK
+    @$xp$45Firedac@Phys@Asacli@SET_WINDOW_TITLE_CALLBACK @25  ; __tpdsc__ Firedac::Phys::Asacli::SET_WINDOW_TITLE_CALLBACK
+    @$xp$49Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams @102 ; __tpdsc__ Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams
+    @$xp$50Firedac@Phys@Asawrapper@Firedac_Phys_Asawrapper__4 @64  ; __tpdsc__ Firedac::Phys::Asawrapper::Firedac_Phys_Asawrapper__4
+    @$xp$50Firedac@Phys@Asawrapper@Firedac_Phys_Asawrapper__6 @59  ; __tpdsc__ Firedac::Phys::Asawrapper::Firedac_Phys_Asawrapper__6
+    @$xp$51Firedac@Phys@Asawrapper@TASABackupCheckpointLogType @65  ; __tpdsc__ Firedac::Phys::Asawrapper::TASABackupCheckpointLogType
+    @Firedac@Phys@Asa@Finalization$qqrv @105 ; __fastcall Firedac::Phys::Asa::Finalization()
+    @Firedac@Phys@Asa@TFDASABackup@ @125 ; Firedac::Phys::Asa::TFDASABackup::
+    @Firedac@Phys@Asa@TFDASABackup@$bctr$qqrp25System@Classes@TComponent @113 ; __fastcall Firedac::Phys::Asa::TFDASABackup::TFDASABackup(System::Classes::TComponent *)
+    @Firedac@Phys@Asa@TFDASABackup@Backup$qqrv @111 ; __fastcall Firedac::Phys::Asa::TFDASABackup::Backup()
+    @Firedac@Phys@Asa@TFDASABackup@InternalExecute$qqrv @112 ; __fastcall Firedac::Phys::Asa::TFDASABackup::InternalExecute()
+    @Firedac@Phys@Asa@TFDASAService@ @127 ; Firedac::Phys::Asa::TFDASAService::
+    @Firedac@Phys@Asa@TFDASAService@CheckActive$qqroo @114 ; __fastcall Firedac::Phys::Asa::TFDASAService::CheckActive(bool, bool)
+    @Firedac@Phys@Asa@TFDASAService@GetDriverLink$qqrv @118 ; __fastcall Firedac::Phys::Asa::TFDASAService::GetDriverLink()
+    @Firedac@Phys@Asa@TFDASAService@GetEnv$qqrv @116 ; __fastcall Firedac::Phys::Asa::TFDASAService::GetEnv()
+    @Firedac@Phys@Asa@TFDASAService@GetToolLib$qqrv @115 ; __fastcall Firedac::Phys::Asa::TFDASAService::GetToolLib()
+    @Firedac@Phys@Asa@TFDASAService@SetDriverLink$qqrxp37Firedac@Phys@Asa@TFDPhysASADriverLink @117 ; __fastcall Firedac::Phys::Asa::TFDASAService::SetDriverLink(Firedac::Phys::Asa::TFDPhysASADriverLink * const)
+    @Firedac@Phys@Asa@TFDASAValidate@ @123 ; Firedac::Phys::Asa::TFDASAValidate::
+    @Firedac@Phys@Asa@TFDASAValidate@$bctr$qqrp25System@Classes@TComponent @110 ; __fastcall Firedac::Phys::Asa::TFDASAValidate::TFDASAValidate(System::Classes::TComponent *)
+    @Firedac@Phys@Asa@TFDASAValidate@$bdtr$qqrv @109 ; __fastcall Firedac::Phys::Asa::TFDASAValidate::~TFDASAValidate()
+    @Firedac@Phys@Asa@TFDASAValidate@InternalExecute$qqrv @107 ; __fastcall Firedac::Phys::Asa::TFDASAValidate::InternalExecute()
+    @Firedac@Phys@Asa@TFDASAValidate@SetTables$qqrxp23System@Classes@TStrings @108 ; __fastcall Firedac::Phys::Asa::TFDASAValidate::SetTables(System::Classes::TStrings * const)
+    @Firedac@Phys@Asa@TFDASAValidate@Validate$qqrv @106 ; __fastcall Firedac::Phys::Asa::TFDASAValidate::Validate()
+    @Firedac@Phys@Asa@TFDPhysASADriverLink@ @130 ; Firedac::Phys::Asa::TFDPhysASADriverLink::
+    @Firedac@Phys@Asa@TFDPhysASADriverLink@ApplyTo$qqrx62System@%DelphiInterface$35Firedac@Stan@Intf@IFDStanDefinition% @119 ; Firedac::Phys::Asa::TFDPhysASADriverLink::ApplyTo(const System::DelphiInterface<{583}...
+    @Firedac@Phys@Asa@TFDPhysASADriverLink@GetBaseDriverID$qqrv @121 ; __fastcall Firedac::Phys::Asa::TFDPhysASADriverLink::GetBaseDriverID()
+    @Firedac@Phys@Asa@TFDPhysASADriverLink@IsConfigured$qqrv @120 ; __fastcall Firedac::Phys::Asa::TFDPhysASADriverLink::IsConfigured()
+    @Firedac@Phys@Asa@initialization$qqrv @104 ; __fastcall Firedac::Phys::Asa::initialization()
+    @Firedac@Phys@Asacli@Finalization$qqrv @2   ; __fastcall Firedac::Phys::Asacli::Finalization()
+    @Firedac@Phys@Asacli@initialization$qqrv @1   ; __fastcall Firedac::Phys::Asacli::initialization()
+    @Firedac@Phys@Asadef@Finalization$qqrv @75  ; __fastcall Firedac::Phys::Asadef::Finalization()
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@ @103 ; Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@GetApplicationName$qqrv @85  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::GetApplicationName()
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@GetCompress$qqrv @89  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::GetCompress()
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@GetDatabaseFile$qqrv @93  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::GetDatabaseFile()
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@GetDriverID$qqrv @101 ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::GetDriverID()
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@GetEncrypt$qqrv @87  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::GetEncrypt()
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@GetLoginTimeout$qqrv @97  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::GetLoginTimeout()
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@GetMetaCurCatalog$qqrv @79  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::GetMetaCurCatalog()
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@GetMetaCurSchema$qqrv @77  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::GetMetaCurSchema()
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@GetMetaDefCatalog$qqrv @83  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::GetMetaDefCatalog()
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@GetMetaDefSchema$qqrv @81  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::GetMetaDefSchema()
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@GetODBCAdvanced$qqrv @99  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::GetODBCAdvanced()
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@GetOSAuthent$qqrv @91  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::GetOSAuthent()
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@GetServer$qqrv @95  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::GetServer()
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@SetApplicationName$qqrx20System@UnicodeString @84  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::SetApplicationName(const System::UnicodeString)
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@SetCompress$qqrxo @88  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::SetCompress(const bool)
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@SetDatabaseFile$qqrx20System@UnicodeString @92  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::SetDatabaseFile(const System::UnicodeString)
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@SetDriverID$qqrx20System@UnicodeString @100 ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::SetDriverID(const System::UnicodeString)
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@SetEncrypt$qqrx20System@UnicodeString @86  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::SetEncrypt(const System::UnicodeString)
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@SetLoginTimeout$qqrxi @96  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::SetLoginTimeout(const int)
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@SetMetaCurCatalog$qqrx20System@UnicodeString @78  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::SetMetaCurCatalog(const System::UnicodeString)
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@SetMetaCurSchema$qqrx20System@UnicodeString @76  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::SetMetaCurSchema(const System::UnicodeString)
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@SetMetaDefCatalog$qqrx20System@UnicodeString @82  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::SetMetaDefCatalog(const System::UnicodeString)
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@SetMetaDefSchema$qqrx20System@UnicodeString @80  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::SetMetaDefSchema(const System::UnicodeString)
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@SetODBCAdvanced$qqrx20System@UnicodeString @98  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::SetODBCAdvanced(const System::UnicodeString)
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@SetOSAuthent$qqrxo @90  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::SetOSAuthent(const bool)
+    @Firedac@Phys@Asadef@TFDPhysASAConnectionDefParams@SetServer$qqrx20System@UnicodeString @94  ; __fastcall Firedac::Phys::Asadef::TFDPhysASAConnectionDefParams::SetServer(const System::UnicodeString)
+    @Firedac@Phys@Asadef@initialization$qqrv @74  ; __fastcall Firedac::Phys::Asadef::initialization()
+    @Firedac@Phys@Asawrapper@EASANativeException@ @73  ; Firedac::Phys::Asawrapper::EASANativeException::
+    @Firedac@Phys@Asawrapper@EASANativeException@AppendError$qqrp36Firedac@Phys@Odbcwrapper@TODBCHandlesx20System@UnicodeStringit3t3t3t342Firedac@Stan@Error@TFDCommandExceptionKindii @55  ; Firedac::Phys::Asawrapper::EASANativeException::AppendError(Firedac::Phys::Odbcwrapper::TODBCHandle *, short, const System::UnicodeString, int, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::Unicode
+    @Firedac@Phys@Asawrapper@Finalization$qqrv @33  ; __fastcall Firedac::Phys::Asawrapper::Finalization()
+    @Firedac@Phys@Asawrapper@TASABackup@ @62  ; Firedac::Phys::Asawrapper::TASABackup::
+    @Firedac@Phys@Asawrapper@TASABackup@Backup$qqrv @38  ; __fastcall Firedac::Phys::Asawrapper::TASABackup::Backup()
+    @Firedac@Phys@Asawrapper@TASATool@ @67  ; Firedac::Phys::Asawrapper::TASATool::
+    @Firedac@Phys@Asawrapper@TASATool@$bctr$qqrp35Firedac@Phys@Asawrapper@TASAToolLibp14System@TObject @51  ; __fastcall Firedac::Phys::Asawrapper::TASATool::TASATool(Firedac::Phys::Asawrapper::TASAToolLib *, System::TObject *)
+    @Firedac@Phys@Asawrapper@TASATool@$bdtr$qqrv @50  ; __fastcall Firedac::Phys::Asawrapper::TASATool::~TASATool()
+    @Firedac@Phys@Asawrapper@TASATool@Check$qqrzc @49  ; __fastcall Firedac::Phys::Asawrapper::TASATool::Check(signed char)
+    @Firedac@Phys@Asawrapper@TASATool@DeleteP_name$qqrp26Firedac@Phys@Asacli@a_name @39  ; __fastcall Firedac::Phys::Asawrapper::TASATool::DeleteP_name(Firedac::Phys::Asacli::a_name *)
+    @Firedac@Phys@Asawrapper@TASATool@DoConfirmCallback$qqspuc @46  ; __stdcall Firedac::Phys::Asawrapper::TASATool::DoConfirmCallback(unsigned char *)
+    @Firedac@Phys@Asawrapper@TASATool@DoErrorCallback$qqspuc @45  ; __stdcall Firedac::Phys::Asawrapper::TASATool::DoErrorCallback(unsigned char *)
+    @Firedac@Phys@Asawrapper@TASATool@DoMessage$qqrpuc43Firedac@Phys@Asawrapper@TASAToolMessageKind @48  ; __fastcall Firedac::Phys::Asawrapper::TASATool::DoMessage(unsigned char *, Firedac::Phys::Asawrapper::TASAToolMessageKind)
+    @Firedac@Phys@Asawrapper@TASATool@DoMessageCallback$qqspuc @47  ; __stdcall Firedac::Phys::Asawrapper::TASATool::DoMessageCallback(unsigned char *)
+    @Firedac@Phys@Asawrapper@TASATool@DoStatusCallback$qqspuc @44  ; __stdcall Firedac::Phys::Asawrapper::TASATool::DoStatusCallback(unsigned char *)
+    @Firedac@Phys@Asawrapper@TASATool@Fini$qqrv @42  ; __fastcall Firedac::Phys::Asawrapper::TASATool::Fini()
+    @Firedac@Phys@Asawrapper@TASATool@GetVersion$qqrv @41  ; __fastcall Firedac::Phys::Asawrapper::TASATool::GetVersion()
+    @Firedac@Phys@Asawrapper@TASATool@Init$qqrv @43  ; __fastcall Firedac::Phys::Asawrapper::TASATool::Init()
+    @Firedac@Phys@Asawrapper@TASATool@Strings2P_name$qqrp23System@Classes@TStrings @40  ; __fastcall Firedac::Phys::Asawrapper::TASATool::Strings2P_name(System::Classes::TStrings *)
+    @Firedac@Phys@Asawrapper@TASAToolLib@ @71  ; Firedac::Phys::Asawrapper::TASAToolLib::
+    @Firedac@Phys@Asawrapper@TASAToolLib@$bctr$qqrp14System@TObject @54  ; __fastcall Firedac::Phys::Asawrapper::TASAToolLib::TASAToolLib(System::TObject *)
+    @Firedac@Phys@Asawrapper@TASAToolLib@Load$qqrx20System@UnicodeString @53  ; __fastcall Firedac::Phys::Asawrapper::TASAToolLib::Load(const System::UnicodeString)
+    @Firedac@Phys@Asawrapper@TASAToolLib@LoadEntries$qqrv @52  ; __fastcall Firedac::Phys::Asawrapper::TASAToolLib::LoadEntries()
+    @Firedac@Phys@Asawrapper@TASAValidate@ @57  ; Firedac::Phys::Asawrapper::TASAValidate::
+    @Firedac@Phys@Asawrapper@TASAValidate@$bctr$qqrp35Firedac@Phys@Asawrapper@TASAToolLibp14System@TObject @37  ; __fastcall Firedac::Phys::Asawrapper::TASAValidate::TASAValidate(Firedac::Phys::Asawrapper::TASAToolLib *, System::TObject *)
+    @Firedac@Phys@Asawrapper@TASAValidate@$bdtr$qqrv @36  ; __fastcall Firedac::Phys::Asawrapper::TASAValidate::~TASAValidate()
+    @Firedac@Phys@Asawrapper@TASAValidate@SetTables$qqrxp23System@Classes@TStrings @35  ; __fastcall Firedac::Phys::Asawrapper::TASAValidate::SetTables(System::Classes::TStrings * const)
+    @Firedac@Phys@Asawrapper@TASAValidate@Validate$qqrv @34  ; __fastcall Firedac::Phys::Asawrapper::TASAValidate::Validate()
+    @Firedac@Phys@Asawrapper@initialization$qqrv @32  ; __fastcall Firedac::Phys::Asawrapper::initialization()
+    @Firedacasadriver@@GetPackageInfoTable$qqrv @134 ; Firedacasadriver::__linkproc__ __fastcall GetPackageInfoTable()
+    @Firedacasadriver@@PackageLoad$qqrv @133 ; Firedacasadriver::__linkproc__ __fastcall PackageLoad()
+    @Firedacasadriver@@PackageUnload$qqrv @132 ; Firedacasadriver::__linkproc__ __fastcall PackageUnload()
+    @Firedacasadriver@initialization$qqrv @131 ; __fastcall Firedacasadriver::initialization()
+    @GetPackageInfoTable           @137 ; GetPackageInfoTable
+    Finalize                       @135 ; Finalize
+    Initialize                     @136 ; Initialize

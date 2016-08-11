@@ -1,0 +1,251 @@
+LIBRARY     DCLSTD210.BPL
+
+DESCRIPTION 'mbarcadero Standard Components'
+
+EXPORTS
+    @$xp$16Coledit@TColInfo        @216 ; __tpdsc__ Coledit::TColInfo
+    @$xp$18Ddereg@TDdeLinkDlg      @150 ; __tpdsc__ Ddereg::TDdeLinkDlg
+    @$xp$18Imgedit@TImageInfo      @116 ; __tpdsc__ Imgedit::TImageInfo
+    @$xp$18Itemedit@TItemInfo      @36  ; __tpdsc__ Itemedit::TItemInfo
+    @$xp$19Ddereg@TCliConvEdit     @154 ; __tpdsc__ Ddereg::TCliConvEdit
+    @$xp$20Ddereg@TSrvrConvEdit    @156 ; __tpdsc__ Ddereg::TSrvrConvEdit
+    @$xp$20Ddereg@TSrvrItemEdit    @152 ; __tpdsc__ Ddereg::TSrvrItemEdit
+    @$xp$23Imgedit@TImageOperation @118 ; __tpdsc__ Imgedit::TImageOperation
+    @$xp$23Itemedit@TListViewItems @34  ; __tpdsc__ Itemedit::TListViewItems
+    @$xp$23Nodeedit@TTreeViewItems @64  ; __tpdsc__ Nodeedit::TTreeViewItems
+    @$xp$24Actnres@TStandardActions @122 ; __tpdsc__ Actnres::TStandardActions
+    @$xp$24Coledit@TListViewColumns @214 ; __tpdsc__ Coledit::TListViewColumns
+    @$xp$24Imgedit@TImageListEditor @114 ; __tpdsc__ Imgedit::TImageListEditor
+    @$xp$25Sbaredit@TStatusBarEditor @181 ; __tpdsc__ Sbaredit::TStatusBarEditor
+    @$xp$27Ddereg@TDdeLinkInfoProperty @148 ; __tpdsc__ Ddereg::TDdeLinkInfoProperty
+    @$xp$29Ddereg@TDdeClientItemProperty @146 ; __tpdsc__ Ddereg::TDdeClientItemProperty
+    @$xp$29Hctledit@THeaderControlEditor @238 ; __tpdsc__ Hctledit::THeaderControlEditor
+    @Actnres@Finalization$qqrv     @120 ; __fastcall Actnres::Finalization()
+    @Actnres@StandardActions       @121 ; Actnres::StandardActions
+    @Actnres@TStandardActions@     @123 ; Actnres::TStandardActions::
+    @Actnres@initialization$qqrv   @119 ; __fastcall Actnres::initialization()
+    @Coledit@EditListViewColumns$qqrp25Vcl@Comctrls@TListColumns @213 ; __fastcall Coledit::EditListViewColumns(Vcl::Comctrls::TListColumns *)
+    @Coledit@Finalization$qqrv     @184 ; __fastcall Coledit::Finalization()
+    @Coledit@TColInfo@             @217 ; Coledit::TColInfo::
+    @Coledit@TColInfo@$bctr$qqrp20System@Classes@TListp24Vcl@Comctrls@TListColumn @212 ; __fastcall Coledit::TColInfo::TColInfo(System::Classes::TList *, Vcl::Comctrls::TListColumn *)
+    @Coledit@TColInfo@$bdtr$qqrv   @211 ; __fastcall Coledit::TColInfo::~TColInfo()
+    @Coledit@TColInfo@GetIndex$qqrv @210 ; __fastcall Coledit::TColInfo::GetIndex()
+    @Coledit@TListViewColumns@     @215 ; Coledit::TListViewColumns::
+    @Coledit@TListViewColumns@AlignmentEditExit$qqrp14System@TObject @203 ; __fastcall Coledit::TListViewColumns::AlignmentEditExit(System::TObject *)
+    @Coledit@TListViewColumns@ApplyClick$qqrp14System@TObject @193 ; __fastcall Coledit::TListViewColumns::ApplyClick(System::TObject *)
+    @Coledit@TListViewColumns@ColumnListBoxClick$qqrp14System@TObject @199 ; __fastcall Coledit::TListViewColumns::ColumnListBoxClick(System::TObject *)
+    @Coledit@TListViewColumns@ColumnListBoxDragDrop$qqrp14System@TObjectt1ii @190 ; __fastcall Coledit::TListViewColumns::ColumnListBoxDragDrop(System::TObject *, System::TObject *, int, int)
+    @Coledit@TListViewColumns@ColumnListBoxDragOver$qqrp14System@TObjectt1ii25System@Uitypes@TDragStatero @191 ; __fastcall Coledit::TListViewColumns::ColumnListBoxDragOver(System::TObject *, System::TObject *, int, int, System::Uitypes::TDragState, bool&)
+    @Coledit@TListViewColumns@ColumnListBoxEndDrag$qqrp14System@TObjectt1ii @188 ; __fastcall Coledit::TListViewColumns::ColumnListBoxEndDrag(System::TObject *, System::TObject *, int, int)
+    @Coledit@TListViewColumns@ColumnListBoxMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @187 ; Coledit::TListViewColumns::ColumnListBoxMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Coledit@TListViewColumns@ColumnListBoxStartDrag$qqrp14System@TObjectrp24Vcl@Controls@TDragObject @189 ; __fastcall Coledit::TListViewColumns::ColumnListBoxStartDrag(System::TObject *, Vcl::Controls::TDragObject *&)
+    @Coledit@TListViewColumns@DeleteClick$qqrp14System@TObject @208 ; __fastcall Coledit::TListViewColumns::DeleteClick(System::TObject *)
+    @Coledit@TListViewColumns@FlushControls$qqrv @202 ; __fastcall Coledit::TListViewColumns::FlushControls()
+    @Coledit@TListViewColumns@FormCreate$qqrp14System@TObject @195 ; __fastcall Coledit::TListViewColumns::FormCreate(System::TObject *)
+    @Coledit@TListViewColumns@FormDestroy$qqrp14System@TObject @194 ; __fastcall Coledit::TListViewColumns::FormDestroy(System::TObject *)
+    @Coledit@TListViewColumns@GetColInfo$qqri @192 ; __fastcall Coledit::TListViewColumns::GetColInfo(int)
+    @Coledit@TListViewColumns@GetItem$qqrp24Vcl@Comctrls@TListColumn @201 ; __fastcall Coledit::TListViewColumns::GetItem(Vcl::Comctrls::TListColumn *)
+    @Coledit@TListViewColumns@HWidthBtnClick$qqrp14System@TObject @186 ; __fastcall Coledit::TListViewColumns::HWidthBtnClick(System::TObject *)
+    @Coledit@TListViewColumns@HelpClick$qqrp14System@TObject @185 ; __fastcall Coledit::TListViewColumns::HelpClick(System::TObject *)
+    @Coledit@TListViewColumns@IndexEditExit$qqrp14System@TObject @205 ; __fastcall Coledit::TListViewColumns::IndexEditExit(System::TObject *)
+    @Coledit@TListViewColumns@ListBoxText$qqrp16Coledit@TColInfo @196 ; __fastcall Coledit::TListViewColumns::ListBoxText(Coledit::TColInfo *)
+    @Coledit@TListViewColumns@NewClick$qqrp14System@TObject @198 ; __fastcall Coledit::TListViewColumns::NewClick(System::TObject *)
+    @Coledit@TListViewColumns@SetItem$qqrp16Coledit@TColInfo @200 ; __fastcall Coledit::TListViewColumns::SetItem(Coledit::TColInfo *)
+    @Coledit@TListViewColumns@SetListBoxText$qqrix20System@UnicodeString @207 ; __fastcall Coledit::TListViewColumns::SetListBoxText(int, const System::UnicodeString)
+    @Coledit@TListViewColumns@SetStates$qqrv @197 ; __fastcall Coledit::TListViewColumns::SetStates()
+    @Coledit@TListViewColumns@TextEditExit$qqrp14System@TObject @206 ; __fastcall Coledit::TListViewColumns::TextEditExit(System::TObject *)
+    @Coledit@TListViewColumns@ValueChanged$qqrp14System@TObject @209 ; __fastcall Coledit::TListViewColumns::ValueChanged(System::TObject *)
+    @Coledit@TListViewColumns@WidthEditExit$qqrp14System@TObject @204 ; __fastcall Coledit::TListViewColumns::WidthEditExit(System::TObject *)
+    @Coledit@initialization$qqrv   @183 ; __fastcall Coledit::initialization()
+    @Dclstd@@GetPackageInfoTable$qqrv @243 ; Dclstd::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclstd@@PackageLoad$qqrv      @242 ; Dclstd::__linkproc__ __fastcall PackageLoad()
+    @Dclstd@@PackageUnload$qqrv    @241 ; Dclstd::__linkproc__ __fastcall PackageUnload()
+    @Dclstd@initialization$qqrv    @240 ; __fastcall Dclstd::initialization()
+    @Ddereg@Finalization$qqrv      @131 ; __fastcall Ddereg::Finalization()
+    @Ddereg@Register$qqrv          @132 ; __fastcall Ddereg::Register()
+    @Ddereg@TCliConvEdit@          @155 ; Ddereg::TCliConvEdit::
+    @Ddereg@TCliConvEdit@EditProperty$qqrx47System@%DelphiInterface$20Designintf@IProperty%ro @144 ; Ddereg::TCliConvEdit::EditProperty(const System::DelphiInterface<{583}...
+    @Ddereg@TDdeClientItemProperty@ @147 ; Ddereg::TDdeClientItemProperty::
+    @Ddereg@TDdeClientItemProperty@GetAttributes$qqrv @134 ; __fastcall Ddereg::TDdeClientItemProperty::GetAttributes()
+    @Ddereg@TDdeClientItemProperty@GetValues$qqrynpqqrx20System@UnicodeString$v @133 ; __fastcall Ddereg::TDdeClientItemProperty::GetValues(void __fastcall __closure(*)(const System::UnicodeString))
+    @Ddereg@TDdeLinkDlg@           @151 ; Ddereg::TDdeLinkDlg::
+    @Ddereg@TDdeLinkDlg@DoPasteCheck$qqrp14System@TObject @138 ; __fastcall Ddereg::TDdeLinkDlg::DoPasteCheck(System::TObject *)
+    @Ddereg@TDdeLinkDlg@FormCreate$qqrp14System@TObject @136 ; __fastcall Ddereg::TDdeLinkDlg::FormCreate(System::TObject *)
+    @Ddereg@TDdeLinkDlg@HelpBtnClick$qqrp14System@TObject @135 ; __fastcall Ddereg::TDdeLinkDlg::HelpBtnClick(System::TObject *)
+    @Ddereg@TDdeLinkDlg@WMActivate$qqrr27Winapi@Messages@TWMActivate @137 ; __fastcall Ddereg::TDdeLinkDlg::WMActivate(Winapi::Messages::TWMActivate&)
+    @Ddereg@TDdeLinkDlg@doPasteLink$qqrp14System@TObject @139 ; __fastcall Ddereg::TDdeLinkDlg::doPasteLink(System::TObject *)
+    @Ddereg@TDdeLinkInfoProperty@  @149 ; Ddereg::TDdeLinkInfoProperty::
+    @Ddereg@TDdeLinkInfoProperty@Edit$qqrv @140 ; __fastcall Ddereg::TDdeLinkInfoProperty::Edit()
+    @Ddereg@TDdeLinkInfoProperty@GetAttributes$qqrv @142 ; __fastcall Ddereg::TDdeLinkInfoProperty::GetAttributes()
+    @Ddereg@TDdeLinkInfoProperty@GetValue$qqrv @141 ; __fastcall Ddereg::TDdeLinkInfoProperty::GetValue()
+    @Ddereg@TSrvrConvEdit@         @157 ; Ddereg::TSrvrConvEdit::
+    @Ddereg@TSrvrConvEdit@EditProperty$qqrx47System@%DelphiInterface$20Designintf@IProperty%ro @145 ; Ddereg::TSrvrConvEdit::EditProperty(const System::DelphiInterface<{583}...
+    @Ddereg@TSrvrItemEdit@         @153 ; Ddereg::TSrvrItemEdit::
+    @Ddereg@TSrvrItemEdit@Copy$qqrv @143 ; __fastcall Ddereg::TSrvrItemEdit::Copy()
+    @Ddereg@initialization$qqrv    @130 ; __fastcall Ddereg::initialization()
+    @GetPackageInfoTable           @246 ; GetPackageInfoTable
+    @Hctledit@EditHeaderSections$qqrp28Vcl@Comctrls@THeaderSections @237 ; __fastcall Hctledit::EditHeaderSections(Vcl::Comctrls::THeaderSections *)
+    @Hctledit@Finalization$qqrv    @219 ; __fastcall Hctledit::Finalization()
+    @Hctledit@THeaderControlEditor@ @239 ; Hctledit::THeaderControlEditor::
+    @Hctledit@THeaderControlEditor@ApplyButtonClick$qqrp14System@TObject @221 ; __fastcall Hctledit::THeaderControlEditor::ApplyButtonClick(System::TObject *)
+    @Hctledit@THeaderControlEditor@CancelButtonClick$qqrp14System@TObject @222 ; __fastcall Hctledit::THeaderControlEditor::CancelButtonClick(System::TObject *)
+    @Hctledit@THeaderControlEditor@DeleteButtonClick$qqrp14System@TObject @230 ; __fastcall Hctledit::THeaderControlEditor::DeleteButtonClick(System::TObject *)
+    @Hctledit@THeaderControlEditor@FormCreate$qqrp14System@TObject @236 ; __fastcall Hctledit::THeaderControlEditor::FormCreate(System::TObject *)
+    @Hctledit@THeaderControlEditor@HelpButtonClick$qqrp14System@TObject @220 ; __fastcall Hctledit::THeaderControlEditor::HelpButtonClick(System::TObject *)
+    @Hctledit@THeaderControlEditor@NewButtonClick$qqrp14System@TObject @231 ; __fastcall Hctledit::THeaderControlEditor::NewButtonClick(System::TObject *)
+    @Hctledit@THeaderControlEditor@OkButtonClick$qqrp14System@TObject @223 ; __fastcall Hctledit::THeaderControlEditor::OkButtonClick(System::TObject *)
+    @Hctledit@THeaderControlEditor@SectionComboChange$qqrp14System@TObject @224 ; __fastcall Hctledit::THeaderControlEditor::SectionComboChange(System::TObject *)
+    @Hctledit@THeaderControlEditor@SectionControlExit$qqrp14System@TObject @226 ; __fastcall Hctledit::THeaderControlEditor::SectionControlExit(System::TObject *)
+    @Hctledit@THeaderControlEditor@SectionEditChange$qqrp14System@TObject @225 ; __fastcall Hctledit::THeaderControlEditor::SectionEditChange(System::TObject *)
+    @Hctledit@THeaderControlEditor@SectionListClick$qqrp14System@TObject @232 ; __fastcall Hctledit::THeaderControlEditor::SectionListClick(System::TObject *)
+    @Hctledit@THeaderControlEditor@SectionListDragDrop$qqrp14System@TObjectt1ii @227 ; __fastcall Hctledit::THeaderControlEditor::SectionListDragDrop(System::TObject *, System::TObject *, int, int)
+    @Hctledit@THeaderControlEditor@SectionListDragOver$qqrp14System@TObjectt1ii25System@Uitypes@TDragStatero @228 ; __fastcall Hctledit::THeaderControlEditor::SectionListDragOver(System::TObject *, System::TObject *, int, int, System::Uitypes::TDragState, bool&)
+    @Hctledit@THeaderControlEditor@SectionListMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @229 ; Hctledit::THeaderControlEditor::SectionListMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Hctledit@THeaderControlEditor@UpdateControls$qqrv @235 ; __fastcall Hctledit::THeaderControlEditor::UpdateControls()
+    @Hctledit@THeaderControlEditor@UpdateSection$qqrv @234 ; __fastcall Hctledit::THeaderControlEditor::UpdateSection()
+    @Hctledit@THeaderControlEditor@UpdateSectionList$qqrv @233 ; __fastcall Hctledit::THeaderControlEditor::UpdateSectionList()
+    @Hctledit@initialization$qqrv  @218 ; __fastcall Hctledit::initialization()
+    @Imgedit@EditImageList$qqrp23Vcl@Controls@TImageList @113 ; __fastcall Imgedit::EditImageList(Vcl::Controls::TImageList *)
+    @Imgedit@Finalization$qqrv     @67  ; __fastcall Imgedit::Finalization()
+    @Imgedit@TImageInfo@           @117 ; Imgedit::TImageInfo::
+    @Imgedit@TImageInfo@$bctr$qqrp20System@Classes@TListp24Imgedit@TImageListEditorp21Vcl@Graphics@TGraphici @76  ; __fastcall Imgedit::TImageInfo::TImageInfo(System::Classes::TList *, Imgedit::TImageListEditor *, Vcl::Graphics::TGraphic *, int)
+    @Imgedit@TImageInfo@$bdtr$qqrv @75  ; __fastcall Imgedit::TImageInfo::~TImageInfo()
+    @Imgedit@TImageInfo@Change$qqrv @68  ; __fastcall Imgedit::TImageInfo::Change()
+    @Imgedit@TImageInfo@SetCanChangeFill$qqrxo @74  ; __fastcall Imgedit::TImageInfo::SetCanChangeFill(const bool)
+    @Imgedit@TImageInfo@SetCanChangeOperation$qqrxo @73  ; __fastcall Imgedit::TImageInfo::SetCanChangeOperation(const bool)
+    @Imgedit@TImageInfo@SetCanChangeTransparent$qqrxo @72  ; __fastcall Imgedit::TImageInfo::SetCanChangeTransparent(const bool)
+    @Imgedit@TImageInfo@SetFillColor$qqrx21System@Uitypes@TColor @71  ; __fastcall Imgedit::TImageInfo::SetFillColor(const System::Uitypes::TColor)
+    @Imgedit@TImageInfo@SetOperation$qqrx23Imgedit@TImageOperation @70  ; __fastcall Imgedit::TImageInfo::SetOperation(const Imgedit::TImageOperation)
+    @Imgedit@TImageInfo@SetTransparentColor$qqrx21System@Uitypes@TColor @69  ; __fastcall Imgedit::TImageInfo::SetTransparentColor(const System::Uitypes::TColor)
+    @Imgedit@TImageListEditor@     @115 ; Imgedit::TImageListEditor::
+    @Imgedit@TImageListEditor@AddClick$qqrp14System@TObject @80  ; __fastcall Imgedit::TImageListEditor::AddClick(System::TObject *)
+    @Imgedit@TImageListEditor@AddColor$qqrx20System@UnicodeString @79  ; __fastcall Imgedit::TImageListEditor::AddColor(const System::UnicodeString)
+    @Imgedit@TImageListEditor@ApplyClick$qqrp14System@TObject @105 ; __fastcall Imgedit::TImageListEditor::ApplyClick(System::TObject *)
+    @Imgedit@TImageListEditor@ClearAllImages$qqrv @100 ; __fastcall Imgedit::TImageListEditor::ClearAllImages()
+    @Imgedit@TImageListEditor@ClearClick$qqrp14System@TObject @93  ; __fastcall Imgedit::TImageListEditor::ClearClick(System::TObject *)
+    @Imgedit@TImageListEditor@DeleteClick$qqrp14System@TObject @87  ; __fastcall Imgedit::TImageListEditor::DeleteClick(System::TObject *)
+    @Imgedit@TImageListEditor@DeleteSelectedImages$qqrv @104 ; __fastcall Imgedit::TImageListEditor::DeleteSelectedImages()
+    @Imgedit@TImageListEditor@DoAdd$qqrp18Vcl@Graphics@TIconi @103 ; __fastcall Imgedit::TImageListEditor::DoAdd(Vcl::Graphics::TIcon *, int)
+    @Imgedit@TImageListEditor@DoAdd$qqrp21Vcl@Graphics@TGraphici @102 ; __fastcall Imgedit::TImageListEditor::DoAdd(Vcl::Graphics::TGraphic *, int)
+    @Imgedit@TImageListEditor@DoAdd$qqrp21Vcl@Graphics@TGraphiciii @101 ; __fastcall Imgedit::TImageListEditor::DoAdd(Vcl::Graphics::TGraphic *, int, int, int)
+    @Imgedit@TImageListEditor@DragTimerTimer$qqrp14System@TObject @86  ; __fastcall Imgedit::TImageListEditor::DragTimerTimer(System::TObject *)
+    @Imgedit@TImageListEditor@ExportBtnClick$qqrp14System@TObject @85  ; __fastcall Imgedit::TImageListEditor::ExportBtnClick(System::TObject *)
+    @Imgedit@TImageListEditor@FillColorChange$qqrp14System@TObject @84  ; __fastcall Imgedit::TImageListEditor::FillColorChange(System::TObject *)
+    @Imgedit@TImageListEditor@FormCreate$qqrp14System@TObject @83  ; __fastcall Imgedit::TImageListEditor::FormCreate(System::TObject *)
+    @Imgedit@TImageListEditor@FormDestroy$qqrp14System@TObject @82  ; __fastcall Imgedit::TImageListEditor::FormDestroy(System::TObject *)
+    @Imgedit@TImageListEditor@FormResize$qqrp14System@TObject @81  ; __fastcall Imgedit::TImageListEditor::FormResize(System::TObject *)
+    @Imgedit@TImageListEditor@GetImageInfo$qqri @112 ; __fastcall Imgedit::TImageListEditor::GetImageInfo(int)
+    @Imgedit@TImageListEditor@HelpClick$qqrp14System@TObject @111 ; __fastcall Imgedit::TImageListEditor::HelpClick(System::TObject *)
+    @Imgedit@TImageListEditor@ImageViewCompare$qqrp14System@TObjectp22Vcl@Comctrls@TListItemt2iri @92  ; __fastcall Imgedit::TImageListEditor::ImageViewCompare(System::TObject *, Vcl::Comctrls::TListItem *, Vcl::Comctrls::TListItem *, int, int&)
+    @Imgedit@TImageListEditor@ImageViewDragDrop$qqrp14System@TObjectt1ii @91  ; __fastcall Imgedit::TImageListEditor::ImageViewDragDrop(System::TObject *, System::TObject *, int, int)
+    @Imgedit@TImageListEditor@ImageViewDragOver$qqrp14System@TObjectt1ii25System@Uitypes@TDragStatero @90  ; __fastcall Imgedit::TImageListEditor::ImageViewDragOver(System::TObject *, System::TObject *, int, int, System::Uitypes::TDragState, bool&)
+    @Imgedit@TImageListEditor@ImageViewEndDrag$qqrp14System@TObjectt1ii @89  ; __fastcall Imgedit::TImageListEditor::ImageViewEndDrag(System::TObject *, System::TObject *, int, int)
+    @Imgedit@TImageListEditor@ImageViewSelectItem$qqrp14System@TObjectp22Vcl@Comctrls@TListItemo @88  ; __fastcall Imgedit::TImageListEditor::ImageViewSelectItem(System::TObject *, Vcl::Comctrls::TListItem *, bool)
+    @Imgedit@TImageListEditor@MainImageMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @99  ; Imgedit::TImageListEditor::MainImageMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Imgedit@TImageListEditor@MainImageMouseMove$qqrp14System@TObject60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @97  ; Imgedit::TImageListEditor::MainImageMouseMove(System::TObject *, System::Set<{583}...
+    @Imgedit@TImageListEditor@MainImageMouseUp$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @96  ; Imgedit::TImageListEditor::MainImageMouseUp(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Imgedit@TImageListEditor@MoveImage$qqrii @95  ; __fastcall Imgedit::TImageListEditor::MoveImage(int, int)
+    @Imgedit@TImageListEditor@OptionsGroupClick$qqrp14System@TObject @94  ; __fastcall Imgedit::TImageListEditor::OptionsGroupClick(System::TObject *)
+    @Imgedit@TImageListEditor@Replace$qqrip21Vcl@Graphics@TGraphic21System@Uitypes@TColort323Imgedit@TImageOperation @78  ; __fastcall Imgedit::TImageListEditor::Replace(int, Vcl::Graphics::TGraphic *, System::Uitypes::TColor, System::Uitypes::TColor, Imgedit::TImageOperation)
+    @Imgedit@TImageListEditor@ResizeImageGroup$qqrv @77  ; __fastcall Imgedit::TImageListEditor::ResizeImageGroup()
+    @Imgedit@TImageListEditor@SetImageFillColor$qqr21System@Uitypes@TColor @110 ; __fastcall Imgedit::TImageListEditor::SetImageFillColor(System::Uitypes::TColor)
+    @Imgedit@TImageListEditor@SetImageOperation$qqr23Imgedit@TImageOperation @109 ; __fastcall Imgedit::TImageListEditor::SetImageOperation(Imgedit::TImageOperation)
+    @Imgedit@TImageListEditor@SetImageTransparentColor$qqr21System@Uitypes@TColor @108 ; __fastcall Imgedit::TImageListEditor::SetImageTransparentColor(System::Uitypes::TColor)
+    @Imgedit@TImageListEditor@TransparentColorChange$qqrp14System@TObject @107 ; __fastcall Imgedit::TImageListEditor::TransparentColorChange(System::TObject *)
+    @Imgedit@TImageListEditor@UpdatePickColor$qqrii @98  ; __fastcall Imgedit::TImageListEditor::UpdatePickColor(int, int)
+    @Imgedit@TImageListEditor@UpdateUI$qqro @106 ; __fastcall Imgedit::TImageListEditor::UpdateUI(bool)
+    @Imgedit@initialization$qqrv   @66  ; __fastcall Imgedit::initialization()
+    @Itemedit@EditListViewItems$qqrp23Vcl@Comctrls@TListItems @33  ; __fastcall Itemedit::EditListViewItems(Vcl::Comctrls::TListItems *)
+    @Itemedit@Finalization$qqrv    @5   ; __fastcall Itemedit::Finalization()
+    @Itemedit@TItemInfo@           @37  ; Itemedit::TItemInfo::
+    @Itemedit@TItemInfo@$bctr$qqrp22Vcl@Comctrls@TListItem @32  ; __fastcall Itemedit::TItemInfo::TItemInfo(Vcl::Comctrls::TListItem *)
+    @Itemedit@TItemInfo@$bdtr$qqrv @31  ; __fastcall Itemedit::TItemInfo::~TItemInfo()
+    @Itemedit@TListViewItems@      @35  ; Itemedit::TListViewItems::
+    @Itemedit@TListViewItems@ApplyClick$qqrp14System@TObject @15  ; __fastcall Itemedit::TListViewItems::ApplyClick(System::TObject *)
+    @Itemedit@TListViewItems@Button7Click$qqrp14System@TObject @11  ; __fastcall Itemedit::TListViewItems::Button7Click(System::TObject *)
+    @Itemedit@TListViewItems@CaptionEditExit$qqrp14System@TObject @19  ; __fastcall Itemedit::TListViewItems::CaptionEditExit(System::TObject *)
+    @Itemedit@TListViewItems@DeleteClick$qqrp14System@TObject @21  ; __fastcall Itemedit::TListViewItems::DeleteClick(System::TObject *)
+    @Itemedit@TListViewItems@FlushControls$qqrv @26  ; __fastcall Itemedit::TListViewItems::FlushControls()
+    @Itemedit@TListViewItems@FormCreate$qqrp14System@TObject @7   ; __fastcall Itemedit::TListViewItems::FormCreate(System::TObject *)
+    @Itemedit@TListViewItems@FormDestroy$qqrp14System@TObject @6   ; __fastcall Itemedit::TListViewItems::FormDestroy(System::TObject *)
+    @Itemedit@TListViewItems@GetItem$qqrp18Itemedit@TItemInfop22Vcl@Comctrls@TListItem @29  ; __fastcall Itemedit::TListViewItems::GetItem(Itemedit::TItemInfo *, Vcl::Comctrls::TListItem *)
+    @Itemedit@TListViewItems@ImageExit$qqrp14System@TObject @17  ; __fastcall Itemedit::TListViewItems::ImageExit(System::TObject *)
+    @Itemedit@TListViewItems@NewClick$qqrp14System@TObject @23  ; __fastcall Itemedit::TListViewItems::NewClick(System::TObject *)
+    @Itemedit@TListViewItems@NewSubClick$qqrp14System@TObject @22  ; __fastcall Itemedit::TListViewItems::NewSubClick(System::TObject *)
+    @Itemedit@TListViewItems@SetItem$qqrp18Itemedit@TItemInfo @27  ; __fastcall Itemedit::TListViewItems::SetItem(Itemedit::TItemInfo *)
+    @Itemedit@TListViewItems@SetStates$qqrv @30  ; __fastcall Itemedit::TListViewItems::SetStates()
+    @Itemedit@TListViewItems@SetSubItem$qqrx20System@UnicodeStringi @28  ; __fastcall Itemedit::TListViewItems::SetSubItem(const System::UnicodeString, int)
+    @Itemedit@TListViewItems@StateImageExit$qqrp14System@TObject @16  ; __fastcall Itemedit::TListViewItems::StateImageExit(System::TObject *)
+    @Itemedit@TListViewItems@TreeViewChange$qqrp14System@TObjectp22Vcl@Comctrls@TTreeNode @24  ; __fastcall Itemedit::TListViewItems::TreeViewChange(System::TObject *, Vcl::Comctrls::TTreeNode *)
+    @Itemedit@TListViewItems@TreeViewChanging$qqrp14System@TObjectp22Vcl@Comctrls@TTreeNodero @25  ; __fastcall Itemedit::TListViewItems::TreeViewChanging(System::TObject *, Vcl::Comctrls::TTreeNode *, bool&)
+    @Itemedit@TListViewItems@TreeViewDragDrop$qqrp14System@TObjectt1ii @13  ; __fastcall Itemedit::TListViewItems::TreeViewDragDrop(System::TObject *, System::TObject *, int, int)
+    @Itemedit@TListViewItems@TreeViewDragOver$qqrp14System@TObjectt1ii25System@Uitypes@TDragStatero @14  ; __fastcall Itemedit::TListViewItems::TreeViewDragOver(System::TObject *, System::TObject *, int, int, System::Uitypes::TDragState, bool&)
+    @Itemedit@TListViewItems@TreeViewEdited$qqrp14System@TObjectp22Vcl@Comctrls@TTreeNoder20System@UnicodeString @12  ; __fastcall Itemedit::TListViewItems::TreeViewEdited(System::TObject *, Vcl::Comctrls::TTreeNode *, System::UnicodeString&)
+    @Itemedit@TListViewItems@TreeViewEditing$qqrp14System@TObjectp22Vcl@Comctrls@TTreeNodero @8   ; __fastcall Itemedit::TListViewItems::TreeViewEditing(System::TObject *, Vcl::Comctrls::TTreeNode *, bool&)
+    @Itemedit@TListViewItems@TreeViewKeyDown$qqrp14System@TObjectrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @10  ; Itemedit::TListViewItems::TreeViewKeyDown(System::TObject *, unsigned short&, System::Set<{583}...
+    @Itemedit@TListViewItems@UMTreeEdit$qqrr24Winapi@Messages@TMessage @9   ; __fastcall Itemedit::TListViewItems::UMTreeEdit(Winapi::Messages::TMessage&)
+    @Itemedit@TListViewItems@ValueChange$qqrp14System@TObject @20  ; __fastcall Itemedit::TListViewItems::ValueChange(System::TObject *)
+    @Itemedit@TListViewItems@cbGroupIDChange$qqrp14System@TObject @18  ; __fastcall Itemedit::TListViewItems::cbGroupIDChange(System::TObject *)
+    @Itemedit@initialization$qqrv  @4   ; __fastcall Itemedit::initialization()
+    @Nodeedit@EditTreeViewItems$qqrp23Vcl@Comctrls@TTreeNodes @63  ; __fastcall Nodeedit::EditTreeViewItems(Vcl::Comctrls::TTreeNodes *)
+    @Nodeedit@Finalization$qqrv    @39  ; __fastcall Nodeedit::Finalization()
+    @Nodeedit@TTreeViewItems@      @65  ; Nodeedit::TTreeViewItems::
+    @Nodeedit@TTreeViewItems@ApplyClick$qqrp14System@TObject @47  ; __fastcall Nodeedit::TTreeViewItems::ApplyClick(System::TObject *)
+    @Nodeedit@TTreeViewItems@DeleteClick$qqrp14System@TObject @55  ; __fastcall Nodeedit::TTreeViewItems::DeleteClick(System::TObject *)
+    @Nodeedit@TTreeViewItems@EnabledChanged$qqrp14System@TObject @54  ; __fastcall Nodeedit::TTreeViewItems::EnabledChanged(System::TObject *)
+    @Nodeedit@TTreeViewItems@ExpandedIndexExit$qqrp14System@TObject @53  ; __fastcall Nodeedit::TTreeViewItems::ExpandedIndexExit(System::TObject *)
+    @Nodeedit@TTreeViewItems@FlushControls$qqrv @60  ; __fastcall Nodeedit::TTreeViewItems::FlushControls()
+    @Nodeedit@TTreeViewItems@FormCreate$qqrp14System@TObject @41  ; __fastcall Nodeedit::TTreeViewItems::FormCreate(System::TObject *)
+    @Nodeedit@TTreeViewItems@FormDestroy$qqrp14System@TObject @40  ; __fastcall Nodeedit::TTreeViewItems::FormDestroy(System::TObject *)
+    @Nodeedit@TTreeViewItems@HelpClick$qqrp14System@TObject @42  ; __fastcall Nodeedit::TTreeViewItems::HelpClick(System::TObject *)
+    @Nodeedit@TTreeViewItems@ImageExit$qqrp14System@TObject @50  ; __fastcall Nodeedit::TTreeViewItems::ImageExit(System::TObject *)
+    @Nodeedit@TTreeViewItems@LoadClick$qqrp14System@TObject @46  ; __fastcall Nodeedit::TTreeViewItems::LoadClick(System::TObject *)
+    @Nodeedit@TTreeViewItems@NewClick$qqrp14System@TObject @57  ; __fastcall Nodeedit::TTreeViewItems::NewClick(System::TObject *)
+    @Nodeedit@TTreeViewItems@NewSubClick$qqrp14System@TObject @56  ; __fastcall Nodeedit::TTreeViewItems::NewSubClick(System::TObject *)
+    @Nodeedit@TTreeViewItems@SelectedIndexExit$qqrp14System@TObject @49  ; __fastcall Nodeedit::TTreeViewItems::SelectedIndexExit(System::TObject *)
+    @Nodeedit@TTreeViewItems@SetItem$qqrp22Vcl@Comctrls@TTreeNode @61  ; __fastcall Nodeedit::TTreeViewItems::SetItem(Vcl::Comctrls::TTreeNode *)
+    @Nodeedit@TTreeViewItems@SetStates$qqrv @62  ; __fastcall Nodeedit::TTreeViewItems::SetStates()
+    @Nodeedit@TTreeViewItems@StateImageExit$qqrp14System@TObject @48  ; __fastcall Nodeedit::TTreeViewItems::StateImageExit(System::TObject *)
+    @Nodeedit@TTreeViewItems@TextEditExit$qqrp14System@TObject @51  ; __fastcall Nodeedit::TTreeViewItems::TextEditExit(System::TObject *)
+    @Nodeedit@TTreeViewItems@TreeViewChange$qqrp14System@TObjectp22Vcl@Comctrls@TTreeNode @58  ; __fastcall Nodeedit::TTreeViewItems::TreeViewChange(System::TObject *, Vcl::Comctrls::TTreeNode *)
+    @Nodeedit@TTreeViewItems@TreeViewChanging$qqrp14System@TObjectp22Vcl@Comctrls@TTreeNodero @59  ; __fastcall Nodeedit::TTreeViewItems::TreeViewChanging(System::TObject *, Vcl::Comctrls::TTreeNode *, bool&)
+    @Nodeedit@TTreeViewItems@TreeViewDragDrop$qqrp14System@TObjectt1ii @44  ; __fastcall Nodeedit::TTreeViewItems::TreeViewDragDrop(System::TObject *, System::TObject *, int, int)
+    @Nodeedit@TTreeViewItems@TreeViewDragOver$qqrp14System@TObjectt1ii25System@Uitypes@TDragStatero @45  ; __fastcall Nodeedit::TTreeViewItems::TreeViewDragOver(System::TObject *, System::TObject *, int, int, System::Uitypes::TDragState, bool&)
+    @Nodeedit@TTreeViewItems@TreeViewEdited$qqrp14System@TObjectp22Vcl@Comctrls@TTreeNoder20System@UnicodeString @43  ; __fastcall Nodeedit::TTreeViewItems::TreeViewEdited(System::TObject *, Vcl::Comctrls::TTreeNode *, System::UnicodeString&)
+    @Nodeedit@TTreeViewItems@ValueChange$qqrp14System@TObject @52  ; __fastcall Nodeedit::TTreeViewItems::ValueChange(System::TObject *)
+    @Nodeedit@initialization$qqrv  @38  ; __fastcall Nodeedit::initialization()
+    @Olereg@Finalization$qqrv      @128 ; __fastcall Olereg::Finalization()
+    @Olereg@Register$qqrv          @129 ; __fastcall Olereg::Register()
+    @Olereg@initialization$qqrv    @127 ; __fastcall Olereg::initialization()
+    @Sbaredit@EditStatusPanels$qqrp26Vcl@Comctrls@TStatusPanels @180 ; __fastcall Sbaredit::EditStatusPanels(Vcl::Comctrls::TStatusPanels *)
+    @Sbaredit@Finalization$qqrv    @162 ; __fastcall Sbaredit::Finalization()
+    @Sbaredit@TStatusBarEditor@    @182 ; Sbaredit::TStatusBarEditor::
+    @Sbaredit@TStatusBarEditor@ApplyButtonClick$qqrp14System@TObject @164 ; __fastcall Sbaredit::TStatusBarEditor::ApplyButtonClick(System::TObject *)
+    @Sbaredit@TStatusBarEditor@CancelButtonClick$qqrp14System@TObject @165 ; __fastcall Sbaredit::TStatusBarEditor::CancelButtonClick(System::TObject *)
+    @Sbaredit@TStatusBarEditor@DeleteButtonClick$qqrp14System@TObject @173 ; __fastcall Sbaredit::TStatusBarEditor::DeleteButtonClick(System::TObject *)
+    @Sbaredit@TStatusBarEditor@FormCreate$qqrp14System@TObject @179 ; __fastcall Sbaredit::TStatusBarEditor::FormCreate(System::TObject *)
+    @Sbaredit@TStatusBarEditor@HelpButtonClick$qqrp14System@TObject @163 ; __fastcall Sbaredit::TStatusBarEditor::HelpButtonClick(System::TObject *)
+    @Sbaredit@TStatusBarEditor@NewButtonClick$qqrp14System@TObject @174 ; __fastcall Sbaredit::TStatusBarEditor::NewButtonClick(System::TObject *)
+    @Sbaredit@TStatusBarEditor@OkButtonClick$qqrp14System@TObject @166 ; __fastcall Sbaredit::TStatusBarEditor::OkButtonClick(System::TObject *)
+    @Sbaredit@TStatusBarEditor@PanelComboChange$qqrp14System@TObject @167 ; __fastcall Sbaredit::TStatusBarEditor::PanelComboChange(System::TObject *)
+    @Sbaredit@TStatusBarEditor@PanelControlExit$qqrp14System@TObject @169 ; __fastcall Sbaredit::TStatusBarEditor::PanelControlExit(System::TObject *)
+    @Sbaredit@TStatusBarEditor@PanelEditChange$qqrp14System@TObject @168 ; __fastcall Sbaredit::TStatusBarEditor::PanelEditChange(System::TObject *)
+    @Sbaredit@TStatusBarEditor@PanelListClick$qqrp14System@TObject @175 ; __fastcall Sbaredit::TStatusBarEditor::PanelListClick(System::TObject *)
+    @Sbaredit@TStatusBarEditor@PanelListDragDrop$qqrp14System@TObjectt1ii @170 ; __fastcall Sbaredit::TStatusBarEditor::PanelListDragDrop(System::TObject *, System::TObject *, int, int)
+    @Sbaredit@TStatusBarEditor@PanelListDragOver$qqrp14System@TObjectt1ii25System@Uitypes@TDragStatero @171 ; __fastcall Sbaredit::TStatusBarEditor::PanelListDragOver(System::TObject *, System::TObject *, int, int, System::Uitypes::TDragState, bool&)
+    @Sbaredit@TStatusBarEditor@PanelListMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @172 ; Sbaredit::TStatusBarEditor::PanelListMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Sbaredit@TStatusBarEditor@UpdateControls$qqrv @178 ; __fastcall Sbaredit::TStatusBarEditor::UpdateControls()
+    @Sbaredit@TStatusBarEditor@UpdatePanel$qqrv @177 ; __fastcall Sbaredit::TStatusBarEditor::UpdatePanel()
+    @Sbaredit@TStatusBarEditor@UpdatePanelList$qqrv @176 ; __fastcall Sbaredit::TStatusBarEditor::UpdatePanelList()
+    @Sbaredit@initialization$qqrv  @161 ; __fastcall Sbaredit::initialization()
+    @Stdreg@Finalization$qqrv      @125 ; __fastcall Stdreg::Finalization()
+    @Stdreg@Register$qqrv          @126 ; __fastcall Stdreg::Register()
+    @Stdreg@initialization$qqrv    @124 ; __fastcall Stdreg::initialization()
+    @Svcreg@Finalization$qqrv      @159 ; __fastcall Svcreg::Finalization()
+    @Svcreg@Register$qqrv          @160 ; __fastcall Svcreg::Register()
+    @Svcreg@initialization$qqrv    @158 ; __fastcall Svcreg::initialization()
+    @Sysreg@Finalization$qqrv      @2   ; __fastcall Sysreg::Finalization()
+    @Sysreg@Register$qqrv          @3   ; __fastcall Sysreg::Register()
+    @Sysreg@initialization$qqrv    @1   ; __fastcall Sysreg::initialization()
+    Finalize                       @244 ; Finalize
+    Initialize                     @245 ; Initialize

@@ -1,0 +1,26 @@
+LIBRARY     VCLRESTCOMPONENTS210.BPL
+
+DESCRIPTION 'mbarcadero REST Client Components VCL'
+
+EXPORTS
+    @$xp$54Rest@Authenticator@Oauth@Webform@Win@Tfrm_OAuthWebForm @11  ; __tpdsc__ Rest::Authenticator::Oauth::Webform::Win::Tfrm_OAuthWebForm
+    @$xp$64Rest@Authenticator@Oauth@Webform@Win@TOAuth2WebFormRedirectEvent @14  ; __tpdsc__ Rest::Authenticator::Oauth::Webform::Win::TOAuth2WebFormRedirectEvent
+    @$xp$68Rest@Authenticator@Oauth@Webform@Win@TOAuth2WebFormTitleChangedEvent @13  ; __tpdsc__ Rest::Authenticator::Oauth::Webform::Win::TOAuth2WebFormTitleChangedEvent
+    @GetPackageInfoTable           @21  ; GetPackageInfoTable
+    @Rest@Authenticator@Oauth@Webform@Win@Finalization$qqrv @2   ; __fastcall Rest::Authenticator::Oauth::Webform::Win::Finalization()
+    @Rest@Authenticator@Oauth@Webform@Win@Tfrm_OAuthWebForm@ @12  ; Rest::Authenticator::Oauth::Webform::Win::Tfrm_OAuthWebForm::
+    @Rest@Authenticator@Oauth@Webform@Win@Tfrm_OAuthWebForm@BrowserBeforeNavigate2$qqrp14System@TObjectx35System@%DelphiInterface$9IDispatch%rx17System@OleVariantt3t3t3t3rus @9   ; Rest::Authenticator::Oauth::Webform::Win::Tfrm_OAuthWebForm::BrowserBeforeNavigate2(System::TObject *, const System::DelphiInterface<{583}...
+    @Rest@Authenticator@Oauth@Webform@Win@Tfrm_OAuthWebForm@BrowserNavigateComplete2$qqrp14System@TObjectx35System@%DelphiInterface$9IDispatch%rx17System@OleVariant @8   ; Rest::Authenticator::Oauth::Webform::Win::Tfrm_OAuthWebForm::BrowserNavigateComplete2(System::TObject *, const System::DelphiInterface<{583}...
+    @Rest@Authenticator@Oauth@Webform@Win@Tfrm_OAuthWebForm@BrowserTitleChange$qqrp14System@TObjectx17System@WideString @7   ; __fastcall Rest::Authenticator::Oauth::Webform::Win::Tfrm_OAuthWebForm::BrowserTitleChange(System::TObject *, const System::WideString)
+    @Rest@Authenticator@Oauth@Webform@Win@Tfrm_OAuthWebForm@FormCreate$qqrp14System@TObject @6   ; __fastcall Rest::Authenticator::Oauth::Webform::Win::Tfrm_OAuthWebForm::FormCreate(System::TObject *)
+    @Rest@Authenticator@Oauth@Webform@Win@Tfrm_OAuthWebForm@FormKeyPress$qqrp14System@TObjectrb @5   ; __fastcall Rest::Authenticator::Oauth::Webform::Win::Tfrm_OAuthWebForm::FormKeyPress(System::TObject *, wchar_t&)
+    @Rest@Authenticator@Oauth@Webform@Win@Tfrm_OAuthWebForm@ShowModalWithURL$qqrx20System@UnicodeString @4   ; __fastcall Rest::Authenticator::Oauth::Webform::Win::Tfrm_OAuthWebForm::ShowModalWithURL(const System::UnicodeString)
+    @Rest@Authenticator@Oauth@Webform@Win@Tfrm_OAuthWebForm@ShowWithURL$qqrx20System@UnicodeString @3   ; __fastcall Rest::Authenticator::Oauth::Webform::Win::Tfrm_OAuthWebForm::ShowWithURL(const System::UnicodeString)
+    @Rest@Authenticator@Oauth@Webform@Win@frm_OAuthWebForm @10  ; Rest::Authenticator::Oauth::Webform::Win::frm_OAuthWebForm
+    @Rest@Authenticator@Oauth@Webform@Win@initialization$qqrv @1   ; __fastcall Rest::Authenticator::Oauth::Webform::Win::initialization()
+    @Vclrestcomponents@@GetPackageInfoTable$qqrv @18  ; Vclrestcomponents::__linkproc__ __fastcall GetPackageInfoTable()
+    @Vclrestcomponents@@PackageLoad$qqrv @17  ; Vclrestcomponents::__linkproc__ __fastcall PackageLoad()
+    @Vclrestcomponents@@PackageUnload$qqrv @16  ; Vclrestcomponents::__linkproc__ __fastcall PackageUnload()
+    @Vclrestcomponents@initialization$qqrv @15  ; __fastcall Vclrestcomponents::initialization()
+    Finalize                       @19  ; Finalize
+    Initialize                     @20  ; Initialize

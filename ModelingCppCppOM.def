@@ -1,0 +1,22 @@
+LIBRARY     MODELINGCPPCPPOM.DLL
+
+EXPORTS
+    ArrayCopy                      @7   ; ArrayCopy
+    CleanupBuffers                 @5   ; CleanupBuffers
+    CompileFile                    @2   ; CompileFile
+    EmergencyCleanup               @3   ; EmergencyCleanup
+    GetCppOMVersion                @1   ; GetCppOMVersion
+    HideProgressBar                @17  ; HideProgressBar
+    InitCRTBuffers                 @8   ; InitCRTBuffers
+    MoveToTheNextUnit              @15  ; MoveToTheNextUnit
+    PrepareProgressIndicator       @14  ; PrepareProgressIndicator
+    ReceiveNodeArrayFromCRT        @9   ; ReceiveNodeArrayFromCRT
+    RegisterMessagingServise       @6   ; RegisterMessagingServise
+    RegisterVFSCallbacks           @11  ; RegisterVFSCallbacks
+    ResetVFS                       @12  ; ResetVFS
+    ShowProgressBar                @16  ; ShowProgressBar
+    TransferAllocatedDataBuffer    @13  ; TransferAllocatedDataBuffer
+    TransferNodeArrayToCRT         @10  ; TransferNodeArrayToCRT
+    UnloadBccGate                  @4   ; UnloadBccGate
+    ___CPPdebugHook                @18  ; ___CPPdebugHook
+    __stkchk                       @19  ; __stkchk

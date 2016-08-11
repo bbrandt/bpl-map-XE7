@@ -1,0 +1,13 @@
+LIBRARY     BRCIDE.DLL
+
+EXPORTS
+    @IDECloseFile$qqsi             @7   ; __stdcall IDECloseFile(int)
+    @IDECreateStandardFile$qqspxc  @6   ; __stdcall IDECreateStandardFile(const char *)
+    @IDEOpenRead$qqspxc            @4   ; __stdcall IDEOpenRead(const char *)
+    @IDEOpenStandardFile$qqspxc    @5   ; __stdcall IDEOpenStandardFile(const char *)
+    @IDEReadFile$qqsipvul          @1   ; __stdcall IDEReadFile(int, void *, unsigned long)
+    @IDESeekFile$qqsili            @3   ; __stdcall IDESeekFile(int, long, int)
+    @IDEWriteFile$qqsipvul         @2   ; __stdcall IDEWriteFile(int, void *, unsigned long)
+    CompileResourceFile            @8   ; CompileResourceFile
+    RcInitialize                   @9   ; RcInitialize
+    ___CPPdebugHook                @10  ; ___CPPdebugHook

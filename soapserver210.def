@@ -1,0 +1,65 @@
+LIBRARY     SOAPSERVER210.BPL
+
+DESCRIPTION 'mbarcadero SOAP Server Runtime Package'
+
+EXPORTS
+    @$xp$25Soap@Wsdlpub@IWSDLPublish @53  ; __tpdsc__ Soap::Wsdlpub::IWSDLPublish
+    @$xp$25Soap@Wsdlpub@TWSDLPublish @48  ; __tpdsc__ Soap::Wsdlpub::TWSDLPublish
+    @$xp$29Soap@Wsdlpub@TWSDLHTMLPublish @44  ; __tpdsc__ Soap::Wsdlpub::TWSDLHTMLPublish
+    @$xp$29Soap@Wsdlpub@_TWSDLPublish@_1 @51  ; __tpdsc__ Soap::Wsdlpub::_TWSDLPublish::_1
+    @$xp$29Soap@Wsdlpub@_TWSDLPublish@_2 @50  ; __tpdsc__ Soap::Wsdlpub::_TWSDLPublish::_2
+    @$xp$31Soap@Wsdlpub@SOAPPublishOptions @47  ; __tpdsc__ Soap::Wsdlpub::SOAPPublishOptions
+    @$xp$32Soap@Wsdlpub@TSOAPPublishOptions @46  ; __tpdsc__ Soap::Wsdlpub::TSOAPPublishOptions
+    @$xp$38Soap@Webbrokersoap@THTTPSoapDispatcher @18  ; __tpdsc__ Soap::Webbrokersoap::THTTPSoapDispatcher
+    @$xp$39Soap@Soaphttppasinv@THTTPSoapCppInvoker @4   ; __tpdsc__ Soap::Soaphttppasinv::THTTPSoapCppInvoker
+    @$xp$39Soap@Wsdlpub@TBeforePublishingWSDLEvent @52  ; __tpdsc__ Soap::Wsdlpub::TBeforePublishingWSDLEvent
+    @$xp$42Soap@Soaphttppasinv@THTTPSoapPascalInvoker @6   ; __tpdsc__ Soap::Soaphttppasinv::THTTPSoapPascalInvoker
+    @GetPackageInfoTable           @60  ; GetPackageInfoTable
+    @Soap@Soaphttppasinv@Finalization$qqrv @2   ; __fastcall Soap::Soaphttppasinv::Finalization()
+    @Soap@Soaphttppasinv@THTTPSoapCppInvoker@ @5   ; Soap::Soaphttppasinv::THTTPSoapCppInvoker::
+    @Soap@Soaphttppasinv@THTTPSoapPascalInvoker@ @7   ; Soap::Soaphttppasinv::THTTPSoapPascalInvoker::
+    @Soap@Soaphttppasinv@THTTPSoapPascalInvoker@DispatchSOAP$qqrx27System@%AnsiStringT$us$i0$%t1xp22System@Classes@TStreamp22System@Classes@TStreamr36Soap@Wsdlintf@TWebServiceBindingType @3   ; __fastcall Soap::Soaphttppasinv::THTTPSoapPascalInvoker::DispatchSOAP(const System::AnsiStringT<0>, const System::AnsiStringT<0>, System::Classes::TStream * const, System::Classes::TStream *, Soap::Wsdlintf::TWebServiceBindingType&)
+    @Soap@Soaphttppasinv@initialization$qqrv @1   ; __fastcall Soap::Soaphttppasinv::initialization()
+    @Soap@Webbrokersoap@Finalization$qqrv @9   ; __fastcall Soap::Webbrokersoap::Finalization()
+    @Soap@Webbrokersoap@GetSOAPWebModule$qqrv @17  ; __fastcall Soap::Webbrokersoap::GetSOAPWebModule()
+    @Soap@Webbrokersoap@THTTPSoapDispatcher@ @19  ; Soap::Webbrokersoap::THTTPSoapDispatcher::
+    @Soap@Webbrokersoap@THTTPSoapDispatcher@$bctr$qqrp25System@Classes@TComponent @16  ; __fastcall Soap::Webbrokersoap::THTTPSoapDispatcher::THTTPSoapDispatcher(System::Classes::TComponent *)
+    @Soap@Webbrokersoap@THTTPSoapDispatcher@$bdtr$qqrv @15  ; __fastcall Soap::Webbrokersoap::THTTPSoapDispatcher::~THTTPSoapDispatcher()
+    @Soap@Webbrokersoap@THTTPSoapDispatcher@DispatchEnabled$qqrv @13  ; __fastcall Soap::Webbrokersoap::THTTPSoapDispatcher::DispatchEnabled()
+    @Soap@Webbrokersoap@THTTPSoapDispatcher@DispatchMask$qqrv @12  ; __fastcall Soap::Webbrokersoap::THTTPSoapDispatcher::DispatchMask()
+    @Soap@Webbrokersoap@THTTPSoapDispatcher@DispatchMethodType$qqrv @11  ; __fastcall Soap::Webbrokersoap::THTTPSoapDispatcher::DispatchMethodType()
+    @Soap@Webbrokersoap@THTTPSoapDispatcher@DispatchRequest$qqrp14System@TObjectp23Web@Httpapp@TWebRequestp24Web@Httpapp@TWebResponse @10  ; __fastcall Soap::Webbrokersoap::THTTPSoapDispatcher::DispatchRequest(System::TObject *, Web::Httpapp::TWebRequest *, Web::Httpapp::TWebResponse *)
+    @Soap@Webbrokersoap@THTTPSoapDispatcher@SetWebDispatch$qqrxp25Web@Autodisp@TWebDispatch @14  ; __fastcall Soap::Webbrokersoap::THTTPSoapDispatcher::SetWebDispatch(Web::Autodisp::TWebDispatch * const)
+    @Soap@Webbrokersoap@initialization$qqrv @8   ; __fastcall Soap::Webbrokersoap::initialization()
+    @Soap@Wsdlpub@Finalization$qqrv @21  ; __fastcall Soap::Wsdlpub::Finalization()
+    @Soap@Wsdlpub@TWSDLHTMLPublish@ @45  ; Soap::Wsdlpub::TWSDLHTMLPublish::
+    @Soap@Wsdlpub@TWSDLHTMLPublish@$bctr$qqrp25System@Classes@TComponent @33  ; __fastcall Soap::Wsdlpub::TWSDLHTMLPublish::TWSDLHTMLPublish(System::Classes::TComponent *)
+    @Soap@Wsdlpub@TWSDLHTMLPublish@$bdtr$qqrv @32  ; __fastcall Soap::Wsdlpub::TWSDLHTMLPublish::~TWSDLHTMLPublish()
+    @Soap@Wsdlpub@TWSDLHTMLPublish@AddInterfaceList$qqrp26System@Classes@TStringListx20System@UnicodeString @43  ; __fastcall Soap::Wsdlpub::TWSDLHTMLPublish::AddInterfaceList(System::Classes::TStringList *, const System::UnicodeString)
+    @Soap@Wsdlpub@TWSDLHTMLPublish@AddPortList$qqrp26System@Classes@TStringListx20System@UnicodeString @42  ; __fastcall Soap::Wsdlpub::TWSDLHTMLPublish::AddPortList(System::Classes::TStringList *, const System::UnicodeString)
+    @Soap@Wsdlpub@TWSDLHTMLPublish@DispatchEnabled$qqrv @31  ; __fastcall Soap::Wsdlpub::TWSDLHTMLPublish::DispatchEnabled()
+    @Soap@Wsdlpub@TWSDLHTMLPublish@DispatchMask$qqrv @30  ; __fastcall Soap::Wsdlpub::TWSDLHTMLPublish::DispatchMask()
+    @Soap@Wsdlpub@TWSDLHTMLPublish@DispatchMethodType$qqrv @29  ; __fastcall Soap::Wsdlpub::TWSDLHTMLPublish::DispatchMethodType()
+    @Soap@Wsdlpub@TWSDLHTMLPublish@DispatchRequest$qqrp14System@TObjectp23Web@Httpapp@TWebRequestp24Web@Httpapp@TWebResponse @27  ; __fastcall Soap::Wsdlpub::TWSDLHTMLPublish::DispatchRequest(System::TObject *, Web::Httpapp::TWebRequest *, Web::Httpapp::TWebResponse *)
+    @Soap@Wsdlpub@TWSDLHTMLPublish@GetHostScriptBaseURL$qqrp23Web@Httpapp@TWebRequest @40  ; __fastcall Soap::Wsdlpub::TWSDLHTMLPublish::GetHostScriptBaseURL(Web::Httpapp::TWebRequest *)
+    @Soap@Wsdlpub@TWSDLHTMLPublish@GetNameSpaceIsStored$qqrv @22  ; __fastcall Soap::Wsdlpub::TWSDLHTMLPublish::GetNameSpaceIsStored()
+    @Soap@Wsdlpub@TWSDLHTMLPublish@GetTargetNamespace$qqrv @24  ; __fastcall Soap::Wsdlpub::TWSDLHTMLPublish::GetTargetNamespace()
+    @Soap@Wsdlpub@TWSDLHTMLPublish@HandleRequest$qqrp26System@Classes@TStringListx20System@UnicodeStringt2r20System@UnicodeStringp23Web@Httpapp@TWebRequest @28  ; __fastcall Soap::Wsdlpub::TWSDLHTMLPublish::HandleRequest(System::Classes::TStringList *, const System::UnicodeString, const System::UnicodeString, System::UnicodeString&, Web::Httpapp::TWebRequest *)
+    @Soap@Wsdlpub@TWSDLHTMLPublish@ServiceInfo$qqrp14System@TObjectp23Web@Httpapp@TWebRequestp24Web@Httpapp@TWebResponsero @26  ; __fastcall Soap::Wsdlpub::TWSDLHTMLPublish::ServiceInfo(System::TObject *, Web::Httpapp::TWebRequest *, Web::Httpapp::TWebResponse *, bool&)
+    @Soap@Wsdlpub@TWSDLHTMLPublish@SetWebDispatch$qqrxp25Web@Autodisp@TWebDispatch @23  ; __fastcall Soap::Wsdlpub::TWSDLHTMLPublish::SetWebDispatch(Web::Autodisp::TWebDispatch * const)
+    @Soap@Wsdlpub@TWSDLHTMLPublish@UpdatePortList$qqrp23System@Classes@TStringsx20System@UnicodeStringt2 @41  ; __fastcall Soap::Wsdlpub::TWSDLHTMLPublish::UpdatePortList(System::Classes::TStrings *, const System::UnicodeString, const System::UnicodeString)
+    @Soap@Wsdlpub@TWSDLHTMLPublish@WSILInfo$qqrx20System@UnicodeStringp23Web@Httpapp@TWebRequestp24Web@Httpapp@TWebResponsero @25  ; __fastcall Soap::Wsdlpub::TWSDLHTMLPublish::WSILInfo(const System::UnicodeString, Web::Httpapp::TWebRequest *, Web::Httpapp::TWebResponse *, bool&)
+    @Soap@Wsdlpub@TWSDLPublish@    @49  ; Soap::Wsdlpub::TWSDLPublish::
+    @Soap@Wsdlpub@TWSDLPublish@GetPortTypeEntries$qqrr60System@%DynamicArray$36Soap@Invokeregistry@InterfaceMapItem% @34  ; Soap::Wsdlpub::TWSDLPublish::GetPortTypeEntries(System::DynamicArray<{583}...
+    @Soap@Wsdlpub@TWSDLPublish@GetPortTypeList$qqsv @39  ; __stdcall Soap::Wsdlpub::TWSDLPublish::GetPortTypeList()
+    @Soap@Wsdlpub@TWSDLPublish@GetTypeSystemsList$qqsv @38  ; __stdcall Soap::Wsdlpub::TWSDLPublish::GetTypeSystemsList()
+    @Soap@Wsdlpub@TWSDLPublish@GetWSDLForPortType$qqsx20System@UnicodeString @37  ; __stdcall Soap::Wsdlpub::TWSDLPublish::GetWSDLForPortType(const System::UnicodeString)
+    @Soap@Wsdlpub@TWSDLPublish@GetXSDForTypeSystem$qqsx20System@UnicodeString @36  ; __stdcall Soap::Wsdlpub::TWSDLPublish::GetXSDForTypeSystem(const System::UnicodeString)
+    @Soap@Wsdlpub@WSDLPubFactory$qqrrp14System@TObject @35  ; __fastcall Soap::Wsdlpub::WSDLPubFactory(System::TObject *&)
+    @Soap@Wsdlpub@initialization$qqrv @20  ; __fastcall Soap::Wsdlpub::initialization()
+    @Soapserver@@GetPackageInfoTable$qqrv @57  ; Soapserver::__linkproc__ __fastcall GetPackageInfoTable()
+    @Soapserver@@PackageLoad$qqrv  @56  ; Soapserver::__linkproc__ __fastcall PackageLoad()
+    @Soapserver@@PackageUnload$qqrv @55  ; Soapserver::__linkproc__ __fastcall PackageUnload()
+    @Soapserver@initialization$qqrv @54  ; __fastcall Soapserver::initialization()
+    Finalize                       @58  ; Finalize
+    Initialize                     @59  ; Initialize

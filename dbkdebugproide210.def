@@ -1,0 +1,256 @@
+LIBRARY     DBKDEBUGPROIDE210.BPL
+
+DESCRIPTION 'mbarcadero DBK Debugger Professional IDE Package'
+
+EXPORTS
+    @$xp$11Range@PEdit             @14  ; __tpdsc__ Range::PEdit
+    @$xp$15Range@TRangeDlg         @12  ; __tpdsc__ Range::TRangeDlg
+    @$xp$23Dbginsp@TDebugInspector @231 ; __tpdsc__ Dbginsp::TDebugInspector
+    @$xp$26Dbkinspector@TAncestorInfo @118 ; __tpdsc__ Dbkinspector::TAncestorInfo
+    @$xp$26Dbkinspector@TAncestorView @110 ; __tpdsc__ Dbkinspector::TAncestorView
+    @$xp$29Dbkinspector@TInspectorMember @119 ; __tpdsc__ Dbkinspector::TInspectorMember
+    @$xp$30Dbkinspector@_TAncestorView@_1 @112 ; __tpdsc__ Dbkinspector::_TAncestorView::_1
+    @$xp$32Dbkdebugprocmd@TDebugProCommands @243 ; __tpdsc__ Dbkdebugprocmd::TDebugProCommands
+    @$xp$41Dbkinspector@TDebuggerExpressionInspector @113 ; __tpdsc__ Dbkinspector::TDebuggerExpressionInspector
+    @$xp$45Dbkinspector@_TDebuggerExpressionInspector@_1 @117 ; __tpdsc__ Dbkinspector::_TDebuggerExpressionInspector::_1
+    @$xp$45Dbkinspector@_TDebuggerExpressionInspector@_2 @116 ; __tpdsc__ Dbkinspector::_TDebuggerExpressionInspector::_2
+    @$xp$45Dbkinspector@_TDebuggerExpressionInspector@_3 @115 ; __tpdsc__ Dbkinspector::_TDebuggerExpressionInspector::_3
+    @Dbginsp@CreateDebugInspector$qqrx42System@%DelphiInterface$15Dbk@IDbkInspect%p23Dbginsp@TDebugInspector20System@UnicodeStringrx19System@Types@TPointio @228 ; Dbginsp::CreateDebugInspector(const System::DelphiInterface<{583}...
+    @Dbginsp@CreateDebugInspector$qqrx59System@%DelphiInterface$32Debugapi@IOTAExpressionInspector%p23Dbginsp@TDebugInspector20System@UnicodeStringrx19System@Types@TPointio @227 ; Dbginsp::CreateDebugInspector(const System::DelphiInterface<{583}...
+    @Dbginsp@Finalization$qqrv     @121 ; __fastcall Dbginsp::Finalization()
+    @Dbginsp@Inspect$qqr20System@UnicodeStringp23Dbginsp@TDebugInspectorrx11Dbk@CodePoso @229 ; __fastcall Dbginsp::Inspect(System::UnicodeString, Dbginsp::TDebugInspector *, const Dbk::CodePos&, bool)
+    @Dbginsp@ShowInspector$qqrp23Dbginsp@TDebugInspectorrx19System@Types@TPoint @230 ; __fastcall Dbginsp::ShowInspector(Dbginsp::TDebugInspector *, const System::Types::TPoint&)
+    @Dbginsp@TDebugInspector@      @232 ; Dbginsp::TDebugInspector::
+    @Dbginsp@TDebugInspector@AcceptEdit$qqrv @211 ; __fastcall Dbginsp::TDebugInspector::AcceptEdit()
+    @Dbginsp@TDebugInspector@Activate$qqrv @158 ; __fastcall Dbginsp::TDebugInspector::Activate()
+    @Dbginsp@TDebugInspector@BindToLocationItemClick$qqrp14System@TObject @157 ; __fastcall Dbginsp::TDebugInspector::BindToLocationItemClick(System::TObject *)
+    @Dbginsp@TDebugInspector@CMCompleteChangeProperty$qqrr24Winapi@Messages@TMessage @151 ; __fastcall Dbginsp::TDebugInspector::CMCompleteChangeProperty(Winapi::Messages::TMessage&)
+    @Dbginsp@TDebugInspector@CMCompleteInspect$qqrr24Winapi@Messages@TMessage @153 ; __fastcall Dbginsp::TDebugInspector::CMCompleteInspect(Winapi::Messages::TMessage&)
+    @Dbginsp@TDebugInspector@CMCompleteReplace$qqrr24Winapi@Messages@TMessage @152 ; __fastcall Dbginsp::TDebugInspector::CMCompleteReplace(Winapi::Messages::TMessage&)
+    @Dbginsp@TDebugInspector@CMContinueInspect$qqrr24Winapi@Messages@TMessage @197 ; __fastcall Dbginsp::TDebugInspector::CMContinueInspect(Winapi::Messages::TMessage&)
+    @Dbginsp@TDebugInspector@CMContinueUpdate$qqrr24Winapi@Messages@TMessage @192 ; __fastcall Dbginsp::TDebugInspector::CMContinueUpdate(Winapi::Messages::TMessage&)
+    @Dbginsp@TDebugInspector@CMUpdateInspector$qqrr24Winapi@Messages@TMessage @169 ; __fastcall Dbginsp::TDebugInspector::CMUpdateInspector(Winapi::Messages::TMessage&)
+    @Dbginsp@TDebugInspector@CMUpdateInspector2$qqrr24Winapi@Messages@TMessage @168 ; __fastcall Dbginsp::TDebugInspector::CMUpdateInspector2(Winapi::Messages::TMessage&)
+    @Dbginsp@TDebugInspector@ChangeItemClick$qqrp14System@TObject @222 ; __fastcall Dbginsp::TDebugInspector::ChangeItemClick(System::TObject *)
+    @Dbginsp@TDebugInspector@ChangeMemberComplete$qqrp14System@TObjectr14Dbk@DbkErrInfo @199 ; __fastcall Dbginsp::TDebugInspector::ChangeMemberComplete(System::TObject *, Dbk::DbkErrInfo&)
+    @Dbginsp@TDebugInspector@ChangePropertyComplete$qqrp14System@TObjectr14Dbk@DbkErrInfo @198 ; __fastcall Dbginsp::TDebugInspector::ChangePropertyComplete(System::TObject *, Dbk::DbkErrInfo&)
+    @Dbginsp@TDebugInspector@ChangeStayOnTopState$qqrv @159 ; __fastcall Dbginsp::TDebugInspector::ChangeStayOnTopState()
+    @Dbginsp@TDebugInspector@CloseWindowItemClick$qqrp14System@TObject @141 ; __fastcall Dbginsp::TDebugInspector::CloseWindowItemClick(System::TObject *)
+    @Dbginsp@TDebugInspector@DataPropListDragDrop$qqrp14System@TObjectt1ii @124 ; __fastcall Dbginsp::TDebugInspector::DataPropListDragDrop(System::TObject *, System::TObject *, int, int)
+    @Dbginsp@TDebugInspector@DataPropListDragOver$qqrp14System@TObjectt1ii25System@Uitypes@TDragStatero @123 ; __fastcall Dbginsp::TDebugInspector::DataPropListDragOver(System::TObject *, System::TObject *, int, int, System::Uitypes::TDragState, bool&)
+    @Dbginsp@TDebugInspector@DebugOptionsChanged$qqrp14System@TObject @206 ; __fastcall Dbginsp::TDebugInspector::DebugOptionsChanged(System::TObject *)
+    @Dbginsp@TDebugInspector@DebugUpdate$qqrp14System@TObject @164 ; __fastcall Dbginsp::TDebugInspector::DebugUpdate(System::TObject *)
+    @Dbginsp@TDebugInspector@DeferDebugResult$qqrynpqqrp14System@TObjectr14Dbk@DbkErrInfo$v @191 ; __fastcall Dbginsp::TDebugInspector::DeferDebugResult(void __fastcall __closure(*)(System::TObject *, Dbk::DbkErrInfo&))
+    @Dbginsp@TDebugInspector@DeleteDBKInspect$qqrv @139 ; __fastcall Dbginsp::TDebugInspector::DeleteDBKInspect()
+    @Dbginsp@TDebugInspector@DescendItemClick$qqrp14System@TObject @217 ; __fastcall Dbginsp::TDebugInspector::DescendItemClick(System::TObject *)
+    @Dbginsp@TDebugInspector@DoDock$qqrp24Vcl@Controls@TWinControlr18System@Types@TRect @204 ; __fastcall Dbginsp::TDebugInspector::DoDock(Vcl::Controls::TWinControl *, System::Types::TRect&)
+    @Dbginsp@TDebugInspector@EditAction$qqr22Designintf@TEditAction @126 ; __fastcall Dbginsp::TDebugInspector::EditAction(Designintf::TEditAction)
+    @Dbginsp@TDebugInspector@EditDblClick$qqrp14System@TObjecto @137 ; __fastcall Dbginsp::TDebugInspector::EditDblClick(System::TObject *, bool)
+    @Dbginsp@TDebugInspector@EnableControls$qqro @167 ; __fastcall Dbginsp::TDebugInspector::EnableControls(bool)
+    @Dbginsp@TDebugInspector@FormCanResize$qqrp14System@TObjectrit2ro @144 ; __fastcall Dbginsp::TDebugInspector::FormCanResize(System::TObject *, int&, int&, bool&)
+    @Dbginsp@TDebugInspector@FormClose$qqrp14System@TObjectr27System@Uitypes@TCloseAction @129 ; __fastcall Dbginsp::TDebugInspector::FormClose(System::TObject *, System::Uitypes::TCloseAction&)
+    @Dbginsp@TDebugInspector@FormCloseQuery$qqrp14System@TObjectro @145 ; __fastcall Dbginsp::TDebugInspector::FormCloseQuery(System::TObject *, bool&)
+    @Dbginsp@TDebugInspector@FormCreate$qqrp14System@TObject @226 ; __fastcall Dbginsp::TDebugInspector::FormCreate(System::TObject *)
+    @Dbginsp@TDebugInspector@FormDestroy$qqrp14System@TObject @225 ; __fastcall Dbginsp::TDebugInspector::FormDestroy(System::TObject *)
+    @Dbginsp@TDebugInspector@FormMouseDown$qqrp14System@TObject27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @150 ; Dbginsp::TDebugInspector::FormMouseDown(System::TObject *, System::Uitypes::TMouseButton, System::Set<{583}...
+    @Dbginsp@TDebugInspector@GetActivePropFlag$qqrv @182 ; __fastcall Dbginsp::TDebugInspector::GetActivePropFlag()
+    @Dbginsp@TDebugInspector@GetActivePropFullName$qqrv @185 ; __fastcall Dbginsp::TDebugInspector::GetActivePropFullName()
+    @Dbginsp@TDebugInspector@GetActivePropName$qqrv @186 ; __fastcall Dbginsp::TDebugInspector::GetActivePropName()
+    @Dbginsp@TDebugInspector@GetActivePropType$qqrv @183 ; __fastcall Dbginsp::TDebugInspector::GetActivePropType()
+    @Dbginsp@TDebugInspector@GetActivePropValue$qqrv @184 ; __fastcall Dbginsp::TDebugInspector::GetActivePropValue()
+    @Dbginsp@TDebugInspector@GetDbkInspector$qqrv @219 ; __fastcall Dbginsp::TDebugInspector::GetDbkInspector()
+    @Dbginsp@TDebugInspector@GetEditState$qqrv @125 ; __fastcall Dbginsp::TDebugInspector::GetEditState()
+    @Dbginsp@TDebugInspector@GetItemProperty$qqri @190 ; __fastcall Dbginsp::TDebugInspector::GetItemProperty(int)
+    @Dbginsp@TDebugInspector@GetOriginalString$qqrv @166 ; __fastcall Dbginsp::TDebugInspector::GetOriginalString()
+    @Dbginsp@TDebugInspector@GetProperties$qqrynpqqrx47System@%DelphiInterface$20Designintf@IProperty%$v @189 ; Dbginsp::TDebugInspector::GetProperties(__closure(*)(const System::DelphiInterface<{583}...
+    @Dbginsp@TDebugInspector@GetSubInspector$qqrv @221 ; __fastcall Dbginsp::TDebugInspector::GetSubInspector()
+    @Dbginsp@TDebugInspector@GetTabVisible$qqri @181 ; __fastcall Dbginsp::TDebugInspector::GetTabVisible(int)
+    @Dbginsp@TDebugInspector@GetTopInspector$qqrv @212 ; __fastcall Dbginsp::TDebugInspector::GetTopInspector()
+    @Dbginsp@TDebugInspector@InspDblClick$qqrp14System@TObject @138 ; __fastcall Dbginsp::TDebugInspector::InspDblClick(System::TObject *)
+    @Dbginsp@TDebugInspector@InspectComplete$qqrp14System@TObjectr14Dbk@DbkErrInfo @196 ; __fastcall Dbginsp::TDebugInspector::InspectComplete(System::TObject *, Dbk::DbkErrInfo&)
+    @Dbginsp@TDebugInspector@InstanceAccept$qqrp14System@TObject @171 ; __fastcall Dbginsp::TDebugInspector::InstanceAccept(System::TObject *)
+    @Dbginsp@TDebugInspector@InstanceCancel$qqrp14System@TObject @170 ; __fastcall Dbginsp::TDebugInspector::InstanceCancel(System::TObject *)
+    @Dbginsp@TDebugInspector@InstanceDropDown$qqrp14System@TObjectro @175 ; __fastcall Dbginsp::TDebugInspector::InstanceDropDown(System::TObject *, bool&)
+    @Dbginsp@TDebugInspector@IsBlankOrBad$qqrv @122 ; __fastcall Dbginsp::TDebugInspector::IsBlankOrBad()
+    @Dbginsp@TDebugInspector@LoadWindowState$qqrp30System@Inifiles@TCustomIniFile @148 ; __fastcall Dbginsp::TDebugInspector::LoadWindowState(System::Inifiles::TCustomIniFile *)
+    @Dbginsp@TDebugInspector@LocalEvaluateModifyItemClick$qqrp14System@TObject @165 ; __fastcall Dbginsp::TDebugInspector::LocalEvaluateModifyItemClick(System::TObject *)
+    @Dbginsp@TDebugInspector@LocalInspectItemClick$qqrp14System@TObject @218 ; __fastcall Dbginsp::TDebugInspector::LocalInspectItemClick(System::TObject *)
+    @Dbginsp@TDebugInspector@LocalPopupMenuPopup$qqrp14System@TObject @224 ; __fastcall Dbginsp::TDebugInspector::LocalPopupMenuPopup(System::TObject *)
+    @Dbginsp@TDebugInspector@LocalWatchItemClick$qqrp14System@TObject @156 ; __fastcall Dbginsp::TDebugInspector::LocalWatchItemClick(System::TObject *)
+    @Dbginsp@TDebugInspector@MarkDirty$qqrv @147 ; __fastcall Dbginsp::TDebugInspector::MarkDirty()
+    @Dbginsp@TDebugInspector@NewExpressionItemClick$qqrp14System@TObject @214 ; __fastcall Dbginsp::TDebugInspector::NewExpressionItemClick(System::TObject *)
+    @Dbginsp@TDebugInspector@ProcessMemoryChanged$qqrp14System@TObjecto @160 ; __fastcall Dbginsp::TDebugInspector::ProcessMemoryChanged(System::TObject *, bool)
+    @Dbginsp@TDebugInspector@PropListButtonClick$qqrp14System@TObject @134 ; __fastcall Dbginsp::TDebugInspector::PropListButtonClick(System::TObject *)
+    @Dbginsp@TDebugInspector@PropListGetProperties$qqrp14System@TObjectynpqqrx47System@%DelphiInterface$20Designintf@IProperty%$v @136 ; Dbginsp::TDebugInspector::PropListGetProperties(System::TObject *, __closure(*)(const System::DelphiInterface<{583}...
+    @Dbginsp@TDebugInspector@PropListKeyDown$qqrp14System@TObjectrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @130 ; Dbginsp::TDebugInspector::PropListKeyDown(System::TObject *, unsigned short&, System::Set<{583}...
+    @Dbginsp@TDebugInspector@PropListUpdateDirtyData$qqrp14System@TObject @132 ; __fastcall Dbginsp::TDebugInspector::PropListUpdateDirtyData(System::TObject *)
+    @Dbginsp@TDebugInspector@PropNCHitTest$qqrp14System@TObject60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @135 ; Dbginsp::TDebugInspector::PropNCHitTest(System::TObject *, System::Set<{583}...
+    @Dbginsp@TDebugInspector@PropQueryButtonClick$qqrp14System@TObject @133 ; __fastcall Dbginsp::TDebugInspector::PropQueryButtonClick(System::TObject *)
+    @Dbginsp@TDebugInspector@RangeItemClick$qqrp14System@TObject @223 ; __fastcall Dbginsp::TDebugInspector::RangeItemClick(System::TObject *)
+    @Dbginsp@TDebugInspector@RefreshInspectComplete$qqrp14System@TObjectr14Dbk@DbkErrInfo @195 ; __fastcall Dbginsp::TDebugInspector::RefreshInspectComplete(System::TObject *, Dbk::DbkErrInfo&)
+    @Dbginsp@TDebugInspector@RefreshInstanceList$qqrv @174 ; __fastcall Dbginsp::TDebugInspector::RefreshInstanceList()
+    @Dbginsp@TDebugInspector@ReplaceItem$qqrp17Propbox@TPropItemi @201 ; __fastcall Dbginsp::TDebugInspector::ReplaceItem(Propbox::TPropItem *, int)
+    @Dbginsp@TDebugInspector@ReplaceItemForce$qqrp17Propbox@TPropItemi @202 ; __fastcall Dbginsp::TDebugInspector::ReplaceItemForce(Propbox::TPropItem *, int)
+    @Dbginsp@TDebugInspector@RunDebugUpdate$qqrp14System@TObject @163 ; __fastcall Dbginsp::TDebugInspector::RunDebugUpdate(System::TObject *)
+    @Dbginsp@TDebugInspector@SaveWindowState$qqrp30System@Inifiles@TCustomIniFileo @149 ; __fastcall Dbginsp::TDebugInspector::SaveWindowState(System::Inifiles::TCustomIniFile *, bool)
+    @Dbginsp@TDebugInspector@SelectItemClick$qqrp14System@TObject @140 ; __fastcall Dbginsp::TDebugInspector::SelectItemClick(System::TObject *)
+    @Dbginsp@TDebugInspector@SetData$qqrx42System@%DelphiInterface$15Dbk@IDbkInspect%x59System@%DelphiInterface$32Debugapi@IOTAExpressionInspector%20System@UnicodeStringoro @187 ; Dbginsp::TDebugInspector::SetData(const System::DelphiInterface<{583}...
+    @Dbginsp@TDebugInspector@SetDefaultItem$qqriiynpqqrx47System@%DelphiInterface$20Designintf@IProperty%$v @194 ; Dbginsp::TDebugInspector::SetDefaultItem(int, int, __closure(*)(const System::DelphiInterface<{583}...
+    @Dbginsp@TDebugInspector@SetInstanceAddr$qqrx20System@UnicodeString @178 ; __fastcall Dbginsp::TDebugInspector::SetInstanceAddr(const System::UnicodeString)
+    @Dbginsp@TDebugInspector@SetInstanceName$qqrx20System@UnicodeString @180 ; __fastcall Dbginsp::TDebugInspector::SetInstanceName(const System::UnicodeString)
+    @Dbginsp@TDebugInspector@SetInstanceType$qqrx20System@UnicodeString @179 ; __fastcall Dbginsp::TDebugInspector::SetInstanceType(const System::UnicodeString)
+    @Dbginsp@TDebugInspector@SetKernelOptions$qqroooo @203 ; __fastcall Dbginsp::TDebugInspector::SetKernelOptions(bool, bool, bool, bool)
+    @Dbginsp@TDebugInspector@SetNewItemData$qqrp17Propbox@TPropItemix20System@UnicodeStringt3t3t3ii @200 ; __fastcall Dbginsp::TDebugInspector::SetNewItemData(Propbox::TPropItem *, int, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, int, int)
+    @Dbginsp@TDebugInspector@SetParent$qqrp24Vcl@Controls@TWinControl @205 ; __fastcall Dbginsp::TDebugInspector::SetParent(Vcl::Controls::TWinControl *)
+    @Dbginsp@TDebugInspector@SetPosition$qqrrx19System@Types@TPointo @188 ; __fastcall Dbginsp::TDebugInspector::SetPosition(const System::Types::TPoint&, bool)
+    @Dbginsp@TDebugInspector@SetTabVisible$qqrio @177 ; __fastcall Dbginsp::TDebugInspector::SetTabVisible(int, bool)
+    @Dbginsp@TDebugInspector@ShowFullyQualifiedNamesItemClick$qqrp14System@TObject @128 ; __fastcall Dbginsp::TDebugInspector::ShowFullyQualifiedNamesItemClick(System::TObject *)
+    @Dbginsp@TDebugInspector@ShowGetterPropsItemClick$qqrp14System@TObject @215 ; __fastcall Dbginsp::TDebugInspector::ShowGetterPropsItemClick(System::TObject *)
+    @Dbginsp@TDebugInspector@ShowInheritedItemClick$qqrp14System@TObject @216 ; __fastcall Dbginsp::TDebugInspector::ShowInheritedItemClick(System::TObject *)
+    @Dbginsp@TDebugInspector@SortByDeclarationOrderItemClick$qqrp14System@TObject @127 ; __fastcall Dbginsp::TDebugInspector::SortByDeclarationOrderItemClick(System::TObject *)
+    @Dbginsp@TDebugInspector@SubInspect$qqro @220 ; __fastcall Dbginsp::TDebugInspector::SubInspect(bool)
+    @Dbginsp@TDebugInspector@TabControlChanging$qqrp14System@TObjectro @143 ; __fastcall Dbginsp::TDebugInspector::TabControlChanging(System::TObject *, bool&)
+    @Dbginsp@TDebugInspector@TabControlClick$qqrp14System@TObject @146 ; __fastcall Dbginsp::TDebugInspector::TabControlClick(System::TObject *)
+    @Dbginsp@TDebugInspector@ThreadListChanged$qqrp14System@TObject @161 ; __fastcall Dbginsp::TDebugInspector::ThreadListChanged(System::TObject *)
+    @Dbginsp@TDebugInspector@ThreadStillValid$qqrv @162 ; __fastcall Dbginsp::TDebugInspector::ThreadStillValid()
+    @Dbginsp@TDebugInspector@TopPanelResize$qqrp14System@TObject @176 ; __fastcall Dbginsp::TDebugInspector::TopPanelResize(System::TObject *)
+    @Dbginsp@TDebugInspector@TypeCastItemClick$qqrp14System@TObject @213 ; __fastcall Dbginsp::TDebugInspector::TypeCastItemClick(System::TObject *)
+    @Dbginsp@TDebugInspector@UpdateCaption$qqrv @207 ; __fastcall Dbginsp::TDebugInspector::UpdateCaption()
+    @Dbginsp@TDebugInspector@UpdateInstanceLabel$qqrv @173 ; __fastcall Dbginsp::TDebugInspector::UpdateInstanceLabel()
+    @Dbginsp@TDebugInspector@UpdateInstanceList$qqrx20System@UnicodeString @172 ; __fastcall Dbginsp::TDebugInspector::UpdateInstanceList(const System::UnicodeString)
+    @Dbginsp@TDebugInspector@UpdateItem$qqrp17Propbox@TPropItemio @193 ; __fastcall Dbginsp::TDebugInspector::UpdateItem(Propbox::TPropItem *, int, bool)
+    @Dbginsp@TDebugInspector@UpdatePropItemData$qqrip17Propbox@TPropItem @131 ; __fastcall Dbginsp::TDebugInspector::UpdatePropItemData(int, Propbox::TPropItem *)
+    @Dbginsp@TDebugInspector@UpdateStatusBar$qqrv @210 ; __fastcall Dbginsp::TDebugInspector::UpdateStatusBar()
+    @Dbginsp@TDebugInspector@ViewVisualizerItem$qqrp14System@TObject @209 ; __fastcall Dbginsp::TDebugInspector::ViewVisualizerItem(System::TObject *)
+    @Dbginsp@TDebugInspector@VisualizerListChanged$qqrp14System@TObject @208 ; __fastcall Dbginsp::TDebugInspector::VisualizerListChanged(System::TObject *)
+    @Dbginsp@TDebugInspector@WMNCLButtonDown$qqrr31Winapi@Messages@TWMNCHitMessage @155 ; __fastcall Dbginsp::TDebugInspector::WMNCLButtonDown(Winapi::Messages::TWMNCHitMessage&)
+    @Dbginsp@TDebugInspector@WMSizing$qqrr24Winapi@Messages@TMessage @154 ; __fastcall Dbginsp::TDebugInspector::WMSizing(Winapi::Messages::TMessage&)
+    @Dbginsp@TDebugInspector@ZoomWindowItemClick$qqrp14System@TObject @142 ; __fastcall Dbginsp::TDebugInspector::ZoomWindowItemClick(System::TObject *)
+    @Dbginsp@initialization$qqrv   @120 ; __fastcall Dbginsp::initialization()
+    @Dbkdebugprocmd@Finalization$qqrv @234 ; __fastcall Dbkdebugprocmd::Finalization()
+    @Dbkdebugprocmd@IDERegister$qqrv @235 ; __fastcall Dbkdebugprocmd::IDERegister()
+    @Dbkdebugprocmd@TDebugProCommands@ @244 ; Dbkdebugprocmd::TDebugProCommands::
+    @Dbkdebugprocmd@TDebugProCommands@CreateInspector$qqrx20System@UnicodeStringr59System@%DelphiInterface$32Debugapi@IOTAExpressionInspector% @238 ; Dbkdebugprocmd::TDebugProCommands::CreateInspector(const System::UnicodeString, System::DelphiInterface<{583}...
+    @Dbkdebugprocmd@TDebugProCommands@CreateInspectorAtSource$qqrx20System@UnicodeStringt1ir59System@%DelphiInterface$32Debugapi@IOTAExpressionInspector% @237 ; Dbkdebugprocmd::TDebugProCommands::CreateInspectorAtSource(const System::UnicodeString, const System::UnicodeString, int, System::DelphiInterface<{583}...
+    @Dbkdebugprocmd@TDebugProCommands@CreateInspectorDbkInsp$qqr42System@%DelphiInterface$15Dbk@IDbkInspect% @239 ; Dbkdebugprocmd::TDebugProCommands::CreateInspectorDbkInsp(System::DelphiInterface<{583}...
+    @Dbkdebugprocmd@TDebugProCommands@CreateInspectorExpressionInspector$qqrp15Debug@TDebuggerx59System@%DelphiInterface$32Debugapi@IOTAExpressionInspector% @240 ; Dbkdebugprocmd::TDebugProCommands::CreateInspectorExpressionInspector(Debug::TDebugger *, const System::DelphiInterface<{583}...
+    @Dbkdebugprocmd@TDebugProCommands@CreateLocalsInspector$qqrr59System@%DelphiInterface$32Debugapi@IOTAExpressionInspector%i @236 ; Dbkdebugprocmd::TDebugProCommands::CreateLocalsInspector(System::DelphiInterface<{583}...
+    @Dbkdebugprocmd@TDebugProCommands@Inspect$qqrp15Debug@TDebuggerx20System@UnicodeString @242 ; __fastcall Dbkdebugprocmd::TDebugProCommands::Inspect(Debug::TDebugger *, const System::UnicodeString)
+    @Dbkdebugprocmd@TDebugProCommands@InspectAtSource$qqrp15Debug@TDebuggerx20System@UnicodeStringt2i @241 ; __fastcall Dbkdebugprocmd::TDebugProCommands::InspectAtSource(Debug::TDebugger *, const System::UnicodeString, const System::UnicodeString, int)
+    @Dbkdebugprocmd@initialization$qqrv @233 ; __fastcall Dbkdebugprocmd::initialization()
+    @Dbkdebugproide@@GetPackageInfoTable$qqrv @248 ; Dbkdebugproide::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dbkdebugproide@@PackageLoad$qqrv @247 ; Dbkdebugproide::__linkproc__ __fastcall PackageLoad()
+    @Dbkdebugproide@@PackageUnload$qqrv @246 ; Dbkdebugproide::__linkproc__ __fastcall PackageUnload()
+    @Dbkdebugproide@initialization$qqrv @245 ; __fastcall Dbkdebugproide::initialization()
+    @Dbkinspector@Finalization$qqrv @16  ; __fastcall Dbkinspector::Finalization()
+    @Dbkinspector@TAncestorView@   @111 ; Dbkinspector::TAncestorView::
+    @Dbkinspector@TAncestorView@$bctr$qqrx20System@UnicodeStringx42System@%DelphiInterface$15Dbk@IDbkInspect%39Debugapi@TExpressionInspectorMemberTypeiio46System@%DelphiInterface$19Toolsapi@IOTAThread%o @53  ; Dbkinspector::TAncestorView::TAncestorView(const System::UnicodeString, const System::DelphiInterface<{583}...
+    @Dbkinspector@TAncestorView@$bdtr$qqrv @52  ; __fastcall Dbkinspector::TAncestorView::~TAncestorView()
+    @Dbkinspector@TAncestorView@AddNotifier$qqrx57System@%DelphiInterface$30Debugapi@IOTAInspectorNotifier% @49  ; Dbkinspector::TAncestorView::AddNotifier(const System::DelphiInterface<{583}...
+    @Dbkinspector@TAncestorView@ChangeMemberValue$qqr39Debugapi@TExpressionInspectorMemberTypeix20System@UnicodeString @29  ; __fastcall Dbkinspector::TAncestorView::ChangeMemberValue(Debugapi::TExpressionInspectorMemberType, int, const System::UnicodeString)
+    @Dbkinspector@TAncestorView@DoGetMember$qqri @51  ; __fastcall Dbkinspector::TAncestorView::DoGetMember(int)
+    @Dbkinspector@TAncestorView@GetAddress$qqrv @43  ; __fastcall Dbkinspector::TAncestorView::GetAddress()
+    @Dbkinspector@TAncestorView@GetCanExpand$qqrv @27  ; __fastcall Dbkinspector::TAncestorView::GetCanExpand()
+    @Dbkinspector@TAncestorView@GetCurrentRange$qqrrit1 @39  ; __fastcall Dbkinspector::TAncestorView::GetCurrentRange(int&, int&)
+    @Dbkinspector@TAncestorView@GetDisplayFlags$qqrv @41  ; __fastcall Dbkinspector::TAncestorView::GetDisplayFlags()
+    @Dbkinspector@TAncestorView@GetErrorMessage$qqrv @25  ; __fastcall Dbkinspector::TAncestorView::GetErrorMessage()
+    @Dbkinspector@TAncestorView@GetExpanded$qqrv @26  ; __fastcall Dbkinspector::TAncestorView::GetExpanded()
+    @Dbkinspector@TAncestorView@GetFrameNumber$qqrv @24  ; __fastcall Dbkinspector::TAncestorView::GetFrameNumber()
+    @Dbkinspector@TAncestorView@GetFullExpression$qqrv @46  ; __fastcall Dbkinspector::TAncestorView::GetFullExpression()
+    @Dbkinspector@TAncestorView@GetInstance$qqrv @17  ; __fastcall Dbkinspector::TAncestorView::GetInstance()
+    @Dbkinspector@TAncestorView@GetMemberAddress$qqr39Debugapi@TExpressionInspectorMemberTypei @33  ; __fastcall Dbkinspector::TAncestorView::GetMemberAddress(Debugapi::TExpressionInspectorMemberType, int)
+    @Dbkinspector@TAncestorView@GetMemberComplete$qqrp14System@TObjectr14Dbk@DbkErrInfo @50  ; __fastcall Dbkinspector::TAncestorView::GetMemberComplete(System::TObject *, Dbk::DbkErrInfo&)
+    @Dbkinspector@TAncestorView@GetMemberCount$qqr39Debugapi@TExpressionInspectorMemberType @37  ; __fastcall Dbkinspector::TAncestorView::GetMemberCount(Debugapi::TExpressionInspectorMemberType)
+    @Dbkinspector@TAncestorView@GetMemberError$qqr39Debugapi@TExpressionInspectorMemberTypei @31  ; __fastcall Dbkinspector::TAncestorView::GetMemberError(Debugapi::TExpressionInspectorMemberType, int)
+    @Dbkinspector@TAncestorView@GetMemberFlags$qqr39Debugapi@TExpressionInspectorMemberTypei @30  ; __fastcall Dbkinspector::TAncestorView::GetMemberFlags(Debugapi::TExpressionInspectorMemberType, int)
+    @Dbkinspector@TAncestorView@GetMemberFullExpression$qqr39Debugapi@TExpressionInspectorMemberTypei @32  ; __fastcall Dbkinspector::TAncestorView::GetMemberFullExpression(Debugapi::TExpressionInspectorMemberType, int)
+    @Dbkinspector@TAncestorView@GetMemberName$qqr39Debugapi@TExpressionInspectorMemberTypei @36  ; __fastcall Dbkinspector::TAncestorView::GetMemberName(Debugapi::TExpressionInspectorMemberType, int)
+    @Dbkinspector@TAncestorView@GetMemberType$qqr39Debugapi@TExpressionInspectorMemberTypei @34  ; __fastcall Dbkinspector::TAncestorView::GetMemberType(Debugapi::TExpressionInspectorMemberType, int)
+    @Dbkinspector@TAncestorView@GetMemberValue$qqr39Debugapi@TExpressionInspectorMemberTypei @35  ; __fastcall Dbkinspector::TAncestorView::GetMemberValue(Debugapi::TExpressionInspectorMemberType, int)
+    @Dbkinspector@TAncestorView@GetStatusFlags$qqrv @42  ; __fastcall Dbkinspector::TAncestorView::GetStatusFlags()
+    @Dbkinspector@TAncestorView@GetThread$qqrv @23  ; __fastcall Dbkinspector::TAncestorView::GetThread()
+    @Dbkinspector@TAncestorView@GetTitleLine$qqrv @47  ; __fastcall Dbkinspector::TAncestorView::GetTitleLine()
+    @Dbkinspector@TAncestorView@GetTypeName$qqrv @45  ; __fastcall Dbkinspector::TAncestorView::GetTypeName()
+    @Dbkinspector@TAncestorView@GetUseVisualizer$qqrv @19  ; __fastcall Dbkinspector::TAncestorView::GetUseVisualizer()
+    @Dbkinspector@TAncestorView@GetValue$qqrv @44  ; __fastcall Dbkinspector::TAncestorView::GetValue()
+    @Dbkinspector@TAncestorView@Refresh$qqro @22  ; __fastcall Dbkinspector::TAncestorView::Refresh(bool)
+    @Dbkinspector@TAncestorView@RemoveNotifier$qqri @48  ; __fastcall Dbkinspector::TAncestorView::RemoveNotifier(int)
+    @Dbkinspector@TAncestorView@SetCurrentRange$qqrii @38  ; __fastcall Dbkinspector::TAncestorView::SetCurrentRange(int, int)
+    @Dbkinspector@TAncestorView@SetDisplayFlags$qqr67System@%Set$40Debugapi@TExpressionInspectorDisplayFlagt1$i0$t1$i5$% @40  ; Dbkinspector::TAncestorView::SetDisplayFlags(System::Set<{583}...
+    @Dbkinspector@TAncestorView@SetExpanded$qqro @21  ; __fastcall Dbkinspector::TAncestorView::SetExpanded(bool)
+    @Dbkinspector@TAncestorView@SetFrameNumber$qqri @20  ; __fastcall Dbkinspector::TAncestorView::SetFrameNumber(int)
+    @Dbkinspector@TAncestorView@SetUseVisualizer$qqrxo @18  ; __fastcall Dbkinspector::TAncestorView::SetUseVisualizer(const bool)
+    @Dbkinspector@TAncestorView@SubInspectMember$qqr39Debugapi@TExpressionInspectorMemberTypeir27Toolsapi@TOTAEvaluateResult @28  ; __fastcall Dbkinspector::TAncestorView::SubInspectMember(Debugapi::TExpressionInspectorMemberType, int, Toolsapi::TOTAEvaluateResult&)
+    @Dbkinspector@TDebuggerExpressionInspector@ @114 ; Dbkinspector::TDebuggerExpressionInspector::
+    @Dbkinspector@TDebuggerExpressionInspector@$bctr$qqrx20System@UnicodeStringr27Toolsapi@TOTAEvaluateResultoot1ioio @109 ; __fastcall Dbkinspector::TDebuggerExpressionInspector::TDebuggerExpressionInspector(const System::UnicodeString, Toolsapi::TOTAEvaluateResult&, bool, bool, const System::UnicodeString, int, bool, int, bool)
+    @Dbkinspector@TDebuggerExpressionInspector@$bctr$qqrx42System@%DelphiInterface$15Dbk@IDbkInspect%39Debugapi@TExpressionInspectorMemberTypeix46System@%DelphiInterface$19Toolsapi@IOTAThread%r27Toolsapi@TOTAEvaluateResultooo @107 ; Dbkinspector::TDebuggerExpressionInspector::TDebuggerExpressionInspector(const System::DelphiInterface<{583}...
+    @Dbkinspector@TDebuggerExpressionInspector@$bctr$qqrx42System@%DelphiInterface$15Dbk@IDbkInspect%x46System@%DelphiInterface$19Toolsapi@IOTAThread%ooo @108 ; Dbkinspector::TDebuggerExpressionInspector::TDebuggerExpressionInspector(const System::DelphiInterface<{583}...
+    @Dbkinspector@TDebuggerExpressionInspector@$bdtr$qqrv @106 ; __fastcall Dbkinspector::TDebuggerExpressionInspector::~TDebuggerExpressionInspector()
+    @Dbkinspector@TDebuggerExpressionInspector@AddNotifier$qqrx57System@%DelphiInterface$30Debugapi@IOTAInspectorNotifier% @103 ; Dbkinspector::TDebuggerExpressionInspector::AddNotifier(const System::DelphiInterface<{583}...
+    @Dbkinspector@TDebuggerExpressionInspector@AfterInspectComplete$qqrv @83  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::AfterInspectComplete()
+    @Dbkinspector@TDebuggerExpressionInspector@AfterRefreshComplete$qqro @82  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::AfterRefreshComplete(bool)
+    @Dbkinspector@TDebuggerExpressionInspector@ChangeMemberValue$qqr39Debugapi@TExpressionInspectorMemberTypeix20System@UnicodeString @68  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::ChangeMemberValue(Debugapi::TExpressionInspectorMemberType, int, const System::UnicodeString)
+    @Dbkinspector@TDebuggerExpressionInspector@CleanupDBKInspector$qqrv @104 ; __fastcall Dbkinspector::TDebuggerExpressionInspector::CleanupDBKInspector()
+    @Dbkinspector@TDebuggerExpressionInspector@DoGetMember$qqri @86  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::DoGetMember(int)
+    @Dbkinspector@TDebuggerExpressionInspector@DoGetMethod$qqri @85  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::DoGetMethod(int)
+    @Dbkinspector@TDebuggerExpressionInspector@DoGetProperty$qqri @84  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::DoGetProperty(int)
+    @Dbkinspector@TDebuggerExpressionInspector@GetAddress$qqrv @96  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetAddress()
+    @Dbkinspector@TDebuggerExpressionInspector@GetAncestorCount$qqrv @89  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetAncestorCount()
+    @Dbkinspector@TDebuggerExpressionInspector@GetAncestorInfo$qqri @88  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetAncestorInfo(int)
+    @Dbkinspector@TDebuggerExpressionInspector@GetCanExpand$qqrv @64  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetCanExpand()
+    @Dbkinspector@TDebuggerExpressionInspector@GetCurrentRange$qqrrit1 @92  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetCurrentRange(int&, int&)
+    @Dbkinspector@TDebuggerExpressionInspector@GetDisplayFlags$qqrv @94  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetDisplayFlags()
+    @Dbkinspector@TDebuggerExpressionInspector@GetErrorMessage$qqrv @57  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetErrorMessage()
+    @Dbkinspector@TDebuggerExpressionInspector@GetExpanded$qqrv @63  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetExpanded()
+    @Dbkinspector@TDebuggerExpressionInspector@GetExpression$qqro @101 ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetExpression(bool)
+    @Dbkinspector@TDebuggerExpressionInspector@GetFrameNumber$qqrv @56  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetFrameNumber()
+    @Dbkinspector@TDebuggerExpressionInspector@GetFullExpression$qqrv @99  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetFullExpression()
+    @Dbkinspector@TDebuggerExpressionInspector@GetInheritedMemberCount$qqr39Debugapi@TExpressionInspectorMemberTyperi @90  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetInheritedMemberCount(Debugapi::TExpressionInspectorMemberType, int&)
+    @Dbkinspector@TDebuggerExpressionInspector@GetInstance$qqrv @58  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetInstance()
+    @Dbkinspector@TDebuggerExpressionInspector@GetMemberAddress$qqr39Debugapi@TExpressionInspectorMemberTypei @72  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetMemberAddress(Debugapi::TExpressionInspectorMemberType, int)
+    @Dbkinspector@TDebuggerExpressionInspector@GetMemberComplete$qqrp14System@TObjectr14Dbk@DbkErrInfo @76  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetMemberComplete(System::TObject *, Dbk::DbkErrInfo&)
+    @Dbkinspector@TDebuggerExpressionInspector@GetMemberCount$qqr39Debugapi@TExpressionInspectorMemberType @87  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetMemberCount(Debugapi::TExpressionInspectorMemberType)
+    @Dbkinspector@TDebuggerExpressionInspector@GetMemberError$qqr39Debugapi@TExpressionInspectorMemberTypei @70  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetMemberError(Debugapi::TExpressionInspectorMemberType, int)
+    @Dbkinspector@TDebuggerExpressionInspector@GetMemberFlags$qqr39Debugapi@TExpressionInspectorMemberTypei @69  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetMemberFlags(Debugapi::TExpressionInspectorMemberType, int)
+    @Dbkinspector@TDebuggerExpressionInspector@GetMemberFullExpression$qqr39Debugapi@TExpressionInspectorMemberTypei @71  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetMemberFullExpression(Debugapi::TExpressionInspectorMemberType, int)
+    @Dbkinspector@TDebuggerExpressionInspector@GetMemberName$qqr39Debugapi@TExpressionInspectorMemberTypei @75  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetMemberName(Debugapi::TExpressionInspectorMemberType, int)
+    @Dbkinspector@TDebuggerExpressionInspector@GetMemberType$qqr39Debugapi@TExpressionInspectorMemberTypei @73  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetMemberType(Debugapi::TExpressionInspectorMemberType, int)
+    @Dbkinspector@TDebuggerExpressionInspector@GetMemberValue$qqr39Debugapi@TExpressionInspectorMemberTypei @74  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetMemberValue(Debugapi::TExpressionInspectorMemberType, int)
+    @Dbkinspector@TDebuggerExpressionInspector@GetStatusFlags$qqrv @95  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetStatusFlags()
+    @Dbkinspector@TDebuggerExpressionInspector@GetThread$qqrv @55  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetThread()
+    @Dbkinspector@TDebuggerExpressionInspector@GetTitleLine$qqrv @100 ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetTitleLine()
+    @Dbkinspector@TDebuggerExpressionInspector@GetTypeName$qqrv @98  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetTypeName()
+    @Dbkinspector@TDebuggerExpressionInspector@GetUseVisualizer$qqrv @60  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetUseVisualizer()
+    @Dbkinspector@TDebuggerExpressionInspector@GetValue$qqrv @97  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::GetValue()
+    @Dbkinspector@TDebuggerExpressionInspector@InspectComplete$qqrp14System@TObjectr14Dbk@DbkErrInfo @81  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::InspectComplete(System::TObject *, Dbk::DbkErrInfo&)
+    @Dbkinspector@TDebuggerExpressionInspector@ProcessModuleCreated$qqrx53System@%DelphiInterface$26Toolsapi@IOTAProcessModule% @80  ; Dbkinspector::TDebuggerExpressionInspector::ProcessModuleCreated(const System::DelphiInterface<{583}...
+    @Dbkinspector@TDebuggerExpressionInspector@ProcessModuleDestroyed$qqrx53System@%DelphiInterface$26Toolsapi@IOTAProcessModule% @79  ; Dbkinspector::TDebuggerExpressionInspector::ProcessModuleDestroyed(const System::DelphiInterface<{583}...
+    @Dbkinspector@TDebuggerExpressionInspector@Refresh$qqro @54  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::Refresh(bool)
+    @Dbkinspector@TDebuggerExpressionInspector@RefreshComplete$qqrp14System@TObjectr14Dbk@DbkErrInfo @77  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::RefreshComplete(System::TObject *, Dbk::DbkErrInfo&)
+    @Dbkinspector@TDebuggerExpressionInspector@RemoveNotifier$qqri @102 ; __fastcall Dbkinspector::TDebuggerExpressionInspector::RemoveNotifier(int)
+    @Dbkinspector@TDebuggerExpressionInspector@SetCurrentRange$qqrii @91  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::SetCurrentRange(int, int)
+    @Dbkinspector@TDebuggerExpressionInspector@SetDisplayFlags$qqr67System@%Set$40Debugapi@TExpressionInspectorDisplayFlagt1$i0$t1$i5$% @93  ; Dbkinspector::TDebuggerExpressionInspector::SetDisplayFlags(System::Set<{583}...
+    @Dbkinspector@TDebuggerExpressionInspector@SetExpanded$qqro @62  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::SetExpanded(bool)
+    @Dbkinspector@TDebuggerExpressionInspector@SetFrameNumber$qqri @61  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::SetFrameNumber(int)
+    @Dbkinspector@TDebuggerExpressionInspector@SetUseVisualizer$qqrxo @59  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::SetUseVisualizer(const bool)
+    @Dbkinspector@TDebuggerExpressionInspector@SetupDBKInspector$qqr20System@UnicodeStringt1i @105 ; __fastcall Dbkinspector::TDebuggerExpressionInspector::SetupDBKInspector(System::UnicodeString, System::UnicodeString, int)
+    @Dbkinspector@TDebuggerExpressionInspector@SubInspectComplete$qqrp14System@TObjectr14Dbk@DbkErrInfo @78  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::SubInspectComplete(System::TObject *, Dbk::DbkErrInfo&)
+    @Dbkinspector@TDebuggerExpressionInspector@SubInspectMember$qqr39Debugapi@TExpressionInspectorMemberTypeir27Toolsapi@TOTAEvaluateResult @67  ; __fastcall Dbkinspector::TDebuggerExpressionInspector::SubInspectMember(Debugapi::TExpressionInspectorMemberType, int, Toolsapi::TOTAEvaluateResult&)
+    @Dbkinspector@TDebuggerExpressionInspector@ThreadCreated$qqrx46System@%DelphiInterface$19Toolsapi@IOTAThread% @66  ; Dbkinspector::TDebuggerExpressionInspector::ThreadCreated(const System::DelphiInterface<{583}...
+    @Dbkinspector@TDebuggerExpressionInspector@ThreadDestroyed$qqrx46System@%DelphiInterface$19Toolsapi@IOTAThread% @65  ; Dbkinspector::TDebuggerExpressionInspector::ThreadDestroyed(const System::DelphiInterface<{583}...
+    @Dbkinspector@initialization$qqrv @15  ; __fastcall Dbkinspector::initialization()
+    @GetPackageInfoTable           @251 ; GetPackageInfoTable
+    @Range@Finalization$qqrv       @2   ; __fastcall Range::Finalization()
+    @Range@TRangeDlg@              @13  ; Range::TRangeDlg::
+    @Range@TRangeDlg@EndValChange$qqrp14System@TObject @4   ; __fastcall Range::TRangeDlg::EndValChange(System::TObject *)
+    @Range@TRangeDlg@FormCloseQuery$qqrp14System@TObjectro @3   ; __fastcall Range::TRangeDlg::FormCloseQuery(System::TObject *, bool&)
+    @Range@TRangeDlg@GetEndVal$qqrv @8   ; __fastcall Range::TRangeDlg::GetEndVal()
+    @Range@TRangeDlg@GetStartVal$qqrv @10  ; __fastcall Range::TRangeDlg::GetStartVal()
+    @Range@TRangeDlg@HelpButtonClick$qqrp14System@TObject @6   ; __fastcall Range::TRangeDlg::HelpButtonClick(System::TObject *)
+    @Range@TRangeDlg@SetEndVal$qqri @7   ; __fastcall Range::TRangeDlg::SetEndVal(int)
+    @Range@TRangeDlg@SetPosition$qqrrx19System@Types@TPoint @11  ; __fastcall Range::TRangeDlg::SetPosition(const System::Types::TPoint&)
+    @Range@TRangeDlg@SetStartVal$qqri @9   ; __fastcall Range::TRangeDlg::SetStartVal(int)
+    @Range@TRangeDlg@StartValChange$qqrp14System@TObject @5   ; __fastcall Range::TRangeDlg::StartValChange(System::TObject *)
+    @Range@initialization$qqrv     @1   ; __fastcall Range::initialization()
+    Finalize                       @249 ; Finalize
+    Initialize                     @250 ; Initialize

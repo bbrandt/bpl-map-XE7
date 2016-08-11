@@ -1,0 +1,19 @@
+LIBRARY     INETDBXPRESS210.BPL
+
+EXPORTS
+    @$xp$38Web@Dbxpressweb@TSQLQueryTableProducer @8   ; __tpdsc__ Web::Dbxpressweb::TSQLQueryTableProducer
+    @GetPackageInfoTable           @16  ; GetPackageInfoTable
+    @Inetdbxpress@@GetPackageInfoTable$qqrv @13  ; Inetdbxpress::__linkproc__ __fastcall GetPackageInfoTable()
+    @Inetdbxpress@@PackageLoad$qqrv @12  ; Inetdbxpress::__linkproc__ __fastcall PackageLoad()
+    @Inetdbxpress@@PackageUnload$qqrv @11  ; Inetdbxpress::__linkproc__ __fastcall PackageUnload()
+    @Inetdbxpress@initialization$qqrv @10  ; __fastcall Inetdbxpress::initialization()
+    @Web@Dbxpressweb@Finalization$qqrv @2   ; __fastcall Web::Dbxpressweb::Finalization()
+    @Web@Dbxpressweb@TSQLQueryTableProducer@ @9   ; Web::Dbxpressweb::TSQLQueryTableProducer::
+    @Web@Dbxpressweb@TSQLQueryTableProducer@Content$qqrv @7   ; __fastcall Web::Dbxpressweb::TSQLQueryTableProducer::Content()
+    @Web@Dbxpressweb@TSQLQueryTableProducer@GetDataSet$qqrv @6   ; __fastcall Web::Dbxpressweb::TSQLQueryTableProducer::GetDataSet()
+    @Web@Dbxpressweb@TSQLQueryTableProducer@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @5   ; __fastcall Web::Dbxpressweb::TSQLQueryTableProducer::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Web@Dbxpressweb@TSQLQueryTableProducer@SetDataSet$qqrp16Data@Db@TDataSet @4   ; __fastcall Web::Dbxpressweb::TSQLQueryTableProducer::SetDataSet(Data::Db::TDataSet *)
+    @Web@Dbxpressweb@TSQLQueryTableProducer@SetQuery$qqrp22Data@Sqlexpr@TSQLQuery @3   ; __fastcall Web::Dbxpressweb::TSQLQueryTableProducer::SetQuery(Data::Sqlexpr::TSQLQuery *)
+    @Web@Dbxpressweb@initialization$qqrv @1   ; __fastcall Web::Dbxpressweb::initialization()
+    Finalize                       @14  ; Finalize
+    Initialize                     @15  ; Initialize

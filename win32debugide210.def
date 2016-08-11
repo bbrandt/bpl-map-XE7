@@ -1,0 +1,266 @@
+LIBRARY     WIN32DEBUGIDE210.BPL
+
+DESCRIPTION 'mbarcadero Win32 Native Code Debugger IDE Package'
+
+EXPORTS
+    @$xp$109System@Generics@Collections@%TEnumerable__1$62System@Generics@Collections@%TPair__2$i20System@UnicodeString%% @231 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<int, System::UnicodeString> >
+    @$xp$109System@Generics@Collections@%TEnumerator__1$62System@Generics@Collections@%TPair__2$i20System@UnicodeString%% @233 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<System::Generics::Collections::TPair__2<int, System::UnicodeString> >
+    @$xp$20System@%TArray__1$i%    @225 ; __tpdsc__ System::TArray__1<int>
+    @$xp$24Win32debug@TNativeThread @245 ; __tpdsc__ Win32debug::TNativeThread
+    @$xp$25Win32debug@TNativeProcess @237 ; __tpdsc__ Win32debug::TNativeProcess
+    @$xp$26Win32debug@TDbkAddrWrapper @249 ; __tpdsc__ Win32debug::TDbkAddrWrapper
+    @$xp$26Win32debug@TNativeDebugger @251 ; __tpdsc__ Win32debug::TNativeDebugger
+    @$xp$26Win32debug@TNativeLinkUnit @243 ; __tpdsc__ Win32debug::TNativeLinkUnit
+    @$xp$29Win32debug@INativeDbkDebugger @253 ; __tpdsc__ Win32debug::INativeDbkDebugger
+    @$xp$29Win32debug@TDbkCGEvBreakpoint @239 ; __tpdsc__ Win32debug::TDbkCGEvBreakpoint
+    @$xp$30Win32debug@PIgnoreExceptRanges @242 ; __tpdsc__ Win32debug::PIgnoreExceptRanges
+    @$xp$30Win32debug@TIgnoreExceptRanges @241 ; __tpdsc__ Win32debug::TIgnoreExceptRanges
+    @$xp$31Win32debug@TExceptionRecordInfo @248 ; __tpdsc__ Win32debug::TExceptionRecordInfo
+    @$xp$31Win32debug@TNativeExceptionType @247 ; __tpdsc__ Win32debug::TNativeExceptionType
+    @$xp$34Addexceptdialog@TAddExceptRangeDlg @7   ; __tpdsc__ Addexceptdialog::TAddExceptRangeDlg
+    @$xp$41System@%TArray__1$20System@UnicodeString% @216 ; __tpdsc__ System::TArray__1<System::UnicodeString>
+    @$xp$46System@Generics@Collections@%TEnumerable__1$i% @221 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<int>
+    @$xp$46System@Generics@Collections@%TEnumerator__1$i% @223 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<int>
+    @$xp$47Debuggerexceptoptions@TDebuggerExceptionOptions @28  ; __tpdsc__ Debuggerexceptoptions::TDebuggerExceptionOptions
+    @$xp$49System@Generics@Defaults@%IEqualityComparer__1$i% @228 ; __tpdsc__ System::Generics::Defaults::IEqualityComparer__1<int>
+    @$xp$57System@Generics@Collections@%TCollectionNotifyEvent__1$i% @227 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<int>
+    @$xp$62System@Generics@Collections@%TPair__2$i20System@UnicodeString% @236 ; __tpdsc__ System::Generics::Collections::TPair__2<int, System::UnicodeString>
+    @$xp$67System@Generics@Collections@%TEnumerable__1$20System@UnicodeString% @212 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<System::UnicodeString>
+    @$xp$67System@Generics@Collections@%TEnumerator__1$20System@UnicodeString% @214 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<System::UnicodeString>
+    @$xp$68System@Generics@Collections@%TDictionary__2$i20System@UnicodeString% @204 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, System::UnicodeString>
+    @$xp$77System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TItem$% @230 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TItem<>
+    @$xp$78System@Generics@Collections@%TCollectionNotifyEvent__1$20System@UnicodeString% @226 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<System::UnicodeString>
+    @$xp$82System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TItemArray$% @229 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TItemArray<>
+    @$xp$83System@%TArray__1$62System@Generics@Collections@%TPair__2$i20System@UnicodeString%% @235 ; __tpdsc__ System::TArray__1<System::Generics::Collections::TPair__2<int, System::UnicodeString> >
+    @$xp$86System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TKeyCollection$% @217 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TKeyCollection<>
+    @$xp$86System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TKeyEnumerator$% @219 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TKeyEnumerator<>
+    @$xp$87System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TPairEnumerator$% @206 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TPairEnumerator<>
+    @$xp$88System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TValueCollection$% @208 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TValueCollection<>
+    @$xp$88System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TValueEnumerator$% @210 ; __tpdsc__ System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TValueEnumerator<>
+    @Addexceptdialog@AddExceptRangeDlg @6   ; Addexceptdialog::AddExceptRangeDlg
+    @Addexceptdialog@Finalization$qqrv @2   ; __fastcall Addexceptdialog::Finalization()
+    @Addexceptdialog@TAddExceptRangeDlg@ @8   ; Addexceptdialog::TAddExceptRangeDlg::
+    @Addexceptdialog@TAddExceptRangeDlg@FormCloseQuery$qqrp14System@TObjectro @3   ; __fastcall Addexceptdialog::TAddExceptRangeDlg::FormCloseQuery(System::TObject *, bool&)
+    @Addexceptdialog@TAddExceptRangeDlg@HelpButtonClick$qqrp14System@TObject @5   ; __fastcall Addexceptdialog::TAddExceptRangeDlg::HelpButtonClick(System::TObject *)
+    @Addexceptdialog@TAddExceptRangeDlg@SetCategories$qqr44System@%DynamicArray$20System@UnicodeString%i @4   ; Addexceptdialog::TAddExceptRangeDlg::SetCategories(System::DynamicArray<{583}...
+    @Addexceptdialog@initialization$qqrv @1   ; __fastcall Addexceptdialog::initialization()
+    @Debuggerexceptoptions@Finalization$qqrv @10  ; __fastcall Debuggerexceptoptions::Finalization()
+    @Debuggerexceptoptions@TDebuggerExceptionOptions@ @29  ; Debuggerexceptoptions::TDebuggerExceptionOptions::
+    @Debuggerexceptoptions@TDebuggerExceptionOptions@$ClassInitFlag @31  ; Debuggerexceptoptions::TDebuggerExceptionOptions::{1017}...
+    @Debuggerexceptoptions@TDebuggerExceptionOptions@$bcctr$qqrv @16  ; Debuggerexceptoptions::TDebuggerExceptionOptions::operator ...
+    @Debuggerexceptoptions@TDebuggerExceptionOptions@$bcdtr$qqrv @30  ; Debuggerexceptoptions::TDebuggerExceptionOptions::operator ...
+    @Debuggerexceptoptions@TDebuggerExceptionOptions@AddExButtonClick$qqrp14System@TObject @18  ; __fastcall Debuggerexceptoptions::TDebuggerExceptionOptions::AddExButtonClick(System::TObject *)
+    @Debuggerexceptoptions@TDebuggerExceptionOptions@ConfirmChange$qqrrx28Dbkdebugopts@TExceptionRange @17  ; __fastcall Debuggerexceptoptions::TDebuggerExceptionOptions::ConfirmChange(const Dbkdebugopts::TExceptionRange&)
+    @Debuggerexceptoptions@TDebuggerExceptionOptions@DebuggerExceptionOptionsBroadcast$qqrp14System@TObjectr24Winapi@Messages@TMessage @13  ; __fastcall Debuggerexceptoptions::TDebuggerExceptionOptions::DebuggerExceptionOptionsBroadcast(System::TObject *, Winapi::Messages::TMessage&)
+    @Debuggerexceptoptions@TDebuggerExceptionOptions@ExceptionTreeChange$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNode @26  ; __fastcall Debuggerexceptoptions::TDebuggerExceptionOptions::ExceptionTreeChange(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *)
+    @Debuggerexceptoptions@TDebuggerExceptionOptions@ExceptionTreeCollapsed$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNode @25  ; __fastcall Debuggerexceptoptions::TDebuggerExceptionOptions::ExceptionTreeCollapsed(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *)
+    @Debuggerexceptoptions@TDebuggerExceptionOptions@ExceptionTreeDblClick$qqrp14System@TObject @24  ; __fastcall Debuggerexceptoptions::TDebuggerExceptionOptions::ExceptionTreeDblClick(System::TObject *)
+    @Debuggerexceptoptions@TDebuggerExceptionOptions@ExceptionTreeExpanded$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNode @23  ; __fastcall Debuggerexceptoptions::TDebuggerExceptionOptions::ExceptionTreeExpanded(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *)
+    @Debuggerexceptoptions@TDebuggerExceptionOptions@ExceptionTreeGetImageIndex$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNode28Idevirtualtrees@TVTImageKindirori @22  ; __fastcall Debuggerexceptoptions::TDebuggerExceptionOptions::ExceptionTreeGetImageIndex(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, Idevirtualtrees::TVTImageKind, int, bool&, int&)
+    @Debuggerexceptoptions@TDebuggerExceptionOptions@ExceptionTreeGetText$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodei28Idevirtualtrees@TVSTTextTyper17System@WideString @21  ; __fastcall Debuggerexceptoptions::TDebuggerExceptionOptions::ExceptionTreeGetText(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, int, Idevirtualtrees::TVSTTextType, System::WideString&)
+    @Debuggerexceptoptions@TDebuggerExceptionOptions@ExceptionTreeInitChildren$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNoderui @20  ; __fastcall Debuggerexceptoptions::TDebuggerExceptionOptions::ExceptionTreeInitChildren(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, unsigned int&)
+    @Debuggerexceptoptions@TDebuggerExceptionOptions@ExceptionTreeInitNode$qqrp32Idevirtualtrees@TBaseVirtualTreep28Idevirtualtrees@TVirtualNodet2r64System@%Set$37Idevirtualtrees@TVirtualNodeInitStatet1$i0$t1$i4$% @19  ; Debuggerexceptoptions::TDebuggerExceptionOptions::ExceptionTreeInitNode(Idevirtualtrees::TBaseVirtualTree *, Idevirtualtrees::TVirtualNode *, Idevirtualtrees::TVirtualNode *, System::Set<{583}...
+    @Debuggerexceptoptions@TDebuggerExceptionOptions@FSelectedIndex @32  ; Debuggerexceptoptions::TDebuggerExceptionOptions::FSelectedIndex
+    @Debuggerexceptoptions@TDebuggerExceptionOptions@FSelectedParentIndex @33  ; Debuggerexceptoptions::TDebuggerExceptionOptions::FSelectedParentIndex
+    @Debuggerexceptoptions@TDebuggerExceptionOptions@PropertySheetCreate$qqrp14System@TObject @11  ; __fastcall Debuggerexceptoptions::TDebuggerExceptionOptions::PropertySheetCreate(System::TObject *)
+    @Debuggerexceptoptions@TDebuggerExceptionOptions@RemoveExButtonClick$qqrp14System@TObject @12  ; __fastcall Debuggerexceptoptions::TDebuggerExceptionOptions::RemoveExButtonClick(System::TObject *)
+    @Debuggerexceptoptions@TDebuggerExceptionOptions@UpdateRadioButtons$qqrp28Idevirtualtrees@TVirtualNode @27  ; __fastcall Debuggerexceptoptions::TDebuggerExceptionOptions::UpdateRadioButtons(Idevirtualtrees::TVirtualNode *)
+    @Debuggerexceptoptions@TDebuggerExceptionOptions@rgHandledByClick$qqrp14System@TObject @15  ; __fastcall Debuggerexceptoptions::TDebuggerExceptionOptions::rgHandledByClick(System::TObject *)
+    @Debuggerexceptoptions@TDebuggerExceptionOptions@rgResumeOptionsClick$qqrp14System@TObject @14  ; __fastcall Debuggerexceptoptions::TDebuggerExceptionOptions::rgResumeOptionsClick(System::TObject *)
+    @Debuggerexceptoptions@initialization$qqrv @9   ; __fastcall Debuggerexceptoptions::initialization()
+    @GetPackageInfoTable           @261 ; GetPackageInfoTable
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@ @205 ; System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@$bctr$qqri @87  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TDictionary__2<int, System::UnicodeString>(int)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@$bctr$qqrix76System@%DelphiInterface$49System@Generics@Defaults@%IEqualityComparer__1$i%% @85  ; System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TDictionary__2<int, System::UnicodeString>(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@$bctr$qqrx76System@%DelphiInterface$49System@Generics@Defaults@%IEqualityComparer__1$i%% @86  ; System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TDictionary__2<int, System::UnicodeString>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@$bctr$qqrxp109System@Generics@Collections@%TEnumerable__1$62System@Generics@Collections@%TPair__2$i20System@UnicodeString%% @84  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TDictionary__2<int, System::UnicodeString>(System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<int, System::UnicodeString> > * const)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@$bctr$qqrxp109System@Generics@Collections@%TEnumerable__1$62System@Generics@Collections@%TPair__2$i20System@UnicodeString%%x76System@%DelphiInterface$49System@GeeyWszTK/ahAbTY5Josjbog @83  ; System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TDictionary__2<int, System::UnicodeString>(System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<int, System::UnicodeString> > * const, ...
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@$bdtr$qqrv @82  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::~TDictionary__2<int, System::UnicodeString>()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TKeyCollection$%@ @218 ; System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TKeyCollection<>::
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TKeyCollection$%@$bctr$qqrxp68System@Generics@Collections@%TDictionary__2$i20System@UnicodeString% @61  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TKeyCollection<>::TKeyCollection<>(System::Generics::Collections::TDictionary__2<int, System::UnicodeString> * const)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TKeyCollection$%@DoGetEnumerator$qqrv @62  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TKeyCollection<>::DoGetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TKeyCollection$%@GetCount$qqrv @63  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TKeyCollection<>::GetCount()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TKeyCollection$%@GetEnumerator$qqrv @60  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TKeyCollection<>::GetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TKeyCollection$%@ToArray$qqrv @59  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TKeyCollection<>::ToArray()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TKeyEnumerator$%@ @220 ; System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TKeyEnumerator<>::
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TKeyEnumerator$%@$bctr$qqrxp68System@Generics@Collections@%TDictionary__2$i20System@UnicodeString% @55  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TKeyEnumerator<>::TKeyEnumerator<>(System::Generics::Collections::TDictionary__2<int, System::UnicodeString> * const)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TKeyEnumerator$%@DoGetCurrent$qqrv @57  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TKeyEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TKeyEnumerator$%@DoMoveNext$qqrv @56  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TKeyEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TKeyEnumerator$%@GetCurrent$qqrv @58  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TKeyEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TKeyEnumerator$%@MoveNext$qqrv @54  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TKeyEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TPairEnumerator$%@ @207 ; System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TPairEnumerator<>::
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TPairEnumerator$%@$bctr$qqrxp68System@Generics@Collections@%TDictionary__2$i20System@UnicodeString% @35  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TPairEnumerator<>::TPairEnumerator<>(System::Generics::Collections::TDictionary__2<int, System::UnicodeString> * const)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TPairEnumerator$%@DoGetCurrent$qqrv @37  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TPairEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TPairEnumerator$%@DoMoveNext$qqrv @36  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TPairEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TPairEnumerator$%@GetCurrent$qqrv @38  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TPairEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TPairEnumerator$%@MoveNext$qqrv @34  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TPairEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TValueCollection$%@ @209 ; System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TValueCollection<>::
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TValueCollection$%@$bctr$qqrxp68System@Generics@Collections@%TDictionary__2$i20System@UnicodeString% @46  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TValueCollection<>::TValueCollection<>(System::Generics::Collections::TDictionary__2<int, System::UnicodeString> * const)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TValueCollection$%@DoGetEnumerator$qqrv @47  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TValueCollection<>::DoGetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TValueCollection$%@GetCount$qqrv @48  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TValueCollection<>::GetCount()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TValueCollection$%@GetEnumerator$qqrv @45  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TValueCollection<>::GetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TValueCollection$%@ToArray$qqrv @44  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TValueCollection<>::ToArray()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TValueEnumerator$%@ @211 ; System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TValueEnumerator<>::
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TValueEnumerator$%@$bctr$qqrxp68System@Generics@Collections@%TDictionary__2$i20System@UnicodeString% @40  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TValueEnumerator<>::TValueEnumerator<>(System::Generics::Collections::TDictionary__2<int, System::UnicodeString> * const)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TValueEnumerator$%@DoGetCurrent$qqrv @42  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TValueEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TValueEnumerator$%@DoMoveNext$qqrv @41  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TValueEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TValueEnumerator$%@GetCurrent$qqrv @43  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TValueEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@%TValueEnumerator$%@MoveNext$qqrv @39  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TValueEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@Add$qqrxix20System@UnicodeString @81  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::Add(const int, const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@AddOrSetValue$qqrxix20System@UnicodeString @75  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::AddOrSetValue(const int, const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@Clear$qqrv @78  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::Clear()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@ContainsKey$qqrxi @74  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::ContainsKey(const int)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@ContainsValue$qqrx20System@UnicodeString @73  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::ContainsValue(const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@DoAdd$qqriixix20System@UnicodeString @93  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::DoAdd(int, int, const int, const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@DoGetEnumerator$qqrv @90  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::DoGetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@DoRemove$qqrxii51System@Generics@Collections@TCollectionNotification @91  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::DoRemove(const int, int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@DoSetValue$qqrix20System@UnicodeString @92  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::DoSetValue(int, const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@ExtractPair$qqrxi @79  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::ExtractPair(const int)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@GetBucketIndex$qqrxii @98  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::GetBucketIndex(const int, int)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@GetEnumerator$qqrv @69  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::GetEnumerator()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@GetItem$qqrxi @96  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::GetItem(const int)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@GetKeys$qqrv @71  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::GetKeys()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@GetValues$qqrv @70  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::GetValues()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@Grow$qqrv @99  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::Grow()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@Hash$qqrxi @97  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::Hash(const int)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@KeyNotify$qqrxi51System@Generics@Collections@TCollectionNotification @89  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::KeyNotify(const int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@Rehash$qqri @100 ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::Rehash(int)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@RehashAdd$qqrixix20System@UnicodeString @94  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::RehashAdd(int, const int, const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@Remove$qqrxi @80  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::Remove(const int)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@SetCapacity$qqri @101 ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::SetCapacity(int)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@SetItem$qqrxix20System@UnicodeString @95  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::SetItem(const int, const System::UnicodeString)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@ToArray$qqrv @72  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::ToArray()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@TrimExcess$qqrv @77  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TrimExcess()
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@TryGetValue$qqrxir20System@UnicodeString @76  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::TryGetValue(const int, System::UnicodeString&)
+    @System@Generics@Collections@%TDictionary__2$i20System@UnicodeString%@ValueNotify$qqrx20System@UnicodeString51System@Generics@Collections@TCollectionNotification @88  ; __fastcall System::Generics::Collections::TDictionary__2<int, System::UnicodeString>::ValueNotify(const System::UnicodeString, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TEnumerable__1$20System@UnicodeString%@ @213 ; System::Generics::Collections::TEnumerable__1<System::UnicodeString>::
+    @System@Generics@Collections@%TEnumerable__1$20System@UnicodeString%@$bdtr$qqrv @52  ; __fastcall System::Generics::Collections::TEnumerable__1<System::UnicodeString>::~TEnumerable__1<System::UnicodeString>()
+    @System@Generics@Collections@%TEnumerable__1$20System@UnicodeString%@GetEnumerator$qqrv @51  ; __fastcall System::Generics::Collections::TEnumerable__1<System::UnicodeString>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$20System@UnicodeString%@ToArray$qqrv @50  ; __fastcall System::Generics::Collections::TEnumerable__1<System::UnicodeString>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$20System@UnicodeString%@ToArrayImpl$qqri @53  ; __fastcall System::Generics::Collections::TEnumerable__1<System::UnicodeString>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerable__1$62System@Generics@Collections@%TPair__2$i20System@UnicodeString%%@ @232 ; System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<int, System::UnicodeString> >::
+    @System@Generics@Collections@%TEnumerable__1$62System@Generics@Collections@%TPair__2$i20System@UnicodeString%%@$bdtr$qqrv @105 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<int, System::UnicodeString> >::~TEnumerable__1<System::Generics::Collections::TPair__2<int, System::UnicodeString> >()
+    @System@Generics@Collections@%TEnumerable__1$62System@Generics@Collections@%TPair__2$i20System@UnicodeString%%@GetEnumerator$qqrv @104 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<int, System::UnicodeString> >::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$62System@Generics@Collections@%TPair__2$i20System@UnicodeString%%@ToArray$qqrv @103 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<int, System::UnicodeString> >::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$62System@Generics@Collections@%TPair__2$i20System@UnicodeString%%@ToArrayImpl$qqri @106 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<int, System::UnicodeString> >::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerable__1$i%@ @222 ; System::Generics::Collections::TEnumerable__1<int>::
+    @System@Generics@Collections@%TEnumerable__1$i%@$bdtr$qqrv @67  ; __fastcall System::Generics::Collections::TEnumerable__1<int>::~TEnumerable__1<int>()
+    @System@Generics@Collections@%TEnumerable__1$i%@GetEnumerator$qqrv @66  ; __fastcall System::Generics::Collections::TEnumerable__1<int>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$i%@ToArray$qqrv @65  ; __fastcall System::Generics::Collections::TEnumerable__1<int>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$i%@ToArrayImpl$qqri @68  ; __fastcall System::Generics::Collections::TEnumerable__1<int>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerator__1$20System@UnicodeString%@ @215 ; System::Generics::Collections::TEnumerator__1<System::UnicodeString>::
+    @System@Generics@Collections@%TEnumerator__1$20System@UnicodeString%@MoveNext$qqrv @49  ; __fastcall System::Generics::Collections::TEnumerator__1<System::UnicodeString>::MoveNext()
+    @System@Generics@Collections@%TEnumerator__1$62System@Generics@Collections@%TPair__2$i20System@UnicodeString%%@ @234 ; System::Generics::Collections::TEnumerator__1<System::Generics::Collections::TPair__2<int, System::UnicodeString> >::
+    @System@Generics@Collections@%TEnumerator__1$62System@Generics@Collections@%TPair__2$i20System@UnicodeString%%@MoveNext$qqrv @102 ; __fastcall System::Generics::Collections::TEnumerator__1<System::Generics::Collections::TPair__2<int, System::UnicodeString> >::MoveNext()
+    @System@Generics@Collections@%TEnumerator__1$i%@ @224 ; System::Generics::Collections::TEnumerator__1<int>::
+    @System@Generics@Collections@%TEnumerator__1$i%@MoveNext$qqrv @64  ; __fastcall System::Generics::Collections::TEnumerator__1<int>::MoveNext()
+    @System@Generics@Collections@%TPair__2$i20System@UnicodeString%@$bctr$qqrxix20System@UnicodeString @107 ; __fastcall System::Generics::Collections::TPair__2<int, System::UnicodeString>::TPair__2<int, System::UnicodeString>(const int, const System::UnicodeString)
+    @Win32debug@Finalization$qqrv  @109 ; __fastcall Win32debug::Finalization()
+    @Win32debug@IDERegister$qqrv   @203 ; __fastcall Win32debug::IDERegister()
+    @Win32debug@TDbkAddrWrapper@   @250 ; Win32debug::TDbkAddrWrapper::
+    @Win32debug@TDbkAddrWrapper@$bctr$qqrrx17Dbk@DbkProcAddr_t @110 ; __fastcall Win32debug::TDbkAddrWrapper::TDbkAddrWrapper(const Dbk::DbkProcAddr_t&)
+    @Win32debug@TDbkCGEvBreakpoint@ @240 ; Win32debug::TDbkCGEvBreakpoint::
+    @Win32debug@TDbkCGEvBreakpoint@$bctr$qqrp14Debug@TProcessp15Debug@TDebugger @202 ; __fastcall Win32debug::TDbkCGEvBreakpoint::TDbkCGEvBreakpoint(Debug::TProcess *, Debug::TDebugger *)
+    @Win32debug@TDbkCGEvBreakpoint@ReleaseCallback$qqrv @201 ; __fastcall Win32debug::TDbkCGEvBreakpoint::ReleaseCallback()
+    @Win32debug@TDbkCGEvBreakpoint@onVerified$qqsii @199 ; __stdcall Win32debug::TDbkCGEvBreakpoint::onVerified(int, int)
+    @Win32debug@TDbkCGEvBreakpoint@whenOccurs$qqsxp17Dbk@DbkProcAddr_tx41System@%DelphiInterface$14Dbk@IDbkThread%rui @200 ; Win32debug::TDbkCGEvBreakpoint::whenOccurs(Dbk::DbkProcAddr_t * const, const System::DelphiInterface<{583}...
+    @Win32debug@TNativeDebugger@   @252 ; Win32debug::TNativeDebugger::
+    @Win32debug@TNativeDebugger@DoCanSetNextStatement$qqrx20System@UnicodeStringi @174 ; __fastcall Win32debug::TNativeDebugger::DoCanSetNextStatement(const System::UnicodeString, int)
+    @Win32debug@TNativeDebugger@DoGetDebuggerOptionsAddinClasses$qqrp23System@Classes@TStringsx47System@%DelphiInterface$20Toolsapi@IOTAProcess% @172 ; Win32debug::TNativeDebugger::DoGetDebuggerOptionsAddinClasses(System::Classes::TStrings *, const System::DelphiInterface<{583}...
+    @Win32debug@TNativeDebugger@DoGetDefaultAddressForm$qqrv @190 ; __fastcall Win32debug::TNativeDebugger::DoGetDefaultAddressForm()
+    @Win32debug@TNativeDebugger@DoGetDefaultLauncher$qqrv @189 ; __fastcall Win32debug::TNativeDebugger::DoGetDefaultLauncher()
+    @Win32debug@TNativeDebugger@DoGetEnabledDebugCommands$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProcess% @197 ; Win32debug::TNativeDebugger::DoGetEnabledDebugCommands(const System::DelphiInterface<{583}...
+    @Win32debug@TNativeDebugger@DoGetLauncherPromptString$qqrv @193 ; __fastcall Win32debug::TNativeDebugger::DoGetLauncherPromptString()
+    @Win32debug@TNativeDebugger@DoGetOldCommandLineSwitch$qqri @192 ; __fastcall Win32debug::TNativeDebugger::DoGetOldCommandLineSwitch(int)
+    @Win32debug@TNativeDebugger@DoGetOldCommandLineSwitchCount$qqrv @191 ; __fastcall Win32debug::TNativeDebugger::DoGetOldCommandLineSwitchCount()
+    @Win32debug@TNativeDebugger@DoGetProcessClass$qqrv @187 ; __fastcall Win32debug::TNativeDebugger::DoGetProcessClass()
+    @Win32debug@TNativeDebugger@DoGetSupportedAttachCommands$qqrv @194 ; __fastcall Win32debug::TNativeDebugger::DoGetSupportedAttachCommands()
+    @Win32debug@TNativeDebugger@DoGetSupportedCPUPanes$qqrv @188 ; __fastcall Win32debug::TNativeDebugger::DoGetSupportedCPUPanes()
+    @Win32debug@TNativeDebugger@DoGetSupportedDebugCommands$qqrv @198 ; __fastcall Win32debug::TNativeDebugger::DoGetSupportedDebugCommands()
+    @Win32debug@TNativeDebugger@DoGetSupportedLoadProcessCommands$qqrv @196 ; __fastcall Win32debug::TNativeDebugger::DoGetSupportedLoadProcessCommands()
+    @Win32debug@TNativeDebugger@DoGetSupportedRunParametersCommands$qqrv @195 ; __fastcall Win32debug::TNativeDebugger::DoGetSupportedRunParametersCommands()
+    @Win32debug@TNativeDebugger@DoLockEvaluator$qqri @178 ; __fastcall Win32debug::TNativeDebugger::DoLockEvaluator(int)
+    @Win32debug@TNativeDebugger@DoSetNextStatement$qqrx20System@UnicodeStringir20System@UnicodeString @173 ; __fastcall Win32debug::TNativeDebugger::DoSetNextStatement(const System::UnicodeString, int, System::UnicodeString&)
+    @Win32debug@TNativeDebugger@DoShowException$qqrv @186 ; __fastcall Win32debug::TNativeDebugger::DoShowException()
+    @Win32debug@TNativeDebugger@DoUnlockEvaluator$qqrv @177 ; __fastcall Win32debug::TNativeDebugger::DoUnlockEvaluator()
+    @Win32debug@TNativeDebugger@GetAddModuleFilter$qqrv @180 ; __fastcall Win32debug::TNativeDebugger::GetAddModuleFilter()
+    @Win32debug@TNativeDebugger@GetModuleBreakpoint$qqri @179 ; __fastcall Win32debug::TNativeDebugger::GetModuleBreakpoint(int)
+    @Win32debug@TNativeDebugger@GetModuleBreakpointCount$qqrv @183 ; __fastcall Win32debug::TNativeDebugger::GetModuleBreakpointCount()
+    @Win32debug@TNativeDebugger@GetOsExceptionType$qqrv @182 ; __fastcall Win32debug::TNativeDebugger::GetOsExceptionType()
+    @Win32debug@TNativeDebugger@GetOsExceptionTypeDisplayName$qqrv @181 ; __fastcall Win32debug::TNativeDebugger::GetOsExceptionTypeDisplayName()
+    @Win32debug@TNativeDebugger@InternalSetNextStatement$qqrx20System@UnicodeStringir20System@UnicodeStringo @175 ; __fastcall Win32debug::TNativeDebugger::InternalSetNextStatement(const System::UnicodeString, int, System::UnicodeString&, bool)
+    @Win32debug@TNativeDebugger@ModuleHasBreakpoint$qqrx20System@UnicodeString @184 ; __fastcall Win32debug::TNativeDebugger::ModuleHasBreakpoint(const System::UnicodeString)
+    @Win32debug@TNativeDebugger@SetNextStatementCallBack$qqrp14Debug@TProcessrx17Dbk@DbkProcAddr_tri @176 ; __fastcall Win32debug::TNativeDebugger::SetNextStatementCallBack(Debug::TProcess *, const Dbk::DbkProcAddr_t&, int&)
+    @Win32debug@TNativeDebugger@ToggleModuleBreakpoint$qqrx20System@UnicodeString @185 ; __fastcall Win32debug::TNativeDebugger::ToggleModuleBreakpoint(const System::UnicodeString)
+    @Win32debug@TNativeLinkUnit@   @244 ; Win32debug::TNativeLinkUnit::
+    @Win32debug@TNativeLinkUnit@$bctr$qqrp14Debug@TProcessuiui @142 ; __fastcall Win32debug::TNativeLinkUnit::TNativeLinkUnit(Debug::TProcess *, unsigned int, unsigned int)
+    @Win32debug@TNativeLinkUnit@GetCppDebugHook$qqrv @141 ; __fastcall Win32debug::TNativeLinkUnit::GetCppDebugHook()
+    @Win32debug@TNativeProcess@    @238 ; Win32debug::TNativeProcess::
+    @Win32debug@TNativeProcess@$bctr$qqrp15Debug@TDebugger39System@%DelphiInterface$12Dbk@IDbkProc%x20System@UnicodeString @139 ; Win32debug::TNativeProcess::TNativeProcess(Debug::TDebugger *, System::DelphiInterface<{583}...
+    @Win32debug@TNativeProcess@$bctr$qqrp15Debug@TDebuggerx20System@UnicodeString @140 ; __fastcall Win32debug::TNativeProcess::TNativeProcess(Debug::TDebugger *, const System::UnicodeString)
+    @Win32debug@TNativeProcess@$bdtr$qqrv @138 ; __fastcall Win32debug::TNativeProcess::~TNativeProcess()
+    @Win32debug@TNativeProcess@AddNotifier$qqrx55System@%DelphiInterface$28Debugapi@IOTACGEventNotifier% @116 ; Win32debug::TNativeProcess::AddNotifier(const System::DelphiInterface<{583}...
+    @Win32debug@TNativeProcess@DoGetCodeGuardLibraryName$qqrv @123 ; __fastcall Win32debug::TNativeProcess::DoGetCodeGuardLibraryName()
+    @Win32debug@TNativeProcess@DoGetLinkUnitClass$qqrv @122 ; __fastcall Win32debug::TNativeProcess::DoGetLinkUnitClass()
+    @Win32debug@TNativeProcess@DoGetThreadClass$qqrv @124 ; __fastcall Win32debug::TNativeProcess::DoGetThreadClass()
+    @Win32debug@TNativeProcess@DoLinkUnitCreated$qqrp15Debug@TLinkUnit @126 ; __fastcall Win32debug::TNativeProcess::DoLinkUnitCreated(Debug::TLinkUnit *)
+    @Win32debug@TNativeProcess@DoLinkUnitDeleted$qqrp15Debug@TLinkUnit @125 ; __fastcall Win32debug::TNativeProcess::DoLinkUnitDeleted(Debug::TLinkUnit *)
+    @Win32debug@TNativeProcess@DoSetExceptOption$qqrv @121 ; __fastcall Win32debug::TNativeProcess::DoSetExceptOption()
+    @Win32debug@TNativeProcess@DoSetExceptionTracing$qqro @127 ; __fastcall Win32debug::TNativeProcess::DoSetExceptionTracing(bool)
+    @Win32debug@TNativeProcess@EnterExitFinally$qqrv @134 ; __fastcall Win32debug::TNativeProcess::EnterExitFinally()
+    @Win32debug@TNativeProcess@GetCodeGuardSourcePath$qqrv @112 ; __fastcall Win32debug::TNativeProcess::GetCodeGuardSourcePath()
+    @Win32debug@TNativeProcess@GetCodeGuardSourcePathAddress$qqrv @114 ; __fastcall Win32debug::TNativeProcess::GetCodeGuardSourcePathAddress()
+    @Win32debug@TNativeProcess@GetCppTracingLevel$qqrv @130 ; __fastcall Win32debug::TNativeProcess::GetCppTracingLevel()
+    @Win32debug@TNativeProcess@GetDebugHook$qqrv @132 ; __fastcall Win32debug::TNativeProcess::GetDebugHook()
+    @Win32debug@TNativeProcess@GetDelphiTracingLevel$qqrv @131 ; __fastcall Win32debug::TNativeProcess::GetDelphiTracingLevel()
+    @Win32debug@TNativeProcess@InitExceptRanges$qqr52System@%DynamicArray$28Dbkdebugopts@TExceptionRange% @136 ; Win32debug::TNativeProcess::InitExceptRanges(System::DynamicArray<{583}...
+    @Win32debug@TNativeProcess@InitExceptionTracing$qqrv @135 ; __fastcall Win32debug::TNativeProcess::InitExceptionTracing()
+    @Win32debug@TNativeProcess@IsCodeGuardPresent$qqrv @113 ; __fastcall Win32debug::TNativeProcess::IsCodeGuardPresent()
+    @Win32debug@TNativeProcess@LeaveExitFinally$qqrv @133 ; __fastcall Win32debug::TNativeProcess::LeaveExitFinally()
+    @Win32debug@TNativeProcess@ReleaseCallback$qqrv @137 ; __fastcall Win32debug::TNativeProcess::ReleaseCallback()
+    @Win32debug@TNativeProcess@RemoveNotifier$qqri @115 ; __fastcall Win32debug::TNativeProcess::RemoveNotifier(int)
+    @Win32debug@TNativeProcess@SetCodeGuardSourcePath$qqrx20System@UnicodeString @111 ; __fastcall Win32debug::TNativeProcess::SetCodeGuardSourcePath(const System::UnicodeString)
+    @Win32debug@TNativeProcess@SetCppTracingLevel$qqri @128 ; __fastcall Win32debug::TNativeProcess::SetCppTracingLevel(int)
+    @Win32debug@TNativeProcess@SetDelphiTracingLevel$qqruc @129 ; __fastcall Win32debug::TNativeProcess::SetDelphiTracingLevel(unsigned char)
+    @Win32debug@TNativeProcess@ShowMemoryLocation$qqrxuip21Vcl@Forms@TCustomForm @118 ; __fastcall Win32debug::TNativeProcess::ShowMemoryLocation(const unsigned int, Vcl::Forms::TCustomForm *)
+    @Win32debug@TNativeProcess@ShowMemoryLocation$qqrxujp21Vcl@Forms@TCustomForm @117 ; __fastcall Win32debug::TNativeProcess::ShowMemoryLocation(const unsigned __int64, Vcl::Forms::TCustomForm *)
+    @Win32debug@TNativeProcess@ShowNonSourceLocation$qqrxuip21Vcl@Forms@TCustomForm @120 ; __fastcall Win32debug::TNativeProcess::ShowNonSourceLocation(const unsigned int, Vcl::Forms::TCustomForm *)
+    @Win32debug@TNativeProcess@ShowNonSourceLocation$qqrxujp21Vcl@Forms@TCustomForm @119 ; __fastcall Win32debug::TNativeProcess::ShowNonSourceLocation(const unsigned __int64, Vcl::Forms::TCustomForm *)
+    @Win32debug@TNativeThread@     @246 ; Win32debug::TNativeThread::
+    @Win32debug@TNativeThread@$bctr$qqruip14Debug@TProcess @171 ; __fastcall Win32debug::TNativeThread::TNativeThread(unsigned int, Debug::TProcess *)
+    @Win32debug@TNativeThread@DemangleExceptionName$qqrx20System@UnicodeString @166 ; __fastcall Win32debug::TNativeThread::DemangleExceptionName(const System::UnicodeString)
+    @Win32debug@TNativeThread@DoClearStepProc$qqrv @151 ; __fastcall Win32debug::TNativeThread::DoClearStepProc()
+    @Win32debug@TNativeThread@DoGetContext$qqrv @147 ; __fastcall Win32debug::TNativeThread::DoGetContext()
+    @Win32debug@TNativeThread@DoGetExceptionAddress$qqrv @156 ; __fastcall Win32debug::TNativeThread::DoGetExceptionAddress()
+    @Win32debug@TNativeThread@DoGetExceptionDisplayName$qqrv @158 ; __fastcall Win32debug::TNativeThread::DoGetExceptionDisplayName()
+    @Win32debug@TNativeThread@DoGetExceptionMessage$qqrv @157 ; __fastcall Win32debug::TNativeThread::DoGetExceptionMessage()
+    @Win32debug@TNativeThread@DoGetExceptionName$qqrv @160 ; __fastcall Win32debug::TNativeThread::DoGetExceptionName()
+    @Win32debug@TNativeThread@DoGetHandle$qqrv @159 ; __fastcall Win32debug::TNativeThread::DoGetHandle()
+    @Win32debug@TNativeThread@DoGetOTAXMMRegisters$qqrr20Toolsapi@TOTAXMMRegs @146 ; __fastcall Win32debug::TNativeThread::DoGetOTAXMMRegisters(Toolsapi::TOTAXMMRegs&)
+    @Win32debug@TNativeThread@DoGetStackInfo$qqri @145 ; __fastcall Win32debug::TNativeThread::DoGetStackInfo(int)
+    @Win32debug@TNativeThread@DoHandleNtfy1stChanceException$qqriuirui @152 ; __fastcall Win32debug::TNativeThread::DoHandleNtfy1stChanceException(int, unsigned int, unsigned int&)
+    @Win32debug@TNativeThread@DoHandleStopOnFirstChanceException$qqrv @153 ; __fastcall Win32debug::TNativeThread::DoHandleStopOnFirstChanceException()
+    @Win32debug@TNativeThread@DoSetContext$qqrrx21Dbkhelper@TDbkContext @150 ; __fastcall Win32debug::TNativeThread::DoSetContext(const Dbkhelper::TDbkContext&)
+    @Win32debug@TNativeThread@DoSetOTAXMMRegisters$qqrrx20Toolsapi@TOTAXMMRegs @149 ; __fastcall Win32debug::TNativeThread::DoSetOTAXMMRegisters(const Toolsapi::TOTAXMMRegs&)
+    @Win32debug@TNativeThread@DoSetStepProc$qqrv @148 ; __fastcall Win32debug::TNativeThread::DoSetStepProc()
+    @Win32debug@TNativeThread@FFutureThreadNames @254 ; Win32debug::TNativeThread::FFutureThreadNames
+    @Win32debug@TNativeThread@GetExceptionClass$qqrv @169 ; __fastcall Win32debug::TNativeThread::GetExceptionClass()
+    @Win32debug@TNativeThread@GetExceptionContext$qqrv @155 ; __fastcall Win32debug::TNativeThread::GetExceptionContext()
+    @Win32debug@TNativeThread@GetFutureThreadNames$qqrv @144 ; __fastcall Win32debug::TNativeThread::GetFutureThreadNames()
+    @Win32debug@TNativeThread@GetIA32Context$qqrv @154 ; __fastcall Win32debug::TNativeThread::GetIA32Context()
+    @Win32debug@TNativeThread@IsADelphiException$qqrrx31Win32debug@TExceptionRecordInfo @168 ; __fastcall Win32debug::TNativeThread::IsADelphiException(const Win32debug::TExceptionRecordInfo&)
+    @Win32debug@TNativeThread@ParseThreadOsInfo$qqrrx19Dbk@DbkThreadOsInfor31Win32debug@TExceptionRecordInfo @167 ; __fastcall Win32debug::TNativeThread::ParseThreadOsInfo(const Dbk::DbkThreadOsInfo&, Win32debug::TExceptionRecordInfo&)
+    @Win32debug@TNativeThread@ReadInteger$qqrj @165 ; __fastcall Win32debug::TNativeThread::ReadInteger(__int64)
+    @Win32debug@TNativeThread@ReadLString$qqrj @161 ; __fastcall Win32debug::TNativeThread::ReadLString(__int64)
+    @Win32debug@TNativeThread@ReadNString$qqrji @164 ; __fastcall Win32debug::TNativeThread::ReadNString(__int64, int)
+    @Win32debug@TNativeThread@ReadPChar$qqrj @162 ; __fastcall Win32debug::TNativeThread::ReadPChar(__int64)
+    @Win32debug@TNativeThread@ReadString$qqrj @163 ; __fastcall Win32debug::TNativeThread::ReadString(__int64)
+    @Win32debug@TNativeThread@ReleaseCallback$qqrv @170 ; __fastcall Win32debug::TNativeThread::ReleaseCallback()
+    @Win32debug@TNativeThread@SetFutureThreadNames$qqrxp68System@Generics@Collections@%TDictionary__2$i20System@UnicodeString% @143 ; __fastcall Win32debug::TNativeThread::SetFutureThreadNames(System::Generics::Collections::TDictionary__2<int, System::UnicodeString> * const)
+    @Win32debug@initialization$qqrv @108 ; __fastcall Win32debug::initialization()
+    @Win32debugide@@GetPackageInfoTable$qqrv @258 ; Win32debugide::__linkproc__ __fastcall GetPackageInfoTable()
+    @Win32debugide@@PackageLoad$qqrv @257 ; Win32debugide::__linkproc__ __fastcall PackageLoad()
+    @Win32debugide@@PackageUnload$qqrv @256 ; Win32debugide::__linkproc__ __fastcall PackageUnload()
+    @Win32debugide@initialization$qqrv @255 ; __fastcall Win32debugide::initialization()
+    Finalize                       @259 ; Finalize
+    Initialize                     @260 ; Initialize

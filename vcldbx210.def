@@ -1,0 +1,133 @@
+LIBRARY     VCLDBX210.BPL
+
+DESCRIPTION 'mbarcadero Compatibility Database Components'
+
+EXPORTS
+    @$xp$23Vcl@Dblookup@TPopupGrid @113 ; __tpdsc__ Vcl::Dblookup::TPopupGrid
+    @$xp$25Vcl@Dblookup@TComboButton @111 ; __tpdsc__ Vcl::Dblookup::TComboButton
+    @$xp$26Vcl@Dblookup@TDBLookupList @115 ; __tpdsc__ Vcl::Dblookup::TDBLookupList
+    @$xp$27Vcl@Dblookup@TDBLookupCombo @117 ; __tpdsc__ Vcl::Dblookup::TDBLookupCombo
+    @$xp$32Vcl@Dblookup@TDBLookupComboStyle @121 ; __tpdsc__ Vcl::Dblookup::TDBLookupComboStyle
+    @$xp$32Vcl@Dblookup@TDBLookupListOption @120 ; __tpdsc__ Vcl::Dblookup::TDBLookupListOption
+    @$xp$33Vcl@Dblookup@TDBLookupListOptions @119 ; __tpdsc__ Vcl::Dblookup::TDBLookupListOptions
+    @GetPackageInfoTable           @128 ; GetPackageInfoTable
+    @Vcl@Dblookup@Finalization$qqrv @2   ; __fastcall Vcl::Dblookup::Finalization()
+    @Vcl@Dblookup@TComboButton@    @112 ; Vcl::Dblookup::TComboButton::
+    @Vcl@Dblookup@TComboButton@MouseDown$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @4   ; Vcl::Dblookup::TComboButton::MouseDown(System::Uitypes::TMouseButton, System::Set<{583}...
+    @Vcl@Dblookup@TComboButton@MouseMove$qqr60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @3   ; Vcl::Dblookup::TComboButton::MouseMove(System::Set<{583}...
+    @Vcl@Dblookup@TDBLookupCombo@  @118 ; Vcl::Dblookup::TDBLookupCombo::
+    @Vcl@Dblookup@TDBLookupCombo@$bctr$qqrp25System@Classes@TComponent @110 ; __fastcall Vcl::Dblookup::TDBLookupCombo::TDBLookupCombo(System::Classes::TComponent *)
+    @Vcl@Dblookup@TDBLookupCombo@$bdtr$qqrv @109 ; __fastcall Vcl::Dblookup::TDBLookupCombo::~TDBLookupCombo()
+    @Vcl@Dblookup@TDBLookupCombo@CMCancelMode$qqrr26Vcl@Controls@TCMCancelMode @71  ; __fastcall Vcl::Dblookup::TDBLookupCombo::CMCancelMode(Vcl::Controls::TCMCancelMode&)
+    @Vcl@Dblookup@TDBLookupCombo@CMEnabledChanged$qqrr24Winapi@Messages@TMessage @73  ; __fastcall Vcl::Dblookup::TDBLookupCombo::CMEnabledChanged(Winapi::Messages::TMessage&)
+    @Vcl@Dblookup@TDBLookupCombo@CMEnter$qqrr27Winapi@Messages@TWMNoParams @58  ; __fastcall Vcl::Dblookup::TDBLookupCombo::CMEnter(Winapi::Messages::TWMNoParams&)
+    @Vcl@Dblookup@TDBLookupCombo@CMExit$qqrr27Winapi@Messages@TWMNoParams @59  ; __fastcall Vcl::Dblookup::TDBLookupCombo::CMExit(Winapi::Messages::TWMNoParams&)
+    @Vcl@Dblookup@TDBLookupCombo@CMFontChanged$qqrr24Winapi@Messages@TMessage @74  ; __fastcall Vcl::Dblookup::TDBLookupCombo::CMFontChanged(Winapi::Messages::TMessage&)
+    @Vcl@Dblookup@TDBLookupCombo@CMHintShow$qqrr24Winapi@Messages@TMessage @70  ; __fastcall Vcl::Dblookup::TDBLookupCombo::CMHintShow(Winapi::Messages::TMessage&)
+    @Vcl@Dblookup@TDBLookupCombo@CanEdit$qqrv @106 ; __fastcall Vcl::Dblookup::TDBLookupCombo::CanEdit()
+    @Vcl@Dblookup@TDBLookupCombo@Change$qqrv @103 ; __fastcall Vcl::Dblookup::TDBLookupCombo::Change()
+    @Vcl@Dblookup@TDBLookupCombo@CloseUp$qqrv @68  ; __fastcall Vcl::Dblookup::TDBLookupCombo::CloseUp()
+    @Vcl@Dblookup@TDBLookupCombo@CreateParams$qqrr26Vcl@Controls@TCreateParams @80  ; __fastcall Vcl::Dblookup::TDBLookupCombo::CreateParams(Vcl::Controls::TCreateParams&)
+    @Vcl@Dblookup@TDBLookupCombo@CreateWnd$qqrv @79  ; __fastcall Vcl::Dblookup::TDBLookupCombo::CreateWnd()
+    @Vcl@Dblookup@TDBLookupCombo@DataChange$qqrp14System@TObject @92  ; __fastcall Vcl::Dblookup::TDBLookupCombo::DataChange(System::TObject *)
+    @Vcl@Dblookup@TDBLookupCombo@DoSelectAll$qqrv @57  ; __fastcall Vcl::Dblookup::TDBLookupCombo::DoSelectAll()
+    @Vcl@Dblookup@TDBLookupCombo@DropDown$qqrv @69  ; __fastcall Vcl::Dblookup::TDBLookupCombo::DropDown()
+    @Vcl@Dblookup@TDBLookupCombo@Editable$qqrv @107 ; __fastcall Vcl::Dblookup::TDBLookupCombo::Editable()
+    @Vcl@Dblookup@TDBLookupCombo@EditingChange$qqrp14System@TObject @85  ; __fastcall Vcl::Dblookup::TDBLookupCombo::EditingChange(System::TObject *)
+    @Vcl@Dblookup@TDBLookupCombo@FieldLinkActive$qqrp14System@TObject @83  ; __fastcall Vcl::Dblookup::TDBLookupCombo::FieldLinkActive(System::TObject *)
+    @Vcl@Dblookup@TDBLookupCombo@GetDataField$qqrv @94  ; __fastcall Vcl::Dblookup::TDBLookupCombo::GetDataField()
+    @Vcl@Dblookup@TDBLookupCombo@GetDataSource$qqrv @102 ; __fastcall Vcl::Dblookup::TDBLookupCombo::GetDataSource()
+    @Vcl@Dblookup@TDBLookupCombo@GetDisplayValue$qqrv @90  ; __fastcall Vcl::Dblookup::TDBLookupCombo::GetDisplayValue()
+    @Vcl@Dblookup@TDBLookupCombo@GetLookupDisplay$qqrv @97  ; __fastcall Vcl::Dblookup::TDBLookupCombo::GetLookupDisplay()
+    @Vcl@Dblookup@TDBLookupCombo@GetLookupField$qqrv @95  ; __fastcall Vcl::Dblookup::TDBLookupCombo::GetLookupField()
+    @Vcl@Dblookup@TDBLookupCombo@GetLookupSource$qqrv @100 ; __fastcall Vcl::Dblookup::TDBLookupCombo::GetLookupSource()
+    @Vcl@Dblookup@TDBLookupCombo@GetMinHeight$qqrv @76  ; __fastcall Vcl::Dblookup::TDBLookupCombo::GetMinHeight()
+    @Vcl@Dblookup@TDBLookupCombo@GetOptions$qqrv @55  ; __fastcall Vcl::Dblookup::TDBLookupCombo::GetOptions()
+    @Vcl@Dblookup@TDBLookupCombo@GetReadOnly$qqrv @87  ; __fastcall Vcl::Dblookup::TDBLookupCombo::GetReadOnly()
+    @Vcl@Dblookup@TDBLookupCombo@GetValue$qqrv @91  ; __fastcall Vcl::Dblookup::TDBLookupCombo::GetValue()
+    @Vcl@Dblookup@TDBLookupCombo@GridClick$qqrp14System@TObject @67  ; __fastcall Vcl::Dblookup::TDBLookupCombo::GridClick(System::TObject *)
+    @Vcl@Dblookup@TDBLookupCombo@KeyDown$qqrrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @105 ; Vcl::Dblookup::TDBLookupCombo::KeyDown(unsigned short&, System::Set<{583}...
+    @Vcl@Dblookup@TDBLookupCombo@KeyPress$qqrrb @104 ; __fastcall Vcl::Dblookup::TDBLookupCombo::KeyPress(wchar_t&)
+    @Vcl@Dblookup@TDBLookupCombo@Loaded$qqrv @54  ; __fastcall Vcl::Dblookup::TDBLookupCombo::Loaded()
+    @Vcl@Dblookup@TDBLookupCombo@MouseMove$qqr60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @61  ; Vcl::Dblookup::TDBLookupCombo::MouseMove(System::Set<{583}...
+    @Vcl@Dblookup@TDBLookupCombo@NonEditMouseDown$qqrr24Winapi@Messages@TWMMouse @62  ; __fastcall Vcl::Dblookup::TDBLookupCombo::NonEditMouseDown(Winapi::Messages::TWMMouse&)
+    @Vcl@Dblookup@TDBLookupCombo@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @108 ; __fastcall Vcl::Dblookup::TDBLookupCombo::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Vcl@Dblookup@TDBLookupCombo@SetDataField$qqrx20System@UnicodeString @93  ; __fastcall Vcl::Dblookup::TDBLookupCombo::SetDataField(const System::UnicodeString)
+    @Vcl@Dblookup@TDBLookupCombo@SetDataSource$qqrp19Data@Db@TDataSource @101 ; __fastcall Vcl::Dblookup::TDBLookupCombo::SetDataSource(Data::Db::TDataSource *)
+    @Vcl@Dblookup@TDBLookupCombo@SetDisplayValue$qqrx20System@UnicodeString @89  ; __fastcall Vcl::Dblookup::TDBLookupCombo::SetDisplayValue(const System::UnicodeString)
+    @Vcl@Dblookup@TDBLookupCombo@SetEditRect$qqrv @78  ; __fastcall Vcl::Dblookup::TDBLookupCombo::SetEditRect()
+    @Vcl@Dblookup@TDBLookupCombo@SetLookupDisplay$qqrx20System@UnicodeString @98  ; __fastcall Vcl::Dblookup::TDBLookupCombo::SetLookupDisplay(const System::UnicodeString)
+    @Vcl@Dblookup@TDBLookupCombo@SetLookupField$qqrx20System@UnicodeString @96  ; __fastcall Vcl::Dblookup::TDBLookupCombo::SetLookupField(const System::UnicodeString)
+    @Vcl@Dblookup@TDBLookupCombo@SetLookupSource$qqrp19Data@Db@TDataSource @99  ; __fastcall Vcl::Dblookup::TDBLookupCombo::SetLookupSource(Data::Db::TDataSource *)
+    @Vcl@Dblookup@TDBLookupCombo@SetOptions$qqr59System@%Set$32Vcl@Dblookup@TDBLookupListOptiont1$i0$t1$i2$% @56  ; Vcl::Dblookup::TDBLookupCombo::SetOptions(System::Set<{583}...
+    @Vcl@Dblookup@TDBLookupCombo@SetReadOnly$qqro @86  ; __fastcall Vcl::Dblookup::TDBLookupCombo::SetReadOnly(bool)
+    @Vcl@Dblookup@TDBLookupCombo@SetStyle$qqr32Vcl@Dblookup@TDBLookupComboStyle @66  ; __fastcall Vcl::Dblookup::TDBLookupCombo::SetStyle(Vcl::Dblookup::TDBLookupComboStyle)
+    @Vcl@Dblookup@TDBLookupCombo@SetValue$qqrx20System@UnicodeString @88  ; __fastcall Vcl::Dblookup::TDBLookupCombo::SetValue(const System::UnicodeString)
+    @Vcl@Dblookup@TDBLookupCombo@UpdateData$qqrp14System@TObject @84  ; __fastcall Vcl::Dblookup::TDBLookupCombo::UpdateData(System::TObject *)
+    @Vcl@Dblookup@TDBLookupCombo@WMCut$qqrr24Winapi@Messages@TMessage @81  ; __fastcall Vcl::Dblookup::TDBLookupCombo::WMCut(Winapi::Messages::TMessage&)
+    @Vcl@Dblookup@TDBLookupCombo@WMKillFocus$qqrr28Winapi@Messages@TWMKillFocus @72  ; __fastcall Vcl::Dblookup::TDBLookupCombo::WMKillFocus(Winapi::Messages::TWMKillFocus&)
+    @Vcl@Dblookup@TDBLookupCombo@WMLButtonDblClk$qqrr24Winapi@Messages@TWMMouse @63  ; __fastcall Vcl::Dblookup::TDBLookupCombo::WMLButtonDblClk(Winapi::Messages::TWMMouse&)
+    @Vcl@Dblookup@TDBLookupCombo@WMLButtonDown$qqrr24Winapi@Messages@TWMMouse @65  ; __fastcall Vcl::Dblookup::TDBLookupCombo::WMLButtonDown(Winapi::Messages::TWMMouse&)
+    @Vcl@Dblookup@TDBLookupCombo@WMLButtonUp$qqrr24Winapi@Messages@TWMMouse @64  ; __fastcall Vcl::Dblookup::TDBLookupCombo::WMLButtonUp(Winapi::Messages::TWMMouse&)
+    @Vcl@Dblookup@TDBLookupCombo@WMPaint$qqrr24Winapi@Messages@TWMPaint @75  ; __fastcall Vcl::Dblookup::TDBLookupCombo::WMPaint(Winapi::Messages::TWMPaint&)
+    @Vcl@Dblookup@TDBLookupCombo@WMPaste$qqrr24Winapi@Messages@TMessage @82  ; __fastcall Vcl::Dblookup::TDBLookupCombo::WMPaste(Winapi::Messages::TMessage&)
+    @Vcl@Dblookup@TDBLookupCombo@WMSetFocus$qqrr27Winapi@Messages@TWMSetFocus @60  ; __fastcall Vcl::Dblookup::TDBLookupCombo::WMSetFocus(Winapi::Messages::TWMSetFocus&)
+    @Vcl@Dblookup@TDBLookupCombo@WMSize$qqrr23Winapi@Messages@TWMSize @77  ; __fastcall Vcl::Dblookup::TDBLookupCombo::WMSize(Winapi::Messages::TWMSize&)
+    @Vcl@Dblookup@TDBLookupList@   @116 ; Vcl::Dblookup::TDBLookupList::
+    @Vcl@Dblookup@TDBLookupList@$bctr$qqrp25System@Classes@TComponent @53  ; __fastcall Vcl::Dblookup::TDBLookupList::TDBLookupList(System::Classes::TComponent *)
+    @Vcl@Dblookup@TDBLookupList@$bdtr$qqrv @52  ; __fastcall Vcl::Dblookup::TDBLookupList::~TDBLookupList()
+    @Vcl@Dblookup@TDBLookupList@CMEnter$qqrr27Winapi@Messages@TWMNoParams @16  ; __fastcall Vcl::Dblookup::TDBLookupList::CMEnter(Winapi::Messages::TWMNoParams&)
+    @Vcl@Dblookup@TDBLookupList@CMExit$qqrr27Winapi@Messages@TWMNoParams @15  ; __fastcall Vcl::Dblookup::TDBLookupList::CMExit(Winapi::Messages::TWMNoParams&)
+    @Vcl@Dblookup@TDBLookupList@CanEdit$qqrv @36  ; __fastcall Vcl::Dblookup::TDBLookupList::CanEdit()
+    @Vcl@Dblookup@TDBLookupList@CanGridAcceptKey$qqrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @28  ; Vcl::Dblookup::TDBLookupList::CanGridAcceptKey(unsigned short, System::Set<{583}...
+    @Vcl@Dblookup@TDBLookupList@CreateWnd$qqrv @51  ; __fastcall Vcl::Dblookup::TDBLookupList::CreateWnd()
+    @Vcl@Dblookup@TDBLookupList@DataChange$qqrp14System@TObject @34  ; __fastcall Vcl::Dblookup::TDBLookupList::DataChange(System::TObject *)
+    @Vcl@Dblookup@TDBLookupList@DefineFieldMap$qqrv @31  ; __fastcall Vcl::Dblookup::TDBLookupList::DefineFieldMap()
+    @Vcl@Dblookup@TDBLookupList@DoLookup$qqrv @40  ; __fastcall Vcl::Dblookup::TDBLookupList::DoLookup()
+    @Vcl@Dblookup@TDBLookupList@FieldLinkActive$qqrp14System@TObject @17  ; __fastcall Vcl::Dblookup::TDBLookupList::FieldLinkActive(System::TObject *)
+    @Vcl@Dblookup@TDBLookupList@GetDataField$qqrv @39  ; __fastcall Vcl::Dblookup::TDBLookupList::GetDataField()
+    @Vcl@Dblookup@TDBLookupList@GetDataSource$qqrv @49  ; __fastcall Vcl::Dblookup::TDBLookupList::GetDataSource()
+    @Vcl@Dblookup@TDBLookupList@GetLookupSource$qqrv @47  ; __fastcall Vcl::Dblookup::TDBLookupList::GetLookupSource()
+    @Vcl@Dblookup@TDBLookupList@GetReadOnly$qqrv @37  ; __fastcall Vcl::Dblookup::TDBLookupList::GetReadOnly()
+    @Vcl@Dblookup@TDBLookupList@HighlightCell$qqriix20System@UnicodeString49System@%Set$22Vcl@Grids@Vcl_Grids__3t1$i0$t1$i5$% @21  ; Vcl::Dblookup::TDBLookupList::HighlightCell(int, int, const System::UnicodeString, System::Set<{583}...
+    @Vcl@Dblookup@TDBLookupList@InitFields$qqro @32  ; __fastcall Vcl::Dblookup::TDBLookupList::InitFields(bool)
+    @Vcl@Dblookup@TDBLookupList@KeyDown$qqrrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @27  ; Vcl::Dblookup::TDBLookupList::KeyDown(unsigned short&, System::Set<{583}...
+    @Vcl@Dblookup@TDBLookupList@KeyPress$qqrrb @26  ; __fastcall Vcl::Dblookup::TDBLookupList::KeyPress(wchar_t&)
+    @Vcl@Dblookup@TDBLookupList@LinkActive$qqro @18  ; __fastcall Vcl::Dblookup::TDBLookupList::LinkActive(bool)
+    @Vcl@Dblookup@TDBLookupList@ListClick$qqrv @22  ; __fastcall Vcl::Dblookup::TDBLookupList::ListClick()
+    @Vcl@Dblookup@TDBLookupList@Loaded$qqrv @13  ; __fastcall Vcl::Dblookup::TDBLookupList::Loaded()
+    @Vcl@Dblookup@TDBLookupList@MouseDown$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @25  ; Vcl::Dblookup::TDBLookupList::MouseDown(System::Uitypes::TMouseButton, System::Set<{583}...
+    @Vcl@Dblookup@TDBLookupList@MouseMove$qqr60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @24  ; Vcl::Dblookup::TDBLookupList::MouseMove(System::Set<{583}...
+    @Vcl@Dblookup@TDBLookupList@MouseUp$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @23  ; Vcl::Dblookup::TDBLookupList::MouseUp(System::Uitypes::TMouseButton, System::Set<{583}...
+    @Vcl@Dblookup@TDBLookupList@NewLayout$qqrv @46  ; __fastcall Vcl::Dblookup::TDBLookupList::NewLayout()
+    @Vcl@Dblookup@TDBLookupList@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @50  ; __fastcall Vcl::Dblookup::TDBLookupList::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Vcl@Dblookup@TDBLookupList@Paint$qqrv @20  ; __fastcall Vcl::Dblookup::TDBLookupList::Paint()
+    @Vcl@Dblookup@TDBLookupList@Scroll$qqri @19  ; __fastcall Vcl::Dblookup::TDBLookupList::Scroll(int)
+    @Vcl@Dblookup@TDBLookupList@SetColumnAttributes$qqrv @30  ; __fastcall Vcl::Dblookup::TDBLookupList::SetColumnAttributes()
+    @Vcl@Dblookup@TDBLookupList@SetDataField$qqrx20System@UnicodeString @38  ; __fastcall Vcl::Dblookup::TDBLookupList::SetDataField(const System::UnicodeString)
+    @Vcl@Dblookup@TDBLookupList@SetDataSource$qqrp19Data@Db@TDataSource @48  ; __fastcall Vcl::Dblookup::TDBLookupList::SetDataSource(Data::Db::TDataSource *)
+    @Vcl@Dblookup@TDBLookupList@SetDisplayValue$qqrx20System@UnicodeString @41  ; __fastcall Vcl::Dblookup::TDBLookupList::SetDisplayValue(const System::UnicodeString)
+    @Vcl@Dblookup@TDBLookupList@SetLookupDisplay$qqrx20System@UnicodeString @44  ; __fastcall Vcl::Dblookup::TDBLookupList::SetLookupDisplay(const System::UnicodeString)
+    @Vcl@Dblookup@TDBLookupList@SetLookupField$qqrx20System@UnicodeString @43  ; __fastcall Vcl::Dblookup::TDBLookupList::SetLookupField(const System::UnicodeString)
+    @Vcl@Dblookup@TDBLookupList@SetLookupSource$qqrp19Data@Db@TDataSource @45  ; __fastcall Vcl::Dblookup::TDBLookupList::SetLookupSource(Data::Db::TDataSource *)
+    @Vcl@Dblookup@TDBLookupList@SetOptions$qqr59System@%Set$32Vcl@Dblookup@TDBLookupListOptiont1$i0$t1$i2$% @14  ; Vcl::Dblookup::TDBLookupList::SetOptions(System::Set<{583}...
+    @Vcl@Dblookup@TDBLookupList@SetReadOnly$qqro @35  ; __fastcall Vcl::Dblookup::TDBLookupList::SetReadOnly(bool)
+    @Vcl@Dblookup@TDBLookupList@SetValue$qqrx20System@UnicodeString @42  ; __fastcall Vcl::Dblookup::TDBLookupList::SetValue(const System::UnicodeString)
+    @Vcl@Dblookup@TDBLookupList@UpdateData$qqrp14System@TObject @33  ; __fastcall Vcl::Dblookup::TDBLookupList::UpdateData(System::TObject *)
+    @Vcl@Dblookup@TDBLookupList@WMSize$qqrr23Winapi@Messages@TWMSize @29  ; __fastcall Vcl::Dblookup::TDBLookupList::WMSize(Winapi::Messages::TWMSize&)
+    @Vcl@Dblookup@TPopupGrid@      @114 ; Vcl::Dblookup::TPopupGrid::
+    @Vcl@Dblookup@TPopupGrid@$bctr$qqrp25System@Classes@TComponent @12  ; __fastcall Vcl::Dblookup::TPopupGrid::TPopupGrid(System::Classes::TComponent *)
+    @Vcl@Dblookup@TPopupGrid@CMHintShow$qqrr24Winapi@Messages@TMessage @5   ; __fastcall Vcl::Dblookup::TPopupGrid::CMHintShow(Winapi::Messages::TMessage&)
+    @Vcl@Dblookup@TPopupGrid@CanEdit$qqrv @8   ; __fastcall Vcl::Dblookup::TPopupGrid::CanEdit()
+    @Vcl@Dblookup@TPopupGrid@CreateParams$qqrr26Vcl@Controls@TCreateParams @11  ; __fastcall Vcl::Dblookup::TPopupGrid::CreateParams(Vcl::Controls::TCreateParams&)
+    @Vcl@Dblookup@TPopupGrid@CreateWnd$qqrv @10  ; __fastcall Vcl::Dblookup::TPopupGrid::CreateWnd()
+    @Vcl@Dblookup@TPopupGrid@LinkActive$qqro @6   ; __fastcall Vcl::Dblookup::TPopupGrid::LinkActive(bool)
+    @Vcl@Dblookup@TPopupGrid@MouseDown$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @7   ; Vcl::Dblookup::TPopupGrid::MouseDown(System::Uitypes::TMouseButton, System::Set<{583}...
+    @Vcl@Dblookup@TPopupGrid@WMLButtonUp$qqrr24Winapi@Messages@TWMMouse @9   ; __fastcall Vcl::Dblookup::TPopupGrid::WMLButtonUp(Winapi::Messages::TWMMouse&)
+    @Vcl@Dblookup@initialization$qqrv @1   ; __fastcall Vcl::Dblookup::initialization()
+    @Vcldbx@@GetPackageInfoTable$qqrv @125 ; Vcldbx::__linkproc__ __fastcall GetPackageInfoTable()
+    @Vcldbx@@PackageLoad$qqrv      @124 ; Vcldbx::__linkproc__ __fastcall PackageLoad()
+    @Vcldbx@@PackageUnload$qqrv    @123 ; Vcldbx::__linkproc__ __fastcall PackageUnload()
+    @Vcldbx@initialization$qqrv    @122 ; __fastcall Vcldbx::initialization()
+    Finalize                       @126 ; Finalize
+    Initialize                     @127 ; Initialize

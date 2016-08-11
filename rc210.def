@@ -1,0 +1,78 @@
+LIBRARY     RC210.BPL
+
+DESCRIPTION 'mbarcadero Integrated Translation Environment / RC translator'
+
+EXPORTS
+    @$xp$15Itercmgr@TRCMgr         @51  ; __tpdsc__ Itercmgr::TRCMgr
+    @$xp$20Itercform@TITERCForm    @63  ; __tpdsc__ Itercform::TITERCForm
+    @$xp$26Iterccommon@Iterccommon__1 @8   ; __tpdsc__ Iterccommon::Iterccommon__1
+    @$xp$26Itercform@TITERCTranslator @65  ; __tpdsc__ Itercform::TITERCTranslator
+    @$xp$26Itercnotes@TITERCNotesFile @33  ; __tpdsc__ Itercnotes::TITERCNotesFile
+    @GetPackageInfoTable           @73  ; GetPackageInfoTable
+    @Iterccommon@Creator           @5   ; Iterccommon::Creator
+    @Iterccommon@DefColIds         @6   ; Iterccommon::DefColIds
+    @Iterccommon@FileNameToNoteName$qqrx20System@UnicodeString @3   ; __fastcall Iterccommon::FileNameToNoteName(const System::UnicodeString)
+    @Iterccommon@Finalization$qqrv @2   ; __fastcall Iterccommon::Finalization()
+    @Iterccommon@ITEColInfo        @7   ; Iterccommon::ITEColInfo
+    @Iterccommon@Updater           @4   ; Iterccommon::Updater
+    @Iterccommon@_SColComment      @9   ; Iterccommon::_SColComment
+    @Iterccommon@_SColCreated      @13  ; Iterccommon::_SColCreated
+    @Iterccommon@_SColCurr         @14  ; Iterccommon::_SColCurr
+    @Iterccommon@_SColId           @17  ; Iterccommon::_SColId
+    @Iterccommon@_SColIndex        @18  ; Iterccommon::_SColIndex
+    @Iterccommon@_SColModified     @12  ; Iterccommon::_SColModified
+    @Iterccommon@_SColOrig         @16  ; Iterccommon::_SColOrig
+    @Iterccommon@_SColPrevCurr     @10  ; Iterccommon::_SColPrevCurr
+    @Iterccommon@_SColPrevOrig     @11  ; Iterccommon::_SColPrevOrig
+    @Iterccommon@_SColStatus       @15  ; Iterccommon::_SColStatus
+    @Iterccommon@_SFiles           @19  ; Iterccommon::_SFiles
+    @Iterccommon@initialization$qqrv @1   ; __fastcall Iterccommon::initialization()
+    @Iterccreator@Finalization$qqrv @36  ; __fastcall Iterccreator::Finalization()
+    @Iterccreator@initialization$qqrv @35  ; __fastcall Iterccreator::initialization()
+    @Itercform@Finalization$qqrv   @56  ; __fastcall Itercform::Finalization()
+    @Itercform@TITERCForm@         @64  ; Itercform::TITERCForm::
+    @Itercform@TITERCForm@FormCreate$qqrp14System@TObject @59  ; __fastcall Itercform::TITERCForm::FormCreate(System::TObject *)
+    @Itercform@TITERCForm@GetTranslator$qqrv @58  ; __fastcall Itercform::TITERCForm::GetTranslator()
+    @Itercform@TITERCForm@ValidateText$qqrp20Itecontrols@TITEGridii @57  ; __fastcall Itercform::TITERCForm::ValidateText(Itecontrols::TITEGrid *, int, int)
+    @Itercform@TITERCTranslator@   @66  ; Itercform::TITERCTranslator::
+    @Itercform@TITERCTranslator@$bctr$qqrv @61  ; __fastcall Itercform::TITERCTranslator::TITERCTranslator()
+    @Itercform@TITERCTranslator@GetForm$qqrv @60  ; __fastcall Itercform::TITERCTranslator::GetForm()
+    @Itercform@TITERCTranslator@GetMgrClass$qqrv @62  ; __fastcall Itercform::TITERCTranslator::GetMgrClass()
+    @Itercform@initialization$qqrv @55  ; __fastcall Itercform::initialization()
+    @Itercmgr@Finalization$qqrv    @38  ; __fastcall Itercmgr::Finalization()
+    @Itercmgr@GetStats$qqrx20System@UnicodeStringo @50  ; __fastcall Itercmgr::GetStats(const System::UnicodeString, bool)
+    @Itercmgr@TRCMgr@              @52  ; Itercmgr::TRCMgr::
+    @Itercmgr@TRCMgr@$bctr$qqrx20System@UnicodeStringo @49  ; __fastcall Itercmgr::TRCMgr::TRCMgr(const System::UnicodeString, bool)
+    @Itercmgr@TRCMgr@CheckStats$qqrv @48  ; __fastcall Itercmgr::TRCMgr::CheckStats()
+    @Itercmgr@TRCMgr@ConvertFromRawString$qqrx20System@UnicodeString @43  ; __fastcall Itercmgr::TRCMgr::ConvertFromRawString(const System::UnicodeString)
+    @Itercmgr@TRCMgr@ConvertToRawString$qqrx20System@UnicodeString @42  ; __fastcall Itercmgr::TRCMgr::ConvertToRawString(const System::UnicodeString)
+    @Itercmgr@TRCMgr@EggBuild$qqrv @45  ; __fastcall Itercmgr::TRCMgr::EggBuild()
+    @Itercmgr@TRCMgr@FileNameToNoteName$qqrx20System@UnicodeString @41  ; __fastcall Itercmgr::TRCMgr::FileNameToNoteName(const System::UnicodeString)
+    @Itercmgr@TRCMgr@GetColInfo$qqri @39  ; __fastcall Itercmgr::TRCMgr::GetColInfo(int)
+    @Itercmgr@TRCMgr@GetNotesClass$qqrv @40  ; __fastcall Itercmgr::TRCMgr::GetNotesClass()
+    @Itercmgr@TRCMgr@MakeDictionary$qqrp23System@Classes@TStrings @44  ; __fastcall Itercmgr::TRCMgr::MakeDictionary(System::Classes::TStrings *)
+    @Itercmgr@TRCMgr@Purge$qqrv    @46  ; __fastcall Itercmgr::TRCMgr::Purge()
+    @Itercmgr@TRCMgr@Save$qqrouiuio @47  ; __fastcall Itercmgr::TRCMgr::Save(bool, unsigned int, unsigned int, bool)
+    @Itercmgr@initialization$qqrv  @37  ; __fastcall Itercmgr::initialization()
+    @Itercnotes@Finalization$qqrv  @27  ; __fastcall Itercnotes::Finalization()
+    @Itercnotes@TITERCNotesFile@   @34  ; Itercnotes::TITERCNotesFile::
+    @Itercnotes@TITERCNotesFile@ConvertFromRaw$qqr20System@UnicodeString @32  ; __fastcall Itercnotes::TITERCNotesFile::ConvertFromRaw(System::UnicodeString)
+    @Itercnotes@TITERCNotesFile@ConvertToRaw$qqr20System@UnicodeString @31  ; __fastcall Itercnotes::TITERCNotesFile::ConvertToRaw(System::UnicodeString)
+    @Itercnotes@TITERCNotesFile@GetExts$qqrv @30  ; __fastcall Itercnotes::TITERCNotesFile::GetExts()
+    @Itercnotes@TITERCNotesFile@GetType$qqrv @29  ; __fastcall Itercnotes::TITERCNotesFile::GetType()
+    @Itercnotes@TITERCNotesFile@LoadOldNotes$qqrp22System@Classes@TStream @28  ; __fastcall Itercnotes::TITERCNotesFile::LoadOldNotes(System::Classes::TStream *)
+    @Itercnotes@initialization$qqrv @26  ; __fastcall Itercnotes::initialization()
+    @Itercupdater@Finalization$qqrv @54  ; __fastcall Itercupdater::Finalization()
+    @Itercupdater@initialization$qqrv @53  ; __fastcall Itercupdater::initialization()
+    @Itercutils@Finalization$qqrv  @21  ; __fastcall Itercutils::Finalization()
+    @Itercutils@ITEGetStringTable$qqrp22System@Classes@TStreamp27Iteutils@TITEStringPairListui @22  ; __fastcall Itercutils::ITEGetStringTable(System::Classes::TStream *, Iteutils::TITEStringPairList *, unsigned int)
+    @Itercutils@ITEGetStringTable$qqrp22System@Classes@TStreamp30Iteutils@TITEStringIntPairListui @23  ; __fastcall Itercutils::ITEGetStringTable(System::Classes::TStream *, Iteutils::TITEStringIntPairList *, unsigned int)
+    @Itercutils@ITEGetStringTable$qqrx20System@UnicodeStringp27Iteutils@TITEStringPairListui @24  ; __fastcall Itercutils::ITEGetStringTable(const System::UnicodeString, Iteutils::TITEStringPairList *, unsigned int)
+    @Itercutils@ITEGetStringTable$qqrx20System@UnicodeStringp30Iteutils@TITEStringIntPairListui @25  ; __fastcall Itercutils::ITEGetStringTable(const System::UnicodeString, Iteutils::TITEStringIntPairList *, unsigned int)
+    @Itercutils@initialization$qqrv @20  ; __fastcall Itercutils::initialization()
+    @Rc@@GetPackageInfoTable$qqrv  @70  ; Rc::__linkproc__ __fastcall GetPackageInfoTable()
+    @Rc@@PackageLoad$qqrv          @69  ; Rc::__linkproc__ __fastcall PackageLoad()
+    @Rc@@PackageUnload$qqrv        @68  ; Rc::__linkproc__ __fastcall PackageUnload()
+    @Rc@initialization$qqrv        @67  ; __fastcall Rc::initialization()
+    Finalize                       @71  ; Finalize
+    Initialize                     @72  ; Initialize

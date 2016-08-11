@@ -1,0 +1,24 @@
+LIBRARY     IDEWIN32PLATFORM210.BPL
+
+EXPORTS
+    @$xp$28Win32platform@TWin32Platform @13  ; __tpdsc__ Win32platform::TWin32Platform
+    @GetPackageInfoTable           @21  ; GetPackageInfoTable
+    @Idewin32platform@@GetPackageInfoTable$qqrv @18  ; Idewin32platform::__linkproc__ __fastcall GetPackageInfoTable()
+    @Idewin32platform@@PackageLoad$qqrv @17  ; Idewin32platform::__linkproc__ __fastcall PackageLoad()
+    @Idewin32platform@@PackageUnload$qqrv @16  ; Idewin32platform::__linkproc__ __fastcall PackageUnload()
+    @Idewin32platform@initialization$qqrv @15  ; __fastcall Idewin32platform::initialization()
+    @Idewinbehavior@Finalization$qqrv @2   ; __fastcall Idewinbehavior::Finalization()
+    @Idewinbehavior@Initialize$qqrv @3   ; __fastcall Idewinbehavior::Initialize()
+    @Idewinbehavior@initialization$qqrv @1   ; __fastcall Idewinbehavior::initialization()
+    @Win32platform@Finalization$qqrv @5   ; __fastcall Win32platform::Finalization()
+    @Win32platform@Initialize$qqrv @6   ; __fastcall Win32platform::Initialize()
+    @Win32platform@TWin32Platform@ @14  ; Win32platform::TWin32Platform::
+    @Win32platform@TWin32Platform@$bctr$qqrv @12  ; __fastcall Win32platform::TWin32Platform::TWin32Platform()
+    @Win32platform@TWin32Platform@$bctr$qqrx20System@UnicodeStringt1t1i @11  ; __fastcall Win32platform::TWin32Platform::TWin32Platform(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, int)
+    @Win32platform@TWin32Platform@DefaultWin32Namespaces$qqrv @10  ; __fastcall Win32platform::TWin32Platform::DefaultWin32Namespaces()
+    @Win32platform@TWin32Platform@GetId$qqrv @9   ; __fastcall Win32platform::TWin32Platform::GetId()
+    @Win32platform@TWin32Platform@GetNamespaceSearchPaths$qqrv @8   ; __fastcall Win32platform::TWin32Platform::GetNamespaceSearchPaths()
+    @Win32platform@TWin32Platform@InitExtensionMaps$qqrv @7   ; __fastcall Win32platform::TWin32Platform::InitExtensionMaps()
+    @Win32platform@initialization$qqrv @4   ; __fastcall Win32platform::initialization()
+    Finalize                       @19  ; Finalize
+    Initialize                     @20  ; Initialize

@@ -1,0 +1,747 @@
+LIBRARY     DCLDB210.BPL
+
+DESCRIPTION 'mbarcadero Database Components'
+
+EXPORTS
+    @$xp$104System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TItem$% @715 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @$xp$105System@Generics@Collections@%TCollectionNotifyEvent__1$47System@%DelphiInterface$20Toolsapi@IOTAProject%% @712 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<System::DelphiInterface<{583}...
+    @$xp$109System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TItemArray$% @714 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @$xp$110System@%TArray__1$89System@Generics@Collections@%TPair__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%% @720 ; __tpdsc__ System::TArray__1<System::Generics::Collections::TPair__2<System::DelphiInterface<{583}...
+    @$xp$113System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TKeyCollection$% @702 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @$xp$113System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TKeyEnumerator$% @704 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @$xp$114System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TPairEnumerator$% @691 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @$xp$115System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TValueCollection$% @693 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @$xp$115System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TValueEnumerator$% @695 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @$xp$136System@Generics@Collections@%TEnumerable__1$89System@Generics@Collections@%TPair__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%% @716 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<System::DelphiInterface<{583}...
+    @$xp$136System@Generics@Collections@%TEnumerator__1$89System@Generics@Collections@%TPair__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%% @718 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<System::Generics::Collections::TPair__2<System::DelphiInterface<{583}...
+    @$xp$16Dsadd@TAddFields        @102 ; __tpdsc__ Dsadd::TAddFields
+    @$xp$17Dsndb@TFieldSprig       @386 ; __tpdsc__ Dsndb::TFieldSprig
+    @$xp$18Dsndb@TFieldsSprig      @388 ; __tpdsc__ Dsndb::TFieldsSprig
+    @$xp$19Dsndb@TDataSetSprig     @384 ; __tpdsc__ Dsndb::TDataSetSprig
+    @$xp$20Dbreg@TDataSetEditor    @241 ; __tpdsc__ Dbreg::TDataSetEditor
+    @$xp$20Dsdesign@TDSDesigner    @212 ; __tpdsc__ Dsdesign::TDSDesigner
+    @$xp$20Fldlinks@TLinkFields    @279 ; __tpdsc__ Fldlinks::TLinkFields
+    @$xp$20Sqledit@TSQLEditForm    @312 ; __tpdsc__ Sqledit::TSQLEditForm
+    @$xp$20System@%TArray__1$i%    @701 ; __tpdsc__ System::TArray__1<int>
+    @$xp$21Dsdefine@TDefineField   @139 ; __tpdsc__ Dsdefine::TDefineField
+    @$xp$21Sqledit@TExecuteEvent   @321 ; __tpdsc__ Sqledit::TExecuteEvent
+    @$xp$22Dsdesign@TFieldsEditor  @214 ; __tpdsc__ Dsdesign::TFieldsEditor
+    @$xp$22Dsndb@TDataSourceSprig  @382 ; __tpdsc__ Dsndb::TDataSourceSprig
+    @$xp$23Dbreg@TDBStringProperty @247 ; __tpdsc__ Dbreg::TDBStringProperty
+    @$xp$23Drpctrls@TCandidateList @94  ; __tpdsc__ Drpctrls::TCandidateList
+    @$xp$23Dsdesign@TSelectionProc @217 ; __tpdsc__ Dsdesign::TSelectionProc
+    @$xp$23Sqledit@TPopulateThread @319 ; __tpdsc__ Sqledit::TPopulateThread
+    @$xp$24Dbreg@TDataFieldProperty @245 ; __tpdsc__ Dbreg::TDataFieldProperty
+    @$xp$24Dbreg@TIndexNameProperty @237 ; __tpdsc__ Dbreg::TIndexNameProperty
+    @$xp$24Dbreg@TListFieldProperty @235 ; __tpdsc__ Dbreg::TListFieldProperty
+    @$xp$25Dsdesign@TDSDesignerClass @216 ; __tpdsc__ Dsdesign::TDSDesignerClass
+    @$xp$26Sqledit@TGetFieldNamesProc @316 ; __tpdsc__ Sqledit::TGetFieldNamesProc
+    @$xp$26Sqledit@TGetTableNamesProc @318 ; __tpdsc__ Sqledit::TGetTableNamesProc
+    @$xp$27Dbreg@TDataFieldAggProperty @243 ; __tpdsc__ Dbreg::TDataFieldAggProperty
+    @$xp$27Fldlinks@TFieldLinkProperty @281 ; __tpdsc__ Fldlinks::TFieldLinkProperty
+    @$xp$28Widesqledit@TWideSQLEditForm @345 ; __tpdsc__ Widesqledit::TWideSQLEditForm
+    @$xp$30Dbreg@TIndexFieldNamesProperty @239 ; __tpdsc__ Dbreg::TIndexFieldNamesProperty
+    @$xp$30Sqledit@TRequiresQuoteCharProc @314 ; __tpdsc__ Sqledit::TRequiresQuoteCharProc
+    @$xp$31Widesqledit@TGetFieldNamesProcW @349 ; __tpdsc__ Widesqledit::TGetFieldNamesProcW
+    @$xp$31Widesqledit@TGetTableNamesProcW @351 ; __tpdsc__ Widesqledit::TGetTableNamesProcW
+    @$xp$35Dsproxydesigner@TProxyModuleCreator @734 ; __tpdsc__ Dsproxydesigner::TProxyModuleCreator
+    @$xp$35Sqledit@TGetFieldNamesForSchemaProc @315 ; __tpdsc__ Sqledit::TGetFieldNamesForSchemaProc
+    @$xp$35Sqledit@TGetTableNamesForSchemaProc @317 ; __tpdsc__ Sqledit::TGetTableNamesForSchemaProc
+    @$xp$35Widesqledit@TRequiresQuoteCharProcW @347 ; __tpdsc__ Widesqledit::TRequiresQuoteCharProcW
+    @$xp$36Dsproxydesigner@TProxyModuleNotifier @732 ; __tpdsc__ Dsproxydesigner::TProxyModuleNotifier
+    @$xp$36System@%TArray__1$p14System@TObject% @541 ; __tpdsc__ System::TArray__1<System::TObject *>
+    @$xp$37Dsproxydesigner@TProxyStorageNotifier @728 ; __tpdsc__ Dsproxydesigner::TProxyStorageNotifier
+    @$xp$38Dbconnectthread@TThreadedMessageDialog @562 ; __tpdsc__ Dbconnectthread::TThreadedMessageDialog
+    @$xp$38Dsproxydesigner@TProjectChangeNotifier @730 ; __tpdsc__ Dsproxydesigner::TProjectChangeNotifier
+    @$xp$40Widesqledit@TGetFieldNamesForSchemaProcW @348 ; __tpdsc__ Widesqledit::TGetFieldNamesForSchemaProcW
+    @$xp$40Widesqledit@TGetTableNamesForSchemaProcW @350 ; __tpdsc__ Widesqledit::TGetTableNamesForSchemaProcW
+    @$xp$41System@%IEnumerable__1$p14System@TObject% @530 ; __tpdsc__ System::IEnumerable__1<System::TObject *>
+    @$xp$41System@%IEnumerator__1$p14System@TObject% @531 ; __tpdsc__ System::IEnumerator__1<System::TObject *>
+    @$xp$43Dsproxydesigner@TDesignTimeProxyNodeManager @724 ; __tpdsc__ Dsproxydesigner::TDesignTimeProxyNodeManager
+    @$xp$44Dbconnectthread@TThreadedMessageDialogThread @560 ; __tpdsc__ Dbconnectthread::TThreadedMessageDialogThread
+    @$xp$44System@%TArray__1$p22System@Classes@TThread% @558 ; __tpdsc__ System::TArray__1<System::Classes::TThread *>
+    @$xp$45Dsproxydesigner@TDesignTimeProxyModuleManager @722 ; __tpdsc__ Dsproxydesigner::TDesignTimeProxyModuleManager
+    @$xp$46System@Generics@Collections@%TEnumerable__1$i% @697 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<int>
+    @$xp$46System@Generics@Collections@%TEnumerator__1$i% @699 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<int>
+    @$xp$47Dsproxydesigner@TDesignTimeProxyGeneratedSource @727 ; __tpdsc__ Dsproxydesigner::TDesignTimeProxyGeneratedSource
+    @$xp$49System@%IEnumerable__1$p22System@Classes@TThread% @547 ; __tpdsc__ System::IEnumerable__1<System::Classes::TThread *>
+    @$xp$49System@%IEnumerator__1$p22System@Classes@TThread% @548 ; __tpdsc__ System::IEnumerator__1<System::Classes::TThread *>
+    @$xp$49System@Sysutils@%TProc__1$20System@UnicodeString% @559 ; __tpdsc__ System::Sysutils::TProc__1<System::UnicodeString>
+    @$xp$50Dsproxydesigner@TDesignTimeProxyGenerateSourceProc @726 ; __tpdsc__ Dsproxydesigner::TDesignTimeProxyGenerateSourceProc
+    @$xp$56System@Generics@Collections@%TList__1$p14System@TObject% @525 ; __tpdsc__ System::Generics::Collections::TList__1<System::TObject *>
+    @$xp$57System@Generics@Collections@%TCollectionNotifyEvent__1$i% @711 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<int>
+    @$xp$57System@Generics@Defaults@%IComparer__1$p14System@TObject% @535 ; __tpdsc__ System::Generics::Defaults::IComparer__1<System::TObject *>
+    @$xp$62System@Generics@Collections@%TEnumerable__1$p14System@TObject% @537 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<System::TObject *>
+    @$xp$62System@Generics@Collections@%TEnumerator__1$p14System@TObject% @539 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<System::TObject *>
+    @$xp$64System@Generics@Collections@%TArrayManager__1$p14System@TObject% @532 ; __tpdsc__ System::Generics::Collections::TArrayManager__1<System::TObject *>
+    @$xp$64System@Generics@Collections@%TList__1$p22System@Classes@TThread% @542 ; __tpdsc__ System::Generics::Collections::TList__1<System::Classes::TThread *>
+    @$xp$65System@Generics@Defaults@%IComparer__1$p22System@Classes@TThread% @552 ; __tpdsc__ System::Generics::Defaults::IComparer__1<System::Classes::TThread *>
+    @$xp$68System@%TArray__1$47System@%DelphiInterface$20Toolsapi@IOTAProject%% @710 ; __tpdsc__ System::TArray__1<System::DelphiInterface<{583}...
+    @$xp$68System@Generics@Collections@%TList__1$p14System@TObject%@%arrayofT$% @536 ; __tpdsc__ System::Generics::Collections::TList__1<System::TObject *>::arrayofT<>
+    @$xp$70System@Generics@Collections@%TEnumerable__1$p22System@Classes@TThread% @554 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<System::Classes::TThread *>
+    @$xp$70System@Generics@Collections@%TEnumerator__1$p22System@Classes@TThread% @556 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<System::Classes::TThread *>
+    @$xp$70System@Generics@Collections@%TList__1$p14System@TObject%@%TEmptyFunc$% @529 ; __tpdsc__ System::Generics::Collections::TList__1<System::TObject *>::TEmptyFunc<>
+    @$xp$71System@Generics@Collections@%TList__1$p14System@TObject%@%TEnumerator$% @527 ; __tpdsc__ System::Generics::Collections::TList__1<System::TObject *>::TEnumerator<>
+    @$xp$72System@Generics@Collections@%TArrayManager__1$p22System@Classes@TThread% @549 ; __tpdsc__ System::Generics::Collections::TArrayManager__1<System::Classes::TThread *>
+    @$xp$73System@Generics@Collections@%TCollectionNotifyEvent__1$p14System@TObject% @534 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<System::TObject *>
+    @$xp$76System@Generics@Collections@%TList__1$p22System@Classes@TThread%@%arrayofT$% @553 ; __tpdsc__ System::Generics::Collections::TList__1<System::Classes::TThread *>::arrayofT<>
+    @$xp$78System@Generics@Collections@%TList__1$p22System@Classes@TThread%@%TEmptyFunc$% @546 ; __tpdsc__ System::Generics::Collections::TList__1<System::Classes::TThread *>::TEmptyFunc<>
+    @$xp$79System@Generics@Collections@%TList__1$p22System@Classes@TThread%@%TEnumerator$% @544 ; __tpdsc__ System::Generics::Collections::TList__1<System::Classes::TThread *>::TEnumerator<>
+    @$xp$81System@Generics@Collections@%TCollectionNotifyEvent__1$p22System@Classes@TThread% @551 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<System::Classes::TThread *>
+    @$xp$89System@Generics@Collections@%TPair__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i% @721 ; __tpdsc__ System::Generics::Collections::TPair__2<System::DelphiInterface<{583}...
+    @$xp$94System@Generics@Collections@%TEnumerable__1$47System@%DelphiInterface$20Toolsapi@IOTAProject%% @706 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<System::DelphiInterface<{583}...
+    @$xp$94System@Generics@Collections@%TEnumerator__1$47System@%DelphiInterface$20Toolsapi@IOTAProject%% @708 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<System::DelphiInterface<{583}...
+    @$xp$95System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i% @689 ; __tpdsc__ System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @$xp$97System@Generics@Defaults@%IEqualityComparer__1$47System@%DelphiInterface$20Toolsapi@IOTAProject%% @713 ; __tpdsc__ System::Generics::Defaults::IEqualityComparer__1<System::DelphiInterface<{583}...
+    @Dbconnectthread@Finalization$qqrv @515 ; __fastcall Dbconnectthread::Finalization()
+    @Dbconnectthread@TThreadedMessageDialog@ @563 ; Dbconnectthread::TThreadedMessageDialog::
+    @Dbconnectthread@TThreadedMessageDialog@$bctr$qqrv @518 ; __fastcall Dbconnectthread::TThreadedMessageDialog::TThreadedMessageDialog()
+    @Dbconnectthread@TThreadedMessageDialog@$bdtr$qqrv @517 ; __fastcall Dbconnectthread::TThreadedMessageDialog::~TThreadedMessageDialog()
+    @Dbconnectthread@TThreadedMessageDialog@ShowMessage$qqrx20System@UnicodeStringp44Dbconnectthread@TThreadedMessageDialogThread48System@%DelphiInterface$21System@Sysutils@TProc%r20System@UnicodeStringui @516 ; Dbconnectthread::TThreadedMessageDialog::ShowMessage(const System::UnicodeString, Dbconnectthread::TThreadedMessageDialogThread *, System::DelphiInterface<{583}...
+    @Dbconnectthread@TThreadedMessageDialogThread@ @561 ; Dbconnectthread::TThreadedMessageDialogThread::
+    @Dbconnectthread@TThreadedMessageDialogThread@$bctr$qqrv @523 ; __fastcall Dbconnectthread::TThreadedMessageDialogThread::TThreadedMessageDialogThread()
+    @Dbconnectthread@TThreadedMessageDialogThread@$bdtr$qqrv @522 ; __fastcall Dbconnectthread::TThreadedMessageDialogThread::~TThreadedMessageDialogThread()
+    @Dbconnectthread@TThreadedMessageDialogThread@ConnectCallbacks$qqr48System@%DelphiInterface$21System@Sysutils@TProc%49System@Sysutils@%TProc__1$20System@UnicodeString% @524 ; Dbconnectthread::TThreadedMessageDialogThread::ConnectCallbacks(System::DelphiInterface<{583}...
+    @Dbconnectthread@TThreadedMessageDialogThread@DisconnectCallbacks$qqrv @521 ; __fastcall Dbconnectthread::TThreadedMessageDialogThread::DisconnectCallbacks()
+    @Dbconnectthread@TThreadedMessageDialogThread@Execute$qqrv @520 ; __fastcall Dbconnectthread::TThreadedMessageDialogThread::Execute()
+    @Dbconnectthread@TThreadedMessageDialogThread@LockAndCallback$qqrp14System@TObject48System@%DelphiInterface$21System@Sysutils@TProc% @519 ; Dbconnectthread::TThreadedMessageDialogThread::LockAndCallback(System::TObject *, System::DelphiInterface<{583}...
+    @Dbconnectthread@initialization$qqrv @514 ; __fastcall Dbconnectthread::initialization()
+    @Dbreg@Finalization$qqrv       @219 ; __fastcall Dbreg::Finalization()
+    @Dbreg@Register$qqrv           @220 ; __fastcall Dbreg::Register()
+    @Dbreg@TDBStringProperty@      @248 ; Dbreg::TDBStringProperty::
+    @Dbreg@TDBStringProperty@GetAttributes$qqrv @230 ; __fastcall Dbreg::TDBStringProperty::GetAttributes()
+    @Dbreg@TDBStringProperty@GetValueList$qqrp23System@Classes@TStrings @229 ; __fastcall Dbreg::TDBStringProperty::GetValueList(System::Classes::TStrings *)
+    @Dbreg@TDBStringProperty@GetValues$qqrynpqqrx20System@UnicodeString$v @228 ; __fastcall Dbreg::TDBStringProperty::GetValues(void __fastcall __closure(*)(const System::UnicodeString))
+    @Dbreg@TDataFieldAggProperty@  @244 ; Dbreg::TDataFieldAggProperty::
+    @Dbreg@TDataFieldAggProperty@GetDataSourcePropName$qqrv @223 ; __fastcall Dbreg::TDataFieldAggProperty::GetDataSourcePropName()
+    @Dbreg@TDataFieldAggProperty@GetValueList$qqrp23System@Classes@TStrings @222 ; __fastcall Dbreg::TDataFieldAggProperty::GetValueList(System::Classes::TStrings *)
+    @Dbreg@TDataFieldProperty@     @246 ; Dbreg::TDataFieldProperty::
+    @Dbreg@TDataFieldProperty@GetDataSourcePropName$qqrv @225 ; __fastcall Dbreg::TDataFieldProperty::GetDataSourcePropName()
+    @Dbreg@TDataFieldProperty@GetValueList$qqrp23System@Classes@TStrings @224 ; __fastcall Dbreg::TDataFieldProperty::GetValueList(System::Classes::TStrings *)
+    @Dbreg@TDataSetEditor@         @242 ; Dbreg::TDataSetEditor::
+    @Dbreg@TDataSetEditor@ExecuteVerb$qqri @233 ; __fastcall Dbreg::TDataSetEditor::ExecuteVerb(int)
+    @Dbreg@TDataSetEditor@GetDSDesignerClass$qqrv @234 ; __fastcall Dbreg::TDataSetEditor::GetDSDesignerClass()
+    @Dbreg@TDataSetEditor@GetVerb$qqri @232 ; __fastcall Dbreg::TDataSetEditor::GetVerb(int)
+    @Dbreg@TDataSetEditor@GetVerbCount$qqrv @231 ; __fastcall Dbreg::TDataSetEditor::GetVerbCount()
+    @Dbreg@TIndexFieldNamesProperty@ @240 ; Dbreg::TIndexFieldNamesProperty::
+    @Dbreg@TIndexFieldNamesProperty@GetValueList$qqrp23System@Classes@TStrings @226 ; __fastcall Dbreg::TIndexFieldNamesProperty::GetValueList(System::Classes::TStrings *)
+    @Dbreg@TIndexNameProperty@     @238 ; Dbreg::TIndexNameProperty::
+    @Dbreg@TIndexNameProperty@GetValueList$qqrp23System@Classes@TStrings @227 ; __fastcall Dbreg::TIndexNameProperty::GetValueList(System::Classes::TStrings *)
+    @Dbreg@TListFieldProperty@     @236 ; Dbreg::TListFieldProperty::
+    @Dbreg@TListFieldProperty@GetDataSourcePropName$qqrv @221 ; __fastcall Dbreg::TListFieldProperty::GetDataSourcePropName()
+    @Dbreg@initialization$qqrv     @218 ; __fastcall Dbreg::initialization()
+    @Dcldb@@GetPackageInfoTable$qqrv @739 ; Dcldb::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dcldb@@PackageLoad$qqrv       @738 ; Dcldb::__linkproc__ __fastcall PackageLoad()
+    @Dcldb@@PackageUnload$qqrv     @737 ; Dcldb::__linkproc__ __fastcall PackageUnload()
+    @Dcldb@initialization$qqrv     @736 ; __fastcall Dcldb::initialization()
+    @Drpctrls@CreateControlClass$qqrp16Data@Db@TDataSetx20System@UnicodeString20System@UnicodeString @88  ; __fastcall Drpctrls::CreateControlClass(Data::Db::TDataSet *, const System::UnicodeString, System::UnicodeString)
+    @Drpctrls@CreateFieldControl$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p14Data@Db@TField20System@UnicodeStringp25System@Classes@TComponentiio @87  ; Drpctrls::CreateFieldControl(const System::DelphiInterface<{583}...
+    @Drpctrls@Finalization$qqrv    @86  ; __fastcall Drpctrls::Finalization()
+    @Drpctrls@GetDataSource$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p16Data@Db@TDataSet @89  ; Drpctrls::GetDataSource(const System::DelphiInterface<{583}...
+    @Drpctrls@RegisterFieldControl$qqrp17System@TMetaClassx20System@UnicodeString @93  ; __fastcall Drpctrls::RegisterFieldControl(System::TMetaClass *, const System::UnicodeString)
+    @Drpctrls@SetClassProp$qqrp14System@TObjectx20System@UnicodeStringp17System@TMetaClasspv @92  ; __fastcall Drpctrls::SetClassProp(System::TObject *, const System::UnicodeString, System::TMetaClass *, void *)
+    @Drpctrls@TCandidateList@      @95  ; Drpctrls::TCandidateList::
+    @Drpctrls@TCandidateList@$bctr$qqrp17System@TMetaClassx47System@%DelphiInterface$20Designintf@IDesigner% @90  ; Drpctrls::TCandidateList::TCandidateList(System::TMetaClass *, const System::DelphiInterface<{583}...
+    @Drpctrls@TCandidateList@AddComponent$qqrx20System@UnicodeString @91  ; __fastcall Drpctrls::TCandidateList::AddComponent(const System::UnicodeString)
+    @Drpctrls@initialization$qqrv  @85  ; __fastcall Drpctrls::initialization()
+    @Dsadd@AddFields               @101 ; Dsadd::AddFields
+    @Dsadd@Finalization$qqrv       @97  ; __fastcall Dsadd::Finalization()
+    @Dsadd@TAddFields@             @103 ; Dsadd::TAddFields::
+    @Dsadd@TAddFields@FormCreate$qqrp14System@TObject @99  ; __fastcall Dsadd::TAddFields::FormCreate(System::TObject *)
+    @Dsadd@TAddFields@HelpBtnClick$qqrp14System@TObject @98  ; __fastcall Dsadd::TAddFields::HelpBtnClick(System::TObject *)
+    @Dsadd@TAddFields@SelectAll$qqrv @100 ; __fastcall Dsadd::TAddFields::SelectAll()
+    @Dsadd@initialization$qqrv     @96  ; __fastcall Dsadd::initialization()
+    @Dsdefine@ClassNameNoT$qqrp17System@TMetaClass @137 ; __fastcall Dsdefine::ClassNameNoT(System::TMetaClass *)
+    @Dsdefine@DefineField          @138 ; Dsdefine::DefineField
+    @Dsdefine@Finalization$qqrv    @105 ; __fastcall Dsdefine::Finalization()
+    @Dsdefine@TDefineField@        @140 ; Dsdefine::TDefineField::
+    @Dsdefine@TDefineField@ConfigureForLookupOnly$qqrx20System@UnicodeStringt1t1t1t1us @106 ; __fastcall Dsdefine::TDefineField::ConfigureForLookupOnly(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, unsigned short)
+    @Dsdefine@TDefineField@DatasetListChange$qqrp14System@TObject @109 ; __fastcall Dsdefine::TDefineField::DatasetListChange(System::TObject *)
+    @Dsdefine@TDefineField@DatasetListDropDown$qqrp14System@TObject @115 ; __fastcall Dsdefine::TDefineField::DatasetListDropDown(System::TObject *)
+    @Dsdefine@TDefineField@FieldKindClick$qqrp14System@TObject @110 ; __fastcall Dsdefine::TDefineField::FieldKindClick(System::TObject *)
+    @Dsdefine@TDefineField@FieldNameEditChange$qqrp14System@TObject @118 ; __fastcall Dsdefine::TDefineField::FieldNameEditChange(System::TObject *)
+    @Dsdefine@TDefineField@FieldTypeListChange$qqrp14System@TObject @107 ; __fastcall Dsdefine::TDefineField::FieldTypeListChange(System::TObject *)
+    @Dsdefine@TDefineField@FormCreate$qqrp14System@TObject @136 ; __fastcall Dsdefine::TDefineField::FormCreate(System::TObject *)
+    @Dsdefine@TDefineField@GetCalculated$qqrv @135 ; __fastcall Dsdefine::TDefineField::GetCalculated()
+    @Dsdefine@TDefineField@GetComponentName$qqrv @134 ; __fastcall Dsdefine::TDefineField::GetComponentName()
+    @Dsdefine@TDefineField@GetFieldClass$qqrv @133 ; __fastcall Dsdefine::TDefineField::GetFieldClass()
+    @Dsdefine@TDefineField@GetFieldName$qqrv @132 ; __fastcall Dsdefine::TDefineField::GetFieldName()
+    @Dsdefine@TDefineField@GetKeyFields$qqrv @129 ; __fastcall Dsdefine::TDefineField::GetKeyFields()
+    @Dsdefine@TDefineField@GetLookup$qqrv @131 ; __fastcall Dsdefine::TDefineField::GetLookup()
+    @Dsdefine@TDefineField@GetLookupDataset$qqrv @130 ; __fastcall Dsdefine::TDefineField::GetLookupDataset()
+    @Dsdefine@TDefineField@GetLookupFields$qqrp23System@Classes@TStrings @113 ; __fastcall Dsdefine::TDefineField::GetLookupFields(System::Classes::TStrings *)
+    @Dsdefine@TDefineField@GetLookupKeyFields$qqrv @128 ; __fastcall Dsdefine::TDefineField::GetLookupKeyFields()
+    @Dsdefine@TDefineField@GetLookupResultField$qqrv @127 ; __fastcall Dsdefine::TDefineField::GetLookupResultField()
+    @Dsdefine@TDefineField@GetSize$qqrv @126 ; __fastcall Dsdefine::TDefineField::GetSize()
+    @Dsdefine@TDefineField@HelpBtnClick$qqrp14System@TObject @108 ; __fastcall Dsdefine::TDefineField::HelpBtnClick(System::TObject *)
+    @Dsdefine@TDefineField@KeyFieldsListDropDown$qqrp14System@TObject @114 ; __fastcall Dsdefine::TDefineField::KeyFieldsListDropDown(System::TObject *)
+    @Dsdefine@TDefineField@LookupKeysListDropDown$qqrp14System@TObject @112 ; __fastcall Dsdefine::TDefineField::LookupKeysListDropDown(System::TObject *)
+    @Dsdefine@TDefineField@OkBtnClick$qqrp14System@TObject @117 ; __fastcall Dsdefine::TDefineField::OkBtnClick(System::TObject *)
+    @Dsdefine@TDefineField@ResultFieldListDropDown$qqrp14System@TObject @111 ; __fastcall Dsdefine::TDefineField::ResultFieldListDropDown(System::TObject *)
+    @Dsdefine@TDefineField@SetCalculated$qqro @125 ; __fastcall Dsdefine::TDefineField::SetCalculated(bool)
+    @Dsdefine@TDefineField@SetComponentName$qqrx20System@UnicodeString @124 ; __fastcall Dsdefine::TDefineField::SetComponentName(const System::UnicodeString)
+    @Dsdefine@TDefineField@SetDataset$qqrp16Data@Db@TDataSet @123 ; __fastcall Dsdefine::TDefineField::SetDataset(Data::Db::TDataSet *)
+    @Dsdefine@TDefineField@SetFieldClass$qqrp17System@TMetaClass @122 ; __fastcall Dsdefine::TDefineField::SetFieldClass(System::TMetaClass *)
+    @Dsdefine@TDefineField@SetFieldName$qqrx20System@UnicodeString @121 ; __fastcall Dsdefine::TDefineField::SetFieldName(const System::UnicodeString)
+    @Dsdefine@TDefineField@SetLookup$qqro @120 ; __fastcall Dsdefine::TDefineField::SetLookup(bool)
+    @Dsdefine@TDefineField@SetSize$qqri @119 ; __fastcall Dsdefine::TDefineField::SetSize(int)
+    @Dsdefine@TDefineField@UpdateLookupControls$qqrv @116 ; __fastcall Dsdefine::TDefineField::UpdateLookupControls()
+    @Dsdefine@initialization$qqrv  @104 ; __fastcall Dsdefine::initialization()
+    @Dsdesign@CreateFieldsEditor$qqr47System@%DelphiInterface$20Designintf@IDesigner%p16Data@Db@TDataSetp17System@TMetaClassro @197 ; Dsdesign::CreateFieldsEditor(System::DelphiInterface<{583}...
+    @Dsdesign@CreateUniqueName$qqrp16Data@Db@TDataSetx20System@UnicodeStringp17System@TMetaClassp25System@Classes@TComponent @196 ; __fastcall Dsdesign::CreateUniqueName(Data::Db::TDataSet *, const System::UnicodeString, System::TMetaClass *, System::Classes::TComponent *)
+    @Dsdesign@DesignerCount        @211 ; Dsdesign::DesignerCount
+    @Dsdesign@Finalization$qqrv    @142 ; __fastcall Dsdesign::Finalization()
+    @Dsdesign@ShowFieldsEditor$qqr47System@%DelphiInterface$20Designintf@IDesigner%p16Data@Db@TDataSetp17System@TMetaClass @198 ; Dsdesign::ShowFieldsEditor(System::DelphiInterface<{583}...
+    @Dsdesign@TDSDesigner@         @213 ; Dsdesign::TDSDesigner::
+    @Dsdesign@TDSDesigner@$bdtr$qqrv @210 ; __fastcall Dsdesign::TDSDesigner::~TDSDesigner()
+    @Dsdesign@TDSDesigner@BeginCreateFields$qqrv @203 ; __fastcall Dsdesign::TDSDesigner::BeginCreateFields()
+    @Dsdesign@TDSDesigner@BeginUpdateFieldDefs$qqrv @205 ; __fastcall Dsdesign::TDSDesigner::BeginUpdateFieldDefs()
+    @Dsdesign@TDSDesigner@DataEvent$qqr18Data@Db@TDataEventi @209 ; __fastcall Dsdesign::TDSDesigner::DataEvent(Data::Db::TDataEvent, int)
+    @Dsdesign@TDSDesigner@DoCreateField$qqrx17System@WideString20System@UnicodeString @199 ; __fastcall Dsdesign::TDSDesigner::DoCreateField(const System::WideString, System::UnicodeString)
+    @Dsdesign@TDSDesigner@EndCreateFields$qqrv @202 ; __fastcall Dsdesign::TDSDesigner::EndCreateFields()
+    @Dsdesign@TDSDesigner@EndUpdateFieldDefs$qqrv @204 ; __fastcall Dsdesign::TDSDesigner::EndUpdateFieldDefs()
+    @Dsdesign@TDSDesigner@GetControlClass$qqrp14Data@Db@TField @208 ; __fastcall Dsdesign::TDSDesigner::GetControlClass(Data::Db::TField *)
+    @Dsdesign@TDSDesigner@InitializeMenu$qqrp20Vcl@Menus@TPopupMenu @201 ; __fastcall Dsdesign::TDSDesigner::InitializeMenu(Vcl::Menus::TPopupMenu *)
+    @Dsdesign@TDSDesigner@SupportsAggregates$qqrv @207 ; __fastcall Dsdesign::TDSDesigner::SupportsAggregates()
+    @Dsdesign@TDSDesigner@SupportsInternalCalc$qqrv @206 ; __fastcall Dsdesign::TDSDesigner::SupportsInternalCalc()
+    @Dsdesign@TDSDesigner@UpdateMenus$qqrp20Vcl@Menus@TPopupMenu50System@%Set$22Designintf@TEditStatest1$i0$t1$i10$% @200 ; Dsdesign::TDSDesigner::UpdateMenus(Vcl::Menus::TPopupMenu *, System::Set<{583}...
+    @Dsdesign@TFieldsEditor@       @215 ; Dsdesign::TFieldsEditor::
+    @Dsdesign@TFieldsEditor@$bdtr$qqrv @195 ; __fastcall Dsdesign::TFieldsEditor::~TFieldsEditor()
+    @Dsdesign@TFieldsEditor@AListBoxClick$qqrp14System@TObject @158 ; __fastcall Dsdesign::TFieldsEditor::AListBoxClick(System::TObject *)
+    @Dsdesign@TFieldsEditor@AListBoxKeyDown$qqrp14System@TObjectrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @173 ; Dsdesign::TFieldsEditor::AListBoxKeyDown(System::TObject *, unsigned short&, System::Set<{583}...
+    @Dsdesign@TFieldsEditor@AListBoxKeyPress$qqrp14System@TObjectrb @157 ; __fastcall Dsdesign::TFieldsEditor::AListBoxKeyPress(System::TObject *, wchar_t&)
+    @Dsdesign@TFieldsEditor@Activated$qqrv @169 ; __fastcall Dsdesign::TFieldsEditor::Activated()
+    @Dsdesign@TFieldsEditor@AddAllFields$qqrp14System@TObject @147 ; __fastcall Dsdesign::TFieldsEditor::AddAllFields(System::TObject *)
+    @Dsdesign@TFieldsEditor@AddFields$qqro @180 ; __fastcall Dsdesign::TFieldsEditor::AddFields(bool)
+    @Dsdesign@TFieldsEditor@AddItemClick$qqrp14System@TObject @178 ; __fastcall Dsdesign::TFieldsEditor::AddItemClick(System::TObject *)
+    @Dsdesign@TFieldsEditor@BeginUpdate$qqrv @156 ; __fastcall Dsdesign::TFieldsEditor::BeginUpdate()
+    @Dsdesign@TFieldsEditor@CheckFieldAdd$qqrv @144 ; __fastcall Dsdesign::TFieldsEditor::CheckFieldAdd()
+    @Dsdesign@TFieldsEditor@CheckFieldDelete$qqrv @145 ; __fastcall Dsdesign::TFieldsEditor::CheckFieldDelete()
+    @Dsdesign@TFieldsEditor@ClearAllClick$qqrp14System@TObject @155 ; __fastcall Dsdesign::TFieldsEditor::ClearAllClick(System::TObject *)
+    @Dsdesign@TFieldsEditor@Copy$qqrv @163 ; __fastcall Dsdesign::TFieldsEditor::Copy()
+    @Dsdesign@TFieldsEditor@CopyItemClick$qqrp14System@TObject @151 ; __fastcall Dsdesign::TFieldsEditor::CopyItemClick(System::TObject *)
+    @Dsdesign@TFieldsEditor@CreateFields$qqrp21Vcl@Stdctrls@TListBox @188 ; __fastcall Dsdesign::TFieldsEditor::CreateFields(Vcl::Stdctrls::TListBox *)
+    @Dsdesign@TFieldsEditor@Cut$qqrv @164 ; __fastcall Dsdesign::TFieldsEditor::Cut()
+    @Dsdesign@TFieldsEditor@CutItemClick$qqrp14System@TObject @152 ; __fastcall Dsdesign::TFieldsEditor::CutItemClick(System::TObject *)
+    @Dsdesign@TFieldsEditor@DeleteItemClick$qqrp14System@TObject @177 ; __fastcall Dsdesign::TFieldsEditor::DeleteItemClick(System::TObject *)
+    @Dsdesign@TFieldsEditor@DoAddFields$qqro @179 ; __fastcall Dsdesign::TFieldsEditor::DoAddFields(bool)
+    @Dsdesign@TFieldsEditor@DoNewField$qqrv @171 ; __fastcall Dsdesign::TFieldsEditor::DoNewField()
+    @Dsdesign@TFieldsEditor@DoNewLookupField$qqrx20System@UnicodeStringt1t1t1t1us @170 ; __fastcall Dsdesign::TFieldsEditor::DoNewLookupField(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, unsigned short)
+    @Dsdesign@TFieldsEditor@EditAction$qqr22Designintf@TEditAction @166 ; __fastcall Dsdesign::TFieldsEditor::EditAction(Designintf::TEditAction)
+    @Dsdesign@TFieldsEditor@Endupdate$qqrv @165 ; __fastcall Dsdesign::TFieldsEditor::Endupdate()
+    @Dsdesign@TFieldsEditor@FieldListBoxDragDrop$qqrp14System@TObjectt1ii @175 ; __fastcall Dsdesign::TFieldsEditor::FieldListBoxDragDrop(System::TObject *, System::TObject *, int, int)
+    @Dsdesign@TFieldsEditor@FieldListBoxDragOver$qqrp14System@TObjectt1ii25System@Uitypes@TDragStatero @176 ; __fastcall Dsdesign::TFieldsEditor::FieldListBoxDragOver(System::TObject *, System::TObject *, int, int, System::Uitypes::TDragState, bool&)
+    @Dsdesign@TFieldsEditor@FieldListBoxStartDrag$qqrp14System@TObjectrp24Vcl@Controls@TDragObject @154 ; __fastcall Dsdesign::TFieldsEditor::FieldListBoxStartDrag(System::TObject *, Vcl::Controls::TDragObject *&)
+    @Dsdesign@TFieldsEditor@ForEachSelection$qqrynpqqrp14Data@Db@TField$o @148 ; __fastcall Dsdesign::TFieldsEditor::ForEachSelection(bool __fastcall __closure(*)(Data::Db::TField *))
+    @Dsdesign@TFieldsEditor@FormCreate$qqrp14System@TObject @183 ; __fastcall Dsdesign::TFieldsEditor::FormCreate(System::TObject *)
+    @Dsdesign@TFieldsEditor@FormDestroy$qqrp14System@TObject @182 ; __fastcall Dsdesign::TFieldsEditor::FormDestroy(System::TObject *)
+    @Dsdesign@TFieldsEditor@GetActiveListbox$qqrv @146 ; __fastcall Dsdesign::TFieldsEditor::GetActiveListbox()
+    @Dsdesign@TFieldsEditor@GetEditState$qqrv @167 ; __fastcall Dsdesign::TFieldsEditor::GetEditState()
+    @Dsdesign@TFieldsEditor@ItemDeleted$qqrx47System@%DelphiInterface$20Designintf@IDesigner%p26System@Classes@TPersistent @143 ; Dsdesign::TFieldsEditor::ItemDeleted(const System::DelphiInterface<{583}...
+    @Dsdesign@TFieldsEditor@ItemsModified$qqrx47System@%DelphiInterface$20Designintf@IDesigner% @161 ; Dsdesign::TFieldsEditor::ItemsModified(const System::DelphiInterface<{583}...
+    @Dsdesign@TFieldsEditor@LocalMenuPopup$qqrp14System@TObject @149 ; __fastcall Dsdesign::TFieldsEditor::LocalMenuPopup(System::TObject *)
+    @Dsdesign@TFieldsEditor@MoveFields$qqri @185 ; __fastcall Dsdesign::TFieldsEditor::MoveFields(int)
+    @Dsdesign@TFieldsEditor@NewItemClick$qqrp14System@TObject @172 ; __fastcall Dsdesign::TFieldsEditor::NewItemClick(System::TObject *)
+    @Dsdesign@TFieldsEditor@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @181 ; __fastcall Dsdesign::TFieldsEditor::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Dsdesign@TFieldsEditor@Paste$qqrv @162 ; __fastcall Dsdesign::TFieldsEditor::Paste()
+    @Dsdesign@TFieldsEditor@PasteItemClick$qqrp14System@TObject @150 ; __fastcall Dsdesign::TFieldsEditor::PasteItemClick(System::TObject *)
+    @Dsdesign@TFieldsEditor@RemoveFields$qqrp21Vcl@Stdctrls@TListBox @186 ; __fastcall Dsdesign::TFieldsEditor::RemoveFields(Vcl::Stdctrls::TListBox *)
+    @Dsdesign@TFieldsEditor@RestoreSelection$qqrp21Vcl@Stdctrls@TListBoxrp26System@Classes@TStringListiio @192 ; __fastcall Dsdesign::TFieldsEditor::RestoreSelection(Vcl::Stdctrls::TListBox *, System::Classes::TStringList *&, int, int, bool)
+    @Dsdesign@TFieldsEditor@SaveSelection$qqrp21Vcl@Stdctrls@TListBoxrp26System@Classes@TStringListrit3o @193 ; __fastcall Dsdesign::TFieldsEditor::SaveSelection(Vcl::Stdctrls::TListBox *, System::Classes::TStringList *&, int&, int&, bool)
+    @Dsdesign@TFieldsEditor@SelectAll$qqrv @187 ; __fastcall Dsdesign::TFieldsEditor::SelectAll()
+    @Dsdesign@TFieldsEditor@SelectAllItemClick$qqrp14System@TObject @153 ; __fastcall Dsdesign::TFieldsEditor::SelectAllItemClick(System::TObject *)
+    @Dsdesign@TFieldsEditor@SelectTable$qqrp14System@TObject @159 ; __fastcall Dsdesign::TFieldsEditor::SelectTable(System::TObject *)
+    @Dsdesign@TFieldsEditor@SelectionChanged$qqrx47System@%DelphiInterface$20Designintf@IDesigner%x57System@%DelphiInterface$30Designintf@IDesignerSelections% @160 ; Dsdesign::TFieldsEditor::SelectionChanged(const System::DelphiInterface<{583}...
+    @Dsdesign@TFieldsEditor@SetDataset$qqrp16Data@Db@TDataSet @184 ; __fastcall Dsdesign::TFieldsEditor::SetDataset(Data::Db::TDataSet *)
+    @Dsdesign@TFieldsEditor@UniqueName$qqrp25System@Classes@TComponent @168 ; __fastcall Dsdesign::TFieldsEditor::UniqueName(System::Classes::TComponent *)
+    @Dsdesign@TFieldsEditor@UpdateCaption$qqrv @191 ; __fastcall Dsdesign::TFieldsEditor::UpdateCaption()
+    @Dsdesign@TFieldsEditor@UpdateDisplay$qqrv @194 ; __fastcall Dsdesign::TFieldsEditor::UpdateDisplay()
+    @Dsdesign@TFieldsEditor@UpdateFieldList$qqrv @190 ; __fastcall Dsdesign::TFieldsEditor::UpdateFieldList()
+    @Dsdesign@TFieldsEditor@UpdateSelection$qqrv @189 ; __fastcall Dsdesign::TFieldsEditor::UpdateSelection()
+    @Dsdesign@TFieldsEditor@WMGetMinMaxInfo$qqrr32Winapi@Messages@TWMGetMinMaxInfo @174 ; __fastcall Dsdesign::TFieldsEditor::WMGetMinMaxInfo(Winapi::Messages::TWMGetMinMaxInfo&)
+    @Dsdesign@initialization$qqrv  @141 ; __fastcall Dsdesign::initialization()
+    @Dsndb@Finalization$qqrv       @353 ; __fastcall Dsndb::Finalization()
+    @Dsndb@SprigDataSetFieldsName$qqrp16Data@Db@TDataSet @381 ; __fastcall Dsndb::SprigDataSetFieldsName(Data::Db::TDataSet *)
+    @Dsndb@TDataSetSprig@          @385 ; Dsndb::TDataSetSprig::
+    @Dsndb@TDataSetSprig@FigureChildren$qqrv @379 ; __fastcall Dsndb::TDataSetSprig::FigureChildren()
+    @Dsndb@TDataSetSprig@GetDSDesignerClass$qqrv @378 ; __fastcall Dsndb::TDataSetSprig::GetDSDesignerClass()
+    @Dsndb@TDataSourceSprig@       @383 ; Dsndb::TDataSourceSprig::
+    @Dsndb@TDataSourceSprig@ParentProperty$qqrv @380 ; __fastcall Dsndb::TDataSourceSprig::ParentProperty()
+    @Dsndb@TFieldSprig@            @387 ; Dsndb::TFieldSprig::
+    @Dsndb@TFieldSprig@AddType$qqri @362 ; __fastcall Dsndb::TFieldSprig::AddType(int)
+    @Dsndb@TFieldSprig@AddTypeCount$qqrv @361 ; __fastcall Dsndb::TFieldSprig::AddTypeCount()
+    @Dsndb@TFieldSprig@Caption$qqrv @360 ; __fastcall Dsndb::TFieldSprig::Caption()
+    @Dsndb@TFieldSprig@DragDropTo$qqrp15Treeintf@TSprig @359 ; __fastcall Dsndb::TFieldSprig::DragDropTo(Treeintf::TSprig *)
+    @Dsndb@TFieldSprig@DragOverTo$qqrp15Treeintf@TSprig @358 ; __fastcall Dsndb::TFieldSprig::DragOverTo(Treeintf::TSprig *)
+    @Dsndb@TFieldSprig@FigureParent$qqrv @357 ; __fastcall Dsndb::TFieldSprig::FigureParent()
+    @Dsndb@TFieldSprig@GetAddType$qqri @356 ; __fastcall Dsndb::TFieldSprig::GetAddType(int)
+    @Dsndb@TFieldSprig@ItemIndex$qqrv @355 ; __fastcall Dsndb::TFieldSprig::ItemIndex()
+    @Dsndb@TFieldSprig@PrepareMenu$qqrx49System@%DelphiInterface$22Designmenus@IMenuItems% @354 ; Dsndb::TFieldSprig::PrepareMenu(const System::DelphiInterface<{583}...
+    @Dsndb@TFieldsSprig@           @389 ; Dsndb::TFieldsSprig::
+    @Dsndb@TFieldsSprig@AddType$qqri @368 ; __fastcall Dsndb::TFieldsSprig::AddType(int)
+    @Dsndb@TFieldsSprig@AddTypeCount$qqrv @367 ; __fastcall Dsndb::TFieldsSprig::AddTypeCount()
+    @Dsndb@TFieldsSprig@Caption$qqrv @377 ; __fastcall Dsndb::TFieldsSprig::Caption()
+    @Dsndb@TFieldsSprig@CustomDelete$qqrv @372 ; __fastcall Dsndb::TFieldsSprig::CustomDelete()
+    @Dsndb@TFieldsSprig@DeleteStyle$qqrv @373 ; __fastcall Dsndb::TFieldsSprig::DeleteStyle()
+    @Dsndb@TFieldsSprig@DoAddAllFields$qqrv @363 ; __fastcall Dsndb::TFieldsSprig::DoAddAllFields()
+    @Dsndb@TFieldsSprig@DoAddFields$qqrv @365 ; __fastcall Dsndb::TFieldsSprig::DoAddFields()
+    @Dsndb@TFieldsSprig@DoNewField$qqrv @364 ; __fastcall Dsndb::TFieldsSprig::DoNewField()
+    @Dsndb@TFieldsSprig@FigureParent$qqrv @376 ; __fastcall Dsndb::TFieldsSprig::FigureParent()
+    @Dsndb@TFieldsSprig@GetAddType$qqri @366 ; __fastcall Dsndb::TFieldsSprig::GetAddType(int)
+    @Dsndb@TFieldsSprig@GetDSDesignerClass$qqrv @370 ; __fastcall Dsndb::TFieldsSprig::GetDSDesignerClass()
+    @Dsndb@TFieldsSprig@HandleFieldsEditor$qqrp14System@TObject @369 ; __fastcall Dsndb::TFieldsSprig::HandleFieldsEditor(System::TObject *)
+    @Dsndb@TFieldsSprig@PrepareMenu$qqrx49System@%DelphiInterface$22Designmenus@IMenuItems% @371 ; Dsndb::TFieldsSprig::PrepareMenu(const System::DelphiInterface<{583}...
+    @Dsndb@TFieldsSprig@SortByIndex$qqrv @375 ; __fastcall Dsndb::TFieldsSprig::SortByIndex()
+    @Dsndb@TFieldsSprig@UniqueName$qqrv @374 ; __fastcall Dsndb::TFieldsSprig::UniqueName()
+    @Dsndb@_SNoMasterFields        @391 ; Dsndb::_SNoMasterFields
+    @Dsndb@_SParamsFields          @390 ; Dsndb::_SParamsFields
+    @Dsndb@initialization$qqrv     @352 ; __fastcall Dsndb::initialization()
+    @Dsndbcst@Finalization$qqrv    @2   ; __fastcall Dsndbcst::Finalization()
+    @Dsndbcst@_SADOConnectionEditor @8   ; Dsndbcst::_SADOConnectionEditor
+    @Dsndbcst@_SADODataFilter      @6   ; Dsndbcst::_SADODataFilter
+    @Dsndbcst@_SAllClientDataFilter @33  ; Dsndbcst::_SAllClientDataFilter
+    @Dsndbcst@_SAssociateAttributes @13  ; Dsndbcst::_SAssociateAttributes
+    @Dsndbcst@_SCancel             @56  ; Dsndbcst::_SCancel
+    @Dsndbcst@_SClientDSAssignData @45  ; Dsndbcst::_SClientDSAssignData
+    @Dsndbcst@_SClientDSClearData  @38  ; Dsndbcst::_SClientDSClearData
+    @Dsndbcst@_SClientDataFilter   @35  ; Dsndbcst::_SClientDataFilter
+    @Dsndbcst@_SClientDataSetEditor @36  ; Dsndbcst::_SClientDataSetEditor
+    @Dsndbcst@_SColEditCaption     @49  ; Dsndbcst::_SColEditCaption
+    @Dsndbcst@_SCommandExecute     @7   ; Dsndbcst::_SCommandExecute
+    @Dsndbcst@_SComment            @74  ; Dsndbcst::_SComment
+    @Dsndbcst@_SComputerNameDialogNotSupported @47  ; Dsndbcst::_SComputerNameDialogNotSupported
+    @Dsndbcst@_SControlInRemoteDataModule @27  ; Dsndbcst::_SControlInRemoteDataModule
+    @Dsndbcst@_SCreateDataSet      @37  ; Dsndbcst::_SCreateDataSet
+    @Dsndbcst@_SDBGridColEditor    @22  ; Dsndbcst::_SDBGridColEditor
+    @Dsndbcst@_SDSAttrExists       @65  ; Dsndbcst::_SDSAttrExists
+    @Dsndbcst@_SDSConfirmDeleteAll @70  ; Dsndbcst::_SDSConfirmDeleteAll
+    @Dsndbcst@_SDSDataFieldOnOpenTable @68  ; Dsndbcst::_SDSDataFieldOnOpenTable
+    @Dsndbcst@_SDSFieldNotInDict   @64  ; Dsndbcst::_SDSFieldNotInDict
+    @Dsndbcst@_SDSLinkForms        @67  ; Dsndbcst::_SDSLinkForms
+    @Dsndbcst@_SDSMustBeSpecified  @69  ; Dsndbcst::_SDSMustBeSpecified
+    @Dsndbcst@_SDSNoAttrs          @66  ; Dsndbcst::_SDSNoAttrs
+    @Dsndbcst@_SDSNone             @63  ; Dsndbcst::_SDSNone
+    @Dsndbcst@_SDatasetDesigner    @23  ; Dsndbcst::_SDatasetDesigner
+    @Dsndbcst@_SDatasetEditor      @21  ; Dsndbcst::_SDatasetEditor
+    @Dsndbcst@_SDbExplorerMenuItem @73  ; Dsndbcst::_SDbExplorerMenuItem
+    @Dsndbcst@_SDeleteColumnsQuestion @50  ; Dsndbcst::_SDeleteColumnsQuestion
+    @Dsndbcst@_SDetailTable        @60  ; Dsndbcst::_SDetailTable
+    @Dsndbcst@_SExecute            @28  ; Dsndbcst::_SExecute
+    @Dsndbcst@_SExpertMenuItem     @76  ; Dsndbcst::_SExpertMenuItem
+    @Dsndbcst@_SExportProvider     @46  ; Dsndbcst::_SExportProvider
+    @Dsndbcst@_SFKAggregate        @19  ; Dsndbcst::_SFKAggregate
+    @Dsndbcst@_SFKInternalCalc     @20  ; Dsndbcst::_SFKInternalCalc
+    @Dsndbcst@_SFetchParams        @29  ; Dsndbcst::_SFetchParams
+    @Dsndbcst@_SInvalidAliasName   @57  ; Dsndbcst::_SInvalidAliasName
+    @Dsndbcst@_SInvalidBaseClass   @78  ; Dsndbcst::_SInvalidBaseClass
+    @Dsndbcst@_SInvalidFieldClass  @79  ; Dsndbcst::_SInvalidFieldClass
+    @Dsndbcst@_SLinkDesigner       @25  ; Dsndbcst::_SLinkDesigner
+    @Dsndbcst@_SLoadFromBinaryFile @43  ; Dsndbcst::_SLoadFromBinaryFile
+    @Dsndbcst@_SLoadFromFile       @44  ; Dsndbcst::_SLoadFromFile
+    @Dsndbcst@_SLocalFilter        @59  ; Dsndbcst::_SLocalFilter
+    @Dsndbcst@_SMasterTable        @61  ; Dsndbcst::_SMasterTable
+    @Dsndbcst@_SMidasCategoryDesc  @17  ; Dsndbcst::_SMidasCategoryDesc
+    @Dsndbcst@_SMidasCategoryName  @18  ; Dsndbcst::_SMidasCategoryName
+    @Dsndbcst@_SMissingDataSource  @26  ; Dsndbcst::_SMissingDataSource
+    @Dsndbcst@_SNewConnection      @3   ; Dsndbcst::_SNewConnection
+    @Dsndbcst@_SPrimary            @24  ; Dsndbcst::_SPrimary
+    @Dsndbcst@_SPrimaryIndex       @53  ; Dsndbcst::_SPrimaryIndex
+    @Dsndbcst@_SPrivate            @52  ; Dsndbcst::_SPrivate
+    @Dsndbcst@_SProperty           @80  ; Dsndbcst::_SProperty
+    @Dsndbcst@_SPublic             @51  ; Dsndbcst::_SPublic
+    @Dsndbcst@_SQTAllClientDataFilter @30  ; Dsndbcst::_SQTAllClientDataFilter
+    @Dsndbcst@_SQTClientDataFilter @32  ; Dsndbcst::_SQTClientDataFilter
+    @Dsndbcst@_SQTXMLClientDataFilter @31  ; Dsndbcst::_SQTXMLClientDataFilter
+    @Dsndbcst@_SRemoteFilter       @58  ; Dsndbcst::_SRemoteFilter
+    @Dsndbcst@_SRetrieveAttributes @16  ; Dsndbcst::_SRetrieveAttributes
+    @Dsndbcst@_SSQLMonitorMenuItem @72  ; Dsndbcst::_SSQLMonitorMenuItem
+    @Dsndbcst@_SSaveAttributes     @15  ; Dsndbcst::_SSaveAttributes
+    @Dsndbcst@_SSaveAttributesAs   @14  ; Dsndbcst::_SSaveAttributesAs
+    @Dsndbcst@_SSaveToBinaryFile   @41  ; Dsndbcst::_SSaveToBinaryFile
+    @Dsndbcst@_SSaveToFile         @42  ; Dsndbcst::_SSaveToFile
+    @Dsndbcst@_SSaveToXmlFile      @40  ; Dsndbcst::_SSaveToXmlFile
+    @Dsndbcst@_SSaveToXmlUTF8File  @39  ; Dsndbcst::_SSaveToXmlUTF8File
+    @Dsndbcst@_SSelectRemoteServer @48  ; Dsndbcst::_SSelectRemoteServer
+    @Dsndbcst@_SSimpleDSEditConn   @4   ; Dsndbcst::_SSimpleDSEditConn
+    @Dsndbcst@_SSimpleDSEditDS     @5   ; Dsndbcst::_SSimpleDSEditDS
+    @Dsndbcst@_SSimpleTable        @62  ; Dsndbcst::_SSimpleTable
+    @Dsndbcst@_SSqlMonitorExec     @71  ; Dsndbcst::_SSqlMonitorExec
+    @Dsndbcst@_STemplateName       @75  ; Dsndbcst::_STemplateName
+    @Dsndbcst@_SUnassociateAttributes @12  ; Dsndbcst::_SUnassociateAttributes
+    @Dsndbcst@_SXMLClientDataFilter @34  ; Dsndbcst::_SXMLClientDataFilter
+    @Dsndbcst@_sBusinessPage       @77  ; Dsndbcst::_sBusinessPage
+    @Dsndbcst@_sDatabaseMenu       @55  ; Dsndbcst::_sDatabaseMenu
+    @Dsndbcst@_sDatabaseMenuHandler @54  ; Dsndbcst::_sDatabaseMenuHandler
+    @Dsndbcst@_srADO               @10  ; Dsndbcst::_srADO
+    @Dsndbcst@_srBDE               @11  ; Dsndbcst::_srBDE
+    @Dsndbcst@_srDAccess           @84  ; Dsndbcst::_srDAccess
+    @Dsndbcst@_srDControls         @83  ; Dsndbcst::_srDControls
+    @Dsndbcst@_srMidas             @81  ; Dsndbcst::_srMidas
+    @Dsndbcst@_srSQL               @9   ; Dsndbcst::_srSQL
+    @Dsndbcst@_srWin31             @82  ; Dsndbcst::_srWin31
+    @Dsndbcst@initialization$qqrv  @1   ; __fastcall Dsndbcst::initialization()
+    @Dsproxydesigner@Finalization$qqrv @639 ; __fastcall Dsproxydesigner::Finalization()
+    @Dsproxydesigner@TDesignTimeProxyModuleManager@ @723 ; Dsproxydesigner::TDesignTimeProxyModuleManager::
+    @Dsproxydesigner@TDesignTimeProxyModuleManager@$bctr$qqr47System@%DelphiInterface$20Toolsapi@IOTAProject%x20System@UnicodeString77System@%DelphiInterface$50Dsproxydesigner@TDesignTimeProxyGenerateSourceProc%t2 @688 ; Dsproxydesigner::TDesignTimeProxyModuleManager::TDesignTimeProxyModuleManager(System::DelphiInterface<{583}...
+    @Dsproxydesigner@TDesignTimeProxyModuleManager@$bctr$qqr47System@%DelphiInterface$20Toolsapi@IOTAProject%x20System@UnicodeStringt277System@%DelphiInterface$50Dsproxydesigner@TDesignTimeProxyGenerateSourceProc% @687 ; Dsproxydesigner::TDesignTimeProxyModuleManager::TDesignTimeProxyModuleManager(System::DelphiInterface<{583}...
+    @Dsproxydesigner@TDesignTimeProxyModuleManager@GenerateProxy$qqrv @684 ; __fastcall Dsproxydesigner::TDesignTimeProxyModuleManager::GenerateProxy()
+    @Dsproxydesigner@TDesignTimeProxyModuleManager@GetCurrentModule$qqrv @685 ; __fastcall Dsproxydesigner::TDesignTimeProxyModuleManager::GetCurrentModule()
+    @Dsproxydesigner@TDesignTimeProxyModuleManager@GetCurrentModuleProject$qqrv @686 ; __fastcall Dsproxydesigner::TDesignTimeProxyModuleManager::GetCurrentModuleProject()
+    @Dsproxydesigner@TDesignTimeProxyModuleManager@GetGeneratedModule$qqrv @683 ; __fastcall Dsproxydesigner::TDesignTimeProxyModuleManager::GetGeneratedModule()
+    @Dsproxydesigner@TDesignTimeProxyNodeManager@ @725 ; Dsproxydesigner::TDesignTimeProxyNodeManager::
+    @Dsproxydesigner@TDesignTimeProxyNodeManager@$bctr$qqr47System@%DelphiInterface$20Toolsapi@IOTAProject%x20System@UnicodeString @678 ; Dsproxydesigner::TDesignTimeProxyNodeManager::TDesignTimeProxyNodeManager(System::DelphiInterface<{583}...
+    @Dsproxydesigner@TDesignTimeProxyNodeManager@AddNode$qqrx20System@UnicodeStringt1 @674 ; __fastcall Dsproxydesigner::TDesignTimeProxyNodeManager::AddNode(const System::UnicodeString, const System::UnicodeString)
+    @Dsproxydesigner@TDesignTimeProxyNodeManager@AddProjectStorageNode$qqrv @680 ; __fastcall Dsproxydesigner::TDesignTimeProxyNodeManager::AddProjectStorageNode()
+    @Dsproxydesigner@TDesignTimeProxyNodeManager@GetNodeForConnection$qqr47System@%DelphiInterface$20Xml@Xmlintf@IXMLNode%x20System@UnicodeString @681 ; Dsproxydesigner::TDesignTimeProxyNodeManager::GetNodeForConnection(System::DelphiInterface<{583}...
+    @Dsproxydesigner@TDesignTimeProxyNodeManager@GetNodeForModule$qqr47System@%DelphiInterface$20Xml@Xmlintf@IXMLNode%x20System@UnicodeString @676 ; Dsproxydesigner::TDesignTimeProxyNodeManager::GetNodeForModule(System::DelphiInterface<{583}...
+    @Dsproxydesigner@TDesignTimeProxyNodeManager@GetNotifierForConnection$qqr47System@%DelphiInterface$20Xml@Xmlintf@IXMLNode%x20System@UnicodeString @682 ; Dsproxydesigner::TDesignTimeProxyNodeManager::GetNotifierForConnection(System::DelphiInterface<{583}...
+    @Dsproxydesigner@TDesignTimeProxyNodeManager@GetProjectStorageNode$qqrv @679 ; __fastcall Dsproxydesigner::TDesignTimeProxyNodeManager::GetProjectStorageNode()
+    @Dsproxydesigner@TDesignTimeProxyNodeManager@RemoveNodeForConnection$qqr47System@%DelphiInterface$20Xml@Xmlintf@IXMLNode%x20System@UnicodeString @677 ; Dsproxydesigner::TDesignTimeProxyNodeManager::RemoveNodeForConnection(System::DelphiInterface<{583}...
+    @Dsproxydesigner@TDesignTimeProxyNodeManager@RemoveNodeForModule$qqr47System@%DelphiInterface$20Xml@Xmlintf@IXMLNode%x20System@UnicodeString @675 ; Dsproxydesigner::TDesignTimeProxyNodeManager::RemoveNodeForModule(System::DelphiInterface<{583}...
+    @Dsproxydesigner@TProjectChangeNotifier@ @731 ; Dsproxydesigner::TProjectChangeNotifier::
+    @Dsproxydesigner@TProjectChangeNotifier@$bctr$qqr47System@%DelphiInterface$20Toolsapi@IOTAProject% @644 ; Dsproxydesigner::TProjectChangeNotifier::TProjectChangeNotifier(System::DelphiInterface<{583}...
+    @Dsproxydesigner@TProjectChangeNotifier@$bdtr$qqrv @643 ; __fastcall Dsproxydesigner::TProjectChangeNotifier::~TProjectChangeNotifier()
+    @Dsproxydesigner@TProjectChangeNotifier@ModuleAdded$qqrx20System@UnicodeString @642 ; __fastcall Dsproxydesigner::TProjectChangeNotifier::ModuleAdded(const System::UnicodeString)
+    @Dsproxydesigner@TProjectChangeNotifier@ModuleRemoved$qqrx20System@UnicodeString @641 ; __fastcall Dsproxydesigner::TProjectChangeNotifier::ModuleRemoved(const System::UnicodeString)
+    @Dsproxydesigner@TProjectChangeNotifier@ProjectModuleRenamed$qqrx20System@UnicodeStringt1 @640 ; __fastcall Dsproxydesigner::TProjectChangeNotifier::ProjectModuleRenamed(const System::UnicodeString, const System::UnicodeString)
+    @Dsproxydesigner@TProxyModuleCreator@ @735 ; Dsproxydesigner::TProxyModuleCreator::
+    @Dsproxydesigner@TProxyModuleCreator@$bctr$qqr46System@%DelphiInterface$19Toolsapi@IOTAModule%x20System@UnicodeStringt2t2t2 @673 ; Dsproxydesigner::TProxyModuleCreator::TProxyModuleCreator(System::DelphiInterface<{583}...
+    @Dsproxydesigner@TProxyModuleCreator@FormCreated$qqrx50System@%DelphiInterface$23Toolsapi@IOTAFormEditor% @672 ; Dsproxydesigner::TProxyModuleCreator::FormCreated(const System::DelphiInterface<{583}...
+    @Dsproxydesigner@TProxyModuleCreator@GetAncestorName$qqrv @671 ; __fastcall Dsproxydesigner::TProxyModuleCreator::GetAncestorName()
+    @Dsproxydesigner@TProxyModuleCreator@GetCreatorType$qqrv @670 ; __fastcall Dsproxydesigner::TProxyModuleCreator::GetCreatorType()
+    @Dsproxydesigner@TProxyModuleCreator@GetExisting$qqrv @669 ; __fastcall Dsproxydesigner::TProxyModuleCreator::GetExisting()
+    @Dsproxydesigner@TProxyModuleCreator@GetFileSystem$qqrv @668 ; __fastcall Dsproxydesigner::TProxyModuleCreator::GetFileSystem()
+    @Dsproxydesigner@TProxyModuleCreator@GetFormName$qqrv @667 ; __fastcall Dsproxydesigner::TProxyModuleCreator::GetFormName()
+    @Dsproxydesigner@TProxyModuleCreator@GetImplFileName$qqrv @666 ; __fastcall Dsproxydesigner::TProxyModuleCreator::GetImplFileName()
+    @Dsproxydesigner@TProxyModuleCreator@GetIntfFileName$qqrv @665 ; __fastcall Dsproxydesigner::TProxyModuleCreator::GetIntfFileName()
+    @Dsproxydesigner@TProxyModuleCreator@GetMainForm$qqrv @664 ; __fastcall Dsproxydesigner::TProxyModuleCreator::GetMainForm()
+    @Dsproxydesigner@TProxyModuleCreator@GetOwner$qqrv @663 ; __fastcall Dsproxydesigner::TProxyModuleCreator::GetOwner()
+    @Dsproxydesigner@TProxyModuleCreator@GetShowForm$qqrv @662 ; __fastcall Dsproxydesigner::TProxyModuleCreator::GetShowForm()
+    @Dsproxydesigner@TProxyModuleCreator@GetShowSource$qqrv @661 ; __fastcall Dsproxydesigner::TProxyModuleCreator::GetShowSource()
+    @Dsproxydesigner@TProxyModuleCreator@GetUnnamed$qqrv @660 ; __fastcall Dsproxydesigner::TProxyModuleCreator::GetUnnamed()
+    @Dsproxydesigner@TProxyModuleCreator@NewFormFile$qqrx20System@UnicodeStringt1 @659 ; __fastcall Dsproxydesigner::TProxyModuleCreator::NewFormFile(const System::UnicodeString, const System::UnicodeString)
+    @Dsproxydesigner@TProxyModuleCreator@NewImplSource$qqrx20System@UnicodeStringt1t1 @658 ; __fastcall Dsproxydesigner::TProxyModuleCreator::NewImplSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Dsproxydesigner@TProxyModuleCreator@NewIntfSource$qqrx20System@UnicodeStringt1t1 @657 ; __fastcall Dsproxydesigner::TProxyModuleCreator::NewIntfSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Dsproxydesigner@TProxyModuleNotifier@ @733 ; Dsproxydesigner::TProxyModuleNotifier::
+    @Dsproxydesigner@TProxyModuleNotifier@$bctr$qqr47System@%DelphiInterface$20Toolsapi@IOTAProject%46System@%DelphiInterface$19Toolsapi@IOTAModule%x20System@UnicodeStringt3 @655 ; Dsproxydesigner::TProxyModuleNotifier::TProxyModuleNotifier(System::DelphiInterface<{583}...
+    @Dsproxydesigner@TProxyModuleNotifier@$bdtr$qqrv @654 ; __fastcall Dsproxydesigner::TProxyModuleNotifier::~TProxyModuleNotifier()
+    @Dsproxydesigner@TProxyModuleNotifier@CheckOverwrite$qqrv @656 ; __fastcall Dsproxydesigner::TProxyModuleNotifier::CheckOverwrite()
+    @Dsproxydesigner@TProxyModuleNotifier@ModuleRenamed$qqrx20System@UnicodeString @653 ; __fastcall Dsproxydesigner::TProxyModuleNotifier::ModuleRenamed(const System::UnicodeString)
+    @Dsproxydesigner@TProxyModuleNotifier@SetNotifierIndex$qqri @652 ; __fastcall Dsproxydesigner::TProxyModuleNotifier::SetNotifierIndex(int)
+    @Dsproxydesigner@TProxyStorageNotifier@ @729 ; Dsproxydesigner::TProxyStorageNotifier::
+    @Dsproxydesigner@TProxyStorageNotifier@$bctr$qqrv @651 ; __fastcall Dsproxydesigner::TProxyStorageNotifier::TProxyStorageNotifier()
+    @Dsproxydesigner@TProxyStorageNotifier@$bdtr$qqrv @649 ; __fastcall Dsproxydesigner::TProxyStorageNotifier::~TProxyStorageNotifier()
+    @Dsproxydesigner@TProxyStorageNotifier@CreatingProject$qqrx46System@%DelphiInterface$19Toolsapi@IOTAModule% @650 ; Dsproxydesigner::TProxyStorageNotifier::CreatingProject(const System::DelphiInterface<{583}...
+    @Dsproxydesigner@TProxyStorageNotifier@GetName$qqrv @648 ; __fastcall Dsproxydesigner::TProxyStorageNotifier::GetName()
+    @Dsproxydesigner@TProxyStorageNotifier@ProjectClosing$qqrx46System@%DelphiInterface$19Toolsapi@IOTAModule% @647 ; Dsproxydesigner::TProxyStorageNotifier::ProjectClosing(const System::DelphiInterface<{583}...
+    @Dsproxydesigner@TProxyStorageNotifier@ProjectLoaded$qqrx46System@%DelphiInterface$19Toolsapi@IOTAModule%x47System@%DelphiInterface$20Xml@Xmlintf@IXMLNode% @646 ; Dsproxydesigner::TProxyStorageNotifier::ProjectLoaded(const System::DelphiInterface<{583}...
+    @Dsproxydesigner@TProxyStorageNotifier@ProjectSaving$qqrx46System@%DelphiInterface$19Toolsapi@IOTAModule%x47System@%DelphiInterface$20Xml@Xmlintf@IXMLNode% @645 ; Dsproxydesigner::TProxyStorageNotifier::ProjectSaving(const System::DelphiInterface<{583}...
+    @Dsproxydesigner@initialization$qqrv @638 ; __fastcall Dsproxydesigner::initialization()
+    @Fldlinks@EditMasterFields$qqrp16Data@Db@TDataSetp27Fldlinks@TFieldLinkProperty @278 ; __fastcall Fldlinks::EditMasterFields(Data::Db::TDataSet *, Fldlinks::TFieldLinkProperty *)
+    @Fldlinks@Finalization$qqrv    @250 ; __fastcall Fldlinks::Finalization()
+    @Fldlinks@TFieldLinkProperty@  @282 ; Fldlinks::TFieldLinkProperty::
+    @Fldlinks@TFieldLinkProperty@$bctr$qqrp16Data@Db@TDataSet @267 ; __fastcall Fldlinks::TFieldLinkProperty::TFieldLinkProperty(Data::Db::TDataSet *)
+    @Fldlinks@TFieldLinkProperty@Edit$qqrv @268 ; __fastcall Fldlinks::TFieldLinkProperty::Edit()
+    @Fldlinks@TFieldLinkProperty@GetAttributes$qqrv @269 ; __fastcall Fldlinks::TFieldLinkProperty::GetAttributes()
+    @Fldlinks@TFieldLinkProperty@GetDataSet$qqrv @266 ; __fastcall Fldlinks::TFieldLinkProperty::GetDataSet()
+    @Fldlinks@TFieldLinkProperty@GetFieldNamesForIndex$qqrp23System@Classes@TStrings @272 ; __fastcall Fldlinks::TFieldLinkProperty::GetFieldNamesForIndex(System::Classes::TStrings *)
+    @Fldlinks@TFieldLinkProperty@GetIndexBased$qqrv @277 ; __fastcall Fldlinks::TFieldLinkProperty::GetIndexBased()
+    @Fldlinks@TFieldLinkProperty@GetIndexDefs$qqrv @276 ; __fastcall Fldlinks::TFieldLinkProperty::GetIndexDefs()
+    @Fldlinks@TFieldLinkProperty@GetIndexFieldNames$qqrv @275 ; __fastcall Fldlinks::TFieldLinkProperty::GetIndexFieldNames()
+    @Fldlinks@TFieldLinkProperty@GetIndexName$qqrv @274 ; __fastcall Fldlinks::TFieldLinkProperty::GetIndexName()
+    @Fldlinks@TFieldLinkProperty@GetIndexNames$qqrp23System@Classes@TStrings @273 ; __fastcall Fldlinks::TFieldLinkProperty::GetIndexNames(System::Classes::TStrings *)
+    @Fldlinks@TFieldLinkProperty@SetIndexFieldNames$qqrx20System@UnicodeString @271 ; __fastcall Fldlinks::TFieldLinkProperty::SetIndexFieldNames(const System::UnicodeString)
+    @Fldlinks@TFieldLinkProperty@SetIndexName$qqrx20System@UnicodeString @270 ; __fastcall Fldlinks::TFieldLinkProperty::SetIndexName(const System::UnicodeString)
+    @Fldlinks@TLinkFields@         @280 ; Fldlinks::TLinkFields::
+    @Fldlinks@TLinkFields@AddButtonClick$qqrp14System@TObject @256 ; __fastcall Fldlinks::TLinkFields::AddButtonClick(System::TObject *)
+    @Fldlinks@TLinkFields@AddToBindList$qqrx20System@UnicodeStringt1 @258 ; __fastcall Fldlinks::TLinkFields::AddToBindList(const System::UnicodeString, const System::UnicodeString)
+    @Fldlinks@TLinkFields@BindListClick$qqrp14System@TObject @253 ; __fastcall Fldlinks::TLinkFields::BindListClick(System::TObject *)
+    @Fldlinks@TLinkFields@BindingListClick$qqrp14System@TObject @257 ; __fastcall Fldlinks::TLinkFields::BindingListClick(System::TObject *)
+    @Fldlinks@TLinkFields@BitBtn1Click$qqrp14System@TObject @252 ; __fastcall Fldlinks::TLinkFields::BitBtn1Click(System::TObject *)
+    @Fldlinks@TLinkFields@ClearButtonClick$qqrp14System@TObject @255 ; __fastcall Fldlinks::TLinkFields::ClearButtonClick(System::TObject *)
+    @Fldlinks@TLinkFields@DeleteButtonClick$qqrp14System@TObject @254 ; __fastcall Fldlinks::TLinkFields::DeleteButtonClick(System::TObject *)
+    @Fldlinks@TLinkFields@Edit$qqrv @263 ; __fastcall Fldlinks::TLinkFields::Edit()
+    @Fldlinks@TLinkFields@FormCreate$qqrp14System@TObject @265 ; __fastcall Fldlinks::TLinkFields::FormCreate(System::TObject *)
+    @Fldlinks@TLinkFields@FormDestroy$qqrp14System@TObject @264 ; __fastcall Fldlinks::TLinkFields::FormDestroy(System::TObject *)
+    @Fldlinks@TLinkFields@HelpClick$qqrp14System@TObject @251 ; __fastcall Fldlinks::TLinkFields::HelpClick(System::TObject *)
+    @Fldlinks@TLinkFields@IndexListChange$qqrp14System@TObject @260 ; __fastcall Fldlinks::TLinkFields::IndexListChange(System::TObject *)
+    @Fldlinks@TLinkFields@Initialize$qqrv @261 ; __fastcall Fldlinks::TLinkFields::Initialize()
+    @Fldlinks@TLinkFields@OrderFieldList$qqrp23System@Classes@TStringst1 @259 ; __fastcall Fldlinks::TLinkFields::OrderFieldList(System::Classes::TStrings *, System::Classes::TStrings *)
+    @Fldlinks@TLinkFields@SetDataSet$qqrp16Data@Db@TDataSet @262 ; __fastcall Fldlinks::TLinkFields::SetDataSet(Data::Db::TDataSet *)
+    @Fldlinks@initialization$qqrv  @249 ; __fastcall Fldlinks::initialization()
+    @GetPackageInfoTable           @742 ; GetPackageInfoTable
+    @Sqledit@DefaultReqQuoteChar$qqr20System@UnicodeString @286 ; __fastcall Sqledit::DefaultReqQuoteChar(System::UnicodeString)
+    @Sqledit@EditSQL$qqrp23System@Classes@TStringsynpqqrp23System@Classes@TStringso$vynpqqrx20System@UnicodeStringp23System@Classes@TStrings$v20System@UnicodeStringt4ynpqqrx20System@UnicodeString$o @309 ; Sqledit::EditSQL(System::Classes::TStrings *, void __fastcall __closure(*)(System::Classes::TStrings *, bool), void __fastcall __closure(*)(const System::UnicodeString, System::Classes::TStrings *), System::UnicodeString, System::UnicodeString, __closu
+    @Sqledit@EditSQL$qqrr20System@UnicodeStringynpqqrp23System@Classes@TStrings20System@UnicodeStringo$vynpqqrx20System@UnicodeStringp23System@Classes@TStrings$v20System@UnicodeStringt4ynpqqrx20System@UnicodeString$ot4 @311 ; Sqledit::EditSQL(System::UnicodeString&, void __fastcall __closure(*)(System::Classes::TStrings *, System::UnicodeString, bool), void __fastcall __closure(*)(const System::UnicodeString, System::Classes::TStrings *), System::UnicodeString, System::Unic
+    @Sqledit@EditSQL$qqrr20System@UnicodeStringynpqqrp23System@Classes@TStringso$vynpqqrx20System@UnicodeStringp23System@Classes@TStrings$v20System@UnicodeStringt4ynpqqrx20System@UnicodeString$o @310 ; Sqledit::EditSQL(System::UnicodeString&, void __fastcall __closure(*)(System::Classes::TStrings *, bool), void __fastcall __closure(*)(const System::UnicodeString, System::Classes::TStrings *), System::UnicodeString, System::UnicodeString, __closure(*)
+    @Sqledit@EditSQLSchema$qqrr20System@UnicodeStringynpqqrp23System@Classes@TStrings20System@UnicodeStringo$vynpqqrx20System@UnicodeString20System@UnicodeStringp23System@Classes@TStrings$v20System@UnicodeStringt4ynpqqrx20System@UnicodeString$ot4 @308 ; Sqledit::EditSQLSchema(System::UnicodeString&, void __fastcall __closure(*)(System::Classes::TStrings *, System::UnicodeString, bool), void __fastcall __closure(*)(const System::UnicodeString, System::UnicodeString, System::Classes::TStrings *), System
+    @Sqledit@Finalization$qqrv     @284 ; __fastcall Sqledit::Finalization()
+    @Sqledit@TPopulateThread@      @320 ; Sqledit::TPopulateThread::
+    @Sqledit@TPopulateThread@$bctr$qqrynpqqrv$v @288 ; __fastcall Sqledit::TPopulateThread::TPopulateThread(void __fastcall __closure(*)())
+    @Sqledit@TPopulateThread@Execute$qqrv @287 ; __fastcall Sqledit::TPopulateThread::Execute()
+    @Sqledit@TSQLEditForm@         @313 ; Sqledit::TSQLEditForm::
+    @Sqledit@TSQLEditForm@AddFieldButtonClick$qqrp14System@TObject @292 ; __fastcall Sqledit::TSQLEditForm::AddFieldButtonClick(System::TObject *)
+    @Sqledit@TSQLEditForm@AddTableButtonClick$qqrp14System@TObject @293 ; __fastcall Sqledit::TSQLEditForm::AddTableButtonClick(System::TObject *)
+    @Sqledit@TSQLEditForm@DrawCaretPosIndicator$qqrv @289 ; __fastcall Sqledit::TSQLEditForm::DrawCaretPosIndicator()
+    @Sqledit@TSQLEditForm@FormDestroy$qqrp14System@TObject @306 ; __fastcall Sqledit::TSQLEditForm::FormDestroy(System::TObject *)
+    @Sqledit@TSQLEditForm@FormShow$qqrp14System@TObject @307 ; __fastcall Sqledit::TSQLEditForm::FormShow(System::TObject *)
+    @Sqledit@TSQLEditForm@FormUpdateActionUpdate$qqrp14System@TObject @285 ; __fastcall Sqledit::TSQLEditForm::FormUpdateActionUpdate(System::TObject *)
+    @Sqledit@TSQLEditForm@GetSQLMemoControl$qqrv @305 ; __fastcall Sqledit::TSQLEditForm::GetSQLMemoControl()
+    @Sqledit@TSQLEditForm@GetSQLText$qqrv @304 ; __fastcall Sqledit::TSQLEditForm::GetSQLText()
+    @Sqledit@TSQLEditForm@HelpButtonClick$qqrp14System@TObject @302 ; __fastcall Sqledit::TSQLEditForm::HelpButtonClick(System::TObject *)
+    @Sqledit@TSQLEditForm@InsertText$qqr20System@UnicodeStringo @294 ; __fastcall Sqledit::TSQLEditForm::InsertText(System::UnicodeString, bool)
+    @Sqledit@TSQLEditForm@MetaInfoSQLSplitterCanResize$qqrp14System@TObjectriro @299 ; __fastcall Sqledit::TSQLEditForm::MetaInfoSQLSplitterCanResize(System::TObject *, int&, bool&)
+    @Sqledit@TSQLEditForm@MetaInfoSQLSplitterMoved$qqrp14System@TObject @298 ; __fastcall Sqledit::TSQLEditForm::MetaInfoSQLSplitterMoved(System::TObject *)
+    @Sqledit@TSQLEditForm@PopulateFieldList$qqrv @297 ; __fastcall Sqledit::TSQLEditForm::PopulateFieldList()
+    @Sqledit@TSQLEditForm@PopulateTableList$qqrv @301 ; __fastcall Sqledit::TSQLEditForm::PopulateTableList()
+    @Sqledit@TSQLEditForm@SQLMemoEnter$qqrp14System@TObject @290 ; __fastcall Sqledit::TSQLEditForm::SQLMemoEnter(System::TObject *)
+    @Sqledit@TSQLEditForm@SQLMemoExit$qqrp14System@TObject @291 ; __fastcall Sqledit::TSQLEditForm::SQLMemoExit(System::TObject *)
+    @Sqledit@TSQLEditForm@SetSQLText$qqrx20System@UnicodeString @303 ; __fastcall Sqledit::TSQLEditForm::SetSQLText(const System::UnicodeString)
+    @Sqledit@TSQLEditForm@TableFieldsSplitterCanResize$qqrp14System@TObjectriro @300 ; __fastcall Sqledit::TSQLEditForm::TableFieldsSplitterCanResize(System::TObject *, int&, bool&)
+    @Sqledit@TSQLEditForm@TableListClick$qqrp14System@TObject @295 ; __fastcall Sqledit::TSQLEditForm::TableListClick(System::TObject *)
+    @Sqledit@TSQLEditForm@TerminatePopulateThread$qqrv @296 ; __fastcall Sqledit::TSQLEditForm::TerminatePopulateThread()
+    @Sqledit@initialization$qqrv   @283 ; __fastcall Sqledit::initialization()
+    @System@Generics@Collections@%TArrayManager__1$p14System@TObject%@ @533 ; System::Generics::Collections::TArrayManager__1<System::TObject *>::
+    @System@Generics@Collections@%TArrayManager__1$p22System@Classes@TThread%@ @550 ; System::Generics::Collections::TArrayManager__1<System::Classes::TThread *>::
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@ @690 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@$bctr$qqri @617 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@$bctr$qqrix124System@%DelphiInterface$97System@Generics@Defaults@%IEqualityComparer__1$47System@%DelphiInterface$20Toolsapi@IOTAProject%%% @615 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@$bctr$qqrx124System@%DelphiInterface$97System@Generics@Defaults@%IEqualityComparer__1$47System@%DelphiInterface$20Toolsapi@IOTAProject%%% @616 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@$bctr$qqrxp136System@Generics@Collections@%TEnumerable__1$89System@Generics@Collections@%TPair__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%% @614 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@$bctr$qqrxp136System@Generics@Collections@%TEnumerable__1$89System@Generics@Collections@%TPair__2$47System@%DelphiInterface$20ToolsapiI9rCO9/5LYsOC52c7Ee+PA @613 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@$bdtr$qqrv @612 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TKeyCollection$%@ @703 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TKeyCollection$%@$bctr$qqrxp95System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i% @591 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TKeyCollection$%@DoGetEnumerator$qqrv @592 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TKeyCollection$%@GetCount$qqrv @593 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TKeyCollection$%@GetEnumerator$qqrv @590 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TKeyCollection$%@ToArray$qqrv @589 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TKeyEnumerator$%@ @705 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TKeyEnumerator$%@$bctr$qqrxp95System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i% @585 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TKeyEnumerator$%@DoGetCurrent$qqrv @587 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TKeyEnumerator$%@DoMoveNext$qqrv @586 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TKeyEnumerator$%@GetCurrent$qqrv @588 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TKeyEnumerator$%@MoveNext$qqrv @584 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TPairEnumerator$%@ @692 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TPairEnumerator$%@$bctr$qqrxp95System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i% @565 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TPairEnumerator$%@DoGetCurrent$qqrv @567 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TPairEnumerator$%@DoMoveNext$qqrv @566 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TPairEnumerator$%@GetCurrent$qqrv @568 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TPairEnumerator$%@MoveNext$qqrv @564 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TValueCollection$%@ @694 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TValueCollection$%@$bctr$qqrxp95System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i% @576 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TValueCollection$%@DoGetEnumerator$qqrv @577 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TValueCollection$%@GetCount$qqrv @578 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TValueCollection$%@GetEnumerator$qqrv @575 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TValueCollection$%@ToArray$qqrv @574 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TValueEnumerator$%@ @696 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TValueEnumerator$%@$bctr$qqrxp95System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i% @570 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TValueEnumerator$%@DoGetCurrent$qqrv @572 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TValueEnumerator$%@DoMoveNext$qqrv @571 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TValueEnumerator$%@GetCurrent$qqrv @573 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@%TValueEnumerator$%@MoveNext$qqrv @569 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@Add$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject%xi @611 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@AddOrSetValue$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject%xi @605 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@Clear$qqrv @608 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@ContainsKey$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject% @604 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@ContainsValue$qqrxi @603 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@DoAdd$qqriix47System@%DelphiInterface$20Toolsapi@IOTAProject%xi @623 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@DoGetEnumerator$qqrv @620 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@DoRemove$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject%i51System@Generics@Collections@TCollectionNotification @621 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@DoSetValue$qqrixi @622 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@ExtractPair$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject% @609 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@GetBucketIndex$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject%i @628 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@GetEnumerator$qqrv @599 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@GetItem$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject% @626 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@GetKeys$qqrv @601 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@GetValues$qqrv @600 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@Grow$qqrv @629 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@Hash$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject% @627 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@KeyNotify$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject%51System@Generics@Collections@TCollectionNotification @619 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@Rehash$qqri @630 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@RehashAdd$qqrix47System@%DelphiInterface$20Toolsapi@IOTAProject%xi @624 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@Remove$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject% @610 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@SetCapacity$qqri @631 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@SetItem$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject%xi @625 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@ToArray$qqrv @602 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@TrimExcess$qqrv @607 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@TryGetValue$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject%ri @606 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TDictionary__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@ValueNotify$qqrxi51System@Generics@Collections@TCollectionNotification @618 ; System::Generics::Collections::TDictionary__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$47System@%DelphiInterface$20Toolsapi@IOTAProject%%@ @707 ; System::Generics::Collections::TEnumerable__1<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$47System@%DelphiInterface$20Toolsapi@IOTAProject%%@$bdtr$qqrv @597 ; System::Generics::Collections::TEnumerable__1<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$47System@%DelphiInterface$20Toolsapi@IOTAProject%%@GetEnumerator$qqrv @596 ; System::Generics::Collections::TEnumerable__1<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$47System@%DelphiInterface$20Toolsapi@IOTAProject%%@ToArray$qqrv @595 ; System::Generics::Collections::TEnumerable__1<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$47System@%DelphiInterface$20Toolsapi@IOTAProject%%@ToArrayImpl$qqri @598 ; System::Generics::Collections::TEnumerable__1<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$89System@Generics@Collections@%TPair__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%%@ @717 ; System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$89System@Generics@Collections@%TPair__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%%@$bdtr$qqrv @635 ; System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$89System@Generics@Collections@%TPair__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%%@GetEnumerator$qqrv @634 ; System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$89System@Generics@Collections@%TPair__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%%@ToArray$qqrv @633 ; System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$89System@Generics@Collections@%TPair__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%%@ToArrayImpl$qqri @636 ; System::Generics::Collections::TEnumerable__1<System::Generics::Collections::TPair__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerable__1$i%@ @698 ; System::Generics::Collections::TEnumerable__1<int>::
+    @System@Generics@Collections@%TEnumerable__1$i%@$bdtr$qqrv @582 ; __fastcall System::Generics::Collections::TEnumerable__1<int>::~TEnumerable__1<int>()
+    @System@Generics@Collections@%TEnumerable__1$i%@GetEnumerator$qqrv @581 ; __fastcall System::Generics::Collections::TEnumerable__1<int>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$i%@ToArray$qqrv @580 ; __fastcall System::Generics::Collections::TEnumerable__1<int>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$i%@ToArrayImpl$qqri @583 ; __fastcall System::Generics::Collections::TEnumerable__1<int>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerable__1$p14System@TObject%@ @538 ; System::Generics::Collections::TEnumerable__1<System::TObject *>::
+    @System@Generics@Collections@%TEnumerable__1$p14System@TObject%@$bdtr$qqrv @451 ; __fastcall System::Generics::Collections::TEnumerable__1<System::TObject *>::~TEnumerable__1<System::TObject *>()
+    @System@Generics@Collections@%TEnumerable__1$p14System@TObject%@GetEnumerator$qqrv @450 ; __fastcall System::Generics::Collections::TEnumerable__1<System::TObject *>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$p14System@TObject%@ToArray$qqrv @449 ; __fastcall System::Generics::Collections::TEnumerable__1<System::TObject *>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$p14System@TObject%@ToArrayImpl$qqri @452 ; __fastcall System::Generics::Collections::TEnumerable__1<System::TObject *>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerable__1$p22System@Classes@TThread%@ @555 ; System::Generics::Collections::TEnumerable__1<System::Classes::TThread *>::
+    @System@Generics@Collections@%TEnumerable__1$p22System@Classes@TThread%@$bdtr$qqrv @512 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Classes::TThread *>::~TEnumerable__1<System::Classes::TThread *>()
+    @System@Generics@Collections@%TEnumerable__1$p22System@Classes@TThread%@GetEnumerator$qqrv @511 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Classes::TThread *>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$p22System@Classes@TThread%@ToArray$qqrv @510 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Classes::TThread *>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$p22System@Classes@TThread%@ToArrayImpl$qqri @513 ; __fastcall System::Generics::Collections::TEnumerable__1<System::Classes::TThread *>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerator__1$47System@%DelphiInterface$20Toolsapi@IOTAProject%%@ @709 ; System::Generics::Collections::TEnumerator__1<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerator__1$47System@%DelphiInterface$20Toolsapi@IOTAProject%%@MoveNext$qqrv @594 ; System::Generics::Collections::TEnumerator__1<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerator__1$89System@Generics@Collections@%TPair__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%%@ @719 ; System::Generics::Collections::TEnumerator__1<System::Generics::Collections::TPair__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerator__1$89System@Generics@Collections@%TPair__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%%@MoveNext$qqrv @632 ; System::Generics::Collections::TEnumerator__1<System::Generics::Collections::TPair__2<System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TEnumerator__1$i%@ @700 ; System::Generics::Collections::TEnumerator__1<int>::
+    @System@Generics@Collections@%TEnumerator__1$i%@MoveNext$qqrv @579 ; __fastcall System::Generics::Collections::TEnumerator__1<int>::MoveNext()
+    @System@Generics@Collections@%TEnumerator__1$p14System@TObject%@ @540 ; System::Generics::Collections::TEnumerator__1<System::TObject *>::
+    @System@Generics@Collections@%TEnumerator__1$p14System@TObject%@MoveNext$qqrv @448 ; __fastcall System::Generics::Collections::TEnumerator__1<System::TObject *>::MoveNext()
+    @System@Generics@Collections@%TEnumerator__1$p22System@Classes@TThread%@ @557 ; System::Generics::Collections::TEnumerator__1<System::Classes::TThread *>::
+    @System@Generics@Collections@%TEnumerator__1$p22System@Classes@TThread%@MoveNext$qqrv @509 ; __fastcall System::Generics::Collections::TEnumerator__1<System::Classes::TThread *>::MoveNext()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@ @526 ; System::Generics::Collections::TList__1<System::TObject *>::
+    @System@Generics@Collections@%TList__1$p14System@TObject%@$bctr$qqrv @436 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::TList__1<System::TObject *>()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@$bctr$qqrx84System@%DelphiInterface$57System@Generics@Defaults@%IComparer__1$p14System@TObject%% @435 ; System::Generics::Collections::TList__1<System::TObject *>::TList__1<System::TObject *>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14System@TObject%@$bctr$qqrxp62System@Generics@Collections@%TEnumerable__1$p14System@TObject% @434 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::TList__1<System::TObject *>(System::Generics::Collections::TEnumerable__1<System::TObject *> * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@$bdtr$qqrv @433 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::~TList__1<System::TObject *>()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@%TEnumerator$%@ @528 ; System::Generics::Collections::TList__1<System::TObject *>::TEnumerator<>::
+    @System@Generics@Collections@%TList__1$p14System@TObject%@%TEnumerator$%@$bctr$qqrxp56System@Generics@Collections@%TList__1$p14System@TObject% @393 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::TEnumerator<>::TEnumerator<>(System::Generics::Collections::TList__1<System::TObject *> * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@%TEnumerator$%@DoGetCurrent$qqrv @395 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::TEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@%TEnumerator$%@DoMoveNext$qqrv @394 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::TEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@%TEnumerator$%@GetCurrent$qqrv @396 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::TEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@%TEnumerator$%@MoveNext$qqrv @392 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::TEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Add$qqrxp14System@TObject @430 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Add(System::TObject * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@AddRange$qqrpxp14System@TObjectxi @429 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::AddRange(System::TObject * const *, const int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@AddRange$qqrx68System@%DelphiInterface$41System@%IEnumerable__1$p14System@TObject%% @428 ; System::Generics::Collections::TList__1<System::TObject *>::AddRange(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14System@TObject%@AddRange$qqrxp62System@Generics@Collections@%TEnumerable__1$p14System@TObject% @427 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::AddRange(System::Generics::Collections::TEnumerable__1<System::TObject *> * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@BinarySearch$qqrxp14System@TObjectri @401 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::BinarySearch(System::TObject * const, int&)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@BinarySearch$qqrxp14System@TObjectrix84System@%DelphiInterface$57System@Generics@Defaults@%IComparer__1$p14System@TObject%% @400 ; System::Generics::Collections::TList__1<System::TObject *>::BinarySearch(System::TObject * const, int&, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Clear$qqrv @410 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Clear()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Contains$qqrxp14System@TObject @408 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Contains(System::TObject * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Delete$qqri @418 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Delete(int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@DeleteRange$qqrii @417 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::DeleteRange(int, int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@DoDelete$qqri51System@Generics@Collections@TCollectionNotification @440 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::DoDelete(int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@DoGetEnumerator$qqrv @438 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::DoGetEnumerator()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Error$qqrp20System@TResStringReci @431 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Error(System::TResStringRec *, int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Error$qqrx20System@UnicodeStringi @432 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Error(const System::UnicodeString, int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Exchange$qqrii @414 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Exchange(int, int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Expand$qqrv @409 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Expand()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Extract$qqrxp14System@TObject @416 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Extract(System::TObject * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@ExtractItem$qqrxp14System@TObject23System@Types@TDirection @415 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::ExtractItem(System::TObject * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@First$qqrv @412 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::First()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@GetCapacity$qqrv @447 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::GetCapacity()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@GetEnumerator$qqrv @397 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::GetEnumerator()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@GetItem$qqri @444 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::GetItem(int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Grow$qqri @442 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Grow(int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@GrowCheck$qqri @441 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::GrowCheck(int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@IndexOf$qqrxp14System@TObject @407 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::IndexOf(System::TObject * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@IndexOfItem$qqrxp14System@TObject23System@Types@TDirection @406 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::IndexOfItem(System::TObject * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Insert$qqrixp14System@TObject @426 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Insert(int, System::TObject * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@InsertRange$qqripxp14System@TObjectxi @425 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::InsertRange(int, System::TObject * const *, const int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@InsertRange$qqrix68System@%DelphiInterface$41System@%IEnumerable__1$p14System@TObject%% @424 ; System::Generics::Collections::TList__1<System::TObject *>::InsertRange(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14System@TObject%@InsertRange$qqrixp62System@Generics@Collections@%TEnumerable__1$p14System@TObject% @423 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::InsertRange(int, System::Generics::Collections::TEnumerable__1<System::TObject *> * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@ItemValue$qqrxp14System@TObject @439 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::ItemValue(System::TObject * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Last$qqrv @411 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Last()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@LastIndexOf$qqrxp14System@TObject @405 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::LastIndexOf(System::TObject * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Move$qqrii @413 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Move(int, int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Notify$qqrxp14System@TObject51System@Generics@Collections@TCollectionNotification @437 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Notify(System::TObject * const, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Pack$qqrv @422 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Pack()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Pack$qqrx97System@%DelphiInterface$70System@Generics@Collections@%TList__1$p14System@TObject%@%TEmptyFunc$%% @421 ; System::Generics::Collections::TList__1<System::TObject *>::Pack(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Remove$qqrxp14System@TObject @420 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Remove(System::TObject * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@RemoveItem$qqrxp14System@TObject23System@Types@TDirection @419 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::RemoveItem(System::TObject * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Reverse$qqrv @404 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Reverse()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@SetCapacity$qqri @446 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::SetCapacity(int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@SetCount$qqri @445 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::SetCount(int)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@SetItem$qqrixp14System@TObject @443 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::SetItem(int, System::TObject * const)
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Sort$qqrv @403 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::Sort()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@Sort$qqrx84System@%DelphiInterface$57System@Generics@Defaults@%IComparer__1$p14System@TObject%% @402 ; System::Generics::Collections::TList__1<System::TObject *>::Sort(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14System@TObject%@ToArray$qqrv @398 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::ToArray()
+    @System@Generics@Collections@%TList__1$p14System@TObject%@TrimExcess$qqrv @399 ; __fastcall System::Generics::Collections::TList__1<System::TObject *>::TrimExcess()
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@ @543 ; System::Generics::Collections::TList__1<System::Classes::TThread *>::
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@$bctr$qqrv @497 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::TList__1<System::Classes::TThread *>()
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@$bctr$qqrx92System@%DelphiInterface$65System@Generics@Defaults@%IComparer__1$p22System@Classes@TThread%% @496 ; System::Generics::Collections::TList__1<System::Classes::TThread *>::TList__1<System::Classes::TThread *>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@$bctr$qqrxp70System@Generics@Collections@%TEnumerable__1$p22System@Classes@TThread% @495 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::TList__1<System::Classes::TThread *>(System::Generics::Collections::TEnumerable__1<System::Classes::TThread *> * const)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@$bdtr$qqrv @494 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::~TList__1<System::Classes::TThread *>()
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@%TEnumerator$%@ @545 ; System::Generics::Collections::TList__1<System::Classes::TThread *>::TEnumerator<>::
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@%TEnumerator$%@$bctr$qqrxp64System@Generics@Collections@%TList__1$p22System@Classes@TThread% @454 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::TEnumerator<>::TEnumerator<>(System::Generics::Collections::TList__1<System::Classes::TThread *> * const)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@%TEnumerator$%@DoGetCurrent$qqrv @456 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::TEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@%TEnumerator$%@DoMoveNext$qqrv @455 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::TEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@%TEnumerator$%@GetCurrent$qqrv @457 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::TEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@%TEnumerator$%@MoveNext$qqrv @453 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::TEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@Add$qqrxp22System@Classes@TThread @491 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::Add(System::Classes::TThread * const)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@AddRange$qqrpxp22System@Classes@TThreadxi @490 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::AddRange(System::Classes::TThread * const *, const int)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@AddRange$qqrx76System@%DelphiInterface$49System@%IEnumerable__1$p22System@Classes@TThread%% @489 ; System::Generics::Collections::TList__1<System::Classes::TThread *>::AddRange(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@AddRange$qqrxp70System@Generics@Collections@%TEnumerable__1$p22System@Classes@TThread% @488 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::AddRange(System::Generics::Collections::TEnumerable__1<System::Classes::TThread *> * const)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@BinarySearch$qqrxp22System@Classes@TThreadri @462 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::BinarySearch(System::Classes::TThread * const, int&)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@BinarySearch$qqrxp22System@Classes@TThreadrix92System@%DelphiInterface$65System@Generics@Defaults@%IComparer__1$p22System@Classes@TThread%% @461 ; System::Generics::Collections::TList__1<System::Classes::TThread *>::BinarySearch(System::Classes::TThread * const, int&, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@Clear$qqrv @471 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::Clear()
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@Contains$qqrxp22System@Classes@TThread @469 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::Contains(System::Classes::TThread * const)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@Delete$qqri @479 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::Delete(int)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@DeleteRange$qqrii @478 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::DeleteRange(int, int)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@DoDelete$qqri51System@Generics@Collections@TCollectionNotification @501 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::DoDelete(int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@DoGetEnumerator$qqrv @499 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::DoGetEnumerator()
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@Error$qqrp20System@TResStringReci @492 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::Error(System::TResStringRec *, int)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@Error$qqrx20System@UnicodeStringi @493 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::Error(const System::UnicodeString, int)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@Exchange$qqrii @475 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::Exchange(int, int)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@Expand$qqrv @470 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::Expand()
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@Extract$qqrxp22System@Classes@TThread @477 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::Extract(System::Classes::TThread * const)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@ExtractItem$qqrxp22System@Classes@TThread23System@Types@TDirection @476 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::ExtractItem(System::Classes::TThread * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@First$qqrv @473 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::First()
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@GetCapacity$qqrv @508 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::GetCapacity()
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@GetEnumerator$qqrv @458 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::GetEnumerator()
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@GetItem$qqri @505 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::GetItem(int)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@Grow$qqri @503 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::Grow(int)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@GrowCheck$qqri @502 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::GrowCheck(int)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@IndexOf$qqrxp22System@Classes@TThread @468 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::IndexOf(System::Classes::TThread * const)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@IndexOfItem$qqrxp22System@Classes@TThread23System@Types@TDirection @467 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::IndexOfItem(System::Classes::TThread * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@Insert$qqrixp22System@Classes@TThread @487 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::Insert(int, System::Classes::TThread * const)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@InsertRange$qqripxp22System@Classes@TThreadxi @486 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::InsertRange(int, System::Classes::TThread * const *, const int)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@InsertRange$qqrix76System@%DelphiInterface$49System@%IEnumerable__1$p22System@Classes@TThread%% @485 ; System::Generics::Collections::TList__1<System::Classes::TThread *>::InsertRange(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@InsertRange$qqrixp70System@Generics@Collections@%TEnumerable__1$p22System@Classes@TThread% @484 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::InsertRange(int, System::Generics::Collections::TEnumerable__1<System::Classes::TThread *> * const)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@ItemValue$qqrxp22System@Classes@TThread @500 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::ItemValue(System::Classes::TThread * const)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@Last$qqrv @472 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::Last()
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@LastIndexOf$qqrxp22System@Classes@TThread @466 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::LastIndexOf(System::Classes::TThread * const)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@Move$qqrii @474 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::Move(int, int)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@Notify$qqrxp22System@Classes@TThread51System@Generics@Collections@TCollectionNotification @498 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::Notify(System::Classes::TThread * const, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@Pack$qqrv @483 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::Pack()
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@Pack$qqrx105System@%DelphiInterface$78System@Generics@Collections@%TList__1$p22System@Classes@TThread%@%TEmptyFunc$%% @482 ; System::Generics::Collections::TList__1<System::Classes::TThread *>::Pack(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@Remove$qqrxp22System@Classes@TThread @481 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::Remove(System::Classes::TThread * const)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@RemoveItem$qqrxp22System@Classes@TThread23System@Types@TDirection @480 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::RemoveItem(System::Classes::TThread * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@Reverse$qqrv @465 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::Reverse()
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@SetCapacity$qqri @507 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::SetCapacity(int)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@SetCount$qqri @506 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::SetCount(int)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@SetItem$qqrixp22System@Classes@TThread @504 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::SetItem(int, System::Classes::TThread * const)
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@Sort$qqrv @464 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::Sort()
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@Sort$qqrx92System@%DelphiInterface$65System@Generics@Defaults@%IComparer__1$p22System@Classes@TThread%% @463 ; System::Generics::Collections::TList__1<System::Classes::TThread *>::Sort(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@ToArray$qqrv @459 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::ToArray()
+    @System@Generics@Collections@%TList__1$p22System@Classes@TThread%@TrimExcess$qqrv @460 ; __fastcall System::Generics::Collections::TList__1<System::Classes::TThread *>::TrimExcess()
+    @System@Generics@Collections@%TPair__2$47System@%DelphiInterface$20Toolsapi@IOTAProject%i%@$bctr$qqrx47System@%DelphiInterface$20Toolsapi@IOTAProject%xi @637 ; System::Generics::Collections::TPair__2<System::DelphiInterface<{583}...
+    @Widesqledit@DefaultReqQuoteChar$qqr17System@WideString @325 ; __fastcall Widesqledit::DefaultReqQuoteChar(System::WideString)
+    @Widesqledit@EditSQL$qqrp31System@Widestrings@TWideStringsynpqqrp31System@Widestrings@TWideStringso$vynpqqrx17System@WideStringp31System@Widestrings@TWideStrings$v17System@WideStringt4ynpqqrx17System@WideString$o @342 ; Widesqledit::EditSQL(System::Widestrings::TWideStrings *, void __fastcall __closure(*)(System::Widestrings::TWideStrings *, bool), void __fastcall __closure(*)(const System::WideString, System::Widestrings::TWideStrings *), System::WideString, System::
+    @Widesqledit@EditSQL$qqrr17System@WideStringynpqqrp31System@Widestrings@TWideStrings17System@WideStringo$vynpqqrx17System@WideStringp31System@Widestrings@TWideStrings$v17System@WideStringt4ynpqqrx17System@WideString$ot4 @344 ; Widesqledit::EditSQL(System::WideString&, void __fastcall __closure(*)(System::Widestrings::TWideStrings *, System::WideString, bool), void __fastcall __closure(*)(const System::WideString, System::Widestrings::TWideStrings *), System::WideString, Syst
+    @Widesqledit@EditSQL$qqrr17System@WideStringynpqqrp31System@Widestrings@TWideStringso$vynpqqrx17System@WideStringp31System@Widestrings@TWideStrings$v17System@WideStringt4ynpqqrx17System@WideString$o @343 ; Widesqledit::EditSQL(System::WideString&, void __fastcall __closure(*)(System::Widestrings::TWideStrings *, bool), void __fastcall __closure(*)(const System::WideString, System::Widestrings::TWideStrings *), System::WideString, System::WideString, __cl
+    @Widesqledit@EditSQLSchema$qqrr17System@WideStringynpqqrp31System@Widestrings@TWideStrings17System@WideStringo$vynpqqrx17System@WideString17System@WideStringp31System@Widestrings@TWideStrings$v17System@WideStringt4ynpqqrx17System@WideString$ot4 @341 ; Widesqledit::EditSQLSchema(System::WideString&, void __fastcall __closure(*)(System::Widestrings::TWideStrings *, System::WideString, bool), void __fastcall __closure(*)(const System::WideString, System::WideString, System::Widestrings::TWideStrings *)
+    @Widesqledit@Finalization$qqrv @323 ; __fastcall Widesqledit::Finalization()
+    @Widesqledit@TWideSQLEditForm@ @346 ; Widesqledit::TWideSQLEditForm::
+    @Widesqledit@TWideSQLEditForm@AddFieldButtonClick$qqrp14System@TObject @329 ; __fastcall Widesqledit::TWideSQLEditForm::AddFieldButtonClick(System::TObject *)
+    @Widesqledit@TWideSQLEditForm@AddTableButtonClick$qqrp14System@TObject @330 ; __fastcall Widesqledit::TWideSQLEditForm::AddTableButtonClick(System::TObject *)
+    @Widesqledit@TWideSQLEditForm@DrawCaretPosIndicator$qqrv @326 ; __fastcall Widesqledit::TWideSQLEditForm::DrawCaretPosIndicator()
+    @Widesqledit@TWideSQLEditForm@FormDestroy$qqrp14System@TObject @339 ; __fastcall Widesqledit::TWideSQLEditForm::FormDestroy(System::TObject *)
+    @Widesqledit@TWideSQLEditForm@FormShow$qqrp14System@TObject @340 ; __fastcall Widesqledit::TWideSQLEditForm::FormShow(System::TObject *)
+    @Widesqledit@TWideSQLEditForm@FormUpdateActionUpdate$qqrp14System@TObject @324 ; __fastcall Widesqledit::TWideSQLEditForm::FormUpdateActionUpdate(System::TObject *)
+    @Widesqledit@TWideSQLEditForm@HelpButtonClick$qqrp14System@TObject @338 ; __fastcall Widesqledit::TWideSQLEditForm::HelpButtonClick(System::TObject *)
+    @Widesqledit@TWideSQLEditForm@InsertText$qqr17System@WideStringo @331 ; __fastcall Widesqledit::TWideSQLEditForm::InsertText(System::WideString, bool)
+    @Widesqledit@TWideSQLEditForm@MetaInfoSQLSplitterCanResize$qqrp14System@TObjectriro @335 ; __fastcall Widesqledit::TWideSQLEditForm::MetaInfoSQLSplitterCanResize(System::TObject *, int&, bool&)
+    @Widesqledit@TWideSQLEditForm@MetaInfoSQLSplitterMoved$qqrp14System@TObject @334 ; __fastcall Widesqledit::TWideSQLEditForm::MetaInfoSQLSplitterMoved(System::TObject *)
+    @Widesqledit@TWideSQLEditForm@PopulateFieldList$qqrv @333 ; __fastcall Widesqledit::TWideSQLEditForm::PopulateFieldList()
+    @Widesqledit@TWideSQLEditForm@PopulateTableList$qqrv @337 ; __fastcall Widesqledit::TWideSQLEditForm::PopulateTableList()
+    @Widesqledit@TWideSQLEditForm@SQLMemoEnter$qqrp14System@TObject @327 ; __fastcall Widesqledit::TWideSQLEditForm::SQLMemoEnter(System::TObject *)
+    @Widesqledit@TWideSQLEditForm@SQLMemoExit$qqrp14System@TObject @328 ; __fastcall Widesqledit::TWideSQLEditForm::SQLMemoExit(System::TObject *)
+    @Widesqledit@TWideSQLEditForm@TableFieldsSplitterCanResize$qqrp14System@TObjectriro @336 ; __fastcall Widesqledit::TWideSQLEditForm::TableFieldsSplitterCanResize(System::TObject *, int&, bool&)
+    @Widesqledit@TWideSQLEditForm@TableListClick$qqrp14System@TObject @332 ; __fastcall Widesqledit::TWideSQLEditForm::TableListClick(System::TObject *)
+    @Widesqledit@initialization$qqrv @322 ; __fastcall Widesqledit::initialization()
+    Finalize                       @740 ; Finalize
+    Initialize                     @741 ; Initialize

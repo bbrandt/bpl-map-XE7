@@ -1,0 +1,8 @@
+LIBRARY     STDVCL40.DLL
+
+EXPORTS
+    DllCanUnloadNow                @4   ; DllCanUnloadNow
+    DllGetClassObject              @5   ; DllGetClassObject
+    DllRegisterServer              @3   ; DllRegisterServer
+    DllUnregisterServer            @2   ; DllUnregisterServer
+    TMethodImplementationIntercept @1   ; TMethodImplementationIntercept

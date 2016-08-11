@@ -1,0 +1,4 @@
+LIBRARY     VCLTEST.DLL
+
+EXPORTS
+    SetHook                        @1   ; SetHook

@@ -1,0 +1,1248 @@
+LIBRARY     VCLACTNBAND210.BPL
+
+DESCRIPTION 'mbarcadero Action Band Components'
+
+EXPORTS
+    @$xp$20Vcl@Actnman@TBarEdge    @581 ; __tpdsc__ Vcl::Actnman::TBarEdge
+    @$xp$22Vcl@Actnman@TCMItemMsg  @578 ; __tpdsc__ Vcl::Actnman::TCMItemMsg
+    @$xp$23Vcl@Actnman@TActionBars @635 ; __tpdsc__ Vcl::Actnman::TActionBars
+    @$xp$23Vcl@Actnman@TActionProc @658 ; __tpdsc__ Vcl::Actnman::TActionProc
+    @$xp$23Vcl@Actnman@TMergeRange @602 ; __tpdsc__ Vcl::Actnman::TMergeRange
+    @$xp$24Vcl@Actnmenus@TMenuEdges @915 ; __tpdsc__ Vcl::Actnmenus::TMenuEdges
+    @$xp$24Vcl@Actnmenus@TMenuStack @945 ; __tpdsc__ Vcl::Actnmenus::TMenuStack
+    @$xp$25Vcl@Actnman@TActionClient @639 ; __tpdsc__ Vcl::Actnman::TActionClient
+    @$xp$25Vcl@Actnman@TCommandStyle @603 ; __tpdsc__ Vcl::Actnman::TCommandStyle
+    @$xp$25Vcl@Actnman@TStyleChanged @659 ; __tpdsc__ Vcl::Actnman::TStyleChanged
+    @$xp$26Vcl@Actnman@TActionBarItem @637 ; __tpdsc__ Vcl::Actnman::TActionBarItem
+    @$xp$26Vcl@Actnman@TActionClients @631 ; __tpdsc__ Vcl::Actnman::TActionClients
+    @$xp$26Vcl@Actnman@TActionManager @650 ; __tpdsc__ Vcl::Actnman::TActionManager
+    @$xp$26Vcl@Actnman@TGalleryResize @606 ; __tpdsc__ Vcl::Actnman::TGalleryResize
+    @$xp$26Vcl@Actnman@TXToolDockForm @573 ; __tpdsc__ Vcl::Actnman::TXToolDockForm
+    @$xp$26Vcl@Shadowwnd@TControlSide @14  ; __tpdsc__ Vcl::Shadowwnd::TControlSide
+    @$xp$27Vcl@Actnman@TActionBarStyle @654 ; __tpdsc__ Vcl::Actnman::TActionBarStyle
+    @$xp$27Vcl@Actnman@TActionListItem @648 ; __tpdsc__ Vcl::Actnman::TActionListItem
+    @$xp$27Vcl@Actnman@TBarOrientation @585 ; __tpdsc__ Vcl::Actnman::TBarOrientation
+    @$xp$27Vcl@Actnman@TCaptionOptions @633 ; __tpdsc__ Vcl::Actnman::TCaptionOptions
+    @$xp$27Vcl@Actnman@TChangesAllowed @642 ; __tpdsc__ Vcl::Actnman::TChangesAllowed
+    @$xp$27Vcl@Actnman@TMenuProperties @607 ; __tpdsc__ Vcl::Actnman::TMenuProperties
+    @$xp$27Vcl@Actnman@TTextProperties @611 ; __tpdsc__ Vcl::Actnman::TTextProperties
+    @$xp$27Vcl@Shadowwnd@TShadowWindow @12  ; __tpdsc__ Vcl::Shadowwnd::TShadowWindow
+    @$xp$28Vcl@Actnctrls@TActionToolBar @151 ; __tpdsc__ Vcl::Actnctrls::TActionToolBar
+    @$xp$28Vcl@Actnman@TActionBarsClass @667 ; __tpdsc__ Vcl::Actnman::TActionBarsClass
+    @$xp$28Vcl@Actnman@TBarOrientations @584 ; __tpdsc__ Vcl::Actnman::TBarOrientations
+    @$xp$28Vcl@Actnman@TCustomActionBar @579 ; __tpdsc__ Vcl::Actnman::TCustomActionBar
+    @$xp$28Vcl@Actnmenus@TExitMenuEvent @937 ; __tpdsc__ Vcl::Actnmenus::TExitMenuEvent
+    @$xp$29Vcl@Actncolormaps@TXPColorMap @26  ; __tpdsc__ Vcl::Actncolormaps::TXPColorMap
+    @$xp$29Vcl@Actnman@TActionClientItem @600 ; __tpdsc__ Vcl::Actnman::TActionClientItem
+    @$xp$29Vcl@Actnman@TActionClientLink @628 ; __tpdsc__ Vcl::Actnman::TActionClientLink
+    @$xp$29Vcl@Actnman@TActionDragObject @594 ; __tpdsc__ Vcl::Actnman::TActionDragObject
+    @$xp$29Vcl@Actnman@TBackgroundLayout @643 ; __tpdsc__ Vcl::Actnman::TBackgroundLayout
+    @$xp$29Vcl@Actnman@TButtonProperties @616 ; __tpdsc__ Vcl::Actnman::TButtonProperties
+    @$xp$29Vcl@Actnmenus@TAnimationStyle @940 ; __tpdsc__ Vcl::Actnmenus::TAnimationStyle
+    @$xp$29Vcl@Actnmenus@TCustomMenuItem @913 ; __tpdsc__ Vcl::Actnmenus::TCustomMenuItem
+    @$xp$29Vcl@Actnmenus@TMDIButtonStyle @922 ; __tpdsc__ Vcl::Actnmenus::TMDIButtonStyle
+    @$xp$29Vcl@Actnmenus@TMenuPopupEvent @939 ; __tpdsc__ Vcl::Actnmenus::TMenuPopupEvent
+    @$xp$29Vcl@Actnpopup@TPopupActionBar @1155; __tpdsc__ Vcl::Actnpopup::TPopupActionBar
+    @$xp$30Vcl@Actnman@IActionBarDesigner @575 ; __tpdsc__ Vcl::Actnman::IActionBarDesigner
+    @$xp$30Vcl@Actnman@TActionClientClass @634 ; __tpdsc__ Vcl::Actnman::TActionClientClass
+    @$xp$30Vcl@Actnman@TChangesAllowedSet @641 ; __tpdsc__ Vcl::Actnman::TChangesAllowedSet
+    @$xp$30Vcl@Actnman@TCommandProperties @624 ; __tpdsc__ Vcl::Actnman::TCommandProperties
+    @$xp$30Vcl@Actnman@TControlProperties @609 ; __tpdsc__ Vcl::Actnman::TControlProperties
+    @$xp$30Vcl@Actnman@TCustomActionClass @596 ; __tpdsc__ Vcl::Actnman::TCustomActionClass
+    @$xp$30Vcl@Actnman@TGalleryProperties @613 ; __tpdsc__ Vcl::Actnman::TGalleryProperties
+    @$xp$30Vcl@Actnman@TGetBarsClassEvent @664 ; __tpdsc__ Vcl::Actnman::TGetBarsClassEvent
+    @$xp$30Vcl@Customizedlg@TCustomizeDlg @1204; __tpdsc__ Vcl::Customizedlg::TCustomizeDlg
+    @$xp$30Vcl@Customizedlg@TCustomizeFrm @1206; __tpdsc__ Vcl::Customizedlg::TCustomizeFrm
+    @$xp$30Vcl@Xpactnctrls@TXPStyleButton @1048; __tpdsc__ Vcl::Xpactnctrls::TXPStyleButton
+    @$xp$31Vcl@Actnman@TActionBarItemClass @666 ; __tpdsc__ Vcl::Actnman::TActionBarItemClass
+    @$xp$31Vcl@Actnman@TActionBarStyleList @569 ; __tpdsc__ Vcl::Actnman::TActionBarStyleList
+    @$xp$31Vcl@Actnman@TActionClientsClass @668 ; __tpdsc__ Vcl::Actnman::TActionClientsClass
+    @$xp$31Vcl@Actnman@TCategoryDragObject @592 ; __tpdsc__ Vcl::Actnman::TCategoryDragObject
+    @$xp$31Vcl@Actnman@TCheckBoxProperties @622 ; __tpdsc__ Vcl::Actnman::TCheckBoxProperties
+    @$xp$31Vcl@Actnman@TColorMapUpdateProc @589 ; __tpdsc__ Vcl::Actnman::TColorMapUpdateProc
+    @$xp$31Vcl@Actnman@TComboBoxProperties @604 ; __tpdsc__ Vcl::Actnman::TComboBoxProperties
+    @$xp$31Vcl@Actnmenus@TActionBarStyleEx @941 ; __tpdsc__ Vcl::Actnmenus::TActionBarStyleEx
+    @$xp$31Vcl@Actnmenus@TCustomMenuButton @911 ; __tpdsc__ Vcl::Actnmenus::TCustomMenuButton
+    @$xp$31Vcl@Actnmenus@TCustomPopupClass @944 ; __tpdsc__ Vcl::Actnmenus::TCustomPopupClass
+    @$xp$32Vcl@Actnctrls@TCustomActionCombo @161 ; __tpdsc__ Vcl::Actnctrls::TCustomActionCombo
+    @$xp$32Vcl@Actnman@TActionDragBaseClass @598 ; __tpdsc__ Vcl::Actnman::TActionDragBaseClass
+    @$xp$32Vcl@Actnman@TControlCreatedEvent @583 ; __tpdsc__ Vcl::Actnman::TControlCreatedEvent
+    @$xp$32Vcl@Actnman@TCustomActionControl @576 ; __tpdsc__ Vcl::Actnman::TCustomActionControl
+    @$xp$32Vcl@Actnman@TCustomActionManager @652 ; __tpdsc__ Vcl::Actnman::TCustomActionManager
+    @$xp$32Vcl@Actnman@TCustomColorMapClass @656 ; __tpdsc__ Vcl::Actnman::TCustomColorMapClass
+    @$xp$32Vcl@Actnmenus@TActionMainMenuBar @916 ; __tpdsc__ Vcl::Actnmenus::TActionMainMenuBar
+    @$xp$32Vcl@Xpactnctrls@TXPStyleMenuItem @1056; __tpdsc__ Vcl::Xpactnctrls::TXPStyleMenuItem
+    @$xp$33Vcl@Actncolormaps@TThemedColorMap @22  ; __tpdsc__ Vcl::Actncolormaps::TThemedColorMap
+    @$xp$33Vcl@Actnctrls@TCustomComboControl @159 ; __tpdsc__ Vcl::Actnctrls::TCustomComboControl
+    @$xp$33Vcl@Actnman@TActionItemDragObject @590 ; __tpdsc__ Vcl::Actnman::TActionItemDragObject
+    @$xp$33Vcl@Actnman@TActionListCollection @646 ; __tpdsc__ Vcl::Actnman::TActionListCollection
+    @$xp$33Vcl@Actnman@TCustomActionBarClass @586 ; __tpdsc__ Vcl::Actnman::TCustomActionBarClass
+    @$xp$33Vcl@Actnman@TGetBarItemClassEvent @663 ; __tpdsc__ Vcl::Actnman::TGetBarItemClassEvent
+    @$xp$33Vcl@Actnman@TGetClientsClassEvent @662 ; __tpdsc__ Vcl::Actnman::TGetClientsClassEvent
+    @$xp$33Vcl@Actnman@TGetControlClassEvent @582 ; __tpdsc__ Vcl::Actnman::TGetControlClassEvent
+    @$xp$33Vcl@Actnmenus@TAddRemoveItemClass @907 ; __tpdsc__ Vcl::Actnmenus::TAddRemoveItemClass
+    @$xp$33Vcl@Actnmenus@TGetPopupClassEvent @938 ; __tpdsc__ Vcl::Actnmenus::TGetPopupClassEvent
+    @$xp$33Vcl@Bandactn@TCustomizeActionBars @1213; __tpdsc__ Vcl::Bandactn::TCustomizeActionBars
+    @$xp$33Vcl@Xpactnctrls@TXPStyleExpandBtn @1050; __tpdsc__ Vcl::Xpactnctrls::TXPStyleExpandBtn
+    @$xp$33Vcl@Xpactnctrls@TXPStylePopupMenu @1052; __tpdsc__ Vcl::Xpactnctrls::TXPStylePopupMenu
+    @$xp$34Vcl@Actnctrls@TCustomActionDockBar @156 ; __tpdsc__ Vcl::Actnctrls::TCustomActionDockBar
+    @$xp$34Vcl@Actnctrls@TCustomActionToolBar @153 ; __tpdsc__ Vcl::Actnctrls::TCustomActionToolBar
+    @$xp$34Vcl@Actnctrls@TCustomButtonControl @169 ; __tpdsc__ Vcl::Actnctrls::TCustomButtonControl
+    @$xp$34Vcl@Actnctrls@TCustomToolScrollBtn @165 ; __tpdsc__ Vcl::Actnctrls::TCustomToolScrollBtn
+    @$xp$34Vcl@Actnctrls@TCustomUtilityButton @167 ; __tpdsc__ Vcl::Actnctrls::TCustomUtilityButton
+    @$xp$34Vcl@Actnman@TActionClientItemClass @669 ; __tpdsc__ Vcl::Actnman::TActionClientItemClass
+    @$xp$34Vcl@Actnman@TActionClientLinkClass @630 ; __tpdsc__ Vcl::Actnman::TActionClientLinkClass
+    @$xp$34Vcl@Actnmenus@TCustomActionMenuBar @935 ; __tpdsc__ Vcl::Actnmenus::TCustomActionMenuBar
+    @$xp$34Vcl@Actnmenus@TCustomAddRemoveItem @909 ; __tpdsc__ Vcl::Actnmenus::TCustomAddRemoveItem
+    @$xp$34Vcl@Actnmenus@TCustomMDIMenuButton @920 ; __tpdsc__ Vcl::Actnmenus::TCustomMDIMenuButton
+    @$xp$34Vcl@Actnmenus@TCustomMenuExpandBtn @933 ; __tpdsc__ Vcl::Actnmenus::TCustomMenuExpandBtn
+    @$xp$34Vcl@Actnmenus@TCustomizeActionLink @925 ; __tpdsc__ Vcl::Actnmenus::TCustomizeActionLink
+    @$xp$34Vcl@Actnmenus@TUpdateActnMenusProc @905 ; __tpdsc__ Vcl::Actnmenus::TUpdateActnMenusProc
+    @$xp$34Vcl@Stdactnmenus@TStandardMenuItem @996 ; __tpdsc__ Vcl::Stdactnmenus::TStandardMenuItem
+    @$xp$34Vcl@Xpactnctrls@TXPStyleMenuButton @1054; __tpdsc__ Vcl::Xpactnctrls::TXPStyleMenuButton
+    @$xp$35Vcl@Actncolormaps@TStandardColorMap @28  ; __tpdsc__ Vcl::Actncolormaps::TStandardColorMap
+    @$xp$35Vcl@Actncolormaps@TTwilightColorMap @24  ; __tpdsc__ Vcl::Actncolormaps::TTwilightColorMap
+    @$xp$35Vcl@Actnctrls@TCustomDropDownButton @163 ; __tpdsc__ Vcl::Actnctrls::TCustomDropDownButton
+    @$xp$35Vcl@Actnman@TCommandPropertiesClass @665 ; __tpdsc__ Vcl::Actnman::TCommandPropertiesClass
+    @$xp$35Vcl@Actnmenus@TMenuItemControlClass @908 ; __tpdsc__ Vcl::Actnmenus::TMenuItemControlClass
+    @$xp$35Vcl@Stdactnmenus@TStandardMenuPopup @988 ; __tpdsc__ Vcl::Stdactnmenus::TStandardMenuPopup
+    @$xp$35Vcl@Themedactnctrls@TThemedMenuItem @1127; __tpdsc__ Vcl::Themedactnctrls::TThemedMenuItem
+    @$xp$35Vcl@Xpactnctrls@TXPStyleDropDownBtn @1046; __tpdsc__ Vcl::Xpactnctrls::TXPStyleDropDownBtn
+    @$xp$36Vcl@Actnman@TActionClientsCollection @644 ; __tpdsc__ Vcl::Actnman::TActionClientsCollection
+    @$xp$36Vcl@Actnman@TCustomActionBarColorMap @587 ; __tpdsc__ Vcl::Actnman::TCustomActionBarColorMap
+    @$xp$36Vcl@Actnman@TGetClientItemClassEvent @661 ; __tpdsc__ Vcl::Actnman::TGetClientItemClassEvent
+    @$xp$36Vcl@Actnmenus@TCustomActionPopupMenu @930 ; __tpdsc__ Vcl::Actnmenus::TCustomActionPopupMenu
+    @$xp$36Vcl@Stdactnmenus@TStandardMenuButton @994 ; __tpdsc__ Vcl::Stdactnmenus::TStandardMenuButton
+    @$xp$36Vcl@Themedactnctrls@TThemedExpandBtn @1121; __tpdsc__ Vcl::Themedactnctrls::TThemedExpandBtn
+    @$xp$36Vcl@Themedactnctrls@TThemedPopupMenu @1123; __tpdsc__ Vcl::Themedactnctrls::TThemedPopupMenu
+    @$xp$37Vcl@Actnman@TCustomActionControlClass @657 ; __tpdsc__ Vcl::Actnman::TCustomActionControlClass
+    @$xp$37Vcl@Actnmenus@TCustomizeActionToolBar @927 ; __tpdsc__ Vcl::Actnmenus::TCustomizeActionToolBar
+    @$xp$37Vcl@Actnmenus@TMenuButtonControlClass @906 ; __tpdsc__ Vcl::Actnmenus::TMenuButtonControlClass
+    @$xp$37Vcl@Themedactnctrls@TThemedMenuButton @1125; __tpdsc__ Vcl::Themedactnctrls::TThemedMenuButton
+    @$xp$37Vcl@Xpactnctrls@TXPStyleAddRemoveItem @1040; __tpdsc__ Vcl::Xpactnctrls::TXPStyleAddRemoveItem
+    @$xp$37Vcl@Xpactnctrls@TXPStyleToolScrollBtn @1042; __tpdsc__ Vcl::Xpactnctrls::TXPStyleToolScrollBtn
+    @$xp$38Vcl@Actnctrls@TMenuResizeActionControl @171 ; __tpdsc__ Vcl::Actnctrls::TMenuResizeActionControl
+    @$xp$38Vcl@Actnctrls@_TCustomActionDockBar@_1 @158 ; __tpdsc__ Vcl::Actnctrls::_TCustomActionDockBar::_1
+    @$xp$38Vcl@Actnmenus@TCustomActionMainMenuBar @918 ; __tpdsc__ Vcl::Actnmenus::TCustomActionMainMenuBar
+    @$xp$38Vcl@Actnpopup@TCustomActionPopupMenuEx @1157; __tpdsc__ Vcl::Actnpopup::TCustomActionPopupMenuEx
+    @$xp$38Vcl@Xpactnctrls@TXPStyleCustomizePopup @1044; __tpdsc__ Vcl::Xpactnctrls::TXPStyleCustomizePopup
+    @$xp$39Vcl@Actnctrls@TCustomToolScrollBtnClass @155 ; __tpdsc__ Vcl::Actnctrls::TCustomToolScrollBtnClass
+    @$xp$39Vcl@Actnmenus@TCustomAddRemoveItemClass @943 ; __tpdsc__ Vcl::Actnmenus::TCustomAddRemoveItemClass
+    @$xp$39Vcl@Actnmenus@TCustomMenuExpandBtnClass @932 ; __tpdsc__ Vcl::Actnmenus::TCustomMenuExpandBtnClass
+    @$xp$39Vcl@Stdactnmenus@TStandardAddRemoveItem @986 ; __tpdsc__ Vcl::Stdactnmenus::TStandardAddRemoveItem
+    @$xp$39Vcl@Stdactnmenus@TStandardButtonControl @982 ; __tpdsc__ Vcl::Stdactnmenus::TStandardButtonControl
+    @$xp$39Vcl@Stdactnmenus@TStandardMenuExpandBtn @990 ; __tpdsc__ Vcl::Stdactnmenus::TStandardMenuExpandBtn
+    @$xp$39Vcl@Stdactnmenus@TStandardToolScrollBtn @992 ; __tpdsc__ Vcl::Stdactnmenus::TStandardToolScrollBtn
+    @$xp$39Vcl@Xpstyleactnctrls@TXPStyleActionBars @1224; __tpdsc__ Vcl::Xpstyleactnctrls::TXPStyleActionBars
+    @$xp$40Vcl@Actnmenus@TCustomizeActionClientItem @923 ; __tpdsc__ Vcl::Actnmenus::TCustomizeActionClientItem
+    @$xp$40Vcl@Stdactnmenus@TStandardCustomizePopup @984 ; __tpdsc__ Vcl::Stdactnmenus::TStandardCustomizePopup
+    @$xp$40Vcl@Stdactnmenus@TStandardDropDownButton @980 ; __tpdsc__ Vcl::Stdactnmenus::TStandardDropDownButton
+    @$xp$40Vcl@Themedactnctrls@TThemedAddRemoveItem @1111; __tpdsc__ Vcl::Themedactnctrls::TThemedAddRemoveItem
+    @$xp$40Vcl@Themedactnctrls@TThemedButtonControl @1119; __tpdsc__ Vcl::Themedactnctrls::TThemedButtonControl
+    @$xp$40Vcl@Themedactnctrls@TThemedToolScrollBtn @1113; __tpdsc__ Vcl::Themedactnctrls::TThemedToolScrollBtn
+    @$xp$41Vcl@Actnman@TButtonProperties@TButtonSize @621 ; __tpdsc__ Vcl::Actnman::TButtonProperties::TButtonSize
+    @$xp$41Vcl@Actnman@TButtonProperties@TButtonType @620 ; __tpdsc__ Vcl::Actnman::TButtonProperties::TButtonType
+    @$xp$41Vcl@Themedactnctrls@TThemedCustomizePopup @1115; __tpdsc__ Vcl::Themedactnctrls::TThemedCustomizePopup
+    @$xp$41Vcl@Themedactnctrls@TThemedDropDownButton @1117; __tpdsc__ Vcl::Themedactnctrls::TThemedDropDownButton
+    @$xp$42Vcl@Actnmenus@TCustomizeActionToolBarClass @929 ; __tpdsc__ Vcl::Actnmenus::TCustomizeActionToolBarClass
+    @$xp$43Vcl@Abaccessibility@TActionBarAccessibility @704 ; __tpdsc__ Vcl::Abaccessibility::TActionBarAccessibility
+    @$xp$43Vcl@Actnman@TCommandProperties@TChangeState @627 ; __tpdsc__ Vcl::Actnman::TCommandProperties::TChangeState
+    @$xp$43Vcl@Actnman@TGalleryProperties@TGalleryType @615 ; __tpdsc__ Vcl::Actnman::TGalleryProperties::TGalleryType
+    @$xp$43Vcl@Actnman@TGetCommandPropertiesClassEvent @660 ; __tpdsc__ Vcl::Actnman::TGetCommandPropertiesClassEvent
+    @$xp$44Vcl@Actnman@TButtonProperties@TGroupPosition @619 ; __tpdsc__ Vcl::Actnman::TButtonProperties::TGroupPosition
+    @$xp$46Vcl@Actnman@TButtonProperties@TTextAssociation @618 ; __tpdsc__ Vcl::Actnman::TButtonProperties::TTextAssociation
+    @$xp$46Vcl@Stdstyleactnctrls@TStandardStyleActionBars @1235; __tpdsc__ Vcl::Stdstyleactnctrls::TStandardStyleActionBars
+    @$xp$47Vcl@Abaccessibility@TActionMenuBarAccessibility @702 ; __tpdsc__ Vcl::Abaccessibility::TActionMenuBarAccessibility
+    @$xp$60Vcl@Actnman@TCommandProperties@TCommandPropertiesChangeEvent @626 ; __tpdsc__ Vcl::Actnman::TCommandProperties::TCommandPropertiesChangeEvent
+    @$xp$65Vcl@Platformdefaultstyleactnctrls@TPlatformDefaultStyleActionBars @1138; __tpdsc__ Vcl::Platformdefaultstyleactnctrls::TPlatformDefaultStyleActionBars
+    @GetPackageInfoTable           @1243; GetPackageInfoTable
+    @Vcl@Abaccessibility@Finalization$qqrv @671 ; __fastcall Vcl::Abaccessibility::Finalization()
+    @Vcl@Abaccessibility@TActionBarAccessibility@ @705 ; Vcl::Abaccessibility::TActionBarAccessibility::
+    @Vcl@Abaccessibility@TActionBarAccessibility@$bctr$qqrp25Vcl@Actnman@TActionClientt1 @696 ; __fastcall Vcl::Abaccessibility::TActionBarAccessibility::TActionBarAccessibility(Vcl::Actnman::TActionClient *, Vcl::Actnman::TActionClient *)
+    @Vcl@Abaccessibility@TActionBarAccessibility@GetIDsOfNames$qqsrx5_GUIDpviit2 @695 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::GetIDsOfNames(const _GUID&, void *, int, int, void *)
+    @Vcl@Abaccessibility@TActionBarAccessibility@GetTypeInfo$qqsiipv @694 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::GetTypeInfo(int, int, void *)
+    @Vcl@Abaccessibility@TActionBarAccessibility@GetTypeInfoCount$qqsri @693 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::GetTypeInfoCount(int&)
+    @Vcl@Abaccessibility@TActionBarAccessibility@Get_accChild$qqsx17System@OleVariantr35System@%DelphiInterface$9IDispatch% @692 ; Vcl::Abaccessibility::TActionBarAccessibility::Get_accChild(const System::OleVariant, System::DelphiInterface<{583}...
+    @Vcl@Abaccessibility@TActionBarAccessibility@Get_accChildCount$qqsri @691 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::Get_accChildCount(int&)
+    @Vcl@Abaccessibility@TActionBarAccessibility@Get_accDefaultAction$qqsx17System@OleVariantr17System@WideString @690 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::Get_accDefaultAction(const System::OleVariant, System::WideString&)
+    @Vcl@Abaccessibility@TActionBarAccessibility@Get_accDescription$qqsx17System@OleVariantr17System@WideString @689 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::Get_accDescription(const System::OleVariant, System::WideString&)
+    @Vcl@Abaccessibility@TActionBarAccessibility@Get_accFocus$qqsr17System@OleVariant @688 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::Get_accFocus(System::OleVariant&)
+    @Vcl@Abaccessibility@TActionBarAccessibility@Get_accHelp$qqsx17System@OleVariantr17System@WideString @687 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::Get_accHelp(const System::OleVariant, System::WideString&)
+    @Vcl@Abaccessibility@TActionBarAccessibility@Get_accHelpTopic$qqsr17System@WideStringx17System@OleVariantri @686 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::Get_accHelpTopic(System::WideString&, const System::OleVariant, int&)
+    @Vcl@Abaccessibility@TActionBarAccessibility@Get_accKeyboardShortcut$qqsx17System@OleVariantr17System@WideString @685 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::Get_accKeyboardShortcut(const System::OleVariant, System::WideString&)
+    @Vcl@Abaccessibility@TActionBarAccessibility@Get_accName$qqsx17System@OleVariantr17System@WideString @684 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::Get_accName(const System::OleVariant, System::WideString&)
+    @Vcl@Abaccessibility@TActionBarAccessibility@Get_accParent$qqsr35System@%DelphiInterface$9IDispatch% @683 ; Vcl::Abaccessibility::TActionBarAccessibility::Get_accParent(System::DelphiInterface<{583}...
+    @Vcl@Abaccessibility@TActionBarAccessibility@Get_accRole$qqsx17System@OleVariantr17System@OleVariant @682 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::Get_accRole(const System::OleVariant, System::OleVariant&)
+    @Vcl@Abaccessibility@TActionBarAccessibility@Get_accSelection$qqsr17System@OleVariant @697 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::Get_accSelection(System::OleVariant&)
+    @Vcl@Abaccessibility@TActionBarAccessibility@Get_accState$qqsx17System@OleVariantr17System@OleVariant @680 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::Get_accState(const System::OleVariant, System::OleVariant&)
+    @Vcl@Abaccessibility@TActionBarAccessibility@Get_accValue$qqsx17System@OleVariantr17System@WideString @679 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::Get_accValue(const System::OleVariant, System::WideString&)
+    @Vcl@Abaccessibility@TActionBarAccessibility@Invoke$qqsirx5_GUIDiuspvt5t5t5 @678 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::Invoke(int, const _GUID&, int, unsigned short, void *, void *, void *, void *)
+    @Vcl@Abaccessibility@TActionBarAccessibility@Set_accName$qqsx17System@OleVariantx17System@WideString @677 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::Set_accName(const System::OleVariant, const System::WideString)
+    @Vcl@Abaccessibility@TActionBarAccessibility@Set_accValue$qqsx17System@OleVariantx17System@WideString @676 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::Set_accValue(const System::OleVariant, const System::WideString)
+    @Vcl@Abaccessibility@TActionBarAccessibility@accDoDefaultAction$qqsx17System@OleVariant @701 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::accDoDefaultAction(const System::OleVariant)
+    @Vcl@Abaccessibility@TActionBarAccessibility@accHitTest$qqsiir17System@OleVariant @700 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::accHitTest(int, int, System::OleVariant&)
+    @Vcl@Abaccessibility@TActionBarAccessibility@accLocation$qqsrit1t1t1x17System@OleVariant @699 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::accLocation(int&, int&, int&, int&, const System::OleVariant)
+    @Vcl@Abaccessibility@TActionBarAccessibility@accNavigate$qqsix17System@OleVariantr17System@OleVariant @698 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::accNavigate(int, const System::OleVariant, System::OleVariant&)
+    @Vcl@Abaccessibility@TActionBarAccessibility@accSelect$qqsix17System@OleVariant @681 ; __stdcall Vcl::Abaccessibility::TActionBarAccessibility::accSelect(int, const System::OleVariant)
+    @Vcl@Abaccessibility@TActionMenuBarAccessibility@ @703 ; Vcl::Abaccessibility::TActionMenuBarAccessibility::
+    @Vcl@Abaccessibility@TActionMenuBarAccessibility@Get_accChild$qqsx17System@OleVariantr35System@%DelphiInterface$9IDispatch% @675 ; Vcl::Abaccessibility::TActionMenuBarAccessibility::Get_accChild(const System::OleVariant, System::DelphiInterface<{583}...
+    @Vcl@Abaccessibility@TActionMenuBarAccessibility@Get_accDescription$qqsx17System@OleVariantr17System@WideString @674 ; __stdcall Vcl::Abaccessibility::TActionMenuBarAccessibility::Get_accDescription(const System::OleVariant, System::WideString&)
+    @Vcl@Abaccessibility@TActionMenuBarAccessibility@Get_accRole$qqsx17System@OleVariantr17System@OleVariant @673 ; __stdcall Vcl::Abaccessibility::TActionMenuBarAccessibility::Get_accRole(const System::OleVariant, System::OleVariant&)
+    @Vcl@Abaccessibility@TActionMenuBarAccessibility@Get_accState$qqsx17System@OleVariantr17System@OleVariant @672 ; __stdcall Vcl::Abaccessibility::TActionMenuBarAccessibility::Get_accState(const System::OleVariant, System::OleVariant&)
+    @Vcl@Abaccessibility@initialization$qqrv @670 ; __fastcall Vcl::Abaccessibility::initialization()
+    @Vcl@Actncolormaps@Finalization$qqrv @16  ; __fastcall Vcl::Actncolormaps::Finalization()
+    @Vcl@Actncolormaps@TStandardColorMap@ @29  ; Vcl::Actncolormaps::TStandardColorMap::
+    @Vcl@Actncolormaps@TStandardColorMap@SetColor$qqrx21System@Uitypes@TColor @21  ; __fastcall Vcl::Actncolormaps::TStandardColorMap::SetColor(const System::Uitypes::TColor)
+    @Vcl@Actncolormaps@TStandardColorMap@UpdateColors$qqrv @20  ; __fastcall Vcl::Actncolormaps::TStandardColorMap::UpdateColors()
+    @Vcl@Actncolormaps@TThemedColorMap@ @23  ; Vcl::Actncolormaps::TThemedColorMap::
+    @Vcl@Actncolormaps@TThemedColorMap@UpdateColors$qqrv @17  ; __fastcall Vcl::Actncolormaps::TThemedColorMap::UpdateColors()
+    @Vcl@Actncolormaps@TTwilightColorMap@ @25  ; Vcl::Actncolormaps::TTwilightColorMap::
+    @Vcl@Actncolormaps@TTwilightColorMap@UpdateColors$qqrv @18  ; __fastcall Vcl::Actncolormaps::TTwilightColorMap::UpdateColors()
+    @Vcl@Actncolormaps@TXPColorMap@ @27  ; Vcl::Actncolormaps::TXPColorMap::
+    @Vcl@Actncolormaps@TXPColorMap@UpdateColors$qqrv @19  ; __fastcall Vcl::Actncolormaps::TXPColorMap::UpdateColors()
+    @Vcl@Actncolormaps@initialization$qqrv @15  ; __fastcall Vcl::Actncolormaps::initialization()
+    @Vcl@Actnctrls@Finalization$qqrv @31  ; __fastcall Vcl::Actnctrls::Finalization()
+    @Vcl@Actnctrls@TActionToolBar@ @152 ; Vcl::Actnctrls::TActionToolBar::
+    @Vcl@Actnctrls@TCustomActionCombo@ @162 ; Vcl::Actnctrls::TCustomActionCombo::
+    @Vcl@Actnctrls@TCustomActionCombo@BeginAutoDrag$qqrv @97  ; __fastcall Vcl::Actnctrls::TCustomActionCombo::BeginAutoDrag()
+    @Vcl@Actnctrls@TCustomActionCombo@ComboWndProc$qqrr24Winapi@Messages@TMessagep6HWND__pv @87  ; __fastcall Vcl::Actnctrls::TCustomActionCombo::ComboWndProc(Winapi::Messages::TMessage&, HWND__ *, void *)
+    @Vcl@Actnctrls@TCustomActionCombo@DesignWndProc$qqrr24Winapi@Messages@TMessage @96  ; __fastcall Vcl::Actnctrls::TCustomActionCombo::DesignWndProc(Winapi::Messages::TMessage&)
+    @Vcl@Actnctrls@TCustomActionCombo@DragDrop$qqrp14System@TObjectii @95  ; __fastcall Vcl::Actnctrls::TCustomActionCombo::DragDrop(System::TObject *, int, int)
+    @Vcl@Actnctrls@TCustomActionCombo@DragOver$qqrp14System@TObjectii25System@Uitypes@TDragStatero @94  ; __fastcall Vcl::Actnctrls::TCustomActionCombo::DragOver(System::TObject *, int, int, System::Uitypes::TDragState, bool&)
+    @Vcl@Actnctrls@TCustomActionDockBar@ @157 ; Vcl::Actnctrls::TCustomActionDockBar::
+    @Vcl@Actnctrls@TCustomActionDockBar@$bctr$qqrp25System@Classes@TComponent @80  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::TCustomActionDockBar(System::Classes::TComponent *)
+    @Vcl@Actnctrls@TCustomActionDockBar@CalcDockedWidth$qqrv @79  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::CalcDockedWidth()
+    @Vcl@Actnctrls@TCustomActionDockBar@CreateControls$qqrv @76  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::CreateControls()
+    @Vcl@Actnctrls@TCustomActionDockBar@CreateScrollButtons$qqrv @75  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::CreateScrollButtons()
+    @Vcl@Actnctrls@TCustomActionDockBar@CustomAlignPosition$qqrp21Vcl@Controls@TControlrit2t2t2r18System@Types@TRectrx23Vcl@Controls@TAlignInfo @78  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::CustomAlignPosition(Vcl::Controls::TControl *, int&, int&, int&, int&, System::Types::TRect&, const Vcl::Controls::TAlignInfo&)
+    @Vcl@Actnctrls@TCustomActionDockBar@DoEndDock$qqrp14System@TObjectii @74  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::DoEndDock(System::TObject *, int, int)
+    @Vcl@Actnctrls@TCustomActionDockBar@DoScrollDown$qqrv @72  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::DoScrollDown()
+    @Vcl@Actnctrls@TCustomActionDockBar@DoScrollUp$qqrv @71  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::DoScrollUp()
+    @Vcl@Actnctrls@TCustomActionDockBar@DoStartDock$qqrrp24Vcl@Controls@TDragObject @73  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::DoStartDock(Vcl::Controls::TDragObject *&)
+    @Vcl@Actnctrls@TCustomActionDockBar@Dock$qqrp24Vcl@Controls@TWinControlrx18System@Types@TRect @77  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::Dock(Vcl::Controls::TWinControl *, const System::Types::TRect&)
+    @Vcl@Actnctrls@TCustomActionDockBar@GenerateControlHeightLookup$qqrv @67  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::GenerateControlHeightLookup()
+    @Vcl@Actnctrls@TCustomActionDockBar@GetFloatingDockSiteClass$qqrv @66  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::GetFloatingDockSiteClass()
+    @Vcl@Actnctrls@TCustomActionDockBar@GetSiteInfo$qqrp21Vcl@Controls@TControlr18System@Types@TRectrx19System@Types@TPointro @70  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::GetSiteInfo(Vcl::Controls::TControl *, System::Types::TRect&, const System::Types::TPoint&, bool&)
+    @Vcl@Actnctrls@TCustomActionDockBar@Loaded$qqrv @69  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::Loaded()
+    @Vcl@Actnctrls@TCustomActionDockBar@MakeLastItemVisible$qqrv @68  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::MakeLastItemVisible()
+    @Vcl@Actnctrls@TCustomActionDockBar@Resize$qqrv @65  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::Resize()
+    @Vcl@Actnctrls@TCustomActionDockBar@ScrollButtonsVisible$qqrv @64  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::ScrollButtonsVisible()
+    @Vcl@Actnctrls@TCustomActionDockBar@ScrollDownClickHandler$qqrp14System@TObject @63  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::ScrollDownClickHandler(System::TObject *)
+    @Vcl@Actnctrls@TCustomActionDockBar@ScrollUpClickHandler$qqrp14System@TObject @62  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::ScrollUpClickHandler(System::TObject *)
+    @Vcl@Actnctrls@TCustomActionDockBar@SetAllowScrolling$qqrxo @61  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::SetAllowScrolling(const bool)
+    @Vcl@Actnctrls@TCustomActionDockBar@SetOrientation$qqrx27Vcl@Actnman@TBarOrientation @60  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::SetOrientation(const Vcl::Actnman::TBarOrientation)
+    @Vcl@Actnctrls@TCustomActionDockBar@SetVisibleIndex$qqrxi @58  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::SetVisibleIndex(const int)
+    @Vcl@Actnctrls@TCustomActionDockBar@SetupScrolling$qqrxo @59  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::SetupScrolling(const bool)
+    @Vcl@Actnctrls@TCustomActionDockBar@ShowScrollButtons$qqrv @57  ; __fastcall Vcl::Actnctrls::TCustomActionDockBar::ShowScrollButtons()
+    @Vcl@Actnctrls@TCustomActionToolBar@ @154 ; Vcl::Actnctrls::TCustomActionToolBar::
+    @Vcl@Actnctrls@TCustomActionToolBar@$bctr$qqrp25System@Classes@TComponent @56  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::TCustomActionToolBar(System::Classes::TComponent *)
+    @Vcl@Actnctrls@TCustomActionToolBar@$bdtr$qqrv @55  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::~TCustomActionToolBar()
+    @Vcl@Actnctrls@TCustomActionToolBar@AutoSizingChanged$qqrv @54  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::AutoSizingChanged()
+    @Vcl@Actnctrls@TCustomActionToolBar@CMColorchanged$qqrr24Winapi@Messages@TMessage @36  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::CMColorchanged(Winapi::Messages::TMessage&)
+    @Vcl@Actnctrls@TCustomActionToolBar@CalcButtonWidth$qqrv @53  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::CalcButtonWidth()
+    @Vcl@Actnctrls@TCustomActionToolBar@CalcDockedWidth$qqrv @52  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::CalcDockedWidth()
+    @Vcl@Actnctrls@TCustomActionToolBar@CreateControl$qqrp29Vcl@Actnman@TActionClientItem @51  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::CreateControl(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnctrls@TCustomActionToolBar@CreateControls$qqrv @50  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::CreateControls()
+    @Vcl@Actnctrls@TCustomActionToolBar@DisableHiding$qqrv @49  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::DisableHiding()
+    @Vcl@Actnctrls@TCustomActionToolBar@DoDropCategory$qqrp31Vcl@Actnman@TCategoryDragObjectxixi @47  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::DoDropCategory(Vcl::Actnman::TCategoryDragObject *, const int, const int)
+    @Vcl@Actnctrls@TCustomActionToolBar@DoScrollBtnClick$qqrv @46  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::DoScrollBtnClick()
+    @Vcl@Actnctrls@TCustomActionToolBar@DragDrop$qqrp14System@TObjectii @34  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::DragDrop(System::TObject *, int, int)
+    @Vcl@Actnctrls@TCustomActionToolBar@DrawBackground$qqrv @45  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::DrawBackground()
+    @Vcl@Actnctrls@TCustomActionToolBar@DrawSeparator$qqrxixi @44  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::DrawSeparator(const int, const int)
+    @Vcl@Actnctrls@TCustomActionToolBar@EnableHiding$qqrv @43  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::EnableHiding()
+    @Vcl@Actnctrls@TCustomActionToolBar@GetControlClass$qqrp29Vcl@Actnman@TActionClientItem @48  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::GetControlClass(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnctrls@TCustomActionToolBar@GetHiddenCount$qqrv @42  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::GetHiddenCount()
+    @Vcl@Actnctrls@TCustomActionToolBar@GetPopupClass$qqrv @33  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::GetPopupClass()
+    @Vcl@Actnctrls@TCustomActionToolBar@GetScrollBtnClass$qqrv @32  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::GetScrollBtnClass()
+    @Vcl@Actnctrls@TCustomActionToolBar@HideUnusedItems$qqrv @41  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::HideUnusedItems()
+    @Vcl@Actnctrls@TCustomActionToolBar@Reset$qqrv @37  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::Reset()
+    @Vcl@Actnctrls@TCustomActionToolBar@ScrollBtnClick$qqrp14System@TObject @40  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::ScrollBtnClick(System::TObject *)
+    @Vcl@Actnctrls@TCustomActionToolBar@SetBounds$qqriiii @35  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::SetBounds(int, int, int, int)
+    @Vcl@Actnctrls@TCustomActionToolBar@SetOrientation$qqrx27Vcl@Actnman@TBarOrientation @39  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::SetOrientation(const Vcl::Actnman::TBarOrientation)
+    @Vcl@Actnctrls@TCustomActionToolBar@SetupDropDownBtn$qqrv @38  ; __fastcall Vcl::Actnctrls::TCustomActionToolBar::SetupDropDownBtn()
+    @Vcl@Actnctrls@TCustomButtonControl@ @170 ; Vcl::Actnctrls::TCustomButtonControl::
+    @Vcl@Actnctrls@TCustomButtonControl@$bctr$qqrp25System@Classes@TComponent @150 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::TCustomButtonControl(System::Classes::TComponent *)
+    @Vcl@Actnctrls@TCustomButtonControl@CMDialogChar$qqrr22Winapi@Messages@TWMKey @124 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::CMDialogChar(Winapi::Messages::TWMKey&)
+    @Vcl@Actnctrls@TCustomButtonControl@CMEnabledChanged$qqrr24Winapi@Messages@TMessage @147 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::CMEnabledChanged(Winapi::Messages::TMessage&)
+    @Vcl@Actnctrls@TCustomButtonControl@CMMouseEnter$qqrr24Winapi@Messages@TMessage @145 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::CMMouseEnter(Winapi::Messages::TMessage&)
+    @Vcl@Actnctrls@TCustomButtonControl@CMMouseLeave$qqrr24Winapi@Messages@TMessage @144 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::CMMouseLeave(Winapi::Messages::TMessage&)
+    @Vcl@Actnctrls@TCustomButtonControl@CMTextChanged$qqrr24Winapi@Messages@TMessage @146 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::CMTextChanged(Winapi::Messages::TMessage&)
+    @Vcl@Actnctrls@TCustomButtonControl@CalcBounds$qqrv @149 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::CalcBounds()
+    @Vcl@Actnctrls@TCustomButtonControl@Click$qqrv @148 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::Click()
+    @Vcl@Actnctrls@TCustomButtonControl@DrawBackground$qqrr18System@Types@TRect @143 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::DrawBackground(System::Types::TRect&)
+    @Vcl@Actnctrls@TCustomButtonControl@DrawFrame$qqrrx18System@Types@TRecto @142 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::DrawFrame(const System::Types::TRect&, bool)
+    @Vcl@Actnctrls@TCustomButtonControl@DrawLargeGlyph$qqrrx19System@Types@TPoint @125 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::DrawLargeGlyph(const System::Types::TPoint&)
+    @Vcl@Actnctrls@TCustomButtonControl@GetShowShortCut$qqrv @141 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::GetShowShortCut()
+    @Vcl@Actnctrls@TCustomButtonControl@Loaded$qqrv @140 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::Loaded()
+    @Vcl@Actnctrls@TCustomButtonControl@MouseDown$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @139 ; Vcl::Actnctrls::TCustomButtonControl::MouseDown(System::Uitypes::TMouseButton, System::Set<{583}...
+    @Vcl@Actnctrls@TCustomButtonControl@MouseMove$qqr60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @138 ; Vcl::Actnctrls::TCustomButtonControl::MouseMove(System::Set<{583}...
+    @Vcl@Actnctrls@TCustomButtonControl@MouseUp$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @137 ; Vcl::Actnctrls::TCustomButtonControl::MouseUp(System::Uitypes::TMouseButton, System::Set<{583}...
+    @Vcl@Actnctrls@TCustomButtonControl@Paint$qqrv @136 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::Paint()
+    @Vcl@Actnctrls@TCustomButtonControl@SetActionClient$qqrp29Vcl@Actnman@TActionClientItem @135 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::SetActionClient(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnctrls@TCustomButtonControl@SetAllowAllUp$qqro @134 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::SetAllowAllUp(bool)
+    @Vcl@Actnctrls@TCustomButtonControl@SetBounds$qqriiii @129 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::SetBounds(int, int, int, int)
+    @Vcl@Actnctrls@TCustomButtonControl@SetDown$qqro @133 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::SetDown(bool)
+    @Vcl@Actnctrls@TCustomButtonControl@SetFlat$qqrxo @132 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::SetFlat(const bool)
+    @Vcl@Actnctrls@TCustomButtonControl@SetGlyphLayout$qqrx25Vcl@Buttons@TButtonLayout @126 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::SetGlyphLayout(const Vcl::Buttons::TButtonLayout)
+    @Vcl@Actnctrls@TCustomButtonControl@SetSelected$qqro @131 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::SetSelected(bool)
+    @Vcl@Actnctrls@TCustomButtonControl@SetState$qqrx24Vcl@Buttons@TButtonState @130 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::SetState(const Vcl::Buttons::TButtonState)
+    @Vcl@Actnctrls@TCustomButtonControl@UpdateTracking$qqrv @128 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::UpdateTracking()
+    @Vcl@Actnctrls@TCustomButtonControl@WMLButtonDblClk$qqrr24Winapi@Messages@TWMMouse @127 ; __fastcall Vcl::Actnctrls::TCustomButtonControl::WMLButtonDblClk(Winapi::Messages::TWMMouse&)
+    @Vcl@Actnctrls@TCustomComboControl@ @160 ; Vcl::Actnctrls::TCustomComboControl::
+    @Vcl@Actnctrls@TCustomComboControl@$bctr$qqrp25System@Classes@TComponent @93  ; __fastcall Vcl::Actnctrls::TCustomComboControl::TCustomComboControl(System::Classes::TComponent *)
+    @Vcl@Actnctrls@TCustomComboControl@$bdtr$qqrv @92  ; __fastcall Vcl::Actnctrls::TCustomComboControl::~TCustomComboControl()
+    @Vcl@Actnctrls@TCustomComboControl@CMVisiblechanged$qqrr24Winapi@Messages@TMessage @89  ; __fastcall Vcl::Actnctrls::TCustomComboControl::CMVisiblechanged(Winapi::Messages::TMessage&)
+    @Vcl@Actnctrls@TCustomComboControl@CalcBounds$qqrv @91  ; __fastcall Vcl::Actnctrls::TCustomComboControl::CalcBounds()
+    @Vcl@Actnctrls@TCustomComboControl@Click$qqrv @90  ; __fastcall Vcl::Actnctrls::TCustomComboControl::Click()
+    @Vcl@Actnctrls@TCustomComboControl@ComboClick$qqrp14System@TObject @88  ; __fastcall Vcl::Actnctrls::TCustomComboControl::ComboClick(System::TObject *)
+    @Vcl@Actnctrls@TCustomComboControl@Paint$qqrv @86  ; __fastcall Vcl::Actnctrls::TCustomComboControl::Paint()
+    @Vcl@Actnctrls@TCustomComboControl@SetActionClient$qqrp29Vcl@Actnman@TActionClientItem @85  ; __fastcall Vcl::Actnctrls::TCustomComboControl::SetActionClient(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnctrls@TCustomComboControl@SetBounds$qqriiii @84  ; __fastcall Vcl::Actnctrls::TCustomComboControl::SetBounds(int, int, int, int)
+    @Vcl@Actnctrls@TCustomComboControl@SetDragMode$qqr24System@Uitypes@TDragMode @83  ; __fastcall Vcl::Actnctrls::TCustomComboControl::SetDragMode(System::Uitypes::TDragMode)
+    @Vcl@Actnctrls@TCustomComboControl@SetParent$qqrp24Vcl@Controls@TWinControl @82  ; __fastcall Vcl::Actnctrls::TCustomComboControl::SetParent(Vcl::Controls::TWinControl *)
+    @Vcl@Actnctrls@TCustomComboControl@VisibleChanging$qqrv @81  ; __fastcall Vcl::Actnctrls::TCustomComboControl::VisibleChanging()
+    @Vcl@Actnctrls@TCustomDropDownButton@ @164 ; Vcl::Actnctrls::TCustomDropDownButton::
+    @Vcl@Actnctrls@TCustomDropDownButton@CMMouseleave$qqrr24Winapi@Messages@TMessage @106 ; __fastcall Vcl::Actnctrls::TCustomDropDownButton::CMMouseleave(Winapi::Messages::TMessage&)
+    @Vcl@Actnctrls@TCustomDropDownButton@CalcBounds$qqrv @108 ; __fastcall Vcl::Actnctrls::TCustomDropDownButton::CalcBounds()
+    @Vcl@Actnctrls@TCustomDropDownButton@Click$qqrv @107 ; __fastcall Vcl::Actnctrls::TCustomDropDownButton::Click()
+    @Vcl@Actnctrls@TCustomDropDownButton@DrawDropDownArrow$qqrv @105 ; __fastcall Vcl::Actnctrls::TCustomDropDownButton::DrawDropDownArrow()
+    @Vcl@Actnctrls@TCustomDropDownButton@DrawFrame$qqrrx18System@Types@TRecto @104 ; __fastcall Vcl::Actnctrls::TCustomDropDownButton::DrawFrame(const System::Types::TRect&, bool)
+    @Vcl@Actnctrls@TCustomDropDownButton@DropDownClick$qqrv @103 ; __fastcall Vcl::Actnctrls::TCustomDropDownButton::DropDownClick()
+    @Vcl@Actnctrls@TCustomDropDownButton@GetDropDownButtonWidth$qqrv @102 ; __fastcall Vcl::Actnctrls::TCustomDropDownButton::GetDropDownButtonWidth()
+    @Vcl@Actnctrls@TCustomDropDownButton@GetPopupClass$qqrv @101 ; __fastcall Vcl::Actnctrls::TCustomDropDownButton::GetPopupClass()
+    @Vcl@Actnctrls@TCustomDropDownButton@MouseDown$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @100 ; Vcl::Actnctrls::TCustomDropDownButton::MouseDown(System::Uitypes::TMouseButton, System::Set<{583}...
+    @Vcl@Actnctrls@TCustomDropDownButton@MouseOverDropDown$qqrv @99  ; __fastcall Vcl::Actnctrls::TCustomDropDownButton::MouseOverDropDown()
+    @Vcl@Actnctrls@TCustomDropDownButton@Paint$qqrv @98  ; __fastcall Vcl::Actnctrls::TCustomDropDownButton::Paint()
+    @Vcl@Actnctrls@TCustomToolScrollBtn@ @166 ; Vcl::Actnctrls::TCustomToolScrollBtn::
+    @Vcl@Actnctrls@TCustomToolScrollBtn@$bctr$qqrp25System@Classes@TComponent @110 ; __fastcall Vcl::Actnctrls::TCustomToolScrollBtn::TCustomToolScrollBtn(System::Classes::TComponent *)
+    @Vcl@Actnctrls@TCustomToolScrollBtn@CalcBounds$qqrv @111 ; __fastcall Vcl::Actnctrls::TCustomToolScrollBtn::CalcBounds()
+    @Vcl@Actnctrls@TCustomToolScrollBtn@DrawArrows$qqrv @109 ; __fastcall Vcl::Actnctrls::TCustomToolScrollBtn::DrawArrows()
+    @Vcl@Actnctrls@TCustomUtilityButton@ @168 ; Vcl::Actnctrls::TCustomUtilityButton::
+    @Vcl@Actnctrls@TCustomUtilityButton@$bctr$qqrp25System@Classes@TComponent @123 ; __fastcall Vcl::Actnctrls::TCustomUtilityButton::TCustomUtilityButton(System::Classes::TComponent *)
+    @Vcl@Actnctrls@TCustomUtilityButton@$bdtr$qqrv @122 ; __fastcall Vcl::Actnctrls::TCustomUtilityButton::~TCustomUtilityButton()
+    @Vcl@Actnctrls@TCustomUtilityButton@CMMouseEnter$qqrr24Winapi@Messages@TMessage @120 ; __fastcall Vcl::Actnctrls::TCustomUtilityButton::CMMouseEnter(Winapi::Messages::TMessage&)
+    @Vcl@Actnctrls@TCustomUtilityButton@CMMouseLeave$qqrr24Winapi@Messages@TMessage @119 ; __fastcall Vcl::Actnctrls::TCustomUtilityButton::CMMouseLeave(Winapi::Messages::TMessage&)
+    @Vcl@Actnctrls@TCustomUtilityButton@Click$qqrv @121 ; __fastcall Vcl::Actnctrls::TCustomUtilityButton::Click()
+    @Vcl@Actnctrls@TCustomUtilityButton@DrawArrows$qqrv @118 ; __fastcall Vcl::Actnctrls::TCustomUtilityButton::DrawArrows()
+    @Vcl@Actnctrls@TCustomUtilityButton@MouseDown$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @117 ; Vcl::Actnctrls::TCustomUtilityButton::MouseDown(System::Uitypes::TMouseButton, System::Set<{583}...
+    @Vcl@Actnctrls@TCustomUtilityButton@OnDelay$qqrp14System@TObject @116 ; __fastcall Vcl::Actnctrls::TCustomUtilityButton::OnDelay(System::TObject *)
+    @Vcl@Actnctrls@TCustomUtilityButton@Paint$qqrv @112 ; __fastcall Vcl::Actnctrls::TCustomUtilityButton::Paint()
+    @Vcl@Actnctrls@TCustomUtilityButton@SetArrowSize$qqrxi @115 ; __fastcall Vcl::Actnctrls::TCustomUtilityButton::SetArrowSize(const int)
+    @Vcl@Actnctrls@TCustomUtilityButton@SetArrowType$qqrx24Vcl@Graphutil@TArrowType @114 ; __fastcall Vcl::Actnctrls::TCustomUtilityButton::SetArrowType(const Vcl::Graphutil::TArrowType)
+    @Vcl@Actnctrls@TCustomUtilityButton@SetDirection$qqrx30Vcl@Graphutil@TScrollDirection @113 ; __fastcall Vcl::Actnctrls::TCustomUtilityButton::SetDirection(const Vcl::Graphutil::TScrollDirection)
+    @Vcl@Actnctrls@TMenuResizeActionControl@ @172 ; Vcl::Actnctrls::TMenuResizeActionControl::
+    @Vcl@Actnctrls@initialization$qqrv @30  ; __fastcall Vcl::Actnctrls::initialization()
+    @Vcl@Actnman@ActionBarDesigner @568 ; Vcl::Actnman::ActionBarDesigner
+    @Vcl@Actnman@ActionBarStyles   @567 ; Vcl::Actnman::ActionBarStyles
+    @Vcl@Actnman@ControlDragMode   @572 ; Vcl::Actnman::ControlDragMode
+    @Vcl@Actnman@DefaultActnBarStyle @566 ; Vcl::Actnman::DefaultActnBarStyle
+    @Vcl@Actnman@Finalization$qqrv @174 ; __fastcall Vcl::Actnman::Finalization()
+    @Vcl@Actnman@NotifyDesigner$qqrp28Vcl@Actnman@TCustomActionBar @564 ; __fastcall Vcl::Actnman::NotifyDesigner(Vcl::Actnman::TCustomActionBar *)
+    @Vcl@Actnman@TActionBarItem@   @638 ; Vcl::Actnman::TActionBarItem::
+    @Vcl@Actnman@TActionBarItem@$bctr$qqrp26System@Classes@TCollection @463 ; __fastcall Vcl::Actnman::TActionBarItem::TActionBarItem(System::Classes::TCollection *)
+    @Vcl@Actnman@TActionBarItem@ColorChanged$qqrv @464 ; __fastcall Vcl::Actnman::TActionBarItem::ColorChanged()
+    @Vcl@Actnman@TActionBarItem@GetActionBars$qqrv @462 ; __fastcall Vcl::Actnman::TActionBarItem::GetActionBars()
+    @Vcl@Actnman@TActionBarItem@GetDisplayName$qqrv @461 ; __fastcall Vcl::Actnman::TActionBarItem::GetDisplayName()
+    @Vcl@Actnman@TActionBarItem@Refresh$qqrv @460 ; __fastcall Vcl::Actnman::TActionBarItem::Refresh()
+    @Vcl@Actnman@TActionBarItem@SetAutoSize$qqrxo @459 ; __fastcall Vcl::Actnman::TActionBarItem::SetAutoSize(const bool)
+    @Vcl@Actnman@TActionBarItem@SetGlyphLayout$qqrx25Vcl@Buttons@TButtonLayout @458 ; __fastcall Vcl::Actnman::TActionBarItem::SetGlyphLayout(const Vcl::Buttons::TButtonLayout)
+    @Vcl@Actnman@TActionBarItem@SetVisible$qqrxo @457 ; __fastcall Vcl::Actnman::TActionBarItem::SetVisible(const bool)
+    @Vcl@Actnman@TActionBarStyle@  @655 ; Vcl::Actnman::TActionBarStyle::
+    @Vcl@Actnman@TActionBarStyleList@ @570 ; Vcl::Actnman::TActionBarStyleList::
+    @Vcl@Actnman@TActionBarStyleList@GetStyle$qqri @179 ; __fastcall Vcl::Actnman::TActionBarStyleList::GetStyle(int)
+    @Vcl@Actnman@TActionBars@      @636 ; Vcl::Actnman::TActionBars::
+    @Vcl@Actnman@TActionBars@$bctr$qqrp26System@Classes@TPersistentp17System@TMetaClass @456 ; __fastcall Vcl::Actnman::TActionBars::TActionBars(System::Classes::TPersistent *, System::TMetaClass *)
+    @Vcl@Actnman@TActionBars@Add$qqrv @455 ; __fastcall Vcl::Actnman::TActionBars::Add()
+    @Vcl@Actnman@TActionBars@DoShowHint$qqrp25Vcl@Actnman@TActionClient @454 ; __fastcall Vcl::Actnman::TActionBars::DoShowHint(Vcl::Actnman::TActionClient *)
+    @Vcl@Actnman@TActionBars@GetActionBar$qqrxi @453 ; __fastcall Vcl::Actnman::TActionBars::GetActionBar(const int)
+    @Vcl@Actnman@TActionBars@GetHintShortCuts$qqrv @452 ; __fastcall Vcl::Actnman::TActionBars::GetHintShortCuts()
+    @Vcl@Actnman@TActionBars@Loaded$qqrv @451 ; __fastcall Vcl::Actnman::TActionBars::Loaded()
+    @Vcl@Actnman@TActionBars@Notify$qqrp30System@Classes@TCollectionItem38System@Classes@TCollectionNotification @450 ; __fastcall Vcl::Actnman::TActionBars::Notify(System::Classes::TCollectionItem *, System::Classes::TCollectionNotification)
+    @Vcl@Actnman@TActionBars@SetHintShortCuts$qqrxo @448 ; __fastcall Vcl::Actnman::TActionBars::SetHintShortCuts(const bool)
+    @Vcl@Actnman@TActionBars@SetShowHints$qqrxo @449 ; __fastcall Vcl::Actnman::TActionBars::SetShowHints(const bool)
+    @Vcl@Actnman@TActionClient@    @640 ; Vcl::Actnman::TActionClient::
+    @Vcl@Actnman@TActionClient@$bctr$qqrp26System@Classes@TCollection @491 ; __fastcall Vcl::Actnman::TActionClient::TActionClient(System::Classes::TCollection *)
+    @Vcl@Actnman@TActionClient@$bdtr$qqrv @490 ; __fastcall Vcl::Actnman::TActionClient::~TActionClient()
+    @Vcl@Actnman@TActionClient@AreContextItemsStored$qqrv @489 ; __fastcall Vcl::Actnman::TActionClient::AreContextItemsStored()
+    @Vcl@Actnman@TActionClient@Assign$qqrp26System@Classes@TPersistent @488 ; __fastcall Vcl::Actnman::TActionClient::Assign(System::Classes::TPersistent *)
+    @Vcl@Actnman@TActionClient@ClearActionBar$qqrv @487 ; __fastcall Vcl::Actnman::TActionClient::ClearActionBar()
+    @Vcl@Actnman@TActionClient@ColorChanged$qqrv @486 ; __fastcall Vcl::Actnman::TActionClient::ColorChanged()
+    @Vcl@Actnman@TActionClient@FreeChildren$qqrv @485 ; __fastcall Vcl::Actnman::TActionClient::FreeChildren()
+    @Vcl@Actnman@TActionClient@GetBackground$qqrv @484 ; __fastcall Vcl::Actnman::TActionClient::GetBackground()
+    @Vcl@Actnman@TActionClient@GetContextItems$qqrv @483 ; __fastcall Vcl::Actnman::TActionClient::GetContextItems()
+    @Vcl@Actnman@TActionClient@GetHasItems$qqrv @482 ; __fastcall Vcl::Actnman::TActionClient::GetHasItems()
+    @Vcl@Actnman@TActionClient@GetItems$qqrv @480 ; __fastcall Vcl::Actnman::TActionClient::GetItems()
+    @Vcl@Actnman@TActionClient@GetOwningCollection$qqrv @479 ; __fastcall Vcl::Actnman::TActionClient::GetOwningCollection()
+    @Vcl@Actnman@TActionClient@HasBackground$qqrv @478 ; __fastcall Vcl::Actnman::TActionClient::HasBackground()
+    @Vcl@Actnman@TActionClient@HasVisibleItems$qqrv @477 ; __fastcall Vcl::Actnman::TActionClient::HasVisibleItems()
+    @Vcl@Actnman@TActionClient@IsBackgroundStored$qqrv @476 ; __fastcall Vcl::Actnman::TActionClient::IsBackgroundStored()
+    @Vcl@Actnman@TActionClient@IsChildItem$qqrp25Vcl@Actnman@TActionClient @475 ; __fastcall Vcl::Actnman::TActionClient::IsChildItem(Vcl::Actnman::TActionClient *)
+    @Vcl@Actnman@TActionClient@IsItemsStored$qqrv @474 ; __fastcall Vcl::Actnman::TActionClient::IsItemsStored()
+    @Vcl@Actnman@TActionClient@Refresh$qqrv @473 ; __fastcall Vcl::Actnman::TActionClient::Refresh()
+    @Vcl@Actnman@TActionClient@SetActionBar$qqrxp28Vcl@Actnman@TCustomActionBar @472 ; __fastcall Vcl::Actnman::TActionClient::SetActionBar(Vcl::Actnman::TCustomActionBar * const)
+    @Vcl@Actnman@TActionClient@SetBackground$qqrxp21Vcl@Graphics@TPicture @470 ; __fastcall Vcl::Actnman::TActionClient::SetBackground(Vcl::Graphics::TPicture * const)
+    @Vcl@Actnman@TActionClient@SetBackgroundLayout$qqrx29Vcl@Actnman@TBackgroundLayout @469 ; __fastcall Vcl::Actnman::TActionClient::SetBackgroundLayout(const Vcl::Actnman::TBackgroundLayout)
+    @Vcl@Actnman@TActionClient@SetChangesAllowed$qqrx54System@%Set$27Vcl@Actnman@TChangesAllowedt1$i0$t1$i2$% @468 ; Vcl::Actnman::TActionClient::SetChangesAllowed(const System::Set<{583}...
+    @Vcl@Actnman@TActionClient@SetColor$qqrx21System@Uitypes@TColor @467 ; __fastcall Vcl::Actnman::TActionClient::SetColor(const System::Uitypes::TColor)
+    @Vcl@Actnman@TActionClient@SetContextItems$qqrxp26Vcl@Actnman@TActionClients @466 ; __fastcall Vcl::Actnman::TActionClient::SetContextItems(Vcl::Actnman::TActionClients * const)
+    @Vcl@Actnman@TActionClient@SetItems$qqrxp26Vcl@Actnman@TActionClients @471 ; __fastcall Vcl::Actnman::TActionClient::SetItems(Vcl::Actnman::TActionClients * const)
+    @Vcl@Actnman@TActionClient@SetVisible$qqrxo @465 ; __fastcall Vcl::Actnman::TActionClient::SetVisible(const bool)
+    @Vcl@Actnman@TActionClientItem@ @601 ; Vcl::Actnman::TActionClientItem::
+    @Vcl@Actnman@TActionClientItem@$bctr$qqrp26System@Classes@TCollection @374 ; __fastcall Vcl::Actnman::TActionClientItem::TActionClientItem(System::Classes::TCollection *)
+    @Vcl@Actnman@TActionClientItem@$bdtr$qqrv @373 ; __fastcall Vcl::Actnman::TActionClientItem::~TActionClientItem()
+    @Vcl@Actnman@TActionClientItem@ActionChange$qqrp14System@TObjecto @372 ; __fastcall Vcl::Actnman::TActionClientItem::ActionChange(System::TObject *, bool)
+    @Vcl@Actnman@TActionClientItem@Assign$qqrp26System@Classes@TPersistent @371 ; __fastcall Vcl::Actnman::TActionClientItem::Assign(System::Classes::TPersistent *)
+    @Vcl@Actnman@TActionClientItem@ColorChanged$qqrv @370 ; __fastcall Vcl::Actnman::TActionClientItem::ColorChanged()
+    @Vcl@Actnman@TActionClientItem@DoActionChange$qqrp14System@TObject @369 ; __fastcall Vcl::Actnman::TActionClientItem::DoActionChange(System::TObject *)
+    @Vcl@Actnman@TActionClientItem@GetAction$qqrv @366 ; __fastcall Vcl::Actnman::TActionClientItem::GetAction()
+    @Vcl@Actnman@TActionClientItem@GetActionClients$qqrv @368 ; __fastcall Vcl::Actnman::TActionClientItem::GetActionClients()
+    @Vcl@Actnman@TActionClientItem@GetActionLinkClass$qqrv @367 ; __fastcall Vcl::Actnman::TActionClientItem::GetActionLinkClass()
+    @Vcl@Actnman@TActionClientItem@GetCaption$qqrv @365 ; __fastcall Vcl::Actnman::TActionClientItem::GetCaption()
+    @Vcl@Actnman@TActionClientItem@GetDisplayName$qqrv @364 ; __fastcall Vcl::Actnman::TActionClientItem::GetDisplayName()
+    @Vcl@Actnman@TActionClientItem@GetParentItem$qqrv @481 ; __fastcall Vcl::Actnman::TActionClientItem::GetParentItem()
+    @Vcl@Actnman@TActionClientItem@HasGlyph$qqrv @363 ; __fastcall Vcl::Actnman::TActionClientItem::HasGlyph()
+    @Vcl@Actnman@TActionClientItem@InitiateAction$qqrv @362 ; __fastcall Vcl::Actnman::TActionClientItem::InitiateAction()
+    @Vcl@Actnman@TActionClientItem@IsCaptionStored$qqrv @361 ; __fastcall Vcl::Actnman::TActionClientItem::IsCaptionStored()
+    @Vcl@Actnman@TActionClientItem@IsHelpContextStored$qqrv @337 ; __fastcall Vcl::Actnman::TActionClientItem::IsHelpContextStored()
+    @Vcl@Actnman@TActionClientItem@Refresh$qqrv @360 ; __fastcall Vcl::Actnman::TActionClientItem::Refresh()
+    @Vcl@Actnman@TActionClientItem@ResetUsageData$qqrv @359 ; __fastcall Vcl::Actnman::TActionClientItem::ResetUsageData()
+    @Vcl@Actnman@TActionClientItem@SetAction$qqrxp31System@Actions@TContainedAction @358 ; __fastcall Vcl::Actnman::TActionClientItem::SetAction(System::Actions::TContainedAction * const)
+    @Vcl@Actnman@TActionClientItem@SetCaption$qqrx20System@UnicodeString @357 ; __fastcall Vcl::Actnman::TActionClientItem::SetCaption(const System::UnicodeString)
+    @Vcl@Actnman@TActionClientItem@SetChangesAllowed$qqrx54System@%Set$27Vcl@Actnman@TChangesAllowedt1$i0$t1$i2$% @343 ; Vcl::Actnman::TActionClientItem::SetChangesAllowed(const System::Set<{583}...
+    @Vcl@Actnman@TActionClientItem@SetCollection$qqrp26System@Classes@TCollection @341 ; __fastcall Vcl::Actnman::TActionClientItem::SetCollection(System::Classes::TCollection *)
+    @Vcl@Actnman@TActionClientItem@SetCommandProperties$qqrxp30Vcl@Actnman@TCommandProperties @340 ; __fastcall Vcl::Actnman::TActionClientItem::SetCommandProperties(Vcl::Actnman::TCommandProperties * const)
+    @Vcl@Actnman@TActionClientItem@SetCommandStyle$qqrx25Vcl@Actnman@TCommandStyle @339 ; __fastcall Vcl::Actnman::TActionClientItem::SetCommandStyle(const Vcl::Actnman::TCommandStyle)
+    @Vcl@Actnman@TActionClientItem@SetControl$qqrxp32Vcl@Actnman@TCustomActionControl @356 ; __fastcall Vcl::Actnman::TActionClientItem::SetControl(Vcl::Actnman::TCustomActionControl * const)
+    @Vcl@Actnman@TActionClientItem@SetDefault$qqrxo @355 ; __fastcall Vcl::Actnman::TActionClientItem::SetDefault(const bool)
+    @Vcl@Actnman@TActionClientItem@SetImageIndex$qqrxi @354 ; __fastcall Vcl::Actnman::TActionClientItem::SetImageIndex(const int)
+    @Vcl@Actnman@TActionClientItem@SetIndex$qqri @353 ; __fastcall Vcl::Actnman::TActionClientItem::SetIndex(int)
+    @Vcl@Actnman@TActionClientItem@SetLastSession$qqrxi @352 ; __fastcall Vcl::Actnman::TActionClientItem::SetLastSession(const int)
+    @Vcl@Actnman@TActionClientItem@SetMergeIndex$qqrxi @351 ; __fastcall Vcl::Actnman::TActionClientItem::SetMergeIndex(const int)
+    @Vcl@Actnman@TActionClientItem@SetNewCol$qqrxo @350 ; __fastcall Vcl::Actnman::TActionClientItem::SetNewCol(const bool)
+    @Vcl@Actnman@TActionClientItem@SetNewRow$qqrxo @349 ; __fastcall Vcl::Actnman::TActionClientItem::SetNewRow(const bool)
+    @Vcl@Actnman@TActionClientItem@SetShortCut$qqrxus @348 ; __fastcall Vcl::Actnman::TActionClientItem::SetShortCut(const unsigned short)
+    @Vcl@Actnman@TActionClientItem@SetShowCaption$qqrxo @347 ; __fastcall Vcl::Actnman::TActionClientItem::SetShowCaption(const bool)
+    @Vcl@Actnman@TActionClientItem@SetShowGlyph$qqrxo @342 ; __fastcall Vcl::Actnman::TActionClientItem::SetShowGlyph(const bool)
+    @Vcl@Actnman@TActionClientItem@SetShowShortCut$qqrxo @346 ; __fastcall Vcl::Actnman::TActionClientItem::SetShowShortCut(const bool)
+    @Vcl@Actnman@TActionClientItem@SetUsageCount$qqrxi @345 ; __fastcall Vcl::Actnman::TActionClientItem::SetUsageCount(const int)
+    @Vcl@Actnman@TActionClientItem@SetVisible$qqrxo @344 ; __fastcall Vcl::Actnman::TActionClientItem::SetVisible(const bool)
+    @Vcl@Actnman@TActionClientItem@Unused$qqrv @338 ; __fastcall Vcl::Actnman::TActionClientItem::Unused()
+    @Vcl@Actnman@TActionClientLink@ @629 ; Vcl::Actnman::TActionClientLink::
+    @Vcl@Actnman@TActionClientLink@AssignClient$qqrp14System@TObject @434 ; __fastcall Vcl::Actnman::TActionClientLink::AssignClient(System::TObject *)
+    @Vcl@Actnman@TActionClientLink@DoShowHint$qqrr20System@UnicodeString @433 ; __fastcall Vcl::Actnman::TActionClientLink::DoShowHint(System::UnicodeString&)
+    @Vcl@Actnman@TActionClientLink@IsCaptionLinked$qqrv @432 ; __fastcall Vcl::Actnman::TActionClientLink::IsCaptionLinked()
+    @Vcl@Actnman@TActionClientLink@IsEnabledLinked$qqrv @431 ; __fastcall Vcl::Actnman::TActionClientLink::IsEnabledLinked()
+    @Vcl@Actnman@TActionClientLink@IsHelpContextLinked$qqrv @430 ; __fastcall Vcl::Actnman::TActionClientLink::IsHelpContextLinked()
+    @Vcl@Actnman@TActionClientLink@IsHintLinked$qqrv @429 ; __fastcall Vcl::Actnman::TActionClientLink::IsHintLinked()
+    @Vcl@Actnman@TActionClientLink@IsImageIndexLinked$qqrv @428 ; __fastcall Vcl::Actnman::TActionClientLink::IsImageIndexLinked()
+    @Vcl@Actnman@TActionClientLink@IsOnExecuteLinked$qqrv @427 ; __fastcall Vcl::Actnman::TActionClientLink::IsOnExecuteLinked()
+    @Vcl@Actnman@TActionClientLink@IsShortCutLinked$qqrv @426 ; __fastcall Vcl::Actnman::TActionClientLink::IsShortCutLinked()
+    @Vcl@Actnman@TActionClientLink@IsVisibleLinked$qqrv @425 ; __fastcall Vcl::Actnman::TActionClientLink::IsVisibleLinked()
+    @Vcl@Actnman@TActionClientLink@SetCaption$qqrx20System@UnicodeString @424 ; __fastcall Vcl::Actnman::TActionClientLink::SetCaption(const System::UnicodeString)
+    @Vcl@Actnman@TActionClientLink@SetChecked$qqro @423 ; __fastcall Vcl::Actnman::TActionClientLink::SetChecked(bool)
+    @Vcl@Actnman@TActionClientLink@SetEnabled$qqro @422 ; __fastcall Vcl::Actnman::TActionClientLink::SetEnabled(bool)
+    @Vcl@Actnman@TActionClientLink@SetHelpContext$qqri @421 ; __fastcall Vcl::Actnman::TActionClientLink::SetHelpContext(int)
+    @Vcl@Actnman@TActionClientLink@SetHint$qqrx20System@UnicodeString @420 ; __fastcall Vcl::Actnman::TActionClientLink::SetHint(const System::UnicodeString)
+    @Vcl@Actnman@TActionClientLink@SetImageIndex$qqri @419 ; __fastcall Vcl::Actnman::TActionClientLink::SetImageIndex(int)
+    @Vcl@Actnman@TActionClientLink@SetOnExecute$qqrynpqqrp14System@TObject$v @418 ; __fastcall Vcl::Actnman::TActionClientLink::SetOnExecute(void __fastcall __closure(*)(System::TObject *))
+    @Vcl@Actnman@TActionClientLink@SetShortCut$qqrus @417 ; __fastcall Vcl::Actnman::TActionClientLink::SetShortCut(unsigned short)
+    @Vcl@Actnman@TActionClientLink@SetVisible$qqro @416 ; __fastcall Vcl::Actnman::TActionClientLink::SetVisible(bool)
+    @Vcl@Actnman@TActionClients@   @632 ; Vcl::Actnman::TActionClients::
+    @Vcl@Actnman@TActionClients@$bctr$qqrp26System@Classes@TPersistentp17System@TMetaClass @447 ; __fastcall Vcl::Actnman::TActionClients::TActionClients(System::Classes::TPersistent *, System::TMetaClass *)
+    @Vcl@Actnman@TActionClients@Add$qqrv @446 ; __fastcall Vcl::Actnman::TActionClients::Add()
+    @Vcl@Actnman@TActionClients@Assign$qqrp26System@Classes@TPersistent @445 ; __fastcall Vcl::Actnman::TActionClients::Assign(System::Classes::TPersistent *)
+    @Vcl@Actnman@TActionClients@DoHideUnused$qqrp25Vcl@Actnman@TActionClient @444 ; __fastcall Vcl::Actnman::TActionClients::DoHideUnused(Vcl::Actnman::TActionClient *)
+    @Vcl@Actnman@TActionClients@DoShowCaptions$qqrp25Vcl@Actnman@TActionClient @443 ; __fastcall Vcl::Actnman::TActionClients::DoShowCaptions(Vcl::Actnman::TActionClient *)
+    @Vcl@Actnman@TActionClients@GetActionClient$qqrxi @442 ; __fastcall Vcl::Actnman::TActionClients::GetActionClient(const int)
+    @Vcl@Actnman@TActionClients@Notify$qqrp30System@Classes@TCollectionItem38System@Classes@TCollectionNotification @441 ; __fastcall Vcl::Actnman::TActionClients::Notify(System::Classes::TCollectionItem *, System::Classes::TCollectionNotification)
+    @Vcl@Actnman@TActionClients@SetActionClient$qqrxixp29Vcl@Actnman@TActionClientItem @440 ; __fastcall Vcl::Actnman::TActionClients::SetActionClient(const int, Vcl::Actnman::TActionClientItem * const)
+    @Vcl@Actnman@TActionClients@SetCaptionOptions$qqrx27Vcl@Actnman@TCaptionOptions @439 ; __fastcall Vcl::Actnman::TActionClients::SetCaptionOptions(const Vcl::Actnman::TCaptionOptions)
+    @Vcl@Actnman@TActionClients@SetHideUnused$qqrxo @438 ; __fastcall Vcl::Actnman::TActionClients::SetHideUnused(const bool)
+    @Vcl@Actnman@TActionClients@SetSmallIcons$qqrxo @437 ; __fastcall Vcl::Actnman::TActionClients::SetSmallIcons(const bool)
+    @Vcl@Actnman@TActionClients@ToggleSmallIcons$qqrp26Vcl@Actnman@TActionClientso @436 ; __fastcall Vcl::Actnman::TActionClients::ToggleSmallIcons(Vcl::Actnman::TActionClients *, bool)
+    @Vcl@Actnman@TActionClients@VisibleCount$qqrv @435 ; __fastcall Vcl::Actnman::TActionClients::VisibleCount()
+    @Vcl@Actnman@TActionClientsCollection@ @645 ; Vcl::Actnman::TActionClientsCollection::
+    @Vcl@Actnman@TActionClientsCollection@$bctr$qqrp26System@Classes@TPersistentp17System@TMetaClass @495 ; __fastcall Vcl::Actnman::TActionClientsCollection::TActionClientsCollection(System::Classes::TPersistent *, System::TMetaClass *)
+    @Vcl@Actnman@TActionClientsCollection@AfterConstruction$qqrv @494 ; __fastcall Vcl::Actnman::TActionClientsCollection::AfterConstruction()
+    @Vcl@Actnman@TActionClientsCollection@GetActionClient$qqrxi @498 ; __fastcall Vcl::Actnman::TActionClientsCollection::GetActionClient(const int)
+    @Vcl@Actnman@TActionClientsCollection@GetActionManager$qqrv @497 ; __fastcall Vcl::Actnman::TActionClientsCollection::GetActionManager()
+    @Vcl@Actnman@TActionClientsCollection@InternalRethinkHotkeys$qqro @496 ; __fastcall Vcl::Actnman::TActionClientsCollection::InternalRethinkHotkeys(bool)
+    @Vcl@Actnman@TActionClientsCollection@IterateClients$qqrp36Vcl@Actnman@TActionClientsCollectionynpqqrp25Vcl@Actnman@TActionClient$v @493 ; __fastcall Vcl::Actnman::TActionClientsCollection::IterateClients(Vcl::Actnman::TActionClientsCollection *, void __fastcall __closure(*)(Vcl::Actnman::TActionClient *))
+    @Vcl@Actnman@TActionClientsCollection@SetActionClient$qqrxixp25Vcl@Actnman@TActionClient @499 ; __fastcall Vcl::Actnman::TActionClientsCollection::SetActionClient(const int, Vcl::Actnman::TActionClient * const)
+    @Vcl@Actnman@TActionClientsCollection@SetAutoHotKeys$qqrxo @492 ; __fastcall Vcl::Actnman::TActionClientsCollection::SetAutoHotKeys(const bool)
+    @Vcl@Actnman@TActionDragBaseClass@ @599 ; Vcl::Actnman::TActionDragBaseClass::
+    @Vcl@Actnman@TActionDragObject@ @595 ; Vcl::Actnman::TActionDragObject::
+    @Vcl@Actnman@TActionDragObject@$bctr$qqrv @336 ; __fastcall Vcl::Actnman::TActionDragObject::TActionDragObject()
+    @Vcl@Actnman@TActionDragObject@$bdtr$qqrv @335 ; __fastcall Vcl::Actnman::TActionDragObject::~TActionDragObject()
+    @Vcl@Actnman@TActionDragObject@AddAction$qqrp31System@Actions@TContainedAction @334 ; __fastcall Vcl::Actnman::TActionDragObject::AddAction(System::Actions::TContainedAction *)
+    @Vcl@Actnman@TActionDragObject@AddActionClass$qqrp30Vcl@Actnman@TCustomActionClass @333 ; __fastcall Vcl::Actnman::TActionDragObject::AddActionClass(Vcl::Actnman::TCustomActionClass *)
+    @Vcl@Actnman@TActionDragObject@GetAction$qqri @332 ; __fastcall Vcl::Actnman::TActionDragObject::GetAction(int)
+    @Vcl@Actnman@TActionDragObject@GetActionCount$qqrv @331 ; __fastcall Vcl::Actnman::TActionDragObject::GetActionCount()
+    @Vcl@Actnman@TActionItemDragObject@ @591 ; Vcl::Actnman::TActionItemDragObject::
+    @Vcl@Actnman@TActionItemDragObject@Finished$qqrp14System@TObjectiio @329 ; __fastcall Vcl::Actnman::TActionItemDragObject::Finished(System::TObject *, int, int, bool)
+    @Vcl@Actnman@TActionListCollection@ @647 ; Vcl::Actnman::TActionListCollection::
+    @Vcl@Actnman@TActionListCollection@GetActionManager$qqrv @502 ; __fastcall Vcl::Actnman::TActionListCollection::GetActionManager()
+    @Vcl@Actnman@TActionListCollection@GetListItem$qqri @501 ; __fastcall Vcl::Actnman::TActionListCollection::GetListItem(int)
+    @Vcl@Actnman@TActionListCollection@SetListItem$qqrixp27Vcl@Actnman@TActionListItem @500 ; __fastcall Vcl::Actnman::TActionListCollection::SetListItem(int, Vcl::Actnman::TActionListItem * const)
+    @Vcl@Actnman@TActionListItem@  @649 ; Vcl::Actnman::TActionListItem::
+    @Vcl@Actnman@TActionListItem@Assign$qqrp26System@Classes@TPersistent @507 ; __fastcall Vcl::Actnman::TActionListItem::Assign(System::Classes::TPersistent *)
+    @Vcl@Actnman@TActionListItem@GetCaption$qqrv @506 ; __fastcall Vcl::Actnman::TActionListItem::GetCaption()
+    @Vcl@Actnman@TActionListItem@GetDisplayName$qqrv @505 ; __fastcall Vcl::Actnman::TActionListItem::GetDisplayName()
+    @Vcl@Actnman@TActionListItem@Owner$qqrv @504 ; __fastcall Vcl::Actnman::TActionListItem::Owner()
+    @Vcl@Actnman@TActionListItem@SetActionList$qqrxp30Vcl@Actnlist@TCustomActionList @503 ; __fastcall Vcl::Actnman::TActionListItem::SetActionList(Vcl::Actnlist::TCustomActionList * const)
+    @Vcl@Actnman@TActionManager@   @651 ; Vcl::Actnman::TActionManager::
+    @Vcl@Actnman@TButtonProperties@ @617 ; Vcl::Actnman::TButtonProperties::
+    @Vcl@Actnman@TButtonProperties@$bctr$qqrp29Vcl@Actnman@TActionClientItem @409 ; __fastcall Vcl::Actnman::TButtonProperties::TButtonProperties(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnman@TButtonProperties@Assign$qqrp26System@Classes@TPersistent @410 ; __fastcall Vcl::Actnman::TButtonProperties::Assign(System::Classes::TPersistent *)
+    @Vcl@Actnman@TButtonProperties@SetButtonSize$qqrx41Vcl@Actnman@TButtonProperties@TButtonSize @408 ; __fastcall Vcl::Actnman::TButtonProperties::SetButtonSize(const Vcl::Actnman::TButtonProperties::TButtonSize)
+    @Vcl@Actnman@TButtonProperties@SetButtonType$qqrx41Vcl@Actnman@TButtonProperties@TButtonType @407 ; __fastcall Vcl::Actnman::TButtonProperties::SetButtonType(const Vcl::Actnman::TButtonProperties::TButtonType)
+    @Vcl@Actnman@TButtonProperties@SetGroupPosition$qqrx44Vcl@Actnman@TButtonProperties@TGroupPosition @406 ; __fastcall Vcl::Actnman::TButtonProperties::SetGroupPosition(const Vcl::Actnman::TButtonProperties::TGroupPosition)
+    @Vcl@Actnman@TButtonProperties@SetTextAssociation$qqrx46Vcl@Actnman@TButtonProperties@TTextAssociation @405 ; __fastcall Vcl::Actnman::TButtonProperties::SetTextAssociation(const Vcl::Actnman::TButtonProperties::TTextAssociation)
+    @Vcl@Actnman@TCategoryDragObject@ @593 ; Vcl::Actnman::TCategoryDragObject::
+    @Vcl@Actnman@TCategoryDragObject@$bctr$qqr20System@UnicodeString @330 ; __fastcall Vcl::Actnman::TCategoryDragObject::TCategoryDragObject(System::UnicodeString)
+    @Vcl@Actnman@TCheckBoxProperties@ @623 ; Vcl::Actnman::TCheckBoxProperties::
+    @Vcl@Actnman@TCheckBoxProperties@$bctr$qqrp29Vcl@Actnman@TActionClientItem @177 ; __fastcall Vcl::Actnman::TCheckBoxProperties::TCheckBoxProperties(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnman@TCheckBoxProperties@Assign$qqrp26System@Classes@TPersistent @178 ; __fastcall Vcl::Actnman::TCheckBoxProperties::Assign(System::Classes::TPersistent *)
+    @Vcl@Actnman@TCheckBoxProperties@DoSetWidth$qqrv @176 ; __fastcall Vcl::Actnman::TCheckBoxProperties::DoSetWidth()
+    @Vcl@Actnman@TCheckBoxProperties@SetWidth$qqrxi @175 ; __fastcall Vcl::Actnman::TCheckBoxProperties::SetWidth(const int)
+    @Vcl@Actnman@TComboBoxProperties@ @605 ; Vcl::Actnman::TComboBoxProperties::
+    @Vcl@Actnman@TComboBoxProperties@$bctr$qqrp29Vcl@Actnman@TActionClientItem @375 ; __fastcall Vcl::Actnman::TComboBoxProperties::TComboBoxProperties(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnman@TCommandProperties@ @625 ; Vcl::Actnman::TCommandProperties::
+    @Vcl@Actnman@TCommandProperties@$bctr$qqrp29Vcl@Actnman@TActionClientItem @414 ; __fastcall Vcl::Actnman::TCommandProperties::TCommandProperties(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnman@TCommandProperties@Assign$qqrp26System@Classes@TPersistent @415 ; __fastcall Vcl::Actnman::TCommandProperties::Assign(System::Classes::TPersistent *)
+    @Vcl@Actnman@TCommandProperties@DoChanged$qqrv @413 ; __fastcall Vcl::Actnman::TCommandProperties::DoChanged()
+    @Vcl@Actnman@TCommandProperties@GetControl$qqrv @412 ; __fastcall Vcl::Actnman::TCommandProperties::GetControl()
+    @Vcl@Actnman@TCommandProperties@InvalidateControl$qqrxo @411 ; __fastcall Vcl::Actnman::TCommandProperties::InvalidateControl(const bool)
+    @Vcl@Actnman@TControlProperties@ @610 ; Vcl::Actnman::TControlProperties::
+    @Vcl@Actnman@TControlProperties@$bctr$qqrp29Vcl@Actnman@TActionClientItem @381 ; __fastcall Vcl::Actnman::TControlProperties::TControlProperties(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnman@TControlProperties@Assign$qqrp26System@Classes@TPersistent @382 ; __fastcall Vcl::Actnman::TControlProperties::Assign(System::Classes::TPersistent *)
+    @Vcl@Actnman@TControlProperties@DoSetControlText$qqrx20System@UnicodeString @380 ; __fastcall Vcl::Actnman::TControlProperties::DoSetControlText(const System::UnicodeString)
+    @Vcl@Actnman@TControlProperties@DoSetWidth$qqrv @379 ; __fastcall Vcl::Actnman::TControlProperties::DoSetWidth()
+    @Vcl@Actnman@TControlProperties@SetContainedControl$qqrxp21Vcl@Controls@TControl @378 ; __fastcall Vcl::Actnman::TControlProperties::SetContainedControl(Vcl::Controls::TControl * const)
+    @Vcl@Actnman@TControlProperties@SetLabelWidth$qqrxi @377 ; __fastcall Vcl::Actnman::TControlProperties::SetLabelWidth(const int)
+    @Vcl@Actnman@TControlProperties@SetText$qqrx20System@UnicodeString @376 ; __fastcall Vcl::Actnman::TControlProperties::SetText(const System::UnicodeString)
+    @Vcl@Actnman@TCustomActionBar@ @580 ; Vcl::Actnman::TCustomActionBar::
+    @Vcl@Actnman@TCustomActionBar@$bctr$qqrp25System@Classes@TComponent @316 ; __fastcall Vcl::Actnman::TCustomActionBar::TCustomActionBar(System::Classes::TComponent *)
+    @Vcl@Actnman@TCustomActionBar@$bdtr$qqrv @315 ; __fastcall Vcl::Actnman::TCustomActionBar::~TCustomActionBar()
+    @Vcl@Actnman@TCustomActionBar@AlignControls$qqrp21Vcl@Controls@TControlr18System@Types@TRect @314 ; __fastcall Vcl::Actnman::TCustomActionBar::AlignControls(Vcl::Controls::TControl *, System::Types::TRect&)
+    @Vcl@Actnman@TCustomActionBar@AutoSizingChanged$qqrv @313 ; __fastcall Vcl::Actnman::TCustomActionBar::AutoSizingChanged()
+    @Vcl@Actnman@TCustomActionBar@BackgroundSize$qqrv @312 ; __fastcall Vcl::Actnman::TCustomActionBar::BackgroundSize()
+    @Vcl@Actnman@TCustomActionBar@CMEnabledchanged$qqrr24Winapi@Messages@TMessage @309 ; __fastcall Vcl::Actnman::TCustomActionBar::CMEnabledchanged(Winapi::Messages::TMessage&)
+    @Vcl@Actnman@TCustomActionBar@CMMouseLeave$qqrr24Winapi@Messages@TMessage @239 ; __fastcall Vcl::Actnman::TCustomActionBar::CMMouseLeave(Winapi::Messages::TMessage&)
+    @Vcl@Actnman@TCustomActionBar@CMResetBar$qqrr24Winapi@Messages@TMessage @260 ; __fastcall Vcl::Actnman::TCustomActionBar::CMResetBar(Winapi::Messages::TMessage&)
+    @Vcl@Actnman@TCustomActionBar@CMStyleChanged$qqrr24Winapi@Messages@TMessage @259 ; __fastcall Vcl::Actnman::TCustomActionBar::CMStyleChanged(Winapi::Messages::TMessage&)
+    @Vcl@Actnman@TCustomActionBar@CMSysFontChanged$qqrr24Winapi@Messages@TMessage @258 ; __fastcall Vcl::Actnman::TCustomActionBar::CMSysFontChanged(Winapi::Messages::TMessage&)
+    @Vcl@Actnman@TCustomActionBar@CMWinINIChange$qqrr31Winapi@Messages@TWMWinIniChange @242 ; __fastcall Vcl::Actnman::TCustomActionBar::CMWinINIChange(Winapi::Messages::TWMWinIniChange&)
+    @Vcl@Actnman@TCustomActionBar@CalcInsertPosition$qqrp32Vcl@Actnman@TCustomActionControlii @311 ; __fastcall Vcl::Actnman::TCustomActionBar::CalcInsertPosition(Vcl::Actnman::TCustomActionControl *, int, int)
+    @Vcl@Actnman@TCustomActionBar@Clear$qqrv @310 ; __fastcall Vcl::Actnman::TCustomActionBar::Clear()
+    @Vcl@Actnman@TCustomActionBar@CreateControl$qqrp29Vcl@Actnman@TActionClientItem @308 ; __fastcall Vcl::Actnman::TCustomActionBar::CreateControl(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnman@TCustomActionBar@CreateControls$qqrv @307 ; __fastcall Vcl::Actnman::TCustomActionBar::CreateControls()
+    @Vcl@Actnman@TCustomActionBar@CustomAlignInsertBefore$qqrp21Vcl@Controls@TControlt1 @306 ; __fastcall Vcl::Actnman::TCustomActionBar::CustomAlignInsertBefore(Vcl::Controls::TControl *, Vcl::Controls::TControl *)
+    @Vcl@Actnman@TCustomActionBar@CustomAlignPosition$qqrp21Vcl@Controls@TControlrit2t2t2r18System@Types@TRectrx23Vcl@Controls@TAlignInfo @305 ; __fastcall Vcl::Actnman::TCustomActionBar::CustomAlignPosition(Vcl::Controls::TControl *, int&, int&, int&, int&, System::Types::TRect&, const Vcl::Controls::TAlignInfo&)
+    @Vcl@Actnman@TCustomActionBar@DesignWndProc$qqrr24Winapi@Messages@TMessage @238 ; __fastcall Vcl::Actnman::TCustomActionBar::DesignWndProc(Winapi::Messages::TMessage&)
+    @Vcl@Actnman@TCustomActionBar@DoControlCreated$qqrrp32Vcl@Actnman@TCustomActionControl @300 ; __fastcall Vcl::Actnman::TCustomActionBar::DoControlCreated(Vcl::Actnman::TCustomActionControl *&)
+    @Vcl@Actnman@TCustomActionBar@DoDropActions$qqrp29Vcl@Actnman@TActionDragObjectxixi @271 ; __fastcall Vcl::Actnman::TCustomActionBar::DoDropActions(Vcl::Actnman::TActionDragObject *, const int, const int)
+    @Vcl@Actnman@TCustomActionBar@DoDropCategory$qqrp31Vcl@Actnman@TCategoryDragObjectxixi @270 ; __fastcall Vcl::Actnman::TCustomActionBar::DoDropCategory(Vcl::Actnman::TCategoryDragObject *, const int, const int)
+    @Vcl@Actnman@TCustomActionBar@DoDropItem$qqrp33Vcl@Actnman@TActionItemDragObjectxixi @250 ; __fastcall Vcl::Actnman::TCustomActionBar::DoDropItem(Vcl::Actnman::TActionItemDragObject *, const int, const int)
+    @Vcl@Actnman@TCustomActionBar@DoGetControlClass$qqrp29Vcl@Actnman@TActionClientItem @301 ; __fastcall Vcl::Actnman::TCustomActionBar::DoGetControlClass(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnman@TCustomActionBar@DragDrop$qqrp14System@TObjectii @302 ; __fastcall Vcl::Actnman::TCustomActionBar::DragDrop(System::TObject *, int, int)
+    @Vcl@Actnman@TCustomActionBar@DragOver$qqrp14System@TObjectii25System@Uitypes@TDragStatero @303 ; __fastcall Vcl::Actnman::TCustomActionBar::DragOver(System::TObject *, int, int, System::Uitypes::TDragState, bool&)
+    @Vcl@Actnman@TCustomActionBar@DrawBackground$qqrv @304 ; __fastcall Vcl::Actnman::TCustomActionBar::DrawBackground()
+    @Vcl@Actnman@TCustomActionBar@FindAccelItem$qqrxus @299 ; __fastcall Vcl::Actnman::TCustomActionBar::FindAccelItem(const unsigned short)
+    @Vcl@Actnman@TCustomActionBar@FindFirst$qqrv @298 ; __fastcall Vcl::Actnman::TCustomActionBar::FindFirst()
+    @Vcl@Actnman@TCustomActionBar@FindFirstVisibleItem$qqrv @292 ; __fastcall Vcl::Actnman::TCustomActionBar::FindFirstVisibleItem()
+    @Vcl@Actnman@TCustomActionBar@FindItemAt$qqrrx19System@Types@TPoint @297 ; __fastcall Vcl::Actnman::TCustomActionBar::FindItemAt(const System::Types::TPoint&)
+    @Vcl@Actnman@TCustomActionBar@FindItemCaption$qqrx20System@UnicodeString @296 ; __fastcall Vcl::Actnman::TCustomActionBar::FindItemCaption(const System::UnicodeString)
+    @Vcl@Actnman@TCustomActionBar@FindLast$qqrv @295 ; __fastcall Vcl::Actnman::TCustomActionBar::FindLast()
+    @Vcl@Actnman@TCustomActionBar@FindLastVisibleItem$qqrv @293 ; __fastcall Vcl::Actnman::TCustomActionBar::FindLastVisibleItem()
+    @Vcl@Actnman@TCustomActionBar@FindLeastUsedItem$qqrxo @294 ; __fastcall Vcl::Actnman::TCustomActionBar::FindLeastUsedItem(const bool)
+    @Vcl@Actnman@TCustomActionBar@FindNearestControl$qqrrx19System@Types@TPoint @291 ; __fastcall Vcl::Actnman::TCustomActionBar::FindNearestControl(const System::Types::TPoint&)
+    @Vcl@Actnman@TCustomActionBar@FindNext$qqrp29Vcl@Actnman@TActionClientItemxo @289 ; __fastcall Vcl::Actnman::TCustomActionBar::FindNext(Vcl::Actnman::TActionClientItem *, const bool)
+    @Vcl@Actnman@TCustomActionBar@FindNextVisibleItem$qqrp29Vcl@Actnman@TActionClientItem @290 ; __fastcall Vcl::Actnman::TCustomActionBar::FindNextVisibleItem(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnman@TCustomActionBar@FindPrevious$qqrp29Vcl@Actnman@TActionClientItemxo @288 ; __fastcall Vcl::Actnman::TCustomActionBar::FindPrevious(Vcl::Actnman::TActionClientItem *, const bool)
+    @Vcl@Actnman@TCustomActionBar@FindPreviousVisibleItem$qqrp29Vcl@Actnman@TActionClientItem @269 ; __fastcall Vcl::Actnman::TCustomActionBar::FindPreviousVisibleItem(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnman@TCustomActionBar@GetActionControl$qqrxi @287 ; __fastcall Vcl::Actnman::TCustomActionBar::GetActionControl(const int)
+    @Vcl@Actnman@TCustomActionBar@GetAutoSizing$qqrv @252 ; __fastcall Vcl::Actnman::TCustomActionBar::GetAutoSizing()
+    @Vcl@Actnman@TCustomActionBar@GetBannerWidth$qqr20Vcl@Actnman@TBarEdge @286 ; __fastcall Vcl::Actnman::TCustomActionBar::GetBannerWidth(Vcl::Actnman::TBarEdge)
+    @Vcl@Actnman@TCustomActionBar@GetBarHeight$qqrv @267 ; __fastcall Vcl::Actnman::TCustomActionBar::GetBarHeight()
+    @Vcl@Actnman@TCustomActionBar@GetBarWidth$qqrv @266 ; __fastcall Vcl::Actnman::TCustomActionBar::GetBarWidth()
+    @Vcl@Actnman@TCustomActionBar@GetColorMap$qqrv @240 ; __fastcall Vcl::Actnman::TCustomActionBar::GetColorMap()
+    @Vcl@Actnman@TCustomActionBar@GetControlClass$qqrp29Vcl@Actnman@TActionClientItem @285 ; __fastcall Vcl::Actnman::TCustomActionBar::GetControlClass(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnman@TCustomActionBar@GetDefaultColorMapClass$qqrv @245 ; __fastcall Vcl::Actnman::TCustomActionBar::GetDefaultColorMapClass()
+    @Vcl@Actnman@TCustomActionBar@GetDesignMode$qqrv @265 ; __fastcall Vcl::Actnman::TCustomActionBar::GetDesignMode()
+    @Vcl@Actnman@TCustomActionBar@GetItems$qqrv @284 ; __fastcall Vcl::Actnman::TCustomActionBar::GetItems()
+    @Vcl@Actnman@TCustomActionBar@GetPopupMenuClass$qqrv @241 ; __fastcall Vcl::Actnman::TCustomActionBar::GetPopupMenuClass()
+    @Vcl@Actnman@TCustomActionBar@HasItems$qqrv @283 ; __fastcall Vcl::Actnman::TCustomActionBar::HasItems()
+    @Vcl@Actnman@TCustomActionBar@ItemCount$qqrv @282 ; __fastcall Vcl::Actnman::TCustomActionBar::ItemCount()
+    @Vcl@Actnman@TCustomActionBar@Loaded$qqrv @281 ; __fastcall Vcl::Actnman::TCustomActionBar::Loaded()
+    @Vcl@Actnman@TCustomActionBar@NCPaint$qqrp5HDC__ @243 ; __fastcall Vcl::Actnman::TCustomActionBar::NCPaint(HDC__ *)
+    @Vcl@Actnman@TCustomActionBar@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @280 ; __fastcall Vcl::Actnman::TCustomActionBar::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Vcl@Actnman@TCustomActionBar@Paint$qqrv @279 ; __fastcall Vcl::Actnman::TCustomActionBar::Paint()
+    @Vcl@Actnman@TCustomActionBar@PaintWindow$qqrp5HDC__ @278 ; __fastcall Vcl::Actnman::TCustomActionBar::PaintWindow(HDC__ *)
+    @Vcl@Actnman@TCustomActionBar@RecreateControls$qqrv @249 ; __fastcall Vcl::Actnman::TCustomActionBar::RecreateControls()
+    @Vcl@Actnman@TCustomActionBar@RequestAlign$qqrv @256 ; __fastcall Vcl::Actnman::TCustomActionBar::RequestAlign()
+    @Vcl@Actnman@TCustomActionBar@Reset$qqrv @257 ; __fastcall Vcl::Actnman::TCustomActionBar::Reset()
+    @Vcl@Actnman@TCustomActionBar@Resize$qqrv @255 ; __fastcall Vcl::Actnman::TCustomActionBar::Resize()
+    @Vcl@Actnman@TCustomActionBar@SetActionClient$qqrxp25Vcl@Actnman@TActionClient @277 ; __fastcall Vcl::Actnman::TCustomActionBar::SetActionClient(Vcl::Actnman::TActionClient * const)
+    @Vcl@Actnman@TCustomActionBar@SetActionManager$qqrxp32Vcl@Actnman@TCustomActionManager @273 ; __fastcall Vcl::Actnman::TCustomActionBar::SetActionManager(Vcl::Actnman::TCustomActionManager * const)
+    @Vcl@Actnman@TCustomActionBar@SetAutoSizing$qqrxo @251 ; __fastcall Vcl::Actnman::TCustomActionBar::SetAutoSizing(const bool)
+    @Vcl@Actnman@TCustomActionBar@SetBiDiMode$qqr24System@Classes@TBiDiMode @268 ; __fastcall Vcl::Actnman::TCustomActionBar::SetBiDiMode(System::Classes::TBiDiMode)
+    @Vcl@Actnman@TCustomActionBar@SetBounds$qqriiii @248 ; __fastcall Vcl::Actnman::TCustomActionBar::SetBounds(int, int, int, int)
+    @Vcl@Actnman@TCustomActionBar@SetColorMap$qqrxp36Vcl@Actnman@TCustomActionBarColorMap @246 ; __fastcall Vcl::Actnman::TCustomActionBar::SetColorMap(Vcl::Actnman::TCustomActionBarColorMap * const)
+    @Vcl@Actnman@TCustomActionBar@SetDesignMode$qqrxo @276 ; __fastcall Vcl::Actnman::TCustomActionBar::SetDesignMode(const bool)
+    @Vcl@Actnman@TCustomActionBar@SetHorzMargin$qqrxi @264 ; __fastcall Vcl::Actnman::TCustomActionBar::SetHorzMargin(const int)
+    @Vcl@Actnman@TCustomActionBar@SetHorzSeparator$qqrxo @262 ; __fastcall Vcl::Actnman::TCustomActionBar::SetHorzSeparator(const bool)
+    @Vcl@Actnman@TCustomActionBar@SetOrientation$qqrx27Vcl@Actnman@TBarOrientation @275 ; __fastcall Vcl::Actnman::TCustomActionBar::SetOrientation(const Vcl::Actnman::TBarOrientation)
+    @Vcl@Actnman@TCustomActionBar@SetPersistentHotKeys$qqrxo @272 ; __fastcall Vcl::Actnman::TCustomActionBar::SetPersistentHotKeys(const bool)
+    @Vcl@Actnman@TCustomActionBar@SetSpacing$qqri @274 ; __fastcall Vcl::Actnman::TCustomActionBar::SetSpacing(int)
+    @Vcl@Actnman@TCustomActionBar@SetVertMargin$qqrxi @263 ; __fastcall Vcl::Actnman::TCustomActionBar::SetVertMargin(const int)
+    @Vcl@Actnman@TCustomActionBar@SetVertSeparator$qqrxo @261 ; __fastcall Vcl::Actnman::TCustomActionBar::SetVertSeparator(const bool)
+    @Vcl@Actnman@TCustomActionBar@SetupDefaultColorMap$qqrv @244 ; __fastcall Vcl::Actnman::TCustomActionBar::SetupDefaultColorMap()
+    @Vcl@Actnman@TCustomActionBar@Style$qqrv @237 ; __fastcall Vcl::Actnman::TCustomActionBar::Style()
+    @Vcl@Actnman@TCustomActionBar@VisibleChanging$qqrv @254 ; __fastcall Vcl::Actnman::TCustomActionBar::VisibleChanging()
+    @Vcl@Actnman@TCustomActionBar@WMContextMenu$qqrr30Winapi@Messages@TWMContextMenu @253 ; __fastcall Vcl::Actnman::TCustomActionBar::WMContextMenu(Winapi::Messages::TWMContextMenu&)
+    @Vcl@Actnman@TCustomActionBar@WMPaint$qqrr24Winapi@Messages@TWMPaint @247 ; __fastcall Vcl::Actnman::TCustomActionBar::WMPaint(Winapi::Messages::TWMPaint&)
+    @Vcl@Actnman@TCustomActionBarColorMap@ @588 ; Vcl::Actnman::TCustomActionBarColorMap::
+    @Vcl@Actnman@TCustomActionBarColorMap@$bctr$qqrp25System@Classes@TComponent @327 ; __fastcall Vcl::Actnman::TCustomActionBarColorMap::TCustomActionBarColorMap(System::Classes::TComponent *)
+    @Vcl@Actnman@TCustomActionBarColorMap@$bdtr$qqrv @326 ; __fastcall Vcl::Actnman::TCustomActionBarColorMap::~TCustomActionBarColorMap()
+    @Vcl@Actnman@TCustomActionBarColorMap@Add$qqrp28Vcl@Actnman@TCustomActionBar @328 ; __fastcall Vcl::Actnman::TCustomActionBarColorMap::Add(Vcl::Actnman::TCustomActionBar *)
+    @Vcl@Actnman@TCustomActionBarColorMap@Assign$qqrp26System@Classes@TPersistent @317 ; __fastcall Vcl::Actnman::TCustomActionBarColorMap::Assign(System::Classes::TPersistent *)
+    @Vcl@Actnman@TCustomActionBarColorMap@GetDisabledColor$qqrv @325 ; __fastcall Vcl::Actnman::TCustomActionBarColorMap::GetDisabledColor()
+    @Vcl@Actnman@TCustomActionBarColorMap@GetUnusedColor$qqrv @324 ; __fastcall Vcl::Actnman::TCustomActionBarColorMap::GetUnusedColor()
+    @Vcl@Actnman@TCustomActionBarColorMap@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @323 ; __fastcall Vcl::Actnman::TCustomActionBarColorMap::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Vcl@Actnman@TCustomActionBarColorMap@Remove$qqrp28Vcl@Actnman@TCustomActionBar @322 ; __fastcall Vcl::Actnman::TCustomActionBarColorMap::Remove(Vcl::Actnman::TCustomActionBar *)
+    @Vcl@Actnman@TCustomActionBarColorMap@SetColor$qqrx21System@Uitypes@TColor @321 ; __fastcall Vcl::Actnman::TCustomActionBarColorMap::SetColor(const System::Uitypes::TColor)
+    @Vcl@Actnman@TCustomActionBarColorMap@SetFontColor$qqrx21System@Uitypes@TColor @320 ; __fastcall Vcl::Actnman::TCustomActionBarColorMap::SetFontColor(const System::Uitypes::TColor)
+    @Vcl@Actnman@TCustomActionBarColorMap@UpdateActionBars$qqrpqqrp28Vcl@Actnman@TCustomActionBarp36Vcl@Actnman@TCustomActionBarColorMap$v21System@Uitypes@TColor @318 ; __fastcall Vcl::Actnman::TCustomActionBarColorMap::UpdateActionBars(void __fastcall (*)(Vcl::Actnman::TCustomActionBar *, Vcl::Actnman::TCustomActionBarColorMap *), System::Uitypes::TColor)
+    @Vcl@Actnman@TCustomActionBarColorMap@UpdateColors$qqrv @319 ; __fastcall Vcl::Actnman::TCustomActionBarColorMap::UpdateColors()
+    @Vcl@Actnman@TCustomActionClass@ @597 ; Vcl::Actnman::TCustomActionClass::
+    @Vcl@Actnman@TCustomActionControl@ @577 ; Vcl::Actnman::TCustomActionControl::
+    @Vcl@Actnman@TCustomActionControl@$bctr$qqrp25System@Classes@TComponent @236 ; __fastcall Vcl::Actnman::TCustomActionControl::TCustomActionControl(System::Classes::TComponent *)
+    @Vcl@Actnman@TCustomActionControl@$bdtr$qqrv @235 ; __fastcall Vcl::Actnman::TCustomActionControl::~TCustomActionControl()
+    @Vcl@Actnman@TCustomActionControl@ActualSpacing$qqrrx19System@Types@TPoint @231 ; __fastcall Vcl::Actnman::TCustomActionControl::ActualSpacing(const System::Types::TPoint&)
+    @Vcl@Actnman@TCustomActionControl@BeginAutoDrag$qqrv @234 ; __fastcall Vcl::Actnman::TCustomActionControl::BeginAutoDrag()
+    @Vcl@Actnman@TCustomActionControl@CMDesignHitTest$qqrr24Winapi@Messages@TWMMouse @204 ; __fastcall Vcl::Actnman::TCustomActionControl::CMDesignHitTest(Winapi::Messages::TWMMouse&)
+    @Vcl@Actnman@TCustomActionControl@CMFontChanged$qqrr24Winapi@Messages@TMessage @229 ; __fastcall Vcl::Actnman::TCustomActionControl::CMFontChanged(Winapi::Messages::TMessage&)
+    @Vcl@Actnman@TCustomActionControl@CMHintShow$qqrr24Vcl@Controls@TCMHintShow @203 ; __fastcall Vcl::Actnman::TCustomActionControl::CMHintShow(Vcl::Controls::TCMHintShow&)
+    @Vcl@Actnman@TCustomActionControl@CMItemDropPoint$qqrr22Vcl@Actnman@TCMItemMsg @180 ; __fastcall Vcl::Actnman::TCustomActionControl::CMItemDropPoint(Vcl::Actnman::TCMItemMsg&)
+    @Vcl@Actnman@TCustomActionControl@CMItemSelected$qqrr22Vcl@Actnman@TCMItemMsg @209 ; __fastcall Vcl::Actnman::TCustomActionControl::CMItemSelected(Vcl::Actnman::TCMItemMsg&)
+    @Vcl@Actnman@TCustomActionControl@CMTextChanged$qqrr24Winapi@Messages@TMessage @187 ; __fastcall Vcl::Actnman::TCustomActionControl::CMTextChanged(Winapi::Messages::TMessage&)
+    @Vcl@Actnman@TCustomActionControl@CalcBounds$qqrv @185 ; __fastcall Vcl::Actnman::TCustomActionControl::CalcBounds()
+    @Vcl@Actnman@TCustomActionControl@CalcLayout$qqrv @230 ; __fastcall Vcl::Actnman::TCustomActionControl::CalcLayout()
+    @Vcl@Actnman@TCustomActionControl@CaptionHeight$qqrv @232 ; __fastcall Vcl::Actnman::TCustomActionControl::CaptionHeight()
+    @Vcl@Actnman@TCustomActionControl@CaptionLength$qqrv @233 ; __fastcall Vcl::Actnman::TCustomActionControl::CaptionLength()
+    @Vcl@Actnman@TCustomActionControl@Click$qqrv @228 ; __fastcall Vcl::Actnman::TCustomActionControl::Click()
+    @Vcl@Actnman@TCustomActionControl@DesignWndProc$qqrr24Winapi@Messages@TMessage @227 ; __fastcall Vcl::Actnman::TCustomActionControl::DesignWndProc(Winapi::Messages::TMessage&)
+    @Vcl@Actnman@TCustomActionControl@DoDragDrop$qqrp14System@TObjectii @184 ; __fastcall Vcl::Actnman::TCustomActionControl::DoDragDrop(System::TObject *, int, int)
+    @Vcl@Actnman@TCustomActionControl@DoStartDrag$qqrrp24Vcl@Controls@TDragObject @197 ; __fastcall Vcl::Actnman::TCustomActionControl::DoStartDrag(Vcl::Controls::TDragObject *&)
+    @Vcl@Actnman@TCustomActionControl@DragDrop$qqrp14System@TObjectii @200 ; __fastcall Vcl::Actnman::TCustomActionControl::DragDrop(System::TObject *, int, int)
+    @Vcl@Actnman@TCustomActionControl@DragOver$qqrp14System@TObjectii25System@Uitypes@TDragStatero @199 ; __fastcall Vcl::Actnman::TCustomActionControl::DragOver(System::TObject *, int, int, System::Uitypes::TDragState, bool&)
+    @Vcl@Actnman@TCustomActionControl@DrawBackground$qqrr18System@Types@TRect @226 ; __fastcall Vcl::Actnman::TCustomActionControl::DrawBackground(System::Types::TRect&)
+    @Vcl@Actnman@TCustomActionControl@DrawDesignFocus$qqrr18System@Types@TRect @202 ; __fastcall Vcl::Actnman::TCustomActionControl::DrawDesignFocus(System::Types::TRect&)
+    @Vcl@Actnman@TCustomActionControl@DrawDragDropPoint$qqrv @198 ; __fastcall Vcl::Actnman::TCustomActionControl::DrawDragDropPoint()
+    @Vcl@Actnman@TCustomActionControl@DrawGlyph$qqrrx19System@Types@TPoint @225 ; __fastcall Vcl::Actnman::TCustomActionControl::DrawGlyph(const System::Types::TPoint&)
+    @Vcl@Actnman@TCustomActionControl@DrawLargeGlyph$qqrrx19System@Types@TPoint @224 ; __fastcall Vcl::Actnman::TCustomActionControl::DrawLargeGlyph(const System::Types::TPoint&)
+    @Vcl@Actnman@TCustomActionControl@DrawSeparator$qqrxi @223 ; __fastcall Vcl::Actnman::TCustomActionControl::DrawSeparator(const int)
+    @Vcl@Actnman@TCustomActionControl@DrawShadowedText$qqrrx18System@Types@TRectui20System@UnicodeString21System@Uitypes@TColort4 @221 ; __fastcall Vcl::Actnman::TCustomActionControl::DrawShadowedText(const System::Types::TRect&, unsigned int, System::UnicodeString, System::Uitypes::TColor, System::Uitypes::TColor)
+    @Vcl@Actnman@TCustomActionControl@DrawText$qqrr18System@Types@TRectrui20System@UnicodeString @222 ; __fastcall Vcl::Actnman::TCustomActionControl::DrawText(System::Types::TRect&, unsigned int&, System::UnicodeString)
+    @Vcl@Actnman@TCustomActionControl@FindImageList$qqroi @214 ; __fastcall Vcl::Actnman::TCustomActionControl::FindImageList(bool, int)
+    @Vcl@Actnman@TCustomActionControl@FindImageList$qqroroi @215 ; __fastcall Vcl::Actnman::TCustomActionControl::FindImageList(bool, bool&, int)
+    @Vcl@Actnman@TCustomActionControl@GetAction$qqrv @190 ; __fastcall Vcl::Actnman::TCustomActionControl::GetAction()
+    @Vcl@Actnman@TCustomActionControl@GetActionBar$qqrv @188 ; __fastcall Vcl::Actnman::TCustomActionControl::GetActionBar()
+    @Vcl@Actnman@TCustomActionControl@GetImageSize$qqrv @213 ; __fastcall Vcl::Actnman::TCustomActionControl::GetImageSize()
+    @Vcl@Actnman@TCustomActionControl@GetSeparator$qqrv @194 ; __fastcall Vcl::Actnman::TCustomActionControl::GetSeparator()
+    @Vcl@Actnman@TCustomActionControl@GetShowCaption$qqrv @193 ; __fastcall Vcl::Actnman::TCustomActionControl::GetShowCaption()
+    @Vcl@Actnman@TCustomActionControl@GetShowShortCut$qqrv @192 ; __fastcall Vcl::Actnman::TCustomActionControl::GetShowShortCut()
+    @Vcl@Actnman@TCustomActionControl@HasGlyph$qqrv @196 ; __fastcall Vcl::Actnman::TCustomActionControl::HasGlyph()
+    @Vcl@Actnman@TCustomActionControl@InitiateAction$qqrv @189 ; __fastcall Vcl::Actnman::TCustomActionControl::InitiateAction()
+    @Vcl@Actnman@TCustomActionControl@IsChecked$qqrv @191 ; __fastcall Vcl::Actnman::TCustomActionControl::IsChecked()
+    @Vcl@Actnman@TCustomActionControl@IsGrouped$qqrv @220 ; __fastcall Vcl::Actnman::TCustomActionControl::IsGrouped()
+    @Vcl@Actnman@TCustomActionControl@Keyed$qqrv @205 ; __fastcall Vcl::Actnman::TCustomActionControl::Keyed()
+    @Vcl@Actnman@TCustomActionControl@Paint$qqrv @219 ; __fastcall Vcl::Actnman::TCustomActionControl::Paint()
+    @Vcl@Actnman@TCustomActionControl@PositionChanged$qqrv @218 ; __fastcall Vcl::Actnman::TCustomActionControl::PositionChanged()
+    @Vcl@Actnman@TCustomActionControl@RequestAlign$qqrv @217 ; __fastcall Vcl::Actnman::TCustomActionControl::RequestAlign()
+    @Vcl@Actnman@TCustomActionControl@ResetUsageData$qqrv @201 ; __fastcall Vcl::Actnman::TCustomActionControl::ResetUsageData()
+    @Vcl@Actnman@TCustomActionControl@SetActionClient$qqrp29Vcl@Actnman@TActionClientItem @212 ; __fastcall Vcl::Actnman::TCustomActionControl::SetActionClient(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnman@TCustomActionControl@SetDropPoint$qqro @181 ; __fastcall Vcl::Actnman::TCustomActionControl::SetDropPoint(bool)
+    @Vcl@Actnman@TCustomActionControl@SetGlyphLayout$qqrx25Vcl@Buttons@TButtonLayout @206 ; __fastcall Vcl::Actnman::TCustomActionControl::SetGlyphLayout(const Vcl::Buttons::TButtonLayout)
+    @Vcl@Actnman@TCustomActionControl@SetMargins$qqrrx18System@Types@TRect @208 ; __fastcall Vcl::Actnman::TCustomActionControl::SetMargins(const System::Types::TRect&)
+    @Vcl@Actnman@TCustomActionControl@SetSelected$qqro @211 ; __fastcall Vcl::Actnman::TCustomActionControl::SetSelected(bool)
+    @Vcl@Actnman@TCustomActionControl@SetSmallIcon$qqrxo @183 ; __fastcall Vcl::Actnman::TCustomActionControl::SetSmallIcon(const bool)
+    @Vcl@Actnman@TCustomActionControl@SetSpacing$qqrxi @207 ; __fastcall Vcl::Actnman::TCustomActionControl::SetSpacing(const int)
+    @Vcl@Actnman@TCustomActionControl@SetTransparent$qqrxo @216 ; __fastcall Vcl::Actnman::TCustomActionControl::SetTransparent(const bool)
+    @Vcl@Actnman@TCustomActionControl@UpdateSelection$qqrv @210 ; __fastcall Vcl::Actnman::TCustomActionControl::UpdateSelection()
+    @Vcl@Actnman@TCustomActionControl@UpdateTextBounds$qqrv @186 ; __fastcall Vcl::Actnman::TCustomActionControl::UpdateTextBounds()
+    @Vcl@Actnman@TCustomActionControl@WMContextMenu$qqrr30Winapi@Messages@TWMContextMenu @182 ; __fastcall Vcl::Actnman::TCustomActionControl::WMContextMenu(Winapi::Messages::TWMContextMenu&)
+    @Vcl@Actnman@TCustomActionControl@WMSetText$qqrr26Winapi@Messages@TWMSetText @195 ; __fastcall Vcl::Actnman::TCustomActionControl::WMSetText(Winapi::Messages::TWMSetText&)
+    @Vcl@Actnman@TCustomActionManager@ @653 ; Vcl::Actnman::TCustomActionManager::
+    @Vcl@Actnman@TCustomActionManager@$bctr$qqrp25System@Classes@TComponent @563 ; __fastcall Vcl::Actnman::TCustomActionManager::TCustomActionManager(System::Classes::TComponent *)
+    @Vcl@Actnman@TCustomActionManager@$bdtr$qqrv @562 ; __fastcall Vcl::Actnman::TCustomActionManager::~TCustomActionManager()
+    @Vcl@Actnman@TCustomActionManager@AddAction$qqrp26Vcl@Actnlist@TCustomActionp25Vcl@Actnman@TActionCliento @561 ; __fastcall Vcl::Actnman::TCustomActionManager::AddAction(Vcl::Actnlist::TCustomAction *, Vcl::Actnman::TActionClient *, bool)
+    @Vcl@Actnman@TCustomActionManager@AddCategory$qqr20System@UnicodeStringp25Vcl@Actnman@TActionCliento @560 ; __fastcall Vcl::Actnman::TCustomActionManager::AddCategory(System::UnicodeString, Vcl::Actnman::TActionClient *, bool)
+    @Vcl@Actnman@TCustomActionManager@AddSeparator$qqrp29Vcl@Actnman@TActionClientItemo @559 ; __fastcall Vcl::Actnman::TCustomActionManager::AddSeparator(Vcl::Actnman::TActionClientItem *, bool)
+    @Vcl@Actnman@TCustomActionManager@AfterConstruction$qqrv @510 ; __fastcall Vcl::Actnman::TCustomActionManager::AfterConstruction()
+    @Vcl@Actnman@TCustomActionManager@Assign$qqrp26System@Classes@TPersistent @558 ; __fastcall Vcl::Actnman::TCustomActionManager::Assign(System::Classes::TPersistent *)
+    @Vcl@Actnman@TCustomActionManager@Change$qqrv @525 ; __fastcall Vcl::Actnman::TCustomActionManager::Change()
+    @Vcl@Actnman@TCustomActionManager@CompareAction$qqrp25Vcl@Actnman@TActionClient @557 ; __fastcall Vcl::Actnman::TCustomActionManager::CompareAction(Vcl::Actnman::TActionClient *)
+    @Vcl@Actnman@TCustomActionManager@CompareCaption$qqrp25Vcl@Actnman@TActionClient @556 ; __fastcall Vcl::Actnman::TCustomActionManager::CompareCaption(Vcl::Actnman::TActionClient *)
+    @Vcl@Actnman@TCustomActionManager@CreateActionBars$qqrv @555 ; __fastcall Vcl::Actnman::TCustomActionManager::CreateActionBars()
+    @Vcl@Actnman@TCustomActionManager@DefineProperties$qqrp21System@Classes@TFiler @553 ; __fastcall Vcl::Actnman::TCustomActionManager::DefineProperties(System::Classes::TFiler *)
+    @Vcl@Actnman@TCustomActionManager@DeleteActionItems$qqrpp26Vcl@Actnlist@TCustomActionxi @554 ; __fastcall Vcl::Actnman::TCustomActionManager::DeleteActionItems(Vcl::Actnlist::TCustomAction * *, const int)
+    @Vcl@Actnman@TCustomActionManager@DeleteItem$qqr20System@UnicodeString @552 ; __fastcall Vcl::Actnman::TCustomActionManager::DeleteItem(System::UnicodeString)
+    @Vcl@Actnman@TCustomActionManager@FindActionBar$qqrp28Vcl@Actnman@TCustomActionBarp36Vcl@Actnman@TActionClientsCollection @546 ; __fastcall Vcl::Actnman::TCustomActionManager::FindActionBar(Vcl::Actnman::TCustomActionBar *, Vcl::Actnman::TActionClientsCollection *)
+    @Vcl@Actnman@TCustomActionManager@FindActionClient$qqrp31System@Actions@TContainedActionp36Vcl@Actnman@TActionClientsCollection @547 ; __fastcall Vcl::Actnman::TCustomActionManager::FindActionClient(System::Actions::TContainedAction *, Vcl::Actnman::TActionClientsCollection *)
+    @Vcl@Actnman@TCustomActionManager@FindClient$qqrp25Vcl@Actnman@TActionClient @551 ; __fastcall Vcl::Actnman::TCustomActionManager::FindClient(Vcl::Actnman::TActionClient *)
+    @Vcl@Actnman@TCustomActionManager@FindItem$qqrv @550 ; __fastcall Vcl::Actnman::TCustomActionManager::FindItem()
+    @Vcl@Actnman@TCustomActionManager@FindItemByAction$qqrp26Vcl@Actnlist@TCustomAction @549 ; __fastcall Vcl::Actnman::TCustomActionManager::FindItemByAction(Vcl::Actnlist::TCustomAction *)
+    @Vcl@Actnman@TCustomActionManager@FindItemByCaption$qqr20System@UnicodeString @548 ; __fastcall Vcl::Actnman::TCustomActionManager::FindItemByCaption(System::UnicodeString)
+    @Vcl@Actnman@TCustomActionManager@GetActionBarItemClass$qqrv @520 ; __fastcall Vcl::Actnman::TCustomActionManager::GetActionBarItemClass()
+    @Vcl@Actnman@TCustomActionManager@GetActionBarsClass$qqrv @521 ; __fastcall Vcl::Actnman::TCustomActionManager::GetActionBarsClass()
+    @Vcl@Actnman@TCustomActionManager@GetActionClientItemClass$qqrv @522 ; __fastcall Vcl::Actnman::TCustomActionManager::GetActionClientItemClass()
+    @Vcl@Actnman@TCustomActionManager@GetActionClientsClass$qqrv @524 ; __fastcall Vcl::Actnman::TCustomActionManager::GetActionClientsClass()
+    @Vcl@Actnman@TCustomActionManager@GetCommandPropertiesClass$qqrp29Vcl@Actnman@TActionClientItem @523 ; __fastcall Vcl::Actnman::TCustomActionManager::GetCommandPropertiesClass(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnman@TCustomActionManager@GetFileName$qqrv @516 ; __fastcall Vcl::Actnman::TCustomActionManager::GetFileName()
+    @Vcl@Actnman@TCustomActionManager@GetLinkedActionLists$qqrv @514 ; __fastcall Vcl::Actnman::TCustomActionManager::GetLinkedActionLists()
+    @Vcl@Actnman@TCustomActionManager@GetUsage$qqrp29Vcl@Actnman@TActionClientItem @532 ; __fastcall Vcl::Actnman::TCustomActionManager::GetUsage(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnman@TCustomActionManager@HasLinkedActionLists$qqrv @511 ; __fastcall Vcl::Actnman::TCustomActionManager::HasLinkedActionLists()
+    @Vcl@Actnman@TCustomActionManager@ImageListChange$qqrp14System@TObject @518 ; __fastcall Vcl::Actnman::TCustomActionManager::ImageListChange(System::TObject *)
+    @Vcl@Actnman@TCustomActionManager@IsActionBarsStored$qqrv @517 ; __fastcall Vcl::Actnman::TCustomActionManager::IsActionBarsStored()
+    @Vcl@Actnman@TCustomActionManager@IsLinkedActionListsStored$qqrv @519 ; __fastcall Vcl::Actnman::TCustomActionManager::IsLinkedActionListsStored()
+    @Vcl@Actnman@TCustomActionManager@IsPriorityScheduleStored$qqrv @531 ; __fastcall Vcl::Actnman::TCustomActionManager::IsPriorityScheduleStored()
+    @Vcl@Actnman@TCustomActionManager@LoadFromFile$qqrx20System@UnicodeString @545 ; __fastcall Vcl::Actnman::TCustomActionManager::LoadFromFile(const System::UnicodeString)
+    @Vcl@Actnman@TCustomActionManager@LoadFromStream$qqrp22System@Classes@TStream @544 ; __fastcall Vcl::Actnman::TCustomActionManager::LoadFromStream(System::Classes::TStream *)
+    @Vcl@Actnman@TCustomActionManager@LoadMenu$qqrp26Vcl@Actnman@TActionClientsp19Vcl@Menus@TMenuItem @542 ; __fastcall Vcl::Actnman::TCustomActionManager::LoadMenu(Vcl::Actnman::TActionClients *, Vcl::Menus::TMenuItem *)
+    @Vcl@Actnman@TCustomActionManager@Loaded$qqrv @543 ; __fastcall Vcl::Actnman::TCustomActionManager::Loaded()
+    @Vcl@Actnman@TCustomActionManager@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @541 ; __fastcall Vcl::Actnman::TCustomActionManager::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Vcl@Actnman@TCustomActionManager@ReadStyleProp$qqrp22System@Classes@TReader @513 ; __fastcall Vcl::Actnman::TCustomActionManager::ReadStyleProp(System::Classes::TReader *)
+    @Vcl@Actnman@TCustomActionManager@ResetActionBar$qqri @530 ; __fastcall Vcl::Actnman::TCustomActionManager::ResetActionBar(int)
+    @Vcl@Actnman@TCustomActionManager@ResetClientUsageData$qqrp25Vcl@Actnman@TActionClient @529 ; __fastcall Vcl::Actnman::TCustomActionManager::ResetClientUsageData(Vcl::Actnman::TActionClient *)
+    @Vcl@Actnman@TCustomActionManager@ResetUsageData$qqrv @528 ; __fastcall Vcl::Actnman::TCustomActionManager::ResetUsageData()
+    @Vcl@Actnman@TCustomActionManager@SaveToFile$qqrx20System@UnicodeString @540 ; __fastcall Vcl::Actnman::TCustomActionManager::SaveToFile(const System::UnicodeString)
+    @Vcl@Actnman@TCustomActionManager@SaveToStream$qqrp22System@Classes@TStream @539 ; __fastcall Vcl::Actnman::TCustomActionManager::SaveToStream(System::Classes::TStream *)
+    @Vcl@Actnman@TCustomActionManager@SetActionBars$qqrxp23Vcl@Actnman@TActionBars @537 ; __fastcall Vcl::Actnman::TCustomActionManager::SetActionBars(Vcl::Actnman::TActionBars * const)
+    @Vcl@Actnman@TCustomActionManager@SetDisabledImages$qqrxp28Vcl@Imglist@TCustomImageList @536 ; __fastcall Vcl::Actnman::TCustomActionManager::SetDisabledImages(Vcl::Imglist::TCustomImageList * const)
+    @Vcl@Actnman@TCustomActionManager@SetFileName$qqr20System@UnicodeString @515 ; __fastcall Vcl::Actnman::TCustomActionManager::SetFileName(System::UnicodeString)
+    @Vcl@Actnman@TCustomActionManager@SetImages$qqrp28Vcl@Imglist@TCustomImageList @534 ; __fastcall Vcl::Actnman::TCustomActionManager::SetImages(Vcl::Imglist::TCustomImageList *)
+    @Vcl@Actnman@TCustomActionManager@SetLargeDisabledImages$qqrxp28Vcl@Imglist@TCustomImageList @535 ; __fastcall Vcl::Actnman::TCustomActionManager::SetLargeDisabledImages(Vcl::Imglist::TCustomImageList * const)
+    @Vcl@Actnman@TCustomActionManager@SetLargeImages$qqrxp28Vcl@Imglist@TCustomImageList @527 ; __fastcall Vcl::Actnman::TCustomActionManager::SetLargeImages(Vcl::Imglist::TCustomImageList * const)
+    @Vcl@Actnman@TCustomActionManager@SetLinkedActionLists$qqrxp33Vcl@Actnman@TActionListCollection @526 ; __fastcall Vcl::Actnman::TCustomActionManager::SetLinkedActionLists(Vcl::Actnman::TActionListCollection * const)
+    @Vcl@Actnman@TCustomActionManager@SetPrioritySchedule$qqrxp26System@Classes@TStringList @533 ; __fastcall Vcl::Actnman::TCustomActionManager::SetPrioritySchedule(System::Classes::TStringList * const)
+    @Vcl@Actnman@TCustomActionManager@SetState$qqrx31System@Actions@TActionListState @508 ; __fastcall Vcl::Actnman::TCustomActionManager::SetState(const System::Actions::TActionListState)
+    @Vcl@Actnman@TCustomActionManager@SetStyle$qqrxp27Vcl@Actnman@TActionBarStyle @509 ; __fastcall Vcl::Actnman::TCustomActionManager::SetStyle(Vcl::Actnman::TActionBarStyle * const)
+    @Vcl@Actnman@TCustomActionManager@SetupActionBars$qqrp36Vcl@Actnman@TActionClientsCollection @538 ; __fastcall Vcl::Actnman::TCustomActionManager::SetupActionBars(Vcl::Actnman::TActionClientsCollection *)
+    @Vcl@Actnman@TCustomActionManager@WriteStyleProp$qqrp22System@Classes@TWriter @512 ; __fastcall Vcl::Actnman::TCustomActionManager::WriteStyleProp(System::Classes::TWriter *)
+    @Vcl@Actnman@TGalleryProperties@ @614 ; Vcl::Actnman::TGalleryProperties::
+    @Vcl@Actnman@TGalleryProperties@$bctr$qqrp29Vcl@Actnman@TActionClientItem @403 ; __fastcall Vcl::Actnman::TGalleryProperties::TGalleryProperties(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnman@TGalleryProperties@Assign$qqrp26System@Classes@TPersistent @404 ; __fastcall Vcl::Actnman::TGalleryProperties::Assign(System::Classes::TPersistent *)
+    @Vcl@Actnman@TGalleryProperties@GetGalleryType$qqrv @402 ; __fastcall Vcl::Actnman::TGalleryProperties::GetGalleryType()
+    @Vcl@Actnman@TGalleryProperties@GetItemsPerRow$qqrv @401 ; __fastcall Vcl::Actnman::TGalleryProperties::GetItemsPerRow()
+    @Vcl@Actnman@TGalleryProperties@SetGalleryType$qqrx43Vcl@Actnman@TGalleryProperties@TGalleryType @400 ; __fastcall Vcl::Actnman::TGalleryProperties::SetGalleryType(const Vcl::Actnman::TGalleryProperties::TGalleryType)
+    @Vcl@Actnman@TGalleryProperties@SetItemsPerRow$qqrxi @399 ; __fastcall Vcl::Actnman::TGalleryProperties::SetItemsPerRow(const int)
+    @Vcl@Actnman@TGalleryProperties@SetShowRichContent$qqrxo @398 ; __fastcall Vcl::Actnman::TGalleryProperties::SetShowRichContent(const bool)
+    @Vcl@Actnman@TMenuProperties@  @608 ; Vcl::Actnman::TMenuProperties::
+    @Vcl@Actnman@TMenuProperties@$bctr$qqrp29Vcl@Actnman@TActionClientItem @396 ; __fastcall Vcl::Actnman::TMenuProperties::TMenuProperties(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnman@TMenuProperties@$bdtr$qqrv @395 ; __fastcall Vcl::Actnman::TMenuProperties::~TMenuProperties()
+    @Vcl@Actnman@TMenuProperties@Assign$qqrp26System@Classes@TPersistent @397 ; __fastcall Vcl::Actnman::TMenuProperties::Assign(System::Classes::TPersistent *)
+    @Vcl@Actnman@TMenuProperties@SetContent$qqrxp23System@Classes@TStrings @394 ; __fastcall Vcl::Actnman::TMenuProperties::SetContent(System::Classes::TStrings * const)
+    @Vcl@Actnman@TMenuProperties@SetFont$qqrxp18Vcl@Graphics@TFont @393 ; __fastcall Vcl::Actnman::TMenuProperties::SetFont(Vcl::Graphics::TFont * const)
+    @Vcl@Actnman@TMenuProperties@SetHeight$qqrxi @392 ; __fastcall Vcl::Actnman::TMenuProperties::SetHeight(const int)
+    @Vcl@Actnman@TMenuProperties@SetShowRichContent$qqrxo @391 ; __fastcall Vcl::Actnman::TMenuProperties::SetShowRichContent(const bool)
+    @Vcl@Actnman@TTextProperties@  @612 ; Vcl::Actnman::TTextProperties::
+    @Vcl@Actnman@TTextProperties@$bctr$qqrp29Vcl@Actnman@TActionClientItem @389 ; __fastcall Vcl::Actnman::TTextProperties::TTextProperties(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnman@TTextProperties@$bdtr$qqrv @388 ; __fastcall Vcl::Actnman::TTextProperties::~TTextProperties()
+    @Vcl@Actnman@TTextProperties@Assign$qqrp26System@Classes@TPersistent @390 ; __fastcall Vcl::Actnman::TTextProperties::Assign(System::Classes::TPersistent *)
+    @Vcl@Actnman@TTextProperties@FontChangeHandler$qqrp14System@TObject @387 ; __fastcall Vcl::Actnman::TTextProperties::FontChangeHandler(System::TObject *)
+    @Vcl@Actnman@TTextProperties@SetAlignment$qqrx25System@Classes@TAlignment @386 ; __fastcall Vcl::Actnman::TTextProperties::SetAlignment(const System::Classes::TAlignment)
+    @Vcl@Actnman@TTextProperties@SetEllipsisPosition$qqrx30Vcl@Stdctrls@TEllipsisPosition @385 ; __fastcall Vcl::Actnman::TTextProperties::SetEllipsisPosition(const Vcl::Stdctrls::TEllipsisPosition)
+    @Vcl@Actnman@TTextProperties@SetFont$qqrxp18Vcl@Graphics@TFont @384 ; __fastcall Vcl::Actnman::TTextProperties::SetFont(Vcl::Graphics::TFont * const)
+    @Vcl@Actnman@TTextProperties@SetParentFont$qqrxo @383 ; __fastcall Vcl::Actnman::TTextProperties::SetParentFont(const bool)
+    @Vcl@Actnman@TXToolDockForm@   @574 ; Vcl::Actnman::TXToolDockForm::
+    @Vcl@Actnman@TXToolDockForm@CMDialogChar$qqrr22Winapi@Messages@TWMKey @565 ; __fastcall Vcl::Actnman::TXToolDockForm::CMDialogChar(Winapi::Messages::TWMKey&)
+    @Vcl@Actnman@cDefaultSchedule  @571 ; Vcl::Actnman::cDefaultSchedule
+    @Vcl@Actnman@initialization$qqrv @173 ; __fastcall Vcl::Actnman::initialization()
+    @Vcl@Actnmenus@Finalization$qqrv @707 ; __fastcall Vcl::Actnmenus::Finalization()
+    @Vcl@Actnmenus@MenuAddRemoveItemClass @903 ; Vcl::Actnmenus::MenuAddRemoveItemClass
+    @Vcl@Actnmenus@MenuButtonControlClass @902 ; Vcl::Actnmenus::MenuButtonControlClass
+    @Vcl@Actnmenus@MenuCustomizePopupClass @900 ; Vcl::Actnmenus::MenuCustomizePopupClass
+    @Vcl@Actnmenus@MenuItemControlClass @904 ; Vcl::Actnmenus::MenuItemControlClass
+    @Vcl@Actnmenus@MenuPopupClass  @901 ; Vcl::Actnmenus::MenuPopupClass
+    @Vcl@Actnmenus@RegisterActnBarStyle$qqrp31Vcl@Actnmenus@TActionBarStyleEx @709 ; __fastcall Vcl::Actnmenus::RegisterActnBarStyle(Vcl::Actnmenus::TActionBarStyleEx *)
+    @Vcl@Actnmenus@TActionBarStyleEx@ @942 ; Vcl::Actnmenus::TActionBarStyleEx::
+    @Vcl@Actnmenus@TActionMainMenuBar@ @917 ; Vcl::Actnmenus::TActionMainMenuBar::
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@ @919 ; Vcl::Actnmenus::TCustomActionMainMenuBar::
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@$bctr$qqrp25System@Classes@TComponent @777 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::TCustomActionMainMenuBar(System::Classes::TComponent *)
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@$bdtr$qqrv @776 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::~TCustomActionMainMenuBar()
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@CMEnabledchanged$qqrr24Winapi@Messages@TMessage @761 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::CMEnabledchanged(Winapi::Messages::TMessage&)
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@CMWininichange$qqrr31Winapi@Messages@TWMWinIniChange @764 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::CMWininichange(Winapi::Messages::TWMWinIniChange&)
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@CanFocus$qqrv @771 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::CanFocus()
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@Clear$qqrv @774 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::Clear()
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@CloseMenu$qqrv @773 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::CloseMenu()
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@CreateControl$qqrp29Vcl@Actnman@TActionClientItem @770 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::CreateControl(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@CreateControls$qqrv @752 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::CreateControls()
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@CustomAlignPosition$qqrp21Vcl@Controls@TControlrit2t2t2r18System@Types@TRectrx23Vcl@Controls@TAlignInfo @753 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::CustomAlignPosition(Vcl::Controls::TControl *, int&, int&, int&, int&, System::Types::TRect&, const Vcl::Controls::TAlignInfo&)
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@DesignWndProc$qqrr24Winapi@Messages@TMessage @769 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::DesignWndProc(Winapi::Messages::TMessage&)
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@DoneMenuLoop$qqrv @768 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::DoneMenuLoop()
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@DrawBackground$qqrv @775 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::DrawBackground()
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@GetActiveMDIChild$qqrv @767 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::GetActiveMDIChild()
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@MDIChildMaximized$qqrp21Vcl@Forms@TCustomForm @755 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::MDIChildMaximized(Vcl::Forms::TCustomForm *)
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@MDIChildRestored$qqrv @754 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::MDIChildRestored()
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@MainWndHook$qqrr24Winapi@Messages@TMessage @748 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::MainWndHook(Winapi::Messages::TMessage&)
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@NewPopup$qqrv @760 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::NewPopup()
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @759 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@ProcessMouseMsg$qqrr6tagMSG @765 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::ProcessMouseMsg(tagMSG&)
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@RefreshMDIMenu$qqrv @756 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::RefreshMDIMenu()
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@SetDesignMode$qqrxo @763 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::SetDesignMode(const bool)
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@SetInActive$qqrxo @762 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::SetInActive(const bool)
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@SetShadows$qqrxo @747 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::SetShadows(const bool)
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@SetWindowMenu$qqrx20System@UnicodeString @757 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::SetWindowMenu(const System::UnicodeString)
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@SetupWindowMenu$qqrv @758 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::SetupWindowMenu()
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@TrackMenu$qqrv @746 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::TrackMenu()
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@WMKeyDown$qqrr22Winapi@Messages@TWMKey @772 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::WMKeyDown(Winapi::Messages::TWMKey&)
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@WMNCHitTest$qqrr28Winapi@Messages@TWMNCHitTest @766 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::WMNCHitTest(Winapi::Messages::TWMNCHitTest&)
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@WMSysCommand$qqrr29Winapi@Messages@TWMSysCommand @751 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::WMSysCommand(Winapi::Messages::TWMSysCommand&)
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@WMSysKeyDown$qqrr22Winapi@Messages@TWMKey @750 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::WMSysKeyDown(Winapi::Messages::TWMKey&)
+    @Vcl@Actnmenus@TCustomActionMainMenuBar@WMSysKeyUp$qqrr22Winapi@Messages@TWMKey @749 ; __fastcall Vcl::Actnmenus::TCustomActionMainMenuBar::WMSysKeyUp(Winapi::Messages::TWMKey&)
+    @Vcl@Actnmenus@TCustomActionMenuBar@ @936 ; Vcl::Actnmenus::TCustomActionMenuBar::
+    @Vcl@Actnmenus@TCustomActionMenuBar@$bctr$qqrp25System@Classes@TComponent @893 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::TCustomActionMenuBar(System::Classes::TComponent *)
+    @Vcl@Actnmenus@TCustomActionMenuBar@$bdtr$qqrv @892 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::~TCustomActionMenuBar()
+    @Vcl@Actnmenus@TCustomActionMenuBar@ActionIdleTimerProc$qqrp14System@TObject @844 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::ActionIdleTimerProc(System::TObject *)
+    @Vcl@Actnmenus@TCustomActionMenuBar@Animate$qqro @891 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::Animate(bool)
+    @Vcl@Actnmenus@TCustomActionMenuBar@CMEnterMenuLoop$qqrr24Winapi@Messages@TMessage @886 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::CMEnterMenuLoop(Winapi::Messages::TMessage&)
+    @Vcl@Actnmenus@TCustomActionMenuBar@CMFontchanged$qqrr24Winapi@Messages@TMessage @848 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::CMFontchanged(Winapi::Messages::TMessage&)
+    @Vcl@Actnmenus@TCustomActionMenuBar@CMItemClicked$qqrr22Vcl@Actnman@TCMItemMsg @887 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::CMItemClicked(Vcl::Actnman::TCMItemMsg&)
+    @Vcl@Actnmenus@TCustomActionMenuBar@CMItemKeyed$qqrr22Vcl@Actnman@TCMItemMsg @885 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::CMItemKeyed(Vcl::Actnman::TCMItemMsg&)
+    @Vcl@Actnmenus@TCustomActionMenuBar@CleanupStack$qqrv @890 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::CleanupStack()
+    @Vcl@Actnmenus@TCustomActionMenuBar@ClearSubMenus$qqrv @889 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::ClearSubMenus()
+    @Vcl@Actnmenus@TCustomActionMenuBar@CloseMenu$qqrv @888 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::CloseMenu()
+    @Vcl@Actnmenus@TCustomActionMenuBar@CreateControl$qqrp29Vcl@Actnman@TActionClientItem @884 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::CreateControl(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnmenus@TCustomActionMenuBar@CreatePopup$qqrp34Vcl@Actnmenus@TCustomActionMenuBarp32Vcl@Actnman@TCustomActionControl @883 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::CreatePopup(Vcl::Actnmenus::TCustomActionMenuBar *, Vcl::Actnman::TCustomActionControl *)
+    @Vcl@Actnmenus@TCustomActionMenuBar@DoActionIdle$qqrv @845 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::DoActionIdle()
+    @Vcl@Actnmenus@TCustomActionMenuBar@DoGetPopupClass$qqrv @880 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::DoGetPopupClass()
+    @Vcl@Actnmenus@TCustomActionMenuBar@DoItemClicked$qqrp32Vcl@Actnman@TCustomActionControl @879 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::DoItemClicked(Vcl::Actnman::TCustomActionControl *)
+    @Vcl@Actnmenus@TCustomActionMenuBar@DoItemKeyed$qqrp32Vcl@Actnman@TCustomActionControl @877 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::DoItemKeyed(Vcl::Actnman::TCustomActionControl *)
+    @Vcl@Actnmenus@TCustomActionMenuBar@DoItemSelected$qqrp32Vcl@Actnman@TCustomActionControl @882 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::DoItemSelected(Vcl::Actnman::TCustomActionControl *)
+    @Vcl@Actnmenus@TCustomActionMenuBar@DoMenuDelay$qqrp14System@TObject @874 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::DoMenuDelay(System::TObject *)
+    @Vcl@Actnmenus@TCustomActionMenuBar@DoMouseIdle$qqrv @846 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::DoMouseIdle()
+    @Vcl@Actnmenus@TCustomActionMenuBar@DoPopup$qqrp32Vcl@Actnman@TCustomActionControl @872 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::DoPopup(Vcl::Actnman::TCustomActionControl *)
+    @Vcl@Actnmenus@TCustomActionMenuBar@DoSplitItemClicked$qqrp32Vcl@Actnman@TCustomActionControl @878 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::DoSplitItemClicked(Vcl::Actnman::TCustomActionControl *)
+    @Vcl@Actnmenus@TCustomActionMenuBar@DoneMenuLoop$qqrv @873 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::DoneMenuLoop()
+    @Vcl@Actnmenus@TCustomActionMenuBar@ExecAction$qqrp31System@Actions@TContainedAction @881 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::ExecAction(System::Actions::TContainedAction *)
+    @Vcl@Actnmenus@TCustomActionMenuBar@Expand$qqro @871 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::Expand(bool)
+    @Vcl@Actnmenus@TCustomActionMenuBar@ExpandTimer$qqrp14System@TObject @870 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::ExpandTimer(System::TObject *)
+    @Vcl@Actnmenus@TCustomActionMenuBar@GetDefaultSounds$qqrv @876 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::GetDefaultSounds()
+    @Vcl@Actnmenus@TCustomActionMenuBar@GetDesignMode$qqrv @869 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::GetDesignMode()
+    @Vcl@Actnmenus@TCustomActionMenuBar@GetMouseHoverItem$qqrrx6tagMSG @868 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::GetMouseHoverItem(const tagMSG&)
+    @Vcl@Actnmenus@TCustomActionMenuBar@GetPopupClass$qqrv @867 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::GetPopupClass()
+    @Vcl@Actnmenus@TCustomActionMenuBar@GetSelected$qqrv @866 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::GetSelected()
+    @Vcl@Actnmenus@TCustomActionMenuBar@Idle$qqrrx6tagMSG @843 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::Idle(const tagMSG&)
+    @Vcl@Actnmenus@TCustomActionMenuBar@InitMenuLoop$qqrv @865 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::InitMenuLoop()
+    @Vcl@Actnmenus@TCustomActionMenuBar@IsDesignMsg$qqrr6tagMSG @875 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::IsDesignMsg(tagMSG&)
+    @Vcl@Actnmenus@TCustomActionMenuBar@Loaded$qqrv @838 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::Loaded()
+    @Vcl@Actnmenus@TCustomActionMenuBar@MouseActivate$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%iii @864 ; Vcl::Actnmenus::TCustomActionMenuBar::MouseActivate(System::Uitypes::TMouseButton, System::Set<{583}...
+    @Vcl@Actnmenus@TCustomActionMenuBar@NewPopup$qqrv @863 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::NewPopup()
+    @Vcl@Actnmenus@TCustomActionMenuBar@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @847 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Vcl@Actnmenus@TCustomActionMenuBar@ProcessMenuLoop$qqrv @861 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::ProcessMenuLoop()
+    @Vcl@Actnmenus@TCustomActionMenuBar@ProcessMessage$qqrr6tagMSG @842 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::ProcessMessage(tagMSG&)
+    @Vcl@Actnmenus@TCustomActionMenuBar@ProcessMessages$qqrv @841 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::ProcessMessages()
+    @Vcl@Actnmenus@TCustomActionMenuBar@ProcessMouseMsg$qqrr6tagMSG @862 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::ProcessMouseMsg(tagMSG&)
+    @Vcl@Actnmenus@TCustomActionMenuBar@RecreateControls$qqrv @837 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::RecreateControls()
+    @Vcl@Actnmenus@TCustomActionMenuBar@Select$qqrxo @860 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::Select(const bool)
+    @Vcl@Actnmenus@TCustomActionMenuBar@SelectItem$qqrp32Vcl@Actnman@TCustomActionControl @859 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::SelectItem(Vcl::Actnman::TCustomActionControl *)
+    @Vcl@Actnmenus@TCustomActionMenuBar@SetAnimateDuration$qqrxi @849 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::SetAnimateDuration(const int)
+    @Vcl@Actnmenus@TCustomActionMenuBar@SetDesignMode$qqrxo @858 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::SetDesignMode(const bool)
+    @Vcl@Actnmenus@TCustomActionMenuBar@SetMouseControl$qqrxp21Vcl@Controls@TControl @836 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::SetMouseControl(Vcl::Controls::TControl * const)
+    @Vcl@Actnmenus@TCustomActionMenuBar@SetParent$qqrp24Vcl@Controls@TWinControl @855 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::SetParent(Vcl::Controls::TWinControl *)
+    @Vcl@Actnmenus@TCustomActionMenuBar@SetParentMenu$qqrxp34Vcl@Actnmenus@TCustomActionMenuBar @857 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::SetParentMenu(Vcl::Actnmenus::TCustomActionMenuBar * const)
+    @Vcl@Actnmenus@TCustomActionMenuBar@SetPersistentHotKeys$qqrxo @856 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::SetPersistentHotKeys(const bool)
+    @Vcl@Actnmenus@TCustomActionMenuBar@SetUseSystemFont$qqrxo @839 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::SetUseSystemFont(const bool)
+    @Vcl@Actnmenus@TCustomActionMenuBar@Style$qqrv @840 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::Style()
+    @Vcl@Actnmenus@TCustomActionMenuBar@TrackMenu$qqrv @854 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::TrackMenu()
+    @Vcl@Actnmenus@TCustomActionMenuBar@WMKeyDown$qqrr22Winapi@Messages@TWMKey @852 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::WMKeyDown(Winapi::Messages::TWMKey&)
+    @Vcl@Actnmenus@TCustomActionMenuBar@WMMouseActivate$qqrr32Winapi@Messages@TWMMouseActivate @851 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::WMMouseActivate(Winapi::Messages::TWMMouseActivate&)
+    @Vcl@Actnmenus@TCustomActionMenuBar@WMSysKeyDown$qqrr22Winapi@Messages@TWMKey @850 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::WMSysKeyDown(Winapi::Messages::TWMKey&)
+    @Vcl@Actnmenus@TCustomActionMenuBar@WndProc$qqrr24Winapi@Messages@TMessage @853 ; __fastcall Vcl::Actnmenus::TCustomActionMenuBar::WndProc(Winapi::Messages::TMessage&)
+    @Vcl@Actnmenus@TCustomActionPopupMenu@ @931 ; Vcl::Actnmenus::TCustomActionPopupMenu::
+    @Vcl@Actnmenus@TCustomActionPopupMenu@$bctr$qqrp25System@Classes@TComponent @830 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::TCustomActionPopupMenu(System::Classes::TComponent *)
+    @Vcl@Actnmenus@TCustomActionPopupMenu@$bdtr$qqrv @829 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::~TCustomActionPopupMenu()
+    @Vcl@Actnmenus@TCustomActionPopupMenu@AddEdges$qqrp29Vcl@Actnmenus@TCustomMenuItem @828 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::AddEdges(Vcl::Actnmenus::TCustomMenuItem *)
+    @Vcl@Actnmenus@TCustomActionPopupMenu@CMMouseLeave$qqrr24Winapi@Messages@TMessage @827 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::CMMouseLeave(Winapi::Messages::TMessage&)
+    @Vcl@Actnmenus@TCustomActionPopupMenu@CMVisibleChanged$qqrr24Winapi@Messages@TMessage @826 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::CMVisibleChanged(Winapi::Messages::TMessage&)
+    @Vcl@Actnmenus@TCustomActionPopupMenu@CanAutoSize$qqrrit1 @806 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::CanAutoSize(int&, int&)
+    @Vcl@Actnmenus@TCustomActionPopupMenu@CloseMenu$qqrv @809 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::CloseMenu()
+    @Vcl@Actnmenus@TCustomActionPopupMenu@CreateControl$qqrp29Vcl@Actnman@TActionClientItem @825 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::CreateControl(Vcl::Actnman::TActionClientItem *)
+    @Vcl@Actnmenus@TCustomActionPopupMenu@CreateControls$qqrv @824 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::CreateControls()
+    @Vcl@Actnmenus@TCustomActionPopupMenu@CreateParams$qqrr26Vcl@Controls@TCreateParams @823 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::CreateParams(Vcl::Controls::TCreateParams&)
+    @Vcl@Actnmenus@TCustomActionPopupMenu@DesignWndProc$qqrr24Winapi@Messages@TMessage @822 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::DesignWndProc(Winapi::Messages::TMessage&)
+    @Vcl@Actnmenus@TCustomActionPopupMenu@DisplayShadow$qqrv @805 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::DisplayShadow()
+    @Vcl@Actnmenus@TCustomActionPopupMenu@DrawBackground$qqrv @800 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::DrawBackground()
+    @Vcl@Actnmenus@TCustomActionPopupMenu@ExecAction$qqrp31System@Actions@TContainedAction @821 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::ExecAction(System::Actions::TContainedAction *)
+    @Vcl@Actnmenus@TCustomActionPopupMenu@Expand$qqro @820 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::Expand(bool)
+    @Vcl@Actnmenus@TCustomActionPopupMenu@ExpandClick$qqrp14System@TObject @819 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::ExpandClick(System::TObject *)
+    @Vcl@Actnmenus@TCustomActionPopupMenu@GetClientRect$qqrv @808 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::GetClientRect()
+    @Vcl@Actnmenus@TCustomActionPopupMenu@GetExpandBtnClass$qqrv @807 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::GetExpandBtnClass()
+    @Vcl@Actnmenus@TCustomActionPopupMenu@HideShadow$qqrv @804 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::HideShadow()
+    @Vcl@Actnmenus@TCustomActionPopupMenu@NewPopup$qqrv @799 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::NewPopup()
+    @Vcl@Actnmenus@TCustomActionPopupMenu@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @802 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Vcl@Actnmenus@TCustomActionPopupMenu@Popup$qqrii @818 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::Popup(int, int)
+    @Vcl@Actnmenus@TCustomActionPopupMenu@PositionPopup$qqrp28Vcl@Actnman@TCustomActionBarp32Vcl@Actnman@TCustomActionControl @817 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::PositionPopup(Vcl::Actnman::TCustomActionBar *, Vcl::Actnman::TCustomActionControl *)
+    @Vcl@Actnmenus@TCustomActionPopupMenu@SetColorMap$qqrxp36Vcl@Actnman@TCustomActionBarColorMap @803 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::SetColorMap(Vcl::Actnman::TCustomActionBarColorMap * const)
+    @Vcl@Actnmenus@TCustomActionPopupMenu@SetOrientation$qqrx27Vcl@Actnman@TBarOrientation @815 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::SetOrientation(const Vcl::Actnman::TBarOrientation)
+    @Vcl@Actnmenus@TCustomActionPopupMenu@SetShadow$qqrxo @801 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::SetShadow(const bool)
+    @Vcl@Actnmenus@TCustomActionPopupMenu@SetupExpandBtn$qqrv @816 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::SetupExpandBtn()
+    @Vcl@Actnmenus@TCustomActionPopupMenu@ValidOrientations$qqrv @811 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::ValidOrientations()
+    @Vcl@Actnmenus@TCustomActionPopupMenu@VisibleChanging$qqrv @810 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::VisibleChanging()
+    @Vcl@Actnmenus@TCustomActionPopupMenu@WMKeyDown$qqrr22Winapi@Messages@TWMKey @814 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::WMKeyDown(Winapi::Messages::TWMKey&)
+    @Vcl@Actnmenus@TCustomActionPopupMenu@WMNCPaint$qqrr26Winapi@Messages@TWMNCPaint @798 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::WMNCPaint(Winapi::Messages::TWMNCPaint&)
+    @Vcl@Actnmenus@TCustomActionPopupMenu@WMPrint$qqrr24Winapi@Messages@TMessage @813 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::WMPrint(Winapi::Messages::TMessage&)
+    @Vcl@Actnmenus@TCustomActionPopupMenu@WMPrintClient$qqrr24Winapi@Messages@TWMPrint @812 ; __fastcall Vcl::Actnmenus::TCustomActionPopupMenu::WMPrintClient(Winapi::Messages::TWMPrint&)
+    @Vcl@Actnmenus@TCustomAddRemoveItem@ @910 ; Vcl::Actnmenus::TCustomAddRemoveItem::
+    @Vcl@Actnmenus@TCustomAddRemoveItem@CalcBounds$qqrv @797 ; __fastcall Vcl::Actnmenus::TCustomAddRemoveItem::CalcBounds()
+    @Vcl@Actnmenus@TCustomAddRemoveItem@IsActionVisible$qqrv @796 ; __fastcall Vcl::Actnmenus::TCustomAddRemoveItem::IsActionVisible()
+    @Vcl@Actnmenus@TCustomAddRemoveItem@MouseUp$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @795 ; Vcl::Actnmenus::TCustomAddRemoveItem::MouseUp(System::Uitypes::TMouseButton, System::Set<{583}...
+    @Vcl@Actnmenus@TCustomAddRemoveItem@SetEnabled$qqro @794 ; __fastcall Vcl::Actnmenus::TCustomAddRemoveItem::SetEnabled(bool)
+    @Vcl@Actnmenus@TCustomMDIMenuButton@ @921 ; Vcl::Actnmenus::TCustomMDIMenuButton::
+    @Vcl@Actnmenus@TCustomMDIMenuButton@Paint$qqrv @778 ; __fastcall Vcl::Actnmenus::TCustomMDIMenuButton::Paint()
+    @Vcl@Actnmenus@TCustomMenuButton@ @912 ; Vcl::Actnmenus::TCustomMenuButton::
+    @Vcl@Actnmenus@TCustomMenuButton@$bctr$qqrp25System@Classes@TComponent @723 ; __fastcall Vcl::Actnmenus::TCustomMenuButton::TCustomMenuButton(System::Classes::TComponent *)
+    @Vcl@Actnmenus@TCustomMenuButton@$bdtr$qqrv @722 ; __fastcall Vcl::Actnmenus::TCustomMenuButton::~TCustomMenuButton()
+    @Vcl@Actnmenus@TCustomMenuButton@BeginAutoDrag$qqrv @721 ; __fastcall Vcl::Actnmenus::TCustomMenuButton::BeginAutoDrag()
+    @Vcl@Actnmenus@TCustomMenuButton@CMDialogChar$qqrr22Winapi@Messages@TWMKey @710 ; __fastcall Vcl::Actnmenus::TCustomMenuButton::CMDialogChar(Winapi::Messages::TWMKey&)
+    @Vcl@Actnmenus@TCustomMenuButton@CMMouseEnter$qqrr24Winapi@Messages@TMessage @719 ; __fastcall Vcl::Actnmenus::TCustomMenuButton::CMMouseEnter(Winapi::Messages::TMessage&)
+    @Vcl@Actnmenus@TCustomMenuButton@Click$qqrv @720 ; __fastcall Vcl::Actnmenus::TCustomMenuButton::Click()
+    @Vcl@Actnmenus@TCustomMenuButton@DoDragDrop$qqrp14System@TObjectii @718 ; __fastcall Vcl::Actnmenus::TCustomMenuButton::DoDragDrop(System::TObject *, int, int)
+    @Vcl@Actnmenus@TCustomMenuButton@DragOver$qqrp14System@TObjectii25System@Uitypes@TDragStatero @717 ; __fastcall Vcl::Actnmenus::TCustomMenuButton::DragOver(System::TObject *, int, int, System::Uitypes::TDragState, bool&)
+    @Vcl@Actnmenus@TCustomMenuButton@DrawText$qqrr18System@Types@TRectrui20System@UnicodeString @716 ; __fastcall Vcl::Actnmenus::TCustomMenuButton::DrawText(System::Types::TRect&, unsigned int&, System::UnicodeString)
+    @Vcl@Actnmenus@TCustomMenuButton@GetMenu$qqrv @715 ; __fastcall Vcl::Actnmenus::TCustomMenuButton::GetMenu()
+    @Vcl@Actnmenus@TCustomMenuButton@Keyed$qqrv @714 ; __fastcall Vcl::Actnmenus::TCustomMenuButton::Keyed()
+    @Vcl@Actnmenus@TCustomMenuButton@MouseDown$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @713 ; Vcl::Actnmenus::TCustomMenuButton::MouseDown(System::Uitypes::TMouseButton, System::Set<{583}...
+    @Vcl@Actnmenus@TCustomMenuButton@MouseUp$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @712 ; Vcl::Actnmenus::TCustomMenuButton::MouseUp(System::Uitypes::TMouseButton, System::Set<{583}...
+    @Vcl@Actnmenus@TCustomMenuButton@Paint$qqrv @711 ; __fastcall Vcl::Actnmenus::TCustomMenuButton::Paint()
+    @Vcl@Actnmenus@TCustomMenuExpandBtn@ @934 ; Vcl::Actnmenus::TCustomMenuExpandBtn::
+    @Vcl@Actnmenus@TCustomMenuExpandBtn@$bctr$qqrp25System@Classes@TComponent @835 ; __fastcall Vcl::Actnmenus::TCustomMenuExpandBtn::TCustomMenuExpandBtn(System::Classes::TComponent *)
+    @Vcl@Actnmenus@TCustomMenuExpandBtn@DragOver$qqrp14System@TObjectii25System@Uitypes@TDragStatero @834 ; __fastcall Vcl::Actnmenus::TCustomMenuExpandBtn::DragOver(System::TObject *, int, int, System::Uitypes::TDragState, bool&)
+    @Vcl@Actnmenus@TCustomMenuExpandBtn@DrawBackground$qqrr18System@Types@TRect @833 ; __fastcall Vcl::Actnmenus::TCustomMenuExpandBtn::DrawBackground(System::Types::TRect&)
+    @Vcl@Actnmenus@TCustomMenuExpandBtn@DrawFrame$qqrrx18System@Types@TRecto @832 ; __fastcall Vcl::Actnmenus::TCustomMenuExpandBtn::DrawFrame(const System::Types::TRect&, bool)
+    @Vcl@Actnmenus@TCustomMenuExpandBtn@GetMenu$qqrv @831 ; __fastcall Vcl::Actnmenus::TCustomMenuExpandBtn::GetMenu()
+    @Vcl@Actnmenus@TCustomMenuItem@ @914 ; Vcl::Actnmenus::TCustomMenuItem::
+    @Vcl@Actnmenus@TCustomMenuItem@$bctr$qqrp25System@Classes@TComponent @745 ; __fastcall Vcl::Actnmenus::TCustomMenuItem::TCustomMenuItem(System::Classes::TComponent *)
+    @Vcl@Actnmenus@TCustomMenuItem@$bdtr$qqrv @744 ; __fastcall Vcl::Actnmenus::TCustomMenuItem::~TCustomMenuItem()
+    @Vcl@Actnmenus@TCustomMenuItem@CMMouseEnter$qqrr24Winapi@Messages@TMessage @737 ; __fastcall Vcl::Actnmenus::TCustomMenuItem::CMMouseEnter(Winapi::Messages::TMessage&)
+    @Vcl@Actnmenus@TCustomMenuItem@CMTextchanged$qqrr24Winapi@Messages@TMessage @736 ; __fastcall Vcl::Actnmenus::TCustomMenuItem::CMTextchanged(Winapi::Messages::TMessage&)
+    @Vcl@Actnmenus@TCustomMenuItem@CalcBounds$qqrv @732 ; __fastcall Vcl::Actnmenus::TCustomMenuItem::CalcBounds()
+    @Vcl@Actnmenus@TCustomMenuItem@CalcLayout$qqrv @731 ; __fastcall Vcl::Actnmenus::TCustomMenuItem::CalcLayout()
+    @Vcl@Actnmenus@TCustomMenuItem@Click$qqrv @740 ; __fastcall Vcl::Actnmenus::TCustomMenuItem::Click()
+    @Vcl@Actnmenus@TCustomMenuItem@DoDragDrop$qqrp14System@TObjectii @726 ; __fastcall Vcl::Actnmenus::TCustomMenuItem::DoDragDrop(System::TObject *, int, int)
+    @Vcl@Actnmenus@TCustomMenuItem@DragDrop$qqrp14System@TObjectii @734 ; __fastcall Vcl::Actnmenus::TCustomMenuItem::DragDrop(System::TObject *, int, int)
+    @Vcl@Actnmenus@TCustomMenuItem@DragOver$qqrp14System@TObjectii25System@Uitypes@TDragStatero @733 ; __fastcall Vcl::Actnmenus::TCustomMenuItem::DragOver(System::TObject *, int, int, System::Uitypes::TDragState, bool&)
+    @Vcl@Actnmenus@TCustomMenuItem@DrawEdge$qqr50System@%Set$23Vcl@Toolwin@TEdgeBordert1$i0$t1$i3$% @730 ; Vcl::Actnmenus::TCustomMenuItem::DrawEdge(System::Set<{583}...
+    @Vcl@Actnmenus@TCustomMenuItem@DrawShadowedText$qqrrx18System@Types@TRectui20System@UnicodeString21System@Uitypes@TColort4 @729 ; __fastcall Vcl::Actnmenus::TCustomMenuItem::DrawShadowedText(const System::Types::TRect&, unsigned int, System::UnicodeString, System::Uitypes::TColor, System::Uitypes::TColor)
+    @Vcl@Actnmenus@TCustomMenuItem@DrawSubMenuGlyph$qqrv @743 ; __fastcall Vcl::Actnmenus::TCustomMenuItem::DrawSubMenuGlyph()
+    @Vcl@Actnmenus@TCustomMenuItem@DrawText$qqrr18System@Types@TRectrui20System@UnicodeString @728 ; __fastcall Vcl::Actnmenus::TCustomMenuItem::DrawText(System::Types::TRect&, unsigned int&, System::UnicodeString)
+    @Vcl@Actnmenus@TCustomMenuItem@DrawUnusedEdges$qqrv @741 ; __fastcall Vcl::Actnmenus::TCustomMenuItem::DrawUnusedEdges()
+    @Vcl@Actnmenus@TCustomMenuItem@Keyed$qqrv @739 ; __fastcall Vcl::Actnmenus::TCustomMenuItem::Keyed()
+    @Vcl@Actnmenus@TCustomMenuItem@MouseMove$qqr60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @724 ; Vcl::Actnmenus::TCustomMenuItem::MouseMove(System::Set<{583}...
+    @Vcl@Actnmenus@TCustomMenuItem@MouseUp$qqr27System@Uitypes@TMouseButton60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$%ii @725 ; Vcl::Actnmenus::TCustomMenuItem::MouseUp(System::Uitypes::TMouseButton, System::Set<{583}...
+    @Vcl@Actnmenus@TCustomMenuItem@Paint$qqrv @742 ; __fastcall Vcl::Actnmenus::TCustomMenuItem::Paint()
+    @Vcl@Actnmenus@TCustomMenuItem@PositionChanged$qqrv @727 ; __fastcall Vcl::Actnmenus::TCustomMenuItem::PositionChanged()
+    @Vcl@Actnmenus@TCustomMenuItem@SetEdges$qqrx50System@%Set$23Vcl@Toolwin@TEdgeBordert1$i0$t1$i3$% @738 ; Vcl::Actnmenus::TCustomMenuItem::SetEdges(const System::Set<{583}...
+    @Vcl@Actnmenus@TCustomMenuItem@SetSelected$qqro @735 ; __fastcall Vcl::Actnmenus::TCustomMenuItem::SetSelected(bool)
+    @Vcl@Actnmenus@TCustomizeActionClientItem@ @924 ; Vcl::Actnmenus::TCustomizeActionClientItem::
+    @Vcl@Actnmenus@TCustomizeActionClientItem@GetActionLinkClass$qqrv @779 ; __fastcall Vcl::Actnmenus::TCustomizeActionClientItem::GetActionLinkClass()
+    @Vcl@Actnmenus@TCustomizeActionLink@ @926 ; Vcl::Actnmenus::TCustomizeActionLink::
+    @Vcl@Actnmenus@TCustomizeActionLink@SetEnabled$qqro @780 ; __fastcall Vcl::Actnmenus::TCustomizeActionLink::SetEnabled(bool)
+    @Vcl@Actnmenus@TCustomizeActionToolBar@ @928 ; Vcl::Actnmenus::TCustomizeActionToolBar::
+    @Vcl@Actnmenus@TCustomizeActionToolBar@$bctr$qqrp25System@Classes@TComponent @793 ; __fastcall Vcl::Actnmenus::TCustomizeActionToolBar::TCustomizeActionToolBar(System::Classes::TComponent *)
+    @Vcl@Actnmenus@TCustomizeActionToolBar@$bdtr$qqrv @792 ; __fastcall Vcl::Actnmenus::TCustomizeActionToolBar::~TCustomizeActionToolBar()
+    @Vcl@Actnmenus@TCustomizeActionToolBar@CMItemSelected$qqrr22Vcl@Actnman@TCMItemMsg @789 ; __fastcall Vcl::Actnmenus::TCustomizeActionToolBar::CMItemSelected(Vcl::Actnman::TCMItemMsg&)
+    @Vcl@Actnmenus@TCustomizeActionToolBar@CanAutoSize$qqrrit1 @791 ; __fastcall Vcl::Actnmenus::TCustomizeActionToolBar::CanAutoSize(int&, int&)
+    @Vcl@Actnmenus@TCustomizeActionToolBar@Clear$qqrv @790 ; __fastcall Vcl::Actnmenus::TCustomizeActionToolBar::Clear()
+    @Vcl@Actnmenus@TCustomizeActionToolBar@DoAddCustomizeItems$qqrxp25Vcl@Actnman@TActionClient @783 ; __fastcall Vcl::Actnmenus::TCustomizeActionToolBar::DoAddCustomizeItems(Vcl::Actnman::TActionClient * const)
+    @Vcl@Actnmenus@TCustomizeActionToolBar@DoItemClicked$qqrp32Vcl@Actnman@TCustomActionControl @786 ; __fastcall Vcl::Actnmenus::TCustomizeActionToolBar::DoItemClicked(Vcl::Actnman::TCustomActionControl *)
+    @Vcl@Actnmenus@TCustomizeActionToolBar@GetActionControl$qqrxi @788 ; __fastcall Vcl::Actnmenus::TCustomizeActionToolBar::GetActionControl(const int)
+    @Vcl@Actnmenus@TCustomizeActionToolBar@GetAddRemoveItemClass$qqrv @781 ; __fastcall Vcl::Actnmenus::TCustomizeActionToolBar::GetAddRemoveItemClass()
+    @Vcl@Actnmenus@TCustomizeActionToolBar@GetSubMenuControlClass$qqrp28Vcl@Actnman@TCustomActionBarp25Vcl@Actnman@TActionClientrp17System@TMetaClass @785 ; __fastcall Vcl::Actnmenus::TCustomizeActionToolBar::GetSubMenuControlClass(Vcl::Actnman::TCustomActionBar *, Vcl::Actnman::TActionClient *, System::TMetaClass *&)
+    @Vcl@Actnmenus@TCustomizeActionToolBar@ItemCount$qqrv @787 ; __fastcall Vcl::Actnmenus::TCustomizeActionToolBar::ItemCount()
+    @Vcl@Actnmenus@TCustomizeActionToolBar@NewPopup$qqrv @784 ; __fastcall Vcl::Actnmenus::TCustomizeActionToolBar::NewPopup()
+    @Vcl@Actnmenus@TCustomizeActionToolBar@SetActionClient$qqrxp25Vcl@Actnman@TActionClient @782 ; __fastcall Vcl::Actnmenus::TCustomizeActionToolBar::SetActionClient(Vcl::Actnman::TActionClient * const)
+    @Vcl@Actnmenus@TMenuStack@     @946 ; Vcl::Actnmenus::TMenuStack::
+    @Vcl@Actnmenus@TMenuStack@$bctr$qqrp34Vcl@Actnmenus@TCustomActionMenuBar @898 ; __fastcall Vcl::Actnmenus::TMenuStack::TMenuStack(Vcl::Actnmenus::TCustomActionMenuBar *)
+    @Vcl@Actnmenus@TMenuStack@GetBars$qqrxi @897 ; __fastcall Vcl::Actnmenus::TMenuStack::GetBars(const int)
+    @Vcl@Actnmenus@TMenuStack@Peek$qqrv @896 ; __fastcall Vcl::Actnmenus::TMenuStack::Peek()
+    @Vcl@Actnmenus@TMenuStack@Pop$qqrv @895 ; __fastcall Vcl::Actnmenus::TMenuStack::Pop()
+    @Vcl@Actnmenus@TMenuStack@Push$qqrp34Vcl@Actnmenus@TCustomActionMenuBar @894 ; __fastcall Vcl::Actnmenus::TMenuStack::Push(Vcl::Actnmenus::TCustomActionMenuBar *)
+    @Vcl@Actnmenus@UnRegisterActnBarStyle$qqrp31Vcl@Actnmenus@TActionBarStyleEx @708 ; __fastcall Vcl::Actnmenus::UnRegisterActnBarStyle(Vcl::Actnmenus::TActionBarStyleEx *)
+    @Vcl@Actnmenus@UpdateActnMenusProc @899 ; Vcl::Actnmenus::UpdateActnMenusProc
+    @Vcl@Actnmenus@initialization$qqrv @706 ; __fastcall Vcl::Actnmenus::initialization()
+    @Vcl@Actnpopup@Finalization$qqrv @1141; __fastcall Vcl::Actnpopup::Finalization()
+    @Vcl@Actnpopup@NewPopupMenu$qqrp25System@Classes@TComponentx20System@UnicodeString25Vcl@Menus@TPopupAlignmentopxp19Vcl@Menus@TMenuItemxi @1154; __fastcall Vcl::Actnpopup::NewPopupMenu(System::Classes::TComponent *, const System::UnicodeString, Vcl::Menus::TPopupAlignment, bool, Vcl::Menus::TMenuItem * const *, const int)
+    @Vcl@Actnpopup@TCustomActionPopupMenuEx@ @1158; Vcl::Actnpopup::TCustomActionPopupMenuEx::
+    @Vcl@Actnpopup@TCustomActionPopupMenuEx@DoPopup$qqrp32Vcl@Actnman@TCustomActionControl @1145; __fastcall Vcl::Actnpopup::TCustomActionPopupMenuEx::DoPopup(Vcl::Actnman::TCustomActionControl *)
+    @Vcl@Actnpopup@TCustomActionPopupMenuEx@ExecAction$qqrp31System@Actions@TContainedAction @1144; __fastcall Vcl::Actnpopup::TCustomActionPopupMenuEx::ExecAction(System::Actions::TContainedAction *)
+    @Vcl@Actnpopup@TCustomActionPopupMenuEx@GetPopupClass$qqrv @1143; __fastcall Vcl::Actnpopup::TCustomActionPopupMenuEx::GetPopupClass()
+    @Vcl@Actnpopup@TCustomActionPopupMenuEx@LoadMenu$qqrp26Vcl@Actnman@TActionClientsp19Vcl@Menus@TMenuItem @1142; __fastcall Vcl::Actnpopup::TCustomActionPopupMenuEx::LoadMenu(Vcl::Actnman::TActionClients *, Vcl::Menus::TMenuItem *)
+    @Vcl@Actnpopup@TPopupActionBar@ @1156; Vcl::Actnpopup::TPopupActionBar::
+    @Vcl@Actnpopup@TPopupActionBar@$bctr$qqrp25System@Classes@TComponent @1153; __fastcall Vcl::Actnpopup::TPopupActionBar::TPopupActionBar(System::Classes::TComponent *)
+    @Vcl@Actnpopup@TPopupActionBar@DefineProperties$qqrp21System@Classes@TFiler @1152; __fastcall Vcl::Actnpopup::TPopupActionBar::DefineProperties(System::Classes::TFiler *)
+    @Vcl@Actnpopup@TPopupActionBar@GetMenuActive$qqrv @1151; __fastcall Vcl::Actnpopup::TPopupActionBar::GetMenuActive()
+    @Vcl@Actnpopup@TPopupActionBar@GetStyle$qqrv @1150; __fastcall Vcl::Actnpopup::TPopupActionBar::GetStyle()
+    @Vcl@Actnpopup@TPopupActionBar@Popup$qqrii @1149; __fastcall Vcl::Actnpopup::TPopupActionBar::Popup(int, int)
+    @Vcl@Actnpopup@TPopupActionBar@ReadStyleProp$qqrp22System@Classes@TReader @1148; __fastcall Vcl::Actnpopup::TPopupActionBar::ReadStyleProp(System::Classes::TReader *)
+    @Vcl@Actnpopup@TPopupActionBar@SetStyle$qqrxp27Vcl@Actnman@TActionBarStyle @1147; __fastcall Vcl::Actnpopup::TPopupActionBar::SetStyle(Vcl::Actnman::TActionBarStyle * const)
+    @Vcl@Actnpopup@TPopupActionBar@WriteStyleProp$qqrp22System@Classes@TWriter @1146; __fastcall Vcl::Actnpopup::TPopupActionBar::WriteStyleProp(System::Classes::TWriter *)
+    @Vcl@Actnpopup@initialization$qqrv @1140; __fastcall Vcl::Actnpopup::initialization()
+    @Vcl@Bandactn@Finalization$qqrv @1209; __fastcall Vcl::Bandactn::Finalization()
+    @Vcl@Bandactn@TCustomizeActionBars@ @1214; Vcl::Bandactn::TCustomizeActionBars::
+    @Vcl@Bandactn@TCustomizeActionBars@$bctr$qqrp25System@Classes@TComponent @1212; __fastcall Vcl::Bandactn::TCustomizeActionBars::TCustomizeActionBars(System::Classes::TComponent *)
+    @Vcl@Bandactn@TCustomizeActionBars@ExecuteTarget$qqrp14System@TObject @1211; __fastcall Vcl::Bandactn::TCustomizeActionBars::ExecuteTarget(System::TObject *)
+    @Vcl@Bandactn@TCustomizeActionBars@HandlesTarget$qqrp14System@TObject @1210; __fastcall Vcl::Bandactn::TCustomizeActionBars::HandlesTarget(System::TObject *)
+    @Vcl@Bandactn@initialization$qqrv @1208; __fastcall Vcl::Bandactn::initialization()
+    @Vcl@Customizedlg@Finalization$qqrv @1160; __fastcall Vcl::Customizedlg::Finalization()
+    @Vcl@Customizedlg@TCustomizeDlg@ @1205; Vcl::Customizedlg::TCustomizeDlg::
+    @Vcl@Customizedlg@TCustomizeDlg@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @1167; __fastcall Vcl::Customizedlg::TCustomizeDlg::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Vcl@Customizedlg@TCustomizeDlg@SetActionManager$qqrxp32Vcl@Actnman@TCustomActionManager @1166; __fastcall Vcl::Customizedlg::TCustomizeDlg::SetActionManager(Vcl::Actnman::TCustomActionManager * const)
+    @Vcl@Customizedlg@TCustomizeDlg@SetStayOnTop$qqrxo @1165; __fastcall Vcl::Customizedlg::TCustomizeDlg::SetStayOnTop(const bool)
+    @Vcl@Customizedlg@TCustomizeDlg@SetupDlg$qqrv @1164; __fastcall Vcl::Customizedlg::TCustomizeDlg::SetupDlg()
+    @Vcl@Customizedlg@TCustomizeDlg@Show$qqrv @1163; __fastcall Vcl::Customizedlg::TCustomizeDlg::Show()
+    @Vcl@Customizedlg@TCustomizeFrm@ @1207; Vcl::Customizedlg::TCustomizeFrm::
+    @Vcl@Customizedlg@TCustomizeFrm@ActionBarListClick$qqrp14System@TObject @1174; __fastcall Vcl::Customizedlg::TCustomizeFrm::ActionBarListClick(System::TObject *)
+    @Vcl@Customizedlg@TCustomizeFrm@ActionBarListClickCheck$qqrp14System@TObject @1193; __fastcall Vcl::Customizedlg::TCustomizeFrm::ActionBarListClickCheck(System::TObject *)
+    @Vcl@Customizedlg@TCustomizeFrm@ActionsListClick$qqrp14System@TObject @1184; __fastcall Vcl::Customizedlg::TCustomizeFrm::ActionsListClick(System::TObject *)
+    @Vcl@Customizedlg@TCustomizeFrm@ActionsListData$qqrp24Vcl@Controls@TWinControlir20System@UnicodeString @1173; __fastcall Vcl::Customizedlg::TCustomizeFrm::ActionsListData(Vcl::Controls::TWinControl *, int, System::UnicodeString&)
+    @Vcl@Customizedlg@TCustomizeFrm@ActionsListDrawItem$qqrp24Vcl@Controls@TWinControlirx18System@Types@TRect60System@%Set$32Winapi@Windows@Winapi_Windows__1t1$i0$t1$i12$% @1199; Vcl::Customizedlg::TCustomizeFrm::ActionsListDrawItem(Vcl::Controls::TWinControl *, int, const System::Types::TRect&, System::Set<{583}...
+    @Vcl@Customizedlg@TCustomizeFrm@ActionsListMeasureItem$qqrp24Vcl@Controls@TWinControliri @1192; __fastcall Vcl::Customizedlg::TCustomizeFrm::ActionsListMeasureItem(Vcl::Controls::TWinControl *, int, int&)
+    @Vcl@Customizedlg@TCustomizeFrm@ActionsListStartDrag$qqrp14System@TObjectrp24Vcl@Controls@TDragObject @1200; __fastcall Vcl::Customizedlg::TCustomizeFrm::ActionsListStartDrag(System::TObject *, Vcl::Controls::TDragObject *&)
+    @Vcl@Customizedlg@TCustomizeFrm@AddAction$qqrp31System@Actions@TContainedAction @1203; __fastcall Vcl::Customizedlg::TCustomizeFrm::AddAction(System::Actions::TContainedAction *)
+    @Vcl@Customizedlg@TCustomizeFrm@ApplyToAllActnUpdate$qqrp14System@TObject @1161; __fastcall Vcl::Customizedlg::TCustomizeFrm::ApplyToAllActnUpdate(System::TObject *)
+    @Vcl@Customizedlg@TCustomizeFrm@CMVisiblechanged$qqrr24Winapi@Messages@TMessage @1189; __fastcall Vcl::Customizedlg::TCustomizeFrm::CMVisiblechanged(Winapi::Messages::TMessage&)
+    @Vcl@Customizedlg@TCustomizeFrm@CaptionOptionsComboChange$qqrp14System@TObject @1169; __fastcall Vcl::Customizedlg::TCustomizeFrm::CaptionOptionsComboChange(System::TObject *)
+    @Vcl@Customizedlg@TCustomizeFrm@CatListClick$qqrp14System@TObject @1201; __fastcall Vcl::Customizedlg::TCustomizeFrm::CatListClick(System::TObject *)
+    @Vcl@Customizedlg@TCustomizeFrm@CatListStartDrag$qqrp14System@TObjectrp24Vcl@Controls@TDragObject @1194; __fastcall Vcl::Customizedlg::TCustomizeFrm::CatListStartDrag(System::TObject *, Vcl::Controls::TDragObject *&)
+    @Vcl@Customizedlg@TCustomizeFrm@ClearCatList$qqrv @1190; __fastcall Vcl::Customizedlg::TCustomizeFrm::ClearCatList()
+    @Vcl@Customizedlg@TCustomizeFrm@CloseBtnClick$qqrp14System@TObject @1196; __fastcall Vcl::Customizedlg::TCustomizeFrm::CloseBtnClick(System::TObject *)
+    @Vcl@Customizedlg@TCustomizeFrm@FindActionBars$qqrv @1198; __fastcall Vcl::Customizedlg::TCustomizeFrm::FindActionBars()
+    @Vcl@Customizedlg@TCustomizeFrm@FormClose$qqrp14System@TObjectr27System@Uitypes@TCloseAction @1197; __fastcall Vcl::Customizedlg::TCustomizeFrm::FormClose(System::TObject *, System::Uitypes::TCloseAction&)
+    @Vcl@Customizedlg@TCustomizeFrm@FormCreate$qqrp14System@TObject @1185; __fastcall Vcl::Customizedlg::TCustomizeFrm::FormCreate(System::TObject *)
+    @Vcl@Customizedlg@TCustomizeFrm@FormResize$qqrp14System@TObject @1168; __fastcall Vcl::Customizedlg::TCustomizeFrm::FormResize(System::TObject *)
+    @Vcl@Customizedlg@TCustomizeFrm@IsDupShortCut$qqrusrp31System@Actions@TContainedAction @1188; __fastcall Vcl::Customizedlg::TCustomizeFrm::IsDupShortCut(unsigned short, System::Actions::TContainedAction *&)
+    @Vcl@Customizedlg@TCustomizeFrm@LargeIconsActnExecute$qqrp14System@TObject @1172; __fastcall Vcl::Customizedlg::TCustomizeFrm::LargeIconsActnExecute(System::TObject *)
+    @Vcl@Customizedlg@TCustomizeFrm@LargeIconsActnUpdate$qqrp14System@TObject @1171; __fastcall Vcl::Customizedlg::TCustomizeFrm::LargeIconsActnUpdate(System::TObject *)
+    @Vcl@Customizedlg@TCustomizeFrm@ListComboSelect$qqrp14System@TObject @1170; __fastcall Vcl::Customizedlg::TCustomizeFrm::ListComboSelect(System::TObject *)
+    @Vcl@Customizedlg@TCustomizeFrm@MenuAnimationStylesChange$qqrp14System@TObject @1183; __fastcall Vcl::Customizedlg::TCustomizeFrm::MenuAnimationStylesChange(System::TObject *)
+    @Vcl@Customizedlg@TCustomizeFrm@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @1195; __fastcall Vcl::Customizedlg::TCustomizeFrm::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Vcl@Customizedlg@TCustomizeFrm@RecentlyUsedActnExecute$qqrp14System@TObject @1179; __fastcall Vcl::Customizedlg::TCustomizeFrm::RecentlyUsedActnExecute(System::TObject *)
+    @Vcl@Customizedlg@TCustomizeFrm@RecentlyUsedActnUpdate$qqrp14System@TObject @1175; __fastcall Vcl::Customizedlg::TCustomizeFrm::RecentlyUsedActnUpdate(System::TObject *)
+    @Vcl@Customizedlg@TCustomizeFrm@ResetActnExecute$qqrp14System@TObject @1181; __fastcall Vcl::Customizedlg::TCustomizeFrm::ResetActnExecute(System::TObject *)
+    @Vcl@Customizedlg@TCustomizeFrm@ResetActnUpdate$qqrp14System@TObject @1182; __fastcall Vcl::Customizedlg::TCustomizeFrm::ResetActnUpdate(System::TObject *)
+    @Vcl@Customizedlg@TCustomizeFrm@ResetUsageDataActnExecute$qqrp14System@TObject @1180; __fastcall Vcl::Customizedlg::TCustomizeFrm::ResetUsageDataActnExecute(System::TObject *)
+    @Vcl@Customizedlg@TCustomizeFrm@SeparatorBtnStartDrag$qqrp14System@TObjectrp24Vcl@Controls@TDragObject @1162; __fastcall Vcl::Customizedlg::TCustomizeFrm::SeparatorBtnStartDrag(System::TObject *, Vcl::Controls::TDragObject *&)
+    @Vcl@Customizedlg@TCustomizeFrm@SetActionManager$qqrxp32Vcl@Actnman@TCustomActionManager @1202; __fastcall Vcl::Customizedlg::TCustomizeFrm::SetActionManager(Vcl::Actnman::TCustomActionManager * const)
+    @Vcl@Customizedlg@TCustomizeFrm@SetActiveActionList$qqrxp30Vcl@Actnlist@TCustomActionList @1187; __fastcall Vcl::Customizedlg::TCustomizeFrm::SetActiveActionList(Vcl::Actnlist::TCustomActionList * const)
+    @Vcl@Customizedlg@TCustomizeFrm@SetupListCombo$qqrv @1186; __fastcall Vcl::Customizedlg::TCustomizeFrm::SetupListCombo()
+    @Vcl@Customizedlg@TCustomizeFrm@ShowHintsActnExecute$qqrp14System@TObject @1178; __fastcall Vcl::Customizedlg::TCustomizeFrm::ShowHintsActnExecute(System::TObject *)
+    @Vcl@Customizedlg@TCustomizeFrm@ShowHintsActnUpdate$qqrp14System@TObject @1177; __fastcall Vcl::Customizedlg::TCustomizeFrm::ShowHintsActnUpdate(System::TObject *)
+    @Vcl@Customizedlg@TCustomizeFrm@ShowShortCutsInTipsActnExecute$qqrp14System@TObject @1176; __fastcall Vcl::Customizedlg::TCustomizeFrm::ShowShortCutsInTipsActnExecute(System::TObject *)
+    @Vcl@Customizedlg@TCustomizeFrm@UpdateDialog$qqrv @1191; __fastcall Vcl::Customizedlg::TCustomizeFrm::UpdateDialog()
+    @Vcl@Customizedlg@initialization$qqrv @1159; __fastcall Vcl::Customizedlg::initialization()
+    @Vcl@Platformdefaultstyleactnctrls@Finalization$qqrv @1130; __fastcall Vcl::Platformdefaultstyleactnctrls::Finalization()
+    @Vcl@Platformdefaultstyleactnctrls@PlatformDefaultStyle @1137; Vcl::Platformdefaultstyleactnctrls::PlatformDefaultStyle
+    @Vcl@Platformdefaultstyleactnctrls@TPlatformDefaultStyleActionBars@ @1139; Vcl::Platformdefaultstyleactnctrls::TPlatformDefaultStyleActionBars::
+    @Vcl@Platformdefaultstyleactnctrls@TPlatformDefaultStyleActionBars@GetAddRemoveItemClass$qqrp28Vcl@Actnman@TCustomActionBar @1136; __fastcall Vcl::Platformdefaultstyleactnctrls::TPlatformDefaultStyleActionBars::GetAddRemoveItemClass(Vcl::Actnman::TCustomActionBar *)
+    @Vcl@Platformdefaultstyleactnctrls@TPlatformDefaultStyleActionBars@GetColorMapClass$qqrp28Vcl@Actnman@TCustomActionBar @1135; __fastcall Vcl::Platformdefaultstyleactnctrls::TPlatformDefaultStyleActionBars::GetColorMapClass(Vcl::Actnman::TCustomActionBar *)
+    @Vcl@Platformdefaultstyleactnctrls@TPlatformDefaultStyleActionBars@GetControlClass$qqrp28Vcl@Actnman@TCustomActionBarp29Vcl@Actnman@TActionClientItem @1134; __fastcall Vcl::Platformdefaultstyleactnctrls::TPlatformDefaultStyleActionBars::GetControlClass(Vcl::Actnman::TCustomActionBar *, Vcl::Actnman::TActionClientItem *)
+    @Vcl@Platformdefaultstyleactnctrls@TPlatformDefaultStyleActionBars@GetPopupClass$qqrp28Vcl@Actnman@TCustomActionBar @1133; __fastcall Vcl::Platformdefaultstyleactnctrls::TPlatformDefaultStyleActionBars::GetPopupClass(Vcl::Actnman::TCustomActionBar *)
+    @Vcl@Platformdefaultstyleactnctrls@TPlatformDefaultStyleActionBars@GetScrollBtnClass$qqrv @1132; __fastcall Vcl::Platformdefaultstyleactnctrls::TPlatformDefaultStyleActionBars::GetScrollBtnClass()
+    @Vcl@Platformdefaultstyleactnctrls@TPlatformDefaultStyleActionBars@GetStyleName$qqrv @1131; __fastcall Vcl::Platformdefaultstyleactnctrls::TPlatformDefaultStyleActionBars::GetStyleName()
+    @Vcl@Platformdefaultstyleactnctrls@initialization$qqrv @1129; __fastcall Vcl::Platformdefaultstyleactnctrls::initialization()
+    @Vcl@Shadowwnd@Finalization$qqrv @2   ; __fastcall Vcl::Shadowwnd::Finalization()
+    @Vcl@Shadowwnd@TShadowWindow@  @13  ; Vcl::Shadowwnd::TShadowWindow::
+    @Vcl@Shadowwnd@TShadowWindow@$bctr$qqrp25System@Classes@TComponent @11  ; __fastcall Vcl::Shadowwnd::TShadowWindow::TShadowWindow(System::Classes::TComponent *)
+    @Vcl@Shadowwnd@TShadowWindow@$bctr$qqrp25System@Classes@TComponent26Vcl@Shadowwnd@TControlSide @10  ; __fastcall Vcl::Shadowwnd::TShadowWindow::TShadowWindow(System::Classes::TComponent *, Vcl::Shadowwnd::TControlSide)
+    @Vcl@Shadowwnd@TShadowWindow@$bdtr$qqrv @9   ; __fastcall Vcl::Shadowwnd::TShadowWindow::~TShadowWindow()
+    @Vcl@Shadowwnd@TShadowWindow@CreateParams$qqrr26Vcl@Controls@TCreateParams @8   ; __fastcall Vcl::Shadowwnd::TShadowWindow::CreateParams(Vcl::Controls::TCreateParams&)
+    @Vcl@Shadowwnd@TShadowWindow@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @7   ; __fastcall Vcl::Shadowwnd::TShadowWindow::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Vcl@Shadowwnd@TShadowWindow@Paint$qqrv @6   ; __fastcall Vcl::Shadowwnd::TShadowWindow::Paint()
+    @Vcl@Shadowwnd@TShadowWindow@SetBounds$qqriiii @3   ; __fastcall Vcl::Shadowwnd::TShadowWindow::SetBounds(int, int, int, int)
+    @Vcl@Shadowwnd@TShadowWindow@SetControl$qqrxp21Vcl@Controls@TControl @5   ; __fastcall Vcl::Shadowwnd::TShadowWindow::SetControl(Vcl::Controls::TControl * const)
+    @Vcl@Shadowwnd@TShadowWindow@WMEraseBkgnd$qqrr29Winapi@Messages@TWMEraseBkgnd @4   ; __fastcall Vcl::Shadowwnd::TShadowWindow::WMEraseBkgnd(Winapi::Messages::TWMEraseBkgnd&)
+    @Vcl@Shadowwnd@initialization$qqrv @1   ; __fastcall Vcl::Shadowwnd::initialization()
+    @Vcl@Stdactnmenus@Finalization$qqrv @948 ; __fastcall Vcl::Stdactnmenus::Finalization()
+    @Vcl@Stdactnmenus@RegisterStandardMenus$qqrv @979 ; __fastcall Vcl::Stdactnmenus::RegisterStandardMenus()
+    @Vcl@Stdactnmenus@TStandardAddRemoveItem@ @987 ; Vcl::Stdactnmenus::TStandardAddRemoveItem::
+    @Vcl@Stdactnmenus@TStandardAddRemoveItem@DrawBackground$qqrr18System@Types@TRect @964 ; __fastcall Vcl::Stdactnmenus::TStandardAddRemoveItem::DrawBackground(System::Types::TRect&)
+    @Vcl@Stdactnmenus@TStandardAddRemoveItem@DrawGlyph$qqrrx19System@Types@TPoint @965 ; __fastcall Vcl::Stdactnmenus::TStandardAddRemoveItem::DrawGlyph(const System::Types::TPoint&)
+    @Vcl@Stdactnmenus@TStandardButtonControl@ @983 ; Vcl::Stdactnmenus::TStandardButtonControl::
+    @Vcl@Stdactnmenus@TStandardButtonControl@DrawFrame$qqrrx18System@Types@TRecto @955 ; __fastcall Vcl::Stdactnmenus::TStandardButtonControl::DrawFrame(const System::Types::TRect&, bool)
+    @Vcl@Stdactnmenus@TStandardButtonControl@DrawGlyph$qqrrx19System@Types@TPoint @954 ; __fastcall Vcl::Stdactnmenus::TStandardButtonControl::DrawGlyph(const System::Types::TPoint&)
+    @Vcl@Stdactnmenus@TStandardButtonControl@DrawText$qqrr18System@Types@TRectrui20System@UnicodeString @953 ; __fastcall Vcl::Stdactnmenus::TStandardButtonControl::DrawText(System::Types::TRect&, unsigned int&, System::UnicodeString)
+    @Vcl@Stdactnmenus@TStandardCustomizePopup@ @985 ; Vcl::Stdactnmenus::TStandardCustomizePopup::
+    @Vcl@Stdactnmenus@TStandardCustomizePopup@CanAutoSize$qqrrit1 @963 ; __fastcall Vcl::Stdactnmenus::TStandardCustomizePopup::CanAutoSize(int&, int&)
+    @Vcl@Stdactnmenus@TStandardCustomizePopup@NCPaint$qqrp5HDC__ @962 ; __fastcall Vcl::Stdactnmenus::TStandardCustomizePopup::NCPaint(HDC__ *)
+    @Vcl@Stdactnmenus@TStandardCustomizePopup@PositionPopup$qqrp28Vcl@Actnman@TCustomActionBarp32Vcl@Actnman@TCustomActionControl @961 ; __fastcall Vcl::Stdactnmenus::TStandardCustomizePopup::PositionPopup(Vcl::Actnman::TCustomActionBar *, Vcl::Actnman::TCustomActionControl *)
+    @Vcl@Stdactnmenus@TStandardDropDownButton@ @981 ; Vcl::Stdactnmenus::TStandardDropDownButton::
+    @Vcl@Stdactnmenus@TStandardDropDownButton@DrawFrame$qqrrx18System@Types@TRecto @950 ; __fastcall Vcl::Stdactnmenus::TStandardDropDownButton::DrawFrame(const System::Types::TRect&, bool)
+    @Vcl@Stdactnmenus@TStandardDropDownButton@GetPopupClass$qqrv @949 ; __fastcall Vcl::Stdactnmenus::TStandardDropDownButton::GetPopupClass()
+    @Vcl@Stdactnmenus@TStandardMenuButton@ @995 ; Vcl::Stdactnmenus::TStandardMenuButton::
+    @Vcl@Stdactnmenus@TStandardMenuButton@DrawBackground$qqrr18System@Types@TRect @960 ; __fastcall Vcl::Stdactnmenus::TStandardMenuButton::DrawBackground(System::Types::TRect&)
+    @Vcl@Stdactnmenus@TStandardMenuButton@DrawDesignFocus$qqrr18System@Types@TRect @959 ; __fastcall Vcl::Stdactnmenus::TStandardMenuButton::DrawDesignFocus(System::Types::TRect&)
+    @Vcl@Stdactnmenus@TStandardMenuButton@DrawFrame$qqrrx18System@Types@TRecto @958 ; __fastcall Vcl::Stdactnmenus::TStandardMenuButton::DrawFrame(const System::Types::TRect&, bool)
+    @Vcl@Stdactnmenus@TStandardMenuButton@DrawText$qqrr18System@Types@TRectrui20System@UnicodeString @957 ; __fastcall Vcl::Stdactnmenus::TStandardMenuButton::DrawText(System::Types::TRect&, unsigned int&, System::UnicodeString)
+    @Vcl@Stdactnmenus@TStandardMenuExpandBtn@ @991 ; Vcl::Stdactnmenus::TStandardMenuExpandBtn::
+    @Vcl@Stdactnmenus@TStandardMenuExpandBtn@DrawBackground$qqrr18System@Types@TRect @952 ; __fastcall Vcl::Stdactnmenus::TStandardMenuExpandBtn::DrawBackground(System::Types::TRect&)
+    @Vcl@Stdactnmenus@TStandardMenuExpandBtn@DrawFrame$qqrrx18System@Types@TRecto @951 ; __fastcall Vcl::Stdactnmenus::TStandardMenuExpandBtn::DrawFrame(const System::Types::TRect&, bool)
+    @Vcl@Stdactnmenus@TStandardMenuItem@ @997 ; Vcl::Stdactnmenus::TStandardMenuItem::
+    @Vcl@Stdactnmenus@TStandardMenuItem@CMTextchanged$qqrr24Winapi@Messages@TMessage @974 ; __fastcall Vcl::Stdactnmenus::TStandardMenuItem::CMTextchanged(Winapi::Messages::TMessage&)
+    @Vcl@Stdactnmenus@TStandardMenuItem@DrawBackground$qqrr18System@Types@TRect @977 ; __fastcall Vcl::Stdactnmenus::TStandardMenuItem::DrawBackground(System::Types::TRect&)
+    @Vcl@Stdactnmenus@TStandardMenuItem@DrawDesignFocus$qqrr18System@Types@TRect @973 ; __fastcall Vcl::Stdactnmenus::TStandardMenuItem::DrawDesignFocus(System::Types::TRect&)
+    @Vcl@Stdactnmenus@TStandardMenuItem@DrawEdge$qqr50System@%Set$23Vcl@Toolwin@TEdgeBordert1$i0$t1$i3$% @970 ; Vcl::Stdactnmenus::TStandardMenuItem::DrawEdge(System::Set<{583}...
+    @Vcl@Stdactnmenus@TStandardMenuItem@DrawGlyph$qqrrx19System@Types@TPoint @976 ; __fastcall Vcl::Stdactnmenus::TStandardMenuItem::DrawGlyph(const System::Types::TPoint&)
+    @Vcl@Stdactnmenus@TStandardMenuItem@DrawGlyphFrame$qqrrx19System@Types@TPoint @972 ; __fastcall Vcl::Stdactnmenus::TStandardMenuItem::DrawGlyphFrame(const System::Types::TPoint&)
+    @Vcl@Stdactnmenus@TStandardMenuItem@DrawLargeGlyph$qqrrx19System@Types@TPoint @971 ; __fastcall Vcl::Stdactnmenus::TStandardMenuItem::DrawLargeGlyph(const System::Types::TPoint&)
+    @Vcl@Stdactnmenus@TStandardMenuItem@DrawSeparator$qqrxi @978 ; __fastcall Vcl::Stdactnmenus::TStandardMenuItem::DrawSeparator(const int)
+    @Vcl@Stdactnmenus@TStandardMenuItem@DrawText$qqrr18System@Types@TRectrui20System@UnicodeString @975 ; __fastcall Vcl::Stdactnmenus::TStandardMenuItem::DrawText(System::Types::TRect&, unsigned int&, System::UnicodeString)
+    @Vcl@Stdactnmenus@TStandardMenuPopup@ @989 ; Vcl::Stdactnmenus::TStandardMenuPopup::
+    @Vcl@Stdactnmenus@TStandardMenuPopup@CanAutoSize$qqrrit1 @969 ; __fastcall Vcl::Stdactnmenus::TStandardMenuPopup::CanAutoSize(int&, int&)
+    @Vcl@Stdactnmenus@TStandardMenuPopup@GetExpandBtnClass$qqrv @968 ; __fastcall Vcl::Stdactnmenus::TStandardMenuPopup::GetExpandBtnClass()
+    @Vcl@Stdactnmenus@TStandardMenuPopup@NCPaint$qqrp5HDC__ @967 ; __fastcall Vcl::Stdactnmenus::TStandardMenuPopup::NCPaint(HDC__ *)
+    @Vcl@Stdactnmenus@TStandardMenuPopup@PositionPopup$qqrp28Vcl@Actnman@TCustomActionBarp32Vcl@Actnman@TCustomActionControl @966 ; __fastcall Vcl::Stdactnmenus::TStandardMenuPopup::PositionPopup(Vcl::Actnman::TCustomActionBar *, Vcl::Actnman::TCustomActionControl *)
+    @Vcl@Stdactnmenus@TStandardToolScrollBtn@ @993 ; Vcl::Stdactnmenus::TStandardToolScrollBtn::
+    @Vcl@Stdactnmenus@TStandardToolScrollBtn@DrawFrame$qqrrx18System@Types@TRecto @956 ; __fastcall Vcl::Stdactnmenus::TStandardToolScrollBtn::DrawFrame(const System::Types::TRect&, bool)
+    @Vcl@Stdactnmenus@initialization$qqrv @947 ; __fastcall Vcl::Stdactnmenus::initialization()
+    @Vcl@Stdstyleactnctrls@Finalization$qqrv @1227; __fastcall Vcl::Stdstyleactnctrls::Finalization()
+    @Vcl@Stdstyleactnctrls@StandardStyle @1234; Vcl::Stdstyleactnctrls::StandardStyle
+    @Vcl@Stdstyleactnctrls@TStandardStyleActionBars@ @1236; Vcl::Stdstyleactnctrls::TStandardStyleActionBars::
+    @Vcl@Stdstyleactnctrls@TStandardStyleActionBars@GetAddRemoveItemClass$qqrp28Vcl@Actnman@TCustomActionBar @1233; __fastcall Vcl::Stdstyleactnctrls::TStandardStyleActionBars::GetAddRemoveItemClass(Vcl::Actnman::TCustomActionBar *)
+    @Vcl@Stdstyleactnctrls@TStandardStyleActionBars@GetColorMapClass$qqrp28Vcl@Actnman@TCustomActionBar @1232; __fastcall Vcl::Stdstyleactnctrls::TStandardStyleActionBars::GetColorMapClass(Vcl::Actnman::TCustomActionBar *)
+    @Vcl@Stdstyleactnctrls@TStandardStyleActionBars@GetControlClass$qqrp28Vcl@Actnman@TCustomActionBarp29Vcl@Actnman@TActionClientItem @1231; __fastcall Vcl::Stdstyleactnctrls::TStandardStyleActionBars::GetControlClass(Vcl::Actnman::TCustomActionBar *, Vcl::Actnman::TActionClientItem *)
+    @Vcl@Stdstyleactnctrls@TStandardStyleActionBars@GetPopupClass$qqrp28Vcl@Actnman@TCustomActionBar @1230; __fastcall Vcl::Stdstyleactnctrls::TStandardStyleActionBars::GetPopupClass(Vcl::Actnman::TCustomActionBar *)
+    @Vcl@Stdstyleactnctrls@TStandardStyleActionBars@GetScrollBtnClass$qqrv @1229; __fastcall Vcl::Stdstyleactnctrls::TStandardStyleActionBars::GetScrollBtnClass()
+    @Vcl@Stdstyleactnctrls@TStandardStyleActionBars@GetStyleName$qqrv @1228; __fastcall Vcl::Stdstyleactnctrls::TStandardStyleActionBars::GetStyleName()
+    @Vcl@Stdstyleactnctrls@initialization$qqrv @1226; __fastcall Vcl::Stdstyleactnctrls::initialization()
+    @Vcl@Themedactnctrls@Finalization$qqrv @1059; __fastcall Vcl::Themedactnctrls::Finalization()
+    @Vcl@Themedactnctrls@TThemedAddRemoveItem@ @1112; Vcl::Themedactnctrls::TThemedAddRemoveItem::
+    @Vcl@Themedactnctrls@TThemedAddRemoveItem@CalcBounds$qqrv @1068; __fastcall Vcl::Themedactnctrls::TThemedAddRemoveItem::CalcBounds()
+    @Vcl@Themedactnctrls@TThemedAddRemoveItem@DoDrawText$qqrp5HDC__x20System@UnicodeStringr18System@Types@TRecti @1067; __fastcall Vcl::Themedactnctrls::TThemedAddRemoveItem::DoDrawText(HDC__ *, const System::UnicodeString, System::Types::TRect&, int)
+    @Vcl@Themedactnctrls@TThemedAddRemoveItem@DrawBackground$qqrr18System@Types@TRect @1066; __fastcall Vcl::Themedactnctrls::TThemedAddRemoveItem::DrawBackground(System::Types::TRect&)
+    @Vcl@Themedactnctrls@TThemedAddRemoveItem@DrawGlyph$qqrrx19System@Types@TPoint @1065; __fastcall Vcl::Themedactnctrls::TThemedAddRemoveItem::DrawGlyph(const System::Types::TPoint&)
+    @Vcl@Themedactnctrls@TThemedAddRemoveItem@DrawSeparator$qqrxi @1064; __fastcall Vcl::Themedactnctrls::TThemedAddRemoveItem::DrawSeparator(const int)
+    @Vcl@Themedactnctrls@TThemedAddRemoveItem@DrawText$qqrr18System@Types@TRectrui20System@UnicodeString @1063; __fastcall Vcl::Themedactnctrls::TThemedAddRemoveItem::DrawText(System::Types::TRect&, unsigned int&, System::UnicodeString)
+    @Vcl@Themedactnctrls@TThemedAddRemoveItem@DrawUnusedEdges$qqrv @1062; __fastcall Vcl::Themedactnctrls::TThemedAddRemoveItem::DrawUnusedEdges()
+    @Vcl@Themedactnctrls@TThemedAddRemoveItem@GetImageSize$qqrv @1061; __fastcall Vcl::Themedactnctrls::TThemedAddRemoveItem::GetImageSize()
+    @Vcl@Themedactnctrls@TThemedButtonControl@ @1120; Vcl::Themedactnctrls::TThemedButtonControl::
+    @Vcl@Themedactnctrls@TThemedButtonControl@DrawBackground$qqrr18System@Types@TRect @1085; __fastcall Vcl::Themedactnctrls::TThemedButtonControl::DrawBackground(System::Types::TRect&)
+    @Vcl@Themedactnctrls@TThemedButtonControl@DrawFrame$qqrrx18System@Types@TRecto @1084; __fastcall Vcl::Themedactnctrls::TThemedButtonControl::DrawFrame(const System::Types::TRect&, bool)
+    @Vcl@Themedactnctrls@TThemedButtonControl@DrawGlyph$qqrrx19System@Types@TPoint @1083; __fastcall Vcl::Themedactnctrls::TThemedButtonControl::DrawGlyph(const System::Types::TPoint&)
+    @Vcl@Themedactnctrls@TThemedButtonControl@DrawLargeGlyph$qqrrx19System@Types@TPoint @1082; __fastcall Vcl::Themedactnctrls::TThemedButtonControl::DrawLargeGlyph(const System::Types::TPoint&)
+    @Vcl@Themedactnctrls@TThemedButtonControl@DrawShadowedText$qqrrx18System@Types@TRectui20System@UnicodeString21System@Uitypes@TColort4 @1081; __fastcall Vcl::Themedactnctrls::TThemedButtonControl::DrawShadowedText(const System::Types::TRect&, unsigned int, System::UnicodeString, System::Uitypes::TColor, System::Uitypes::TColor)
+    @Vcl@Themedactnctrls@TThemedButtonControl@DrawText$qqrr18System@Types@TRectrui20System@UnicodeString @1080; __fastcall Vcl::Themedactnctrls::TThemedButtonControl::DrawText(System::Types::TRect&, unsigned int&, System::UnicodeString)
+    @Vcl@Themedactnctrls@TThemedCustomizePopup@ @1116; Vcl::Themedactnctrls::TThemedCustomizePopup::
+    @Vcl@Themedactnctrls@TThemedCustomizePopup@$bctr$qqrp25System@Classes@TComponent @1072; __fastcall Vcl::Themedactnctrls::TThemedCustomizePopup::TThemedCustomizePopup(System::Classes::TComponent *)
+    @Vcl@Themedactnctrls@TThemedCustomizePopup@GetAddRemoveItemClass$qqrv @1071; __fastcall Vcl::Themedactnctrls::TThemedCustomizePopup::GetAddRemoveItemClass()
+    @Vcl@Themedactnctrls@TThemedCustomizePopup@GetDefaultColorMapClass$qqrv @1070; __fastcall Vcl::Themedactnctrls::TThemedCustomizePopup::GetDefaultColorMapClass()
+    @Vcl@Themedactnctrls@TThemedCustomizePopup@NCPaint$qqrp5HDC__ @1069; __fastcall Vcl::Themedactnctrls::TThemedCustomizePopup::NCPaint(HDC__ *)
+    @Vcl@Themedactnctrls@TThemedDropDownButton@ @1118; Vcl::Themedactnctrls::TThemedDropDownButton::
+    @Vcl@Themedactnctrls@TThemedDropDownButton@DrawBackground$qqrr18System@Types@TRect @1079; __fastcall Vcl::Themedactnctrls::TThemedDropDownButton::DrawBackground(System::Types::TRect&)
+    @Vcl@Themedactnctrls@TThemedDropDownButton@DrawFrame$qqrrx18System@Types@TRecto @1078; __fastcall Vcl::Themedactnctrls::TThemedDropDownButton::DrawFrame(const System::Types::TRect&, bool)
+    @Vcl@Themedactnctrls@TThemedDropDownButton@DrawGlyph$qqrrx19System@Types@TPoint @1077; __fastcall Vcl::Themedactnctrls::TThemedDropDownButton::DrawGlyph(const System::Types::TPoint&)
+    @Vcl@Themedactnctrls@TThemedDropDownButton@DrawLargeGlyph$qqrrx19System@Types@TPoint @1076; __fastcall Vcl::Themedactnctrls::TThemedDropDownButton::DrawLargeGlyph(const System::Types::TPoint&)
+    @Vcl@Themedactnctrls@TThemedDropDownButton@DrawText$qqrr18System@Types@TRectrui20System@UnicodeString @1073; __fastcall Vcl::Themedactnctrls::TThemedDropDownButton::DrawText(System::Types::TRect&, unsigned int&, System::UnicodeString)
+    @Vcl@Themedactnctrls@TThemedDropDownButton@GetDropDownButtonWidth$qqrv @1075; __fastcall Vcl::Themedactnctrls::TThemedDropDownButton::GetDropDownButtonWidth()
+    @Vcl@Themedactnctrls@TThemedDropDownButton@GetPopupClass$qqrv @1074; __fastcall Vcl::Themedactnctrls::TThemedDropDownButton::GetPopupClass()
+    @Vcl@Themedactnctrls@TThemedExpandBtn@ @1122; Vcl::Themedactnctrls::TThemedExpandBtn::
+    @Vcl@Themedactnctrls@TThemedExpandBtn@DrawBackground$qqrr18System@Types@TRect @1088; __fastcall Vcl::Themedactnctrls::TThemedExpandBtn::DrawBackground(System::Types::TRect&)
+    @Vcl@Themedactnctrls@TThemedExpandBtn@DrawFrame$qqrrx18System@Types@TRecto @1087; __fastcall Vcl::Themedactnctrls::TThemedExpandBtn::DrawFrame(const System::Types::TRect&, bool)
+    @Vcl@Themedactnctrls@TThemedExpandBtn@GetImageSize$qqrv @1086; __fastcall Vcl::Themedactnctrls::TThemedExpandBtn::GetImageSize()
+    @Vcl@Themedactnctrls@TThemedMenuButton@ @1126; Vcl::Themedactnctrls::TThemedMenuButton::
+    @Vcl@Themedactnctrls@TThemedMenuButton@CalcBounds$qqrv @1098; __fastcall Vcl::Themedactnctrls::TThemedMenuButton::CalcBounds()
+    @Vcl@Themedactnctrls@TThemedMenuButton@DoDrawText$qqrx20System@UnicodeStringr18System@Types@TRecti @1097; __fastcall Vcl::Themedactnctrls::TThemedMenuButton::DoDrawText(const System::UnicodeString, System::Types::TRect&, int)
+    @Vcl@Themedactnctrls@TThemedMenuButton@DrawBackground$qqrr18System@Types@TRect @1096; __fastcall Vcl::Themedactnctrls::TThemedMenuButton::DrawBackground(System::Types::TRect&)
+    @Vcl@Themedactnctrls@TThemedMenuButton@DrawShadowedText$qqrrx18System@Types@TRectui20System@UnicodeString21System@Uitypes@TColort4 @1095; __fastcall Vcl::Themedactnctrls::TThemedMenuButton::DrawShadowedText(const System::Types::TRect&, unsigned int, System::UnicodeString, System::Uitypes::TColor, System::Uitypes::TColor)
+    @Vcl@Themedactnctrls@TThemedMenuButton@DrawText$qqrr18System@Types@TRectrui20System@UnicodeString @1094; __fastcall Vcl::Themedactnctrls::TThemedMenuButton::DrawText(System::Types::TRect&, unsigned int&, System::UnicodeString)
+    @Vcl@Themedactnctrls@TThemedMenuItem@ @1128; Vcl::Themedactnctrls::TThemedMenuItem::
+    @Vcl@Themedactnctrls@TThemedMenuItem@CalcBounds$qqrv @1110; __fastcall Vcl::Themedactnctrls::TThemedMenuItem::CalcBounds()
+    @Vcl@Themedactnctrls@TThemedMenuItem@DoDrawMenuCheck$qqrv @1109; __fastcall Vcl::Themedactnctrls::TThemedMenuItem::DoDrawMenuCheck()
+    @Vcl@Themedactnctrls@TThemedMenuItem@DoDrawText$qqrp5HDC__x20System@UnicodeStringr18System@Types@TRecti @1108; __fastcall Vcl::Themedactnctrls::TThemedMenuItem::DoDrawText(HDC__ *, const System::UnicodeString, System::Types::TRect&, int)
+    @Vcl@Themedactnctrls@TThemedMenuItem@DrawBackground$qqrr18System@Types@TRect @1107; __fastcall Vcl::Themedactnctrls::TThemedMenuItem::DrawBackground(System::Types::TRect&)
+    @Vcl@Themedactnctrls@TThemedMenuItem@DrawGlyph$qqrrx19System@Types@TPoint @1106; __fastcall Vcl::Themedactnctrls::TThemedMenuItem::DrawGlyph(const System::Types::TPoint&)
+    @Vcl@Themedactnctrls@TThemedMenuItem@DrawLargeGlyph$qqrrx19System@Types@TPoint @1105; __fastcall Vcl::Themedactnctrls::TThemedMenuItem::DrawLargeGlyph(const System::Types::TPoint&)
+    @Vcl@Themedactnctrls@TThemedMenuItem@DrawSeparator$qqrxi @1104; __fastcall Vcl::Themedactnctrls::TThemedMenuItem::DrawSeparator(const int)
+    @Vcl@Themedactnctrls@TThemedMenuItem@DrawShadowedText$qqrrx18System@Types@TRectui20System@UnicodeString21System@Uitypes@TColort4 @1103; __fastcall Vcl::Themedactnctrls::TThemedMenuItem::DrawShadowedText(const System::Types::TRect&, unsigned int, System::UnicodeString, System::Uitypes::TColor, System::Uitypes::TColor)
+    @Vcl@Themedactnctrls@TThemedMenuItem@DrawSubMenuGlyph$qqrv @1102; __fastcall Vcl::Themedactnctrls::TThemedMenuItem::DrawSubMenuGlyph()
+    @Vcl@Themedactnctrls@TThemedMenuItem@DrawText$qqrr18System@Types@TRectrui20System@UnicodeString @1101; __fastcall Vcl::Themedactnctrls::TThemedMenuItem::DrawText(System::Types::TRect&, unsigned int&, System::UnicodeString)
+    @Vcl@Themedactnctrls@TThemedMenuItem@DrawUnusedEdges$qqrv @1100; __fastcall Vcl::Themedactnctrls::TThemedMenuItem::DrawUnusedEdges()
+    @Vcl@Themedactnctrls@TThemedMenuItem@GetImageSize$qqrv @1099; __fastcall Vcl::Themedactnctrls::TThemedMenuItem::GetImageSize()
+    @Vcl@Themedactnctrls@TThemedPopupMenu@ @1124; Vcl::Themedactnctrls::TThemedPopupMenu::
+    @Vcl@Themedactnctrls@TThemedPopupMenu@$bctr$qqrp25System@Classes@TComponent @1093; __fastcall Vcl::Themedactnctrls::TThemedPopupMenu::TThemedPopupMenu(System::Classes::TComponent *)
+    @Vcl@Themedactnctrls@TThemedPopupMenu@GetExpandBtnClass$qqrv @1092; __fastcall Vcl::Themedactnctrls::TThemedPopupMenu::GetExpandBtnClass()
+    @Vcl@Themedactnctrls@TThemedPopupMenu@NCPaint$qqrp5HDC__ @1091; __fastcall Vcl::Themedactnctrls::TThemedPopupMenu::NCPaint(HDC__ *)
+    @Vcl@Themedactnctrls@TThemedPopupMenu@PositionPopup$qqrp28Vcl@Actnman@TCustomActionBarp32Vcl@Actnman@TCustomActionControl @1090; __fastcall Vcl::Themedactnctrls::TThemedPopupMenu::PositionPopup(Vcl::Actnman::TCustomActionBar *, Vcl::Actnman::TCustomActionControl *)
+    @Vcl@Themedactnctrls@TThemedPopupMenu@VisibleChanging$qqrv @1089; __fastcall Vcl::Themedactnctrls::TThemedPopupMenu::VisibleChanging()
+    @Vcl@Themedactnctrls@TThemedToolScrollBtn@ @1114; Vcl::Themedactnctrls::TThemedToolScrollBtn::
+    @Vcl@Themedactnctrls@TThemedToolScrollBtn@DrawBackground$qqrr18System@Types@TRect @1060; __fastcall Vcl::Themedactnctrls::TThemedToolScrollBtn::DrawBackground(System::Types::TRect&)
+    @Vcl@Themedactnctrls@initialization$qqrv @1058; __fastcall Vcl::Themedactnctrls::initialization()
+    @Vcl@Xpactnctrls@Finalization$qqrv @999 ; __fastcall Vcl::Xpactnctrls::Finalization()
+    @Vcl@Xpactnctrls@TXPStyleAddRemoveItem@ @1041; Vcl::Xpactnctrls::TXPStyleAddRemoveItem::
+    @Vcl@Xpactnctrls@TXPStyleAddRemoveItem@CalcBounds$qqrv @1006; __fastcall Vcl::Xpactnctrls::TXPStyleAddRemoveItem::CalcBounds()
+    @Vcl@Xpactnctrls@TXPStyleAddRemoveItem@DrawBackground$qqrr18System@Types@TRect @1005; __fastcall Vcl::Xpactnctrls::TXPStyleAddRemoveItem::DrawBackground(System::Types::TRect&)
+    @Vcl@Xpactnctrls@TXPStyleAddRemoveItem@DrawGlyph$qqrrx19System@Types@TPoint @1004; __fastcall Vcl::Xpactnctrls::TXPStyleAddRemoveItem::DrawGlyph(const System::Types::TPoint&)
+    @Vcl@Xpactnctrls@TXPStyleAddRemoveItem@DrawSeparator$qqrxi @1003; __fastcall Vcl::Xpactnctrls::TXPStyleAddRemoveItem::DrawSeparator(const int)
+    @Vcl@Xpactnctrls@TXPStyleAddRemoveItem@DrawText$qqrr18System@Types@TRectrui20System@UnicodeString @1002; __fastcall Vcl::Xpactnctrls::TXPStyleAddRemoveItem::DrawText(System::Types::TRect&, unsigned int&, System::UnicodeString)
+    @Vcl@Xpactnctrls@TXPStyleAddRemoveItem@DrawUnusedEdges$qqrv @1001; __fastcall Vcl::Xpactnctrls::TXPStyleAddRemoveItem::DrawUnusedEdges()
+    @Vcl@Xpactnctrls@TXPStyleButton@ @1049; Vcl::Xpactnctrls::TXPStyleButton::
+    @Vcl@Xpactnctrls@TXPStyleButton@DrawBackground$qqrr18System@Types@TRect @1018; __fastcall Vcl::Xpactnctrls::TXPStyleButton::DrawBackground(System::Types::TRect&)
+    @Vcl@Xpactnctrls@TXPStyleButton@DrawFrame$qqrrx18System@Types@TRecto @1017; __fastcall Vcl::Xpactnctrls::TXPStyleButton::DrawFrame(const System::Types::TRect&, bool)
+    @Vcl@Xpactnctrls@TXPStyleButton@DrawGlyph$qqrrx19System@Types@TPoint @1016; __fastcall Vcl::Xpactnctrls::TXPStyleButton::DrawGlyph(const System::Types::TPoint&)
+    @Vcl@Xpactnctrls@TXPStyleButton@DrawText$qqrr18System@Types@TRectrui20System@UnicodeString @1015; __fastcall Vcl::Xpactnctrls::TXPStyleButton::DrawText(System::Types::TRect&, unsigned int&, System::UnicodeString)
+    @Vcl@Xpactnctrls@TXPStyleCustomizePopup@ @1045; Vcl::Xpactnctrls::TXPStyleCustomizePopup::
+    @Vcl@Xpactnctrls@TXPStyleCustomizePopup@$bctr$qqrp25System@Classes@TComponent @1010; __fastcall Vcl::Xpactnctrls::TXPStyleCustomizePopup::TXPStyleCustomizePopup(System::Classes::TComponent *)
+    @Vcl@Xpactnctrls@TXPStyleCustomizePopup@GetAddRemoveItemClass$qqrv @1009; __fastcall Vcl::Xpactnctrls::TXPStyleCustomizePopup::GetAddRemoveItemClass()
+    @Vcl@Xpactnctrls@TXPStyleCustomizePopup@GetDefaultColorMapClass$qqrv @1008; __fastcall Vcl::Xpactnctrls::TXPStyleCustomizePopup::GetDefaultColorMapClass()
+    @Vcl@Xpactnctrls@TXPStyleCustomizePopup@NCPaint$qqrp5HDC__ @1007; __fastcall Vcl::Xpactnctrls::TXPStyleCustomizePopup::NCPaint(HDC__ *)
+    @Vcl@Xpactnctrls@TXPStyleDropDownBtn@ @1047; Vcl::Xpactnctrls::TXPStyleDropDownBtn::
+    @Vcl@Xpactnctrls@TXPStyleDropDownBtn@DrawBackground$qqrr18System@Types@TRect @1014; __fastcall Vcl::Xpactnctrls::TXPStyleDropDownBtn::DrawBackground(System::Types::TRect&)
+    @Vcl@Xpactnctrls@TXPStyleDropDownBtn@DrawFrame$qqrrx18System@Types@TRecto @1013; __fastcall Vcl::Xpactnctrls::TXPStyleDropDownBtn::DrawFrame(const System::Types::TRect&, bool)
+    @Vcl@Xpactnctrls@TXPStyleDropDownBtn@DrawGlyph$qqrrx19System@Types@TPoint @1012; __fastcall Vcl::Xpactnctrls::TXPStyleDropDownBtn::DrawGlyph(const System::Types::TPoint&)
+    @Vcl@Xpactnctrls@TXPStyleDropDownBtn@GetPopupClass$qqrv @1011; __fastcall Vcl::Xpactnctrls::TXPStyleDropDownBtn::GetPopupClass()
+    @Vcl@Xpactnctrls@TXPStyleExpandBtn@ @1051; Vcl::Xpactnctrls::TXPStyleExpandBtn::
+    @Vcl@Xpactnctrls@TXPStyleExpandBtn@DrawBackground$qqrr18System@Types@TRect @1020; __fastcall Vcl::Xpactnctrls::TXPStyleExpandBtn::DrawBackground(System::Types::TRect&)
+    @Vcl@Xpactnctrls@TXPStyleExpandBtn@DrawFrame$qqrrx18System@Types@TRecto @1019; __fastcall Vcl::Xpactnctrls::TXPStyleExpandBtn::DrawFrame(const System::Types::TRect&, bool)
+    @Vcl@Xpactnctrls@TXPStyleMenuButton@ @1055; Vcl::Xpactnctrls::TXPStyleMenuButton::
+    @Vcl@Xpactnctrls@TXPStyleMenuButton@DrawBackground$qqrr18System@Types@TRect @1030; __fastcall Vcl::Xpactnctrls::TXPStyleMenuButton::DrawBackground(System::Types::TRect&)
+    @Vcl@Xpactnctrls@TXPStyleMenuButton@DrawText$qqrr18System@Types@TRectrui20System@UnicodeString @1029; __fastcall Vcl::Xpactnctrls::TXPStyleMenuButton::DrawText(System::Types::TRect&, unsigned int&, System::UnicodeString)
+    @Vcl@Xpactnctrls@TXPStyleMenuItem@ @1057; Vcl::Xpactnctrls::TXPStyleMenuItem::
+    @Vcl@Xpactnctrls@TXPStyleMenuItem@CalcBounds$qqrv @1039; __fastcall Vcl::Xpactnctrls::TXPStyleMenuItem::CalcBounds()
+    @Vcl@Xpactnctrls@TXPStyleMenuItem@CalcLayout$qqrv @1038; __fastcall Vcl::Xpactnctrls::TXPStyleMenuItem::CalcLayout()
+    @Vcl@Xpactnctrls@TXPStyleMenuItem@DrawBackground$qqrr18System@Types@TRect @1037; __fastcall Vcl::Xpactnctrls::TXPStyleMenuItem::DrawBackground(System::Types::TRect&)
+    @Vcl@Xpactnctrls@TXPStyleMenuItem@DrawGlyph$qqrrx19System@Types@TPoint @1036; __fastcall Vcl::Xpactnctrls::TXPStyleMenuItem::DrawGlyph(const System::Types::TPoint&)
+    @Vcl@Xpactnctrls@TXPStyleMenuItem@DrawSeparator$qqrxi @1035; __fastcall Vcl::Xpactnctrls::TXPStyleMenuItem::DrawSeparator(const int)
+    @Vcl@Xpactnctrls@TXPStyleMenuItem@DrawShadowedText$qqrrx18System@Types@TRectui20System@UnicodeString21System@Uitypes@TColort4 @1034; __fastcall Vcl::Xpactnctrls::TXPStyleMenuItem::DrawShadowedText(const System::Types::TRect&, unsigned int, System::UnicodeString, System::Uitypes::TColor, System::Uitypes::TColor)
+    @Vcl@Xpactnctrls@TXPStyleMenuItem@DrawSubMenuGlyph$qqrv @1033; __fastcall Vcl::Xpactnctrls::TXPStyleMenuItem::DrawSubMenuGlyph()
+    @Vcl@Xpactnctrls@TXPStyleMenuItem@DrawText$qqrr18System@Types@TRectrui20System@UnicodeString @1032; __fastcall Vcl::Xpactnctrls::TXPStyleMenuItem::DrawText(System::Types::TRect&, unsigned int&, System::UnicodeString)
+    @Vcl@Xpactnctrls@TXPStyleMenuItem@DrawUnusedEdges$qqrv @1031; __fastcall Vcl::Xpactnctrls::TXPStyleMenuItem::DrawUnusedEdges()
+    @Vcl@Xpactnctrls@TXPStylePopupMenu@ @1053; Vcl::Xpactnctrls::TXPStylePopupMenu::
+    @Vcl@Xpactnctrls@TXPStylePopupMenu@$bctr$qqrp25System@Classes@TComponent @1028; __fastcall Vcl::Xpactnctrls::TXPStylePopupMenu::TXPStylePopupMenu(System::Classes::TComponent *)
+    @Vcl@Xpactnctrls@TXPStylePopupMenu@$bdtr$qqrv @1027; __fastcall Vcl::Xpactnctrls::TXPStylePopupMenu::~TXPStylePopupMenu()
+    @Vcl@Xpactnctrls@TXPStylePopupMenu@DisplayShadow$qqrv @1026; __fastcall Vcl::Xpactnctrls::TXPStylePopupMenu::DisplayShadow()
+    @Vcl@Xpactnctrls@TXPStylePopupMenu@GetExpandBtnClass$qqrv @1025; __fastcall Vcl::Xpactnctrls::TXPStylePopupMenu::GetExpandBtnClass()
+    @Vcl@Xpactnctrls@TXPStylePopupMenu@HideShadow$qqrv @1024; __fastcall Vcl::Xpactnctrls::TXPStylePopupMenu::HideShadow()
+    @Vcl@Xpactnctrls@TXPStylePopupMenu@NCPaint$qqrp5HDC__ @1023; __fastcall Vcl::Xpactnctrls::TXPStylePopupMenu::NCPaint(HDC__ *)
+    @Vcl@Xpactnctrls@TXPStylePopupMenu@PositionPopup$qqrp28Vcl@Actnman@TCustomActionBarp32Vcl@Actnman@TCustomActionControl @1022; __fastcall Vcl::Xpactnctrls::TXPStylePopupMenu::PositionPopup(Vcl::Actnman::TCustomActionBar *, Vcl::Actnman::TCustomActionControl *)
+    @Vcl@Xpactnctrls@TXPStylePopupMenu@VisibleChanging$qqrv @1021; __fastcall Vcl::Xpactnctrls::TXPStylePopupMenu::VisibleChanging()
+    @Vcl@Xpactnctrls@TXPStyleToolScrollBtn@ @1043; Vcl::Xpactnctrls::TXPStyleToolScrollBtn::
+    @Vcl@Xpactnctrls@TXPStyleToolScrollBtn@DrawBackground$qqrr18System@Types@TRect @1000; __fastcall Vcl::Xpactnctrls::TXPStyleToolScrollBtn::DrawBackground(System::Types::TRect&)
+    @Vcl@Xpactnctrls@initialization$qqrv @998 ; __fastcall Vcl::Xpactnctrls::initialization()
+    @Vcl@Xpstyleactnctrls@Finalization$qqrv @1216; __fastcall Vcl::Xpstyleactnctrls::Finalization()
+    @Vcl@Xpstyleactnctrls@TXPStyleActionBars@ @1225; Vcl::Xpstyleactnctrls::TXPStyleActionBars::
+    @Vcl@Xpstyleactnctrls@TXPStyleActionBars@GetAddRemoveItemClass$qqrp28Vcl@Actnman@TCustomActionBar @1222; __fastcall Vcl::Xpstyleactnctrls::TXPStyleActionBars::GetAddRemoveItemClass(Vcl::Actnman::TCustomActionBar *)
+    @Vcl@Xpstyleactnctrls@TXPStyleActionBars@GetColorMapClass$qqrp28Vcl@Actnman@TCustomActionBar @1221; __fastcall Vcl::Xpstyleactnctrls::TXPStyleActionBars::GetColorMapClass(Vcl::Actnman::TCustomActionBar *)
+    @Vcl@Xpstyleactnctrls@TXPStyleActionBars@GetControlClass$qqrp28Vcl@Actnman@TCustomActionBarp29Vcl@Actnman@TActionClientItem @1220; __fastcall Vcl::Xpstyleactnctrls::TXPStyleActionBars::GetControlClass(Vcl::Actnman::TCustomActionBar *, Vcl::Actnman::TActionClientItem *)
+    @Vcl@Xpstyleactnctrls@TXPStyleActionBars@GetPopupClass$qqrp28Vcl@Actnman@TCustomActionBar @1219; __fastcall Vcl::Xpstyleactnctrls::TXPStyleActionBars::GetPopupClass(Vcl::Actnman::TCustomActionBar *)
+    @Vcl@Xpstyleactnctrls@TXPStyleActionBars@GetScrollBtnClass$qqrv @1218; __fastcall Vcl::Xpstyleactnctrls::TXPStyleActionBars::GetScrollBtnClass()
+    @Vcl@Xpstyleactnctrls@TXPStyleActionBars@GetStyleName$qqrv @1217; __fastcall Vcl::Xpstyleactnctrls::TXPStyleActionBars::GetStyleName()
+    @Vcl@Xpstyleactnctrls@XPStyle  @1223; Vcl::Xpstyleactnctrls::XPStyle
+    @Vcl@Xpstyleactnctrls@initialization$qqrv @1215; __fastcall Vcl::Xpstyleactnctrls::initialization()
+    @Vclactnband@@GetPackageInfoTable$qqrv @1240; Vclactnband::__linkproc__ __fastcall GetPackageInfoTable()
+    @Vclactnband@@PackageLoad$qqrv @1239; Vclactnband::__linkproc__ __fastcall PackageLoad()
+    @Vclactnband@@PackageUnload$qqrv @1238; Vclactnband::__linkproc__ __fastcall PackageUnload()
+    @Vclactnband@initialization$qqrv @1237; __fastcall Vclactnband::initialization()
+    Finalize                       @1241; Finalize
+    Initialize                     @1242; Initialize

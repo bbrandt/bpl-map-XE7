@@ -1,0 +1,108 @@
+LIBRARY     DCLMLWIZ210.BPL
+
+DESCRIPTION 'mbarcadero Markup Language Wizards'
+
+EXPORTS
+    @$xp$27Newmarkupdocuments@TWMLFile @65  ; __tpdsc__ Newmarkupdocuments::TWMLFile
+    @$xp$27Newmarkupdocuments@TXSLFile @71  ; __tpdsc__ Newmarkupdocuments::TXSLFile
+    @$xp$28Newmarkupdocuments@THTMLFile @83  ; __tpdsc__ Newmarkupdocuments::THTMLFile
+    @$xp$29Newmarkupdocuments@TFileClass @91  ; __tpdsc__ Newmarkupdocuments::TFileClass
+    @$xp$29Newmarkupdocuments@TWMLWizard @69  ; __tpdsc__ Newmarkupdocuments::TWMLWizard
+    @$xp$29Newmarkupdocuments@TXHTMLFile @77  ; __tpdsc__ Newmarkupdocuments::TXHTMLFile
+    @$xp$29Newmarkupdocuments@TXSLWizard @75  ; __tpdsc__ Newmarkupdocuments::TXSLWizard
+    @$xp$30Newmarkupdocuments@TBaseMLFile @92  ; __tpdsc__ Newmarkupdocuments::TBaseMLFile
+    @$xp$30Newmarkupdocuments@THTMLWizard @87  ; __tpdsc__ Newmarkupdocuments::THTMLWizard
+    @$xp$30Newmarkupdocuments@TWMLCreator @67  ; __tpdsc__ Newmarkupdocuments::TWMLCreator
+    @$xp$30Newmarkupdocuments@TXSLCreator @73  ; __tpdsc__ Newmarkupdocuments::TXSLCreator
+    @$xp$31Newmarkupdocuments@THTMLCreator @85  ; __tpdsc__ Newmarkupdocuments::THTMLCreator
+    @$xp$31Newmarkupdocuments@TXHTMLWizard @81  ; __tpdsc__ Newmarkupdocuments::TXHTMLWizard
+    @$xp$32Newmarkupdocuments@TBaseMLWizard @89  ; __tpdsc__ Newmarkupdocuments::TBaseMLWizard
+    @$xp$32Newmarkupdocuments@TCreatorClass @94  ; __tpdsc__ Newmarkupdocuments::TCreatorClass
+    @$xp$32Newmarkupdocuments@TXHTMLCreator @79  ; __tpdsc__ Newmarkupdocuments::TXHTMLCreator
+    @$xp$33Newmarkupdocuments@TBaseMLCreator @95  ; __tpdsc__ Newmarkupdocuments::TBaseMLCreator
+    @Dclmlwiz@@GetPackageInfoTable$qqrv @100 ; Dclmlwiz::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dclmlwiz@@PackageLoad$qqrv    @99  ; Dclmlwiz::__linkproc__ __fastcall PackageLoad()
+    @Dclmlwiz@@PackageUnload$qqrv  @98  ; Dclmlwiz::__linkproc__ __fastcall PackageUnload()
+    @Dclmlwiz@initialization$qqrv  @97  ; __fastcall Dclmlwiz::initialization()
+    @GetPackageInfoTable           @103 ; GetPackageInfoTable
+    @Newmarkupdocuments@Finalization$qqrv @2   ; __fastcall Newmarkupdocuments::Finalization()
+    @Newmarkupdocuments@TBaseMLCreator@ @96  ; Newmarkupdocuments::TBaseMLCreator::
+    @Newmarkupdocuments@TBaseMLCreator@$bctr$qqrv @64  ; __fastcall Newmarkupdocuments::TBaseMLCreator::TBaseMLCreator()
+    @Newmarkupdocuments@TBaseMLCreator@FormCreated$qqrx50System@%DelphiInterface$23Toolsapi@IOTAFormEditor% @63  ; Newmarkupdocuments::TBaseMLCreator::FormCreated(const System::DelphiInterface<{583}...
+    @Newmarkupdocuments@TBaseMLCreator@GetAncestorName$qqrv @62  ; __fastcall Newmarkupdocuments::TBaseMLCreator::GetAncestorName()
+    @Newmarkupdocuments@TBaseMLCreator@GetCreatorFileExt$qqrv @61  ; __fastcall Newmarkupdocuments::TBaseMLCreator::GetCreatorFileExt()
+    @Newmarkupdocuments@TBaseMLCreator@GetCreatorType$qqrv @60  ; __fastcall Newmarkupdocuments::TBaseMLCreator::GetCreatorType()
+    @Newmarkupdocuments@TBaseMLCreator@GetExisting$qqrv @59  ; __fastcall Newmarkupdocuments::TBaseMLCreator::GetExisting()
+    @Newmarkupdocuments@TBaseMLCreator@GetFileSystem$qqrv @58  ; __fastcall Newmarkupdocuments::TBaseMLCreator::GetFileSystem()
+    @Newmarkupdocuments@TBaseMLCreator@GetFormName$qqrv @57  ; __fastcall Newmarkupdocuments::TBaseMLCreator::GetFormName()
+    @Newmarkupdocuments@TBaseMLCreator@GetImplFileName$qqrv @56  ; __fastcall Newmarkupdocuments::TBaseMLCreator::GetImplFileName()
+    @Newmarkupdocuments@TBaseMLCreator@GetIntfFileName$qqrv @55  ; __fastcall Newmarkupdocuments::TBaseMLCreator::GetIntfFileName()
+    @Newmarkupdocuments@TBaseMLCreator@GetMainForm$qqrv @54  ; __fastcall Newmarkupdocuments::TBaseMLCreator::GetMainForm()
+    @Newmarkupdocuments@TBaseMLCreator@GetOwner$qqrv @53  ; __fastcall Newmarkupdocuments::TBaseMLCreator::GetOwner()
+    @Newmarkupdocuments@TBaseMLCreator@GetShowForm$qqrv @52  ; __fastcall Newmarkupdocuments::TBaseMLCreator::GetShowForm()
+    @Newmarkupdocuments@TBaseMLCreator@GetShowSource$qqrv @51  ; __fastcall Newmarkupdocuments::TBaseMLCreator::GetShowSource()
+    @Newmarkupdocuments@TBaseMLCreator@GetUnnamed$qqrv @50  ; __fastcall Newmarkupdocuments::TBaseMLCreator::GetUnnamed()
+    @Newmarkupdocuments@TBaseMLCreator@NewFormFile$qqrx20System@UnicodeStringt1 @49  ; __fastcall Newmarkupdocuments::TBaseMLCreator::NewFormFile(const System::UnicodeString, const System::UnicodeString)
+    @Newmarkupdocuments@TBaseMLCreator@NewImplSource$qqrx20System@UnicodeStringt1t1 @48  ; __fastcall Newmarkupdocuments::TBaseMLCreator::NewImplSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Newmarkupdocuments@TBaseMLCreator@NewIntfSource$qqrx20System@UnicodeStringt1t1 @47  ; __fastcall Newmarkupdocuments::TBaseMLCreator::NewIntfSource(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString)
+    @Newmarkupdocuments@TBaseMLFile@ @93  ; Newmarkupdocuments::TBaseMLFile::
+    @Newmarkupdocuments@TBaseMLFile@$bctr$qqrx20System@UnicodeString @37  ; __fastcall Newmarkupdocuments::TBaseMLFile::TBaseMLFile(const System::UnicodeString)
+    @Newmarkupdocuments@TBaseMLFile@GetAge$qqrv @36  ; __fastcall Newmarkupdocuments::TBaseMLFile::GetAge()
+    @Newmarkupdocuments@TBaseMLFile@GetSource$qqrv @35  ; __fastcall Newmarkupdocuments::TBaseMLFile::GetSource()
+    @Newmarkupdocuments@TBaseMLWizard@ @90  ; Newmarkupdocuments::TBaseMLWizard::
+    @Newmarkupdocuments@TBaseMLWizard@Execute$qqrv @46  ; __fastcall Newmarkupdocuments::TBaseMLWizard::Execute()
+    @Newmarkupdocuments@TBaseMLWizard@GetAuthor$qqrv @45  ; __fastcall Newmarkupdocuments::TBaseMLWizard::GetAuthor()
+    @Newmarkupdocuments@TBaseMLWizard@GetComment$qqrv @44  ; __fastcall Newmarkupdocuments::TBaseMLWizard::GetComment()
+    @Newmarkupdocuments@TBaseMLWizard@GetDesigner$qqrv @43  ; __fastcall Newmarkupdocuments::TBaseMLWizard::GetDesigner()
+    @Newmarkupdocuments@TBaseMLWizard@GetGlyph$qqrv @42  ; __fastcall Newmarkupdocuments::TBaseMLWizard::GetGlyph()
+    @Newmarkupdocuments@TBaseMLWizard@GetIDString$qqrv @41  ; __fastcall Newmarkupdocuments::TBaseMLWizard::GetIDString()
+    @Newmarkupdocuments@TBaseMLWizard@GetName$qqrv @40  ; __fastcall Newmarkupdocuments::TBaseMLWizard::GetName()
+    @Newmarkupdocuments@TBaseMLWizard@GetPage$qqrv @39  ; __fastcall Newmarkupdocuments::TBaseMLWizard::GetPage()
+    @Newmarkupdocuments@TBaseMLWizard@GetState$qqrv @38  ; __fastcall Newmarkupdocuments::TBaseMLWizard::GetState()
+    @Newmarkupdocuments@THTMLCreator@ @86  ; Newmarkupdocuments::THTMLCreator::
+    @Newmarkupdocuments@THTMLCreator@GetCreatorFileExt$qqrv @34  ; __fastcall Newmarkupdocuments::THTMLCreator::GetCreatorFileExt()
+    @Newmarkupdocuments@THTMLCreator@VectoredNewImplSource$qqrv @33  ; __fastcall Newmarkupdocuments::THTMLCreator::VectoredNewImplSource()
+    @Newmarkupdocuments@THTMLFile@ @84  ; Newmarkupdocuments::THTMLFile::
+    @Newmarkupdocuments@THTMLFile@GetVectoredSource$qqrv @27  ; __fastcall Newmarkupdocuments::THTMLFile::GetVectoredSource()
+    @Newmarkupdocuments@THTMLWizard@ @88  ; Newmarkupdocuments::THTMLWizard::
+    @Newmarkupdocuments@THTMLWizard@GetCreatorClass$qqrv @32  ; __fastcall Newmarkupdocuments::THTMLWizard::GetCreatorClass()
+    @Newmarkupdocuments@THTMLWizard@GetVectoredComment$qqrv @31  ; __fastcall Newmarkupdocuments::THTMLWizard::GetVectoredComment()
+    @Newmarkupdocuments@THTMLWizard@GetVectoredGlyph$qqrv @30  ; __fastcall Newmarkupdocuments::THTMLWizard::GetVectoredGlyph()
+    @Newmarkupdocuments@THTMLWizard@GetVectoredIDString$qqrv @29  ; __fastcall Newmarkupdocuments::THTMLWizard::GetVectoredIDString()
+    @Newmarkupdocuments@THTMLWizard@GetVectoredName$qqrv @28  ; __fastcall Newmarkupdocuments::THTMLWizard::GetVectoredName()
+    @Newmarkupdocuments@TWMLCreator@ @68  ; Newmarkupdocuments::TWMLCreator::
+    @Newmarkupdocuments@TWMLCreator@GetCreatorFileExt$qqrv @13  ; __fastcall Newmarkupdocuments::TWMLCreator::GetCreatorFileExt()
+    @Newmarkupdocuments@TWMLCreator@VectoredNewImplSource$qqrv @12  ; __fastcall Newmarkupdocuments::TWMLCreator::VectoredNewImplSource()
+    @Newmarkupdocuments@TWMLFile@  @66  ; Newmarkupdocuments::TWMLFile::
+    @Newmarkupdocuments@TWMLFile@GetVectoredSource$qqrv @11  ; __fastcall Newmarkupdocuments::TWMLFile::GetVectoredSource()
+    @Newmarkupdocuments@TWMLWizard@ @70  ; Newmarkupdocuments::TWMLWizard::
+    @Newmarkupdocuments@TWMLWizard@GetCreatorClass$qqrv @18  ; __fastcall Newmarkupdocuments::TWMLWizard::GetCreatorClass()
+    @Newmarkupdocuments@TWMLWizard@GetVectoredComment$qqrv @17  ; __fastcall Newmarkupdocuments::TWMLWizard::GetVectoredComment()
+    @Newmarkupdocuments@TWMLWizard@GetVectoredGlyph$qqrv @16  ; __fastcall Newmarkupdocuments::TWMLWizard::GetVectoredGlyph()
+    @Newmarkupdocuments@TWMLWizard@GetVectoredIDString$qqrv @15  ; __fastcall Newmarkupdocuments::TWMLWizard::GetVectoredIDString()
+    @Newmarkupdocuments@TWMLWizard@GetVectoredName$qqrv @14  ; __fastcall Newmarkupdocuments::TWMLWizard::GetVectoredName()
+    @Newmarkupdocuments@TXHTMLCreator@ @80  ; Newmarkupdocuments::TXHTMLCreator::
+    @Newmarkupdocuments@TXHTMLCreator@GetCreatorFileExt$qqrv @9   ; __fastcall Newmarkupdocuments::TXHTMLCreator::GetCreatorFileExt()
+    @Newmarkupdocuments@TXHTMLCreator@VectoredNewImplSource$qqrv @8   ; __fastcall Newmarkupdocuments::TXHTMLCreator::VectoredNewImplSource()
+    @Newmarkupdocuments@TXHTMLFile@ @78  ; Newmarkupdocuments::TXHTMLFile::
+    @Newmarkupdocuments@TXHTMLFile@GetVectoredSource$qqrv @10  ; __fastcall Newmarkupdocuments::TXHTMLFile::GetVectoredSource()
+    @Newmarkupdocuments@TXHTMLWizard@ @82  ; Newmarkupdocuments::TXHTMLWizard::
+    @Newmarkupdocuments@TXHTMLWizard@GetCreatorClass$qqrv @7   ; __fastcall Newmarkupdocuments::TXHTMLWizard::GetCreatorClass()
+    @Newmarkupdocuments@TXHTMLWizard@GetVectoredComment$qqrv @6   ; __fastcall Newmarkupdocuments::TXHTMLWizard::GetVectoredComment()
+    @Newmarkupdocuments@TXHTMLWizard@GetVectoredGlyph$qqrv @5   ; __fastcall Newmarkupdocuments::TXHTMLWizard::GetVectoredGlyph()
+    @Newmarkupdocuments@TXHTMLWizard@GetVectoredIDString$qqrv @4   ; __fastcall Newmarkupdocuments::TXHTMLWizard::GetVectoredIDString()
+    @Newmarkupdocuments@TXHTMLWizard@GetVectoredName$qqrv @3   ; __fastcall Newmarkupdocuments::TXHTMLWizard::GetVectoredName()
+    @Newmarkupdocuments@TXSLCreator@ @74  ; Newmarkupdocuments::TXSLCreator::
+    @Newmarkupdocuments@TXSLCreator@GetCreatorFileExt$qqrv @20  ; __fastcall Newmarkupdocuments::TXSLCreator::GetCreatorFileExt()
+    @Newmarkupdocuments@TXSLCreator@VectoredNewImplSource$qqrv @19  ; __fastcall Newmarkupdocuments::TXSLCreator::VectoredNewImplSource()
+    @Newmarkupdocuments@TXSLFile@  @72  ; Newmarkupdocuments::TXSLFile::
+    @Newmarkupdocuments@TXSLFile@GetVectoredSource$qqrv @26  ; __fastcall Newmarkupdocuments::TXSLFile::GetVectoredSource()
+    @Newmarkupdocuments@TXSLWizard@ @76  ; Newmarkupdocuments::TXSLWizard::
+    @Newmarkupdocuments@TXSLWizard@GetCreatorClass$qqrv @25  ; __fastcall Newmarkupdocuments::TXSLWizard::GetCreatorClass()
+    @Newmarkupdocuments@TXSLWizard@GetVectoredComment$qqrv @24  ; __fastcall Newmarkupdocuments::TXSLWizard::GetVectoredComment()
+    @Newmarkupdocuments@TXSLWizard@GetVectoredGlyph$qqrv @23  ; __fastcall Newmarkupdocuments::TXSLWizard::GetVectoredGlyph()
+    @Newmarkupdocuments@TXSLWizard@GetVectoredIDString$qqrv @22  ; __fastcall Newmarkupdocuments::TXSLWizard::GetVectoredIDString()
+    @Newmarkupdocuments@TXSLWizard@GetVectoredName$qqrv @21  ; __fastcall Newmarkupdocuments::TXSLWizard::GetVectoredName()
+    @Newmarkupdocuments@initialization$qqrv @1   ; __fastcall Newmarkupdocuments::initialization()
+    Finalize                       @101 ; Finalize
+    Initialize                     @102 ; Initialize

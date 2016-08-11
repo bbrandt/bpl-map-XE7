@@ -1,0 +1,898 @@
+LIBRARY     FIREDACIBDRIVER210.BPL
+
+DESCRIPTION 'mbarcadero FireDAC IB Driver Components'
+
+EXPORTS
+    @$xp$23Firedac@Phys@Ibcli@vary @239 ; __tpdsc__ Firedac::Phys::Ibcli::vary
+    @$xp$24Firedac@Phys@Ibcli@PVary @240 ; __tpdsc__ Firedac::Phys::Ibcli::PVary
+    @$xp$24Firedac@Phys@Ibcli@SQUAD @243 ; __tpdsc__ Firedac::Phys::Ibcli::SQUAD
+    @$xp$25Firedac@Phys@Ibcli@PUCHAR @244 ; __tpdsc__ Firedac::Phys::Ibcli::PUCHAR
+    @$xp$25Firedac@Phys@Ibcli@TBopen @154 ; __tpdsc__ Firedac::Phys::Ibcli::TBopen
+    @$xp$26Firedac@Phys@Fb@TFDFBTrace @846 ; __tpdsc__ Firedac::Phys::Fb::TFDFBTrace
+    @$xp$26Firedac@Phys@Ib@TFDIBSDump @883 ; __tpdsc__ Firedac::Phys::Ib::TFDIBSDump
+    @$xp$26Firedac@Phys@Ibcli@BSTREAM @202 ; __tpdsc__ Firedac::Phys::Ibcli::BSTREAM
+    @$xp$26Firedac@Phys@Ibcli@PISCTEB @171 ; __tpdsc__ Firedac::Phys::Ibcli::PISCTEB
+    @$xp$26Firedac@Phys@Ibcli@TISCTEB @170 ; __tpdsc__ Firedac::Phys::Ibcli::TISCTEB
+    @$xp$26Firedac@Phys@Ibcli@lstring @237 ; __tpdsc__ Firedac::Phys::Ibcli::lstring
+    @$xp$27Firedac@Phys@Ibcli@GDS_QUAD @241 ; __tpdsc__ Firedac::Phys::Ibcli::GDS_QUAD
+    @$xp$27Firedac@Phys@Ibcli@PBStream @203 ; __tpdsc__ Firedac::Phys::Ibcli::PBStream
+    @$xp$27Firedac@Phys@Ibcli@PGDSQuad @242 ; __tpdsc__ Firedac::Phys::Ibcli::PGDSQuad
+    @$xp$27Firedac@Phys@Ibcli@PISCDate @223 ; __tpdsc__ Firedac::Phys::Ibcli::PISCDate
+    @$xp$27Firedac@Phys@Ibcli@PISCLong @233 ; __tpdsc__ Firedac::Phys::Ibcli::PISCLong
+    @$xp$27Firedac@Phys@Ibcli@PISCQuad @217 ; __tpdsc__ Firedac::Phys::Ibcli::PISCQuad
+    @$xp$27Firedac@Phys@Ibcli@PISCTime @222 ; __tpdsc__ Firedac::Phys::Ibcli::PISCTime
+    @$xp$27Firedac@Phys@Ibcli@PLString @238 ; __tpdsc__ Firedac::Phys::Ibcli::PLString
+    @$xp$27Firedac@Phys@Ibcli@Tfb_ping @10  ; __tpdsc__ Firedac::Phys::Ibcli::Tfb_ping
+    @$xp$27Firedac@Phys@Ibcli@Tisc_ddl @128 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_ddl
+    @$xp$28Firedac@Phys@Fb@TFDFBNBackup @850 ; __tpdsc__ Firedac::Phys::Fb::TFDFBNBackup
+    @$xp$28Firedac@Phys@Ibcli@PARAMVARY @191 ; __tpdsc__ Firedac::Phys::Ibcli::PARAMVARY
+    @$xp$28Firedac@Phys@Ibcli@PISCSChar @235 ; __tpdsc__ Firedac::Phys::Ibcli::PISCSChar
+    @$xp$28Firedac@Phys@Ibcli@PISCShort @229 ; __tpdsc__ Firedac::Phys::Ibcli::PISCShort
+    @$xp$28Firedac@Phys@Ibcli@PISCUChar @236 ; __tpdsc__ Firedac::Phys::Ibcli::PISCUChar
+    @$xp$28Firedac@Phys@Ibcli@PISCULong @232 ; __tpdsc__ Firedac::Phys::Ibcli::PISCULong
+    @$xp$28Firedac@Phys@Ibcli@PXSQLDAV1 @188 ; __tpdsc__ Firedac::Phys::Ibcli::PXSQLDAV1
+    @$xp$28Firedac@Phys@Ibcli@PXSQLDAV2 @183 ; __tpdsc__ Firedac::Phys::Ibcli::PXSQLDAV2
+    @$xp$28Firedac@Phys@Ibcli@TBLOB_get @160 ; __tpdsc__ Firedac::Phys::Ibcli::TBLOB_get
+    @$xp$28Firedac@Phys@Ibcli@TBLOB_put @157 ; __tpdsc__ Firedac::Phys::Ibcli::TBLOB_put
+    @$xp$28Firedac@Phys@Ibcli@Tisc_free @71  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_free
+    @$xp$28Firedac@Phys@Ibcli@Tisc_ftof @70  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_ftof
+    @$xp$28Firedac@Phys@Ibcli@Tisc_open @63  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_open
+    @$xp$28Firedac@Phys@Ibcli@Tisc_qtoq @51  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_qtoq
+    @$xp$28Firedac@Phys@Ibcli@Tisc_send @42  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_send
+    @$xp$28Firedac@Phys@Ibcli@Tisc_vtof @25  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_vtof
+    @$xp$28Firedac@Phys@Ibcli@Tisc_vtov @24  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_vtov
+    @$xp$28Firedac@Phys@Ibcli@XSQLDA_V1 @187 ; __tpdsc__ Firedac::Phys::Ibcli::XSQLDA_V1
+    @$xp$28Firedac@Phys@Ibcli@XSQLDA_V2 @182 ; __tpdsc__ Firedac::Phys::Ibcli::XSQLDA_V2
+    @$xp$29Firedac@Phys@Fb@TFDFBNRestore @848 ; __tpdsc__ Firedac::Phys::Fb::TFDFBNRestore
+    @$xp$29Firedac@Phys@Ibcli@PISCStatus @227 ; __tpdsc__ Firedac::Phys::Ibcli::PISCStatus
+    @$xp$29Firedac@Phys@Ibcli@PISCUShort @228 ; __tpdsc__ Firedac::Phys::Ibcli::PISCUShort
+    @$xp$29Firedac@Phys@Ibcli@PPISCSChar @234 ; __tpdsc__ Firedac::Phys::Ibcli::PPISCSChar
+    @$xp$29Firedac@Phys@Ibcli@PParamVary @192 ; __tpdsc__ Firedac::Phys::Ibcli::PParamVary
+    @$xp$29Firedac@Phys@Ibcli@PXSQLVarV1 @190 ; __tpdsc__ Firedac::Phys::Ibcli::PXSQLVarV1
+    @$xp$29Firedac@Phys@Ibcli@PXSQLVarV2 @186 ; __tpdsc__ Firedac::Phys::Ibcli::PXSQLVarV2
+    @$xp$29Firedac@Phys@Ibcli@TBLOB_dump @162 ; __tpdsc__ Firedac::Phys::Ibcli::TBLOB_dump
+    @$xp$29Firedac@Phys@Ibcli@TBLOB_edit @161 ; __tpdsc__ Firedac::Phys::Ibcli::TBLOB_edit
+    @$xp$29Firedac@Phys@Ibcli@TBLOB_load @159 ; __tpdsc__ Firedac::Phys::Ibcli::TBLOB_load
+    @$xp$29Firedac@Phys@Ibcli@TBLOB_open @158 ; __tpdsc__ Firedac::Phys::Ibcli::TBLOB_open
+    @$xp$29Firedac@Phys@Ibcli@Tisc_close @138 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_close
+    @$xp$29Firedac@Phys@Ibcli@Tisc_fetch @72  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_fetch
+    @$xp$29Firedac@Phys@Ibcli@XSQLVAR_V1 @189 ; __tpdsc__ Firedac::Phys::Ibcli::XSQLVAR_V1
+    @$xp$29Firedac@Phys@Ibcli@XSQLVAR_V2 @184 ; __tpdsc__ Firedac::Phys::Ibcli::XSQLVAR_V2
+    @$xp$29Firedac@Phys@Ibwrapper@TIBEnv @549 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBEnv
+    @$xp$29Firedac@Phys@Ibwrapper@TIBLib @569 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBLib
+    @$xp$30Firedac@Phys@Ibcli@PARAMDSC_V1 @195 ; __tpdsc__ Firedac::Phys::Ibcli::PARAMDSC_V1
+    @$xp$30Firedac@Phys@Ibcli@PARAMDSC_V2 @193 ; __tpdsc__ Firedac::Phys::Ibcli::PARAMDSC_V2
+    @$xp$30Firedac@Phys@Ibcli@PISCBlobCtl @206 ; __tpdsc__ Firedac::Phys::Ibcli::PISCBlobCtl
+    @$xp$30Firedac@Phys@Ibcli@PISCBoolean @230 ; __tpdsc__ Firedac::Phys::Ibcli::PISCBoolean
+    @$xp$30Firedac@Phys@Ibcli@PPISCStatus @226 ; __tpdsc__ Firedac::Phys::Ibcli::PPISCStatus
+    @$xp$30Firedac@Phys@Ibcli@PPXSQLVarV2 @185 ; __tpdsc__ Firedac::Phys::Ibcli::PPXSQLVarV2
+    @$xp$30Firedac@Phys@Ibcli@PParamDscV1 @196 ; __tpdsc__ Firedac::Phys::Ibcli::PParamDscV1
+    @$xp$30Firedac@Phys@Ibcli@PParamDscV2 @194 ; __tpdsc__ Firedac::Phys::Ibcli::PParamDscV2
+    @$xp$30Firedac@Phys@Ibcli@TBLOB_close @164 ; __tpdsc__ Firedac::Phys::Ibcli::TBLOB_close
+    @$xp$30Firedac@Phys@Ibwrapper@TIBBlob @532 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBBlob
+    @$xp$31Firedac@Phys@Ibbase@TFDIBBackup @783 ; __tpdsc__ Firedac::Phys::Ibbase::TFDIBBackup
+    @$xp$31Firedac@Phys@Ibbase@TFDIBConfig @772 ; __tpdsc__ Firedac::Phys::Ibbase::TFDIBConfig
+    @$xp$31Firedac@Phys@Ibcli@BLOBCALLBACK @197 ; __tpdsc__ Firedac::Phys::Ibcli::BLOBCALLBACK
+    @$xp$31Firedac@Phys@Ibcli@ISC_BLOB_CTL @204 ; __tpdsc__ Firedac::Phys::Ibcli::ISC_BLOB_CTL
+    @$xp$31Firedac@Phys@Ibcli@PIscDbHandle @179 ; __tpdsc__ Firedac::Phys::Ibcli::PIscDbHandle
+    @$xp$31Firedac@Phys@Ibcli@PIscTrHandle @174 ; __tpdsc__ Firedac::Phys::Ibcli::PIscTrHandle
+    @$xp$31Firedac@Phys@Ibcli@PUserSecData @168 ; __tpdsc__ Firedac::Phys::Ibcli::PUserSecData
+    @$xp$31Firedac@Phys@Ibcli@TBlobLSeekFn @199 ; __tpdsc__ Firedac::Phys::Ibcli::TBlobLSeekFn
+    @$xp$31Firedac@Phys@Ibcli@TISCStatusFn @205 ; __tpdsc__ Firedac::Phys::Ibcli::TISCStatusFn
+    @$xp$31Firedac@Phys@Ibcli@Tfb_shutdown @12  ; __tpdsc__ Firedac::Phys::Ibcli::Tfb_shutdown
+    @$xp$31Firedac@Phys@Ibcli@Tfb_sqlstate @14  ; __tpdsc__ Firedac::Phys::Ibcli::Tfb_sqlstate
+    @$xp$31Firedac@Phys@Ibcli@Tisc_declare @127 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_declare
+    @$xp$31Firedac@Phys@Ibcli@Tisc_execute @75  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_execute
+    @$xp$31Firedac@Phys@Ibcli@Tisc_prepare @59  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_prepare
+    @$xp$31Firedac@Phys@Ibcli@Tisc_receive @49  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_receive
+    @$xp$31Firedac@Phys@Ibcli@Tisc_sqlcode @35  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_sqlcode
+    @$xp$31Firedac@Phys@Ibcli@Tisc_version @26  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_version
+    @$xp$31Firedac@Phys@Ibcli@isc_callback @173 ; __tpdsc__ Firedac::Phys::Ibcli::isc_callback
+    @$xp$31Firedac@Phys@Ibwrapper@TIBError @561 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBError
+    @$xp$31Firedac@Phys@Ibwrapper@TIBSDump @516 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBSDump
+    @$xp$31Firedac@Phys@Ibwrapper@TIBTrace @502 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBTrace
+    @$xp$32Firedac@Phys@Ibbase@TFDIBRestore @781 ; __tpdsc__ Firedac::Phys::Ibbase::TFDIBRestore
+    @$xp$32Firedac@Phys@Ibbase@TFDIBService @785 ; __tpdsc__ Firedac::Phys::Ibbase::TFDIBService
+    @$xp$32Firedac@Phys@Ibcli@ISC_TIMESTAMP @220 ; __tpdsc__ Firedac::Phys::Ibcli::ISC_TIMESTAMP
+    @$xp$32Firedac@Phys@Ibcli@PBlobCallBack @198 ; __tpdsc__ Firedac::Phys::Ibcli::PBlobCallBack
+    @$xp$32Firedac@Phys@Ibcli@PISCTimeStamp @221 ; __tpdsc__ Firedac::Phys::Ibcli::PISCTimeStamp
+    @$xp$32Firedac@Phys@Ibcli@PIscAttHandle @181 ; __tpdsc__ Firedac::Phys::Ibcli::PIscAttHandle
+    @$xp$32Firedac@Phys@Ibcli@PIscReqHandle @177 ; __tpdsc__ Firedac::Phys::Ibcli::PIscReqHandle
+    @$xp$32Firedac@Phys@Ibcli@PIscSvcHandle @175 ; __tpdsc__ Firedac::Phys::Ibcli::PIscSvcHandle
+    @$xp$32Firedac@Phys@Ibcli@TBLOB_display @163 ; __tpdsc__ Firedac::Phys::Ibcli::TBLOB_display
+    @$xp$32Firedac@Phys@Ibcli@Tfb_interpret @66  ; __tpdsc__ Firedac::Phys::Ibcli::Tfb_interpret
+    @$xp$32Firedac@Phys@Ibcli@Tisc_add_user @153 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_add_user
+    @$xp$32Firedac@Phys@Ibcli@Tisc_describe @121 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_describe
+    @$xp$32Firedac@Phys@Ibcli@USER_SEC_DATA @169 ; __tpdsc__ Firedac::Phys::Ibcli::USER_SEC_DATA
+    @$xp$32Firedac@Phys@Ibcli@info_db_class @167 ; __tpdsc__ Firedac::Phys::Ibcli::info_db_class
+    @$xp$32Firedac@Phys@Ibwrapper@PIBPBInfo @558 ; __tpdsc__ Firedac::Phys::Ibwrapper::PIBPBInfo
+    @$xp$32Firedac@Phys@Ibwrapper@TIBBackup @522 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBBackup
+    @$xp$32Firedac@Phys@Ibwrapper@TIBConfig @490 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBConfig
+    @$xp$32Firedac@Phys@Ibwrapper@TIBEvents @539 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBEvents
+    @$xp$32Firedac@Phys@Ibwrapper@TIBObject @567 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBObject
+    @$xp$32Firedac@Phys@Ibwrapper@TIBPBInfo @559 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBPBInfo
+    @$xp$32Firedac@Phys@Ibwrapper@TIBRepair @505 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBRepair
+    @$xp$33Firedac@Phys@Ibbase@TFDIBSecurity @775 ; __tpdsc__ Firedac::Phys::Ibbase::TFDIBSecurity
+    @$xp$33Firedac@Phys@Ibbase@TFDIBValidate @779 ; __tpdsc__ Firedac::Phys::Ibbase::TFDIBValidate
+    @$xp$33Firedac@Phys@Ibcli@PISCArrayBound @216 ; __tpdsc__ Firedac::Phys::Ibcli::PISCArrayBound
+    @$xp$33Firedac@Phys@Ibcli@PISCBlobDescV1 @212 ; __tpdsc__ Firedac::Phys::Ibcli::PISCBlobDescV1
+    @$xp$33Firedac@Phys@Ibcli@PISCBlobDescV2 @208 ; __tpdsc__ Firedac::Phys::Ibcli::PISCBlobDescV2
+    @$xp$33Firedac@Phys@Ibcli@PIscBlobHandle @180 ; __tpdsc__ Firedac::Phys::Ibcli::PIscBlobHandle
+    @$xp$33Firedac@Phys@Ibcli@PIscFormHandle @178 ; __tpdsc__ Firedac::Phys::Ibcli::PIscFormHandle
+    @$xp$33Firedac@Phys@Ibcli@PIscResvHandle @172 ; __tpdsc__ Firedac::Phys::Ibcli::PIscResvHandle
+    @$xp$33Firedac@Phys@Ibcli@PIscStmtHandle @176 ; __tpdsc__ Firedac::Phys::Ibcli::PIscStmtHandle
+    @$xp$33Firedac@Phys@Ibcli@Tisc_blob_info @143 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_blob_info
+    @$xp$33Firedac@Phys@Ibcli@Tisc_get_slice @68  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_get_slice
+    @$xp$33Firedac@Phys@Ibcli@Tisc_open_blob @62  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_open_blob
+    @$xp$33Firedac@Phys@Ibcli@Tisc_print_blr @56  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_print_blr
+    @$xp$33Firedac@Phys@Ibcli@Tisc_put_slice @52  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_put_slice
+    @$xp$33Firedac@Phys@Ibcli@Tisc_reset_fpe @22  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_reset_fpe
+    @$xp$33Firedac@Phys@Ibcli@Tisc_seek_blob @43  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_seek_blob
+    @$xp$33Firedac@Phys@Ibcli@Tisc_set_debug @37  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_set_debug
+    @$xp$33Firedac@Phys@Ibwrapper@TFBNBackup @518 ; __tpdsc__ Firedac::Phys::Ibwrapper::TFBNBackup
+    @$xp$33Firedac@Phys@Ibwrapper@TFDIBError @565 ; __tpdsc__ Firedac::Phys::Ibwrapper::TFDIBError
+    @$xp$33Firedac@Phys@Ibwrapper@TIBRestore @512 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBRestore
+    @$xp$33Firedac@Phys@Ibwrapper@TIBService @526 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBService
+    @$xp$34Firedac@Phys@Ibcli@ISC_ARRAY_BOUND @215 ; __tpdsc__ Firedac::Phys::Ibcli::ISC_ARRAY_BOUND
+    @$xp$34Firedac@Phys@Ibcli@PCTimeStructure @218 ; __tpdsc__ Firedac::Phys::Ibcli::PCTimeStructure
+    @$xp$34Firedac@Phys@Ibcli@PISCArrayDescV1 @214 ; __tpdsc__ Firedac::Phys::Ibcli::PISCArrayDescV1
+    @$xp$34Firedac@Phys@Ibcli@PISCArrayDescV2 @210 ; __tpdsc__ Firedac::Phys::Ibcli::PISCArrayDescV2
+    @$xp$34Firedac@Phys@Ibcli@TBLOB_text_dump @156 ; __tpdsc__ Firedac::Phys::Ibcli::TBLOB_text_dump
+    @$xp$34Firedac@Phys@Ibcli@TBLOB_text_load @155 ; __tpdsc__ Firedac::Phys::Ibcli::TBLOB_text_load
+    @$xp$34Firedac@Phys@Ibcli@TCTimeStructure @219 ; __tpdsc__ Firedac::Phys::Ibcli::TCTimeStructure
+    @$xp$34Firedac@Phys@Ibcli@TISCEventCounts @231 ; __tpdsc__ Firedac::Phys::Ibcli::TISCEventCounts
+    @$xp$34Firedac@Phys@Ibcli@Tisc_close_blob @137 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_close_blob
+    @$xp$34Firedac@Phys@Ibcli@Tisc_dsql_fetch @105 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_fetch
+    @$xp$34Firedac@Phys@Ibcli@Tisc_expand_dpb @73  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_expand_dpb
+    @$xp$34Firedac@Phys@Ibcli@Tisc_interprete @67  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_interprete
+    @$xp$34Firedac@Phys@Ibcli@Tisc_modify_dpb @65  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_modify_dpb
+    @$xp$34Firedac@Phys@Ibcli@Tisc_open_blob2 @61  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_open_blob2
+    @$xp$34Firedac@Phys@Ibcli@Tisc_que_events @50  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_que_events
+    @$xp$34Firedac@Phys@Ibwrapper@TFBNRestore @510 ; __tpdsc__ Firedac::Phys::Ibwrapper::TFBNRestore
+    @$xp$34Firedac@Phys@Ibwrapper@TIBDatabase @547 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBDatabase
+    @$xp$34Firedac@Phys@Ibwrapper@TIBOpenMode @572 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBOpenMode
+    @$xp$34Firedac@Phys@Ibwrapper@TIBPBReader @551 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBPBReader
+    @$xp$34Firedac@Phys@Ibwrapper@TIBPBWriter @553 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBPBWriter
+    @$xp$34Firedac@Phys@Ibwrapper@TIBPageSize @571 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBPageSize
+    @$xp$34Firedac@Phys@Ibwrapper@TIBProtocol @574 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBProtocol
+    @$xp$34Firedac@Phys@Ibwrapper@TIBSecurity @496 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBSecurity
+    @$xp$34Firedac@Phys@Ibwrapper@TIBVariable @537 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBVariable
+    @$xp$35Firedac@Phys@Fb@TFDPhysFBDriverLink @852 ; __tpdsc__ Firedac::Phys::Fb::TFDPhysFBDriverLink
+    @$xp$35Firedac@Phys@Ib@TFDPhysIBDriverLink @885 ; __tpdsc__ Firedac::Phys::Ib::TFDPhysIBDriverLink
+    @$xp$35Firedac@Phys@Ibbase@PFDIBColInfoRec @762 ; __tpdsc__ Firedac::Phys::Ibbase::PFDIBColInfoRec
+    @$xp$35Firedac@Phys@Ibbase@PFDIBParInfoRec @760 ; __tpdsc__ Firedac::Phys::Ibbase::PFDIBParInfoRec
+    @$xp$35Firedac@Phys@Ibbase@TFDIBColInfoRec @763 ; __tpdsc__ Firedac::Phys::Ibbase::TFDIBColInfoRec
+    @$xp$35Firedac@Phys@Ibbase@TFDIBConfigMode @774 ; __tpdsc__ Firedac::Phys::Ibbase::TFDIBConfigMode
+    @$xp$35Firedac@Phys@Ibbase@TFDIBParInfoRec @761 ; __tpdsc__ Firedac::Phys::Ibbase::TFDIBParInfoRec
+    @$xp$35Firedac@Phys@Ibcli@ISC_BLOB_DESC_V1 @211 ; __tpdsc__ Firedac::Phys::Ibcli::ISC_BLOB_DESC_V1
+    @$xp$35Firedac@Phys@Ibcli@ISC_BLOB_DESC_V2 @207 ; __tpdsc__ Firedac::Phys::Ibcli::ISC_BLOB_DESC_V2
+    @$xp$35Firedac@Phys@Ibcli@TISCStatusVector @225 ; __tpdsc__ Firedac::Phys::Ibcli::TISCStatusVector
+    @$xp$35Firedac@Phys@Ibcli@Tisc_cancel_blob @140 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_cancel_blob
+    @$xp$35Firedac@Phys@Ibcli@Tisc_create_blob @132 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_create_blob
+    @$xp$35Firedac@Phys@Ibcli@Tisc_decode_date @126 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_decode_date
+    @$xp$35Firedac@Phys@Ibcli@Tisc_delete_user @122 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_delete_user
+    @$xp$35Firedac@Phys@Ibcli@Tisc_dsql_finish @103 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_finish
+    @$xp$35Firedac@Phys@Ibcli@Tisc_dsql_insert @101 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_insert
+    @$xp$35Firedac@Phys@Ibcli@Tisc_encode_date @81  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_encode_date
+    @$xp$35Firedac@Phys@Ibcli@Tisc_event_block @77  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_event_block
+    @$xp$35Firedac@Phys@Ibcli@Tisc_get_segment @69  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_get_segment
+    @$xp$35Firedac@Phys@Ibcli@Tisc_modify_user @64  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_modify_user
+    @$xp$35Firedac@Phys@Ibcli@Tisc_put_segment @53  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_put_segment
+    @$xp$35Firedac@Phys@Ibcli@Tisc_vax_integer @27  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_vax_integer
+    @$xp$35Firedac@Phys@Ibcli@info_db_provider @166 ; __tpdsc__ Firedac::Phys::Ibcli::info_db_provider
+    @$xp$35Firedac@Phys@Ibwrapper@PIBPBInfoArr @556 ; __tpdsc__ Firedac::Phys::Ibwrapper::PIBPBInfoArr
+    @$xp$35Firedac@Phys@Ibwrapper@TIBPBInfoArr @557 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBPBInfoArr
+    @$xp$35Firedac@Phys@Ibwrapper@TIBStatement @528 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBStatement
+    @$xp$35Firedac@Phys@Ibwrapper@TIBVariables @534 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBVariables
+    @$xp$35Firedac@Phys@Ibwrapper@TIBWriteMode @494 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBWriteMode
+    @$xp$36Firedac@Phys@Ibcli@ISC_ARRAY_DESC_V1 @213 ; __tpdsc__ Firedac::Phys::Ibcli::ISC_ARRAY_DESC_V1
+    @$xp$36Firedac@Phys@Ibcli@ISC_ARRAY_DESC_V2 @209 ; __tpdsc__ Firedac::Phys::Ibcli::ISC_ARRAY_DESC_V2
+    @$xp$36Firedac@Phys@Ibcli@TBlobGetSegmentFn @201 ; __tpdsc__ Firedac::Phys::Ibcli::TBlobGetSegmentFn
+    @$xp$36Firedac@Phys@Ibcli@TBlobPutSegmentFn @200 ; __tpdsc__ Firedac::Phys::Ibcli::TBlobPutSegmentFn
+    @$xp$36Firedac@Phys@Ibcli@Tisc_blob_gen_bpb @144 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_blob_gen_bpb
+    @$xp$36Firedac@Phys@Ibcli@Tisc_create_blob2 @131 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_create_blob2
+    @$xp$36Firedac@Phys@Ibcli@Tisc_dsql_execute @111 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_execute
+    @$xp$36Firedac@Phys@Ibcli@Tisc_dsql_fetch_m @104 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_fetch_m
+    @$xp$36Firedac@Phys@Ibcli@Tisc_dsql_prepare @99  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_prepare
+    @$xp$36Firedac@Phys@Ibcli@Tisc_dsql_release @97  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_release
+    @$xp$36Firedac@Phys@Ibcli@Tisc_event_counts @76  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_event_counts
+    @$xp$36Firedac@Phys@Ibcli@Tisc_print_status @54  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_print_status
+    @$xp$36Firedac@Phys@Ibcli@Tisc_request_info @46  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_request_info
+    @$xp$36Firedac@Phys@Ibwrapper@TIBAccessMode @493 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBAccessMode
+    @$xp$36Firedac@Phys@Ibwrapper@TIBBlobStream @530 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBBlobStream
+    @$xp$36Firedac@Phys@Ibwrapper@TIBEventSlice @542 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBEventSlice
+    @$xp$36Firedac@Phys@Ibwrapper@TIBRepairMode @507 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBRepairMode
+    @$xp$37Firedac@Phys@Ibbase@TIBEncryptionType @778 ; __tpdsc__ Firedac::Phys::Ibbase::TIBEncryptionType
+    @$xp$37Firedac@Phys@Ibbase@_TFDIBSecurity@_1 @777 ; __tpdsc__ Firedac::Phys::Ibbase::_TFDIBSecurity::_1
+    @$xp$37Firedac@Phys@Ibcli@FB_SQLSTATE_STRING @224 ; __tpdsc__ Firedac::Phys::Ibcli::FB_SQLSTATE_STRING
+    @$xp$37Firedac@Phys@Ibcli@Tisc_array_gen_sdl @152 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_array_gen_sdl
+    @$xp$37Firedac@Phys@Ibcli@Tisc_blob_set_desc @141 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_blob_set_desc
+    @$xp$37Firedac@Phys@Ibcli@Tisc_cancel_events @139 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_cancel_events
+    @$xp$37Firedac@Phys@Ibcli@Tisc_database_info @129 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_database_info
+    @$xp$37Firedac@Phys@Ibcli@Tisc_describe_bind @120 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_describe_bind
+    @$xp$37Firedac@Phys@Ibcli@Tisc_drop_database @118 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_drop_database
+    @$xp$37Firedac@Phys@Ibcli@Tisc_dsql_describe @115 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_describe
+    @$xp$37Firedac@Phys@Ibcli@Tisc_dsql_execute2 @107 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_execute2
+    @$xp$37Firedac@Phys@Ibcli@Tisc_dsql_insert_m @100 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_insert_m
+    @$xp$37Firedac@Phys@Ibcli@Tisc_dsql_sql_info @95  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_sql_info
+    @$xp$37Firedac@Phys@Ibcli@Tisc_service_query @39  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_service_query
+    @$xp$37Firedac@Phys@Ibcli@Tisc_service_start @38  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_service_start
+    @$xp$37Firedac@Phys@Ibcli@Tisc_start_request @32  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_start_request
+    @$xp$37Firedac@Phys@Ibwrapper@TIBPBParamType @560 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBPBParamType
+    @$xp$37Firedac@Phys@Ibwrapper@TIBTraceAction @504 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBTraceAction
+    @$xp$37Firedac@Phys@Ibwrapper@TIBTransaction @544 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBTransaction
+    @$xp$38Firedac@Phys@Ibcli@Tisc_array_set_desc @147 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_array_set_desc
+    @$xp$38Firedac@Phys@Ibcli@Tisc_dsql_execute_m @108 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_execute_m
+    @$xp$38Firedac@Phys@Ibcli@Tisc_dsql_prepare_m @98  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_prepare_m
+    @$xp$38Firedac@Phys@Ibcli@Tisc_print_sqlerror @55  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_print_sqlerror
+    @$xp$38Firedac@Phys@Ibcli@Tisc_service_attach @41  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_service_attach
+    @$xp$38Firedac@Phys@Ibcli@Tisc_service_detach @40  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_service_detach
+    @$xp$38Firedac@Phys@Ibcli@Tisc_sql_interprete @36  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_sql_interprete
+    @$xp$38Firedac@Phys@Ibcli@Tisc_start_and_send @34  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_start_and_send
+    @$xp$38Firedac@Phys@Ibcli@Tisc_start_multiple @33  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_start_multiple
+    @$xp$38Firedac@Phys@Ibcli@Tisc_unwind_request @28  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_unwind_request
+    @$xp$38Firedac@Phys@Ibcli@Tisc_wait_for_event @23  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_wait_for_event
+    @$xp$38Firedac@Phys@Ibwrapper@TIBCharacterSet @573 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBCharacterSet
+    @$xp$38Firedac@Phys@Ibwrapper@TIBReserveSpace @495 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBReserveSpace
+    @$xp$38Firedac@Phys@Ibwrapper@TIBShutdownMode @492 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBShutdownMode
+    @$xp$38Firedac@Phys@Ibwrapper@_TIBSecurity@_1 @498 ; __tpdsc__ Firedac::Phys::Ibwrapper::_TIBSecurity::_1
+    @$xp$39Firedac@Phys@Ibbase@PFDPhysIBCliHandles @789 ; __tpdsc__ Firedac::Phys::Ibbase::PFDPhysIBCliHandles
+    @$xp$39Firedac@Phys@Ibbase@TFDPhysIBCliHandles @790 ; __tpdsc__ Firedac::Phys::Ibbase::TFDPhysIBCliHandles
+    @$xp$39Firedac@Phys@Ibbase@TFDPhysIBDriverBase @770 ; __tpdsc__ Firedac::Phys::Ibbase::TFDPhysIBDriverBase
+    @$xp$39Firedac@Phys@Ibcli@Tfb_cancel_operation @13  ; __tpdsc__ Firedac::Phys::Ibcli::Tfb_cancel_operation
+    @$xp$39Firedac@Phys@Ibcli@Tisc_array_get_slice @151 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_array_get_slice
+    @$xp$39Firedac@Phys@Ibcli@Tisc_array_put_slice @148 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_array_put_slice
+    @$xp$39Firedac@Phys@Ibcli@Tisc_attach_database @146 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_attach_database
+    @$xp$39Firedac@Phys@Ibcli@Tisc_compile_request @134 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_compile_request
+    @$xp$39Firedac@Phys@Ibcli@Tisc_create_database @130 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_create_database
+    @$xp$39Firedac@Phys@Ibcli@Tisc_decode_sql_date @125 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_decode_sql_date
+    @$xp$39Firedac@Phys@Ibcli@Tisc_decode_sql_time @124 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_decode_sql_time
+    @$xp$39Firedac@Phys@Ibcli@Tisc_detach_database @119 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_detach_database
+    @$xp$39Firedac@Phys@Ibcli@Tisc_dsql_execute2_m @106 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_execute2_m
+    @$xp$39Firedac@Phys@Ibcli@Tisc_embed_dsql_open @85  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_embed_dsql_open
+    @$xp$39Firedac@Phys@Ibcli@Tisc_encode_sql_date @80  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_encode_sql_date
+    @$xp$39Firedac@Phys@Ibcli@Tisc_encode_sql_time @79  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_encode_sql_time
+    @$xp$39Firedac@Phys@Ibcli@Tisc_release_request @47  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_release_request
+    @$xp$39Firedac@Phys@Ibcli@Tisc_start_savepoint @16  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_start_savepoint
+    @$xp$39Firedac@Phys@Ibwrapper@TIBBackupOptions @524 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBBackupOptions
+    @$xp$39Firedac@Phys@Ibwrapper@TIBEventsOnFired @541 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBEventsOnFired
+    @$xp$39Firedac@Phys@Ibwrapper@TIBRepairOptions @508 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBRepairOptions
+    @$xp$39Firedac@Phys@Ibwrapper@TIBSecurityValue @501 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBSecurityValue
+    @$xp$39Firedac@Phys@Ibwrapper@_TIBVariables@_1 @536 ; __tpdsc__ Firedac::Phys::Ibwrapper::_TIBVariables::_1
+    @$xp$40Firedac@Phys@Ibbase@TFDPhysIBCommandBase @756 ; __tpdsc__ Firedac::Phys::Ibbase::TFDPhysIBCommandBase
+    @$xp$40Firedac@Phys@Ibcli@Tfb_shutdown_callback @11  ; __tpdsc__ Firedac::Phys::Ibcli::Tfb_shutdown_callback
+    @$xp$40Firedac@Phys@Ibcli@Tisc_blob_lookup_desc @142 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_blob_lookup_desc
+    @$xp$40Firedac@Phys@Ibcli@Tisc_commit_retaining @136 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_commit_retaining
+    @$xp$40Firedac@Phys@Ibcli@Tisc_compile_request2 @133 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_compile_request2
+    @$xp$40Firedac@Phys@Ibcli@Tisc_decode_timestamp @123 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_decode_timestamp
+    @$xp$40Firedac@Phys@Ibcli@Tisc_dsql_exec_immed2 @113 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_exec_immed2
+    @$xp$40Firedac@Phys@Ibcli@Tisc_embed_dsql_close @94  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_embed_dsql_close
+    @$xp$40Firedac@Phys@Ibcli@Tisc_embed_dsql_fetch @87  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_embed_dsql_fetch
+    @$xp$40Firedac@Phys@Ibcli@Tisc_embed_dsql_open2 @84  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_embed_dsql_open2
+    @$xp$40Firedac@Phys@Ibcli@Tisc_encode_timestamp @78  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_encode_timestamp
+    @$xp$40Firedac@Phys@Ibcli@Tisc_portable_integer @60  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_portable_integer
+    @$xp$40Firedac@Phys@Ibcli@Tisc_transact_request @30  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_transact_request
+    @$xp$40Firedac@Phys@Ibcli@Tisc_transaction_info @29  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_transaction_info
+    @$xp$40Firedac@Phys@Ibwrapper@TFBNBackupOptions @520 ; __tpdsc__ Firedac::Phys::Ibwrapper::TFBNBackupOptions
+    @$xp$40Firedac@Phys@Ibwrapper@TIBRestoreOptions @514 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBRestoreOptions
+    @$xp$40Firedac@Phys@Ibwrapper@TIBSecurityAction @499 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBSecurityAction
+    @$xp$40Firedac@Phys@Ibwrapper@TIBSecurityValues @500 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBSecurityValues
+    @$xp$41Firedac@Phys@Ibcli@Tisc_array_lookup_desc @149 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_array_lookup_desc
+    @$xp$41Firedac@Phys@Ibcli@Tisc_blob_default_desc @145 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_blob_default_desc
+    @$xp$41Firedac@Phys@Ibcli@Tisc_embed_dsql_insert @86  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_embed_dsql_insert
+    @$xp$41Firedac@Phys@Ibcli@Tisc_execute_immediate @74  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_execute_immediate
+    @$xp$41Firedac@Phys@Ibcli@Tisc_release_savepoint @18  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_release_savepoint
+    @$xp$41Firedac@Phys@Ibcli@Tisc_start_transaction @31  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_start_transaction
+    @$xp$41Firedac@Phys@Ibwrapper@EIBNativeException @563 ; __tpdsc__ Firedac::Phys::Ibwrapper::EIBNativeException
+    @$xp$41Firedac@Phys@Ibwrapper@_TIBTransaction@_1 @546 ; __tpdsc__ Firedac::Phys::Ibwrapper::_TIBTransaction::_1
+    @$xp$42Firedac@Phys@Ibcli@Tfb_get_database_handle @9   ; __tpdsc__ Firedac::Phys::Ibcli::Tfb_get_database_handle
+    @$xp$42Firedac@Phys@Ibcli@Tisc_commit_transaction @135 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_commit_transaction
+    @$xp$42Firedac@Phys@Ibcli@Tisc_dsql_batch_execute @15  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_batch_execute
+    @$xp$42Firedac@Phys@Ibcli@Tisc_dsql_describe_bind @114 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_describe_bind
+    @$xp$42Firedac@Phys@Ibcli@Tisc_dsql_exec_immed3_m @112 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_exec_immed3_m
+    @$xp$42Firedac@Phys@Ibcli@Tisc_embed_dsql_declare @93  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_embed_dsql_declare
+    @$xp$42Firedac@Phys@Ibcli@Tisc_embed_dsql_execute @90  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_embed_dsql_execute
+    @$xp$42Firedac@Phys@Ibcli@Tisc_embed_dsql_prepare @83  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_embed_dsql_prepare
+    @$xp$42Firedac@Phys@Ibcli@Tisc_embed_dsql_release @82  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_embed_dsql_release
+    @$xp$42Firedac@Phys@Ibcli@Tisc_get_client_version @21  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_get_client_version
+    @$xp$42Firedac@Phys@Ibcli@Tisc_rollback_retaining @45  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_rollback_retaining
+    @$xp$42Firedac@Phys@Ibcli@Tisc_rollback_savepoint @17  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_rollback_savepoint
+    @$xp$42Firedac@Phys@Ibwrapper@TIBPBInfoFilterFunc @555 ; __tpdsc__ Firedac::Phys::Ibwrapper::TIBPBInfoFilterFunc
+    @$xp$43Firedac@Phys@Ibbase@TFDPhysIBBaseDriverLink @787 ; __tpdsc__ Firedac::Phys::Ibbase::TFDPhysIBBaseDriverLink
+    @$xp$43Firedac@Phys@Ibbase@TFDPhysIBConnectionBase @768 ; __tpdsc__ Firedac::Phys::Ibbase::TFDPhysIBConnectionBase
+    @$xp$43Firedac@Phys@Ibcli@Tisc_array_lookup_bounds @150 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_array_lookup_bounds
+    @$xp$43Firedac@Phys@Ibcli@Tisc_dsql_free_statement @102 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_free_statement
+    @$xp$43Firedac@Phys@Ibcli@Tisc_embed_dsql_describe @92  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_embed_dsql_describe
+    @$xp$43Firedac@Phys@Ibcli@Tisc_embed_dsql_execute2 @88  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_embed_dsql_execute2
+    @$xp$43Firedac@Phys@Ibcli@Tisc_prepare_transaction @58  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_prepare_transaction
+    @$xp$44Firedac@Phys@Ibbase@TFDPhysIBTransactionBase @766 ; __tpdsc__ Firedac::Phys::Ibbase::TFDPhysIBTransactionBase
+    @$xp$44Firedac@Phys@Ibbase@_TFDPhysIBCommandBase@_1 @759 ; __tpdsc__ Firedac::Phys::Ibbase::_TFDPhysIBCommandBase::_1
+    @$xp$44Firedac@Phys@Ibbase@_TFDPhysIBCommandBase@_2 @758 ; __tpdsc__ Firedac::Phys::Ibbase::_TFDPhysIBCommandBase::_2
+    @$xp$44Firedac@Phys@Ibcli@FB_SHUTDOWN_CALLBACK_FUNC @165 ; __tpdsc__ Firedac::Phys::Ibcli::FB_SHUTDOWN_CALLBACK_FUNC
+    @$xp$44Firedac@Phys@Ibcli@Tisc_dsql_set_cursor_name @96  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_set_cursor_name
+    @$xp$44Firedac@Phys@Ibcli@Tisc_prepare_transaction2 @57  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_prepare_transaction2
+    @$xp$44Firedac@Phys@Ibcli@Tisc_rollback_transaction @44  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_rollback_transaction
+    @$xp$45Firedac@Phys@Ibbase@TFDPhysIBEventAlerterBase @764 ; __tpdsc__ Firedac::Phys::Ibbase::TFDPhysIBEventAlerterBase
+    @$xp$45Firedac@Phys@Ibcli@Tfb_get_transaction_handle @8   ; __tpdsc__ Firedac::Phys::Ibcli::Tfb_get_transaction_handle
+    @$xp$45Firedac@Phys@Ibcli@Tisc_dsql_alloc_statement2 @117 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_alloc_statement2
+    @$xp$45Firedac@Phys@Ibcli@Tisc_reconnect_transaction @48  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_reconnect_transaction
+    @$xp$46Firedac@Phys@Ibcli@Tisc_dsql_execute_immediate @110 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_execute_immediate
+    @$xp$47Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams @819 ; __tpdsc__ Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams
+    @$xp$47Firedac@Phys@Ibcli@Tisc_dsql_allocate_statement @116 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_allocate_statement
+    @$xp$47Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams @607 ; __tpdsc__ Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams
+    @$xp$48Firedac@Phys@Ibcli@Tisc_dsql_execute_immediate_m @109 ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_dsql_execute_immediate_m
+    @$xp$48Firedac@Phys@Ibcli@Tisc_embed_dsql_describe_bind @91  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_embed_dsql_describe_bind
+    @$xp$48Firedac@Phys@Ibcli@Tisc_embed_dsql_execute_immed @89  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_embed_dsql_execute_immed
+    @$xp$48Firedac@Phys@Ibcli@Tisc_get_client_major_version @20  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_get_client_major_version
+    @$xp$48Firedac@Phys@Ibcli@Tisc_get_client_minor_version @19  ; __tpdsc__ Firedac::Phys::Ibcli::Tisc_get_client_minor_version
+    @$xp$49Firedac@Phys@Ibwrapper@Firedac_Phys_Ibwrapper__12 @521 ; __tpdsc__ Firedac::Phys::Ibwrapper::Firedac_Phys_Ibwrapper__12
+    @$xp$49Firedac@Phys@Ibwrapper@Firedac_Phys_Ibwrapper__42 @515 ; __tpdsc__ Firedac::Phys::Ibwrapper::Firedac_Phys_Ibwrapper__42
+    @$xp$49Firedac@Phys@Ibwrapper@Firedac_Phys_Ibwrapper__72 @509 ; __tpdsc__ Firedac::Phys::Ibwrapper::Firedac_Phys_Ibwrapper__72
+    @$xp$49Firedac@Phys@Ibwrapper@Firedac_Phys_Ibwrapper__91 @525 ; __tpdsc__ Firedac::Phys::Ibwrapper::Firedac_Phys_Ibwrapper__91
+    @$xp$55Firedac@Phys@Iblitedef@TFDPhysIBLiteConnectionDefParams @870 ; __tpdsc__ Firedac::Phys::Iblitedef::TFDPhysIBLiteConnectionDefParams
+    @Firedac@Phys@Fb@Finalization$qqrv @822 ; __fastcall Firedac::Phys::Fb::Finalization()
+    @Firedac@Phys@Fb@TFDFBNBackup@ @851 ; Firedac::Phys::Fb::TFDFBNBackup::
+    @Firedac@Phys@Fb@TFDFBNBackup@Backup$qqrv @840 ; __fastcall Firedac::Phys::Fb::TFDFBNBackup::Backup()
+    @Firedac@Phys@Fb@TFDFBNBackup@CreateService$qqrp29Firedac@Phys@Ibwrapper@TIBEnv @842 ; __fastcall Firedac::Phys::Fb::TFDFBNBackup::CreateService(Firedac::Phys::Ibwrapper::TIBEnv *)
+    @Firedac@Phys@Fb@TFDFBNBackup@SetupService$qqrp33Firedac@Phys@Ibwrapper@TIBService @841 ; __fastcall Firedac::Phys::Fb::TFDFBNBackup::SetupService(Firedac::Phys::Ibwrapper::TIBService *)
+    @Firedac@Phys@Fb@TFDFBNRestore@ @849 ; Firedac::Phys::Fb::TFDFBNRestore::
+    @Firedac@Phys@Fb@TFDFBNRestore@$bctr$qqrp25System@Classes@TComponent @839 ; __fastcall Firedac::Phys::Fb::TFDFBNRestore::TFDFBNRestore(System::Classes::TComponent *)
+    @Firedac@Phys@Fb@TFDFBNRestore@$bdtr$qqrv @838 ; __fastcall Firedac::Phys::Fb::TFDFBNRestore::~TFDFBNRestore()
+    @Firedac@Phys@Fb@TFDFBNRestore@CreateService$qqrp29Firedac@Phys@Ibwrapper@TIBEnv @836 ; __fastcall Firedac::Phys::Fb::TFDFBNRestore::CreateService(Firedac::Phys::Ibwrapper::TIBEnv *)
+    @Firedac@Phys@Fb@TFDFBNRestore@Restore$qqrv @834 ; __fastcall Firedac::Phys::Fb::TFDFBNRestore::Restore()
+    @Firedac@Phys@Fb@TFDFBNRestore@SetBackupFile$qqrxp23System@Classes@TStrings @837 ; __fastcall Firedac::Phys::Fb::TFDFBNRestore::SetBackupFile(System::Classes::TStrings * const)
+    @Firedac@Phys@Fb@TFDFBNRestore@SetupService$qqrp33Firedac@Phys@Ibwrapper@TIBService @835 ; __fastcall Firedac::Phys::Fb::TFDFBNRestore::SetupService(Firedac::Phys::Ibwrapper::TIBService *)
+    @Firedac@Phys@Fb@TFDFBTrace@   @847 ; Firedac::Phys::Fb::TFDFBTrace::
+    @Firedac@Phys@Fb@TFDFBTrace@$bctr$qqrp25System@Classes@TComponent @833 ; __fastcall Firedac::Phys::Fb::TFDFBTrace::TFDFBTrace(System::Classes::TComponent *)
+    @Firedac@Phys@Fb@TFDFBTrace@$bdtr$qqrv @832 ; __fastcall Firedac::Phys::Fb::TFDFBTrace::~TFDFBTrace()
+    @Firedac@Phys@Fb@TFDFBTrace@CreateService$qqrp29Firedac@Phys@Ibwrapper@TIBEnv @830 ; __fastcall Firedac::Phys::Fb::TFDFBTrace::CreateService(Firedac::Phys::Ibwrapper::TIBEnv *)
+    @Firedac@Phys@Fb@TFDFBTrace@DoProgress$qqrp33Firedac@Phys@Ibwrapper@TIBServicex20System@UnicodeString @828 ; __fastcall Firedac::Phys::Fb::TFDFBTrace::DoProgress(Firedac::Phys::Ibwrapper::TIBService *, const System::UnicodeString)
+    @Firedac@Phys@Fb@TFDFBTrace@List$qqrv @823 ; __fastcall Firedac::Phys::Fb::TFDFBTrace::List()
+    @Firedac@Phys@Fb@TFDFBTrace@Resume$qqrv @824 ; __fastcall Firedac::Phys::Fb::TFDFBTrace::Resume()
+    @Firedac@Phys@Fb@TFDFBTrace@SetConfig$qqrxp23System@Classes@TStrings @831 ; __fastcall Firedac::Phys::Fb::TFDFBTrace::SetConfig(System::Classes::TStrings * const)
+    @Firedac@Phys@Fb@TFDFBTrace@SetupService$qqrp33Firedac@Phys@Ibwrapper@TIBService @829 ; __fastcall Firedac::Phys::Fb::TFDFBTrace::SetupService(Firedac::Phys::Ibwrapper::TIBService *)
+    @Firedac@Phys@Fb@TFDFBTrace@Start$qqrv @827 ; __fastcall Firedac::Phys::Fb::TFDFBTrace::Start()
+    @Firedac@Phys@Fb@TFDFBTrace@Stop$qqrv @826 ; __fastcall Firedac::Phys::Fb::TFDFBTrace::Stop()
+    @Firedac@Phys@Fb@TFDFBTrace@Suspend$qqrv @825 ; __fastcall Firedac::Phys::Fb::TFDFBTrace::Suspend()
+    @Firedac@Phys@Fb@TFDPhysFBDriverLink@ @853 ; Firedac::Phys::Fb::TFDPhysFBDriverLink::
+    @Firedac@Phys@Fb@TFDPhysFBDriverLink@ApplyTo$qqrx62System@%DelphiInterface$35Firedac@Stan@Intf@IFDStanDefinition% @844 ; Firedac::Phys::Fb::TFDPhysFBDriverLink::ApplyTo(const System::DelphiInterface<{583}...
+    @Firedac@Phys@Fb@TFDPhysFBDriverLink@GetBaseDriverID$qqrv @845 ; __fastcall Firedac::Phys::Fb::TFDPhysFBDriverLink::GetBaseDriverID()
+    @Firedac@Phys@Fb@TFDPhysFBDriverLink@IsConfigured$qqrv @843 ; __fastcall Firedac::Phys::Fb::TFDPhysFBDriverLink::IsConfigured()
+    @Firedac@Phys@Fb@initialization$qqrv @821 ; __fastcall Firedac::Phys::Fb::initialization()
+    @Firedac@Phys@Fbdef@Finalization$qqrv @792 ; __fastcall Firedac::Phys::Fbdef::Finalization()
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@ @820 ; Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@GetCharacterSet$qqrv @804 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::GetCharacterSet()
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@GetDriverID$qqrv @818 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::GetDriverID()
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@GetDropDatabase$qqrv @796 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::GetDropDatabase()
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@GetExtendedMetadata$qqrv @802 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::GetExtendedMetadata()
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@GetIBAdvanced$qqrv @794 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::GetIBAdvanced()
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@GetOSAuthent$qqrv @816 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::GetOSAuthent()
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@GetOpenMode$qqrv @800 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::GetOpenMode()
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@GetPageSize$qqrv @798 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::GetPageSize()
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@GetPort$qqrv @810 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::GetPort()
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@GetProtocol$qqrv @814 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::GetProtocol()
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@GetRoleName$qqrv @806 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::GetRoleName()
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@GetSQLDialect$qqrv @808 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::GetSQLDialect()
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@GetServer$qqrv @812 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::GetServer()
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@SetCharacterSet$qqrx38Firedac@Phys@Ibwrapper@TIBCharacterSet @803 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::SetCharacterSet(const Firedac::Phys::Ibwrapper::TIBCharacterSet)
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@SetDriverID$qqrx20System@UnicodeString @817 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::SetDriverID(const System::UnicodeString)
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@SetDropDatabase$qqrxo @795 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::SetDropDatabase(const bool)
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@SetExtendedMetadata$qqrxo @801 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::SetExtendedMetadata(const bool)
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@SetIBAdvanced$qqrx20System@UnicodeString @793 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::SetIBAdvanced(const System::UnicodeString)
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@SetOSAuthent$qqrxo @815 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::SetOSAuthent(const bool)
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@SetOpenMode$qqrx34Firedac@Phys@Ibwrapper@TIBOpenMode @799 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::SetOpenMode(const Firedac::Phys::Ibwrapper::TIBOpenMode)
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@SetPageSize$qqrx34Firedac@Phys@Ibwrapper@TIBPageSize @797 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::SetPageSize(const Firedac::Phys::Ibwrapper::TIBPageSize)
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@SetPort$qqrxi @809 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::SetPort(const int)
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@SetProtocol$qqrx34Firedac@Phys@Ibwrapper@TIBProtocol @813 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::SetProtocol(const Firedac::Phys::Ibwrapper::TIBProtocol)
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@SetRoleName$qqrx20System@UnicodeString @805 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::SetRoleName(const System::UnicodeString)
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@SetSQLDialect$qqrxi @807 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::SetSQLDialect(const int)
+    @Firedac@Phys@Fbdef@TFDPhysFBConnectionDefParams@SetServer$qqrx20System@UnicodeString @811 ; __fastcall Firedac::Phys::Fbdef::TFDPhysFBConnectionDefParams::SetServer(const System::UnicodeString)
+    @Firedac@Phys@Fbdef@initialization$qqrv @791 ; __fastcall Firedac::Phys::Fbdef::initialization()
+    @Firedac@Phys@Ib@Finalization$qqrv @873 ; __fastcall Firedac::Phys::Ib::Finalization()
+    @Firedac@Phys@Ib@TFDIBSDump@   @884 ; Firedac::Phys::Ib::TFDIBSDump::
+    @Firedac@Phys@Ib@TFDIBSDump@$bctr$qqrp25System@Classes@TComponent @879 ; __fastcall Firedac::Phys::Ib::TFDIBSDump::TFDIBSDump(System::Classes::TComponent *)
+    @Firedac@Phys@Ib@TFDIBSDump@$bdtr$qqrv @878 ; __fastcall Firedac::Phys::Ib::TFDIBSDump::~TFDIBSDump()
+    @Firedac@Phys@Ib@TFDIBSDump@CreateService$qqrp29Firedac@Phys@Ibwrapper@TIBEnv @876 ; __fastcall Firedac::Phys::Ib::TFDIBSDump::CreateService(Firedac::Phys::Ibwrapper::TIBEnv *)
+    @Firedac@Phys@Ib@TFDIBSDump@Dump$qqrv @874 ; __fastcall Firedac::Phys::Ib::TFDIBSDump::Dump()
+    @Firedac@Phys@Ib@TFDIBSDump@SetBackupFiles$qqrxp23System@Classes@TStrings @877 ; __fastcall Firedac::Phys::Ib::TFDIBSDump::SetBackupFiles(System::Classes::TStrings * const)
+    @Firedac@Phys@Ib@TFDIBSDump@SetupService$qqrp33Firedac@Phys@Ibwrapper@TIBService @875 ; __fastcall Firedac::Phys::Ib::TFDIBSDump::SetupService(Firedac::Phys::Ibwrapper::TIBService *)
+    @Firedac@Phys@Ib@TFDPhysIBDriverLink@ @886 ; Firedac::Phys::Ib::TFDPhysIBDriverLink::
+    @Firedac@Phys@Ib@TFDPhysIBDriverLink@ApplyTo$qqrx62System@%DelphiInterface$35Firedac@Stan@Intf@IFDStanDefinition% @881 ; Firedac::Phys::Ib::TFDPhysIBDriverLink::ApplyTo(const System::DelphiInterface<{583}...
+    @Firedac@Phys@Ib@TFDPhysIBDriverLink@GetBaseDriverID$qqrv @882 ; __fastcall Firedac::Phys::Ib::TFDPhysIBDriverLink::GetBaseDriverID()
+    @Firedac@Phys@Ib@TFDPhysIBDriverLink@IsConfigured$qqrv @880 ; __fastcall Firedac::Phys::Ib::TFDPhysIBDriverLink::IsConfigured()
+    @Firedac@Phys@Ib@initialization$qqrv @872 ; __fastcall Firedac::Phys::Ib::initialization()
+    @Firedac@Phys@Ibbase@Finalization$qqrv @610 ; __fastcall Firedac::Phys::Ibbase::Finalization()
+    @Firedac@Phys@Ibbase@TFDIBBackup@ @784 ; Firedac::Phys::Ibbase::TFDIBBackup::
+    @Firedac@Phys@Ibbase@TFDIBBackup@$bctr$qqrp25System@Classes@TComponent @744 ; __fastcall Firedac::Phys::Ibbase::TFDIBBackup::TFDIBBackup(System::Classes::TComponent *)
+    @Firedac@Phys@Ibbase@TFDIBBackup@$bdtr$qqrv @743 ; __fastcall Firedac::Phys::Ibbase::TFDIBBackup::~TFDIBBackup()
+    @Firedac@Phys@Ibbase@TFDIBBackup@Backup$qqrv @739 ; __fastcall Firedac::Phys::Ibbase::TFDIBBackup::Backup()
+    @Firedac@Phys@Ibbase@TFDIBBackup@CreateService$qqrp29Firedac@Phys@Ibwrapper@TIBEnv @741 ; __fastcall Firedac::Phys::Ibbase::TFDIBBackup::CreateService(Firedac::Phys::Ibwrapper::TIBEnv *)
+    @Firedac@Phys@Ibbase@TFDIBBackup@SetBackupFiles$qqrxp23System@Classes@TStrings @742 ; __fastcall Firedac::Phys::Ibbase::TFDIBBackup::SetBackupFiles(System::Classes::TStrings * const)
+    @Firedac@Phys@Ibbase@TFDIBBackup@SetupService$qqrp33Firedac@Phys@Ibwrapper@TIBService @740 ; __fastcall Firedac::Phys::Ibbase::TFDIBBackup::SetupService(Firedac::Phys::Ibwrapper::TIBService *)
+    @Firedac@Phys@Ibbase@TFDIBConfig@ @773 ; Firedac::Phys::Ibbase::TFDIBConfig::
+    @Firedac@Phys@Ibbase@TFDIBConfig@ActivateShadow$qqrv @687 ; __fastcall Firedac::Phys::Ibbase::TFDIBConfig::ActivateShadow()
+    @Firedac@Phys@Ibbase@TFDIBConfig@CreateService$qqrp29Firedac@Phys@Ibwrapper@TIBEnv @697 ; __fastcall Firedac::Phys::Ibbase::TFDIBConfig::CreateService(Firedac::Phys::Ibwrapper::TIBEnv *)
+    @Firedac@Phys@Ibbase@TFDIBConfig@OnlineDB$qqrv @688 ; __fastcall Firedac::Phys::Ibbase::TFDIBConfig::OnlineDB()
+    @Firedac@Phys@Ibbase@TFDIBConfig@SetAccessMode$qqrx36Firedac@Phys@Ibwrapper@TIBAccessMode @695 ; __fastcall Firedac::Phys::Ibbase::TFDIBConfig::SetAccessMode(const Firedac::Phys::Ibwrapper::TIBAccessMode)
+    @Firedac@Phys@Ibbase@TFDIBConfig@SetPageBuffers$qqrxui @694 ; __fastcall Firedac::Phys::Ibbase::TFDIBConfig::SetPageBuffers(const unsigned int)
+    @Firedac@Phys@Ibbase@TFDIBConfig@SetReserveSpace$qqrx38Firedac@Phys@Ibwrapper@TIBReserveSpace @693 ; __fastcall Firedac::Phys::Ibbase::TFDIBConfig::SetReserveSpace(const Firedac::Phys::Ibwrapper::TIBReserveSpace)
+    @Firedac@Phys@Ibbase@TFDIBConfig@SetSQLDialect$qqrxui @692 ; __fastcall Firedac::Phys::Ibbase::TFDIBConfig::SetSQLDialect(const unsigned int)
+    @Firedac@Phys@Ibbase@TFDIBConfig@SetSweepInterval$qqrxui @691 ; __fastcall Firedac::Phys::Ibbase::TFDIBConfig::SetSweepInterval(const unsigned int)
+    @Firedac@Phys@Ibbase@TFDIBConfig@SetWriteMode$qqrx35Firedac@Phys@Ibwrapper@TIBWriteMode @690 ; __fastcall Firedac::Phys::Ibbase::TFDIBConfig::SetWriteMode(const Firedac::Phys::Ibwrapper::TIBWriteMode)
+    @Firedac@Phys@Ibbase@TFDIBConfig@SetupService$qqrp33Firedac@Phys@Ibwrapper@TIBService @696 ; __fastcall Firedac::Phys::Ibbase::TFDIBConfig::SetupService(Firedac::Phys::Ibwrapper::TIBService *)
+    @Firedac@Phys@Ibbase@TFDIBConfig@ShutdownDB$qqr38Firedac@Phys@Ibwrapper@TIBShutdownModeui @689 ; __fastcall Firedac::Phys::Ibbase::TFDIBConfig::ShutdownDB(Firedac::Phys::Ibwrapper::TIBShutdownMode, unsigned int)
+    @Firedac@Phys@Ibbase@TFDIBRestore@ @782 ; Firedac::Phys::Ibbase::TFDIBRestore::
+    @Firedac@Phys@Ibbase@TFDIBRestore@$bctr$qqrp25System@Classes@TComponent @738 ; __fastcall Firedac::Phys::Ibbase::TFDIBRestore::TFDIBRestore(System::Classes::TComponent *)
+    @Firedac@Phys@Ibbase@TFDIBRestore@$bdtr$qqrv @737 ; __fastcall Firedac::Phys::Ibbase::TFDIBRestore::~TFDIBRestore()
+    @Firedac@Phys@Ibbase@TFDIBRestore@CreateService$qqrp29Firedac@Phys@Ibwrapper@TIBEnv @735 ; __fastcall Firedac::Phys::Ibbase::TFDIBRestore::CreateService(Firedac::Phys::Ibwrapper::TIBEnv *)
+    @Firedac@Phys@Ibbase@TFDIBRestore@Restore$qqrv @733 ; __fastcall Firedac::Phys::Ibbase::TFDIBRestore::Restore()
+    @Firedac@Phys@Ibbase@TFDIBRestore@SetBackupFiles$qqrxp23System@Classes@TStrings @736 ; __fastcall Firedac::Phys::Ibbase::TFDIBRestore::SetBackupFiles(System::Classes::TStrings * const)
+    @Firedac@Phys@Ibbase@TFDIBRestore@SetupService$qqrp33Firedac@Phys@Ibwrapper@TIBService @734 ; __fastcall Firedac::Phys::Ibbase::TFDIBRestore::SetupService(Firedac::Phys::Ibwrapper::TIBService *)
+    @Firedac@Phys@Ibbase@TFDIBSecurity@ @776 ; Firedac::Phys::Ibbase::TFDIBSecurity::
+    @Firedac@Phys@Ibbase@TFDIBSecurity@AddUser$qqrv @717 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::AddUser()
+    @Firedac@Phys@Ibbase@TFDIBSecurity@ChangeEncryption$qqrx20System@UnicodeStringt1t1o @698 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::ChangeEncryption(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString, bool)
+    @Firedac@Phys@Ibbase@TFDIBSecurity@CreateKey$qqro37Firedac@Phys@Ibbase@TIBEncryptionTypeix20System@UnicodeStringoot4 @706 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::CreateKey(bool, Firedac::Phys::Ibbase::TIBEncryptionType, int, const System::UnicodeString, bool, bool, const System::UnicodeString)
+    @Firedac@Phys@Ibbase@TFDIBSecurity@CreateSEPassword$qqrx20System@UnicodeStringo @707 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::CreateSEPassword(const System::UnicodeString, bool)
+    @Firedac@Phys@Ibbase@TFDIBSecurity@CreateSYSDSO$qqrx20System@UnicodeString @708 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::CreateSYSDSO(const System::UnicodeString)
+    @Firedac@Phys@Ibbase@TFDIBSecurity@CreateService$qqrp29Firedac@Phys@Ibwrapper@TIBEnv @721 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::CreateService(Firedac::Phys::Ibwrapper::TIBEnv *)
+    @Firedac@Phys@Ibbase@TFDIBSecurity@DecryptColumn$qqrx20System@UnicodeStringt1 @701 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::DecryptColumn(const System::UnicodeString, const System::UnicodeString)
+    @Firedac@Phys@Ibbase@TFDIBSecurity@DeleteService$qqrrp33Firedac@Phys@Ibwrapper@TIBService @718 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::DeleteService(Firedac::Phys::Ibwrapper::TIBService *&)
+    @Firedac@Phys@Ibbase@TFDIBSecurity@DeleteUser$qqrv @716 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::DeleteUser()
+    @Firedac@Phys@Ibbase@TFDIBSecurity@DisplayUser$qqrv @714 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::DisplayUser()
+    @Firedac@Phys@Ibbase@TFDIBSecurity@DisplayUsers$qqrv @713 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::DisplayUsers()
+    @Firedac@Phys@Ibbase@TFDIBSecurity@DropKey$qqro @705 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::DropKey(bool)
+    @Firedac@Phys@Ibbase@TFDIBSecurity@EncryptColumn$qqrx20System@UnicodeStringt1 @702 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::EncryptColumn(const System::UnicodeString, const System::UnicodeString)
+    @Firedac@Phys@Ibbase@TFDIBSecurity@GetDBEncrypted$qqrv @710 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::GetDBEncrypted()
+    @Firedac@Phys@Ibbase@TFDIBSecurity@GetEUAActive$qqrv @712 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::GetEUAActive()
+    @Firedac@Phys@Ibbase@TFDIBSecurity@GetInt$qqrxi @726 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::GetInt(const int)
+    @Firedac@Phys@Ibbase@TFDIBSecurity@GetStr$qqrxi @724 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::GetStr(const int)
+    @Firedac@Phys@Ibbase@TFDIBSecurity@GrantKey$qqrx20System@UnicodeString @704 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::GrantKey(const System::UnicodeString)
+    @Firedac@Phys@Ibbase@TFDIBSecurity@IsStored$qqrxi @722 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::IsStored(const int)
+    @Firedac@Phys@Ibbase@TFDIBSecurity@ModifyUser$qqrv @715 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::ModifyUser()
+    @Firedac@Phys@Ibbase@TFDIBSecurity@QueryService$qqrp33Firedac@Phys@Ibwrapper@TIBService @719 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::QueryService(Firedac::Phys::Ibwrapper::TIBService *)
+    @Firedac@Phys@Ibbase@TFDIBSecurity@RemoveEncryption$qqrx20System@UnicodeString @699 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::RemoveEncryption(const System::UnicodeString)
+    @Firedac@Phys@Ibbase@TFDIBSecurity@RevokeKey$qqrx20System@UnicodeString @703 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::RevokeKey(const System::UnicodeString)
+    @Firedac@Phys@Ibbase@TFDIBSecurity@SetDBEncrypted$qqrxo @709 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::SetDBEncrypted(const bool)
+    @Firedac@Phys@Ibbase@TFDIBSecurity@SetEUAActive$qqrxo @711 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::SetEUAActive(const bool)
+    @Firedac@Phys@Ibbase@TFDIBSecurity@SetEncryption$qqrx20System@UnicodeStringt1o37Firedac@Phys@Ibbase@TIBEncryptionTypei @700 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::SetEncryption(const System::UnicodeString, const System::UnicodeString, bool, Firedac::Phys::Ibbase::TIBEncryptionType, int)
+    @Firedac@Phys@Ibbase@TFDIBSecurity@SetInt$qqrxixi @725 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::SetInt(const int, const int)
+    @Firedac@Phys@Ibbase@TFDIBSecurity@SetStr$qqrxix20System@UnicodeString @723 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::SetStr(const int, const System::UnicodeString)
+    @Firedac@Phys@Ibbase@TFDIBSecurity@SetupService$qqrp33Firedac@Phys@Ibwrapper@TIBService @720 ; __fastcall Firedac::Phys::Ibbase::TFDIBSecurity::SetupService(Firedac::Phys::Ibwrapper::TIBService *)
+    @Firedac@Phys@Ibbase@TFDIBService@ @786 ; Firedac::Phys::Ibbase::TFDIBService::
+    @Firedac@Phys@Ibbase@TFDIBService@DeleteService$qqrrp33Firedac@Phys@Ibwrapper@TIBService @751 ; __fastcall Firedac::Phys::Ibbase::TFDIBService::DeleteService(Firedac::Phys::Ibwrapper::TIBService *&)
+    @Firedac@Phys@Ibbase@TFDIBService@DoProgress$qqrp33Firedac@Phys@Ibwrapper@TIBServicex20System@UnicodeString @750 ; __fastcall Firedac::Phys::Ibbase::TFDIBService::DoProgress(Firedac::Phys::Ibwrapper::TIBService *, const System::UnicodeString)
+    @Firedac@Phys@Ibbase@TFDIBService@ExecSQL$qqrx20System@UnicodeStringt1 @745 ; __fastcall Firedac::Phys::Ibbase::TFDIBService::ExecSQL(const System::UnicodeString, const System::UnicodeString)
+    @Firedac@Phys@Ibbase@TFDIBService@ExecSQL$qqrx62System@%DelphiInterface$35Firedac@Phys@Intf@IFDPhysConnection%x20System@UnicodeString @746 ; Firedac::Phys::Ibbase::TFDIBService::ExecSQL(const System::DelphiInterface<{583}...
+    @Firedac@Phys@Ibbase@TFDIBService@GetConnection$qqrx20System@UnicodeString @747 ; __fastcall Firedac::Phys::Ibbase::TFDIBService::GetConnection(const System::UnicodeString)
+    @Firedac@Phys@Ibbase@TFDIBService@GetDriverLink$qqrv @755 ; __fastcall Firedac::Phys::Ibbase::TFDIBService::GetDriverLink()
+    @Firedac@Phys@Ibbase@TFDIBService@InternalExecute$qqrv @748 ; __fastcall Firedac::Phys::Ibbase::TFDIBService::InternalExecute()
+    @Firedac@Phys@Ibbase@TFDIBService@QueryService$qqrp33Firedac@Phys@Ibwrapper@TIBService @749 ; __fastcall Firedac::Phys::Ibbase::TFDIBService::QueryService(Firedac::Phys::Ibwrapper::TIBService *)
+    @Firedac@Phys@Ibbase@TFDIBService@SetDriverLink$qqrxp43Firedac@Phys@Ibbase@TFDPhysIBBaseDriverLink @754 ; __fastcall Firedac::Phys::Ibbase::TFDIBService::SetDriverLink(Firedac::Phys::Ibbase::TFDPhysIBBaseDriverLink * const)
+    @Firedac@Phys@Ibbase@TFDIBService@SetHost$qqrx20System@UnicodeString @753 ; __fastcall Firedac::Phys::Ibbase::TFDIBService::SetHost(const System::UnicodeString)
+    @Firedac@Phys@Ibbase@TFDIBService@SetupService$qqrp33Firedac@Phys@Ibwrapper@TIBService @752 ; __fastcall Firedac::Phys::Ibbase::TFDIBService::SetupService(Firedac::Phys::Ibwrapper::TIBService *)
+    @Firedac@Phys@Ibbase@TFDIBValidate@ @780 ; Firedac::Phys::Ibbase::TFDIBValidate::
+    @Firedac@Phys@Ibbase@TFDIBValidate@Analyze$qqrx20System@UnicodeStringt1 @727 ; __fastcall Firedac::Phys::Ibbase::TFDIBValidate::Analyze(const System::UnicodeString, const System::UnicodeString)
+    @Firedac@Phys@Ibbase@TFDIBValidate@CheckOnly$qqrv @730 ; __fastcall Firedac::Phys::Ibbase::TFDIBValidate::CheckOnly()
+    @Firedac@Phys@Ibbase@TFDIBValidate@CreateService$qqrp29Firedac@Phys@Ibwrapper@TIBEnv @732 ; __fastcall Firedac::Phys::Ibbase::TFDIBValidate::CreateService(Firedac::Phys::Ibwrapper::TIBEnv *)
+    @Firedac@Phys@Ibbase@TFDIBValidate@Repair$qqrv @729 ; __fastcall Firedac::Phys::Ibbase::TFDIBValidate::Repair()
+    @Firedac@Phys@Ibbase@TFDIBValidate@SetupService$qqrp33Firedac@Phys@Ibwrapper@TIBService @731 ; __fastcall Firedac::Phys::Ibbase::TFDIBValidate::SetupService(Firedac::Phys::Ibwrapper::TIBService *)
+    @Firedac@Phys@Ibbase@TFDIBValidate@Sweep$qqrv @728 ; __fastcall Firedac::Phys::Ibbase::TFDIBValidate::Sweep()
+    @Firedac@Phys@Ibbase@TFDPhysIBBaseDriverLink@ @788 ; Firedac::Phys::Ibbase::TFDPhysIBBaseDriverLink::
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@ @757 ; Firedac::Phys::Ibbase::TFDPhysIBCommandBase::
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@CheckColInfos$qqrv @631 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::CheckColInfos()
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@CheckParamInfos$qqrv @630 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::CheckParamInfos()
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@CheckSPPrepared$qqr36Firedac@Phys@Intf@TFDPhysCommandKind @632 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::CheckSPPrepared(Firedac::Phys::Intf::TFDPhysCommandKind)
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@CreateColInfos$qqrv @640 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::CreateColInfos()
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@CreateParamInfos$qqrp35Firedac@Phys@Ibwrapper@TIBVariablesoo @638 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::CreateParamInfos(Firedac::Phys::Ibwrapper::TIBVariables *, bool, bool)
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@DestroyColInfos$qqrv @639 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::DestroyColInfos()
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@DestroyParamInfos$qqrv @637 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::DestroyParamInfos()
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@DoExecute$qqriiri @621 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::DoExecute(int, int, int&)
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@FetchRow$qqrp25Firedac@Dats@TFDDatSTablep23Firedac@Dats@TFDDatSRow @615 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::FetchRow(Firedac::Dats::TFDDatSTable *, Firedac::Dats::TFDDatSRow *)
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@GetCliObj$qqrv @643 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::GetCliObj()
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@GetConnection$qqrv @644 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::GetConnection()
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@GetItem$qqrir20System@UnicodeStringr14System@Variantr40Firedac@Stan@Intf@TFDMoniAdapterItemKind @611 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::GetItem(int, System::UnicodeString&, System::Variant&, Firedac::Stan::Intf::TFDMoniAdapterItemKind&)
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@GetItemCount$qqrv @612 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::GetItemCount()
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@GetParamValue$qqrp36Firedac@Stan@Option@TFDFormatOptionsp27Firedac@Stan@Param@TFDParamp34Firedac@Phys@Ibwrapper@TIBVariablep35Firedac@Phys@Ibbase@TFDIBParInfoRecii @623 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::GetParamValue(Firedac::Stan::Option::TFDFormatOptions *, Firedac::Stan::Param::TFDParam *, Firedac::Phys::Ibwrapper::TIBVariable *, Firedac::Phys::Ibbase::TFDIBParInfoRec *, int, int)
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@GetParamValues$qqrii @622 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::GetParamValues(int, int)
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@InternalAbort$qqrv @620 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::InternalAbort()
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@InternalClose$qqrv @618 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::InternalClose()
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@InternalColInfoGet$qqrr34Firedac@Phys@TFDPhysDataColumnInfo @626 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::InternalColInfoGet(Firedac::Phys::TFDPhysDataColumnInfo&)
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@InternalColInfoStart$qqrr33Firedac@Phys@TFDPhysDataTableInfo @627 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::InternalColInfoStart(Firedac::Phys::TFDPhysDataTableInfo&)
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@InternalFetchRowSet$qqrp25Firedac@Dats@TFDDatSTablep23Firedac@Dats@TFDDatSRowui @614 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::InternalFetchRowSet(Firedac::Dats::TFDDatSTable *, Firedac::Dats::TFDDatSRow *, unsigned int)
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@InternalNextRecordSet$qqrv @613 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::InternalNextRecordSet()
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@InternalOpen$qqrv @619 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::InternalOpen()
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@InternalPrepare$qqrv @633 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::InternalPrepare()
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@InternalUnprepare$qqrv @629 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::InternalUnprepare()
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@InternalUseStandardMetadata$qqrv @628 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::InternalUseStandardMetadata()
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@IsReturning$qqrv @635 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::IsReturning()
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@PrepareBase$qqrv @634 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::PrepareBase()
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@ProcessColumn$qqrp25Firedac@Dats@TFDDatSTablep36Firedac@Stan@Option@TFDFormatOptionsip23Firedac@Dats@TFDDatSRowp35Firedac@Phys@Ibbase@TFDIBColInfoReci @617 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::ProcessColumn(Firedac::Dats::TFDDatSTable *, Firedac::Stan::Option::TFDFormatOptions *, int, Firedac::Dats::TFDDatSRow *, Firedac::Phys::Ibbase::TFDIBColInfoRec *, int)
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@ProcessMetaColumn$qqrp25Firedac@Dats@TFDDatSTablep36Firedac@Stan@Option@TFDFormatOptionsip23Firedac@Dats@TFDDatSRowp35Firedac@Phys@Ibbase@TFDIBColInfoReci @616 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::ProcessMetaColumn(Firedac::Dats::TFDDatSTable *, Firedac::Stan::Option::TFDFormatOptions *, int, Firedac::Dats::TFDDatSRow *, Firedac::Phys::Ibbase::TFDIBColInfoRec *, int)
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@SQL2ADColInfo$qqrsssssr29Firedac@Stan@Intf@TFDDataTyper62System@%Set$34Firedac@Stan@Intf@TFDDataAttributet1$i0$t1$i15$%ruirit9p36Firedac@Stan@Option@TFDFormatOptions @641 ; Firedac::Phys::Ibbase::TFDPhysIBCommandBase::SQL2ADColInfo(short, short, short, short, short, Firedac::Stan::Intf::TFDDataType&, System::Set<{583}...
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@SetParamValue$qqrp36Firedac@Stan@Option@TFDFormatOptionsp27Firedac@Stan@Param@TFDParamp34Firedac@Phys@Ibwrapper@TIBVariablep35Firedac@Phys@Ibbase@TFDIBParInfoRecii @625 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::SetParamValue(Firedac::Stan::Option::TFDFormatOptions *, Firedac::Stan::Param::TFDParam *, Firedac::Phys::Ibwrapper::TIBVariable *, Firedac::Phys::Ibbase::TFDIBParInfoRec *, int, int)
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@SetParamValues$qqrii @624 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::SetParamValues(int, int)
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@SetupStatement$qqrp35Firedac@Phys@Ibwrapper@TIBStatement @642 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::SetupStatement(Firedac::Phys::Ibwrapper::TIBStatement *)
+    @Firedac@Phys@Ibbase@TFDPhysIBCommandBase@UseExecDirect$qqrv @636 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBCommandBase::UseExecDirect()
+    @Firedac@Phys@Ibbase@TFDPhysIBConnectionBase@ @769 ; Firedac::Phys::Ibbase::TFDPhysIBConnectionBase::
+    @Firedac@Phys@Ibbase@TFDPhysIBConnectionBase@$bctr$qqrp26Firedac@Phys@TFDPhysDriverp34Firedac@Phys@TFDPhysConnectionHost @681 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBConnectionBase::TFDPhysIBConnectionBase(Firedac::Phys::TFDPhysDriver *, Firedac::Phys::TFDPhysConnectionHost *)
+    @Firedac@Phys@Ibbase@TFDPhysIBConnectionBase@$bdtr$qqrv @680 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBConnectionBase::~TFDPhysIBConnectionBase()
+    @Firedac@Phys@Ibbase@TFDPhysIBConnectionBase@BuildIBConnectParams$qqrp23System@Classes@TStringsx65System@%DelphiInterface$38Firedac@Stan@Intf@IFDStanConnectionDef% @673 ; Firedac::Phys::Ibbase::TFDPhysIBConnectionBase::BuildIBConnectParams(System::Classes::TStrings *, const System::DelphiInterface<{583}...
+    @Firedac@Phys@Ibbase@TFDPhysIBConnectionBase@GetCliObj$qqrv @665 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBConnectionBase::GetCliObj()
+    @Firedac@Phys@Ibbase@TFDPhysIBConnectionBase@GetItem$qqrir20System@UnicodeStringr14System@Variantr40Firedac@Stan@Intf@TFDMoniAdapterItemKind @667 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBConnectionBase::GetItem(int, System::UnicodeString&, System::Variant&, Firedac::Stan::Intf::TFDMoniAdapterItemKind&)
+    @Firedac@Phys@Ibbase@TFDPhysIBConnectionBase@GetItemCount$qqrv @668 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBConnectionBase::GetItemCount()
+    @Firedac@Phys@Ibbase@TFDPhysIBConnectionBase@GetMessages$qqrv @666 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBConnectionBase::GetMessages()
+    @Firedac@Phys@Ibbase@TFDPhysIBConnectionBase@InternalAnalyzeSession$qqrp23System@Classes@TStrings @663 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBConnectionBase::InternalAnalyzeSession(System::Classes::TStrings *)
+    @Firedac@Phys@Ibbase@TFDPhysIBConnectionBase@InternalConnect$qqrv @672 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBConnectionBase::InternalConnect()
+    @Firedac@Phys@Ibbase@TFDPhysIBConnectionBase@InternalCreateCommandGenerator$qqrx59System@%DelphiInterface$32Firedac@Phys@Intf@IFDPhysCommand% @676 ; Firedac::Phys::Ibbase::TFDPhysIBConnectionBase::InternalCreateCommandGenerator(const System::DelphiInterface<{583}...
+    @Firedac@Phys@Ibbase@TFDPhysIBConnectionBase@InternalCreateEvent$qqrx20System@UnicodeString @678 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBConnectionBase::InternalCreateEvent(const System::UnicodeString)
+    @Firedac@Phys@Ibbase@TFDPhysIBConnectionBase@InternalCreateMetaInfoCommand$qqrv @677 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBConnectionBase::InternalCreateMetaInfoCommand()
+    @Firedac@Phys@Ibbase@TFDPhysIBConnectionBase@InternalCreateMetadata$qqrv @675 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBConnectionBase::InternalCreateMetadata()
+    @Firedac@Phys@Ibbase@TFDPhysIBConnectionBase@InternalCreateTransaction$qqrv @679 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBConnectionBase::InternalCreateTransaction()
+    @Firedac@Phys@Ibbase@TFDPhysIBConnectionBase@InternalDisconnect$qqrv @671 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBConnectionBase::InternalDisconnect()
+    @Firedac@Phys@Ibbase@TFDPhysIBConnectionBase@InternalExecuteDirect$qqrx20System@UnicodeStringp31Firedac@Phys@TFDPhysTransaction @669 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBConnectionBase::InternalExecuteDirect(const System::UnicodeString, Firedac::Phys::TFDPhysTransaction *)
+    @Firedac@Phys@Ibbase@TFDPhysIBConnectionBase@InternalGetCliHandle$qqrv @664 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBConnectionBase::InternalGetCliHandle()
+    @Firedac@Phys@Ibbase@TFDPhysIBConnectionBase@InternalPing$qqrv @670 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBConnectionBase::InternalPing()
+    @Firedac@Phys@Ibbase@TFDPhysIBConnectionBase@InternalTracingChanged$qqrv @674 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBConnectionBase::InternalTracingChanged()
+    @Firedac@Phys@Ibbase@TFDPhysIBDriverBase@ @771 ; Firedac::Phys::Ibbase::TFDPhysIBDriverBase::
+    @Firedac@Phys@Ibbase@TFDPhysIBDriverBase@$bctr$qqrp27Firedac@Phys@TFDPhysManagerx62System@%DelphiInterface$35Firedac@Stan@Intf@IFDStanDefinition% @686 ; Firedac::Phys::Ibbase::TFDPhysIBDriverBase::TFDPhysIBDriverBase(Firedac::Phys::TFDPhysManager *, const System::DelphiInterface<{583}...
+    @Firedac@Phys@Ibbase@TFDPhysIBDriverBase@$bdtr$qqrv @685 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBDriverBase::~TFDPhysIBDriverBase()
+    @Firedac@Phys@Ibbase@TFDPhysIBDriverBase@GetCliObj$qqrv @683 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBDriverBase::GetCliObj()
+    @Firedac@Phys@Ibbase@TFDPhysIBDriverBase@GetConnParams$qqrp23System@Classes@TStringsp25Firedac@Dats@TFDDatSTable @682 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBDriverBase::GetConnParams(System::Classes::TStrings *, Firedac::Dats::TFDDatSTable *)
+    @Firedac@Phys@Ibbase@TFDPhysIBDriverBase@InternalUnload$qqrv @684 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBDriverBase::InternalUnload()
+    @Firedac@Phys@Ibbase@TFDPhysIBEventAlerterBase@ @765 ; Firedac::Phys::Ibbase::TFDPhysIBEventAlerterBase::
+    @Firedac@Phys@Ibbase@TFDPhysIBEventAlerterBase@DoFired$qqrp32Firedac@Phys@Ibwrapper@TIBEventsirx29System@%StaticArray$uii$i20$% @650 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBEventAlerterBase::DoFired(Firedac::Phys::Ibwrapper::TIBEvents *, int, const System::StaticArray<unsigned int, 20>&)
+    @Firedac@Phys@Ibbase@TFDPhysIBEventAlerterBase@InternalAllocHandle$qqrv @651 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBEventAlerterBase::InternalAllocHandle()
+    @Firedac@Phys@Ibbase@TFDPhysIBEventAlerterBase@InternalHandle$qqrp32Firedac@Phys@TFDPhysEventMessage @649 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBEventAlerterBase::InternalHandle(Firedac::Phys::TFDPhysEventMessage *)
+    @Firedac@Phys@Ibbase@TFDPhysIBEventAlerterBase@InternalRegister$qqrv @648 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBEventAlerterBase::InternalRegister()
+    @Firedac@Phys@Ibbase@TFDPhysIBEventAlerterBase@InternalReleaseHandle$qqrv @646 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBEventAlerterBase::InternalReleaseHandle()
+    @Firedac@Phys@Ibbase@TFDPhysIBEventAlerterBase@InternalSignal$qqrx20System@UnicodeStringrx14System@Variant @645 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBEventAlerterBase::InternalSignal(const System::UnicodeString, const System::Variant&)
+    @Firedac@Phys@Ibbase@TFDPhysIBEventAlerterBase@InternalUnregister$qqrv @647 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBEventAlerterBase::InternalUnregister()
+    @Firedac@Phys@Ibbase@TFDPhysIBTransactionBase@ @767 ; Firedac::Phys::Ibbase::TFDPhysIBTransactionBase::
+    @Firedac@Phys@Ibbase@TFDPhysIBTransactionBase@GetCliObj$qqrv @655 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBTransactionBase::GetCliObj()
+    @Firedac@Phys@Ibbase@TFDPhysIBTransactionBase@GetIBConnection$qqrv @662 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBTransactionBase::GetIBConnection()
+    @Firedac@Phys@Ibbase@TFDPhysIBTransactionBase@GetItem$qqrir20System@UnicodeStringr14System@Variantr40Firedac@Stan@Intf@TFDMoniAdapterItemKind @652 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBTransactionBase::GetItem(int, System::UnicodeString&, System::Variant&, Firedac::Stan::Intf::TFDMoniAdapterItemKind&)
+    @Firedac@Phys@Ibbase@TFDPhysIBTransactionBase@GetItemCount$qqrv @653 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBTransactionBase::GetItemCount()
+    @Firedac@Phys@Ibbase@TFDPhysIBTransactionBase@InternalAllocHandle$qqrv @661 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBTransactionBase::InternalAllocHandle()
+    @Firedac@Phys@Ibbase@TFDPhysIBTransactionBase@InternalChanged$qqrv @659 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBTransactionBase::InternalChanged()
+    @Firedac@Phys@Ibbase@TFDPhysIBTransactionBase@InternalCommit$qqrui @657 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBTransactionBase::InternalCommit(unsigned int)
+    @Firedac@Phys@Ibbase@TFDPhysIBTransactionBase@InternalNotify$qqr34Firedac@Phys@TFDPhysTxNotificationp27Firedac@Phys@TFDPhysCommand @654 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBTransactionBase::InternalNotify(Firedac::Phys::TFDPhysTxNotification, Firedac::Phys::TFDPhysCommand *)
+    @Firedac@Phys@Ibbase@TFDPhysIBTransactionBase@InternalReleaseHandle$qqrv @660 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBTransactionBase::InternalReleaseHandle()
+    @Firedac@Phys@Ibbase@TFDPhysIBTransactionBase@InternalRollback$qqrui @656 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBTransactionBase::InternalRollback(unsigned int)
+    @Firedac@Phys@Ibbase@TFDPhysIBTransactionBase@InternalStartTransaction$qqrui @658 ; __fastcall Firedac::Phys::Ibbase::TFDPhysIBTransactionBase::InternalStartTransaction(unsigned int)
+    @Firedac@Phys@Ibbase@initialization$qqrv @609 ; __fastcall Firedac::Phys::Ibbase::initialization()
+    @Firedac@Phys@Ibcli@ADD_SPB_LENGTH$qqrrpuci @4   ; __fastcall Firedac::Phys::Ibcli::ADD_SPB_LENGTH(unsigned char *&, int)
+    @Firedac@Phys@Ibcli@ADD_SPB_NUMERIC$qqrrpuci @3   ; __fastcall Firedac::Phys::Ibcli::ADD_SPB_NUMERIC(unsigned char *&, int)
+    @Firedac@Phys@Ibcli@Finalization$qqrv @2   ; __fastcall Firedac::Phys::Ibcli::Finalization()
+    @Firedac@Phys@Ibcli@XSQLDA_LENGTH_V1$qqri @7   ; __fastcall Firedac::Phys::Ibcli::XSQLDA_LENGTH_V1(int)
+    @Firedac@Phys@Ibcli@XSQLDA_LENGTH_V2$qqri @6   ; __fastcall Firedac::Phys::Ibcli::XSQLDA_LENGTH_V2(int)
+    @Firedac@Phys@Ibcli@XSQLVAR_LENGTH$qqrii @5   ; __fastcall Firedac::Phys::Ibcli::XSQLVAR_LENGTH(int, int)
+    @Firedac@Phys@Ibcli@initialization$qqrv @1   ; __fastcall Firedac::Phys::Ibcli::initialization()
+    @Firedac@Phys@Ibdef@Finalization$qqrv @576 ; __fastcall Firedac::Phys::Ibdef::Finalization()
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@ @608 ; Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@GetCharacterSet$qqrv @592 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::GetCharacterSet()
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@GetDriverID$qqrv @606 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::GetDriverID()
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@GetDropDatabase$qqrv @584 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::GetDropDatabase()
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@GetExtendedMetadata$qqrv @590 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::GetExtendedMetadata()
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@GetIBAdvanced$qqrv @582 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::GetIBAdvanced()
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@GetInstanceName$qqrv @580 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::GetInstanceName()
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@GetOSAuthent$qqrv @604 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::GetOSAuthent()
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@GetOpenMode$qqrv @588 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::GetOpenMode()
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@GetPageSize$qqrv @586 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::GetPageSize()
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@GetPort$qqrv @598 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::GetPort()
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@GetProtocol$qqrv @602 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::GetProtocol()
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@GetRoleName$qqrv @594 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::GetRoleName()
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@GetSEPassword$qqrv @578 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::GetSEPassword()
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@GetSQLDialect$qqrv @596 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::GetSQLDialect()
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@GetServer$qqrv @600 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::GetServer()
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@SetCharacterSet$qqrx38Firedac@Phys@Ibwrapper@TIBCharacterSet @591 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::SetCharacterSet(const Firedac::Phys::Ibwrapper::TIBCharacterSet)
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@SetDriverID$qqrx20System@UnicodeString @605 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::SetDriverID(const System::UnicodeString)
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@SetDropDatabase$qqrxo @583 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::SetDropDatabase(const bool)
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@SetExtendedMetadata$qqrxo @589 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::SetExtendedMetadata(const bool)
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@SetIBAdvanced$qqrx20System@UnicodeString @581 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::SetIBAdvanced(const System::UnicodeString)
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@SetInstanceName$qqrx20System@UnicodeString @579 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::SetInstanceName(const System::UnicodeString)
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@SetOSAuthent$qqrxo @603 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::SetOSAuthent(const bool)
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@SetOpenMode$qqrx34Firedac@Phys@Ibwrapper@TIBOpenMode @587 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::SetOpenMode(const Firedac::Phys::Ibwrapper::TIBOpenMode)
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@SetPageSize$qqrx34Firedac@Phys@Ibwrapper@TIBPageSize @585 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::SetPageSize(const Firedac::Phys::Ibwrapper::TIBPageSize)
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@SetPort$qqrxi @597 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::SetPort(const int)
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@SetProtocol$qqrx34Firedac@Phys@Ibwrapper@TIBProtocol @601 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::SetProtocol(const Firedac::Phys::Ibwrapper::TIBProtocol)
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@SetRoleName$qqrx20System@UnicodeString @593 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::SetRoleName(const System::UnicodeString)
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@SetSEPassword$qqrx20System@UnicodeString @577 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::SetSEPassword(const System::UnicodeString)
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@SetSQLDialect$qqrxi @595 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::SetSQLDialect(const int)
+    @Firedac@Phys@Ibdef@TFDPhysIBConnectionDefParams@SetServer$qqrx20System@UnicodeString @599 ; __fastcall Firedac::Phys::Ibdef::TFDPhysIBConnectionDefParams::SetServer(const System::UnicodeString)
+    @Firedac@Phys@Ibdef@initialization$qqrv @575 ; __fastcall Firedac::Phys::Ibdef::initialization()
+    @Firedac@Phys@Iblitedef@Finalization$qqrv @855 ; __fastcall Firedac::Phys::Iblitedef::Finalization()
+    @Firedac@Phys@Iblitedef@TFDPhysIBLiteConnectionDefParams@ @871 ; Firedac::Phys::Iblitedef::TFDPhysIBLiteConnectionDefParams::
+    @Firedac@Phys@Iblitedef@TFDPhysIBLiteConnectionDefParams@GetCharacterSet$qqrv @867 ; __fastcall Firedac::Phys::Iblitedef::TFDPhysIBLiteConnectionDefParams::GetCharacterSet()
+    @Firedac@Phys@Iblitedef@TFDPhysIBLiteConnectionDefParams@GetDriverID$qqrv @869 ; __fastcall Firedac::Phys::Iblitedef::TFDPhysIBLiteConnectionDefParams::GetDriverID()
+    @Firedac@Phys@Iblitedef@TFDPhysIBLiteConnectionDefParams@GetDropDatabase$qqrv @859 ; __fastcall Firedac::Phys::Iblitedef::TFDPhysIBLiteConnectionDefParams::GetDropDatabase()
+    @Firedac@Phys@Iblitedef@TFDPhysIBLiteConnectionDefParams@GetExtendedMetadata$qqrv @865 ; __fastcall Firedac::Phys::Iblitedef::TFDPhysIBLiteConnectionDefParams::GetExtendedMetadata()
+    @Firedac@Phys@Iblitedef@TFDPhysIBLiteConnectionDefParams@GetIBAdvanced$qqrv @857 ; __fastcall Firedac::Phys::Iblitedef::TFDPhysIBLiteConnectionDefParams::GetIBAdvanced()
+    @Firedac@Phys@Iblitedef@TFDPhysIBLiteConnectionDefParams@GetOpenMode$qqrv @863 ; __fastcall Firedac::Phys::Iblitedef::TFDPhysIBLiteConnectionDefParams::GetOpenMode()
+    @Firedac@Phys@Iblitedef@TFDPhysIBLiteConnectionDefParams@GetPageSize$qqrv @861 ; __fastcall Firedac::Phys::Iblitedef::TFDPhysIBLiteConnectionDefParams::GetPageSize()
+    @Firedac@Phys@Iblitedef@TFDPhysIBLiteConnectionDefParams@SetCharacterSet$qqrx38Firedac@Phys@Ibwrapper@TIBCharacterSet @866 ; __fastcall Firedac::Phys::Iblitedef::TFDPhysIBLiteConnectionDefParams::SetCharacterSet(const Firedac::Phys::Ibwrapper::TIBCharacterSet)
+    @Firedac@Phys@Iblitedef@TFDPhysIBLiteConnectionDefParams@SetDriverID$qqrx20System@UnicodeString @868 ; __fastcall Firedac::Phys::Iblitedef::TFDPhysIBLiteConnectionDefParams::SetDriverID(const System::UnicodeString)
+    @Firedac@Phys@Iblitedef@TFDPhysIBLiteConnectionDefParams@SetDropDatabase$qqrxo @858 ; __fastcall Firedac::Phys::Iblitedef::TFDPhysIBLiteConnectionDefParams::SetDropDatabase(const bool)
+    @Firedac@Phys@Iblitedef@TFDPhysIBLiteConnectionDefParams@SetExtendedMetadata$qqrxo @864 ; __fastcall Firedac::Phys::Iblitedef::TFDPhysIBLiteConnectionDefParams::SetExtendedMetadata(const bool)
+    @Firedac@Phys@Iblitedef@TFDPhysIBLiteConnectionDefParams@SetIBAdvanced$qqrx20System@UnicodeString @856 ; __fastcall Firedac::Phys::Iblitedef::TFDPhysIBLiteConnectionDefParams::SetIBAdvanced(const System::UnicodeString)
+    @Firedac@Phys@Iblitedef@TFDPhysIBLiteConnectionDefParams@SetOpenMode$qqrx34Firedac@Phys@Ibwrapper@TIBOpenMode @862 ; __fastcall Firedac::Phys::Iblitedef::TFDPhysIBLiteConnectionDefParams::SetOpenMode(const Firedac::Phys::Ibwrapper::TIBOpenMode)
+    @Firedac@Phys@Iblitedef@TFDPhysIBLiteConnectionDefParams@SetPageSize$qqrx34Firedac@Phys@Ibwrapper@TIBPageSize @860 ; __fastcall Firedac::Phys::Iblitedef::TFDPhysIBLiteConnectionDefParams::SetPageSize(const Firedac::Phys::Ibwrapper::TIBPageSize)
+    @Firedac@Phys@Iblitedef@initialization$qqrv @854 ; __fastcall Firedac::Phys::Iblitedef::initialization()
+    @Firedac@Phys@Ibwrapper@EIBNativeException@ @564 ; Firedac::Phys::Ibwrapper::EIBNativeException::
+    @Firedac@Phys@Ibwrapper@EIBNativeException@$bctr$qqrp31Firedac@Phys@Ibwrapper@TIBError @463 ; __fastcall Firedac::Phys::Ibwrapper::EIBNativeException::EIBNativeException(Firedac::Phys::Ibwrapper::TIBError *)
+    @Firedac@Phys@Ibwrapper@EIBNativeException@GetErrorClass$qqrv @462 ; __fastcall Firedac::Phys::Ibwrapper::EIBNativeException::GetErrorClass()
+    @Firedac@Phys@Ibwrapper@EIBNativeException@GetErrors$qqri @461 ; __fastcall Firedac::Phys::Ibwrapper::EIBNativeException::GetErrors(int)
+    @Firedac@Phys@Ibwrapper@Finalization$qqrv @246 ; __fastcall Firedac::Phys::Ibwrapper::Finalization()
+    @Firedac@Phys@Ibwrapper@TFBNBackup@ @519 ; Firedac::Phys::Ibwrapper::TFBNBackup::
+    @Firedac@Phys@Ibwrapper@TFBNBackup@GetServiceParams$qqrp34Firedac@Phys@Ibwrapper@TIBPBWriter @283 ; __fastcall Firedac::Phys::Ibwrapper::TFBNBackup::GetServiceParams(Firedac::Phys::Ibwrapper::TIBPBWriter *)
+    @Firedac@Phys@Ibwrapper@TFBNRestore@ @511 ; Firedac::Phys::Ibwrapper::TFBNRestore::
+    @Firedac@Phys@Ibwrapper@TFBNRestore@$bctr$qqrp29Firedac@Phys@Ibwrapper@TIBEnvp14System@TObject @274 ; __fastcall Firedac::Phys::Ibwrapper::TFBNRestore::TFBNRestore(Firedac::Phys::Ibwrapper::TIBEnv *, System::TObject *)
+    @Firedac@Phys@Ibwrapper@TFBNRestore@$bdtr$qqrv @273 ; __fastcall Firedac::Phys::Ibwrapper::TFBNRestore::~TFBNRestore()
+    @Firedac@Phys@Ibwrapper@TFBNRestore@GetServiceParams$qqrp34Firedac@Phys@Ibwrapper@TIBPBWriter @271 ; __fastcall Firedac::Phys::Ibwrapper::TFBNRestore::GetServiceParams(Firedac::Phys::Ibwrapper::TIBPBWriter *)
+    @Firedac@Phys@Ibwrapper@TFBNRestore@SetBackupFile$qqrxp23System@Classes@TStrings @272 ; __fastcall Firedac::Phys::Ibwrapper::TFBNRestore::SetBackupFile(System::Classes::TStrings * const)
+    @Firedac@Phys@Ibwrapper@TFDIBError@ @566 ; Firedac::Phys::Ibwrapper::TFDIBError::
+    @Firedac@Phys@Ibwrapper@TFDIBError@Assign$qqrp29Firedac@Stan@Error@TFDDBError @469 ; __fastcall Firedac::Phys::Ibwrapper::TFDIBError::Assign(Firedac::Stan::Error::TFDDBError *)
+    @Firedac@Phys@Ibwrapper@TFDIBError@GetErrClass$qqrv @468 ; __fastcall Firedac::Phys::Ibwrapper::TFDIBError::GetErrClass()
+    @Firedac@Phys@Ibwrapper@TFDIBError@GetErrCode$qqrv @467 ; __fastcall Firedac::Phys::Ibwrapper::TFDIBError::GetErrCode()
+    @Firedac@Phys@Ibwrapper@TFDIBError@GetFacility$qqrv @466 ; __fastcall Firedac::Phys::Ibwrapper::TFDIBError::GetFacility()
+    @Firedac@Phys@Ibwrapper@TFDIBError@LoadFromStorage$qqrx59System@%DelphiInterface$32Firedac@Stan@Intf@IFDStanStorage% @465 ; Firedac::Phys::Ibwrapper::TFDIBError::LoadFromStorage(const System::DelphiInterface<{583}...
+    @Firedac@Phys@Ibwrapper@TFDIBError@SaveToStorage$qqrx59System@%DelphiInterface$32Firedac@Stan@Intf@IFDStanStorage% @464 ; Firedac::Phys::Ibwrapper::TFDIBError::SaveToStorage(const System::DelphiInterface<{583}...
+    @Firedac@Phys@Ibwrapper@TIBBackup@ @523 ; Firedac::Phys::Ibwrapper::TIBBackup::
+    @Firedac@Phys@Ibwrapper@TIBBackup@$bctr$qqrp29Firedac@Phys@Ibwrapper@TIBEnvp14System@TObject @287 ; __fastcall Firedac::Phys::Ibwrapper::TIBBackup::TIBBackup(Firedac::Phys::Ibwrapper::TIBEnv *, System::TObject *)
+    @Firedac@Phys@Ibwrapper@TIBBackup@$bdtr$qqrv @286 ; __fastcall Firedac::Phys::Ibwrapper::TIBBackup::~TIBBackup()
+    @Firedac@Phys@Ibwrapper@TIBBackup@GetServiceParams$qqrp34Firedac@Phys@Ibwrapper@TIBPBWriter @284 ; __fastcall Firedac::Phys::Ibwrapper::TIBBackup::GetServiceParams(Firedac::Phys::Ibwrapper::TIBPBWriter *)
+    @Firedac@Phys@Ibwrapper@TIBBackup@SetBackupFiles$qqrxp23System@Classes@TStrings @285 ; __fastcall Firedac::Phys::Ibwrapper::TIBBackup::SetBackupFiles(System::Classes::TStrings * const)
+    @Firedac@Phys@Ibwrapper@TIBBlob@ @533 ; Firedac::Phys::Ibwrapper::TIBBlob::
+    @Firedac@Phys@Ibwrapper@TIBBlob@$bctr$qqrp34Firedac@Phys@Ibwrapper@TIBDatabasep37Firedac@Phys@Ibwrapper@TIBTransactionp14System@TObject @336 ; __fastcall Firedac::Phys::Ibwrapper::TIBBlob::TIBBlob(Firedac::Phys::Ibwrapper::TIBDatabase *, Firedac::Phys::Ibwrapper::TIBTransaction *, System::TObject *)
+    @Firedac@Phys@Ibwrapper@TIBBlob@$bdtr$qqrv @335 ; __fastcall Firedac::Phys::Ibwrapper::TIBBlob::~TIBBlob()
+    @Firedac@Phys@Ibwrapper@TIBBlob@Add$qqrv @330 ; __fastcall Firedac::Phys::Ibwrapper::TIBBlob::Add()
+    @Firedac@Phys@Ibwrapper@TIBBlob@Close$qqrv @329 ; __fastcall Firedac::Phys::Ibwrapper::TIBBlob::Close()
+    @Firedac@Phys@Ibwrapper@TIBBlob@GetInfo$qqrv @332 ; __fastcall Firedac::Phys::Ibwrapper::TIBBlob::GetInfo()
+    @Firedac@Phys@Ibwrapper@TIBBlob@GetIsOpen$qqrv @333 ; __fastcall Firedac::Phys::Ibwrapper::TIBBlob::GetIsOpen()
+    @Firedac@Phys@Ibwrapper@TIBBlob@GetNational$qqrv @334 ; __fastcall Firedac::Phys::Ibwrapper::TIBBlob::GetNational()
+    @Firedac@Phys@Ibwrapper@TIBBlob@Open$qqrv @331 ; __fastcall Firedac::Phys::Ibwrapper::TIBBlob::Open()
+    @Firedac@Phys@Ibwrapper@TIBBlob@Read$qqrpucui @328 ; __fastcall Firedac::Phys::Ibwrapper::TIBBlob::Read(unsigned char *, unsigned int)
+    @Firedac@Phys@Ibwrapper@TIBBlob@Write$qqrpucui @327 ; __fastcall Firedac::Phys::Ibwrapper::TIBBlob::Write(unsigned char *, unsigned int)
+    @Firedac@Phys@Ibwrapper@TIBBlobStream@ @531 ; Firedac::Phys::Ibwrapper::TIBBlobStream::
+    @Firedac@Phys@Ibwrapper@TIBBlobStream@$bctr$qqrp30Firedac@Phys@Ibwrapper@TIBBlob @326 ; __fastcall Firedac::Phys::Ibwrapper::TIBBlobStream::TIBBlobStream(Firedac::Phys::Ibwrapper::TIBBlob *)
+    @Firedac@Phys@Ibwrapper@TIBBlobStream@$bdtr$qqrv @325 ; __fastcall Firedac::Phys::Ibwrapper::TIBBlobStream::~TIBBlobStream()
+    @Firedac@Phys@Ibwrapper@TIBBlobStream@Bytes2Chars$qqrui @324 ; __fastcall Firedac::Phys::Ibwrapper::TIBBlobStream::Bytes2Chars(unsigned int)
+    @Firedac@Phys@Ibwrapper@TIBBlobStream@Chars2Bytes$qqrui @323 ; __fastcall Firedac::Phys::Ibwrapper::TIBBlobStream::Chars2Bytes(unsigned int)
+    @Firedac@Phys@Ibwrapper@TIBBlobStream@CheckOpen$qqrv @322 ; __fastcall Firedac::Phys::Ibwrapper::TIBBlobStream::CheckOpen()
+    @Firedac@Phys@Ibwrapper@TIBBlobStream@GetSize$qqrv @318 ; __fastcall Firedac::Phys::Ibwrapper::TIBBlobStream::GetSize()
+    @Firedac@Phys@Ibwrapper@TIBBlobStream@Read$qqrpvi @321 ; __fastcall Firedac::Phys::Ibwrapper::TIBBlobStream::Read(void *, int)
+    @Firedac@Phys@Ibwrapper@TIBBlobStream@Seek$qqrxj26System@Classes@TSeekOrigin @319 ; __fastcall Firedac::Phys::Ibwrapper::TIBBlobStream::Seek(const __int64, System::Classes::TSeekOrigin)
+    @Firedac@Phys@Ibwrapper@TIBBlobStream@Write$qqrpxvi @320 ; __fastcall Firedac::Phys::Ibwrapper::TIBBlobStream::Write(const void *, int)
+    @Firedac@Phys@Ibwrapper@TIBConfig@ @491 ; Firedac::Phys::Ibwrapper::TIBConfig::
+    @Firedac@Phys@Ibwrapper@TIBConfig@ActivateShadow$qqrv @248 ; __fastcall Firedac::Phys::Ibwrapper::TIBConfig::ActivateShadow()
+    @Firedac@Phys@Ibwrapper@TIBConfig@GetServiceParams$qqrp34Firedac@Phys@Ibwrapper@TIBPBWriter @247 ; __fastcall Firedac::Phys::Ibwrapper::TIBConfig::GetServiceParams(Firedac::Phys::Ibwrapper::TIBPBWriter *)
+    @Firedac@Phys@Ibwrapper@TIBConfig@OnlineDB$qqrv @249 ; __fastcall Firedac::Phys::Ibwrapper::TIBConfig::OnlineDB()
+    @Firedac@Phys@Ibwrapper@TIBConfig@SetAccessMode$qqrx36Firedac@Phys@Ibwrapper@TIBAccessMode @251 ; __fastcall Firedac::Phys::Ibwrapper::TIBConfig::SetAccessMode(const Firedac::Phys::Ibwrapper::TIBAccessMode)
+    @Firedac@Phys@Ibwrapper@TIBConfig@SetPageBuffers$qqrxui @256 ; __fastcall Firedac::Phys::Ibwrapper::TIBConfig::SetPageBuffers(const unsigned int)
+    @Firedac@Phys@Ibwrapper@TIBConfig@SetReserveSpace$qqrx38Firedac@Phys@Ibwrapper@TIBReserveSpace @253 ; __fastcall Firedac::Phys::Ibwrapper::TIBConfig::SetReserveSpace(const Firedac::Phys::Ibwrapper::TIBReserveSpace)
+    @Firedac@Phys@Ibwrapper@TIBConfig@SetSQLDialect$qqrxui @255 ; __fastcall Firedac::Phys::Ibwrapper::TIBConfig::SetSQLDialect(const unsigned int)
+    @Firedac@Phys@Ibwrapper@TIBConfig@SetSweepInterval$qqrxui @254 ; __fastcall Firedac::Phys::Ibwrapper::TIBConfig::SetSweepInterval(const unsigned int)
+    @Firedac@Phys@Ibwrapper@TIBConfig@SetWriteMode$qqrx35Firedac@Phys@Ibwrapper@TIBWriteMode @252 ; __fastcall Firedac::Phys::Ibwrapper::TIBConfig::SetWriteMode(const Firedac::Phys::Ibwrapper::TIBWriteMode)
+    @Firedac@Phys@Ibwrapper@TIBConfig@ShutdownDB$qqr38Firedac@Phys@Ibwrapper@TIBShutdownModeui @250 ; __fastcall Firedac::Phys::Ibwrapper::TIBConfig::ShutdownDB(Firedac::Phys::Ibwrapper::TIBShutdownMode, unsigned int)
+    @Firedac@Phys@Ibwrapper@TIBDatabase@ @548 ; Firedac::Phys::Ibwrapper::TIBDatabase::
+    @Firedac@Phys@Ibwrapper@TIBDatabase@$bctr$qqrp29Firedac@Phys@Ibwrapper@TIBEnvp14System@TObject @426 ; __fastcall Firedac::Phys::Ibwrapper::TIBDatabase::TIBDatabase(Firedac::Phys::Ibwrapper::TIBEnv *, System::TObject *)
+    @Firedac@Phys@Ibwrapper@TIBDatabase@$bctr$qqrp29Firedac@Phys@Ibwrapper@TIBEnvpvp14System@TObject @425 ; __fastcall Firedac::Phys::Ibwrapper::TIBDatabase::TIBDatabase(Firedac::Phys::Ibwrapper::TIBEnv *, void *, System::TObject *)
+    @Firedac@Phys@Ibwrapper@TIBDatabase@$bdtr$qqrv @424 ; __fastcall Firedac::Phys::Ibwrapper::TIBDatabase::~TIBDatabase()
+    @Firedac@Phys@Ibwrapper@TIBDatabase@Attach$qqrx20System@UnicodeStringp23System@Classes@TStringso @422 ; __fastcall Firedac::Phys::Ibwrapper::TIBDatabase::Attach(const System::UnicodeString, System::Classes::TStrings *, bool)
+    @Firedac@Phys@Ibwrapper@TIBDatabase@Cancel$qqrv @419 ; __fastcall Firedac::Phys::Ibwrapper::TIBDatabase::Cancel()
+    @Firedac@Phys@Ibwrapper@TIBDatabase@CreateDatabase$qqrx20System@UnicodeStringp23System@Classes@TStrings @421 ; __fastcall Firedac::Phys::Ibwrapper::TIBDatabase::CreateDatabase(const System::UnicodeString, System::Classes::TStrings *)
+    @Firedac@Phys@Ibwrapper@TIBDatabase@Detach$qqrv @420 ; __fastcall Firedac::Phys::Ibwrapper::TIBDatabase::Detach()
+    @Firedac@Phys@Ibwrapper@TIBDatabase@Drop$qqrv @418 ; __fastcall Firedac::Phys::Ibwrapper::TIBDatabase::Drop()
+    @Firedac@Phys@Ibwrapper@TIBDatabase@FilterDBParam$qqrrx32Firedac@Phys@Ibwrapper@TIBPBInfo @423 ; __fastcall Firedac::Phys::Ibwrapper::TIBDatabase::FilterDBParam(const Firedac::Phys::Ibwrapper::TIBPBInfo&)
+    @Firedac@Phys@Ibwrapper@TIBDatabase@GetDatabaseInfo$qqripuci @416 ; __fastcall Firedac::Phys::Ibwrapper::TIBDatabase::GetDatabaseInfo(int, unsigned char *, int)
+    @Firedac@Phys@Ibwrapper@TIBDatabase@GetDatabaseInfoBool$qqri @413 ; __fastcall Firedac::Phys::Ibwrapper::TIBDatabase::GetDatabaseInfoBool(int)
+    @Firedac@Phys@Ibwrapper@TIBDatabase@GetDatabaseInfoInt$qqri @415 ; __fastcall Firedac::Phys::Ibwrapper::TIBDatabase::GetDatabaseInfoInt(int)
+    @Firedac@Phys@Ibwrapper@TIBDatabase@GetDatabaseInfoInts$qqri @411 ; __fastcall Firedac::Phys::Ibwrapper::TIBDatabase::GetDatabaseInfoInts(int)
+    @Firedac@Phys@Ibwrapper@TIBDatabase@GetDatabaseInfoOpers$qqri @412 ; __fastcall Firedac::Phys::Ibwrapper::TIBDatabase::GetDatabaseInfoOpers(int)
+    @Firedac@Phys@Ibwrapper@TIBDatabase@GetDatabaseInfoStr$qqri @414 ; __fastcall Firedac::Phys::Ibwrapper::TIBDatabase::GetDatabaseInfoStr(int)
+    @Firedac@Phys@Ibwrapper@TIBDatabase@GetDatabaseInfoStrsCnt$qqri @409 ; __fastcall Firedac::Phys::Ibwrapper::TIBDatabase::GetDatabaseInfoStrsCnt(int)
+    @Firedac@Phys@Ibwrapper@TIBDatabase@GetDatabaseInfoUserNames$qqri @410 ; __fastcall Firedac::Phys::Ibwrapper::TIBDatabase::GetDatabaseInfoUserNames(int)
+    @Firedac@Phys@Ibwrapper@TIBDatabase@Ping$qqrv @417 ; __fastcall Firedac::Phys::Ibwrapper::TIBDatabase::Ping()
+    @Firedac@Phys@Ibwrapper@TIBEnv@ @550 ; Firedac::Phys::Ibwrapper::TIBEnv::
+    @Firedac@Phys@Ibwrapper@TIBEnv@$bctr$qqrp29Firedac@Phys@Ibwrapper@TIBLibp14System@TObject @432 ; __fastcall Firedac::Phys::Ibwrapper::TIBEnv::TIBEnv(Firedac::Phys::Ibwrapper::TIBLib *, System::TObject *)
+    @Firedac@Phys@Ibwrapper@TIBEnv@$bdtr$qqrv @431 ; __fastcall Firedac::Phys::Ibwrapper::TIBEnv::~TIBEnv()
+    @Firedac@Phys@Ibwrapper@TIBEnv@BuildPB$qqrp28Firedac@Stan@Util@TFDEncoderp23System@Classes@TStringsucucp62System@%StaticArray$32Firedac@Phys@Ibwrapper@TIBPBInfoi$i255$%ucynpqqrrx32Firedac@Phys@Ibwrapper@TIBPBInfo$37Firedac@Phys@Ibwrapper@TIBPBParamType @430 ; Firedac::Phys::Ibwrapper::TIBEnv::BuildPB(Firedac::Stan::Util::TFDEncoder *, System::Classes::TStrings *, unsigned char, unsigned char, System::StaticArray<Firedac::Phys::Ibwrapper::TIBPBInfo, 255> *, unsigned char, __closure(*)(const Firedac::Phys::Ib
+    @Firedac@Phys@Ibwrapper@TIBEnv@GetTracing$qqrv @429 ; __fastcall Firedac::Phys::Ibwrapper::TIBEnv::GetTracing()
+    @Firedac@Phys@Ibwrapper@TIBEnv@Trace$qqr34Firedac@Stan@Intf@TFDMoniEventKind34Firedac@Stan@Intf@TFDMoniEventStepx20System@UnicodeStringpx14System@TVarRecxi @427 ; __fastcall Firedac::Phys::Ibwrapper::TIBEnv::Trace(Firedac::Stan::Intf::TFDMoniEventKind, Firedac::Stan::Intf::TFDMoniEventStep, const System::UnicodeString, const System::TVarRec *, const int)
+    @Firedac@Phys@Ibwrapper@TIBEnv@Trace$qqrx20System@UnicodeStringpx14System@TVarRecxi @428 ; __fastcall Firedac::Phys::Ibwrapper::TIBEnv::Trace(const System::UnicodeString, const System::TVarRec *, const int)
+    @Firedac@Phys@Ibwrapper@TIBError@ @562 ; Firedac::Phys::Ibwrapper::TIBError::
+    @Firedac@Phys@Ibwrapper@TIBError@$bdtr$qqrv @460 ; __fastcall Firedac::Phys::Ibwrapper::TIBError::~TIBError()
+    @Firedac@Phys@Ibwrapper@TIBError@Check$qqrip14System@TObject @459 ; __fastcall Firedac::Phys::Ibwrapper::TIBError::Check(int, System::TObject *)
+    @Firedac@Phys@Ibwrapper@TIBError@CheckAllocateInfo$qqrv @457 ; __fastcall Firedac::Phys::Ibwrapper::TIBError::CheckAllocateInfo()
+    @Firedac@Phys@Ibwrapper@TIBError@ClearInfo$qqrv @458 ; __fastcall Firedac::Phys::Ibwrapper::TIBError::ClearInfo()
+    @Firedac@Phys@Ibwrapper@TIBEventSlice@ @543 ; Firedac::Phys::Ibwrapper::TIBEventSlice::
+    @Firedac@Phys@Ibwrapper@TIBEvents@ @540 ; Firedac::Phys::Ibwrapper::TIBEvents::
+    @Firedac@Phys@Ibwrapper@TIBEvents@$bctr$qqrp34Firedac@Phys@Ibwrapper@TIBDatabasep14System@TObject @392 ; __fastcall Firedac::Phys::Ibwrapper::TIBEvents::TIBEvents(Firedac::Phys::Ibwrapper::TIBDatabase *, System::TObject *)
+    @Firedac@Phys@Ibwrapper@TIBEvents@$bdtr$qqrv @391 ; __fastcall Firedac::Phys::Ibwrapper::TIBEvents::~TIBEvents()
+    @Firedac@Phys@Ibwrapper@TIBEvents@HandleEvents$qqrp36Firedac@Phys@Ibwrapper@TIBEventSlice @389 ; __fastcall Firedac::Phys::Ibwrapper::TIBEvents::HandleEvents(Firedac::Phys::Ibwrapper::TIBEventSlice *)
+    @Firedac@Phys@Ibwrapper@TIBEvents@QueueEvents$qqrp36Firedac@Phys@Ibwrapper@TIBEventSlice @390 ; __fastcall Firedac::Phys::Ibwrapper::TIBEvents::QueueEvents(Firedac::Phys::Ibwrapper::TIBEventSlice *)
+    @Firedac@Phys@Ibwrapper@TIBEvents@Start$qqrv @388 ; __fastcall Firedac::Phys::Ibwrapper::TIBEvents::Start()
+    @Firedac@Phys@Ibwrapper@TIBEvents@Stop$qqrv @387 ; __fastcall Firedac::Phys::Ibwrapper::TIBEvents::Stop()
+    @Firedac@Phys@Ibwrapper@TIBLib@ @570 ; Firedac::Phys::Ibwrapper::TIBLib::
+    @Firedac@Phys@Ibwrapper@TIBLib@$bctr$qqrx20System@UnicodeStringp14System@TObject @489 ; __fastcall Firedac::Phys::Ibwrapper::TIBLib::TIBLib(const System::UnicodeString, System::TObject *)
+    @Firedac@Phys@Ibwrapper@TIBLib@$bdtr$qqrv @488 ; __fastcall Firedac::Phys::Ibwrapper::TIBLib::~TIBLib()
+    @Firedac@Phys@Ibwrapper@TIBLib@GetBytesPerChar$qqri @474 ; __fastcall Firedac::Phys::Ibwrapper::TIBLib::GetBytesPerChar(int)
+    @Firedac@Phys@Ibwrapper@TIBLib@GetIDUTF8$qqrv @477 ; __fastcall Firedac::Phys::Ibwrapper::TIBLib::GetIDUTF8()
+    @Firedac@Phys@Ibwrapper@TIBLib@GetLibraryInfo$qqrv @482 ; __fastcall Firedac::Phys::Ibwrapper::TIBLib::GetLibraryInfo()
+    @Firedac@Phys@Ibwrapper@TIBLib@GetUTF8CSName$qqri @475 ; __fastcall Firedac::Phys::Ibwrapper::TIBLib::GetUTF8CSName(int)
+    @Firedac@Phys@Ibwrapper@TIBLib@IsUTF8$qqri @476 ; __fastcall Firedac::Phys::Ibwrapper::TIBLib::IsUTF8(int)
+    @Firedac@Phys@Ibwrapper@TIBLib@LoadBase$qqrx20System@UnicodeStringt1px20System@UnicodeStringxi @487 ; __fastcall Firedac::Phys::Ibwrapper::TIBLib::LoadBase(const System::UnicodeString, const System::UnicodeString, const System::UnicodeString *, const int)
+    @Firedac@Phys@Ibwrapper@TIBLib@LoadEntries$qqrv @481 ; __fastcall Firedac::Phys::Ibwrapper::TIBLib::LoadEntries()
+    @Firedac@Phys@Ibwrapper@TIBLib@LoadFB$qqrx20System@UnicodeStringt1o @485 ; __fastcall Firedac::Phys::Ibwrapper::TIBLib::LoadFB(const System::UnicodeString, const System::UnicodeString, bool)
+    @Firedac@Phys@Ibwrapper@TIBLib@LoadIB$qqrx20System@UnicodeStringt1o @486 ; __fastcall Firedac::Phys::Ibwrapper::TIBLib::LoadIB(const System::UnicodeString, const System::UnicodeString, bool)
+    @Firedac@Phys@Ibwrapper@TIBLib@Lock$qqrv @484 ; __fastcall Firedac::Phys::Ibwrapper::TIBLib::Lock()
+    @Firedac@Phys@Ibwrapper@TIBLib@Unlock$qqrv @483 ; __fastcall Firedac::Phys::Ibwrapper::TIBLib::Unlock()
+    @Firedac@Phys@Ibwrapper@TIBLib@getb$qqrp26Firedac@Phys@Ibcli@BSTREAM @480 ; __fastcall Firedac::Phys::Ibwrapper::TIBLib::getb(Firedac::Phys::Ibcli::BSTREAM *)
+    @Firedac@Phys@Ibwrapper@TIBLib@putb$qqrzcp26Firedac@Phys@Ibcli@BSTREAM @479 ; __fastcall Firedac::Phys::Ibwrapper::TIBLib::putb(signed char, Firedac::Phys::Ibcli::BSTREAM *)
+    @Firedac@Phys@Ibwrapper@TIBLib@putbx$qqrzcp26Firedac@Phys@Ibcli@BSTREAM @478 ; __fastcall Firedac::Phys::Ibwrapper::TIBLib::putbx(signed char, Firedac::Phys::Ibcli::BSTREAM *)
+    @Firedac@Phys@Ibwrapper@TIBObject@ @568 ; Firedac::Phys::Ibwrapper::TIBObject::
+    @Firedac@Phys@Ibwrapper@TIBObject@$bctr$qqrp29Firedac@Phys@Ibwrapper@TIBEnvp14System@TObject @473 ; __fastcall Firedac::Phys::Ibwrapper::TIBObject::TIBObject(Firedac::Phys::Ibwrapper::TIBEnv *, System::TObject *)
+    @Firedac@Phys@Ibwrapper@TIBObject@Check$qqrip14System@TObject @472 ; __fastcall Firedac::Phys::Ibwrapper::TIBObject::Check(int, System::TObject *)
+    @Firedac@Phys@Ibwrapper@TIBObject@GetError$qqrv @471 ; __fastcall Firedac::Phys::Ibwrapper::TIBObject::GetError()
+    @Firedac@Phys@Ibwrapper@TIBObject@GetLib$qqrv @470 ; __fastcall Firedac::Phys::Ibwrapper::TIBObject::GetLib()
+    @Firedac@Phys@Ibwrapper@TIBPBReader@ @552 ; Firedac::Phys::Ibwrapper::TIBPBReader::
+    @Firedac@Phys@Ibwrapper@TIBPBReader@$bctr$qqrp29Firedac@Phys@Ibwrapper@TIBLibp28Firedac@Stan@Util@TFDEncoder @443 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBReader::TIBPBReader(Firedac::Phys::Ibwrapper::TIBLib *, Firedac::Stan::Util::TFDEncoder *)
+    @Firedac@Phys@Ibwrapper@TIBPBReader@GetAsBlock$qqrv @439 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBReader::GetAsBlock()
+    @Firedac@Phys@Ibwrapper@TIBPBReader@GetAsPByte$qqrv @438 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBReader::GetAsPByte()
+    @Firedac@Phys@Ibwrapper@TIBPBReader@GetByte$qqrv @436 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBReader::GetByte()
+    @Firedac@Phys@Ibwrapper@TIBPBReader@GetEof$qqrv @440 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBReader::GetEof()
+    @Firedac@Phys@Ibwrapper@TIBPBReader@GetInteger$qqrv @434 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBReader::GetInteger()
+    @Firedac@Phys@Ibwrapper@TIBPBReader@GetLen$qqrv @437 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBReader::GetLen()
+    @Firedac@Phys@Ibwrapper@TIBPBReader@GetLongString$qqrv @433 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBReader::GetLongString()
+    @Firedac@Phys@Ibwrapper@TIBPBReader@GetWord$qqrv @435 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBReader::GetWord()
+    @Firedac@Phys@Ibwrapper@TIBPBReader@Reset$qqrs @441 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBReader::Reset(short)
+    @Firedac@Phys@Ibwrapper@TIBPBReader@Reset$qqrx31System@%AnsiStringT$us$i65535$% @442 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBReader::Reset(const System::AnsiStringT<65535>)
+    @Firedac@Phys@Ibwrapper@TIBPBWriter@ @554 ; Firedac::Phys::Ibwrapper::TIBPBWriter::
+    @Firedac@Phys@Ibwrapper@TIBPBWriter@$bctr$qqrp29Firedac@Phys@Ibwrapper@TIBLibp28Firedac@Stan@Util@TFDEncoder @456 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBWriter::TIBPBWriter(Firedac::Phys::Ibwrapper::TIBLib *, Firedac::Stan::Util::TFDEncoder *)
+    @Firedac@Phys@Ibwrapper@TIBPBWriter@AddByte$qqruc @453 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBWriter::AddByte(unsigned char)
+    @Firedac@Phys@Ibwrapper@TIBPBWriter@AddCard$qqrui @450 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBWriter::AddCard(unsigned int)
+    @Firedac@Phys@Ibwrapper@TIBPBWriter@AddDWord$qqrui @451 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBWriter::AddDWord(unsigned int)
+    @Firedac@Phys@Ibwrapper@TIBPBWriter@AddLongString$qqrx20System@UnicodeString @448 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBWriter::AddLongString(const System::UnicodeString)
+    @Firedac@Phys@Ibwrapper@TIBPBWriter@AddParams$qqrp23System@Classes@TStringsp62System@%StaticArray$32Firedac@Phys@Ibwrapper@TIBPBInfoi$i255$%ucynpqqrrx32Firedac@Phys@Ibwrapper@TIBPBInfo$37Firedac@Phys@Ibwrapper@TIBPBParamType @444 ; Firedac::Phys::Ibwrapper::TIBPBWriter::AddParams(System::Classes::TStrings *, System::StaticArray<Firedac::Phys::Ibwrapper::TIBPBInfo, 255> *, unsigned char, __closure(*)(const Firedac::Phys::Ibwrapper::TIBPBInfo&)Firedac::Phys::Ibwrapper::TIBPBParamType 
+    @Firedac@Phys@Ibwrapper@TIBPBWriter@AddShortString$qqrx20System@UnicodeString @449 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBWriter::AddShortString(const System::UnicodeString)
+    @Firedac@Phys@Ibwrapper@TIBPBWriter@AddWord$qqrus @452 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBWriter::AddWord(unsigned short)
+    @Firedac@Phys@Ibwrapper@TIBPBWriter@CheckBufferSize$qqri @454 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBWriter::CheckBufferSize(int)
+    @Firedac@Phys@Ibwrapper@TIBPBWriter@GetAsBlock$qqrv @447 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBWriter::GetAsBlock()
+    @Firedac@Phys@Ibwrapper@TIBPBWriter@GetAsPByte$qqrv @446 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBWriter::GetAsPByte()
+    @Firedac@Phys@Ibwrapper@TIBPBWriter@GetLen$qqrv @445 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBWriter::GetLen()
+    @Firedac@Phys@Ibwrapper@TIBPBWriter@Reset$qqrv @455 ; __fastcall Firedac::Phys::Ibwrapper::TIBPBWriter::Reset()
+    @Firedac@Phys@Ibwrapper@TIBRepair@ @506 ; Firedac::Phys::Ibwrapper::TIBRepair::
+    @Firedac@Phys@Ibwrapper@TIBRepair@GetServiceParams$qqrp34Firedac@Phys@Ibwrapper@TIBPBWriter @270 ; __fastcall Firedac::Phys::Ibwrapper::TIBRepair::GetServiceParams(Firedac::Phys::Ibwrapper::TIBPBWriter *)
+    @Firedac@Phys@Ibwrapper@TIBRestore@ @513 ; Firedac::Phys::Ibwrapper::TIBRestore::
+    @Firedac@Phys@Ibwrapper@TIBRestore@$bctr$qqrp29Firedac@Phys@Ibwrapper@TIBEnvp14System@TObject @278 ; __fastcall Firedac::Phys::Ibwrapper::TIBRestore::TIBRestore(Firedac::Phys::Ibwrapper::TIBEnv *, System::TObject *)
+    @Firedac@Phys@Ibwrapper@TIBRestore@$bdtr$qqrv @277 ; __fastcall Firedac::Phys::Ibwrapper::TIBRestore::~TIBRestore()
+    @Firedac@Phys@Ibwrapper@TIBRestore@GetServiceParams$qqrp34Firedac@Phys@Ibwrapper@TIBPBWriter @275 ; __fastcall Firedac::Phys::Ibwrapper::TIBRestore::GetServiceParams(Firedac::Phys::Ibwrapper::TIBPBWriter *)
+    @Firedac@Phys@Ibwrapper@TIBRestore@SetBackupFiles$qqrxp23System@Classes@TStrings @276 ; __fastcall Firedac::Phys::Ibwrapper::TIBRestore::SetBackupFiles(System::Classes::TStrings * const)
+    @Firedac@Phys@Ibwrapper@TIBSDump@ @517 ; Firedac::Phys::Ibwrapper::TIBSDump::
+    @Firedac@Phys@Ibwrapper@TIBSDump@$bctr$qqrp29Firedac@Phys@Ibwrapper@TIBEnvp14System@TObject @282 ; __fastcall Firedac::Phys::Ibwrapper::TIBSDump::TIBSDump(Firedac::Phys::Ibwrapper::TIBEnv *, System::TObject *)
+    @Firedac@Phys@Ibwrapper@TIBSDump@$bdtr$qqrv @281 ; __fastcall Firedac::Phys::Ibwrapper::TIBSDump::~TIBSDump()
+    @Firedac@Phys@Ibwrapper@TIBSDump@GetServiceParams$qqrp34Firedac@Phys@Ibwrapper@TIBPBWriter @279 ; __fastcall Firedac::Phys::Ibwrapper::TIBSDump::GetServiceParams(Firedac::Phys::Ibwrapper::TIBPBWriter *)
+    @Firedac@Phys@Ibwrapper@TIBSDump@SetBackupFiles$qqrxp23System@Classes@TStrings @280 ; __fastcall Firedac::Phys::Ibwrapper::TIBSDump::SetBackupFiles(System::Classes::TStrings * const)
+    @Firedac@Phys@Ibwrapper@TIBSecurity@ @497 ; Firedac::Phys::Ibwrapper::TIBSecurity::
+    @Firedac@Phys@Ibwrapper@TIBSecurity@$bdtr$qqrv @264 ; __fastcall Firedac::Phys::Ibwrapper::TIBSecurity::~TIBSecurity()
+    @Firedac@Phys@Ibwrapper@TIBSecurity@GetAttachParams$qqrp34Firedac@Phys@Ibwrapper@TIBPBWriter @259 ; __fastcall Firedac::Phys::Ibwrapper::TIBSecurity::GetAttachParams(Firedac::Phys::Ibwrapper::TIBPBWriter *)
+    @Firedac@Phys@Ibwrapper@TIBSecurity@GetInt$qqrxi @263 ; __fastcall Firedac::Phys::Ibwrapper::TIBSecurity::GetInt(const int)
+    @Firedac@Phys@Ibwrapper@TIBSecurity@GetServiceParams$qqrp34Firedac@Phys@Ibwrapper@TIBPBWriter @258 ; __fastcall Firedac::Phys::Ibwrapper::TIBSecurity::GetServiceParams(Firedac::Phys::Ibwrapper::TIBPBWriter *)
+    @Firedac@Phys@Ibwrapper@TIBSecurity@GetStr$qqrxi @261 ; __fastcall Firedac::Phys::Ibwrapper::TIBSecurity::GetStr(const int)
+    @Firedac@Phys@Ibwrapper@TIBSecurity@QuerySecurity$qqrv @257 ; __fastcall Firedac::Phys::Ibwrapper::TIBSecurity::QuerySecurity()
+    @Firedac@Phys@Ibwrapper@TIBSecurity@SetInt$qqrxixi @262 ; __fastcall Firedac::Phys::Ibwrapper::TIBSecurity::SetInt(const int, const int)
+    @Firedac@Phys@Ibwrapper@TIBSecurity@SetStr$qqrxix20System@UnicodeString @260 ; __fastcall Firedac::Phys::Ibwrapper::TIBSecurity::SetStr(const int, const System::UnicodeString)
+    @Firedac@Phys@Ibwrapper@TIBService@ @527 ; Firedac::Phys::Ibwrapper::TIBService::
+    @Firedac@Phys@Ibwrapper@TIBService@$bctr$qqrp29Firedac@Phys@Ibwrapper@TIBEnvp14System@TObject @295 ; __fastcall Firedac::Phys::Ibwrapper::TIBService::TIBService(Firedac::Phys::Ibwrapper::TIBEnv *, System::TObject *)
+    @Firedac@Phys@Ibwrapper@TIBService@$bdtr$qqrv @294 ; __fastcall Firedac::Phys::Ibwrapper::TIBService::~TIBService()
+    @Firedac@Phys@Ibwrapper@TIBService@Attach$qqrv @292 ; __fastcall Firedac::Phys::Ibwrapper::TIBService::Attach()
+    @Firedac@Phys@Ibwrapper@TIBService@Detach$qqrv @291 ; __fastcall Firedac::Phys::Ibwrapper::TIBService::Detach()
+    @Firedac@Phys@Ibwrapper@TIBService@GetAttachParams$qqrp34Firedac@Phys@Ibwrapper@TIBPBWriter @293 ; __fastcall Firedac::Phys::Ibwrapper::TIBService::GetAttachParams(Firedac::Phys::Ibwrapper::TIBPBWriter *)
+    @Firedac@Phys@Ibwrapper@TIBService@GetServiceParams$qqrp34Firedac@Phys@Ibwrapper@TIBPBWriter @290 ; __fastcall Firedac::Phys::Ibwrapper::TIBService::GetServiceParams(Firedac::Phys::Ibwrapper::TIBPBWriter *)
+    @Firedac@Phys@Ibwrapper@TIBService@QueryString$qqrr20System@UnicodeString @288 ; __fastcall Firedac::Phys::Ibwrapper::TIBService::QueryString(System::UnicodeString&)
+    @Firedac@Phys@Ibwrapper@TIBService@Start$qqrv @289 ; __fastcall Firedac::Phys::Ibwrapper::TIBService::Start()
+    @Firedac@Phys@Ibwrapper@TIBStatement@ @529 ; Firedac::Phys::Ibwrapper::TIBStatement::
+    @Firedac@Phys@Ibwrapper@TIBStatement@$bctr$qqrp34Firedac@Phys@Ibwrapper@TIBDatabasep37Firedac@Phys@Ibwrapper@TIBTransactionp14System@TObject @317 ; __fastcall Firedac::Phys::Ibwrapper::TIBStatement::TIBStatement(Firedac::Phys::Ibwrapper::TIBDatabase *, Firedac::Phys::Ibwrapper::TIBTransaction *, System::TObject *)
+    @Firedac@Phys@Ibwrapper@TIBStatement@$bdtr$qqrv @316 ; __fastcall Firedac::Phys::Ibwrapper::TIBStatement::~TIBStatement()
+    @Firedac@Phys@Ibwrapper@TIBStatement@Cancel$qqrv @298 ; __fastcall Firedac::Phys::Ibwrapper::TIBStatement::Cancel()
+    @Firedac@Phys@Ibwrapper@TIBStatement@Close$qqrv @299 ; __fastcall Firedac::Phys::Ibwrapper::TIBStatement::Close()
+    @Firedac@Phys@Ibwrapper@TIBStatement@DescribeBind$qqrv @308 ; __fastcall Firedac::Phys::Ibwrapper::TIBStatement::DescribeBind()
+    @Firedac@Phys@Ibwrapper@TIBStatement@DescribeSelect$qqrv @309 ; __fastcall Firedac::Phys::Ibwrapper::TIBStatement::DescribeSelect()
+    @Firedac@Phys@Ibwrapper@TIBStatement@DumpInVars$qqrv @296 ; __fastcall Firedac::Phys::Ibwrapper::TIBStatement::DumpInVars()
+    @Firedac@Phys@Ibwrapper@TIBStatement@DumpOutVars$qqro @297 ; __fastcall Firedac::Phys::Ibwrapper::TIBStatement::DumpOutVars(bool)
+    @Firedac@Phys@Ibwrapper@TIBStatement@Execute$qqro @306 ; __fastcall Firedac::Phys::Ibwrapper::TIBStatement::Execute(bool)
+    @Firedac@Phys@Ibwrapper@TIBStatement@ExecuteBatch$qqrv @302 ; __fastcall Firedac::Phys::Ibwrapper::TIBStatement::ExecuteBatch()
+    @Firedac@Phys@Ibwrapper@TIBStatement@ExecuteImmediate$qqrx20System@UnicodeString @304 ; __fastcall Firedac::Phys::Ibwrapper::TIBStatement::ExecuteImmediate(const System::UnicodeString)
+    @Firedac@Phys@Ibwrapper@TIBStatement@Fetch$qqrv @301 ; __fastcall Firedac::Phys::Ibwrapper::TIBStatement::Fetch()
+    @Firedac@Phys@Ibwrapper@TIBStatement@GetMaximumBatchSize$qqrv @303 ; __fastcall Firedac::Phys::Ibwrapper::TIBStatement::GetMaximumBatchSize()
+    @Firedac@Phys@Ibwrapper@TIBStatement@GetRowCounts$qqro @312 ; __fastcall Firedac::Phys::Ibwrapper::TIBStatement::GetRowCounts(bool)
+    @Firedac@Phys@Ibwrapper@TIBStatement@GetRowsAffected$qqrv @311 ; __fastcall Firedac::Phys::Ibwrapper::TIBStatement::GetRowsAffected()
+    @Firedac@Phys@Ibwrapper@TIBStatement@GetSQLInfo$qqripuci @315 ; __fastcall Firedac::Phys::Ibwrapper::TIBStatement::GetSQLInfo(int, unsigned char *, int)
+    @Firedac@Phys@Ibwrapper@TIBStatement@GetSQLInfoInt$qqri @314 ; __fastcall Firedac::Phys::Ibwrapper::TIBStatement::GetSQLInfoInt(int)
+    @Firedac@Phys@Ibwrapper@TIBStatement@GetSQLInfoStr$qqri @313 ; __fastcall Firedac::Phys::Ibwrapper::TIBStatement::GetSQLInfoStr(int)
+    @Firedac@Phys@Ibwrapper@TIBStatement@Open$qqro @305 ; __fastcall Firedac::Phys::Ibwrapper::TIBStatement::Open(bool)
+    @Firedac@Phys@Ibwrapper@TIBStatement@Prepare$qqrx20System@UnicodeString @310 ; __fastcall Firedac::Phys::Ibwrapper::TIBStatement::Prepare(const System::UnicodeString)
+    @Firedac@Phys@Ibwrapper@TIBStatement@Reset$qqro @307 ; __fastcall Firedac::Phys::Ibwrapper::TIBStatement::Reset(bool)
+    @Firedac@Phys@Ibwrapper@TIBStatement@Unprepare$qqrv @300 ; __fastcall Firedac::Phys::Ibwrapper::TIBStatement::Unprepare()
+    @Firedac@Phys@Ibwrapper@TIBTrace@ @503 ; Firedac::Phys::Ibwrapper::TIBTrace::
+    @Firedac@Phys@Ibwrapper@TIBTrace@$bctr$qqrp29Firedac@Phys@Ibwrapper@TIBEnvp14System@TObject @269 ; __fastcall Firedac::Phys::Ibwrapper::TIBTrace::TIBTrace(Firedac::Phys::Ibwrapper::TIBEnv *, System::TObject *)
+    @Firedac@Phys@Ibwrapper@TIBTrace@$bdtr$qqrv @268 ; __fastcall Firedac::Phys::Ibwrapper::TIBTrace::~TIBTrace()
+    @Firedac@Phys@Ibwrapper@TIBTrace@GetServiceParams$qqrp34Firedac@Phys@Ibwrapper@TIBPBWriter @266 ; __fastcall Firedac::Phys::Ibwrapper::TIBTrace::GetServiceParams(Firedac::Phys::Ibwrapper::TIBPBWriter *)
+    @Firedac@Phys@Ibwrapper@TIBTrace@QueryString$qqrr20System@UnicodeString @265 ; __fastcall Firedac::Phys::Ibwrapper::TIBTrace::QueryString(System::UnicodeString&)
+    @Firedac@Phys@Ibwrapper@TIBTrace@SetConfig$qqrxp23System@Classes@TStrings @267 ; __fastcall Firedac::Phys::Ibwrapper::TIBTrace::SetConfig(System::Classes::TStrings * const)
+    @Firedac@Phys@Ibwrapper@TIBTransaction@ @545 ; Firedac::Phys::Ibwrapper::TIBTransaction::
+    @Firedac@Phys@Ibwrapper@TIBTransaction@$bctr$qqrp29Firedac@Phys@Ibwrapper@TIBEnvp14System@TObject @408 ; __fastcall Firedac::Phys::Ibwrapper::TIBTransaction::TIBTransaction(Firedac::Phys::Ibwrapper::TIBEnv *, System::TObject *)
+    @Firedac@Phys@Ibwrapper@TIBTransaction@$bctr$qqrp29Firedac@Phys@Ibwrapper@TIBEnvpvp14System@TObject @407 ; __fastcall Firedac::Phys::Ibwrapper::TIBTransaction::TIBTransaction(Firedac::Phys::Ibwrapper::TIBEnv *, void *, System::TObject *)
+    @Firedac@Phys@Ibwrapper@TIBTransaction@$bdtr$qqrv @406 ; __fastcall Firedac::Phys::Ibwrapper::TIBTransaction::~TIBTransaction()
+    @Firedac@Phys@Ibwrapper@TIBTransaction@AddDatabase$qqrp34Firedac@Phys@Ibwrapper@TIBDatabase @403 ; __fastcall Firedac::Phys::Ibwrapper::TIBTransaction::AddDatabase(Firedac::Phys::Ibwrapper::TIBDatabase *)
+    @Firedac@Phys@Ibwrapper@TIBTransaction@Commit$qqrv @398 ; __fastcall Firedac::Phys::Ibwrapper::TIBTransaction::Commit()
+    @Firedac@Phys@Ibwrapper@TIBTransaction@CommitRetaining$qqrv @397 ; __fastcall Firedac::Phys::Ibwrapper::TIBTransaction::CommitRetaining()
+    @Firedac@Phys@Ibwrapper@TIBTransaction@DoParamsChanged$qqrp14System@TObject @404 ; __fastcall Firedac::Phys::Ibwrapper::TIBTransaction::DoParamsChanged(System::TObject *)
+    @Firedac@Phys@Ibwrapper@TIBTransaction@FilterTRParam$qqrrx32Firedac@Phys@Ibwrapper@TIBPBInfo @401 ; __fastcall Firedac::Phys::Ibwrapper::TIBTransaction::FilterTRParam(const Firedac::Phys::Ibwrapper::TIBPBInfo&)
+    @Firedac@Phys@Ibwrapper@TIBTransaction@GetTransactionID$qqrv @393 ; __fastcall Firedac::Phys::Ibwrapper::TIBTransaction::GetTransactionID()
+    @Firedac@Phys@Ibwrapper@TIBTransaction@Prepare$qqrx20System@UnicodeString @394 ; __fastcall Firedac::Phys::Ibwrapper::TIBTransaction::Prepare(const System::UnicodeString)
+    @Firedac@Phys@Ibwrapper@TIBTransaction@RemoveDatabase$qqrp34Firedac@Phys@Ibwrapper@TIBDatabase @402 ; __fastcall Firedac::Phys::Ibwrapper::TIBTransaction::RemoveDatabase(Firedac::Phys::Ibwrapper::TIBDatabase *)
+    @Firedac@Phys@Ibwrapper@TIBTransaction@Rollback$qqrv @396 ; __fastcall Firedac::Phys::Ibwrapper::TIBTransaction::Rollback()
+    @Firedac@Phys@Ibwrapper@TIBTransaction@RollbackRetaining$qqrv @395 ; __fastcall Firedac::Phys::Ibwrapper::TIBTransaction::RollbackRetaining()
+    @Firedac@Phys@Ibwrapper@TIBTransaction@SetParams$qqrxp23System@Classes@TStrings @405 ; __fastcall Firedac::Phys::Ibwrapper::TIBTransaction::SetParams(System::Classes::TStrings * const)
+    @Firedac@Phys@Ibwrapper@TIBTransaction@StartTransaction$qqrv @399 ; __fastcall Firedac::Phys::Ibwrapper::TIBTransaction::StartTransaction()
+    @Firedac@Phys@Ibwrapper@TIBTransaction@Update$qqrv @400 ; __fastcall Firedac::Phys::Ibwrapper::TIBTransaction::Update()
+    @Firedac@Phys@Ibwrapper@TIBVariable@ @538 ; Firedac::Phys::Ibwrapper::TIBVariable::
+    @Firedac@Phys@Ibwrapper@TIBVariable@$bctr$qqrp35Firedac@Phys@Ibwrapper@TIBVariables @375 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::TIBVariable(Firedac::Phys::Ibwrapper::TIBVariables *)
+    @Firedac@Phys@Ibwrapper@TIBVariable@$bdtr$qqrv @374 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::~TIBVariable()
+    @Firedac@Phys@Ibwrapper@TIBVariable@Decode$qqrpxvi @372 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::Decode(const void *, int)
+    @Firedac@Phys@Ibwrapper@TIBVariable@DumpSQLDataType$qqrv @338 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::DumpSQLDataType()
+    @Firedac@Phys@Ibwrapper@TIBVariable@DumpValue$qqrui @337 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::DumpValue(unsigned int)
+    @Firedac@Phys@Ibwrapper@TIBVariable@GetAsString$qqrv @340 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::GetAsString()
+    @Firedac@Phys@Ibwrapper@TIBVariable@GetBaseXSQLVarV1$qqrv @370 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::GetBaseXSQLVarV1()
+    @Firedac@Phys@Ibwrapper@TIBVariable@GetBaseXSQLVarV2$qqrv @369 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::GetBaseXSQLVarV2()
+    @Firedac@Phys@Ibwrapper@TIBVariable@GetBindSize$qqrv @346 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::GetBindSize()
+    @Firedac@Phys@Ibwrapper@TIBVariable@GetData$qqrpv @342 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::GetData(void *)
+    @Firedac@Phys@Ibwrapper@TIBVariable@GetData$qqrpvrui @343 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::GetData(void *, unsigned int&)
+    @Firedac@Phys@Ibwrapper@TIBVariable@GetData$qqruirpvruio @345 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::GetData(unsigned int, void *&, unsigned int&, bool)
+    @Firedac@Phys@Ibwrapper@TIBVariable@GetDataSize$qqrv @347 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::GetDataSize()
+    @Firedac@Phys@Ibwrapper@TIBVariable@GetDataXSQLVarV1$qqrui @368 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::GetDataXSQLVarV1(unsigned int)
+    @Firedac@Phys@Ibwrapper@TIBVariable@GetDataXSQLVarV2$qqrui @367 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::GetDataXSQLVarV2(unsigned int)
+    @Firedac@Phys@Ibwrapper@TIBVariable@GetDumpLabel$qqrv @339 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::GetDumpLabel()
+    @Firedac@Phys@Ibwrapper@TIBVariable@GetIsNullable$qqrv @365 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::GetIsNullable()
+    @Firedac@Phys@Ibwrapper@TIBVariable@GetIsNulls$qqrui @366 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::GetIsNulls(unsigned int)
+    @Firedac@Phys@Ibwrapper@TIBVariable@GetNational$qqrv @371 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::GetNational()
+    @Firedac@Phys@Ibwrapper@TIBVariable@GetSQLDataType$qqrv @363 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::GetSQLDataType()
+    @Firedac@Phys@Ibwrapper@TIBVariable@Getaliasname$qqrv @361 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::Getaliasname()
+    @Firedac@Phys@Ibwrapper@TIBVariable@Getownname$qqrv @360 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::Getownname()
+    @Firedac@Phys@Ibwrapper@TIBVariable@Getrelname$qqrv @359 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::Getrelname()
+    @Firedac@Phys@Ibwrapper@TIBVariable@Getsqllen$qqrv @357 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::Getsqllen()
+    @Firedac@Phys@Ibwrapper@TIBVariable@Getsqlname$qqrv @358 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::Getsqlname()
+    @Firedac@Phys@Ibwrapper@TIBVariable@Getsqlprecision$qqrv @353 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::Getsqlprecision()
+    @Firedac@Phys@Ibwrapper@TIBVariable@Getsqlscale$qqrv @356 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::Getsqlscale()
+    @Firedac@Phys@Ibwrapper@TIBVariable@Getsqlsubtype$qqrv @355 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::Getsqlsubtype()
+    @Firedac@Phys@Ibwrapper@TIBVariable@Getsqltype$qqrv @354 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::Getsqltype()
+    @Firedac@Phys@Ibwrapper@TIBVariable@LayoutChanged$qqrv @373 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::LayoutChanged()
+    @Firedac@Phys@Ibwrapper@TIBVariable@SetData$qqrpxvui @341 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::SetData(const void *, unsigned int)
+    @Firedac@Phys@Ibwrapper@TIBVariable@SetData$qqruipvui29Firedac@Stan@Intf@TFDDataType @344 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::SetData(unsigned int, void *, unsigned int, Firedac::Stan::Intf::TFDDataType)
+    @Firedac@Phys@Ibwrapper@TIBVariable@SetIsNullable$qqrxo @364 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::SetIsNullable(const bool)
+    @Firedac@Phys@Ibwrapper@TIBVariable@SetSQLDataType$qqrxs @362 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::SetSQLDataType(const short)
+    @Firedac@Phys@Ibwrapper@TIBVariable@Setsqllen$qqrxs @352 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::Setsqllen(const short)
+    @Firedac@Phys@Ibwrapper@TIBVariable@Setsqlprecision$qqrxs @348 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::Setsqlprecision(const short)
+    @Firedac@Phys@Ibwrapper@TIBVariable@Setsqlscale$qqrxs @351 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::Setsqlscale(const short)
+    @Firedac@Phys@Ibwrapper@TIBVariable@Setsqlsubtype$qqrxs @350 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::Setsqlsubtype(const short)
+    @Firedac@Phys@Ibwrapper@TIBVariable@Setsqltype$qqrxs @349 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariable::Setsqltype(const short)
+    @Firedac@Phys@Ibwrapper@TIBVariables@ @535 ; Firedac::Phys::Ibwrapper::TIBVariables::
+    @Firedac@Phys@Ibwrapper@TIBVariables@$bctr$qqrp35Firedac@Phys@Ibwrapper@TIBStatement @386 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariables::TIBVariables(Firedac::Phys::Ibwrapper::TIBStatement *)
+    @Firedac@Phys@Ibwrapper@TIBVariables@$bdtr$qqrv @385 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariables::~TIBVariables()
+    @Firedac@Phys@Ibwrapper@TIBVariables@AdjustCount$qqrv @381 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariables::AdjustCount()
+    @Firedac@Phys@Ibwrapper@TIBVariables@AllocateBuff$qqrv @379 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariables::AllocateBuff()
+    @Firedac@Phys@Ibwrapper@TIBVariables@CheckBuff$qqrv @377 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariables::CheckBuff()
+    @Firedac@Phys@Ibwrapper@TIBVariables@GetBuffSize$qqrv @376 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariables::GetBuffSize()
+    @Firedac@Phys@Ibwrapper@TIBVariables@GetItems$qqrui @384 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariables::GetItems(unsigned int)
+    @Firedac@Phys@Ibwrapper@TIBVariables@GetVarCount$qqrv @383 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariables::GetVarCount()
+    @Firedac@Phys@Ibwrapper@TIBVariables@ReleaseBuff$qqrv @378 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariables::ReleaseBuff()
+    @Firedac@Phys@Ibwrapper@TIBVariables@SetRowCount$qqrus @380 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariables::SetRowCount(unsigned short)
+    @Firedac@Phys@Ibwrapper@TIBVariables@SetVarCount$qqrs @382 ; __fastcall Firedac::Phys::Ibwrapper::TIBVariables::SetVarCount(short)
+    @Firedac@Phys@Ibwrapper@initialization$qqrv @245 ; __fastcall Firedac::Phys::Ibwrapper::initialization()
+    @Firedacibdriver@@GetPackageInfoTable$qqrv @890 ; Firedacibdriver::__linkproc__ __fastcall GetPackageInfoTable()
+    @Firedacibdriver@@PackageLoad$qqrv @889 ; Firedacibdriver::__linkproc__ __fastcall PackageLoad()
+    @Firedacibdriver@@PackageUnload$qqrv @888 ; Firedacibdriver::__linkproc__ __fastcall PackageUnload()
+    @Firedacibdriver@initialization$qqrv @887 ; __fastcall Firedacibdriver::initialization()
+    @GetPackageInfoTable           @893 ; GetPackageInfoTable
+    Finalize                       @891 ; Finalize
+    Initialize                     @892 ; Initialize

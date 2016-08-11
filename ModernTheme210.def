@@ -1,0 +1,59 @@
+LIBRARY     MODERNTHEME210.BPL
+
+DESCRIPTION 'mbarcadero Unit Testing IDE Package'
+
+EXPORTS
+    @$xp$24Moderntheme@TModernTheme @44  ; __tpdsc__ Moderntheme::TModernTheme
+    @$xp$26Moderntheme@TImageReplacer @46  ; __tpdsc__ Moderntheme::TImageReplacer
+    @$xp$32Themeresources@TDMThemeResources @4   ; __tpdsc__ Themeresources::TDMThemeResources
+    @$xp$36Moderntheme@TModernCaptionedDockTree @42  ; __tpdsc__ Moderntheme::TModernCaptionedDockTree
+    @$xp$36Moderntheme@TModernDockCaptionDrawer @40  ; __tpdsc__ Moderntheme::TModernDockCaptionDrawer
+    @GetPackageInfoTable           @54  ; GetPackageInfoTable
+    @Moderntheme@@GetPackageInfoTable$qqrv @51  ; Moderntheme::__linkproc__ __fastcall GetPackageInfoTable()
+    @Moderntheme@@PackageLoad$qqrv @50  ; Moderntheme::__linkproc__ __fastcall PackageLoad()
+    @Moderntheme@@PackageUnload$qqrv @49  ; Moderntheme::__linkproc__ __fastcall PackageUnload()
+    @Moderntheme@Finalization$qqrv @7   ; __fastcall Moderntheme::Finalization()
+    @Moderntheme@TImageReplacer@   @47  ; Moderntheme::TImageReplacer::
+    @Moderntheme@TImageReplacer@ReplaceIcon$qqrp15Vcl@Forms@TForm @34  ; __fastcall Moderntheme::TImageReplacer::ReplaceIcon(Vcl::Forms::TForm *)
+    @Moderntheme@TImageReplacer@ReplaceImageList$qqrx20System@UnicodeStringp28Vcl@Imglist@TCustomImageList @33  ; __fastcall Moderntheme::TImageReplacer::ReplaceImageList(const System::UnicodeString, Vcl::Imglist::TCustomImageList *)
+    @Moderntheme@TModernCaptionedDockTree@ @43  ; Moderntheme::TModernCaptionedDockTree::
+    @Moderntheme@TModernCaptionedDockTree@GetDockCaptionDrawer$qqrv @39  ; __fastcall Moderntheme::TModernCaptionedDockTree::GetDockCaptionDrawer()
+    @Moderntheme@TModernDockCaptionDrawer@ @41  ; Moderntheme::TModernDockCaptionDrawer::
+    @Moderntheme@TModernDockCaptionDrawer@CalcButtonSize$qqrrx18System@Types@TRect @35  ; __fastcall Moderntheme::TModernDockCaptionDrawer::CalcButtonSize(const System::Types::TRect&)
+    @Moderntheme@TModernDockCaptionDrawer@DrawDockCaption$qqrxp20Vcl@Graphics@TCanvasrx18System@Types@TRectrx38Vcl@Captioneddocktree@TParentFormState @38  ; __fastcall Moderntheme::TModernDockCaptionDrawer::DrawDockCaption(Vcl::Graphics::TCanvas * const, const System::Types::TRect&, const Vcl::Captioneddocktree::TParentFormState&)
+    @Moderntheme@TModernDockCaptionDrawer@GetCloseRect$qqrrx18System@Types@TRect @37  ; __fastcall Moderntheme::TModernDockCaptionDrawer::GetCloseRect(const System::Types::TRect&)
+    @Moderntheme@TModernDockCaptionDrawer@GetPinRect$qqrrx18System@Types@TRect @36  ; __fastcall Moderntheme::TModernDockCaptionDrawer::GetPinRect(const System::Types::TRect&)
+    @Moderntheme@TModernTheme@     @45  ; Moderntheme::TModernTheme::
+    @Moderntheme@TModernTheme@$bctr$qqrv @32  ; __fastcall Moderntheme::TModernTheme::TModernTheme()
+    @Moderntheme@TModernTheme@$bdtr$qqrv @31  ; __fastcall Moderntheme::TModernTheme::~TModernTheme()
+    @Moderntheme@TModernTheme@GetCaptionedDockTreeClass$qqrv @30  ; __fastcall Moderntheme::TModernTheme::GetCaptionedDockTreeClass()
+    @Moderntheme@TModernTheme@GetDisabledSingleColor$qqrv @29  ; __fastcall Moderntheme::TModernTheme::GetDisabledSingleColor()
+    @Moderntheme@TModernTheme@GetFlat$qqrv @28  ; __fastcall Moderntheme::TModernTheme::GetFlat()
+    @Moderntheme@TModernTheme@GetFont$qqrv @27  ; __fastcall Moderntheme::TModernTheme::GetFont()
+    @Moderntheme@TModernTheme@GetHotSingleColor$qqrv @26  ; __fastcall Moderntheme::TModernTheme::GetHotSingleColor()
+    @Moderntheme@TModernTheme@GetOutlineTabsetButtons$qqrv @25  ; __fastcall Moderntheme::TModernTheme::GetOutlineTabsetButtons()
+    @Moderntheme@TModernTheme@GetTabColorActiveEnd$qqrv @24  ; __fastcall Moderntheme::TModernTheme::GetTabColorActiveEnd()
+    @Moderntheme@TModernTheme@GetTabColorActiveStart$qqrv @23  ; __fastcall Moderntheme::TModernTheme::GetTabColorActiveStart()
+    @Moderntheme@TModernTheme@GetTabDrawingStyle$qqrv @22  ; __fastcall Moderntheme::TModernTheme::GetTabDrawingStyle()
+    @Moderntheme@TModernTheme@GetViewBarDelta$qqrv @21  ; __fastcall Moderntheme::TModernTheme::GetViewBarDelta()
+    @Moderntheme@TModernTheme@GetViewBarTabStyle$qqrv @20  ; __fastcall Moderntheme::TModernTheme::GetViewBarTabStyle()
+    @Moderntheme@TModernTheme@ImageListReplace$qqrp28Vcl@Imglist@TCustomImageList @19  ; __fastcall Moderntheme::TModernTheme::ImageListReplace(Vcl::Imglist::TCustomImageList *)
+    @Moderntheme@TModernTheme@SetCaptionedDockTreeClass$qqrxp17System@TMetaClass @18  ; __fastcall Moderntheme::TModernTheme::SetCaptionedDockTreeClass(System::TMetaClass * const)
+    @Moderntheme@TModernTheme@SetDisabledSingleColor$qqrx21System@Uitypes@TColor @17  ; __fastcall Moderntheme::TModernTheme::SetDisabledSingleColor(const System::Uitypes::TColor)
+    @Moderntheme@TModernTheme@SetFlat$qqrxo @16  ; __fastcall Moderntheme::TModernTheme::SetFlat(const bool)
+    @Moderntheme@TModernTheme@SetFont$qqrxp18Vcl@Graphics@TFont @15  ; __fastcall Moderntheme::TModernTheme::SetFont(Vcl::Graphics::TFont * const)
+    @Moderntheme@TModernTheme@SetHotSingleColor$qqrx21System@Uitypes@TColor @14  ; __fastcall Moderntheme::TModernTheme::SetHotSingleColor(const System::Uitypes::TColor)
+    @Moderntheme@TModernTheme@SetOutlineTabsetButtons$qqrxo @13  ; __fastcall Moderntheme::TModernTheme::SetOutlineTabsetButtons(const bool)
+    @Moderntheme@TModernTheme@SetTabColorActiveEnd$qqrx21System@Uitypes@TColor @12  ; __fastcall Moderntheme::TModernTheme::SetTabColorActiveEnd(const System::Uitypes::TColor)
+    @Moderntheme@TModernTheme@SetTabColorActiveStart$qqrx21System@Uitypes@TColor @11  ; __fastcall Moderntheme::TModernTheme::SetTabColorActiveStart(const System::Uitypes::TColor)
+    @Moderntheme@TModernTheme@SetTabDrawingStyle$qqrx28Brandingapi@TTabDrawingStyle @10  ; __fastcall Moderntheme::TModernTheme::SetTabDrawingStyle(const Brandingapi::TTabDrawingStyle)
+    @Moderntheme@TModernTheme@SetViewBarDelta$qqrxi @9   ; __fastcall Moderntheme::TModernTheme::SetViewBarDelta(const int)
+    @Moderntheme@TModernTheme@SetViewBarTabStyle$qqrx24Vcl@Tabs@TTabSetTabStyle @8   ; __fastcall Moderntheme::TModernTheme::SetViewBarTabStyle(const Vcl::Tabs::TTabSetTabStyle)
+    @Moderntheme@initialization$qqrv @6   ; __fastcall Moderntheme::initialization()
+    @Moderntheme@initialization$qqrv @48  ; __fastcall Moderntheme::initialization()
+    @Themeresources@DMThemeResources @3   ; Themeresources::DMThemeResources
+    @Themeresources@Finalization$qqrv @2   ; __fastcall Themeresources::Finalization()
+    @Themeresources@TDMThemeResources@ @5   ; Themeresources::TDMThemeResources::
+    @Themeresources@initialization$qqrv @1   ; __fastcall Themeresources::initialization()
+    Finalize                       @52  ; Finalize
+    Initialize                     @53  ; Initialize

@@ -1,0 +1,18 @@
+LIBRARY     DCLTETHERING210.BPL
+
+DESCRIPTION 'mbarcadero - Tethering Component Editors'
+
+EXPORTS
+    @Dcltethering@@GetPackageInfoTable$qqrv @10  ; Dcltethering::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dcltethering@@PackageLoad$qqrv @9   ; Dcltethering::__linkproc__ __fastcall PackageLoad()
+    @Dcltethering@@PackageUnload$qqrv @8   ; Dcltethering::__linkproc__ __fastcall PackageUnload()
+    @Dcltethering@initialization$qqrv @7   ; __fastcall Dcltethering::initialization()
+    @GetPackageInfoTable           @13  ; GetPackageInfoTable
+    @System@Tether@Appprofilereg@Finalization$qqrv @5   ; __fastcall System::Tether::Appprofilereg::Finalization()
+    @System@Tether@Appprofilereg@Register$qqrv @6   ; __fastcall System::Tether::Appprofilereg::Register()
+    @System@Tether@Appprofilereg@initialization$qqrv @4   ; __fastcall System::Tether::Appprofilereg::initialization()
+    @System@Tether@Editorreg@Finalization$qqrv @2   ; __fastcall System::Tether::Editorreg::Finalization()
+    @System@Tether@Editorreg@Register$qqrv @3   ; __fastcall System::Tether::Editorreg::Register()
+    @System@Tether@Editorreg@initialization$qqrv @1   ; __fastcall System::Tether::Editorreg::initialization()
+    Finalize                       @11  ; Finalize
+    Initialize                     @12  ; Initialize

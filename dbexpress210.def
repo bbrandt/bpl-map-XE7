@@ -1,0 +1,688 @@
+LIBRARY     DBEXPRESS210.BPL
+
+DESCRIPTION 'mbarcadero dbExpress Database Components'
+
+EXPORTS
+    @$xp$21Data@Sqlexpr@TFLDDesc   @621 ; __tpdsc__ Data::Sqlexpr::TFLDDesc
+    @$xp$21System@%TArray__1$uc%   @570 ; __tpdsc__ System::TArray__1<unsigned char>
+    @$xp$22Data@Sqlexpr@TSQLQuery  @611 ; __tpdsc__ Data::Sqlexpr::TSQLQuery
+    @$xp$22Data@Sqlexpr@TSQLTable  @607 ; __tpdsc__ Data::Sqlexpr::TSQLTable
+    @$xp$24Data@Sqlexpr@SPParamDesc @644 ; __tpdsc__ Data::Sqlexpr::SPParamDesc
+    @$xp$24Data@Sqlexpr@TSQLDataSet @613 ; __tpdsc__ Data::Sqlexpr::TSQLDataSet
+    @$xp$24Data@Sqlexpr@TSQLMonitor @637 ; __tpdsc__ Data::Sqlexpr::TSQLMonitor
+    @$xp$24Data@Sqlexpr@TSchemaType @635 ; __tpdsc__ Data::Sqlexpr::TSchemaType
+    @$xp$24Data@Sqlexpr@TTableScope @633 ; __tpdsc__ Data::Sqlexpr::TTableScope
+    @$xp$24Data@Sqlexpr@TTraceEvent @640 ; __tpdsc__ Data::Sqlexpr::TTraceEvent
+    @$xp$25Data@Sqlexpr@EConnectFlag @636 ; __tpdsc__ Data::Sqlexpr::EConnectFlag
+    @$xp$25Data@Sqlexpr@TSQLDataLink @623 ; __tpdsc__ Data::Sqlexpr::TSQLDataLink
+    @$xp$25Data@Sqlexpr@TTableScopes @632 ; __tpdsc__ Data::Sqlexpr::TTableScopes
+    @$xp$27Data@Sqlexpr@TFieldDescList @619 ; __tpdsc__ Data::Sqlexpr::TFieldDescList
+    @$xp$27Data@Sqlexpr@TGetDriverFunc @552 ; __tpdsc__ Data::Sqlexpr::TGetDriverFunc
+    @$xp$27Data@Sqlexpr@TParseSqlEvent @618 ; __tpdsc__ Data::Sqlexpr::TParseSqlEvent
+    @$xp$27Data@Sqlexpr@TSQLBlobStream @642 ; __tpdsc__ Data::Sqlexpr::TSQLBlobStream
+    @$xp$27Data@Sqlexpr@TSQLConnection @625 ; __tpdsc__ Data::Sqlexpr::TSQLConnection
+    @$xp$27Data@Sqlexpr@TSQLSchemaInfo @620 ; __tpdsc__ Data::Sqlexpr::TSQLSchemaInfo
+    @$xp$27Data@Sqlexpr@TSQLStoredProc @609 ; __tpdsc__ Data::Sqlexpr::TSQLStoredProc
+    @$xp$27Data@Sqlexpr@TTraceLogEvent @639 ; __tpdsc__ Data::Sqlexpr::TTraceLogEvent
+    @$xp$28Data@Sqlexpr@TConnectionData @627 ; __tpdsc__ Data::Sqlexpr::TConnectionData
+    @$xp$29Data@Sqlexpr@TConnectionState @634 ; __tpdsc__ Data::Sqlexpr::TConnectionState
+    @$xp$29Data@Sqlexpr@TSqlServerMethod @605 ; __tpdsc__ Data::Sqlexpr::TSqlServerMethod
+    @$xp$29Data@Sqlexpr@TTransactionDesc @646 ; __tpdsc__ Data::Sqlexpr::TTransactionDesc
+    @$xp$29Data@Sqlexpr@TTransactionItem @629 ; __tpdsc__ Data::Sqlexpr::TTransactionItem
+    @$xp$30Data@Sqlexpr@TCustomSQLDataSet @615 ; __tpdsc__ Data::Sqlexpr::TCustomSQLDataSet
+    @$xp$30Data@Sqlexpr@TSQLExceptionType @648 ; __tpdsc__ Data::Sqlexpr::TSQLExceptionType
+    @$xp$32Data@Sqlexpr@TConnectionUserType @641 ; __tpdsc__ Data::Sqlexpr::TConnectionUserType
+    @$xp$33Data@Dbconnadmin@IConnectionAdmin @676 ; __tpdsc__ Data::Dbconnadmin::IConnectionAdmin
+    @$xp$33Data@Dbconnadmin@TConnectionAdmin @674 ; __tpdsc__ Data::Dbconnadmin::TConnectionAdmin
+    @$xp$33Data@Sqlexpr@TParseInsertSqlEvent @617 ; __tpdsc__ Data::Sqlexpr::TParseInsertSqlEvent
+    @$xp$33Data@Sqlexpr@TTransIsolationLevel @647 ; __tpdsc__ Data::Sqlexpr::TTransIsolationLevel
+    @$xp$36System@%TArray__1$p14Data@Db@TField% @569 ; __tpdsc__ System::TArray__1<Data::Db::TField *>
+    @$xp$37Data@Sqlexpr@TSQLConnectionLoginEvent @631 ; __tpdsc__ Data::Sqlexpr::TSQLConnectionLoginEvent
+    @$xp$41System@%IEnumerable__1$p14Data@Db@TField% @558 ; __tpdsc__ System::IEnumerable__1<Data::Db::TField *>
+    @$xp$41System@%IEnumerator__1$p14Data@Db@TField% @559 ; __tpdsc__ System::IEnumerator__1<Data::Db::TField *>
+    @$xp$46System@%TArray__1$p24Data@Sqlexpr@SPParamDesc% @604 ; __tpdsc__ System::TArray__1<Data::Sqlexpr::SPParamDesc *>
+    @$xp$46System@%TArray__1$p24Data@Sqlexpr@TSQLMonitor% @587 ; __tpdsc__ System::TArray__1<Data::Sqlexpr::TSQLMonitor *>
+    @$xp$51System@%IEnumerable__1$p24Data@Sqlexpr@SPParamDesc% @593 ; __tpdsc__ System::IEnumerable__1<Data::Sqlexpr::SPParamDesc *>
+    @$xp$51System@%IEnumerable__1$p24Data@Sqlexpr@TSQLMonitor% @576 ; __tpdsc__ System::IEnumerable__1<Data::Sqlexpr::TSQLMonitor *>
+    @$xp$51System@%IEnumerator__1$p24Data@Sqlexpr@SPParamDesc% @594 ; __tpdsc__ System::IEnumerator__1<Data::Sqlexpr::SPParamDesc *>
+    @$xp$51System@%IEnumerator__1$p24Data@Sqlexpr@TSQLMonitor% @577 ; __tpdsc__ System::IEnumerator__1<Data::Sqlexpr::TSQLMonitor *>
+    @$xp$56System@Generics@Collections@%TList__1$p14Data@Db@TField% @553 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Db::TField *>
+    @$xp$57System@Generics@Defaults@%IComparer__1$p14Data@Db@TField% @563 ; __tpdsc__ System::Generics::Defaults::IComparer__1<Data::Db::TField *>
+    @$xp$62System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField% @565 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<Data::Db::TField *>
+    @$xp$62System@Generics@Collections@%TEnumerator__1$p14Data@Db@TField% @567 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<Data::Db::TField *>
+    @$xp$64System@Generics@Collections@%TArrayManager__1$p14Data@Db@TField% @560 ; __tpdsc__ System::Generics::Collections::TArrayManager__1<Data::Db::TField *>
+    @$xp$66System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc% @588 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>
+    @$xp$66System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor% @571 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>
+    @$xp$67System@Generics@Defaults@%IComparer__1$p24Data@Sqlexpr@SPParamDesc% @598 ; __tpdsc__ System::Generics::Defaults::IComparer__1<Data::Sqlexpr::SPParamDesc *>
+    @$xp$67System@Generics@Defaults@%IComparer__1$p24Data@Sqlexpr@TSQLMonitor% @581 ; __tpdsc__ System::Generics::Defaults::IComparer__1<Data::Sqlexpr::TSQLMonitor *>
+    @$xp$68System@Generics@Collections@%TList__1$p14Data@Db@TField%@%arrayofT$% @564 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Db::TField *>::arrayofT<>
+    @$xp$70System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEmptyFunc$% @557 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Db::TField *>::TEmptyFunc<>
+    @$xp$71System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEnumerator$% @555 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Db::TField *>::TEnumerator<>
+    @$xp$72System@Generics@Collections@%TEnumerable__1$p24Data@Sqlexpr@SPParamDesc% @600 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<Data::Sqlexpr::SPParamDesc *>
+    @$xp$72System@Generics@Collections@%TEnumerable__1$p24Data@Sqlexpr@TSQLMonitor% @583 ; __tpdsc__ System::Generics::Collections::TEnumerable__1<Data::Sqlexpr::TSQLMonitor *>
+    @$xp$72System@Generics@Collections@%TEnumerator__1$p24Data@Sqlexpr@SPParamDesc% @602 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<Data::Sqlexpr::SPParamDesc *>
+    @$xp$72System@Generics@Collections@%TEnumerator__1$p24Data@Sqlexpr@TSQLMonitor% @585 ; __tpdsc__ System::Generics::Collections::TEnumerator__1<Data::Sqlexpr::TSQLMonitor *>
+    @$xp$73System@Generics@Collections@%TCollectionNotifyEvent__1$p14Data@Db@TField% @562 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<Data::Db::TField *>
+    @$xp$74System@Generics@Collections@%TArrayManager__1$p24Data@Sqlexpr@SPParamDesc% @595 ; __tpdsc__ System::Generics::Collections::TArrayManager__1<Data::Sqlexpr::SPParamDesc *>
+    @$xp$74System@Generics@Collections@%TArrayManager__1$p24Data@Sqlexpr@TSQLMonitor% @578 ; __tpdsc__ System::Generics::Collections::TArrayManager__1<Data::Sqlexpr::TSQLMonitor *>
+    @$xp$78System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@%arrayofT$% @599 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::arrayofT<>
+    @$xp$78System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@%arrayofT$% @582 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::arrayofT<>
+    @$xp$80System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@%TEmptyFunc$% @592 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::TEmptyFunc<>
+    @$xp$80System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@%TEmptyFunc$% @575 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::TEmptyFunc<>
+    @$xp$81System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@%TEnumerator$% @590 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::TEnumerator<>
+    @$xp$81System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@%TEnumerator$% @573 ; __tpdsc__ System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::TEnumerator<>
+    @$xp$83System@Generics@Collections@%TCollectionNotifyEvent__1$p24Data@Sqlexpr@SPParamDesc% @597 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<Data::Sqlexpr::SPParamDesc *>
+    @$xp$83System@Generics@Collections@%TCollectionNotifyEvent__1$p24Data@Sqlexpr@TSQLMonitor% @580 ; __tpdsc__ System::Generics::Collections::TCollectionNotifyEvent__1<Data::Sqlexpr::TSQLMonitor *>
+    @Data@Dbconnadmin@Finalization$qqrv @654 ; __fastcall Data::Dbconnadmin::Finalization()
+    @Data@Dbconnadmin@GetConnectionAdmin$qqrv @673 ; __fastcall Data::Dbconnadmin::GetConnectionAdmin()
+    @Data@Dbconnadmin@TConnectionAdmin@ @675 ; Data::Dbconnadmin::TConnectionAdmin::
+    @Data@Dbconnadmin@TConnectionAdmin@$bctr$qqrv @672 ; __fastcall Data::Dbconnadmin::TConnectionAdmin::TConnectionAdmin()
+    @Data@Dbconnadmin@TConnectionAdmin@$bdtr$qqrv @671 ; __fastcall Data::Dbconnadmin::TConnectionAdmin::~TConnectionAdmin()
+    @Data@Dbconnadmin@TConnectionAdmin@AddConnection$qqrx20System@UnicodeStringt1 @669 ; __fastcall Data::Dbconnadmin::TConnectionAdmin::AddConnection(const System::UnicodeString, const System::UnicodeString)
+    @Data@Dbconnadmin@TConnectionAdmin@CheckConfigFile$qqrv @670 ; __fastcall Data::Dbconnadmin::TConnectionAdmin::CheckConfigFile()
+    @Data@Dbconnadmin@TConnectionAdmin@DeleteConnection$qqrx20System@UnicodeString @668 ; __fastcall Data::Dbconnadmin::TConnectionAdmin::DeleteConnection(const System::UnicodeString)
+    @Data@Dbconnadmin@TConnectionAdmin@GetConnectionNames$qqrp23System@Classes@TStrings20System@UnicodeString @667 ; __fastcall Data::Dbconnadmin::TConnectionAdmin::GetConnectionNames(System::Classes::TStrings *, System::UnicodeString)
+    @Data@Dbconnadmin@TConnectionAdmin@GetConnectionParams$qqrx20System@UnicodeStringp23System@Classes@TStrings @666 ; __fastcall Data::Dbconnadmin::TConnectionAdmin::GetConnectionParams(const System::UnicodeString, System::Classes::TStrings *)
+    @Data@Dbconnadmin@TConnectionAdmin@GetDelegateDriverNames$qqrp23System@Classes@TStrings @662 ; __fastcall Data::Dbconnadmin::TConnectionAdmin::GetDelegateDriverNames(System::Classes::TStrings *)
+    @Data@Dbconnadmin@TConnectionAdmin@GetDisplayDriverName$qqrx20System@UnicodeString @665 ; __fastcall Data::Dbconnadmin::TConnectionAdmin::GetDisplayDriverName(const System::UnicodeString)
+    @Data@Dbconnadmin@TConnectionAdmin@GetDisplayDriverNames$qqrp23System@Classes@TStrings @664 ; __fastcall Data::Dbconnadmin::TConnectionAdmin::GetDisplayDriverNames(System::Classes::TStrings *)
+    @Data@Dbconnadmin@TConnectionAdmin@GetDriverLibNames$qqrx20System@UnicodeStringr20System@UnicodeStringt2 @659 ; __fastcall Data::Dbconnadmin::TConnectionAdmin::GetDriverLibNames(const System::UnicodeString, System::UnicodeString&, System::UnicodeString&)
+    @Data@Dbconnadmin@TConnectionAdmin@GetDriverNames$qqrp23System@Classes@TStrings @663 ; __fastcall Data::Dbconnadmin::TConnectionAdmin::GetDriverNames(System::Classes::TStrings *)
+    @Data@Dbconnadmin@TConnectionAdmin@GetDriverParams$qqrx20System@UnicodeStringp23System@Classes@TStrings @661 ; __fastcall Data::Dbconnadmin::TConnectionAdmin::GetDriverParams(const System::UnicodeString, System::Classes::TStrings *)
+    @Data@Dbconnadmin@TConnectionAdmin@InitializeDriverNames$qqrv @660 ; __fastcall Data::Dbconnadmin::TConnectionAdmin::InitializeDriverNames()
+    @Data@Dbconnadmin@TConnectionAdmin@ModifyConnection$qqrx20System@UnicodeStringp23System@Classes@TStrings @658 ; __fastcall Data::Dbconnadmin::TConnectionAdmin::ModifyConnection(const System::UnicodeString, System::Classes::TStrings *)
+    @Data@Dbconnadmin@TConnectionAdmin@RegisterDriver$qqrx20System@UnicodeString @657 ; __fastcall Data::Dbconnadmin::TConnectionAdmin::RegisterDriver(const System::UnicodeString)
+    @Data@Dbconnadmin@TConnectionAdmin@RenameConnection$qqrx20System@UnicodeStringt1 @655 ; __fastcall Data::Dbconnadmin::TConnectionAdmin::RenameConnection(const System::UnicodeString, const System::UnicodeString)
+    @Data@Dbconnadmin@TConnectionAdmin@UnregisterDriver$qqrx20System@UnicodeString @656 ; __fastcall Data::Dbconnadmin::TConnectionAdmin::UnregisterDriver(const System::UnicodeString)
+    @Data@Dbconnadmin@initialization$qqrv @653 ; __fastcall Data::Dbconnadmin::initialization()
+    @Data@Sqlconst@Finalization$qqrv @2   ; __fastcall Data::Sqlconst::Finalization()
+    @Data@Sqlconst@_SActiveTrans   @36  ; Data::Sqlconst::_SActiveTrans
+    @Data@Sqlconst@_SAddConnectionString @32  ; Data::Sqlconst::_SAddConnectionString
+    @Data@Sqlconst@_SCannotCreateFile @11  ; Data::Sqlconst::_SCannotCreateFile
+    @Data@Sqlconst@_SCircularProvider @7   ; Data::Sqlconst::_SCircularProvider
+    @Data@Sqlconst@_SCommandTextEditor @29  ; Data::Sqlconst::_SCommandTextEditor
+    @Data@Sqlconst@_SConfFileMoveError @15  ; Data::Sqlconst::_SConfFileMoveError
+    @Data@Sqlconst@_SConnectionEditor @33  ; Data::Sqlconst::_SConnectionEditor
+    @Data@Sqlconst@_SConnectionNameMissing @54  ; Data::Sqlconst::_SConnectionNameMissing
+    @Data@Sqlconst@_SDBXError      @17  ; Data::Sqlconst::_SDBXError
+    @Data@Sqlconst@_SDBXUNKNOWNERROR @19  ; Data::Sqlconst::_SDBXUNKNOWNERROR
+    @Data@Sqlconst@_SDataTypes     @49  ; Data::Sqlconst::_SDataTypes
+    @Data@Sqlconst@_SDatabaseClosed @56  ; Data::Sqlconst::_SDatabaseClosed
+    @Data@Sqlconst@_SDatabaseOpen  @57  ; Data::Sqlconst::_SDatabaseOpen
+    @Data@Sqlconst@_SDlgFilterTxt  @9   ; Data::Sqlconst::_SDlgFilterTxt
+    @Data@Sqlconst@_SDlgOpenCaption @10  ; Data::Sqlconst::_SDlgOpenCaption
+    @Data@Sqlconst@_SDllLoadError  @35  ; Data::Sqlconst::_SDllLoadError
+    @Data@Sqlconst@_SDllProcLoadError @34  ; Data::Sqlconst::_SDllProcLoadError
+    @Data@Sqlconst@_SEmptySQLStatement @53  ; Data::Sqlconst::_SEmptySQLStatement
+    @Data@Sqlconst@_SErrorMappingError @23  ; Data::Sqlconst::_SErrorMappingError
+    @Data@Sqlconst@_SGenerateClientClasses @3   ; Data::Sqlconst::_SGenerateClientClasses
+    @Data@Sqlconst@_SLogFileFilter @8   ; Data::Sqlconst::_SLogFileFilter
+    @Data@Sqlconst@_SLoginError    @60  ; Data::Sqlconst::_SLoginError
+    @Data@Sqlconst@_SMetaDataOpenError @24  ; Data::Sqlconst::_SMetaDataOpenError
+    @Data@Sqlconst@_SMissingConfFile @14  ; Data::Sqlconst::_SMissingConfFile
+    @Data@Sqlconst@_SMissingConnection @58  ; Data::Sqlconst::_SMissingConnection
+    @Data@Sqlconst@_SMissingDLLName @28  ; Data::Sqlconst::_SMissingDLLName
+    @Data@Sqlconst@_SMissingDataBaseName @43  ; Data::Sqlconst::_SMissingDataBaseName
+    @Data@Sqlconst@_SMissingDataSet @42  ; Data::Sqlconst::_SMissingDataSet
+    @Data@Sqlconst@_SMissingDriverName @41  ; Data::Sqlconst::_SMissingDriverName
+    @Data@Sqlconst@_SMissingDriverRegFile @27  ; Data::Sqlconst::_SMissingDriverRegFile
+    @Data@Sqlconst@_SMissingSQLConnection @55  ; Data::Sqlconst::_SMissingSQLConnection
+    @Data@Sqlconst@_SMonitorActive @59  ; Data::Sqlconst::_SMonitorActive
+    @Data@Sqlconst@_SNOTSUPPORTED  @18  ; Data::Sqlconst::_SNOTSUPPORTED
+    @Data@Sqlconst@_SNoActiveTrans @37  ; Data::Sqlconst::_SNoActiveTrans
+    @Data@Sqlconst@_SNoCachedUpdates @44  ; Data::Sqlconst::_SNoCachedUpdates
+    @Data@Sqlconst@_SNoCursor      @25  ; Data::Sqlconst::_SNoCursor
+    @Data@Sqlconst@_SNoDataSetField @45  ; Data::Sqlconst::_SNoDataSetField
+    @Data@Sqlconst@_SNoParameterType @51  ; Data::Sqlconst::_SNoParameterType
+    @Data@Sqlconst@_SNoParameterValue @52  ; Data::Sqlconst::_SNoParameterValue
+    @Data@Sqlconst@_SNoSqlStatement @46  ; Data::Sqlconst::_SNoSqlStatement
+    @Data@Sqlconst@_SNoTableName   @47  ; Data::Sqlconst::_SNoTableName
+    @Data@Sqlconst@_SObjectNameError @39  ; Data::Sqlconst::_SObjectNameError
+    @Data@Sqlconst@_SObjectTypenameRequired @12  ; Data::Sqlconst::_SObjectTypenameRequired
+    @Data@Sqlconst@_SObjectViewNotTrue @13  ; Data::Sqlconst::_SObjectViewNotTrue
+    @Data@Sqlconst@_SPackagesNotSupported @21  ; Data::Sqlconst::_SPackagesNotSupported
+    @Data@Sqlconst@_SParameterTypes @50  ; Data::Sqlconst::_SParameterTypes
+    @Data@Sqlconst@_SPrepareError  @40  ; Data::Sqlconst::_SPrepareError
+    @Data@Sqlconst@_SRefreshConnectionString @31  ; Data::Sqlconst::_SRefreshConnectionString
+    @Data@Sqlconst@_SReloadConnectionParams @4   ; Data::Sqlconst::_SReloadConnectionParams
+    @Data@Sqlconst@_SRemoveConnectionString @30  ; Data::Sqlconst::_SRemoveConnectionString
+    @Data@Sqlconst@_SResultName    @48  ; Data::Sqlconst::_SResultName
+    @Data@Sqlconst@_SSQLDataSetOpen @38  ; Data::Sqlconst::_SSQLDataSetOpen
+    @Data@Sqlconst@_SSQLServerError @16  ; Data::Sqlconst::_SSQLServerError
+    @Data@Sqlconst@_SSaveConnectionParams @5   ; Data::Sqlconst::_SSaveConnectionParams
+    @Data@Sqlconst@_SStoredProcsNotSupported @22  ; Data::Sqlconst::_SStoredProcsNotSupported
+    @Data@Sqlconst@_STableNameNotFound @26  ; Data::Sqlconst::_STableNameNotFound
+    @Data@Sqlconst@_STooManyActualParam @20  ; Data::Sqlconst::_STooManyActualParam
+    @Data@Sqlconst@_SUnknownDataType @6   ; Data::Sqlconst::_SUnknownDataType
+    @Data@Sqlconst@initialization$qqrv @1   ; __fastcall Data::Sqlconst::initialization()
+    @Data@Sqlexpr@BlobTypeMap      @649 ; Data::Sqlexpr::BlobTypeMap
+    @Data@Sqlexpr@DataTypeMap      @650 ; Data::Sqlexpr::DataTypeMap
+    @Data@Sqlexpr@Finalization$qqrv @245 ; __fastcall Data::Sqlexpr::Finalization()
+    @Data@Sqlexpr@FldSubTypeMap    @651 ; Data::Sqlexpr::FldSubTypeMap
+    @Data@Sqlexpr@FldTypeMap       @652 ; Data::Sqlexpr::FldTypeMap
+    @Data@Sqlexpr@FreeProcParams$qqrrp66System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc% @542 ; __fastcall Data::Sqlexpr::FreeProcParams(System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *> *&)
+    @Data@Sqlexpr@GetConnectionNames$qqrp23System@Classes@TStrings20System@UnicodeStringo @545 ; __fastcall Data::Sqlexpr::GetConnectionNames(System::Classes::TStrings *, System::UnicodeString, bool)
+    @Data@Sqlexpr@GetConnectionRegistryFile$qqro @550 ; __fastcall Data::Sqlexpr::GetConnectionRegistryFile(bool)
+    @Data@Sqlexpr@GetDelegateDriverNames$qqrp23System@Classes@TStringso @546 ; __fastcall Data::Sqlexpr::GetDelegateDriverNames(System::Classes::TStrings *, bool)
+    @Data@Sqlexpr@GetDisplayDriverName$qqrx20System@UnicodeString @549 ; __fastcall Data::Sqlexpr::GetDisplayDriverName(const System::UnicodeString)
+    @Data@Sqlexpr@GetDisplayDriverNames$qqrp23System@Classes@TStringso @548 ; __fastcall Data::Sqlexpr::GetDisplayDriverNames(System::Classes::TStrings *, bool)
+    @Data@Sqlexpr@GetDriverNames$qqrp23System@Classes@TStringso @547 ; __fastcall Data::Sqlexpr::GetDriverNames(System::Classes::TStrings *, bool)
+    @Data@Sqlexpr@GetDriverRegistryFile$qqro @551 ; __fastcall Data::Sqlexpr::GetDriverRegistryFile(bool)
+    @Data@Sqlexpr@LoadParamListItems$qqrp15Data@Db@TParamsp66System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc% @541 ; __fastcall Data::Sqlexpr::LoadParamListItems(Data::Db::TParams *, System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *> *)
+    @Data@Sqlexpr@RegisterDriver$qqrx20System@UnicodeString @544 ; __fastcall Data::Sqlexpr::RegisterDriver(const System::UnicodeString)
+    @Data@Sqlexpr@SPParamDesc@     @645 ; Data::Sqlexpr::SPParamDesc::
+    @Data@Sqlexpr@TConnectionData@ @628 ; Data::Sqlexpr::TConnectionData::
+    @Data@Sqlexpr@TConnectionData@$bctr$qqrp27Data@Sqlexpr@TSQLConnection @267 ; __fastcall Data::Sqlexpr::TConnectionData::TConnectionData(Data::Sqlexpr::TSQLConnection *)
+    @Data@Sqlexpr@TConnectionData@$bctr$qqrp28Data@Sqlexpr@TConnectionData @264 ; __fastcall Data::Sqlexpr::TConnectionData::TConnectionData(Data::Sqlexpr::TConnectionData *)
+    @Data@Sqlexpr@TConnectionData@$bdtr$qqrv @263 ; __fastcall Data::Sqlexpr::TConnectionData::~TConnectionData()
+    @Data@Sqlexpr@TConnectionData@AddProperties$qqrp23System@Classes@TStrings @266 ; __fastcall Data::Sqlexpr::TConnectionData::AddProperties(System::Classes::TStrings *)
+    @Data@Sqlexpr@TConnectionData@BeginUpdate$qqrv @265 ; __fastcall Data::Sqlexpr::TConnectionData::BeginUpdate()
+    @Data@Sqlexpr@TConnectionData@DoChange$qqrp14System@TObject @262 ; __fastcall Data::Sqlexpr::TConnectionData::DoChange(System::TObject *)
+    @Data@Sqlexpr@TConnectionData@EndUpdate$qqrv @261 ; __fastcall Data::Sqlexpr::TConnectionData::EndUpdate()
+    @Data@Sqlexpr@TConnectionData@GetConectionName$qqrv @260 ; __fastcall Data::Sqlexpr::TConnectionData::GetConectionName()
+    @Data@Sqlexpr@TConnectionData@GetDriverName$qqrv @259 ; __fastcall Data::Sqlexpr::TConnectionData::GetDriverName()
+    @Data@Sqlexpr@TConnectionData@GetFullParams$qqrp23System@Classes@TStrings @258 ; __fastcall Data::Sqlexpr::TConnectionData::GetFullParams(System::Classes::TStrings *)
+    @Data@Sqlexpr@TConnectionData@GetIsModified$qqrv @257 ; __fastcall Data::Sqlexpr::TConnectionData::GetIsModified()
+    @Data@Sqlexpr@TConnectionData@GetOriginalProperties$qqrv @256 ; __fastcall Data::Sqlexpr::TConnectionData::GetOriginalProperties()
+    @Data@Sqlexpr@TConnectionData@GetPrefix$qqrv @255 ; __fastcall Data::Sqlexpr::TConnectionData::GetPrefix()
+    @Data@Sqlexpr@TConnectionData@GetProperties$qqrv @254 ; __fastcall Data::Sqlexpr::TConnectionData::GetProperties()
+    @Data@Sqlexpr@TConnectionData@IsMyProperty$qqrx20System@UnicodeString @253 ; __fastcall Data::Sqlexpr::TConnectionData::IsMyProperty(const System::UnicodeString)
+    @Data@Sqlexpr@TConnectionData@RefreshProperties$qqrv @252 ; __fastcall Data::Sqlexpr::TConnectionData::RefreshProperties()
+    @Data@Sqlexpr@TConnectionData@ReloadProperties$qqrv @251 ; __fastcall Data::Sqlexpr::TConnectionData::ReloadProperties()
+    @Data@Sqlexpr@TConnectionData@SetConnectionName$qqrx20System@UnicodeString @250 ; __fastcall Data::Sqlexpr::TConnectionData::SetConnectionName(const System::UnicodeString)
+    @Data@Sqlexpr@TConnectionData@SetDelegateConnection$qqrxp28Data@Sqlexpr@TConnectionData @249 ; __fastcall Data::Sqlexpr::TConnectionData::SetDelegateConnection(Data::Sqlexpr::TConnectionData * const)
+    @Data@Sqlexpr@TConnectionData@SetDriverName$qqrx20System@UnicodeString @248 ; __fastcall Data::Sqlexpr::TConnectionData::SetDriverName(const System::UnicodeString)
+    @Data@Sqlexpr@TConnectionData@SetProperties$qqrxp29Data@Dbxcommon@TDBXProperties @247 ; __fastcall Data::Sqlexpr::TConnectionData::SetProperties(Data::Dbxcommon::TDBXProperties * const)
+    @Data@Sqlexpr@TConnectionData@UpdateProperties$qqrp23System@Classes@TStrings @246 ; __fastcall Data::Sqlexpr::TConnectionData::UpdateProperties(System::Classes::TStrings *)
+    @Data@Sqlexpr@TCustomSQLDataSet@ @616 ; Data::Sqlexpr::TCustomSQLDataSet::
+    @Data@Sqlexpr@TCustomSQLDataSet@$bctr$qqrp25System@Classes@TComponent @425 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::TCustomSQLDataSet(System::Classes::TComponent *)
+    @Data@Sqlexpr@TCustomSQLDataSet@$bctr$qqrp25System@Classes@TComponentp25Data@Dbxcommon@TDBXReadero @393 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::TCustomSQLDataSet(System::Classes::TComponent *, Data::Dbxcommon::TDBXReader *, bool)
+    @Data@Sqlexpr@TCustomSQLDataSet@$bdtr$qqrv @424 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::~TCustomSQLDataSet()
+    @Data@Sqlexpr@TCustomSQLDataSet@AddFieldDesc$qqr46System@%DynamicArray$p21Data@Sqlexpr@TFLDDesc%irip20System@Classes@TBitsp18Data@Db@TFieldDefs @402 ; Data::Sqlexpr::TCustomSQLDataSet::AddFieldDesc(System::DynamicArray<{583}...
+    @Data@Sqlexpr@TCustomSQLDataSet@AddIndexDefs$qqrp30Data@Sqlexpr@TCustomSQLDataSet20System@UnicodeString @339 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::AddIndexDefs(Data::Sqlexpr::TCustomSQLDataSet *, System::UnicodeString)
+    @Data@Sqlexpr@TCustomSQLDataSet@AddMetadataQuotes$qqr20System@UnicodeStringo @338 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::AddMetadataQuotes(System::UnicodeString, bool)
+    @Data@Sqlexpr@TCustomSQLDataSet@CheckConnection$qqr25Data@Sqlexpr@EConnectFlag @423 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::CheckConnection(Data::Sqlexpr::EConnectFlag)
+    @Data@Sqlexpr@TCustomSQLDataSet@CheckDetail$qqrx20System@UnicodeString @365 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::CheckDetail(const System::UnicodeString)
+    @Data@Sqlexpr@TCustomSQLDataSet@CheckFieldNames$qqrx20System@UnicodeString @340 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::CheckFieldNames(const System::UnicodeString)
+    @Data@Sqlexpr@TCustomSQLDataSet@CheckPrepareError$qqrv @363 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::CheckPrepareError()
+    @Data@Sqlexpr@TCustomSQLDataSet@CheckStatement$qqro @367 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::CheckStatement(bool)
+    @Data@Sqlexpr@TCustomSQLDataSet@ClearIndexDefs$qqrv @407 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::ClearIndexDefs()
+    @Data@Sqlexpr@TCustomSQLDataSet@CloseCursor$qqrv @416 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::CloseCursor()
+    @Data@Sqlexpr@TCustomSQLDataSet@CloseStatement$qqrv @413 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::CloseStatement()
+    @Data@Sqlexpr@TCustomSQLDataSet@CreateBlobStream$qqrp14Data@Db@TField23Data@Db@TBlobStreamMode @392 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::CreateBlobStream(Data::Db::TField *, Data::Db::TBlobStreamMode)
+    @Data@Sqlexpr@TCustomSQLDataSet@DefineProperties$qqrp21System@Classes@TFiler @345 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::DefineProperties(System::Classes::TFiler *)
+    @Data@Sqlexpr@TCustomSQLDataSet@ExecSQL$qqro @362 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::ExecSQL(bool)
+    @Data@Sqlexpr@TCustomSQLDataSet@ExecuteStatement$qqrv @361 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::ExecuteStatement()
+    @Data@Sqlexpr@TCustomSQLDataSet@FreeBuffers$qqrv @406 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::FreeBuffers()
+    @Data@Sqlexpr@TCustomSQLDataSet@FreeCommand$qqrv @414 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::FreeCommand()
+    @Data@Sqlexpr@TCustomSQLDataSet@FreeReader$qqrv @415 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::FreeReader()
+    @Data@Sqlexpr@TCustomSQLDataSet@GetBlobFieldData$qqrir24System@%DynamicArray$uc% @394 ; Data::Sqlexpr::TCustomSQLDataSet::GetBlobFieldData(int, System::DynamicArray<{583}...
+    @Data@Sqlexpr@TCustomSQLDataSet@GetCalculatedField$qqrp14Data@Db@TFieldr24System@%DynamicArray$uc% @389 ; Data::Sqlexpr::TCustomSQLDataSet::GetCalculatedField(Data::Db::TField *, System::DynamicArray<{583}...
+    @Data@Sqlexpr@TCustomSQLDataSet@GetCanModify$qqrv @388 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetCanModify()
+    @Data@Sqlexpr@TCustomSQLDataSet@GetCanRefresh$qqrv @387 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetCanRefresh()
+    @Data@Sqlexpr@TCustomSQLDataSet@GetCommandNames$qqrp23System@Classes@TStrings @386 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetCommandNames(System::Classes::TStrings *)
+    @Data@Sqlexpr@TCustomSQLDataSet@GetDataSetFromSQL$qqr20System@UnicodeString @381 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetDataSetFromSQL(System::UnicodeString)
+    @Data@Sqlexpr@TCustomSQLDataSet@GetDataSetOutputParam$qqrp14Data@Db@TParamp24Data@Dbxcommon@TDBXValue @373 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetDataSetOutputParam(Data::Db::TParam *, Data::Dbxcommon::TDBXValue *)
+    @Data@Sqlexpr@TCustomSQLDataSet@GetDataSource$qqrv @354 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetDataSource()
+    @Data@Sqlexpr@TCustomSQLDataSet@GetDetailLinkFields$qqrp20System@Classes@TListt1 @352 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetDetailLinkFields(System::Classes::TList *, System::Classes::TList *)
+    @Data@Sqlexpr@TCustomSQLDataSet@GetDetailLinkFields$qqrp56System@Generics@Collections@%TList__1$p14Data@Db@TField%t1 @353 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetDetailLinkFields(System::Generics::Collections::TList__1<Data::Db::TField *> *, System::Generics::Collections::TList__1<Data::Db::TField *> *)
+    @Data@Sqlexpr@TCustomSQLDataSet@GetFieldData$qqripv @397 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetFieldData(int, void *)
+    @Data@Sqlexpr@TCustomSQLDataSet@GetFieldData$qqrir24System@%DynamicArray$uc% @399 ; Data::Sqlexpr::TCustomSQLDataSet::GetFieldData(int, System::DynamicArray<{583}...
+    @Data@Sqlexpr@TCustomSQLDataSet@GetFieldData$qqrp14Data@Db@TFieldpv @396 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetFieldData(Data::Db::TField *, void *)
+    @Data@Sqlexpr@TCustomSQLDataSet@GetFieldData$qqrp14Data@Db@TFieldr24System@%DynamicArray$uc% @398 ; Data::Sqlexpr::TCustomSQLDataSet::GetFieldData(Data::Db::TField *, System::DynamicArray<{583}...
+    @Data@Sqlexpr@TCustomSQLDataSet@GetInternalConnection$qqrv @421 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetInternalConnection()
+    @Data@Sqlexpr@TCustomSQLDataSet@GetKeyFieldNames$qqrp23System@Classes@TStrings @337 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetKeyFieldNames(System::Classes::TStrings *)
+    @Data@Sqlexpr@TCustomSQLDataSet@GetObjectProcParamCount$qqrv @360 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetObjectProcParamCount()
+    @Data@Sqlexpr@TCustomSQLDataSet@GetObjectTypeNames$qqrp15Data@Db@TFields @420 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetObjectTypeNames(Data::Db::TFields *)
+    @Data@Sqlexpr@TCustomSQLDataSet@GetOutputParams$qqrp66System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc% @370 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetOutputParams(System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *> *)
+    @Data@Sqlexpr@TCustomSQLDataSet@GetParamCount$qqrv @359 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetParamCount()
+    @Data@Sqlexpr@TCustomSQLDataSet@GetParamsOutputParam$qqrp14Data@Db@TParamp24Data@Dbxcommon@TDBXValue @371 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetParamsOutputParam(Data::Db::TParam *, Data::Dbxcommon::TDBXValue *)
+    @Data@Sqlexpr@TCustomSQLDataSet@GetProcParams$qqrv @380 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetProcParams()
+    @Data@Sqlexpr@TCustomSQLDataSet@GetQueryFromType$qqrv @366 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetQueryFromType()
+    @Data@Sqlexpr@TCustomSQLDataSet@GetQuoteChar$qqrv @324 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetQuoteChar()
+    @Data@Sqlexpr@TCustomSQLDataSet@GetRecord$qqri16Data@Db@TGetModeo @385 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetRecord(int, Data::Db::TGetMode, bool)
+    @Data@Sqlexpr@TCustomSQLDataSet@GetRecord$qqrpuc16Data@Db@TGetModeo @384 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetRecord(unsigned char *, Data::Db::TGetMode, bool)
+    @Data@Sqlexpr@TCustomSQLDataSet@GetRecordCount$qqrv @358 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetRecordCount()
+    @Data@Sqlexpr@TCustomSQLDataSet@GetRowsAffected$qqrv @357 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetRowsAffected()
+    @Data@Sqlexpr@TCustomSQLDataSet@GetSortFieldNames$qqrv @351 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::GetSortFieldNames()
+    @Data@Sqlexpr@TCustomSQLDataSet@InitBuffers$qqrv @408 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::InitBuffers()
+    @Data@Sqlexpr@TCustomSQLDataSet@InitRecord$qqri @405 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::InitRecord(int)
+    @Data@Sqlexpr@TCustomSQLDataSet@InitRecord$qqrpuc @404 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::InitRecord(unsigned char *)
+    @Data@Sqlexpr@TCustomSQLDataSet@InternalClose$qqrv @412 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::InternalClose()
+    @Data@Sqlexpr@TCustomSQLDataSet@InternalFreeCommand$qqrv @411 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::InternalFreeCommand()
+    @Data@Sqlexpr@TCustomSQLDataSet@InternalHandleException$qqrv @342 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::InternalHandleException()
+    @Data@Sqlexpr@TCustomSQLDataSet@InternalInitFieldDefs$qqrv @400 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::InternalInitFieldDefs()
+    @Data@Sqlexpr@TCustomSQLDataSet@InternalOpen$qqrv @419 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::InternalOpen()
+    @Data@Sqlexpr@TCustomSQLDataSet@InternalRefresh$qqrv @409 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::InternalRefresh()
+    @Data@Sqlexpr@TCustomSQLDataSet@IsCursorOpen$qqrv @418 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::IsCursorOpen()
+    @Data@Sqlexpr@TCustomSQLDataSet@IsDbxCommandTypeStored$qqrv @372 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::IsDbxCommandTypeStored()
+    @Data@Sqlexpr@TCustomSQLDataSet@IsSequenced$qqrv @346 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::IsSequenced()
+    @Data@Sqlexpr@TCustomSQLDataSet@LoadFieldDef$qqrusrp21Data@Sqlexpr@TFLDDesc @401 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::LoadFieldDef(unsigned short, Data::Sqlexpr::TFLDDesc *&)
+    @Data@Sqlexpr@TCustomSQLDataSet@Loaded$qqrv @410 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::Loaded()
+    @Data@Sqlexpr@TCustomSQLDataSet@Locate$qqrx20System@UnicodeStringrx14System@Variant48System@%Set$21Data@Db@TLocateOptiont1$i0$t1$i1$% @308 ; Data::Sqlexpr::TCustomSQLDataSet::Locate(const System::UnicodeString, const System::Variant&, System::Set<{583}...
+    @Data@Sqlexpr@TCustomSQLDataSet@LocateRecord$qqrx20System@UnicodeStringrx14System@Variant48System@%Set$21Data@Db@TLocateOptiont1$i0$t1$i1$%o @309 ; Data::Sqlexpr::TCustomSQLDataSet::LocateRecord(const System::UnicodeString, const System::Variant&, System::Set<{583}...
+    @Data@Sqlexpr@TCustomSQLDataSet@Lookup$qqrx20System@UnicodeStringrx14System@Variantt1 @307 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::Lookup(const System::UnicodeString, const System::Variant&, const System::UnicodeString)
+    @Data@Sqlexpr@TCustomSQLDataSet@OpenCursor$qqro @417 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::OpenCursor(bool)
+    @Data@Sqlexpr@TCustomSQLDataSet@OpenSchema$qqrv @335 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::OpenSchema()
+    @Data@Sqlexpr@TCustomSQLDataSet@PSEndTransaction$qqro @334 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PSEndTransaction(bool)
+    @Data@Sqlexpr@TCustomSQLDataSet@PSExecute$qqrv @333 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PSExecute()
+    @Data@Sqlexpr@TCustomSQLDataSet@PSExecuteStatement$qqrx20System@UnicodeStringp15Data@Db@TParams @332 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PSExecuteStatement(const System::UnicodeString, Data::Db::TParams *)
+    @Data@Sqlexpr@TCustomSQLDataSet@PSExecuteStatement$qqrx20System@UnicodeStringp15Data@Db@TParamspv @330 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PSExecuteStatement(const System::UnicodeString, Data::Db::TParams *, void *)
+    @Data@Sqlexpr@TCustomSQLDataSet@PSExecuteStatement$qqrx20System@UnicodeStringp15Data@Db@TParamsrp16Data@Db@TDataSet @331 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PSExecuteStatement(const System::UnicodeString, Data::Db::TParams *, Data::Db::TDataSet *&)
+    @Data@Sqlexpr@TCustomSQLDataSet@PSGetAttributes$qqrp20System@Classes@TList @329 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PSGetAttributes(System::Classes::TList *)
+    @Data@Sqlexpr@TCustomSQLDataSet@PSGetCommandText$qqrv @311 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PSGetCommandText()
+    @Data@Sqlexpr@TCustomSQLDataSet@PSGetCommandType$qqrv @310 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PSGetCommandType()
+    @Data@Sqlexpr@TCustomSQLDataSet@PSGetDefaultOrder$qqrv @327 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PSGetDefaultOrder()
+    @Data@Sqlexpr@TCustomSQLDataSet@PSGetIndexDefs$qqr47System@%Set$20Data@Db@TIndexOptiont1$i0$t1$i5$% @328 ; Data::Sqlexpr::TCustomSQLDataSet::PSGetIndexDefs(System::Set<{583}...
+    @Data@Sqlexpr@TCustomSQLDataSet@PSGetKeyFields$qqrv @326 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PSGetKeyFields()
+    @Data@Sqlexpr@TCustomSQLDataSet@PSGetParams$qqrv @325 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PSGetParams()
+    @Data@Sqlexpr@TCustomSQLDataSet@PSGetQuoteChar$qqrv @323 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PSGetQuoteChar()
+    @Data@Sqlexpr@TCustomSQLDataSet@PSGetTableName$qqrv @321 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PSGetTableName()
+    @Data@Sqlexpr@TCustomSQLDataSet@PSGetUpdateException$qqrp25System@Sysutils@Exceptionp20Data@Db@EUpdateError @320 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PSGetUpdateException(System::Sysutils::Exception *, Data::Db::EUpdateError *)
+    @Data@Sqlexpr@TCustomSQLDataSet@PSInTransaction$qqrv @319 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PSInTransaction()
+    @Data@Sqlexpr@TCustomSQLDataSet@PSIsSQLBased$qqrv @318 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PSIsSQLBased()
+    @Data@Sqlexpr@TCustomSQLDataSet@PSIsSQLSupported$qqrv @317 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PSIsSQLSupported()
+    @Data@Sqlexpr@TCustomSQLDataSet@PSReset$qqrv @322 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PSReset()
+    @Data@Sqlexpr@TCustomSQLDataSet@PSSetCommandText$qqrx20System@UnicodeString @315 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PSSetCommandText(const System::UnicodeString)
+    @Data@Sqlexpr@TCustomSQLDataSet@PSSetParams$qqrp15Data@Db@TParams @316 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PSSetParams(Data::Db::TParams *)
+    @Data@Sqlexpr@TCustomSQLDataSet@PSStartTransaction$qqrv @314 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PSStartTransaction()
+    @Data@Sqlexpr@TCustomSQLDataSet@PSUpdateRecord$qqr19Data@Db@TUpdateKindp16Data@Db@TDataSet @313 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PSUpdateRecord(Data::Db::TUpdateKind, Data::Db::TDataSet *)
+    @Data@Sqlexpr@TCustomSQLDataSet@ParamByName$qqrx20System@UnicodeString @374 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::ParamByName(const System::UnicodeString)
+    @Data@Sqlexpr@TCustomSQLDataSet@ParseIdentifier$qqr20System@UnicodeStringr20System@UnicodeStringt2t2 @305 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::ParseIdentifier(System::UnicodeString, System::UnicodeString&, System::UnicodeString&, System::UnicodeString&)
+    @Data@Sqlexpr@TCustomSQLDataSet@PrepareStatement$qqrv @364 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PrepareStatement()
+    @Data@Sqlexpr@TCustomSQLDataSet@PropertyChanged$qqrv @347 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::PropertyChanged()
+    @Data@Sqlexpr@TCustomSQLDataSet@QuoteIdentifier$qqr20System@UnicodeStringo @312 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::QuoteIdentifier(System::UnicodeString, bool)
+    @Data@Sqlexpr@TCustomSQLDataSet@ReadDesignerData$qqrp22System@Classes@TReader @344 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::ReadDesignerData(System::Classes::TReader *)
+    @Data@Sqlexpr@TCustomSQLDataSet@RefreshParams$qqrv @376 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::RefreshParams()
+    @Data@Sqlexpr@TCustomSQLDataSet@SetBufListSize$qqri @403 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::SetBufListSize(int)
+    @Data@Sqlexpr@TCustomSQLDataSet@SetCommandText$qqrx20System@UnicodeString @382 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::SetCommandText(const System::UnicodeString)
+    @Data@Sqlexpr@TCustomSQLDataSet@SetCommandType$qqrx22Data@Db@TPSCommandType @348 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::SetCommandType(const Data::Db::TPSCommandType)
+    @Data@Sqlexpr@TCustomSQLDataSet@SetConnection$qqrxp27Data@Sqlexpr@TSQLConnection @422 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::SetConnection(Data::Sqlexpr::TSQLConnection * const)
+    @Data@Sqlexpr@TCustomSQLDataSet@SetCurrentBlobSize$qqrj @395 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::SetCurrentBlobSize(__int64)
+    @Data@Sqlexpr@TCustomSQLDataSet@SetDataSource$qqrp19Data@Db@TDataSource @356 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::SetDataSource(Data::Db::TDataSource *)
+    @Data@Sqlexpr@TCustomSQLDataSet@SetDbxCommandType$qqrx20System@UnicodeString @355 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::SetDbxCommandType(const System::UnicodeString)
+    @Data@Sqlexpr@TCustomSQLDataSet@SetFCommandText$qqrx20System@UnicodeString @383 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::SetFCommandText(const System::UnicodeString)
+    @Data@Sqlexpr@TCustomSQLDataSet@SetFieldData$qqrp14Data@Db@TField24System@%DynamicArray$uc% @391 ; Data::Sqlexpr::TCustomSQLDataSet::SetFieldData(Data::Db::TField *, System::DynamicArray<{583}...
+    @Data@Sqlexpr@TCustomSQLDataSet@SetFieldData$qqrp14Data@Db@TFieldpv @390 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::SetFieldData(Data::Db::TField *, void *)
+    @Data@Sqlexpr@TCustomSQLDataSet@SetMaxBlobSize$qqri @349 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::SetMaxBlobSize(int)
+    @Data@Sqlexpr@TCustomSQLDataSet@SetParameters$qqrxp15Data@Db@TParams @369 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::SetParameters(Data::Db::TParams * const)
+    @Data@Sqlexpr@TCustomSQLDataSet@SetParamsFromCursor$qqrv @375 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::SetParamsFromCursor()
+    @Data@Sqlexpr@TCustomSQLDataSet@SetParamsFromProcedure$qqrv @378 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::SetParamsFromProcedure()
+    @Data@Sqlexpr@TCustomSQLDataSet@SetParamsFromSQL$qqrp16Data@Db@TDataSeto @377 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::SetParamsFromSQL(Data::Db::TDataSet *, bool)
+    @Data@Sqlexpr@TCustomSQLDataSet@SetParamsFromServerMethod$qqrv @379 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::SetParamsFromServerMethod()
+    @Data@Sqlexpr@TCustomSQLDataSet@SetPrepared$qqro @368 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::SetPrepared(bool)
+    @Data@Sqlexpr@TCustomSQLDataSet@SetSchemaInfo$qqr24Data@Sqlexpr@TSchemaType20System@UnicodeStringt2t2 @336 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::SetSchemaInfo(Data::Sqlexpr::TSchemaType, System::UnicodeString, System::UnicodeString, System::UnicodeString)
+    @Data@Sqlexpr@TCustomSQLDataSet@SetSchemaName$qqrx20System@UnicodeString @306 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::SetSchemaName(const System::UnicodeString)
+    @Data@Sqlexpr@TCustomSQLDataSet@SetSchemaOption$qqrr20System@UnicodeStringt1 @304 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::SetSchemaOption(System::UnicodeString&, System::UnicodeString&)
+    @Data@Sqlexpr@TCustomSQLDataSet@SetSortFieldNames$qqr20System@UnicodeString @350 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::SetSortFieldNames(System::UnicodeString)
+    @Data@Sqlexpr@TCustomSQLDataSet@UpdateIndexDefs$qqrv @341 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::UpdateIndexDefs()
+    @Data@Sqlexpr@TCustomSQLDataSet@WriteDesignerData$qqrp22System@Classes@TWriter @343 ; __fastcall Data::Sqlexpr::TCustomSQLDataSet::WriteDesignerData(System::Classes::TWriter *)
+    @Data@Sqlexpr@TFLDDesc@        @622 ; Data::Sqlexpr::TFLDDesc::
+    @Data@Sqlexpr@TSQLBlobStream@  @643 ; Data::Sqlexpr::TSQLBlobStream::
+    @Data@Sqlexpr@TSQLBlobStream@$bctr$qqrp18Data@Db@TBlobField23Data@Db@TBlobStreamMode @540 ; __fastcall Data::Sqlexpr::TSQLBlobStream::TSQLBlobStream(Data::Db::TBlobField *, Data::Db::TBlobStreamMode)
+    @Data@Sqlexpr@TSQLBlobStream@$bdtr$qqrv @539 ; __fastcall Data::Sqlexpr::TSQLBlobStream::~TSQLBlobStream()
+    @Data@Sqlexpr@TSQLBlobStream@Read$qqr24System@%DynamicArray$uc%ii @536 ; Data::Sqlexpr::TSQLBlobStream::Read(System::DynamicArray<{583}...
+    @Data@Sqlexpr@TSQLBlobStream@Read$qqrpvi @535 ; __fastcall Data::Sqlexpr::TSQLBlobStream::Read(void *, int)
+    @Data@Sqlexpr@TSQLBlobStream@ReadBlobData$qqrv @537 ; __fastcall Data::Sqlexpr::TSQLBlobStream::ReadBlobData()
+    @Data@Sqlexpr@TSQLBlobStream@ReadBlobSize$qqrv @538 ; __fastcall Data::Sqlexpr::TSQLBlobStream::ReadBlobSize()
+    @Data@Sqlexpr@TSQLConnection@  @626 ; Data::Sqlexpr::TSQLConnection::
+    @Data@Sqlexpr@TSQLConnection@$bctr$qqrp25System@Classes@TComponent @519 ; __fastcall Data::Sqlexpr::TSQLConnection::TSQLConnection(System::Classes::TComponent *)
+    @Data@Sqlexpr@TSQLConnection@$bdtr$qqrv @518 ; __fastcall Data::Sqlexpr::TSQLConnection::~TSQLConnection()
+    @Data@Sqlexpr@TSQLConnection@AddConnectNotification$qqrp14System@TObjectynpqqrp14System@TObjecto$v @463 ; __fastcall Data::Sqlexpr::TSQLConnection::AddConnectNotification(System::TObject *, void __fastcall __closure(*)(System::TObject *, bool))
+    @Data@Sqlexpr@TSQLConnection@BeginTransaction$qqri @455 ; __fastcall Data::Sqlexpr::TSQLConnection::BeginTransaction(int)
+    @Data@Sqlexpr@TSQLConnection@BeginTransaction$qqrrx29Data@Sqlexpr@TTransactionDesci @456 ; __fastcall Data::Sqlexpr::TSQLConnection::BeginTransaction(const Data::Sqlexpr::TTransactionDesc&, int)
+    @Data@Sqlexpr@TSQLConnection@BeginTransaction$qqrv @458 ; __fastcall Data::Sqlexpr::TSQLConnection::BeginTransaction()
+    @Data@Sqlexpr@TSQLConnection@CheckActive$qqrv @490 ; __fastcall Data::Sqlexpr::TSQLConnection::CheckActive()
+    @Data@Sqlexpr@TSQLConnection@CheckConnection$qqr25Data@Sqlexpr@EConnectFlag @513 ; __fastcall Data::Sqlexpr::TSQLConnection::CheckConnection(Data::Sqlexpr::EConnectFlag)
+    @Data@Sqlexpr@TSQLConnection@CheckDisconnect$qqrv @492 ; __fastcall Data::Sqlexpr::TSQLConnection::CheckDisconnect()
+    @Data@Sqlexpr@TSQLConnection@CheckInactive$qqrv @491 ; __fastcall Data::Sqlexpr::TSQLConnection::CheckInactive()
+    @Data@Sqlexpr@TSQLConnection@CheckLoginParams$qqrv @511 ; __fastcall Data::Sqlexpr::TSQLConnection::CheckLoginParams()
+    @Data@Sqlexpr@TSQLConnection@ClearConnectionUsers$qqrv @517 ; __fastcall Data::Sqlexpr::TSQLConnection::ClearConnectionUsers()
+    @Data@Sqlexpr@TSQLConnection@ClearMonitors$qqrv @516 ; __fastcall Data::Sqlexpr::TSQLConnection::ClearMonitors()
+    @Data@Sqlexpr@TSQLConnection@CloneConnection$qqrv @484 ; __fastcall Data::Sqlexpr::TSQLConnection::CloneConnection()
+    @Data@Sqlexpr@TSQLConnection@CloseDataSets$qqrv @493 ; __fastcall Data::Sqlexpr::TSQLConnection::CloseDataSets()
+    @Data@Sqlexpr@TSQLConnection@Commit$qqrrx29Data@Sqlexpr@TTransactionDesc @447 ; __fastcall Data::Sqlexpr::TSQLConnection::Commit(const Data::Sqlexpr::TTransactionDesc&)
+    @Data@Sqlexpr@TSQLConnection@CommitFreeAndNil$qqrrp30Data@Dbxcommon@TDBXTransaction @450 ; __fastcall Data::Sqlexpr::TSQLConnection::CommitFreeAndNil(Data::Dbxcommon::TDBXTransaction *&)
+    @Data@Sqlexpr@TSQLConnection@ConnectionOptions$qqrv @508 ; __fastcall Data::Sqlexpr::TSQLConnection::ConnectionOptions()
+    @Data@Sqlexpr@TSQLConnection@DefineProperties$qqrp21System@Classes@TFiler @507 ; __fastcall Data::Sqlexpr::TSQLConnection::DefineProperties(System::Classes::TFiler *)
+    @Data@Sqlexpr@TSQLConnection@DoConnect$qqrv @501 ; __fastcall Data::Sqlexpr::TSQLConnection::DoConnect()
+    @Data@Sqlexpr@TSQLConnection@DoDisconnect$qqrv @495 ; __fastcall Data::Sqlexpr::TSQLConnection::DoDisconnect()
+    @Data@Sqlexpr@TSQLConnection@DoParamsChange$qqrp14System@TObject @494 ; __fastcall Data::Sqlexpr::TSQLConnection::DoParamsChange(System::TObject *)
+    @Data@Sqlexpr@TSQLConnection@EndAndFreeTransaction$qqro @452 ; __fastcall Data::Sqlexpr::TSQLConnection::EndAndFreeTransaction(bool)
+    @Data@Sqlexpr@TSQLConnection@EndAndFreeTransaction$qqrrx29Data@Sqlexpr@TTransactionDesco @451 ; __fastcall Data::Sqlexpr::TSQLConnection::EndAndFreeTransaction(const Data::Sqlexpr::TTransactionDesc&, bool)
+    @Data@Sqlexpr@TSQLConnection@EndFreeAndNilTransaction$qqrrp30Data@Dbxcommon@TDBXTransactiono @453 ; __fastcall Data::Sqlexpr::TSQLConnection::EndFreeAndNilTransaction(Data::Dbxcommon::TDBXTransaction *&, bool)
+    @Data@Sqlexpr@TSQLConnection@Execute$qqrx20System@UnicodeStringp15Data@Db@TParams @487 ; __fastcall Data::Sqlexpr::TSQLConnection::Execute(const System::UnicodeString, Data::Db::TParams *)
+    @Data@Sqlexpr@TSQLConnection@Execute$qqrx20System@UnicodeStringp15Data@Db@TParamspv @485 ; __fastcall Data::Sqlexpr::TSQLConnection::Execute(const System::UnicodeString, Data::Db::TParams *, void *)
+    @Data@Sqlexpr@TSQLConnection@Execute$qqrx20System@UnicodeStringp15Data@Db@TParamsrp16Data@Db@TDataSet @486 ; __fastcall Data::Sqlexpr::TSQLConnection::Execute(const System::UnicodeString, Data::Db::TParams *, Data::Db::TDataSet *&)
+    @Data@Sqlexpr@TSQLConnection@ExecuteDirect$qqrx20System@UnicodeString @488 ; __fastcall Data::Sqlexpr::TSQLConnection::ExecuteDirect(const System::UnicodeString)
+    @Data@Sqlexpr@TSQLConnection@FreeSchemaTable$qqrp30Data@Sqlexpr@TCustomSQLDataSet @481 ; __fastcall Data::Sqlexpr::TSQLConnection::FreeSchemaTable(Data::Sqlexpr::TCustomSQLDataSet *)
+    @Data@Sqlexpr@TSQLConnection@GetCommandTypes$qqrp23System@Classes@TStrings @497 ; __fastcall Data::Sqlexpr::TSQLConnection::GetCommandTypes(System::Classes::TStrings *)
+    @Data@Sqlexpr@TSQLConnection@GetConnected$qqrv @496 ; __fastcall Data::Sqlexpr::TSQLConnection::GetConnected()
+    @Data@Sqlexpr@TSQLConnection@GetConnectionForStatement$qqrv @489 ; __fastcall Data::Sqlexpr::TSQLConnection::GetConnectionForStatement()
+    @Data@Sqlexpr@TSQLConnection@GetConnectionName$qqrv @443 ; __fastcall Data::Sqlexpr::TSQLConnection::GetConnectionName()
+    @Data@Sqlexpr@TSQLConnection@GetDataSet$qqri @445 ; __fastcall Data::Sqlexpr::TSQLConnection::GetDataSet(int)
+    @Data@Sqlexpr@TSQLConnection@GetDefaultSchemaName$qqrv @431 ; __fastcall Data::Sqlexpr::TSQLConnection::GetDefaultSchemaName()
+    @Data@Sqlexpr@TSQLConnection@GetFieldNames$qqrx20System@UnicodeString20System@UnicodeStringp23System@Classes@TStrings @477 ; __fastcall Data::Sqlexpr::TSQLConnection::GetFieldNames(const System::UnicodeString, System::UnicodeString, System::Classes::TStrings *)
+    @Data@Sqlexpr@TSQLConnection@GetFieldNames$qqrx20System@UnicodeStringp23System@Classes@TStrings @478 ; __fastcall Data::Sqlexpr::TSQLConnection::GetFieldNames(const System::UnicodeString, System::Classes::TStrings *)
+    @Data@Sqlexpr@TSQLConnection@GetInTransaction$qqrv @459 ; __fastcall Data::Sqlexpr::TSQLConnection::GetInTransaction()
+    @Data@Sqlexpr@TSQLConnection@GetIndexNames$qqrx20System@UnicodeStringp23System@Classes@TStrings @469 ; __fastcall Data::Sqlexpr::TSQLConnection::GetIndexNames(const System::UnicodeString, System::Classes::TStrings *)
+    @Data@Sqlexpr@TSQLConnection@GetIndexNames$qqrx20System@UnicodeStringt1p23System@Classes@TStrings @468 ; __fastcall Data::Sqlexpr::TSQLConnection::GetIndexNames(const System::UnicodeString, const System::UnicodeString, System::Classes::TStrings *)
+    @Data@Sqlexpr@TSQLConnection@GetLibraryName$qqrv @440 ; __fastcall Data::Sqlexpr::TSQLConnection::GetLibraryName()
+    @Data@Sqlexpr@TSQLConnection@GetLocaleCode$qqrv @437 ; __fastcall Data::Sqlexpr::TSQLConnection::GetLocaleCode()
+    @Data@Sqlexpr@TSQLConnection@GetLoginParams$qqrp23System@Classes@TStrings @498 ; __fastcall Data::Sqlexpr::TSQLConnection::GetLoginParams(System::Classes::TStrings *)
+    @Data@Sqlexpr@TSQLConnection@GetLoginUsername$qqrv @500 ; __fastcall Data::Sqlexpr::TSQLConnection::GetLoginUsername()
+    @Data@Sqlexpr@TSQLConnection@GetMetaData$qqrv @499 ; __fastcall Data::Sqlexpr::TSQLConnection::GetMetaData()
+    @Data@Sqlexpr@TSQLConnection@GetPackageNames$qqrp23System@Classes@TStrings @473 ; __fastcall Data::Sqlexpr::TSQLConnection::GetPackageNames(System::Classes::TStrings *)
+    @Data@Sqlexpr@TSQLConnection@GetProcedureNames$qqrp23System@Classes@TStrings @476 ; __fastcall Data::Sqlexpr::TSQLConnection::GetProcedureNames(System::Classes::TStrings *)
+    @Data@Sqlexpr@TSQLConnection@GetProcedureNames$qqrx20System@UnicodeStringp23System@Classes@TStrings @475 ; __fastcall Data::Sqlexpr::TSQLConnection::GetProcedureNames(const System::UnicodeString, System::Classes::TStrings *)
+    @Data@Sqlexpr@TSQLConnection@GetProcedureNames$qqrx20System@UnicodeStringt1p23System@Classes@TStrings @474 ; __fastcall Data::Sqlexpr::TSQLConnection::GetProcedureNames(const System::UnicodeString, const System::UnicodeString, System::Classes::TStrings *)
+    @Data@Sqlexpr@TSQLConnection@GetProcedureParams$qqr20System@UnicodeStringp66System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc% @467 ; __fastcall Data::Sqlexpr::TSQLConnection::GetProcedureParams(System::UnicodeString, System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *> *)
+    @Data@Sqlexpr@TSQLConnection@GetProcedureParams$qqr20System@UnicodeStringt1p66System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc% @466 ; __fastcall Data::Sqlexpr::TSQLConnection::GetProcedureParams(System::UnicodeString, System::UnicodeString, System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *> *)
+    @Data@Sqlexpr@TSQLConnection@GetProcedureParams$qqr20System@UnicodeStringt1t1p66System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc% @465 ; __fastcall Data::Sqlexpr::TSQLConnection::GetProcedureParams(System::UnicodeString, System::UnicodeString, System::UnicodeString, System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *> *)
+    @Data@Sqlexpr@TSQLConnection@GetQuoteChar$qqrv @510 ; __fastcall Data::Sqlexpr::TSQLConnection::GetQuoteChar()
+    @Data@Sqlexpr@TSQLConnection@GetSchemaNames$qqrp23System@Classes@TStrings @472 ; __fastcall Data::Sqlexpr::TSQLConnection::GetSchemaNames(System::Classes::TStrings *)
+    @Data@Sqlexpr@TSQLConnection@GetServerMethodNames$qqrp23System@Classes@TStrings @432 ; __fastcall Data::Sqlexpr::TSQLConnection::GetServerMethodNames(System::Classes::TStrings *)
+    @Data@Sqlexpr@TSQLConnection@GetTableNames$qqrp23System@Classes@TStrings20System@UnicodeStringo @470 ; __fastcall Data::Sqlexpr::TSQLConnection::GetTableNames(System::Classes::TStrings *, System::UnicodeString, bool)
+    @Data@Sqlexpr@TSQLConnection@GetTableNames$qqrp23System@Classes@TStringso @471 ; __fastcall Data::Sqlexpr::TSQLConnection::GetTableNames(System::Classes::TStrings *, bool)
+    @Data@Sqlexpr@TSQLConnection@GetVendorLib$qqrv @441 ; __fastcall Data::Sqlexpr::TSQLConnection::GetVendorLib()
+    @Data@Sqlexpr@TSQLConnection@HasTransaction$qqrp30Data@Dbxcommon@TDBXTransaction @454 ; __fastcall Data::Sqlexpr::TSQLConnection::HasTransaction(Data::Dbxcommon::TDBXTransaction *)
+    @Data@Sqlexpr@TSQLConnection@LoadParamsFromIniFile$qqr20System@UnicodeString @439 ; __fastcall Data::Sqlexpr::TSQLConnection::LoadParamsFromIniFile(System::UnicodeString)
+    @Data@Sqlexpr@TSQLConnection@Loaded$qqrv @434 ; __fastcall Data::Sqlexpr::TSQLConnection::Loaded()
+    @Data@Sqlexpr@TSQLConnection@Login$qqrp23System@Classes@TStrings @512 ; __fastcall Data::Sqlexpr::TSQLConnection::Login(System::Classes::TStrings *)
+    @Data@Sqlexpr@TSQLConnection@Notification$qqrp25System@Classes@TComponent25System@Classes@TOperation @433 ; __fastcall Data::Sqlexpr::TSQLConnection::Notification(System::Classes::TComponent *, System::Classes::TOperation)
+    @Data@Sqlexpr@TSQLConnection@OpenSchema$qqr24Data@Sqlexpr@TSchemaType20System@UnicodeStringp23System@Classes@TStrings @480 ; __fastcall Data::Sqlexpr::TSQLConnection::OpenSchema(Data::Sqlexpr::TSchemaType, System::UnicodeString, System::Classes::TStrings *)
+    @Data@Sqlexpr@TSQLConnection@OpenSchema$qqr24Data@Sqlexpr@TSchemaType20System@UnicodeStringt2p23System@Classes@TStrings @479 ; __fastcall Data::Sqlexpr::TSQLConnection::OpenSchema(Data::Sqlexpr::TSchemaType, System::UnicodeString, System::UnicodeString, System::Classes::TStrings *)
+    @Data@Sqlexpr@TSQLConnection@OpenSchemaTable$qqr24Data@Sqlexpr@TSchemaType20System@UnicodeStringt2t2 @483 ; __fastcall Data::Sqlexpr::TSQLConnection::OpenSchemaTable(Data::Sqlexpr::TSchemaType, System::UnicodeString, System::UnicodeString, System::UnicodeString)
+    @Data@Sqlexpr@TSQLConnection@OpenSchemaTable$qqr24Data@Sqlexpr@TSchemaType20System@UnicodeStringt2t2t2 @482 ; __fastcall Data::Sqlexpr::TSQLConnection::OpenSchemaTable(Data::Sqlexpr::TSchemaType, System::UnicodeString, System::UnicodeString, System::UnicodeString, System::UnicodeString)
+    @Data@Sqlexpr@TSQLConnection@ReadGetDriverFunc$qqrp22System@Classes@TReader @504 ; __fastcall Data::Sqlexpr::TSQLConnection::ReadGetDriverFunc(System::Classes::TReader *)
+    @Data@Sqlexpr@TSQLConnection@ReadLibraryName$qqrp22System@Classes@TReader @503 ; __fastcall Data::Sqlexpr::TSQLConnection::ReadLibraryName(System::Classes::TReader *)
+    @Data@Sqlexpr@TSQLConnection@ReadUniqueId$qqrp22System@Classes@TReader @506 ; __fastcall Data::Sqlexpr::TSQLConnection::ReadUniqueId(System::Classes::TReader *)
+    @Data@Sqlexpr@TSQLConnection@ReadVendorLib$qqrp22System@Classes@TReader @502 ; __fastcall Data::Sqlexpr::TSQLConnection::ReadVendorLib(System::Classes::TReader *)
+    @Data@Sqlexpr@TSQLConnection@RegisterClient$qqrp14System@TObjectynpqqrp14System@TObjecto$v @461 ; __fastcall Data::Sqlexpr::TSQLConnection::RegisterClient(System::TObject *, void __fastcall __closure(*)(System::TObject *, bool))
+    @Data@Sqlexpr@TSQLConnection@RegisterTraceCallback$qqro @460 ; __fastcall Data::Sqlexpr::TSQLConnection::RegisterTraceCallback(bool)
+    @Data@Sqlexpr@TSQLConnection@RegisterTraceMonitor$qqrp14System@TObject @515 ; __fastcall Data::Sqlexpr::TSQLConnection::RegisterTraceMonitor(System::TObject *)
+    @Data@Sqlexpr@TSQLConnection@RemoveConnectNotification$qqrp14System@TObject @462 ; __fastcall Data::Sqlexpr::TSQLConnection::RemoveConnectNotification(System::TObject *)
+    @Data@Sqlexpr@TSQLConnection@Rollback$qqrrx29Data@Sqlexpr@TTransactionDesc @446 ; __fastcall Data::Sqlexpr::TSQLConnection::Rollback(const Data::Sqlexpr::TTransactionDesc&)
+    @Data@Sqlexpr@TSQLConnection@RollbackFreeAndNil$qqrrp30Data@Dbxcommon@TDBXTransaction @449 ; __fastcall Data::Sqlexpr::TSQLConnection::RollbackFreeAndNil(Data::Dbxcommon::TDBXTransaction *&)
+    @Data@Sqlexpr@TSQLConnection@RollbackIncompleteFreeAndNil$qqrrp30Data@Dbxcommon@TDBXTransaction @448 ; __fastcall Data::Sqlexpr::TSQLConnection::RollbackIncompleteFreeAndNil(Data::Dbxcommon::TDBXTransaction *&)
+    @Data@Sqlexpr@TSQLConnection@SetConnectionName$qqr20System@UnicodeString @442 ; __fastcall Data::Sqlexpr::TSQLConnection::SetConnectionName(System::UnicodeString)
+    @Data@Sqlexpr@TSQLConnection@SetCursor$qqri @509 ; __fastcall Data::Sqlexpr::TSQLConnection::SetCursor(int)
+    @Data@Sqlexpr@TSQLConnection@SetDriverName$qqr20System@UnicodeString @444 ; __fastcall Data::Sqlexpr::TSQLConnection::SetDriverName(System::UnicodeString)
+    @Data@Sqlexpr@TSQLConnection@SetKeepConnection$qqro @436 ; __fastcall Data::Sqlexpr::TSQLConnection::SetKeepConnection(bool)
+    @Data@Sqlexpr@TSQLConnection@SetLocaleCode$qqri @438 ; __fastcall Data::Sqlexpr::TSQLConnection::SetLocaleCode(int)
+    @Data@Sqlexpr@TSQLConnection@SetParams$qqrp23System@Classes@TStrings @435 ; __fastcall Data::Sqlexpr::TSQLConnection::SetParams(System::Classes::TStrings *)
+    @Data@Sqlexpr@TSQLConnection@SetTraceEvent$qqrynpqqrrx28Data@Dbxcommon@TDBXTraceInfo$26Data@Dbcommontypes@CBRType @464 ; __fastcall Data::Sqlexpr::TSQLConnection::SetTraceEvent(Data::Dbcommontypes::CBRType __fastcall __closure(*)(const Data::Dbxcommon::TDBXTraceInfo&))
+    @Data@Sqlexpr@TSQLConnection@StartTransaction$qqrrx29Data@Sqlexpr@TTransactionDesc @457 ; __fastcall Data::Sqlexpr::TSQLConnection::StartTransaction(const Data::Sqlexpr::TTransactionDesc&)
+    @Data@Sqlexpr@TSQLConnection@UnregisterTraceMonitor$qqrp14System@TObject @514 ; __fastcall Data::Sqlexpr::TSQLConnection::UnregisterTraceMonitor(System::TObject *)
+    @Data@Sqlexpr@TSQLConnection@WriteUniqueId$qqrp22System@Classes@TWriter @505 ; __fastcall Data::Sqlexpr::TSQLConnection::WriteUniqueId(System::Classes::TWriter *)
+    @Data@Sqlexpr@TSQLDataLink@    @624 ; Data::Sqlexpr::TSQLDataLink::
+    @Data@Sqlexpr@TSQLDataLink@$bctr$qqrp30Data@Sqlexpr@TCustomSQLDataSet @430 ; __fastcall Data::Sqlexpr::TSQLDataLink::TSQLDataLink(Data::Sqlexpr::TCustomSQLDataSet *)
+    @Data@Sqlexpr@TSQLDataLink@ActiveChanged$qqrv @429 ; __fastcall Data::Sqlexpr::TSQLDataLink::ActiveChanged()
+    @Data@Sqlexpr@TSQLDataLink@CheckBrowseMode$qqrv @426 ; __fastcall Data::Sqlexpr::TSQLDataLink::CheckBrowseMode()
+    @Data@Sqlexpr@TSQLDataLink@GetDetailDataSet$qqrv @428 ; __fastcall Data::Sqlexpr::TSQLDataLink::GetDetailDataSet()
+    @Data@Sqlexpr@TSQLDataLink@RecordChanged$qqrp14Data@Db@TField @427 ; __fastcall Data::Sqlexpr::TSQLDataLink::RecordChanged(Data::Db::TField *)
+    @Data@Sqlexpr@TSQLDataSet@     @614 ; Data::Sqlexpr::TSQLDataSet::
+    @Data@Sqlexpr@TSQLDataSet@$bctr$qqrp25System@Classes@TComponent @303 ; __fastcall Data::Sqlexpr::TSQLDataSet::TSQLDataSet(System::Classes::TComponent *)
+    @Data@Sqlexpr@TSQLDataSet@ExecSQL$qqro @302 ; __fastcall Data::Sqlexpr::TSQLDataSet::ExecSQL(bool)
+    @Data@Sqlexpr@TSQLMonitor@     @638 ; Data::Sqlexpr::TSQLMonitor::
+    @Data@Sqlexpr@TSQLMonitor@$bctr$qqrp25System@Classes@TComponent @534 ; __fastcall Data::Sqlexpr::TSQLMonitor::TSQLMonitor(System::Classes::TComponent *)
+    @Data@Sqlexpr@TSQLMonitor@$bdtr$qqrv @533 ; __fastcall Data::Sqlexpr::TSQLMonitor::~TSQLMonitor()
+    @Data@Sqlexpr@TSQLMonitor@CheckInactive$qqrv @531 ; __fastcall Data::Sqlexpr::TSQLMonitor::CheckInactive()
+    @Data@Sqlexpr@TSQLMonitor@GetTraceCount$qqrv @523 ; __fastcall Data::Sqlexpr::TSQLMonitor::GetTraceCount()
+    @Data@Sqlexpr@TSQLMonitor@InvokeCallBack$qqrrx28Data@Dbxcommon@TDBXTraceInfo @527 ; __fastcall Data::Sqlexpr::TSQLMonitor::InvokeCallBack(const Data::Dbxcommon::TDBXTraceInfo&)
+    @Data@Sqlexpr@TSQLMonitor@LoadFromFile$qqr20System@UnicodeString @522 ; __fastcall Data::Sqlexpr::TSQLMonitor::LoadFromFile(System::UnicodeString)
+    @Data@Sqlexpr@TSQLMonitor@SaveToFile$qqr20System@UnicodeString @521 ; __fastcall Data::Sqlexpr::TSQLMonitor::SaveToFile(System::UnicodeString)
+    @Data@Sqlexpr@TSQLMonitor@SetActive$qqro @525 ; __fastcall Data::Sqlexpr::TSQLMonitor::SetActive(bool)
+    @Data@Sqlexpr@TSQLMonitor@SetFileName$qqrx20System@UnicodeString @532 ; __fastcall Data::Sqlexpr::TSQLMonitor::SetFileName(const System::UnicodeString)
+    @Data@Sqlexpr@TSQLMonitor@SetSQLConnection$qqrp27Data@Sqlexpr@TSQLConnection @530 ; __fastcall Data::Sqlexpr::TSQLMonitor::SetSQLConnection(Data::Sqlexpr::TSQLConnection *)
+    @Data@Sqlexpr@TSQLMonitor@SetStreamedActive$qqrv @524 ; __fastcall Data::Sqlexpr::TSQLMonitor::SetStreamedActive()
+    @Data@Sqlexpr@TSQLMonitor@SetTraceList$qqrp23System@Classes@TStrings @520 ; __fastcall Data::Sqlexpr::TSQLMonitor::SetTraceList(System::Classes::TStrings *)
+    @Data@Sqlexpr@TSQLMonitor@SwitchConnection$qqrxp27Data@Sqlexpr@TSQLConnection @529 ; __fastcall Data::Sqlexpr::TSQLMonitor::SwitchConnection(Data::Sqlexpr::TSQLConnection * const)
+    @Data@Sqlexpr@TSQLMonitor@Trace$qqrrx28Data@Dbxcommon@TDBXTraceInfoo @528 ; __fastcall Data::Sqlexpr::TSQLMonitor::Trace(const Data::Dbxcommon::TDBXTraceInfo&, bool)
+    @Data@Sqlexpr@TSQLMonitor@UpdateTraceCallBack$qqrv @526 ; __fastcall Data::Sqlexpr::TSQLMonitor::UpdateTraceCallBack()
+    @Data@Sqlexpr@TSQLQuery@       @612 ; Data::Sqlexpr::TSQLQuery::
+    @Data@Sqlexpr@TSQLQuery@$bctr$qqrp25System@Classes@TComponent @301 ; __fastcall Data::Sqlexpr::TSQLQuery::TSQLQuery(System::Classes::TComponent *)
+    @Data@Sqlexpr@TSQLQuery@$bdtr$qqrv @300 ; __fastcall Data::Sqlexpr::TSQLQuery::~TSQLQuery()
+    @Data@Sqlexpr@TSQLQuery@ExecSQL$qqro @299 ; __fastcall Data::Sqlexpr::TSQLQuery::ExecSQL(bool)
+    @Data@Sqlexpr@TSQLQuery@PrepareStatement$qqrv @298 ; __fastcall Data::Sqlexpr::TSQLQuery::PrepareStatement()
+    @Data@Sqlexpr@TSQLQuery@QueryChanged$qqrp14System@TObject @297 ; __fastcall Data::Sqlexpr::TSQLQuery::QueryChanged(System::TObject *)
+    @Data@Sqlexpr@TSQLQuery@SetSQL$qqrp23System@Classes@TStrings @296 ; __fastcall Data::Sqlexpr::TSQLQuery::SetSQL(System::Classes::TStrings *)
+    @Data@Sqlexpr@TSQLStoredProc@  @610 ; Data::Sqlexpr::TSQLStoredProc::
+    @Data@Sqlexpr@TSQLStoredProc@$bctr$qqrp25System@Classes@TComponent @295 ; __fastcall Data::Sqlexpr::TSQLStoredProc::TSQLStoredProc(System::Classes::TComponent *)
+    @Data@Sqlexpr@TSQLStoredProc@ExecProc$qqrv @294 ; __fastcall Data::Sqlexpr::TSQLStoredProc::ExecProc()
+    @Data@Sqlexpr@TSQLStoredProc@NextRecordSet$qqrv @290 ; __fastcall Data::Sqlexpr::TSQLStoredProc::NextRecordSet()
+    @Data@Sqlexpr@TSQLStoredProc@PrepareStatement$qqrv @293 ; __fastcall Data::Sqlexpr::TSQLStoredProc::PrepareStatement()
+    @Data@Sqlexpr@TSQLStoredProc@SetPackageName$qqr20System@UnicodeString @291 ; __fastcall Data::Sqlexpr::TSQLStoredProc::SetPackageName(System::UnicodeString)
+    @Data@Sqlexpr@TSQLStoredProc@SetStoredProcName$qqr20System@UnicodeString @292 ; __fastcall Data::Sqlexpr::TSQLStoredProc::SetStoredProcName(System::UnicodeString)
+    @Data@Sqlexpr@TSQLTable@       @608 ; Data::Sqlexpr::TSQLTable::
+    @Data@Sqlexpr@TSQLTable@$bctr$qqrp25System@Classes@TComponent @289 ; __fastcall Data::Sqlexpr::TSQLTable::TSQLTable(System::Classes::TComponent *)
+    @Data@Sqlexpr@TSQLTable@$bdtr$qqrv @288 ; __fastcall Data::Sqlexpr::TSQLTable::~TSQLTable()
+    @Data@Sqlexpr@TSQLTable@AddParamsToQuery$qqrv @282 ; __fastcall Data::Sqlexpr::TSQLTable::AddParamsToQuery()
+    @Data@Sqlexpr@TSQLTable@DeleteRecords$qqrv @287 ; __fastcall Data::Sqlexpr::TSQLTable::DeleteRecords()
+    @Data@Sqlexpr@TSQLTable@GetIndexField$qqri @286 ; __fastcall Data::Sqlexpr::TSQLTable::GetIndexField(int)
+    @Data@Sqlexpr@TSQLTable@GetIndexFieldCount$qqrv @285 ; __fastcall Data::Sqlexpr::TSQLTable::GetIndexFieldCount()
+    @Data@Sqlexpr@TSQLTable@GetIndexNames$qqrp23System@Classes@TStrings @284 ; __fastcall Data::Sqlexpr::TSQLTable::GetIndexNames(System::Classes::TStrings *)
+    @Data@Sqlexpr@TSQLTable@GetMasterFields$qqrv @277 ; __fastcall Data::Sqlexpr::TSQLTable::GetMasterFields()
+    @Data@Sqlexpr@TSQLTable@GetQueryFromType$qqrv @280 ; __fastcall Data::Sqlexpr::TSQLTable::GetQueryFromType()
+    @Data@Sqlexpr@TSQLTable@OpenCursor$qqro @283 ; __fastcall Data::Sqlexpr::TSQLTable::OpenCursor(bool)
+    @Data@Sqlexpr@TSQLTable@PrepareStatement$qqrv @279 ; __fastcall Data::Sqlexpr::TSQLTable::PrepareStatement()
+    @Data@Sqlexpr@TSQLTable@RefreshIndexFields$qqrv @278 ; __fastcall Data::Sqlexpr::TSQLTable::RefreshIndexFields()
+    @Data@Sqlexpr@TSQLTable@SetDataSource$qqrp19Data@Db@TDataSource @281 ; __fastcall Data::Sqlexpr::TSQLTable::SetDataSource(Data::Db::TDataSource *)
+    @Data@Sqlexpr@TSQLTable@SetIndexField$qqrip14Data@Db@TField @273 ; __fastcall Data::Sqlexpr::TSQLTable::SetIndexField(int, Data::Db::TField *)
+    @Data@Sqlexpr@TSQLTable@SetIndexFieldNames$qqr20System@UnicodeString @274 ; __fastcall Data::Sqlexpr::TSQLTable::SetIndexFieldNames(System::UnicodeString)
+    @Data@Sqlexpr@TSQLTable@SetIndexName$qqr20System@UnicodeString @272 ; __fastcall Data::Sqlexpr::TSQLTable::SetIndexName(System::UnicodeString)
+    @Data@Sqlexpr@TSQLTable@SetMasterFields$qqr20System@UnicodeString @276 ; __fastcall Data::Sqlexpr::TSQLTable::SetMasterFields(System::UnicodeString)
+    @Data@Sqlexpr@TSQLTable@SetTableName$qqr20System@UnicodeString @275 ; __fastcall Data::Sqlexpr::TSQLTable::SetTableName(System::UnicodeString)
+    @Data@Sqlexpr@TSqlServerMethod@ @606 ; Data::Sqlexpr::TSqlServerMethod::
+    @Data@Sqlexpr@TSqlServerMethod@$bctr$qqrp25System@Classes@TComponent @270 ; __fastcall Data::Sqlexpr::TSqlServerMethod::TSqlServerMethod(System::Classes::TComponent *)
+    @Data@Sqlexpr@TSqlServerMethod@CheckDetail$qqrx20System@UnicodeString @271 ; __fastcall Data::Sqlexpr::TSqlServerMethod::CheckDetail(const System::UnicodeString)
+    @Data@Sqlexpr@TSqlServerMethod@ExecuteMethod$qqrv @268 ; __fastcall Data::Sqlexpr::TSqlServerMethod::ExecuteMethod()
+    @Data@Sqlexpr@TSqlServerMethod@SetServerMethodName$qqr20System@UnicodeString @269 ; __fastcall Data::Sqlexpr::TSqlServerMethod::SetServerMethodName(System::UnicodeString)
+    @Data@Sqlexpr@TTransactionItem@ @630 ; Data::Sqlexpr::TTransactionItem::
+    @Data@Sqlexpr@UnregisterDriver$qqrx20System@UnicodeString @543 ; __fastcall Data::Sqlexpr::UnregisterDriver(const System::UnicodeString)
+    @Data@Sqlexpr@initialization$qqrv @244 ; __fastcall Data::Sqlexpr::initialization()
+    @Dbexpress@@GetPackageInfoTable$qqrv @680 ; Dbexpress::__linkproc__ __fastcall GetPackageInfoTable()
+    @Dbexpress@@PackageLoad$qqrv   @679 ; Dbexpress::__linkproc__ __fastcall PackageLoad()
+    @Dbexpress@@PackageUnload$qqrv @678 ; Dbexpress::__linkproc__ __fastcall PackageUnload()
+    @Dbexpress@initialization$qqrv @677 ; __fastcall Dbexpress::initialization()
+    @GetPackageInfoTable           @683 ; GetPackageInfoTable
+    @System@Generics@Collections@%TArrayManager__1$p14Data@Db@TField%@ @561 ; System::Generics::Collections::TArrayManager__1<Data::Db::TField *>::
+    @System@Generics@Collections@%TArrayManager__1$p24Data@Sqlexpr@SPParamDesc%@ @596 ; System::Generics::Collections::TArrayManager__1<Data::Sqlexpr::SPParamDesc *>::
+    @System@Generics@Collections@%TArrayManager__1$p24Data@Sqlexpr@TSQLMonitor%@ @579 ; System::Generics::Collections::TArrayManager__1<Data::Sqlexpr::TSQLMonitor *>::
+    @System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField%@ @566 ; System::Generics::Collections::TEnumerable__1<Data::Db::TField *>::
+    @System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField%@$bdtr$qqrv @120 ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Db::TField *>::~TEnumerable__1<Data::Db::TField *>()
+    @System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField%@GetEnumerator$qqrv @119 ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Db::TField *>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField%@ToArray$qqrv @118 ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Db::TField *>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField%@ToArrayImpl$qqri @121 ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Db::TField *>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerable__1$p24Data@Sqlexpr@SPParamDesc%@ @601 ; System::Generics::Collections::TEnumerable__1<Data::Sqlexpr::SPParamDesc *>::
+    @System@Generics@Collections@%TEnumerable__1$p24Data@Sqlexpr@SPParamDesc%@$bdtr$qqrv @242 ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Sqlexpr::SPParamDesc *>::~TEnumerable__1<Data::Sqlexpr::SPParamDesc *>()
+    @System@Generics@Collections@%TEnumerable__1$p24Data@Sqlexpr@SPParamDesc%@GetEnumerator$qqrv @241 ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Sqlexpr::SPParamDesc *>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$p24Data@Sqlexpr@SPParamDesc%@ToArray$qqrv @240 ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Sqlexpr::SPParamDesc *>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$p24Data@Sqlexpr@SPParamDesc%@ToArrayImpl$qqri @243 ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Sqlexpr::SPParamDesc *>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerable__1$p24Data@Sqlexpr@TSQLMonitor%@ @584 ; System::Generics::Collections::TEnumerable__1<Data::Sqlexpr::TSQLMonitor *>::
+    @System@Generics@Collections@%TEnumerable__1$p24Data@Sqlexpr@TSQLMonitor%@$bdtr$qqrv @181 ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Sqlexpr::TSQLMonitor *>::~TEnumerable__1<Data::Sqlexpr::TSQLMonitor *>()
+    @System@Generics@Collections@%TEnumerable__1$p24Data@Sqlexpr@TSQLMonitor%@GetEnumerator$qqrv @180 ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Sqlexpr::TSQLMonitor *>::GetEnumerator()
+    @System@Generics@Collections@%TEnumerable__1$p24Data@Sqlexpr@TSQLMonitor%@ToArray$qqrv @179 ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Sqlexpr::TSQLMonitor *>::ToArray()
+    @System@Generics@Collections@%TEnumerable__1$p24Data@Sqlexpr@TSQLMonitor%@ToArrayImpl$qqri @182 ; __fastcall System::Generics::Collections::TEnumerable__1<Data::Sqlexpr::TSQLMonitor *>::ToArrayImpl(int)
+    @System@Generics@Collections@%TEnumerator__1$p14Data@Db@TField%@ @568 ; System::Generics::Collections::TEnumerator__1<Data::Db::TField *>::
+    @System@Generics@Collections@%TEnumerator__1$p14Data@Db@TField%@MoveNext$qqrv @117 ; __fastcall System::Generics::Collections::TEnumerator__1<Data::Db::TField *>::MoveNext()
+    @System@Generics@Collections@%TEnumerator__1$p24Data@Sqlexpr@SPParamDesc%@ @603 ; System::Generics::Collections::TEnumerator__1<Data::Sqlexpr::SPParamDesc *>::
+    @System@Generics@Collections@%TEnumerator__1$p24Data@Sqlexpr@SPParamDesc%@MoveNext$qqrv @239 ; __fastcall System::Generics::Collections::TEnumerator__1<Data::Sqlexpr::SPParamDesc *>::MoveNext()
+    @System@Generics@Collections@%TEnumerator__1$p24Data@Sqlexpr@TSQLMonitor%@ @586 ; System::Generics::Collections::TEnumerator__1<Data::Sqlexpr::TSQLMonitor *>::
+    @System@Generics@Collections@%TEnumerator__1$p24Data@Sqlexpr@TSQLMonitor%@MoveNext$qqrv @178 ; __fastcall System::Generics::Collections::TEnumerator__1<Data::Sqlexpr::TSQLMonitor *>::MoveNext()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@ @554 ; System::Generics::Collections::TList__1<Data::Db::TField *>::
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@$bctr$qqrv @105 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TList__1<Data::Db::TField *>()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@$bctr$qqrx84System@%DelphiInterface$57System@Generics@Defaults@%IComparer__1$p14Data@Db@TField%% @104 ; System::Generics::Collections::TList__1<Data::Db::TField *>::TList__1<Data::Db::TField *>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@$bctr$qqrxp62System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField% @103 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TList__1<Data::Db::TField *>(System::Generics::Collections::TEnumerable__1<Data::Db::TField *> * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@$bdtr$qqrv @102 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::~TList__1<Data::Db::TField *>()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEnumerator$%@ @556 ; System::Generics::Collections::TList__1<Data::Db::TField *>::TEnumerator<>::
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEnumerator$%@$bctr$qqrxp56System@Generics@Collections@%TList__1$p14Data@Db@TField% @62  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TEnumerator<>::TEnumerator<>(System::Generics::Collections::TList__1<Data::Db::TField *> * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEnumerator$%@DoGetCurrent$qqrv @64  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEnumerator$%@DoMoveNext$qqrv @63  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEnumerator$%@GetCurrent$qqrv @65  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEnumerator$%@MoveNext$qqrv @61  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Add$qqrxp14Data@Db@TField @99  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Add(Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@AddRange$qqrpxp14Data@Db@TFieldxi @98  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::AddRange(Data::Db::TField * const *, const int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@AddRange$qqrx68System@%DelphiInterface$41System@%IEnumerable__1$p14Data@Db@TField%% @97  ; System::Generics::Collections::TList__1<Data::Db::TField *>::AddRange(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@AddRange$qqrxp62System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField% @96  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::AddRange(System::Generics::Collections::TEnumerable__1<Data::Db::TField *> * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@BinarySearch$qqrxp14Data@Db@TFieldri @70  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::BinarySearch(Data::Db::TField * const, int&)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@BinarySearch$qqrxp14Data@Db@TFieldrix84System@%DelphiInterface$57System@Generics@Defaults@%IComparer__1$p14Data@Db@TField%% @69  ; System::Generics::Collections::TList__1<Data::Db::TField *>::BinarySearch(Data::Db::TField * const, int&, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Clear$qqrv @79  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Clear()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Contains$qqrxp14Data@Db@TField @77  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Contains(Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Delete$qqri @87  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Delete(int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@DeleteRange$qqrii @86  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::DeleteRange(int, int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@DoDelete$qqri51System@Generics@Collections@TCollectionNotification @109 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::DoDelete(int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@DoGetEnumerator$qqrv @107 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::DoGetEnumerator()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Error$qqrp20System@TResStringReci @100 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Error(System::TResStringRec *, int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Error$qqrx20System@UnicodeStringi @101 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Error(const System::UnicodeString, int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Exchange$qqrii @83  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Exchange(int, int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Expand$qqrv @78  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Expand()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Extract$qqrxp14Data@Db@TField @85  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Extract(Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@ExtractItem$qqrxp14Data@Db@TField23System@Types@TDirection @84  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::ExtractItem(Data::Db::TField * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@First$qqrv @81  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::First()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@GetCapacity$qqrv @116 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::GetCapacity()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@GetEnumerator$qqrv @66  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::GetEnumerator()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@GetItem$qqri @113 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::GetItem(int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Grow$qqri @111 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Grow(int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@GrowCheck$qqri @110 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::GrowCheck(int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@IndexOf$qqrxp14Data@Db@TField @76  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::IndexOf(Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@IndexOfItem$qqrxp14Data@Db@TField23System@Types@TDirection @75  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::IndexOfItem(Data::Db::TField * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Insert$qqrixp14Data@Db@TField @95  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Insert(int, Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@InsertRange$qqripxp14Data@Db@TFieldxi @94  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::InsertRange(int, Data::Db::TField * const *, const int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@InsertRange$qqrix68System@%DelphiInterface$41System@%IEnumerable__1$p14Data@Db@TField%% @93  ; System::Generics::Collections::TList__1<Data::Db::TField *>::InsertRange(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@InsertRange$qqrixp62System@Generics@Collections@%TEnumerable__1$p14Data@Db@TField% @92  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::InsertRange(int, System::Generics::Collections::TEnumerable__1<Data::Db::TField *> * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@ItemValue$qqrxp14Data@Db@TField @108 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::ItemValue(Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Last$qqrv @80  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Last()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@LastIndexOf$qqrxp14Data@Db@TField @74  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::LastIndexOf(Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Move$qqrii @82  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Move(int, int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Notify$qqrxp14Data@Db@TField51System@Generics@Collections@TCollectionNotification @106 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Notify(Data::Db::TField * const, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Pack$qqrv @91  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Pack()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Pack$qqrx97System@%DelphiInterface$70System@Generics@Collections@%TList__1$p14Data@Db@TField%@%TEmptyFunc$%% @90  ; System::Generics::Collections::TList__1<Data::Db::TField *>::Pack(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Remove$qqrxp14Data@Db@TField @89  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Remove(Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@RemoveItem$qqrxp14Data@Db@TField23System@Types@TDirection @88  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::RemoveItem(Data::Db::TField * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Reverse$qqrv @73  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Reverse()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@SetCapacity$qqri @115 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::SetCapacity(int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@SetCount$qqri @114 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::SetCount(int)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@SetItem$qqrixp14Data@Db@TField @112 ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::SetItem(int, Data::Db::TField * const)
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Sort$qqrv @72  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::Sort()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@Sort$qqrx84System@%DelphiInterface$57System@Generics@Defaults@%IComparer__1$p14Data@Db@TField%% @71  ; System::Generics::Collections::TList__1<Data::Db::TField *>::Sort(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@ToArray$qqrv @67  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::ToArray()
+    @System@Generics@Collections@%TList__1$p14Data@Db@TField%@TrimExcess$qqrv @68  ; __fastcall System::Generics::Collections::TList__1<Data::Db::TField *>::TrimExcess()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@ @589 ; System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@$bctr$qqrv @227 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::TList__1<Data::Sqlexpr::SPParamDesc *>()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@$bctr$qqrx94System@%DelphiInterface$67System@Generics@Defaults@%IComparer__1$p24Data@Sqlexpr@SPParamDesc%% @226 ; System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::TList__1<Data::Sqlexpr::SPParamDesc *>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@$bctr$qqrxp72System@Generics@Collections@%TEnumerable__1$p24Data@Sqlexpr@SPParamDesc% @225 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::TList__1<Data::Sqlexpr::SPParamDesc *>(System::Generics::Collections::TEnumerable__1<Data::Sqlexpr::SPParamDesc *> * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@$bdtr$qqrv @224 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::~TList__1<Data::Sqlexpr::SPParamDesc *>()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@%TEnumerator$%@ @591 ; System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::TEnumerator<>::
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@%TEnumerator$%@$bctr$qqrxp66System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc% @184 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::TEnumerator<>::TEnumerator<>(System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *> * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@%TEnumerator$%@DoGetCurrent$qqrv @186 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::TEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@%TEnumerator$%@DoMoveNext$qqrv @185 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::TEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@%TEnumerator$%@GetCurrent$qqrv @187 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::TEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@%TEnumerator$%@MoveNext$qqrv @183 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::TEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@Add$qqrxp24Data@Sqlexpr@SPParamDesc @221 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::Add(Data::Sqlexpr::SPParamDesc * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@AddRange$qqrpxp24Data@Sqlexpr@SPParamDescxi @220 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::AddRange(Data::Sqlexpr::SPParamDesc * const *, const int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@AddRange$qqrx78System@%DelphiInterface$51System@%IEnumerable__1$p24Data@Sqlexpr@SPParamDesc%% @219 ; System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::AddRange(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@AddRange$qqrxp72System@Generics@Collections@%TEnumerable__1$p24Data@Sqlexpr@SPParamDesc% @218 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::AddRange(System::Generics::Collections::TEnumerable__1<Data::Sqlexpr::SPParamDesc *> * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@BinarySearch$qqrxp24Data@Sqlexpr@SPParamDescri @192 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::BinarySearch(Data::Sqlexpr::SPParamDesc * const, int&)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@BinarySearch$qqrxp24Data@Sqlexpr@SPParamDescrix94System@%DelphiInterface$67System@Generics@Defaults@%IComparer__1$p24Data@Sqlexpr@SPParamDesc%% @191 ; System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::BinarySearch(Data::Sqlexpr::SPParamDesc * const, int&, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@Clear$qqrv @201 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::Clear()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@Contains$qqrxp24Data@Sqlexpr@SPParamDesc @199 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::Contains(Data::Sqlexpr::SPParamDesc * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@Delete$qqri @209 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::Delete(int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@DeleteRange$qqrii @208 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::DeleteRange(int, int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@DoDelete$qqri51System@Generics@Collections@TCollectionNotification @231 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::DoDelete(int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@DoGetEnumerator$qqrv @229 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::DoGetEnumerator()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@Error$qqrp20System@TResStringReci @222 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::Error(System::TResStringRec *, int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@Error$qqrx20System@UnicodeStringi @223 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::Error(const System::UnicodeString, int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@Exchange$qqrii @205 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::Exchange(int, int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@Expand$qqrv @200 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::Expand()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@Extract$qqrxp24Data@Sqlexpr@SPParamDesc @207 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::Extract(Data::Sqlexpr::SPParamDesc * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@ExtractItem$qqrxp24Data@Sqlexpr@SPParamDesc23System@Types@TDirection @206 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::ExtractItem(Data::Sqlexpr::SPParamDesc * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@First$qqrv @203 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::First()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@GetCapacity$qqrv @238 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::GetCapacity()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@GetEnumerator$qqrv @188 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::GetEnumerator()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@GetItem$qqri @235 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::GetItem(int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@Grow$qqri @233 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::Grow(int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@GrowCheck$qqri @232 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::GrowCheck(int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@IndexOf$qqrxp24Data@Sqlexpr@SPParamDesc @198 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::IndexOf(Data::Sqlexpr::SPParamDesc * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@IndexOfItem$qqrxp24Data@Sqlexpr@SPParamDesc23System@Types@TDirection @197 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::IndexOfItem(Data::Sqlexpr::SPParamDesc * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@Insert$qqrixp24Data@Sqlexpr@SPParamDesc @217 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::Insert(int, Data::Sqlexpr::SPParamDesc * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@InsertRange$qqripxp24Data@Sqlexpr@SPParamDescxi @216 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::InsertRange(int, Data::Sqlexpr::SPParamDesc * const *, const int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@InsertRange$qqrix78System@%DelphiInterface$51System@%IEnumerable__1$p24Data@Sqlexpr@SPParamDesc%% @215 ; System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::InsertRange(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@InsertRange$qqrixp72System@Generics@Collections@%TEnumerable__1$p24Data@Sqlexpr@SPParamDesc% @214 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::InsertRange(int, System::Generics::Collections::TEnumerable__1<Data::Sqlexpr::SPParamDesc *> * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@ItemValue$qqrxp24Data@Sqlexpr@SPParamDesc @230 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::ItemValue(Data::Sqlexpr::SPParamDesc * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@Last$qqrv @202 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::Last()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@LastIndexOf$qqrxp24Data@Sqlexpr@SPParamDesc @196 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::LastIndexOf(Data::Sqlexpr::SPParamDesc * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@Move$qqrii @204 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::Move(int, int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@Notify$qqrxp24Data@Sqlexpr@SPParamDesc51System@Generics@Collections@TCollectionNotification @228 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::Notify(Data::Sqlexpr::SPParamDesc * const, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@Pack$qqrv @213 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::Pack()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@Pack$qqrx107System@%DelphiInterface$80System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@%TEmptyFunc$%% @212 ; System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::Pack(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@Remove$qqrxp24Data@Sqlexpr@SPParamDesc @211 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::Remove(Data::Sqlexpr::SPParamDesc * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@RemoveItem$qqrxp24Data@Sqlexpr@SPParamDesc23System@Types@TDirection @210 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::RemoveItem(Data::Sqlexpr::SPParamDesc * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@Reverse$qqrv @195 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::Reverse()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@SetCapacity$qqri @237 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::SetCapacity(int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@SetCount$qqri @236 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::SetCount(int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@SetItem$qqrixp24Data@Sqlexpr@SPParamDesc @234 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::SetItem(int, Data::Sqlexpr::SPParamDesc * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@Sort$qqrv @194 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::Sort()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@Sort$qqrx94System@%DelphiInterface$67System@Generics@Defaults@%IComparer__1$p24Data@Sqlexpr@SPParamDesc%% @193 ; System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::Sort(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@ToArray$qqrv @189 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::ToArray()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@SPParamDesc%@TrimExcess$qqrv @190 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::SPParamDesc *>::TrimExcess()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@ @572 ; System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@$bctr$qqrv @166 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::TList__1<Data::Sqlexpr::TSQLMonitor *>()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@$bctr$qqrx94System@%DelphiInterface$67System@Generics@Defaults@%IComparer__1$p24Data@Sqlexpr@TSQLMonitor%% @165 ; System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::TList__1<Data::Sqlexpr::TSQLMonitor *>(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@$bctr$qqrxp72System@Generics@Collections@%TEnumerable__1$p24Data@Sqlexpr@TSQLMonitor% @164 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::TList__1<Data::Sqlexpr::TSQLMonitor *>(System::Generics::Collections::TEnumerable__1<Data::Sqlexpr::TSQLMonitor *> * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@$bdtr$qqrv @163 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::~TList__1<Data::Sqlexpr::TSQLMonitor *>()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@%TEnumerator$%@ @574 ; System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::TEnumerator<>::
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@%TEnumerator$%@$bctr$qqrxp66System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor% @123 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::TEnumerator<>::TEnumerator<>(System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *> * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@%TEnumerator$%@DoGetCurrent$qqrv @125 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::TEnumerator<>::DoGetCurrent()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@%TEnumerator$%@DoMoveNext$qqrv @124 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::TEnumerator<>::DoMoveNext()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@%TEnumerator$%@GetCurrent$qqrv @126 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::TEnumerator<>::GetCurrent()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@%TEnumerator$%@MoveNext$qqrv @122 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::TEnumerator<>::MoveNext()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@Add$qqrxp24Data@Sqlexpr@TSQLMonitor @160 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::Add(Data::Sqlexpr::TSQLMonitor * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@AddRange$qqrpxp24Data@Sqlexpr@TSQLMonitorxi @159 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::AddRange(Data::Sqlexpr::TSQLMonitor * const *, const int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@AddRange$qqrx78System@%DelphiInterface$51System@%IEnumerable__1$p24Data@Sqlexpr@TSQLMonitor%% @158 ; System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::AddRange(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@AddRange$qqrxp72System@Generics@Collections@%TEnumerable__1$p24Data@Sqlexpr@TSQLMonitor% @157 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::AddRange(System::Generics::Collections::TEnumerable__1<Data::Sqlexpr::TSQLMonitor *> * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@BinarySearch$qqrxp24Data@Sqlexpr@TSQLMonitorri @131 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::BinarySearch(Data::Sqlexpr::TSQLMonitor * const, int&)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@BinarySearch$qqrxp24Data@Sqlexpr@TSQLMonitorrix94System@%DelphiInterface$67System@Generics@Defaults@%IComparer__1$p24Data@Sqlexpr@TSQLMonitor%% @130 ; System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::BinarySearch(Data::Sqlexpr::TSQLMonitor * const, int&, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@Clear$qqrv @140 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::Clear()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@Contains$qqrxp24Data@Sqlexpr@TSQLMonitor @138 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::Contains(Data::Sqlexpr::TSQLMonitor * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@Delete$qqri @148 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::Delete(int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@DeleteRange$qqrii @147 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::DeleteRange(int, int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@DoDelete$qqri51System@Generics@Collections@TCollectionNotification @170 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::DoDelete(int, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@DoGetEnumerator$qqrv @168 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::DoGetEnumerator()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@Error$qqrp20System@TResStringReci @161 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::Error(System::TResStringRec *, int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@Error$qqrx20System@UnicodeStringi @162 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::Error(const System::UnicodeString, int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@Exchange$qqrii @144 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::Exchange(int, int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@Expand$qqrv @139 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::Expand()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@Extract$qqrxp24Data@Sqlexpr@TSQLMonitor @146 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::Extract(Data::Sqlexpr::TSQLMonitor * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@ExtractItem$qqrxp24Data@Sqlexpr@TSQLMonitor23System@Types@TDirection @145 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::ExtractItem(Data::Sqlexpr::TSQLMonitor * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@First$qqrv @142 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::First()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@GetCapacity$qqrv @177 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::GetCapacity()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@GetEnumerator$qqrv @127 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::GetEnumerator()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@GetItem$qqri @174 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::GetItem(int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@Grow$qqri @172 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::Grow(int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@GrowCheck$qqri @171 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::GrowCheck(int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@IndexOf$qqrxp24Data@Sqlexpr@TSQLMonitor @137 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::IndexOf(Data::Sqlexpr::TSQLMonitor * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@IndexOfItem$qqrxp24Data@Sqlexpr@TSQLMonitor23System@Types@TDirection @136 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::IndexOfItem(Data::Sqlexpr::TSQLMonitor * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@Insert$qqrixp24Data@Sqlexpr@TSQLMonitor @156 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::Insert(int, Data::Sqlexpr::TSQLMonitor * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@InsertRange$qqripxp24Data@Sqlexpr@TSQLMonitorxi @155 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::InsertRange(int, Data::Sqlexpr::TSQLMonitor * const *, const int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@InsertRange$qqrix78System@%DelphiInterface$51System@%IEnumerable__1$p24Data@Sqlexpr@TSQLMonitor%% @154 ; System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::InsertRange(int, const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@InsertRange$qqrixp72System@Generics@Collections@%TEnumerable__1$p24Data@Sqlexpr@TSQLMonitor% @153 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::InsertRange(int, System::Generics::Collections::TEnumerable__1<Data::Sqlexpr::TSQLMonitor *> * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@ItemValue$qqrxp24Data@Sqlexpr@TSQLMonitor @169 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::ItemValue(Data::Sqlexpr::TSQLMonitor * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@Last$qqrv @141 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::Last()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@LastIndexOf$qqrxp24Data@Sqlexpr@TSQLMonitor @135 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::LastIndexOf(Data::Sqlexpr::TSQLMonitor * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@Move$qqrii @143 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::Move(int, int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@Notify$qqrxp24Data@Sqlexpr@TSQLMonitor51System@Generics@Collections@TCollectionNotification @167 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::Notify(Data::Sqlexpr::TSQLMonitor * const, System::Generics::Collections::TCollectionNotification)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@Pack$qqrv @152 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::Pack()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@Pack$qqrx107System@%DelphiInterface$80System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@%TEmptyFunc$%% @151 ; System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::Pack(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@Remove$qqrxp24Data@Sqlexpr@TSQLMonitor @150 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::Remove(Data::Sqlexpr::TSQLMonitor * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@RemoveItem$qqrxp24Data@Sqlexpr@TSQLMonitor23System@Types@TDirection @149 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::RemoveItem(Data::Sqlexpr::TSQLMonitor * const, System::Types::TDirection)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@Reverse$qqrv @134 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::Reverse()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@SetCapacity$qqri @176 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::SetCapacity(int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@SetCount$qqri @175 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::SetCount(int)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@SetItem$qqrixp24Data@Sqlexpr@TSQLMonitor @173 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::SetItem(int, Data::Sqlexpr::TSQLMonitor * const)
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@Sort$qqrv @133 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::Sort()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@Sort$qqrx94System@%DelphiInterface$67System@Generics@Defaults@%IComparer__1$p24Data@Sqlexpr@TSQLMonitor%% @132 ; System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::Sort(const System::DelphiInterface<{583}...
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@ToArray$qqrv @128 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::ToArray()
+    @System@Generics@Collections@%TList__1$p24Data@Sqlexpr@TSQLMonitor%@TrimExcess$qqrv @129 ; __fastcall System::Generics::Collections::TList__1<Data::Sqlexpr::TSQLMonitor *>::TrimExcess()
+    Finalize                       @681 ; Finalize
+    Initialize                     @682 ; Initialize

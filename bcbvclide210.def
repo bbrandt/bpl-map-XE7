@@ -1,0 +1,20 @@
+LIBRARY     BCBVCLIDE210.BPL
+
+DESCRIPTION 'mbarcadero C++Builder VCL IDE Package'
+
+EXPORTS
+    @$xp$25Cppvclidecmd@TVCLCommands @4   ; __tpdsc__ Cppvclidecmd::TVCLCommands
+    @Bcbvclide@@GetPackageInfoTable$qqrv @12  ; Bcbvclide::__linkproc__ __fastcall GetPackageInfoTable()
+    @Bcbvclide@@PackageLoad$qqrv   @11  ; Bcbvclide::__linkproc__ __fastcall PackageLoad()
+    @Bcbvclide@@PackageUnload$qqrv @10  ; Bcbvclide::__linkproc__ __fastcall PackageUnload()
+    @Bcbvclide@initialization$qqrv @9   ; __fastcall Bcbvclide::initialization()
+    @Cppvclidecmd@Finalization$qqrv @2   ; __fastcall Cppvclidecmd::Finalization()
+    @Cppvclidecmd@IDERegister$qqrv @3   ; __fastcall Cppvclidecmd::IDERegister()
+    @Cppvclidecmd@TVCLCommands@    @5   ; Cppvclidecmd::TVCLCommands::
+    @Cppvclidecmd@initialization$qqrv @1   ; __fastcall Cppvclidecmd::initialization()
+    @Cppvclmetroidecmd@Finalization$qqrv @7   ; __fastcall Cppvclmetroidecmd::Finalization()
+    @Cppvclmetroidecmd@IDERegister$qqrv @8   ; __fastcall Cppvclmetroidecmd::IDERegister()
+    @Cppvclmetroidecmd@initialization$qqrv @6   ; __fastcall Cppvclmetroidecmd::initialization()
+    @GetPackageInfoTable           @15  ; GetPackageInfoTable
+    Finalize                       @13  ; Finalize
+    Initialize                     @14  ; Initialize

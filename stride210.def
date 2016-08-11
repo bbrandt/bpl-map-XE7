@@ -1,0 +1,66 @@
+LIBRARY     STRIDE210.BPL
+
+DESCRIPTION 'tring Resource Editor IDE Package'
+
+EXPORTS
+    @$xp$22Stringtabledlg@TTokens  @54  ; __tpdsc__ Stringtabledlg::TTokens
+    @$xp$26Stringtabledlg@EQuoteError @45  ; __tpdsc__ Stringtabledlg::EQuoteError
+    @$xp$26Stringtabledlg@TRCFileType @52  ; __tpdsc__ Stringtabledlg::TRCFileType
+    @$xp$29Multilinedlg@TMultiLineDialog @6   ; __tpdsc__ Multilinedlg::TMultiLineDialog
+    @$xp$30Stringtabledlg@TSaveFileResult @51  ; __tpdsc__ Stringtabledlg::TSaveFileResult
+    @$xp$31Stringtabledlg@TStringTableGrid @49  ; __tpdsc__ Stringtabledlg::TStringTableGrid
+    @$xp$31Stringtabledlg@TTokenValidaters @53  ; __tpdsc__ Stringtabledlg::TTokenValidaters
+    @$xp$33Stringtabledlg@TStringTableDialog @47  ; __tpdsc__ Stringtabledlg::TStringTableDialog
+    @GetPackageInfoTable           @61  ; GetPackageInfoTable
+    @Multilinedlg@Finalization$qqrv @2   ; __fastcall Multilinedlg::Finalization()
+    @Multilinedlg@MultiLineDialog  @5   ; Multilinedlg::MultiLineDialog
+    @Multilinedlg@TMultiLineDialog@ @7   ; Multilinedlg::TMultiLineDialog::
+    @Multilinedlg@TMultiLineDialog@Memo1KeyUp$qqrp14System@TObjectrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @3   ; Multilinedlg::TMultiLineDialog::Memo1KeyUp(System::TObject *, unsigned short&, System::Set<{583}...
+    @Multilinedlg@TMultiLineDialog@UpdateMemo$qqrx20System@UnicodeString @4   ; __fastcall Multilinedlg::TMultiLineDialog::UpdateMemo(const System::UnicodeString)
+    @Multilinedlg@initialization$qqrv @1   ; __fastcall Multilinedlg::initialization()
+    @Stride@@GetPackageInfoTable$qqrv @58  ; Stride::__linkproc__ __fastcall GetPackageInfoTable()
+    @Stride@@PackageLoad$qqrv      @57  ; Stride::__linkproc__ __fastcall PackageLoad()
+    @Stride@@PackageUnload$qqrv    @56  ; Stride::__linkproc__ __fastcall PackageUnload()
+    @Stride@initialization$qqrv    @55  ; __fastcall Stride::initialization()
+    @Stringtabledlg@EQuoteError@   @46  ; Stringtabledlg::EQuoteError::
+    @Stringtabledlg@Finalization$qqrv @9   ; __fastcall Stringtabledlg::Finalization()
+    @Stringtabledlg@IDERegister$qqrv @10  ; __fastcall Stringtabledlg::IDERegister()
+    @Stringtabledlg@TStringTableDialog@ @48  ; Stringtabledlg::TStringTableDialog::
+    @Stringtabledlg@TStringTableDialog@ClearGrid$qqrv @37  ; __fastcall Stringtabledlg::TStringTableDialog::ClearGrid()
+    @Stringtabledlg@TStringTableDialog@DateOfFile$qqrx20System@UnicodeString @29  ; __fastcall Stringtabledlg::TStringTableDialog::DateOfFile(const System::UnicodeString)
+    @Stringtabledlg@TStringTableDialog@Execute$qqrx20System@UnicodeString @25  ; __fastcall Stringtabledlg::TStringTableDialog::Execute(const System::UnicodeString)
+    @Stringtabledlg@TStringTableDialog@FileClose1Execute$qqrp14System@TObject @23  ; __fastcall Stringtabledlg::TStringTableDialog::FileClose1Execute(System::TObject *)
+    @Stringtabledlg@TStringTableDialog@FileSave1Execute$qqrp14System@TObject @24  ; __fastcall Stringtabledlg::TStringTableDialog::FileSave1Execute(System::TObject *)
+    @Stringtabledlg@TStringTableDialog@FileSave1Update$qqrp14System@TObject @22  ; __fastcall Stringtabledlg::TStringTableDialog::FileSave1Update(System::TObject *)
+    @Stringtabledlg@TStringTableDialog@FindToken$qqrpbpx20System@UnicodeStringxioo @36  ; __fastcall Stringtabledlg::TStringTableDialog::FindToken(wchar_t *, const System::UnicodeString *, const int, bool, bool)
+    @Stringtabledlg@TStringTableDialog@FormActivate$qqrp14System@TObject @11  ; __fastcall Stringtabledlg::TStringTableDialog::FormActivate(System::TObject *)
+    @Stringtabledlg@TStringTableDialog@FormCloseQuery$qqrp14System@TObjectro @21  ; __fastcall Stringtabledlg::TStringTableDialog::FormCloseQuery(System::TObject *, bool&)
+    @Stringtabledlg@TStringTableDialog@FormCreate$qqrp14System@TObject @44  ; __fastcall Stringtabledlg::TStringTableDialog::FormCreate(System::TObject *)
+    @Stringtabledlg@TStringTableDialog@FormDestroy$qqrp14System@TObject @43  ; __fastcall Stringtabledlg::TStringTableDialog::FormDestroy(System::TObject *)
+    @Stringtabledlg@TStringTableDialog@Idle$qqrp14System@TObjectro @40  ; __fastcall Stringtabledlg::TStringTableDialog::Idle(System::TObject *, bool&)
+    @Stringtabledlg@TStringTableDialog@IsDirty$qqrv @39  ; __fastcall Stringtabledlg::TStringTableDialog::IsDirty()
+    @Stringtabledlg@TStringTableDialog@ItemEnd$qqrx20System@UnicodeString @34  ; __fastcall Stringtabledlg::TStringTableDialog::ItemEnd(const System::UnicodeString)
+    @Stringtabledlg@TStringTableDialog@ItemEndPC$qqrpb @35  ; __fastcall Stringtabledlg::TStringTableDialog::ItemEndPC(wchar_t *)
+    @Stringtabledlg@TStringTableDialog@LoadFile$qqrv @28  ; __fastcall Stringtabledlg::TStringTableDialog::LoadFile()
+    @Stringtabledlg@TStringTableDialog@LoadFromFile$qqrv @31  ; __fastcall Stringtabledlg::TStringTableDialog::LoadFromFile()
+    @Stringtabledlg@TStringTableDialog@MultiLineEditorExecute$qqrp14System@TObject @14  ; __fastcall Stringtabledlg::TStringTableDialog::MultiLineEditorExecute(System::TObject *)
+    @Stringtabledlg@TStringTableDialog@NextIdentifier$qqrpbo @33  ; __fastcall Stringtabledlg::TStringTableDialog::NextIdentifier(wchar_t *, bool)
+    @Stringtabledlg@TStringTableDialog@RemoveComments$qqrx20System@UnicodeString @32  ; __fastcall Stringtabledlg::TStringTableDialog::RemoveComments(const System::UnicodeString)
+    @Stringtabledlg@TStringTableDialog@ResetAllColsDimensions$qqrv @38  ; __fastcall Stringtabledlg::TStringTableDialog::ResetAllColsDimensions()
+    @Stringtabledlg@TStringTableDialog@ResetOrigList$qqrv @27  ; __fastcall Stringtabledlg::TStringTableDialog::ResetOrigList()
+    @Stringtabledlg@TStringTableDialog@ResizeCol$qqri @41  ; __fastcall Stringtabledlg::TStringTableDialog::ResizeCol(int)
+    @Stringtabledlg@TStringTableDialog@SaveFile$qqrv @26  ; __fastcall Stringtabledlg::TStringTableDialog::SaveFile()
+    @Stringtabledlg@TStringTableDialog@SaveToFile$qqrv @30  ; __fastcall Stringtabledlg::TStringTableDialog::SaveToFile()
+    @Stringtabledlg@TStringTableDialog@SetEditorMode$qqri @19  ; __fastcall Stringtabledlg::TStringTableDialog::SetEditorMode(int)
+    @Stringtabledlg@TStringTableDialog@ShowError$qqrx20System@UnicodeStringp25System@Sysutils@Exception @42  ; __fastcall Stringtabledlg::TStringTableDialog::ShowError(const System::UnicodeString, System::Sysutils::Exception *)
+    @Stringtabledlg@TStringTableDialog@ShowMemo$qqri @17  ; __fastcall Stringtabledlg::TStringTableDialog::ShowMemo(int)
+    @Stringtabledlg@TStringTableDialog@StringTableGridDblClick$qqrp14System@TObject @16  ; __fastcall Stringtabledlg::TStringTableDialog::StringTableGridDblClick(System::TObject *)
+    @Stringtabledlg@TStringTableDialog@StringTableGridKeyPress$qqrp14System@TObjectrb @13  ; __fastcall Stringtabledlg::TStringTableDialog::StringTableGridKeyPress(System::TObject *, wchar_t&)
+    @Stringtabledlg@TStringTableDialog@StringTableGridKeyUp$qqrp14System@TObjectrus60System@%Set$32System@Classes@System_Classes__1t1$i0$t1$i10$% @12  ; Stringtabledlg::TStringTableDialog::StringTableGridKeyUp(System::TObject *, unsigned short&, System::Set<{583}...
+    @Stringtabledlg@TStringTableDialog@StringTableGridSelectCell$qqrp14System@TObjectiiro @18  ; __fastcall Stringtabledlg::TStringTableDialog::StringTableGridSelectCell(System::TObject *, int, int, bool&)
+    @Stringtabledlg@TStringTableDialog@Timer1Timer$qqrp14System@TObject @15  ; __fastcall Stringtabledlg::TStringTableDialog::Timer1Timer(System::TObject *)
+    @Stringtabledlg@TStringTableDialog@ValidCurrentCell$qqrv @20  ; __fastcall Stringtabledlg::TStringTableDialog::ValidCurrentCell()
+    @Stringtabledlg@TStringTableGrid@ @50  ; Stringtabledlg::TStringTableGrid::
+    @Stringtabledlg@initialization$qqrv @8   ; __fastcall Stringtabledlg::initialization()
+    Finalize                       @59  ; Finalize
+    Initialize                     @60  ; Initialize

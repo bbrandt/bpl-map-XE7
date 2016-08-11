@@ -1,0 +1,25 @@
+LIBRARY     COMP32X.DLL
+
+EXPORTS
+    ASMFILENAME                    @32  ; ASMFILENAME
+    ASMOPTIONS                     @34  ; ASMOPTIONS
+    BccGetInterface                @30  ; BccGetInterface
+    COMPILEWITHOPTIONS             @31  ; COMPILEWITHOPTIONS
+    COMPMESSAGES                   @36  ; COMPMESSAGES
+    CONFIG                         @24  ; CONFIG
+    CUMLINENO                      @27  ; CUMLINENO
+    DbEval32InitProc               @22  ; DbEval32InitProc
+    ERRBREAK                       @40  ; ERRBREAK
+    FILENAME                       @26  ; FILENAME
+    FIRSTERROR                     @37  ; FIRSTERROR
+    FIRSTWARNING                   @38  ; FIRSTWARNING
+    FLUSHPCH                       @42  ; FLUSHPCH
+    GetCompilerListeners           @43  ; GetCompilerListeners
+    OBJFILENAME                    @33  ; OBJFILENAME
+    TOTALERRORCOUNT                @41  ; TOTALERRORCOUNT
+    WARNINGCOUNT                   @39  ; WARNINGCOUNT
+    WARNINGS                       @35  ; WARNINGS
+    ___CPPdebugHook                @23  ; ___CPPdebugHook
+    _add_compiler_listener         @29  ; _add_compiler_listener
+    _add_include_file_listener     @28  ; _add_include_file_listener
+    compile                        @25  ; compile
